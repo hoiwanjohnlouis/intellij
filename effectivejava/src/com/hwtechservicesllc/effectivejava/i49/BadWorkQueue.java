@@ -27,6 +27,8 @@ public abstract class BadWorkQueue {
     private final List queue = new LinkedList();
     private boolean stopped = false;
 
+    protected BadWorkQueue() { new BadWorkerThread().start(); };
+
     //
     public final void enqueue(Object workItem) {
        synchronized (queue) {
@@ -47,7 +49,7 @@ public abstract class BadWorkQueue {
     protected abstract void processItem(Object workItem) throws InterruptedException;
 
     // Broken - invokes alien method from synchronized block
-    private class WorkerThread extends Thread {
+    private class BadWorkerThread extends Thread {
         public void run() {
             // main loop
             while (true) {
@@ -59,6 +61,7 @@ public abstract class BadWorkQueue {
                         }
                     } catch (InterruptedException e) {
                         // todo: write error msg
+
                         return;
                     }
                     // stop is requested, so we are done.
@@ -69,7 +72,7 @@ public abstract class BadWorkQueue {
                     // we have data to process.
                     Object workItem = queue.remove(0);
                     try {
-                        processItem(workItem);  // Lock held!, broken
+                        processItem(workItem);  // Lock held while calling external function!, broken logic
                     } catch (InterruptedException e) {
                         // todo: write error msg
                         return;

@@ -24,5 +24,16 @@ public class BadDeadLockQueue extends BadWorkQueue {
     @Override
     protected void processItem(Object workItem) throws InterruptedException {
 
+        // Bad. this logic will cause a deadlock with BadWorkQueue!
+
+        // call new thread
+        Thread child = new Thread() {
+            public void run() {
+                enqueue(workItem);
+            }
+        };
+
+        child.start();
+        child.join();   // deadlock happens here.
     }
 }

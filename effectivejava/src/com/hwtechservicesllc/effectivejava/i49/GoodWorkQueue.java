@@ -76,7 +76,7 @@ public abstract class GoodWorkQueue {
 
                 // processItem is now outside the synchronized block.
                 try {
-                    processItem(workItem);  // Lock held!, broken
+                    processItem(workItem);  // Lock not held!, success!
                 } catch (InterruptedException e) {
                     // todo: write error msg
                     return;

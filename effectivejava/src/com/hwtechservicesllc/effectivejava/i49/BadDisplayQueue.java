@@ -23,9 +23,11 @@ public class BadDisplayQueue extends BadWorkQueue {
 
     @Override
     protected void processItem(Object workItem) throws InterruptedException {
-        //
+
+        // Okay. this logic will not cause a deadlock;
         System.out.println(workItem);
         Thread.sleep(1000);
+
     }
 
 }
