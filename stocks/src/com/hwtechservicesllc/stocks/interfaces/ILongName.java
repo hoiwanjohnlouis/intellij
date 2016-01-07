@@ -1,7 +1,7 @@
-package com.hwtechservicesllc.stocks.fields;
+package com.hwtechservicesllc.stocks.interfaces;
 
 /**
- * Copyright 01/06/2016 HW Tech Services, LLC
+ * Copyright 01/07/2016 HW Tech Services, LLC
  * <p>
  * Login   KimSoYeon
  * <p>
@@ -20,10 +20,7 @@ package com.hwtechservicesllc.stocks.fields;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
-public interface IDescription {
-
-    public EDescription getDescription();
-    public void setDescription(EDescription description);
-
-
+public interface ILongName {
+    public String getLongName();
+    public void setLongName(String longName);
 }

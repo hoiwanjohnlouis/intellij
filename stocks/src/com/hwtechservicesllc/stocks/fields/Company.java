@@ -16,36 +16,46 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-import org.apache.log4j.*;
+
+import com.hwtechservicesllc.stocks.enums.FieldType;
+import com.hwtechservicesllc.stocks.interfaces.ICompany;
 
 public class Company implements ICompany {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    private EDescription description;
+    private String shortName;
     private String longName;
+    private FieldType description;
 
     @Override
-    public EDescription getDescription() {
-        return this.description;
+    public FieldType getDescription() {
+        return null;
     }
 
     @Override
-    public void setDescription(EDescription description) {
-        this.description = description;
+    public void setDescription(FieldType description) {
+
     }
 
     @Override
     public String getLongName() {
-        return this.longName;
+        return null;
     }
 
     @Override
     public void setLongName(String longName) {
-        //Log.v(DEBUG_TAG, "in setLongName");
-        this.longName = longName;
+
     }
 
+    @Override
+    public String getShortName() {
+        return null;
+    }
 
+    @Override
+    public void setShortName(String shortName) {
+
+    }
 }

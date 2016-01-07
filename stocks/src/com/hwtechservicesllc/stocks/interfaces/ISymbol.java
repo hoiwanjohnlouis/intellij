@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.stocks.fields;
+package com.hwtechservicesllc.stocks.interfaces;
 
 /*
     Copyright (c) 2014  HW Tech Services, Inc., LLC
@@ -16,9 +16,7 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public interface IDateStamp extends IDescription {
-
-    public String getDateStamp();
-    public void setDateStamp(String dateStamp);
-
+public interface ISymbol extends IShortName, ILongName, IDescription {
+    public String getSymbol();
+    public void setSymbol(String symbol);
 }

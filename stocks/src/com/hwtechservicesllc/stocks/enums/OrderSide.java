@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.stocks.fields;
+package com.hwtechservicesllc.stocks.enums;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -16,15 +16,31 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public enum EDescription {
+// from FixProtocol.org website www.fixprotocol.org
 
-    COMPANY,
-    SYMBOL,
-    OPENING_PRICE,
-    PREVIOUS_DAYS_CLOSING_PRICE,
-    TRADE_PRICE,
-    TRADE_QUANTITY,
-    TRADE_DATE_STAMP,
-    TRADE_TIME_STAMP
+public enum OrderSide {
+
+    BUY ('1'),
+    SELL ('2'),
+    BUY_MINUS ('3'),
+    SELL_PLUS ('4'),
+    SELL_SHORT ('5'),
+    SELL_SHORT_EXEMPT ('6'),
+    UNDISCLOSED ('7'),
+    CROSS ('8'),
+    CROSS_SHORT ('9'),
+    CROSS_SHORT_EXEMPT ('A'),
+    AS_DEFINED ('B'),
+    OPPOSITE ('C'),
+    SUBSCRIBE ('D'),
+    REDEEM ('E'),
+    LEND_FINANCING ('F'),
+    BORROW_FINANCING ('G');
+
+
+    private final int side;
+    OrderSide(final int side) {
+        this.side = side;
+    }
 
 }

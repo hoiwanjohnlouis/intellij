@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.stocks.fields;
+package com.hwtechservicesllc.stocks.interfaces;
 
 /*
     Copyright (c) 2014  HW Tech Services, Inc., LLC
@@ -16,9 +16,11 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public interface ITimeStamp extends IDescription {
+import com.hwtechservicesllc.stocks.interfaces.IDescription;
+import com.hwtechservicesllc.stocks.interfaces.ILongName;
+import com.hwtechservicesllc.stocks.interfaces.IShortName;
 
-    public String getTimeStamp();
-    public void setTimeStamp(String timeStamp);
-
+public interface IDateStamp extends IShortName, ILongName, IDescription {
+    public String getDateStamp();
+    public void setDateStamp(String dateStamp);
 }

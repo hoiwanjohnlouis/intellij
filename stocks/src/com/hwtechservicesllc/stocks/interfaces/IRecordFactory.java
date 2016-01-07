@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.stocks.fields;
+package com.hwtechservicesllc.stocks.interfaces;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -16,31 +16,15 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-// from FixProtocol.org website www.fixprotocol.org
+public interface IRecordFactory extends IDescription {
 
-public enum EOrderSide {
-
-    BUY (1),
-    SELL (2),
-    BUY_MINUS (3),
-    SELL_PLUS (4),
-    SELL_SHORT (5),
-    SELL_SHORT_EXEMPT (6),
-    UNDISCLOSED (7),
-    CROSS (8),
-    CROSS_SHORT (9),
-    CROSS_SHORT_EXEMPT ('A'),
-    AS_DEFINED ('B'),
-    OPPOSITE ('C'),
-    SUBSCRIBE ('D'),
-    REDEEM ('E'),
-    LEND_FINANCING ('F'),
-    BORROW_FINANCING ('G');
-
-    private int value;
-
-    private EOrderSide(int value) {
-        this.value = value;
-    }
+    public ICompany addCompany();
+    public IPrice addOpeningPrice();
+    public IPrice addPreviousDaysClosingPrice();
+    public IPrice addTradePrice();
+    public IQuantity addTradeQuantity();
+    public ISymbol addSymbol();
+    public IDateStamp addTradeDateStamp();
+    public ITimeStamp addTradeTimeStamp();
 
 }

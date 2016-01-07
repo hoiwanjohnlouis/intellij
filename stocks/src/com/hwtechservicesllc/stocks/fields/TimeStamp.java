@@ -15,37 +15,57 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-import android.util.Log;
+import com.hwtechservicesllc.stocks.enums.FieldType;
+import com.hwtechservicesllc.stocks.interfaces.ITimeStamp;
 
 public class TimeStamp implements ITimeStamp {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    private EDescription description;
     private String timeStamp;
+    private String shortName;
+    private String longName;
+    private FieldType description;
 
-    @Override
-    public EDescription getDescription() {
-        return this.description;
-    }
-
-    @Override
-    public void setDescription(EDescription description) {
-        this.description = description;
-    }
 
     @Override
     public String getTimeStamp() {
-        return this.timeStamp;
+        return null;
     }
 
     @Override
     public void setTimeStamp(String timeStamp) {
-        Log.v(DEBUG_TAG, "in setTimeStamp");
-        this.timeStamp = timeStamp;
+
     }
 
+    @Override
+    public FieldType getDescription() {
+        return null;
+    }
 
+    @Override
+    public void setDescription(FieldType description) {
 
+    }
+
+    @Override
+    public String getLongName() {
+        return null;
+    }
+
+    @Override
+    public void setLongName(String longName) {
+
+    }
+
+    @Override
+    public String getShortName() {
+        return null;
+    }
+
+    @Override
+    public void setShortName(String shortName) {
+
+    }
 }

@@ -17,36 +17,58 @@ package com.hwtechservicesllc.stocks.fields;
 */
 
 
-import android.util.Log;
+import com.hwtechservicesllc.stocks.enums.FieldType;
+import com.hwtechservicesllc.stocks.interfaces.IPrice;
 
 public class Price implements IPrice {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    private EDescription description;
     private double price;
+    private String shortName;
+    private String longName;
+    private FieldType description;
 
-    @Override
-    public EDescription getDescription() {
-        return this.description;
-    }
-
-    @Override
-    public void setDescription(EDescription description) {
-        this.description = description;
-    }
 
     @Override
     public double getPrice() {
-        return this.price;
+        return 0;
     }
 
     @Override
     public void setPrice(double price) {
-        Log.v(DEBUG_TAG, "in setPrice");
-        this.price = price;
+
     }
 
+    @Override
+    public FieldType getDescription() {
+        return null;
+    }
+
+    @Override
+    public void setDescription(FieldType description) {
+
+    }
+
+    @Override
+    public String getLongName() {
+        return null;
+    }
+
+    @Override
+    public void setLongName(String longName) {
+
+    }
+
+    @Override
+    public String getShortName() {
+        return null;
+    }
+
+    @Override
+    public void setShortName(String shortName) {
+
+    }
 
 }

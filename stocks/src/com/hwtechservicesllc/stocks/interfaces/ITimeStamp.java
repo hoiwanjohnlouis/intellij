@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.stocks.fields;
+package com.hwtechservicesllc.stocks.interfaces;
 
 /*
     Copyright (c) 2014  HW Tech Services, Inc., LLC
@@ -16,9 +16,7 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public interface IQuantity {
-
-    public double getQuantity();
-    public void setQuantity(double quantity);
-
+public interface ITimeStamp extends IShortName, ILongName, IDescription {
+    public String getTimeStamp();
+    public void setTimeStamp(String timeStamp);
 }

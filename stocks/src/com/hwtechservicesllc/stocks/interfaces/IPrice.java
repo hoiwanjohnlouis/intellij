@@ -1,7 +1,7 @@
-package com.hwtechservicesllc.stocks.fields;
+package com.hwtechservicesllc.stocks.interfaces;
 
 /*
-    Copyright (c) 2015  HW Tech Services, Inc., LLC
+    Copyright (c) 2014  HW Tech Services, Inc., LLC
  
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public enum ERecordType {
-    ORDER_RECORD,
-    TRADE_RECORD
+public interface IPrice extends IShortName, ILongName, IDescription {
+    public double getPrice();
+    public void setPrice(double price);
 }

@@ -16,21 +16,9 @@ package com.hwtechservicesllc.stocks.factories;
     limitations under the License.
 */
 
-import android.util.Log;
-
-import com.hoiwanlouis.mystockportfolio.fields.Company;
-import com.hoiwanlouis.mystockportfolio.fields.DateStamp;
-import com.hoiwanlouis.mystockportfolio.fields.ICompany;
-import com.hoiwanlouis.mystockportfolio.fields.IDateStamp;
-import com.hoiwanlouis.mystockportfolio.fields.IPrice;
-import com.hoiwanlouis.mystockportfolio.fields.IQuantity;
-import com.hoiwanlouis.mystockportfolio.fields.IRecordFactory;
-import com.hoiwanlouis.mystockportfolio.fields.ISymbol;
-import com.hoiwanlouis.mystockportfolio.fields.ITimeStamp;
-import com.hoiwanlouis.mystockportfolio.fields.Price;
-import com.hoiwanlouis.mystockportfolio.fields.Quantity;
-import com.hoiwanlouis.mystockportfolio.fields.Symbol;
-import com.hoiwanlouis.mystockportfolio.fields.TimeStamp;
+import com.hwtechservicesllc.stocks.enums.FieldType;
+import com.hwtechservicesllc.stocks.fields.*;
+import com.hwtechservicesllc.stocks.interfaces.*;
 
 
 public class TradeFactory implements IRecordFactory {
@@ -85,4 +73,15 @@ public class TradeFactory implements IRecordFactory {
         Log.v(DEBUG_TAG, "in addTradeTimeStamp");
         return new TimeStamp();
     }
+
+    @Override
+    public FieldType getDescription() {
+        return null;
+    }
+
+    @Override
+    public void setDescription(FieldType description) {
+
+    }
+
 }

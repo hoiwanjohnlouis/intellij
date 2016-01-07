@@ -16,13 +16,8 @@ package com.hwtechservicesllc.stocks.factories;
 */
 
 
-import com.hwtechservicesllc.stocks.fields.ERecordType;
-import com.hwtechservicesllc.stocks.fields.ICompany;
-import com.hwtechservicesllc.stocks.fields.IDateStamp;
-import com.hwtechservicesllc.stocks.fields.IPrice;
-import com.hwtechservicesllc.stocks.fields.IQuantity;
-import com.hwtechservicesllc.stocks.fields.ISymbol;
-import com.hwtechservicesllc.stocks.fields.ITimeStamp;
+import com.hwtechservicesllc.stocks.enums.RecordType;
+import com.hwtechservicesllc.stocks.fields.*;
 
 
 public abstract class Record {
@@ -31,18 +26,18 @@ public abstract class Record {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
 
-    private ERecordType recordType;
+    private RecordType recordType;
     private StringBuilder stringBuilder = new StringBuilder();
 
 
-    protected ICompany company;                 // 1
-    protected ISymbol symbol;                   // 2
-    protected IPrice openingPrice;              // 3
-    protected IPrice previousDaysClosingPrice;  // 4
-    protected IPrice lastTradePrice;            // 5
-    protected IQuantity lastTradeQuantity;      // 6
-    protected IDateStamp lastTradeDateStamp;    // 7
-    protected ITimeStamp lastTradeTimeStamp;    // 8
+    protected Company company;                 // 1
+    protected Symbol symbol;                   // 2
+    protected Price openingPrice;              // 3
+    protected Price previousDaysClosingPrice;  // 4
+    protected Price lastTradePrice;            // 5
+    protected Quantity lastTradeQuantity;      // 6
+    protected DateStamp lastTradeDateStamp;    // 7
+    protected TimeStamp lastTradeTimeStamp;    // 8
 
 
     // concrete definition is by whom inherits this class
@@ -50,12 +45,12 @@ public abstract class Record {
 
 
     //
-    public ERecordType getRecordType() {
+    public RecordType getRecordType() {
         return recordType;
     }
 
     //
-    public void setRecordType(ERecordType recordType) {
+    public void setRecordType(RecordType recordType) {
         this.recordType = recordType;
     }
 

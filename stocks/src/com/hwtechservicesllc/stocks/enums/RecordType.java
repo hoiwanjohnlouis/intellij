@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.stocks.fields;
+package com.hwtechservicesllc.stocks.enums;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -16,15 +16,15 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public interface IRecordFactory extends IDescription {
+public enum RecordType {
 
-    public ICompany addCompany();
-    public IPrice addOpeningPrice();
-    public IPrice addPreviousDaysClosingPrice();
-    public IPrice addTradePrice();
-    public IQuantity addTradeQuantity();
-    public ISymbol addSymbol();
-    public IDateStamp addTradeDateStamp();
-    public ITimeStamp addTradeTimeStamp();
+    ORDER_RECORD('1'),
+    TRADE_RECORD('2');
+
+
+    private final int recordType;
+    private RecordType(int recordType) {
+        this.recordType = recordType;
+    }
 
 }
