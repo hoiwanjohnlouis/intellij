@@ -20,7 +20,8 @@ package com.hwtechservicesllc.stocks.interfaces;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
-public interface ILongName {
-    public String getLongName();
-    public void setLongName(String longName);
+
+public interface ShortName {
+    public String getShortName();
+    public void setShortName(String shortName);
 }

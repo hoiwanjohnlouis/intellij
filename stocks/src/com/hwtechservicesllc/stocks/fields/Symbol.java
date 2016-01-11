@@ -18,7 +18,6 @@ package com.hwtechservicesllc.stocks.fields;
 
 
 import com.hwtechservicesllc.stocks.enums.FieldType;
-import com.hwtechservicesllc.stocks.interfaces.ISymbol;
 
 public class Symbol implements ISymbol {
 
@@ -31,42 +30,9 @@ public class Symbol implements ISymbol {
     private FieldType description;
 
     @Override
-    public String getSymbol() {
-        return null;
-    }
-
-    @Override
-    public void setSymbol(String symbol) {
+    public void displayField() {
 
     }
 
-    @Override
-    public FieldType getDescription() {
-        return null;
-    }
 
-    @Override
-    public void setDescription(FieldType description) {
-
-    }
-
-    @Override
-    public String getLongName() {
-        return null;
-    }
-
-    @Override
-    public void setLongName(String longName) {
-
-    }
-
-    @Override
-    public String getShortName() {
-        return null;
-    }
-
-    @Override
-    public void setShortName(String shortName) {
-
-    }
 }

@@ -16,7 +16,6 @@ package com.hwtechservicesllc.stocks.fields;
 */
 
 import com.hwtechservicesllc.stocks.enums.FieldType;
-import com.hwtechservicesllc.stocks.interfaces.ITimeStamp;
 
 public class TimeStamp implements ITimeStamp {
 

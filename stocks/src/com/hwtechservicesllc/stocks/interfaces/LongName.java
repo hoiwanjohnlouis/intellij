@@ -1,9 +1,5 @@
 package com.hwtechservicesllc.stocks.interfaces;
 
-import com.hwtechservicesllc.stocks.interfaces.IDescription;
-import com.hwtechservicesllc.stocks.interfaces.ILongName;
-import com.hwtechservicesllc.stocks.interfaces.IShortName;
-
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
  * <p>
@@ -24,5 +20,8 @@ import com.hwtechservicesllc.stocks.interfaces.IShortName;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
-public interface ICompany extends IShortName, ILongName, IDescription {
+
+public interface LongName {
+    public String getLongName();
+    public void setLongName(String longName);
 }

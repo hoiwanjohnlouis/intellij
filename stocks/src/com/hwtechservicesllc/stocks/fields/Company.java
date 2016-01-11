@@ -16,46 +16,10 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-
-import com.hwtechservicesllc.stocks.enums.FieldType;
-import com.hwtechservicesllc.stocks.interfaces.ICompany;
-
-public class Company implements ICompany {
+public class Company extends AbstractField {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    private String shortName;
-    private String longName;
-    private FieldType description;
 
-    @Override
-    public FieldType getDescription() {
-        return null;
-    }
-
-    @Override
-    public void setDescription(FieldType description) {
-
-    }
-
-    @Override
-    public String getLongName() {
-        return null;
-    }
-
-    @Override
-    public void setLongName(String longName) {
-
-    }
-
-    @Override
-    public String getShortName() {
-        return null;
-    }
-
-    @Override
-    public void setShortName(String shortName) {
-
-    }
 }

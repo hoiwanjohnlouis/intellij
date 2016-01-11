@@ -48,7 +48,7 @@ public class Trade extends Record {
         // The fields needed were passed in the factory
 
         company = IRecordFactory.addCompany();
-        company.setDescription(EDescription.COMPANY);
+        company.setFieldType(EDescription.COMPANY);
         company.setLongName("");
 
         symbol = IRecordFactory.addSymbol();
@@ -56,15 +56,15 @@ public class Trade extends Record {
         symbol.setSymbol("");
 
         openingPrice = IRecordFactory.addOpeningPrice();
-        openingPrice.setDescription(EDescription.OPENING_PRICE);
+        openingPrice.setFieldType(EDescription.OPENING_PRICE);
         openingPrice.setPrice(0.00);
 
         previousDaysClosingPrice = IRecordFactory.addPreviousDaysClosingPrice();
-        previousDaysClosingPrice.setDescription(EDescription.PREVIOUS_DAYS_CLOSING_PRICE);
+        previousDaysClosingPrice.setFieldType(EDescription.PREVIOUS_DAYS_CLOSING_PRICE);
         previousDaysClosingPrice.setPrice(0.00);
 
         lastTradePrice = IRecordFactory.addTradePrice();
-        lastTradePrice.setDescription(EDescription.TRADE_PRICE);
+        lastTradePrice.setFieldType(EDescription.TRADE_PRICE);
         lastTradePrice.setPrice(0.00);
 
         lastTradeQuantity = IRecordFactory.addTradeQuantity();
@@ -72,7 +72,7 @@ public class Trade extends Record {
         lastTradeQuantity.setQuantity(0.00);
 
         lastTradeDateStamp = IRecordFactory.addTradeDateStamp();
-        lastTradeDateStamp.setDescription(EDescription.TRADE_DATE_STAMP);
+        lastTradeDateStamp.setFieldType(EDescription.TRADE_DATE_STAMP);
         lastTradeDateStamp.setDateStamp("");
 
         lastTradeTimeStamp = IRecordFactory.addTradeTimeStamp();

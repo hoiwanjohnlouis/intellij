@@ -18,12 +18,12 @@ package com.hwtechservicesllc.stocks.enums;
 
 public enum RecordType {
 
-    ORDER_RECORD('1'),
-    TRADE_RECORD('2');
+    ORDER_RECORD("1"),
+    TRADE_RECORD("2");
 
 
-    private final int recordType;
-    private RecordType(int recordType) {
+    private final String recordType;
+    private RecordType(final String recordType) {
         this.recordType = recordType;
     }
 

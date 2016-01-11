@@ -21,7 +21,7 @@ import com.hwtechservicesllc.stocks.fields.*;
 import com.hwtechservicesllc.stocks.interfaces.*;
 
 
-public class TradeFactory implements IRecordFactory {
+public class TradeFactory implements RecordFactory {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
@@ -75,12 +75,12 @@ public class TradeFactory implements IRecordFactory {
     }
 
     @Override
-    public FieldType getDescription() {
+    public FieldType getFieldType() {
         return null;
     }
 
     @Override
-    public void setDescription(FieldType description) {
+    public void setFieldType(FieldType description) {
 
     }
 

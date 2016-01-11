@@ -63,7 +63,7 @@ public abstract class Record {
 
         stringBuilder.append(this.getRecordType());
         stringBuilder.append("\n");
-        stringBuilder.append(company.getDescription());
+        stringBuilder.append(company.getFieldType());
         stringBuilder.append(":");
         stringBuilder.append(company.getLongName());
         stringBuilder.append(",\n");
@@ -71,15 +71,15 @@ public abstract class Record {
         stringBuilder.append(":");
         stringBuilder.append(symbol.getSymbol());
         stringBuilder.append(",\n");
-        stringBuilder.append(openingPrice.getDescription());
+        stringBuilder.append(openingPrice.getFieldType());
         stringBuilder.append(":");
         stringBuilder.append(openingPrice.getPrice());
         stringBuilder.append(",\n");
-        stringBuilder.append(previousDaysClosingPrice.getDescription());
+        stringBuilder.append(previousDaysClosingPrice.getFieldType());
         stringBuilder.append(":");
         stringBuilder.append(previousDaysClosingPrice.getPrice());
         stringBuilder.append(",\n");
-        stringBuilder.append(lastTradePrice.getDescription());
+        stringBuilder.append(lastTradePrice.getFieldType());
         stringBuilder.append(":");
         stringBuilder.append(lastTradePrice.getPrice());
         stringBuilder.append(",\n");
@@ -87,7 +87,7 @@ public abstract class Record {
         stringBuilder.append(":");
         stringBuilder.append(lastTradeQuantity.getQuantity());
         stringBuilder.append(",\n");
-        stringBuilder.append(lastTradeDateStamp.getDescription());
+        stringBuilder.append(lastTradeDateStamp.getFieldType());
         stringBuilder.append(":");
         stringBuilder.append(lastTradeDateStamp.getDateStamp());
         stringBuilder.append(",\n");

@@ -1,7 +1,7 @@
 package com.hwtechservicesllc.stocks.interfaces;
 
 /*
-    Copyright (c) 2014  HW Tech Services, Inc., LLC
+    Copyright (c) 2015  HW Tech Services, Inc., LLC
  
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -16,11 +16,17 @@ package com.hwtechservicesllc.stocks.interfaces;
     limitations under the License.
 */
 
-import com.hwtechservicesllc.stocks.interfaces.IDescription;
-import com.hwtechservicesllc.stocks.interfaces.ILongName;
-import com.hwtechservicesllc.stocks.interfaces.IShortName;
+import com.hwtechservicesllc.stocks.fields.*;
 
-public interface IDateStamp extends IShortName, ILongName, IDescription {
-    public String getDateStamp();
-    public void setDateStamp(String dateStamp);
+public interface RecordFactory extends FieldType {
+
+    public Company addCompany();
+    public Price addOpeningPrice();
+    public Price addPreviousDaysClosingPrice();
+    public Price addTradePrice();
+    public Quantity addTradeQuantity();
+    public Symbol addSymbol();
+    public DateStamp addTradeDateStamp();
+    public TimeStamp addTradeTimeStamp();
+
 }

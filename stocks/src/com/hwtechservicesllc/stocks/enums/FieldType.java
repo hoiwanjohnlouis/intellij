@@ -20,19 +20,13 @@ package com.hwtechservicesllc.stocks.enums;
 
 public enum FieldType {
 
-    COMPANY ('1'),
-    SYMBOL ('2'),
-    OPENING_PRICE ('3'),
-    PREVIOUS_DAYS_CLOSING_PRICE ('4'),
-    TRADE_PRICE ('5'),
-    TRADE_QUANTITY ('6'),
-    TRADE_DATE_STAMP ('7'),
-    TRADE_TIME_STAMP ('8');
-
-
-    private final int fieldType;
-    FieldType(final int fieldType) {
-        this.fieldType = fieldType;
-    }
+    COMPANY,
+    SYMBOL,
+    OPENING_PRICE,
+    PREVIOUS_DAYS_CLOSING_PRICE,
+    TRADE_PRICE,
+    TRADE_QUANTITY,
+    TRADE_DATE_STAMP,
+    TRADE_TIME_STAMP;
 
 }

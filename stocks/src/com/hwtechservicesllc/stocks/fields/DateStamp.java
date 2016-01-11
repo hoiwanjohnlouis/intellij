@@ -15,57 +15,24 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-
-import com.hwtechservicesllc.stocks.enums.FieldType;
-import com.hwtechservicesllc.stocks.interfaces.IDateStamp;
-
-public class DateStamp implements IDateStamp {
+public class DateStamp extends AbstractField {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
     private String dateStamp;
-    private String shortName;
-    private String longName;
-    private FieldType description;
 
-    @Override
     public String getDateStamp() {
-        return null;
+        return dateStamp;
     }
 
-    @Override
     public void setDateStamp(String dateStamp) {
-
+        this.dateStamp = dateStamp;
     }
 
     @Override
-    public FieldType getDescription() {
-        return null;
-    }
-
-    @Override
-    public void setDescription(FieldType description) {
+    public void displayField() {
 
     }
 
-    @Override
-    public String getLongName() {
-        return null;
-    }
-
-    @Override
-    public void setLongName(String longName) {
-
-    }
-
-    @Override
-    public String getShortName() {
-        return null;
-    }
-
-    @Override
-    public void setShortName(String shortName) {
-
-    }
 }
