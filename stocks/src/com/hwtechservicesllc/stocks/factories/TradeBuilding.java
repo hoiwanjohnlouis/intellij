@@ -16,10 +16,12 @@ package com.hwtechservicesllc.stocks.factories;
     limitations under the License.
 */
 
-import android.util.Log;
+//import android.util.Log;
 
-import com.hoiwanlouis.mystockportfolio.fields.ERecordType;
-import com.hoiwanlouis.mystockportfolio.fields.IRecordFactory;
+import com.hwtechservicesllc.stocks.enums.RecordType;
+import com.hwtechservicesllc.stocks.interfaces.RecordFactory;
+import com.hwtechservicesllc.stocks.views.BaseRecord;
+import com.hwtechservicesllc.stocks.views.TradeRecord;
 
 
 public class TradeBuilding extends RecordBuilding {
@@ -27,13 +29,13 @@ public class TradeBuilding extends RecordBuilding {
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    public Record makeRecord(ERecordType recordType) {
+    public BaseRecord makeRecord(RecordType recordType) {
         Log.v(DEBUG_TAG, "in makeRecord:" + recordType);
 
-        Record tradeRecord = (Trade) null;
+        BaseRecord tradeRecord = (TradeRecord) null;
 
-        IRecordFactory tradeRecordFactory = new TradeFactory();
-        tradeRecord = new Trade(tradeRecordFactory);
+        RecordFactory tradeRecordFactory = new TradeFactory();
+        tradeRecord = new TradeRecord(tradeRecordFactory);
         tradeRecord.setRecordType(recordType);
 
         return tradeRecord;

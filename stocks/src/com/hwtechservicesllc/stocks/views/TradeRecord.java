@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.stocks.factories;
+package com.hwtechservicesllc.stocks.views;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -22,7 +22,7 @@ import com.hoiwanlouis.mystockportfolio.fields.EDescription;
 import com.hoiwanlouis.mystockportfolio.fields.IRecordFactory;
 
 
-public class Trade extends Record {
+public class TradeRecord extends BaseRecord {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
@@ -35,8 +35,8 @@ public class Trade extends Record {
     // The trade factory is sent to this method.
     // The factory will specifies what fields to populate
 
-    public Trade(IRecordFactory IRecordFactory) {
-        Log.v(DEBUG_TAG, "in Trade constructor");
+    public TradeRecord(IRecordFactory IRecordFactory) {
+        Log.v(DEBUG_TAG, "in TradeRecord constructor");
 
         this.IRecordFactory = IRecordFactory;
 

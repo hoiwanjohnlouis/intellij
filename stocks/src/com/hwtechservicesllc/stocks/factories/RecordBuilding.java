@@ -17,43 +17,37 @@ package com.hwtechservicesllc.stocks.factories;
 */
 
 
-import android.util.Log;
+//import android.util.Log;
 
-import com.hoiwanlouis.mystockportfolio.fields.ERecordType;
-
+import com.hwtechservicesllc.stocks.enums.RecordType;
+import com.hwtechservicesllc.stocks.views.BaseRecord;
 
 public abstract class RecordBuilding {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-
     //
     //
     //
-    public abstract Record makeRecord(ERecordType recordType);
-
-
+    public abstract BaseRecord makeRecord(RecordType recordType);
 
     //
     // todo: orderRecord should receive an update record populated with trade data which will be passed to prepare
     //
-    public Record orderRecord(ERecordType recordType) {
-        Log.v(DEBUG_TAG, "in orderRecord");
+    public BaseRecord orderRecord(RecordType recordType) {
+//        Log.v(DEBUG_TAG, "in orderRecord");
 
 
         //
-        Record record = makeRecord(recordType);
-        record.prepare();
-
+        BaseRecord baseRecord = makeRecord(recordType);
+        baseRecord.prepare();
 
         // todo: add function to update SQLite DB
 
         // todo: add function to update GUI related adapter
 
-        return record;
-
+        return baseRecord;
     }
-
 
 }

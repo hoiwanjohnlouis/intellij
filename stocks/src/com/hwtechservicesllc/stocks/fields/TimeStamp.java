@@ -1,4 +1,5 @@
 package com.hwtechservicesllc.stocks.fields;
+
 /*
     Copyright (c) 2014  Hoi Wan Louis
  
@@ -17,54 +18,26 @@ package com.hwtechservicesllc.stocks.fields;
 
 import com.hwtechservicesllc.stocks.enums.FieldType;
 
-public class TimeStamp implements ITimeStamp {
+public class TimeStamp {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-
+    private FieldType fieldType;
     private String timeStamp;
-    private String shortName;
-    private String longName;
-    private FieldType description;
 
+    // no one can call default constructor
+    private TimeStamp() {}
 
-    @Override
+    public TimeStamp(final FieldType fieldType, final String timeStamp) {
+        this.fieldType = fieldType;
+        this.timeStamp = timeStamp;
+    }
+
     public String getTimeStamp() {
-        return null;
+        return timeStamp;
+    }
+    public void setTimeStamp(final String timeStamp) {
+        this.timeStamp = timeStamp;
     }
 
-    @Override
-    public void setTimeStamp(String timeStamp) {
-
-    }
-
-    @Override
-    public FieldType getDescription() {
-        return null;
-    }
-
-    @Override
-    public void setDescription(FieldType description) {
-
-    }
-
-    @Override
-    public String getLongName() {
-        return null;
-    }
-
-    @Override
-    public void setLongName(String longName) {
-
-    }
-
-    @Override
-    public String getShortName() {
-        return null;
-    }
-
-    @Override
-    public void setShortName(String shortName) {
-
-    }
 }

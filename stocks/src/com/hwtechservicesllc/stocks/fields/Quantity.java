@@ -16,24 +16,28 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public class Quantity extends AbstractField {
+import com.hwtechservicesllc.stocks.enums.FieldType;
+
+public class Quantity {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-
+    private FieldType fieldType;
     private double quantity;
+
+    // no one can call default constructor
+    private Quantity() {}
+
+    public Quantity(final FieldType fieldType, final double quantity) {
+        this.fieldType = fieldType;
+        this.quantity = quantity;
+    }
 
     public double getQuantity() {
         return quantity;
     }
-
-    public void setQuantity(double quantity) {
+    public void setQuantity(final double quantity) {
         this.quantity = quantity;
-    }
-
-    @Override
-    public void displayField() {
-
     }
 
 }

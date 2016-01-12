@@ -21,7 +21,6 @@ public enum RecordType {
     ORDER_RECORD("1"),
     TRADE_RECORD("2");
 
-
     private final String recordType;
     private RecordType(final String recordType) {
         this.recordType = recordType;

@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.stocks.factories;
+package com.hwtechservicesllc.stocks.views;
 /*
     Copyright (c) 2014  Hoi Wan Louis
  
@@ -15,45 +15,33 @@ package com.hwtechservicesllc.stocks.factories;
     limitations under the License.
 */
 
-
 import com.hwtechservicesllc.stocks.enums.RecordType;
 import com.hwtechservicesllc.stocks.fields.*;
 
-
-public abstract class Record {
+public abstract class BaseRecord {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-
-
-    private RecordType recordType;
     private StringBuilder stringBuilder = new StringBuilder();
 
+    protected RecordType recordType;
+    protected Company company;
+    protected Price openingPrice;
+    protected Price previousDaysClosingPrice;
+    protected Price lastTradePrice;
+    protected Quantity lastTradeQuantity;
+    protected DateStamp lastTradeDateStamp;
+    protected TimeStamp lastTradeTimeStamp;
 
-    protected Company company;                 // 1
-    protected Symbol symbol;                   // 2
-    protected Price openingPrice;              // 3
-    protected Price previousDaysClosingPrice;  // 4
-    protected Price lastTradePrice;            // 5
-    protected Quantity lastTradeQuantity;      // 6
-    protected DateStamp lastTradeDateStamp;    // 7
-    protected TimeStamp lastTradeTimeStamp;    // 8
+    // no one can call default constructor
+    private BaseRecord() {}
 
+    public BaseRecord(final Company company) {
+        this.company = company;
+    }
 
     // concrete definition is by whom inherits this class
     abstract void prepare();
-
-
-    //
-    public RecordType getRecordType() {
-        return recordType;
-    }
-
-    //
-    public void setRecordType(RecordType recordType) {
-        this.recordType = recordType;
-    }
-
 
     // If any EnemyShip object is printed to screen this shows up
     public String toString(){
@@ -61,43 +49,40 @@ public abstract class Record {
         // clean up the buffer before using.
         stringBuilder.delete(0,stringBuilder.length());
 
-        stringBuilder.append(this.getRecordType());
+        stringBuilder.append(recordType);
         stringBuilder.append("\n");
-        stringBuilder.append(company.getFieldType());
+        stringBuilder.append("LongName");
         stringBuilder.append(":");
         stringBuilder.append(company.getLongName());
         stringBuilder.append(",\n");
-        stringBuilder.append(symbol.getDescription());
+        stringBuilder.append("TickerSymbol");
         stringBuilder.append(":");
-        stringBuilder.append(symbol.getSymbol());
+        stringBuilder.append(company.getTickerSymbol());
         stringBuilder.append(",\n");
-        stringBuilder.append(openingPrice.getFieldType());
+        stringBuilder.append("openingPrice");
         stringBuilder.append(":");
         stringBuilder.append(openingPrice.getPrice());
         stringBuilder.append(",\n");
-        stringBuilder.append(previousDaysClosingPrice.getFieldType());
+        stringBuilder.append("previousDaysClosingPrice");
         stringBuilder.append(":");
         stringBuilder.append(previousDaysClosingPrice.getPrice());
         stringBuilder.append(",\n");
-        stringBuilder.append(lastTradePrice.getFieldType());
+        stringBuilder.append("lastTradePrice");
         stringBuilder.append(":");
         stringBuilder.append(lastTradePrice.getPrice());
         stringBuilder.append(",\n");
-        stringBuilder.append(lastTradeQuantity.getDescription());
+        stringBuilder.append("lastTradeQuantity");
         stringBuilder.append(":");
         stringBuilder.append(lastTradeQuantity.getQuantity());
         stringBuilder.append(",\n");
-        stringBuilder.append(lastTradeDateStamp.getFieldType());
+        stringBuilder.append("lastTradeDateStamp");
         stringBuilder.append(":");
         stringBuilder.append(lastTradeDateStamp.getDateStamp());
         stringBuilder.append(",\n");
-        stringBuilder.append(lastTradeTimeStamp.getDescription());
+        stringBuilder.append("lastTradeTimeStamp");
         stringBuilder.append(":");
         stringBuilder.append(lastTradeTimeStamp.getTimeStamp());
 
         return stringBuilder.toString();
-
     }
-
-
 }

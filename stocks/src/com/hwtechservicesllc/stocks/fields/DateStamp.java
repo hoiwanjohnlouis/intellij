@@ -15,24 +15,28 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public class DateStamp extends AbstractField {
+import com.hwtechservicesllc.stocks.enums.FieldType;
+
+public class DateStamp {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-
+    private FieldType fieldType;
     private String dateStamp;
+
+    // no one can call default constructor
+    private DateStamp() {}
+
+    public DateStamp(final FieldType fieldType, final String dateStamp) {
+        this.fieldType = fieldType;
+        this.dateStamp = dateStamp;
+    }
 
     public String getDateStamp() {
         return dateStamp;
     }
-
-    public void setDateStamp(String dateStamp) {
+    public void setDateStamp(final String dateStamp) {
         this.dateStamp = dateStamp;
-    }
-
-    @Override
-    public void displayField() {
-
     }
 
 }

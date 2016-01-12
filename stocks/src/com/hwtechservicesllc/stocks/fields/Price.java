@@ -16,24 +16,28 @@ package com.hwtechservicesllc.stocks.fields;
     limitations under the License.
 */
 
-public class Price extends AbstractField {
+import com.hwtechservicesllc.stocks.enums.FieldType;
+
+public class Price {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-
+    private FieldType fieldType;
     private double price;
+
+    // no one can call default constructor
+    private Price() {}
+
+    public Price(final FieldType fieldType, final double price) {
+        this.fieldType = fieldType;
+        this.price = price;
+    }
 
     public double getPrice() {
         return price;
     }
-
-    public void setPrice(double price) {
+    public void setPrice(final double price) {
         this.price = price;
-    }
-
-    @Override
-    public void displayField() {
-
     }
 
 }
