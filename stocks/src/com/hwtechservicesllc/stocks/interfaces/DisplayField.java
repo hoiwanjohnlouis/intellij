@@ -1,11 +1,11 @@
 package com.hwtechservicesllc.stocks.interfaces;
 
 /**
- * Copyright 01/07/2016 HW Tech Services, LLC
+ * Copyright 01/12/2016 HW Tech Services, LLC
  * <p>
  * Login   KimSoYeon
  * <p>
- * Package com.hwtechservicesllc.stocks.fields
+ * Package com.hwtechservicesllc.stocks.interfaces
  * Project intellijPrototyping
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,7 +21,7 @@ package com.hwtechservicesllc.stocks.interfaces;
  * limitations under the License.
  **/
 
-public interface LongName {
-    public String getLongName();
-    public void setLongName(String longName);
+public interface DisplayField {
+    // concrete definition is by whom inherits this class
+    public void displayField();
 }

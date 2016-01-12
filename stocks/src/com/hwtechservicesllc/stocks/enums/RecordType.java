@@ -16,6 +16,8 @@ package com.hwtechservicesllc.stocks.enums;
     limitations under the License.
 */
 
+// from FixProtocol.org website www.fixprotocol.org
+
 public enum RecordType {
 
     ORDER_RECORD("1"),

@@ -1,4 +1,7 @@
 package com.hwtechservicesllc.stocks.fields;
+
+import com.hwtechservicesllc.stocks.enums.FieldType;
+
 /*
     Copyright (c) 2014  Hoi Wan Louis
  
@@ -14,8 +17,6 @@ package com.hwtechservicesllc.stocks.fields;
     See the License for the specific language governing permissions and
     limitations under the License.
 */
-
-import com.hwtechservicesllc.stocks.enums.FieldType;
 
 public class DateStamp {
 

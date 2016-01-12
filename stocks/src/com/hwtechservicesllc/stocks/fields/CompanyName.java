@@ -1,4 +1,6 @@
-package com.hwtechservicesllc.stocks.interfaces;
+package com.hwtechservicesllc.stocks.fields;
+
+import com.hwtechservicesllc.stocks.enums.FieldType;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -21,7 +23,26 @@ package com.hwtechservicesllc.stocks.interfaces;
  * limitations under the License.
  **/
 
-public interface ShortName {
-    public String getShortName();
-    public void setShortName(String shortName);
+public class CompanyName {
+
+    // for logging purposes
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private FieldType fieldType;
+    private String companyName;
+
+    // no one can call default constructor
+    private CompanyName() {}
+
+    public CompanyName(final FieldType fieldType, final String companyName) {
+        this.fieldType = fieldType;
+        this.companyName = companyName;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+    public void setCompanyName(final String companyName) {
+        this.companyName = companyName;
+    }
+
 }

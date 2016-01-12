@@ -1,4 +1,6 @@
-package com.hwtechservicesllc.stocks.interfaces;
+package com.hwtechservicesllc.stocks.fields;
+
+import com.hwtechservicesllc.stocks.enums.FieldType;
 
 /**
  * Copyright 01/12/2016 HW Tech Services, LLC
@@ -21,7 +23,26 @@ package com.hwtechservicesllc.stocks.interfaces;
  * limitations under the License.
  **/
 
-public interface TickerSymbol {
-    public String getTickerSymbol();
-    public void setTickerSymbol(String tickerSymbol);
+public class TickerSymbol {
+
+    // for logging purposes
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private FieldType fieldType;
+    private String tickerSymbol;
+
+    // no one can call default constructor
+    private TickerSymbol() {}
+
+    public TickerSymbol(final FieldType fieldType, final String tickerSymbol) {
+        this.fieldType = fieldType;
+        this.tickerSymbol = tickerSymbol;
+    }
+
+    public String getTickerSymbol() {
+        return tickerSymbol;
+    }
+    public void setTickerSymbol(final String tickerSymbol) {
+        this.tickerSymbol = tickerSymbol;
+    }
+
 }

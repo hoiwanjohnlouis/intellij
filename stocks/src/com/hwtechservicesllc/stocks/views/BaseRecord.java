@@ -24,24 +24,90 @@ public abstract class BaseRecord {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private StringBuilder stringBuilder = new StringBuilder();
 
-    protected RecordType recordType;
-    protected Company company;
-    protected Price openingPrice;
-    protected Price previousDaysClosingPrice;
-    protected Price lastTradePrice;
-    protected Quantity lastTradeQuantity;
-    protected DateStamp lastTradeDateStamp;
-    protected TimeStamp lastTradeTimeStamp;
+    private RecordType recordType;
+    private CompanyName companyName;
+    private TickerSymbol tickerSymbol;
+    private Price openingPrice;
+    private Price previousDaysClosingPrice;
+    private Price lastTradePrice;
+    private Quantity lastTradeQuantity;
+    private DateStamp lastTradeDateStamp;
+    private TimeStamp lastTradeTimeStamp;
 
     // no one can call default constructor
     private BaseRecord() {}
 
-    public BaseRecord(final Company company) {
-        this.company = company;
+    public BaseRecord(final RecordType recordType, final CompanyName companyName, final TickerSymbol tickerSymbol) {
+        this.recordType = recordType;
+        this.companyName = companyName;
+        this.tickerSymbol = tickerSymbol;
     }
 
     // concrete definition is by whom inherits this class
-    abstract void prepare();
+    // abstract void prepare();
+
+    public RecordType getRecordType() {
+        return recordType;
+    }
+    public void setRecordType(RecordType recordType) {
+        this.recordType = recordType;
+    }
+
+    public CompanyName getCompanyName() {
+        return companyName;
+    }
+    public void setCompanyName(CompanyName companyName) {
+        this.companyName = companyName;
+    }
+
+    public TickerSymbol getTickerSymbol() {
+        return tickerSymbol;
+    }
+    public void setTickerSymbol(TickerSymbol tickerSymbol) {
+        this.tickerSymbol = tickerSymbol;
+    }
+
+    public Price getOpeningPrice() {
+        return openingPrice;
+    }
+    public void setOpeningPrice(Price openingPrice) {
+        this.openingPrice = openingPrice;
+    }
+
+    public Price getPreviousDaysClosingPrice() {
+        return previousDaysClosingPrice;
+    }
+    public void setPreviousDaysClosingPrice(Price previousDaysClosingPrice) {
+        this.previousDaysClosingPrice = previousDaysClosingPrice;
+    }
+
+    public Price getLastTradePrice() {
+        return lastTradePrice;
+    }
+    public void setLastTradePrice(Price lastTradePrice) {
+        this.lastTradePrice = lastTradePrice;
+    }
+
+    public Quantity getLastTradeQuantity() {
+        return lastTradeQuantity;
+    }
+    public void setLastTradeQuantity(Quantity lastTradeQuantity) {
+        this.lastTradeQuantity = lastTradeQuantity;
+    }
+
+    public DateStamp getLastTradeDateStamp() {
+        return lastTradeDateStamp;
+    }
+    public void setLastTradeDateStamp(DateStamp lastTradeDateStamp) {
+        this.lastTradeDateStamp = lastTradeDateStamp;
+    }
+
+    public TimeStamp getLastTradeTimeStamp() {
+        return lastTradeTimeStamp;
+    }
+    public void setLastTradeTimeStamp(TimeStamp lastTradeTimeStamp) {
+        this.lastTradeTimeStamp = lastTradeTimeStamp;
+    }
 
     // If any EnemyShip object is printed to screen this shows up
     public String toString(){
@@ -51,13 +117,13 @@ public abstract class BaseRecord {
 
         stringBuilder.append(recordType);
         stringBuilder.append("\n");
-        stringBuilder.append("LongName");
+        stringBuilder.append("CompanyName");
         stringBuilder.append(":");
-        stringBuilder.append(company.getLongName());
+        stringBuilder.append(companyName.getCompanyName());
         stringBuilder.append(",\n");
         stringBuilder.append("TickerSymbol");
         stringBuilder.append(":");
-        stringBuilder.append(company.getTickerSymbol());
+        stringBuilder.append(tickerSymbol.getTickerSymbol());
         stringBuilder.append(",\n");
         stringBuilder.append("openingPrice");
         stringBuilder.append(":");
