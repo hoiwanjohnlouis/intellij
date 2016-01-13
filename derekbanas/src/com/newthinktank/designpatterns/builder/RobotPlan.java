@@ -1,3 +1,5 @@
+package com.newthinktank.designpatterns.builder;
+
 // This is the interface that will be returned from the builder
 
 public interface RobotPlan{

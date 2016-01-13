@@ -1,3 +1,5 @@
+package com.newthinktank.designpatterns.builder;
+
 // The director / engineer class creates a Robot using the
 // builder interface that is defined (OldRobotBuilder)
 

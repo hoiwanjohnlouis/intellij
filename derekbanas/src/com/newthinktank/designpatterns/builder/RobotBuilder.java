@@ -1,4 +1,6 @@
-// Defines the methods needed for creating parts 
+package com.newthinktank.designpatterns.builder;
+
+// Defines the methods needed for creating parts
 // for the robot
 
 public interface RobotBuilder {

@@ -1,3 +1,5 @@
+package com.newthinktank.designpatterns.factory;
+
 public abstract class EnemyShip {
 	
 	private String name;

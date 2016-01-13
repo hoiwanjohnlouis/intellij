@@ -1,3 +1,5 @@
+package com.newthinktank.designpatterns.factory;
+
 import java.util.Scanner;
 
 public class EnemyShipTesting {

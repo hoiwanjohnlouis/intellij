@@ -1,4 +1,6 @@
-// The concrete builder class that assembles the parts 
+package com.newthinktank.designpatterns.builder;
+
+// The concrete builder class that assembles the parts
 // of the finished Robot object
 
 public class OldRobotBuilder implements RobotBuilder {

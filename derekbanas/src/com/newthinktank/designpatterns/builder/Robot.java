@@ -1,3 +1,5 @@
+package com.newthinktank.designpatterns.builder;
+
 // The concrete Robot class based on the RobotPlan interface
 
 public class Robot implements RobotPlan{

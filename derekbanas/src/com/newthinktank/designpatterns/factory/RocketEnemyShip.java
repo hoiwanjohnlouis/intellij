@@ -1,3 +1,5 @@
+package com.newthinktank.designpatterns.factory;
+
 public class RocketEnemyShip extends EnemyShip {
 	
 	public RocketEnemyShip(){

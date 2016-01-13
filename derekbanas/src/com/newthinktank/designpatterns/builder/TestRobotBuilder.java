@@ -1,3 +1,5 @@
+package com.newthinktank.designpatterns.builder;
+
 public class TestRobotBuilder {
 	
 	public static void main(String[] args){
