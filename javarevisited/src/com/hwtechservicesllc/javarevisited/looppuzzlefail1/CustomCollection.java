@@ -45,7 +45,6 @@ public class CustomCollection<T>{
         return bucket.add(e);
     }
 
-
     public boolean remove(T o) {
         return bucket.remove(o);
     }

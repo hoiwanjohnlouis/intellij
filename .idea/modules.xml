@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/derekbanas/derekbanas.iml" filepath="$PROJECT_DIR$/derekbanas/derekbanas.iml" />
       <module fileurl="file://$PROJECT_DIR$/effectivejava/effectivejava.iml" filepath="$PROJECT_DIR$/effectivejava/effectivejava.iml" />
       <module fileurl="file://$PROJECT_DIR$/effectivejava2/effectivejava2.iml" filepath="$PROJECT_DIR$/effectivejava2/effectivejava2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/intellijPrototyping.iml" filepath="$PROJECT_DIR$/.idea/intellijPrototyping.iml" />
@@ -11,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/newthinktank2014/newthinktank2014.iml" filepath="$PROJECT_DIR$/newthinktank2014/newthinktank2014.iml" />
       <module fileurl="file://$PROJECT_DIR$/nyuf2014/nyuf2014.iml" filepath="$PROJECT_DIR$/nyuf2014/nyuf2014.iml" />
       <module fileurl="file://$PROJECT_DIR$/robmarano/robmarano.iml" filepath="$PROJECT_DIR$/robmarano/robmarano.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stocks/stocks.iml" filepath="$PROJECT_DIR$/stocks/stocks.iml" />
       <module fileurl="file://$PROJECT_DIR$/thehackerati2014/thehackerati2014.iml" filepath="$PROJECT_DIR$/thehackerati2014/thehackerati2014.iml" />
       <module fileurl="file://$PROJECT_DIR$/tij4f2014/tij4f2014.iml" filepath="$PROJECT_DIR$/tij4f2014/tij4f2014.iml" />
     </modules>
