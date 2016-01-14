@@ -15,7 +15,7 @@ package com.hwtechservicesllc.stocks.views;
     limitations under the License.
 */
 
-import com.hwtechservicesllc.stocks.enums.RecordType;
+import com.hwtechservicesllc.stocks.enums.MsgType;
 import com.hwtechservicesllc.stocks.fields.*;
 
 public abstract class BaseRecord {
@@ -24,7 +24,7 @@ public abstract class BaseRecord {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private StringBuilder stringBuilder = new StringBuilder();
 
-    private RecordType recordType;
+    private MsgType msgType;
     private CompanyName companyName;
     private TickerSymbol tickerSymbol;
     private Price openingPrice;
@@ -37,8 +37,8 @@ public abstract class BaseRecord {
     // no one can call default constructor
     private BaseRecord() {}
 
-    public BaseRecord(final RecordType recordType, final CompanyName companyName, final TickerSymbol tickerSymbol) {
-        this.recordType = recordType;
+    public BaseRecord(final MsgType msgType, final CompanyName companyName, final TickerSymbol tickerSymbol) {
+        this.msgType = msgType;
         this.companyName = companyName;
         this.tickerSymbol = tickerSymbol;
     }
@@ -46,11 +46,11 @@ public abstract class BaseRecord {
     // concrete definition is by whom inherits this class
     // abstract void prepare();
 
-    public RecordType getRecordType() {
-        return recordType;
+    public MsgType getMsgType() {
+        return msgType;
     }
-    public void setRecordType(RecordType recordType) {
-        this.recordType = recordType;
+    public void setMsgType(MsgType msgType) {
+        this.msgType = msgType;
     }
 
     public CompanyName getCompanyName() {
@@ -115,7 +115,7 @@ public abstract class BaseRecord {
         // clean up the buffer before using.
         stringBuilder.delete(0,stringBuilder.length());
 
-        stringBuilder.append(recordType);
+        stringBuilder.append(msgType);
         stringBuilder.append("\n");
         stringBuilder.append("CompanyName");
         stringBuilder.append(":");

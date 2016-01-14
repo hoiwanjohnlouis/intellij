@@ -16,10 +16,10 @@ package com.hwtechservicesllc.stocks.views;
     limitations under the License.
 */
 
-import android.util.Log;
+//import android.util.Log;
 
-import com.hoiwanlouis.mystockportfolio.fields.EDescription;
-import com.hoiwanlouis.mystockportfolio.fields.IRecordFactory;
+import com.hwtechservicesllc.stocks.enums.FieldType;
+import com.hwtechservicesllc.stocks.interfaces.RecordFactory;
 
 
 public class TradeRecord extends BaseRecord {
@@ -30,20 +30,20 @@ public class TradeRecord extends BaseRecord {
     // We define the type of record we want to create
     // by stating the factory to build trades
 
-    com.hoiwanlouis.mystockportfolio.fields.IRecordFactory IRecordFactory;
+    RecordFactory recordFactory;
 
     // The trade factory is sent to this method.
     // The factory will specifies what fields to populate
 
-    public TradeRecord(IRecordFactory IRecordFactory) {
-        Log.v(DEBUG_TAG, "in TradeRecord constructor");
+    public TradeRecord(RecordFactory RecordFactory) {
+        //Log.v(DEBUG_TAG, "in TradeRecord constructor");
 
-        this.IRecordFactory = IRecordFactory;
+        this.recordFactory = recordFactory;
 
     }
 
     public void prepare() {
-        Log.v(DEBUG_TAG, "in prepare");
+        //Log.v(DEBUG_TAG, "in prepare");
 
         // The fields needed were passed in the factory
 

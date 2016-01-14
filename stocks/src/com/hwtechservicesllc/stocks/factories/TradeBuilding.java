@@ -18,7 +18,7 @@ package com.hwtechservicesllc.stocks.factories;
 
 //import android.util.Log;
 
-import com.hwtechservicesllc.stocks.enums.RecordType;
+import com.hwtechservicesllc.stocks.enums.MsgType;
 import com.hwtechservicesllc.stocks.interfaces.RecordFactory;
 import com.hwtechservicesllc.stocks.views.BaseRecord;
 import com.hwtechservicesllc.stocks.views.TradeRecord;
@@ -29,14 +29,14 @@ public class TradeBuilding extends RecordBuilding {
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    public BaseRecord makeRecord(RecordType recordType) {
-        Log.v(DEBUG_TAG, "in makeRecord:" + recordType);
+    public BaseRecord makeRecord(MsgType msgType) {
+        //Log.v(DEBUG_TAG, "in makeRecord:" + msgType);
 
         BaseRecord tradeRecord = (TradeRecord) null;
 
         RecordFactory tradeRecordFactory = new TradeFactory();
         tradeRecord = new TradeRecord(tradeRecordFactory);
-        tradeRecord.setRecordType(recordType);
+        tradeRecord.setMsgType(msgType);
 
         return tradeRecord;
     }

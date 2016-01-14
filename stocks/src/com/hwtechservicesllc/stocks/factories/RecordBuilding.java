@@ -19,7 +19,7 @@ package com.hwtechservicesllc.stocks.factories;
 
 //import android.util.Log;
 
-import com.hwtechservicesllc.stocks.enums.RecordType;
+import com.hwtechservicesllc.stocks.enums.MsgType;
 import com.hwtechservicesllc.stocks.views.BaseRecord;
 
 public abstract class RecordBuilding {
@@ -30,17 +30,17 @@ public abstract class RecordBuilding {
     //
     //
     //
-    public abstract BaseRecord makeRecord(RecordType recordType);
+    public abstract BaseRecord makeRecord(MsgType msgType);
 
     //
     // todo: orderRecord should receive an update record populated with trade data which will be passed to prepare
     //
-    public BaseRecord orderRecord(RecordType recordType) {
+    public BaseRecord orderRecord(MsgType msgType) {
 //        Log.v(DEBUG_TAG, "in orderRecord");
 
 
         //
-        BaseRecord baseRecord = makeRecord(recordType);
+        BaseRecord baseRecord = makeRecord(msgType);
         baseRecord.prepare();
 
         // todo: add function to update SQLite DB
