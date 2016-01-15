@@ -1,17 +1,19 @@
-package com.ej.i49;
+package com.hwtechservicesllc.ej.i49;
 
 /**
- * Copyright 9/28/15 by HW Tech Services, Inc., LLC
- * <p/>
- * Package com.hwtechservices.effectivejava
- * Project i49
- * <p/>
+ * Copyright 1/3/2016 HW Tech Services, LLC
+ * <p>
+ * Login   KimSoYeon
+ * <p>
+ * Package com.hwtechservicesllc.effectivejava.i49
+ * Project intellijPrototyping
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * <p/>
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,10 +21,5 @@ package com.ej.i49;
  * limitations under the License.
  **/
 
-public class GoodDeadLockQueue extends GoodWorkQueue {
-
-    @Override
-    protected void processItem(Object workItem) throws InterruptedException {
-
-    }
+public class TestBadQueue {
 }
