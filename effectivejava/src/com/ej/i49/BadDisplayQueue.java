@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ej.i49;
+package com.ej.i49;
 
 /**
  * Copyright 9/28/15 by HW Tech Services, Inc., LLC
@@ -19,21 +19,15 @@ package com.hwtechservicesllc.ej.i49;
  * limitations under the License.
  **/
 
-public class BadDeadLockQueue extends BadWorkQueue {
+public class BadDisplayQueue extends BadWorkQueue {
 
     @Override
     protected void processItem(Object workItem) throws InterruptedException {
 
-        // Bad. this logic will cause a deadlock with BadWorkQueue!
+        // Okay. this logic will not cause a deadlock;
+        System.out.println(workItem);
+        Thread.sleep(1000);
 
-        // call new thread
-        Thread child = new Thread() {
-            public void run() {
-                enqueue(workItem);
-            }
-        };
-
-        child.start();
-        child.join();   // deadlock happens here.
     }
+
 }

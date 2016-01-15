@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ej.i49;
+package com.ej.i49;
 
 public class Main {
 
