@@ -5,7 +5,7 @@ package com.hwtechservicesllc.jcg.designpatterns.builder;
  * <p>
  * Login   KimSoYeon
  * <p>
- * Package com.hwtechservicesllc.jcg.designpatterns.builder
+ * Package com.hwtechservicesllc.jcg.patterns.builder
  * Project intellijPrototyping
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
