@@ -5,7 +5,7 @@ import com.hwtechservicesllc.stocks.enums.FieldType;
 /**
  * Copyright 01/15/2016 HW Tech Services, LLC
  * <p>
- * Login   KimSoYeon
+ * Login   Hoi Wan Louis
  * <p>
  * Package com.hwtechservicesllc.stocks.fields
  * Project intellijPrototyping
@@ -28,6 +28,22 @@ public class TestFields {
     public static void main (String[] args) {
         CompanyName companyName = new CompanyName(FieldType.COMPANY, "Widgets, Inc.");
         System.out.println(companyName);
+        TickerSymbol tickerSymbol = new TickerSymbol(FieldType.SYMBOL, "WDGT");
+        System.out.println(tickerSymbol);
+        Price openingPrice = new Price(FieldType.OPENING_PRICE, 98.76);
+        System.out.println(openingPrice);
+        Price previousDaysClosingPrice = new Price(FieldType
+                                                          .PREVIOUS_DAYS_CLOSING_PRICE, 98.72);
+        System.out.println(previousDaysClosingPrice);
+        Price tradePrice = new Price(FieldType.TRADE_PRICE, 98.77);
+        System.out.println(tradePrice);
+        Quantity tradeQuantity = new Quantity(FieldType.TRADE_QUANTITY, 200.125);
+        System.out.println(tradeQuantity);
+        DateStamp dateStamp = new DateStamp(FieldType.TRADE_DATE_STAMP, "2016" +
+                ".01.15");
+        System.out.println(dateStamp);
+        TimeStamp timeStamp = new TimeStamp(FieldType.TRADE_TIME_STAMP, "12:34:56");
+        System.out.println(timeStamp);
     }
 
 }

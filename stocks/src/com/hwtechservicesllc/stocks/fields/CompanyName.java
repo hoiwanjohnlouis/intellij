@@ -5,7 +5,7 @@ import com.hwtechservicesllc.stocks.enums.FieldType;
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
  * <p>
- * Login   KimSoYeon
+ * Login   Hoi Wan Louis
  * <p>
  * Package com.hwtechservicesllc.stocks.fields
  * Project intellijPrototyping
