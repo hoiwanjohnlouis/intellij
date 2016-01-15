@@ -45,4 +45,13 @@ public class TickerSymbol {
         this.tickerSymbol = tickerSymbol;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("--------------"+fieldType.name()+"---------------------");
+        sb.append("\n TickerSymbol: ");
+        sb.append(getTickerSymbol());
+
+        return sb.toString();
+    }
 }

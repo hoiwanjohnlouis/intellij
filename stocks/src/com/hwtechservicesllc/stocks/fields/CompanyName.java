@@ -45,4 +45,13 @@ public class CompanyName {
         this.companyName = companyName;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("--------------"+fieldType.name()+"---------------------");
+        sb.append("\n Name: ");
+        sb.append(getCompanyName());
+
+        return sb.toString();
+    }
 }

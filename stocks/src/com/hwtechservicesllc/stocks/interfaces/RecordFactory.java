@@ -18,14 +18,14 @@ package com.hwtechservicesllc.stocks.interfaces;
 
 import com.hwtechservicesllc.stocks.fields.*;
 
-public interface RecordFactory extends FieldType {
+public interface RecordFactory {
 
-    public Company addCompany();
+    public CompanyName addCompanyName();
     public Price addOpeningPrice();
     public Price addPreviousDaysClosingPrice();
     public Price addTradePrice();
     public Quantity addTradeQuantity();
-    public Symbol addSymbol();
+    public TickerSymbol addTickweSymbol();
     public DateStamp addTradeDateStamp();
     public TimeStamp addTradeTimeStamp();
 

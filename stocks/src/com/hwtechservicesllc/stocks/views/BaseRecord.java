@@ -22,7 +22,6 @@ public abstract class BaseRecord {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private StringBuilder stringBuilder = new StringBuilder();
 
     private MsgType msgType;
     private CompanyName companyName;
@@ -44,7 +43,7 @@ public abstract class BaseRecord {
     }
 
     // concrete definition is by whom inherits this class
-    // abstract void prepare();
+    public abstract void prepare();
 
     public MsgType getMsgType() {
         return msgType;
@@ -111,10 +110,7 @@ public abstract class BaseRecord {
 
     // If any EnemyShip object is printed to screen this shows up
     public String toString(){
-
-        // clean up the buffer before using.
-        stringBuilder.delete(0,stringBuilder.length());
-
+        StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(msgType);
         stringBuilder.append("\n");
         stringBuilder.append("CompanyName");

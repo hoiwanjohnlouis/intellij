@@ -40,4 +40,13 @@ public class TimeStamp {
         this.timeStamp = timeStamp;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("--------------"+fieldType.name()+"---------------------");
+        sb.append("\n TimeStamp: ");
+        sb.append(getTimeStamp());
+
+        return sb.toString();
+    }
 }

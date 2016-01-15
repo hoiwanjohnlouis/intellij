@@ -19,6 +19,9 @@ package com.hwtechservicesllc.stocks.views;
 //import android.util.Log;
 
 import com.hwtechservicesllc.stocks.enums.FieldType;
+import com.hwtechservicesllc.stocks.enums.MsgType;
+import com.hwtechservicesllc.stocks.fields.CompanyName;
+import com.hwtechservicesllc.stocks.fields.TickerSymbol;
 import com.hwtechservicesllc.stocks.interfaces.RecordFactory;
 
 
@@ -30,57 +33,20 @@ public class TradeRecord extends BaseRecord {
     // We define the type of record we want to create
     // by stating the factory to build trades
 
-    RecordFactory recordFactory;
+    // RecordFactory recordFactory;
+
+    public TradeRecord(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
+        super(msgType, companyName, tickerSymbol);
+    }
 
     // The trade factory is sent to this method.
     // The factory will specifies what fields to populate
-
-    public TradeRecord(RecordFactory RecordFactory) {
-        //Log.v(DEBUG_TAG, "in TradeRecord constructor");
-
-        this.recordFactory = recordFactory;
-
-    }
 
     public void prepare() {
         //Log.v(DEBUG_TAG, "in prepare");
 
         // The fields needed were passed in the factory
 
-        company = IRecordFactory.addCompany();
-        company.setFieldType(EDescription.COMPANY);
-        company.setLongName("");
-
-        symbol = IRecordFactory.addSymbol();
-        symbol.setDescription(EDescription.SYMBOL);
-        symbol.setSymbol("");
-
-        openingPrice = IRecordFactory.addOpeningPrice();
-        openingPrice.setFieldType(EDescription.OPENING_PRICE);
-        openingPrice.setPrice(0.00);
-
-        previousDaysClosingPrice = IRecordFactory.addPreviousDaysClosingPrice();
-        previousDaysClosingPrice.setFieldType(EDescription.PREVIOUS_DAYS_CLOSING_PRICE);
-        previousDaysClosingPrice.setPrice(0.00);
-
-        lastTradePrice = IRecordFactory.addTradePrice();
-        lastTradePrice.setFieldType(EDescription.TRADE_PRICE);
-        lastTradePrice.setPrice(0.00);
-
-        lastTradeQuantity = IRecordFactory.addTradeQuantity();
-        lastTradeQuantity.setDescription(EDescription.TRADE_QUANTITY);
-        lastTradeQuantity.setQuantity(0.00);
-
-        lastTradeDateStamp = IRecordFactory.addTradeDateStamp();
-        lastTradeDateStamp.setFieldType(EDescription.TRADE_DATE_STAMP);
-        lastTradeDateStamp.setDateStamp("");
-
-        lastTradeTimeStamp = IRecordFactory.addTradeTimeStamp();
-        lastTradeTimeStamp.setDescription(EDescription.TRADE_TIME_STAMP);
-        lastTradeTimeStamp.setTimeStamp("");
-
-
     }
-
 
 }

@@ -26,4 +26,43 @@ public class TradeFactory implements RecordFactory {
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
+    @Override
+    public CompanyName addCompanyName() {
+        return null;
+    }
+
+    @Override
+    public Price addOpeningPrice() {
+        return null;
+    }
+
+    @Override
+    public Price addPreviousDaysClosingPrice() {
+        return null;
+    }
+
+    @Override
+    public Price addTradePrice() {
+        return null;
+    }
+
+    @Override
+    public Quantity addTradeQuantity() {
+        return null;
+    }
+
+    @Override
+    public TickerSymbol addTickweSymbol() {
+        return null;
+    }
+
+    @Override
+    public DateStamp addTradeDateStamp() {
+        return null;
+    }
+
+    @Override
+    public TimeStamp addTradeTimeStamp() {
+        return null;
+    }
 }

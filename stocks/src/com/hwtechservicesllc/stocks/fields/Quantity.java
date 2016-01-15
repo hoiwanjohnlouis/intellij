@@ -40,4 +40,13 @@ public class Quantity {
         this.quantity = quantity;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("--------------"+fieldType.name()+"---------------------");
+        sb.append("\n Quantity: ");
+        sb.append(getQuantity());
+
+        return sb.toString();
+    }
 }
