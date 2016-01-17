@@ -7,7 +7,7 @@ import com.hwtechservicesllc.stocks.enums.FieldType;
  * <p>
  * Login   Hoi Wan Louis
  * <p>
- * Package com.hwtechservicesllc.stocks.interfaces
+ * Package com.hwtechservicesllc.stocks.fields
  * Project intellijPrototyping
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -48,9 +48,10 @@ public class TickerSymbol {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("--------------"+fieldType.name()+"---------------------");
-        sb.append("\n TickerSymbol: ");
+        sb.append(fieldType.name());
+        sb.append(":[");
         sb.append(getTickerSymbol());
+        sb.append("]");
 
         return sb.toString();
     }

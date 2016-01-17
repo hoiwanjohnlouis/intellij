@@ -20,8 +20,8 @@ package com.hwtechservicesllc.stocks.enums;
 
 public enum FieldType {
 
-    COMPANY,
-    SYMBOL,
+    COMPANY_NAME,
+    TICKER_SYMBOL,
     OPENING_PRICE,
     PREVIOUS_DAYS_CLOSING_PRICE,
     TRADE_PRICE,
@@ -29,4 +29,11 @@ public enum FieldType {
     TRADE_DATE_STAMP,
     TRADE_TIME_STAMP;
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.name());
+
+        return sb.toString();
+    }
 }

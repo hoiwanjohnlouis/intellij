@@ -18,7 +18,7 @@ package com.hwtechservicesllc.stocks.views;
 import com.hwtechservicesllc.stocks.enums.MsgType;
 import com.hwtechservicesllc.stocks.fields.*;
 
-public abstract class BaseRecord {
+public abstract class BaseView {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
@@ -34,9 +34,9 @@ public abstract class BaseRecord {
     private TimeStamp lastTradeTimeStamp;
 
     // no one can call default constructor
-    private BaseRecord() {}
+    private BaseView() {}
 
-    public BaseRecord(final MsgType msgType, final CompanyName companyName, final TickerSymbol tickerSymbol) {
+    public BaseView(final MsgType msgType, final CompanyName companyName, final TickerSymbol tickerSymbol) {
         this.msgType = msgType;
         this.companyName = companyName;
         this.tickerSymbol = tickerSymbol;
@@ -108,42 +108,33 @@ public abstract class BaseRecord {
         this.lastTradeTimeStamp = lastTradeTimeStamp;
     }
 
-    // If any EnemyShip object is printed to screen this shows up
+    //
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(msgType);
         stringBuilder.append("\n");
-        stringBuilder.append("CompanyName");
-        stringBuilder.append(":");
-        stringBuilder.append(companyName.getCompanyName());
-        stringBuilder.append(",\n");
-        stringBuilder.append("TickerSymbol");
-        stringBuilder.append(":");
-        stringBuilder.append(tickerSymbol.getTickerSymbol());
-        stringBuilder.append(",\n");
-        stringBuilder.append("openingPrice");
-        stringBuilder.append(":");
-        stringBuilder.append(openingPrice.getPrice());
-        stringBuilder.append(",\n");
-        stringBuilder.append("previousDaysClosingPrice");
-        stringBuilder.append(":");
-        stringBuilder.append(previousDaysClosingPrice.getPrice());
-        stringBuilder.append(",\n");
-        stringBuilder.append("lastTradePrice");
-        stringBuilder.append(":");
-        stringBuilder.append(lastTradePrice.getPrice());
-        stringBuilder.append(",\n");
-        stringBuilder.append("lastTradeQuantity");
-        stringBuilder.append(":");
-        stringBuilder.append(lastTradeQuantity.getQuantity());
-        stringBuilder.append(",\n");
-        stringBuilder.append("lastTradeDateStamp");
-        stringBuilder.append(":");
-        stringBuilder.append(lastTradeDateStamp.getDateStamp());
-        stringBuilder.append(",\n");
-        stringBuilder.append("lastTradeTimeStamp");
-        stringBuilder.append(":");
-        stringBuilder.append(lastTradeTimeStamp.getTimeStamp());
+        stringBuilder.append(companyName);
+        stringBuilder.append("\n");
+        stringBuilder.append(tickerSymbol);
+
+        if (null != openingPrice) {
+            stringBuilder.append(openingPrice);
+        }
+        if (null != previousDaysClosingPrice) {
+            stringBuilder.append(previousDaysClosingPrice);
+        }
+        if (null != lastTradePrice) {
+            stringBuilder.append(lastTradePrice);
+        }
+        if (null != lastTradeQuantity) {
+            stringBuilder.append(lastTradeQuantity);
+        }
+        if (null != lastTradeDateStamp) {
+            stringBuilder.append(lastTradeDateStamp);
+        }
+        if (null != lastTradeTimeStamp) {
+            stringBuilder.append(lastTradeTimeStamp);
+        }
 
         return stringBuilder.toString();
     }

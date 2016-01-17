@@ -16,31 +16,40 @@ package com.hwtechservicesllc.stocks.factories;
     limitations under the License.
 */
 
+
 //import android.util.Log;
 
 import com.hwtechservicesllc.stocks.enums.MsgType;
 import com.hwtechservicesllc.stocks.fields.CompanyName;
 import com.hwtechservicesllc.stocks.fields.TickerSymbol;
-import com.hwtechservicesllc.stocks.interfaces.RecordFactory;
-import com.hwtechservicesllc.stocks.views.BaseRecord;
-import com.hwtechservicesllc.stocks.views.TradeRecord;
+import com.hwtechservicesllc.stocks.views.BaseView;
 
-
-public class TradeBuilding extends RecordBuilding {
+public abstract class ViewBuilding {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    public BaseRecord makeRecord(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
-        //Log.v(DEBUG_TAG, "in makeRecord:" + msgType);
+    //
+    //
+    //
+    public abstract BaseView makeRecord(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol);
 
-        BaseRecord tradeRecord;
+    //
+    // todo: orderRecord should receive an update record populated with trade data which will be passed to prepare
+    //
+    public BaseView orderRecord(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
+//        Log.v(DEBUG_TAG, "in orderRecord");
 
-        RecordFactory tradeRecordFactory = new TradeFactory();
-        tradeRecord = new TradeRecord(msgType, companyName, tickerSymbol);
-//        tradeRecord.setMsgType(msgType);
 
-        return tradeRecord;
+        //
+        BaseView baseView = makeRecord(msgType, companyName, tickerSymbol);
+        baseView.prepare();
+
+        // todo: add function to update SQLite DB
+
+        // todo: add function to update GUI related adapter
+
+        return baseView;
     }
 
 }

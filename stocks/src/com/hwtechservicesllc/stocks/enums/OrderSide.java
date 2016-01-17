@@ -43,4 +43,15 @@ public enum OrderSide {
         this.side = side;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.name());
+        sb.append(":[");
+        sb.append(this.side);
+        sb.append("]");
+
+        return sb.toString();
+    }
+
 }

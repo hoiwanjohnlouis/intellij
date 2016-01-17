@@ -21,48 +21,49 @@ import com.hwtechservicesllc.stocks.fields.*;
 import com.hwtechservicesllc.stocks.interfaces.*;
 
 
-public class TradeFactory implements RecordFactory {
+public class ViewFactory implements com.hwtechservicesllc.stocks.interfaces.ViewFactory {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
+
     @Override
-    public CompanyName addCompanyName() {
+    public CompanyName addCompanyName(FieldType fieldType, String companyName) {
         return null;
     }
 
     @Override
-    public Price addOpeningPrice() {
+    public TickerSymbol addTickerSymbol(FieldType fieldType, String tickerSymbol) {
         return null;
     }
 
     @Override
-    public Price addPreviousDaysClosingPrice() {
+    public Price addOpeningPrice(FieldType fieldType, double openingPrice) {
         return null;
     }
 
     @Override
-    public Price addTradePrice() {
+    public Price addPreviousDaysClosingPrice(FieldType fieldType, String companyName) {
         return null;
     }
 
     @Override
-    public Quantity addTradeQuantity() {
+    public Price addTradePrice(FieldType fieldType, double tradePrice) {
         return null;
     }
 
     @Override
-    public TickerSymbol addTickweSymbol() {
+    public Quantity addTradeQuantity(FieldType fieldType, double tradeQuantity) {
         return null;
     }
 
     @Override
-    public DateStamp addTradeDateStamp() {
+    public DateStamp addTradeDateStamp(FieldType fieldType, String tradeDateStamp) {
         return null;
     }
 
     @Override
-    public TimeStamp addTradeTimeStamp() {
+    public TimeStamp addTradeTimeStamp(FieldType fieldType, String tradeTimeStamp) {
         return null;
     }
 }

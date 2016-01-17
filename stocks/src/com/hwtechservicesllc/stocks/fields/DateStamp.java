@@ -48,9 +48,10 @@ public class DateStamp {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("--------------"+fieldType.name()+"---------------------");
-        sb.append("\n DateStamp: ");
+        sb.append(fieldType.name());
+        sb.append(":[");
         sb.append(getDateStamp());
+        sb.append("]");
 
         return sb.toString();
     }

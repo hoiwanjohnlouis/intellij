@@ -48,9 +48,10 @@ public class Quantity {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("--------------"+fieldType.name()+"---------------------");
-        sb.append("\n Quantity: ");
+        sb.append(fieldType.name());
+        sb.append(":[");
         sb.append(getQuantity());
+        sb.append("]");
 
         return sb.toString();
     }

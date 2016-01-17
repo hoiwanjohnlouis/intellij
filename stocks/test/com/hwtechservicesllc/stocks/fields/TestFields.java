@@ -26,9 +26,9 @@ import com.hwtechservicesllc.stocks.enums.FieldType;
 public class TestFields {
 
     public static void main (String[] args) {
-        CompanyName companyName = new CompanyName(FieldType.COMPANY, "Widgets, Inc.");
+        CompanyName companyName = new CompanyName(FieldType.COMPANY_NAME, "Widgets, Inc.");
         System.out.println(companyName);
-        TickerSymbol tickerSymbol = new TickerSymbol(FieldType.SYMBOL, "WDGT");
+        TickerSymbol tickerSymbol = new TickerSymbol(FieldType.TICKER_SYMBOL, "WIDG");
         System.out.println(tickerSymbol);
         Price openingPrice = new Price(FieldType.OPENING_PRICE, 98.76);
         System.out.println(openingPrice);

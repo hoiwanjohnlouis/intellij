@@ -41,4 +41,18 @@ public enum MsgType {
         this.msgDescription = msgDescription;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.name());
+        sb.append(":[");
+        sb.append(this.msgType);
+        sb.append("]");
+        sb.append(":[");
+        sb.append(this.msgDescription);
+        sb.append("]");
+
+        return sb.toString();
+    }
+
 }

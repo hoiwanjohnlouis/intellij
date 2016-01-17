@@ -18,14 +18,12 @@ package com.hwtechservicesllc.stocks.views;
 
 //import android.util.Log;
 
-import com.hwtechservicesllc.stocks.enums.FieldType;
 import com.hwtechservicesllc.stocks.enums.MsgType;
 import com.hwtechservicesllc.stocks.fields.CompanyName;
 import com.hwtechservicesllc.stocks.fields.TickerSymbol;
-import com.hwtechservicesllc.stocks.interfaces.RecordFactory;
 
 
-public class TradeRecord extends BaseRecord {
+public class TradeView extends BaseView {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
@@ -33,9 +31,9 @@ public class TradeRecord extends BaseRecord {
     // We define the type of record we want to create
     // by stating the factory to build trades
 
-    // RecordFactory recordFactory;
+    // ViewFactory recordFactory;
 
-    public TradeRecord(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
+    public TradeView(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
         super(msgType, companyName, tickerSymbol);
     }
 
