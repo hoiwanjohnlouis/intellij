@@ -16,7 +16,7 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
 */
 
 
-import com.hwtechservicesllc.me.abstractfactories.fields.*;
+import com.hwtechservicesllc.ms.abstractfactories.fields.*;
 
 public abstract class Record {
 

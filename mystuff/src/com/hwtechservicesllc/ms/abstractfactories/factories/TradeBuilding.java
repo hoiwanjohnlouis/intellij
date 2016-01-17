@@ -16,8 +16,8 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-import com.hwtechservicesllc.me.abstractfactories.fields.ERecordType;
-import com.hwtechservicesllc.me.abstractfactories.fields.IRecordFactory;
+import com.hwtechservicesllc.ms.abstractfactories.fields.ERecordType;
+import com.hwtechservicesllc.ms.abstractfactories.fields.IRecordFactory;
 
 public class TradeBuilding extends RecordBuilding {
 

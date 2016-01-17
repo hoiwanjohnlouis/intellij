@@ -1,10 +1,10 @@
 package com.hwtechservicesllc.ms.abstractfactories;
 
 
-import com.hwtechservicesllc.me.abstractfactories.factories.Record;
-import com.hwtechservicesllc.me.abstractfactories.factories.RecordBuilding;
-import com.hwtechservicesllc.me.abstractfactories.factories.TradeBuilding;
-import com.hwtechservicesllc.me.abstractfactories.fields.ERecordType;
+import com.hwtechservicesllc.ms.abstractfactories.factories.Record;
+import com.hwtechservicesllc.ms.abstractfactories.factories.RecordBuilding;
+import com.hwtechservicesllc.ms.abstractfactories.factories.TradeBuilding;
+import com.hwtechservicesllc.ms.abstractfactories.fields.ERecordType;
 
 public class TestFactoriesActivity {
 
