@@ -99,6 +99,12 @@ public class TradeView {
             this.msgType = msgType;
             this.companyName = companyName;
             this.tickerSymbol = tickerSymbol;
+            this.openingPrice = Price.DEFAULT_PRICE_FIELD;
+            this.previousDaysClosingPrice = Price.DEFAULT_PRICE_FIELD;
+            this.lastTradePrice = Price.DEFAULT_PRICE_FIELD;
+            this.lastTradeQuantity = Quantity.DEFAULT_QUANTITY_FIELD;
+            this.lastTradeDateStamp = DateStamp.DEFAULT_DATE_STAMP_FIELD;
+            this.lastTradeTimeStamp = TimeStamp.DEFAULT_TIME_STAMP_FIELD;
         }
 
         public TradeViewBuilder buildOpeningPrice(Price openingPrice) {

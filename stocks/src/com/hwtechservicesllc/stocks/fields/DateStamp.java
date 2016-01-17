@@ -27,11 +27,19 @@ public class DateStamp {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_DATE_STAMP;
+    private final String DEFAULT_DATE_STAMP = "1900.01.01";
+
     private FieldType fieldType;
     private String dateStamp;
 
-    // no one can call default constructor
-    private DateStamp() {}
+    public final static DateStamp DEFAULT_DATE_STAMP_FIELD = new DateStamp();
+
+    //
+    public DateStamp() {
+        this.fieldType = DEFAULT_FIELD_TYPE;
+        this.dateStamp = DEFAULT_DATE_STAMP;
+    }
 
     public DateStamp(final FieldType fieldType, final String dateStamp) {
         this.fieldType = fieldType;

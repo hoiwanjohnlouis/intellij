@@ -20,6 +20,12 @@ package com.hwtechservicesllc.stocks.enums;
 
 public enum FieldType {
 
+    DEFAULT_COMPANY_NAME,
+    DEFAULT_TICKER_SYMBOL,
+    DEFAULT_PRICE,
+    DEFAULT_QUANTITY,
+    DEFAULT_DATE_STAMP,
+    DEFAULT_TIME_STAMP,
     COMPANY_NAME,
     TICKER_SYMBOL,
     OPENING_PRICE,

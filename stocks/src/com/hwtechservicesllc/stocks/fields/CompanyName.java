@@ -27,11 +27,19 @@ public class CompanyName {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_COMPANY_NAME;
+    private final String DEFAULT_COMPANY_NAME = "Some Widgets, Inc.";
+
     private FieldType fieldType;
     private String companyName;
 
-    // no one can call default constructor
-    private CompanyName() {}
+    public final static CompanyName DEFAULT_COMPANY_NAME_FIELD = new CompanyName();
+
+    //
+    public CompanyName() {
+        this.fieldType = DEFAULT_FIELD_TYPE;
+        this.companyName = DEFAULT_COMPANY_NAME;
+    }
 
     public CompanyName(final FieldType fieldType, final String companyName) {
         this.fieldType = fieldType;

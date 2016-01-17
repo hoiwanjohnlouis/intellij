@@ -27,11 +27,19 @@ public class Quantity {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_QUANTITY;
+    private final double DEFAULT_QUANTITY = 0.00;
+
     private FieldType fieldType;
     private double quantity;
 
-    // no one can call default constructor
-    private Quantity() {}
+    public final static Quantity DEFAULT_QUANTITY_FIELD = new Quantity();
+
+    //
+    public Quantity() {
+        this.fieldType = DEFAULT_FIELD_TYPE;
+        this.quantity = DEFAULT_QUANTITY;
+    }
 
     public Quantity(final FieldType fieldType, final double quantity) {
         this.fieldType = fieldType;

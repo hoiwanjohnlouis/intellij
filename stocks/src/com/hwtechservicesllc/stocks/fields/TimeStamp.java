@@ -27,11 +27,19 @@ public class TimeStamp {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_TIME_STAMP;
+    private final String DEFAULT_TIME_STAMP = "00:00:00";
+
     private FieldType fieldType;
     private String timeStamp;
 
-    // no one can call default constructor
-    private TimeStamp() {}
+    public final static TimeStamp DEFAULT_TIME_STAMP_FIELD = new TimeStamp();
+
+    //
+    public TimeStamp() {
+        this.fieldType = DEFAULT_FIELD_TYPE;
+        this.timeStamp = DEFAULT_TIME_STAMP;
+    }
 
     public TimeStamp(final FieldType fieldType, final String timeStamp) {
         this.fieldType = fieldType;

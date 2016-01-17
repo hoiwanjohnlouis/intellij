@@ -27,11 +27,20 @@ public class TickerSymbol {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_TICKER_SYMBOL;
+    private final String DEFAULT_TICKER_SYMBOL = "WDGTS";
+
     private FieldType fieldType;
     private String tickerSymbol;
 
-    // no one can call default constructor
-    private TickerSymbol() {}
+    public final static TickerSymbol DEFAULT_TICKER_SYMBOL_FIELD = new TickerSymbol();
+
+
+    //
+    public TickerSymbol() {
+        this.fieldType = DEFAULT_FIELD_TYPE;
+        this.tickerSymbol = DEFAULT_TICKER_SYMBOL;
+    }
 
     public TickerSymbol(final FieldType fieldType, final String tickerSymbol) {
         this.fieldType = fieldType;

@@ -27,11 +27,19 @@ public class Price {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_PRICE;
+    private final double DEFAULT_PRICE = 0.00;
+
     private FieldType fieldType;
     private double price;
 
-    // no one can call default constructor
-    private Price() {}
+    public final static Price DEFAULT_PRICE_FIELD = new Price();
+
+    //
+    public Price() {
+        this.fieldType = DEFAULT_FIELD_TYPE;
+        this.price = DEFAULT_PRICE;
+    }
 
     public Price(final FieldType fieldType, final double price) {
         this.fieldType = fieldType;
