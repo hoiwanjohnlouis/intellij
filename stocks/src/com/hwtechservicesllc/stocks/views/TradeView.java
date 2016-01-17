@@ -1,7 +1,6 @@
 package com.hwtechservicesllc.stocks.views;
-
 /*
-    Copyright (c) 2015  HW Tech Services, Inc., LLC
+    Copyright (c) 2014  Hoi Wan Louis
  
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -16,35 +15,125 @@ package com.hwtechservicesllc.stocks.views;
     limitations under the License.
 */
 
-//import android.util.Log;
-
 import com.hwtechservicesllc.stocks.enums.MsgType;
-import com.hwtechservicesllc.stocks.fields.CompanyName;
-import com.hwtechservicesllc.stocks.fields.TickerSymbol;
+import com.hwtechservicesllc.stocks.fields.*;
 
-
-public class TradeView extends BaseView {
+public class TradeView {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    // We define the type of record we want to create
-    // by stating the factory to build trades
+    private MsgType msgType;
+    private CompanyName companyName;
+    private TickerSymbol tickerSymbol;
+    private Price openingPrice;
+    private Price previousDaysClosingPrice;
+    private Price lastTradePrice;
+    private Quantity lastTradeQuantity;
+    private DateStamp lastTradeDateStamp;
+    private TimeStamp lastTradeTimeStamp;
 
-    // ViewFactory recordFactory;
-
-    public TradeView(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
-        super(msgType, companyName, tickerSymbol);
+    //
+    private TradeView(TradeViewBuilder tradeViewBuilder) {
+        this.msgType = tradeViewBuilder.msgType;
+        this.companyName = tradeViewBuilder.companyName;
+        this.tickerSymbol = tradeViewBuilder.tickerSymbol;
+        this.openingPrice = tradeViewBuilder.openingPrice;
+        this.previousDaysClosingPrice = tradeViewBuilder.previousDaysClosingPrice;
+        this.lastTradePrice = tradeViewBuilder.lastTradePrice;
+        this.lastTradeQuantity = tradeViewBuilder.lastTradeQuantity;
+        this.lastTradeDateStamp = tradeViewBuilder.lastTradeDateStamp;
+        this.lastTradeTimeStamp = tradeViewBuilder.lastTradeTimeStamp;
     }
 
-    // The trade factory is sent to this method.
-    // The factory will specifies what fields to populate
+    //
+    public String toString(){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(msgType);
+        stringBuilder.append("\n");
+        stringBuilder.append(companyName);
+        stringBuilder.append("\n");
+        stringBuilder.append(tickerSymbol);
 
-    public void prepare() {
-        //Log.v(DEBUG_TAG, "in prepare");
+        if (null != openingPrice) {
+            stringBuilder.append(openingPrice);
+        }
+        if (null != previousDaysClosingPrice) {
+            stringBuilder.append(previousDaysClosingPrice);
+        }
+        if (null != lastTradePrice) {
+            stringBuilder.append(lastTradePrice);
+        }
+        if (null != lastTradeQuantity) {
+            stringBuilder.append(lastTradeQuantity);
+        }
+        if (null != lastTradeDateStamp) {
+            stringBuilder.append(lastTradeDateStamp);
+        }
+        if (null != lastTradeTimeStamp) {
+            stringBuilder.append(lastTradeTimeStamp);
+        }
 
-        // The fields needed were passed in the factory
+        return stringBuilder.toString();
+    }
 
+
+    // static helper class to build tradeview
+    public static class TradeViewBuilder {
+
+        // for logging purposes
+        private final String DEBUG_TAG = this.getClass().getSimpleName();
+
+        private MsgType msgType;
+        private CompanyName companyName;
+        private TickerSymbol tickerSymbol;
+        private Price openingPrice;
+        private Price previousDaysClosingPrice;
+        private Price lastTradePrice;
+        private Quantity lastTradeQuantity;
+        private DateStamp lastTradeDateStamp;
+        private TimeStamp lastTradeTimeStamp;
+
+        // static helper class to build object
+        public TradeViewBuilder(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
+            this.msgType = msgType;
+            this.companyName = companyName;
+            this.tickerSymbol = tickerSymbol;
+        }
+
+        public TradeViewBuilder buildOpeningPrice(Price openingPrice) {
+            this.openingPrice = openingPrice;
+            return this;
+        }
+
+        public TradeViewBuilder buildPreviousDaysClosingPrice(Price previousDaysClosingPrice) {
+            this.previousDaysClosingPrice = previousDaysClosingPrice;
+            return this;
+        }
+
+        public TradeViewBuilder buildTradePrice(Price lastTradePrice) {
+            this.lastTradePrice = lastTradePrice;
+            return this;
+        }
+
+        public TradeViewBuilder buildTradeQuantity(Quantity lastTradeQuantity) {
+            this.lastTradeQuantity = lastTradeQuantity;
+            return this;
+        }
+
+        public TradeViewBuilder buildTradeDateStamp(DateStamp lastTradeDateStamp) {
+            this.lastTradeDateStamp = lastTradeDateStamp;
+            return this;
+        }
+
+        public TradeViewBuilder buildTradeTimeStamp(TimeStamp lastTradeTimeStamp) {
+            this.lastTradeTimeStamp = lastTradeTimeStamp;
+            return this;
+        }
+
+        public TradeView build() {
+            return new TradeView(this);
+        }
     }
 
 }
