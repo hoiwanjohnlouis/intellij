@@ -30,8 +30,7 @@ public class TestViews {
     public static void main (String[] args) {
         CompanyName companyName = new CompanyName(FieldType.COMPANY_NAME, "Wigets, Inc.");
         TickerSymbol tickerSymbol = new TickerSymbol(FieldType.TICKER_SYMBOL, "WIDG");
-        TradeView testView = new TradeView(MsgType.EXECUTION_REPORT, companyName,
-                                           tickerSymbol);
+        TradeView testView = new TradeView.TradeViewBuilder(MsgType.EXECUTION_REPORT, companyName, tickerSymbol).build();
         System.out.println(testView);
     }
 }

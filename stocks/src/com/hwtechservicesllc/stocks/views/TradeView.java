@@ -54,25 +54,18 @@ public class TradeView {
         stringBuilder.append(companyName);
         stringBuilder.append("\n");
         stringBuilder.append(tickerSymbol);
-
-        if (null != openingPrice) {
-            stringBuilder.append(openingPrice);
-        }
-        if (null != previousDaysClosingPrice) {
-            stringBuilder.append(previousDaysClosingPrice);
-        }
-        if (null != lastTradePrice) {
-            stringBuilder.append(lastTradePrice);
-        }
-        if (null != lastTradeQuantity) {
-            stringBuilder.append(lastTradeQuantity);
-        }
-        if (null != lastTradeDateStamp) {
-            stringBuilder.append(lastTradeDateStamp);
-        }
-        if (null != lastTradeTimeStamp) {
-            stringBuilder.append(lastTradeTimeStamp);
-        }
+        stringBuilder.append("\n");
+        stringBuilder.append(openingPrice);
+        stringBuilder.append("\n");
+        stringBuilder.append(previousDaysClosingPrice);
+        stringBuilder.append("\n");
+        stringBuilder.append(lastTradePrice);
+        stringBuilder.append("\n");
+        stringBuilder.append(lastTradeQuantity);
+        stringBuilder.append("\n");
+        stringBuilder.append(lastTradeDateStamp);
+        stringBuilder.append("\n");
+        stringBuilder.append(lastTradeTimeStamp);
 
         return stringBuilder.toString();
     }
