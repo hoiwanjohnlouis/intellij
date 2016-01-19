@@ -17,6 +17,8 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
 */
 
 
+import com.hwtechservicesllc.ms.abstractfactories.interfaces.ISymbol;
+
 public class Symbol implements ISymbol {
 
     // for logging purposes

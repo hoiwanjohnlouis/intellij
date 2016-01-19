@@ -17,6 +17,8 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
 */
 
 
+import com.hwtechservicesllc.ms.abstractfactories.interfaces.ICompany;
+
 public class Company implements ICompany {
 
     // for logging purposes

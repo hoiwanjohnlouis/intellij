@@ -17,6 +17,8 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
 */
 
 
+import com.hwtechservicesllc.ms.abstractfactories.interfaces.IPrice;
+
 public class Price implements IPrice {
 
     // for logging purposes

@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.fields;
+package com.hwtechservicesllc.ms.abstractfactories.interfaces;
 
 /*
     Copyright (c) 2014  HW Tech Services, Inc., LLC
@@ -16,12 +16,14 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
     limitations under the License.
 */
 
-public interface IDateStamp {
+import com.hwtechservicesllc.ms.abstractfactories.fields.EDescription;
+
+public interface IPrice {
 
     public EDescription getDescription();
     public void setDescription(EDescription description);
 
-    public String getDateStamp();
-    public void setDateStamp(String dateStamp);
+    public double getPrice();
+    public void setPrice(double price);
 
 }

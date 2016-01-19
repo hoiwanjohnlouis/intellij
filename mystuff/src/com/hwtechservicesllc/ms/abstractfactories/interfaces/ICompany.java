@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.fields;
+package com.hwtechservicesllc.ms.abstractfactories.interfaces;
 
 /*
     Copyright (c) 2014  HW Tech Services, Inc., LLC
@@ -16,12 +16,14 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
     limitations under the License.
 */
 
-public interface ISymbol {
+import com.hwtechservicesllc.ms.abstractfactories.fields.EDescription;
+
+public interface ICompany {
 
     public EDescription getDescription();
     public void setDescription(EDescription description);
 
-    public String getSymbol();
-    public void setSymbol(String symbol);
+    public String getLongName();
+    public void setLongName(String longName);
 
 }

@@ -16,6 +16,8 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
 */
 
 
+import com.hwtechservicesllc.ms.abstractfactories.interfaces.ITimeStamp;
+
 public class TimeStamp implements ITimeStamp {
 
     // for logging purposes

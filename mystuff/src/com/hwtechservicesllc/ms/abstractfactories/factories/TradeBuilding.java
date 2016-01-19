@@ -17,7 +17,7 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
 */
 
 import com.hwtechservicesllc.ms.abstractfactories.fields.ERecordType;
-import com.hwtechservicesllc.ms.abstractfactories.fields.IRecordFactory;
+import com.hwtechservicesllc.ms.abstractfactories.interfaces.IRecordFactory;
 
 public class TradeBuilding extends RecordBuilding {
 

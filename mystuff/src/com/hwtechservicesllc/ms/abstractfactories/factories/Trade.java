@@ -17,7 +17,7 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
 */
 
 import com.hwtechservicesllc.ms.abstractfactories.fields.EDescription;
-import com.hwtechservicesllc.ms.abstractfactories.fields.IRecordFactory;
+import com.hwtechservicesllc.ms.abstractfactories.interfaces.IRecordFactory;
 
 public class Trade extends Record {
 
@@ -27,7 +27,7 @@ public class Trade extends Record {
     // We define the type of record we want to create
     // by stating the factory to build trades
 
-    com.hwtechservicesllc.ms.abstractfactories.fields.IRecordFactory IRecordFactory;
+    com.hwtechservicesllc.ms.abstractfactories.interfaces.IRecordFactory IRecordFactory;
 
     // The trade factory is sent to this method.
     // The factory will specifies what fields to populate

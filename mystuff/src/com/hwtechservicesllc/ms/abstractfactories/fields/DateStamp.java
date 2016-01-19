@@ -15,6 +15,8 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
     limitations under the License.
 */
 
+import com.hwtechservicesllc.ms.abstractfactories.interfaces.IDateStamp;
+
 public class DateStamp implements IDateStamp {
 
     // for logging purposes

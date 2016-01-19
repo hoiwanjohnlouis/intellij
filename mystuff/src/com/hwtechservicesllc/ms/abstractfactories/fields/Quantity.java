@@ -17,6 +17,8 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
 */
 
 
+import com.hwtechservicesllc.ms.abstractfactories.interfaces.IQuantity;
+
 public class Quantity implements IQuantity {
 
     // for logging purposes

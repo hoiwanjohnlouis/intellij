@@ -1,7 +1,7 @@
-package com.hwtechservicesllc.ms.abstractfactories.fields;
+package com.hwtechservicesllc.ms.abstractfactories.interfaces;
 
 /*
-    Copyright (c) 2014  HW Tech Services, Inc., LLC
+    Copyright (c) 2015  HW Tech Services, Inc., LLC
  
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -16,12 +16,15 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
     limitations under the License.
 */
 
-public interface ICompany {
+public interface IRecordFactory {
 
-    public EDescription getDescription();
-    public void setDescription(EDescription description);
-
-    public String getLongName();
-    public void setLongName(String longName);
+    public ICompany addCompany();
+    public IPrice addOpeningPrice();
+    public IPrice addPreviousDaysClosingPrice();
+    public IPrice addTradePrice();
+    public IQuantity addTradeQuantity();
+    public ISymbol addSymbol();
+    public IDateStamp addTradeDateStamp();
+    public ITimeStamp addTradeTimeStamp();
 
 }
