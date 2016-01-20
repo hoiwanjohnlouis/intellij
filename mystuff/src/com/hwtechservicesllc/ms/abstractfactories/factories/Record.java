@@ -16,6 +16,7 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
+import com.hwtechservicesllc.ms.abstractfactories.enums.MsgType;
 import com.hwtechservicesllc.ms.abstractfactories.fields.*;
 import com.hwtechservicesllc.ms.abstractfactories.interfaces.*;
 
@@ -24,13 +25,11 @@ public abstract class Record {
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-
-    private RecordType recordType;
+    private MsgType msgType;
     private StringBuilder stringBuilder = new StringBuilder();
 
-
-    protected Company company;                 // 1
-    protected TickerSymbol tickerSymbol;                   // 2
+    protected CompanyName companyName;         // 1
+    protected TickerSymbol tickerSymbol;       // 2
     protected Price openingPrice;              // 3
     protected Price previousDaysClosingPrice;  // 4
     protected Price lastTradePrice;            // 5
@@ -38,10 +37,8 @@ public abstract class Record {
     protected DateStamp lastTradeDateStamp;    // 7
     protected TimeStamp lastTradeTimeStamp;    // 8
 
-
     // concrete definition is by whom inherits this class
     abstract void prepare();
-
 
     //
     public ERecordType getRecordType() {
