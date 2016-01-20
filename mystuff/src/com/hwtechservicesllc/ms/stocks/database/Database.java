@@ -18,8 +18,6 @@ package com.hwtechservicesllc.ms.stocks.database;
 
 import android.provider.BaseColumns;
 
-import com.hwtechservicesllc.stocks.R;
-
 //FYI: This is the same setup as PetTracker, same schema
 public final class Database {
 
