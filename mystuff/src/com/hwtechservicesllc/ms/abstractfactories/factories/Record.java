@@ -16,9 +16,8 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-import com.hwtechservicesllc.ms.abstractfactories.enums.MsgType;
-import com.hwtechservicesllc.ms.abstractfactories.fields.*;
-import com.hwtechservicesllc.ms.abstractfactories.interfaces.*;
+import com.hwtechservicesllc.ms.stocks.enums.MsgType;
+import com.hwtechservicesllc.ms.stocks.fields.*;
 
 public abstract class Record {
 
@@ -28,28 +27,17 @@ public abstract class Record {
     private MsgType msgType;
     private StringBuilder stringBuilder = new StringBuilder();
 
-    protected CompanyName companyName;         // 1
-    protected TickerSymbol tickerSymbol;       // 2
-    protected Price openingPrice;              // 3
-    protected Price previousDaysClosingPrice;  // 4
-    protected Price lastTradePrice;            // 5
-    protected Quantity lastTradeQuantity;      // 6
-    protected DateStamp lastTradeDateStamp;    // 7
-    protected TimeStamp lastTradeTimeStamp;    // 8
+    private CompanyName companyName;         // 1
+    private TickerSymbol tickerSymbol;       // 2
+    private Price openingPrice;              // 3
+    private Price previousDaysClosingPrice;  // 4
+    private Price lastTradePrice;            // 5
+    private Quantity lastTradeQuantity;      // 6
+    private DateStamp lastTradeDateStamp;    // 7
+    private TimeStamp lastTradeTimeStamp;    // 8
 
     // concrete definition is by whom inherits this class
-    abstract void prepare();
-
-    //
-    public ERecordType getRecordType() {
-        return recordType;
-    }
-
-    //
-    public void setRecordType(ERecordType recordType) {
-        this.recordType = recordType;
-    }
-
+    abstract Record build();
 
     // If any EnemyShip object is printed to screen this shows up
     public String toString(){
@@ -57,39 +45,23 @@ public abstract class Record {
         // clean up the buffer before using.
         stringBuilder.delete(0,stringBuilder.length());
 
-        stringBuilder.append(this.getRecordType());
+        stringBuilder.append(msgType);
         stringBuilder.append("\n");
-        stringBuilder.append(company.getDescription());
-        stringBuilder.append(":");
-        stringBuilder.append(company.getLongName());
-        stringBuilder.append(",\n");
-        stringBuilder.append(symbol.getDescription());
-        stringBuilder.append(":");
-        stringBuilder.append(symbol.getSymbol());
-        stringBuilder.append(",\n");
-        stringBuilder.append(openingPrice.getDescription());
-        stringBuilder.append(":");
-        stringBuilder.append(openingPrice.getPrice());
-        stringBuilder.append(",\n");
-        stringBuilder.append(previousDaysClosingPrice.getDescription());
-        stringBuilder.append(":");
-        stringBuilder.append(previousDaysClosingPrice.getPrice());
-        stringBuilder.append(",\n");
-        stringBuilder.append(lastTradePrice.getDescription());
-        stringBuilder.append(":");
-        stringBuilder.append(lastTradePrice.getPrice());
-        stringBuilder.append(",\n");
-        stringBuilder.append(lastTradeQuantity.getDescription());
-        stringBuilder.append(":");
-        stringBuilder.append(lastTradeQuantity.getQuantity());
-        stringBuilder.append(",\n");
-        stringBuilder.append(lastTradeDateStamp.getDescription());
-        stringBuilder.append(":");
-        stringBuilder.append(lastTradeDateStamp.getDateStamp());
-        stringBuilder.append(",\n");
-        stringBuilder.append(lastTradeTimeStamp.getDescription());
-        stringBuilder.append(":");
-        stringBuilder.append(lastTradeTimeStamp.getTimeStamp());
+        stringBuilder.append(companyName);
+        stringBuilder.append("\n");
+        stringBuilder.append(tickerSymbol);
+        stringBuilder.append("\n");
+        stringBuilder.append(openingPrice);
+        stringBuilder.append("\n");
+        stringBuilder.append(previousDaysClosingPrice);
+        stringBuilder.append("\n");
+        stringBuilder.append(lastTradePrice);
+        stringBuilder.append("\n");
+        stringBuilder.append(lastTradeQuantity);
+        stringBuilder.append("\n");
+        stringBuilder.append(lastTradeDateStamp);
+        stringBuilder.append("\n");
+        stringBuilder.append(lastTradeTimeStamp);
 
         return stringBuilder.toString();
 

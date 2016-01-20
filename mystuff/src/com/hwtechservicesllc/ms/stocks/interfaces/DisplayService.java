@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.interfaces;
+package com.hwtechservicesllc.ms.stocks.interfaces;
 
 /**
  * Copyright 01/12/2016 HW Tech Services, LLC

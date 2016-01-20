@@ -16,36 +16,19 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-public abstract class RecordBuilding {
+public class TradeBuilder extends RecordBuilder {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
+    public Record makeRecord(ERecordType recordType) {
+        Record tradeRecord = (Trade) null;
 
-    //
-    //
-    //
-    public abstract Record makeRecord(ERecordType recordType);
+        IRecordFactory tradeRecordFactory = new TradeFactory();
+        tradeRecord = new Trade(tradeRecordFactory);
+        tradeRecord.setRecordType(recordType);
 
-
-
-    //
-    // todo: orderRecord should receive an update record populated with trade data which will be passed to prepare
-    //
-    public Record orderRecord(ERecordType recordType) {
-
-        //
-        Record record = makeRecord(recordType);
-        record.prepare();
-
-
-        // todo: add function to update SQLite DB
-
-        // todo: add function to update GUI related adapter
-
-
-        return record;
-
+        return tradeRecord;
     }
 
 }

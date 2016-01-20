@@ -1,6 +1,6 @@
-package com.hwtechservicesllc.ms.abstractfactories.fields;
+package com.hwtechservicesllc.ms.stocks.fields;
 
-import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
+import com.hwtechservicesllc.ms.stocks.enums.FieldType;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -23,34 +23,34 @@ import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
  * limitations under the License.
  **/
 
-public class CompanyName {
+public class Price {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_COMPANY_NAME;
-    private final String DEFAULT_COMPANY_NAME = "Some Widgets, Inc.";
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_PRICE;
+    private final double DEFAULT_PRICE = 0.00;
 
     private FieldType fieldType;
-    private String companyName;
+    private double price;
 
-    public final static CompanyName DEFAULT_COMPANY_NAME_FIELD = new CompanyName();
+    public final static Price DEFAULT_PRICE_FIELD = new Price();
 
     //
-    public CompanyName() {
+    public Price() {
         this.fieldType = DEFAULT_FIELD_TYPE;
-        this.companyName = DEFAULT_COMPANY_NAME;
+        this.price = DEFAULT_PRICE;
     }
 
-    public CompanyName(final FieldType fieldType, final String companyName) {
+    public Price(final FieldType fieldType, final double price) {
         this.fieldType = fieldType;
-        this.companyName = companyName;
+        this.price = price;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public double getPrice() {
+        return price;
     }
-    public void setCompanyName(final String companyName) {
-        this.companyName = companyName;
+    public void setPrice(final double price) {
+        this.price = price;
     }
 
     @Override
@@ -58,7 +58,7 @@ public class CompanyName {
         StringBuilder sb = new StringBuilder();
         sb.append(fieldType.name());
         sb.append(":[");
-        sb.append(getCompanyName());
+        sb.append(getPrice());
         sb.append("]");
 
         return sb.toString();

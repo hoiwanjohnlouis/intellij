@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.views;
+package com.hwtechservicesllc.ms.stocks.views;
 
 /*
     Copyright (c) 2014  Hoi Wan Louis
@@ -16,8 +16,8 @@ package com.hwtechservicesllc.ms.abstractfactories.views;
     limitations under the License.
 */
 
-import com.hwtechservicesllc.ms.abstractfactories.enums.MsgType;
-import com.hwtechservicesllc.ms.abstractfactories.fields.*;
+import com.hwtechservicesllc.ms.stocks.enums.MsgType;
+import com.hwtechservicesllc.ms.stocks.fields.*;
 
 public class TradeView {
 

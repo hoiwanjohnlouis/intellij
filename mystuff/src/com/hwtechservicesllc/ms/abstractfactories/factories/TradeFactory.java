@@ -17,8 +17,7 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
 */
 
 
-import com.hwtechservicesllc.ms.abstractfactories.fields.*;
-import com.hwtechservicesllc.ms.abstractfactories.interfaces.*;
+import com.hwtechservicesllc.ms.stocks.fields.*;
 
 public class TradeFactory implements IRecordFactory {
 

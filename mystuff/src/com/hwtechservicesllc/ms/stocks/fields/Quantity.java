@@ -1,6 +1,6 @@
-package com.hwtechservicesllc.ms.abstractfactories.fields;
+package com.hwtechservicesllc.ms.stocks.fields;
 
-import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
+import com.hwtechservicesllc.ms.stocks.enums.FieldType;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -23,34 +23,34 @@ import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
  * limitations under the License.
  **/
 
-public class Price {
+public class Quantity {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_PRICE;
-    private final double DEFAULT_PRICE = 0.00;
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_QUANTITY;
+    private final double DEFAULT_QUANTITY = 0.00;
 
     private FieldType fieldType;
-    private double price;
+    private double quantity;
 
-    public final static Price DEFAULT_PRICE_FIELD = new Price();
+    public final static Quantity DEFAULT_QUANTITY_FIELD = new Quantity();
 
     //
-    public Price() {
+    public Quantity() {
         this.fieldType = DEFAULT_FIELD_TYPE;
-        this.price = DEFAULT_PRICE;
+        this.quantity = DEFAULT_QUANTITY;
     }
 
-    public Price(final FieldType fieldType, final double price) {
+    public Quantity(final FieldType fieldType, final double quantity) {
         this.fieldType = fieldType;
-        this.price = price;
+        this.quantity = quantity;
     }
 
-    public double getPrice() {
-        return price;
+    public double getQuantity() {
+        return quantity;
     }
-    public void setPrice(final double price) {
-        this.price = price;
+    public void setQuantity(final double quantity) {
+        this.quantity = quantity;
     }
 
     @Override
@@ -58,7 +58,7 @@ public class Price {
         StringBuilder sb = new StringBuilder();
         sb.append(fieldType.name());
         sb.append(":[");
-        sb.append(getPrice());
+        sb.append(getQuantity());
         sb.append("]");
 
         return sb.toString();

@@ -1,6 +1,6 @@
-package com.hwtechservicesllc.ms.abstractfactories.fields;
+package com.hwtechservicesllc.ms.stocks.fields;
 
-import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
+import com.hwtechservicesllc.ms.stocks.enums.FieldType;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC

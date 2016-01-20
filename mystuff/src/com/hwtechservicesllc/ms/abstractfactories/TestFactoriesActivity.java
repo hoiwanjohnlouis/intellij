@@ -1,10 +1,10 @@
 package com.hwtechservicesllc.ms.abstractfactories;
 
 
-import com.hwtechservicesllc.ms.abstractfactories.enums.MsgType;
+import com.hwtechservicesllc.ms.stocks.enums.MsgType;
 import com.hwtechservicesllc.ms.abstractfactories.factories.Record;
-import com.hwtechservicesllc.ms.abstractfactories.factories.RecordBuilding;
-import com.hwtechservicesllc.ms.abstractfactories.factories.TradeBuilding;
+import com.hwtechservicesllc.ms.abstractfactories.factories.RecordBuilder;
+import com.hwtechservicesllc.ms.abstractfactories.factories.TradeBuilder;
 
 public class TestFactoriesActivity {
 
@@ -15,7 +15,7 @@ public class TestFactoriesActivity {
     public static void main (String[] args) {
 
         //  testing ticker record construction
-        RecordBuilding createTrade = new TradeBuilding();
+        RecordBuilder createTrade = new TradeBuilder();
         Record record = createTrade.orderRecord(MsgType.EXECUTION_REPORT);
         System.out.println(record + "\n");
 

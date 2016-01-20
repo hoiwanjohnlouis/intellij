@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.enums;
+package com.hwtechservicesllc.ms.stocks.enums;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC

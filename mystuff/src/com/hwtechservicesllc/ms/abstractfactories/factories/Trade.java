@@ -16,7 +16,7 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-import com.hwtechservicesllc.ms.abstractfactories.fields.EDescription;
+import com.hwtechservicesllc.ms.stocks.fields.EDescription;
 
 public class Trade extends Record {
 
@@ -26,7 +26,7 @@ public class Trade extends Record {
     // We define the type of record we want to create
     // by stating the factory to build trades
 
-    com.hwtechservicesllc.ms.abstractfactories.interfaces.IRecordFactory IRecordFactory;
+    com.hwtechservicesllc.ms.stocks.interfaces.IRecordFactory IRecordFactory;
 
     // The trade factory is sent to this method.
     // The factory will specifies what fields to populate

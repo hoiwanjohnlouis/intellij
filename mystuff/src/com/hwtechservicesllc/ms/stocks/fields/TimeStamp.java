@@ -1,9 +1,9 @@
-package com.hwtechservicesllc.ms.abstractfactories.fields;
+package com.hwtechservicesllc.ms.stocks.fields;
 
-import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
+import com.hwtechservicesllc.ms.stocks.enums.FieldType;
 
 /**
- * Copyright 01/12/2016 HW Tech Services, LLC
+ * Copyright 01/07/2016 HW Tech Services, LLC
  * <p>
  * Login   Hoi Wan Louis
  * <p>
@@ -23,35 +23,34 @@ import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
  * limitations under the License.
  **/
 
-public class TickerSymbol {
+public class TimeStamp {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_TICKER_SYMBOL;
-    private final String DEFAULT_TICKER_SYMBOL = "WDGTS";
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_TIME_STAMP;
+    private final String DEFAULT_TIME_STAMP = "00:00:00";
 
     private FieldType fieldType;
-    private String tickerSymbol;
+    private String timeStamp;
 
-    public final static TickerSymbol DEFAULT_TICKER_SYMBOL_FIELD = new TickerSymbol();
-
+    public final static TimeStamp DEFAULT_TIME_STAMP_FIELD = new TimeStamp();
 
     //
-    public TickerSymbol() {
+    public TimeStamp() {
         this.fieldType = DEFAULT_FIELD_TYPE;
-        this.tickerSymbol = DEFAULT_TICKER_SYMBOL;
+        this.timeStamp = DEFAULT_TIME_STAMP;
     }
 
-    public TickerSymbol(final FieldType fieldType, final String tickerSymbol) {
+    public TimeStamp(final FieldType fieldType, final String timeStamp) {
         this.fieldType = fieldType;
-        this.tickerSymbol = tickerSymbol;
+        this.timeStamp = timeStamp;
     }
 
-    public String getTickerSymbol() {
-        return tickerSymbol;
+    public String getTimeStamp() {
+        return timeStamp;
     }
-    public void setTickerSymbol(final String tickerSymbol) {
-        this.tickerSymbol = tickerSymbol;
+    public void setTimeStamp(final String timeStamp) {
+        this.timeStamp = timeStamp;
     }
 
     @Override
@@ -59,7 +58,7 @@ public class TickerSymbol {
         StringBuilder sb = new StringBuilder();
         sb.append(fieldType.name());
         sb.append(":[");
-        sb.append(getTickerSymbol());
+        sb.append(getTimeStamp());
         sb.append("]");
 
         return sb.toString();
