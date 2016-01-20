@@ -46,6 +46,69 @@ public class TradeView {
         this.lastTradeTimeStamp = tradeViewBuilder.lastTradeTimeStamp;
     }
 
+    // Only getters for these fields
+    public MsgType getMsgType() {
+        return msgType;
+    }
+
+    public CompanyName getCompanyName() {
+        return companyName;
+    }
+
+    public TickerSymbol getTickerSymbol() {
+        return tickerSymbol;
+    }
+
+
+    // getters & setters for remaining fields
+    public Price getOpeningPrice() {
+        return openingPrice;
+    }
+
+    public void setOpeningPrice(Price openingPrice) {
+        this.openingPrice = openingPrice;
+    }
+
+    public Price getPreviousDaysClosingPrice() {
+        return previousDaysClosingPrice;
+    }
+
+    public void setPreviousDaysClosingPrice(Price previousDaysClosingPrice) {
+        this.previousDaysClosingPrice = previousDaysClosingPrice;
+    }
+
+    public Price getLastTradePrice() {
+        return lastTradePrice;
+    }
+
+    public void setLastTradePrice(Price lastTradePrice) {
+        this.lastTradePrice = lastTradePrice;
+    }
+
+    public Quantity getLastTradeQuantity() {
+        return lastTradeQuantity;
+    }
+
+    public void setLastTradeQuantity(Quantity lastTradeQuantity) {
+        this.lastTradeQuantity = lastTradeQuantity;
+    }
+
+    public DateStamp getLastTradeDateStamp() {
+        return lastTradeDateStamp;
+    }
+
+    public void setLastTradeDateStamp(DateStamp lastTradeDateStamp) {
+        this.lastTradeDateStamp = lastTradeDateStamp;
+    }
+
+    public TimeStamp getLastTradeTimeStamp() {
+        return lastTradeTimeStamp;
+    }
+
+    public void setLastTradeTimeStamp(TimeStamp lastTradeTimeStamp) {
+        this.lastTradeTimeStamp = lastTradeTimeStamp;
+    }
+
     //
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();

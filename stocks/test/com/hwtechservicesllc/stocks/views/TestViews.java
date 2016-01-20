@@ -32,5 +32,9 @@ public class TestViews {
         TickerSymbol tickerSymbol = new TickerSymbol(FieldType.TICKER_SYMBOL, "WIDG");
         TradeView testView = new TradeView.TradeViewBuilder(MsgType.EXECUTION_REPORT, companyName, tickerSymbol).build();
         System.out.println(testView);
+
+        PriceView priceView = new PriceView.PriceViewBuilder(MsgType.EXECUTION_REPORT,tickerSymbol).build();
+        System.out.println(priceView);
+
     }
 }

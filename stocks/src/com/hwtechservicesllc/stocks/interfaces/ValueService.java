@@ -21,7 +21,7 @@ package com.hwtechservicesllc.stocks.interfaces;
  * limitations under the License.
  **/
 
-public interface DisplayField {
+public interface ValueService {
     // concrete definition is by whom inherits this class
-    public void displayField();
+    public String valueOf();
 }
