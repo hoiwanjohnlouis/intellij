@@ -3,7 +3,7 @@ package com.hwtechservicesllc.ms.abstractfactories.fields;
 import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
 
 /**
- * Copyright 01/07/2016 HW Tech Services, LLC
+ * Copyright 01/12/2016 HW Tech Services, LLC
  * <p>
  * Login   Hoi Wan Louis
  * <p>
@@ -23,34 +23,35 @@ import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
  * limitations under the License.
  **/
 
-public class Quantity {
+public class TickerSymbol {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_QUANTITY;
-    private final double DEFAULT_QUANTITY = 0.00;
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_TICKER_SYMBOL;
+    private final String DEFAULT_TICKER_SYMBOL = "WDGTS";
 
     private FieldType fieldType;
-    private double quantity;
+    private String tickerSymbol;
 
-    public final static Quantity DEFAULT_QUANTITY_FIELD = new Quantity();
+    public final static TickerSymbol DEFAULT_TICKER_SYMBOL_FIELD = new TickerSymbol();
+
 
     //
-    public Quantity() {
+    public TickerSymbol() {
         this.fieldType = DEFAULT_FIELD_TYPE;
-        this.quantity = DEFAULT_QUANTITY;
+        this.tickerSymbol = DEFAULT_TICKER_SYMBOL;
     }
 
-    public Quantity(final FieldType fieldType, final double quantity) {
+    public TickerSymbol(final FieldType fieldType, final String tickerSymbol) {
         this.fieldType = fieldType;
-        this.quantity = quantity;
+        this.tickerSymbol = tickerSymbol;
     }
 
-    public double getQuantity() {
-        return quantity;
+    public String getTickerSymbol() {
+        return tickerSymbol;
     }
-    public void setQuantity(final double quantity) {
-        this.quantity = quantity;
+    public void setTickerSymbol(final String tickerSymbol) {
+        this.tickerSymbol = tickerSymbol;
     }
 
     @Override
@@ -58,7 +59,7 @@ public class Quantity {
         StringBuilder sb = new StringBuilder();
         sb.append(fieldType.name());
         sb.append(":[");
-        sb.append(getQuantity());
+        sb.append(getTickerSymbol());
         sb.append("]");
 
         return sb.toString();

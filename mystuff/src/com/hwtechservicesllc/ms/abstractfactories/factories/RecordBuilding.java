@@ -16,8 +16,6 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-import com.hwtechservicesllc.ms.abstractfactories.fields.ERecordType;
-
 public abstract class RecordBuilding {
 
     // for logging purposes

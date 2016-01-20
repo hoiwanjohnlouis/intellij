@@ -17,7 +17,6 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
 */
 
 import com.hwtechservicesllc.ms.abstractfactories.fields.EDescription;
-import com.hwtechservicesllc.ms.abstractfactories.interfaces.IRecordFactory;
 
 public class Trade extends Record {
 

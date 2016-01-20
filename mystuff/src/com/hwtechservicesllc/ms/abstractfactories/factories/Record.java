@@ -1,4 +1,5 @@
 package com.hwtechservicesllc.ms.abstractfactories.factories;
+
 /*
     Copyright (c) 2014  Hoi Wan Louis
  
@@ -15,7 +16,6 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-
 import com.hwtechservicesllc.ms.abstractfactories.fields.*;
 import com.hwtechservicesllc.ms.abstractfactories.interfaces.*;
 
@@ -25,18 +25,18 @@ public abstract class Record {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
 
-    private ERecordType recordType;
+    private RecordType recordType;
     private StringBuilder stringBuilder = new StringBuilder();
 
 
-    protected ICompany company;                 // 1
-    protected ISymbol symbol;                   // 2
-    protected IPrice openingPrice;              // 3
-    protected IPrice previousDaysClosingPrice;  // 4
-    protected IPrice lastTradePrice;            // 5
-    protected IQuantity lastTradeQuantity;      // 6
-    protected IDateStamp lastTradeDateStamp;    // 7
-    protected ITimeStamp lastTradeTimeStamp;    // 8
+    protected Company company;                 // 1
+    protected TickerSymbol tickerSymbol;                   // 2
+    protected Price openingPrice;              // 3
+    protected Price previousDaysClosingPrice;  // 4
+    protected Price lastTradePrice;            // 5
+    protected Quantity lastTradeQuantity;      // 6
+    protected DateStamp lastTradeDateStamp;    // 7
+    protected TimeStamp lastTradeTimeStamp;    // 8
 
 
     // concrete definition is by whom inherits this class

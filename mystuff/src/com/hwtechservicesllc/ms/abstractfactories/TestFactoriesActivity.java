@@ -1,10 +1,10 @@
 package com.hwtechservicesllc.ms.abstractfactories;
 
 
+import com.hwtechservicesllc.ms.abstractfactories.enums.MsgType;
 import com.hwtechservicesllc.ms.abstractfactories.factories.Record;
 import com.hwtechservicesllc.ms.abstractfactories.factories.RecordBuilding;
 import com.hwtechservicesllc.ms.abstractfactories.factories.TradeBuilding;
-import com.hwtechservicesllc.ms.abstractfactories.fields.ERecordType;
 
 public class TestFactoriesActivity {
 
@@ -16,7 +16,7 @@ public class TestFactoriesActivity {
 
         //  testing ticker record construction
         RecordBuilding createTrade = new TradeBuilding();
-        Record record = createTrade.orderRecord(ERecordType.TRADE_RECORD);
+        Record record = createTrade.orderRecord(MsgType.EXECUTION_REPORT);
         System.out.println(record + "\n");
 
 

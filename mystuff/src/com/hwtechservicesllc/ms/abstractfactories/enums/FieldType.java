@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.interfaces;
+package com.hwtechservicesllc.ms.abstractfactories.enums;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -16,15 +16,30 @@ package com.hwtechservicesllc.ms.abstractfactories.interfaces;
     limitations under the License.
 */
 
-public interface IRecordFactory {
+// from FixProtocol.org website www.fixprotocol.org
 
-    public ICompany addCompany();
-    public IPrice addOpeningPrice();
-    public IPrice addPreviousDaysClosingPrice();
-    public IPrice addTradePrice();
-    public IQuantity addTradeQuantity();
-    public ISymbol addSymbol();
-    public IDateStamp addTradeDateStamp();
-    public ITimeStamp addTradeTimeStamp();
+public enum FieldType {
 
+    DEFAULT_COMPANY_NAME,
+    DEFAULT_TICKER_SYMBOL,
+    DEFAULT_PRICE,
+    DEFAULT_QUANTITY,
+    DEFAULT_DATE_STAMP,
+    DEFAULT_TIME_STAMP,
+    COMPANY_NAME,
+    TICKER_SYMBOL,
+    OPENING_PRICE,
+    PREVIOUS_DAYS_CLOSING_PRICE,
+    TRADE_PRICE,
+    TRADE_QUANTITY,
+    TRADE_DATE_STAMP,
+    TRADE_TIME_STAMP;
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.name());
+
+        return sb.toString();
+    }
 }

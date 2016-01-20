@@ -23,34 +23,34 @@ import com.hwtechservicesllc.ms.abstractfactories.enums.FieldType;
  * limitations under the License.
  **/
 
-public class Quantity {
+public class CompanyName {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_QUANTITY;
-    private final double DEFAULT_QUANTITY = 0.00;
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_COMPANY_NAME;
+    private final String DEFAULT_COMPANY_NAME = "Some Widgets, Inc.";
 
     private FieldType fieldType;
-    private double quantity;
+    private String companyName;
 
-    public final static Quantity DEFAULT_QUANTITY_FIELD = new Quantity();
+    public final static CompanyName DEFAULT_COMPANY_NAME_FIELD = new CompanyName();
 
     //
-    public Quantity() {
+    public CompanyName() {
         this.fieldType = DEFAULT_FIELD_TYPE;
-        this.quantity = DEFAULT_QUANTITY;
+        this.companyName = DEFAULT_COMPANY_NAME;
     }
 
-    public Quantity(final FieldType fieldType, final double quantity) {
+    public CompanyName(final FieldType fieldType, final String companyName) {
         this.fieldType = fieldType;
-        this.quantity = quantity;
+        this.companyName = companyName;
     }
 
-    public double getQuantity() {
-        return quantity;
+    public String getCompanyName() {
+        return companyName;
     }
-    public void setQuantity(final double quantity) {
-        this.quantity = quantity;
+    public void setCompanyName(final String companyName) {
+        this.companyName = companyName;
     }
 
     @Override
@@ -58,7 +58,7 @@ public class Quantity {
         StringBuilder sb = new StringBuilder();
         sb.append(fieldType.name());
         sb.append(":[");
-        sb.append(getQuantity());
+        sb.append(getCompanyName());
         sb.append("]");
 
         return sb.toString();
