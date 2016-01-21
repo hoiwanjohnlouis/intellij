@@ -47,7 +47,7 @@ public class GetTheStock implements Runnable{
 
     public void run() {
 
-        // send price updates to all stocks with
+        // send price updates to all staging with
         // a two second delay, just like stock ticker
 
 

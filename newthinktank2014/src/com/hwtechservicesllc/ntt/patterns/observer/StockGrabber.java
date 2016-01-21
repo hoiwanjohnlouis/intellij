@@ -78,7 +78,7 @@ public class StockGrabber implements ISubject {
     }
 
 
-    // Change prices for all stocks and notifies observers of changes
+    // Change prices for all staging and notifies observers of changes
 
     public void setIBMPrice(double newIBMPrice) {
 

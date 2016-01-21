@@ -8,7 +8,7 @@ import com.hwtechservicesllc.stocks.fields.*;
  * <p>
  * Login   Hoi Wan Louis
  * <p>
- * Package com.hwtechservicesllc.stocks.views
+ * Package com.hwtechservicesllc.staging.views
  * Project intellijPrototyping
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");

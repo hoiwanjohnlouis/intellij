@@ -7,7 +7,7 @@ import com.hwtechservicesllc.stocks.enums.FieldType;
  * <p>
  * Login   Hoi Wan Louis
  * <p>
- * Package com.hwtechservicesllc.stocks.fields
+ * Package com.hwtechservicesllc.staging.fields
  * Project intellijPrototyping
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
