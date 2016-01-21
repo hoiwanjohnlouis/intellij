@@ -1,6 +1,7 @@
 package com.hwtechservicesllc.ms.stocks.fields;
 
 import com.hwtechservicesllc.ms.stocks.enums.FieldType;
+import org.apache.log4j.Logger;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -27,13 +28,14 @@ public class TimeStamp {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(this.getClass());
+
+    public final static TimeStamp DEFAULT_TIME_STAMP_FIELD = new TimeStamp();
     private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_TIME_STAMP;
     private final String DEFAULT_TIME_STAMP = "00:00:00";
 
     private FieldType fieldType;
     private String timeStamp;
-
-    public final static TimeStamp DEFAULT_TIME_STAMP_FIELD = new TimeStamp();
 
     //
     public TimeStamp() {

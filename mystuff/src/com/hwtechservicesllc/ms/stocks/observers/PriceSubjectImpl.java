@@ -1,5 +1,8 @@
 package com.hwtechservicesllc.ms.stocks.observers;
 
+import java.util.ArrayList;
+import org.apache.log4j.Logger;
+
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
  
@@ -16,36 +19,32 @@ package com.hwtechservicesllc.ms.stocks.observers;
     limitations under the License.
 */
 
-import android.util.Log;
-
-import java.util.ArrayList;
-
 public class PriceSubjectImpl implements Subject {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     ArrayList<Observer> observers;
 
-
     public PriceSubjectImpl() {
-        Log.v(DEBUG_TAG, "in PriceSubjectImpl");
+        logger.trace("in PriceSubjectImpl");
         observers = new ArrayList<Observer>();
     }
 
     @Override
     public void register(Observer o) {
-        Log.v(DEBUG_TAG, "in register");
+        logger.trace("in register");
         observers.add(o);
     }
 
     @Override
     public void unregister(Observer o) {
-        Log.v(DEBUG_TAG, "in unregister");
+        logger.trace("in unregister");
 
         int observerIndex = observers.indexOf(o);
         if (observerIndex >= 0) {
-            Log.i(DEBUG_TAG, "Observer #" + (observerIndex + 1) + " deleted");
+            logger.info("Observer #" + (observerIndex + 1) + " deleted");
             observers.remove(observerIndex);
         }
     }

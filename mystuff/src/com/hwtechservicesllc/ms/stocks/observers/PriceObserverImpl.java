@@ -1,5 +1,7 @@
 package com.hwtechservicesllc.ms.stocks.observers;
 
+import org.apache.log4j.Logger;
+
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
  
@@ -20,6 +22,7 @@ public class PriceObserverImpl implements Observer {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     private Subject priceUpdate;
 

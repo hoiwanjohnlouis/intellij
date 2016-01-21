@@ -16,21 +16,12 @@ package com.hwtechservicesllc.ms.stocks.observers;
     limitations under the License.
 */
 
-import android.app.Activity;
-import android.os.Bundle;
+import org.apache.log4j.Logger;
 
+public class TestPriceObserver {
 
-import com.hwtechservicesllc.stocks.R;
+    public static void main (String[] args) {
 
-
-public class TestPriceObserver extends Activity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_portfolio_observer);
     }
-
-
 
 }

@@ -1,6 +1,7 @@
 package com.hwtechservicesllc.ms.stocks.fields;
 
 import com.hwtechservicesllc.ms.stocks.enums.FieldType;
+import org.apache.log4j.Logger;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -27,13 +28,14 @@ public class CompanyName {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(this.getClass());
+
+    public final static CompanyName DEFAULT_COMPANY_NAME_FIELD = new CompanyName();
     private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_COMPANY_NAME;
     private final String DEFAULT_COMPANY_NAME = "Some Widgets, Inc.";
 
     private FieldType fieldType;
     private String companyName;
-
-    public final static CompanyName DEFAULT_COMPANY_NAME_FIELD = new CompanyName();
 
     //
     public CompanyName() {
