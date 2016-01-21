@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
  * <p>
  * Login   Hoi Wan Louis
  * <p>
- * Package com.hwtechservicesllc.staging.fields
+ * Package com.hwtechservicesllc.stocks.fields
  * Project intellijPrototyping
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");

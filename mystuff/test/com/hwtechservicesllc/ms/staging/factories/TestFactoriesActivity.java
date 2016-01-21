@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.staging;
+package com.hwtechservicesllc.ms.staging.factories;
 
 
 import com.hwtechservicesllc.ms.factory.factories.Record;

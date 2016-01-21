@@ -4,11 +4,11 @@ import com.hwtechservicesllc.ms.staging.enums.FieldType;
 import org.apache.log4j.Logger;
 
 /**
- * Copyright 01/12/2016 HW Tech Services, LLC
+ * Copyright 01/07/2016 HW Tech Services, LLC
  * <p>
  * Login   Hoi Wan Louis
  * <p>
- * Package com.hwtechservicesllc.staging.fields
+ * Package com.hwtechservicesllc.stocks.fields
  * Project intellijPrototyping
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");

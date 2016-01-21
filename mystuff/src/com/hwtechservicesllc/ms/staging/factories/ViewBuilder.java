@@ -1,11 +1,11 @@
 package com.hwtechservicesllc.ms.staging.factories;
 
-/***************************************************************************
- * Copyright 01/21/2016 HW Tech Services, LLC
+/**
+ * Copyright 01/07/2016 HW Tech Services, LLC
  * <p>
  * Login   Hoi Wan Louis
  * <p>
- * Package com.hwtechservicesllc.ms.factory.factories
+ * Package com.hwtechservicesllc.stocks.fields
  * Project intellijPrototyping
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +19,8 @@ package com.hwtechservicesllc.ms.staging.factories;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- ***************************************************************************/
+ **/
+
 public class ViewBuilder {
 
 }
