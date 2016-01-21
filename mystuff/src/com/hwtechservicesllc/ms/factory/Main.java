@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories;
+package com.hwtechservicesllc.ms.factory;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.factories;
+package com.hwtechservicesllc.ms.factory.enums;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -16,19 +16,30 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-public class TradeBuilder extends RecordBuilder {
+// from FixProtocol.org website www.fixprotocol.org
 
-    // for logging purposes
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public enum FieldType {
 
-    public Record makeRecord(ERecordType recordType) {
-        Record tradeRecord = (Trade) null;
+    DEFAULT_COMPANY_NAME,
+    DEFAULT_TICKER_SYMBOL,
+    DEFAULT_PRICE,
+    DEFAULT_QUANTITY,
+    DEFAULT_DATE_STAMP,
+    DEFAULT_TIME_STAMP,
+    COMPANY_NAME,
+    TICKER_SYMBOL,
+    OPENING_PRICE,
+    PREVIOUS_DAYS_CLOSING_PRICE,
+    TRADE_PRICE,
+    TRADE_QUANTITY,
+    TRADE_DATE_STAMP,
+    TRADE_TIME_STAMP;
 
-        IRecordFactory tradeRecordFactory = new TradeFactory();
-        tradeRecord = new Trade(tradeRecordFactory);
-        tradeRecord.setRecordType(recordType);
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.name());
 
-        return tradeRecord;
+        return sb.toString();
     }
-
 }

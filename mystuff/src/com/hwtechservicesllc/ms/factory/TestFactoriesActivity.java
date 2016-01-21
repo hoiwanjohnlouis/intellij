@@ -1,10 +1,10 @@
-package com.hwtechservicesllc.ms.abstractfactories;
+package com.hwtechservicesllc.ms.factory;
 
 
 import com.hwtechservicesllc.ms.stocks.enums.MsgType;
-import com.hwtechservicesllc.ms.abstractfactories.factories.Record;
-import com.hwtechservicesllc.ms.abstractfactories.factories.RecordBuilder;
-import com.hwtechservicesllc.ms.abstractfactories.factories.TradeBuilder;
+import com.hwtechservicesllc.ms.factory.factories.Record;
+import com.hwtechservicesllc.ms.factory.factories.RecordBuilder;
+import com.hwtechservicesllc.ms.factory.factories.TradeBuilder;
 
 public class TestFactoriesActivity {
 

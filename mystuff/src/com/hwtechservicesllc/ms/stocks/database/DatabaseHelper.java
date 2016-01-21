@@ -20,10 +20,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 
-import com.hwtechservicesllc.stocks.database.Database.*;
+import org.apache.log4j.Logger;
 
 
 //FYI: This is the same setup as PetTracker
@@ -31,7 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     public DatabaseHelper(
             Context context,

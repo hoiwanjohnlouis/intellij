@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.factories;
+package com.hwtechservicesllc.ms.factory.factories;
 
 /*
     Copyright (c) 2014  Hoi Wan Louis
@@ -16,8 +16,8 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-import com.hwtechservicesllc.ms.stocks.enums.MsgType;
-import com.hwtechservicesllc.ms.stocks.fields.*;
+import com.hwtechservicesllc.ms.factory.enums.MsgType;
+import com.hwtechservicesllc.ms.factory.fields.*;
 
 public abstract class Record {
 

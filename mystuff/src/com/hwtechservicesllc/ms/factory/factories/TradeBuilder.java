@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.ms.abstractfactories.factories;
+package com.hwtechservicesllc.ms.factory.factories;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -16,28 +16,19 @@ package com.hwtechservicesllc.ms.abstractfactories.factories;
     limitations under the License.
 */
 
-public abstract class RecordBuilder {
+public class TradeBuilder extends RecordBuilder {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-    //
-    // todo: orderRecord should receive an update record populated with trade data which will be passed to prepare
-    //
-    public Record orderRecord(ERecordType recordType) {
+    public Record makeRecord(ERecordType recordType) {
+        Record tradeRecord = (Trade) null;
 
-        //
-        Record record = makeRecord(recordType);
-        record.prepare();
+        IRecordFactory tradeRecordFactory = new TradeFactory();
+        tradeRecord = new Trade(tradeRecordFactory);
+        tradeRecord.setRecordType(recordType);
 
-
-        // todo: add function to update SQLite DB
-
-        // todo: add function to update GUI related adapter
-
-
-        return record;
-
+        return tradeRecord;
     }
 
 }
