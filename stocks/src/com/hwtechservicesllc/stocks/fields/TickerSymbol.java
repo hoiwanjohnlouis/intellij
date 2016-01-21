@@ -1,6 +1,7 @@
 package com.hwtechservicesllc.stocks.fields;
 
 import com.hwtechservicesllc.stocks.enums.FieldType;
+import org.apache.log4j.Logger;
 
 /**
  * Copyright 01/12/2016 HW Tech Services, LLC
@@ -27,14 +28,14 @@ public class TickerSymbol {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(this.getClass());
+
+    public final static TickerSymbol DEFAULT_TICKER_SYMBOL_FIELD = new TickerSymbol();
     private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_TICKER_SYMBOL;
     private final String DEFAULT_TICKER_SYMBOL = "WDGTS";
 
     private FieldType fieldType;
     private String tickerSymbol;
-
-    public final static TickerSymbol DEFAULT_TICKER_SYMBOL_FIELD = new TickerSymbol();
-
 
     //
     public TickerSymbol() {

@@ -1,6 +1,7 @@
 package com.hwtechservicesllc.stocks.fields;
 
 import com.hwtechservicesllc.stocks.enums.FieldType;
+import org.apache.log4j.Logger;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -27,13 +28,14 @@ public class DateStamp {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(this.getClass());
+
+    public final static DateStamp DEFAULT_DATE_STAMP_FIELD = new DateStamp();
     private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_DATE_STAMP;
     private final String DEFAULT_DATE_STAMP = "1900.01.01";
 
     private FieldType fieldType;
     private String dateStamp;
-
-    public final static DateStamp DEFAULT_DATE_STAMP_FIELD = new DateStamp();
 
     //
     public DateStamp() {

@@ -1,6 +1,7 @@
 package com.hwtechservicesllc.stocks.fields;
 
 import com.hwtechservicesllc.stocks.enums.FieldType;
+import org.apache.log4j.Logger;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -27,13 +28,14 @@ public class Price {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(this.getClass());
+
+    public final static Price DEFAULT_PRICE_FIELD = new Price();
     private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_PRICE;
     private final double DEFAULT_PRICE = 0.00;
 
     private FieldType fieldType;
     private double price;
-
-    public final static Price DEFAULT_PRICE_FIELD = new Price();
 
     //
     public Price() {

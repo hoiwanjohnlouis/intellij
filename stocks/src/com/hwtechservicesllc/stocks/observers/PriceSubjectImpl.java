@@ -1,51 +1,56 @@
-package com.hwtechservicesllc.ms.stocks.observers;
+package com.hwtechservicesllc.stocks.observers;
 
-/*
-    Copyright (c) 2015  HW Tech Services, Inc., LLC
- 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
- 
-        http://www.apache.org/licenses/LICENSE-2.0
- 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-*/
-
-import android.util.Log;
-
+import org.apache.log4j.Logger;
 import java.util.ArrayList;
+
+/**
+ * Copyright 01/07/2016 HW Tech Services, LLC
+ * <p>
+ * Login   Hoi Wan Louis
+ * <p>
+ * Package com.hwtechservicesllc.stocks.fields
+ * Project intellijPrototyping
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ **/
 
 public class PriceSubjectImpl implements Subject {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     ArrayList<Observer> observers;
 
 
     public PriceSubjectImpl() {
-        Log.v(DEBUG_TAG, "in PriceSubjectImpl");
+        logger.trace("in PriceSubjectImpl");
         observers = new ArrayList<Observer>();
     }
 
     @Override
     public void register(Observer o) {
-        Log.v(DEBUG_TAG, "in register");
+        logger.trace("in register");
         observers.add(o);
     }
 
     @Override
     public void unregister(Observer o) {
-        Log.v(DEBUG_TAG, "in unregister");
+        logger.trace("in unregister");
 
         int observerIndex = observers.indexOf(o);
         if (observerIndex >= 0) {
-            Log.i(DEBUG_TAG, "Observer #" + (observerIndex + 1) + " deleted");
+            logger.info("Observer #" + (observerIndex + 1) + " deleted");
             observers.remove(observerIndex);
         }
     }
