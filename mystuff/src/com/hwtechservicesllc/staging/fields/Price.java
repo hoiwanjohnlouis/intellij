@@ -31,8 +31,8 @@ public class Price {
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
     public final static Price DEFAULT_PRICE_FIELD = new Price();
-    private final EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_PRICE;
-    private final double DEFAULT_PRICE = 0.00;
+    public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_PRICE;
+    public final static double DEFAULT_PRICE = 0.00;
 
     private final EFieldType fieldType;
     private final double price;

@@ -1,6 +1,5 @@
 package com.hwtechservicesllc.staging.views;
 
-import com.hwtechservicesllc.staging.enums.EFieldType;
 import com.hwtechservicesllc.staging.enums.EMsgType;
 import com.hwtechservicesllc.staging.fields.CompanyName;
 import com.hwtechservicesllc.staging.fields.TickerSymbol;
@@ -31,8 +30,8 @@ public class TestViews {
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
     public static void main (String[] args) {
-        CompanyName companyName = new CompanyName(EFieldType.COMPANY_NAME, "Wigets, Inc.");
-        TickerSymbol tickerSymbol = new TickerSymbol(EFieldType.TICKER_SYMBOL, "WIDG");
+        CompanyName companyName = CompanyName.DEFAULT_COMPANY_NAME_FIELD;
+        TickerSymbol tickerSymbol = TickerSymbol.DEFAULT_TICKER_SYMBOL_FIELD;
         TradeView testView = new TradeView.TradeViewBuilder(EMsgType.EXECUTION_REPORT, companyName, tickerSymbol).build();
         System.out.println(testView);
 

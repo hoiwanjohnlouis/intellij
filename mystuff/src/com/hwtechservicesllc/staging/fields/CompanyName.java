@@ -31,8 +31,8 @@ public class CompanyName {
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
     public final static CompanyName DEFAULT_COMPANY_NAME_FIELD = new CompanyName();
-    private final EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_COMPANY_NAME;
-    private final String DEFAULT_COMPANY_NAME = "Some Widgets, Inc.";
+    public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_COMPANY_NAME;
+    public final static String DEFAULT_COMPANY_NAME = "Some Widgets, Inc.";
 
     private final EFieldType fieldType;
     private final String companyName;

@@ -31,8 +31,8 @@ public class Quantity {
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
     public final static Quantity DEFAULT_QUANTITY_FIELD = new Quantity();
-    private final EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_QUANTITY;
-    private final double DEFAULT_QUANTITY = 0.00;
+    public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_QUANTITY;
+    public final static double DEFAULT_QUANTITY = 0.00;
 
     private final EFieldType fieldType;
     private final double quantity;

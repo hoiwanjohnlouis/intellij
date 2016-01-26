@@ -28,8 +28,8 @@ public class TimeStamp {
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
     public final static TimeStamp DEFAULT_TIME_STAMP_FIELD = new TimeStamp();
-    private final EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_TIME_STAMP;
-    private final String DEFAULT_TIME_STAMP = "00:00:00";
+    public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_TIME_STAMP;
+    public final static String DEFAULT_TIME_STAMP = "00:00:00";
 
     private final EFieldType fieldType;
     private final String timeStamp;
