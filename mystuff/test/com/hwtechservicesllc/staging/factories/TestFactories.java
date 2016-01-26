@@ -11,7 +11,8 @@ public class TestFactories {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private final Logger logger = Logger.getLogger(DEBUG_TAG);
+    private static final Logger logger = Logger.getLogger("com.hwtechservicesllc.factories" +
+            ".TestFactories");
 
     public static void main (String[] args) {
 
