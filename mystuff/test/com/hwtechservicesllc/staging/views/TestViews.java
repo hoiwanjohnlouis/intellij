@@ -5,6 +5,8 @@ import com.hwtechservicesllc.staging.fields.CompanyName;
 import com.hwtechservicesllc.staging.fields.TickerSymbol;
 import org.apache.log4j.Logger;
 
+import javax.crypto.spec.DESedeKeySpec;
+
 /**
  * Copyright 01/17/2016 HW Tech Services, LLC
  * <p>
@@ -27,13 +29,15 @@ public class TestViews {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private final Logger logger = Logger.getLogger(DEBUG_TAG);
+    private static final Logger logger = Logger.getLogger("com.hwtechservicesllc.views.TestViews");
 
     public static void main (String[] args) {
-        CompanyName companyName = CompanyName.DEFAULT_COMPANY_NAME_FIELD;
-        TickerSymbol tickerSymbol = TickerSymbol.DEFAULT_TICKER_SYMBOL_FIELD;
+
+        CompanyName companyName = new CompanyName();
+        TickerSymbol tickerSymbol = new TickerSymbol();
         TradeView testView = new TradeView.TradeViewBuilder(EMsgType.EXECUTION_REPORT, companyName, tickerSymbol).build();
         System.out.println(testView);
+        logger.info(testView);
 
         PriceView priceView = new PriceView.PriceViewBuilder(EMsgType.EXECUTION_REPORT,tickerSymbol).build();
         System.out.println(priceView);

@@ -105,10 +105,10 @@ public class PriceView {
         public PriceViewBuilder(EMsgType msgType, TickerSymbol tickerSymbol) {
             this.msgType = msgType;
             this.tickerSymbol = tickerSymbol;
-            this.lastTradePrice = Price.DEFAULT_PRICE_FIELD;
-            this.lastTradeQuantity = Quantity.DEFAULT_QUANTITY_FIELD;
-            this.lastTradeDateStamp = DateStamp.DEFAULT_DATE_STAMP_FIELD;
-            this.lastTradeTimeStamp = TimeStamp.DEFAULT_TIME_STAMP_FIELD;
+            this.lastTradePrice = new Price();
+            this.lastTradeQuantity = new Quantity();
+            this.lastTradeDateStamp = new DateStamp();
+            this.lastTradeTimeStamp = new TimeStamp();
         }
 
         public PriceViewBuilder buildTradePrice(Price lastTradePrice) {

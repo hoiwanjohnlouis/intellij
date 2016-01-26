@@ -27,7 +27,6 @@ public class TimeStamp {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    public final static TimeStamp DEFAULT_TIME_STAMP_FIELD = new TimeStamp();
     public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_TIME_STAMP;
     public final static String DEFAULT_TIME_STAMP = "00:00:00";
 

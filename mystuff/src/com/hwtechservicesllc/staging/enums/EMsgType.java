@@ -57,7 +57,7 @@ public enum EMsgType {
         sb.append(getMsgTypeValue());
         sb.append("]");
         sb.append(":[");
-        sb.append(getMsgTypeValue());
+        sb.append(getMsgTypeDescription());
         sb.append("]");
 
         return sb.toString();

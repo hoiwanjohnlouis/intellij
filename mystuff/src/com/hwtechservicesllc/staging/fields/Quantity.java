@@ -30,7 +30,6 @@ public class Quantity {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    public final static Quantity DEFAULT_QUANTITY_FIELD = new Quantity();
     public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_QUANTITY;
     public final static double DEFAULT_QUANTITY = 0.00;
 

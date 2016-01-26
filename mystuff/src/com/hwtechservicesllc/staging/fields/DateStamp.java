@@ -30,7 +30,6 @@ public class DateStamp {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    public final static DateStamp DEFAULT_DATE_STAMP_FIELD = new DateStamp();
     public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_DATE_STAMP;
     public final static String DEFAULT_DATE_STAMP = "1900.01.01";
 

@@ -30,7 +30,6 @@ public class Price {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    public final static Price DEFAULT_PRICE_FIELD = new Price();
     public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_PRICE;
     public final static double DEFAULT_PRICE = 0.00;
 

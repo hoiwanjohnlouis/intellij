@@ -30,7 +30,6 @@ public class TickerSymbol {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    public final static TickerSymbol DEFAULT_TICKER_SYMBOL_FIELD = new TickerSymbol();
     public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_TICKER_SYMBOL;
     public final static String DEFAULT_TICKER_SYMBOL = "WDGTS";
 
