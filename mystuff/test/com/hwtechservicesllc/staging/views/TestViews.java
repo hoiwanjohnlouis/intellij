@@ -4,6 +4,7 @@ import com.hwtechservicesllc.staging.enums.EFieldType;
 import com.hwtechservicesllc.staging.enums.EMsgType;
 import com.hwtechservicesllc.staging.fields.CompanyName;
 import com.hwtechservicesllc.staging.fields.TickerSymbol;
+import org.apache.log4j.Logger;
 
 /**
  * Copyright 01/17/2016 HW Tech Services, LLC
@@ -24,6 +25,11 @@ import com.hwtechservicesllc.staging.fields.TickerSymbol;
  **/
 
 public class TestViews {
+
+    // for logging purposes
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final Logger logger = Logger.getLogger(DEBUG_TAG);
+
     public static void main (String[] args) {
         CompanyName companyName = new CompanyName(EFieldType.COMPANY_NAME, "Wigets, Inc.");
         TickerSymbol tickerSymbol = new TickerSymbol(EFieldType.TICKER_SYMBOL, "WIDG");
