@@ -28,12 +28,14 @@ public class Pepperoni extends ToppingDecorator {
     // Returns the result of calling getDescription() for
     // PlainPizza and adds " mozzarella" to it
 
+    @Override
     public String getDescription(){
 
         return tempPizza.getDescription() + ", pepperoni";
 
     }
 
+    @Override
     public double getCost(){
 
         System.out.println("Cost of Pepperoni: " + 1.15);

@@ -25,11 +25,12 @@ public class PlainPizza implements Pizza {
 
     public PlainPizza () {
 
-        System.out.println("Adding Dough");
+        System.out.println("---------- New Pizza ----------\n" + "Adding Dough");
 
     }
 
 
+    @Override
     public String getDescription() {
 
         return "Thin dough";
@@ -37,6 +38,7 @@ public class PlainPizza implements Pizza {
     }
 
 
+    @Override
     public double getCost() {
 
         System.out.println("Cost of Dough: " + 4.00);

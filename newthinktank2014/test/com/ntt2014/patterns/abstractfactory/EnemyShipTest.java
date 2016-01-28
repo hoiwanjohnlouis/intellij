@@ -16,7 +16,7 @@ package com.ntt2014.patterns.abstractfactory;
     limitations under the License.
 */
 
-public class EnemyShipTesting {
+public class EnemyShipTest {
 
     public static void main(String[] args) {
 

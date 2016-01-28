@@ -16,7 +16,7 @@ package com.ntt2014.patterns.observer;
     limitations under the License.
 */
 
-public class GrabStocks{
+public class GrabStockTest {
 
     public static void main(String[] args){
 

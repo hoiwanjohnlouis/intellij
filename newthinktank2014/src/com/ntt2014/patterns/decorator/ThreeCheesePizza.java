@@ -26,7 +26,8 @@ package com.ntt2014.patterns.decorator;
 // by writing new code rather than by changing current code
 
 
-/* hoi wan, commented out so intellij wont complaint about project
+/* hoi wan, commented out so intellij wont complaint about project,
+  we are replacing this method with a decorator pattern for each cheese
 
 public class ThreeCheesePizza extends Pizza {
 

@@ -18,7 +18,7 @@ package com.ntt2014.patterns.factory;
 
 import java.util.Scanner;
 
-public class EnemyShipTesting {
+public class EnemyShipTest {
 
     public static void main(String[] args){
 
