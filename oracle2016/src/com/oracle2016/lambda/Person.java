@@ -30,15 +30,13 @@
  */
 
 
-package com.hwtechservicesllc.oracle.lambda;
+package com.oracle2016.lambda;
 
 
 import java.util.List;
 import java.util.ArrayList;
 import java.time.chrono.IsoChronology;
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-import java.time.Period;
 
 public class Person {
   
