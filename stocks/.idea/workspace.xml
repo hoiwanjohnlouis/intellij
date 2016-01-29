@@ -2,94 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751f66d1-06c2-49ea-b44b-5369d6673d7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/libraries/hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/libraries/junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/libraries/log4j_1_2_api_2_4_1.xml" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\.idea\javacodegeeks.iml" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\.idea\libraries\log4j_1_2_api_2_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\javacodegeeks.iml" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\AbstractParserFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\NYErrorXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\NYFeedbackXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\NYOrderXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\NYParserFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\NYResponseXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\ParserFactoryProducer.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\TWErrorXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\TWFeedbackXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\TWOrderXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\TWParserFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\TWResponseXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\TestAbstractFactoryPattern.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\abstractfactory\XMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\adapter\payd\PayD.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\adapter\site\RunAdapterExample.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\adapter\site\XpayImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\adapter\site\XpayToPayDAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\adapter\xpay\Xpay.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\bridge\BigWheel.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\bridge\Car.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\bridge\CentralLocking.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\bridge\GearLocking.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\bridge\Motoren.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\bridge\Product.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\bridge\TestBridgePattern.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\builder\Car.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\builder\CarBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\builder\CarDirector.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\builder\Form.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\builder\SedanCarBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\builder\SportsCarBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\builder\TestBuilderPattern.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\builder\TestForm.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\AudioFileHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\DocFileHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\ExcelFileHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\File.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\Handler.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\ImageFileHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\TestChainofResponsibility.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\TextFileHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\chainofresponsibility\VideoFileHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\DisplayService.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\ErrorXMLDisplayService.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\ErrorXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\FeedbackXML.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\FeedbackXMLDisplayService.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\OrderXMLDisplayService.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\OrderXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\ResponseXMLDisplayService.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\ResponseXMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\TestFactoryMethodPattern.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\designpatterns\factorymethod\XMLParser.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\junitsample\intf\AccountService.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\junitsample\obj\Account.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\junitsample\obj\Transaction.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\com\hwtechservicesllc\jcg\junitsample\svc\AccountServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\hwjl8888@onedrive\OneDrive\idea\intellijPrototyping\javacodegeeks\src\log4j.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/copyright/HW_Tech_Services__LLC.xml" afterPath="$PROJECT_DIR$/../.idea/copyright/HW_Tech_Services__LLC.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/compiler.xml" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../effectivejava/effectivejava.iml" afterPath="$PROJECT_DIR$/../effectivejava/effectivejava.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../effectivejava2/effectivejava2.iml" afterPath="$PROJECT_DIR$/../effectivejava2/effectivejava2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/encodings.xml" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/intellijPrototyping.iml" afterPath="$PROJECT_DIR$/../.idea/intellijPrototyping.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../newthinktank2014/newthinktank2014.iml" afterPath="$PROJECT_DIR$/../newthinktank2014/newthinktank2014.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../nyuf2014/nyuf2014.iml" afterPath="$PROJECT_DIR$/../nyuf2014/nyuf2014.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../robmarano/robmarano.iml" afterPath="$PROJECT_DIR$/../robmarano/robmarano.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stocks.iml" afterPath="$PROJECT_DIR$/stocks.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/apache_log4j_log4j_1_2_15.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/stocks.iml" afterPath="$PROJECT_DIR$/.idea/stocks.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../thehackerati2014/thehackerati2014.iml" afterPath="$PROJECT_DIR$/../thehackerati2014/thehackerati2014.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tij4f2014/tij4f2014.iml" afterPath="$PROJECT_DIR$/../tij4f2014/tij4f2014.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../effectivejava2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../effectivejava2/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../effectivejava/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../effectivejava/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="stocks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,14 +65,122 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="stocks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fields" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enums" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log4j-1.2.15.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -164,8 +189,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -173,6 +198,9 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FullScreen" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -224,60 +252,52 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -328,6 +348,149 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -344,6 +507,7 @@
       <workItem from="1453952711680" duration="23000" />
       <workItem from="1453974722109" duration="1201000" />
       <workItem from="1454010931438" duration="68000" />
+      <workItem from="1454028850810" duration="711000" />
     </task>
     <task id="LOCAL-00001" summary="updated stocks project (20160121-1)">
       <created>1453399691266</created>
@@ -355,7 +519,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1667000" />
+    <option name="totallyTimeSpent" value="2378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="335" y="135" width="1338" height="893" extended-state="0" />
@@ -364,6 +528,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -384,7 +549,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -480,7 +644,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>log4j-1.2-api-2.4.1</last-edited>
+          <last-edited>apache-log4j:log4j:1.2.15</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
