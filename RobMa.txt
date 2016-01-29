@@ -1,5 +1,0 @@
-Here's the value of pi: 
-3.14159
-We are done twice!
-
-
