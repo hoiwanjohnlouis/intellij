@@ -13,6 +13,6 @@ hs_err_pid*
 
 # idea specific #
 out/
-workspace.xml
-
-
+**/.idea/*.iws
+**/.idea/workspace.xml
+**/.idea/tasks.xml
