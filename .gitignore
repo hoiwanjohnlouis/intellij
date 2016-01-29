@@ -12,7 +12,7 @@
 hs_err_pid*
 
 # idea specific #
-./out/
-./workspace.xml
+out/
+workspace.xml
 
 
