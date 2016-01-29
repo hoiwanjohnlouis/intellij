@@ -22,7 +22,7 @@ package com.ejf2015.i49;
 public class BadDeadLockQueue extends BadWorkQueue {
 
     @Override
-    protected void processItem(Object workItem) throws InterruptedException {
+    protected void processItem(final Object workItem) throws InterruptedException {
 
         // Bad. this logic will cause a deadlock with BadWorkQueue!
 

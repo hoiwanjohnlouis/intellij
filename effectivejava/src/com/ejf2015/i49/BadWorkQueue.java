@@ -30,7 +30,7 @@ public abstract class BadWorkQueue {
     protected BadWorkQueue() { new BadWorkerThread().start(); };
 
     //
-    public final void enqueue(Object workItem) {
+    public final void enqueue(final Object workItem) {
        synchronized (queue) {
            queue.add(workItem);
            queue.notify();
