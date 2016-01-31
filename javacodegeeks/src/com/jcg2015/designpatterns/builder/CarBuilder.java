@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.jcg.designpatterns.builder;
+package com.jcg2015.designpatterns.builder;
 
 public interface CarBuilder {
 

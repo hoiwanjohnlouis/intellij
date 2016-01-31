@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.jcg.designpatterns.adapter.xpay;
+package com.jcg2015.designpatterns.adapter.xpay;
 
 public interface Xpay {
 	

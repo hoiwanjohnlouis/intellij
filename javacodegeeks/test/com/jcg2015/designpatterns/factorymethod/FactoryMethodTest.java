@@ -1,6 +1,6 @@
-package com.hwtechservicesllc.jcg.designpatterns.factorymethod;
+package com.jcg2015.designpatterns.factorymethod;
 
-public class TestFactoryMethodPattern {
+public class FactoryMethodTest {
 
 	public static void main(String[] args) {
 		DisplayService service = new FeedbackXMLDisplayService();

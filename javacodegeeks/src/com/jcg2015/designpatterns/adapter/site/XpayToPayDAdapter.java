@@ -1,7 +1,7 @@
-package com.hwtechservicesllc.jcg.designpatterns.adapter.site;
+package com.jcg2015.designpatterns.adapter.site;
 
-import com.hwtechservicesllc.jcg.designpatterns.adapter.payd.PayD;
-import com.hwtechservicesllc.jcg.designpatterns.adapter.xpay.Xpay;
+import com.jcg2015.designpatterns.adapter.payd.PayD;
+import com.jcg2015.designpatterns.adapter.xpay.Xpay;
 
 public class XpayToPayDAdapter implements PayD {
 

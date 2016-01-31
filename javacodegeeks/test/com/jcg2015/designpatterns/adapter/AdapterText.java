@@ -1,7 +1,9 @@
-package com.jcg2015.designpatterns.adapter.site;
+package com.jcg2015.designpatterns.adapter;
 
-import com.hwtechservicesllc.jcg.designpatterns.adapter.payd.PayD;
-import com.hwtechservicesllc.jcg.designpatterns.adapter.xpay.Xpay;
+import com.jcg2015.designpatterns.adapter.payd.PayD;
+import com.jcg2015.designpatterns.adapter.site.XpayImpl;
+import com.jcg2015.designpatterns.adapter.site.XpayToPayDAdapter;
+import com.jcg2015.designpatterns.adapter.xpay.Xpay;
 
 public class AdapterText {
 

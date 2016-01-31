@@ -1,6 +1,6 @@
-package com.hwtechservicesllc.jcg.designpatterns.builder;
+package com.jcg2015.designpatterns.builder;
 
-public class SportsCarBuilder implements CarBuilder{
+public class SportsCarBuilder implements CarBuilder {
 
     private final Car car = new Car("SPORTS");
 

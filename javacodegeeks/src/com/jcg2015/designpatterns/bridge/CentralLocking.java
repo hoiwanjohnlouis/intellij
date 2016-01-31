@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.jcg.designpatterns.bridge;
+package com.jcg2015.designpatterns.bridge;
 
 public class CentralLocking implements Product{
 

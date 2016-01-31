@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.jcg.designpatterns.chainofresponsibility;
+package com.jcg2015.designpatterns.chainofresponsibility;
 
 public class DocFileHandler implements Handler{
 

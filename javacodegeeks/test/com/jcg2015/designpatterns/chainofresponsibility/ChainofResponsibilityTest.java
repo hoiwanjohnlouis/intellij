@@ -1,6 +1,6 @@
-package com.hwtechservicesllc.jcg.designpatterns.chainofresponsibility;
+package com.jcg2015.designpatterns.chainofresponsibility;
 
-public class TestChainofResponsibility {
+public class ChainofResponsibilityTest {
 
 	public static void main(String[] args) {
 		File file = null;

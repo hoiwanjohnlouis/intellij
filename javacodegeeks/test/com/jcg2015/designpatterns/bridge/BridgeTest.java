@@ -1,6 +1,6 @@
-package com.hwtechservicesllc.jcg.designpatterns.bridge;
+package com.jcg2015.designpatterns.bridge;
 
-public class TestBridgePattern {
+public class BridgeTest {
 
 	public static void main(String[] args) {
 		Product product = new CentralLocking("Central Locking System");

@@ -1,9 +1,9 @@
-package com.hwtechservicesllc.jcg.junitsample.intf;
+package com.jcg2015.junitsample.intf;
 
 import java.util.List;
 
-import com.hwtechservicesllc.jcg.junitsample.obj.Account;
-import com.hwtechservicesllc.jcg.junitsample.obj.Transaction;
+import com.jcg2015.junitsample.obj.Account;
+import com.jcg2015.junitsample.obj.Transaction;
 
 public interface AccountService {
 

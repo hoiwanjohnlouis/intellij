@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.jcg.designpatterns.factorymethod;
+package com.jcg2015.designpatterns.factorymethod;
 
 public class ErrorXMLDisplayService extends DisplayService{
 

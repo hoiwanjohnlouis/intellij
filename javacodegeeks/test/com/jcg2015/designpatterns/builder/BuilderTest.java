@@ -1,6 +1,6 @@
-package com.hwtechservicesllc.jcg.designpatterns.builder;
+package com.jcg2015.designpatterns.builder;
 
-public class TestBuilderPattern {
+public class BuilderTest {
 
     public static void main(String[] args) {
         CarBuilder carBuilder = new SedanCarBuilder();

@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.jcg.designpatterns.adapter.payd;
+package com.jcg2015.designpatterns.adapter.payd;
 
 public interface PayD {
 	

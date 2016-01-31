@@ -1,13 +1,11 @@
-
-package com.hwtechservicesllc.jcg.junitsample.svc;
+package com.jcg2015.junitsample.svc;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-import com.hwtechservicesllc.jcg.junitsample.intf.AccountService;
-import com.hwtechservicesllc.jcg.junitsample.obj.Account;
-import com.hwtechservicesllc.jcg.junitsample.obj.Transaction;
+import com.jcg2015.junitsample.intf.AccountService;
+import com.jcg2015.junitsample.obj.Account;
+import com.jcg2015.junitsample.obj.Transaction;
 
 public class AccountServiceImpl implements AccountService {
 	public Account createNewAccount(Account account) {

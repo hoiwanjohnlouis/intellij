@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.jcg.junitsample.obj;
+package com.jcg2015.junitsample.obj;
 
 public class Transaction extends Account {
 

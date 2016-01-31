@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.jcg.designpatterns.builder;
+package com.jcg2015.designpatterns.builder;
 
 /**
  * Copyright 01/14/2016 HW Tech Services, LLC
@@ -21,7 +21,7 @@ package com.hwtechservicesllc.jcg.designpatterns.builder;
  * limitations under the License.
  **/
 
-public class TestForm {
+public class FormTest {
 
     public static void main(String[] args) {
         Form form = new Form.FormBuilder("Dave", "Carter", "DavCarter", "DAvCaEr123").passwordHint("MyName").city("NY").language("English").build();
