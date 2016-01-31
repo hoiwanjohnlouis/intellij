@@ -19,7 +19,7 @@ package com.jr2015.staticbehavior;
  * limitations under the License.
  **/
 
-public class Demo {
+public class StaticBehaviourTest {
     public static void main(String args[]){
         Vehicle v = new Car();
         v.kmToMiles(10);

@@ -5,9 +5,6 @@ import java.util.Optional;
 /**
  * Copyright 8/22/2015 by HW Tech Services, Inc., LLC
  * <p>
- * Package com.hwtechservices.jr2015.FizzBuzzJava8
- * Project FizzBuzzJava8
- * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at

@@ -1,4 +1,4 @@
-package com.jr2015.looppuzzlefail1;
+package com.jr2015.looppuzzlefail;
 
 /**
  * Copyright 8/16/2015 by HW Tech Services, Inc., LLC

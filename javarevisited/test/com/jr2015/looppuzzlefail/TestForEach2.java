@@ -1,4 +1,4 @@
-package com.jr2015.looppuzzlefail2;
+package com.jr2015.looppuzzlefail;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,12 +1,12 @@
-package com.jr2015.looppuzzlefail1;
+package com.jr2015.looppuzzlefail;
 
 import java.util.ArrayList;
 
 /**
  * Copyright 8/16/2015 by HW Tech Services, Inc., LLC
  * <p>
- * Package com.hwtechservices.jr2015.looppuzzlefail1
- * Project looppuzzlefail1
+ * Package com.hwtechservices.jr2015.looppuzzlefail
+ * Project looppuzzlefail
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

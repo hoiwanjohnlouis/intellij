@@ -3,7 +3,7 @@ package com.jr2015.threadstopdemo;
 import java.util.concurrent.TimeUnit;
 import static java.lang.Thread.currentThread;
 
-public class Main {
+public class ThreadServerTest {
 
     public static void main(String args[]) throws InterruptedException {
 
