@@ -63,7 +63,8 @@ public class AccountServiceImplTest {
 	}
 
 	/**
-	 * Test method for {@link com.areyes1.jgc.svc.AccountServiceImpl#removeAccount(com.areyes1.jgc.obj.Account)}.
+	 * Test method for {@link com.jcg2016.junittestbeginnersexample.svc
+	 * .AccountServiceImpl#removeAccount(com.jcg2016.junittestbeginnersexample.obj.Account)}.
 	 */
 	@Test
 	public void testRemoveAccount() {
@@ -79,7 +80,8 @@ public class AccountServiceImplTest {
 	}
 
 	/**
-	 * Test method for {@link com.areyes1.jgc.svc.AccountServiceImpl#listAllTransactions(com.areyes1.jgc.obj.Account)}.
+	 * Test method for {@link com.jcg2016.junittestbeginnersexample.svc
+	 * .AccountServiceImpl#listAllTransactions(com.jcg2016.junittestbeginnersexample.obj.Account)}.
 	 */
 	@Test
 	public void testListAllTransactions() {
