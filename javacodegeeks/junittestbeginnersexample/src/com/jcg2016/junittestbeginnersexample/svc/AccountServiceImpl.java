@@ -1,11 +1,11 @@
-package com.jcg2015.junitsample.svc;
+package com.jcg2016.junittestbeginnersexample.svc;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jcg2015.junitsample.intf.AccountService;
-import com.jcg2015.junitsample.obj.Account;
-import com.jcg2015.junitsample.obj.Transaction;
+import com.jcg2016.junittestbeginnersexample.intf.AccountService;
+import com.jcg2016.junittestbeginnersexample.obj.Account;
+import com.jcg2016.junittestbeginnersexample.obj.Transaction;
 
 public class AccountServiceImpl implements AccountService {
 	public Account createNewAccount(Account account) {

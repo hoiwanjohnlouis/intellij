@@ -1,4 +1,4 @@
-package com.jcg2015.junitsample.obj;
+package com.jcg2016.junittestbeginnersexample.obj;
 
 import java.util.List;
 

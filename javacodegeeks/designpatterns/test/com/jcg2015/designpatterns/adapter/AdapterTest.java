@@ -5,7 +5,7 @@ import com.jcg2015.designpatterns.adapter.site.XpayImpl;
 import com.jcg2015.designpatterns.adapter.site.XpayToPayDAdapter;
 import com.jcg2015.designpatterns.adapter.xpay.Xpay;
 
-public class AdapterText {
+public class AdapterTest {
 
 	public static void main(String[] args) {
 		

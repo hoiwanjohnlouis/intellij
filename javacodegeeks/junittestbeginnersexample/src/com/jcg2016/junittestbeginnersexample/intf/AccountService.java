@@ -1,9 +1,9 @@
-package com.jcg2015.junitsample.intf;
+package com.jcg2016.junittestbeginnersexample.intf;
 
 import java.util.List;
 
-import com.jcg2015.junitsample.obj.Account;
-import com.jcg2015.junitsample.obj.Transaction;
+import com.jcg2016.junittestbeginnersexample.obj.Account;
+import com.jcg2016.junittestbeginnersexample.obj.Transaction;
 
 public interface AccountService {
 
