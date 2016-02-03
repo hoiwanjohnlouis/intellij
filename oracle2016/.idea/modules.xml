@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/jdbctutorial/jdbctutorial.iml" filepath="$PROJECT_DIR$/jdbctutorial/jdbctutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lambda/lambda.iml" filepath="$PROJECT_DIR$/lambda/lambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/oracle2016.iml" filepath="$PROJECT_DIR$/oracle2016.iml" />
     </modules>
   </component>

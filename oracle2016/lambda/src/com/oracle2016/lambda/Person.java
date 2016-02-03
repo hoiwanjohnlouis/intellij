@@ -28,15 +28,12 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
-
 package com.oracle2016.lambda;
 
-
-import java.util.List;
-import java.util.ArrayList;
-import java.time.chrono.IsoChronology;
 import java.time.LocalDate;
+import java.time.chrono.IsoChronology;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Person {
   

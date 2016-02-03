@@ -67,7 +67,7 @@ public class LambdaScopeTest {
 
     public static void main(String... args) {
         LambdaScopeTest st = new LambdaScopeTest();
-        LambdaScopeTest.FirstLevel fl = st.new FirstLevel();
+        FirstLevel fl = st.new FirstLevel();
         fl.methodInFirstLevel(23);
     }
 }
