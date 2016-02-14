@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Enumeration;
 
+// import org.hsqldb.jdbcDriver;
+
 /**
  * Example of usages of DriverManager, not recommended to do manually
  * 
