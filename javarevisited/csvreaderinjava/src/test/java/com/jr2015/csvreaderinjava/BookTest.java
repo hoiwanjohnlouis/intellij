@@ -15,6 +15,8 @@
  ***************************************************************************/
 package com.jr2015.csvreaderinjava;
 
+import java.util.List;
+
 /***************************************************************************
  * Program Synopsis
  * <p>
@@ -31,5 +33,20 @@ package com.jr2015.csvreaderinjava;
 public class BookTest {
     public static void main(String[] args) {
 
+        List<Book> books = BookUtils.readBooksFromCSV("books.txt");
+
+        // let's print all the person read from CSV file
+        for (Book b : books) { System.out.println(b); }
+
     }
 }
+
+/*
+
+Output
+Book [name=Effective Java, price=42, author=Joshua Bloch]
+Book [name=Head First Java, price=39, author=Kathy Sierra]
+Book [name=Head First Design Pattern, price=44, author=Kathy Sierra]
+Book [name=Introduction to Algorithm, price=72, author=Thomas Cormen]
+
+*/
