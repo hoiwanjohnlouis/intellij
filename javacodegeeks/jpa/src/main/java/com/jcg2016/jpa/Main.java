@@ -1,6 +1,6 @@
 package com.jcg2016.jpa;
 
-import jpa.entity.*;
+import com.jcg2016.jpa.entity.*;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
