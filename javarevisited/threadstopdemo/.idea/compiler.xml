@@ -25,8 +25,5 @@
         <module name="threadstopdemo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="threadstopdemo" target="" />
-    </bytecodeTargetLevel>
   </component>
 </project>
