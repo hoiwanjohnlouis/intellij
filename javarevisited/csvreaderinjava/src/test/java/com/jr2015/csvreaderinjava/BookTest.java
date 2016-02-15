@@ -42,11 +42,9 @@ public class BookTest {
 }
 
 /*
-
 Output
 Book [name=Effective Java, price=42, author=Joshua Bloch]
 Book [name=Head First Java, price=39, author=Kathy Sierra]
 Book [name=Head First Design Pattern, price=44, author=Kathy Sierra]
-Book [name=Introduction to Algorithm, price=72, author=Thomas Cormen]
-
+Book [name=Introduction to Algorithms, price=72, author=Thomas Cormen]
 */
