@@ -37,27 +37,8 @@ import java.util.List;
  ***************************************************************************/
 public class ShapeTest {
 
-
-    public static void processShapes() throws Exception {
-        List<IShape> shapes = new ArrayList<IShape>();
-        IShape aCircle = new Circle(2.0);
-        shapes.add(aCircle);
-        IShape aSquare = new Square(2.0);
-        shapes.add(aSquare);
-        IShape aRTriangle = new RTriangle(2.0, 2.0);
-        shapes.add(aRTriangle);
-
-        for (IShape ss : shapes) {
-            System.out.println(ss);
-            try {
-                ss.foo();
-            } catch (Exception ex) {
-                //System.out.println(ex);
-                throw ex;
-            } finally {
-                System.out.println("Hello!");
-            }
-        }
+    public static void main(String[] args) throws Exception {
+        Shape.processShapes();
     }
 
 }
