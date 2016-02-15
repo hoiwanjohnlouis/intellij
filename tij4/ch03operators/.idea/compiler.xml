@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
@@ -24,8 +25,5 @@
         <module name="ch03operators" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ch03operators" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
