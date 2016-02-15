@@ -1,4 +1,4 @@
-package com.ntt2014.patterns.decorator;
+package com.ntt2015.decoratorpattern;
 
 /*
     Copyright (c) 2014  HW Tech Services, Inc., LLC
@@ -16,29 +16,33 @@ package com.ntt2014.patterns.decorator;
     limitations under the License.
 */
 
-// Blueprint for classes that will have decorators
+public class Mozzarella extends ToppingDecorator {
 
-public interface Pizza {
+    public Mozzarella(Pizza newPizza) {
 
-    public String getDescription();
+        super(newPizza);
 
-    public double getCost();
+        System.out.println("Adding Moz");
+    }
+
+    // Returns the result of calling getDescription() for
+    // PlainPizza and adds " mozzarella" to it
+
+    @Override
+    public String getDescription(){
+
+        return tempPizza.getDescription() + ", mozzarella";
+
+    }
+
+    @Override
+    public double getCost(){
+
+        System.out.println("Cost of Moz: " + .50);
+
+        return tempPizza.getCost() + .50;
+
+    }
 
 }
 
-
-/*
-public abstract class Pizza{
-
-
-	public abstract void setDescription(String newDescription);
-	public abstract String getDescription();
-
-	public abstract void setCost(double newCost);
-	public abstract double getCost();
-
-	// I could use getter and setter methods for every
-	// potential Pizza topping
-
-}
-*/

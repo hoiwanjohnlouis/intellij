@@ -1,4 +1,4 @@
-package com.ntt2014.patterns.decorator;
+package com.ntt2015.decoratorpattern;
 
 /*
     Copyright (c) 2014  HW Tech Services, Inc., LLC
@@ -16,33 +16,31 @@ package com.ntt2014.patterns.decorator;
     limitations under the License.
 */
 
-public class Mozzarella extends ToppingDecorator {
+public class TomatoSauce extends ToppingDecorator {
 
-    public Mozzarella(Pizza newPizza) {
-
+    public TomatoSauce(Pizza newPizza) {
         super(newPizza);
 
-        System.out.println("Adding Moz");
+        System.out.println("Adding Sauce");
     }
 
     // Returns the result of calling getDescription() for
-    // PlainPizza and adds " mozzarella" to it
+    // PlainPizza, Mozzarella and then TomatoSauce
 
     @Override
     public String getDescription(){
 
-        return tempPizza.getDescription() + ", mozzarella";
+        return tempPizza.getDescription() + ", tomato sauce";
 
     }
 
     @Override
     public double getCost(){
 
-        System.out.println("Cost of Moz: " + .50);
+        System.out.println("Cost of Sauce: " + .35);
 
-        return tempPizza.getCost() + .50;
+        return tempPizza.getCost() + .35;
 
     }
 
 }
-

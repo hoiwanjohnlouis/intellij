@@ -1,4 +1,4 @@
-package com.ntt2014.patterns.decorator;
+package com.ntt2015.decoratorpattern;
 
 /**
  * ************************************************************************

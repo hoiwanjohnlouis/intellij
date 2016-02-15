@@ -1,4 +1,4 @@
-package com.ntt2014.patterns.decorator;
+package com.ntt2015.decoratorpattern;
 
 /*
     Copyright (c) 2014  HW Tech Services, Inc., LLC
@@ -16,30 +16,34 @@ package com.ntt2014.patterns.decorator;
     limitations under the License.
 */
 
-public class TomatoSauce extends ToppingDecorator {
+// Implements the Pizza interface with only the required
+// methods from the interface
 
-    public TomatoSauce(Pizza newPizza) {
-        super(newPizza);
+// Every Pizza made will start as a PlainPizza
 
-        System.out.println("Adding Sauce");
-    }
+public class PlainPizza implements Pizza {
 
-    // Returns the result of calling getDescription() for
-    // PlainPizza, Mozzarella and then TomatoSauce
+    public PlainPizza () {
 
-    @Override
-    public String getDescription(){
-
-        return tempPizza.getDescription() + ", tomato sauce";
+        System.out.println("---------- New Pizza ----------\n" + "Adding Dough");
 
     }
 
+
     @Override
-    public double getCost(){
+    public String getDescription() {
 
-        System.out.println("Cost of Sauce: " + .35);
+        return "Thin dough";
 
-        return tempPizza.getCost() + .35;
+    }
+
+
+    @Override
+    public double getCost() {
+
+        System.out.println("Cost of Dough: " + 4.00);
+
+        return 4.00;
 
     }
 
