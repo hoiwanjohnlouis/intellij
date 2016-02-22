@@ -42,7 +42,7 @@ import java.util.TreeMap;
  **/
 
 public class HashMapSorting{
-    public static void main(String args[]) throws ParseException {
+    public static void processData() throws ParseException {
 
         // let's create a map with Java releases and their code names
         HashMap<String, String> codenames = new HashMap<String, String>();
