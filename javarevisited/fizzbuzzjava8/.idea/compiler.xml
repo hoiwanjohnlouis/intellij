@@ -25,5 +25,8 @@
         <module name="fizzbuzzjava8" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="fizzbuzzjava8" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
