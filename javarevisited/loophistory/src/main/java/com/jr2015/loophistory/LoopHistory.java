@@ -22,9 +22,9 @@ import java.util.List;
  * limitations under the License.
  **/
 
-public class Main {
+public class LoopHistory {
 
-    public static void main(String[] args) {
+    public static void processData() {
 
         List<String> countries = Arrays.asList("India", "Australia", "England", "South Africa");
 
