@@ -12,8 +12,8 @@ import java.util.Set;
  * @author java67
  */
 
-public class TestKeyFromValue {
-    public static void main(String args[]) {
+public class KeyFromValue {
+    public static void processData() {
 
         //how to get key from value in hashtable in Java
         Hashtable table = new Hashtable();
