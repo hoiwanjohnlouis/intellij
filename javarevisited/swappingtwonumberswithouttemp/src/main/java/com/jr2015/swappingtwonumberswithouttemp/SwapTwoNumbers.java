@@ -2,9 +2,9 @@ package com.jr2015.swappingtwonumberswithouttemp;
 
 
 
-public class Main {
+public class SwapTwoNumbers {
 
-    public static void main(String[] args) {
+    public static void processData() {
 
         // write your code here
         int a = 10;
