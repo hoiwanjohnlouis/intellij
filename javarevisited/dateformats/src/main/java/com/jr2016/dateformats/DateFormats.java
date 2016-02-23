@@ -15,6 +15,10 @@
  ***************************************************************************/
 package com.jr2016.dateformats;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /***************************************************************************
  * Program Synopsis
  * <p>
@@ -31,5 +35,10 @@ package com.jr2016.dateformats;
  *
  ***************************************************************************/
 public class DateFormats {
+    public static void processData() {
+        Date date;
+        DateFormat dateFormat;
+        SimpleDateFormat simpleDateFormat;
 
+    }
 }
