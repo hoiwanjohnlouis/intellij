@@ -25,5 +25,8 @@
         <module name="twodimensionalarray" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="twodimensionalarray" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
