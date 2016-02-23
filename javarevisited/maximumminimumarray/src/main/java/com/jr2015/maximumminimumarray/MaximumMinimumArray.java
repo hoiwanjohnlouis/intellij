@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Created by KimHaNeul on 10/16/2015.
  */
 
-public class MaximumMinimumArrayDemo {
+public class MaximumMinimumArray {
 
     public static void main(String args[]) {
         largestAndSmallest(new int[]{-20, 34, 21, -87, 92, Integer.MAX_VALUE});
