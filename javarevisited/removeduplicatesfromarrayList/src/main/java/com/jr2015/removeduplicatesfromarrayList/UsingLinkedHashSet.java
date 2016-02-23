@@ -33,7 +33,7 @@ public class UsingLinkedHashSet {
     // duplicate entries from ArrayList without losing insertion
     // order or entries:
 
-    public static void main(String args[]) {
+    public static void processData() {
 
         //ArrayList with duplicates String
         List<String> duplicateList = (List<String>) Arrays.asList("Android" , "Android", "iOS", "Windows mobile");

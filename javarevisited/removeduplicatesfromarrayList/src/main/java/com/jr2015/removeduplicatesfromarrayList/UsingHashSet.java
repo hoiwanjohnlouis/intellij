@@ -18,7 +18,7 @@ public class UsingHashSet {
     // removing duplicates from ArrayList without losing order
     // of elements, for that instead of HashSet we need to use LinkedHashSet.
 
-    public static void main(String[] args) {
+    public static void processData() {
         //ArrayList with duplicates String
         List<String> duplicateList = (List<String>) Arrays.asList("Android" , "Android", "iOS", "Windows mobile");
         System.out.println("size of Arraylist with duplicates: " + duplicateList.size()); //should print 4 becaues of duplicates Android
