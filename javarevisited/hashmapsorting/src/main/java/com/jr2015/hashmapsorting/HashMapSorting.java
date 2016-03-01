@@ -103,4 +103,31 @@ public class HashMapSorting{
         }
     }
 }
+/*
+Output:
 
+HashMap before sorting, random order
+J2SE 1.2 ==> Playground
+JDK 1.1.4 ==> Sparkler
+J2SE 1.3 ==> Kestrel
+J2SE 1.4 ==> Merlin
+J2SE 5.0 ==> Tiger
+Java SE 7 ==> Dolphin
+Java SE 6 ==> Mustang
+HashMap after sorting by keys in ascending order
+J2SE 1.2 ==> Playground
+J2SE 1.3 ==> Kestrel
+J2SE 1.4 ==> Merlin
+J2SE 5.0 ==> Tiger
+JDK 1.1.4 ==> Sparkler
+Java SE 6 ==> Mustang
+Java SE 7 ==> Dolphin
+HashMap after sorting entries by values
+Java SE 7 ==> Dolphin
+J2SE 1.3 ==> Kestrel
+J2SE 1.4 ==> Merlin
+Java SE 6 ==> Mustang
+J2SE 1.2 ==> Playground
+JDK 1.1.4 ==> Sparkler
+J2SE 5.0 ==> Tiger
+*/
