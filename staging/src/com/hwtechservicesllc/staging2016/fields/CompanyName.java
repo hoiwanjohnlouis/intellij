@@ -1,6 +1,6 @@
 package com.hwtechservicesllc.staging2016.fields;
 
-import com.hwtechservicesllc.staging2016.enums.EFieldType;
+import com.hwtechservicesllc.staging2016.enums.FieldType;
 import org.apache.log4j.Logger;
 
 /**
@@ -30,24 +30,24 @@ public class CompanyName {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    public final static EFieldType DEFAULT_FIELD_TYPE = EFieldType.DEFAULT_COMPANY_NAME;
-    public final static String DEFAULT_COMPANY_NAME = "Some Widgets, Inc.";
+    private final FieldType DEFAULT_FIELD_TYPE = FieldType.DEFAULT_COMPANY_NAME;
+    private final String DEFAULT_VALUE = "Some Widgets, Inc.";
 
-    private final EFieldType fieldType;
+    private final FieldType fieldType;
     private final String companyName;
 
     //
     public CompanyName() {
         this.fieldType = DEFAULT_FIELD_TYPE;
-        this.companyName = DEFAULT_COMPANY_NAME;
+        this.companyName = DEFAULT_VALUE;
     }
 
-    public CompanyName(final EFieldType fieldType, final String companyName) {
+    public CompanyName(final FieldType fieldType, final String companyName) {
         this.fieldType = fieldType;
         this.companyName = companyName;
     }
 
-    public EFieldType getFieldType() {
+    public FieldType getFieldType() {
         return fieldType;
     }
 
@@ -58,7 +58,7 @@ public class CompanyName {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(fieldType.name());
+        sb.append(getFieldType().name());
         sb.append(":[");
         sb.append(getCompanyName());
         sb.append("]");

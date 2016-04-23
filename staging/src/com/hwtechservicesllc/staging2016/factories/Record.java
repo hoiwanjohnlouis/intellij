@@ -1,6 +1,6 @@
 package com.hwtechservicesllc.staging2016.factories;
 
-import com.hwtechservicesllc.staging2016.enums.EMsgType;
+import com.hwtechservicesllc.staging2016.enums.MsgType;
 import com.hwtechservicesllc.staging2016.fields.*;
 
 import org.apache.log4j.Logger;
@@ -29,7 +29,7 @@ public class Record {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    private final EMsgType msgType;
+    private final MsgType msgType;
     private final CompanyName companyName;
     private final TickerSymbol tickerSymbol;
     private final Price openingPrice;
@@ -53,7 +53,7 @@ public class Record {
     }
 
 
-    public EMsgType getMsgType() {
+    public MsgType getMsgType() {
         return msgType;
     }
 
@@ -128,7 +128,7 @@ public class Record {
 
         private StringBuilder stringBuilder = new StringBuilder();
 
-        private EMsgType msgType;
+        private MsgType msgType;
         private CompanyName companyName;         // 1
         private TickerSymbol tickerSymbol;       // 2
         private Price openingPrice;              // 3
@@ -140,7 +140,7 @@ public class Record {
         
         
         // static helper class to build object
-        public RecordBuilder(EMsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
+        public RecordBuilder(MsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
             this.msgType = msgType;
             this.companyName = companyName;
             this.tickerSymbol = tickerSymbol;

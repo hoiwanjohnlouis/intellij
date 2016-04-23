@@ -1,24 +1,15 @@
 package com.hwtechservicesllc.staging2016.views;
 
-import com.hwtechservicesllc.staging2016.enums.EMsgType;
+import com.hwtechservicesllc.staging2016.enums.MsgType;
 import com.hwtechservicesllc.staging2016.fields.*;
 
 import org.apache.log4j.Logger;
 
 /*
     Copyright (c) 2014  Hoi Wan Louis
- 
     Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
- 
         http://www.apache.org/licenses/LICENSE-2.0
- 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
 */
 
 public class TradeView {
@@ -27,7 +18,7 @@ public class TradeView {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    private final EMsgType msgType;
+    private final MsgType msgType;
     private final CompanyName companyName;
     private final TickerSymbol tickerSymbol;
     private final Price openingPrice;
@@ -36,8 +27,8 @@ public class TradeView {
     private final Quantity lastTradeQuantity;
     private final DateStamp lastTradeDateStamp;
     private final TimeStamp lastTradeTimeStamp;
+    private final StringBuilder stringBuilder = new StringBuilder();
 
-    //
     private TradeView(TradeViewBuilder tradeViewBuilder) {
         this.msgType = tradeViewBuilder.msgType;
         this.companyName = tradeViewBuilder.companyName;
@@ -50,9 +41,9 @@ public class TradeView {
         this.lastTradeTimeStamp = tradeViewBuilder.lastTradeTimeStamp;
     }
 
-    //
+    @Override
     public String toString(){
-        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.setLength(0);
         stringBuilder.append(msgType);
         stringBuilder.append("\n");
         stringBuilder.append(companyName);
@@ -81,7 +72,7 @@ public class TradeView {
         // for logging purposes
         private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-        private EMsgType msgType;
+        private MsgType msgType;
         private CompanyName companyName;
         private TickerSymbol tickerSymbol;
         private Price openingPrice;
@@ -92,16 +83,26 @@ public class TradeView {
         private TimeStamp lastTradeTimeStamp;
 
         // static helper class to build object
-        public TradeViewBuilder(EMsgType msgType, CompanyName companyName, TickerSymbol tickerSymbol) {
+        public TradeViewBuilder(MsgType msgType) {
             this.msgType = msgType;
-            this.companyName = companyName;
-            this.tickerSymbol = tickerSymbol;
+            this.companyName = new CompanyName();
+            this.tickerSymbol = new TickerSymbol();
             this.openingPrice = new Price();
             this.previousDaysClosingPrice = new Price();
             this.lastTradePrice = new Price();
             this.lastTradeQuantity = new Quantity();
             this.lastTradeDateStamp = new DateStamp();
             this.lastTradeTimeStamp = new TimeStamp();
+        }
+
+        public TradeViewBuilder buildCompanyName(CompanyName companyName) {
+            this.companyName = companyName;
+            return this;
+        }
+
+        public TradeViewBuilder buildTickerSymbol(TickerSymbol tickerSymbol) {
+            this.tickerSymbol = tickerSymbol;
+            return this;
         }
 
         public TradeViewBuilder buildOpeningPrice(Price openingPrice) {

@@ -18,44 +18,28 @@ package com.hwtechservicesllc.staging2016.enums;
 
 // from FixProtocol.org website www.fixprotocol.org
 
-public enum EOrderSide {
+public enum FieldType {
 
-    BUY ("1"),
-    SELL ("2"),
-    BUY_MINUS ("3"),
-    SELL_PLUS ("4"),
-    SELL_SHORT ("5"),
-    SELL_SHORT_EXEMPT ("6"),
-    UNDISCLOSED ("7"),
-    CROSS ("8"),
-    CROSS_SHORT ("9"),
-    CROSS_SHORT_EXEMPT ("A"),
-    AS_DEFINED ("B"),
-    OPPOSITE ("C"),
-    SUBSCRIBE ("D"),
-    REDEEM ("E"),
-    LEND_FINANCING ("F"),
-    BORROW_FINANCING ("G");
-
-    private final String orderSideValue;
-
-    EOrderSide(final String side) {
-        this.orderSideValue = side;
-    }
-
-    public String getOrderSideValue() {
-        return orderSideValue;
-    }
+    DEFAULT_COMPANY_NAME,
+    DEFAULT_TICKER_SYMBOL,
+    DEFAULT_PRICE,
+    DEFAULT_QUANTITY,
+    DEFAULT_DATE_STAMP,
+    DEFAULT_TIME_STAMP,
+    COMPANY_NAME,
+    TICKER_SYMBOL,
+    OPENING_PRICE,
+    PREVIOUS_DAYS_CLOSING_PRICE,
+    TRADE_PRICE,
+    TRADE_QUANTITY,
+    TRADE_DATE_STAMP,
+    TRADE_TIME_STAMP;
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.name());
-        sb.append(":[");
-        sb.append(getOrderSideValue());
-        sb.append("]");
 
         return sb.toString();
     }
-
 }

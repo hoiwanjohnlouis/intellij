@@ -18,7 +18,7 @@ package com.hwtechservicesllc.staging2016.enums;
 
 // from FixProtocol.org website www.fixprotocol.org
 
-public enum EMsgType {
+public enum MsgType {
 
     HEARTBEAT("0", "Heartbeat"),
     TEST_REQUEST("1", "Test Request"),
@@ -36,7 +36,7 @@ public enum EMsgType {
     private final String msgTypeValue;
     private final String msgTypeDescription;
 
-    private EMsgType(final String msgType, final String msgDescription) {
+    private MsgType(final String msgType, final String msgDescription) {
         this.msgTypeValue = msgType;
         this.msgTypeDescription = msgDescription;
     }

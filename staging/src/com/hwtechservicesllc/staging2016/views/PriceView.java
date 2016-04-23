@@ -2,7 +2,7 @@ package com.hwtechservicesllc.staging2016.views;
 
 import org.apache.log4j.Logger;
 
-import com.hwtechservicesllc.staging2016.enums.EMsgType;
+import com.hwtechservicesllc.staging2016.enums.MsgType;
 import com.hwtechservicesllc.staging2016.fields.*;
 
 /***************************************************************************
@@ -29,7 +29,7 @@ public class PriceView {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private final Logger logger = Logger.getLogger(DEBUG_TAG);
 
-    private final EMsgType msgType;
+    private final MsgType msgType;
     private final TickerSymbol tickerSymbol;
     private final Price lastTradePrice;
     private final Quantity lastTradeQuantity;
@@ -46,7 +46,7 @@ public class PriceView {
         this.lastTradeTimeStamp = priceViewBuilder.lastTradeTimeStamp;
     }
 
-    public EMsgType getMsgType() {
+    public MsgType getMsgType() {
         return msgType;
     }
 
@@ -94,7 +94,7 @@ public class PriceView {
         // for logging purposes
         private final String DEBUG_TAG = this.getClass().getSimpleName();
 
-        private EMsgType msgType;
+        private MsgType msgType;
         private TickerSymbol tickerSymbol;
         private Price lastTradePrice;
         private Quantity lastTradeQuantity;
@@ -102,13 +102,18 @@ public class PriceView {
         private TimeStamp lastTradeTimeStamp;
 
         //
-        public PriceViewBuilder(EMsgType msgType, TickerSymbol tickerSymbol) {
+        public PriceViewBuilder(MsgType msgType) {
             this.msgType = msgType;
-            this.tickerSymbol = tickerSymbol;
+            this.tickerSymbol = new TickerSymbol();
             this.lastTradePrice = new Price();
             this.lastTradeQuantity = new Quantity();
             this.lastTradeDateStamp = new DateStamp();
             this.lastTradeTimeStamp = new TimeStamp();
+        }
+
+        public PriceViewBuilder buildTickerSymbol(TickerSymbol tickerSymbol) {
+            this.tickerSymbol = tickerSymbol;
+            return this;
         }
 
         public PriceViewBuilder buildTradePrice(Price lastTradePrice) {
