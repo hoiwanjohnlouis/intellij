@@ -1,15 +1,15 @@
 package com.hwtechservicesllc.staging2016.fields;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
-
-import com.hwtechservicesllc.staging2016.enums.FieldType;
-
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
  * Licensed under the Apache License, Version 2.0 (the "License");
  * http://www.apache.org/licenses/LICENSE-2.0
  **/
+
+import com.hwtechservicesllc.staging2016.enums.FieldType;
+import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 public class DateStamp {
 
@@ -29,19 +29,23 @@ public class DateStamp {
         this.dateStamp = DEFAULT_VALUE;
     }
 
+    //
     public DateStamp(final FieldType fieldType, final String dateStamp) {
         this.fieldType = fieldType;
         this.dateStamp = dateStamp;
     }
 
+    //
     public FieldType getFieldType() {
         return fieldType;
     }
 
+    //
     public String getDateStamp() {
         return dateStamp;
     }
 
+    //
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

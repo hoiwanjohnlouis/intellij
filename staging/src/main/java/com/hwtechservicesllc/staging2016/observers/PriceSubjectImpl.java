@@ -1,8 +1,9 @@
 package com.hwtechservicesllc.staging2016.observers;
 
 import java.util.ArrayList;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC

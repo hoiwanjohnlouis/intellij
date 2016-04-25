@@ -10,8 +10,9 @@ import com.hwtechservicesllc.staging2016.enums.MsgType;
 import com.hwtechservicesllc.staging2016.fields.CompanyName;
 import com.hwtechservicesllc.staging2016.fields.TickerSymbol;
 import com.hwtechservicesllc.staging2016.views.TradeView;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 public class TestFactories {
 
