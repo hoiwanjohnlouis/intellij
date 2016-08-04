@@ -25,7 +25,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="abstractfactorypattern" target="1.5" />
+      <module name="abstractfactorypattern" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
