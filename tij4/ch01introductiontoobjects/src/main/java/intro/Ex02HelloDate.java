@@ -1,4 +1,4 @@
-package com.tij4f2014.ch01;
+package intro;
 
 /**
  * Created by callas on 9/16/2014.
