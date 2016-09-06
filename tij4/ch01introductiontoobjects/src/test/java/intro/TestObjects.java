@@ -28,10 +28,16 @@ package intro;
 public class TestObjects {
 
     /**
-     * @param args
+     * @param args None.
      */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
+        // Test Ex01
+        Ex01SimpleData ex01SimpleData = new Ex01SimpleData();
+        System.out.println(ex01SimpleData);
+
+        // Test Ex02
+        Ex02HelloDate ex02HelloDate = new Ex02HelloDate();
+        System.out.println(ex02HelloDate);
 
     }
 

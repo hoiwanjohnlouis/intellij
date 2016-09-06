@@ -1,40 +1,26 @@
 package intro;
 
-/**
- * Created by callas on 9/16/2014.
- */
 public class Ex01SimpleData {
-    private int m_ctr;
-    private char m_char;
+    private int intData;
+    private char characterData;
 
     static private StringBuffer sb;
-    public Ex01SimpleData() {
-        setM_ctr(0);
-        setM_char(' ');
+
+    Ex01SimpleData() {
+        this(0,' ');
     }
-    public Ex01SimpleData(int i, char c) {
-        setM_ctr(i);
-        setM_char(c);
+    Ex01SimpleData(int i, char c) {
+        this.intData = i;
+        this.characterData = c;
     }
-    public int getM_ctr () {
-        return m_ctr;
-    }
-    protected void setM_ctr (int i) {
-        m_ctr = i;
-    }
-    public char getM_char () {
-        return m_char;
-    }
-    protected void setM_char (char c) {
-        m_char = c;
-    }
+
     @Override
     public String toString() {
         sb = new StringBuffer();
-        sb.append("counter:");
-        sb.append(m_ctr);
+        sb.append("intData:");
+        sb.append(intData);
         sb.append("\ncharacter:");
-        sb.append(m_char);
+        sb.append(characterData);
         return String.valueOf(sb);
     }
 }
