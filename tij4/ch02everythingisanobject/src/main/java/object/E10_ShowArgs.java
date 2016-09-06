@@ -6,7 +6,7 @@
  * You'll need to index into the command-line
  * array of Strings.
  ***********************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E10_ShowArgs {
   public static void main(String[] args) {

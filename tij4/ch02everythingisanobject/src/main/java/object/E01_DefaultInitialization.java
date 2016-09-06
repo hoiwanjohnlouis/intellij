@@ -5,7 +5,7 @@
  * to verify that Java performs default
  * initialization.
  ***********************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E01_DefaultInitialization {
   int i;

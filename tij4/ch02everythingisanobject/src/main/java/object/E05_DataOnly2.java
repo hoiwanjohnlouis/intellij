@@ -4,7 +4,7 @@
  * of the data in DataOnly are assigned to and
  * printed in main().
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E05_DataOnly2 {
   public static void main(String[] args) {

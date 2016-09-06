@@ -4,7 +4,7 @@
  * storage() method defined as a code fragment in
  * this chapter.
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E06_Storage {
   String s = "Hello, World!";

@@ -1,6 +1,6 @@
 //: object/E10_ShowArgs2.java
 // {Args: A B C}
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E10_ShowArgs2 {
   public static void main(String[] args) {

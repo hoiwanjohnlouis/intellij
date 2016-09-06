@@ -4,7 +4,7 @@
  * autoboxing works for all the primitive types
  * and their wrappers.
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E09_AutoboxingTest {
   public static void main(String[] args) {

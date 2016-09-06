@@ -3,7 +3,7 @@
  * Turn the AllTheColorsOfTheRainbow example into
  * a program that compiles and runs.
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E11_AllTheColorsOfTheRainbow {
   int anIntegerRepresentingColors;

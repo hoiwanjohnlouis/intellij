@@ -3,7 +3,7 @@
  * Add an HTML list of items to the documentation
  * in Exercise 13.
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 /** A class comment
 * <pre>

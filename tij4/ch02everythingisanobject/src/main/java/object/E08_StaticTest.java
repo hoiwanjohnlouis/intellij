@@ -5,7 +5,7 @@
  * particular class, there is only one instance
  * of a particular static field in that class.
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E08_StaticTest {
   static int i = 47;

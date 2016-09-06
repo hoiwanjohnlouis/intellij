@@ -5,7 +5,7 @@
  * the resulting documentation with your Web
  * browser.
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E13_LeftToReader {
   public static void main(String args[]) {

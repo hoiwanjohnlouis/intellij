@@ -12,7 +12,7 @@
  * environment than the JDK, learn how to compile
  * and run programs in that environment.
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 public class E02_HelloWorld {
   public static void main(String[] args) {

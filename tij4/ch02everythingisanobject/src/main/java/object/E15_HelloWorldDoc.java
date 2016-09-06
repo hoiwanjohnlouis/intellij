@@ -4,7 +4,7 @@
  * Extract it into an HTML file using Javadoc
  * and view it with your Web browser.
  ************************************************/
-package com.tij4f2014.ch02.object;
+package object;
 
 /** A first example from <i>sTIJ4</i>. 
 * Demonstrates the basic class
