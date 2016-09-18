@@ -21,10 +21,10 @@ package com.hwtechservicesllc.staging2016.observers;
  * limitations under the License.
  **/
 
-public interface ISubject {
+public interface Subject {
 
-    public void register(IObserver o);
-    public void unregister(IObserver o);
+    public void register(Observer o);
+    public void unregister(Observer o);
     public void notifyObserver();
 
 }

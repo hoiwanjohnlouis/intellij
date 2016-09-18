@@ -3,9 +3,9 @@ package com.hwtechservicesllc.staging2016.factories;
 import com.hwtechservicesllc.staging2016.enums.MsgType;
 import com.hwtechservicesllc.staging2016.fields.*;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
  * http://www.apache.org/licenses/LICENSE-2.0
  **/
 
-public class Record {
+public class Record implements Comparable {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
@@ -107,6 +107,10 @@ public class Record {
 
         return stringBuilder.toString();
 
+    }
+
+    public int compareTo(Object o) {
+        return 0;
     }
 
     // static builder helper class 

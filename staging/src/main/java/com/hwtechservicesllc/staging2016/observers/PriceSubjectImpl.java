@@ -1,9 +1,9 @@
 package com.hwtechservicesllc.staging2016.observers;
 
 import java.util.ArrayList;
-import org.apache.log4j.Level;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -11,27 +11,27 @@ import org.apache.log4j.Logger;
  * http://www.apache.org/licenses/LICENSE-2.0
  **/
 
-public class PriceSubjectImpl implements ISubject {
+public class PriceSubjectImpl implements Subject {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private ArrayList<IObserver> observers;
+    private ArrayList<Observer> observers;
 
     public PriceSubjectImpl() {
         logger.trace("in PriceSubjectImpl");
-        observers = new ArrayList<IObserver>();
+        observers = new ArrayList<Observer>();
     }
 
     @Override
-    public void register(IObserver o) {
+    public void register(Observer o) {
         logger.trace("in register");
         observers.add(o);
     }
 
     @Override
-    public void unregister(IObserver o) {
+    public void unregister(Observer o) {
         logger.trace("in unregister");
 
         int observerIndex = observers.indexOf(o);
@@ -43,8 +43,8 @@ public class PriceSubjectImpl implements ISubject {
 
     @Override
     public void notifyObserver() {
-        // call update method for each IObserver
-        for (IObserver observer : observers) {
+        // call update method for each Observer
+        for (Observer observer : observers) {
             observer.update(0.1, 0.2, 0.3);
         }
     }

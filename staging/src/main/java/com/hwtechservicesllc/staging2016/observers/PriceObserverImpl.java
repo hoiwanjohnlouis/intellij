@@ -1,8 +1,7 @@
 package com.hwtechservicesllc.staging2016.observers;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Copyright 01/07/2016 HW Tech Services, LLC
@@ -10,14 +9,14 @@ import org.apache.log4j.Logger;
  * http://www.apache.org/licenses/LICENSE-2.0
  **/
 
-public class PriceObserverImpl implements IObserver {
+public class PriceObserverImpl implements Observer {
 
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private ISubject priceUpdate;
+    private Subject priceUpdate;
 
-    public PriceObserverImpl(ISubject priceUpdate) {
+    public PriceObserverImpl(Subject priceUpdate) {
         this.priceUpdate = priceUpdate;
         this.priceUpdate.register(this);
     }

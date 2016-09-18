@@ -1,8 +1,9 @@
 package com.hwtechservicesllc.staging2016.fields;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 import com.hwtechservicesllc.staging2016.enums.FieldType;
 
