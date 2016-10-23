@@ -10,5 +10,8 @@ import static org.junit.Assert.*;
  * @author KimSoYeon
  ***********************************************************************/
 public class MyE01_DefaultInitializationTest {
-
+    public static void main(String[] args) {
+        System.out.println("Default constructor: " + new MyE01_DefaultInitialization());
+        System.out.println("(int, char) constructor: " + new MyE01_DefaultInitialization(7, 'a'));
+    }
 }
