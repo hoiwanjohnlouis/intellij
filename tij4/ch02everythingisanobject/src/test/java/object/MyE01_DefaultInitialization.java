@@ -11,7 +11,6 @@ package object;
 class MyE01_DefaultInitialization {
     private int intData;
     private char characterData;
-
     static private StringBuffer sb;
 
     MyE01_DefaultInitialization() {
@@ -29,6 +28,11 @@ class MyE01_DefaultInitialization {
         sb.append("\ncharacter:");
         sb.append(characterData);
         return String.valueOf(sb);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Default constructor: " + new MyE01_DefaultInitialization());
+        System.out.println("(int, char) constructor: " + new MyE01_DefaultInitialization(7, 'a'));
     }
 
 }

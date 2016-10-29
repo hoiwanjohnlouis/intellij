@@ -1,16 +1,18 @@
-package object;
-
 /***********************************************************************
  * Copyright 2016 HW Tech Services, LLC
  * Licensed under the Apache License, Version 2.0 (the "License");
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  * @author KimSoYeon
+ * @param args none
+ * @return none
+ * @throws none
  ***********************************************************************/
+package object;
 
-class MyE02_HelloWorld {
-    @Override
-    public String toString () {
-        return ("Hello, World!");
+public class MyE03_ATypeName {
+
+    public static void main (String[] args) {
     }
+
 }
