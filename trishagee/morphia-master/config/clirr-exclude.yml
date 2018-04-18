@@ -1,0 +1,5 @@
+---
+differenceTypes: []
+
+packages:
+- com.mongodb.*
