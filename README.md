@@ -1,1 +1,1 @@
-# intellijPrototyping
+# intellij
