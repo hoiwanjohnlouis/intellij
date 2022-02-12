@@ -2,10 +2,11 @@ package com.hwtechservicesllc.staging2022.factories;
 
 import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.*;
+import com.hwtechservicesllc.staging2022.interfaces.VerboseLogString;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class FIXMessage {
+public class FIXRecord implements VerboseLogString {
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -21,7 +22,7 @@ public class FIXMessage {
     private final LastTradeTimeStamp lastTradeTimeStamp;
 
     //
-    private FIXMessage(FIXMessage.Builder builder) {
+    private FIXRecord(FIXRecord.Builder builder) {
         this.tag35MsgType = builder.tag35MsgType;
         this.companyName = builder.companyName;
         this.tickerSymbol = builder.tickerSymbol;
@@ -36,44 +37,33 @@ public class FIXMessage {
     public Tag35MsgType getMsgType() {
         return tag35MsgType;
     }
-
     public CompanyName getCompanyName() {
         return companyName;
     }
-
     public TickerSymbol getTickerSymbol() {
         return tickerSymbol;
     }
-
     public OpeningPrice getOpeningPrice() {
         return openingPrice;
     }
-
     public PreviousDaysClosingPrice getPreviousDaysClosingPrice() {
         return previousDaysClosingPrice;
     }
-
     public LastTradePrice getLastTradePrice() {
         return lastTradePrice;
     }
-
     public LastTradeQuantity getLastTradeQuantity() {
         return lastTradeQuantity;
     }
-
     public LastTradeDateStamp getLastTradeDateStamp() {
         return lastTradeDateStamp;
     }
-
     public LastTradeTimeStamp getLastTradeTimeStamp() {
         return lastTradeTimeStamp;
     }
 
-
-    // If any EnemyShip object is printed to screen this shows up
     @Override
     public String toString() {
-
         StringBuilder stringBuilder = new StringBuilder();
 
         // clean up the buffer before using.
@@ -98,9 +88,35 @@ public class FIXMessage {
         return stringBuilder.toString();
     }
 
-    public int compareTo(Object o) {
-        return 0;
+    @Override
+    public String toVerboseLogString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        // clean up the buffer before using.
+        stringBuilder.append(tag35MsgType);
+        stringBuilder.append("\n\t");
+        stringBuilder.append(companyName);
+        stringBuilder.append("\n\t");
+        stringBuilder.append(tickerSymbol);
+        stringBuilder.append("\n\t");
+        stringBuilder.append(openingPrice);
+        stringBuilder.append("\n\t");
+        stringBuilder.append(previousDaysClosingPrice);
+        stringBuilder.append("\n\t");
+        stringBuilder.append(lastTradePrice);
+        stringBuilder.append("\n\t");
+        stringBuilder.append(lastTradeQuantity);
+        stringBuilder.append("\n\t");
+        stringBuilder.append(lastTradeDateStamp);
+        stringBuilder.append("\n\t");
+        stringBuilder.append(lastTradeTimeStamp);
+
+        return stringBuilder.toString();
     }
+
+//    public int compareTo(Object o) {
+//        return 0;
+//    }
 
     // static builder helper class
     public static class Builder {
@@ -123,7 +139,6 @@ public class FIXMessage {
         // helper class to build object
         public Builder(Tag35MsgType tag35MsgType) {
             this.tag35MsgType = tag35MsgType;
-            return;
         }
 
         public Builder buildCompanyName(String companyName) {
@@ -166,8 +181,8 @@ public class FIXMessage {
             return this;
         }
 
-        public FIXMessage build() {
-            return new FIXMessage(this);
+        public FIXRecord build() {
+            return new FIXRecord(this);
         }
     }
 

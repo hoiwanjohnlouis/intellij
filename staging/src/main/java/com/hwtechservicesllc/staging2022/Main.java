@@ -3,7 +3,7 @@ package com.hwtechservicesllc.staging2022;
 import com.hwtechservicesllc.staging2022.enums.FIXTag;
 
 import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
-import com.hwtechservicesllc.staging2022.factories.FIXMessage;
+import com.hwtechservicesllc.staging2022.factories.FIXRecord;
 
 public class Main {
 
@@ -14,8 +14,8 @@ public class Main {
 
         FIXTag tagger = FIXTag.ACCOUNT;
 
-        FIXMessage record =
-                new FIXMessage.Builder(Tag35MsgType.NEW_ORDER)
+        FIXRecord record =
+                new FIXRecord.Builder(Tag35MsgType.NEW_ORDER)
                         .buildCompanyName(companyName)
                         .buildTickerSymbol("IBM")
                         .buildOpeningPrice(12.34D)
@@ -27,5 +27,6 @@ public class Main {
                         .build();
 
         System.out.println(record);
+        System.out.println(record.toVerboseLogString());
     }
 }
