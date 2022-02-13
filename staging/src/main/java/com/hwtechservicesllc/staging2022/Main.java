@@ -2,7 +2,7 @@ package com.hwtechservicesllc.staging2022;
 
 import com.hwtechservicesllc.staging2022.enums.FIXTag;
 
-import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
+import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.factories.FIXRecord;
 
 public class Main {

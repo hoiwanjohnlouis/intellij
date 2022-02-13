@@ -1,14 +1,9 @@
 package com.hwtechservicesllc.staging2022.factories;
 
-/**
- * Copyright 01/07/2016 HW Tech Services, LLC
- * Licensed under the Apache License, Version 2.0 (the "License");
- * http://www.apache.org/licenses/LICENSE-2.0
- **/
 
-import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
+import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.CompanyName;
-import com.hwtechservicesllc.staging2022.fields.TickerSymbol;
+import com.hwtechservicesllc.staging2022.fields.Tag55Symbol;
 import com.hwtechservicesllc.staging2022.views.TradeView;
 
 import org.apache.log4j.LogManager;
@@ -24,11 +19,11 @@ public class TestFactories {
 
         //  testing ticker record construction
         CompanyName companyName = new CompanyName();
-        TickerSymbol tickerSymbol = new TickerSymbol();
+        Tag55Symbol tag55Symbol = new Tag55Symbol();
         TradeView testView =
                 new TradeView.TradeViewBuilder(Tag35MsgType.EXECUTION_REPORT).
                         buildCompanyName(companyName).
-                        buildTickerSymbol(tickerSymbol).
+                        buildTickerSymbol(tag55Symbol).
                         build();
         System.out.println(testView);
 

@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.staging2022.enums;
+package com.hwtechservicesllc.staging2022.fields;
 
 /*
     Copyright (c) 2022  HW Tech Services, Inc., LLC
@@ -36,7 +36,7 @@ public enum Tag35MsgType {
     private final String tag35MsgTypeValue;
     private final String tag35MsgTypeDescription;
 
-    private Tag35MsgType(final String msgType, final String msgDescription) {
+    Tag35MsgType(final String msgType, final String msgDescription) {
         this.tag35MsgTypeValue = msgType;
         this.tag35MsgTypeDescription = msgDescription;
     }

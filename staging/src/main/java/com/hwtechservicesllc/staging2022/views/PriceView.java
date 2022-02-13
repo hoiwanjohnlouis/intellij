@@ -1,6 +1,6 @@
 package com.hwtechservicesllc.staging2022.views;
 
-import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
+import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.*;
 
 import org.apache.log4j.LogManager;
@@ -19,7 +19,7 @@ public class PriceView {
     private static final Logger logger = LogManager.getRootLogger();
 
     private final Tag35MsgType tag35MsgType;
-    private final TickerSymbol tickerSymbol;
+    private final Tag55Symbol tag55Symbol;
     private final OpeningPrice lastTradeOpeningPrice;
     private final LastTradeQuantity lastTradeQuantity;
     private final LastTradeDateStamp lastTradeDateStamp;
@@ -28,7 +28,7 @@ public class PriceView {
     //
     private PriceView(PriceViewBuilder priceViewBuilder) {
         this.tag35MsgType = priceViewBuilder.tag35MsgType;
-        this.tickerSymbol = priceViewBuilder.tickerSymbol;
+        this.tag55Symbol = priceViewBuilder.tag55Symbol;
         this.lastTradeOpeningPrice = priceViewBuilder.lastTradeOpeningPrice;
         this.lastTradeQuantity = priceViewBuilder.lastTradeQuantity;
         this.lastTradeDateStamp = priceViewBuilder.lastTradeDateStamp;
@@ -39,8 +39,8 @@ public class PriceView {
         return tag35MsgType;
     }
 
-    public TickerSymbol getTickerSymbol() {
-        return tickerSymbol;
+    public Tag55Symbol getTickerSymbol() {
+        return tag55Symbol;
     }
 
     public OpeningPrice getLastTradePrice() {
@@ -64,7 +64,7 @@ public class PriceView {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(tag35MsgType);
         stringBuilder.append("\n");
-        stringBuilder.append(tickerSymbol);
+        stringBuilder.append(tag55Symbol);
         stringBuilder.append("\n");
         stringBuilder.append(lastTradeOpeningPrice);
         stringBuilder.append("\n");
@@ -84,7 +84,7 @@ public class PriceView {
         private final String DEBUG_TAG = this.getClass().getSimpleName();
 
         private Tag35MsgType tag35MsgType;
-        private TickerSymbol tickerSymbol;
+        private Tag55Symbol tag55Symbol;
         private OpeningPrice lastTradeOpeningPrice;
         private LastTradeQuantity lastTradeQuantity;
         private LastTradeDateStamp lastTradeDateStamp;
@@ -93,15 +93,15 @@ public class PriceView {
         //
         public PriceViewBuilder(Tag35MsgType tag35MsgType) {
             this.tag35MsgType = tag35MsgType;
-            this.tickerSymbol = new TickerSymbol();
+            this.tag55Symbol = new Tag55Symbol();
             this.lastTradeOpeningPrice = new OpeningPrice();
             this.lastTradeQuantity = new LastTradeQuantity();
             this.lastTradeDateStamp = new LastTradeDateStamp();
             this.lastTradeTimeStamp = new LastTradeTimeStamp();
         }
 
-        public PriceViewBuilder buildTickerSymbol(TickerSymbol tickerSymbol) {
-            this.tickerSymbol = tickerSymbol;
+        public PriceViewBuilder buildTickerSymbol(Tag55Symbol tag55Symbol) {
+            this.tag55Symbol = tag55Symbol;
             return this;
         }
 

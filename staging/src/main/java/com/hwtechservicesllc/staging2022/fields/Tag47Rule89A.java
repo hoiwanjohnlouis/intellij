@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.staging2022.enums;
+package com.hwtechservicesllc.staging2022.fields;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -18,8 +18,8 @@ package com.hwtechservicesllc.staging2022.enums;
 
 // from FixProtocol.org website www.fixprotocol.org
 // formerly known as RULE80A
-
-public enum Tag47OrderCapacity {
+@Deprecated
+public enum Tag47Rule89A {
 
     AGENCY_SINGLE_ORDER("A",	"Agency single order"),
     SHORT_EXEMPT_A("B", "Short exempt transaction (refer to A type)"),
@@ -45,19 +45,19 @@ public enum Tag47OrderCapacity {
     PROGRAM_ORDER_NON_INDEX_ARB_OTHER_AGENCY("Y", "Program Order, non-index arb, for other agency"),
     SHORT_EXEMPT_NON_MEMBER("Z", "Short exempt transaction for non-member competing market-maker (refer to A and R types)");
 
-    private final String tag47OrderCapacity;
-    private final String tag47OrderCapacityDescription;
+    private final String tag47Rule80AValue;
+    private final String tag47Rule80ADescription;
 
-    private Tag47OrderCapacity(final String tag47OrderCapacity, final String tag47OrderCapacityDescription) {
-        this.tag47OrderCapacity = tag47OrderCapacity;
-        this.tag47OrderCapacityDescription = tag47OrderCapacityDescription;
+    Tag47Rule89A(final String tag47Rule80AValue, final String tag47Rule80ADescription) {
+        this.tag47Rule80AValue = tag47Rule80AValue;
+        this.tag47Rule80ADescription = tag47Rule80ADescription;
     }
 
-    public String getTag47OrderCapacity() {
-        return tag47OrderCapacity;
+    public String getTag47Rule80AValue() {
+        return tag47Rule80AValue;
     }
-    public String getTag47OrderCapacityDescription() {
-        return tag47OrderCapacityDescription;
+    public String getTag47Rule80ADescription() {
+        return tag47Rule80ADescription;
     }
 
     @Override
@@ -65,10 +65,10 @@ public enum Tag47OrderCapacity {
         StringBuilder sb = new StringBuilder();
         sb.append(this.name());
         sb.append(":[");
-        sb.append(getTag47OrderCapacity());
+        sb.append(getTag47Rule80AValue());
         sb.append("]");
         sb.append(":[");
-        sb.append(getTag47OrderCapacityDescription());
+        sb.append(getTag47Rule80ADescription());
         sb.append("]");
 
         return sb.toString();

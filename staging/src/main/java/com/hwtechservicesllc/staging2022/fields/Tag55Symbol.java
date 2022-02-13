@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
  * http://www.apache.org/licenses/LICENSE-2.0
  **/
 
-public class TickerSymbol {
+public class Tag55Symbol {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
@@ -23,12 +23,12 @@ public class TickerSymbol {
     private final String tickerSymbol;
 
     //
-    public TickerSymbol() {
+    public Tag55Symbol() {
         this.fieldType = FieldType.DEFAULT_TICKER_SYMBOL;
         this.tickerSymbol = DEFAULT_VALUE;
     }
 
-    public TickerSymbol(final String tickerSymbol) {
+    public Tag55Symbol(final String tickerSymbol) {
         this.fieldType = FieldType.TICKER_SYMBOL;
         this.tickerSymbol = tickerSymbol;
     }

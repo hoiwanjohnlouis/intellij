@@ -1,6 +1,22 @@
 package com.hwtechservicesllc.staging2022.factories;
 
-import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
+/*
+    Copyright (c) 2022  HW Tech Services, Inc., LLC
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/
+
+import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.*;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -13,7 +29,7 @@ public class ExecutionReport {
 
     private final Tag35MsgType tag35MsgType;
     private final CompanyName companyName;
-    private final TickerSymbol tickerSymbol;
+    private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
     private final PreviousDaysClosingPrice previousDaysClosingPrice;
     private final LastTradePrice lastTradePrice;
@@ -25,7 +41,7 @@ public class ExecutionReport {
     private ExecutionReport(ExecutionReport.Builder builder) {
         this.tag35MsgType = builder.tag35MsgType;
         this.companyName = builder.companyName;
-        this.tickerSymbol = builder.tickerSymbol;
+        this.tag55Symbol = builder.tag55Symbol;
         this.openingPrice = builder.openingPrice;
         this.previousDaysClosingPrice = builder.previousDaysClosingPrice;
         this.lastTradePrice = builder.lastTradePrice;
@@ -42,8 +58,8 @@ public class ExecutionReport {
         return companyName;
     }
 
-    public TickerSymbol getTickerSymbol() {
-        return tickerSymbol;
+    public Tag55Symbol getTickerSymbol() {
+        return tag55Symbol;
     }
 
     public OpeningPrice getOpeningPrice() {
@@ -82,7 +98,7 @@ public class ExecutionReport {
         stringBuilder.append("\n");
         stringBuilder.append(companyName.getCompanyName());
         stringBuilder.append("\n");
-        stringBuilder.append(tickerSymbol.getTickerSymbol());
+        stringBuilder.append(tag55Symbol.getTickerSymbol());
         stringBuilder.append("\n");
         stringBuilder.append(openingPrice.getPrice());
         stringBuilder.append("\n");
@@ -113,7 +129,7 @@ public class ExecutionReport {
 
         private Tag35MsgType tag35MsgType;
         private CompanyName companyName;                // 1
-        private TickerSymbol tickerSymbol;              // 2
+        private Tag55Symbol tag55Symbol;              // 2
         private OpeningPrice openingPrice;              // 3
         private PreviousDaysClosingPrice previousDaysClosingPrice;    // 4
         private LastTradePrice lastTradePrice;          // 5
@@ -124,7 +140,6 @@ public class ExecutionReport {
         // helper class to build object
         public Builder(Tag35MsgType tag35MsgType) {
             this.tag35MsgType = tag35MsgType;
-            return;
         }
 
         public Builder buildCompanyName(String companyName) {
@@ -133,7 +148,7 @@ public class ExecutionReport {
         }
 
         public Builder buildTickerSymbol(String tickerSymbol) {
-            this.tickerSymbol = new TickerSymbol(tickerSymbol);
+            this.tag55Symbol = new Tag55Symbol(tickerSymbol);
             return this;
         }
 

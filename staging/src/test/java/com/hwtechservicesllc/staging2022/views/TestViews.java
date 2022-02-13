@@ -1,8 +1,8 @@
 package com.hwtechservicesllc.staging2022.views;
 
-import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
+import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.CompanyName;
-import com.hwtechservicesllc.staging2022.fields.TickerSymbol;
+import com.hwtechservicesllc.staging2022.fields.Tag55Symbol;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -16,24 +16,24 @@ import org.apache.log4j.Logger;
 public class TestViews {
 
     private static final String DEBUG_TAG = TestViews.class.getSimpleName();
-//    private static final Logger logger = Logger.getLogger(DEBUG_TAG);
+    //    private static final Logger logger = Logger.getLogger(DEBUG_TAG);
     private static final Logger logger = LogManager.getRootLogger();
 
     public static void main (String[] args) {
 
         CompanyName companyName = new CompanyName();
-        TickerSymbol tickerSymbol = new TickerSymbol();
+        Tag55Symbol tag55Symbol = new Tag55Symbol();
         TradeView testView =
                 new TradeView.TradeViewBuilder(Tag35MsgType.EXECUTION_REPORT).
                         buildCompanyName(companyName).
-                        buildTickerSymbol(tickerSymbol).
+                        buildTickerSymbol(tag55Symbol).
                         build();
         System.out.println(testView);
         logger.info(testView);
 
         PriceView priceView =
                 new PriceView.PriceViewBuilder(Tag35MsgType.EXECUTION_REPORT).
-                        buildTickerSymbol(tickerSymbol).
+                        buildTickerSymbol(tag55Symbol).
                         build();
         System.out.println(priceView);
 

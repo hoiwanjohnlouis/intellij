@@ -1,14 +1,13 @@
 package com.hwtechservicesllc.staging2022.views;
 
-import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
+import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.*;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-
 /**
- * Copyright 01/07/2016 HW Tech Services, LLC
+ * Copyright 01/07/2022 HW Tech Services, LLC
  * Licensed under the Apache License, Version 2.0 (the "License");
  * http://www.apache.org/licenses/LICENSE-2.0
  **/
@@ -21,7 +20,7 @@ public class TradeView {
 
     private final Tag35MsgType tag35MsgType;
     private final CompanyName companyName;
-    private final TickerSymbol tickerSymbol;
+    private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
     private final OpeningPrice previousDaysClosingPrice;
     private final OpeningPrice lastTradeOpeningPrice;
@@ -33,7 +32,7 @@ public class TradeView {
     private TradeView(TradeViewBuilder tradeViewBuilder) {
         this.tag35MsgType = tradeViewBuilder.tag35MsgType;
         this.companyName = tradeViewBuilder.companyName;
-        this.tickerSymbol = tradeViewBuilder.tickerSymbol;
+        this.tag55Symbol = tradeViewBuilder.tag55Symbol;
         this.openingPrice = tradeViewBuilder.openingPrice;
         this.previousDaysClosingPrice = tradeViewBuilder.previousDaysClosingPrice;
         this.lastTradeOpeningPrice = tradeViewBuilder.lastTradeOpeningPrice;
@@ -49,7 +48,7 @@ public class TradeView {
         stringBuilder.append("\n");
         stringBuilder.append(companyName);
         stringBuilder.append("\n");
-        stringBuilder.append(tickerSymbol);
+        stringBuilder.append(tag55Symbol);
         stringBuilder.append("\n");
         stringBuilder.append(openingPrice);
         stringBuilder.append("\n");
@@ -75,7 +74,7 @@ public class TradeView {
 
         private Tag35MsgType tag35MsgType;
         private CompanyName companyName;
-        private TickerSymbol tickerSymbol;
+        private Tag55Symbol tag55Symbol;
         private OpeningPrice openingPrice;
         private OpeningPrice previousDaysClosingPrice;
         private OpeningPrice lastTradeOpeningPrice;
@@ -87,7 +86,7 @@ public class TradeView {
         public TradeViewBuilder(Tag35MsgType tag35MsgType) {
             this.tag35MsgType = tag35MsgType;
             this.companyName = new CompanyName();
-            this.tickerSymbol = new TickerSymbol();
+            this.tag55Symbol = new Tag55Symbol();
             this.openingPrice = new OpeningPrice();
             this.previousDaysClosingPrice = new OpeningPrice();
             this.lastTradeOpeningPrice = new OpeningPrice();
@@ -101,8 +100,8 @@ public class TradeView {
             return this;
         }
 
-        public TradeViewBuilder buildTickerSymbol(TickerSymbol tickerSymbol) {
-            this.tickerSymbol = tickerSymbol;
+        public TradeViewBuilder buildTickerSymbol(Tag55Symbol tag55Symbol) {
+            this.tag55Symbol = tag55Symbol;
             return this;
         }
 

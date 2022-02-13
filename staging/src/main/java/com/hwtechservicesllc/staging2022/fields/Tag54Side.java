@@ -1,4 +1,4 @@
-package com.hwtechservicesllc.staging2022.enums;
+package com.hwtechservicesllc.staging2022.fields;
 
 /*
     Copyright (c) 2015  HW Tech Services, Inc., LLC
@@ -18,7 +18,7 @@ package com.hwtechservicesllc.staging2022.enums;
 
 // from FixProtocol.org website www.fixprotocol.org
 
-public enum Tag54OrderSide {
+public enum Tag54Side {
 
     BUY ("1"),
     SELL ("2"),
@@ -37,15 +37,15 @@ public enum Tag54OrderSide {
     LEND_FINANCING ("F"),
     BORROW_FINANCING ("G");
 
-    private final String tag35OrderSideValue;
-//  private final String tag35OrderSideDescription;
+    private final String tag35SideValue;
+//  private final String tag35SideDescription;
 
-    Tag54OrderSide(final String side) {
-        this.tag35OrderSideValue = side;
+    Tag54Side(final String side) {
+        this.tag35SideValue = side;
     }
 
     public String getOrderSideValue() {
-        return tag35OrderSideValue;
+        return tag35SideValue;
     }
 
     @Override

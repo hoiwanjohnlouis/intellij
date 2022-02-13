@@ -1,6 +1,22 @@
 package com.hwtechservicesllc.staging2022.factories;
 
-import com.hwtechservicesllc.staging2022.enums.Tag35MsgType;
+/*
+    Copyright (c) 2022  HW Tech Services, Inc., LLC
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/
+
+import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.*;
 import com.hwtechservicesllc.staging2022.interfaces.VerboseLogString;
 import org.apache.log4j.LogManager;
@@ -13,7 +29,7 @@ public class FIXRecord implements VerboseLogString {
 
     private final Tag35MsgType tag35MsgType;
     private final CompanyName companyName;
-    private final TickerSymbol tickerSymbol;
+    private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
     private final PreviousDaysClosingPrice previousDaysClosingPrice;
     private final LastTradePrice lastTradePrice;
@@ -25,7 +41,7 @@ public class FIXRecord implements VerboseLogString {
     private FIXRecord(FIXRecord.Builder builder) {
         this.tag35MsgType = builder.tag35MsgType;
         this.companyName = builder.companyName;
-        this.tickerSymbol = builder.tickerSymbol;
+        this.tag55Symbol = builder.tag55Symbol;
         this.openingPrice = builder.openingPrice;
         this.previousDaysClosingPrice = builder.previousDaysClosingPrice;
         this.lastTradePrice = builder.lastTradePrice;
@@ -40,8 +56,8 @@ public class FIXRecord implements VerboseLogString {
     public CompanyName getCompanyName() {
         return companyName;
     }
-    public TickerSymbol getTickerSymbol() {
-        return tickerSymbol;
+    public Tag55Symbol getTickerSymbol() {
+        return tag55Symbol;
     }
     public OpeningPrice getOpeningPrice() {
         return openingPrice;
@@ -67,23 +83,23 @@ public class FIXRecord implements VerboseLogString {
         StringBuilder stringBuilder = new StringBuilder();
 
         // clean up the buffer before using.
-        stringBuilder.append(tag35MsgType.getTag35MsgTypeValue());
-        stringBuilder.append("\n");
-        stringBuilder.append(companyName.getCompanyName());
-        stringBuilder.append("\n");
-        stringBuilder.append(tickerSymbol.getTickerSymbol());
-        stringBuilder.append("\n");
-        stringBuilder.append(openingPrice.getPrice());
-        stringBuilder.append("\n");
-        stringBuilder.append(previousDaysClosingPrice.getPrice());
-        stringBuilder.append("\n");
-        stringBuilder.append(lastTradePrice.getPrice());
-        stringBuilder.append("\n");
-        stringBuilder.append(lastTradeQuantity.getQuantity());
-        stringBuilder.append("\n");
-        stringBuilder.append(lastTradeDateStamp.getDateStamp());
-        stringBuilder.append("\n");
-        stringBuilder.append(lastTradeTimeStamp.getTimeStamp());
+        stringBuilder.append(tag35MsgType.getTag35MsgTypeValue())
+            .append("\n")
+            .append(companyName.getCompanyName())
+            .append("\n")
+            .append(tag55Symbol.getTickerSymbol())
+            .append("\n")
+            .append(openingPrice.getPrice())
+            .append("\n")
+            .append(previousDaysClosingPrice.getPrice())
+            .append("\n")
+            .append(lastTradePrice.getPrice())
+            .append("\n")
+            .append(lastTradeQuantity.getQuantity())
+            .append("\n")
+            .append(lastTradeDateStamp.getDateStamp())
+            .append("\n")
+            .append(lastTradeTimeStamp.getTimeStamp());
 
         return stringBuilder.toString();
     }
@@ -93,23 +109,23 @@ public class FIXRecord implements VerboseLogString {
         StringBuilder stringBuilder = new StringBuilder();
 
         // clean up the buffer before using.
-        stringBuilder.append(tag35MsgType);
-        stringBuilder.append("\n\t");
-        stringBuilder.append(companyName);
-        stringBuilder.append("\n\t");
-        stringBuilder.append(tickerSymbol);
-        stringBuilder.append("\n\t");
-        stringBuilder.append(openingPrice);
-        stringBuilder.append("\n\t");
-        stringBuilder.append(previousDaysClosingPrice);
-        stringBuilder.append("\n\t");
-        stringBuilder.append(lastTradePrice);
-        stringBuilder.append("\n\t");
-        stringBuilder.append(lastTradeQuantity);
-        stringBuilder.append("\n\t");
-        stringBuilder.append(lastTradeDateStamp);
-        stringBuilder.append("\n\t");
-        stringBuilder.append(lastTradeTimeStamp);
+        stringBuilder.append(tag35MsgType)
+            .append("\n\t")
+            .append(companyName)
+        .append("\n\t")
+        .append(tag55Symbol)
+        .append("\n\t")
+        .append(openingPrice)
+        .append("\n\t")
+        .append(previousDaysClosingPrice)
+        .append("\n\t")
+        .append(lastTradePrice)
+        .append("\n\t")
+        .append(lastTradeQuantity)
+        .append("\n\t")
+        .append(lastTradeDateStamp)
+        .append("\n\t")
+        .append(lastTradeTimeStamp);
 
         return stringBuilder.toString();
     }
@@ -127,8 +143,9 @@ public class FIXRecord implements VerboseLogString {
         private StringBuilder stringBuilder = new StringBuilder();
 
         private Tag35MsgType tag35MsgType;
+        private Tag53Shares tag53Shares;
         private CompanyName companyName;                // 1
-        private TickerSymbol tickerSymbol;              // 2
+        private Tag55Symbol tag55Symbol;              // 2
         private OpeningPrice openingPrice;              // 3
         private PreviousDaysClosingPrice previousDaysClosingPrice;    // 4
         private LastTradePrice lastTradePrice;          // 5
@@ -147,7 +164,7 @@ public class FIXRecord implements VerboseLogString {
         }
 
         public Builder buildTickerSymbol(String tickerSymbol) {
-            this.tickerSymbol = new TickerSymbol(tickerSymbol);
+            this.tag55Symbol = new Tag55Symbol(tickerSymbol);
             return this;
         }
 
