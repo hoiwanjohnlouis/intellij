@@ -31,9 +31,9 @@ public class ExecutionReport {
     private final CompanyName companyName;
     private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
-    private final PreviousDaysClosingPrice previousDaysClosingPrice;
-    private final LastTradePrice lastTradePrice;
-    private final LastTradeQuantity lastTradeQuantity;
+    private final Tag140PrevClosePx tag140PrevClosePx;
+    private final Tag31LastPx tag31LastPx;
+    private final Tag32LastQty tag32LastQty;
     private final LastTradeDateStamp lastTradeDateStamp;
     private final LastTradeTimeStamp lastTradeTimeStamp;
 
@@ -43,9 +43,9 @@ public class ExecutionReport {
         this.companyName = builder.companyName;
         this.tag55Symbol = builder.tag55Symbol;
         this.openingPrice = builder.openingPrice;
-        this.previousDaysClosingPrice = builder.previousDaysClosingPrice;
-        this.lastTradePrice = builder.lastTradePrice;
-        this.lastTradeQuantity = builder.lastTradeQuantity;
+        this.tag140PrevClosePx = builder.tag140PrevClosePx;
+        this.tag31LastPx = builder.tag31LastPx;
+        this.tag32LastQty = builder.tag32LastQty;
         this.lastTradeDateStamp = builder.lastTradeDateStamp;
         this.lastTradeTimeStamp = builder.lastTradeTimeStamp;
     }
@@ -66,16 +66,16 @@ public class ExecutionReport {
         return openingPrice;
     }
 
-    public PreviousDaysClosingPrice getPreviousDaysClosingPrice() {
-        return previousDaysClosingPrice;
+    public Tag140PrevClosePx getPreviousDaysClosingPrice() {
+        return tag140PrevClosePx;
     }
 
-    public LastTradePrice getLastTradePrice() {
-        return lastTradePrice;
+    public Tag31LastPx getLastTradePrice() {
+        return tag31LastPx;
     }
 
-    public LastTradeQuantity getLastTradeQuantity() {
-        return lastTradeQuantity;
+    public Tag32LastQty getLastTradeQuantity() {
+        return tag32LastQty;
     }
 
     public LastTradeDateStamp getLastTradeDateStamp() {
@@ -102,11 +102,11 @@ public class ExecutionReport {
         stringBuilder.append("\n");
         stringBuilder.append(openingPrice.getPrice());
         stringBuilder.append("\n");
-        stringBuilder.append(previousDaysClosingPrice.getPrice());
+        stringBuilder.append(tag140PrevClosePx.getTag140PrevClosePxValue());
         stringBuilder.append("\n");
-        stringBuilder.append(lastTradePrice.getPrice());
+        stringBuilder.append(tag31LastPx.getTag31LastPxValue());
         stringBuilder.append("\n");
-        stringBuilder.append(lastTradeQuantity.getQuantity());
+        stringBuilder.append(tag32LastQty.getTag32LastQtyValue());
         stringBuilder.append("\n");
         stringBuilder.append(lastTradeDateStamp.getDateStamp());
         stringBuilder.append("\n");
@@ -131,9 +131,9 @@ public class ExecutionReport {
         private CompanyName companyName;                // 1
         private Tag55Symbol tag55Symbol;              // 2
         private OpeningPrice openingPrice;              // 3
-        private PreviousDaysClosingPrice previousDaysClosingPrice;    // 4
-        private LastTradePrice lastTradePrice;          // 5
-        private LastTradeQuantity lastTradeQuantity;    // 6
+        private Tag140PrevClosePx tag140PrevClosePx;    // 4
+        private Tag31LastPx tag31LastPx;          // 5
+        private Tag32LastQty tag32LastQty;    // 6
         private LastTradeDateStamp lastTradeDateStamp;  // 7
         private LastTradeTimeStamp lastTradeTimeStamp;  // 8
 
@@ -158,17 +158,17 @@ public class ExecutionReport {
         }
 
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.previousDaysClosingPrice = new PreviousDaysClosingPrice(previousDaysClosingPrice);
+            this.tag140PrevClosePx = new Tag140PrevClosePx(previousDaysClosingPrice);
             return this;
         }
 
         public Builder buildLastTradePrice(double lastTradePrice) {
-            this.lastTradePrice = new LastTradePrice(lastTradePrice);
+            this.tag31LastPx = new Tag31LastPx(lastTradePrice);
             return this;
         }
 
         public Builder buildLastTradeQuantity(double lastTradeQuantity) {
-            this.lastTradeQuantity = new LastTradeQuantity(lastTradeQuantity);
+            this.tag32LastQty = new Tag32LastQty(lastTradeQuantity);
             return this;
         }
 

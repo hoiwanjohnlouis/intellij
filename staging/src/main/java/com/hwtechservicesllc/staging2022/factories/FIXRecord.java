@@ -31,9 +31,9 @@ public class FIXRecord implements VerboseLogString {
     private final CompanyName companyName;
     private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
-    private final PreviousDaysClosingPrice previousDaysClosingPrice;
-    private final LastTradePrice lastTradePrice;
-    private final LastTradeQuantity lastTradeQuantity;
+    private final Tag140PrevClosePx tag140PrevClosePx;
+    private final Tag31LastPx tag31LastPx;
+    private final Tag32LastQty tag32LastQty;
     private final LastTradeDateStamp lastTradeDateStamp;
     private final LastTradeTimeStamp lastTradeTimeStamp;
 
@@ -43,9 +43,9 @@ public class FIXRecord implements VerboseLogString {
         this.companyName = builder.companyName;
         this.tag55Symbol = builder.tag55Symbol;
         this.openingPrice = builder.openingPrice;
-        this.previousDaysClosingPrice = builder.previousDaysClosingPrice;
-        this.lastTradePrice = builder.lastTradePrice;
-        this.lastTradeQuantity = builder.lastTradeQuantity;
+        this.tag140PrevClosePx = builder.tag140PrevClosePx;
+        this.tag31LastPx = builder.tag31LastPx;
+        this.tag32LastQty = builder.tag32LastQty;
         this.lastTradeDateStamp = builder.lastTradeDateStamp;
         this.lastTradeTimeStamp = builder.lastTradeTimeStamp;
     }
@@ -62,14 +62,14 @@ public class FIXRecord implements VerboseLogString {
     public OpeningPrice getOpeningPrice() {
         return openingPrice;
     }
-    public PreviousDaysClosingPrice getPreviousDaysClosingPrice() {
-        return previousDaysClosingPrice;
+    public Tag140PrevClosePx getPreviousDaysClosingPrice() {
+        return tag140PrevClosePx;
     }
-    public LastTradePrice getLastTradePrice() {
-        return lastTradePrice;
+    public Tag31LastPx getLastTradePrice() {
+        return tag31LastPx;
     }
-    public LastTradeQuantity getLastTradeQuantity() {
-        return lastTradeQuantity;
+    public Tag32LastQty getTag32LastQty() {
+        return tag32LastQty;
     }
     public LastTradeDateStamp getLastTradeDateStamp() {
         return lastTradeDateStamp;
@@ -91,11 +91,11 @@ public class FIXRecord implements VerboseLogString {
             .append("\n")
             .append(openingPrice.getPrice())
             .append("\n")
-            .append(previousDaysClosingPrice.getPrice())
+            .append(tag140PrevClosePx.getTag140PrevClosePxValue())
             .append("\n")
-            .append(lastTradePrice.getPrice())
+            .append(tag31LastPx.getTag31LastPxValue())
             .append("\n")
-            .append(lastTradeQuantity.getQuantity())
+            .append(tag32LastQty.getTag32LastQtyValue())
             .append("\n")
             .append(lastTradeDateStamp.getDateStamp())
             .append("\n")
@@ -112,27 +112,27 @@ public class FIXRecord implements VerboseLogString {
         stringBuilder.append(tag35MsgType)
             .append("\n\t")
             .append(companyName)
-        .append("\n\t")
-        .append(tag55Symbol)
-        .append("\n\t")
-        .append(openingPrice)
-        .append("\n\t")
-        .append(previousDaysClosingPrice)
-        .append("\n\t")
-        .append(lastTradePrice)
-        .append("\n\t")
-        .append(lastTradeQuantity)
-        .append("\n\t")
-        .append(lastTradeDateStamp)
-        .append("\n\t")
-        .append(lastTradeTimeStamp);
+            .append("\n\t")
+            .append(tag55Symbol)
+            .append("\n\t")
+            .append(openingPrice)
+            .append("\n\t")
+            .append(tag140PrevClosePx)
+            .append("\n\t")
+            .append(tag31LastPx)
+            .append("\n\t")
+            .append(tag32LastQty)
+            .append("\n\t")
+            .append(lastTradeDateStamp)
+            .append("\n\t")
+            .append(lastTradeTimeStamp);
 
         return stringBuilder.toString();
     }
 
-//    public int compareTo(Object o) {
-//        return 0;
-//    }
+    public int compareTo(Object o) {
+        return 0;
+    }
 
     // static builder helper class
     public static class Builder {
@@ -143,13 +143,14 @@ public class FIXRecord implements VerboseLogString {
         private StringBuilder stringBuilder = new StringBuilder();
 
         private Tag35MsgType tag35MsgType;
-        private Tag53Shares tag53Shares;
+        private Tag53Quantity tag53Shares;
+        private Tag54Side tag54Side;
         private CompanyName companyName;                // 1
         private Tag55Symbol tag55Symbol;              // 2
         private OpeningPrice openingPrice;              // 3
-        private PreviousDaysClosingPrice previousDaysClosingPrice;    // 4
-        private LastTradePrice lastTradePrice;          // 5
-        private LastTradeQuantity lastTradeQuantity;    // 6
+        private Tag140PrevClosePx tag140PrevClosePx;    // 4
+        private Tag31LastPx tag31LastPx;          // 5
+        private Tag32LastQty tag32LastQty;    // 6
         private LastTradeDateStamp lastTradeDateStamp;  // 7
         private LastTradeTimeStamp lastTradeTimeStamp;  // 8
 
@@ -174,17 +175,17 @@ public class FIXRecord implements VerboseLogString {
         }
 
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.previousDaysClosingPrice = new PreviousDaysClosingPrice(previousDaysClosingPrice);
+            this.tag140PrevClosePx = new Tag140PrevClosePx(previousDaysClosingPrice);
             return this;
         }
 
         public Builder buildLastTradePrice(double lastTradePrice) {
-            this.lastTradePrice = new LastTradePrice(lastTradePrice);
+            this.tag31LastPx = new Tag31LastPx(lastTradePrice);
             return this;
         }
 
         public Builder buildLastTradeQuantity(double lastTradeQuantity) {
-            this.lastTradeQuantity = new LastTradeQuantity(lastTradeQuantity);
+            this.tag32LastQty = new Tag32LastQty(lastTradeQuantity);
             return this;
         }
 

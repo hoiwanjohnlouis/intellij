@@ -24,7 +24,7 @@ public class TradeView {
     private final OpeningPrice openingPrice;
     private final OpeningPrice previousDaysClosingPrice;
     private final OpeningPrice lastTradeOpeningPrice;
-    private final LastTradeQuantity lastTradeQuantity;
+    private final Tag32LastQty tag32LastQty;
     private final LastTradeDateStamp lastTradeDateStamp;
     private final LastTradeTimeStamp lastTradeTimeStamp;
     private final StringBuilder stringBuilder = new StringBuilder();
@@ -36,7 +36,7 @@ public class TradeView {
         this.openingPrice = tradeViewBuilder.openingPrice;
         this.previousDaysClosingPrice = tradeViewBuilder.previousDaysClosingPrice;
         this.lastTradeOpeningPrice = tradeViewBuilder.lastTradeOpeningPrice;
-        this.lastTradeQuantity = tradeViewBuilder.lastTradeQuantity;
+        this.tag32LastQty = tradeViewBuilder.tag32LastQty;
         this.lastTradeDateStamp = tradeViewBuilder.lastTradeDateStamp;
         this.lastTradeTimeStamp = tradeViewBuilder.lastTradeTimeStamp;
     }
@@ -56,7 +56,7 @@ public class TradeView {
         stringBuilder.append("\n");
         stringBuilder.append(lastTradeOpeningPrice);
         stringBuilder.append("\n");
-        stringBuilder.append(lastTradeQuantity);
+        stringBuilder.append(tag32LastQty);
         stringBuilder.append("\n");
         stringBuilder.append(lastTradeDateStamp);
         stringBuilder.append("\n");
@@ -78,7 +78,7 @@ public class TradeView {
         private OpeningPrice openingPrice;
         private OpeningPrice previousDaysClosingPrice;
         private OpeningPrice lastTradeOpeningPrice;
-        private LastTradeQuantity lastTradeQuantity;
+        private Tag32LastQty tag32LastQty;
         private LastTradeDateStamp lastTradeDateStamp;
         private LastTradeTimeStamp lastTradeTimeStamp;
 
@@ -90,7 +90,7 @@ public class TradeView {
             this.openingPrice = new OpeningPrice();
             this.previousDaysClosingPrice = new OpeningPrice();
             this.lastTradeOpeningPrice = new OpeningPrice();
-            this.lastTradeQuantity = new LastTradeQuantity();
+            this.tag32LastQty = new Tag32LastQty();
             this.lastTradeDateStamp = new LastTradeDateStamp();
             this.lastTradeTimeStamp = new LastTradeTimeStamp();
         }
@@ -120,8 +120,8 @@ public class TradeView {
             return this;
         }
 
-        public TradeViewBuilder buildTradeQuantity(LastTradeQuantity lastTradeQuantity) {
-            this.lastTradeQuantity = lastTradeQuantity;
+        public TradeViewBuilder buildTradeQuantity(Tag32LastQty tag32LastQty) {
+            this.tag32LastQty = tag32LastQty;
             return this;
         }
 

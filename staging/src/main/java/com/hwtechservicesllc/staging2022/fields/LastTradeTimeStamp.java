@@ -1,6 +1,6 @@
 package com.hwtechservicesllc.staging2022.fields;
 
-import com.hwtechservicesllc.staging2022.enums.FieldType;
+import com.hwtechservicesllc.staging2022.datatypes.FieldType;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

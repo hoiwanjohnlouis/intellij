@@ -21,7 +21,7 @@ public class PriceView {
     private final Tag35MsgType tag35MsgType;
     private final Tag55Symbol tag55Symbol;
     private final OpeningPrice lastTradeOpeningPrice;
-    private final LastTradeQuantity lastTradeQuantity;
+    private final Tag32LastQty tag32LastQty;
     private final LastTradeDateStamp lastTradeDateStamp;
     private final LastTradeTimeStamp lastTradeTimeStamp;
 
@@ -30,7 +30,7 @@ public class PriceView {
         this.tag35MsgType = priceViewBuilder.tag35MsgType;
         this.tag55Symbol = priceViewBuilder.tag55Symbol;
         this.lastTradeOpeningPrice = priceViewBuilder.lastTradeOpeningPrice;
-        this.lastTradeQuantity = priceViewBuilder.lastTradeQuantity;
+        this.tag32LastQty = priceViewBuilder.tag32LastQty;
         this.lastTradeDateStamp = priceViewBuilder.lastTradeDateStamp;
         this.lastTradeTimeStamp = priceViewBuilder.lastTradeTimeStamp;
     }
@@ -47,8 +47,8 @@ public class PriceView {
         return lastTradeOpeningPrice;
     }
 
-    public LastTradeQuantity getLastTradeQuantity() {
-        return lastTradeQuantity;
+    public Tag32LastQty getLastTradeQuantity() {
+        return tag32LastQty;
     }
 
     public LastTradeDateStamp getLastTradeDateStamp() {
@@ -68,7 +68,7 @@ public class PriceView {
         stringBuilder.append("\n");
         stringBuilder.append(lastTradeOpeningPrice);
         stringBuilder.append("\n");
-        stringBuilder.append(lastTradeQuantity);
+        stringBuilder.append(tag32LastQty);
         stringBuilder.append("\n");
         stringBuilder.append(lastTradeDateStamp);
         stringBuilder.append("\n");
@@ -86,7 +86,7 @@ public class PriceView {
         private Tag35MsgType tag35MsgType;
         private Tag55Symbol tag55Symbol;
         private OpeningPrice lastTradeOpeningPrice;
-        private LastTradeQuantity lastTradeQuantity;
+        private Tag32LastQty tag32LastQty;
         private LastTradeDateStamp lastTradeDateStamp;
         private LastTradeTimeStamp lastTradeTimeStamp;
 
@@ -95,7 +95,7 @@ public class PriceView {
             this.tag35MsgType = tag35MsgType;
             this.tag55Symbol = new Tag55Symbol();
             this.lastTradeOpeningPrice = new OpeningPrice();
-            this.lastTradeQuantity = new LastTradeQuantity();
+            this.tag32LastQty = new Tag32LastQty();
             this.lastTradeDateStamp = new LastTradeDateStamp();
             this.lastTradeTimeStamp = new LastTradeTimeStamp();
         }
@@ -110,8 +110,8 @@ public class PriceView {
             return this;
         }
 
-        public PriceViewBuilder buildTradeQuantity(LastTradeQuantity lastTradeQuantity) {
-            this.lastTradeQuantity = lastTradeQuantity;
+        public PriceViewBuilder buildTradeQuantity(Tag32LastQty tag32LastQty) {
+            this.tag32LastQty = tag32LastQty;
             return this;
         }
 
