@@ -1,22 +1,20 @@
-package com.hwtechservicesllc.staging2022.datatypes;
-
 /*
-    Copyright (c) 2022  HW Tech Services, Inc., LLC
+ * Copyright (c) 2022.  HW Tech Services, LLC
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-*/
-
-// from FixProtocol.org website www.fixprotocol.org
+package com.hwtechservicesllc.staging2022.datatypes;
 
 public enum FIXTag {
 
@@ -382,8 +380,8 @@ public enum FIXTag {
     UNDERLYING_SYMBOL(311, "UnderlyingSymbol"),
     UNDERLYING_SYMBOL_SFX(312, "UnderlyingSymbolSfx"),
     UNDERLYING_MATURITY_MONTH_YEAR(313, "UnderlyingMaturityMonthYear"),
-    UNDERLYING_MATURITY_DAY(314, "UnderlyingMaturityDay"),
-    UNDERLYING_PUT_OR_CALL(315, "UnderlyingPutOrCall"),
+    UNDERLYING_MATURITY_DAY(314, "UnderlyingMaturityDay (replaced)"),
+    UNDERLYING_PUT_OR_CALL(315, "UnderlyingPutOrCall (replaced)"),
     UNDERLYING_STRIKE_PRICE(316, "UnderlyingStrikePrice"),
     UNDERLYING_OPT_ATTRIBUTE(317, "UnderlyingOptAttribute"),
     UNDERLYING_CURRENCY(318, "UnderlyingCurrency"),

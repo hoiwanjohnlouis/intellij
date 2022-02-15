@@ -1,20 +1,20 @@
-package com.hwtechservicesllc.staging2022.factories;
-
 /*
-    Copyright (c) 2022  HW Tech Services, Inc., LLC
+ * Copyright (c) 2022.  HW Tech Services, LLC
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-*/
+package com.hwtechservicesllc.staging2022.factories;
 
 import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.*;
@@ -35,7 +35,7 @@ public class FIXRecord implements LogStringVerbose {
     private final Tag31LastPx tag31LastPx;
     private final Tag32LastQty tag32LastQty;
     private final LastTradeDateStamp lastTradeDateStamp;
-    private final LastTradeTimeStamp lastTradeTimeStamp;
+    private final Tag60TransactTime tag60TransactTime;
 
     //
     private FIXRecord(FIXRecord.Builder builder) {
@@ -47,7 +47,7 @@ public class FIXRecord implements LogStringVerbose {
         this.tag31LastPx = builder.tag31LastPx;
         this.tag32LastQty = builder.tag32LastQty;
         this.lastTradeDateStamp = builder.lastTradeDateStamp;
-        this.lastTradeTimeStamp = builder.lastTradeTimeStamp;
+        this.tag60TransactTime = builder.tag60TransactTime;
     }
 
     public Tag35MsgType getMsgType() {
@@ -74,8 +74,8 @@ public class FIXRecord implements LogStringVerbose {
     public LastTradeDateStamp getLastTradeDateStamp() {
         return lastTradeDateStamp;
     }
-    public LastTradeTimeStamp getLastTradeTimeStamp() {
-        return lastTradeTimeStamp;
+    public Tag60TransactTime getLastTradeTimeStamp() {
+        return tag60TransactTime;
     }
 
     @Override
@@ -99,7 +99,7 @@ public class FIXRecord implements LogStringVerbose {
             .append("\n")
             .append(lastTradeDateStamp.getDateStamp())
             .append("\n")
-            .append(lastTradeTimeStamp.getTimeStamp());
+            .append(tag60TransactTime.getTimeStamp());
 
         return stringBuilder.toString();
     }
@@ -125,7 +125,7 @@ public class FIXRecord implements LogStringVerbose {
             .append("\n\t")
             .append(lastTradeDateStamp)
             .append("\n\t")
-            .append(lastTradeTimeStamp);
+            .append(tag60TransactTime);
 
         return stringBuilder.toString();
     }
@@ -152,7 +152,7 @@ public class FIXRecord implements LogStringVerbose {
         private Tag31LastPx tag31LastPx;          // 5
         private Tag32LastQty tag32LastQty;    // 6
         private LastTradeDateStamp lastTradeDateStamp;  // 7
-        private LastTradeTimeStamp lastTradeTimeStamp;  // 8
+        private Tag60TransactTime tag60TransactTime;  // 8
 
         // helper class to build object
         public Builder(Tag35MsgType tag35MsgType) {
@@ -195,7 +195,7 @@ public class FIXRecord implements LogStringVerbose {
         }
 
         public Builder buildLastTradeTimeStamp(String lastTradeTimeStamp) {
-            this.lastTradeTimeStamp = new LastTradeTimeStamp(lastTradeTimeStamp);
+            this.tag60TransactTime = new Tag60TransactTime(lastTradeTimeStamp);
             return this;
         }
 

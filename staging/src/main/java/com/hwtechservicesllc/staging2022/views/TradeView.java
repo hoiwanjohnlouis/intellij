@@ -1,3 +1,19 @@
+/*
+ * Copyright (c) 2022.  HW Tech Services, LLC
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+
 package com.hwtechservicesllc.staging2022.views;
 
 import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
@@ -5,12 +21,6 @@ import com.hwtechservicesllc.staging2022.fields.*;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
-/**
- * Copyright 01/07/2022 HW Tech Services, LLC
- * Licensed under the Apache License, Version 2.0 (the "License");
- * http://www.apache.org/licenses/LICENSE-2.0
- **/
 
 public class TradeView {
 
@@ -26,7 +36,7 @@ public class TradeView {
     private final OpeningPrice lastTradeOpeningPrice;
     private final Tag32LastQty tag32LastQty;
     private final LastTradeDateStamp lastTradeDateStamp;
-    private final LastTradeTimeStamp lastTradeTimeStamp;
+    private final Tag60TransactTime tag60TransactTime;
     private final StringBuilder stringBuilder = new StringBuilder();
 
     private TradeView(TradeViewBuilder tradeViewBuilder) {
@@ -38,7 +48,7 @@ public class TradeView {
         this.lastTradeOpeningPrice = tradeViewBuilder.lastTradeOpeningPrice;
         this.tag32LastQty = tradeViewBuilder.tag32LastQty;
         this.lastTradeDateStamp = tradeViewBuilder.lastTradeDateStamp;
-        this.lastTradeTimeStamp = tradeViewBuilder.lastTradeTimeStamp;
+        this.tag60TransactTime = tradeViewBuilder.tag60TransactTime;
     }
 
     @Override
@@ -60,7 +70,7 @@ public class TradeView {
         stringBuilder.append("\n");
         stringBuilder.append(lastTradeDateStamp);
         stringBuilder.append("\n");
-        stringBuilder.append(lastTradeTimeStamp);
+        stringBuilder.append(tag60TransactTime);
 
         return stringBuilder.toString();
     }
@@ -80,7 +90,7 @@ public class TradeView {
         private OpeningPrice lastTradeOpeningPrice;
         private Tag32LastQty tag32LastQty;
         private LastTradeDateStamp lastTradeDateStamp;
-        private LastTradeTimeStamp lastTradeTimeStamp;
+        private Tag60TransactTime tag60TransactTime;
 
         // static helper class to build object
         public TradeViewBuilder(Tag35MsgType tag35MsgType) {
@@ -92,7 +102,7 @@ public class TradeView {
             this.lastTradeOpeningPrice = new OpeningPrice();
             this.tag32LastQty = new Tag32LastQty();
             this.lastTradeDateStamp = new LastTradeDateStamp();
-            this.lastTradeTimeStamp = new LastTradeTimeStamp();
+            this.tag60TransactTime = new Tag60TransactTime();
         }
 
         public TradeViewBuilder buildCompanyName(CompanyName companyName) {
@@ -130,8 +140,8 @@ public class TradeView {
             return this;
         }
 
-        public TradeViewBuilder buildTradeTimeStamp(LastTradeTimeStamp lastTradeTimeStamp) {
-            this.lastTradeTimeStamp = lastTradeTimeStamp;
+        public TradeViewBuilder buildTradeTimeStamp(Tag60TransactTime tag60TransactTime) {
+            this.tag60TransactTime = tag60TransactTime;
             return this;
         }
 

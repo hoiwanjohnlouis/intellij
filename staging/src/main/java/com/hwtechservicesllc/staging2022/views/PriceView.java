@@ -1,3 +1,19 @@
+/*
+ * Copyright (c) 2022.  HW Tech Services, LLC
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+
 package com.hwtechservicesllc.staging2022.views;
 
 import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
@@ -5,12 +21,6 @@ import com.hwtechservicesllc.staging2022.fields.*;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
-/**
- * Copyright 01/07/2016 HW Tech Services, LLC
- * Licensed under the Apache License, Version 2.0 (the "License");
- * http://www.apache.org/licenses/LICENSE-2.0
- **/
 
 public class PriceView {
 
@@ -23,7 +33,7 @@ public class PriceView {
     private final OpeningPrice lastTradeOpeningPrice;
     private final Tag32LastQty tag32LastQty;
     private final LastTradeDateStamp lastTradeDateStamp;
-    private final LastTradeTimeStamp lastTradeTimeStamp;
+    private final Tag60TransactTime tag60TransactTime;
 
     //
     private PriceView(PriceViewBuilder priceViewBuilder) {
@@ -32,7 +42,7 @@ public class PriceView {
         this.lastTradeOpeningPrice = priceViewBuilder.lastTradeOpeningPrice;
         this.tag32LastQty = priceViewBuilder.tag32LastQty;
         this.lastTradeDateStamp = priceViewBuilder.lastTradeDateStamp;
-        this.lastTradeTimeStamp = priceViewBuilder.lastTradeTimeStamp;
+        this.tag60TransactTime = priceViewBuilder.tag60TransactTime;
     }
 
     public Tag35MsgType getMsgType() {
@@ -55,8 +65,8 @@ public class PriceView {
         return lastTradeDateStamp;
     }
 
-    public LastTradeTimeStamp getLastTradeTimeStamp() {
-        return lastTradeTimeStamp;
+    public Tag60TransactTime getLastTradeTimeStamp() {
+        return tag60TransactTime;
     }
 
     //
@@ -72,7 +82,7 @@ public class PriceView {
         stringBuilder.append("\n");
         stringBuilder.append(lastTradeDateStamp);
         stringBuilder.append("\n");
-        stringBuilder.append(lastTradeTimeStamp);
+        stringBuilder.append(tag60TransactTime);
 
         return stringBuilder.toString();
     }
@@ -88,7 +98,7 @@ public class PriceView {
         private OpeningPrice lastTradeOpeningPrice;
         private Tag32LastQty tag32LastQty;
         private LastTradeDateStamp lastTradeDateStamp;
-        private LastTradeTimeStamp lastTradeTimeStamp;
+        private Tag60TransactTime tag60TransactTime;
 
         //
         public PriceViewBuilder(Tag35MsgType tag35MsgType) {
@@ -97,7 +107,7 @@ public class PriceView {
             this.lastTradeOpeningPrice = new OpeningPrice();
             this.tag32LastQty = new Tag32LastQty();
             this.lastTradeDateStamp = new LastTradeDateStamp();
-            this.lastTradeTimeStamp = new LastTradeTimeStamp();
+            this.tag60TransactTime = new Tag60TransactTime();
         }
 
         public PriceViewBuilder buildTickerSymbol(Tag55Symbol tag55Symbol) {
@@ -120,8 +130,8 @@ public class PriceView {
             return this;
         }
 
-        public PriceViewBuilder buildTradeTimeStamp(LastTradeTimeStamp lastTradeTimeStamp) {
-            this.lastTradeTimeStamp = lastTradeTimeStamp;
+        public PriceViewBuilder buildTradeTimeStamp(Tag60TransactTime tag60TransactTime) {
+            this.tag60TransactTime = tag60TransactTime;
             return this;
         }
 
