@@ -6,7 +6,7 @@ package com.hwtechservicesllc.staging2022.interfaces;
  * http://www.apache.org/licenses/LICENSE-2.0
  **/
 
-public interface VerboseLogString {
+public interface LogStringVerbose {
     // concrete definition is by whom inherits this class
-    public String toVerboseLogString();
+    String toLogStringVerbose();
 }

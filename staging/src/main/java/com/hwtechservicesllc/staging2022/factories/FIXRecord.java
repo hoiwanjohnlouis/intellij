@@ -18,11 +18,11 @@ package com.hwtechservicesllc.staging2022.factories;
 
 import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.fields.*;
-import com.hwtechservicesllc.staging2022.interfaces.VerboseLogString;
+import com.hwtechservicesllc.staging2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class FIXRecord implements VerboseLogString {
+public class FIXRecord implements LogStringVerbose {
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -105,7 +105,7 @@ public class FIXRecord implements VerboseLogString {
     }
 
     @Override
-    public String toVerboseLogString() {
+    public String toLogStringVerbose() {
         StringBuilder stringBuilder = new StringBuilder();
 
         // clean up the buffer before using.

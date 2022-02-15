@@ -72,7 +72,7 @@ public enum FIXTag {
     PRICE(44, "Price"),
     REF_SEQ_NUM(45, "RefSeqNum"),
     RELATD_SYM(46, "RelatdSym (No longer used)"),
-//    RULE_80_A(47, "Rule80A (no longer used)"),
+    RULE_80_A(47, "Rule80A (no longer used)"),
     SECURITY_ID(48, "SecurityID"),
     SENDER_COMP_ID(49, "SenderCompID"),
     SENDER_SUB_ID(50, "SenderSubID"),
@@ -131,6 +131,7 @@ public enum FIXTag {
     ENCRYPT_METHOD(98, "EncryptMethod"),
     STOP_PX(99, "StopPx"),
     EX_DESTINATION(100, "ExDestination"),
+
     
     // 101-200
     
@@ -205,7 +206,7 @@ public enum FIXTag {
     SETTL_INST_TRANS_TYPE(163, "SettlInstTransType"),
     EMAIL_THREAD_ID(164, "EmailThreadID"),
     SETTL_INST_SOURCE(165, "SettlInstSource"),
-//    SETTL_LOCATION(166, "SettlLocation (replaced)"),
+    SETTL_LOCATION(166, "SettlLocation (replaced)"),
     SECURITY_TYPE(167, "SecurityType"),
     EFFECTIVE_TIME(168, "EffectiveTime"),
     STAND_INST_DB_TYPE(169, "StandInstDbType"),
@@ -213,22 +214,22 @@ public enum FIXTag {
 
     STAND_INST_DB_ID(171, "StandInstDbID"),
     SETTL_DELIVERY_TYPE(172, "SettlDeliveryType"),
-//    SETTL_DEPOSITORY_CODE(173, "SettlDepositoryCode (Obsolete)"),
-//    SETTL_BRKR_CODE(174, "SettlBrkrCode (Obsolete)"),
-//    SETTL_INST_CODE(175, "SettlInstCode (Obsolete)"),
-//    SECURITY_SETTL_AGENT_NAME(176, "SecuritySettlAgentName (Obsolete)"),
-//    SECURITY_SETTL_AGENT_CODE(177, "SecuritySettlAgentCode (Obsolete)"),
-//    SECURITY_SETTL_AGENT_ACCT_NUM(178, "SecuritySettlAgentAcctNum (Obsolete)"),
-//    SECURITY_SETTL_AGENT_ACCT_NAME(179, "SecuritySettlAgentAcctName (Obsolete)"),
-//    SECURITY_SETTL_AGENT_CONTACT_NAME(180, "SecuritySettlAgentContactName (Obsolete)"),
+    SETTL_DEPOSITORY_CODE(173, "SettlDepositoryCode (replaced)"),
+    SETTL_BRKR_CODE(174, "SettlBrkrCode (replaced)"),
+    SETTL_INST_CODE(175, "SettlInstCode (replaced)"),
+    SECURITY_SETTL_AGENT_NAME(176, "SecuritySettlAgentName (replaced)"),
+    SECURITY_SETTL_AGENT_CODE(177, "SecuritySettlAgentCode (replaced)"),
+    SECURITY_SETTL_AGENT_ACCT_NUM(178, "SecuritySettlAgentAcctNum (replaced)"),
+    SECURITY_SETTL_AGENT_ACCT_NAME(179, "SecuritySettlAgentAcctName (replaced)"),
+    SECURITY_SETTL_AGENT_CONTACT_NAME(180, "SecuritySettlAgentContactName (replaced)"),
 
-//    SECURITY_SETTL_AGENT_CONTACT_PHONE(181, "SecuritySettlAgentContactPhone (Obsolete)"),
-//    CASH_SETTL_AGENT_NAME(182, "CashSettlAgentName (Obsolete)"),
-//    CASH_SETTL_AGENT_CODE(183, "CashSettlAgentCode (Obsolete)"),
-//    CASH_SETTL_AGENT_ACCT_NUM(184, "CashSettlAgentAcctNum (Obsolete)"),
-//    CASH_SETTL_AGENT_ACCT_NAME(185, "CashSettlAgentAcctName (Obsolete)"),
-//    CASH_SETTL_AGENT_CONTACT_NAME(186, "CashSettlAgentContactName (Obsolete)"),
-//    CASH_SETTL_AGENT_CONTACT_PHONE(187, "CashSettlAgentContactPhone (Obsolete)"),
+    SECURITY_SETTL_AGENT_CONTACT_PHONE(181, "SecuritySettlAgentContactPhone (replaced)"),
+    CASH_SETTL_AGENT_NAME(182, "CashSettlAgentName (replaced)"),
+    CASH_SETTL_AGENT_CODE(183, "CashSettlAgentCode (replaced)"),
+    CASH_SETTL_AGENT_ACCT_NUM(184, "CashSettlAgentAcctNum (replaced)"),
+    CASH_SETTL_AGENT_ACCT_NAME(185, "CashSettlAgentAcctName (replaced)"),
+    CASH_SETTL_AGENT_CONTACT_NAME(186, "CashSettlAgentContactName (replaced)"),
+    CASH_SETTL_AGENT_CONTACT_PHONE(187, "CashSettlAgentContactPhone (replaced)"),
     BID_SPOT_RATE(188, "BidSpotRate"),
     BID_FORWARD_POINTS(189, "BidForwardPoints"),
     OFFER_SPOT_RATE(190, "OfferSpotRate"),
@@ -247,11 +248,11 @@ public enum FIXTag {
 
     // 201-300
     
-//    PUT_OR_CALL(201, "PutOrCall (replaced)"),
+    PUT_OR_CALL(201, "PutOrCall (replaced)"),
     STRIKE_PRICE(202, "StrikePrice"),
     COVERED_OR_UNCOVERED(203, "CoveredOrUncovered"),
-//    CUSTOMER_OR_FIRM(204, "CustomerOrFirm (replaced)"),
-//    MATURITY_DAY(205, "MaturityDay (replaced)"),
+    CUSTOMER_OR_FIRM(204, "CustomerOrFirm (replaced)"),
+    MATURITY_DAY(205, "MaturityDay (replaced)"),
     OPT_ATTRIBUTE(206, "OptAttribute"),
     SECURITY_EXCHANGE(207, "SecurityExchange"),
     NOTIFY_BROKER_OF_CREDIT(208, "NotifyBrokerOfCredit"),
@@ -266,17 +267,60 @@ public enum FIXTag {
     ROUTING_TYPE(216, "RoutingType"),
     ROUTING_ID(217, "RoutingID"),
     SPREAD_TO_BENCHMARK(218, "SpreadToBenchmark"),
-//    BENCHMARK(219, "Benchmark (no longer used)"),
+    BENCHMARK(219, "Benchmark (no longer used)"),
 
-// 220-222,    Reserved/Allocated to the Fixed Income proposal
-
+	// 220-222,    Reserved/Allocated to the Fixed Income proposal	
+	BENCHMARK_CURVE_CURRENCY(220, "BenchmarkCurveCurrency"),
+	BENCHMARK_CURVE_NAME(221, "BenchmarkCurveName"),
+	BENCHMARK_CURVE_POINT(222, "BenchmarkCurvePoint"),
+	// 220-222,    Reserved/Allocated to the Fixed Income proposal	
     COUPON_RATE(223, "CouponRate"),
-
-// 224-230,    Reserved/Allocated to the Fixed Income proposal
+	// 224-230,    Reserved/Allocated to the Fixed Income proposal
+	COUPON_PAYMENT_DATE(224, "CouponPaymentDate"),
+	ISSUE_DATE(225, "IssueDate"),
+	REPURCHASE_TERM(226, "RepurchaseTerm (Deprecated)"),
+	REPURCHASE_RATE(227, "RepurchaseRate (Deprecated)"),
+	FACTOR(228, "Factor"),
+	TRADE_ORIGINATION_DATE(229, "TradeOriginationDate"),
+	EX_DATE(230, "ExDate"),
+	// 224-230,    Reserved/Allocated to the Fixed Income proposal
 
     CONTRACT_MULTIPLIER(231, "ContractMultiplier"),
+	// 232-261,    Reserved/Allocated to the Fixed Income proposal
+	NO_STIPULATIONS(232, "NoStipulations"),
+	STIPULATION_TYPE(233, "StipulationType"),
+	STIPULATION_VALUE(234, "StipulationValue"),
+	YIELD_TYPE(235, "YieldType"),
+	YIELD(236, "Yield"),
+	TOTAL_TAKEDOWN(237, "TotalTakedown"),
+	CONCESSION(238, "Concession"),
+	REPO_COLLATERAL_SECURITY_TYPE(239, "RepoCollateralSecurityType (Deprecated)"),
+	REDEMPTION_DATE(240, "RedemptionDate (Deprecated)"),
 
-// 232-261,    Reserved/Allocated to the Fixed Income proposal
+	UNDERLYING_COUPON_PAYMENT_DATE(241, "UnderlyingCouponPaymentDate"),
+	UNDERLYING_ISSUE_DATE(242, "UnderlyingIssueDate"),
+	UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE(243, "UnderlyingRepoCollateralSecurityType (Deprecated"),
+	UNDERLYING_REPURCHASE_TERM(244, "UnderlyingRepurchaseTerm (Deprecated)"),
+	UNDERLYING_REPURCHASE_RATE(245, "UnderlyingRepurchaseRate (Deprecated)"),
+	UNDERLYING_FACTOR(246, "UnderlyingFactor"),
+	UNDERLYING_REDEMPTION_DATE(247, "UnderlyingRedemptionDate (Deprecated)"),
+	LEG_COUPON_PAYMENT_DATE(248, "LegCouponPaymentDate"),
+	LEG_ISSUE_DATE(249, "LegIssueDate"),
+	LEG_REPO_COLLATERAL_SECURITY_TYPE(250, "LegRepoCollateralSecurityType (Deprecated)"),
+
+	LEG_REPURCHASE_TERM(251, "LegRepurchaseTerm (Deprecated)"),
+	LEG_REPURCHASE_RATE(252, "LegRepurchaseRate (Deprecated)"),
+	LEG_FACTOR(253, "LegFactor"),
+	LEG_REDEMPTION_DATE(254, "LegRedemptionDate (Deprecated)"),
+	CREDIT_RATING(255, "CreditRating"),
+	UNDERLYING_CREDIT_RATING(256, "UnderlyingCreditRating"),
+	LEG_CREDIT_RATING(257, "LegCreditRating"),
+	TRADED_FLAT_SWITCH(258, "TradedFlatSwitch"),
+	BASIS_FEATURE_DATE(259, "BasisFeatureDate"),
+	BASIS_FEATURE_PRICE(260, "BasisFeaturePrice"),
+
+	// xx(261, ""),
+	// 232-261,    Reserved/Allocated to the Fixed Income proposal
 
     MD_REQ_ID(262, "MDReqID"),
     SUBSCRIPTION_REQUEST_TYPE(263, "SubscriptionRequestType"),
@@ -343,7 +387,7 @@ public enum FIXTag {
     UNDERLYING_STRIKE_PRICE(316, "UnderlyingStrikePrice"),
     UNDERLYING_OPT_ATTRIBUTE(317, "UnderlyingOptAttribute"),
     UNDERLYING_CURRENCY(318, "UnderlyingCurrency"),
-//    RATIO_QTY(319, "RatioQty (unused)"),
+    RATIO_QTY(319, "RatioQty (unused)"),
     SECURITY_REQ_ID(320, "SecurityReqID"),
 
     SECURITY_REQUEST_TYPE(321, "SecurityRequestType"),
@@ -489,8 +533,8 @@ public enum FIXTag {
     LIST_STATUS_ENCODED_TEXT(446, "ListStatusEncodedText"),
 	PARTY_ID_SOURCE(447, "PartyIDSource"),
 	PARTY_ID(448, "PartyID"),
-//    TOTAL_VOLUME_TRADED_DATE(449, "TotalVolumeTradedDate (replaced)"),
-//    TOTAL_VOLUME_TRADED_TIME(450, "TotalVolumeTradedTime (replaced)"),
+    TOTAL_VOLUME_TRADED_DATE(449, "TotalVolumeTradedDate (replaced)"),
+    TOTAL_VOLUME_TRADED_TIME(450, "TotalVolumeTradedTime (replaced)"),
 
 	NET_CHG_PREV_DAY(451, "NetChgPrevDay"),
 	PARTY_ROLE(452, "PartyRole"),
@@ -720,7 +764,7 @@ public enum FIXTag {
 
 	UNDERLYING_LAST_PX(651, "UnderlyingLastPx"),
 	UNDERLYING_LAST_QTY(652, "UnderlyingLastQty"),
-//    SEC_DEF_STATUS(653, "SecDefStatus (replaced)"),
+    SEC_DEF_STATUS(653, "SecDefStatus (replaced)"),
 	LEG_REF_ID(654, "LegRefID"),
 	CONTRA_LEG_REF_ID(655, "ContraLegRefID"),
 	SETTL_CURR_BID_FX_RATE(656, "SettlCurrBidFxRate"),
@@ -1090,13 +1134,13 @@ public enum FIXTag {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.name());
-        sb.append(":[");
-        sb.append(getFIXTagNumber());
-        sb.append("]");
-        sb.append(":[");
-        sb.append(getFIXTagDescription());
-        sb.append("]");
+        sb.append(this.name())
+            .append(":[")
+            .append(getFIXTagNumber())
+            .append("]")
+            .append(":[")
+            .append(getFIXTagDescription())
+            .append("]");
 
         return sb.toString();
     }

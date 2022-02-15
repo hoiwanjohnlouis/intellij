@@ -1,7 +1,6 @@
 package com.hwtechservicesllc.staging2022;
 
-import com.hwtechservicesllc.staging2022.datatypes.FIXTag;
-
+import com.hwtechservicesllc.staging2022.fields.Tag1Account;
 import com.hwtechservicesllc.staging2022.fields.Tag35MsgType;
 import com.hwtechservicesllc.staging2022.factories.FIXRecord;
 
@@ -9,10 +8,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        double openingPrice = 0.0d;
         String companyName = "International Business Machines, Inc.";
 
-        FIXTag tagger = FIXTag.ACCOUNT;
+        Tag1Account tag1Account = new Tag1Account("1234567890");
+        System.out.println(tag1Account);
+        System.out.println(tag1Account.getTag1AccountDescription());
+        System.out.println(tag1Account.getTag1AccountValue());
 
         FIXRecord record =
                 new FIXRecord.Builder(Tag35MsgType.NEW_ORDER)
@@ -27,6 +28,6 @@ public class Main {
                         .build();
 
         System.out.println(record);
-        System.out.println(record.toVerboseLogString());
+        System.out.println(record.toLogStringVerbose());
     }
 }
