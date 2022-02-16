@@ -16,7 +16,6 @@
 
 package com.hwtsllc.staging2022.views;
 
-import com.hwtsllc.staging2022.fields.Tag35MsgType;
 import com.hwtsllc.staging2022.fields.*;
 
 import org.apache.log4j.LogManager;

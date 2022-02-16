@@ -18,7 +18,7 @@ package com.hwtsllc.staging2022;
 
 import com.hwtsllc.staging2022.fields.Tag1Account;
 import com.hwtsllc.staging2022.fields.Tag35MsgType;
-import com.hwtsllc.staging2022.factories.FIXRecord;
+import com.hwtsllc.staging2022.factories.FIXBody;
 
 public class Main {
 
@@ -31,8 +31,8 @@ public class Main {
         System.out.println(tag1Account.getTag1AccountDescription());
         System.out.println(tag1Account.getTag1AccountValue());
 
-        FIXRecord record =
-                new FIXRecord.Builder(Tag35MsgType.NEW_ORDER)
+        FIXBody record =
+                new FIXBody.Builder(Tag35MsgType.NEW_ORDER)
                         .buildCompanyName(companyName)
                         .buildTickerSymbol("IBM")
                         .buildOpeningPrice(12.34D)
