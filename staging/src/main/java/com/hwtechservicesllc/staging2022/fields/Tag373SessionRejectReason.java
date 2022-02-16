@@ -14,12 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtechservicesllc.staging2022.interfaces;
+package com.hwtechservicesllc.staging2022.fields;
 
-public interface FixString {
-    // concrete definition is by whom inherits this class
-    String toFixString();
-
-    class Tag374BidRequestTransType {
-    }
+public class Tag373SessionRejectReason {
 }

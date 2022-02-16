@@ -16,10 +16,5 @@
 
 package com.hwtechservicesllc.staging2022.interfaces;
 
-public interface FixString {
-    // concrete definition is by whom inherits this class
-    String toFixString();
-
-    class Tag374BidRequestTransType {
-    }
+public class Tag400BidDescriptor {
 }
