@@ -16,8 +16,8 @@
 
 package com.hwtsllc.staging2022;
 
-import com.hwtsllc.staging2022.fields.Tag1Account;
-import com.hwtsllc.staging2022.fields.Tag35MsgType;
+import com.hwtsllc.staging2022.fields40.Tag1Account;
+import com.hwtsllc.staging2022.fields40.Tag35MsgType;
 import com.hwtsllc.staging2022.factories.FIXBody;
 
 public class Main {

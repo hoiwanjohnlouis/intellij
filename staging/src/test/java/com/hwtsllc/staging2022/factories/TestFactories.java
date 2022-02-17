@@ -17,9 +17,9 @@
 package com.hwtsllc.staging2022.factories;
 
 
-import com.hwtsllc.staging2022.fields.Tag35MsgType;
-import com.hwtsllc.staging2022.fields.CompanyName;
-import com.hwtsllc.staging2022.fields.Tag55Symbol;
+import com.hwtsllc.staging2022.fields40.Tag35MsgType;
+import com.hwtsllc.staging2022.fields40.CompanyName;
+import com.hwtsllc.staging2022.fields40.Tag55Symbol;
 import com.hwtsllc.staging2022.views.TradeView;
 
 import org.apache.log4j.LogManager;
