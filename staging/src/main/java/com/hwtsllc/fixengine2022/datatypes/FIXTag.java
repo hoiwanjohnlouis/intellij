@@ -20,11 +20,11 @@ public enum FIXTag {
 
     // 1-100
 
-    /*******************************************/
-    /*******************************************/
-    /* Start of FIX4.0                         */
-    /*******************************************/
-    /*******************************************/
+    /*
+     *
+     * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
+     *
+     */
     ACCOUNT(1, "Account"),
     ADV_ID(2, "AdvId"),
     ADV_REF_ID(3, "AdvRefId"),
@@ -181,17 +181,18 @@ public enum FIXTag {
     MISC_FEE_CURR(138, "MiscFeeCurr"),
     MISC_FEE_TYPE(139, "MiscFeeType"),
     PREV_CLOSE_PX(140, "PrevClosePx"),
-    /*******************************************/
-    /*******************************************/
-    /** End of FIX4.0                         **/
-    /*******************************************/
-    /*******************************************/
+    /*
+     *
+     * End of FIX4.0
+     *
+     */
 
-    /*******************************************/
-    /*******************************************/
-    /** Start of FIX4.2                       **/
-    /*******************************************/
-    /*******************************************/
+
+    /*
+     *
+     * Start of FIX4.2 as defined by the FIX Protocol Specification 4.2
+     *
+     */
     RESET_SEQ_NUM_FLAG(141, "ResetSeqNumFlag"),
     SENDER_LOCATION_ID(142, "SenderLocationID"),
     TARGET_LOCATION_ID(143, "TargetLocationID"),
@@ -326,9 +327,6 @@ public enum FIXTag {
     TRADED_FLAT_SWITCH(258, "TradedFlatSwitch"),
     BASIS_FEATURE_DATE(259, "BasisFeatureDate"),
     BASIS_FEATURE_PRICE(260, "BasisFeaturePrice"),
-
-    // xx(261, ""),
-    // 261,    Reserved/Allocated to the Fixed Income proposal
 
     MD_REQ_ID(262, "MDReqID"),
     SUBSCRIPTION_REQUEST_TYPE(263, "SubscriptionRequestType"),
@@ -539,17 +537,18 @@ public enum FIXTag {
     LIST_STATUS_TEXT(444, "ListStatusText"),
     LIST_STATUS_ENCODED_TEXT_LEN(445, "ListStatusEncodedTextLen"),
     LIST_STATUS_ENCODED_TEXT(446, "ListStatusEncodedText"),
-    /*******************************************/
-    /*******************************************/
-    /** End of FIX4.2                         **/
-    /*******************************************/
-    /*******************************************/
+    /*
+     *
+     * End of FIX4.2
+     *
+     */
 
-    /*******************************************/
-    /*******************************************/
-    /** Start of FIX4.3                       **/
-    /*******************************************/
-    /*******************************************/
+
+    /*
+     *
+     * Start of FIX4.3 as defined by the FIX Protocol Specification 4.3
+     *
+     */
     PARTY_ID_SOURCE(447, "PartyIDSource"),
     PARTY_ID(448, "PartyID"),
     TOTAL_VOLUME_TRADED_DATE(449, "TotalVolumeTradedDate (replaced)"),
@@ -790,17 +789,18 @@ public enum FIXTag {
     SETTL_CURR_OFFER_FX_RATE(657, "SettlCurrOfferFxRate"),
     QUOTE_REQUEST_REJECT_REASON(658, "QuoteRequestRejectReason"),
     SIDE_COMPLIANCE_ID(659, "SideComplianceID"),
-    /*******************************************/
-    /*******************************************/
-    /** End of FIX4.3                         **/
-    /*******************************************/
-    /*******************************************/
+    /*
+     *
+     * End of FIX4.3
+     *
+     */
 
-    /*******************************************/
-    /*******************************************/
-    /** Start of FIX4.4                       **/
-    /*******************************************/
-    /*******************************************/
+
+    /*
+     *
+     * Start of FIX4.4 as defined by the FIX Protocol Specification 4.4
+     *
+     */
     ACCT_ID_SOURCE(660, "AcctIDSource"),
 
     ALLOC_ACCT_ID_SOURCE(661, "AllocAcctIDSource"),
@@ -1136,17 +1136,18 @@ public enum FIXTag {
     NESTED_3_PARTY_SUB_ID_TYPE(954, "Nested3PartySubIDType"),
     LEG_CONTRACT_SETTL_MONTH(955, "LegContractSettlMonth"),
     LEG_INTEREST_ACCRUAL_DATE(956, "LegInterestAccrualDate"),
-    /*******************************************/
-    /*******************************************/
-    /** End of FIX4.4                         **/
-    /*******************************************/
-    /*******************************************/
+    /*
+     *
+     * End of FIX4.4
+     *
+     */
 
-    /*******************************************/
-    /*******************************************/
-    /** Start of FIX5.0                       **/
-    /*******************************************/
-    /*******************************************/
+
+    /*
+     *
+     * Start of FIX5.0 as defined by the FIX Protocol Specification 5.0
+     *
+     */
     NO_STRATEGY_PARAMETERS(957, "NoStrategyParameters"),
     STRATEGY_PARAMETER_NAME(958, "StrategyParameterName"),
     STRATEGY_PARAMETER_TYPE(959, "StrategyParameterType"),
@@ -1348,11 +1349,11 @@ public enum FIXTag {
     DEFAULT_APPL_VER_ID(1137, "DefaultApplVerID"),
     DISPLAY_QTY(1138, "DisplayQty"),
     EXCHANGE_SPECIAL_INSTRUCTIONS(1139, "ExchangeSpecialInstructions");
-    /*******************************************/
-    /*******************************************/
-    /** End of FIX5.0                         **/
-    /*******************************************/
-    /*******************************************/
+    /*
+     *
+     * End of FIX5.0
+     *
+     */
 
 
     ///////////////////////////////////////////////////////////////////////////
