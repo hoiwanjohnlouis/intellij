@@ -16,7 +16,5 @@
 
 package com.hwtsllc.staging2022.interfaces;
 
-public interface FixString {
-    // concrete definition is by whom inherits this class
-    String toFixString();
+public class Tag899MarginExcess {
 }

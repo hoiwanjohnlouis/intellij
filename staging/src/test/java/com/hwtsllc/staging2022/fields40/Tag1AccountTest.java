@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.staging2022;
+package com.hwtsllc.staging2022.fields40;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-class MainTest {
+class Tag1AccountTest {
 
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -34,14 +34,17 @@ class MainTest {
     void setUp() {
         logger.info("@BeforeEach - executes before each test method in this class");
     }
-
     @AfterEach
     void tearDown() {
         logger.info("@AfterEach - executes after each test method in this class");
     }
 
     @Test
-    void xx() {
-
+    void TestTag1() {
+        Tag1Account tag1Account = new Tag1Account("1234567890");
+        assertEquals( tag1Account.getTag1AccountValue(), "1234567890");
+        assertNotEquals( tag1Account.getTag1AccountValue(), "1234567890");
     }
+
+
 }

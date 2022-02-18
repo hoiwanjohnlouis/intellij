@@ -27,9 +27,13 @@ public class Main {
         String companyName = "International Business Machines, Inc. ";
 
         Tag1Account tag1Account = new Tag1Account("1234567890");
-        System.out.println(tag1Account);
-        System.out.println(tag1Account.getTag1AccountDescription());
-        System.out.println(tag1Account.getTag1AccountValue());
+        System.out.println("1:"+tag1Account);
+        System.out.println("2:"+tag1Account.toLogStringVerbose());
+        System.out.println("3:"+tag1Account.getTag1AccountValue());
+        System.out.println("4:"+tag1Account.getFIXTagName());
+        System.out.println("5:"+tag1Account.getFIXTagNumber());
+        System.out.println("6:"+tag1Account.getFIXTagDescription());
+        System.out.println("7:"+tag1Account.toFixString());
 
         FIXBody record =
                 new FIXBody.Builder(Tag35MsgType.NEW_ORDER)

@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.staging2022.interfaces;
+package com.hwtsllc.staging2022.fields44;
 
-public class Tag800OrderBookingQty {
+public class Tag744AssignmentMethod {
 }

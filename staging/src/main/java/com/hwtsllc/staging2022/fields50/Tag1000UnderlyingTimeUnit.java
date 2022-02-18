@@ -14,9 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.staging2022.interfaces;
+package com.hwtsllc.staging2022.fields50;
 
-public interface FixString {
-    // concrete definition is by whom inherits this class
-    String toFixString();
+public class Tag1000UnderlyingTimeUnit {
 }

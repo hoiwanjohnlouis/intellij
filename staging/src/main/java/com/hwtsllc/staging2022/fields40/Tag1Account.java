@@ -17,11 +17,12 @@
 package com.hwtsllc.staging2022.fields40;
 
 import com.hwtsllc.staging2022.datatypes.FIXTag;
-//import com.hwtechservicesllc.staging2022.datatypes.FieldType;
+import com.hwtsllc.staging2022.interfaces.FixString;
+import com.hwtsllc.staging2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag1Account {
+public class Tag1Account implements FixString, LogStringVerbose {
 
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,7 +37,14 @@ public class Tag1Account {
     public String getTag1AccountValue() {
         return tag1AccountValue;
     }
-    public String getTag1AccountDescription() {
+
+    public String getFIXTagName() {
+        return fixTag.getFIXTagName();
+    }
+    public int getFIXTagNumber() {
+        return fixTag.getFIXTagNumber();
+    }
+    public String getFIXTagDescription() {
         return fixTag.getFIXTagDescription();
     }
 
@@ -44,10 +52,34 @@ public class Tag1Account {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
-            .append(":[")
-            .append(getTag1AccountValue())
-            .append("]");
+                .append(":[")
+                .append(getTag1AccountValue())
+                .append("]");
         return sb.toString();
     }
 
+    @Override
+    public String toLogStringVerbose() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getFIXTagName())
+                .append(":[")
+                .append(getTag1AccountValue())
+                .append("],[")
+                .append(getFIXTagNumber())
+                .append(",")
+                .append(getFIXTagDescription())
+                .append("]. FIXTag[")
+                .append(fixTag)
+                .append("]");
+        return sb.toString();
+    }
+
+    @Override
+    public String toFixString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getFIXTagNumber())
+                .append("=")
+                .append(getTag1AccountValue());
+        return sb.toString();
+    }
 }

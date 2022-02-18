@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.staging2022.interfaces;
+package com.hwtsllc.staging2022.fields44;
 
-public class Tag701YieldCalcDate {
+public class Tag797CopyMsgIndicator {
 }
