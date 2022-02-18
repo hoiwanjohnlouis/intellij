@@ -1382,13 +1382,11 @@ public enum FIXTag {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getFIXTagName())
-            .append(":[")
+            .append("=[")
             .append(getFIXTagNumber())
-            .append("]")
-            .append("[")
+            .append(",")
             .append(getFIXTagDescription())
             .append("]");
-
         return sb.toString();
     }
 

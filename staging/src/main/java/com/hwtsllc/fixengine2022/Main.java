@@ -24,7 +24,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String companyName = "International Business Machines, Inc. ";
+        String companyName = "International Business Machines, Inc.";
 
         Tag1Account tag1Account = new Tag1Account("1234567890");
         System.out.println("1:"+tag1Account);

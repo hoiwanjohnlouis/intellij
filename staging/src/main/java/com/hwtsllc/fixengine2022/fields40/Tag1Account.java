@@ -52,7 +52,7 @@ public class Tag1Account implements FixString, LogStringVerbose {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
-                .append(":[")
+                .append("=[")
                 .append(getTag1AccountValue())
                 .append("]");
         return sb.toString();
@@ -61,16 +61,21 @@ public class Tag1Account implements FixString, LogStringVerbose {
     @Override
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
-        sb.append(getFIXTagName())
-                .append(":[")
-                .append(getTag1AccountValue())
-                .append("],[")
+        sb.append(this.getClass().getSimpleName())
+                .append("\n\tTagName[")
+                .append(getFIXTagName())
+                .append("]")
+                .append("\n\tTagNumber[")
                 .append(getFIXTagNumber())
-                .append(",")
+                .append("]")
+                .append("\n\tTagDescription[")
                 .append(getFIXTagDescription())
-                .append("]. FIXTag[")
-                .append(fixTag)
-                .append("]");
+                .append("]")
+                .append("\n\tTagValue[")
+                .append(getTag1AccountValue())
+                .append("]")
+                .append("\n")
+                .append(fixTag);
         return sb.toString();
     }
 
