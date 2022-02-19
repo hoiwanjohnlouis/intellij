@@ -16,6 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fields40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public enum Tag35MsgType {
 
     HEARTBEAT("0", "Heartbeat"),
@@ -29,7 +33,12 @@ public enum Tag35MsgType {
     NEW_ORDER("D", "New Order - Single"),
     ORDER_CANCEL_REQUEST("F", "Order Cancel Request"),
     ORDER_MODIFICATION_REQUEST("G", "Order Cancel/Replace Request"),
-    ORDER_STATUS_REQUEST("H", "Order Status Request");
+    ORDER_STATUS_REQUEST("H", "Order Status Request"),
+    ;
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private final FIXType fixType = FIXType.MSG_TYPE;
 
     private final String tag35MsgTypeValue;
     private final String tag35MsgTypeDescription;

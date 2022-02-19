@@ -22,8 +22,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag55Symbol {
-
-    // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 

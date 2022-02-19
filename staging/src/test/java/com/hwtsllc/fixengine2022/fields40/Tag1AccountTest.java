@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-class Tag1AccountTest {
+class  Tag1AccountTest {
 
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -42,8 +42,8 @@ class Tag1AccountTest {
     @Test
     void TestTag1() {
         Tag1Account tag1Account = new Tag1Account("1234567890");
-        assertEquals( tag1Account.getTag1AccountValue(), "1234567890");
-        assertNotEquals( tag1Account.getTag1AccountValue(), "1234567890");
+        assertEquals( tag1Account.getDataValue(), "1234567890");
+        assertNotEquals( tag1Account.getDataValue(), "abcdefghij");
     }
 
 

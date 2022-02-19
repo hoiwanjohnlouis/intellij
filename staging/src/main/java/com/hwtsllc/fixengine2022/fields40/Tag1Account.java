@@ -16,36 +16,34 @@
 
 package com.hwtsllc.fixengine2022.fields40;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXTag;
-import com.hwtsllc.fixengine2022.interfaces.FixString;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag1Account implements FixString, LogStringVerbose {
-
+public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXTag fixTag = FIXTag.ACCOUNT;
-    private final String tag1AccountValue;
+    private final FIXType fixType = FIXType.ACCOUNT;
+    private final String dataValue;
 
-    public Tag1Account(final String tag1AccountValue) {
-        this.tag1AccountValue = tag1AccountValue;
-    }
-
-    public String getTag1AccountValue() {
-        return tag1AccountValue;
+    public Tag1Account(final String dataValue) {
+        this.dataValue = dataValue;
     }
 
     public String getFIXTagName() {
-        return fixTag.getFIXTagName();
+        return fixType.getFIXName();
     }
     public int getFIXTagNumber() {
-        return fixTag.getFIXTagNumber();
+        return fixType.getFIXNumber();
     }
     public String getFIXTagDescription() {
-        return fixTag.getFIXTagDescription();
+        return fixType.getFIXDescription();
+    }
+    public String getDataValue() {
+        return dataValue;
     }
 
     @Override
@@ -53,11 +51,10 @@ public class Tag1Account implements FixString, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append("=[")
-                .append(getTag1AccountValue())
+                .append(getDataValue())
                 .append("]");
         return sb.toString();
     }
-
     @Override
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
@@ -72,19 +69,16 @@ public class Tag1Account implements FixString, LogStringVerbose {
                 .append(getFIXTagDescription())
                 .append("]")
                 .append("\n\tTagValue[")
-                .append(getTag1AccountValue())
-                .append("]")
-                .append("\n")
-                .append(fixTag);
+                .append(getDataValue())
+                .append("]");
         return sb.toString();
     }
-
     @Override
-    public String toFixString() {
+    public String toFixTagValuePairString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getFIXTagNumber())
                 .append("=")
-                .append(getTag1AccountValue());
+                .append(getDataValue());
         return sb.toString();
     }
 }

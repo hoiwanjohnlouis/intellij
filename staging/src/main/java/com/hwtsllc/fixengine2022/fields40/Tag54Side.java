@@ -16,6 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fields40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public enum Tag54Side {
 
     BUY ("1"),
@@ -33,7 +37,13 @@ public enum Tag54Side {
     SUBSCRIBE ("D"),
     REDEEM ("E"),
     LEND_FINANCING ("F"),
-    BORROW_FINANCING ("G");
+    BORROW_FINANCING ("G"),
+    ;
+
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private final FIXType fixType = FIXType.SIDE;
 
     private final String tag35SideValue;
 //  private final String tag35SideDescription;

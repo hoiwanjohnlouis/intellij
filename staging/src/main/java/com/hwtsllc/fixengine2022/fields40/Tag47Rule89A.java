@@ -16,6 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fields40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 @Deprecated
 public enum Tag47Rule89A {
 
@@ -41,7 +45,13 @@ public enum Tag47Rule89A {
     ALL_OTHER_ORDERS_AS_AGENT("W", "All other orders as agent for other member"),
     SHORT_EXEMPT_MEMBER_W_T("X", "Short exempt transaction for member competing market-maker not affiliated with the firm clearing the trade (refer to W and T types)"),
     PROGRAM_ORDER_NON_INDEX_ARB_OTHER_AGENCY("Y", "Program Order, non-index arb, for other agency"),
-    SHORT_EXEMPT_NON_MEMBER("Z", "Short exempt transaction for non-member competing market-maker (refer to A and R types)");
+    SHORT_EXEMPT_NON_MEMBER("Z", "Short exempt transaction for non-member competing market-maker (refer to A and R types)")
+    ;
+
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private final FIXType fixType = FIXType.RULE_80_A;
 
     private final String tag47Rule80AValue;
     private final String tag47Rule80ADescription;

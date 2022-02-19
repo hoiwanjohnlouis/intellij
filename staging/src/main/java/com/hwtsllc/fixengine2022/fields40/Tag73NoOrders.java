@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fields40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public class Tag73NoOrders {
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private final FIXType fixType = FIXType.NO_ORDERS;
 }
