@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.fields40.*;
+import com.hwtsllc.fixengine2022.fix40.*;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

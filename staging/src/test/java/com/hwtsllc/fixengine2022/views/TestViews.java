@@ -16,9 +16,9 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.fields40.Tag35MsgType;
-import com.hwtsllc.fixengine2022.fields40.CompanyName;
-import com.hwtsllc.fixengine2022.fields40.Tag55Symbol;
+import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
+import com.hwtsllc.fixengine2022.fix40.CompanyName;
+import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

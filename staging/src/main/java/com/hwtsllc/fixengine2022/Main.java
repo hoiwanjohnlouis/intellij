@@ -16,9 +16,9 @@
 
 package com.hwtsllc.fixengine2022;
 
-import com.hwtsllc.fixengine2022.fields40.Tag1Account;
-import com.hwtsllc.fixengine2022.fields40.Tag2AdvID;
-import com.hwtsllc.fixengine2022.fields40.Tag35MsgType;
+import com.hwtsllc.fixengine2022.fix40.Tag1Account;
+import com.hwtsllc.fixengine2022.fix40.Tag2AdvID;
+import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
 import com.hwtsllc.fixengine2022.factories.FIXBody;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
