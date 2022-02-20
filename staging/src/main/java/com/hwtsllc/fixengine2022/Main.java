@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix40.Tag1Account;
 import com.hwtsllc.fixengine2022.fix40.Tag2AdvID;
 import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
@@ -28,35 +29,12 @@ public class Main {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
+    /*
+     *
+     */
     public static void main(String[] args) {
 
         String companyName = "International Business Machines, Inc.";
-
-        Tag1Account tag1Account = new Tag1Account("1234567890");
-        System.out.println("t1.1:"+tag1Account);
-        System.out.println("t1.2.verbose:"+tag1Account.toLogStringVerbose());
-        System.out.println("t1.3.FixName:"+tag1Account.getFIXTagName());
-        System.out.println("t1.4.FixNumber:"+tag1Account.getFIXTagNumber());
-        System.out.println("t1.5.FixDescription:"+tag1Account.getFIXTagDescription());
-        System.out.println("t1.6.DataValue:"+tag1Account.getDataValue());
-        System.out.println("t1.7.FixString:"+tag1Account.toFixTagValuePairString());
-
-        Tag2AdvID tag2AdvID = new Tag2AdvID("adv id");
-        System.out.println("t2.1:"+tag2AdvID);
-        System.out.println("t2.2.verbose:"+tag2AdvID.toLogStringVerbose());
-        System.out.println("t2.7.FixString:"+tag2AdvID.toFixTagValuePairString());
-
-        Tag0Temp tag0Temp = new Tag0Temp("hello from main");
-        System.out.println("t0.1:"+tag0Temp);
-        System.out.println("t0.2.verbose:"+tag0Temp.getLogStringVerbose());
-        System.out.println("t0.3.FixName:"+tag0Temp.getFIXName());
-        System.out.println("t0.4.FixNumber:"+tag0Temp.getFIXNumber());
-        System.out.println("t0.5.FixDescription:"+tag0Temp.getFIXDescription());
-        System.out.println("t0.6.DataValue:"+tag0Temp.getDataValue());
-        System.out.println("t0.7.FixString:"+tag0Temp.getFixTagValuePairString());
-
-        Tag3AdvRefID tag3AdvRefID = new Tag3AdvRefID("adv ref id");
-        System.out.println("t3.1:"+tag3AdvRefID);
 
         FIXBody record =
                 new FIXBody.Builder(Tag35MsgType.NEW_ORDER)

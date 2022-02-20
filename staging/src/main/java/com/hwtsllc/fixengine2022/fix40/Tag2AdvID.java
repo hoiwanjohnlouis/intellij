@@ -33,17 +33,17 @@ public class Tag2AdvID implements FixTagValuePairString, LogStringVerbose {
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return dataValue;
-    }
-    public String getFIXTagName() {
+    public String getFIXName() {
         return fixType.getFIXName();
     }
-    public int getFIXTagNumber() {
+    public int getFIXNumber() {
         return fixType.getFIXNumber();
     }
-    public String getFIXTagDescription() {
+    public String getFIXDescription() {
         return fixType.getFIXDescription();
+    }
+    public String getDataValue() {
+        return this.dataValue;
     }
 
     @Override
@@ -60,15 +60,15 @@ public class Tag2AdvID implements FixTagValuePairString, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append("\n\tTagName[")
-                .append(getFIXTagName())
+                .append(getFIXName())
                 .append("]")
                 .append("\n\tTagNumber[")
-                .append(getFIXTagNumber())
+                .append(getFIXNumber())
                 .append("]")
                 .append("\n\tTagDescription[")
-                .append(getFIXTagDescription())
+                .append(getFIXDescription())
                 .append("]")
-                .append("\n\tTagValue[")
+                .append("\n\tDataValue[")
                 .append(getDataValue())
                 .append("]");
         return sb.toString();
@@ -76,10 +76,25 @@ public class Tag2AdvID implements FixTagValuePairString, LogStringVerbose {
     @Override
     public String toFixTagValuePairString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(getFIXTagNumber())
+        sb.append(getFIXNumber())
                 .append("=")
                 .append(getDataValue());
         return sb.toString();
     }
 
+    /*
+     *
+     */
+    public static void main(String[] args) {
+
+        Tag2AdvID tag2AdvID = new Tag2AdvID("adv id");
+        System.out.println("t2.1:"+tag2AdvID);
+        System.out.println("t2.2.verbose:"+tag2AdvID.toLogStringVerbose());
+        System.out.println("t1.3.FixName:"+tag2AdvID.getFIXName());
+        System.out.println("t1.4.FixNumber:"+tag2AdvID.getFIXNumber());
+        System.out.println("t1.5.FixDescription:"+tag2AdvID.getFIXDescription());
+        System.out.println("t1.6.DataValue:"+tag2AdvID.getDataValue());
+        System.out.println("t2.7.FixString:"+tag2AdvID.toFixTagValuePairString());
+
+    }
 }

@@ -18,14 +18,11 @@ package com.hwtsllc.fixengine2022.datatypes;
 
 public enum FIXType {
 
-    FIX0_NOT_USED_PLACEHOLDER(0, "not defined. used for default processing"),
-
     // 1-100
 
     /*
-     *
      * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
-     *
+     *  Tags: 1-140
      */
     ACCOUNT(1, "Account"),
     ADV_ID(2, "AdvId"),
@@ -140,7 +137,6 @@ public enum FIXType {
     
     // 101-200
     
-    NOT_DEFINED(101, "(Not Defined)"),
     CXL_REJ_REASON(102, "CxlRejReason"),
     ORD_REJ_REASON(103, "OrdRejReason"),
     IOI_QUALIFIER(104, "IOIQualifier"),
@@ -191,9 +187,8 @@ public enum FIXType {
 
 
     /*
-     *
      * Start of FIX4.2 as defined by the FIX Protocol Specification 4.2
-     *
+     *  Tags: 141-446
      */
     RESET_SEQ_NUM_FLAG(141, "ResetSeqNumFlag"),
     SENDER_LOCATION_ID(142, "SenderLocationID"),
@@ -547,9 +542,8 @@ public enum FIXType {
 
 
     /*
-     *
      * Start of FIX4.3 as defined by the FIX Protocol Specification 4.3
-     *
+     *  Tags: 447-659
      */
     PARTY_ID_SOURCE(447, "PartyIDSource"),
     PARTY_ID(448, "PartyID"),
@@ -799,9 +793,8 @@ public enum FIXType {
 
 
     /*
-     *
      * Start of FIX4.4 as defined by the FIX Protocol Specification 4.4
-     *
+     *  Tags: 660-956
      */
     ACCT_ID_SOURCE(660, "AcctIDSource"),
 
@@ -1146,9 +1139,8 @@ public enum FIXType {
 
 
     /*
-     *
      * Start of FIX5.0 as defined by the FIX Protocol Specification 5.0
-     *
+     *  Tags: 957-1139
      */
     NO_STRATEGY_PARAMETERS(957, "NoStrategyParameters"),
     STRATEGY_PARAMETER_NAME(958, "StrategyParameterName"),
@@ -1390,6 +1382,604 @@ public enum FIXType {
             .append(getFIXDescription())
             .append("]");
         return sb.toString();
+    }
+
+    /*
+     *
+     */
+    public static void main(String[] args) {
+
+        // 1-100
+        /*
+         * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
+         *  Tags: 1-140
+         */
+        System.out.println(FIXType.ACCOUNT);
+        System.out.println(FIXType.ADV_ID);
+        System.out.println(FIXType.ADV_REF_ID);
+        System.out.println(FIXType.ADV_SIDE);
+        System.out.println(FIXType.ADV_TRANS_TYPE);
+        System.out.println(FIXType.AVG_PX);
+        System.out.println(FIXType.BEGIN_SEQ_NO);
+        System.out.println(FIXType.BEGIN_STRING);
+        System.out.println(FIXType.BODY_LENGTH);
+        System.out.println(FIXType.CHECK_SUM);
+
+        System.out.println(FIXType.CL_ORD_ID);
+        System.out.println(FIXType.COMMISSION);
+        System.out.println(FIXType.COMM_TYPE);
+        System.out.println(FIXType.CUM_QTY);
+        System.out.println(FIXType.CURRENCY);
+        System.out.println(FIXType.END_SEQ_NO);
+        System.out.println(FIXType.EXEC_ID);
+        System.out.println(FIXType.EXEC_INST);
+        System.out.println(FIXType.EXEC_REF_ID);
+        System.out.println(FIXType.EXEC_TRANS_TYPE);
+
+        System.out.println(FIXType.HANDL_INST);
+        System.out.println(FIXType.ID_SOURCE);
+        System.out.println(FIXType.IOI_ID);
+        System.out.println(FIXType.IOI_OTH_SVC);
+        System.out.println(FIXType.IOI_QLTY_IND);
+        System.out.println(FIXType.IOI_REF_ID);
+        System.out.println(FIXType.IOI_SHARES);
+        System.out.println(FIXType.IOI_TRANS_TYPE);
+        System.out.println(FIXType.LAST_CAPACITY);
+        System.out.println(FIXType.LAST_MKT);
+
+        System.out.println(FIXType.LAST_PX);
+        System.out.println(FIXType.LAST_SHARES);
+        System.out.println(FIXType.LINES_OF_TEXT);
+        System.out.println(FIXType.MSG_SEQ_NUM);
+        System.out.println(FIXType.MSG_TYPE);
+        System.out.println(FIXType.NEW_SEQ_NO);
+        System.out.println(FIXType.ORDER_ID);
+        System.out.println(FIXType.ORDER_QTY);
+        System.out.println(FIXType.ORD_STATUS);
+        System.out.println(FIXType.ORD_TYPE);
+
+        System.out.println(FIXType.ORIG_CL_ORD_ID);
+        System.out.println(FIXType.ORIG_TIME);
+        System.out.println(FIXType.POSS_DUP_FLAG);
+        System.out.println(FIXType.PRICE);
+        System.out.println(FIXType.REF_SEQ_NUM);
+        System.out.println(FIXType.RELATD_SYM);
+        System.out.println(FIXType.RULE_80_A);
+        System.out.println(FIXType.SECURITY_ID);
+        System.out.println(FIXType.SENDER_COMP_ID);
+        System.out.println(FIXType.SENDER_SUB_ID);
+
+        System.out.println(FIXType.SENDING_DATE);
+        System.out.println(FIXType.SENDING_TIME);
+        System.out.println(FIXType.QUANTITY);
+        System.out.println(FIXType.SIDE);
+        System.out.println(FIXType.SYMBOL);
+        System.out.println(FIXType.TARGET_COMP_ID);
+        System.out.println(FIXType.TARGET_SUB_ID);
+        System.out.println(FIXType.TEXT);
+        System.out.println(FIXType.TIME_IN_FORCE);
+        System.out.println(FIXType.TRANSACT_TIME);
+
+        System.out.println(FIXType.URGENCY);
+        System.out.println(FIXType.VALID_UNTIL_TIME);
+        System.out.println(FIXType.SETTLMNT_TYP);
+        System.out.println(FIXType.FUT_SETT_DATE);
+        System.out.println(FIXType.SYMBOL_SFX);
+        System.out.println(FIXType.LIST_ID);
+        System.out.println(FIXType.LIST_SEQ_NO);
+        System.out.println(FIXType.TOT_NO_ORDERS);
+        System.out.println(FIXType.LIST_EXEC_INST);
+        System.out.println(FIXType.ALLOC_ID);
+
+        System.out.println(FIXType.ALLOC_TRANS_TYPE);
+        System.out.println(FIXType.REF_ALLOC_ID);
+        System.out.println(FIXType.NO_ORDERS);
+        System.out.println(FIXType.AVG_PRX_PRECISION);
+        System.out.println(FIXType.TRADE_DATE);
+        System.out.println(FIXType.EXEC_BROKER);
+        System.out.println(FIXType.OPEN_CLOSE);
+        System.out.println(FIXType.NO_ALLOCS);
+        System.out.println(FIXType.ALLOC_ACCOUNT);
+        System.out.println(FIXType.ALLOC_SHARES);
+
+        System.out.println(FIXType.PROCESS_CODE);
+        System.out.println(FIXType.NO_RPTS);
+        System.out.println(FIXType.RPT_SEQ);
+        System.out.println(FIXType.CXL_QTY);
+        System.out.println(FIXType.NO_DLVY_INST);
+        System.out.println(FIXType.DLVY_INST);
+        System.out.println(FIXType.ALLOC_STATUS);
+        System.out.println(FIXType.ALLOC_REJ_CODE);
+        System.out.println(FIXType.SIGNATURE);
+        System.out.println(FIXType.SECURE_DATA_LEN);
+
+        System.out.println(FIXType.SECURE_DATA);
+        System.out.println(FIXType.BROKER_OF_CREDIT);
+        System.out.println(FIXType.SIGNATURE_LENGTH);
+        System.out.println(FIXType.EMAIL_TYPE);
+        System.out.println(FIXType.RAW_DATA_LENGTH);
+        System.out.println(FIXType.RAW_DATA);
+        System.out.println(FIXType.POSS_RESEND);
+        System.out.println(FIXType.ENCRYPT_METHOD);
+        System.out.println(FIXType.STOP_PX);
+        System.out.println(FIXType.EX_DESTINATION);
+
+
+        // 101-200
+
+        System.out.println(CXL_REJ_REASON);
+        System.out.println(ORD_REJ_REASON);
+        System.out.println(IOI_QUALIFIER);
+        System.out.println(WAVE_NO);
+        System.out.println(ISSUER);
+        System.out.println(SECURITY_DESC);
+        System.out.println(HEART_BT_INT);
+        System.out.println(CLIENT_ID);
+        System.out.println(MIN_QTY);
+
+        System.out.println(MAX_FLOOR);
+        System.out.println(TEST_REQ_ID);
+        System.out.println(REPORT_TO_EXCH);
+        System.out.println(LOCATE_REQD);
+        System.out.println(ON_BEHALF_OF_COMP_ID);
+        System.out.println(ON_BEHALF_OF_SUB_ID);
+        System.out.println(QUOTE_ID);
+        System.out.println(NET_MONEY);
+        System.out.println(SETTL_CURR_AMT);
+        System.out.println(SETTL_CURRENCY);
+
+        System.out.println(FOREX_REQ);
+        System.out.println(ORIG_SENDING_TIME);
+        System.out.println(GAP_FILL_FLAG);
+        System.out.println(NO_EXECS);
+        System.out.println(CXL_TYPE);
+        System.out.println(EXPIRE_TIME);
+        System.out.println(DK_REASON);
+        System.out.println(DELIVER_TO_COMP_ID);
+        System.out.println(DELIVER_TO_SUB_ID);
+        System.out.println(IOI_NATURAL_FLAG);
+
+        System.out.println(QUOTE_REQ_ID);
+        System.out.println(BID_PX);
+        System.out.println(OFFER_PX);
+        System.out.println(BID_SIZE);
+        System.out.println(OFFER_SIZE);
+        System.out.println(NO_MISC_FEES);
+        System.out.println(MISC_FEE_AMT);
+        System.out.println(MISC_FEE_CURR);
+        System.out.println(MISC_FEE_TYPE);
+        System.out.println(PREV_CLOSE_PX);
+        /*
+         *
+         * End of FIX4.0
+         *
+         */
+
+
+        /*
+         * Start of FIX4.2 as defined by the FIX Protocol Specification 4.2
+         *  Tags: 141-446
+         */
+        System.out.println(RESET_SEQ_NUM_FLAG);
+        System.out.println(SENDER_LOCATION_ID);
+        System.out.println(TARGET_LOCATION_ID);
+        System.out.println(ON_BEHALF_OF_LOCATION_ID);
+        System.out.println(DELIVER_TO_LOCATION_ID);
+        System.out.println(NO_RELATED_SYM);
+        System.out.println(SUBJECT);
+        System.out.println(HEADLINE);
+        System.out.println(URL_LINK);
+        System.out.println(EXEC_TYPE);
+
+        System.out.println(LEAVES_QTY);
+        System.out.println(CASH_ORDER_QTY);
+        System.out.println(ALLOC_AVG_PX);
+        System.out.println(ALLOC_NET_MONEY);
+        System.out.println(SETTL_CURR_FX_RATE);
+        System.out.println(SETTL_CURR_FX_RATE_CALC);
+        System.out.println(NUM_DAYS_INTEREST);
+        System.out.println(ACCRUED_INTEREST_RATE);
+        System.out.println(ACCRUED_INTEREST_AMT);
+        System.out.println(SETTL_INST_MODE);
+
+        System.out.println(ALLOC_TEXT);
+        System.out.println(SETTL_INST_ID);
+        System.out.println(SETTL_INST_TRANS_TYPE);
+        System.out.println(EMAIL_THREAD_ID);
+        System.out.println(SETTL_INST_SOURCE);
+        System.out.println(SETTL_LOCATION);
+        System.out.println(SECURITY_TYPE);
+        System.out.println(EFFECTIVE_TIME);
+        System.out.println(STAND_INST_DB_TYPE);
+        System.out.println(STAND_INST_DB_NAME);
+
+        System.out.println(STAND_INST_DB_ID);
+        System.out.println(SETTL_DELIVERY_TYPE);
+        System.out.println(SETTL_DEPOSITORY_CODE);
+        System.out.println(SETTL_BRKR_CODE);
+        System.out.println(SETTL_INST_CODE);
+        System.out.println(SECURITY_SETTL_AGENT_NAME);
+        System.out.println(SECURITY_SETTL_AGENT_CODE);
+        System.out.println(SECURITY_SETTL_AGENT_ACCT_NUM);
+        System.out.println(SECURITY_SETTL_AGENT_ACCT_NAME);
+        System.out.println(SECURITY_SETTL_AGENT_CONTACT_NAME);
+
+        System.out.println(SECURITY_SETTL_AGENT_CONTACT_PHONE);
+        System.out.println(CASH_SETTL_AGENT_NAME);
+        System.out.println(CASH_SETTL_AGENT_CODE);
+        System.out.println(CASH_SETTL_AGENT_ACCT_NUM);
+        System.out.println(CASH_SETTL_AGENT_ACCT_NAME);
+        System.out.println(CASH_SETTL_AGENT_CONTACT_NAME);
+        System.out.println(CASH_SETTL_AGENT_CONTACT_PHONE);
+        System.out.println(BID_SPOT_RATE);
+        System.out.println(BID_FORWARD_POINTS);
+        System.out.println(OFFER_SPOT_RATE);
+
+        System.out.println(OFFER_FORWARD_POINTS);
+        System.out.println(ORDER_QTY_2);
+        System.out.println(FUT_SETT_DATE_2);
+        System.out.println(LAST_SPOT_RATE);
+        System.out.println(LAST_FORWARD_POINTS);
+        System.out.println(ALLOC_LINK_ID);
+        System.out.println(ALLOC_LINK_TYPE);
+        System.out.println(SECONDARY_ORDER_ID);
+        System.out.println(NO_IOI_QUALIFIERS);
+        System.out.println(MATURITY_MONTH_YEAR);
+
+
+        // 201-300
+
+        System.out.println(PUT_OR_CALL);
+        System.out.println(STRIKE_PRICE);
+        System.out.println(COVERED_OR_UNCOVERED);
+        System.out.println(CUSTOMER_OR_FIRM);
+        System.out.println(MATURITY_DAY);
+        System.out.println(OPT_ATTRIBUTE);
+        System.out.println(SECURITY_EXCHANGE);
+        System.out.println(NOTIFY_BROKER_OF_CREDIT);
+        System.out.println(ALLOC_HANDL_INST);
+        System.out.println(MAX_SHOW);
+
+        System.out.println(PEG_DIFFERENCE);
+        System.out.println(XML_DATA_LEN);
+        System.out.println(XML_DATA);
+        System.out.println(SETTL_INST_REF_ID);
+        System.out.println(NO_ROUTING_IDS);
+        System.out.println(ROUTING_TYPE);
+        System.out.println(ROUTING_ID);
+        System.out.println(SPREAD_TO_BENCHMARK);
+        System.out.println(BENCHMARK);
+        System.out.println(BENCHMARK_CURVE_CURRENCY);
+
+        System.out.println(BENCHMARK_CURVE_NAME);
+        System.out.println(BENCHMARK_CURVE_POINT);
+        System.out.println(COUPON_RATE);
+        System.out.println(COUPON_PAYMENT_DATE);
+        System.out.println(ISSUE_DATE);
+        System.out.println(REPURCHASE_TERM);
+        System.out.println(REPURCHASE_RATE);
+        System.out.println(FACTOR);
+        System.out.println(TRADE_ORIGINATION_DATE);
+        System.out.println(EX_DATE);
+
+        System.out.println(CONTRACT_MULTIPLIER);
+        System.out.println(NO_STIPULATIONS);
+        System.out.println(STIPULATION_TYPE);
+        System.out.println(STIPULATION_VALUE);
+        System.out.println(YIELD_TYPE);
+        System.out.println(YIELD);
+        System.out.println(TOTAL_TAKEDOWN);
+        System.out.println(CONCESSION);
+        System.out.println(REPO_COLLATERAL_SECURITY_TYPE);
+        System.out.println(REDEMPTION_DATE);
+
+        System.out.println(UNDERLYING_COUPON_PAYMENT_DATE);
+        System.out.println(UNDERLYING_ISSUE_DATE);
+        System.out.println(UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE);
+        System.out.println(UNDERLYING_REPURCHASE_TERM);
+        System.out.println(UNDERLYING_REPURCHASE_RATE);
+        System.out.println(UNDERLYING_FACTOR);
+        System.out.println(UNDERLYING_REDEMPTION_DATE);
+        System.out.println(LEG_COUPON_PAYMENT_DATE);
+        System.out.println(LEG_ISSUE_DATE);
+        System.out.println(LEG_REPO_COLLATERAL_SECURITY_TYPE);
+
+        System.out.println(LEG_REPURCHASE_TERM);
+        System.out.println(LEG_REPURCHASE_RATE);
+        System.out.println(LEG_FACTOR);
+        System.out.println(LEG_REDEMPTION_DATE);
+        System.out.println(CREDIT_RATING);
+        System.out.println(UNDERLYING_CREDIT_RATING);
+        System.out.println(LEG_CREDIT_RATING);
+        System.out.println(TRADED_FLAT_SWITCH);
+        System.out.println(BASIS_FEATURE_DATE);
+        System.out.println(BASIS_FEATURE_PRICE);
+
+        System.out.println(MD_REQ_ID);
+        System.out.println(SUBSCRIPTION_REQUEST_TYPE);
+        System.out.println(MARKET_DEPTH);
+        System.out.println(MD_UPDATE_TYPE);
+        System.out.println(AGGREGATED_BOOK);
+        System.out.println(NO_MD_ENTRY_TYPES);
+        System.out.println(NO_MD_ENTRIES);
+        System.out.println(MD_ENTRY_TYPE);
+        System.out.println(MD_ENTRY_PX);
+
+        System.out.println(MD_ENTRY_SIZE);
+        System.out.println(MD_ENTRY_DATE);
+        System.out.println(MD_ENTRY_TIME);
+        System.out.println(TICK_DIRECTION);
+        System.out.println(MD_MKT);
+        System.out.println(QUOTE_CONDITION);
+        System.out.println(TRADE_CONDITION);
+        System.out.println(MD_ENTRY_ID);
+        System.out.println(MD_UPDATE_ACTION);
+        System.out.println(MD_ENTRY_REF_ID);
+
+        System.out.println(MD_REQ_REJ_REASON);
+        System.out.println(MD_ENTRY_ORIGINATOR);
+        System.out.println(LOCATION_ID);
+        System.out.println(DESK_ID);
+        System.out.println(DELETE_REASON);
+        System.out.println(OPEN_CLOSE_SETTLE_FLAG);
+        System.out.println(SELLER_DAYS);
+        System.out.println(MD_ENTRY_BUYER);
+        System.out.println(MD_ENTRY_SELLER);
+        System.out.println(MD_ENTRY_POSITION_NO);
+
+        System.out.println(FINANCIAL_STATUS);
+        System.out.println(CORPORATE_ACTION);
+        System.out.println(DEF_BID_SIZE);
+        System.out.println(DEF_OFFER_SIZE);
+        System.out.println(NO_QUOTE_ENTRIES);
+        System.out.println(NO_QUOTE_SETS);
+        System.out.println(QUOTE_ACK_STATUS);
+        System.out.println(QUOTE_CANCEL_TYPE);
+        System.out.println(QUOTE_ENTRY_ID);
+        System.out.println(QUOTE_REJECT_REASON);
+
+
+        // 301-400
+
+        System.out.println(QUOTE_RESPONSE_LEVEL);
+        System.out.println(QUOTE_SET_ID);
+        System.out.println(QUOTE_REQUEST_TYPE);
+        System.out.println(TOT_QUOTE_ENTRIES);
+        System.out.println(UNDERLYING_ID_SOURCE);
+        System.out.println(UNDERLYING_ISSUER);
+        System.out.println(UNDERLYING_SECURITY_DESC);
+        System.out.println(UNDERLYING_SECURITY_EXCHANGE);
+        System.out.println(UNDERLYING_SECURITY_ID);
+        System.out.println(UNDERLYING_SECURITY_TYPE);
+
+        System.out.println(UNDERLYING_SYMBOL);
+        System.out.println(UNDERLYING_SYMBOL_SFX);
+        System.out.println(UNDERLYING_MATURITY_MONTH_YEAR);
+        System.out.println(UNDERLYING_MATURITY_DAY);
+        System.out.println(UNDERLYING_PUT_OR_CALL);
+        System.out.println(UNDERLYING_STRIKE_PRICE);
+        System.out.println(UNDERLYING_OPT_ATTRIBUTE);
+        System.out.println(UNDERLYING_CURRENCY);
+        System.out.println(RATIO_QTY);
+        System.out.println(SECURITY_REQ_ID);
+
+        System.out.println(SECURITY_REQUEST_TYPE);
+        System.out.println(SECURITY_RESPONSE_ID);
+        System.out.println(SECURITY_RESPONSE_TYPE);
+        System.out.println(SECURITY_STATUS_REQ_ID);
+        System.out.println(UNSOLICITED_INDICATOR);
+        System.out.println(SECURITY_TRADING_STATUS);
+        System.out.println(HALT_REASON);
+        System.out.println(IN_VIEW_OF_COMMON);
+        System.out.println(DUE_TO_RELATED);
+        System.out.println(BUY_VOLUME);
+
+        System.out.println(SELL_VOLUME);
+        System.out.println(HIGH_PX);
+        System.out.println(LOW_PX);
+        System.out.println(ADJUSTMENT);
+        System.out.println(TRAD_SES_REQ_ID);
+        System.out.println(TRADING_SESSION_ID);
+        System.out.println(CONTRA_TRADER);
+        System.out.println(TRAD_SES_METHOD);
+        System.out.println(TRAD_SES_MODE);
+        System.out.println(TRAD_SES_STATUS);
+
+        System.out.println(TRAD_SES_START_TIME);
+        System.out.println(TRAD_SES_OPEN_TIME);
+        System.out.println(TRAD_SES_PRE_CLOSE_TIME);
+        System.out.println(TRAD_SES_CLOSE_TIME);
+        System.out.println(TRAD_SES_END_TIME);
+        System.out.println(NUMBER_OF_ORDERS);
+        System.out.println(MESSAGE_ENCODING);
+        System.out.println(ENCODED_ISSUER_LEN);
+        System.out.println(ENCODED_ISSUER);
+        System.out.println(ENCODED_SECURITY_DESC_LEN);
+
+        System.out.println(ENCODED_SECURITY_DESC);
+        System.out.println(ENCODED_LIST_EXEC_INST_LEN);
+        System.out.println(ENCODED_LIST_EXEC_INST);
+        System.out.println(ENCODED_TEXT_LEN);
+        System.out.println(ENCODED_TEXT);
+        System.out.println(ENCODED_SUBJECT_LEN);
+        System.out.println(ENCODED_SUBJECT);
+        System.out.println(ENCODED_HEADLINE_LEN);
+        System.out.println(ENCODED_HEADLINE);
+        System.out.println(ENCODED_ALLOC_TEXT_LEN);
+
+        System.out.println(ENCODED_ALLOC_TEXT);
+        System.out.println(ENCODED_UNDERLYING_ISSUER_LEN);
+        System.out.println(ENCODED_UNDERLYING_ISSUER);
+        System.out.println(ENCODED_UNDERLYING_SECURITY_DESC_LEN);
+        System.out.println(ENCODED_UNDERLYING_SECURITY_DESC);
+        System.out.println(ALLOC_PRICE);
+        System.out.println(QUOTE_SET_VALID_UNTIL_TIME);
+        System.out.println(QUOTE_ENTRY_REJECT_REASON);
+        System.out.println(LAST_MSG_SEQ_NUM_PROCESSED);
+        System.out.println(ON_BEHALF_OF_SENDING_TIME);
+
+        System.out.println(REF_TAG_ID);
+        System.out.println(REF_MSG_TYPE);
+        System.out.println(SESSION_REJECT_REASON);
+        System.out.println(BID_REQUEST_TRANS_TYPE);
+        System.out.println(CONTRA_BROKER);
+        System.out.println(COMPLIANCE_ID);
+        System.out.println(SOLICITED_FLAG);
+        System.out.println(EXEC_RESTATEMENT_REASON);
+        System.out.println(BUSINESS_REJECT_REF_ID);
+        System.out.println(BUSINESS_REJECT_REASON);
+
+        System.out.println(GROSS_TRADE_AMT);
+        System.out.println(NO_CONTRA_BROKERS);
+        System.out.println(MAX_MESSAGE_SIZE);
+        System.out.println(NO_MSG_TYPES);
+        System.out.println(MSG_DIRECTION);
+        System.out.println(NO_TRADING_SESSIONS);
+        System.out.println(TOTAL_VOLUME_TRADED);
+        System.out.println(DISCRETION_INST);
+        System.out.println(DISCRETION_OFFSET);
+        System.out.println(BID_ID);
+
+        System.out.println(CLIENT_BID_ID);
+        System.out.println(LIST_NAME);
+        System.out.println(TOTAL_NUM_SECURITIES);
+        System.out.println(BID_TYPE);
+        System.out.println(NUM_TICKETS);
+        System.out.println(SIDE_VALUE1);
+        System.out.println(SIDE_VALUE2);
+        System.out.println(NO_BID_DESCRIPTORS);
+        System.out.println(BID_DESCRIPTOR_TYPE);
+        System.out.println(BID_DESCRIPTOR);
+
+
+        // 401-500
+
+        System.out.println(SIDE_VALUE_IND);
+        System.out.println(LIQUIDITY_PCT_LOW);
+        System.out.println(LIQUIDITY_PCT_HIGH);
+        System.out.println(LIQUIDITY_VALUE);
+        System.out.println(EFP_TRACKING_ERROR);
+        System.out.println(FAIR_VALUE);
+        System.out.println(OUTSIDE_INDEX_PCT);
+        System.out.println(VALUE_OF_FUTURES);
+        System.out.println(LIQUIDITY_IND_TYPE);
+        System.out.println(WT_AVERAGE_LIQUIDITY);
+
+        System.out.println(EXCHANGE_FOR_PHYSICAL);
+        System.out.println(OUT_MAIN_CNTRY_U_INDEX);
+        System.out.println(CROSS_PERCENT);
+        System.out.println(PROG_RPT_REQS);
+        System.out.println(PROG_PERIOD_INTERVAL);
+        System.out.println(INC_TAX_IND);
+        System.out.println(NUM_BIDDERS);
+        System.out.println(TRADE_TYPE);
+        System.out.println(BASIS_PX_TYPE);
+        System.out.println(NO_BID_COMPONENTS);
+
+        System.out.println(COUNTRY);
+        System.out.println(TOT_NO_STRIKES);
+        System.out.println(PRICE_TYPE);
+        System.out.println(DAY_ORDER_QTY);
+        System.out.println(DAY_CUM_QTY);
+        System.out.println(DAY_AVG_PX);
+        System.out.println(GT_BOOKING_INST);
+        System.out.println(NO_STRIKES);
+        System.out.println(LIST_STATUS_TYPE);
+        System.out.println(NET_GROSS_IND);
+
+        System.out.println(LIST_ORDER_STATUS);
+        System.out.println(EXPIRE_DATE);
+        System.out.println(LIST_EXEC_INST_TYPE);
+        System.out.println(CXL_REJ_RESPONSE_TO);
+        System.out.println(UNDERLYING_COUPON_RATE);
+        System.out.println(UNDERLYING_CONTRACT_MULTIPLIER);
+        System.out.println(CONTRA_TRADE_QTY);
+        System.out.println(CONTRA_TRADE_TIME);
+        System.out.println(CLEARING_FIRM);
+        System.out.println(CLEARING_ACCOUNT);
+
+        System.out.println(LIQUIDITY_NUM_SECURITIES);
+        System.out.println(MULTI_LEG_REPORTING_TYPE);
+        System.out.println(STRIKE_TIME);
+        System.out.println(LIST_STATUS_TEXT);
+        System.out.println(LIST_STATUS_ENCODED_TEXT_LEN);
+        System.out.println(LIST_STATUS_ENCODED_TEXT);
+        /*
+         *
+         * End of FIX4.2
+         *
+         */
+
+
+        /*
+         * Start of FIX4.3 as defined by the FIX Protocol Specification 4.3
+         *  Tags: 447-659
+         */
+        System.out.println(PARTY_ID_SOURCE);
+        System.out.println(PARTY_ID);
+        System.out.println(TOTAL_VOLUME_TRADED_DATE);
+        System.out.println(TOTAL_VOLUME_TRADED_TIME);
+
+        System.out.println(NET_CHG_PREV_DAY);
+        System.out.println(PARTY_ROLE);
+        System.out.println(NO_PARTY_IDS);
+        System.out.println(NO_SECURITY_ALT_ID);
+        System.out.println(SECURITY_ALT_ID);
+        System.out.println(SECURITY_ALT_ID_SOURCE);
+        System.out.println(NO_UNDERLYING_SECURITY_ALT_ID);
+        System.out.println(UNDERLYING_SECURITY_ALT_ID);
+        System.out.println(UNDERLYING_SECURITY_ALT_ID_SOURCE);
+        System.out.println(PRODUCT);
+
+        System.out.println(CFI_CODE);
+        System.out.println(UNDERLYING_PRODUCT);
+        System.out.println(UNDERLYING_CFI_CODE);
+        System.out.println(TEST_MESSAGE_INDICATOR);
+        System.out.println(QUANTITY_TYPE);
+        System.out.println(BOOKING_REF_ID);
+        System.out.println(INDIVIDUAL_ALLOC_ID);
+        System.out.println(ROUNDING_DIRECTION);
+        System.out.println(ROUNDING_MODULUS);
+        System.out.println(COUNTRY_OF_ISSUE);
+
+        System.out.println(STATE_OR_PROVINCE_OF_ISSUE);
+        System.out.println(LOCALE_OF_ISSUE);
+        System.out.println(NO_REGIST_DTLS);
+        System.out.println(MAILING_DTLS);
+        System.out.println(INVESTOR_COUNTRY_OF_RESIDENCE);
+        System.out.println(PAYMENT_REF);
+        System.out.println(DISTRIB_PAYMENT_METHOD);
+        System.out.println(CASH_DISTRIB_CURR);
+        System.out.println(COMM_CURRENCY);
+        System.out.println(CANCELLATION_RIGHTS);
+
+        System.out.println(MONEY_LAUNDERING_STATUS);
+        System.out.println(MAILING_INST);
+        System.out.println(TRANS_BKD_TIME);
+        System.out.println(EXEC_PRICE_TYPE);
+        System.out.println(EXEC_PRICE_ADJUSTMENT);
+        System.out.println(DATE_OF_BIRTH);
+        System.out.println(TRADE_REPORT_TRANS_TYPE);
+        System.out.println(CARD_HOLDER_NAME);
+        System.out.println(CARD_NUMBER);
+        System.out.println(CARD_EXP_DATE);
+
+        System.out.println(CARD_ISS_NUM);
+        System.out.println(PAYMENT_METHOD);
+        System.out.println(REGIST_ACCT_TYPE);
+        System.out.println(DESIGNATION);
+        System.out.println(TAX_ADVANTAGE_TYPE);
+        System.out.println(REGIST_REJ_REASON_TEXT);
+        System.out.println(FUND_RENEW_WAIV);
+        System.out.println(CASH_DISTRIB_AGENT_NAME);
+        System.out.println(CASH_DISTRIB_AGENT_CODE);
+        System.out.println(CASH_DISTRIB_AGENT_ACCT_NUMBER);
+
+
+        // 501-600
+
+
+
     }
 
 }

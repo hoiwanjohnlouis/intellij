@@ -33,17 +33,17 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
         this.dataValue = dataValue;
     }
 
-    public String getFIXTagName() {
+    public String getFIXName() {
         return fixType.getFIXName();
     }
-    public int getFIXTagNumber() {
+    public int getFIXNumber() {
         return fixType.getFIXNumber();
     }
-    public String getFIXTagDescription() {
+    public String getFIXDescription() {
         return fixType.getFIXDescription();
     }
     public String getDataValue() {
-        return dataValue;
+        return this.dataValue;
     }
 
     @Override
@@ -51,6 +51,10 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append("=[")
+                .append(getFIXName())
+                .append(",")
+                .append(getFIXNumber())
+                .append(",")
                 .append(getDataValue())
                 .append("]");
         return sb.toString();
@@ -60,15 +64,15 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append("\n\tTagName[")
-                .append(getFIXTagName())
+                .append(getFIXName())
                 .append("]")
                 .append("\n\tTagNumber[")
-                .append(getFIXTagNumber())
+                .append(getFIXNumber())
                 .append("]")
                 .append("\n\tTagDescription[")
-                .append(getFIXTagDescription())
+                .append(getFIXDescription())
                 .append("]")
-                .append("\n\tTagValue[")
+                .append("\n\tDataValue[")
                 .append(getDataValue())
                 .append("]");
         return sb.toString();
@@ -76,9 +80,25 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
     @Override
     public String toFixTagValuePairString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(getFIXTagNumber())
+        sb.append(getFIXNumber())
                 .append("=")
                 .append(getDataValue());
         return sb.toString();
+    }
+
+    /*
+    *
+    */
+    public static void main(String[] args) {
+
+        Tag1Account tag1Account = new Tag1Account("1234567890");
+        System.out.println("t1.1:"+tag1Account);
+        System.out.println("t1.2.verbose:"+tag1Account.toLogStringVerbose());
+        System.out.println("t1.3.FixName:"+tag1Account.getFIXName());
+        System.out.println("t1.4.FixNumber:"+tag1Account.getFIXNumber());
+        System.out.println("t1.5.FixDescription:"+tag1Account.getFIXDescription());
+        System.out.println("t1.6.DataValue:"+tag1Account.getDataValue());
+        System.out.println("t1.7.FixString:"+tag1Account.toFixTagValuePairString());
+
     }
 }

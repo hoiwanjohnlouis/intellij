@@ -17,21 +17,20 @@
 package com.hwtsllc.fixengine2022;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag0Temp {
-
+public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     private final FIXType fixType = FIXType.ACCOUNT;
-    private final TagType tagType;
-    private String dataValue;
+    private final String dataValue;
 
-    public Tag0Temp(String dataValue) {
+    public Tag1Account(final String dataValue) {
         this.dataValue = dataValue;
-        tagType = new TagType(this.fixType,this.dataValue);
     }
 
     public String getFIXName() {
@@ -44,13 +43,7 @@ public class Tag0Temp {
         return fixType.getFIXDescription();
     }
     public String getDataValue() {
-        return dataValue;
-    }
-    public String getLogStringVerbose() {
-        return tagType.toLogStringVerbose();
-    }
-    public String getFixTagValuePairString() {
-        return tagType.toFixTagValuePairString();
+        return this.dataValue;
     }
 
     @Override
@@ -58,8 +51,45 @@ public class Tag0Temp {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append("=[")
-                .append(tagType.getDataValue())
+                .append(getFIXName())
+                .append(",")
+                .append(getFIXNumber())
+                .append(",")
+                .append(getDataValue())
                 .append("]");
         return sb.toString();
+    }
+    @Override
+    public String toLogStringVerbose() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.getClass().getSimpleName())
+                .append("\n\tTagName[")
+                .append(getFIXName())
+                .append("]")
+                .append("\n\tTagNumber[")
+                .append(getFIXNumber())
+                .append("]")
+                .append("\n\tTagDescription[")
+                .append(getFIXDescription())
+                .append("]")
+                .append("\n\tDataValue[")
+                .append(getDataValue())
+                .append("]");
+        return sb.toString();
+    }
+    @Override
+    public String toFixTagValuePairString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getFIXNumber())
+                .append("=")
+                .append(getDataValue());
+        return sb.toString();
+    }
+
+    /*
+     *
+     */
+    public static void main(String[] args) {
+
     }
 }

@@ -29,11 +29,8 @@ public class TagType implements FixTagValuePairString, LogStringVerbose {
     private final FIXType fixType;
     private final String dataValue;
 
-//    private TagType() {
-//    }
-
-    public TagType(final FIXType fixType, final String dataValue) {
-        this.fixType = fixType;
+    public TagType(final FIXType fixtype, String dataValue) {
+        this.fixType = fixtype;
         this.dataValue = dataValue;
     }
 
@@ -47,7 +44,7 @@ public class TagType implements FixTagValuePairString, LogStringVerbose {
         return fixType.getFIXDescription();
     }
     public String getDataValue() {
-        return dataValue;
+        return this.dataValue;
     }
 
     @Override
@@ -89,4 +86,48 @@ public class TagType implements FixTagValuePairString, LogStringVerbose {
                 .append(getDataValue());
         return sb.toString();
     }
+
+    /*
+     *
+     */
+    public static void main(String[] args) {
+
+        TagType tag140PrevClosePx = new TagType(FIXType.PREV_CLOSE_PX,"10.23");
+        System.out.println("t140.1:"+tag140PrevClosePx);
+        System.out.println("t140.2.verbose:"+tag140PrevClosePx.toLogStringVerbose());
+        System.out.println("t140.7.FixString:"+tag140PrevClosePx.toFixTagValuePairString());
+        System.out.println("");
+
+        TagType tag147Subject = new TagType(FIXType.SUBJECT,"This Is A Test Subject String");
+        System.out.println("t147.1:"+tag147Subject);
+        System.out.println("t147.2.verbose:"+tag147Subject.toLogStringVerbose());
+        System.out.println("t147.7.FixString:"+tag147Subject.toFixTagValuePairString());
+        System.out.println("");
+
+        TagType tag460Product = new TagType(FIXType.PRODUCT,"Widgets are Us!");
+        System.out.println("t147.1:"+tag460Product);
+        System.out.println("t147.2.verbose:"+tag460Product.toLogStringVerbose());
+        System.out.println("t147.7.FixString:"+tag460Product.toFixTagValuePairString());
+        System.out.println("");
+
+        TagType tag730SettlPrice = new TagType(FIXType.SETTL_PRICE,"23.74");
+        System.out.println("t147.1:"+tag730SettlPrice);
+        System.out.println("t147.2.verbose:"+tag730SettlPrice.toLogStringVerbose());
+        System.out.println("t147.7.FixString:"+tag730SettlPrice.toFixTagValuePairString());
+        System.out.println("");
+
+        TagType tag947StrikeCurrency = new TagType(FIXType.STRIKE_CURRENCY,"USD");
+        System.out.println("t147.1:"+tag947StrikeCurrency);
+        System.out.println("t147.2.verbose:"+tag947StrikeCurrency.toLogStringVerbose());
+        System.out.println("t147.7.FixString:"+tag947StrikeCurrency.toFixTagValuePairString());
+        System.out.println("");
+
+        TagType tag1020TradeVolume = new TagType(FIXType.TRADE_VOLUME,"1000000");
+        System.out.println("t147.1:"+tag1020TradeVolume);
+        System.out.println("t147.2.verbose:"+tag1020TradeVolume.toLogStringVerbose());
+        System.out.println("t147.7.FixString:"+tag1020TradeVolume.toFixTagValuePairString());
+        System.out.println("");
+
+    }
+
 }
