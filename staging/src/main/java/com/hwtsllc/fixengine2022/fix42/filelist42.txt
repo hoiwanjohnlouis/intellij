@@ -1,311 +1,304 @@
- Volume in drive C is C-CRU-CT1000-C1
- Volume Serial Number is 2C5C-5483
-
- Directory of C:\Users\saeko\OneDrive\github\intellij\staging\src\main\java\com\hwtsllc\fixengine2022\fix42
-
-02/19/2022  08:01               728 Tag141ResetSeqNumFlag.java
-02/19/2022  08:01               730 Tag142SenderLocationID.java
-02/19/2022  08:01               730 Tag143TargetLocationID.java
-02/19/2022  08:01               734 Tag144OnBehalfOfLocationID.java
-02/19/2022  08:01               733 Tag145DeliverToLocationID.java
-02/19/2022  08:01               726 Tag146NoRelatedSym.java
-02/19/2022  08:01               721 Tag147Subject.java
-02/19/2022  08:01               722 Tag148Headline.java
-02/19/2022  08:01               721 Tag149URLLink.java
-02/19/2022  08:01               721 Tag150ExecType.java
-02/19/2022  08:01               723 Tag151LeavesQty.java
-02/19/2022  08:01               726 Tag152CashOrderQty.java
-02/19/2022  08:01               724 Tag153AllocAvgPx.java
-02/19/2022  08:01               727 Tag154AllocNetMoney.java
-02/19/2022  08:01               729 Tag155SettlCurrFxRate.java
-02/19/2022  08:01               733 Tag156SettlCurrFxRateCalc.java
-02/19/2022  08:01               729 Tag157NumDaysInterest.java
-02/19/2022  08:01               733 Tag158AccruedInterestRate.java
-02/19/2022  08:01               732 Tag159AccruedInterestAmt.java
-02/19/2022  08:01               726 Tag160SettlInstMode.java
-02/19/2022  08:01               723 Tag161AllocText.java
-02/19/2022  08:01               725 Tag162SettlInstID.java
-02/19/2022  08:01               731 Tag163SettlInstTransType.java
-02/19/2022  08:01               727 Tag164EmailThreadID.java
-02/19/2022  08:01               728 Tag165SettlInstSource.java
-02/19/2022  08:01               740 Tag166SettlLocation.java
-02/19/2022  08:01               726 Tag167SecurityType.java
-02/19/2022  08:01               727 Tag168EffectiveTime.java
-02/19/2022  08:01               729 Tag169StandInstDBType.java
-02/19/2022  08:01               729 Tag170StandInstDBName.java
-02/19/2022  08:01               727 Tag171StandInstDBID.java
-02/19/2022  08:01               730 Tag172SettlDeliveryType.java
-02/19/2022  08:01               746 Tag173SettlDepositoryCode.java
-02/19/2022  08:01               740 Tag174SettlBrkrCode.java
-02/19/2022  08:01               740 Tag175SettlInstCode.java
-02/19/2022  08:01               749 Tag176SecuritySettlAgentName.java
-02/19/2022  08:01               749 Tag177SecuritySettlAgentCode.java
-02/19/2022  08:01               752 Tag178SecuritySettlAgentAcctNum.java
-02/19/2022  08:01               753 Tag179SecuritySettlAgentAcctName.java
-02/19/2022  08:01               756 Tag180SecuritySettlAgentContactName.java
-02/19/2022  08:01               757 Tag181SecuritySettlAgentContachPhone.java
-02/19/2022  08:01               745 Tag182CashSettlAgentName.java
-02/19/2022  08:01               745 Tag183CashSettlAgentCode.java
-02/19/2022  08:01               748 Tag184CashSettlAgentAcctNum.java
-02/19/2022  08:01               749 Tag185CashSettlAgentAcctName.java
-02/19/2022  08:01               752 Tag186CashSettlAgentContactName.java
-02/19/2022  08:01               753 Tag187CashSettlAgentContactPhone.java
-02/19/2022  08:01               725 Tag188BidSpotRate.java
-02/19/2022  08:01               730 Tag189BidForwardPoints.java
-02/19/2022  08:01               727 Tag190OfferSpotRate.java
-02/19/2022  08:01               732 Tag191OfferForwardPoints.java
-02/19/2022  08:01               723 Tag192OrderQty2.java
-02/19/2022  08:01               724 Tag193SettlDate2.java
-02/19/2022  08:01               726 Tag194LastSpotRate.java
-02/19/2022  08:01               731 Tag195LastForwardPoints.java
-02/19/2022  08:01               725 Tag196AllocLinkID.java
-02/19/2022  08:01               726 Tag197AllocLinkType.java
-02/19/2022  08:01               730 Tag198SecondaryOrderID.java
-02/19/2022  08:01               729 Tag199NoIOIQualifiers.java
-02/19/2022  08:01               731 Tag200MaturityMonthYear.java
-02/19/2022  08:01               735 Tag201PutOrCall.java
-02/19/2022  08:01               725 Tag202StrikePrice.java
-02/19/2022  08:01               731 Tag203CoveredOrUncovered.java
-02/19/2022  08:01               741 Tag204CustomerOrFirm.java
-02/19/2022  08:01               739 Tag205MaturityDate.java
-02/19/2022  08:01               726 Tag206OptAttribute.java
-02/19/2022  08:01               730 Tag207SecurityExchange.java
-02/19/2022  08:01               734 Tag208NotifyBrokerOfCredit.java
-02/19/2022  08:01               728 Tag209AllocHandlInst.java
-02/19/2022  08:01               721 Tag210MaxShow.java
-02/19/2022  08:01               728 Tag211PegOffsetValue.java
-02/19/2022  08:01               724 Tag212XmlDataLen.java
-02/19/2022  08:01               721 Tag213XmlData.java
-02/19/2022  08:01               728 Tag214SettlInstRefID.java
-02/19/2022  08:01               726 Tag215NoRoutingIDs.java
-02/19/2022  08:01               725 Tag216RoutingType.java
-02/19/2022  08:01               723 Tag217RoutingID.java
-02/19/2022  08:01               720 Tag218Spread.java
-02/19/2022  08:01               736 Tag219Benchmark.java
-02/19/2022  08:01               736 Tag220BenchmarkCurveCurrency.java
-02/19/2022  08:01               732 Tag221BenchmarkCurveName.java
-02/19/2022  08:01               733 Tag222BenchmarkCurvePoint.java
-02/19/2022  08:01               724 Tag223CouponRate.java
-02/19/2022  08:01               731 Tag224CouponPaymentDate.java
-02/19/2022  08:01               723 Tag225IssueDate.java
-02/19/2022  08:01               741 Tag226RepurchaseTerm.java
-02/19/2022  08:01               741 Tag227RepurchaseRate.java
-02/19/2022  08:01               720 Tag228Factor.java
-02/19/2022  08:01               734 Tag229TradeOriginatingDate.java
-02/19/2022  08:01               720 Tag230ExDate.java
-02/19/2022  08:01               732 Tag231ContractMultiplier.java
-02/19/2022  08:01               728 Tag232NoStipulations.java
-02/19/2022  08:01               729 Tag233StipulationType.java
-02/19/2022  08:01               730 Tag234StipulationValue.java
-02/19/2022  08:01               722 Tag235YieldType.java
-02/19/2022  08:01               719 Tag236Yield.java
-02/19/2022  08:01               727 Tag237TotalTakedown.java
-02/19/2022  08:01               724 Tag238Concession.java
-02/19/2022  08:01               753 Tag239RepoCollateralSecurityType.java
-02/19/2022  08:01               741 Tag240RedemptionDate.java
-02/19/2022  08:01               741 Tag241UnderlyingCouponPaymentDate.java
-02/19/2022  08:01               733 Tag242UnderlyingIssueDate.java
-02/19/2022  08:01               763 Tag243UnderlyingRepoCollateralSecurityType.java
-02/19/2022  08:01               751 Tag244UnderlyingRepurchaseTerm.java
-02/19/2022  08:01               751 Tag245UnderlyingRepurchaseRate.java
-02/19/2022  08:01               730 Tag246UnderlyingFactor.java
-02/19/2022  08:01               751 Tag247UnderlyingRedemptionDate.java
-02/19/2022  08:01               734 Tag248LegCouponPaymentDate.java
-02/19/2022  08:01               726 Tag249LegIssueDate.java
-02/19/2022  08:01               756 Tag250LegRepoCollateralSecurityType.java
-02/19/2022  08:01               744 Tag251LegRepurchaseTerm.java
-02/19/2022  08:01               744 Tag252LegRepurchaseRate.java
-02/19/2022  08:01               723 Tag253LegFactor.java
-02/19/2022  08:01               744 Tag254LegRedemptionDate.java
-02/19/2022  08:01               726 Tag255CreditRating.java
-02/19/2022  08:01               736 Tag256UnderlyingCreditRating.java
-02/19/2022  08:01               729 Tag257LegCreditRating.java
-02/19/2022  08:01               730 Tag258TradedFlatSwitch.java
-02/19/2022  08:01               730 Tag259BasisFeatureDate.java
-02/19/2022  08:01               731 Tag260BasisFeaturePrice.java
-02/19/2022  08:01               721 Tag262MDReqID.java
-02/19/2022  08:01               737 Tag263SubscriptionRequestType.java
-02/19/2022  08:01               725 Tag264MarketDepth.java
-02/19/2022  08:01               726 Tag265MDUpdateType.java
-02/19/2022  08:01               728 Tag266AggregatedBook.java
-02/19/2022  08:01               728 Tag267NoMDEntryTypes.java
-02/19/2022  08:01               725 Tag268NoMDEntries.java
-02/19/2022  08:01               725 Tag269MDEntryType.java
-02/19/2022  08:01               723 Tag270MDEntryPx.java
-02/19/2022  08:01               725 Tag271MDEntrySize.java
-02/19/2022  08:01               725 Tag272MDEntryDate.java
-02/19/2022  08:01               725 Tag273MDEntryTime.java
-02/19/2022  08:01               727 Tag274TickDirection.java
-02/19/2022  08:01               719 Tag275MDMkt.java
-02/19/2022  08:01               728 Tag276QuoteCondition.java
-02/19/2022  08:01               728 Tag277TradeCondition.java
-02/19/2022  08:01               723 Tag278MDEntryID.java
-02/19/2022  08:01               728 Tag279MDUpdateAction.java
-02/19/2022  08:01               726 Tag280MDEntryRefID.java
-02/19/2022  08:01               728 Tag281MDReqRejReason.java
-02/19/2022  08:01               731 Tag282MDEntryOriginator.java
-02/19/2022  08:01               724 Tag283LocationID.java
-02/19/2022  08:01               720 Tag284DeskID.java
-02/19/2022  08:01               726 Tag285DeleteReason.java
-02/19/2022  08:01               733 Tag286OpenCloseSettleFlag.java
-02/19/2022  08:01               724 Tag287SellerDays.java
-02/19/2022  08:01               726 Tag288MDEntryBuyer.java
-02/19/2022  08:01               727 Tag289MDEntrySeller.java
-02/19/2022  08:01               731 Tag290MDEntryPositionNo.java
-02/19/2022  08:01               729 Tag291FinancialStatus.java
-02/19/2022  08:01               729 Tag292CorporateAction.java
-02/19/2022  08:01               724 Tag293DefBidSize.java
-02/19/2022  08:01               726 Tag294DefOfferSize.java
-02/19/2022  08:01               728 Tag295NoQuoteEntries.java
-02/19/2022  08:01               725 Tag296NoQuoteSets.java
-02/19/2022  08:01               728 Tag297QuoteAckStatus.java
-02/19/2022  08:01               729 Tag298QuoteCancelType.java
-02/19/2022  08:01               726 Tag299QuoteEntryID.java
-02/19/2022  08:01               731 Tag300QuoteRejectReason.java
-02/19/2022  08:01               732 Tag301QuoteResponseLevel.java
-02/19/2022  08:01               724 Tag302QuoteSetID.java
-02/19/2022  08:01               730 Tag303QuoteRequestType.java
-02/19/2022  08:01               729 Tag304TotQuoteEntries.java
-02/19/2022  08:01               732 Tag305UnderlyingIDSource.java
-02/19/2022  08:01               730 Tag306UnderlyingIssuer.java
-02/19/2022  08:01               736 Tag307UnderlyingSecurityDesc.java
-02/19/2022  08:01               740 Tag308UnderlyingSecurityExchange.java
-02/19/2022  08:01               734 Tag309UnderlyingSecurityID.java
-02/19/2022  08:01               736 Tag310UnderlyingSecurityType.java
-02/19/2022  08:01               730 Tag311UnderlyingSymbol.java
-02/19/2022  08:01               733 Tag312UnderlyingSymbolSfx.java
-02/19/2022  08:01               741 Tag313UnderlyingMaturityMonthYear.java
-02/19/2022  08:01               749 Tag314UnderlyingMaturityDate.java
-02/19/2022  08:01               746 Tag315UnderlyingPutOrCall.java
-02/19/2022  08:01               735 Tag316UnderlyingStrikePrice.java
-02/19/2022  08:01               736 Tag317UnderlyingOptAttribute.java
-02/19/2022  08:01               745 Tag318UnderlyingCurrency.java
-02/19/2022  08:01               735 Tag319RatioQty.java
-02/19/2022  08:01               727 Tag320SecurityReqID.java
-02/19/2022  08:01               733 Tag321SecurityRequestType.java
-02/19/2022  08:01               732 Tag322SecurityResponseID.java
-02/19/2022  08:01               734 Tag323SecurityResponseType.java
-02/19/2022  08:01               733 Tag324SecurityStatusReqID.java
-02/19/2022  08:01               734 Tag325UnsolicitedIndicator.java
-02/19/2022  08:01               735 Tag326SecurityTradingStatus.java
-02/19/2022  08:01               724 Tag327HaltReason.java
-02/19/2022  08:01               728 Tag328InViewOfCommon.java
-02/19/2022  08:01               726 Tag329DueToRelated.java
-02/19/2022  08:01               723 Tag330BuyVolume.java
-02/19/2022  08:01               725 Tag331SellVolume.java
-02/19/2022  08:01               720 Tag332HighPx.java
-02/19/2022  08:01               719 Tag333LowPx.java
-02/19/2022  08:01               725 Tag334Adjustment.java
-02/19/2022  08:01               726 Tag335TradSesReqID.java
-02/19/2022  08:01               730 Tag336TradingSessionID.java
-02/19/2022  08:01               726 Tag337ContraTrader.java
-02/19/2022  08:01               727 Tag338TradSesMethod.java
-02/19/2022  08:01               725 Tag339TradSesMode.java
-02/19/2022  08:01               727 Tag340TradSesStatus.java
-02/19/2022  08:01               730 Tag341TradSesStartTime.java
-02/19/2022  08:01               729 Tag342TradSesOpenTime.java
-02/19/2022  08:01               733 Tag343TradSesPreCloseTime.java
-02/19/2022  08:01               730 Tag344TradSesCloseTime.java
-02/19/2022  08:01               728 Tag345TradSesEndTime.java
-02/19/2022  08:01               728 Tag346NumberOfOrders.java
-02/19/2022  08:01               729 Tag347MessageEncoding.java
-02/19/2022  08:01               730 Tag348EncodedIssuerLen.java
-02/19/2022  08:01               727 Tag349EncodedIssuer.java
-02/19/2022  08:01               736 Tag350EncodedSecurityDescLen.java
-02/19/2022  08:01               733 Tag351EncodedSecurityDesc.java
-02/19/2022  08:01               736 Tag352EncodedListExecInstLen.java
-02/19/2022  08:01               733 Tag353EncodedListExecInst.java
-02/19/2022  08:01               728 Tag354EncodedTextLen.java
-02/19/2022  08:01               725 Tag355EncodedText.java
-02/19/2022  08:01               731 Tag356EncodedSubjectLen.java
-02/19/2022  08:01               728 Tag357EncodedSubject.java
-02/19/2022  08:01               732 Tag358EncodedHeadlineLen.java
-02/19/2022  08:01               729 Tag359EncodedHeadline.java
-02/19/2022  08:01               733 Tag360EncodedAllocTextLen.java
-02/19/2022  08:01               730 Tag361EncodedAllocText.java
-02/19/2022  08:01               740 Tag362EncodedUnderlyingIssuerLen.java
-02/19/2022  08:01               737 Tag363EncodedUnderlyingIssuer.java
-02/19/2022  08:01               746 Tag364EncodedUnderlyingSecurityDescLen.java
-02/19/2022  08:01               743 Tag365EncodedUnderlyingSecurityDesc.java
-02/19/2022  08:01               724 Tag366AllocPrice.java
-02/19/2022  08:01               736 Tag367QuoteSetValidUntilTime.java
-02/19/2022  08:01               736 Tag368QuoteEntryRejectReason.java
-02/19/2022  08:01               736 Tag369LastMsgSeqNumProcessed.java
-02/19/2022  08:01               735 Tag370OnBehalfOfSendingTime.java
-02/19/2022  08:01               722 Tag371RefTagID.java
-02/19/2022  08:01               724 Tag372RefMsgType.java
-02/19/2022  08:01               733 Tag373SessionRejectReason.java
-02/19/2022  08:01               726 Tag375ContraBroker.java
-02/19/2022  08:01               726 Tag376ComplianceID.java
-02/19/2022  08:01               727 Tag377SolicitedFlag.java
-02/19/2022  08:01               735 Tag378ExecRestatementReason.java
-02/19/2022  08:01               733 Tag379BusinessRejectRefID.java
-02/19/2022  08:01               734 Tag380BusinessRejectReason.java
-02/19/2022  08:01               727 Tag381GrossTradeAmt.java
-02/19/2022  08:01               729 Tag382NoContraBrokers.java
-02/19/2022  08:01               728 Tag383MaxMessageSize.java
-02/19/2022  08:01               724 Tag384NoMsgTypes.java
-02/19/2022  08:01               726 Tag385MsgDirection.java
-02/19/2022  08:01               731 Tag386NoTradingSessions.java
-02/19/2022  08:01               731 Tag387TotalVolumeTraded.java
-02/19/2022  08:01               728 Tag388DiscretionInst.java
-02/19/2022  08:01               730 Tag389DiscretionOffset.java
-02/19/2022  08:01               719 Tag390BidID.java
-02/19/2022  08:01               725 Tag391ClientBidID.java
-02/19/2022  08:01               722 Tag392ListName.java
-02/19/2022  08:01               732 Tag393TotalNumSecurities.java
-02/19/2022  08:01               721 Tag394BidType.java
-02/19/2022  08:01               724 Tag395NumTickets.java
-02/19/2022  08:01               724 Tag396SideValue1.java
-02/19/2022  08:01               724 Tag397SideValue2.java
-02/19/2022  08:01               730 Tag398NoBidDescriptors.java
-02/19/2022  08:01               731 Tag399BidDescriptorType.java
-02/19/2022  08:01               727 Tag400BidDescriptor.java
-02/19/2022  08:01               726 Tag401SideValueInd.java
-02/19/2022  08:01               729 Tag402LiquidityPctLow.java
-02/19/2022  08:01               730 Tag403LiquidityPctHigh.java
-02/19/2022  08:01               728 Tag404LiquidityValue.java
-02/19/2022  08:01               730 Tag405EFPTrackingError.java
-02/19/2022  08:01               723 Tag406FairValue.java
-02/19/2022  08:01               729 Tag407OutsideIndexPct.java
-02/19/2022  08:01               728 Tag408ValueOfFutures.java
-02/19/2022  08:01               730 Tag409LiquidityIndType.java
-02/19/2022  08:01               732 Tag410WtAverageLiquidity.java
-02/19/2022  08:01               733 Tag411ExchangeForPhysical.java
-02/19/2022  08:01               732 Tag412OutMainCntryUIndex.java
-02/19/2022  08:01               726 Tag413CrossPercent.java
-02/19/2022  08:01               725 Tag414ProgRptReqs.java
-02/19/2022  08:01               732 Tag415ProgPeriodInterval.java
-02/19/2022  08:01               723 Tag416IncTaxInd.java
-02/19/2022  08:01               724 Tag417NumBidders.java
-02/19/2022  08:01               723 Tag418TradeType.java
-02/19/2022  08:01               725 Tag419BasisPxType.java
-02/19/2022  08:01               729 Tag420NoBidComponents.java
-02/19/2022  08:01               721 Tag421Country.java
-02/19/2022  08:01               726 Tag422TotNoStrikes.java
-02/19/2022  08:01               723 Tag423PriceType.java
-02/19/2022  08:01               725 Tag424DayOrderQty.java
-02/19/2022  08:01               723 Tag425DayCumQty.java
-02/19/2022  08:01               722 Tag426DayAvgPx.java
-02/19/2022  08:01               727 Tag427GTBookingInst.java
-02/19/2022  08:01               723 Tag428NoStrikes.java
-02/19/2022  08:01               728 Tag429ListStatusType.java
-02/19/2022  08:01               725 Tag430NetGrossInd.java
-02/19/2022  08:01               729 Tag431ListOrderStatus.java
-02/19/2022  08:01               724 Tag432ExpireDate.java
-02/19/2022  08:01               730 Tag433ListExecInstType.java
-02/19/2022  08:01               730 Tag434CxlRejResponseTo.java
-02/19/2022  08:01               734 Tag435UnderlyingCouponRate.java
-02/19/2022  08:01               742 Tag436UnderlyingContractMultiplier.java
-02/19/2022  08:01               728 Tag437ContraTradeQty.java
-02/19/2022  08:01               729 Tag438ContraTradeTime.java
-02/19/2022  08:01               739 Tag439ClearingFirm.java
-02/19/2022  08:01               742 Tag440ClearingAccount.java
-02/19/2022  08:01               736 Tag441LiquidityNumSecurities.java
-02/19/2022  08:01               735 Tag442MultiLegReportingType.java
-02/19/2022  08:01               724 Tag443StrikeTime.java
-02/19/2022  08:01               728 Tag444ListStatusText.java
-02/19/2022  08:01               738 Tag445ListStatusEncodedTextLen.java
-02/19/2022  08:01               735 Tag446ListStatusEncodedText.java
-             304 File(s)        222,113 bytes
-               0 Dir(s)  824,033,271,808 bytes free
+Tag141ResetSeqNumFlag.java
+Tag142SenderLocationID.java
+Tag143TargetLocationID.java
+Tag144OnBehalfOfLocationID.java
+Tag145DeliverToLocationID.java
+Tag146NoRelatedSym.java
+Tag147Subject.java
+Tag148Headline.java
+Tag149URLLink.java
+Tag150ExecType.java
+Tag151LeavesQty.java
+Tag152CashOrderQty.java
+Tag153AllocAvgPx.java
+Tag154AllocNetMoney.java
+Tag155SettlCurrFxRate.java
+Tag156SettlCurrFxRateCalc.java
+Tag157NumDaysInterest.java
+Tag158AccruedInterestRate.java
+Tag159AccruedInterestAmt.java
+Tag160SettlInstMode.java
+Tag161AllocText.java
+Tag162SettlInstID.java
+Tag163SettlInstTransType.java
+Tag164EmailThreadID.java
+Tag165SettlInstSource.java
+Tag166SettlLocation.java
+Tag167SecurityType.java
+Tag168EffectiveTime.java
+Tag169StandInstDBType.java
+Tag170StandInstDBName.java
+Tag171StandInstDBID.java
+Tag172SettlDeliveryType.java
+Tag173SettlDepositoryCode.java
+Tag174SettlBrkrCode.java
+Tag175SettlInstCode.java
+Tag176SecuritySettlAgentName.java
+Tag177SecuritySettlAgentCode.java
+Tag178SecuritySettlAgentAcctNum.java
+Tag179SecuritySettlAgentAcctName.java
+Tag180SecuritySettlAgentContactName.java
+Tag181SecuritySettlAgentContachPhone.java
+Tag182CashSettlAgentName.java
+Tag183CashSettlAgentCode.java
+Tag184CashSettlAgentAcctNum.java
+Tag185CashSettlAgentAcctName.java
+Tag186CashSettlAgentContactName.java
+Tag187CashSettlAgentContactPhone.java
+Tag188BidSpotRate.java
+Tag189BidForwardPoints.java
+Tag190OfferSpotRate.java
+Tag191OfferForwardPoints.java
+Tag192OrderQty2.java
+Tag193SettlDate2.java
+Tag194LastSpotRate.java
+Tag195LastForwardPoints.java
+Tag196AllocLinkID.java
+Tag197AllocLinkType.java
+Tag198SecondaryOrderID.java
+Tag199NoIOIQualifiers.java
+Tag200MaturityMonthYear.java
+Tag201PutOrCall.java
+Tag202StrikePrice.java
+Tag203CoveredOrUncovered.java
+Tag204CustomerOrFirm.java
+Tag205MaturityDate.java
+Tag206OptAttribute.java
+Tag207SecurityExchange.java
+Tag208NotifyBrokerOfCredit.java
+Tag209AllocHandlInst.java
+Tag210MaxShow.java
+Tag211PegOffsetValue.java
+Tag212XmlDataLen.java
+Tag213XmlData.java
+Tag214SettlInstRefID.java
+Tag215NoRoutingIDs.java
+Tag216RoutingType.java
+Tag217RoutingID.java
+Tag218Spread.java
+Tag219Benchmark.java
+Tag220BenchmarkCurveCurrency.java
+Tag221BenchmarkCurveName.java
+Tag222BenchmarkCurvePoint.java
+Tag223CouponRate.java
+Tag224CouponPaymentDate.java
+Tag225IssueDate.java
+Tag226RepurchaseTerm.java
+Tag227RepurchaseRate.java
+Tag228Factor.java
+Tag229TradeOriginatingDate.java
+Tag230ExDate.java
+Tag231ContractMultiplier.java
+Tag232NoStipulations.java
+Tag233StipulationType.java
+Tag234StipulationValue.java
+Tag235YieldType.java
+Tag236Yield.java
+Tag237TotalTakedown.java
+Tag238Concession.java
+Tag239RepoCollateralSecurityType.java
+Tag240RedemptionDate.java
+Tag241UnderlyingCouponPaymentDate.java
+Tag242UnderlyingIssueDate.java
+Tag243UnderlyingRepoCollateralSecurityType.java
+Tag244UnderlyingRepurchaseTerm.java
+Tag245UnderlyingRepurchaseRate.java
+Tag246UnderlyingFactor.java
+Tag247UnderlyingRedemptionDate.java
+Tag248LegCouponPaymentDate.java
+Tag249LegIssueDate.java
+Tag250LegRepoCollateralSecurityType.java
+Tag251LegRepurchaseTerm.java
+Tag252LegRepurchaseRate.java
+Tag253LegFactor.java
+Tag254LegRedemptionDate.java
+Tag255CreditRating.java
+Tag256UnderlyingCreditRating.java
+Tag257LegCreditRating.java
+Tag258TradedFlatSwitch.java
+Tag259BasisFeatureDate.java
+Tag260BasisFeaturePrice.java
+Tag262MDReqID.java
+Tag263SubscriptionRequestType.java
+Tag264MarketDepth.java
+Tag265MDUpdateType.java
+Tag266AggregatedBook.java
+Tag267NoMDEntryTypes.java
+Tag268NoMDEntries.java
+Tag269MDEntryType.java
+Tag270MDEntryPx.java
+Tag271MDEntrySize.java
+Tag272MDEntryDate.java
+Tag273MDEntryTime.java
+Tag274TickDirection.java
+Tag275MDMkt.java
+Tag276QuoteCondition.java
+Tag277TradeCondition.java
+Tag278MDEntryID.java
+Tag279MDUpdateAction.java
+Tag280MDEntryRefID.java
+Tag281MDReqRejReason.java
+Tag282MDEntryOriginator.java
+Tag283LocationID.java
+Tag284DeskID.java
+Tag285DeleteReason.java
+Tag286OpenCloseSettleFlag.java
+Tag287SellerDays.java
+Tag288MDEntryBuyer.java
+Tag289MDEntrySeller.java
+Tag290MDEntryPositionNo.java
+Tag291FinancialStatus.java
+Tag292CorporateAction.java
+Tag293DefBidSize.java
+Tag294DefOfferSize.java
+Tag295NoQuoteEntries.java
+Tag296NoQuoteSets.java
+Tag297QuoteAckStatus.java
+Tag298QuoteCancelType.java
+Tag299QuoteEntryID.java
+Tag300QuoteRejectReason.java
+Tag301QuoteResponseLevel.java
+Tag302QuoteSetID.java
+Tag303QuoteRequestType.java
+Tag304TotQuoteEntries.java
+Tag305UnderlyingIDSource.java
+Tag306UnderlyingIssuer.java
+Tag307UnderlyingSecurityDesc.java
+Tag308UnderlyingSecurityExchange.java
+Tag309UnderlyingSecurityID.java
+Tag310UnderlyingSecurityType.java
+Tag311UnderlyingSymbol.java
+Tag312UnderlyingSymbolSfx.java
+Tag313UnderlyingMaturityMonthYear.java
+Tag314UnderlyingMaturityDate.java
+Tag315UnderlyingPutOrCall.java
+Tag316UnderlyingStrikePrice.java
+Tag317UnderlyingOptAttribute.java
+Tag318UnderlyingCurrency.java
+Tag319RatioQty.java
+Tag320SecurityReqID.java
+Tag321SecurityRequestType.java
+Tag322SecurityResponseID.java
+Tag323SecurityResponseType.java
+Tag324SecurityStatusReqID.java
+Tag325UnsolicitedIndicator.java
+Tag326SecurityTradingStatus.java
+Tag327HaltReason.java
+Tag328InViewOfCommon.java
+Tag329DueToRelated.java
+Tag330BuyVolume.java
+Tag331SellVolume.java
+Tag332HighPx.java
+Tag333LowPx.java
+Tag334Adjustment.java
+Tag335TradSesReqID.java
+Tag336TradingSessionID.java
+Tag337ContraTrader.java
+Tag338TradSesMethod.java
+Tag339TradSesMode.java
+Tag340TradSesStatus.java
+Tag341TradSesStartTime.java
+Tag342TradSesOpenTime.java
+Tag343TradSesPreCloseTime.java
+Tag344TradSesCloseTime.java
+Tag345TradSesEndTime.java
+Tag346NumberOfOrders.java
+Tag347MessageEncoding.java
+Tag348EncodedIssuerLen.java
+Tag349EncodedIssuer.java
+Tag350EncodedSecurityDescLen.java
+Tag351EncodedSecurityDesc.java
+Tag352EncodedListExecInstLen.java
+Tag353EncodedListExecInst.java
+Tag354EncodedTextLen.java
+Tag355EncodedText.java
+Tag356EncodedSubjectLen.java
+Tag357EncodedSubject.java
+Tag358EncodedHeadlineLen.java
+Tag359EncodedHeadline.java
+Tag360EncodedAllocTextLen.java
+Tag361EncodedAllocText.java
+Tag362EncodedUnderlyingIssuerLen.java
+Tag363EncodedUnderlyingIssuer.java
+Tag364EncodedUnderlyingSecurityDescLen.java
+Tag365EncodedUnderlyingSecurityDesc.java
+Tag366AllocPrice.java
+Tag367QuoteSetValidUntilTime.java
+Tag368QuoteEntryRejectReason.java
+Tag369LastMsgSeqNumProcessed.java
+Tag370OnBehalfOfSendingTime.java
+Tag371RefTagID.java
+Tag372RefMsgType.java
+Tag373SessionRejectReason.java
+Tag375ContraBroker.java
+Tag376ComplianceID.java
+Tag377SolicitedFlag.java
+Tag378ExecRestatementReason.java
+Tag379BusinessRejectRefID.java
+Tag380BusinessRejectReason.java
+Tag381GrossTradeAmt.java
+Tag382NoContraBrokers.java
+Tag383MaxMessageSize.java
+Tag384NoMsgTypes.java
+Tag385MsgDirection.java
+Tag386NoTradingSessions.java
+Tag387TotalVolumeTraded.java
+Tag388DiscretionInst.java
+Tag389DiscretionOffset.java
+Tag390BidID.java
+Tag391ClientBidID.java
+Tag392ListName.java
+Tag393TotalNumSecurities.java
+Tag394BidType.java
+Tag395NumTickets.java
+Tag396SideValue1.java
+Tag397SideValue2.java
+Tag398NoBidDescriptors.java
+Tag399BidDescriptorType.java
+Tag400BidDescriptor.java
+Tag401SideValueInd.java
+Tag402LiquidityPctLow.java
+Tag403LiquidityPctHigh.java
+Tag404LiquidityValue.java
+Tag405EFPTrackingError.java
+Tag406FairValue.java
+Tag407OutsideIndexPct.java
+Tag408ValueOfFutures.java
+Tag409LiquidityIndType.java
+Tag410WtAverageLiquidity.java
+Tag411ExchangeForPhysical.java
+Tag412OutMainCntryUIndex.java
+Tag413CrossPercent.java
+Tag414ProgRptReqs.java
+Tag415ProgPeriodInterval.java
+Tag416IncTaxInd.java
+Tag417NumBidders.java
+Tag418TradeType.java
+Tag419BasisPxType.java
+Tag420NoBidComponents.java
+Tag421Country.java
+Tag422TotNoStrikes.java
+Tag423PriceType.java
+Tag424DayOrderQty.java
+Tag425DayCumQty.java
+Tag426DayAvgPx.java
+Tag427GTBookingInst.java
+Tag428NoStrikes.java
+Tag429ListStatusType.java
+Tag430NetGrossInd.java
+Tag431ListOrderStatus.java
+Tag432ExpireDate.java
+Tag433ListExecInstType.java
+Tag434CxlRejResponseTo.java
+Tag435UnderlyingCouponRate.java
+Tag436UnderlyingContractMultiplier.java
+Tag437ContraTradeQty.java
+Tag438ContraTradeTime.java
+Tag439ClearingFirm.java
+Tag440ClearingAccount.java
+Tag441LiquidityNumSecurities.java
+Tag442MultiLegReportingType.java
+Tag443StrikeTime.java
+Tag444ListStatusText.java
+Tag445ListStatusEncodedTextLen.java
+Tag446ListStatusEncodedText.java

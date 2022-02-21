@@ -1,184 +1,178 @@
- Volume in drive C is C-CRU-CT1000-C1
- Volume Serial Number is 2C5C-5483
+Tag957NoStrategyParameters.java
+Tag958StrategyParameterName.java
+Tag959StrategyParameterType.java
+Tag960StrategyParameterValue.java
+Tag961HostCrossID.java
+Tag962SideTimeInForce.java
+Tag963MDReportID.java
+Tag964SecurityReportID.java
+Tag965SecurityStatus.java
+Tag966SettleOnOpenFlag.java
+Tag967StrikeMultiplier.java
+Tag968StrikeValue.java
+Tag969MinPriceIncrement.java
+Tag970PositionLimit.java
+Tag971NTPositionLimit.java
+Tag972UnderlyingAllocationPercent.java
+Tag973UnderlyingCashAmount.java
+Tag974UnderlyingCashType.java
+Tag975UnderlyingSettlementType.java
+Tag976QuantityDate.java
+Tag977ContIntRptID.java
+Tag978LateIndicator.java
+Tag979InputSource.java
+Tag980SecurityUpdateAction.java
+Tag981NoExpiration.java
+Tag982ExpType.java
+Tag983ExpQty.java
+Tag984NoUnderlyingAmounts.java
+Tag985UnderlyingPayAmount.java
+Tag986UnderlyingCollectAmount.java
+Tag987UnderlyingSettlementDate.java
+Tag988UnderlyingSettlementStatus.java
+Tag989SecondaryIndividualAllocID.java
+Tag990LegReportID.java
+Tag991RndPx.java
+Tag992IndividualAllocType.java
+Tag993AllocCustomerCapacity.java
+Tag994TierCode.java
+Tag996UnitofMeasure.java
+Tag997TimeUnit.java
+Tag998UnderlyingUnitofMeasure.java
+Tag999LegUnitofMeasure.java
 
- Directory of C:\Users\saeko\OneDrive\github\intellij\staging\src\main\java\com\hwtsllc\fixengine2022\fix50
-
-02/19/2022  08:47               733 Tag1000UnderlyingTimeUnit.java
-02/19/2022  14:52               726 Tag1001LegTimeUnit.java
-02/19/2022  14:52               726 Tag1002AllocMethod.java
-02/19/2022  14:52               722 Tag1003TradeID.java
-02/19/2022  14:52               732 Tag1005SideTradeReportID.java
-02/19/2022  14:52               732 Tag1006SideFillStationCd.java
-02/19/2022  14:52               727 Tag1007SideReasonCd.java
-02/19/2022  14:52               728 Tag1008SideTrdSubTyp.java
-02/19/2022  14:52               722 Tag1009SideQty.java
-02/19/2022  14:55               733 Tag1011MessageEventSource.java
-02/19/2022  14:55               734 Tag1012SideTrdRegTimestamp.java
-02/19/2022  14:55               738 Tag1013SideTrdRegTimestampType.java
-02/19/2022  14:55               737 Tag1014SideTrdRegTimestampSrc.java
-02/19/2022  14:55               728 Tag1015AsOfIndicator.java
-02/19/2022  14:55               729 Tag1016NoSideTrdRegTS.java
-02/19/2022  14:55               729 Tag1017LegOptionRatio.java
-02/19/2022  14:55               734 Tag1018NoInstrumentParties.java
-02/19/2022  14:55               732 Tag1019InstrumentPartyID.java
-02/19/2022  14:57               726 Tag1020TradeVolume.java
-02/19/2022  14:57               725 Tag1021MDBookType.java
-02/19/2022  14:57               725 Tag1022MDFeedType.java
-02/19/2022  14:57               727 Tag1023MDPriceLevel.java
-02/19/2022  14:57               727 Tag1024MDOriginType.java
-02/19/2022  14:57               722 Tag1025FirstPx.java
-02/19/2022  14:57               730 Tag1026MDEntrySpotRate.java
-02/19/2022  14:57               735 Tag1027MDEntryForwardPoints.java
-02/19/2022  14:57               735 Tag1028ManualOrderIndicator.java
-02/19/2022  14:57               732 Tag1029CustDirectedOrder.java
-02/19/2022  15:01               729 Tag1030ReceivedDeptID.java
-02/19/2022  15:01               736 Tag1031CustOrderHandlingInst.java
-02/19/2022  15:01               738 Tag1032OrderHandlingInstSource.java
-02/19/2022  15:01               723 Tag1033DeskType.java
-02/19/2022  15:01               729 Tag1034DeskTypeSource.java
-02/19/2022  15:01               736 Tag1035DeskOrderHandlingInst.java
-02/19/2022  15:01               728 Tag1036ExecAckStatus.java
-02/19/2022  15:01               739 Tag1037UnderlyingDeliveryAmount.java
-02/19/2022  15:01               733 Tag1038UnderlyingCapValue.java
-02/19/2022  15:01               736 Tag1039UnderlyingSettlMethod.java
-02/19/2022  15:04               731 Tag1040SecondaryTradeID.java
-02/19/2022  15:04               726 Tag1041FirmTradeID.java
-02/19/2022  15:04               735 Tag1042SecondaryFirmTradeID.java
-02/19/2022  15:04               727 Tag1043CollApplType.java
-02/19/2022  15:04               741 Tag1044UnderlyingAdjustedQuantity.java
-02/19/2022  15:04               731 Tag1045UnderlyingFXRate.java
-02/19/2022  15:04               735 Tag1046UnderlyingFXRateCalc.java
-02/19/2022  15:04               734 Tag1047AllocPositionEffect.java
-02/19/2022  15:04               730 Tag1048DealingCapacity.java
-02/19/2022  15:04               738 Tag1049InstrmtAssignmentMethod.java
-02/19/2022  15:04               738 Tag1050InstrumentPartyIDSource.java
-02/19/2022  15:16               734 Tag1051InstrumentPartyRole.java
-02/19/2022  15:16               738 Tag1052NoInstrumentPartySubIDs.java
-02/19/2022  15:16               735 Tag1053InstrumentPartySubID.java
-02/19/2022  15:16               739 Tag1054InstrumentPartySubIDType.java
-02/19/2022  15:16               731 Tag1055PositionCurrency.java
-02/19/2022  15:16               735 Tag1056CalculatedCcyLastQty.java
-02/19/2022  15:16               733 Tag1057AggressorIndicator.java
-02/19/2022  15:16               739 Tag1058NoUndlyInstrumentParties.java
-02/19/2022  15:16               737 Tag1059UndlyInstrumentPartyID.java
-02/19/2022  15:34               743 Tag1060UndlyInstrumentPartyIDSource.java
-02/19/2022  15:34               739 Tag1061UndlyInstrumentPartyRole.java
-02/19/2022  15:34               743 Tag1062NoUndlyInstrumentPartySubIDs.java
-02/19/2022  15:34               740 Tag1063UndlyInstrumentPartySubID.java
-02/19/2022  15:34               744 Tag1064UndlyInstrumentPartySubIDType.java
-02/19/2022  15:34               728 Tag1065BidSwapPoints.java
-02/19/2022  15:34               730 Tag1066OfferSwapPoints.java
-02/19/2022  15:34               734 Tag1067LegBidForwardPoints.java
-02/19/2022  15:34               736 Tag1068LegOfferForwardPoints.java
-02/19/2022  15:34               725 Tag1069SwapPoints.java
-02/19/2022  15:36               726 Tag1070MDQuoteType.java
-02/19/2022  15:36               729 Tag1071LastSwapPoints.java
-02/19/2022  15:36               732 Tag1072SideGrossTradeAmt.java
-02/19/2022  15:36               735 Tag1073LegLastForwardPoints.java
-02/19/2022  15:36               738 Tag1074LegCalculatedCcyLastQty.java
-02/19/2022  15:36               731 Tag1075LegGrossTradeAmt.java
-02/19/2022  15:36               727 Tag1079MaturityTime.java
-02/19/2022  15:40               725 Tag1080RefOrderID.java
-02/19/2022  15:40               731 Tag1081RefOrderIDSource.java
-02/19/2022  15:40               734 Tag1082SecondaryDisplayQty.java
-02/19/2022  15:40               726 Tag1083DisplayWhen.java
-02/19/2022  15:40               728 Tag1084DisplayMethod.java
-02/19/2022  15:40               728 Tag1085DisplayLowQty.java
-02/19/2022  15:40               729 Tag1086DisplayHighQty.java
-02/19/2022  15:40               729 Tag1087DisplayMinIncr.java
-02/19/2022  15:40               725 Tag1088RefreshQty.java
-02/19/2022  15:40               729 Tag1089MatchIncrement.java
-02/19/2022  15:42               729 Tag1090MaxPriceLevels.java
-02/19/2022  15:42               732 Tag1091PreTradeAnonymity.java
-02/19/2022  15:42               735 Tag1092PriceProtectionScope.java
-02/19/2022  15:42               722 Tag1093LotType.java
-02/19/2022  15:42               727 Tag1094PegPriceType.java
-02/19/2022  15:42               729 Tag1095PeggedRefPrice.java
-02/19/2022  15:42               734 Tag1096PegSecurityIDSource.java
-02/19/2022  15:42               728 Tag1097PegSecurityID.java
-02/19/2022  15:42               724 Tag1098PegSymbol.java
-02/19/2022  15:42               730 Tag1099PegSecurityDesc.java
-02/19/2022  08:47               726 Tag1100TriggerType.java
-02/19/2022  08:47               728 Tag1101TriggerAction.java
-02/19/2022  08:47               727 Tag1102TriggerPrice.java
-02/19/2022  08:47               728 Tag1103TriggerSymbol.java
-02/19/2022  08:47               732 Tag1104TriggerSecurityID.java
-02/19/2022  08:47               738 Tag1105TriggerSecurityIDSource.java
-02/19/2022  08:47               734 Tag1106TriggerSecurityDesc.java
-02/19/2022  08:47               731 Tag1107TriggerPriceType.java
-02/19/2022  08:47               736 Tag1108TriggerPriceTypeScope.java
-02/19/2022  08:47               736 Tag1109TriggerPriceDirection.java
-02/19/2022  08:47               730 Tag1110TriggerNewPrice.java
-02/19/2022  08:47               731 Tag1111TriggerOrderType.java
-02/19/2022  08:47               728 Tag1112TriggerNewQty.java
-02/19/2022  08:47               738 Tag1113TriggerTradingSessionID.java
-02/19/2022  08:47               741 Tag1114TriggerTradingSessionSubID.java
-02/19/2022  08:47               728 Tag1115OrderCategory.java
-02/19/2022  08:47               729 Tag1116NoRootPartyIDs.java
-02/19/2022  08:47               726 Tag1117RootPartyID.java
-02/19/2022  08:47               732 Tag1118RootPartyIDSource.java
-02/19/2022  08:47               728 Tag1119RootPartyRole.java
-02/19/2022  08:47               732 Tag1120NoRootPartySubIDs.java
-02/19/2022  08:47               729 Tag1121RootPartySubID.java
-02/19/2022  08:47               733 Tag1122RootPartySubIDType.java
-02/19/2022  08:47               733 Tag1123TradeHandlingInstr.java
-02/19/2022  08:47               737 Tag1124OrigTradeHandlingInstr.java
-02/19/2022  08:47               728 Tag1125OrigTradeDate.java
-02/19/2022  08:47               726 Tag1126OrigTradeID.java
-02/19/2022  08:47               735 Tag1127OrigSecondaryTradeID.java
-02/19/2022  08:47               724 Tag1128ApplVerID.java
-02/19/2022  08:47               728 Tag1129CstmApplVerID.java
-02/19/2022  08:47               727 Tag1130RefApplVerID.java
-02/19/2022  08:47               731 Tag1131RefCstmApplVerID.java
-02/19/2022  08:47               729 Tag1132TZTransactTime.java
-02/19/2022  08:47               736 Tag1133ExDestinationIDSource.java
-02/19/2022  08:47               729 Tag1134ReportedPxDiff.java
-02/19/2022  08:47               721 Tag1135RptSys.java
-02/19/2022  08:47               740 Tag1136AllocClearingFeeIndicator.java
-02/19/2022  08:47               731 Tag1137DefaultApplVerID.java
-02/19/2022  08:47               725 Tag1138DisplayQty.java
-02/19/2022  08:47               742 Tag1139ExchangeSpecialInstructions.java
-02/19/2022  08:47               734 Tag957NoStrategyParameters.java
-02/19/2022  08:47               735 Tag958StrategyParameterName.java
-02/19/2022  08:47               735 Tag959StrategyParameterType.java
-02/19/2022  08:47               736 Tag960StrategyParameterValue.java
-02/19/2022  08:47               725 Tag961HostCrossID.java
-02/19/2022  08:47               729 Tag962SideTimeInForce.java
-02/19/2022  08:47               724 Tag963MDReportID.java
-02/19/2022  08:47               730 Tag964SecurityReportID.java
-02/19/2022  08:47               728 Tag965SecurityStatus.java
-02/19/2022  08:47               730 Tag966SettleOnOpenFlag.java
-02/19/2022  08:47               730 Tag967StrikeMultiplier.java
-02/19/2022  08:47               725 Tag968StrikeValue.java
-02/19/2022  08:47               731 Tag969MinPriceIncrement.java
-02/19/2022  08:47               727 Tag970PositionLimit.java
-02/19/2022  08:47               729 Tag971NTPositionLimit.java
-02/19/2022  08:47               741 Tag972UnderlyingAllocationPercent.java
-02/19/2022  08:47               734 Tag973UnderlyingCashAmount.java
-02/19/2022  08:47               732 Tag974UnderlyingCashType.java
-02/19/2022  08:47               738 Tag975UnderlyingSettlementType.java
-02/19/2022  08:47               726 Tag976QuantityDate.java
-02/19/2022  08:47               726 Tag977ContIntRptID.java
-02/19/2022  08:47               727 Tag978LateIndicator.java
-02/19/2022  08:47               725 Tag979InputSource.java
-02/19/2022  08:47               734 Tag980SecurityUpdateAction.java
-02/19/2022  08:47               726 Tag981NoExpiration.java
-02/19/2022  08:47               721 Tag982ExpType.java
-02/19/2022  08:47               720 Tag983ExpQty.java
-02/19/2022  08:47               733 Tag984NoUnderlyingAmounts.java
-02/19/2022  08:47               733 Tag985UnderlyingPayAmount.java
-02/19/2022  08:47               737 Tag986UnderlyingCollectAmount.java
-02/19/2022  08:47               738 Tag987UnderlyingSettlementDate.java
-02/19/2022  08:47               740 Tag988UnderlyingSettlementStatus.java
-02/19/2022  08:47               740 Tag989SecondaryIndividualAllocID.java
-02/19/2022  08:47               725 Tag990LegReportID.java
-02/19/2022  08:47               719 Tag991RndPx.java
-02/19/2022  08:47               733 Tag992IndividualAllocType.java
-02/19/2022  08:47               735 Tag993AllocCustomerCapacity.java
-02/19/2022  08:47               722 Tag994TierCode.java
-02/19/2022  08:47               727 Tag996UnitofMeasure.java
-02/19/2022  08:47               722 Tag997TimeUnit.java
-02/19/2022  08:47               737 Tag998UnderlyingUnitofMeasure.java
-02/19/2022  08:47               730 Tag999LegUnitofMeasure.java
-             177 File(s)        129,406 bytes
-               0 Dir(s)  824,032,301,056 bytes free
+Tag1000UnderlyingTimeUnit.java
+Tag1001LegTimeUnit.java
+Tag1002AllocMethod.java
+Tag1003TradeID.java
+Tag1005SideTradeReportID.java
+Tag1006SideFillStationCd.java
+Tag1007SideReasonCd.java
+Tag1008SideTrdSubTyp.java
+Tag1009SideQty.java
+Tag1011MessageEventSource.java
+Tag1012SideTrdRegTimestamp.java
+Tag1013SideTrdRegTimestampType.java
+Tag1014SideTrdRegTimestampSrc.java
+Tag1015AsOfIndicator.java
+Tag1016NoSideTrdRegTS.java
+Tag1017LegOptionRatio.java
+Tag1018NoInstrumentParties.java
+Tag1019InstrumentPartyID.java
+Tag1020TradeVolume.java
+Tag1021MDBookType.java
+Tag1022MDFeedType.java
+Tag1023MDPriceLevel.java
+Tag1024MDOriginType.java
+Tag1025FirstPx.java
+Tag1026MDEntrySpotRate.java
+Tag1027MDEntryForwardPoints.java
+Tag1028ManualOrderIndicator.java
+Tag1029CustDirectedOrder.java
+Tag1030ReceivedDeptID.java
+Tag1031CustOrderHandlingInst.java
+Tag1032OrderHandlingInstSource.java
+Tag1033DeskType.java
+Tag1034DeskTypeSource.java
+Tag1035DeskOrderHandlingInst.java
+Tag1036ExecAckStatus.java
+Tag1037UnderlyingDeliveryAmount.java
+Tag1038UnderlyingCapValue.java
+Tag1039UnderlyingSettlMethod.java
+Tag1040SecondaryTradeID.java
+Tag1041FirmTradeID.java
+Tag1042SecondaryFirmTradeID.java
+Tag1043CollApplType.java
+Tag1044UnderlyingAdjustedQuantity.java
+Tag1045UnderlyingFXRate.java
+Tag1046UnderlyingFXRateCalc.java
+Tag1047AllocPositionEffect.java
+Tag1048DealingCapacity.java
+Tag1049InstrmtAssignmentMethod.java
+Tag1050InstrumentPartyIDSource.java
+Tag1051InstrumentPartyRole.java
+Tag1052NoInstrumentPartySubIDs.java
+Tag1053InstrumentPartySubID.java
+Tag1054InstrumentPartySubIDType.java
+Tag1055PositionCurrency.java
+Tag1056CalculatedCcyLastQty.java
+Tag1057AggressorIndicator.java
+Tag1058NoUndlyInstrumentParties.java
+Tag1059UndlyInstrumentPartyID.java
+Tag1060UndlyInstrumentPartyIDSource.java
+Tag1061UndlyInstrumentPartyRole.java
+Tag1062NoUndlyInstrumentPartySubIDs.java
+Tag1063UndlyInstrumentPartySubID.java
+Tag1064UndlyInstrumentPartySubIDType.java
+Tag1065BidSwapPoints.java
+Tag1066OfferSwapPoints.java
+Tag1067LegBidForwardPoints.java
+Tag1068LegOfferForwardPoints.java
+Tag1069SwapPoints.java
+Tag1070MDQuoteType.java
+Tag1071LastSwapPoints.java
+Tag1072SideGrossTradeAmt.java
+Tag1073LegLastForwardPoints.java
+Tag1074LegCalculatedCcyLastQty.java
+Tag1075LegGrossTradeAmt.java
+Tag1079MaturityTime.java
+Tag1080RefOrderID.java
+Tag1081RefOrderIDSource.java
+Tag1082SecondaryDisplayQty.java
+Tag1083DisplayWhen.java
+Tag1084DisplayMethod.java
+Tag1085DisplayLowQty.java
+Tag1086DisplayHighQty.java
+Tag1087DisplayMinIncr.java
+Tag1088RefreshQty.java
+Tag1089MatchIncrement.java
+Tag1090MaxPriceLevels.java
+Tag1091PreTradeAnonymity.java
+Tag1092PriceProtectionScope.java
+Tag1093LotType.java
+Tag1094PegPriceType.java
+Tag1095PeggedRefPrice.java
+Tag1096PegSecurityIDSource.java
+Tag1097PegSecurityID.java
+Tag1098PegSymbol.java
+Tag1099PegSecurityDesc.java
+Tag1100TriggerType.java
+Tag1101TriggerAction.java
+Tag1102TriggerPrice.java
+Tag1103TriggerSymbol.java
+Tag1104TriggerSecurityID.java
+Tag1105TriggerSecurityIDSource.java
+Tag1106TriggerSecurityDesc.java
+Tag1107TriggerPriceType.java
+Tag1108TriggerPriceTypeScope.java
+Tag1109TriggerPriceDirection.java
+Tag1110TriggerNewPrice.java
+Tag1111TriggerOrderType.java
+Tag1112TriggerNewQty.java
+Tag1113TriggerTradingSessionID.java
+Tag1114TriggerTradingSessionSubID.java
+Tag1115OrderCategory.java
+Tag1116NoRootPartyIDs.java
+Tag1117RootPartyID.java
+Tag1118RootPartyIDSource.java
+Tag1119RootPartyRole.java
+Tag1120NoRootPartySubIDs.java
+Tag1121RootPartySubID.java
+Tag1122RootPartySubIDType.java
+Tag1123TradeHandlingInstr.java
+Tag1124OrigTradeHandlingInstr.java
+Tag1125OrigTradeDate.java
+Tag1126OrigTradeID.java
+Tag1127OrigSecondaryTradeID.java
+Tag1128ApplVerID.java
+Tag1129CstmApplVerID.java
+Tag1130RefApplVerID.java
+Tag1131RefCstmApplVerID.java
+Tag1132TZTransactTime.java
+Tag1133ExDestinationIDSource.java
+Tag1134ReportedPxDiff.java
+Tag1135RptSys.java
+Tag1136AllocClearingFeeIndicator.java
+Tag1137DefaultApplVerID.java
+Tag1138DisplayQty.java
+Tag1139ExchangeSpecialInstructions.java

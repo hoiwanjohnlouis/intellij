@@ -14,30 +14,23 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.datatypes;
+package com.hwtsllc.fixengine2022;
 
-import com.hwtsllc.fixengine2022.fix40.Tag1Account;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class FixTypeTest {
-
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+class TagTypeTest {
 
     @BeforeEach
     void setUp() {
-        // logger.info("@BeforeEach - executes before each test method in this class");
     }
+
     @AfterEach
     void tearDown() {
-        // logger.info("@AfterEach - executes after each test method in this class");
     }
 
     /*
@@ -46,430 +39,992 @@ public class FixTypeTest {
      */
     @Test
     void Tag0001Test() {
-        FIXType tag1Account = FIXType.ACCOUNT;
-        assertEquals( tag1Account.getFIXNumber(), 1);
-        assertNotEquals( tag1Account.getFIXNumber(), 2);
+        TagType tag1Account = new TagType(FIXType.ACCOUNT,"ABC987654321XYZ");
         assertEquals( tag1Account.getFIXName(), "ACCOUNT");
-        assertNotEquals( tag1Account.getFIXName(), "Not My ACCOUNT");
+        assertEquals( tag1Account.getFIXNumber(), 1);
         assertEquals( tag1Account.getFIXDescription(), "Account");
+        assertNotEquals( tag1Account.getFIXName(), "Not My ACCOUNT");
+        assertNotEquals( tag1Account.getFIXNumber(), 2);
         assertNotEquals( tag1Account.getFIXDescription(), "123 Account");
     }
     @Test
     void Tag0002Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0003Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0004Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0005Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0006Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0007Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0008Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0009Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0010Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0011Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0012Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0013Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0014Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0015Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0016Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0017Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0018Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0019Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0020Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0021Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0022Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0023Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0024Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0025Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0026Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0027Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0028Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0029Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0030Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0031Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0032Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0033Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0034Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0035Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0036Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0037Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0038Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0039Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0040Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0041Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0042Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0043Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0044Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0045Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0046Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0047Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0048Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0049Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0050Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0051Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0052Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0053Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0054Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0055Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0056Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0057Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0058Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0059Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0060Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0061Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0062Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0063Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0064Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0065Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0066Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0067Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0068Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0069Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0070Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0071Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0072Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0073Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0074Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0075Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0076Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0077Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0078Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0079Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0080Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0081Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0082Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0083Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0084Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0085Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0086Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0087Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0088Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0089Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0090Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0091Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0092Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0093Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0094Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0095Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0096Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0097Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0098Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0099Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
     }
     @Test
     void Tag0100Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        assertNotEquals( tag100ExDestination.getFIXName(), "Not My EX_DESTINATION");
+        assertNotEquals( tag100ExDestination.getFIXNumber(), 2);
+        assertNotEquals( tag100ExDestination.getFIXDescription(), "123 Account");
     }
     @Test
+    @Deprecated
     void Tag0101Test() {
+        /* Tag 101 not defined */
+        TagType tag102CxlRejReason2 = new TagType(FIXType.CXL_REJ_REASON,"Last Train To London");
+        assertEquals( tag102CxlRejReason2.getFIXName(), "CXL_REJ_REASON");
+        assertEquals( tag102CxlRejReason2.getFIXNumber(), 102);
+        assertEquals( tag102CxlRejReason2.getFIXDescription(), "CxlRejReason");
     }
     @Test
     void Tag0102Test() {
+        FIXType tag102CxlRejReason = FIXType.CXL_REJ_REASON;
+        assertEquals( tag102CxlRejReason.getFIXName(), "CXL_REJ_REASON");
+        assertEquals( tag102CxlRejReason.getFIXNumber(), 102);
+        assertEquals( tag102CxlRejReason.getFIXDescription(), "CxlRejReason");
     }
     @Test
     void Tag0103Test() {
+        FIXType tag103OrdRejReason = FIXType.ORD_REJ_REASON;
+        assertEquals( tag103OrdRejReason.getFIXName(), "ORD_REJ_REASON");
+        assertEquals( tag103OrdRejReason.getFIXNumber(), 103);
+        assertEquals( tag103OrdRejReason.getFIXDescription(), "OrdRejReason");
     }
     @Test
     void Tag0104Test() {
+        FIXType tag104IOIQualifier = FIXType.IOI_QUALIFIER;
+        TagType tag104IOIQualifier2 = new TagType(FIXType.IOI_QUALIFIER,"interested in Mahlers 4th Symphony");
+        assertEquals( tag104IOIQualifier2.getFIXName(), "IOI_QUALIFIER");
+        assertEquals( tag104IOIQualifier2.getFIXNumber(), 104);
+        assertEquals( tag104IOIQualifier2.getFIXDescription(), "IOIQualifier");
     }
     @Test
     void Tag0105Test() {
+        FIXType tag105WaveNo = FIXType.WAVE_NO;
+        assertEquals( tag105WaveNo.getFIXName(), "WAVE_NO");
+        assertEquals( tag105WaveNo.getFIXNumber(), 105);
+        assertEquals( tag105WaveNo.getFIXDescription(), "WaveNo");
     }
     @Test
     void Tag0106Test() {
+        FIXType tag106Issuer = FIXType.ISSUER;
+        assertEquals( tag106Issuer.getFIXName(), "ISSUER");
+        assertEquals( tag106Issuer.getFIXNumber(), 106);
+        assertEquals( tag106Issuer.getFIXDescription(), "Issuer");
     }
     @Test
     void Tag0107Test() {
+        FIXType tag107SecurityDesc = FIXType.SECURITY_DESC;
+        assertEquals( tag107SecurityDesc.getFIXName(), "SECURITY_DESC");
+        assertEquals( tag107SecurityDesc.getFIXNumber(), 107);
+        assertEquals( tag107SecurityDesc.getFIXDescription(), "SecurityDesc");
     }
     @Test
     void Tag0108Test() {
+        FIXType tag108HeartBtInt = FIXType.HEART_BT_INT;
+        assertEquals( tag108HeartBtInt.getFIXName(), "HEART_BT_INT");
+        assertEquals( tag108HeartBtInt.getFIXNumber(), 108);
+        assertEquals( tag108HeartBtInt.getFIXDescription(), "HeartBtInt");
     }
     @Test
     void Tag0109Test() {
+        FIXType tag109ClientID = FIXType.CLIENT_ID;
+        assertEquals( tag109ClientID.getFIXName(), "CLIENT_ID");
+        assertEquals( tag109ClientID.getFIXNumber(), 109);
+        assertEquals( tag109ClientID.getFIXDescription(), "ClientID");
     }
     @Test
     void Tag0110Test() {
+        FIXType tag110MinQty = FIXType.MIN_QTY;
+        assertEquals( tag110MinQty.getFIXName(), "MIN_QTY");
+        assertEquals( tag110MinQty.getFIXNumber(), 110);
+        assertEquals( tag110MinQty.getFIXDescription(), "MinQty");
     }
     @Test
     void Tag0111Test() {
+        FIXType tag111MaxFloor = FIXType.MAX_FLOOR;
+        assertEquals( tag111MaxFloor.getFIXName(), "MAX_FLOOR");
+        assertEquals( tag111MaxFloor.getFIXNumber(), 111);
+        assertEquals( tag111MaxFloor.getFIXDescription(), "MaxFloor");
     }
     @Test
     void Tag0112Test() {
+        FIXType tag112TestReqID = FIXType.TEST_REQ_ID;
+        assertEquals( tag112TestReqID.getFIXName(), "TEST_REQ_ID");
+        assertEquals( tag112TestReqID.getFIXNumber(), 112);
+        assertEquals( tag112TestReqID.getFIXDescription(), "TestReqID");
     }
     @Test
     void Tag0113Test() {
+        FIXType tag113ReportToExch = FIXType.REPORT_TO_EXCH;
+        assertEquals( tag113ReportToExch.getFIXName(), "REPORT_TO_EXCH");
+        assertEquals( tag113ReportToExch.getFIXNumber(), 113);
+        assertEquals( tag113ReportToExch.getFIXDescription(), "ReportToExch");
     }
     @Test
     void Tag0114Test() {
+        FIXType tag114LocateReqd = FIXType.LOCATE_REQD;
+        assertEquals( tag114LocateReqd.getFIXName(), "LOCATE_REQD");
+        assertEquals( tag114LocateReqd.getFIXNumber(), 114);
+        assertEquals( tag114LocateReqd.getFIXDescription(), "LocateReqd");
     }
     @Test
     void Tag0115Test() {
+        FIXType tag115OnBehalfOfCompID = FIXType.ON_BEHALF_OF_COMP_ID;
+        assertEquals( tag115OnBehalfOfCompID.getFIXName(), "ON_BEHALF_OF_COMP_ID");
+        assertEquals( tag115OnBehalfOfCompID.getFIXNumber(), 115);
+        assertEquals( tag115OnBehalfOfCompID.getFIXDescription(), "OnBehalfOfCompID");
     }
     @Test
     void Tag0116Test() {
+        FIXType tag116OnBehalfOfSubID = FIXType.ON_BEHALF_OF_SUB_ID;
+        assertEquals( tag116OnBehalfOfSubID.getFIXName(), "ON_BEHALF_OF_SUB_ID");
+        assertEquals( tag116OnBehalfOfSubID.getFIXNumber(), 116);
+        assertEquals( tag116OnBehalfOfSubID.getFIXDescription(), "CxlRejReason");
     }
     @Test
     void Tag0117Test() {
+        FIXType tag117QuoteID = FIXType.QUOTE_ID;
+        assertEquals( tag117QuoteID.getFIXName(), "QUOTE_ID");
+        assertEquals( tag117QuoteID.getFIXNumber(), 117);
+        assertEquals( tag117QuoteID.getFIXDescription(), "QuoteID");
     }
     @Test
     void Tag0118Test() {
+        FIXType tag118NetMoney = FIXType.NET_MONEY;
+        assertEquals( tag118NetMoney.getFIXName(), "NET_MONEY");
+        assertEquals( tag118NetMoney.getFIXNumber(), 118);
+        assertEquals( tag118NetMoney.getFIXDescription(), "NetMoney");
     }
     @Test
     void Tag0119Test() {
+        FIXType tag119SettlCurrAmt = FIXType.SETTL_CURR_AMT;
+        assertEquals( tag119SettlCurrAmt.getFIXName(), "SETTL_CURR_AMT");
+        assertEquals( tag119SettlCurrAmt.getFIXNumber(), 119);
+        assertEquals( tag119SettlCurrAmt.getFIXDescription(), "SettlCurrAmt");
     }
     @Test
     void Tag0120Test() {
+        FIXType tag120SettlCurrency = FIXType.SETTL_CURRENCY;
+        assertEquals( tag120SettlCurrency.getFIXName(), "SETTL_CURRENCY");
+        assertEquals( tag120SettlCurrency.getFIXNumber(), 102);
+        assertEquals( tag120SettlCurrency.getFIXDescription(), "SettlCurrency");
     }
     @Test
     void Tag0121Test() {
+        FIXType tag121ForexReq = FIXType.FOREX_REQ;
+        assertEquals( tag121ForexReq.getFIXName(), "FOREX_REQ");
+        assertEquals( tag121ForexReq.getFIXNumber(), 121);
+        assertEquals( tag121ForexReq.getFIXDescription(), "ForexReq");
     }
     @Test
     void Tag0122Test() {
+        FIXType tag122OrigSendingTime = FIXType.ORIG_SENDING_TIME;
+        assertEquals( tag122OrigSendingTime.getFIXName(), "ORIG_SENDING_TIME");
+        assertEquals( tag122OrigSendingTime.getFIXNumber(), 122);
+        assertEquals( tag122OrigSendingTime.getFIXDescription(), "OrigSendingTime");
     }
     @Test
     void Tag0123Test() {
+        FIXType tag123GapFillFlag = FIXType.GAP_FILL_FLAG;
+        assertEquals( tag123GapFillFlag.getFIXName(), "GAP_FILL_FLAG");
+        assertEquals( tag123GapFillFlag.getFIXNumber(), 123);
+        assertEquals( tag123GapFillFlag.getFIXDescription(), "GapFillFlag");
     }
     @Test
     void Tag0124Test() {
+        FIXType tag124NoExecs = FIXType.NO_EXECS;
+        assertEquals( tag124NoExecs.getFIXName(), "NO_EXECS");
+        assertEquals( tag124NoExecs.getFIXNumber(), 124);
+        assertEquals( tag124NoExecs.getFIXDescription(), "NoExecs");
     }
     @Test
     void Tag0125Test() {
+        FIXType tag125CxlType = FIXType.CXL_TYPE;
+        assertEquals( tag125CxlType.getFIXName(), "CXL_TYPE");
+        assertEquals( tag125CxlType.getFIXNumber(), 125);
+        assertEquals( tag125CxlType.getFIXDescription(), "CxlType");
     }
     @Test
     void Tag0126Test() {
+        FIXType tag126ExpireTime = FIXType.EXPIRE_TIME;
+        assertEquals( tag126ExpireTime.getFIXName(), "EXPIRE_TIME");
+        assertEquals( tag126ExpireTime.getFIXNumber(), 126);
+        assertEquals( tag126ExpireTime.getFIXDescription(), "ExpireTime");
     }
     @Test
     void Tag0127Test() {
+        FIXType tag127DKReason = FIXType.DK_REASON;
+        assertEquals( tag127DKReason.getFIXName(), "DK_REASON");
+        assertEquals( tag127DKReason.getFIXNumber(), 127);
+        assertEquals( tag127DKReason.getFIXDescription(), "DKReason");
     }
     @Test
     void Tag0128Test() {
+        FIXType tag128DeliverToCompID = FIXType.DELIVER_TO_COMP_ID;
+        assertEquals( tag128DeliverToCompID.getFIXName(), "DELIVER_TO_COMP_ID");
+        assertEquals( tag128DeliverToCompID.getFIXNumber(), 128);
+        assertEquals( tag128DeliverToCompID.getFIXDescription(), "DeliverToCompID");
     }
     @Test
     void Tag0129Test() {
+        FIXType tag129DeliverToSubID = FIXType.DELIVER_TO_SUB_ID;
+        assertEquals( tag129DeliverToSubID.getFIXName(), "DELIVER_TO_SUB_ID");
+        assertEquals( tag129DeliverToSubID.getFIXNumber(), 129);
+        assertEquals( tag129DeliverToSubID.getFIXDescription(), "DeliverToSubID");
     }
     @Test
     void Tag0130Test() {
+        FIXType tag130IOINaturalFlag = FIXType.IOI_NATURAL_FLAG;
+        assertEquals( tag130IOINaturalFlag.getFIXName(), "IOI_NATURAL_FLAG");
+        assertEquals( tag130IOINaturalFlag.getFIXNumber(), 130);
+        assertEquals( tag130IOINaturalFlag.getFIXDescription(), "IOINaturalFlag");
     }
     @Test
     void Tag0131Test() {
+        FIXType tag131QuoteReqID = FIXType.QUOTE_REQ_ID;
+        assertEquals( tag131QuoteReqID.getFIXName(), "QUOTE_REQ_ID");
+        assertEquals( tag131QuoteReqID.getFIXNumber(), 131);
+        assertEquals( tag131QuoteReqID.getFIXDescription(), "QuoteReqID");
     }
     @Test
     void Tag0132Test() {
+        FIXType tag132BidPx = FIXType.BID_PX;
+        assertEquals( tag132BidPx.getFIXName(), "BID_PX");
+        assertEquals( tag132BidPx.getFIXNumber(), 132);
+        assertEquals( tag132BidPx.getFIXDescription(), "BidPx");
     }
     @Test
     void Tag0133Test() {
+        FIXType tag133OfferPx = FIXType.OFFER_PX;
+        assertEquals( tag133OfferPx.getFIXName(), "OFFER_PX");
+        assertEquals( tag133OfferPx.getFIXNumber(), 133);
+        assertEquals( tag133OfferPx.getFIXDescription(), "OfferPx");
     }
     @Test
     void Tag0134Test() {
+        FIXType tag134BidSize = FIXType.BID_SIZE;
+        assertEquals( tag134BidSize.getFIXName(), "BID_SIZE");
+        assertEquals( tag134BidSize.getFIXNumber(), 134);
+        assertEquals( tag134BidSize.getFIXDescription(), "BidSize");
     }
     @Test
     void Tag0135Test() {
+        FIXType tag135OfferSize = FIXType.OFFER_SIZE;
+        assertEquals( tag135OfferSize.getFIXName(), "OFFER_SIZE");
+        assertEquals( tag135OfferSize.getFIXNumber(), 135);
+        assertEquals( tag135OfferSize.getFIXDescription(), "OfferSize");
     }
     @Test
     void Tag0136Test() {
+        FIXType tag136NoMiscFees = FIXType.NO_MISC_FEES;
+        assertEquals( tag136NoMiscFees.getFIXName(), "NO_MISC_FEES");
+        assertEquals( tag136NoMiscFees.getFIXNumber(), 136);
+        assertEquals( tag136NoMiscFees.getFIXDescription(), "NoMiscFees");
     }
     @Test
     void Tag0137Test() {
+        FIXType tag137MiscFeeAmt = FIXType.MISC_FEE_AMT;
+        assertEquals( tag137MiscFeeAmt.getFIXName(), "MISC_FEE_AMT");
+        assertEquals( tag137MiscFeeAmt.getFIXNumber(), 137);
+        assertEquals( tag137MiscFeeAmt.getFIXDescription(), "MiscFeeAmt");
     }
     @Test
     void Tag0138Test() {
+        FIXType tag138MiscFeeCurr = FIXType.MISC_FEE_CURR;
+        assertEquals( tag138MiscFeeCurr.getFIXName(), "MISC_FEE_CURR");
+        assertEquals( tag138MiscFeeCurr.getFIXNumber(), 138);
+        assertEquals( tag138MiscFeeCurr.getFIXDescription(), "MiscFeeCurr");
     }
     @Test
     void Tag0139Test() {
+        FIXType tag139MiscFeeType = FIXType.MISC_FEE_TYPE;
+        assertEquals( tag139MiscFeeType.getFIXName(), "MISC_FEE_TYPE");
+        assertEquals( tag139MiscFeeType.getFIXNumber(), 139);
+        assertEquals( tag139MiscFeeType.getFIXDescription(), "MiscFeeType");
     }
     @Test
     void Tag0140Test() {
+        TagType tag140PrevClosePx = new TagType(FIXType.PREV_CLOSE_PX,"10.23");
+        assertEquals( tag140PrevClosePx.getFIXName(), "PREV_CLOSE_PX");
+        assertEquals( tag140PrevClosePx.getFIXNumber(), 140);
+        assertEquals( tag140PrevClosePx.getFIXDescription(), "PrevClosePx");
     }
     /*
      *
@@ -3522,189 +4077,18 @@ public class FixTypeTest {
     /*
      * Start of FIX5.x as defined by the FIX Protocol Specification 5.x?
      *  Tags: 1140-????
+     * TODO: define tag stubs as needed
      */
-    @Test
-    void Tag1140Test() {
-    }
-    @Test
-    void Tag1141Test() {
-    }
-    @Test
-    void Tag1142Test() {
-    }
-    @Test
-    void Tag1143Test() {
-    }
-    @Test
-    void Tag1144Test() {
-    }
-    @Test
-    void Tag1145Test() {
-    }
-    @Test
-    void Tag1146Test() {
-    }
-    @Test
-    void Tag1147Test() {
-    }
-    @Test
-    void Tag1148Test() {
-    }
-    @Test
-    void Tag1149Test() {
-    }
-    @Test
-    void Tag1150Test() {
-    }
-    @Test
-    void Tag1151Test() {
-    }
-    @Test
-    void Tag1152Test() {
-    }
-    @Test
-    void Tag1153Test() {
-    }
-    @Test
-    void Tag1154Test() {
-    }
-    @Test
-    void Tag1155Test() {
-    }
-    @Test
-    void Tag1156Test() {
-    }
-    @Test
-    void Tag1157Test() {
-    }
-    @Test
-    void Tag1158Test() {
-    }
-    @Test
-    void Tag1159Test() {
-    }
-    @Test
-    void Tag1160Test() {
-    }
-    @Test
-    void Tag1161Test() {
-    }
-    @Test
-    void Tag1162Test() {
-    }
-    @Test
-    void Tag1163Test() {
-    }
-    @Test
-    void Tag1164Test() {
-    }
-    @Test
-    void Tag1165Test() {
-    }
-    @Test
-    void Tag1166Test() {
-    }
-    @Test
-    void Tag1167Test() {
-    }
-    @Test
-    void Tag1168Test() {
-    }
-    @Test
-    void Tag1169Test() {
-    }
-    @Test
-    void Tag1170Test() {
-    }
-    @Test
-    void Tag1171Test() {
-    }
-    @Test
-    void Tag1172Test() {
-    }
-    @Test
-    void Tag1173Test() {
-    }
-    @Test
-    void Tag1174Test() {
-    }
-    @Test
-    void Tag1175Test() {
-    }
-    @Test
-    void Tag1176Test() {
-    }
-    @Test
-    void Tag1177Test() {
-    }
-    @Test
-    void Tag1178Test() {
-    }
-    @Test
-    void Tag1179Test() {
-    }
-    @Test
-    void Tag1180Test() {
-    }
-    @Test
-    void Tag1181Test() {
-    }
-    @Test
-    void Tag1182Test() {
-    }
-    @Test
-    void Tag1183Test() {
-    }
-    @Test
-    void Tag1184Test() {
-    }
-    @Test
-    void Tag1185Test() {
-    }
-    @Test
-    void Tag1186Test() {
-    }
-    @Test
-    void Tag1187Test() {
-    }
-    @Test
-    void Tag1188Test() {
-    }
-    @Test
-    void Tag1189Test() {
-    }
-    @Test
-    void Tag1190Test() {
-    }
-    @Test
-    void Tag1191Test() {
-    }
-    @Test
-    void Tag1192Test() {
-    }
-    @Test
-    void Tag1193Test() {
-    }
-    @Test
-    void Tag1194Test() {
-    }
-    @Test
-    void Tag1195Test() {
-    }
-    @Test
-    void Tag1196Test() {
-    }
-    @Test
-    void Tag1197Test() {
-    }
-    @Test
-    void Tag1198Test() {
-    }
-    @Test
-    void Tag1199Test() {
-    }
-    @Test
-    void Tag1200Test() {
-    }
+
+//    @Test
+//    void Tag1140Test() {
+//    }
+
+    /*
+     *
+     * END of complete FIX5x tags????
+     *
+     */
+
 
 }
