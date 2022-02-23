@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.views;
 
 import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
-import com.hwtsllc.fixengine2022.fix40.CompanyName;
 import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
 
 import org.apache.log4j.LogManager;
@@ -31,11 +30,9 @@ public class TestViews {
 
     public static void main (String[] args) {
 
-        CompanyName companyName = new CompanyName();
-        Tag55Symbol tag55Symbol = new Tag55Symbol();
+        Tag55Symbol tag55Symbol = new Tag55Symbol(Tag55Symbol.TESTA_TICKER_SYMBOL);
         TradeView testView =
                 new TradeView.TradeViewBuilder(Tag35MsgType.EXECUTION_REPORT).
-                        buildCompanyName(companyName).
                         buildTickerSymbol(tag55Symbol).
                         build();
         System.out.println(testView);

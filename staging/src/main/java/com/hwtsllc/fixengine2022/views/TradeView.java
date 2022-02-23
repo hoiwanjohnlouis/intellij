@@ -28,25 +28,21 @@ public class TradeView {
     private static final Logger logger = LogManager.getRootLogger();
 
     private final Tag35MsgType tag35MsgType;
-    private final CompanyName companyName;
     private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
     private final OpeningPrice previousDaysClosingPrice;
     private final OpeningPrice lastTradeOpeningPrice;
     private final Tag32LastQty tag32LastQty;
-    private final LastTradeDateStamp lastTradeDateStamp;
     private final Tag60TransactTime tag60TransactTime;
     private final StringBuilder stringBuilder = new StringBuilder();
 
     private TradeView(TradeViewBuilder tradeViewBuilder) {
         this.tag35MsgType = tradeViewBuilder.tag35MsgType;
-        this.companyName = tradeViewBuilder.companyName;
         this.tag55Symbol = tradeViewBuilder.tag55Symbol;
         this.openingPrice = tradeViewBuilder.openingPrice;
         this.previousDaysClosingPrice = tradeViewBuilder.previousDaysClosingPrice;
         this.lastTradeOpeningPrice = tradeViewBuilder.lastTradeOpeningPrice;
         this.tag32LastQty = tradeViewBuilder.tag32LastQty;
-        this.lastTradeDateStamp = tradeViewBuilder.lastTradeDateStamp;
         this.tag60TransactTime = tradeViewBuilder.tag60TransactTime;
     }
 
@@ -55,7 +51,6 @@ public class TradeView {
         stringBuilder.setLength(0);
         stringBuilder.append(tag35MsgType);
         stringBuilder.append("\n");
-        stringBuilder.append(companyName);
         stringBuilder.append("\n");
         stringBuilder.append(tag55Symbol);
         stringBuilder.append("\n");
@@ -66,8 +61,6 @@ public class TradeView {
         stringBuilder.append(lastTradeOpeningPrice);
         stringBuilder.append("\n");
         stringBuilder.append(tag32LastQty);
-        stringBuilder.append("\n");
-        stringBuilder.append(lastTradeDateStamp);
         stringBuilder.append("\n");
         stringBuilder.append(tag60TransactTime);
 
@@ -82,31 +75,22 @@ public class TradeView {
         private final String DEBUG_TAG = this.getClass().getSimpleName();
 
         private Tag35MsgType tag35MsgType;
-        private CompanyName companyName;
         private Tag55Symbol tag55Symbol;
         private OpeningPrice openingPrice;
         private OpeningPrice previousDaysClosingPrice;
         private OpeningPrice lastTradeOpeningPrice;
         private Tag32LastQty tag32LastQty;
-        private LastTradeDateStamp lastTradeDateStamp;
         private Tag60TransactTime tag60TransactTime;
 
         // static helper class to build object
         public TradeViewBuilder(Tag35MsgType tag35MsgType) {
             this.tag35MsgType = tag35MsgType;
-            this.companyName = new CompanyName();
-            this.tag55Symbol = new Tag55Symbol();
-            this.openingPrice = new OpeningPrice();
-            this.previousDaysClosingPrice = new OpeningPrice();
-            this.lastTradeOpeningPrice = new OpeningPrice();
+            this.tag55Symbol = new Tag55Symbol(Tag55Symbol.TESTA_TICKER_SYMBOL);
+            this.openingPrice = new OpeningPrice(Tag31LastPx.TESTA_SYMBOL_LAST_PX);
+            this.previousDaysClosingPrice = new OpeningPrice(Tag31LastPx.TESTA_SYMBOL_LAST_PX);
+            this.lastTradeOpeningPrice = new OpeningPrice(Tag31LastPx.TESTA_SYMBOL_LAST_PX);
             this.tag32LastQty = new Tag32LastQty();
-            this.lastTradeDateStamp = new LastTradeDateStamp();
-            this.tag60TransactTime = new Tag60TransactTime();
-        }
-
-        public TradeViewBuilder buildCompanyName(CompanyName companyName) {
-            this.companyName = companyName;
-            return this;
+            this.tag60TransactTime = new Tag60TransactTime(Tag60TransactTime.TESTA_TRANSACT_TIME);
         }
 
         public TradeViewBuilder buildTickerSymbol(Tag55Symbol tag55Symbol) {
@@ -131,11 +115,6 @@ public class TradeView {
 
         public TradeViewBuilder buildTradeQuantity(Tag32LastQty tag32LastQty) {
             this.tag32LastQty = tag32LastQty;
-            return this;
-        }
-
-        public TradeViewBuilder buildTradeDateStamp(LastTradeDateStamp lastTradeDateStamp) {
-            this.lastTradeDateStamp = lastTradeDateStamp;
             return this;
         }
 

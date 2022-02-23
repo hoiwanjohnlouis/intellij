@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,6 +26,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TagTypeTest {
+
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {
@@ -807,7 +812,7 @@ class TagTypeTest {
         FIXType tag109ClientID = FIXType.CLIENT_ID;
         assertEquals( tag109ClientID.getFIXName(), "CLIENT_ID");
         assertEquals( tag109ClientID.getFIXNumber(), 109);
-        assertEquals( tag109ClientID.getFIXDescription(), "ClientID");
+        assertEquals( tag109ClientID.getFIXDescription(), "ClientID (replaced)");
     }
     @Test
     void Tag0110Test() {
@@ -856,7 +861,7 @@ class TagTypeTest {
         FIXType tag116OnBehalfOfSubID = FIXType.ON_BEHALF_OF_SUB_ID;
         assertEquals( tag116OnBehalfOfSubID.getFIXName(), "ON_BEHALF_OF_SUB_ID");
         assertEquals( tag116OnBehalfOfSubID.getFIXNumber(), 116);
-        assertEquals( tag116OnBehalfOfSubID.getFIXDescription(), "CxlRejReason");
+        assertEquals( tag116OnBehalfOfSubID.getFIXDescription(), "OnBehalfOfSubID");
     }
     @Test
     void Tag0117Test() {
@@ -883,7 +888,7 @@ class TagTypeTest {
     void Tag0120Test() {
         FIXType tag120SettlCurrency = FIXType.SETTL_CURRENCY;
         assertEquals( tag120SettlCurrency.getFIXName(), "SETTL_CURRENCY");
-        assertEquals( tag120SettlCurrency.getFIXNumber(), 102);
+        assertEquals( tag120SettlCurrency.getFIXNumber(), 120);
         assertEquals( tag120SettlCurrency.getFIXDescription(), "SettlCurrency");
     }
     @Test
@@ -919,7 +924,7 @@ class TagTypeTest {
         FIXType tag125CxlType = FIXType.CXL_TYPE;
         assertEquals( tag125CxlType.getFIXName(), "CXL_TYPE");
         assertEquals( tag125CxlType.getFIXNumber(), 125);
-        assertEquals( tag125CxlType.getFIXDescription(), "CxlType");
+        assertEquals( tag125CxlType.getFIXDescription(), "CxlType (no longer used)");
     }
     @Test
     void Tag0126Test() {

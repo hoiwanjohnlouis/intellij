@@ -21,25 +21,36 @@ import com.hwtsllc.fixengine2022.datatypes.FieldType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+/**
+ * 	UTCTimestamp:  Time/date combination represented in UTC (Universal Time Coordinated, also known as “GMT”) in either
+ *     	YYYYMMDD-HH:MM:SS (whole seconds) or
+ *     	YYYYMMDD-HH:MM:SS.sss (milliseconds) format, colons, dash, and period required.
+ *
+ * Valid values:
+ *      YYYY = 0000-9999, MM = 01-12, DD = 01-31, HH = 00-23, MM = 00-59, SS = 00-60 (60 only if UTC leap second) (without milliseconds).
+ *      YYYY = 0000-9999, MM = 01-12, DD = 01-31, HH = 00-23, MM = 00-59, SS = 00-60 (60 only if UTC leap second), sss=000-999 (indicating milliseconds).
+ *
+ * Leap Seconds:  Note that UTC includes corrections for leap seconds, which are inserted to account for slowing of the rotation of the earth.
+ *      Leap second insertion is declared by the International Earth Rotation Service (IERS) and has, since 1972,
+ *      only occurred on the night of Dec. 31 or Jun 30.  The IERS considers March 31 and September 30 as
+ *      secondary dates for leap second insertion, but has never utilized these dates.
+ *
+ *      During a leap second insertion, a UTCTimestamp field may read "19981231-23:59:59", "19981231-23:59:60", "19990101-00:00:00".
+ *      (see http://tycho.usno.navy.mil/leapsec.html)
+ */
 public class Tag60TransactTime {
 
     // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    public final static String DEFAULT_VALUE = "00:00:00";
-
-    private final FieldType fieldType;
+    private final FieldType fieldType = FieldType.LAST_TRADE_TIME_STAMP;
     private final String timeStamp;
 
-    //
-    public Tag60TransactTime() {
-        this.fieldType = FieldType.DEFAULT_LAST_TRADE_TIME_STAMP;
-        this.timeStamp = DEFAULT_VALUE;
-    }
+    public final static String TESTA_TRANSACT_TIME = "18991231-23:59:60";
+    public final static String TESTB_TRANSACT_TIME = "18991231-00:00:00";
 
     public Tag60TransactTime(final String timeStamp) {
-        this.fieldType = FieldType.LAST_TRADE_TIME_STAMP;
         this.timeStamp = timeStamp;
     }
 

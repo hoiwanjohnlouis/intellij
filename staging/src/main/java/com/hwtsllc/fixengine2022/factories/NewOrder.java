@@ -29,34 +29,26 @@ public class NewOrder implements Comparable {
     private static final Logger logger = LogManager.getRootLogger();
 
     private final Tag35MsgType tag35MsgType;
-    private final CompanyName companyName;
     private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
     private final Tag140PrevClosePx tag140PrevClosePx;
     private final Tag31LastPx tag31LastPx;
     private final Tag32LastQty tag32LastQty;
-    private final LastTradeDateStamp lastTradeDateStamp;
     private final Tag60TransactTime tag60TransactTime;
 
     //
     private NewOrder(Builder builder) {
         this.tag35MsgType = builder.tag35MsgType;
-        this.companyName = builder.companyName;
         this.tag55Symbol = builder.tag55Symbol;
         this.openingPrice = builder.openingPrice;
         this.tag140PrevClosePx = builder.tag140PrevClosePx;
         this.tag31LastPx = builder.tag31LastPx;
         this.tag32LastQty = builder.tag32LastQty;
-        this.lastTradeDateStamp = builder.lastTradeDateStamp;
         this.tag60TransactTime = builder.tag60TransactTime;
     }
 
     public Tag35MsgType getMsgType() {
         return tag35MsgType;
-    }
-
-    public CompanyName getCompanyName() {
-        return companyName;
     }
 
     public Tag55Symbol getTickerSymbol() {
@@ -79,10 +71,6 @@ public class NewOrder implements Comparable {
         return tag32LastQty;
     }
 
-    public LastTradeDateStamp getLastTradeDateStamp() {
-        return lastTradeDateStamp;
-    }
-
     public Tag60TransactTime getLastTradeTimeStamp() {
         return tag60TransactTime;
     }
@@ -96,8 +84,6 @@ public class NewOrder implements Comparable {
         // clean up the buffer before using.
         stringBuilder.append(tag35MsgType.getTag35MsgTypeValue());
         stringBuilder.append("\n");
-        stringBuilder.append(companyName.getCompanyName());
-        stringBuilder.append("\n");
         stringBuilder.append(tag55Symbol.getTickerSymbol());
         stringBuilder.append("\n");
         stringBuilder.append(openingPrice.getPrice());
@@ -107,8 +93,6 @@ public class NewOrder implements Comparable {
         stringBuilder.append(tag31LastPx.getTag31LastPxValue());
         stringBuilder.append("\n");
         stringBuilder.append(tag32LastQty.getTag32LastQtyValue());
-        stringBuilder.append("\n");
-        stringBuilder.append(lastTradeDateStamp.getDateStamp());
         stringBuilder.append("\n");
         stringBuilder.append(tag60TransactTime.getTimeStamp());
 
@@ -128,23 +112,16 @@ public class NewOrder implements Comparable {
         private StringBuilder stringBuilder = new StringBuilder();
 
         private Tag35MsgType tag35MsgType;
-        private CompanyName companyName;                // 1
         private Tag55Symbol tag55Symbol;              // 2
         private OpeningPrice openingPrice;              // 3
         private Tag140PrevClosePx tag140PrevClosePx;    // 4
         private Tag31LastPx tag31LastPx;          // 5
         private Tag32LastQty tag32LastQty;    // 6
-        private LastTradeDateStamp lastTradeDateStamp;  // 7
         private Tag60TransactTime tag60TransactTime;  // 8
 
         // helper class to build object
         public Builder(Tag35MsgType tag35MsgType) {
             this.tag35MsgType = tag35MsgType;
-        }
-
-        public Builder buildCompanyName(String companyName) {
-            this.companyName = new CompanyName(companyName);
-            return this;
         }
 
         public Builder buildTickerSymbol(String tickerSymbol) {
@@ -169,11 +146,6 @@ public class NewOrder implements Comparable {
 
         public Builder buildLastTradeQuantity(double lastTradeQuantity) {
             this.tag32LastQty = new Tag32LastQty(lastTradeQuantity);
-            return this;
-        }
-
-        public Builder buildLastTradeDateStamp(String lastTradeDateStamp) {
-            this.lastTradeDateStamp = new LastTradeDateStamp(lastTradeDateStamp);
             return this;
         }
 

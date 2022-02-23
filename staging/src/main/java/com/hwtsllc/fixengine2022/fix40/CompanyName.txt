@@ -28,17 +28,10 @@ public class CompanyName {
 
     private final String DEFAULT_VALUE = "Default Company Widgets, Inc.";
 
-    private final FieldType fieldType;
+    private final FieldType fieldType = FieldType.COMPANY_NAME;
     private final String companyName;
 
-    //
-    public CompanyName() {
-        this.fieldType = FieldType.DEFAULT_COMPANY_NAME;
-        this.companyName = DEFAULT_VALUE;
-    }
-
     public CompanyName(final String companyName) {
-        this.fieldType = FieldType.COMPANY_NAME;
         this.companyName = companyName;
     }
 

@@ -32,12 +32,6 @@ public class OpeningPrice {
     private final FieldType fieldType;
     private final double price;
 
-    //
-    public OpeningPrice() {
-        this.fieldType = FieldType.DEFAULT_OPENING_PRICE;
-        this.price = DEFAULT_VALUE;
-    }
-
     public OpeningPrice(final double price) {
         this.fieldType = FieldType.OPENING_PRICE;
         this.price = price;

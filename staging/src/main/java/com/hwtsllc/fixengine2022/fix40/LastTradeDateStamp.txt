@@ -32,18 +32,11 @@ public class LastTradeDateStamp {
 
     private final String DEFAULT_VALUE = "1900.01.01";
 
-    private final FieldType fieldType;
+    private final FieldType fieldType = FieldType.LAST_TRADE_DATE_STAMP;
     private final String dateStamp;
 
     //
-    public LastTradeDateStamp() {
-        this.fieldType = FieldType.DEFAULT_LAST_TRADE_DATE_STAMP;
-        this.dateStamp = DEFAULT_VALUE;
-    }
-
-    //
     public LastTradeDateStamp(final String dateStamp) {
-        this.fieldType = FieldType.LAST_TRADE_DATE_STAMP;
         this.dateStamp = dateStamp;
     }
 

@@ -16,5 +16,5 @@
 
 package com.hwtsllc.fixengine2022.fix50;
 
-public class Tag957NoStrategyParameters {
+class Tag957NoStrategyParameters {
 }

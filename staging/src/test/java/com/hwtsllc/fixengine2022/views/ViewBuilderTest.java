@@ -16,10 +16,16 @@
 
 package com.hwtsllc.fixengine2022.views;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class ViewBuilderTest {
+
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {
@@ -27,5 +33,9 @@ class ViewBuilderTest {
 
     @AfterEach
     void tearDown() {
+    }
+
+    @Test
+    void Test() {
     }
 }

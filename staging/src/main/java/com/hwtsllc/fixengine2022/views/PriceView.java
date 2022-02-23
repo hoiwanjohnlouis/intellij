@@ -31,7 +31,6 @@ public class PriceView {
     private final Tag55Symbol tag55Symbol;
     private final OpeningPrice lastTradeOpeningPrice;
     private final Tag32LastQty tag32LastQty;
-    private final LastTradeDateStamp lastTradeDateStamp;
     private final Tag60TransactTime tag60TransactTime;
 
     //
@@ -40,7 +39,6 @@ public class PriceView {
         this.tag55Symbol = priceViewBuilder.tag55Symbol;
         this.lastTradeOpeningPrice = priceViewBuilder.lastTradeOpeningPrice;
         this.tag32LastQty = priceViewBuilder.tag32LastQty;
-        this.lastTradeDateStamp = priceViewBuilder.lastTradeDateStamp;
         this.tag60TransactTime = priceViewBuilder.tag60TransactTime;
     }
 
@@ -60,10 +58,6 @@ public class PriceView {
         return tag32LastQty;
     }
 
-    public LastTradeDateStamp getLastTradeDateStamp() {
-        return lastTradeDateStamp;
-    }
-
     public Tag60TransactTime getLastTradeTimeStamp() {
         return tag60TransactTime;
     }
@@ -79,13 +73,10 @@ public class PriceView {
         stringBuilder.append("\n");
         stringBuilder.append(tag32LastQty);
         stringBuilder.append("\n");
-        stringBuilder.append(lastTradeDateStamp);
-        stringBuilder.append("\n");
         stringBuilder.append(tag60TransactTime);
 
         return stringBuilder.toString();
     }
-
 
     public static class PriceViewBuilder {
 
@@ -96,17 +87,15 @@ public class PriceView {
         private Tag55Symbol tag55Symbol;
         private OpeningPrice lastTradeOpeningPrice;
         private Tag32LastQty tag32LastQty;
-        private LastTradeDateStamp lastTradeDateStamp;
         private Tag60TransactTime tag60TransactTime;
 
         //
         public PriceViewBuilder(Tag35MsgType tag35MsgType) {
             this.tag35MsgType = tag35MsgType;
-            this.tag55Symbol = new Tag55Symbol();
-            this.lastTradeOpeningPrice = new OpeningPrice();
+            this.tag55Symbol = new Tag55Symbol(Tag55Symbol.TESTA_TICKER_SYMBOL);
+            this.lastTradeOpeningPrice = new OpeningPrice(Tag31LastPx.TESTA_SYMBOL_LAST_PX);
             this.tag32LastQty = new Tag32LastQty();
-            this.lastTradeDateStamp = new LastTradeDateStamp();
-            this.tag60TransactTime = new Tag60TransactTime();
+            this.tag60TransactTime = new Tag60TransactTime("18991231235959");
         }
 
         public PriceViewBuilder buildTickerSymbol(Tag55Symbol tag55Symbol) {
@@ -121,11 +110,6 @@ public class PriceView {
 
         public PriceViewBuilder buildTradeQuantity(Tag32LastQty tag32LastQty) {
             this.tag32LastQty = tag32LastQty;
-            return this;
-        }
-
-        public PriceViewBuilder buildTradeDateStamp(LastTradeDateStamp lastTradeDateStamp) {
-            this.lastTradeDateStamp = lastTradeDateStamp;
             return this;
         }
 

@@ -230,6 +230,7 @@ Tag370OnBehalfOfSendingTime.java
 Tag371RefTagID.java
 Tag372RefMsgType.java
 Tag373SessionRejectReason.java
+Tag374BidRequestTransType.java
 Tag375ContraBroker.java
 Tag376ComplianceID.java
 Tag377SolicitedFlag.java

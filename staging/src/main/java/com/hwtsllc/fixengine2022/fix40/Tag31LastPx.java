@@ -29,10 +29,8 @@ public class Tag31LastPx {
     private final FieldType fieldType;
     private final double tag31LastPx;
 
-    public Tag31LastPx() {
-        this.fieldType = FieldType.DEFAULT_LAST_TRADE_PRICE;
-        this.tag31LastPx = DEFAULT_VALUE;
-    }
+    public final static double TESTA_SYMBOL_LAST_PX = 123.45;
+    public final static double TESTB_SYMBOL_LAST_PX = 67.89;
 
     public Tag31LastPx(final double tag31LastPx) {
         this.fieldType = FieldType.LAST_TRADE_PRICE;

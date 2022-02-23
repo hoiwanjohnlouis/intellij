@@ -18,27 +18,38 @@ package com.hwtsllc.fixengine2022.factories;
 
 
 import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
-import com.hwtsllc.fixengine2022.fix40.CompanyName;
 import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
 import com.hwtsllc.fixengine2022.views.TradeView;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TestFactories {
 
-    // for logging purposes
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
+    @Test
+    void Test() {
+    }
 
     public static void main (String[] args) {
 
         //  testing ticker record construction
-        CompanyName companyName = new CompanyName();
-        Tag55Symbol tag55Symbol = new Tag55Symbol();
+        Tag55Symbol tag55Symbol = new Tag55Symbol(Tag55Symbol.TESTA_TICKER_SYMBOL);
         TradeView testView =
                 new TradeView.TradeViewBuilder(Tag35MsgType.EXECUTION_REPORT).
-                        buildCompanyName(companyName).
                         buildTickerSymbol(tag55Symbol).
                         build();
         System.out.println(testView);
