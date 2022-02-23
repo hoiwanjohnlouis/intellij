@@ -16,6 +16,5 @@
 
 package com.hwtsllc.fixengine2022.fix42;
 
-public class Tag331SellVolume
-{
+public class Tag331SellVolume {
 }
