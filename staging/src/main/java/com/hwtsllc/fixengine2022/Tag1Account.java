@@ -23,8 +23,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+//    private static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     private final FIXType fixType = FIXType.ACCOUNT;
     private final String dataValue;
@@ -62,7 +63,7 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
     @Override
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.getClass().getSimpleName())
+        sb.append(WHERE_AM_I)
                 .append("\n\tTagName[")
                 .append(getFIXName())
                 .append("]")
@@ -90,6 +91,9 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
      *
      */
     public static void main(String[] args) {
-
+        Tag1Account tag1Account = new Tag1Account("12345-6789");
+        logger.trace("1:"+tag1Account);
+        logger.info("2:"+tag1Account.toLogStringVerbose());
+        logger.warn("3:"+tag1Account.toFixTagValuePairString());
     }
 }

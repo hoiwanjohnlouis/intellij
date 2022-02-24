@@ -16,25 +16,34 @@
 
 package com.hwtsllc.fixengine2022.factories;
 
+import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
+import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class FIXHeader implements LogStringVerbose {
-    // for logging purposes
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    // private static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getLogger(FIXHeader.class);
 
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         return stringBuilder.toString();
     }
-
     @Override
     public String toLogStringVerbose() {
         StringBuilder stringBuilder = new StringBuilder();
         return stringBuilder.toString();
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        logger.trace("Hello from FIXHeader");
     }
 
 }

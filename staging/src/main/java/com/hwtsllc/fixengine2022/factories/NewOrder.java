@@ -23,10 +23,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class NewOrder implements Comparable {
-
-    // for logging purposes
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+//    private static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getLogger(NewOrder.class);
 
     private final Tag35MsgType tag35MsgType;
     private final Tag55Symbol tag55Symbol;
@@ -50,27 +49,21 @@ public class NewOrder implements Comparable {
     public Tag35MsgType getMsgType() {
         return tag35MsgType;
     }
-
     public Tag55Symbol getTickerSymbol() {
         return tag55Symbol;
     }
-
     public OpeningPrice getOpeningPrice() {
         return openingPrice;
     }
-
     public Tag140PrevClosePx getPreviousDaysClosingPrice() {
         return tag140PrevClosePx;
     }
-
     public Tag31LastPx getLastTradePrice() {
         return tag31LastPx;
     }
-
     public Tag32LastQty getLastTradeQuantity() {
         return tag32LastQty;
     }
-
     public Tag60TransactTime getLastTradeTimeStamp() {
         return tag60TransactTime;
     }
@@ -157,6 +150,14 @@ public class NewOrder implements Comparable {
         public NewOrder build() {
             return new NewOrder(this);
         }
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        logger.trace("New Order");
     }
 
 }

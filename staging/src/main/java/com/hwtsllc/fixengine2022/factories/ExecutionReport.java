@@ -24,10 +24,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class ExecutionReport {
-
-    // for logging purposes
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    // private static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getLogger(ExecutionReport.class);
 
     private final Tag35MsgType tag35MsgType;
     private final Tag55Symbol tag55Symbol;
@@ -51,31 +50,24 @@ public class ExecutionReport {
     public Tag35MsgType getMsgType() {
         return tag35MsgType;
     }
-
     public Tag55Symbol getTickerSymbol() {
         return tag55Symbol;
     }
-
     public OpeningPrice getOpeningPrice() {
         return openingPrice;
     }
-
     public Tag140PrevClosePx getPreviousDaysClosingPrice() {
         return tag140PrevClosePx;
     }
-
     public Tag31LastPx getLastTradePrice() {
         return tag31LastPx;
     }
-
     public Tag32LastQty getLastTradeQuantity() {
         return tag32LastQty;
     }
-
     public Tag60TransactTime getLastTradeTimeStamp() {
         return tag60TransactTime;
     }
-
 
     // If any EnemyShip object is printed to screen this shows up
     @Override
@@ -107,10 +99,6 @@ public class ExecutionReport {
 
     // static builder helper class
     public static class Builder {
-
-        private final String DEBUG_TAG = this.getClass().getSimpleName();
-        private final Logger logger = LogManager.getLogger(DEBUG_TAG);
-
         private StringBuilder stringBuilder = new StringBuilder();
 
         private Tag35MsgType tag35MsgType;
@@ -126,40 +114,50 @@ public class ExecutionReport {
             this.tag35MsgType = tag35MsgType;
         }
 
-
         public Builder buildTickerSymbol(String tickerSymbol) {
             this.tag55Symbol = new Tag55Symbol(tickerSymbol);
             return this;
         }
-
         public Builder buildOpeningPrice(double openingPrice) {
             this.openingPrice = new OpeningPrice(openingPrice);
             return this;
         }
-
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
             this.tag140PrevClosePx = new Tag140PrevClosePx(previousDaysClosingPrice);
             return this;
         }
-
         public Builder buildLastTradePrice(double lastTradePrice) {
             this.tag31LastPx = new Tag31LastPx(lastTradePrice);
             return this;
         }
-
         public Builder buildLastTradeQuantity(double lastTradeQuantity) {
             this.tag32LastQty = new Tag32LastQty(lastTradeQuantity);
             return this;
         }
-
         public Builder buildLastTradeTimeStamp(String lastTradeTimeStamp) {
             this.tag60TransactTime = new Tag60TransactTime(lastTradeTimeStamp);
             return this;
         }
-
         public ExecutionReport build() {
             return new ExecutionReport(this);
         }
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        ExecutionReport record =
+                new ExecutionReport.Builder(Tag35MsgType.EXECUTION_REPORT)
+                        .buildTickerSymbol(Tag55Symbol.TESTA_TICKER_SYMBOL)
+                        .buildOpeningPrice(12.34D)
+                        .buildPreviousDaysClosingPrice(56.78D)
+                        .buildLastTradePrice(90.12D)
+                        .buildLastTradeQuantity(123.4D)
+                        .buildLastTradeTimeStamp("102346 EST")
+                        .build();
+        logger.trace(record);
     }
 
 }

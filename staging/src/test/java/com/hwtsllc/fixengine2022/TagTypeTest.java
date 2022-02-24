@@ -27,15 +27,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TagTypeTest {
 
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    final String WHERE_AM_I = this.getClass().getSimpleName();
+//    private static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getLogger(TagTypeTest.class);
 
     @BeforeEach
     void setUp() {
+        //logger.info("@BeforeEach - executes before each test method in this class");
     }
 
     @AfterEach
     void tearDown() {
+        //logger.info("@AfterEach - executes after each test method in this class");
     }
 
     /*
@@ -51,9 +54,11 @@ class TagTypeTest {
         assertNotEquals( tag1Account.getFIXName(), "Not My ACCOUNT");
         assertNotEquals( tag1Account.getFIXNumber(), 2);
         assertNotEquals( tag1Account.getFIXDescription(), "123 Account");
+//        logger.info("Successful Tag0001Test()");
     }
     @Test
     void Tag0002Test() {
+        final String WHERE_AM_I = this.getClass().getSimpleName();
         FIXType tag100ExDestination = FIXType.EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
@@ -4084,11 +4089,6 @@ class TagTypeTest {
      *  Tags: 1140-????
      * TODO: define tag stubs as needed
      */
-
-//    @Test
-//    void Tag1140Test() {
-//    }
-
     /*
      *
      * END of complete FIX5x tags????

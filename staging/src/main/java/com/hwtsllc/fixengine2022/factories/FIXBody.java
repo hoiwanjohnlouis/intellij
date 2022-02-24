@@ -25,9 +25,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class FIXBody implements LogStringVerbose {
-    // for logging purposes
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    // private static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getLogger(FIXBody.class);
 
     private final Tag35MsgType tag35MsgType;
     private final Tag55Symbol tag55Symbol;
@@ -91,7 +91,6 @@ public class FIXBody implements LogStringVerbose {
 
         return stringBuilder.toString();
     }
-
     @Override
     public String toLogStringVerbose() {
         StringBuilder stringBuilder = new StringBuilder();
@@ -120,10 +119,6 @@ public class FIXBody implements LogStringVerbose {
 
     // static builder helper class
     public static class Builder {
-
-        private final String DEBUG_TAG = this.getClass().getSimpleName();
-        private final Logger logger = LogManager.getLogger(DEBUG_TAG);
-
         private StringBuilder stringBuilder = new StringBuilder();
 
         private Tag35MsgType tag35MsgType;
@@ -176,5 +171,22 @@ public class FIXBody implements LogStringVerbose {
         }
     }
 
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        FIXBody record =
+                new FIXBody.Builder(Tag35MsgType.NEW_ORDER)
+                        .buildTickerSymbol(Tag55Symbol.TESTA_TICKER_SYMBOL)
+                        .buildOpeningPrice(12.34D)
+                        .buildPreviousDaysClosingPrice(56.78D)
+                        .buildLastTradePrice(90.12D)
+                        .buildLastTradeQuantity(123.4D)
+                        .buildLastTradeTimeStamp("102346 EST")
+                        .build();
+        logger.trace(record);
+        logger.trace(record.toLogStringVerbose());
+    }
 }
 

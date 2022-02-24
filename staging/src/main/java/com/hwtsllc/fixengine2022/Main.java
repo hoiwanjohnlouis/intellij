@@ -16,12 +16,6 @@
 
 package com.hwtsllc.fixengine2022;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix40.Tag1Account;
-import com.hwtsllc.fixengine2022.fix40.Tag2AdvID;
-import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
-import com.hwtsllc.fixengine2022.factories.FIXBody;
-import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -34,18 +28,6 @@ public class Main {
      *
      */
     public static void main(String[] args) {
-
-        FIXBody record =
-                new FIXBody.Builder(Tag35MsgType.NEW_ORDER)
-                        .buildTickerSymbol(Tag55Symbol.TESTA_TICKER_SYMBOL)
-                        .buildOpeningPrice(12.34D)
-                        .buildPreviousDaysClosingPrice(56.78D)
-                        .buildLastTradePrice(90.12D)
-                        .buildLastTradeQuantity(123.4D)
-                        .buildLastTradeTimeStamp("102346 EST")
-                        .build();
-
-        System.out.println(record);
-        System.out.println(record.toLogStringVerbose());
+        logger.trace("Hello from Main");
     }
 }

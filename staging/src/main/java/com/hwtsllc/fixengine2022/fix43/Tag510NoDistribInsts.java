@@ -16,6 +16,5 @@
 
 package com.hwtsllc.fixengine2022.fix43;
 
-public class Tag510NoDistribInsts
-{
+public class Tag510NoDistribInsts {
 }
