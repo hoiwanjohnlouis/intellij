@@ -26,17 +26,16 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 class  Tag1AccountTest {
-
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
-        logger.info("@BeforeEach - executes before each test method in this class");
     }
+
     @AfterEach
     void tearDown() {
-        logger.info("@AfterEach - executes after each test method in this class");
     }
 
     @Test
@@ -44,6 +43,7 @@ class  Tag1AccountTest {
         Tag1Account tag1Account = new Tag1Account("1234567890");
         assertEquals( tag1Account.getDataValue(), "1234567890");
         assertNotEquals( tag1Account.getDataValue(), "abcdefghij");
+        logger.info(WHERE_AM_I + ":Successful Test()");
     }
 
 

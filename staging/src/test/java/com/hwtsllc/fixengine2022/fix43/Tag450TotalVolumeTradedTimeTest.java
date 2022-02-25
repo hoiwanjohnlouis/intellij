@@ -24,9 +24,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Deprecated
 class Tag450TotalVolumeTradedTimeTest {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -36,8 +38,10 @@ class Tag450TotalVolumeTradedTimeTest {
     void tearDown() {
     }
 
-    @Deprecated
     @Test
     void Test() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
     }
 }

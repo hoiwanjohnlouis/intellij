@@ -22,10 +22,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class PercentageTypeTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+class PercentageTypeTest {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -37,5 +39,8 @@ class PercentageTypeTest {
 
     @Test
     void Test() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
     }
 }

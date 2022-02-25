@@ -21,12 +21,32 @@ import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class TestViews {
-
-    private static final String DEBUG_TAG = TestViews.class.getSimpleName();
-    //    private static final Logger logger = Logger.getLogger(DEBUG_TAG);
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
+    @Test
+    void Test() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+        logger.info(WHERE_AM_I + ":Successful Test()");
+    }
 
     public static void main (String[] args) {
 
@@ -43,6 +63,5 @@ public class TestViews {
                         buildTickerSymbol(tag55Symbol).
                         build();
         System.out.println(priceView);
-
     }
 }

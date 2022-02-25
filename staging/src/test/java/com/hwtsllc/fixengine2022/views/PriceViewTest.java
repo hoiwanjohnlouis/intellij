@@ -22,10 +22,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class PriceViewTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+class PriceViewTest {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -37,5 +40,8 @@ class PriceViewTest {
 
     @Test
     void Test() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+        logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

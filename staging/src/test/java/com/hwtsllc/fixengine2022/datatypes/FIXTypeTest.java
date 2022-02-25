@@ -26,18 +26,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class FIXTypeTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class FIXTypeTest {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
-        // logger.info("@BeforeEach - executes before each test method in this class");
     }
+
     @AfterEach
     void tearDown() {
-        // logger.info("@AfterEach - executes after each test method in this class");
+    }
+
+    @Test
+    void Test() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
     }
 
     /*

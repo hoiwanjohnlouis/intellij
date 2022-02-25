@@ -39,8 +39,8 @@ class Tag502CashDistribAgentAcctNameTest {
 
     @Test
     void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
         assertEquals(1,1);
         assertNotEquals(2,1);
+        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
     }
 }

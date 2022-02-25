@@ -24,6 +24,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Deprecated
 class Tag177SecuritySettlAgentCodeTest {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -37,7 +38,6 @@ class Tag177SecuritySettlAgentCodeTest {
     }
 
     @Test
-    @Deprecated
     void Test() {
     }
 }

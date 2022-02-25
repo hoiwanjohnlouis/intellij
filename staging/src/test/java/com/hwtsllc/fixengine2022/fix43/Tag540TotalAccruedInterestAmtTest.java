@@ -24,6 +24,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Deprecated
 class Tag540TotalAccruedInterestAmtTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -37,7 +38,6 @@ class Tag540TotalAccruedInterestAmtTest {
     void tearDown() {
     }
 
-    @Deprecated
     @Test
     void Test() {
         logger.info(WHERE_AM_I + ":Successful Test()");
