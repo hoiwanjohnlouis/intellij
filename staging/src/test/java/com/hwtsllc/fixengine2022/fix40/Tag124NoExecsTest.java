@@ -45,6 +45,13 @@ class Tag124NoExecsTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0124Test() {
+        FIXType fix124NoExecs = FIXType.NO_EXECS;
+        assertEquals( fix124NoExecs.getFIXName(), "NO_EXECS");
+        assertEquals( fix124NoExecs.getFIXNumber(), 124);
+        assertEquals( fix124NoExecs.getFIXDescription(), "NoExecs");
+    }
+    @Test
     void Tag0124Test() {
         FIXType tag124NoExecs = FIXType.NO_EXECS;
         assertEquals( tag124NoExecs.getFIXName(), "NO_EXECS");

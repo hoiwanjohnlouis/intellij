@@ -44,6 +44,13 @@ class Tag113ReportToExchTest {
         assertNotEquals(2,1);
     }
     @Test
+    void FIX0113Test() {
+        FIXType fix113ReportToExch = FIXType.REPORT_TO_EXCH;
+        assertEquals( fix113ReportToExch.getFIXName(), "REPORT_TO_EXCH");
+        assertEquals( fix113ReportToExch.getFIXNumber(), 113);
+        assertEquals( fix113ReportToExch.getFIXDescription(), "ReportToExch");
+    }
+    @Test
     void Tag0113Test() {
         FIXType tag113ReportToExch = FIXType.REPORT_TO_EXCH;
         assertEquals( tag113ReportToExch.getFIXName(), "REPORT_TO_EXCH");

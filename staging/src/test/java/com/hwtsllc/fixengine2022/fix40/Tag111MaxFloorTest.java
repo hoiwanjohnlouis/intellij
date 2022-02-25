@@ -44,6 +44,13 @@ class Tag111MaxFloorTest {
         assertNotEquals(2,1);
     }
     @Test
+    void FIX0111Test() {
+        FIXType fix111MaxFloor = FIXType.MAX_FLOOR;
+        assertEquals( fix111MaxFloor.getFIXName(), "MAX_FLOOR");
+        assertEquals( fix111MaxFloor.getFIXNumber(), 111);
+        assertEquals( fix111MaxFloor.getFIXDescription(), "MaxFloor");
+    }
+    @Test
     void Tag0111Test() {
         FIXType tag111MaxFloor = FIXType.MAX_FLOOR;
         assertEquals( tag111MaxFloor.getFIXName(), "MAX_FLOOR");

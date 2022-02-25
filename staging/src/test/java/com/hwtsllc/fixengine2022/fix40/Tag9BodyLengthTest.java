@@ -45,6 +45,10 @@ class Tag9BodyLengthTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0009Test() {
+        FIXType fix9BodyLength = FIXType.BODY_LENGTH;
+    }
+    @Test
     void Tag0009Test() {
         FIXType tag100ExDestination = FIXType.EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");

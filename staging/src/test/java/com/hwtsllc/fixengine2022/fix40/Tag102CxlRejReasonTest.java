@@ -46,6 +46,13 @@ class Tag102CxlRejReasonTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0102Test() {
+        FIXType fix102CxlRejReason = FIXType.CXL_REJ_REASON;
+        assertEquals( fix102CxlRejReason.getFIXName(), "CXL_REJ_REASON");
+        assertEquals( fix102CxlRejReason.getFIXNumber(), 102);
+        assertEquals( fix102CxlRejReason.getFIXDescription(), "CxlRejReason");
+    }
+    @Test
     void Tag0102Test() {
         TagType tag102CxlRejReason = new TagType(FIXType.CXL_REJ_REASON,"ABC987654321XYZ");
         assertEquals( tag102CxlRejReason.getFIXName(), "CXL_REJ_REASON");

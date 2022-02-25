@@ -43,6 +43,13 @@ class Tag135OfferSizeTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0135Test() {
+        FIXType fix135OfferSize = FIXType.OFFER_SIZE;
+        assertEquals( fix135OfferSize.getFIXName(), "OFFER_SIZE");
+        assertEquals( fix135OfferSize.getFIXNumber(), 135);
+        assertEquals( fix135OfferSize.getFIXDescription(), "OfferSize");
+    }
+    @Test
     void Tag0135Test() {
         FIXType tag135OfferSize = FIXType.OFFER_SIZE;
         assertEquals( tag135OfferSize.getFIXName(), "OFFER_SIZE");

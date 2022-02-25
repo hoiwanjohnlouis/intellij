@@ -45,6 +45,10 @@ class Tag10CheckSumTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0010Test() {
+        FIXType fix10CheckSum = FIXType.CHECK_SUM;
+    }
+    @Test
     void Tag0010Test() {
         FIXType tag100ExDestination = FIXType.EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");

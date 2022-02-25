@@ -43,6 +43,10 @@ class Tag4AdvSideTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0004Test() {
+        FIXType fix4AdvSide = FIXType.ADV_SIDE;
+    }
+    @Test
     void Tag0004Test() {
         FIXType tag100ExDestination = FIXType.EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");

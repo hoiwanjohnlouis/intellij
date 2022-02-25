@@ -40,9 +40,11 @@ class Tag7BeginSeqNoTest {
 
     @Test
     void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void FIX0007Test() {
+        FIXType fix7BeginSeqNo = FIXType.BEGIN_SEQ_NO;
     }
     @Test
     void Tag0007Test() {

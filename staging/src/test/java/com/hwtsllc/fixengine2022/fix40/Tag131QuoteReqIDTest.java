@@ -43,6 +43,13 @@ class Tag131QuoteReqIDTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0131Test() {
+        FIXType fix131QuoteReqID = FIXType.QUOTE_REQ_ID;
+        assertEquals( fix131QuoteReqID.getFIXName(), "QUOTE_REQ_ID");
+        assertEquals( fix131QuoteReqID.getFIXNumber(), 131);
+        assertEquals( fix131QuoteReqID.getFIXDescription(), "QuoteReqID");
+    }
+    @Test
     void Tag0131Test() {
         FIXType tag131QuoteReqID = FIXType.QUOTE_REQ_ID;
         assertEquals( tag131QuoteReqID.getFIXName(), "QUOTE_REQ_ID");

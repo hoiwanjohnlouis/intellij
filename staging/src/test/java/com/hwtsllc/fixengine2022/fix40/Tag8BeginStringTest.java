@@ -40,9 +40,11 @@ class Tag8BeginStringTest {
 
     @Test
     void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void FIX0008Test() {
+        FIXType fix8BeginString = FIXType.BEGIN_STRING;
     }
     @Test
     void Tag0008Test() {

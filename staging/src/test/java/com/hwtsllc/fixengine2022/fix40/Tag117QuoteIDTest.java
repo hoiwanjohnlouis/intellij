@@ -44,6 +44,13 @@ class Tag117QuoteIDTest {
         assertNotEquals(2,1);
     }
     @Test
+    void FIX0117Test() {
+        FIXType fix117QuoteID = FIXType.QUOTE_ID;
+        assertEquals( fix117QuoteID.getFIXName(), "QUOTE_ID");
+        assertEquals( fix117QuoteID.getFIXNumber(), 117);
+        assertEquals( fix117QuoteID.getFIXDescription(), "QuoteID");
+    }
+    @Test
     void Tag0117Test() {
         FIXType tag117QuoteID = FIXType.QUOTE_ID;
         assertEquals( tag117QuoteID.getFIXName(), "QUOTE_ID");

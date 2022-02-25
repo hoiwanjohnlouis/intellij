@@ -45,6 +45,10 @@ class Tag5AdvTransTypeTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0005Test() {
+        FIXType fix5AdvTransType = FIXType.ADV_TRANS_TYPE;
+    }
+    @Test
     void Tag0005Test() {
         FIXType tag100ExDestination = FIXType.EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");

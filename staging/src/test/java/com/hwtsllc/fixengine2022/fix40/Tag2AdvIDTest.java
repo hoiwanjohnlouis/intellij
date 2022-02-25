@@ -45,6 +45,10 @@ class Tag2AdvIDTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0002Test() {
+        FIXType fix2AdvID = FIXType.ADV_ID;
+    }
+    @Test
     void Tag0002Test() {
         final String WHERE_AM_I = this.getClass().getSimpleName();
         FIXType tag100ExDestination = FIXType.EX_DESTINATION;

@@ -45,6 +45,13 @@ class Tag121ForexReqTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0121Test() {
+        FIXType fix121ForexReq = FIXType.FOREX_REQ;
+        assertEquals( fix121ForexReq.getFIXName(), "FOREX_REQ");
+        assertEquals( fix121ForexReq.getFIXNumber(), 121);
+        assertEquals( fix121ForexReq.getFIXDescription(), "ForexReq");
+    }
+    @Test
     void Tag0121Test() {
         FIXType tag121ForexReq = FIXType.FOREX_REQ;
         assertEquals( tag121ForexReq.getFIXName(), "FOREX_REQ");

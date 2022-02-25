@@ -44,6 +44,13 @@ class Tag120SettlCurrencyTest {
         assertNotEquals(2,1);
     }
     @Test
+    void FIX0120Test() {
+        FIXType fix120SettlCurrency = FIXType.SETTL_CURRENCY;
+        assertEquals( fix120SettlCurrency.getFIXName(), "SETTL_CURRENCY");
+        assertEquals( fix120SettlCurrency.getFIXNumber(), 120);
+        assertEquals( fix120SettlCurrency.getFIXDescription(), "SettlCurrency");
+    }
+    @Test
     void Tag0120Test() {
         FIXType tag120SettlCurrency = FIXType.SETTL_CURRENCY;
         assertEquals( tag120SettlCurrency.getFIXName(), "SETTL_CURRENCY");

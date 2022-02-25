@@ -45,6 +45,13 @@ class Tag118NetMoneyTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0118Test() {
+        FIXType fix118NetMoney = FIXType.NET_MONEY;
+        assertEquals( fix118NetMoney.getFIXName(), "NET_MONEY");
+        assertEquals( fix118NetMoney.getFIXNumber(), 118);
+        assertEquals( fix118NetMoney.getFIXDescription(), "NetMoney");
+    }
+    @Test
     void Tag0118Test() {
         FIXType tag118NetMoney = FIXType.NET_MONEY;
         assertEquals( tag118NetMoney.getFIXName(), "NET_MONEY");

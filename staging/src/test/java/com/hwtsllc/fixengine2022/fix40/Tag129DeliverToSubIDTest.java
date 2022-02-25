@@ -43,6 +43,13 @@ class Tag129DeliverToSubIDTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0129Test() {
+        FIXType fix129DeliverToSubID = FIXType.DELIVER_TO_SUB_ID;
+        assertEquals( fix129DeliverToSubID.getFIXName(), "DELIVER_TO_SUB_ID");
+        assertEquals( fix129DeliverToSubID.getFIXNumber(), 129);
+        assertEquals( fix129DeliverToSubID.getFIXDescription(), "DeliverToSubID");
+    }
+    @Test
     void Tag0129Test() {
         FIXType tag129DeliverToSubID = FIXType.DELIVER_TO_SUB_ID;
         assertEquals( tag129DeliverToSubID.getFIXName(), "DELIVER_TO_SUB_ID");

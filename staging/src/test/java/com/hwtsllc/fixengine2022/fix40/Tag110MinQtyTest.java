@@ -44,6 +44,13 @@ class Tag110MinQtyTest {
         assertNotEquals(2,1);
     }
     @Test
+    void FIX0110Test() {
+        FIXType fix110MinQty = FIXType.MIN_QTY;
+        assertEquals( fix110MinQty.getFIXName(), "MIN_QTY");
+        assertEquals( fix110MinQty.getFIXNumber(), 110);
+        assertEquals( fix110MinQty.getFIXDescription(), "MinQty");
+    }
+    @Test
     void Tag0110Test() {
         FIXType tag110MinQty = FIXType.MIN_QTY;
         assertEquals( tag110MinQty.getFIXName(), "MIN_QTY");

@@ -45,6 +45,10 @@ class Tag6AvgPxTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0006Test() {
+        FIXType fix6AvgPx = FIXType.AVG_PX;
+    }
+    @Test
     void Tag0006Test() {
         FIXType tag100ExDestination = FIXType.EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");

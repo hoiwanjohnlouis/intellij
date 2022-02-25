@@ -48,6 +48,16 @@ class  Tag1AccountTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0001Test() {
+        FIXType fix1Account = FIXType.ACCOUNT;
+        assertEquals( fix1Account.getFIXName(), "ACCOUNT");
+        assertEquals( fix1Account.getFIXNumber(), 1);
+        assertEquals( fix1Account.getFIXDescription(), "Account");
+        assertNotEquals( fix1Account.getFIXName(), "Not My ACCOUNT");
+        assertNotEquals( fix1Account.getFIXNumber(), 2);
+        assertNotEquals( fix1Account.getFIXDescription(), "123 Account");
+    }
+    @Test
     void Tag0001Test() {
         TagType tag1Account = new TagType(FIXType.ACCOUNT,"ABC987654321XYZ");
         assertEquals( tag1Account.getFIXName(), "ACCOUNT");

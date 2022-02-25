@@ -46,6 +46,13 @@ class Tag104IOIQualifierTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0104Test() {
+        FIXType fix104IOIQualifier = FIXType.IOI_QUALIFIER;
+        assertEquals( fix104IOIQualifier.getFIXName(), "IOI_QUALIFIER");
+        assertEquals( fix104IOIQualifier.getFIXNumber(), 104);
+        assertEquals( fix104IOIQualifier.getFIXDescription(), "IOIQualifier");
+    }
+    @Test
     void Tag0104Test() {
         TagType tag104IOIQualifier = new TagType(FIXType.IOI_QUALIFIER,"interested in Mahlers 4th Symphony");
         assertEquals( tag104IOIQualifier.getFIXName(), "IOI_QUALIFIER");

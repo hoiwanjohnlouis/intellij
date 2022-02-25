@@ -46,6 +46,16 @@ class Tag100ExDestinationTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0100Test() {
+        FIXType fix100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( fix100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( fix100ExDestination.getFIXNumber(), 100);
+        assertEquals( fix100ExDestination.getFIXDescription(), "ExDestination");
+        assertNotEquals( fix100ExDestination.getFIXName(), "Not My EX_DESTINATION");
+        assertNotEquals( fix100ExDestination.getFIXNumber(), 2);
+        assertNotEquals( fix100ExDestination.getFIXDescription(), "123 Account");
+    }
+    @Test
     void Tag0100Test() {
         TagType tag100ExDestination = new TagType(FIXType.EX_DESTINATION,"ABC987654321XYZ");
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");

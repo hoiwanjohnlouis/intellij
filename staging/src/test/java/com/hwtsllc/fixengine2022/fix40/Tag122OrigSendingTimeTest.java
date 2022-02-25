@@ -45,6 +45,13 @@ class Tag122OrigSendingTimeTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0122Test() {
+        FIXType fix122OrigSendingTime = FIXType.ORIG_SENDING_TIME;
+        assertEquals( fix122OrigSendingTime.getFIXName(), "ORIG_SENDING_TIME");
+        assertEquals( fix122OrigSendingTime.getFIXNumber(), 122);
+        assertEquals( fix122OrigSendingTime.getFIXDescription(), "OrigSendingTime");
+    }
+    @Test
     void Tag0122Test() {
         FIXType tag122OrigSendingTime = FIXType.ORIG_SENDING_TIME;
         assertEquals( tag122OrigSendingTime.getFIXName(), "ORIG_SENDING_TIME");

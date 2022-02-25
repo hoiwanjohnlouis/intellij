@@ -46,6 +46,13 @@ class Tag125CxlTypeTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0125Test() {
+        FIXType fix125CxlType = FIXType.CXL_TYPE;
+        assertEquals( fix125CxlType.getFIXName(), "CXL_TYPE");
+        assertEquals( fix125CxlType.getFIXNumber(), 125);
+        assertEquals( fix125CxlType.getFIXDescription(), "CxlType (no longer used)");
+    }
+    @Test
     void Tag0125Test() {
         FIXType tag125CxlType = FIXType.CXL_TYPE;
         assertEquals( tag125CxlType.getFIXName(), "CXL_TYPE");

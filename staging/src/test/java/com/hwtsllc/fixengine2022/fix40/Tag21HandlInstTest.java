@@ -44,4 +44,15 @@ class Tag21HandlInstTest {
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
+    @Test
+    void FIX0021Test() {
+        FIXType fix21HandlInst = FIXType.HANDL_INST;
+    }
+    @Test
+    void Tag0021Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

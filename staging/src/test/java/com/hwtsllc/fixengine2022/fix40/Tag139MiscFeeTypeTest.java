@@ -43,6 +43,13 @@ class Tag139MiscFeeTypeTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0139Test() {
+        FIXType fix139MiscFeeType = FIXType.MISC_FEE_TYPE;
+        assertEquals( fix139MiscFeeType.getFIXName(), "MISC_FEE_TYPE");
+        assertEquals( fix139MiscFeeType.getFIXNumber(), 139);
+        assertEquals( fix139MiscFeeType.getFIXDescription(), "MiscFeeType");
+    }
+    @Test
     void Tag0139Test() {
         FIXType tag139MiscFeeType = FIXType.MISC_FEE_TYPE;
         assertEquals( tag139MiscFeeType.getFIXName(), "MISC_FEE_TYPE");

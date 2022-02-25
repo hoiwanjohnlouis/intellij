@@ -44,6 +44,13 @@ class Tag114LocateReqdTest {
         assertNotEquals(2,1);
     }
     @Test
+    void FIX0114Test() {
+        FIXType fix114LocateReqd = FIXType.LOCATE_REQD;
+        assertEquals( fix114LocateReqd.getFIXName(), "LOCATE_REQD");
+        assertEquals( fix114LocateReqd.getFIXNumber(), 114);
+        assertEquals( fix114LocateReqd.getFIXDescription(), "LocateReqd");
+    }
+    @Test
     void Tag0114Test() {
         FIXType tag114LocateReqd = FIXType.LOCATE_REQD;
         assertEquals( tag114LocateReqd.getFIXName(), "LOCATE_REQD");

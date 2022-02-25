@@ -44,6 +44,13 @@ class Tag140PrevClosePxTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0140Test() {
+        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        assertEquals( fix140PrevClosePx.getFIXName(), "PREV_CLOSE_PX");
+        assertEquals( fix140PrevClosePx.getFIXNumber(), 140);
+        assertEquals( fix140PrevClosePx.getFIXDescription(), "PrevClosePx");
+    }
+    @Test
     void Tag0140Test() {
         TagType tag140PrevClosePx = new TagType(FIXType.PREV_CLOSE_PX,"10.23");
         assertEquals( tag140PrevClosePx.getFIXName(), "PREV_CLOSE_PX");

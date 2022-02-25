@@ -45,6 +45,13 @@ class Tag127DKReasonTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0127Test() {
+        FIXType fix127DKReason = FIXType.DK_REASON;
+        assertEquals( fix127DKReason.getFIXName(), "DK_REASON");
+        assertEquals( fix127DKReason.getFIXNumber(), 127);
+        assertEquals( fix127DKReason.getFIXDescription(), "DKReason");
+    }
+    @Test
     void Tag0127Test() {
         FIXType tag127DKReason = FIXType.DK_REASON;
         assertEquals( tag127DKReason.getFIXName(), "DK_REASON");

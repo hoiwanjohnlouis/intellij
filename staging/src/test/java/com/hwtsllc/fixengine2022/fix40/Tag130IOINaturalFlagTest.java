@@ -43,6 +43,13 @@ class Tag130IOINaturalFlagTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
+    void FIX0130Test() {
+        FIXType fix130IOINaturalFlag = FIXType.IOI_NATURAL_FLAG;
+        assertEquals( fix130IOINaturalFlag.getFIXName(), "IOI_NATURAL_FLAG");
+        assertEquals( fix130IOINaturalFlag.getFIXNumber(), 130);
+        assertEquals( fix130IOINaturalFlag.getFIXDescription(), "IOINaturalFlag");
+    }
+    @Test
     void Tag0130Test() {
         FIXType tag130IOINaturalFlag = FIXType.IOI_NATURAL_FLAG;
         assertEquals( tag130IOINaturalFlag.getFIXName(), "IOI_NATURAL_FLAG");
