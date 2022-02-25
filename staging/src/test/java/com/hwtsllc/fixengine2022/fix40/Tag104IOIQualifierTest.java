@@ -16,6 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +44,13 @@ class Tag104IOIQualifierTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0104Test() {
+        TagType tag104IOIQualifier = new TagType(FIXType.IOI_QUALIFIER,"interested in Mahlers 4th Symphony");
+        assertEquals( tag104IOIQualifier.getFIXName(), "IOI_QUALIFIER");
+        assertEquals( tag104IOIQualifier.getFIXNumber(), 104);
+        assertEquals( tag104IOIQualifier.getFIXDescription(), "IOIQualifier");
+        logger.info(WHERE_AM_I + ":Successful Tag0104Test()");
     }
 }

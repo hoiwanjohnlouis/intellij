@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +43,12 @@ class Tag122OrigSendingTimeTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0122Test() {
+        FIXType tag122OrigSendingTime = FIXType.ORIG_SENDING_TIME;
+        assertEquals( tag122OrigSendingTime.getFIXName(), "ORIG_SENDING_TIME");
+        assertEquals( tag122OrigSendingTime.getFIXNumber(), 122);
+        assertEquals( tag122OrigSendingTime.getFIXDescription(), "OrigSendingTime");
     }
 }

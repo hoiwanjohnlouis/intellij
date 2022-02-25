@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -39,8 +40,13 @@ class Tag130IOINaturalFlagTest {
 
     @Test
     void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0130Test() {
+        FIXType tag130IOINaturalFlag = FIXType.IOI_NATURAL_FLAG;
+        assertEquals( tag130IOINaturalFlag.getFIXName(), "IOI_NATURAL_FLAG");
+        assertEquals( tag130IOINaturalFlag.getFIXNumber(), 130);
+        assertEquals( tag130IOINaturalFlag.getFIXDescription(), "IOINaturalFlag");
     }
 }

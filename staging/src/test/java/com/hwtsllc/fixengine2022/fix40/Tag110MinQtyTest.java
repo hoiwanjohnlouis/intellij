@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,6 +42,13 @@ class Tag110MinQtyTest {
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0110Test() {
+        FIXType tag110MinQty = FIXType.MIN_QTY;
+        assertEquals( tag110MinQty.getFIXName(), "MIN_QTY");
+        assertEquals( tag110MinQty.getFIXNumber(), 110);
+        assertEquals( tag110MinQty.getFIXDescription(), "MinQty");
+        logger.info(WHERE_AM_I + ":Successful Tag0110Test()");
     }
 }

@@ -16,6 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +44,13 @@ class Tag105WaveNoTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0105Test() {
+        TagType tag105WaveNo = new TagType(FIXType.WAVE_NO,"interested in Mahlers 4th Symphony");
+        assertEquals( tag105WaveNo.getFIXName(), "WAVE_NO");
+        assertEquals( tag105WaveNo.getFIXNumber(), 105);
+        assertEquals( tag105WaveNo.getFIXDescription(), "WaveNo");
+//        logger.info(WHERE_AM_I + ":Successful Tag0105Test()");
     }
 }

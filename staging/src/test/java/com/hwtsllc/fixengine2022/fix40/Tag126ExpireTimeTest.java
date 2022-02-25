@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +43,12 @@ class Tag126ExpireTimeTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0126Test() {
+        FIXType tag126ExpireTime = FIXType.EXPIRE_TIME;
+        assertEquals( tag126ExpireTime.getFIXName(), "EXPIRE_TIME");
+        assertEquals( tag126ExpireTime.getFIXNumber(), 126);
+        assertEquals( tag126ExpireTime.getFIXDescription(), "ExpireTime");
     }
 }

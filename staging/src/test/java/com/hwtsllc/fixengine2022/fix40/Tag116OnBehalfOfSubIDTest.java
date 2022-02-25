@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,6 +42,13 @@ class Tag116OnBehalfOfSubIDTest {
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
+    }
+    @Test
+    void Tag0116Test() {
+        FIXType tag116OnBehalfOfSubID = FIXType.ON_BEHALF_OF_SUB_ID;
+        assertEquals( tag116OnBehalfOfSubID.getFIXName(), "ON_BEHALF_OF_SUB_ID");
+        assertEquals( tag116OnBehalfOfSubID.getFIXNumber(), 116);
+        assertEquals( tag116OnBehalfOfSubID.getFIXDescription(), "OnBehalfOfSubID");
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

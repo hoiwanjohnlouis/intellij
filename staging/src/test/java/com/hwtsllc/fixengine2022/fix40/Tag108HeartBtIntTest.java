@@ -16,6 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +44,12 @@ class Tag108HeartBtIntTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0108Test() {
+        TagType tag108HeartBtInt = new TagType(FIXType.HEART_BT_INT,"60");
+        assertEquals( tag108HeartBtInt.getFIXName(), "HEART_BT_INT");
+        assertEquals( tag108HeartBtInt.getFIXNumber(), 108);
+        assertEquals( tag108HeartBtInt.getFIXDescription(), "HeartBtInt");
     }
 }

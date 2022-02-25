@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -39,8 +40,13 @@ class Tag137MiscFeeAmtTest {
 
     @Test
     void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0137Test() {
+        FIXType tag137MiscFeeAmt = FIXType.MISC_FEE_AMT;
+        assertEquals( tag137MiscFeeAmt.getFIXName(), "MISC_FEE_AMT");
+        assertEquals( tag137MiscFeeAmt.getFIXNumber(), 137);
+        assertEquals( tag137MiscFeeAmt.getFIXDescription(), "MiscFeeAmt");
     }
 }

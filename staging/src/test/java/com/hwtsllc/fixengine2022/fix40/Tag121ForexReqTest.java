@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +43,12 @@ class Tag121ForexReqTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0121Test() {
+        FIXType tag121ForexReq = FIXType.FOREX_REQ;
+        assertEquals( tag121ForexReq.getFIXName(), "FOREX_REQ");
+        assertEquals( tag121ForexReq.getFIXNumber(), 121);
+        assertEquals( tag121ForexReq.getFIXDescription(), "ForexReq");
     }
 }

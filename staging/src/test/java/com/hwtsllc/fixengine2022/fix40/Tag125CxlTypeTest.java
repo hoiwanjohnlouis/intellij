@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -43,5 +44,12 @@ class Tag125CxlTypeTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0125Test() {
+        FIXType tag125CxlType = FIXType.CXL_TYPE;
+        assertEquals( tag125CxlType.getFIXName(), "CXL_TYPE");
+        assertEquals( tag125CxlType.getFIXNumber(), 125);
+        assertEquals( tag125CxlType.getFIXDescription(), "CxlType (no longer used)");
     }
 }

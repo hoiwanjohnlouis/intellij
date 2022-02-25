@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,6 +42,13 @@ class Tag120SettlCurrencyTest {
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
+    }
+    @Test
+    void Tag0120Test() {
+        FIXType tag120SettlCurrency = FIXType.SETTL_CURRENCY;
+        assertEquals( tag120SettlCurrency.getFIXName(), "SETTL_CURRENCY");
+        assertEquals( tag120SettlCurrency.getFIXNumber(), 120);
+        assertEquals( tag120SettlCurrency.getFIXDescription(), "SettlCurrency");
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

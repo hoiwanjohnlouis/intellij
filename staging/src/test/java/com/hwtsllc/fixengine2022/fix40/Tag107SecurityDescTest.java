@@ -16,6 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +44,12 @@ class Tag107SecurityDescTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void Tag0107Test() {
+        TagType tag107SecurityDesc = new TagType(FIXType.SECURITY_DESC,"International Widgets, Inc.");
+        assertEquals( tag107SecurityDesc.getFIXName(), "SECURITY_DESC");
+        assertEquals( tag107SecurityDesc.getFIXNumber(), 107);
+        assertEquals( tag107SecurityDesc.getFIXDescription(), "SecurityDesc");
     }
 }

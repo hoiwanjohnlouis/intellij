@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,6 +42,13 @@ class Tag111MaxFloorTest {
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
+    }
+    @Test
+    void Tag0111Test() {
+        FIXType tag111MaxFloor = FIXType.MAX_FLOOR;
+        assertEquals( tag111MaxFloor.getFIXName(), "MAX_FLOOR");
+        assertEquals( tag111MaxFloor.getFIXNumber(), 111);
+        assertEquals( tag111MaxFloor.getFIXDescription(), "MaxFloor");
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

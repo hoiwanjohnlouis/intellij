@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,6 +42,13 @@ class Tag117QuoteIDTest {
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
+    }
+    @Test
+    void Tag0117Test() {
+        FIXType tag117QuoteID = FIXType.QUOTE_ID;
+        assertEquals( tag117QuoteID.getFIXName(), "QUOTE_ID");
+        assertEquals( tag117QuoteID.getFIXNumber(), 117);
+        assertEquals( tag117QuoteID.getFIXDescription(), "QuoteID");
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }
