@@ -48,4 +48,11 @@ class Tag84CxlQtyTest {
     void FIX0084Test() {
         FIXType fix84CxlQty = FIXType.CXL_QTY;
     }
+    @Test
+    void Tag0084Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

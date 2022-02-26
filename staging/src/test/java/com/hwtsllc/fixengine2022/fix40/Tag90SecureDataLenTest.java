@@ -48,4 +48,11 @@ class Tag90SecureDataLenTest {
     void FIX0090Test() {
         FIXType fix90SecureDataLen = FIXType.SECURE_DATA_LEN;
     }
+    @Test
+    void Tag0090Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

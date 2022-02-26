@@ -48,4 +48,11 @@ class Tag71AllocTransTypeTest {
     void FIX0071Test() {
         FIXType fix71AllocTransType = FIXType.ALLOC_TRANS_TYPE;
     }
+    @Test
+    void Tag0071Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

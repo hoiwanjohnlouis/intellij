@@ -41,13 +41,6 @@ class  Tag1AccountTest {
     }
 
     @Test
-    void TestTag1() {
-        Tag1Account tag1Account = new Tag1Account("1234567890");
-        assertEquals( tag1Account.getDataValue(), "1234567890");
-        assertNotEquals( tag1Account.getDataValue(), "abcdefghij");
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0001Test() {
         FIXType fix1Account = FIXType.ACCOUNT;
         assertEquals( fix1Account.getFIXName(), "ACCOUNT");
@@ -56,16 +49,13 @@ class  Tag1AccountTest {
         assertNotEquals( fix1Account.getFIXName(), "Not My ACCOUNT");
         assertNotEquals( fix1Account.getFIXNumber(), 2);
         assertNotEquals( fix1Account.getFIXDescription(), "123 Account");
+        logger.info(WHERE_AM_I + ":Successful FIX0001Test()");
     }
     @Test
     void Tag0001Test() {
         TagType tag1Account = new TagType(FIXType.ACCOUNT,"ABC987654321XYZ");
-        assertEquals( tag1Account.getFIXName(), "ACCOUNT");
-        assertEquals( tag1Account.getFIXNumber(), 1);
-        assertEquals( tag1Account.getFIXDescription(), "Account");
-        assertNotEquals( tag1Account.getFIXName(), "Not My ACCOUNT");
-        assertNotEquals( tag1Account.getFIXNumber(), 2);
-        assertNotEquals( tag1Account.getFIXDescription(), "123 Account");
+        assertEquals( tag1Account.getDataValue(), "ABC987654321XYZ");
+        assertNotEquals( tag1Account.getDataValue(), "abcdefghij");
         logger.info(WHERE_AM_I + ":Successful Tag0001Test()");
     }
 

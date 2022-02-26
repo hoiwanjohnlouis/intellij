@@ -48,4 +48,11 @@ class Tag62ValidUntilTimeTest {
     void FIX0062Test() {
         FIXType fix62ValidUntilTime = FIXType.VALID_UNTIL_TIME;
     }
+    @Test
+    void Tag0062Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

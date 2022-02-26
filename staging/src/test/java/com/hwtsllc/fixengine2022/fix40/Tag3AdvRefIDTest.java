@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -28,7 +29,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag3AdvRefIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
+    // private static final Logger logger = LogManager.getLogger(Tag3AdvRefID.class);
 
     @BeforeEach
     void setUp() {
@@ -39,20 +40,21 @@ class Tag3AdvRefIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0003Test() {
         FIXType fix3AdvRefID = FIXType.ADV_REF_ID;
+        assertEquals( fix3AdvRefID.getFIXName(), "ADV_REF_ID");
+        assertEquals( fix3AdvRefID.getFIXNumber(), 3);
+        assertEquals( fix3AdvRefID.getFIXDescription(), "AdvRefId");
+        assertNotEquals( fix3AdvRefID.getFIXName(), "Not My ADV_REF_ID");
+        assertNotEquals( fix3AdvRefID.getFIXNumber(), 1623);
+        assertNotEquals( fix3AdvRefID.getFIXDescription(), "123 AdvRefId");
+        logger.info(WHERE_AM_I + ":Successful FIX0003Test()");
     }
     @Test
     void Tag0003Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag3AdvRefID = new TagType(FIXType.ADV_REF_ID,"ABC987654321XYZ");
+        assertEquals( tag3AdvRefID.getDataValue(), "ABC987654321XYZ");
+        assertNotEquals( tag3AdvRefID.getDataValue(), "abcdefghij");
+        logger.info(WHERE_AM_I + ":Successful Tag0003Test()");
     }
 }

@@ -48,4 +48,11 @@ class Tag96RawDataTest {
     void FIX0096Test() {
         FIXType fix96RawData = FIXType.RAW_DATA;
     }
+    @Test
+    void Tag0096Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

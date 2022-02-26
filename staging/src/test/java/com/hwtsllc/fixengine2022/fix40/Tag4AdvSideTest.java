@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,18 +40,21 @@ class Tag4AdvSideTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0004Test() {
         FIXType fix4AdvSide = FIXType.ADV_SIDE;
+        assertEquals( fix4AdvSide.getFIXName(), "ADV_SIDE");
+        assertEquals( fix4AdvSide.getFIXNumber(), 4);
+        assertEquals( fix4AdvSide.getFIXDescription(), "AdvSide");
+        assertNotEquals( fix4AdvSide.getFIXName(), "Not My ADV_SIDE");
+        assertNotEquals( fix4AdvSide.getFIXNumber(), 163223);
+        assertNotEquals( fix4AdvSide.getFIXDescription(), "123 AdvSide");
+        logger.info(WHERE_AM_I + ":Successful FIX0004Test()");
     }
     @Test
     void Tag0004Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag4AdvSide = new TagType(FIXType.ADV_REF_ID,"ABC987654321XYZ");
+        assertEquals( tag4AdvSide.getDataValue(), "ABC987654321XYZ");
+        assertNotEquals( tag4AdvSide.getDataValue(), "abcdefghij");
+        logger.info(WHERE_AM_I + ":Successful Tag0004Test()");
     }
 }

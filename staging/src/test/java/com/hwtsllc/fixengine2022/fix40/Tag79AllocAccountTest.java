@@ -48,4 +48,11 @@ class Tag79AllocAccountTest {
     void FIX0079Test() {
         FIXType fix79AllocAccount = FIXType.ALLOC_ACCOUNT;
     }
+    @Test
+    void Tag0079Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

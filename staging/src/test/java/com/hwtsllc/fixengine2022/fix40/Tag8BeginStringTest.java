@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,18 +40,21 @@ class Tag8BeginStringTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0008Test() {
         FIXType fix8BeginString = FIXType.BEGIN_STRING;
+        assertEquals( fix8BeginString.getFIXName(), "BEGIN_STRING");
+        assertEquals( fix8BeginString.getFIXNumber(), 8);
+        assertEquals( fix8BeginString.getFIXDescription(), "BeginString");
+        assertNotEquals( fix8BeginString.getFIXName(), "Not My BEGIN_STRING");
+        assertNotEquals( fix8BeginString.getFIXNumber(), 163223);
+        assertNotEquals( fix8BeginString.getFIXDescription(), "123 BeginString");
+        logger.info(WHERE_AM_I + ":Successful FIX0008Test()");
     }
     @Test
     void Tag0008Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag8BeginString = new TagType(FIXType.BEGIN_STRING,"FIX4.0");
+        assertEquals( tag8BeginString.getDataValue(), "FIX4.0");
+        assertNotEquals( tag8BeginString.getDataValue(), "67.89");
+        logger.info(WHERE_AM_I + ":Successful Tag0008Test()");
     }
 }

@@ -48,4 +48,11 @@ class Tag93SignatureLengthTest {
     void FIX0093Test() {
         FIXType fix93SignatureLength = FIXType.SIGNATURE_LENGTH;
     }
+    @Test
+    void Tag0093Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

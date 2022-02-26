@@ -48,4 +48,11 @@ class Tag68TotNoOrdersTest {
     void FIX0068Test() {
         FIXType fix68TotNoOrders = FIXType.TOT_NO_ORDERS;
     }
+    @Test
+    void Tag0068Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

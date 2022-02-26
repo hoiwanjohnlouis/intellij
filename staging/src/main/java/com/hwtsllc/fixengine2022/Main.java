@@ -20,14 +20,17 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Main {
-
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private static final String WHERE_AM_I = Main.class.getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     /*
      *
      */
     public static void main(String[] args) {
-        logger.trace("Hello from Main");
+        logger.trace(WHERE_AM_I + ".1:Hello from Main");
+//        logger.info(WHERE_AM_I + ".2:Hello from Main");
+//        logger.warn(WHERE_AM_I + ".3:Hello from Main");
+//        logger.error(WHERE_AM_I + ".4:Hello from Main");
     }
 }

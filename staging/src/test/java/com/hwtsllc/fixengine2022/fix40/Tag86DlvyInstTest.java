@@ -49,4 +49,11 @@ class Tag86DlvyInstTest {
     void FIX0086Test() {
         FIXType fix86DlvyInst = FIXType.DLVY_INST;
     }
+    @Test
+    void Tag0086Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

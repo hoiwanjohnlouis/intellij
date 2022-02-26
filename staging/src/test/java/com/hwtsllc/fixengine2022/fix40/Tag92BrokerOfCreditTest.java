@@ -49,4 +49,11 @@ class Tag92BrokerOfCreditTest {
     void FIX0092Test() {
         FIXType fix92BrokerOfCredit = FIXType.BROKER_OF_CREDIT;
     }
+    @Test
+    void Tag0092Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

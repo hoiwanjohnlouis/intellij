@@ -48,4 +48,11 @@ class Tag78NoAllocsTest {
     void FIX0078Test() {
         FIXType fix78NoAllocs = FIXType.NO_ALLOCS;
     }
+    @Test
+    void Tag0078Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

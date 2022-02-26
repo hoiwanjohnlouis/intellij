@@ -48,4 +48,11 @@ class Tag72RefAllocIDTest {
     void FIX0072Test() {
         FIXType fix72RefAllocID = FIXType.REF_ALLOC_ID;
     }
+    @Test
+    void Tag0072Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

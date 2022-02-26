@@ -48,4 +48,11 @@ class Tag87AllocStatusTest {
     void FIX0087Test() {
         FIXType fix87AllocStatus = FIXType.ALLOC_STATUS;
     }
+    @Test
+    void Tag0087Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

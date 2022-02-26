@@ -48,4 +48,11 @@ class Tag75TradeDateTest {
     void FIX0075Test() {
         FIXType fix75TradeDate = FIXType.TRADE_DATE;
     }
+    @Test
+    void Tag0075Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

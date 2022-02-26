@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,21 @@ class Tag9BodyLengthTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0009Test() {
         FIXType fix9BodyLength = FIXType.BODY_LENGTH;
+        assertEquals( fix9BodyLength.getFIXName(), "BODY_LENGTH");
+        assertEquals( fix9BodyLength.getFIXNumber(), 9);
+        assertEquals( fix9BodyLength.getFIXDescription(), "BodyLength");
+        assertNotEquals( fix9BodyLength.getFIXName(), "Not My BODY_LENGTH");
+        assertNotEquals( fix9BodyLength.getFIXNumber(), 163223);
+        assertNotEquals( fix9BodyLength.getFIXDescription(), "123 BodyLength");
+        logger.info(WHERE_AM_I + ":Successful FIX0009Test()");
     }
     @Test
     void Tag0009Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag9BodyLength = new TagType(FIXType.BODY_LENGTH,"120");
+        assertEquals( tag9BodyLength.getDataValue(), "120");
+        assertNotEquals( tag9BodyLength.getDataValue(), "6789");
+        logger.info(WHERE_AM_I + ":Successful Tag0009Test()");
     }
 }

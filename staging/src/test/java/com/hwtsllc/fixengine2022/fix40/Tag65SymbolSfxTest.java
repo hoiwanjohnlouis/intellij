@@ -48,4 +48,11 @@ class Tag65SymbolSfxTest {
     void FIX0065Test() {
         FIXType fix65SymbolSfx = FIXType.SYMBOL_SFX;
     }
+    @Test
+    void Tag0065Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

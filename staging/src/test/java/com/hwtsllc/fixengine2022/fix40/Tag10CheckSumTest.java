@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,21 @@ class Tag10CheckSumTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0010Test() {
         FIXType fix10CheckSum = FIXType.CHECK_SUM;
+        assertEquals( fix10CheckSum.getFIXName(), "CHECK_SUM");
+        assertEquals( fix10CheckSum.getFIXNumber(), 10);
+        assertEquals( fix10CheckSum.getFIXDescription(), "CheckSum");
+        assertNotEquals( fix10CheckSum.getFIXName(), "Not My CHECK_SUM");
+        assertNotEquals( fix10CheckSum.getFIXNumber(), 163223);
+        assertNotEquals( fix10CheckSum.getFIXDescription(), "123 CheckSum");
+        logger.info(WHERE_AM_I + ":Successful FIX0010Test()");
     }
     @Test
     void Tag0010Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag10CheckSum = new TagType(FIXType.CHECK_SUM,"ABCD");
+        assertEquals( tag10CheckSum.getDataValue(), "ABCD");
+        assertNotEquals( tag10CheckSum.getDataValue(), "67.89");
+        logger.info(WHERE_AM_I + ":Successful Tag0010Test()");
     }
 }

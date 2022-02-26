@@ -48,4 +48,11 @@ class Tag88AllocRejCodeTest {
     void FIX0088Test() {
         FIXType fix88AllocRejCode = FIXType.ALLOC_REJ_CODE;
     }
+    @Test
+    void Tag0088Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

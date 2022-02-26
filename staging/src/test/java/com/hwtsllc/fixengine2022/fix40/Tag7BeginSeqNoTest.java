@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,18 +40,21 @@ class Tag7BeginSeqNoTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0007Test() {
         FIXType fix7BeginSeqNo = FIXType.BEGIN_SEQ_NO;
+        assertEquals( fix7BeginSeqNo.getFIXName(), "BEGIN_SEQ_NO");
+        assertEquals( fix7BeginSeqNo.getFIXNumber(), 7);
+        assertEquals( fix7BeginSeqNo.getFIXDescription(), "BeginSeqNo");
+        assertNotEquals( fix7BeginSeqNo.getFIXName(), "Not My BEGIN_SEQ_NO");
+        assertNotEquals( fix7BeginSeqNo.getFIXNumber(), 163223);
+        assertNotEquals( fix7BeginSeqNo.getFIXDescription(), "123 BeginSeqNo");
+        logger.info(WHERE_AM_I + ":Successful FIX0007Test()");
     }
     @Test
     void Tag0007Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag7BeginSeqNo = new TagType(FIXType.BEGIN_SEQ_NO,"12345");
+        assertEquals( tag7BeginSeqNo.getDataValue(), "12345");
+        assertNotEquals( tag7BeginSeqNo.getDataValue(), "6789");
+        logger.info(WHERE_AM_I + ":Successful Tag0007Test()");
     }
 }

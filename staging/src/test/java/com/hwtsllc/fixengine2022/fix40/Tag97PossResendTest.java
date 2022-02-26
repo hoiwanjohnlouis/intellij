@@ -48,4 +48,11 @@ class Tag97PossResendTest {
     void FIX0097Test() {
         FIXType fix97PossResend = FIXType.POSS_RESEND;
     }
+    @Test
+    void Tag0097Test() {
+        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getFIXNumber(), 100);
+        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+    }
 }

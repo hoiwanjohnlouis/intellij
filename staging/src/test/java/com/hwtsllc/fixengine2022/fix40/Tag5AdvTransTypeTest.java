@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,21 @@ class Tag5AdvTransTypeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0005Test() {
         FIXType fix5AdvTransType = FIXType.ADV_TRANS_TYPE;
+        assertEquals( fix5AdvTransType.getFIXName(), "ADV_TRANS_TYPE");
+        assertEquals( fix5AdvTransType.getFIXNumber(), 5);
+        assertEquals( fix5AdvTransType.getFIXDescription(), "AdvTransType");
+        assertNotEquals( fix5AdvTransType.getFIXName(), "Not My ADV_TRANS_TYPE");
+        assertNotEquals( fix5AdvTransType.getFIXNumber(), 163223);
+        assertNotEquals( fix5AdvTransType.getFIXDescription(), "123 AdvTransType");
+        logger.info(WHERE_AM_I + ":Successful FIX0005Test()");
     }
     @Test
     void Tag0005Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag5AdvTransType = new TagType(FIXType.ADV_TRANS_TYPE,"ABC987654321XYZ");
+        assertEquals( tag5AdvTransType.getDataValue(), "ABC987654321XYZ");
+        assertNotEquals( tag5AdvTransType.getDataValue(), "abcdefghij");
+        logger.info(WHERE_AM_I + ":Successful Tag0005Test()");
     }
 }
