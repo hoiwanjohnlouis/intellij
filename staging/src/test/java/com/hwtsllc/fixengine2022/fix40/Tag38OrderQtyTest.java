@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag38OrderQtyTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0038Test() {
         FIXType fix38OrderQty = FIXType.ORDER_QTY;
+        assertEquals( "ORDER_QTY", fix38OrderQty.getFIXName());
+        assertEquals( 38, fix38OrderQty.getFIXNumber());
+        assertEquals( "OrderQty", fix38OrderQty.getFIXDescription());
+        assertNotEquals( "ORDER_QTY ORDER_QTY", fix38OrderQty.getFIXName());
+        assertNotEquals( 312, fix38OrderQty.getFIXNumber());
+        assertNotEquals( "OrderQty OrderQty", fix38OrderQty.getFIXDescription());
     }
     @Test
     void Tag0038Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag38OrderQty = new TagType(FIXType.ORDER_QTY,"100");
+        assertEquals( "100", tag38OrderQty.getDataValue());
+        assertNotEquals( "11", tag38OrderQty.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0038Test()");
     }
 }

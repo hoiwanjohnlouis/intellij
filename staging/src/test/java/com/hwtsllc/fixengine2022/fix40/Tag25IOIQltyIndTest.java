@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag25IOIQltyIndTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0025Test() {
         FIXType fix25IOIQltyInd = FIXType.IOI_QLTY_IND;
+        assertEquals( "IOI_QLTY_IND", fix25IOIQltyInd.getFIXName());
+        assertEquals( 25, fix25IOIQltyInd.getFIXNumber());
+        assertEquals( "IOIQltyInd", fix25IOIQltyInd.getFIXDescription());
+        assertNotEquals( "IOI_QLTY_IND IOI_QLTY_IND", fix25IOIQltyInd.getFIXName());
+        assertNotEquals( 2525, fix25IOIQltyInd.getFIXNumber());
+        assertNotEquals( "123 IOIQltyInd", fix25IOIQltyInd.getFIXDescription());
     }
     @Test
     void Tag0025Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag25IOIQltyInd = new TagType(FIXType.IOI_QLTY_IND,"A");
+        assertEquals( "A", tag25IOIQltyInd.getDataValue());
+        assertNotEquals( "11", tag25IOIQltyInd.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0025Test()");
     }
 }

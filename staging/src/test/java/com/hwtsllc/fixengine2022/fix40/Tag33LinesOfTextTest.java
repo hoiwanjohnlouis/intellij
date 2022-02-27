@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag33LinesOfTextTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0033Test() {
         FIXType fix33LinesOfText = FIXType.LINES_OF_TEXT;
+        assertEquals( "LINES_OF_TEXT", fix33LinesOfText.getFIXName());
+        assertEquals( 33, fix33LinesOfText.getFIXNumber());
+        assertEquals( "LinesOfText", fix33LinesOfText.getFIXDescription());
+        assertNotEquals( "LINES_OF_TEXT LINES_OF_TEXT", fix33LinesOfText.getFIXName());
+        assertNotEquals( 312, fix33LinesOfText.getFIXNumber());
+        assertNotEquals( "LinesOfText LinesOfText", fix33LinesOfText.getFIXDescription());
     }
     @Test
     void Tag0033Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag33LinesOfText = new TagType(FIXType.LINES_OF_TEXT,"0");
+        assertEquals( "0", tag33LinesOfText.getDataValue());
+        assertNotEquals( "11", tag33LinesOfText.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0033Test()");
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag36NewSeqNoTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0036Test() {
         FIXType fix36NewSeqNo = FIXType.NEW_SEQ_NO;
+        assertEquals( "NEW_SEQ_NO", fix36NewSeqNo.getFIXName());
+        assertEquals( 36, fix36NewSeqNo.getFIXNumber());
+        assertEquals( "NewSeqNo", fix36NewSeqNo.getFIXDescription());
+        assertNotEquals( "NEW_SEQ_NO NEW_SEQ_NO", fix36NewSeqNo.getFIXName());
+        assertNotEquals( 312, fix36NewSeqNo.getFIXNumber());
+        assertNotEquals( "NewSeqNo NewSeqNo", fix36NewSeqNo.getFIXDescription());
     }
     @Test
     void Tag0036Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag36NewSeqNo = new TagType(FIXType.NEW_SEQ_NO,"23456");
+        assertEquals( "23456", tag36NewSeqNo.getDataValue());
+        assertNotEquals( "11", tag36NewSeqNo.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0036Test()");
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag43PossDupFlagTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0043Test() {
         FIXType fix43PossDupFlag = FIXType.POSS_DUP_FLAG;
+        assertEquals( "POSS_DUP_FLAG", fix43PossDupFlag.getFIXName());
+        assertEquals( 43, fix43PossDupFlag.getFIXNumber());
+        assertEquals( "PossDupFlag", fix43PossDupFlag.getFIXDescription());
+        assertNotEquals( "POSS_DUP_FLAG POSS_DUP_FLAG", fix43PossDupFlag.getFIXName());
+        assertNotEquals( 3123, fix43PossDupFlag.getFIXNumber());
+        assertNotEquals( "PossDupFlag PossDupFlag", fix43PossDupFlag.getFIXDescription());
     }
     @Test
     void Tag0043Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag43PossDupFlag = new TagType(FIXType.POSS_DUP_FLAG,"N");
+        assertEquals( "N", tag43PossDupFlag.getDataValue());
+        assertNotEquals( "A11", tag43PossDupFlag.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0043Test()");
     }
 }

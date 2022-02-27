@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -38,9 +39,10 @@ class Tag1000UnderlyingTimeUnitTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
+    void FIX1000Test() {
+        FIXType fix1000UnderlyingTimeUnit = FIXType.UNDERLYING_TIME_UNIT;
+        assertEquals( "UNDERLYING_TIME_UNIT", fix1000UnderlyingTimeUnit.getFIXName());
+        assertEquals( 1000, fix1000UnderlyingTimeUnit.getFIXNumber());
+        assertEquals( "UnderlyingTimeUnit", fix1000UnderlyingTimeUnit.getFIXDescription());
     }
 }

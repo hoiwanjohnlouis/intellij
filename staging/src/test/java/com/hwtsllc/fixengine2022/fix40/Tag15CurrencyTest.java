@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag15CurrencyTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0015Test() {
         FIXType fix15Currency = FIXType.CURRENCY;
+        assertEquals( "CURRENCY", fix15Currency.getFIXName());
+        assertEquals( 15, fix15Currency.getFIXNumber());
+        assertEquals( "Currency", fix15Currency.getFIXDescription());
+        assertNotEquals( "CURRENCY CURRENCY", fix15Currency.getFIXName());
+        assertNotEquals( 111, fix15Currency.getFIXNumber());
+        assertNotEquals( "123 Currency", fix15Currency.getFIXDescription());
     }
     @Test
     void Tag0015Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag15Currency = new TagType(FIXType.CURRENCY,"USD");
+        assertEquals( "USD", tag15Currency.getDataValue());
+        assertNotEquals( "EURO", tag15Currency.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0015Test()");
     }
 }

@@ -42,19 +42,18 @@ class Tag2AdvIDTest {
     @Test
     void FIX0002Test() {
         FIXType fix2AdvID = FIXType.ADV_ID;
-        assertEquals( fix2AdvID.getFIXName(), "ADV_ID");
-        assertEquals( fix2AdvID.getFIXNumber(), 2);
-        assertEquals( fix2AdvID.getFIXDescription(), "AdvId");
-        assertNotEquals( fix2AdvID.getFIXName(), "Not My ADV_ID");
-        assertNotEquals( fix2AdvID.getFIXNumber(), 1623);
-        assertNotEquals( fix2AdvID.getFIXDescription(), "123 AdvID");
-        logger.info(WHERE_AM_I + ":Successful FIX0002Test()");
+        assertEquals( "ADV_ID", fix2AdvID.getFIXName());
+        assertEquals( 2, fix2AdvID.getFIXNumber());
+        assertEquals( "AdvId", fix2AdvID.getFIXDescription());
+        assertNotEquals( "ADV ID", fix2AdvID.getFIXName());
+        assertNotEquals( 22, fix2AdvID.getFIXNumber());
+        assertNotEquals( "Adv Id", fix2AdvID.getFIXDescription());
     }
     @Test
     void Tag0002Test() {
         TagType tag2AdvID = new TagType(FIXType.ADV_ID,"ABC987654321XYZ");
-        assertEquals( tag2AdvID.getDataValue(), "ABC987654321XYZ");
-        assertNotEquals( tag2AdvID.getDataValue(), "abcdefghij");
+        assertEquals( "ABC987654321XYZ", tag2AdvID.getDataValue());
+        assertNotEquals( "abcdefghij", tag2AdvID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0002Test()");
     }
 }

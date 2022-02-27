@@ -42,19 +42,18 @@ class Tag7BeginSeqNoTest {
     @Test
     void FIX0007Test() {
         FIXType fix7BeginSeqNo = FIXType.BEGIN_SEQ_NO;
-        assertEquals( fix7BeginSeqNo.getFIXName(), "BEGIN_SEQ_NO");
-        assertEquals( fix7BeginSeqNo.getFIXNumber(), 7);
-        assertEquals( fix7BeginSeqNo.getFIXDescription(), "BeginSeqNo");
-        assertNotEquals( fix7BeginSeqNo.getFIXName(), "Not My BEGIN_SEQ_NO");
-        assertNotEquals( fix7BeginSeqNo.getFIXNumber(), 163223);
-        assertNotEquals( fix7BeginSeqNo.getFIXDescription(), "123 BeginSeqNo");
-        logger.info(WHERE_AM_I + ":Successful FIX0007Test()");
+        assertEquals( "BEGIN_SEQ_NO", fix7BeginSeqNo.getFIXName());
+        assertEquals( 7, fix7BeginSeqNo.getFIXNumber());
+        assertEquals( "BeginSeqNo", fix7BeginSeqNo.getFIXDescription());
+        assertNotEquals( "BEGIN;SEQ_NO", fix7BeginSeqNo.getFIXName());
+        assertNotEquals( 77, fix7BeginSeqNo.getFIXNumber());
+        assertNotEquals( "Begin Seq No", fix7BeginSeqNo.getFIXDescription());
     }
     @Test
     void Tag0007Test() {
         TagType tag7BeginSeqNo = new TagType(FIXType.BEGIN_SEQ_NO,"12345");
-        assertEquals( tag7BeginSeqNo.getDataValue(), "12345");
-        assertNotEquals( tag7BeginSeqNo.getDataValue(), "6789");
+        assertEquals( "12345", tag7BeginSeqNo.getDataValue());
+        assertNotEquals( "6789", tag7BeginSeqNo.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0007Test()");
     }
 }

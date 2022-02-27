@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag30LastMktTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0030Test() {
         FIXType fix30LastMkt = FIXType.LAST_MKT;
+        assertEquals( "LAST_MKT", fix30LastMkt.getFIXName());
+        assertEquals( 30, fix30LastMkt.getFIXNumber());
+        assertEquals( "LastMkt", fix30LastMkt.getFIXDescription());
+        assertNotEquals( "LAST_MKT LAST_MKT", fix30LastMkt.getFIXName());
+        assertNotEquals( 2020, fix30LastMkt.getFIXNumber());
+        assertNotEquals( "123 LastMkt", fix30LastMkt.getFIXDescription());
     }
     @Test
     void Tag0030Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag30LastMkt = new TagType(FIXType.LAST_MKT,"N");
+        assertEquals( "N", tag30LastMkt.getDataValue());
+        assertNotEquals( "A11", tag30LastMkt.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0030Test()");
     }
 }

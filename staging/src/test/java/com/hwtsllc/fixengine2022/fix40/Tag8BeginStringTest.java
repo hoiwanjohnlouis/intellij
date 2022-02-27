@@ -42,19 +42,18 @@ class Tag8BeginStringTest {
     @Test
     void FIX0008Test() {
         FIXType fix8BeginString = FIXType.BEGIN_STRING;
-        assertEquals( fix8BeginString.getFIXName(), "BEGIN_STRING");
-        assertEquals( fix8BeginString.getFIXNumber(), 8);
-        assertEquals( fix8BeginString.getFIXDescription(), "BeginString");
-        assertNotEquals( fix8BeginString.getFIXName(), "Not My BEGIN_STRING");
-        assertNotEquals( fix8BeginString.getFIXNumber(), 163223);
-        assertNotEquals( fix8BeginString.getFIXDescription(), "123 BeginString");
-        logger.info(WHERE_AM_I + ":Successful FIX0008Test()");
+        assertEquals( "BEGIN_STRING", fix8BeginString.getFIXName());
+        assertEquals( 8, fix8BeginString.getFIXNumber());
+        assertEquals( "BeginString", fix8BeginString.getFIXDescription());
+        assertNotEquals( "BEGIN STRING", fix8BeginString.getFIXName());
+        assertNotEquals( 88, fix8BeginString.getFIXNumber());
+        assertNotEquals( "123 BeginString", fix8BeginString.getFIXDescription());
     }
     @Test
     void Tag0008Test() {
         TagType tag8BeginString = new TagType(FIXType.BEGIN_STRING,"FIX4.0");
-        assertEquals( tag8BeginString.getDataValue(), "FIX4.0");
-        assertNotEquals( tag8BeginString.getDataValue(), "67.89");
+        assertEquals( "FIX4.0", tag8BeginString.getDataValue());
+        assertNotEquals( "FIX4.4", tag8BeginString.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0008Test()");
     }
 }

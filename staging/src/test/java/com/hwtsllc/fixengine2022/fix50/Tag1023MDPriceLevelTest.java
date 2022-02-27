@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -38,9 +39,7 @@ class Tag1023MDPriceLevelTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
+    void FIX1023Test() {
+        FIXType fix1023MDPriceLevel = FIXType.MD_PRICE_LEVEL;
     }
 }

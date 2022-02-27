@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag29LastCapacityTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0029Test() {
         FIXType fix29LastCapacity = FIXType.LAST_CAPACITY;
+        assertEquals( "LAST_CAPACITY", fix29LastCapacity.getFIXName());
+        assertEquals( 29, fix29LastCapacity.getFIXNumber());
+        assertEquals( "LastCapacity", fix29LastCapacity.getFIXDescription());
+        assertNotEquals( "LAST_CAPACITY LAST_CAPACITY", fix29LastCapacity.getFIXName());
+        assertNotEquals( 2020, fix29LastCapacity.getFIXNumber());
+        assertNotEquals( "123 LastCapacity", fix29LastCapacity.getFIXDescription());
     }
     @Test
     void Tag0029Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag29LastCapacity = new TagType(FIXType.LAST_CAPACITY,"A");
+        assertEquals( "A", tag29LastCapacity.getDataValue());
+        assertNotEquals( "11", tag29LastCapacity.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0029Test()");
     }
 }

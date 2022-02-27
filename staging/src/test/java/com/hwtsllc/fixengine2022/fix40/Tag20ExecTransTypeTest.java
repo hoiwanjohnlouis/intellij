@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -40,20 +41,20 @@ class Tag20ExecTransTypeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0020Test() {
         FIXType fix20ExecTransType = FIXType.EXEC_TRANS_TYPE;
+        assertEquals( "EXEC_TRANS_TYPE", fix20ExecTransType.getFIXName());
+        assertEquals( 20, fix20ExecTransType.getFIXNumber());
+        assertEquals( "ExecTransType (replaced)", fix20ExecTransType.getFIXDescription());
+        assertNotEquals( "EXEC_TRANS_TYPE EXEC_TRANS_TYPE", fix20ExecTransType.getFIXName());
+        assertNotEquals( 2020, fix20ExecTransType.getFIXNumber());
+        assertNotEquals( "123 ExecTransType (replaced)", fix20ExecTransType.getFIXDescription());
     }
     @Test
     void Tag0020Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag20ExecTransType = new TagType(FIXType.EXEC_TRANS_TYPE,"A");
+        assertEquals( "A", tag20ExecTransType.getDataValue());
+        assertNotEquals( "11", tag20ExecTransType.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0020Test()");
     }
 }

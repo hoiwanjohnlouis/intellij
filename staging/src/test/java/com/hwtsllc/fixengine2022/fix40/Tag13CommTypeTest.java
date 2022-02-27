@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag13CommTypeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0013Test() {
         FIXType fix13CommType = FIXType.COMM_TYPE;
+        assertEquals( "COMM_TYPE", fix13CommType.getFIXName());
+        assertEquals( 13, fix13CommType.getFIXNumber());
+        assertEquals( "CommType", fix13CommType.getFIXDescription());
+        assertNotEquals( "Not My COMM_TYPE", fix13CommType.getFIXName());
+        assertNotEquals( 163223, fix13CommType.getFIXNumber());
+        assertNotEquals( "123 CommType", fix13CommType.getFIXDescription());
     }
     @Test
     void Tag0013Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType fix13CommType = new TagType(FIXType.COMM_TYPE,"PCT");
+        assertEquals( "PCT", fix13CommType.getDataValue());
+        assertNotEquals( "11", fix13CommType.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0013Test()");
     }
 }

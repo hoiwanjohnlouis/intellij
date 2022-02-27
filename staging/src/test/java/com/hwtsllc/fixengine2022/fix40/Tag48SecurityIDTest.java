@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag48SecurityIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0048Test() {
         FIXType fix48SecurityID = FIXType.SECURITY_ID;
+        assertEquals( "SECURITY_ID", fix48SecurityID.getFIXName());
+        assertEquals( 48, fix48SecurityID.getFIXNumber());
+        assertEquals( "SecurityID", fix48SecurityID.getFIXDescription());
+        assertNotEquals( "SECURITY_ID SECURITY_ID", fix48SecurityID.getFIXName());
+        assertNotEquals( 3123, fix48SecurityID.getFIXNumber());
+        assertNotEquals( "SecurityID SecurityID", fix48SecurityID.getFIXDescription());
     }
     @Test
     void Tag0048Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag48SecurityID = new TagType(FIXType.SECURITY_ID,"TESTA");
+        assertEquals( "TESTA", tag48SecurityID.getDataValue());
+        assertNotEquals( "A11", tag48SecurityID.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0048Test()");
     }
 }

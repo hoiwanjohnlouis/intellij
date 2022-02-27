@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag50SenderSubIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0050Test() {
         FIXType fix50SenderSubID = FIXType.SENDER_SUB_ID;
+        assertEquals( "SENDER_SUB_ID", fix50SenderSubID.getFIXName());
+        assertEquals( 50, fix50SenderSubID.getFIXNumber());
+        assertEquals( "SenderSubID", fix50SenderSubID.getFIXDescription());
+        assertNotEquals( "SENDER_SUB_ID SENDER_SUB_ID", fix50SenderSubID.getFIXName());
+        assertNotEquals( 3123, fix50SenderSubID.getFIXNumber());
+        assertNotEquals( "SenderSubID SenderSubID", fix50SenderSubID.getFIXDescription());
     }
     @Test
     void Tag0050Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag50SenderSubID = new TagType(FIXType.SENDER_SUB_ID,"BEST");
+        assertEquals( "BEST", tag50SenderSubID.getDataValue());
+        assertNotEquals( "A11", tag50SenderSubID.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0050Test()");
     }
 }

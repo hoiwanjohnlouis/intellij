@@ -21,7 +21,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 @Deprecated
-public enum Tag47Rule89A {
+public enum Tag47Rule80A {
 
     AGENCY_SINGLE_ORDER("A",	"Agency single order"),
     SHORT_EXEMPT_A("B", "Short exempt transaction (refer to A type)"),
@@ -56,7 +56,7 @@ public enum Tag47Rule89A {
     private final String tag47Rule80AValue;
     private final String tag47Rule80ADescription;
 
-    Tag47Rule89A(final String tag47Rule80AValue, final String tag47Rule80ADescription) {
+    Tag47Rule80A(final String tag47Rule80AValue, final String tag47Rule80ADescription) {
         this.tag47Rule80AValue = tag47Rule80AValue;
         this.tag47Rule80ADescription = tag47Rule80ADescription;
     }

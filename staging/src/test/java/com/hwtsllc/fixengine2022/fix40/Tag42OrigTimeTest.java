@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag42OrigTimeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0042Test() {
         FIXType fix42OrigTime = FIXType.ORIG_TIME;
+        assertEquals( "ORIG_TIME", fix42OrigTime.getFIXName());
+        assertEquals( 42, fix42OrigTime.getFIXNumber());
+        assertEquals( "OrigTime", fix42OrigTime.getFIXDescription());
+        assertNotEquals( "ORIG_TIME ORIG_TIME", fix42OrigTime.getFIXName());
+        assertNotEquals( 3123, fix42OrigTime.getFIXNumber());
+        assertNotEquals( "OrigTime OrigTime", fix42OrigTime.getFIXDescription());
     }
     @Test
     void Tag0042Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag42OrigTime = new TagType(FIXType.ORIG_TIME,"20220131");
+        assertEquals( "20220131", tag42OrigTime.getDataValue());
+        assertNotEquals( "A11", tag42OrigTime.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0042Test()");
     }
 }

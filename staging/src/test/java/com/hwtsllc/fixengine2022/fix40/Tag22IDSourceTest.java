@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag22IDSourceTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0022Test() {
         FIXType fix22IDSource = FIXType.ID_SOURCE;
+        assertEquals( "ID_SOURCE", fix22IDSource.getFIXName());
+        assertEquals( 22, fix22IDSource.getFIXNumber());
+        assertEquals( "IDSource", fix22IDSource.getFIXDescription());
+        assertNotEquals( "ID_SOURCE ID_SOURCE", fix22IDSource.getFIXName());
+        assertNotEquals( 2222, fix22IDSource.getFIXNumber());
+        assertNotEquals( "123 IDSource", fix22IDSource.getFIXDescription());
     }
     @Test
     void Tag0022Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag22IDSource = new TagType(FIXType.ID_SOURCE,"A");
+        assertEquals( "A", tag22IDSource.getDataValue());
+        assertNotEquals( "11", tag22IDSource.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0022Test()");
     }
 }

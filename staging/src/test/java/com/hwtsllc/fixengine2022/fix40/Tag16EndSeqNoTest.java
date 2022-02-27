@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,18 +40,20 @@ class Tag16EndSeqNoTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0016Test() {
         FIXType fix16EndSeqNo = FIXType.END_SEQ_NO;
+        assertEquals( "END_SEQ_NO", fix16EndSeqNo.getFIXName());
+        assertEquals( 16, fix16EndSeqNo.getFIXNumber());
+        assertEquals( "EndSeqNo", fix16EndSeqNo.getFIXDescription());
+        assertNotEquals( "END_SEQ_NO END_SEQ_NO", fix16EndSeqNo.getFIXName());
+        assertNotEquals( 111, fix16EndSeqNo.getFIXNumber());
+        assertNotEquals( "123 EndSeqNo", fix16EndSeqNo.getFIXDescription());
     }
     @Test
     void Tag0016Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag16EndSeqNo = new TagType(FIXType.END_SEQ_NO,"6789");
+        assertEquals( "6789", tag16EndSeqNo.getDataValue());
+        assertNotEquals( "11", tag16EndSeqNo.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0016Test()");
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag32LastQtyTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0032Test() {
-        FIXType fix32LastQty = FIXType.LAST_SHARES;
+        FIXType fix32LastQty = FIXType.LAST_QTY;
+        assertEquals( "LAST_QTY", fix32LastQty.getFIXName());
+        assertEquals( 32, fix32LastQty.getFIXNumber());
+        assertEquals( "LastQty", fix32LastQty.getFIXDescription());
+        assertNotEquals( "LAST_QTY LAST_QTY", fix32LastQty.getFIXName());
+        assertNotEquals( 312, fix32LastQty.getFIXNumber());
+        assertNotEquals( "LastQty LastQty", fix32LastQty.getFIXDescription());
     }
     @Test
     void Tag0032Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag32LastQty = new TagType(FIXType.LAST_QTY,"200");
+        assertEquals( "200", tag32LastQty.getDataValue());
+        assertNotEquals( "2222", tag32LastQty.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0032Test()");
     }
 }

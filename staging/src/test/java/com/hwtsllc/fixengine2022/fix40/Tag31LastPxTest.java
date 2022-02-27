@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag31LastPxTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0031Test() {
         FIXType fix31LastPx = FIXType.LAST_PX;
+        assertEquals( "LAST_PX", fix31LastPx.getFIXName());
+        assertEquals( 31, fix31LastPx.getFIXNumber());
+        assertEquals( "LastPx", fix31LastPx.getFIXDescription());
+        assertNotEquals( "LAST_PX LAST_PX", fix31LastPx.getFIXName());
+        assertNotEquals( 312, fix31LastPx.getFIXNumber());
+        assertNotEquals( "LastPx LastPx", fix31LastPx.getFIXDescription());
     }
     @Test
     void Tag0031Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag31LastPx = new TagType(FIXType.LAST_PX,"98.23");
+        assertEquals( "98.23", tag31LastPx.getDataValue());
+        assertNotEquals( "91", tag31LastPx.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0031Test()");
     }
 }

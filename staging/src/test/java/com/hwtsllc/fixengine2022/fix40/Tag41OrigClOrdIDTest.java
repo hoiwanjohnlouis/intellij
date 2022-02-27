@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag41OrigClOrdIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0041Test() {
         FIXType fix41OrigClOrdID = FIXType.ORIG_CL_ORD_ID;
+        assertEquals( "ORIG_CL_ORD_ID", fix41OrigClOrdID.getFIXName());
+        assertEquals( 41, fix41OrigClOrdID.getFIXNumber());
+        assertEquals( "OrigClOrdID", fix41OrigClOrdID.getFIXDescription());
+        assertNotEquals( "ORIG_CL_ORD_ID ORIG_CL_ORD_ID", fix41OrigClOrdID.getFIXName());
+        assertNotEquals( 3123, fix41OrigClOrdID.getFIXNumber());
+        assertNotEquals( "OrigClOrdID OrigClOrdID", fix41OrigClOrdID.getFIXDescription());
     }
     @Test
     void Tag0041Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag41OrigClOrdID = new TagType(FIXType.ORIG_CL_ORD_ID,"12345");
+        assertEquals( "12345", tag41OrigClOrdID.getDataValue());
+        assertNotEquals( "11", tag41OrigClOrdID.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0041Test()");
     }
 }

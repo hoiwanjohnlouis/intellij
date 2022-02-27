@@ -58,7 +58,7 @@ public enum FIXType {
     LAST_MKT(30, "LastMkt"),
 
     LAST_PX(31, "LastPx"),
-    LAST_SHARES(32, "LastShares"),
+    LAST_QTY(32, "LastQty"),
     LINES_OF_TEXT(33, "LinesOfText"),
     MSG_SEQ_NUM(34, "MsgSeqNum"),
     MSG_TYPE(35, "MsgType"),
@@ -1429,7 +1429,7 @@ public enum FIXType {
         System.out.println(FIXType.LAST_MKT);
 
         System.out.println(FIXType.LAST_PX);
-        System.out.println(FIXType.LAST_SHARES);
+        System.out.println(FIXType.LAST_QTY);
         System.out.println(FIXType.LINES_OF_TEXT);
         System.out.println(FIXType.MSG_SEQ_NUM);
         System.out.println(FIXType.MSG_TYPE);

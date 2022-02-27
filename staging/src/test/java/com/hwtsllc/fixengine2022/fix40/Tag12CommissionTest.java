@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,18 +40,20 @@ class Tag12CommissionTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0012Test() {
         FIXType fix12Commission = FIXType.COMMISSION;
+        assertEquals( "COMMISSION", fix12Commission.getFIXName());
+        assertEquals( 12, fix12Commission.getFIXNumber());
+        assertEquals( "Commission", fix12Commission.getFIXDescription());
+        assertNotEquals( "Not My COMMISSION", fix12Commission.getFIXName());
+        assertNotEquals( 163223, fix12Commission.getFIXNumber());
+        assertNotEquals( "123 Commission", fix12Commission.getFIXDescription());
     }
     @Test
     void Tag0012Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag12Commission = new TagType(FIXType.COMMISSION,"10");
+        assertEquals( "10", tag12Commission.getDataValue());
+        assertNotEquals( "11", tag12Commission.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0012Test()");
     }
 }

@@ -42,19 +42,18 @@ class Tag9BodyLengthTest {
     @Test
     void FIX0009Test() {
         FIXType fix9BodyLength = FIXType.BODY_LENGTH;
-        assertEquals( fix9BodyLength.getFIXName(), "BODY_LENGTH");
-        assertEquals( fix9BodyLength.getFIXNumber(), 9);
-        assertEquals( fix9BodyLength.getFIXDescription(), "BodyLength");
-        assertNotEquals( fix9BodyLength.getFIXName(), "Not My BODY_LENGTH");
-        assertNotEquals( fix9BodyLength.getFIXNumber(), 163223);
-        assertNotEquals( fix9BodyLength.getFIXDescription(), "123 BodyLength");
-        logger.info(WHERE_AM_I + ":Successful FIX0009Test()");
+        assertEquals( "BODY_LENGTH", fix9BodyLength.getFIXName());
+        assertEquals( 9, fix9BodyLength.getFIXNumber());
+        assertEquals( "BodyLength", fix9BodyLength.getFIXDescription());
+        assertNotEquals( "BODY_ LENGTH", fix9BodyLength.getFIXName());
+        assertNotEquals( 99, fix9BodyLength.getFIXNumber());
+        assertNotEquals( "Body Length", fix9BodyLength.getFIXDescription());
     }
     @Test
     void Tag0009Test() {
         TagType tag9BodyLength = new TagType(FIXType.BODY_LENGTH,"120");
-        assertEquals( tag9BodyLength.getDataValue(), "120");
-        assertNotEquals( tag9BodyLength.getDataValue(), "6789");
+        assertEquals( "120", tag9BodyLength.getDataValue());
+        assertNotEquals( "6789", tag9BodyLength.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0009Test()");
     }
 }

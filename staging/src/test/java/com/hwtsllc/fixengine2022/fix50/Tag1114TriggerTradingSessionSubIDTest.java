@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -38,9 +39,7 @@ class Tag1114TriggerTradingSessionSubIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void FIX1114Test() {
+        FIXType fix1114TriggerTradingSessionSubID = FIXType.TRIGGER_TRADING_SESSION_SUB_ID;
     }
 }

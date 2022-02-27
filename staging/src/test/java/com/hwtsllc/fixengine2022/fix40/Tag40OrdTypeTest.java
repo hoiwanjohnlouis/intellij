@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag40OrdTypeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0040Test() {
         FIXType fix40OrdType = FIXType.ORD_TYPE;
+        assertEquals( "ORD_TYPE", fix40OrdType.getFIXName());
+        assertEquals( 40, fix40OrdType.getFIXNumber());
+        assertEquals( "OrdType", fix40OrdType.getFIXDescription());
+        assertNotEquals( "ORD_TYPE ORD_TYPE", fix40OrdType.getFIXName());
+        assertNotEquals( 3123, fix40OrdType.getFIXNumber());
+        assertNotEquals( "OrdType OrdType", fix40OrdType.getFIXDescription());
     }
     @Test
     void Tag0040Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag40OrdType = new TagType(FIXType.ORD_TYPE,"N");
+        assertEquals( "N", tag40OrdType.getDataValue());
+        assertNotEquals( "A11", tag40OrdType.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0040Test()");
     }
 }

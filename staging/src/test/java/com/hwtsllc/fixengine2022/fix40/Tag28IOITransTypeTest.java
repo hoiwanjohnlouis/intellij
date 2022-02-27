@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag28IOITransTypeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0028Test() {
         FIXType fix28IOITransType = FIXType.IOI_TRANS_TYPE;
+        assertEquals( "IOI_TRANS_TYPE", fix28IOITransType.getFIXName());
+        assertEquals( 28, fix28IOITransType.getFIXNumber());
+        assertEquals( "IOITransType", fix28IOITransType.getFIXDescription());
+        assertNotEquals( "IOI_TRANS_TYPE IOI_TRANS_TYPE", fix28IOITransType.getFIXName());
+        assertNotEquals( 2020, fix28IOITransType.getFIXNumber());
+        assertNotEquals( "123 IOITransType", fix28IOITransType.getFIXDescription());
     }
     @Test
     void Tag0028Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag28IOITransType = new TagType(FIXType.IOI_TRANS_TYPE,"A");
+        assertEquals( "A", tag28IOITransType.getDataValue());
+        assertNotEquals( "11", tag28IOITransType.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0028Test()");
     }
 }

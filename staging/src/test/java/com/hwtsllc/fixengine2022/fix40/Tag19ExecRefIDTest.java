@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -39,20 +40,20 @@ class Tag19ExecRefIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0019Test() {
         FIXType fix19ExecRefID = FIXType.EXEC_REF_ID;
+        assertEquals( "EXEC_REF_ID", fix19ExecRefID.getFIXName());
+        assertEquals( 19, fix19ExecRefID.getFIXNumber());
+        assertEquals( "ExecRefID", fix19ExecRefID.getFIXDescription());
+        assertNotEquals( "EXEC_REF_ID EXEC_REF_ID", fix19ExecRefID.getFIXName());
+        assertNotEquals( 111, fix19ExecRefID.getFIXNumber());
+        assertNotEquals( "123 ExecRefID", fix19ExecRefID.getFIXDescription());
     }
     @Test
     void Tag0019Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag19ExecRefID = new TagType(FIXType.END_SEQ_NO,"6789-XYZ");
+        assertEquals( "6789-XYZ", tag19ExecRefID.getDataValue());
+        assertNotEquals( "11-ABCD", tag19ExecRefID.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0019Test()");
     }
 }

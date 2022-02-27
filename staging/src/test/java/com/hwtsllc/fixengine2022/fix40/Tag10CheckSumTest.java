@@ -42,19 +42,18 @@ class Tag10CheckSumTest {
     @Test
     void FIX0010Test() {
         FIXType fix10CheckSum = FIXType.CHECK_SUM;
-        assertEquals( fix10CheckSum.getFIXName(), "CHECK_SUM");
-        assertEquals( fix10CheckSum.getFIXNumber(), 10);
-        assertEquals( fix10CheckSum.getFIXDescription(), "CheckSum");
-        assertNotEquals( fix10CheckSum.getFIXName(), "Not My CHECK_SUM");
-        assertNotEquals( fix10CheckSum.getFIXNumber(), 163223);
-        assertNotEquals( fix10CheckSum.getFIXDescription(), "123 CheckSum");
-        logger.info(WHERE_AM_I + ":Successful FIX0010Test()");
+        assertEquals( "CHECK_SUM", fix10CheckSum.getFIXName());
+        assertEquals( 10, fix10CheckSum.getFIXNumber());
+        assertEquals( "CheckSum", fix10CheckSum.getFIXDescription());
+        assertNotEquals( "CHECK_SUM CHECK_SUM", fix10CheckSum.getFIXName());
+        assertNotEquals( 100, fix10CheckSum.getFIXNumber());
+        assertNotEquals( "123 CheckSum", fix10CheckSum.getFIXDescription());
     }
     @Test
     void Tag0010Test() {
         TagType tag10CheckSum = new TagType(FIXType.CHECK_SUM,"ABCD");
-        assertEquals( tag10CheckSum.getDataValue(), "ABCD");
-        assertNotEquals( tag10CheckSum.getDataValue(), "67.89");
+        assertEquals( "ABCD", tag10CheckSum.getDataValue());
+        assertNotEquals( "abcd", tag10CheckSum.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0010Test()");
     }
 }

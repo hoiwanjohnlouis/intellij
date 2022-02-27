@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -40,20 +41,20 @@ class Tag46RelatdSymTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0046Test() {
         FIXType fix46RelatdSym = FIXType.RELATD_SYM;
+        assertEquals( "RELATD_SYM", fix46RelatdSym.getFIXName());
+        assertEquals( 46, fix46RelatdSym.getFIXNumber());
+        assertEquals( "RelatdSym (No longer used)", fix46RelatdSym.getFIXDescription());
+        assertNotEquals( "RELATD_SYM RELATD_SYM", fix46RelatdSym.getFIXName());
+        assertNotEquals( 3123, fix46RelatdSym.getFIXNumber());
+        assertNotEquals( "RelatdSym (No longer used) RelatdSym (No longer used)", fix46RelatdSym.getFIXDescription());
     }
     @Test
     void Tag0046Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        TagType tag46RelatdSym = new TagType(FIXType.RELATD_SYM,"N");
+        assertEquals( "N", tag46RelatdSym.getDataValue());
+        assertNotEquals( "A11", tag46RelatdSym.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0046Test()");
     }
 }
