@@ -42,4 +42,7 @@ class Tag1007SideReasonCdTest {
     void FIX1007Test() {
         FIXType fix1007SideReasonCd = FIXType.SIDE_REASON_CD;
     }
+    @Test
+    void Tag1007Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1005SideTradeReportIDTest {
     void FIX1005Test() {
         FIXType fix1005SideTradeReportID = FIXType.SIDE_TRADE_REPORT_ID;
     }
+    @Test
+    void Tag1005Test() {
+    }
 }

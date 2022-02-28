@@ -42,4 +42,7 @@ class Tag987UnderlyingSettlementDateTest {
     void FIX0987Test() {
         FIXType fix987UnderlyingSettlementDate = FIXType.UNDERLYING_SETTLEMENT_DATE;
     }
+    @Test
+    void Tag0987Test() {
+    }
 }

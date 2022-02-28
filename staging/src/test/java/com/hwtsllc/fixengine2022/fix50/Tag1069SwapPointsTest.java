@@ -42,4 +42,7 @@ class Tag1069SwapPointsTest {
     void FIX1069Test() {
         FIXType fix1069SwapPoints = FIXType.SWAP_POINTS;
     }
+    @Test
+    void Tag1069Test() {
+    }
 }

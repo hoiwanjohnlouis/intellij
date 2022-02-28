@@ -42,4 +42,7 @@ class Tag1131RefCstmApplVerIDTest {
     void FIX1131Test() {
         FIXType fix1131RefCstmApplVerID = FIXType.REF_CSTM_APPL_VER_ID;
     }
+    @Test
+    void Tag1131Test() {
+    }
 }

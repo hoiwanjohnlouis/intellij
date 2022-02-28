@@ -42,4 +42,7 @@ class Tag1119RootPartyRoleTest {
     void FIX1119Test() {
         FIXType fix1119RootPartyRole = FIXType.ROOT_PARTY_ROLE;
     }
+    @Test
+    void Tag1119Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag962SideTimeInForceTest {
     void FIX0962Test() {
         FIXType fix962SideTimeInForce = FIXType.SIDE_TIME_IN_FORCE;
     }
+    @Test
+    void Tag0962Test() {
+    }
 }

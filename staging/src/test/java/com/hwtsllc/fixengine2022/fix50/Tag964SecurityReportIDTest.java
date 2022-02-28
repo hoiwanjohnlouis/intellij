@@ -42,4 +42,7 @@ class Tag964SecurityReportIDTest {
     void FIX0964Test() {
         FIXType fix964SecurityReportID = FIXType.SECURITY_REPORT_ID;
     }
+    @Test
+    void Tag0964Test() {
+    }
 }

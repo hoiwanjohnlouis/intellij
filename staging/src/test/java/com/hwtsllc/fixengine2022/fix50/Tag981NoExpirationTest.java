@@ -42,4 +42,7 @@ class Tag981NoExpirationTest {
     void FIX0981Test() {
         FIXType fix981NoExpiration = FIXType.NO_EXPIRATION;
     }
+    @Test
+    void Tag0981Test() {
+    }
 }

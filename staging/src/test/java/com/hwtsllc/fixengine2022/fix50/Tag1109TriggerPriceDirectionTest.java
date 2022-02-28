@@ -42,4 +42,7 @@ class Tag1109TriggerPriceDirectionTest {
     void FIX1109Test() {
         FIXType fix1109TriggerPriceDirection = FIXType.TRIGGER_PRICE_DIRECTION;
     }
+    @Test
+    void Tag1109Test() {
+    }
 }

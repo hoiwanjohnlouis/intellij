@@ -42,4 +42,7 @@ class Tag1091PreTradeAnonymityTest {
     void FIX1091Test() {
         FIXType fix1091PreTradeAnonymity = FIXType.PRE_TRADE_ANONYMITY;
     }
+    @Test
+    void Tag1091Test() {
+    }
 }

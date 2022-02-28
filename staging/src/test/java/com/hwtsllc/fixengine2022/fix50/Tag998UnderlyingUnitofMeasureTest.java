@@ -42,4 +42,7 @@ class Tag998UnderlyingUnitofMeasureTest {
     void FIX0998Test() {
         FIXType fix998UnderlyingUnitofMeasure = FIXType.UNDERLYING_UNIT_OF_MEASURE;
     }
+    @Test
+    void Tag0998Test() {
+    }
 }

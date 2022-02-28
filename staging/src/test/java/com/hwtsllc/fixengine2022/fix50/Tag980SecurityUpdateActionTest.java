@@ -42,4 +42,7 @@ class Tag980SecurityUpdateActionTest {
     void FIX0980Test() {
         FIXType fix980SecurityUpdateAction = FIXType.SECURITY_UPDATE_ACTION;
     }
+    @Test
+    void Tag0980Test() {
+    }
 }

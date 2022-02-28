@@ -42,4 +42,7 @@ class Tag992IndividualAllocTypeTest {
     void FIX0992Test() {
         FIXType fix992IndividualAllocType = FIXType.INDIVIDUAL_ALLOC_TYPE;
     }
+    @Test
+    void Tag0992Test() {
+    }
 }

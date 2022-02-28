@@ -42,4 +42,7 @@ class Tag967StrikeMultiplierTest {
     void FIX0967Test() {
         FIXType fix967StrikeMultiplier = FIXType.STRIKE_MULTIPLIER;
     }
+    @Test
+    void Tag0967Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1110TriggerNewPriceTest {
     void FIX1110Test() {
         FIXType fix1110TriggerNewPrice = FIXType.TRIGGER_NEW_PRICE;
     }
+    @Test
+    void Tag1110Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1125OrigTradeDateTest {
     void FIX1125Test() {
         FIXType fix1125OrigTradeDate = FIXType.ORIG_TRADE_DATE;
     }
+    @Test
+    void Tag1125Test() {
+    }
 }

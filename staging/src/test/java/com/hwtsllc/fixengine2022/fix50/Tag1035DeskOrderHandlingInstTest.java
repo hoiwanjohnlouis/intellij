@@ -42,4 +42,7 @@ class Tag1035DeskOrderHandlingInstTest {
     void FIX1035Test() {
         FIXType fix1035DeskOrderHandlingInst = FIXType.DESK_ORDER_HANDLING_INST;
     }
+    @Test
+    void Tag1035Test() {
+    }
 }

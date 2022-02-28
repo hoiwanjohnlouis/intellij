@@ -42,4 +42,7 @@ class Tag1061UndlyInstrumentPartyRoleTest {
     void FIX1061Test() {
         FIXType fix1061UndlyInstrumentPartyRole = FIXType.UNDLY_INSTRUMENT_PARTY_ROLE;
     }
+    @Test
+    void Tag1061Test() {
+    }
 }

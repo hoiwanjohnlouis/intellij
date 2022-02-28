@@ -42,4 +42,7 @@ class Tag1055PositionCurrencyTest {
     void FIX1055Test() {
         FIXType fix1055PositionCurrency = FIXType.POSITION_CURRENCY;
     }
+    @Test
+    void Tag1055Test() {
+    }
 }

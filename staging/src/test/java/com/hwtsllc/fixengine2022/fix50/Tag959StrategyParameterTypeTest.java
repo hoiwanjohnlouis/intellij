@@ -42,4 +42,7 @@ class Tag959StrategyParameterTypeTest {
     void FIX0959Test() {
         FIXType fix959StrategyParameterType = FIXType.STRATEGY_PARAMETER_TYPE;
     }
+    @Test
+    void Tag0959Test() {
+    }
 }

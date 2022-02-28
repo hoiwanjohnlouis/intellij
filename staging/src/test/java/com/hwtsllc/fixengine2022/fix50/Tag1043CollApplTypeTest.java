@@ -42,4 +42,7 @@ class Tag1043CollApplTypeTest {
     void FIX1043Test() {
         FIXType fix1043CollApplType = FIXType.COLL_APPL_TYPE;
     }
+    @Test
+    void Tag1043Test() {
+    }
 }

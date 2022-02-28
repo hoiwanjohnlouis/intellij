@@ -42,4 +42,7 @@ class Tag1129CstmApplVerIDTest {
     void FIX1129Test() {
         FIXType fix1129CstmApplVerID = FIXType.CSTM_APPL_VER_ID;
     }
+    @Test
+    void Tag1129Test() {
+    }
 }

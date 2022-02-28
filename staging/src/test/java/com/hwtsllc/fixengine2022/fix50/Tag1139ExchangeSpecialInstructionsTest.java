@@ -42,4 +42,7 @@ class Tag1139ExchangeSpecialInstructionsTest {
     void FIX1139Test() {
         FIXType fag1139ExchangeSpecialInstructions = FIXType.EXCHANGE_SPECIAL_INSTRUCTIONS;
     }
+    @Test
+    void Tag1139Test() {
+    }
 }

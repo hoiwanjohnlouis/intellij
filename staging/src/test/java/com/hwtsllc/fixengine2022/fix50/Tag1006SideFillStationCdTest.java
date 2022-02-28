@@ -42,4 +42,7 @@ class Tag1006SideFillStationCdTest {
     void FIX1006Test() {
         FIXType fix1006SideFillStationCd = FIXType.SIDE_FILL_STATION_CD;
     }
+    @Test
+    void Tag1006Test() {
+    }
 }

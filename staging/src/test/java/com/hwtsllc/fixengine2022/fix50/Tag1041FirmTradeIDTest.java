@@ -42,4 +42,7 @@ class Tag1041FirmTradeIDTest {
     void FIX1041Test() {
         FIXType fix1041FirmTradeID = FIXType.FIRM_TRADE_ID;
     }
+    @Test
+    void Tag1041Test() {
+    }
 }

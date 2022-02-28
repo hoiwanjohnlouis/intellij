@@ -42,4 +42,7 @@ class Tag1051InstrumentPartyRoleTest {
     void FIX1051Test() {
         FIXType fix1051InstrumentPartyRole = FIXType.INSTRUMENT_PARTY_ROLE;
     }
+    @Test
+    void Tag1051Test() {
+    }
 }

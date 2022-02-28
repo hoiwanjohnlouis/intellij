@@ -42,4 +42,7 @@ class Tag1084DisplayMethodTest {
     void FIX1084Test() {
         FIXType fix1084DisplayMethod = FIXType.DISPLAY_METHOD;
     }
+    @Test
+    void Tag1084Test() {
+    }
 }

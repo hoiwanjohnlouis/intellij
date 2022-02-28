@@ -42,4 +42,7 @@ class Tag970PositionLimitTest {
     void FIX0970Test() {
         FIXType fix970PositionLimit = FIXType.POSITION_LIMIT;
     }
+    @Test
+    void Tag0970Test() {
+    }
 }

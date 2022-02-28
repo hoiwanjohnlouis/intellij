@@ -42,4 +42,7 @@ class Tag1017LegOptionRatioTest {
     void FIX1017Test() {
         FIXType fix1017LegOptionRatio = FIXType.LEG_OPTION_RATIO;
     }
+    @Test
+    void Tag1017Test() {
+    }
 }

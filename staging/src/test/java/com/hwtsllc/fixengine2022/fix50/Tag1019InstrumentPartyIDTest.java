@@ -42,4 +42,7 @@ class Tag1019InstrumentPartyIDTest {
     void FIX1019Test() {
         FIXType fix1019InstrumentPartyID = FIXType.INSTRUMENT_PARTY_ID;
     }
+    @Test
+    void Tag1019Test() {
+    }
 }

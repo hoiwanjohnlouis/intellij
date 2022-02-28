@@ -42,4 +42,7 @@ class Tag1037UnderlyingDeliveryAmountTest {
     void FIX1037Test() {
         FIXType fix1037UnderlyingDeliveryAmount = FIXType.UNDERLYING_DELIVERY_AMOUNT;
     }
+    @Test
+    void Tag1037Test() {
+    }
 }

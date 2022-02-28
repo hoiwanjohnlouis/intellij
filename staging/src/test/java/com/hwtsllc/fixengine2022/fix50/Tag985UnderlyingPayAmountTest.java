@@ -42,4 +42,7 @@ class Tag985UnderlyingPayAmountTest {
     void FIX0985Test() {
         FIXType fix985UnderlyingPayAmount = FIXType.UNDERLYING_PAY_AMOUNT;
     }
+    @Test
+    void Tag0985Test() {
+    }
 }

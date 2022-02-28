@@ -42,4 +42,7 @@ class Tag993AllocCustomerCapacityTest {
     void FIX0993Test() {
         FIXType fix993AllocCustomerCapacity = FIXType.ALLOC_CUSTOMER_CAPACITY;
     }
+    @Test
+    void Tag0993Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1034DeskTypeSourceTest {
     void FIX1034Test() {
         FIXType fix1034DeskTypeSource = FIXType.DESK_TYPE_SOURCE;
     }
+    @Test
+    void Tag1034Test() {
+    }
 }

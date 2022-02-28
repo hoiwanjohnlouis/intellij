@@ -42,4 +42,7 @@ class Tag1072SideGrossTradeAmtTest {
     void FIX1072Test() {
         FIXType fix1072SideGrossTradeAmt = FIXType.SIDE_GROSS_TRADE_AMT;
     }
+    @Test
+    void Tag1072Test() {
+    }
 }

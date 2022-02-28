@@ -42,4 +42,7 @@ class Tag1031CustOrderHandlingInstTest {
     void FIX1031Test() {
         FIXType fix1031CustOrderHandlingInst = FIXType.CUST_ORDER_HANDLING_INST;
     }
+    @Test
+    void Tag1031Test() {
+    }
 }

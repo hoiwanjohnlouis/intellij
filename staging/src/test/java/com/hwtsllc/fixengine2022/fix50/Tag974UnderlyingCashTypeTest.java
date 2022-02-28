@@ -42,4 +42,7 @@ class Tag974UnderlyingCashTypeTest {
     void FIX0974Test() {
         FIXType fix974UnderlyingCashType = FIXType.UNDERLYING_CASH_TYPE;
     }
+    @Test
+    void Tag0974Test() {
+    }
 }

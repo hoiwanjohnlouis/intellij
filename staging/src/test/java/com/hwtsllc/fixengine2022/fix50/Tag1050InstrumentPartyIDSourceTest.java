@@ -42,4 +42,7 @@ class Tag1050InstrumentPartyIDSourceTest {
     void FIX1050Test() {
         FIXType fix1050InstrumentPartyIDSource = FIXType.INSTRUMENT_PARTY_ID_SOURCE;
     }
+    @Test
+    void Tag1050Test() {
+    }
 }

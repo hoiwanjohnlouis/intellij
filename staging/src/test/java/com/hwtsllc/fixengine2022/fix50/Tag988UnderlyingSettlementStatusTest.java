@@ -42,4 +42,7 @@ class Tag988UnderlyingSettlementStatusTest {
     void FIX0988Test() {
         FIXType fix988UnderlyingSettlementStatus = FIXType.UNDERLYING_SETTLEMENT_STATUS;
     }
+    @Test
+    void Tag0988Test() {
+    }
 }

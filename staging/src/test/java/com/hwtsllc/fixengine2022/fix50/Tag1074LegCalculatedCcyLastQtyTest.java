@@ -42,4 +42,7 @@ class Tag1074LegCalculatedCcyLastQtyTest {
     void FIX1074Test() {
         FIXType fix1074LegCalculatedCcyLastQty = FIXType.LEG_CALCULATED_CCY_LAST_QTY;
     }
+    @Test
+    void Tag1074Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag972UnderlyingAllocationPercentTest {
     void FIX0972Test() {
         FIXType fix972UnderlyingAllocationPercent = FIXType.UNDERLYING_ALLOCATION_PERCENT;
     }
+    @Test
+    void Tag0972Test() {
+    }
 }

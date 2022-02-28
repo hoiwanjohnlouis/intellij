@@ -42,4 +42,7 @@ class Tag1020TradeVolumeTest {
     void FIX1020Test() {
         FIXType fix1020TradeVolume = FIXType.TRADE_VOLUME;
     }
+    @Test
+    void Tag1020Test() {
+    }
 }

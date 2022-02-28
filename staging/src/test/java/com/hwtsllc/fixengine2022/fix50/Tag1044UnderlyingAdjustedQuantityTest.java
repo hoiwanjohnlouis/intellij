@@ -42,4 +42,7 @@ class Tag1044UnderlyingAdjustedQuantityTest {
     void FIX1044Test() {
         FIXType fix1044UnderlyingAdjustedQuantity = FIXType.UNDERLYING_ADJUSTED_QUANTITY;
     }
+    @Test
+    void Tag1044Test() {
+    }
 }

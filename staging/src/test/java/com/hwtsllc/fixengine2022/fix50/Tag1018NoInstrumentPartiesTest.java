@@ -42,4 +42,7 @@ class Tag1018NoInstrumentPartiesTest {
     void FIX1018Test() {
         FIXType fix1018NoInstrumentParties = FIXType.NO_INSTRUMENT_PARTIES;
     }
+    @Test
+    void Tag1018Test() {
+    }
 }

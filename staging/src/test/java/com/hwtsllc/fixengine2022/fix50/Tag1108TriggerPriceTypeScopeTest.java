@@ -42,4 +42,7 @@ class Tag1108TriggerPriceTypeScopeTest {
     void FIX1108Test() {
         FIXType fix1108TriggerPriceTypeScope = FIXType.TRIGGER_PRICE_TYPE_SCOPE;
     }
+    @Test
+    void Tag1108Test() {
+    }
 }

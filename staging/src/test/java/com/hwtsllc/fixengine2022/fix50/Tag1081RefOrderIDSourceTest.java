@@ -42,4 +42,7 @@ class Tag1081RefOrderIDSourceTest {
     void FIX1081Test() {
         FIXType fix1081RefOrderIDSource = FIXType.REF_ORDER_ID_SOURCE;
     }
+    @Test
+    void Tag1081Test() {
+    }
 }

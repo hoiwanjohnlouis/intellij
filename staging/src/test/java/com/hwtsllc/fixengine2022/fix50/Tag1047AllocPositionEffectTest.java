@@ -42,4 +42,7 @@ class Tag1047AllocPositionEffectTest {
     void FIX1047Test() {
         FIXType fix1047AllocPositionEffect = FIXType.ALLOC_POSITION_EFFECT;
     }
+    @Test
+    void Tag1047Test() {
+    }
 }

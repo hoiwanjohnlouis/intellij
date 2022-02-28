@@ -42,4 +42,7 @@ class Tag1060UndlyInstrumentPartyIDSourceTest {
     void FIX1060Test() {
         FIXType fix1060UndlyInstrumentPartyIDSource = FIXType.UNDLY_INSTRUMENT_PARTY_ID_SOURCE;
     }
+    @Test
+    void Tag1060Test() {
+    }
 }

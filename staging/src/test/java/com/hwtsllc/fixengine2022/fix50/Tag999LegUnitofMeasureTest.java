@@ -42,4 +42,7 @@ class Tag999LegUnitofMeasureTest {
     void FIX0999Test() {
         FIXType fix999LegUnitofMeasure = FIXType.LEG_UNIT_OF_MEASURE;
     }
+    @Test
+    void Tag0999Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1067LegBidForwardPointsTest {
     void FIX1067Test() {
         FIXType fix1067LegBidForwardPoints = FIXType.LEG_BID_FORWARD_POINTS;
     }
+    @Test
+    void Tag1067Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1123TradeHandlingInstrTest {
     void FIX1123Test() {
         FIXType fix1123TradeHandlingInstr = FIXType.TRADE_HANDLING_INSTR;
     }
+    @Test
+    void Tag1123Test() {
+    }
 }

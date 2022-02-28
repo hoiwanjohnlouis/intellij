@@ -42,4 +42,7 @@ class Tag1014SideTrdRegTimestampSrcTest {
     void FIX1014Test() {
         FIXType fix1014SideTrdRegTimestampSrc = FIXType.SIDE_TRD_REG_TIMESTAMP_SRC;
     }
+    @Test
+    void Tag1014Test() {
+    }
 }

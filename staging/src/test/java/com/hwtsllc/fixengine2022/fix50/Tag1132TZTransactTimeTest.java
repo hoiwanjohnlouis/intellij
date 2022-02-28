@@ -42,4 +42,7 @@ class Tag1132TZTransactTimeTest {
     void FIX1132Test() {
         FIXType fix1132TZTransactTime = FIXType.TZ_TRANSACT_TIME;
     }
+    @Test
+    void Tag1132Test() {
+    }
 }

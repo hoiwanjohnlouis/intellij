@@ -42,4 +42,7 @@ class Tag1079MaturityTimeTest {
     void FIX1079Test() {
         FIXType fix1079MaturityTime = FIXType.MATURITY_TIME;
     }
+    @Test
+    void Tag1079Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1089MatchIncrementTest {
     void FIX1089Test() {
         FIXType fix1089MatchIncrement = FIXType.MATCH_INCREMENT;
     }
+    @Test
+    void Tag1089Test() {
+    }
 }

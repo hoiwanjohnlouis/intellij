@@ -42,4 +42,7 @@ class Tag1001LegTimeUnitTest {
     void FIX1001Test() {
         FIXType fix1001LegTimeUnit = FIXType.LEG_TIME_UNIT;
     }
+    @Test
+    void Tag1001Test() {
+    }
 }

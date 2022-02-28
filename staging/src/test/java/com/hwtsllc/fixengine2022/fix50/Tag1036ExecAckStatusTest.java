@@ -42,4 +42,7 @@ class Tag1036ExecAckStatusTest {
     void FIX1036Test() {
         FIXType fix1036ExecAckStatus = FIXType.EXEC_ACK_STATUS;
     }
+    @Test
+    void Tag1036Test() {
+    }
 }

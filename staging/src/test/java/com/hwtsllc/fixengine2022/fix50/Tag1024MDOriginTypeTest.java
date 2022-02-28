@@ -42,4 +42,7 @@ class Tag1024MDOriginTypeTest {
     void FIX1024Test() {
         FIXType fix1024MDOriginType = FIXType.MD_ORIGIN_TYPE;
     }
+    @Test
+    void Tag1024Test() {
+    }
 }

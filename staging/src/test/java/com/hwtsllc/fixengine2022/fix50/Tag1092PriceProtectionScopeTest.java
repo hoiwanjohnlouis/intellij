@@ -42,4 +42,7 @@ class Tag1092PriceProtectionScopeTest {
     void FIX1092Test() {
         FIXType fix1092PriceProtectionScope = FIXType.PRICE_PROTECTION_SCOPE;
     }
+    @Test
+    void Tag1092Test() {
+    }
 }

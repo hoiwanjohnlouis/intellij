@@ -42,4 +42,7 @@ class Tag1049InstrmtAssignmentMethodTest {
     void FIX1049Test() {
         FIXType fix1049InstrmtAssignmentMethod = FIXType.INSTRMT_ASSIGNMENT_METHOD;
     }
+    @Test
+    void Tag1049Test() {
+    }
 }

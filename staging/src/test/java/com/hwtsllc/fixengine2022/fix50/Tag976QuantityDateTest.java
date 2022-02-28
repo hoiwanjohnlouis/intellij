@@ -42,4 +42,7 @@ class Tag976QuantityDateTest {
     void FIX0976Test() {
         FIXType fix976QuantityDate = FIXType.QUANTITY_DATE;
     }
+    @Test
+    void Tag0976Test() {
+    }
 }

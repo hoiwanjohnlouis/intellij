@@ -42,4 +42,7 @@ class Tag969MinPriceIncrementTest {
     void FIX0969Test() {
         FIXType fix969MinPriceIncrement = FIXType.MIN_PRICE_INCREMENT;
     }
+    @Test
+    void Tag0969Test() {
+    }
 }

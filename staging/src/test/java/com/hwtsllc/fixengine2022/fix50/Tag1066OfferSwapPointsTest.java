@@ -42,4 +42,7 @@ class Tag1066OfferSwapPointsTest {
     void FIX1066Test() {
         FIXType fix1066OfferSwapPoints = FIXType.OFFER_SWAP_POINTS;
     }
+    @Test
+    void Tag1066Test() {
+    }
 }

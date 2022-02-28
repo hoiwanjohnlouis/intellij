@@ -42,4 +42,7 @@ class Tag990LegReportIDTest {
     void FIX0990Test() {
         FIXType fix990LegReportID = FIXType.LEG_REPORT_ID;
     }
+    @Test
+    void Tag0990Test() {
+    }
 }

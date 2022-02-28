@@ -42,4 +42,7 @@ class Tag1080RefOrderIDTest {
     void FIX1080Test() {
         FIXType fix1080RefOrderID = FIXType.REF_ORDER_ID;
     }
+    @Test
+    void Tag1080Test() {
+    }
 }

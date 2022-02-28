@@ -42,4 +42,7 @@ class Tag1106TriggerSecurityDescTest {
     void FIX1106Test() {
         FIXType fix1106TriggerSecurityDesc = FIXType.TRIGGER_SECURITY_DESC;
     }
+    @Test
+    void Tag1106Test() {
+    }
 }

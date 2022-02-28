@@ -42,4 +42,7 @@ class Tag1028ManualOrderIndicatorTest {
     void FIX1028Test() {
         FIXType fix1028ManualOrderIndicator = FIXType.MANUAL_ORDER_INDICATOR;
     }
+    @Test
+    void Tag1028Test() {
+    }
 }

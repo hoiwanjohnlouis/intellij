@@ -42,4 +42,7 @@ class Tag1021MDBookTypeTest {
     void FIX1021Test() {
         FIXType fix1021MDBookType = FIXType.MD_BOOK_TYPE;
     }
+    @Test
+    void Tag1021Test() {
+    }
 }

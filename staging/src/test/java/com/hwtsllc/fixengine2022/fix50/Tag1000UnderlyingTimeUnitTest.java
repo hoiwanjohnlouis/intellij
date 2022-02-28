@@ -45,4 +45,7 @@ class Tag1000UnderlyingTimeUnitTest {
         assertEquals( 1000, fix1000UnderlyingTimeUnit.getFIXNumber());
         assertEquals( "UnderlyingTimeUnit", fix1000UnderlyingTimeUnit.getFIXDescription());
     }
+    @Test
+    void Tag1000Test() {
+    }
 }

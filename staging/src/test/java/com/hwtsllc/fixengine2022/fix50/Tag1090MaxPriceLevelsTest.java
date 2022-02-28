@@ -42,4 +42,7 @@ class Tag1090MaxPriceLevelsTest {
     void FIX1090Test() {
         FIXType fix1090MaxPriceLevels = FIXType.MAX_PRICE_LEVELS;
     }
+    @Test
+    void Tag1090Test() {
+    }
 }

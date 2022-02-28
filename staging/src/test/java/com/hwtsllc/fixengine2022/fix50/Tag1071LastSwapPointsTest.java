@@ -42,4 +42,7 @@ class Tag1071LastSwapPointsTest {
     void FIX1071Test() {
         FIXType fix1071LastSwapPoints = FIXType.LAST_SWAP_POINTS;
     }
+    @Test
+    void Tag1071Test() {
+    }
 }

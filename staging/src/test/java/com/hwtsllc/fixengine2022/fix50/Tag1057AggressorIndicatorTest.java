@@ -42,4 +42,7 @@ class Tag1057AggressorIndicatorTest {
     void FIX1057Test() {
         FIXType fix1057AggressorIndicator = FIXType.AGGRESSOR_INDICATOR;
     }
+    @Test
+    void Tag1057Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag996UnitofMeasureTest {
     void FIX0996Test() {
         FIXType fix996UnitofMeasure = FIXType.UNIT_OF_MEASURE;
     }
+    @Test
+    void Tag0996Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1135RptSysTest {
     void FIX1135Test() {
         FIXType fix1135RptSys = FIXType.RPT_SYS;
     }
+    @Test
+    void Tag1135Test() {
+    }
 }

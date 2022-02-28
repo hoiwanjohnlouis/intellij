@@ -42,4 +42,7 @@ class Tag1029CustDirectedOrderTest {
     void FIX1029Test() {
         FIXType fix1029CustDirectedOrder = FIXType.CUST_DIRECTED_ORDER;
     }
+    @Test
+    void Tag1029Test() {
+    }
 }

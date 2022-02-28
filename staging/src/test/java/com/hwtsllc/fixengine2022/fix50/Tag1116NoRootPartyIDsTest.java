@@ -42,4 +42,7 @@ class Tag1116NoRootPartyIDsTest {
     void FIX1116Test() {
         FIXType fix1116NoRootPartyIDs = FIXType.NO_ROOT_PARTY_IDS;
     }
+    @Test
+    void Tag1116Test() {
+    }
 }

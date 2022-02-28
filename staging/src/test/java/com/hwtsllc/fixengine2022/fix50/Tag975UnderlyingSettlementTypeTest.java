@@ -42,4 +42,7 @@ class Tag975UnderlyingSettlementTypeTest {
     void FIX0975Test() {
         FIXType fix975UnderlyingSettlementType = FIXType.UNDERLYING_SETTLEMENT_TYPE;
     }
+    @Test
+    void Tag0975Test() {
+    }
 }

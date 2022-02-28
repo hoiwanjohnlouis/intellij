@@ -42,4 +42,7 @@ class Tag1045UnderlyingFXRateTest {
     void FIX1045Test() {
         FIXType fix1045UnderlyingFXRate = FIXType.UNDERLYING_FX_RATE;
     }
+    @Test
+    void Tag1045Test() {
+    }
 }

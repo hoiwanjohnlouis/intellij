@@ -42,4 +42,7 @@ class Tag1097PegSecurityIDTest {
     void FIX1097Test() {
         FIXType fix1097PegSecurityID = FIXType.PEG_SECURITY_ID;
     }
+    @Test
+    void Tag1097Test() {
+    }
 }

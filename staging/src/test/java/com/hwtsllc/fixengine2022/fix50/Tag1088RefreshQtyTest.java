@@ -42,4 +42,7 @@ class Tag1088RefreshQtyTest {
     void FIX1088Test() {
         FIXType fix1088RefreshQty = FIXType.REFRESH_QTY;
     }
+    @Test
+    void Tag1088Test() {
+    }
 }

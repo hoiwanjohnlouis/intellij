@@ -42,4 +42,7 @@ class Tag1087DisplayMinIncrTest {
     void FIX1087Test() {
         FIXType fix1087DisplayMinIncr = FIXType.DISPLAY_MIN_INCR;
     }
+    @Test
+    void Tag1087Test() {
+    }
 }

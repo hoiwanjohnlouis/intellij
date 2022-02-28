@@ -42,4 +42,7 @@ class Tag1134ReportedPxDiffTest {
     void FIX1134Test() {
         FIXType fix1134ReportedPxDiff = FIXType.REPORTED_PX_DIFF;
     }
+    @Test
+    void Tag1134Test() {
+    }
 }

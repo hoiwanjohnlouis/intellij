@@ -42,4 +42,7 @@ class Tag1030ReceivedDeptIDTest {
     void FIX1030Test() {
         FIXType fix1030ReceivedDeptID = FIXType.RECEIVED_DEPT_ID;
     }
+    @Test
+    void Tag1030Test() {
+    }
 }

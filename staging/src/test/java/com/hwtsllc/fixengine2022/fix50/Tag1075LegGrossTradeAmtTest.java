@@ -42,4 +42,7 @@ class Tag1075LegGrossTradeAmtTest {
     void FIX1075Test() {
         FIXType fix1075LegGrossTradeAmt = FIXType.LEG_GROSS_TRADE_AMT;
     }
+    @Test
+    void Tag1075Test() {
+    }
 }

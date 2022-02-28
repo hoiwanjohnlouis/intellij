@@ -42,4 +42,7 @@ class Tag1048DealingCapacityTest {
     void FIX1048Test() {
         FIXType fix1048DealingCapacity = FIXType.DEALING_CAPACITY;
     }
+    @Test
+    void Tag1048Test() {
+    }
 }

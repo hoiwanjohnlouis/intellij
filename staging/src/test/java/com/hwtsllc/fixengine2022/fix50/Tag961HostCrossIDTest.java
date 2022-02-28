@@ -42,4 +42,7 @@ class Tag961HostCrossIDTest {
     void FIX0961Test() {
         FIXType fix961HostCrossID = FIXType.HOST_CROSS_ID;
     }
+    @Test
+    void Tag0961Test() {
+    }
 }

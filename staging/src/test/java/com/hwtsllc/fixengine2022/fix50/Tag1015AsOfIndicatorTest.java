@@ -42,4 +42,7 @@ class Tag1015AsOfIndicatorTest {
     void FIX1015Test() {
         FIXType fix1015AsOfIndicator = FIXType.AS_OF_INDICATOR;
     }
+    @Test
+    void Tag1015Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1100TriggerTypeTest {
     void FIX1100Test() {
         FIXType fix1100TriggerType = FIXType.TRIGGER_TYPE;
     }
+    @Test
+    void Tag1100Test() {
+    }
 }

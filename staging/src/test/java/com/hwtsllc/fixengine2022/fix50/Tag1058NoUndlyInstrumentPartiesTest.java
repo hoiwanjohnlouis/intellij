@@ -42,4 +42,7 @@ class Tag1058NoUndlyInstrumentPartiesTest {
     void FIX1058Test() {
         FIXType fix1058NoUndlyInstrumentParties = FIXType.NO_UNDLY_INSTRUMENT_PARTIES;
     }
+    @Test
+    void Tag1058Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1085DisplayLowQtyTest {
     void FIX1085Test() {
         FIXType fix1085DisplayLowQty = FIXType.DISPLAY_LOW_QTY;
     }
+    @Test
+    void Tag1085Test() {
+    }
 }

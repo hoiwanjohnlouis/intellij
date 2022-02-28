@@ -42,4 +42,7 @@ class Tag1032OrderHandlingInstSourceTest {
     void FIX1032Test() {
         FIXType fix1032OrderHandlingInstSource = FIXType.ORDER_HANDLING_INST_SOURCE;
     }
+    @Test
+    void Tag1032Test() {
+    }
 }

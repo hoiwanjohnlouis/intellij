@@ -42,4 +42,7 @@ class Tag991RndPxTest {
     void FIX0991Test() {
         FIXType fix991RndPx = FIXType.RND_PX;
     }
+    @Test
+    void Tag0991Test() {
+    }
 }

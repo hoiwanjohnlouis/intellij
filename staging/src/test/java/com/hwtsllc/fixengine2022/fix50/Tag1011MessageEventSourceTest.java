@@ -42,4 +42,7 @@ class Tag1011MessageEventSourceTest {
     void FIX1011Test() {
         FIXType fix1011MessageEventSource = FIXType.MESSAGE_EVENT_SOURCE;
     }
+    @Test
+    void Tag1011Test() {
+    }
 }

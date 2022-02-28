@@ -42,4 +42,7 @@ class Tag1095PeggedRefPriceTest {
     void FIX1095Test() {
         FIXType fix1095PeggedRefPrice = FIXType.PEGGED_REF_PRICE;
     }
+    @Test
+    void Tag1095Test() {
+    }
 }

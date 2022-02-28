@@ -42,4 +42,7 @@ class Tag1073LegLastForwardPointsTest {
     void FIX1073Test() {
         FIXType fix1073LegLastForwardPoints = FIXType.LEG_LAST_FORWARD_POINTS;
     }
+    @Test
+    void Tag1073Test() {
+    }
 }

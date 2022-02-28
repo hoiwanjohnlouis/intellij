@@ -42,4 +42,7 @@ class Tag1082SecondaryDisplayQtyTest {
     void FIX1082Test() {
         FIXType fix1082SecondaryDisplayQty = FIXType.SECONDARY_DISPLAY_QTY;
     }
+    @Test
+    void Tag1082Test() {
+    }
 }

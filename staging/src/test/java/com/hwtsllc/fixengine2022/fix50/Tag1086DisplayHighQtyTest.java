@@ -42,4 +42,7 @@ class Tag1086DisplayHighQtyTest {
     void FIX1086Test() {
         FIXType fix1086DisplayHighQty = FIXType.DISPLAY_HIGH_QTY;
     }
+    @Test
+    void Tag1086Test() {
+    }
 }

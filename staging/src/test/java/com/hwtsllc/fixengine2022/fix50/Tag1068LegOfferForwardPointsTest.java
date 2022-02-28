@@ -42,4 +42,7 @@ class Tag1068LegOfferForwardPointsTest {
     void FIX1068Test() {
         FIXType fix1068LegOfferForwardPoints = FIXType.LEG_OFFER_FORWARD_POINTS;
     }
+    @Test
+    void Tag1068Test() {
+    }
 }

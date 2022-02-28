@@ -42,4 +42,7 @@ class Tag1052NoInstrumentPartySubIDsTest {
     void FIX1052Test() {
         FIXType fix1052NoInstrumentPartySubIDs = FIXType.NO_INSTRUMENT_PARTY_SUB_IDS;
     }
+    @Test
+    void Tag1052Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1053InstrumentPartySubIDTest {
     void FIX1053Test() {
         FIXType fix1053InstrumentPartySubID = FIXType.INSTRUMENT_PARTY_SUB_ID;
     }
+    @Test
+    void Tag1053Test() {
+    }
 }

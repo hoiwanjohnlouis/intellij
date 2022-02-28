@@ -42,4 +42,7 @@ class Tag1026MDEntrySpotRateTest {
     void FIX1026Test() {
         FIXType fix1026MDEntrySpotRate = FIXType.MD_ENTRY_SPOT_RATE;
     }
+    @Test
+    void Tag1026Test() {
+    }
 }

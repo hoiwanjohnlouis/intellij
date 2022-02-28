@@ -42,4 +42,7 @@ class Tag968StrikeValueTest {
     void FIX0968Test() {
         FIXType fix968StrikeValue = FIXType.STRIKE_VALUE;
     }
+    @Test
+    void Tag0968Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1103TriggerSymbolTest {
     void FIX1103Test() {
         FIXType fix1103TriggerSymbol = FIXType.TRIGGER_SYMBOL;
     }
+    @Test
+    void Tag1103Test() {
+    }
 }

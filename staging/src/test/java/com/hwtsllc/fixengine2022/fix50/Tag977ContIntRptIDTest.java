@@ -42,4 +42,7 @@ class Tag977ContIntRptIDTest {
     void FIX0977Test() {
         FIXType fix977ContIntRptID = FIXType.CONT_INT_RPT_ID;
     }
+    @Test
+    void Tag0977Test() {
+    }
 }

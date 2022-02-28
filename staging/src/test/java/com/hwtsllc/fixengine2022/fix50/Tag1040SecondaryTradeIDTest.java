@@ -42,4 +42,7 @@ class Tag1040SecondaryTradeIDTest {
     void FIX1040Test() {
         FIXType fix1040SecondaryTradeID = FIXType.SECONDARY_TRADE_ID;
     }
+    @Test
+    void Tag1040Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1121RootPartySubIDTest {
     void FIX1121Test() {
         FIXType fix1121RootPartySubID = FIXType.ROOT_PARTY_SUB_ID;
     }
+    @Test
+    void Tag1121Test() {
+    }
 }

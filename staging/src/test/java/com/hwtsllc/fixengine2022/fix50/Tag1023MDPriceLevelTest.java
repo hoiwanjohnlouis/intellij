@@ -42,4 +42,7 @@ class Tag1023MDPriceLevelTest {
     void FIX1023Test() {
         FIXType fix1023MDPriceLevel = FIXType.MD_PRICE_LEVEL;
     }
+    @Test
+    void Tag1023Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1136AllocClearingFeeIndicatorTest {
     void FIX1136Test() {
         FIXType fix1136AllocClearingFeeIndicator = FIXType.ALLOC_CLEARING_FEE_INDICATOR;
     }
+    @Test
+    void Tag1136Test() {
+    }
 }

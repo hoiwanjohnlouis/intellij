@@ -42,4 +42,7 @@ class Tag1027MDEntryForwardPointsTest {
     void FIX1027Test() {
         FIXType fix1027MDEntryForwardPoints = FIXType.MD_ENTRY_FORWARD_POINTS;
     }
+    @Test
+    void Tag1027Test() {
+    }
 }

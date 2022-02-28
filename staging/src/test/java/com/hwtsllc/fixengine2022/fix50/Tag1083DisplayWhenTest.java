@@ -42,4 +42,8 @@ class Tag1083DisplayWhenTest {
     void FIX1083Test() {
         FIXType fix1083DisplayWhen = FIXType.DISPLAY_WHEN;
     }
+    @Test
+    void Tag1083Test() {
+        FIXType fix1083DisplayWhen = FIXType.DISPLAY_WHEN;
+    }
 }

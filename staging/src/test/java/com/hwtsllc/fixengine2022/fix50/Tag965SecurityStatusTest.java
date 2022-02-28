@@ -42,4 +42,7 @@ class Tag965SecurityStatusTest {
     void FIX0965Test() {
         FIXType fix965SecurityStatus = FIXType.SECURITY_STATUS;
     }
+    @Test
+    void Tag0965Test() {
+    }
 }

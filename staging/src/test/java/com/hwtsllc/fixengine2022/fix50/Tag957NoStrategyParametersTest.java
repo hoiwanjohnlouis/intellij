@@ -42,4 +42,7 @@ class Tag957NoStrategyParametersTest {
     void FIX0957Test() {
         FIXType fix957NoStrategyParameters = FIXType.NO_STRATEGY_PARAMETERS;
     }
+    @Test
+    void Tag0957Test() {
+    }
 }

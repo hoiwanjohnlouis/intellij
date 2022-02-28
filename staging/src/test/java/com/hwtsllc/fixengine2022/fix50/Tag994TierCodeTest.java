@@ -42,4 +42,7 @@ class Tag994TierCodeTest {
     void FIX0994Test() {
         FIXType fix994TierCode = FIXType.TIER_CODE;
     }
+    @Test
+    void Tag0994Test() {
+    }
 }

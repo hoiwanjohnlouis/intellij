@@ -42,4 +42,7 @@ class Tag1114TriggerTradingSessionSubIDTest {
     void FIX1114Test() {
         FIXType fix1114TriggerTradingSessionSubID = FIXType.TRIGGER_TRADING_SESSION_SUB_ID;
     }
+    @Test
+    void Tag1114Test() {
+    }
 }

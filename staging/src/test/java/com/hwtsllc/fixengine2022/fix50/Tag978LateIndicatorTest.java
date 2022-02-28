@@ -42,4 +42,7 @@ class Tag978LateIndicatorTest {
     void FIX0978Test() {
         FIXType fix978LateIndicator = FIXType.LATE_INDICATOR;
     }
+    @Test
+    void Tag0978Test() {
+    }
 }

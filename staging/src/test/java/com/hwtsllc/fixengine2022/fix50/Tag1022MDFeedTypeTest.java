@@ -42,4 +42,7 @@ class Tag1022MDFeedTypeTest {
     void FIX1022Test() {
         FIXType fix1022MDFeedType = FIXType.MD_FEED_TYPE;
     }
+    @Test
+    void Tag1022Test() {
+    }
 }

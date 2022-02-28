@@ -42,4 +42,7 @@ class Tag963MDReportIDTest {
     void FIX0963Test() {
         FIXType fix963MDReportID = FIXType.MD_REPORT_ID;
     }
+    @Test
+    void Tag0963Test() {
+    }
 }

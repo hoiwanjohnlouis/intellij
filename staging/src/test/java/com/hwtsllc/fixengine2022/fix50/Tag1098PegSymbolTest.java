@@ -42,4 +42,7 @@ class Tag1098PegSymbolTest {
     void FIX1098Test() {
         FIXType fix1098PegSymbol = FIXType.PEG_SYMBOL;
     }
+    @Test
+    void Tag1098Test() {
+    }
 }

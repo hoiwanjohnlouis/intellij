@@ -42,4 +42,7 @@ class Tag1002AllocMethodTest {
     void FIX1002Test() {
         FIXType fix1002AllocMethod = FIXType.ALLOC_METHOD;
     }
+    @Test
+    void Tag1002Test() {
+    }
 }

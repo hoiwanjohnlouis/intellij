@@ -42,4 +42,7 @@ class Tag1137DefaultApplVerIDTest {
     void FIX1137Test() {
         FIXType fix1137DefaultApplVerID = FIXType.DEFAULT_APPL_VER_ID;
     }
+    @Test
+    void Tag1137Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag1070MDQuoteTypeTest {
     void FIX1070Test() {
         FIXType fix1070MDQuoteType = FIXType.MD_QUOTE_TYPE;
     }
+    @Test
+    void Tag1070Test() {
+    }
 }

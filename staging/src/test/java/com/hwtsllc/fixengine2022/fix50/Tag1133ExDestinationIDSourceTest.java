@@ -42,4 +42,7 @@ class Tag1133ExDestinationIDSourceTest {
     void FIX1133Test() {
         FIXType fix1133ExDestinationIDSource = FIXType.EX_DESTINATION_ID_SOURCE;
     }
+    @Test
+    void Tag1133Test() {
+    }
 }

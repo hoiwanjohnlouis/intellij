@@ -42,4 +42,7 @@ class Tag1130RefApplVerIDTest {
     void FIX1130Test() {
         FIXType fix1130RefApplVerID = FIXType.REF_APPL_VER_ID;
     }
+    @Test
+    void Tag1130Test() {
+    }
 }

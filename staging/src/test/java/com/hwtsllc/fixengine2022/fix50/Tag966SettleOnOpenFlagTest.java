@@ -42,4 +42,7 @@ class Tag966SettleOnOpenFlagTest {
     void FIX0966Test() {
         FIXType fix966SettleOnOpenFlag = FIXType.SETTLE_ON_OPEN_FLAG;
     }
+    @Test
+    void Tag0966Test() {
+    }
 }

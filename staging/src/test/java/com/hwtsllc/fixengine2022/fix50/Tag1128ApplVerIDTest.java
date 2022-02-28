@@ -42,4 +42,7 @@ class Tag1128ApplVerIDTest {
     void FIX1128Test() {
         FIXType fix1128ApplVerID = FIXType.APPL_VER_ID;
     }
+    @Test
+    void Tag1128Test() {
+    }
 }

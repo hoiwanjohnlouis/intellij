@@ -42,4 +42,7 @@ class Tag1009SideQtyTest {
     void FIX1009Test() {
         FIXType fix1009SideQty = FIXType.SIDE_QTY;
     }
+    @Test
+    void Tag1009Test() {
+    }
 }

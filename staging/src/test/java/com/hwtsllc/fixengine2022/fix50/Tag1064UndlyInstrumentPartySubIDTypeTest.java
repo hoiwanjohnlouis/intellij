@@ -42,4 +42,7 @@ class Tag1064UndlyInstrumentPartySubIDTypeTest {
     void FIX1064Test() {
         FIXType fix1064UndlyInstrumentPartySubIDType = FIXType.UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE;
     }
+    @Test
+    void Tag1064Test() {
+    }
 }

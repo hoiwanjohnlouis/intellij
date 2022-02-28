@@ -42,4 +42,7 @@ class Tag1138DisplayQtyTest {
     void FIX1138Test() {
         FIXType fix1138DisplayQty = FIXType.DISPLAY_QTY;
     }
+    @Test
+    void Tag1138Test() {
+    }
 }

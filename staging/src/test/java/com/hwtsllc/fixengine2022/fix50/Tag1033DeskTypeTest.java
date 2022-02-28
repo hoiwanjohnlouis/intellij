@@ -42,4 +42,7 @@ class Tag1033DeskTypeTest {
     void FIX1033Test() {
         FIXType fix1033DeskType = FIXType.DESK_TYPE;
     }
+    @Test
+    void Tag1033Test() {
+    }
 }

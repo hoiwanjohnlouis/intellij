@@ -42,4 +42,7 @@ class Tag1112TriggerNewQtyTest {
     void FIX1112Test() {
         FIXType fix1112TriggerNewQty = FIXType.TRIGGER_NEW_QTY;
     }
+    @Test
+    void Tag1112Test() {
+    }
 }

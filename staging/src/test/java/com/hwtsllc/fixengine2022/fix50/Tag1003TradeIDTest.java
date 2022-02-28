@@ -42,4 +42,7 @@ class Tag1003TradeIDTest {
     void FIX1003Test() {
         FIXType fix1003TradeID = FIXType.TRADE_ID;
     }
+    @Test
+    void Tag1003Test() {
+    }
 }

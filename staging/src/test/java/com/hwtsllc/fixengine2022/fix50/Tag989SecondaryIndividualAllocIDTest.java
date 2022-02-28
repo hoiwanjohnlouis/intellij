@@ -42,4 +42,7 @@ class Tag989SecondaryIndividualAllocIDTest {
     void FIX0989Test() {
         FIXType fix989SecondaryIndividualAllocID = FIXType.SECONDARY_INDIVIDUAL_ALLOC_ID;
     }
+    @Test
+    void Tag0989Test() {
+    }
 }

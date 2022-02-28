@@ -42,4 +42,7 @@ class Tag1096PegSecurityIDSourceTest {
     void FIX1096Test() {
         FIXType fix1096PegSecurityIDSource = FIXType.PEG_SECURITY_ID_SOURCE;
     }
+    @Test
+    void Tag1096Test() {
+    }
 }

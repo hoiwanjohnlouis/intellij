@@ -42,4 +42,7 @@ class Tag1111TriggerOrderTypeTest {
     void FIX1111Test() {
         FIXType fix1111TriggerOrderType = FIXType.TRIGGER_ORDER_TYPE;
     }
+    @Test
+    void Tag1111Test() {
+    }
 }

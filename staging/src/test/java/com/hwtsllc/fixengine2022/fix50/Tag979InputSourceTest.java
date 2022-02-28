@@ -42,4 +42,7 @@ class Tag979InputSourceTest {
     void FIX0979Test() {
         FIXType fix979InputSource = FIXType.INPUT_SOURCE;
     }
+    @Test
+    void Tag0979Test() {
+    }
 }

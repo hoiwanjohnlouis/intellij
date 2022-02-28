@@ -42,4 +42,7 @@ class Tag1038UnderlyingCapValueTest {
     void FIX1038Test() {
         FIXType fix1038UnderlyingCapValue = FIXType.UNDERLYING_CAP_VALUE;
     }
+    @Test
+    void Tag1038Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag983ExpQtyTest {
     void FIX0983Test() {
         FIXType fix983ExpQty = FIXType.EXP_QTY;
     }
+    @Test
+    void Tag0983Test() {
+    }
 }

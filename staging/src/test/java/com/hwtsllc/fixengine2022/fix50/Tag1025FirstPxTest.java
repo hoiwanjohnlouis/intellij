@@ -42,4 +42,7 @@ class Tag1025FirstPxTest {
     void FIX1025Test() {
         FIXType fix1025FirstPx = FIXType.FIRST_PX;
     }
+    @Test
+    void Tag1025Test() {
+    }
 }

@@ -42,4 +42,7 @@ class Tag986UnderlyingCollectAmountTest {
     void FIX0986Test() {
         FIXType fix986UnderlyingCollectAmount = FIXType.UNDERLYING_COLLECT_AMOUNT;
     }
+    @Test
+    void Tag0986Test() {
+    }
 }

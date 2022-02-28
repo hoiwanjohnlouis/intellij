@@ -42,4 +42,7 @@ class Tag984NoUnderlyingAmountsTest {
     void FIX0984Test() {
         FIXType fix984NoUnderlyingAmounts = FIXType.NO_UNDERLYING_AMOUNTS;
     }
+    @Test
+    void Tag0984Test() {
+    }
 }

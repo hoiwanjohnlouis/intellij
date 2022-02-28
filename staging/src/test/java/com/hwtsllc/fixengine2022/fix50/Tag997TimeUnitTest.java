@@ -42,4 +42,7 @@ class Tag997TimeUnitTest {
     void FIX0997Test() {
         FIXType fix997TimeUnit = FIXType.TIME_UNIT;
     }
+    @Test
+    void Tag0997Test() {
+    }
 }

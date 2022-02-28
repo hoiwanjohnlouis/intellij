@@ -42,4 +42,7 @@ class Tag1115OrderCategoryTest {
     void FIX1115Test() {
         FIXType fix1115OrderCategory = FIXType.ORDER_CATEGORY;
     }
+    @Test
+    void Tag1115Test() {
+    }
 }

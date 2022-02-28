@@ -42,4 +42,7 @@ class Tag1104TriggerSecurityIDTest {
     void FIX1104Test() {
         FIXType fix1104TriggerSecurityID = FIXType.TRIGGER_SECURITY_ID;
     }
+    @Test
+    void Tag1104Test() {
+    }
 }

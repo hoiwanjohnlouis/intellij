@@ -42,4 +42,7 @@ class Tag1094PegPriceTypeTest {
     void FIX1094Test() {
         FIXType fix1094PegPriceType = FIXType.PEG_PRICE_TYPE;
     }
+    @Test
+    void Tag1094Test() {
+    }
 }

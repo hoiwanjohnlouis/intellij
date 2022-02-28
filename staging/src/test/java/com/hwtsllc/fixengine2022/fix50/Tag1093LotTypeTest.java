@@ -42,4 +42,7 @@ class Tag1093LotTypeTest {
     void FIX1093Test() {
         FIXType fix1093LotType = FIXType.LOT_TYPE;
     }
+    @Test
+    void Tag1093Test() {
+    }
 }

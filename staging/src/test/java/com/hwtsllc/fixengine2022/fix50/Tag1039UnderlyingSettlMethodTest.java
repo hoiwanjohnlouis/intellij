@@ -42,4 +42,7 @@ class Tag1039UnderlyingSettlMethodTest {
     void FIX1039Test() {
         FIXType fix1039UnderlyingSettlMethod = FIXType.UNDERLYING_SETTL_METHOD;
     }
+    @Test
+    void Tag1039Test() {
+    }
 }

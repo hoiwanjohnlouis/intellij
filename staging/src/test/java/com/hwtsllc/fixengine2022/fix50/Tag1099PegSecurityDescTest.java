@@ -42,4 +42,7 @@ class Tag1099PegSecurityDescTest {
     void FIX1099Test() {
         FIXType fix1099PegSecurityDesc = FIXType.PEG_SECURITY_DESC;
     }
+    @Test
+    void Tag1099Test() {
+    }
 }

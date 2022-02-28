@@ -42,4 +42,7 @@ class Tag1016NoSideTrdRegTSTest {
     void FIX1016Test() {
         FIXType fix1016NoSideTrdRegTS = FIXType.NO_SIDE_TRD_REG_TS;
     }
+    @Test
+    void Tag1016Test() {
+    }
 }

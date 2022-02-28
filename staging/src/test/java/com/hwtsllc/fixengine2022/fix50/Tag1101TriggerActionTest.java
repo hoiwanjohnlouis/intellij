@@ -42,4 +42,7 @@ class Tag1101TriggerActionTest {
     void FIX1101Test() {
         FIXType fix1101TriggerAction = FIXType.TRIGGER_ACTION;
     }
+    @Test
+    void Tag1101Test() {
+    }
 }
