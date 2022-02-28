@@ -25,5 +25,5 @@ public enum Tag5AdvTransType {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ADV_TRANS_TYPE;
+    private final FIXType fixType = FIXType.FIX5_ADV_TRANS_TYPE;
 }

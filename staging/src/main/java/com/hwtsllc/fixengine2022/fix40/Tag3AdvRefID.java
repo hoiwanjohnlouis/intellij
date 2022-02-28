@@ -24,5 +24,5 @@ public class Tag3AdvRefID {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ADV_REF_ID;
+    private final FIXType fixType = FIXType.FIX3_ADV_REF_ID;
 }

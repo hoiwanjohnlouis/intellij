@@ -26,7 +26,7 @@ public class Tag2AdvID implements FixTagValuePairString, LogStringVerbose {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ADV_ID;
+    private final FIXType fixType = FIXType.FIX2_ADV_ID;
     private final String dataValue;
 
     public Tag2AdvID(final String dataValue) {

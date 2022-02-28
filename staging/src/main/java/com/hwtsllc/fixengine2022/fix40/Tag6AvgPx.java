@@ -24,5 +24,5 @@ public class Tag6AvgPx {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.AVG_PX;
+    private final FIXType fixType = FIXType.FIX6_AVG_PX;
 }

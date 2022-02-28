@@ -26,7 +26,7 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ACCOUNT;
+    private final FIXType fixType = FIXType.FIX1_ACCOUNT;
     private final String dataValue;
 
     public Tag1Account(final String dataValue) {

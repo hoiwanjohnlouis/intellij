@@ -41,7 +41,7 @@ class Tag10CheckSumTest {
 
     @Test
     void FIX0010Test() {
-        FIXType fix10CheckSum = FIXType.CHECK_SUM;
+        FIXType fix10CheckSum = FIXType.FIX10_CHECK_SUM;
         assertEquals( "CHECK_SUM", fix10CheckSum.getFIXName());
         assertEquals( 10, fix10CheckSum.getFIXNumber());
         assertEquals( "CheckSum", fix10CheckSum.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag10CheckSumTest {
     }
     @Test
     void Tag0010Test() {
-        TagType tag10CheckSum = new TagType(FIXType.CHECK_SUM,"ABCD");
+        TagType tag10CheckSum = new TagType(FIXType.FIX10_CHECK_SUM,"ABCD");
         assertEquals( "ABCD", tag10CheckSum.getDataValue());
         assertNotEquals( "abcd", tag10CheckSum.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0010Test()");

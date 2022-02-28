@@ -25,5 +25,5 @@ public enum Tag4AdvSide {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ADV_SIDE;
+    private final FIXType fixType = FIXType.FIX4_ADV_SIDE;
 }

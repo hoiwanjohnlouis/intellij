@@ -24,5 +24,5 @@ public class Tag8BeginString {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.BEGIN_STRING;
+    private final FIXType fixType = FIXType.FIX8_BEGIN_STRING;
 }

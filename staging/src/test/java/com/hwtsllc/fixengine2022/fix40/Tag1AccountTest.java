@@ -42,7 +42,7 @@ class  Tag1AccountTest {
 
     @Test
     void FIX0001Test() {
-        FIXType fix1Account = FIXType.ACCOUNT;
+        FIXType fix1Account = FIXType.FIX1_ACCOUNT;
         assertEquals( "ACCOUNT", fix1Account.getFIXName());
         assertEquals( 1, fix1Account.getFIXNumber());
         assertEquals( "Account", fix1Account.getFIXDescription());
@@ -52,7 +52,7 @@ class  Tag1AccountTest {
     }
     @Test
     void Tag0001Test() {
-        TagType tag1Account = new TagType(FIXType.ACCOUNT,"ABC987654321XYZ");
+        TagType tag1Account = new TagType(FIXType.FIX1_ACCOUNT,"ABC987654321XYZ");
         assertEquals( "ABC987654321XYZ", tag1Account.getDataValue());
         assertNotEquals( "abcdefghij", tag1Account.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0001Test()");

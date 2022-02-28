@@ -41,7 +41,7 @@ class Tag3AdvRefIDTest {
 
     @Test
     void FIX0003Test() {
-        FIXType fix3AdvRefID = FIXType.ADV_REF_ID;
+        FIXType fix3AdvRefID = FIXType.FIX3_ADV_REF_ID;
         assertEquals( "ADV_REF_ID", fix3AdvRefID.getFIXName());
         assertEquals( 3, fix3AdvRefID.getFIXNumber());
         assertEquals( "AdvRefId", fix3AdvRefID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag3AdvRefIDTest {
     }
     @Test
     void Tag0003Test() {
-        TagType tag3AdvRefID = new TagType(FIXType.ADV_REF_ID,"ABC987654321XYZ");
+        TagType tag3AdvRefID = new TagType(FIXType.FIX3_ADV_REF_ID,"ABC987654321XYZ");
         assertEquals( "ABC987654321XYZ", tag3AdvRefID.getDataValue());
         assertNotEquals( "abcdefghij", tag3AdvRefID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0003Test()");
