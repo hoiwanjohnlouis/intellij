@@ -24,16 +24,16 @@ public enum FIXType {
      * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
      *  Tags: 1-140
      */
-    FIX1_ACCOUNT(1, "Account"),
-    FIX2_ADV_ID(2, "AdvId"),
-    FIX3_ADV_REF_ID(3, "AdvRefId"),
-    FIX4_ADV_SIDE(4, "AdvSide"),
-    FIX5_ADV_TRANS_TYPE(5, "AdvTransType"),
-    FIX6_AVG_PX(6, "AvgPx"),
-    FIX7_BEGIN_SEQ_NO(7,"BeginSeqNo"),
-    FIX8_BEGIN_STRING(8, "BeginString"),
-    FIX9_BODY_LENGTH(9, "BodyLength"),
-    FIX10_CHECK_SUM(10, "CheckSum"),
+    ACCOUNT(1, "Account"),
+    ADV_ID(2, "AdvId"),
+    ADV_REF_ID(3, "AdvRefId"),
+    ADV_SIDE(4, "AdvSide"),
+    ADV_TRANS_TYPE(5, "AdvTransType"),
+    AVG_PX(6, "AvgPx"),
+    BEGIN_SEQ_NO(7,"BeginSeqNo"),
+    BEGIN_STRING(8, "BeginString"),
+    BODY_LENGTH(9, "BodyLength"),
+    CHECK_SUM(10, "CheckSum"),
 
     CL_ORD_ID(11, "ClOrdID"),
     COMMISSION(12, "Commission"),
@@ -1395,16 +1395,16 @@ public enum FIXType {
          * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
          *  Tags: 1-140
          */
-        System.out.println(FIXType.FIX1_ACCOUNT);
-        System.out.println(FIXType.FIX2_ADV_ID);
-        System.out.println(FIXType.FIX3_ADV_REF_ID);
-        System.out.println(FIXType.FIX4_ADV_SIDE);
-        System.out.println(FIXType.FIX5_ADV_TRANS_TYPE);
-        System.out.println(FIXType.FIX6_AVG_PX);
-        System.out.println(FIXType.FIX7_BEGIN_SEQ_NO);
-        System.out.println(FIXType.FIX8_BEGIN_STRING);
-        System.out.println(FIXType.FIX9_BODY_LENGTH);
-        System.out.println(FIXType.FIX10_CHECK_SUM);
+        System.out.println(FIXType.ACCOUNT);
+        System.out.println(FIXType.ADV_ID);
+        System.out.println(FIXType.ADV_REF_ID);
+        System.out.println(FIXType.ADV_SIDE);
+        System.out.println(FIXType.ADV_TRANS_TYPE);
+        System.out.println(FIXType.AVG_PX);
+        System.out.println(FIXType.BEGIN_SEQ_NO);
+        System.out.println(FIXType.BEGIN_STRING);
+        System.out.println(FIXType.BODY_LENGTH);
+        System.out.println(FIXType.CHECK_SUM);
 
         System.out.println(FIXType.CL_ORD_ID);
         System.out.println(FIXType.COMMISSION);
