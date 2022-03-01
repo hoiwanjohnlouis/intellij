@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -41,7 +41,7 @@ class Tag7BeginSeqNoTest {
 
     @Test
     void FIX0007Test() {
-        FIXType fix7BeginSeqNo = FIXType.FIX7_BEGIN_SEQ_NO;
+        FIXType fix7BeginSeqNo = FIXType.BEGIN_SEQ_NO;
         assertEquals( "BEGIN_SEQ_NO", fix7BeginSeqNo.getFIXName());
         assertEquals( 7, fix7BeginSeqNo.getFIXNumber());
         assertEquals( "BeginSeqNo", fix7BeginSeqNo.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag7BeginSeqNoTest {
     }
     @Test
     void Tag0007Test() {
-        TagType tag7BeginSeqNo = new TagType(FIXType.FIX7_BEGIN_SEQ_NO,"12345");
+        TagType tag7BeginSeqNo = new TagType(FIXType.BEGIN_SEQ_NO,"12345");
         assertEquals( "12345", tag7BeginSeqNo.getDataValue());
         assertNotEquals( "6789", tag7BeginSeqNo.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0007Test()");

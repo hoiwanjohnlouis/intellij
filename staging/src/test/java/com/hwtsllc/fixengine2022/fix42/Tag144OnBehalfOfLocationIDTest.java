@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +43,12 @@ class Tag144OnBehalfOfLocationIDTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void FIX0144Test() {
+        FIXType fix144OnBehalfOfLocationID = FIXType.ON_BEHALF_OF_LOCATION_ID;
+    }
+    @Test
+    void Tag0144Test() {
     }
 }

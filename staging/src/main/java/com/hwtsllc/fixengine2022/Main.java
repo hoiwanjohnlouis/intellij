@@ -22,7 +22,7 @@ import org.apache.log4j.Logger;
 public class Main {
     private static final String WHERE_AM_I = Main.class.getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
+    // private static final Logger logger = LogManager.getLogger(Main.class);
 
     /*
      *

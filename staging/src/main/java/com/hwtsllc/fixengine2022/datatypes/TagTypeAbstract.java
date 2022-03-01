@@ -14,26 +14,28 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022;
+package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
-public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-//    private static final Logger logger = LogManager.getRootLogger();
-    private static final Logger logger = LogManager.getLogger(Tag1Account.class);
+/**
+ *
+ */
+public abstract class TagTypeAbstract {
 
-    private final FIXType fixType = FIXType.FIX1_ACCOUNT;
-    private final String dataValue;
+    private FIXType fixType;
+    private String dataValue;
 
-    public Tag1Account(final String dataValue) {
+    public void setFixType(FIXType fixType) {
+        this.fixType = fixType;
+    }
+    public void setDataValue(String dataValue) {
         this.dataValue = dataValue;
     }
 
+    public String getFIXTypeName() {
+        return fixType.getFIXTypeName();
+    }
     public String getFIXName() {
         return fixType.getFIXName();
     }
@@ -52,6 +54,8 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append("=[")
+                .append(getFIXTypeName())
+                .append(",")
                 .append(getFIXName())
                 .append(",")
                 .append(getFIXNumber())
@@ -60,17 +64,19 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
                 .append("]");
         return sb.toString();
     }
-    @Override
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
-        sb.append(WHERE_AM_I)
-                .append("\n\tTagName[")
-                .append(getFIXName())
+        sb.append(this.getClass().getSimpleName())
+                .append("\n\tFIXTypeName[")
+                .append(getFIXTypeName())
                 .append("]")
-                .append("\n\tTagNumber[")
+                .append("\n\tFIXNumber[")
                 .append(getFIXNumber())
                 .append("]")
-                .append("\n\tTagDescription[")
+                .append("\n\tFIXName[")
+                .append(getFIXName())
+                .append("]")
+                .append("\n\tFIXDescription[")
                 .append(getFIXDescription())
                 .append("]")
                 .append("\n\tDataValue[")
@@ -78,22 +84,11 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
                 .append("]");
         return sb.toString();
     }
-    @Override
     public String toFixTagValuePairString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getFIXNumber())
                 .append("=")
                 .append(getDataValue());
         return sb.toString();
-    }
-
-    /*
-     *
-     */
-    public static void main(String[] args) {
-        Tag1Account tag1Account = new Tag1Account("12345-6789");
-        logger.trace("1:"+tag1Account);
-        logger.info("2:"+tag1Account.toLogStringVerbose());
-        logger.warn("3:"+tag1Account.toFixTagValuePairString());
     }
 }

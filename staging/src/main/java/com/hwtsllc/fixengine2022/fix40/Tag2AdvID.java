@@ -23,16 +23,20 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag2AdvID implements FixTagValuePairString, LogStringVerbose {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
-    private final FIXType fixType = FIXType.FIX2_ADV_ID;
+    private final FIXType fixType = FIXType.ADV_ID;
     private final String dataValue;
 
     public Tag2AdvID(final String dataValue) {
         this.dataValue = dataValue;
     }
 
+    public String getFIXTypeName() {
+        return fixType.getFIXTypeName();
+    }
     public String getFIXName() {
         return fixType.getFIXName();
     }
@@ -51,6 +55,12 @@ public class Tag2AdvID implements FixTagValuePairString, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append("=[")
+                .append(getFIXTypeName())
+                .append(",")
+                .append(getFIXName())
+                .append(",")
+                .append(getFIXNumber())
+                .append(",")
                 .append(getDataValue())
                 .append("]");
         return sb.toString();
@@ -59,13 +69,16 @@ public class Tag2AdvID implements FixTagValuePairString, LogStringVerbose {
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
-                .append("\n\tTagName[")
-                .append(getFIXName())
+                .append("\n\tFIXTypeName[")
+                .append(getFIXTypeName())
                 .append("]")
-                .append("\n\tTagNumber[")
+                .append("\n\tFIXNumber[")
                 .append(getFIXNumber())
                 .append("]")
-                .append("\n\tTagDescription[")
+                .append("\n\tFIXName[")
+                .append(getFIXName())
+                .append("]")
+                .append("\n\tFIXDescription[")
                 .append(getFIXDescription())
                 .append("]")
                 .append("\n\tDataValue[")
@@ -88,13 +101,14 @@ public class Tag2AdvID implements FixTagValuePairString, LogStringVerbose {
     public static void main(String[] args) {
 
         Tag2AdvID tag2AdvID = new Tag2AdvID("adv id");
-        System.out.println("t2.1:"+tag2AdvID);
-        System.out.println("t2.2.verbose:"+tag2AdvID.toLogStringVerbose());
-        System.out.println("t1.3.FixName:"+tag2AdvID.getFIXName());
-        System.out.println("t1.4.FixNumber:"+tag2AdvID.getFIXNumber());
-        System.out.println("t1.5.FixDescription:"+tag2AdvID.getFIXDescription());
-        System.out.println("t1.6.DataValue:"+tag2AdvID.getDataValue());
-        System.out.println("t2.7.FixString:"+tag2AdvID.toFixTagValuePairString());
+        System.out.println("t1.1:"+tag2AdvID);
+        System.out.println("t1.2.verbose:"+tag2AdvID.toLogStringVerbose());
+        System.out.println("t1.3.FIXTypeName:"+tag2AdvID.getFIXTypeName());
+        System.out.println("t1.4.FIXNumber:"+tag2AdvID.getFIXNumber());
+        System.out.println("t1.5.FIXName:"+tag2AdvID.getFIXName());
+        System.out.println("t1.6.FIXDescription:"+tag2AdvID.getFIXDescription());
+        System.out.println("t1.7.DataValue:"+tag2AdvID.getDataValue());
+        System.out.println("t1.8.FixString:"+tag2AdvID.toFixTagValuePairString());
 
     }
 }

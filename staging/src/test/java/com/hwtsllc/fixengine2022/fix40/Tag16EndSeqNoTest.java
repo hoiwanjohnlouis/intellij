@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

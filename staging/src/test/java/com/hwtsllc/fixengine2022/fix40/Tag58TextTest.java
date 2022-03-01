@@ -16,19 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.TagMine;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Tag58TExtTest {
+class Tag58TextTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,21 +36,32 @@ class Tag58TExtTest {
     void tearDown() {
     }
 
-    @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Tag58TextTest()");
     }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Tag58TextTest()");
+    }
+
     @Test
     void FIX0058Test() {
-        FIXType fix58Text = FIXType.TEXT;
+        FIXType fix58Text = FIXType.FIX58_TEXT;
+        assertEquals( "FIX58_TEXT", fix58Text.getFIXTypeName());
+        assertEquals( 58, fix58Text.getFIXNumber());
+        assertEquals( "TEXT", fix58Text.getFIXName());
+        assertEquals( "Text", fix58Text.getFIXDescription());
+        assertNotEquals( "FIX58_TEXT FIX58_TEXT", fix58Text.getFIXTypeName());
+        assertNotEquals( 100, fix58Text.getFIXNumber());
+        assertNotEquals( "TEXT TEXT", fix58Text.getFIXName());
+        assertNotEquals( "123 TEXT", fix58Text.getFIXDescription());
     }
     @Test
     void Tag0058Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        Tag58Text tag58Text = new Tag58Text("hello from main routine");
+        assertEquals( "hello from main routine", tag58Text.getDataValue());
+        assertNotEquals( "goodbye from main routine", tag58Text.getDataValue());
     }
 }

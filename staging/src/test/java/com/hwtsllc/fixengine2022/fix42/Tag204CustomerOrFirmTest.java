@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -43,5 +44,12 @@ class Tag204CustomerOrFirmTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void FIX0204Test() {
+        FIXType fix204CustomerOrFirm = FIXType.CUSTOMER_OR_FIRM;
+    }
+    @Test
+    void Tag0204Test() {
     }
 }

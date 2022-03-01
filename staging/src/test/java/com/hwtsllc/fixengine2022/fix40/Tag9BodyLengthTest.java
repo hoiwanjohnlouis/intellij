@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -41,7 +41,7 @@ class Tag9BodyLengthTest {
 
     @Test
     void FIX0009Test() {
-        FIXType fix9BodyLength = FIXType.FIX9_BODY_LENGTH;
+        FIXType fix9BodyLength = FIXType.BODY_LENGTH;
         assertEquals( "BODY_LENGTH", fix9BodyLength.getFIXName());
         assertEquals( 9, fix9BodyLength.getFIXNumber());
         assertEquals( "BodyLength", fix9BodyLength.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag9BodyLengthTest {
     }
     @Test
     void Tag0009Test() {
-        TagType tag9BodyLength = new TagType(FIXType.FIX9_BODY_LENGTH,"120");
+        TagType tag9BodyLength = new TagType(FIXType.BODY_LENGTH,"120");
         assertEquals( "120", tag9BodyLength.getDataValue());
         assertNotEquals( "6789", tag9BodyLength.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0009Test()");

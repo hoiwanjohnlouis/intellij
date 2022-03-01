@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +43,12 @@ class Tag424DayOrderQtyTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
+    }
+    @Test
+    void FIX0424Test() {
+        FIXType fix424DayOrderQty = FIXType.DAY_ORDER_QTY;
+    }
+    @Test
+    void Tag0424Test() {
     }
 }

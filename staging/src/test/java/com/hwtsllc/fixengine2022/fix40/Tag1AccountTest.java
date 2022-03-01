@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -43,11 +43,13 @@ class  Tag1AccountTest {
     @Test
     void FIX0001Test() {
         FIXType fix1Account = FIXType.FIX1_ACCOUNT;
-        assertEquals( "ACCOUNT", fix1Account.getFIXName());
+        assertEquals( "FIX1_ACCOUNT", fix1Account.getFIXTypeName());
         assertEquals( 1, fix1Account.getFIXNumber());
+        assertEquals( "ACCOUNT", fix1Account.getFIXName());
         assertEquals( "Account", fix1Account.getFIXDescription());
-        assertNotEquals( "Not My ACCOUNT", fix1Account.getFIXName());
+        assertNotEquals( "Not My FIX1_ACCOUNT", fix1Account.getFIXTypeName());
         assertNotEquals( 11, fix1Account.getFIXNumber());
+        assertNotEquals( "Not My ACCOUNT", fix1Account.getFIXName());
         assertNotEquals( "123 Account", fix1Account.getFIXDescription());
     }
     @Test

@@ -17,12 +17,28 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag3AdvRefID {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag3AdvRefID extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX3_ADV_REF_ID;
+    public Tag3AdvRefID(String dataValue) {
+        setFixType(FIXType.FIX3_ADV_REF_ID);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag3AdvRefID tag3AdvRefID = new Tag3AdvRefID("tag3 Adv Ref ID");
+        System.out.println("t1.1:" + tag3AdvRefID);
+        System.out.println("t1.2:" + tag3AdvRefID.toLogStringVerbose());
+        System.out.println("t1.3.FIXTypeName:" + tag3AdvRefID.getFIXTypeName());
+        System.out.println("t1.4.FIXNumber:" + tag3AdvRefID.getFIXNumber());
+        System.out.println("t1.5.FIXName:" + tag3AdvRefID.getFIXName());
+        System.out.println("t1.6.FIXDescription:" + tag3AdvRefID.getFIXDescription());
+        System.out.println("t1.7.DataValue:" + tag3AdvRefID.getDataValue());
+        System.out.println("t1.8.FixString:" + tag3AdvRefID.toFixTagValuePairString());
+    }
 }

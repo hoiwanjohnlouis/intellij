@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,5 +43,12 @@ class Tag382NoContraBrokersTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    }
+    @Test
+    void FIX0382Test() {
+        FIXType fix382NoContraBrokers = FIXType.NO_CONTRA_BROKERS;
+    }
+    @Test
+    void Tag0382Test() {
     }
 }

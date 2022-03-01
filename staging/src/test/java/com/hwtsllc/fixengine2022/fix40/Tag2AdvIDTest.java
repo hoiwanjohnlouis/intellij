@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -41,7 +41,7 @@ class Tag2AdvIDTest {
 
     @Test
     void FIX0002Test() {
-        FIXType fix2AdvID = FIXType.FIX2_ADV_ID;
+        FIXType fix2AdvID = FIXType.ADV_ID;
         assertEquals( "ADV_ID", fix2AdvID.getFIXName());
         assertEquals( 2, fix2AdvID.getFIXNumber());
         assertEquals( "AdvId", fix2AdvID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag2AdvIDTest {
     }
     @Test
     void Tag0002Test() {
-        TagType tag2AdvID = new TagType(FIXType.FIX2_ADV_ID,"ABC987654321XYZ");
+        TagType tag2AdvID = new TagType(FIXType.ADV_ID,"ABC987654321XYZ");
         assertEquals( "ABC987654321XYZ", tag2AdvID.getDataValue());
         assertNotEquals( "abcdefghij", tag2AdvID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0002Test()");

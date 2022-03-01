@@ -23,8 +23,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     private final FIXType fixType = FIXType.FIX1_ACCOUNT;
     private final String dataValue;
@@ -33,6 +34,9 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
         this.dataValue = dataValue;
     }
 
+    public String getFIXTypeName() {
+        return fixType.getFIXTypeName();
+    }
     public String getFIXName() {
         return fixType.getFIXName();
     }
@@ -51,6 +55,8 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append("=[")
+                .append(getFIXTypeName())
+                .append(",")
                 .append(getFIXName())
                 .append(",")
                 .append(getFIXNumber())
@@ -63,13 +69,16 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
-                .append("\n\tTagName[")
-                .append(getFIXName())
+                .append("\n\tFIXTypeName[")
+                .append(getFIXTypeName())
                 .append("]")
-                .append("\n\tTagNumber[")
+                .append("\n\tFIXNumber[")
                 .append(getFIXNumber())
                 .append("]")
-                .append("\n\tTagDescription[")
+                .append("\n\tFIXName[")
+                .append(getFIXName())
+                .append("]")
+                .append("\n\tFIXDescription[")
                 .append(getFIXDescription())
                 .append("]")
                 .append("\n\tDataValue[")
@@ -94,11 +103,12 @@ public class Tag1Account implements FixTagValuePairString, LogStringVerbose {
         Tag1Account tag1Account = new Tag1Account("1234567890");
         System.out.println("t1.1:"+tag1Account);
         System.out.println("t1.2.verbose:"+tag1Account.toLogStringVerbose());
-        System.out.println("t1.3.FixName:"+tag1Account.getFIXName());
-        System.out.println("t1.4.FixNumber:"+tag1Account.getFIXNumber());
-        System.out.println("t1.5.FixDescription:"+tag1Account.getFIXDescription());
-        System.out.println("t1.6.DataValue:"+tag1Account.getDataValue());
-        System.out.println("t1.7.FixString:"+tag1Account.toFixTagValuePairString());
+        System.out.println("t1.3.FIXTypeName:"+tag1Account.getFIXTypeName());
+        System.out.println("t1.4.FIXNumber:"+tag1Account.getFIXNumber());
+        System.out.println("t1.5.FIXName:"+tag1Account.getFIXName());
+        System.out.println("t1.6.FIXDescription:"+tag1Account.getFIXDescription());
+        System.out.println("t1.7.DataValue:"+tag1Account.getDataValue());
+        System.out.println("t1.8.FixString:"+tag1Account.toFixTagValuePairString());
 
     }
 }

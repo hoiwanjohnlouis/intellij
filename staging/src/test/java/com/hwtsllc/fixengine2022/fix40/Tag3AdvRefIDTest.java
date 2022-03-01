@@ -16,20 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.TagType;
+import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag3AdvRefIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag3AdvRefID.class);
 
     @BeforeEach
     void setUp() {
@@ -39,21 +36,33 @@ class Tag3AdvRefIDTest {
     void tearDown() {
     }
 
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Tag3AdvRefIDTest()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Tag3AdvRefIDTest()");
+    }
+
     @Test
     void FIX0003Test() {
         FIXType fix3AdvRefID = FIXType.FIX3_ADV_REF_ID;
-        assertEquals( "ADV_REF_ID", fix3AdvRefID.getFIXName());
+        assertEquals( "FIX3_ADV_REF_ID", fix3AdvRefID.getFIXTypeName());
         assertEquals( 3, fix3AdvRefID.getFIXNumber());
+        assertEquals( "ADV_REF_ID", fix3AdvRefID.getFIXName());
         assertEquals( "AdvRefId", fix3AdvRefID.getFIXDescription());
-        assertNotEquals( "ADV REF_ID", fix3AdvRefID.getFIXName());
-        assertNotEquals( 33, fix3AdvRefID.getFIXNumber());
-        assertNotEquals( "Adv Ref Id", fix3AdvRefID.getFIXDescription());
+        assertNotEquals( "Not My FIX3_ADV_REF_ID", fix3AdvRefID.getFIXTypeName());
+        assertNotEquals( 9999, fix3AdvRefID.getFIXNumber());
+        assertNotEquals( "Not My ADV_REF_ID", fix3AdvRefID.getFIXName());
+        assertNotEquals( "Not My AdvRefId", fix3AdvRefID.getFIXDescription());
     }
     @Test
     void Tag0003Test() {
-        TagType tag3AdvRefID = new TagType(FIXType.FIX3_ADV_REF_ID,"ABC987654321XYZ");
-        assertEquals( "ABC987654321XYZ", tag3AdvRefID.getDataValue());
-        assertNotEquals( "abcdefghij", tag3AdvRefID.getDataValue());
+        TagType tag3AdvRefID = new TagType(FIXType.FIX3_ADV_REF_ID,"hello from main routine");
+        assertEquals( "hello from main routine", tag3AdvRefID.getDataValue());
+        assertNotEquals( "goodbye from main routine", tag3AdvRefID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0003Test()");
     }
 }

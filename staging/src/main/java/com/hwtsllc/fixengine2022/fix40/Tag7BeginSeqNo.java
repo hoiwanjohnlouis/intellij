@@ -24,5 +24,5 @@ public class Tag7BeginSeqNo {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX7_BEGIN_SEQ_NO;
+    private final FIXType fixType = FIXType.BEGIN_SEQ_NO;
 }

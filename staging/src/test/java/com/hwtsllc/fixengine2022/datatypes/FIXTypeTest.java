@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.TagType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -25,8 +24,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class FIXTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
