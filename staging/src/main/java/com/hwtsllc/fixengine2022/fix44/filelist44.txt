@@ -1,4 +1,5 @@
 Tag660AcctIDSource.java
+
 Tag661AllocAcctIDSource.java
 Tag662BenchmarkPrice.java
 Tag663BenchmarkPriceType.java
@@ -9,6 +10,7 @@ Tag667ContractSettlMonth.java
 Tag668DeliveryForm.java
 Tag669LastParPx.java
 Tag670NoLegAllocs.java
+
 Tag671LegAllocAccount.java
 Tag672LegIndividualAllocID.java
 Tag673LegAllocQty.java
@@ -19,6 +21,7 @@ Tag677LegBenchmarkCurveName.java
 Tag678LegBenchmarkCurvePoint.java
 Tag679LegBenchmarkPrice.java
 Tag680LegBenchmarkPriceType.java
+
 Tag681LegBidPx.java
 Tag682LegIOIQty.java
 Tag683NoLegStipulations.java
@@ -29,6 +32,7 @@ Tag687LegQty.java
 Tag688LegStipulationType.java
 Tag689LegStipulationValue.java
 Tag690LegSwapType.java
+
 Tag691Pool.java
 Tag692QuotePriceType.java
 Tag693QuoteRespID.java
@@ -39,6 +43,7 @@ Tag697YieldRedemptionPrice.java
 Tag698YieldRedemptionPriceType.java
 Tag699BenchmarkSecurityID.java
 Tag700ReversalIndicator.java
+
 Tag701YieldCalcDate.java
 Tag702NoPositions.java
 Tag703PosType.java
@@ -49,6 +54,7 @@ Tag707PosAmtType.java
 Tag708PosAmt.java
 Tag709PosTransType.java
 Tag710PosReqID.java
+
 Tag711NoUnderlyings.java
 Tag712PosMaintAction.java
 Tag713OrigPosReqRefID.java
@@ -59,6 +65,7 @@ Tag717SettlSessSubID.java
 Tag718AdjustmentType.java
 Tag719ContraryInstructionIndicator.java
 Tag720PriorSpreadIndicator.java
+
 Tag721PosMaintRptID.java
 Tag722PosMaintStatus.java
 Tag723PosMaintResult.java
@@ -69,6 +76,7 @@ Tag727TotalNumPosReports.java
 Tag728PosReqResult.java
 Tag729PosReqStatus.java
 Tag730SettlPrice.java
+
 Tag731SettlPriceType.java
 Tag732UnderlyingSettlPrice.java
 Tag733UnderlyingSettlPriceType.java
@@ -79,6 +87,7 @@ Tag737AllocSettlCurrAmt.java
 Tag738InterestAtMaturity.java
 Tag739LegDatedDate.java
 Tag740LegPool.java
+
 Tag741AllocInterestAtMaturity.java
 Tag742AllocAccruedInterestAmt.java
 Tag743DeliveryDate.java
@@ -89,6 +98,7 @@ Tag747ExerciseMethod.java
 Tag748TotNumTradeReports.java
 Tag749TradeRequestResult.java
 Tag750TradeRequestStatus.java
+
 Tag751TradeReportRejectReason.java
 Tag752SideMultiLegReportingType.java
 Tag753NoPosAmt.java
@@ -99,6 +109,7 @@ Tag757Nested2PartyID.java
 Tag758Nested2PartyIDSource.java
 Tag759Nested2PartyRole.java
 Tag760Nested2PartySubID.java
+
 Tag761BenchmarkSecurityIDSource.java
 Tag762SecuritySubType.java
 Tag763UnderlyingSecuritySubType.java
@@ -109,6 +120,7 @@ Tag767AllowableOneSidednessCurr.java
 Tag768NoTrdRegTimestamps.java
 Tag769TrdRegTimestamp.java
 Tag770TrdRegTimestampType.java
+
 Tag771TrdRegTimestampOrigin.java
 Tag772ConfirmRefID.java
 Tag773ConfirmType.java
@@ -119,6 +131,7 @@ Tag777SettlInstMsgID.java
 Tag778NoSettlInst.java
 Tag779LastUpdateTime.java
 Tag780AllocSettlInstType.java
+
 Tag781NoSettlPartyIDs.java
 Tag782SettlPartyID.java
 Tag783SettlPartyIDSource.java
@@ -129,6 +142,7 @@ Tag787DlvyInstType.java
 Tag788TerminationType.java
 Tag789NextExpectedMsgSeqNum.java
 Tag790OrdStatusReqID.java
+
 Tag791SettlInstReqID.java
 Tag792SettlInstReqRejCode.java
 Tag793SecondaryAllocID.java
@@ -139,6 +153,7 @@ Tag797CopyMsgIndicator.java
 Tag798AllocAccountType.java
 Tag799OrderAvgPx.java
 Tag800OrderBookingQty.java
+
 Tag801NoSettlPartySubIDs.java
 Tag802NoPartySubIDs.java
 Tag803PartySubIDType.java
@@ -148,6 +163,7 @@ Tag806NoNested2PartySubIDs.java
 Tag807Nested2PartySubIDType.java
 Tag808AllocIntermedReqType.java
 Tag810UnderlyingPx.java
+
 Tag811PriceDelta.java
 tag812ApplQueueMax.java
 Tag813ApplQueueDepth.java
@@ -158,6 +174,7 @@ Tag817AltMDSourceID.java
 Tag818SecondaryTradeReportID.java
 Tag819AvgPxIndicator.java
 Tag820TradeLinkID.java
+
 Tag821OrderInputDevice.java
 Tag822UnderlyingTradingSessionID.java
 Tag823UnderlyingTradingSessionSubID.java
@@ -168,6 +185,7 @@ Tag827ExpirationCycle.java
 Tag828TrdType.java
 Tag829TrdSubType.java
 Tag830TransferReason.java
+
 Tag831AsgnReqID.java
 Tag832TotNumAssignmentReports.java
 Tag833AsgnRptID.java
@@ -178,6 +196,7 @@ Tag837PegLimitType.java
 Tag838PegRoundDirection.java
 Tag839PeggedPrice.java
 Tag840PegScope.java
+
 Tag841DiscretionMoveType.java
 Tag842DiscretionOffsetType.java
 Tag843DiscretionLimitType.java
@@ -188,6 +207,7 @@ Tag847TargetStrategy.java
 Tag848TargetStrategyParameters.java
 Tag849ParticipationRate.java
 Tag850TargetStrategyPerformance.java
+
 Tag851LastLiquidityInd.java
 Tag852PublishTrdIndicator.java
 Tag853ShortSaleReason.java
@@ -198,6 +218,7 @@ Tag857AllocNoOrdersType.java
 Tag858SharedCommission.java
 Tag859ConfirmReqID.java
 Tag860AvgParPx.java
+
 Tag861ReportedPx.java
 Tag862NoCapacities.java
 Tag863OrderCapacityQty.java
@@ -208,6 +229,7 @@ Tag867EventPx.java
 Tag868EventText.java
 Tag869PctAtRisk.java
 Tag870NoInstrAttrib.java
+
 Tag871InstrAttribType.java
 Tag872InstrAttribValue.java
 Tag873DatedDate.java
@@ -218,6 +240,7 @@ Tag877UnderlyingCPProgram.java
 Tag878UnderlyingCPRegType.java
 Tag879UnderlyingQty.java
 Tag880TrdMatchID.java
+
 Tag881SecondaryTradeReportRefID.java
 Tag882UnderlyingDirtyPrice.java
 Tag883UnderlyingEndPrice.java
@@ -228,6 +251,7 @@ Tag887NoUnderlyingStips.java
 Tag888UnderlyingStipType.java
 Tag889UnderlyingStipValue.java
 Tag890MaturityNetMoney.java
+
 Tag891MiscFeeBasis.java
 Tag892TotNoAllocs.java
 Tag893LastFragment.java
@@ -238,6 +262,7 @@ Tag897NoTrades.java
 Tag898MarginRatio.java
 Tag899MarginExcess.java
 Tag900TotalNetValue.java
+
 Tag901CashOutstanding.java
 Tag902CollAsgnID.java
 Tag903CollAsgnTransType.java
@@ -248,6 +273,7 @@ Tag907CollAsgnRefID.java
 Tag908CollRptID.java
 Tag909CollInquiryID.java
 Tag910CollStatus.java
+
 Tag911TotNumReports.java
 Tag912LastRptRequested.java
 Tag913AgreementDesc.java
@@ -258,6 +284,7 @@ Tag917EndDate.java
 Tag918AgreementCurrency.java
 Tag919DeliveryType.java
 Tag920EndAccruedInterestAmt.java
+
 Tag921StartCash.java
 Tag922EndCash.java
 Tag923UserRequestID.java
@@ -268,6 +295,7 @@ Tag927UserStatusText.java
 Tag928StatusValue.java
 Tag929StatusText.java
 Tag930RefCompID.java
+
 Tag931RefSubID.java
 Tag932NetworkResponseID.java
 Tag933NetworkRequestID.java
@@ -278,6 +306,7 @@ Tag937NetworkStatusResponseType.java
 Tag938NoCollInquiryQualifier.java
 Tag939TrdRptStatus.java
 Tag940AffirmStatus.java
+
 Tag941UnderlyingStrikeCurrency.java
 Tag942LegStrikeCurrency.java
 Tag943TimeBracket.java
@@ -288,6 +317,7 @@ Tag947StrikeCurrency.java
 Tag948NoNested3PartyIDs.java
 Tag949Nested3PartyID.java
 Tag950Nested3PartyIDSource.java
+
 Tag951Nested3PartyRole.java
 Tag952NoNested3PartySubIDs.java
 Tag953Nested3PartySubID.java

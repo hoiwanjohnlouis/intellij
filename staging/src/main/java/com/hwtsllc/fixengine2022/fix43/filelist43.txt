@@ -3,6 +3,7 @@ Tag447PartyIDSource.java
 Tag448PartyID.java
 Tag449TotalVolumeTradedDate.java
 Tag450TotalVolumeTradedTime.java
+
 Tag451NetChgPrevDay.java
 Tag452PartyRole.java
 Tag453NoPartyIDs.java
@@ -13,6 +14,7 @@ Tag457NoUnderlyingSecurityAltID.java
 Tag458UnderlyingSecurityAltID.java
 Tag459UnderlyingSecurityAltIDSource.java
 Tag460Product.java
+
 Tag461CFICode.java
 Tag462UnderlyingProduct.java
 Tag463UnderlyingCFICode.java
@@ -23,6 +25,7 @@ Tag467IndividualAllocID.java
 Tag468RoundingDirection.java
 Tag469RoundingModulus.java
 Tag470CountryOfIssue.java
+
 Tag471StateOrProvinceOfIssue.java
 Tag472LocaleOfIssue.java
 Tag473NoRegistDtls.java
@@ -33,6 +36,7 @@ Tag477DistribPaymentMethod.java
 Tag478CashDistribCurr.java
 Tag479CommCurrency.java
 Tag480CancellationRights.java
+
 Tag481MoneyLaunderingStatus.java
 Tag482MailingInst.java
 Tag483TransBkdTime.java
@@ -43,6 +47,7 @@ Tag487TradeReportTransType.java
 Tag488CardHolderName.java
 Tag489CardNumber.java
 Tag490CardExpDate.java
+
 Tag491CardIssNum.java
 Tag492PaymentMethod.java
 Tag493RegistAcctType.java
@@ -53,6 +58,7 @@ Tag497FundRenewWaiv.java
 Tag498CashDistribAgentName.java
 Tag499CashDistribAgentCode.java
 Tag500CashDistribAgentAcctNumber.java
+
 Tag501CashDistribPayRef.java
 Tag502CashDistribAgentAcctName.java
 Tag503CardStartDate.java
@@ -63,6 +69,7 @@ Tag507RegistRejReasonCode.java
 Tag508RegistRefID.java
 Tag509RegistDtls.java
 Tag510NoDistribInsts.java
+
 Tag511RegistEmail.java
 Tag512DistribPercentage.java
 Tag513RegistID.java
@@ -73,6 +80,7 @@ Tag517OwnershipType.java
 Tag518NoContAmts.java
 Tag519ContAmtType.java
 Tag520ContAmtValue.java
+
 Tag521ContAmtCurr.java
 Tag522OwnerType.java
 Tag523PartySubID.java
@@ -83,6 +91,7 @@ Tag527SecondaryExecID.java
 Tag528OrderCapacity.java
 Tag529OrderRestrictions.java
 Tag530MassCancelRequestType.java
+
 Tag531MassCancelResponse.java
 Tag532MassCancelRejectReason.java
 Tag533TotalAffectedOrders.java
@@ -93,6 +102,7 @@ Tag537QuoteType.java
 Tag538NestedPartyRole.java
 Tag539NoNestedPartyIDs.java
 Tag540TotalAccruedInterestAmt.java
+
 Tag541MaturityDate.java
 Tag542UnderlyingMaturityDate.java
 Tag543InstrRegistry.java
@@ -103,6 +113,7 @@ Tag547MDImplicitDelete.java
 Tag548CrossID.java
 Tag549CrossType.java
 Tag550CrossPrioritization.java
+
 Tag551OrigCrossID.java
 Tag552NoSides.java
 Tag553Username.java
@@ -113,6 +124,7 @@ Tag557TotNoSecurityTypes.java
 Tag558NoSecurityTypes.java
 Tag559SecurityListRequestType.java
 Tag560SecurityRequestResult.java
+
 Tag561RoundLot.java
 Tag562MinTradeVol.java
 Tag563MultiLegRptTypeReq.java
@@ -123,6 +135,7 @@ Tag567TradSesStatusRejReason.java
 Tag568TradeRequestID.java
 Tag569TradeRequestType.java
 Tag570PreviouslyReported.java
+
 Tag571TradeReportID.java
 Tag572TradeReportRefID.java
 Tag573MatchStatus.java
@@ -133,6 +146,7 @@ Tag577ClearingInstruction.java
 Tag578TradeInputSource.java
 Tag579TradeInputDevice.java
 Tag580NoDates.java
+
 Tag581AccountType.java
 Tag582CustOrderCapacity.java
 Tag583ClOrdLinkID.java
@@ -143,6 +157,7 @@ Tag587LegSettlType.java
 Tag588LegSettlDate.java
 Tag589DayBookingInst.java
 Tag590BookingUnit.java
+
 Tag591PreallocMethod.java
 Tag592UnderlyingCountryOfIssue.java
 Tag593UnderlyingStateOrProvinceOfIssue.java
@@ -153,6 +168,7 @@ Tag597LegStateOrProvinceOfIssue.java
 Tag598LegLocaleOfIssue.java
 Tag599LegInstrRegistry.java
 Tag600LegSymbol.java
+
 Tag601LegSymbolSfx.java
 Tag602LegSecurityID.java
 Tag603LegSecurityIDSource.java
@@ -163,6 +179,7 @@ Tag607LegProduct.java
 Tag608LegCFICode.java
 Tag609LegSecurityType.java
 Tag610LegMaturityMonthYear.java
+
 Tag611LegMaturityDate.java
 Tag612LegStrikePrice.java
 Tag613LegOptAttribute.java
@@ -173,6 +190,7 @@ Tag617LegIssuer.java
 Tag618EncodedLegIssuerLen.java
 Tag619EncodedLegIssuer.java
 Tag620LegSecurityDesc.java
+
 Tag621EncodedLegSecurityDescLen.java
 Tag622EncodedLegSecurityDesc.java
 Tag623LegRatioQty.java
@@ -183,6 +201,7 @@ Tag627NoHops.java
 Tag628HopCompID.java
 Tag629HopSendingTime.java
 Tag630HopRefID.java
+
 Tag631MidPx.java
 Tag632BidYield.java
 Tag633MidYield.java
@@ -193,6 +212,7 @@ Tag637LegLastPx.java
 Tag638PriorityIndicator.java
 Tag639PriceImprovement.java
 Tag640Price2.java
+
 Tag641LastForwardPoints2.java
 Tag642BidForwardPoints2.java
 Tag643OfferForwardPoints2.java
@@ -203,6 +223,7 @@ Tag647MinBidSize.java
 Tag648MinOfferSize.java
 Tag649QuoteStatusReqID.java
 Tag650LegalConfirm.java
+
 Tag651UnderlyingLastPx.java
 Tag652UnderlyingLastQty.java
 Tag653SecDefStatus.java

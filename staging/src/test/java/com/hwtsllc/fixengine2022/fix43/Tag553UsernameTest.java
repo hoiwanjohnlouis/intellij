@@ -16,18 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix43;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag553UsernameTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -37,10 +36,33 @@ class Tag553UsernameTest {
     void tearDown() {
     }
 
-    @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Tag553UsernameTest()");
     }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Tag553UsernameTest()");
+    }
+
+    @Test
+    void FIX0553Test() {
+        FIXType fix553Username = FIXType.FIX553_USERNAME;
+        assertEquals( "FIX553_USERNAME", fix553Username.getFIXTypeName());
+        assertEquals( 553, fix553Username.getFIXNumber());
+        assertEquals( "USERNAME", fix553Username.getFIXName());
+        assertEquals( "Username", fix553Username.getFIXDescription());
+        assertNotEquals( "Not My FIX553_USERNAME", fix553Username.getFIXTypeName());
+        assertNotEquals( 9999, fix553Username.getFIXNumber());
+        assertNotEquals( "Not My USERNAME", fix553Username.getFIXName());
+        assertNotEquals( "Not My Username", fix553Username.getFIXDescription());
+    }
+    @Test
+    void Tag0553Test() {
+        Tag553Username tag553Username = new Tag553Username("JohnWick");
+        assertEquals( "JohnWick", tag553Username.getDataValue());
+        assertNotEquals( "goodbye JohnWick", tag553Username.getDataValue());
+    }
+
 }

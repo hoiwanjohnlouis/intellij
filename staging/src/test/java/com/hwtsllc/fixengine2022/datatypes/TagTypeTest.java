@@ -366,12 +366,6 @@ class TagTypeTest {
     void Tag0552Test() {
     }
     @Test
-    void Tag0553Test() {
-    }
-    @Test
-    void Tag0554Test() {
-    }
-    @Test
     void Tag0555Test() {
     }
     @Test

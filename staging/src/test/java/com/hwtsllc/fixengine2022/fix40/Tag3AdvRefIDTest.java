@@ -63,6 +63,5 @@ class Tag3AdvRefIDTest {
         TagType tag3AdvRefID = new TagType(FIXType.FIX3_ADV_REF_ID,"hello from main routine");
         assertEquals( "hello from main routine", tag3AdvRefID.getDataValue());
         assertNotEquals( "goodbye from main routine", tag3AdvRefID.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0003Test()");
     }
 }

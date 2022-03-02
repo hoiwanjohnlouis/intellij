@@ -16,18 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix43;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag554PasswordTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -37,10 +35,32 @@ class Tag554PasswordTest {
     void tearDown() {
     }
 
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Tag554PasswordTest()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Tag554PasswordTest()");
+    }
+
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+    void FIX0554Test() {
+        FIXType fix554Password = FIXType.FIX554_PASSWORD;
+        assertEquals( "FIX554_PASSWORD", fix554Password.getFIXTypeName());
+        assertEquals( 554, fix554Password.getFIXNumber());
+        assertEquals( "PASSWORD", fix554Password.getFIXName());
+        assertEquals( "Password", fix554Password.getFIXDescription());
+        assertNotEquals( "Not My FIX554_PASSWORD", fix554Password.getFIXTypeName());
+        assertNotEquals( 9999, fix554Password.getFIXNumber());
+        assertNotEquals( "Not My PASSWORD", fix554Password.getFIXName());
+        assertNotEquals( "Not My Password", fix554Password.getFIXDescription());
+    }
+    @Test
+    void Tag0554Test() {
+        Tag554Password tag554Password = new Tag554Password("JohnWick");
+        assertEquals( "JohnWick", tag554Password.getDataValue());
+        assertNotEquals( "goodbye JohnWick", tag554Password.getDataValue());
     }
 }

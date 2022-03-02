@@ -53,855 +53,847 @@ public class FIX43TypeTest {
      */
     @Test
     void FIX0447Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix447PartyIDSource = FIXType.PARTY_ID_SOURCE;
     }
     @Test
     void FIX0448Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix448PartyID = FIXType.PARTY_ID;
     }
     @Test
     void FIX0449Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix449TotalVolumeTradedDate = FIXType.TOTAL_VOLUME_TRADED_DATE;
     }
     @Test
     void FIX0450Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix450TotalVolumeTradedTime = FIXType.TOTAL_VOLUME_TRADED_TIME;
     }
     @Test
     void FIX0451Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix451NetChgPrevDay = FIXType.NET_CHG_PREV_DAY;
     }
     @Test
     void FIX0452Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix452PartyRole = FIXType.PARTY_ROLE;
     }
     @Test
     void FIX0453Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix453NoPartyIDs = FIXType.NO_PARTY_IDS;
     }
     @Test
     void FIX0454Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix454NoSecurityAltID = FIXType.NO_SECURITY_ALT_ID;
     }
     @Test
     void FIX0455Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix455SecurityAltID = FIXType.SECURITY_ALT_ID;
     }
     @Test
     void FIX0456Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix456SecurityAltIDSource = FIXType.SECURITY_ALT_ID_SOURCE;
     }
     @Test
     void FIX0457Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix457NoUnderlyingSecurityAltID = FIXType.NO_UNDERLYING_SECURITY_ALT_ID;
     }
     @Test
     void FIX0458Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix458UnderlyingSecurityAltID = FIXType.UNDERLYING_SECURITY_ALT_ID;
     }
     @Test
     void FIX0459Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix459UnderlyingSecurityAltIDSource = FIXType.UNDERLYING_SECURITY_ALT_ID_SOURCE;
     }
     @Test
     void FIX0460Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix460Product = FIXType.PRODUCT;
     }
     @Test
     void FIX0461Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix461CFICode = FIXType.CFI_CODE;
     }
     @Test
     void FIX0462Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix462UnderlyingProduct = FIXType.UNDERLYING_PRODUCT;
     }
     @Test
     void FIX0463Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix463UnderlyingCFICode = FIXType.UNDERLYING_CFI_CODE;
     }
     @Test
     void FIX0464Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix464TestMessageIndicator = FIXType.TEST_MESSAGE_INDICATOR;
     }
     @Test
     void FIX0465Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix465QuantityType = FIXType.QUANTITY_TYPE;
     }
     @Test
     void FIX0466Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix466BookingRefID = FIXType.BOOKING_REF_ID;
     }
     @Test
     void FIX0467Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix467IndividualAllocID = FIXType.INDIVIDUAL_ALLOC_ID;
     }
     @Test
     void FIX0468Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix468RoundingDirection = FIXType.ROUNDING_DIRECTION;
     }
     @Test
     void FIX0469Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix469RoundingModulus = FIXType.ROUNDING_MODULUS;
     }
     @Test
     void FIX0470Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix470CountryOfIssue = FIXType.COUNTRY_OF_ISSUE;
     }
     @Test
     void FIX0471Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix471StateOrProvinceOfIssue = FIXType.STATE_OR_PROVINCE_OF_ISSUE;
     }
     @Test
     void FIX0472Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix472LocaleOfIssue = FIXType.LOCALE_OF_ISSUE;
     }
     @Test
     void FIX0473Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix473NoRegistDtls = FIXType.NO_REGIST_DTLS;
     }
     @Test
     void FIX0474Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix474MailingDtls = FIXType.MAILING_DTLS;
     }
     @Test
     void FIX0475Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix475InvestorCountryOfResidence = FIXType.INVESTOR_COUNTRY_OF_RESIDENCE;
     }
     @Test
     void FIX0476Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix476PaymentRef = FIXType.PAYMENT_REF;
     }
     @Test
     void FIX0477Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix477DistribPaymentMethod = FIXType.DISTRIB_PAYMENT_METHOD;
     }
     @Test
     void FIX0478Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix478CashDistribCurr = FIXType.CASH_DISTRIB_CURR;
     }
     @Test
     void FIX0479Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix479CommCurrency = FIXType.COMM_CURRENCY;
     }
     @Test
     void FIX0480Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix480CancellationRights = FIXType.CANCELLATION_RIGHTS;
     }
     @Test
     void FIX0481Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix481MoneyLaunderingStatus = FIXType.MONEY_LAUNDERING_STATUS;
     }
     @Test
     void FIX0482Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix482MailingInst = FIXType.MAILING_INST;
     }
     @Test
     void FIX0483Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix483TransBkdTime = FIXType.TRANS_BKD_TIME;
     }
     @Test
     void FIX0484Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix484ExecPriceType = FIXType.EXEC_PRICE_TYPE;
     }
     @Test
     void FIX0485Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix485ExecPriceAdjustment = FIXType.EXEC_PRICE_ADJUSTMENT;
     }
     @Test
     void FIX0486Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix486DateOfBirth = FIXType.DATE_OF_BIRTH;
     }
     @Test
     void FIX0487Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix487TradeReportTransType = FIXType.TRADE_REPORT_TRANS_TYPE;
     }
     @Test
     void FIX0488Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix488CardHolderName = FIXType.CARD_HOLDER_NAME;
     }
     @Test
     void FIX0489Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix489CardNumber = FIXType.CARD_NUMBER;
     }
     @Test
     void FIX0490Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix490CardExpDate = FIXType.CARD_EXP_DATE;
     }
     @Test
     void FIX0491Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix491CardIssNum = FIXType.CARD_ISS_NUM;
     }
     @Test
     void FIX0492Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix492PaymentMethod = FIXType.PAYMENT_METHOD;
     }
     @Test
     void FIX0493Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix493RegistAcctType = FIXType.REGIST_ACCT_TYPE;
     }
     @Test
     void FIX0494Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix494Designation = FIXType.DESIGNATION;
     }
     @Test
     void FIX0495Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix495TaxAdvantageType = FIXType.TAX_ADVANTAGE_TYPE;
     }
     @Test
     void FIX0496Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix496RegistRejReasonText = FIXType.REGIST_REJ_REASON_TEXT;
     }
     @Test
     void FIX0497Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix497FundRenewWaiv = FIXType.FUND_RENEW_WAIV;
     }
     @Test
     void FIX0498Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix498CashDistribAgentName = FIXType.CASH_DISTRIB_AGENT_NAME;
     }
     @Test
     void FIX0499Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix499CashDistribAgentCode = FIXType.CASH_DISTRIB_AGENT_CODE;
     }
     @Test
     void FIX0500Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix500CashDistribAgentAcctNumber = FIXType.CASH_DISTRIB_AGENT_ACCT_NUMBER;
     }
     @Test
     void FIX0501Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix501CashDistribPayRef = FIXType.CASH_DISTRIB_PAY_REF;
     }
     @Test
     void FIX0502Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix502CashDistribAgentAcctName = FIXType.CASH_DISTRIB_AGENT_ACCT_NAME;
     }
     @Test
     void FIX0503Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix503CardStartDate = FIXType.CARD_START_DATE;
     }
     @Test
     void FIX0504Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix504PaymentDate = FIXType.PAYMENT_DATE;
     }
     @Test
     void FIX0505Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix505PaymentRemitterID = FIXType.PAYMENT_REMITTER_ID;
     }
     @Test
     void FIX0506Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix506RegistStatus = FIXType.REGIST_STATUS;
     }
     @Test
     void FIX0507Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix507RegistRejReasonCode = FIXType.REGIST_REJ_REASON_CODE;
     }
     @Test
     void FIX0508Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix508RegistRefID = FIXType.REGIST_REF_ID;
     }
     @Test
     void FIX0509Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix509RegistDtls = FIXType.REGIST_DTLS;
     }
     @Test
     void FIX0510Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix510NoDistribInsts = FIXType.NO_DISTRIB_INSTS;
     }
     @Test
     void FIX0511Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix511RegistEmail = FIXType.REGIST_EMAIL;
     }
     @Test
     void FIX0512Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix512DistribPercentage = FIXType.DISTRIB_PERCENTAGE;
     }
     @Test
     void FIX0513Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix513RegistID = FIXType.REGIST_ID;
     }
     @Test
     void FIX0514Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix514RegistTransType = FIXType.REGIST_TRANS_TYPE;
     }
     @Test
     void FIX0515Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix515ExecValuationPoint = FIXType.EXEC_VALUATION_POINT;
     }
     @Test
     void FIX0516Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix516OrderPercent = FIXType.ORDER_PERCENT;
     }
     @Test
     void FIX0517Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix517OwnershipType = FIXType.OWNERSHIP_TYPE;
     }
     @Test
     void FIX0518Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix518NoContAmts = FIXType.NO_CONT_AMTS;
     }
     @Test
     void FIX0519Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix519ContAmtType = FIXType.CONT_AMT_TYPE;
     }
     @Test
     void FIX0520Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix520ContAmtValue = FIXType.CONT_AMT_VALUE;
     }
     @Test
     void FIX0521Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix521ContAmtCurr = FIXType.CONT_AMT_CURR;
     }
     @Test
     void FIX0522Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix522OwnerType = FIXType.OWNER_TYPE;
     }
     @Test
     void FIX0523Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix523PartySubID = FIXType.PARTY_SUB_ID;
     }
     @Test
     void FIX0524Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix524NestedPartyID = FIXType.NESTED_PARTY_ID;
     }
     @Test
     void FIX0525Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix525NestedPartyIDSource = FIXType.NESTED_PARTY_ID_SOURCE;
     }
     @Test
     void FIX0526Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix526SecondaryClOrdID = FIXType.SECONDARY_CL_ORD_ID;
     }
     @Test
     void FIX0527Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix527SecondaryExecID = FIXType.SECONDARY_EXEC_ID;
     }
     @Test
     void FIX0528Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix528OrderCapacity = FIXType.ORDER_CAPACITY;
     }
     @Test
     void FIX0529Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix529OrderRestrictions = FIXType.ORDER_RESTRICTIONS;
     }
     @Test
     void FIX0530Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix530MassCancelRequestType = FIXType.MASS_CANCEL_REQUEST_TYPE;
     }
     @Test
     void FIX0531Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix531MassCancelResponse = FIXType.MASS_CANCEL_RESPONSE;
     }
     @Test
     void FIX0532Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix532MassCancelRejectReason = FIXType.MASS_CANCEL_REJECT_REASON;
     }
     @Test
     void FIX0533Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix533TotalAffectedOrders = FIXType.TOTAL_AFFECTED_ORDERS;
     }
     @Test
     void FIX0534Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix534NoAffectedOrders = FIXType.NO_AFFECTED_ORDERS;
     }
     @Test
     void FIX0535Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix535AffectedOrderID = FIXType.AFFECTED_ORDER_ID;
     }
     @Test
     void FIX0536Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix536AffectedSecondaryOrderID = FIXType.AFFECTED_SECONDARY_ORDER_ID;
     }
     @Test
     void FIX0537Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix537QuoteType = FIXType.QUOTE_TYPE;
     }
     @Test
     void FIX0538Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix538NestedPartyRole = FIXType.NESTED_PARTY_ROLE;
     }
     @Test
     void FIX0539Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix539NoNestedPartyIDs = FIXType.NO_NESTED_PARTY_IDS;
     }
     @Test
     void FIX0540Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix540TotalAccruedInterestAmt = FIXType.TOTAL_ACCRUED_INTEREST_AMT;
     }
     @Test
     void FIX0541Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix541MaturityDate = FIXType.MATURITY_DATE;
     }
     @Test
     void FIX0542Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix542UnderlyingMaturityDate = FIXType.UNDERLYING_MATURITY_DATE;
     }
     @Test
     void FIX0543Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix543InstrRegistry = FIXType.INSTR_REGISTRY;
     }
     @Test
     void FIX0544Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix544CashMargin = FIXType.CASH_MARGIN;
     }
     @Test
     void FIX0545Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix545NestedPartySubID = FIXType.NESTED_PARTY_SUB_ID;
     }
     @Test
     void FIX0546Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix546Scope = FIXType.SCOPE;
     }
     @Test
     void FIX0547Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix547MDImplicitDelete = FIXType.MD_IMPLICIT_DELETE;
     }
     @Test
     void FIX0548Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix548CrossID = FIXType.CROSS_ID;
     }
     @Test
     void FIX0549Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix549CrossType = FIXType.CROSS_TYPE;
     }
     @Test
     void FIX0550Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix550CrossPrioritization = FIXType.CROSS_PRIORITIZATION;
     }
     @Test
     void FIX0551Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix551OrigCrossID = FIXType.ORIG_CROSS_ID;
     }
     @Test
     void FIX0552Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
-    }
-    @Test
-    void FIX0553Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
-    }
-    @Test
-    void FIX0554Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix552NoSides = FIXType.NO_SIDES;
     }
     @Test
     void FIX0555Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix555NoLegs = FIXType.NO_LEGS;
     }
     @Test
     void FIX0556Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix556LegCurrency = FIXType.LEG_CURRENCY;
     }
     @Test
     void FIX0557Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix557TotNoSecurityTypes = FIXType.TOT_NO_SECURITY_TYPES;
     }
     @Test
     void FIX0558Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix558NoSecurityTypes = FIXType.NO_SECURITY_TYPES;
     }
     @Test
     void FIX0559Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix559SecurityListRequestType = FIXType.SECURITY_LIST_REQUEST_TYPE;
     }
     @Test
     void FIX0560Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix560SecurityRequestResult = FIXType.SECURITY_REQUEST_RESULT;
     }
     @Test
     void FIX0561Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix561RoundLot = FIXType.ROUND_LOT;
     }
     @Test
     void FIX0562Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix562MinTradeVol = FIXType.MIN_TRADE_VOL;
     }
     @Test
     void FIX0563Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix563MultiLegRptTypeReq = FIXType.MULTI_LEG_RPT_TYPE_REQ;
     }
     @Test
     void FIX0564Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix564LegPositionEffect = FIXType.LEG_POSITION_EFFECT;
     }
     @Test
     void FIX0565Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix565LegCoveredOrUncovered = FIXType.LEG_COVERED_OR_UNCOVERED;
     }
     @Test
     void FIX0566Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix566LegPrice = FIXType.LEG_PRICE;
     }
     @Test
     void FIX0567Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix567TradSesStatusRejReason = FIXType.TRAD_SES_STATUS_REJ_REASON;
     }
     @Test
     void FIX0568Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix568TradeRequestID = FIXType.TRADE_REQUEST_ID;
     }
     @Test
     void FIX0569Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix569TradeRequestType = FIXType.TRADE_REQUEST_TYPE;
     }
     @Test
     void FIX0570Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix570PreviouslyReported = FIXType.PREVIOUSLY_REPORTED;
     }
     @Test
     void FIX0571Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix571TradeReportID = FIXType.TRADE_REPORT_ID;
     }
     @Test
     void FIX0572Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix572TradeReportRefID = FIXType.TRADE_REPORT_REF_ID;
     }
     @Test
     void FIX0573Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix573MatchStatus = FIXType.MATCH_STATUS;
     }
     @Test
     void FIX0574Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix574MatchType = FIXType.MATCH_TYPE;
     }
     @Test
     void FIX0575Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix575OddLot = FIXType.ODD_LOT;
     }
     @Test
     void FIX0576Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix576NoClearingInstructions = FIXType.NO_CLEARING_INSTRUCTIONS;
     }
     @Test
     void FIX0577Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix577ClearingInstruction = FIXType.CLEARING_INSTRUCTION;
     }
     @Test
     void FIX0578Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix578TradeInputSource = FIXType.TRADE_INPUT_SOURCE;
     }
     @Test
     void FIX0579Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix579TradeInputDevice = FIXType.TRADE_INPUT_DEVICE;
     }
     @Test
     void FIX0580Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix580NoDates = FIXType.NO_DATES;
     }
     @Test
     void FIX0581Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix581AccountType = FIXType.ACCOUNT_TYPE;
     }
     @Test
     void FIX0582Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix582CustOrderCapacity = FIXType.CUST_ORDER_CAPACITY;
     }
     @Test
     void FIX0583Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix583ClOrdLinkID = FIXType.CL_ORD_LINK_ID;
     }
     @Test
     void FIX0584Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix584MassStatusReqID = FIXType.MASS_STATUS_REQ_ID;
     }
     @Test
     void FIX0585Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix585MassStatusReqType = FIXType.MASS_STATUS_REQ_TYPE;
     }
     @Test
     void FIX0586Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix586OrigOrdModTime = FIXType.ORIG_ORD_MOD_TIME;
     }
     @Test
     void FIX0587Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix587LegSettlType = FIXType.LEG_SETTL_TYPE;
     }
     @Test
     void FIX0588Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix588LegSettlDate = FIXType.LEG_SETTL_DATE;
     }
     @Test
     void FIX0589Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix589DayBookingInst = FIXType.DAY_BOOKING_INST;
     }
     @Test
     void FIX0590Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix590BookingUnit = FIXType.BOOKING_UNIT;
     }
     @Test
     void FIX0591Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix591PreallocMethod = FIXType.PREALLOC_METHOD;
     }
     @Test
     void FIX0592Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix592UnderlyingCountryOfIssue = FIXType.UNDERLYING_COUNTRY_OF_ISSUE;
     }
     @Test
     void FIX0593Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix593UnderlyingStateOrProvinceOfIssue = FIXType.UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE;
     }
     @Test
     void FIX0594Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix594UnderlyingLocaleOfIssue = FIXType.UNDERLYING_LOCALE_OF_ISSUE;
     }
     @Test
     void FIX0595Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix595UnderlyingInstrRegistry = FIXType.UNDERLYING_INSTR_REGISTRY;
     }
     @Test
     void FIX0596Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix596LegCountryOfIssue = FIXType.LEG_COUNTRY_OF_ISSUE;
     }
     @Test
     void FIX0597Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix597LegStateOrProvinceOfIssue = FIXType.LEG_STATE_OR_PROVINCE_OF_ISSUE;
     }
     @Test
     void FIX0598Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix598LegLocaleOfIssue = FIXType.LEG_LOCALE_OF_ISSUE;
     }
     @Test
     void FIX0599Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix599LegInstrRegistry = FIXType.LEG_INSTR_REGISTRY;
     }
     @Test
     void FIX0600Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix600LegSymbol = FIXType.LEG_SYMBOL;
     }
     @Test
     void FIX0601Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix601LegSymbolSfx = FIXType.LEG_SYMBOL_SFX;
     }
     @Test
     void FIX0602Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix602LegSecurityID = FIXType.LEG_SECURITY_ID;
     }
     @Test
     void FIX0603Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix603LegSecurityIDSource = FIXType.LEG_SECURITY_ID_SOURCE;
     }
     @Test
     void FIX0604Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix604NoLegSecurityAltID = FIXType.NO_LEG_SECURITY_ALT_ID;
     }
     @Test
     void FIX0605Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix605LegSecurityAltID = FIXType.LEG_SECURITY_ALT_ID;
     }
     @Test
     void FIX0606Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix606LegSecurityAltIDSource = FIXType.LEG_SECURITY_ALT_ID_SOURCE;
     }
     @Test
     void FIX0607Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix607LegProduct = FIXType.LEG_PRODUCT;
     }
     @Test
     void FIX0608Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix608LegCFICode = FIXType.LEG_CFI_CODE;
     }
     @Test
     void FIX0609Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix609LegSecurityType = FIXType.LEG_SECURITY_TYPE;
     }
     @Test
     void FIX0610Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix610LegMaturityMonthYear = FIXType.LEG_MATURITY_MONTH_YEAR;
     }
     @Test
     void FIX0611Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix611LegMaturityDate = FIXType.LEG_MATURITY_DATE;
     }
     @Test
     void FIX0612Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix612LegStrikePrice = FIXType.LEG_STRIKE_PRICE;
     }
     @Test
     void FIX0613Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix613LegOptAttribute = FIXType.LEG_OPT_ATTRIBUTE;
     }
     @Test
     void FIX0614Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix614LegContractMultiplier = FIXType.LEG_CONTRACT_MULTIPLIER;
     }
     @Test
     void FIX0615Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix615LegCouponRate = FIXType.LEG_COUPON_RATE;
     }
     @Test
     void FIX0616Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix616LegSecurityExchange = FIXType.LEG_SECURITY_EXCHANGE;
     }
     @Test
     void FIX0617Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix617LegIssuer = FIXType.LEG_ISSUER;
     }
     @Test
     void FIX0618Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix618EncodedLegIssuerLen = FIXType.ENCODED_LEG_ISSUER_LEN;
     }
     @Test
     void FIX0619Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix619EncodedLegIssuer = FIXType.ENCODED_LEG_ISSUER;
     }
     @Test
     void FIX0620Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix620LegSecurityDesc = FIXType.LEG_SECURITY_DESC;
     }
     @Test
     void FIX0621Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix621EncodedLegSecurityDescLen = FIXType.ENCODED_LEG_SECURITY_DESC_LEN;
     }
     @Test
     void FIX0622Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix622EncodedLegSecurityDesc = FIXType.ENCODED_LEG_SECURITY_DESC;
     }
     @Test
     void FIX0623Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix623LegRatioQty = FIXType.LEG_RATIO_QTY;
     }
     @Test
     void FIX0624Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix624LegSide = FIXType.LEG_SIDE;
     }
     @Test
     void FIX0625Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix625TradingSessionSubID = FIXType.TRADING_SESSION_SUB_ID;
     }
     @Test
     void FIX0626Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix626AllocType = FIXType.ALLOC_TYPE;
     }
     @Test
     void FIX0627Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix627NoHops = FIXType.NO_HOPS;
     }
     @Test
     void FIX0628Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix628HopCompID = FIXType.HOP_COMP_ID;
     }
     @Test
     void FIX0629Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix629HopSendingTime = FIXType.HOP_SENDING_TIME;
     }
     @Test
     void FIX0630Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix630HopRefID = FIXType.HOP_REF_ID;
     }
     @Test
     void FIX0631Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix631MidPx = FIXType.MID_PX;
     }
     @Test
     void FIX0632Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix632BidYield = FIXType.BID_YIELD;
     }
     @Test
     void FIX0633Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix633MidYield = FIXType.MID_YIELD;
     }
     @Test
     void FIX0634Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix634OfferYield = FIXType.OFFER_YIELD;
     }
     @Test
     void FIX0635Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix635ClearingFeeIndicator = FIXType.CLEARING_FEE_INDICATOR;
     }
     @Test
     void FIX0636Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix636WorkingIndicator = FIXType.WORKING_INDICATOR;
     }
     @Test
     void FIX0637Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix637LegLastPx = FIXType.LEG_LAST_PX;
     }
     @Test
     void FIX0638Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix638PriorityIndicator = FIXType.PRIORITY_INDICATOR;
     }
     @Test
     void FIX0639Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix639PriceImprovement = FIXType.PRICE_IMPROVEMENT;
     }
     @Test
     void FIX0640Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix640Price2 = FIXType.PRICE_2;
     }
     @Test
     void FIX0641Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix641LastForwardPoints2 = FIXType.LAST_FORWARD_POINTS_2;
     }
     @Test
     void FIX0642Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix642BidForwardPoints2 = FIXType.BID_FORWARD_POINTS_2;
     }
     @Test
     void FIX0643Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix643OfferForwardPoints2 = FIXType.OFFER_FORWARD_POINTS_2;
     }
     @Test
     void FIX0644Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix644RFQReqID = FIXType.RFQ_REQ_ID;
     }
     @Test
     void FIX0645Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix645MktBidPx = FIXType.MKT_BID_PX;
     }
     @Test
     void FIX0646Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix646MktOfferPx = FIXType.MKT_OFFER_PX;
     }
     @Test
     void FIX0647Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix647MinBidSize = FIXType.MIN_BID_SIZE;
     }
     @Test
     void FIX0648Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix648MinOfferSize = FIXType.MIN_OFFER_SIZE;
     }
     @Test
     void FIX0649Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix649QuoteStatusReqID = FIXType.QUOTE_STATUS_REQ_ID;
     }
     @Test
     void FIX0650Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix650LegalConfirm = FIXType.LEGAL_CONFIRM;
     }
     @Test
     void FIX0651Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix651UnderlyingLastPx = FIXType.UNDERLYING_LAST_PX;
     }
     @Test
     void FIX0652Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix652UnderlyingLastQty = FIXType.UNDERLYING_LAST_QTY;
     }
     @Test
     void FIX0653Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix653SecDefStatus = FIXType.SEC_DEF_STATUS;
     }
     @Test
     void FIX0654Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix654LegRefID = FIXType.LEG_REF_ID;
     }
     @Test
     void FIX0655Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix655ContraLegRefID = FIXType.CONTRA_LEG_REF_ID;
     }
     @Test
     void FIX0656Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix656SettlCurrBidFxRate = FIXType.SETTL_CURR_BID_FX_RATE;
     }
     @Test
     void FIX0657Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix657SettlCurrOfferFxRate = FIXType.SETTL_CURR_OFFER_FX_RATE;
     }
     @Test
     void FIX0658Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix658QuoteRequestRejectReason = FIXType.QUOTE_REQUEST_REJECT_REASON;
     }
     @Test
     void FIX0659Test() {
-        FIXType fix140PrevClosePx = FIXType.PREV_CLOSE_PX;
+        FIXType fix659SideComplianceID = FIXType.SIDE_COMPLIANCE_ID;
     }
     /*
      *
