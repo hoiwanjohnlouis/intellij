@@ -41,7 +41,7 @@ class Tag43PossDupFlagTest {
 
     @Test
     void FIX0043Test() {
-        FIXType fix43PossDupFlag = FIXType.POSS_DUP_FLAG;
+        FIXType fix43PossDupFlag = FIXType.FIX43_POSS_DUP_FLAG;
         assertEquals( "POSS_DUP_FLAG", fix43PossDupFlag.getFIXName());
         assertEquals( 43, fix43PossDupFlag.getFIXNumber());
         assertEquals( "PossDupFlag", fix43PossDupFlag.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag43PossDupFlagTest {
     }
     @Test
     void Tag0043Test() {
-        TagType tag43PossDupFlag = new TagType(FIXType.POSS_DUP_FLAG,"N");
+        TagType tag43PossDupFlag = new TagType(FIXType.FIX43_POSS_DUP_FLAG,"N");
         assertEquals( "N", tag43PossDupFlag.getDataValue());
         assertNotEquals( "A11", tag43PossDupFlag.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0043Test()");

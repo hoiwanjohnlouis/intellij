@@ -46,11 +46,11 @@ class Tag60TransactTimeTest {
     }
     @Test
     void FIX0060Test() {
-        FIXType fix60TransactTime = FIXType.TRANSACT_TIME;
+        FIXType fix60TransactTime = FIXType.FIX60_TRANSACT_TIME;
     }
     @Test
     void Tag0060Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

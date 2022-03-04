@@ -46,7 +46,7 @@ class Tag141ResetSeqNumFlagTest {
     }
     @Test
     void FIX0141Test() {
-        FIXType fix141ResetSeqNumFlag = FIXType.RESET_SEQ_NUM_FLAG;
+        FIXType fix141ResetSeqNumFlag = FIXType.FIX141_RESET_SEQ_NUM_FLAG;
     }
     @Test
     void Tag0141Test() {

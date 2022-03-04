@@ -47,14 +47,14 @@ class Tag103OrdRejReasonTest {
     }
     @Test
     void FIX0103Test() {
-        FIXType fix103OrdRejReason = FIXType.ORD_REJ_REASON;
+        FIXType fix103OrdRejReason = FIXType.FIX103_ORD_REJ_REASON;
         assertEquals( fix103OrdRejReason.getFIXName(), "ORD_REJ_REASON");
         assertEquals( fix103OrdRejReason.getFIXNumber(), 103);
         assertEquals( fix103OrdRejReason.getFIXDescription(), "OrdRejReason");
     }
     @Test
     void Tag0103Test() {
-        TagType tag103OrdRejReason = new TagType(FIXType.ORD_REJ_REASON,"ABC987654321XYZ");
+        TagType tag103OrdRejReason = new TagType(FIXType.FIX103_ORD_REJ_REASON,"ABC987654321XYZ");
         assertEquals( tag103OrdRejReason.getFIXName(), "ORD_REJ_REASON");
         assertEquals( tag103OrdRejReason.getFIXNumber(), 103);
         assertEquals( tag103OrdRejReason.getFIXDescription(), "OrdRejReason");

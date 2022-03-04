@@ -41,7 +41,7 @@ class Tag33LinesOfTextTest {
 
     @Test
     void FIX0033Test() {
-        FIXType fix33LinesOfText = FIXType.LINES_OF_TEXT;
+        FIXType fix33LinesOfText = FIXType.FIX33_LINES_OF_TEXT;
         assertEquals( "LINES_OF_TEXT", fix33LinesOfText.getFIXName());
         assertEquals( 33, fix33LinesOfText.getFIXNumber());
         assertEquals( "LinesOfText", fix33LinesOfText.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag33LinesOfTextTest {
     }
     @Test
     void Tag0033Test() {
-        TagType tag33LinesOfText = new TagType(FIXType.LINES_OF_TEXT,"0");
+        TagType tag33LinesOfText = new TagType(FIXType.FIX33_LINES_OF_TEXT,"0");
         assertEquals( "0", tag33LinesOfText.getDataValue());
         assertNotEquals( "11", tag33LinesOfText.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0033Test()");

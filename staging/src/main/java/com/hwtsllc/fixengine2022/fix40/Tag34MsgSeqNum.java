@@ -17,12 +17,13 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag34MsgSeqNum {
+public class Tag34MsgSeqNum extends TagTypeAbstract {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.MSG_SEQ_NUM;
+    private final FIXType fixType = FIXType.FIX34_MSG_SEQ_NUM;
 }

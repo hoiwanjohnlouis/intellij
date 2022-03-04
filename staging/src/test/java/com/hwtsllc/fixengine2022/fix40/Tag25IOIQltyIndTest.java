@@ -41,7 +41,7 @@ class Tag25IOIQltyIndTest {
 
     @Test
     void FIX0025Test() {
-        FIXType fix25IOIQltyInd = FIXType.IOI_QLTY_IND;
+        FIXType fix25IOIQltyInd = FIXType.FIX25_IOI_QLTY_IND;
         assertEquals( "IOI_QLTY_IND", fix25IOIQltyInd.getFIXName());
         assertEquals( 25, fix25IOIQltyInd.getFIXNumber());
         assertEquals( "IOIQltyInd", fix25IOIQltyInd.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag25IOIQltyIndTest {
     }
     @Test
     void Tag0025Test() {
-        TagType tag25IOIQltyInd = new TagType(FIXType.IOI_QLTY_IND,"A");
+        TagType tag25IOIQltyInd = new TagType(FIXType.FIX25_IOI_QLTY_IND,"A");
         assertEquals( "A", tag25IOIQltyInd.getDataValue());
         assertNotEquals( "11", tag25IOIQltyInd.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0025Test()");

@@ -46,11 +46,11 @@ class Tag59TimeInForceTest {
     }
     @Test
     void FIX0059Test() {
-        FIXType fix59TimeInForce = FIXType.TIME_IN_FORCE;
+        FIXType fix59TimeInForce = FIXType.FIX59_TIME_IN_FORCE;
     }
     @Test
     void Tag0059Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

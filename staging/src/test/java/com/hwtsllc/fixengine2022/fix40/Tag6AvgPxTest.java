@@ -41,7 +41,7 @@ class Tag6AvgPxTest {
 
     @Test
     void FIX0006Test() {
-        FIXType fix6AvgPx = FIXType.AVG_PX;
+        FIXType fix6AvgPx = FIXType.FIX6_AVG_PX;
         assertEquals( "AVG_PX", fix6AvgPx.getFIXName());
         assertEquals( 6, fix6AvgPx.getFIXNumber());
         assertEquals( "AvgPx", fix6AvgPx.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag6AvgPxTest {
     }
     @Test
     void Tag0006Test() {
-        TagType tag5AdvTransType = new TagType(FIXType.AVG_PX,"123.45");
+        TagType tag5AdvTransType = new TagType(FIXType.FIX6_AVG_PX,"123.45");
         assertEquals( "123.45", tag5AdvTransType.getDataValue());
         assertNotEquals( "67.89", tag5AdvTransType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0006Test()");

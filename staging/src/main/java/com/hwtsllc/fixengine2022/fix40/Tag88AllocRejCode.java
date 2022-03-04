@@ -25,5 +25,5 @@ public enum Tag88AllocRejCode {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ALLOC_REJ_CODE;
+    private final FIXType fixType = FIXType.FIX88_ALLOC_REJ_CODE;
 }

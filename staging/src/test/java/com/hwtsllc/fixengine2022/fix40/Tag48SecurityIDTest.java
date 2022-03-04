@@ -41,7 +41,7 @@ class Tag48SecurityIDTest {
 
     @Test
     void FIX0048Test() {
-        FIXType fix48SecurityID = FIXType.SECURITY_ID;
+        FIXType fix48SecurityID = FIXType.FIX48_SECURITY_ID;
         assertEquals( "SECURITY_ID", fix48SecurityID.getFIXName());
         assertEquals( 48, fix48SecurityID.getFIXNumber());
         assertEquals( "SecurityID", fix48SecurityID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag48SecurityIDTest {
     }
     @Test
     void Tag0048Test() {
-        TagType tag48SecurityID = new TagType(FIXType.SECURITY_ID,"TESTA");
+        TagType tag48SecurityID = new TagType(FIXType.FIX48_SECURITY_ID,"TESTA");
         assertEquals( "TESTA", tag48SecurityID.getDataValue());
         assertNotEquals( "A11", tag48SecurityID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0048Test()");

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-public class Tag119SettlCurrAmt {
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+public class Tag119SettlCurrAmt extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
 }

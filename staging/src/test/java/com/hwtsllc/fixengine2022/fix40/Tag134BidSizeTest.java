@@ -44,14 +44,14 @@ class Tag134BidSizeTest {
     }
     @Test
     void FIX0134Test() {
-        FIXType fix134BidSize = FIXType.BID_SIZE;
+        FIXType fix134BidSize = FIXType.FIX134_BID_SIZE;
         assertEquals( fix134BidSize.getFIXName(), "BID_SIZE");
         assertEquals( fix134BidSize.getFIXNumber(), 134);
         assertEquals( fix134BidSize.getFIXDescription(), "BidSize");
     }
     @Test
     void Tag0134Test() {
-        FIXType tag134BidSize = FIXType.BID_SIZE;
+        FIXType tag134BidSize = FIXType.FIX134_BID_SIZE;
         assertEquals( tag134BidSize.getFIXName(), "BID_SIZE");
         assertEquals( tag134BidSize.getFIXNumber(), 134);
         assertEquals( tag134BidSize.getFIXDescription(), "BidSize");

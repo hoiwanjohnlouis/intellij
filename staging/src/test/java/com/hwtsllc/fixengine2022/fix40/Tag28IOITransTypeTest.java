@@ -41,7 +41,7 @@ class Tag28IOITransTypeTest {
 
     @Test
     void FIX0028Test() {
-        FIXType fix28IOITransType = FIXType.IOI_TRANS_TYPE;
+        FIXType fix28IOITransType = FIXType.FIX28_IOI_TRANS_TYPE;
         assertEquals( "IOI_TRANS_TYPE", fix28IOITransType.getFIXName());
         assertEquals( 28, fix28IOITransType.getFIXNumber());
         assertEquals( "IOITransType", fix28IOITransType.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag28IOITransTypeTest {
     }
     @Test
     void Tag0028Test() {
-        TagType tag28IOITransType = new TagType(FIXType.IOI_TRANS_TYPE,"A");
+        TagType tag28IOITransType = new TagType(FIXType.FIX28_IOI_TRANS_TYPE,"A");
         assertEquals( "A", tag28IOITransType.getDataValue());
         assertNotEquals( "11", tag28IOITransType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0028Test()");

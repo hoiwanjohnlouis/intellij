@@ -41,7 +41,7 @@ class Tag29LastCapacityTest {
 
     @Test
     void FIX0029Test() {
-        FIXType fix29LastCapacity = FIXType.LAST_CAPACITY;
+        FIXType fix29LastCapacity = FIXType.FIX29_LAST_CAPACITY;
         assertEquals( "LAST_CAPACITY", fix29LastCapacity.getFIXName());
         assertEquals( 29, fix29LastCapacity.getFIXNumber());
         assertEquals( "LastCapacity", fix29LastCapacity.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag29LastCapacityTest {
     }
     @Test
     void Tag0029Test() {
-        TagType tag29LastCapacity = new TagType(FIXType.LAST_CAPACITY,"A");
+        TagType tag29LastCapacity = new TagType(FIXType.FIX29_LAST_CAPACITY,"A");
         assertEquals( "A", tag29LastCapacity.getDataValue());
         assertNotEquals( "11", tag29LastCapacity.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0029Test()");

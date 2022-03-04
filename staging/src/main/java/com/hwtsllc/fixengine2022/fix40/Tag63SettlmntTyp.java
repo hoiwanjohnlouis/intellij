@@ -25,5 +25,5 @@ public enum Tag63SettlmntTyp {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.SETTLMNT_TYP;
+    private final FIXType fixType = FIXType.FIX63_SETTLMNT_TYP;
 }

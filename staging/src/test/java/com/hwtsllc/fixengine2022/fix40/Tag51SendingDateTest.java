@@ -47,11 +47,11 @@ class Tag51SendingDateTest {
     }
     @Test
     void FIX0051Test() {
-        FIXType fix51SendingDate = FIXType.SENDING_DATE;
+        FIXType fix51SendingDate = FIXType.FIX51_SENDING_DATE;
     }
     @Test
     void Tag0051Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

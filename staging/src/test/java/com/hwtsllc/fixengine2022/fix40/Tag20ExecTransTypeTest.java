@@ -42,7 +42,7 @@ class Tag20ExecTransTypeTest {
 
     @Test
     void FIX0020Test() {
-        FIXType fix20ExecTransType = FIXType.EXEC_TRANS_TYPE;
+        FIXType fix20ExecTransType = FIXType.FIX20_EXEC_TRANS_TYPE;
         assertEquals( "EXEC_TRANS_TYPE", fix20ExecTransType.getFIXName());
         assertEquals( 20, fix20ExecTransType.getFIXNumber());
         assertEquals( "ExecTransType (replaced)", fix20ExecTransType.getFIXDescription());
@@ -52,7 +52,7 @@ class Tag20ExecTransTypeTest {
     }
     @Test
     void Tag0020Test() {
-        TagType tag20ExecTransType = new TagType(FIXType.EXEC_TRANS_TYPE,"A");
+        TagType tag20ExecTransType = new TagType(FIXType.FIX20_EXEC_TRANS_TYPE,"A");
         assertEquals( "A", tag20ExecTransType.getDataValue());
         assertNotEquals( "11", tag20ExecTransType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0020Test()");

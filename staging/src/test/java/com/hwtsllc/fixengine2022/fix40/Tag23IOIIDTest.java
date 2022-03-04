@@ -41,7 +41,7 @@ class Tag23IOIIDTest {
 
     @Test
     void FIX0023Test() {
-        FIXType fix23IOIID = FIXType.IOI_ID;
+        FIXType fix23IOIID = FIXType.FIX23_IOI_ID;
         assertEquals( "IOI_ID", fix23IOIID.getFIXName());
         assertEquals( 23, fix23IOIID.getFIXNumber());
         assertEquals( "IOIid", fix23IOIID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag23IOIIDTest {
     }
     @Test
     void Tag0023Test() {
-        TagType tag23IOIID = new TagType(FIXType.IOI_ID,"A");
+        TagType tag23IOIID = new TagType(FIXType.FIX23_IOI_ID,"A");
         assertEquals( "A", tag23IOIID.getDataValue());
         assertNotEquals( "11", tag23IOIID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0023Test()");

@@ -41,7 +41,7 @@ class Tag22IDSourceTest {
 
     @Test
     void FIX0022Test() {
-        FIXType fix22IDSource = FIXType.ID_SOURCE;
+        FIXType fix22IDSource = FIXType.FIX22_ID_SOURCE;
         assertEquals( "ID_SOURCE", fix22IDSource.getFIXName());
         assertEquals( 22, fix22IDSource.getFIXNumber());
         assertEquals( "IDSource", fix22IDSource.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag22IDSourceTest {
     }
     @Test
     void Tag0022Test() {
-        TagType tag22IDSource = new TagType(FIXType.ID_SOURCE,"A");
+        TagType tag22IDSource = new TagType(FIXType.FIX22_ID_SOURCE,"A");
         assertEquals( "A", tag22IDSource.getDataValue());
         assertNotEquals( "11", tag22IDSource.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0022Test()");

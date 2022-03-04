@@ -25,5 +25,5 @@ public enum Tag100ExDestination {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.EX_DESTINATION;
+    private final FIXType fixType = FIXType.FIX100_EX_DESTINATION;
 }

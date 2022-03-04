@@ -16,6 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 @Deprecated
-public class Tag109ClientID {
+public class Tag109ClientID extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
 }

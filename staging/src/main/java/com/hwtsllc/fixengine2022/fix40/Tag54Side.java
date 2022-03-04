@@ -43,7 +43,7 @@ public enum Tag54Side {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.SIDE;
+    private final FIXType fixType = FIXType.FIX54_SIDE;
 
     private final String tag35SideValue;
 //  private final String tag35SideDescription;

@@ -41,7 +41,7 @@ class Tag36NewSeqNoTest {
 
     @Test
     void FIX0036Test() {
-        FIXType fix36NewSeqNo = FIXType.NEW_SEQ_NO;
+        FIXType fix36NewSeqNo = FIXType.FIX36_NEW_SEQ_NO;
         assertEquals( "NEW_SEQ_NO", fix36NewSeqNo.getFIXName());
         assertEquals( 36, fix36NewSeqNo.getFIXNumber());
         assertEquals( "NewSeqNo", fix36NewSeqNo.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag36NewSeqNoTest {
     }
     @Test
     void Tag0036Test() {
-        TagType tag36NewSeqNo = new TagType(FIXType.NEW_SEQ_NO,"23456");
+        TagType tag36NewSeqNo = new TagType(FIXType.FIX36_NEW_SEQ_NO,"23456");
         assertEquals( "23456", tag36NewSeqNo.getDataValue());
         assertNotEquals( "11", tag36NewSeqNo.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0036Test()");

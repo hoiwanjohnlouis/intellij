@@ -41,7 +41,7 @@ class Tag18ExecInstTest {
 
     @Test
     void FIX0018Test() {
-        FIXType fix18ExecInst = FIXType.EXEC_INST;
+        FIXType fix18ExecInst = FIXType.FIX18_EXEC_INST;
         assertEquals( "EXEC_INST", fix18ExecInst.getFIXName());
         assertEquals( 18, fix18ExecInst.getFIXNumber());
         assertEquals( "ExecInst", fix18ExecInst.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag18ExecInstTest {
     }
     @Test
     void Tag0018Test() {
-        TagType tag18ExecInst = new TagType(FIXType.EXEC_INST,"A");
+        TagType tag18ExecInst = new TagType(FIXType.FIX18_EXEC_INST,"A");
         assertEquals( "A", tag18ExecInst.getDataValue());
         assertNotEquals( "11", tag18ExecInst.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0018Test()");

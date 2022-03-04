@@ -25,5 +25,5 @@ public enum Tag30LastMkt {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.LAST_MKT;
+    private final FIXType fixType = FIXType.FIX30_LAST_MKT;
 }

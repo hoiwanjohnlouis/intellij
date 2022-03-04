@@ -46,11 +46,11 @@ class Tag81ProcessCodeTest {
     }
     @Test
     void FIX0081Test() {
-        FIXType fix81ProcessCode = FIXType.PROCESS_CODE;
+        FIXType fix81ProcessCode = FIXType.FIX81_PROCESS_CODE;
     }
     @Test
     void Tag0081Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

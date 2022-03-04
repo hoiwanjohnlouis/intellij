@@ -41,7 +41,7 @@ class Tag26IOIRefIDTest {
 
     @Test
     void FIX0026Test() {
-        FIXType fix26IOIRefID = FIXType.IOI_REF_ID;
+        FIXType fix26IOIRefID = FIXType.FIX26_IOI_REF_ID;
         assertEquals( "IOI_REF_ID", fix26IOIRefID.getFIXName());
         assertEquals( 26, fix26IOIRefID.getFIXNumber());
         assertEquals( "IOIRefID", fix26IOIRefID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag26IOIRefIDTest {
     }
     @Test
     void Tag0026Test() {
-        TagType tag26IOIRefID = new TagType(FIXType.IOI_REF_ID,"A");
+        TagType tag26IOIRefID = new TagType(FIXType.FIX26_IOI_REF_ID,"A");
         assertEquals( "A", tag26IOIRefID.getDataValue());
         assertNotEquals( "11", tag26IOIRefID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0026Test()");

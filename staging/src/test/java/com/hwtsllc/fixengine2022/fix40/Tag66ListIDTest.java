@@ -46,11 +46,11 @@ class Tag66ListIDTest {
     }
     @Test
     void FIX0066Test() {
-        FIXType fix66ListID = FIXType.LIST_ID;
+        FIXType fix66ListID = FIXType.FIX66_LIST_ID;
     }
     @Test
     void Tag0066Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

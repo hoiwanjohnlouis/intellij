@@ -41,7 +41,7 @@ class Tag44PriceTest {
 
     @Test
     void FIX0044Test() {
-        FIXType fix44Price = FIXType.PRICE;
+        FIXType fix44Price = FIXType.FIX44_PRICE;
         assertEquals( "PRICE", fix44Price.getFIXName());
         assertEquals( 44, fix44Price.getFIXNumber());
         assertEquals( "Price", fix44Price.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag44PriceTest {
     }
     @Test
     void Tag0044Test() {
-        TagType tag44Price = new TagType(FIXType.PRICE,"10.43");
+        TagType tag44Price = new TagType(FIXType.FIX44_PRICE,"10.43");
         assertEquals( "10.43", tag44Price.getDataValue());
         assertNotEquals( "11.01", tag44Price.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0044Test()");

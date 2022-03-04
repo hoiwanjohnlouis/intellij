@@ -41,7 +41,7 @@ class Tag39OrdStatusTest {
 
     @Test
     void FIX0039Test() {
-        FIXType fix39OrdStatus = FIXType.ORD_STATUS;
+        FIXType fix39OrdStatus = FIXType.FIX39_ORD_STATUS;
         assertEquals( "ORD_STATUS", fix39OrdStatus.getFIXName());
         assertEquals( 39, fix39OrdStatus.getFIXNumber());
         assertEquals( "OrdStatus", fix39OrdStatus.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag39OrdStatusTest {
     }
     @Test
     void Tag0039Test() {
-        TagType tag39OrdStatus = new TagType(FIXType.ORD_STATUS,"N");
+        TagType tag39OrdStatus = new TagType(FIXType.FIX39_ORD_STATUS,"N");
         assertEquals( "N", tag39OrdStatus.getDataValue());
         assertNotEquals( "A11", tag39OrdStatus.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0039Test()");

@@ -17,12 +17,27 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag11ClOrdID {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag11ClOrdID extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.CL_ORD_ID;
+    public Tag11ClOrdID(String dataValue) {
+        setFixType(FIXType.FIX11_CL_ORD_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        Tag11ClOrdID tag11ClOrdID = new Tag11ClOrdID("ORDER-1234");
+        System.out.println(tag11ClOrdID);
+        System.out.println(tag11ClOrdID.toLogStringVerbose());
+        System.out.println(tag11ClOrdID.toFixTagValuePairString());
+    }
 }

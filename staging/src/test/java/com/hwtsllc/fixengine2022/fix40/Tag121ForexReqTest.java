@@ -46,14 +46,14 @@ class Tag121ForexReqTest {
     }
     @Test
     void FIX0121Test() {
-        FIXType fix121ForexReq = FIXType.FOREX_REQ;
+        FIXType fix121ForexReq = FIXType.FIX121_FOREX_REQ;
         assertEquals( fix121ForexReq.getFIXName(), "FOREX_REQ");
         assertEquals( fix121ForexReq.getFIXNumber(), 121);
         assertEquals( fix121ForexReq.getFIXDescription(), "ForexReq");
     }
     @Test
     void Tag0121Test() {
-        FIXType tag121ForexReq = FIXType.FOREX_REQ;
+        FIXType tag121ForexReq = FIXType.FIX121_FOREX_REQ;
         assertEquals( tag121ForexReq.getFIXName(), "FOREX_REQ");
         assertEquals( tag121ForexReq.getFIXNumber(), 121);
         assertEquals( tag121ForexReq.getFIXDescription(), "ForexReq");

@@ -25,6 +25,6 @@ public enum Tag39OrdStatus {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ORD_STATUS;
+    private final FIXType fixType = FIXType.FIX39_ORD_STATUS;
 
 }

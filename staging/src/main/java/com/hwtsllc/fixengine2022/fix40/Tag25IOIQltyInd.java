@@ -25,5 +25,5 @@ public enum Tag25IOIQltyInd {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.IOI_QLTY_IND;
+    private final FIXType fixType = FIXType.FIX25_IOI_QLTY_IND;
 }

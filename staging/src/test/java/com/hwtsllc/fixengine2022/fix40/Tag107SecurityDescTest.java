@@ -47,14 +47,14 @@ class Tag107SecurityDescTest {
     }
     @Test
     void FIX0107Test() {
-        FIXType fix107SecurityDesc = FIXType.SECURITY_DESC;
+        FIXType fix107SecurityDesc = FIXType.FIX107_SECURITY_DESC;
         assertEquals( fix107SecurityDesc.getFIXName(), "SECURITY_DESC");
         assertEquals( fix107SecurityDesc.getFIXNumber(), 107);
         assertEquals( fix107SecurityDesc.getFIXDescription(), "SecurityDesc");
     }
     @Test
     void Tag0107Test() {
-        TagType tag107SecurityDesc = new TagType(FIXType.SECURITY_DESC,"International Widgets, Inc.");
+        TagType tag107SecurityDesc = new TagType(FIXType.FIX107_SECURITY_DESC,"International Widgets, Inc.");
         assertEquals( tag107SecurityDesc.getFIXName(), "SECURITY_DESC");
         assertEquals( tag107SecurityDesc.getFIXNumber(), 107);
         assertEquals( tag107SecurityDesc.getFIXDescription(), "SecurityDesc");

@@ -46,11 +46,11 @@ class Tag54SideTest {
     }
     @Test
     void FIX0054Test() {
-        FIXType fix54Side = FIXType.SIDE;
+        FIXType fix54Side = FIXType.FIX54_SIDE;
     }
     @Test
     void Tag0054Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

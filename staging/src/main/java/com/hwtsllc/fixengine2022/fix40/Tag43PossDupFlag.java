@@ -25,5 +25,5 @@ public enum Tag43PossDupFlag {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.POSS_DUP_FLAG;
+    private final FIXType fixType = FIXType.FIX43_POSS_DUP_FLAG;
 }

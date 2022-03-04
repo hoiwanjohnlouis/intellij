@@ -34,11 +34,5 @@ public class Tag58Text extends TagTypeAbstract {
         Tag58Text tag58TExt = new Tag58Text("hello from main routine");
         System.out.println("t1.1:"+tag58TExt);
         System.out.println("t1.2:"+tag58TExt.toLogStringVerbose());
-        System.out.println("t1.3.FIXTypeName:"+tag58TExt.getFIXTypeName());
-        System.out.println("t1.4.FIXNumber:"+tag58TExt.getFIXNumber());
-        System.out.println("t1.5.FIXName:"+tag58TExt.getFIXName());
-        System.out.println("t1.6.FIXDescription:"+tag58TExt.getFIXDescription());
-        System.out.println("t1.7.DataValue:"+tag58TExt.getDataValue());
-        System.out.println("t1.8.FixString:"+tag58TExt.toFixTagValuePairString());
     }
 }

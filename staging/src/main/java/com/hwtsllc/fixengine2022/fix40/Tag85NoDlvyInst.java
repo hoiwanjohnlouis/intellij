@@ -17,13 +17,14 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 @Deprecated
-public class Tag85NoDlvyInst {
+public class Tag85NoDlvyInst extends TagTypeAbstract {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.NO_DLVY_INST;
+    private final FIXType fixType = FIXType.FIX85_NO_DLVY_INST;
 }

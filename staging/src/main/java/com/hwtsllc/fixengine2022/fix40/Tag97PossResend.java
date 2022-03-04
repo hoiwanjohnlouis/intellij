@@ -25,5 +25,5 @@ public enum Tag97PossResend {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.POSS_RESEND;
+    private final FIXType fixType = FIXType.FIX97_POSS_RESEND;
 }

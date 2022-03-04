@@ -17,12 +17,27 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag9BodyLength {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag9BodyLength extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.BODY_LENGTH;
+    public Tag9BodyLength(String dataValue) {
+        setFixType(FIXType.FIX9_BODY_LENGTH);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        Tag9BodyLength tag9BodyLength = new Tag9BodyLength("324");
+        System.out.println(tag9BodyLength);
+        System.out.println(tag9BodyLength.toLogStringVerbose());
+        System.out.println(tag9BodyLength.toFixTagValuePairString());
+    }
 }

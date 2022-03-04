@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-public class Tag106Issuer {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+public class Tag106Issuer extends TagTypeAbstract {
+    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private final FIXType fixType = FIXType.FIX106_ISSUER;
 }

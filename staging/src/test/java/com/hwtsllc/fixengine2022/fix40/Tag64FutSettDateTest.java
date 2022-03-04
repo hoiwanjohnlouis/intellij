@@ -46,11 +46,11 @@ class Tag64FutSettDateTest {
     }
     @Test
     void FIX0064Test() {
-        FIXType fix64FutSettDate = FIXType.FUT_SETT_DATE;
+        FIXType fix64FutSettDate = FIXType.FIX64_FUT_SETT_DATE;
     }
     @Test
     void Tag0064Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

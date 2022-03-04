@@ -45,14 +45,14 @@ class Tag112TestReqIDTest {
     }
     @Test
     void FIX0112Test() {
-        FIXType fix112TestReqID = FIXType.TEST_REQ_ID;
+        FIXType fix112TestReqID = FIXType.FIX112_TEST_REQ_ID;
         assertEquals( fix112TestReqID.getFIXName(), "TEST_REQ_ID");
         assertEquals( fix112TestReqID.getFIXNumber(), 112);
         assertEquals( fix112TestReqID.getFIXDescription(), "TestReqID");
     }
     @Test
     void Tag0112Test() {
-        FIXType tag112TestReqID = FIXType.TEST_REQ_ID;
+        FIXType tag112TestReqID = FIXType.FIX112_TEST_REQ_ID;
         assertEquals( tag112TestReqID.getFIXName(), "TEST_REQ_ID");
         assertEquals( tag112TestReqID.getFIXNumber(), 112);
         assertEquals( tag112TestReqID.getFIXDescription(), "TestReqID");

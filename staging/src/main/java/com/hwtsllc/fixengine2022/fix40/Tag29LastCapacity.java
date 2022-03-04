@@ -25,6 +25,6 @@ public enum Tag29LastCapacity {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.LAST_CAPACITY;
+    private final FIXType fixType = FIXType.FIX29_LAST_CAPACITY;
 
 }

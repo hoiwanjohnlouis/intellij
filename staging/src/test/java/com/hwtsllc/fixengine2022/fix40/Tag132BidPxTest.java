@@ -44,14 +44,14 @@ class Tag132BidPxTest {
     }
     @Test
     void FIX0132Test() {
-        FIXType fix132BidPx = FIXType.BID_PX;
+        FIXType fix132BidPx = FIXType.FIX132_BID_PX;
         assertEquals( fix132BidPx.getFIXName(), "BID_PX");
         assertEquals( fix132BidPx.getFIXNumber(), 132);
         assertEquals( fix132BidPx.getFIXDescription(), "BidPx");
     }
     @Test
     void Tag0132Test() {
-        FIXType tag132BidPx = FIXType.BID_PX;
+        FIXType tag132BidPx = FIXType.FIX132_BID_PX;
         assertEquals( tag132BidPx.getFIXName(), "BID_PX");
         assertEquals( tag132BidPx.getFIXNumber(), 132);
         assertEquals( tag132BidPx.getFIXDescription(), "BidPx");

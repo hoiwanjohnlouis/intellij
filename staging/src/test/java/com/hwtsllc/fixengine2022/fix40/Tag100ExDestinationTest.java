@@ -47,7 +47,7 @@ class Tag100ExDestinationTest {
     }
     @Test
     void FIX0100Test() {
-        FIXType fix100ExDestination = FIXType.EX_DESTINATION;
+        FIXType fix100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( fix100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( fix100ExDestination.getFIXNumber(), 100);
         assertEquals( fix100ExDestination.getFIXDescription(), "ExDestination");
@@ -57,7 +57,7 @@ class Tag100ExDestinationTest {
     }
     @Test
     void Tag0100Test() {
-        TagType tag100ExDestination = new TagType(FIXType.EX_DESTINATION,"ABC987654321XYZ");
+        TagType tag100ExDestination = new TagType(FIXType.FIX100_EX_DESTINATION,"ABC987654321XYZ");
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

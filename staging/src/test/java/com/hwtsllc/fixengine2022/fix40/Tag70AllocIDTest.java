@@ -46,11 +46,11 @@ class Tag70AllocIDTest {
     }
     @Test
     void FIX0070Test() {
-        FIXType fix70AllocID = FIXType.ALLOC_ID;
+        FIXType fix70AllocID = FIXType.FIX70_ALLOC_ID;
     }
     @Test
     void Tag0070Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

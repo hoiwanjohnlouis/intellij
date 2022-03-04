@@ -45,14 +45,14 @@ class Tag116OnBehalfOfSubIDTest {
     }
     @Test
     void FIX0116Test() {
-        FIXType fix116OnBehalfOfSubID = FIXType.ON_BEHALF_OF_SUB_ID;
+        FIXType fix116OnBehalfOfSubID = FIXType.FIX116_ON_BEHALF_OF_SUB_ID;
         assertEquals( fix116OnBehalfOfSubID.getFIXName(), "ON_BEHALF_OF_SUB_ID");
         assertEquals( fix116OnBehalfOfSubID.getFIXNumber(), 116);
         assertEquals( fix116OnBehalfOfSubID.getFIXDescription(), "OnBehalfOfSubID");
     }
     @Test
     void Tag0116Test() {
-        FIXType tag116OnBehalfOfSubID = FIXType.ON_BEHALF_OF_SUB_ID;
+        FIXType tag116OnBehalfOfSubID = FIXType.FIX116_ON_BEHALF_OF_SUB_ID;
         assertEquals( tag116OnBehalfOfSubID.getFIXName(), "ON_BEHALF_OF_SUB_ID");
         assertEquals( tag116OnBehalfOfSubID.getFIXNumber(), 116);
         assertEquals( tag116OnBehalfOfSubID.getFIXDescription(), "OnBehalfOfSubID");

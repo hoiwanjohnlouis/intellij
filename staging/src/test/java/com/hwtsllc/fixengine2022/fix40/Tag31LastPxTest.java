@@ -41,7 +41,7 @@ class Tag31LastPxTest {
 
     @Test
     void FIX0031Test() {
-        FIXType fix31LastPx = FIXType.LAST_PX;
+        FIXType fix31LastPx = FIXType.FIX31_LAST_PX;
         assertEquals( "LAST_PX", fix31LastPx.getFIXName());
         assertEquals( 31, fix31LastPx.getFIXNumber());
         assertEquals( "LastPx", fix31LastPx.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag31LastPxTest {
     }
     @Test
     void Tag0031Test() {
-        TagType tag31LastPx = new TagType(FIXType.LAST_PX,"98.23");
+        TagType tag31LastPx = new TagType(FIXType.FIX31_LAST_PX,"98.23");
         assertEquals( "98.23", tag31LastPx.getDataValue());
         assertNotEquals( "91", tag31LastPx.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0031Test()");

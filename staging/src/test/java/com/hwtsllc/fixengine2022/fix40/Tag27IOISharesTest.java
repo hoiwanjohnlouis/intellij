@@ -41,7 +41,7 @@ class Tag27IOISharesTest {
 
     @Test
     void FIX0027Test() {
-        FIXType fix27IOIShares = FIXType.IOI_SHARES;
+        FIXType fix27IOIShares = FIXType.FIX27_IOI_SHARES;
         assertEquals( "IOI_SHARES", fix27IOIShares.getFIXName());
         assertEquals( 27, fix27IOIShares.getFIXNumber());
         assertEquals( "IOIShares", fix27IOIShares.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag27IOISharesTest {
     }
     @Test
     void Tag0027Test() {
-        TagType tag27IOIShares = new TagType(FIXType.IOI_SHARES,"1234");
+        TagType tag27IOIShares = new TagType(FIXType.FIX27_IOI_SHARES,"1234");
         assertEquals( "1234", tag27IOIShares.getDataValue());
         assertNotEquals( "11", tag27IOIShares.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0027Test()");

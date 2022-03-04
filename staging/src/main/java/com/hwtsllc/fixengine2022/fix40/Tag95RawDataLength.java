@@ -17,12 +17,13 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag95RawDataLength {
+public class Tag95RawDataLength extends TagTypeAbstract {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.RAW_DATA_LENGTH;
+    private final FIXType fixType = FIXType.FIX95_RAW_DATA_LENGTH;
 }

@@ -41,7 +41,7 @@ class Tag30LastMktTest {
 
     @Test
     void FIX0030Test() {
-        FIXType fix30LastMkt = FIXType.LAST_MKT;
+        FIXType fix30LastMkt = FIXType.FIX30_LAST_MKT;
         assertEquals( "LAST_MKT", fix30LastMkt.getFIXName());
         assertEquals( 30, fix30LastMkt.getFIXNumber());
         assertEquals( "LastMkt", fix30LastMkt.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag30LastMktTest {
     }
     @Test
     void Tag0030Test() {
-        TagType tag30LastMkt = new TagType(FIXType.LAST_MKT,"N");
+        TagType tag30LastMkt = new TagType(FIXType.FIX30_LAST_MKT,"N");
         assertEquals( "N", tag30LastMkt.getDataValue());
         assertNotEquals( "A11", tag30LastMkt.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0030Test()");

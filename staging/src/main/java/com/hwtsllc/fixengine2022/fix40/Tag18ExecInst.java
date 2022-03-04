@@ -25,5 +25,5 @@ public enum Tag18ExecInst {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.EXEC_INST;
+    private final FIXType fixType = FIXType.FIX18_EXEC_INST;
 }

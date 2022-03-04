@@ -25,5 +25,5 @@ public enum Tag21HandlInst {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.HANDL_INST;
+    private final FIXType fixType = FIXType.FIX21_HANDL_INST;
 }

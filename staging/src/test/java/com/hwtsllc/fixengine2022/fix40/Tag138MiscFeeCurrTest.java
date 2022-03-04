@@ -44,14 +44,14 @@ class Tag138MiscFeeCurrTest {
     }
     @Test
     void FIX0138Test() {
-        FIXType fix138MiscFeeCurr = FIXType.MISC_FEE_CURR;
+        FIXType fix138MiscFeeCurr = FIXType.FIX138_MISC_FEE_CURR;
         assertEquals( fix138MiscFeeCurr.getFIXName(), "MISC_FEE_CURR");
         assertEquals( fix138MiscFeeCurr.getFIXNumber(), 138);
         assertEquals( fix138MiscFeeCurr.getFIXDescription(), "MiscFeeCurr");
     }
     @Test
     void Tag0138Test() {
-        FIXType tag138MiscFeeCurr = FIXType.MISC_FEE_CURR;
+        FIXType tag138MiscFeeCurr = FIXType.FIX138_MISC_FEE_CURR;
         assertEquals( tag138MiscFeeCurr.getFIXName(), "MISC_FEE_CURR");
         assertEquals( tag138MiscFeeCurr.getFIXNumber(), 138);
         assertEquals( tag138MiscFeeCurr.getFIXDescription(), "MiscFeeCurr");

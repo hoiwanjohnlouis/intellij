@@ -46,14 +46,14 @@ class Tag126ExpireTimeTest {
     }
     @Test
     void FIX0126Test() {
-        FIXType fix126ExpireTime = FIXType.EXPIRE_TIME;
+        FIXType fix126ExpireTime = FIXType.FIX126_EXPIRE_TIME;
         assertEquals( fix126ExpireTime.getFIXName(), "EXPIRE_TIME");
         assertEquals( fix126ExpireTime.getFIXNumber(), 126);
         assertEquals( fix126ExpireTime.getFIXDescription(), "ExpireTime");
     }
     @Test
     void Tag0126Test() {
-        FIXType tag126ExpireTime = FIXType.EXPIRE_TIME;
+        FIXType tag126ExpireTime = FIXType.FIX126_EXPIRE_TIME;
         assertEquals( tag126ExpireTime.getFIXName(), "EXPIRE_TIME");
         assertEquals( tag126ExpireTime.getFIXNumber(), 126);
         assertEquals( tag126ExpireTime.getFIXDescription(), "ExpireTime");

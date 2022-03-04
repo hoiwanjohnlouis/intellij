@@ -46,11 +46,11 @@ class Tag67ListSeqNoTest {
     }
     @Test
     void FIX0067Test() {
-        FIXType fix67ListSeqNo = FIXType.LIST_SEQ_NO;
+        FIXType fix67ListSeqNo = FIXType.FIX67_LIST_SEQ_NO;
     }
     @Test
     void Tag0067Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

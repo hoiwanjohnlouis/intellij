@@ -41,7 +41,7 @@ class Tag35MsgTypeTest {
 
     @Test
     void FIX0035Test() {
-        FIXType fix35MsgType = FIXType.MSG_TYPE;
+        FIXType fix35MsgType = FIXType.FIX35_MSG_TYPE;
         assertEquals( "MSG_TYPE", fix35MsgType.getFIXName());
         assertEquals( 35, fix35MsgType.getFIXNumber());
         assertEquals( "MsgType", fix35MsgType.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag35MsgTypeTest {
     }
     @Test
     void Tag0035Test() {
-        TagType tag35MsgType = new TagType(FIXType.MSG_TYPE,"0");
+        TagType tag35MsgType = new TagType(FIXType.FIX35_MSG_TYPE,"0");
         assertEquals( "0", tag35MsgType.getDataValue());
         assertNotEquals( "A", tag35MsgType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0035Test()");

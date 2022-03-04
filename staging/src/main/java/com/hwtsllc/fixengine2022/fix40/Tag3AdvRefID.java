@@ -30,15 +30,14 @@ public class Tag3AdvRefID extends TagTypeAbstract {
         setDataValue(dataValue);
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Tag3AdvRefID tag3AdvRefID = new Tag3AdvRefID("tag3 Adv Ref ID");
-        System.out.println("t1.1:" + tag3AdvRefID);
-        System.out.println("t1.2:" + tag3AdvRefID.toLogStringVerbose());
-        System.out.println("t1.3.FIXTypeName:" + tag3AdvRefID.getFIXTypeName());
-        System.out.println("t1.4.FIXNumber:" + tag3AdvRefID.getFIXNumber());
-        System.out.println("t1.5.FIXName:" + tag3AdvRefID.getFIXName());
-        System.out.println("t1.6.FIXDescription:" + tag3AdvRefID.getFIXDescription());
-        System.out.println("t1.7.DataValue:" + tag3AdvRefID.getDataValue());
-        System.out.println("t1.8.FixString:" + tag3AdvRefID.toFixTagValuePairString());
+        System.out.println(tag3AdvRefID);
+        System.out.println(tag3AdvRefID.toLogStringVerbose());
+        System.out.println(tag3AdvRefID.toFixTagValuePairString());
     }
 }

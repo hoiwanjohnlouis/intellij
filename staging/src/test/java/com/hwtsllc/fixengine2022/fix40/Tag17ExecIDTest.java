@@ -41,7 +41,7 @@ class Tag17ExecIDTest {
 
     @Test
     void FIX0017Test() {
-        FIXType fix17ExecID = FIXType.EXEC_ID;
+        FIXType fix17ExecID = FIXType.FIX17_EXEC_ID;
         assertEquals( "EXEC_ID", fix17ExecID.getFIXName());
         assertEquals( 17, fix17ExecID.getFIXNumber());
         assertEquals( "ExecID", fix17ExecID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag17ExecIDTest {
     }
     @Test
     void Tag0017Test() {
-        TagType tag17ExecID = new TagType(FIXType.COMM_TYPE,"BEST-1234");
+        TagType tag17ExecID = new TagType(FIXType.FIX13_COMM_TYPE,"BEST-1234");
         assertEquals( "BEST-1234", tag17ExecID.getDataValue());
         assertNotEquals( "11", tag17ExecID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0017Test()");

@@ -41,7 +41,7 @@ class Tag32LastQtyTest {
 
     @Test
     void FIX0032Test() {
-        FIXType fix32LastQty = FIXType.LAST_QTY;
+        FIXType fix32LastQty = FIXType.FIX32_LAST_QTY;
         assertEquals( "LAST_QTY", fix32LastQty.getFIXName());
         assertEquals( 32, fix32LastQty.getFIXNumber());
         assertEquals( "LastQty", fix32LastQty.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag32LastQtyTest {
     }
     @Test
     void Tag0032Test() {
-        TagType tag32LastQty = new TagType(FIXType.LAST_QTY,"200");
+        TagType tag32LastQty = new TagType(FIXType.FIX32_LAST_QTY,"200");
         assertEquals( "200", tag32LastQty.getDataValue());
         assertNotEquals( "2222", tag32LastQty.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0032Test()");

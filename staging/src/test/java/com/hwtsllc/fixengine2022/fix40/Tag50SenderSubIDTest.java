@@ -41,7 +41,7 @@ class Tag50SenderSubIDTest {
 
     @Test
     void FIX0050Test() {
-        FIXType fix50SenderSubID = FIXType.SENDER_SUB_ID;
+        FIXType fix50SenderSubID = FIXType.FIX50_SENDER_SUB_ID;
         assertEquals( "SENDER_SUB_ID", fix50SenderSubID.getFIXName());
         assertEquals( 50, fix50SenderSubID.getFIXNumber());
         assertEquals( "SenderSubID", fix50SenderSubID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag50SenderSubIDTest {
     }
     @Test
     void Tag0050Test() {
-        TagType tag50SenderSubID = new TagType(FIXType.SENDER_SUB_ID,"BEST");
+        TagType tag50SenderSubID = new TagType(FIXType.FIX50_SENDER_SUB_ID,"BEST");
         assertEquals( "BEST", tag50SenderSubID.getDataValue());
         assertNotEquals( "A11", tag50SenderSubID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0050Test()");

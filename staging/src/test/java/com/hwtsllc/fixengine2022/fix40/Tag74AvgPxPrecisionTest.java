@@ -46,11 +46,11 @@ class Tag74AvgPxPrecisionTest {
     }
     @Test
     void FIX0074Test() {
-        FIXType fix74AvgPxPrecision = FIXType.AVG_PRX_PRECISION;
+        FIXType fix74AvgPxPrecision = FIXType.FIX74_AVG_PRX_PRECISION;
     }
     @Test
     void Tag0074Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

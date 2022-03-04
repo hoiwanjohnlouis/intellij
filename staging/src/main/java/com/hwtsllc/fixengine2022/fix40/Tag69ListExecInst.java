@@ -24,5 +24,5 @@ public class Tag69ListExecInst {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.LIST_EXEC_INST;
+    private final FIXType fixType = FIXType.FIX69_LIST_EXEC_INST;
 }

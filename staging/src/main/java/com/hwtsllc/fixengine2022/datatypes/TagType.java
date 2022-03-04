@@ -24,7 +24,6 @@ import org.apache.log4j.Logger;
 public class TagType implements FixTagValuePairString, LogStringVerbose {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(TagType.class);
 
     private final FIXType fixType;
     private final String dataValue;
@@ -100,7 +99,7 @@ public class TagType implements FixTagValuePairString, LogStringVerbose {
      */
     public static void main(String[] args) {
 
-        TagType tag140PrevClosePx = new TagType(FIXType.PREV_CLOSE_PX,"10.23");
+        TagType tag140PrevClosePx = new TagType(FIXType.FIX140_PREV_CLOSE_PX,"10.23");
         System.out.println("t140.1:"+tag140PrevClosePx);
         System.out.println("t140.2.verbose:"+tag140PrevClosePx.toLogStringVerbose());
         System.out.println("t140.7.FixString:"+tag140PrevClosePx.toFixTagValuePairString());

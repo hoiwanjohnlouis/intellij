@@ -16,14 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.AdvSideType;
+import com.hwtsllc.fixengine2022.datatypes.AdvTransType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Tag5AdvTransType {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag5AdvTransType extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ADV_TRANS_TYPE;
+    private AdvTransType advTransType;
+
+    public Tag5AdvTransType(AdvTransType advTransType) {
+        setFixType(FIXType.FIX5_ADV_TRANS_TYPE);
+        setDataValue(advTransType.getAdvTransTypeAction());
+        this.advTransType = advTransType;
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        Tag5AdvTransType tag5AdvTransTypeNew = new Tag5AdvTransType(AdvTransType.NEW);
+        System.out.println(AdvTransType.NEW);
+        System.out.println(tag5AdvTransTypeNew);
+        System.out.println(tag5AdvTransTypeNew.toFixTagValuePairString());
+    }
 }

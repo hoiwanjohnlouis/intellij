@@ -17,12 +17,27 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag10CheckSum {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag10CheckSum extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.CHECK_SUM;
+    public Tag10CheckSum(String dataValue) {
+        setFixType(FIXType.FIX10_CHECK_SUM);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        Tag10CheckSum tag10CheckSum = new Tag10CheckSum("234");
+        System.out.println(tag10CheckSum);
+        System.out.println(tag10CheckSum.toLogStringVerbose());
+        System.out.println(tag10CheckSum.toFixTagValuePairString());
+    }
 }

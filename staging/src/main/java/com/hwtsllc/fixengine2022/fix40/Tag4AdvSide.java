@@ -16,14 +16,45 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.AdvSideType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.SideType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Tag4AdvSide {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag4AdvSide extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ADV_SIDE;
+    private AdvSideType advSideType;
+
+    public Tag4AdvSide(AdvSideType advSideType) {
+        setFixType(FIXType.FIX4_ADV_SIDE);
+        setDataValue(advSideType.getAdvSideAction());
+        this.advSideType = advSideType;
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        Tag4AdvSide tag4AdvSideBuy = new Tag4AdvSide(AdvSideType.BUY);
+        Tag4AdvSide tag4AdvSideSell = new Tag4AdvSide(AdvSideType.SELL);
+        Tag4AdvSide tag4AdvSideCross = new Tag4AdvSide(AdvSideType.CROSS);
+        Tag4AdvSide tag4AdvSideTrade = new Tag4AdvSide(AdvSideType.TRADE);
+        System.out.println(AdvSideType.BUY);
+        System.out.println(AdvSideType.SELL);
+        System.out.println(AdvSideType.CROSS);
+        System.out.println(AdvSideType.TRADE);
+        System.out.println(tag4AdvSideBuy);
+        System.out.println(tag4AdvSideSell);
+        System.out.println(tag4AdvSideCross);
+        System.out.println(tag4AdvSideTrade);
+        System.out.println(tag4AdvSideBuy.toFixTagValuePairString());
+        System.out.println(tag4AdvSideSell.toFixTagValuePairString());
+        System.out.println(tag4AdvSideCross.toFixTagValuePairString());
+        System.out.println(tag4AdvSideTrade.toFixTagValuePairString());
+    }
 }

@@ -47,14 +47,14 @@ class Tag106IssuerTest {
     }
     @Test
     void FIX0106Test() {
-        FIXType fix106Issuer = FIXType.ISSUER;
+        FIXType fix106Issuer = FIXType.FIX106_ISSUER;
         assertEquals( fix106Issuer.getFIXName(), "ISSUER");
         assertEquals( fix106Issuer.getFIXNumber(), 106);
         assertEquals( fix106Issuer.getFIXDescription(), "Issuer");
     }
     @Test
     void Tag0106Test() {
-        TagType tag106Issuer = new TagType(FIXType.ISSUER,"show me the money");
+        TagType tag106Issuer = new TagType(FIXType.FIX106_ISSUER,"show me the money");
         assertEquals( tag106Issuer.getFIXName(), "ISSUER");
         assertEquals( tag106Issuer.getFIXNumber(), 106);
         assertEquals( tag106Issuer.getFIXDescription(), "Issuer");

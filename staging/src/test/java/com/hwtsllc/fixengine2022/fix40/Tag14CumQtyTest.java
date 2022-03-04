@@ -41,7 +41,7 @@ class Tag14CumQtyTest {
 
     @Test
     void FIX0014Test() {
-        FIXType fix14CumQty = FIXType.CUM_QTY;
+        FIXType fix14CumQty = FIXType.FIX14_CUM_QTY;
         assertEquals( "CUM_QTY", fix14CumQty.getFIXName());
         assertEquals( 14, fix14CumQty.getFIXNumber());
         assertEquals( "CumQty", fix14CumQty.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag14CumQtyTest {
     }
     @Test
     void Tag0014Test() {
-        TagType tag14CumQty = new TagType(FIXType.COMM_TYPE,"100");
+        TagType tag14CumQty = new TagType(FIXType.FIX13_COMM_TYPE,"100");
         assertEquals( "100", tag14CumQty.getDataValue());
         assertNotEquals( "11", tag14CumQty.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0014Test()");

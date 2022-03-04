@@ -41,7 +41,7 @@ class Tag15CurrencyTest {
 
     @Test
     void FIX0015Test() {
-        FIXType fix15Currency = FIXType.CURRENCY;
+        FIXType fix15Currency = FIXType.FIX15_CURRENCY;
         assertEquals( "CURRENCY", fix15Currency.getFIXName());
         assertEquals( 15, fix15Currency.getFIXNumber());
         assertEquals( "Currency", fix15Currency.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag15CurrencyTest {
     }
     @Test
     void Tag0015Test() {
-        TagType tag15Currency = new TagType(FIXType.CURRENCY,"USD");
+        TagType tag15Currency = new TagType(FIXType.FIX15_CURRENCY,"USD");
         assertEquals( "USD", tag15Currency.getDataValue());
         assertNotEquals( "EURO", tag15Currency.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0015Test()");

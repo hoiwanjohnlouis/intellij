@@ -46,14 +46,14 @@ class Tag124NoExecsTest {
     }
     @Test
     void FIX0124Test() {
-        FIXType fix124NoExecs = FIXType.NO_EXECS;
+        FIXType fix124NoExecs = FIXType.FIX124_NO_EXECS;
         assertEquals( fix124NoExecs.getFIXName(), "NO_EXECS");
         assertEquals( fix124NoExecs.getFIXNumber(), 124);
         assertEquals( fix124NoExecs.getFIXDescription(), "NoExecs");
     }
     @Test
     void Tag0124Test() {
-        FIXType tag124NoExecs = FIXType.NO_EXECS;
+        FIXType tag124NoExecs = FIXType.FIX124_NO_EXECS;
         assertEquals( tag124NoExecs.getFIXName(), "NO_EXECS");
         assertEquals( tag124NoExecs.getFIXNumber(), 124);
         assertEquals( tag124NoExecs.getFIXDescription(), "NoExecs");

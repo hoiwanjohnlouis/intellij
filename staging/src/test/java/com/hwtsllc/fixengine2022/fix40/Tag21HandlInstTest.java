@@ -41,7 +41,7 @@ class Tag21HandlInstTest {
 
     @Test
     void FIX0021Test() {
-        FIXType fix21HandlInst = FIXType.HANDL_INST;
+        FIXType fix21HandlInst = FIXType.FIX21_HANDL_INST;
         assertEquals( "HANDL_INST", fix21HandlInst.getFIXName());
         assertEquals( 21, fix21HandlInst.getFIXNumber());
         assertEquals( "HandlInst", fix21HandlInst.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag21HandlInstTest {
     }
     @Test
     void Tag0021Test() {
-        TagType tag21HandlInst = new TagType(FIXType.HANDL_INST,"A");
+        TagType tag21HandlInst = new TagType(FIXType.FIX21_HANDL_INST,"A");
         assertEquals( "A", tag21HandlInst.getDataValue());
         assertNotEquals( "11", tag21HandlInst.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0021Test()");

@@ -17,12 +17,27 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag16EndSeqNo {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag16EndSeqNo extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.END_SEQ_NO;
+    public Tag16EndSeqNo(String dataValue) {
+        setFixType(FIXType.FIX16_END_SEQ_NO);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        Tag16EndSeqNo tag16EndSeqNo = new Tag16EndSeqNo("987654321");
+        System.out.println(tag16EndSeqNo);
+        System.out.println(tag16EndSeqNo.toLogStringVerbose());
+        System.out.println(tag16EndSeqNo.toFixTagValuePairString());
+    }
 }

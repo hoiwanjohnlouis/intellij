@@ -41,7 +41,7 @@ class Tag5AdvTransTypeTest {
 
     @Test
     void FIX0005Test() {
-        FIXType fix5AdvTransType = FIXType.ADV_TRANS_TYPE;
+        FIXType fix5AdvTransType = FIXType.FIX5_ADV_TRANS_TYPE;
         assertEquals( "ADV_TRANS_TYPE", fix5AdvTransType.getFIXName());
         assertEquals( 5, fix5AdvTransType.getFIXNumber());
         assertEquals( "AdvTransType", fix5AdvTransType.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag5AdvTransTypeTest {
     }
     @Test
     void Tag0005Test() {
-        TagType tag5AdvTransType = new TagType(FIXType.ADV_TRANS_TYPE,"ABC987654321XYZ");
+        TagType tag5AdvTransType = new TagType(FIXType.FIX5_ADV_TRANS_TYPE,"ABC987654321XYZ");
         assertEquals( "ABC987654321XYZ", tag5AdvTransType.getDataValue());
         assertNotEquals( "abcdefghij", tag5AdvTransType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0005Test()");

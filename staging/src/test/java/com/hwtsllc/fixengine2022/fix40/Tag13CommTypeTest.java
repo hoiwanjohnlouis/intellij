@@ -41,7 +41,7 @@ class Tag13CommTypeTest {
 
     @Test
     void FIX0013Test() {
-        FIXType fix13CommType = FIXType.COMM_TYPE;
+        FIXType fix13CommType = FIXType.FIX13_COMM_TYPE;
         assertEquals( "COMM_TYPE", fix13CommType.getFIXName());
         assertEquals( 13, fix13CommType.getFIXNumber());
         assertEquals( "CommType", fix13CommType.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag13CommTypeTest {
     }
     @Test
     void Tag0013Test() {
-        TagType fix13CommType = new TagType(FIXType.COMM_TYPE,"PCT");
+        TagType fix13CommType = new TagType(FIXType.FIX13_COMM_TYPE,"PCT");
         assertEquals( "PCT", fix13CommType.getDataValue());
         assertNotEquals( "11", fix13CommType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0013Test()");

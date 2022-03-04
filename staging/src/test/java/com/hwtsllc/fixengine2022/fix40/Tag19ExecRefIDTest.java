@@ -41,7 +41,7 @@ class Tag19ExecRefIDTest {
 
     @Test
     void FIX0019Test() {
-        FIXType fix19ExecRefID = FIXType.EXEC_REF_ID;
+        FIXType fix19ExecRefID = FIXType.FIX19_EXEC_REF_ID;
         assertEquals( "EXEC_REF_ID", fix19ExecRefID.getFIXName());
         assertEquals( 19, fix19ExecRefID.getFIXNumber());
         assertEquals( "ExecRefID", fix19ExecRefID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag19ExecRefIDTest {
     }
     @Test
     void Tag0019Test() {
-        TagType tag19ExecRefID = new TagType(FIXType.END_SEQ_NO,"6789-XYZ");
+        TagType tag19ExecRefID = new TagType(FIXType.FIX16_END_SEQ_NO,"6789-XYZ");
         assertEquals( "6789-XYZ", tag19ExecRefID.getDataValue());
         assertNotEquals( "11-ABCD", tag19ExecRefID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0019Test()");

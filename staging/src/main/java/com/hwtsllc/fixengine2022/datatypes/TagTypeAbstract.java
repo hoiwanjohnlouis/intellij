@@ -18,6 +18,8 @@ package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 
+import java.util.Locale;
+
 /**
  *
  */
@@ -36,11 +38,11 @@ public abstract class TagTypeAbstract {
     public String getFIXTypeName() {
         return fixType.getFIXTypeName();
     }
-    public String getFIXName() {
-        return fixType.getFIXName();
-    }
     public int getFIXNumber() {
         return fixType.getFIXNumber();
+    }
+    public String getFIXName() {
+        return fixType.getFIXName();
     }
     public String getFIXDescription() {
         return fixType.getFIXDescription();
@@ -56,9 +58,11 @@ public abstract class TagTypeAbstract {
                 .append("=[")
                 .append(getFIXTypeName())
                 .append(",")
+                .append(getFIXNumber())
+                .append(",")
                 .append(getFIXName())
                 .append(",")
-                .append(getFIXNumber())
+                .append(getFIXDescription())
                 .append(",")
                 .append(getDataValue())
                 .append("]");

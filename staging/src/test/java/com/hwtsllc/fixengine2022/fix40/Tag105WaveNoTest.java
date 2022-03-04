@@ -47,14 +47,14 @@ class Tag105WaveNoTest {
     }
     @Test
     void FIX0105Test() {
-        FIXType fix105WaveNo = FIXType.WAVE_NO;
+        FIXType fix105WaveNo = FIXType.FIX105_WAVE_NO;
         assertEquals( fix105WaveNo.getFIXName(), "WAVE_NO");
         assertEquals( fix105WaveNo.getFIXNumber(), 105);
         assertEquals( fix105WaveNo.getFIXDescription(), "WaveNo");
     }
     @Test
     void Tag0105Test() {
-        TagType tag105WaveNo = new TagType(FIXType.WAVE_NO,"interested in Mahlers 4th Symphony");
+        TagType tag105WaveNo = new TagType(FIXType.FIX105_WAVE_NO,"interested in Mahlers 4th Symphony");
         assertEquals( tag105WaveNo.getFIXName(), "WAVE_NO");
         assertEquals( tag105WaveNo.getFIXNumber(), 105);
         assertEquals( tag105WaveNo.getFIXDescription(), "WaveNo");

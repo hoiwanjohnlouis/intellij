@@ -46,11 +46,11 @@ class Tag95RawDataLengthTest {
     }
     @Test
     void FIX0095Test() {
-        FIXType fix95RawDataLength = FIXType.RAW_DATA_LENGTH;
+        FIXType fix95RawDataLength = FIXType.FIX95_RAW_DATA_LENGTH;
     }
     @Test
     void Tag0095Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

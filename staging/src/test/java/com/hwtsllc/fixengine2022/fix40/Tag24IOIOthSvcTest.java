@@ -42,7 +42,7 @@ class Tag24IOIOthSvcTest {
 
     @Test
     void FIX0024Test() {
-        FIXType fix24IOIOthSvc = FIXType.IOI_OTH_SVC;
+        FIXType fix24IOIOthSvc = FIXType.FIX24_IOI_OTH_SVC;
         assertEquals( "IOI_OTH_SVC", fix24IOIOthSvc.getFIXName());
         assertEquals( 24, fix24IOIOthSvc.getFIXNumber());
         assertEquals( "IOIOthSvc (no longer used)", fix24IOIOthSvc.getFIXDescription());
@@ -52,7 +52,7 @@ class Tag24IOIOthSvcTest {
     }
     @Test
     void Tag0024Test() {
-        TagType tag24IOIOthSvc = new TagType(FIXType.IOI_OTH_SVC,"A");
+        TagType tag24IOIOthSvc = new TagType(FIXType.FIX24_IOI_OTH_SVC,"A");
         assertEquals( "A", tag24IOIOthSvc.getDataValue());
         assertNotEquals( "11", tag24IOIOthSvc.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0024Test()");

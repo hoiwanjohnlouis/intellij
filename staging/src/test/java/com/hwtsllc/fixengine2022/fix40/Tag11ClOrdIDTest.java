@@ -41,7 +41,7 @@ class Tag11ClOrdIDTest {
 
     @Test
     void FIX0011Test() {
-        FIXType fix11ClOrdID = FIXType.CL_ORD_ID;
+        FIXType fix11ClOrdID = FIXType.FIX11_CL_ORD_ID;
         assertEquals( "CL_ORD_ID", fix11ClOrdID.getFIXName());
         assertEquals( 11, fix11ClOrdID.getFIXNumber());
         assertEquals( "ClOrdID", fix11ClOrdID.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag11ClOrdIDTest {
     }
     @Test
     void Tag0011Test() {
-        TagType tag11ClOrdID = new TagType(FIXType.CL_ORD_ID,"ABCD1234");
+        TagType tag11ClOrdID = new TagType(FIXType.FIX11_CL_ORD_ID,"ABCD1234");
         assertEquals( "ABCD1234", tag11ClOrdID.getDataValue());
         assertNotEquals( "abcd", tag11ClOrdID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0011Test()");

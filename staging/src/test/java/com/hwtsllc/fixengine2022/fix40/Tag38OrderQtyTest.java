@@ -41,7 +41,7 @@ class Tag38OrderQtyTest {
 
     @Test
     void FIX0038Test() {
-        FIXType fix38OrderQty = FIXType.ORDER_QTY;
+        FIXType fix38OrderQty = FIXType.FIX38_ORDER_QTY;
         assertEquals( "ORDER_QTY", fix38OrderQty.getFIXName());
         assertEquals( 38, fix38OrderQty.getFIXNumber());
         assertEquals( "OrderQty", fix38OrderQty.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag38OrderQtyTest {
     }
     @Test
     void Tag0038Test() {
-        TagType tag38OrderQty = new TagType(FIXType.ORDER_QTY,"100");
+        TagType tag38OrderQty = new TagType(FIXType.FIX38_ORDER_QTY,"100");
         assertEquals( "100", tag38OrderQty.getDataValue());
         assertNotEquals( "11", tag38OrderQty.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0038Test()");

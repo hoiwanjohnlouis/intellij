@@ -17,12 +17,27 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag6AvgPx {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag6AvgPx extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.AVG_PX;
+    public Tag6AvgPx(String dataValue) {
+        setFixType(FIXType.FIX6_AVG_PX);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        Tag6AvgPx tag6AvgPx = new Tag6AvgPx("23.456789");
+        System.out.println(tag6AvgPx);
+        System.out.println(tag6AvgPx.toLogStringVerbose());
+        System.out.println(tag6AvgPx.toFixTagValuePairString());
+    }
 }

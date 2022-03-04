@@ -38,7 +38,7 @@ public enum Tag35MsgType {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.MSG_TYPE;
+    private final FIXType fixType = FIXType.FIX35_MSG_TYPE;
 
     private final String tag35MsgTypeValue;
     private final String tag35MsgTypeDescription;

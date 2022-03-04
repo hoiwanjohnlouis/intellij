@@ -41,7 +41,7 @@ class Tag12CommissionTest {
 
     @Test
     void FIX0012Test() {
-        FIXType fix12Commission = FIXType.COMMISSION;
+        FIXType fix12Commission = FIXType.FIX12_COMMISSION;
         assertEquals( "COMMISSION", fix12Commission.getFIXName());
         assertEquals( 12, fix12Commission.getFIXNumber());
         assertEquals( "Commission", fix12Commission.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag12CommissionTest {
     }
     @Test
     void Tag0012Test() {
-        TagType tag12Commission = new TagType(FIXType.COMMISSION,"10");
+        TagType tag12Commission = new TagType(FIXType.FIX12_COMMISSION,"10");
         assertEquals( "10", tag12Commission.getDataValue());
         assertNotEquals( "11", tag12Commission.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0012Test()");

@@ -42,7 +42,7 @@ class Tag47Rule80ATest {
 
     @Test
     void FIX0047Test() {
-        FIXType fix47Rule80A = FIXType.RULE_80_A;
+        FIXType fix47Rule80A = FIXType.FIX47_RULE_80_A;
         assertEquals( "RULE_80_A", fix47Rule80A.getFIXName());
         assertEquals( 47, fix47Rule80A.getFIXNumber());
         assertEquals( "Rule80A (no longer used)", fix47Rule80A.getFIXDescription());
@@ -52,7 +52,7 @@ class Tag47Rule80ATest {
     }
     @Test
     void Tag0047Test() {
-        TagType tag47Rule80A = new TagType(FIXType.RULE_80_A,"N");
+        TagType tag47Rule80A = new TagType(FIXType.FIX47_RULE_80_A,"N");
         assertEquals( "N", tag47Rule80A.getDataValue());
         assertNotEquals( "A11", tag47Rule80A.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0047Test()");

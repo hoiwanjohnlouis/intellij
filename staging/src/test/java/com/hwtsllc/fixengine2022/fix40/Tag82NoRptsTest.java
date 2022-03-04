@@ -46,11 +46,11 @@ class Tag82NoRptsTest {
     }
     @Test
     void FIX0082Test() {
-        FIXType fix82NoRpts = FIXType.NO_RPTS;
+        FIXType fix82NoRpts = FIXType.FIX82_NO_RPTS;
     }
     @Test
     void Tag0082Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

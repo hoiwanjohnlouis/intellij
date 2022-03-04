@@ -41,7 +41,7 @@ class Tag16EndSeqNoTest {
 
     @Test
     void FIX0016Test() {
-        FIXType fix16EndSeqNo = FIXType.END_SEQ_NO;
+        FIXType fix16EndSeqNo = FIXType.FIX16_END_SEQ_NO;
         assertEquals( "END_SEQ_NO", fix16EndSeqNo.getFIXName());
         assertEquals( 16, fix16EndSeqNo.getFIXNumber());
         assertEquals( "EndSeqNo", fix16EndSeqNo.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag16EndSeqNoTest {
     }
     @Test
     void Tag0016Test() {
-        TagType tag16EndSeqNo = new TagType(FIXType.END_SEQ_NO,"6789");
+        TagType tag16EndSeqNo = new TagType(FIXType.FIX16_END_SEQ_NO,"6789");
         assertEquals( "6789", tag16EndSeqNo.getDataValue());
         assertNotEquals( "11", tag16EndSeqNo.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0016Test()");

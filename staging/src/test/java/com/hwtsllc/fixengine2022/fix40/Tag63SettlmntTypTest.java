@@ -46,11 +46,11 @@ class Tag63SettlmntTypTest {
     }
     @Test
     void FIX0063Test() {
-        FIXType fix63SettlmntTyp = FIXType.SETTLMNT_TYP;
+        FIXType fix63SettlmntTyp = FIXType.FIX63_SETTLMNT_TYP;
     }
     @Test
     void Tag0063Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");

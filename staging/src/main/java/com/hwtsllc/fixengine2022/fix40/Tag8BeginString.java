@@ -17,12 +17,35 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag8BeginString {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag8BeginString extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.BEGIN_STRING;
+    public final static String BEGIN_STRING_4_0 = "FIX.4.0";
+    public final static String BEGIN_STRING_4_2 = "FIX.4.2";
+    public final static String BEGIN_STRING_4_3 = "FIX.4.3";
+    public final static String BEGIN_STRING_4_4 = "FIX.4.4";
+    public final static String BEGIN_STRING_5_0 = "FIXT.1.1";
+
+    public final static String BEGIN_STRING_CURRENT = BEGIN_STRING_4_4;
+
+    public Tag8BeginString(String dataValue) {
+        setFixType(FIXType.FIX8_BEGIN_STRING);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        Tag8BeginString tag8BeginString = new Tag8BeginString(Tag8BeginString.BEGIN_STRING_CURRENT);
+        System.out.println(tag8BeginString);
+        System.out.println(tag8BeginString.toLogStringVerbose());
+        System.out.println(tag8BeginString.toFixTagValuePairString());
+    }
 }

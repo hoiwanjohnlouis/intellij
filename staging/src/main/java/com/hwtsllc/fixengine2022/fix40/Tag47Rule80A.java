@@ -51,7 +51,7 @@ public enum Tag47Rule80A {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.RULE_80_A;
+    private final FIXType fixType = FIXType.FIX47_RULE_80_A;
 
     private final String tag47Rule80AValue;
     private final String tag47Rule80ADescription;

@@ -25,11 +25,11 @@ public class Tag55Symbol {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FieldType fieldType = FieldType.TICKER_SYMBOL;
-    private final String tickerSymbol;
-
     public final static String TESTA_TICKER_SYMBOL = "TESTA_SYMBOL";
     public final static String TESTB_TICKER_SYMBOL = "TESTB_SYMBOL";
+
+    private final FieldType fieldType = FieldType.TICKER_SYMBOL;
+    private final String tickerSymbol;
 
     public Tag55Symbol(final String tickerSymbol) {
         this.tickerSymbol = tickerSymbol;

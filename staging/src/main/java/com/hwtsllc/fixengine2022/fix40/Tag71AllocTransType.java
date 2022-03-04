@@ -25,5 +25,5 @@ public enum Tag71AllocTransType {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.ALLOC_TRANS_TYPE;
+    private final FIXType fixType = FIXType.FIX71_ALLOC_TRANS_TYPE;
 }

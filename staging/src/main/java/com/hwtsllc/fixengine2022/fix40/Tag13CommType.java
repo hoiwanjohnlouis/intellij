@@ -25,6 +25,6 @@ public enum Tag13CommType {
     private final String DEBUG_TAG = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.COMM_TYPE;
+    private final FIXType fixType = FIXType.FIX13_COMM_TYPE;
 
 }

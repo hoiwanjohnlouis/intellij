@@ -41,7 +41,7 @@ class Tag34MsgSeqNumTest {
 
     @Test
     void FIX0034Test() {
-        FIXType fix34MsgSeqNum = FIXType.MSG_SEQ_NUM;
+        FIXType fix34MsgSeqNum = FIXType.FIX34_MSG_SEQ_NUM;
         assertEquals( "MSG_SEQ_NUM", fix34MsgSeqNum.getFIXName());
         assertEquals( 34, fix34MsgSeqNum.getFIXNumber());
         assertEquals( "MsgSeqNum", fix34MsgSeqNum.getFIXDescription());
@@ -51,7 +51,7 @@ class Tag34MsgSeqNumTest {
     }
     @Test
     void Tag0034Test() {
-        TagType tag34MsgSeqNum = new TagType(FIXType.MSG_SEQ_NUM,"12345");
+        TagType tag34MsgSeqNum = new TagType(FIXType.FIX34_MSG_SEQ_NUM,"12345");
         assertEquals( "12345", tag34MsgSeqNum.getDataValue());
         assertNotEquals( "11", tag34MsgSeqNum.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0034Test()");

@@ -46,11 +46,11 @@ class Tag56TargetCompIDTest {
     }
     @Test
     void FIX0056Test() {
-        FIXType fix56TargetCompID = FIXType.TARGET_COMP_ID;
+        FIXType fix56TargetCompID = FIXType.FIX56_TARGET_COMP_ID;
     }
     @Test
     void Tag0056Test() {
-        FIXType tag100ExDestination = FIXType.EX_DESTINATION;
+        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
         assertEquals( tag100ExDestination.getFIXNumber(), 100);
         assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
