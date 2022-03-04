@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1070MDQuoteTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1070MDQuoteTypeTest {
 
     @Test
     void FIX1070Test() {
-        FIXType fix1070MDQuoteType = FIXType.MD_QUOTE_TYPE;
+        FIXType fix1070MDQuoteType = FIXType.FIX1070_MD_QUOTE_TYPE;
     }
     @Test
     void Tag1070Test() {

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1016NoSideTrdRegTSTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1016NoSideTrdRegTSTest {
 
     @Test
     void FIX1016Test() {
-        FIXType fix1016NoSideTrdRegTS = FIXType.NO_SIDE_TRD_REG_TS;
+        FIXType fix1016NoSideTrdRegTS = FIXType.FIX1016_NO_SIDE_TRD_REG_TS;
     }
     @Test
     void Tag1016Test() {

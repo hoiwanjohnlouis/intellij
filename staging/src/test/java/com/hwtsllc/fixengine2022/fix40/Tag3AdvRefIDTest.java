@@ -36,16 +36,6 @@ class Tag3AdvRefIDTest {
     void tearDown() {
     }
 
-    @BeforeAll
-    static void beforeAll() {
-        System.out.println("Starting Tag3AdvRefIDTest()");
-    }
-
-    @AfterAll
-    static void afterAll() {
-        System.out.println("Completed Tag3AdvRefIDTest()");
-    }
-
     @Test
     void FIX0003Test() {
         FIXType fix3AdvRefID = FIXType.FIX3_ADV_REF_ID;

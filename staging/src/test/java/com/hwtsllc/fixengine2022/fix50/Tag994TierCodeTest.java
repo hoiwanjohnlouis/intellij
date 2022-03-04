@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag994TierCodeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag994TierCodeTest {
 
     @Test
     void FIX0994Test() {
-        FIXType fix994TierCode = FIXType.TIER_CODE;
+        FIXType fix994TierCode = FIXType.FIX994_TIER_CODE;
     }
     @Test
     void Tag0994Test() {

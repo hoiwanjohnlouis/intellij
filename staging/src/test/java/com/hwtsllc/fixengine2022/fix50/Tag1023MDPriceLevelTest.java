@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1023MDPriceLevelTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1023MDPriceLevelTest {
 
     @Test
     void FIX1023Test() {
-        FIXType fix1023MDPriceLevel = FIXType.MD_PRICE_LEVEL;
+        FIXType fix1023MDPriceLevel = FIXType.FIX1023_MD_PRICE_LEVEL;
     }
     @Test
     void Tag1023Test() {

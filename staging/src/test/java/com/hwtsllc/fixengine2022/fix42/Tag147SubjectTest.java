@@ -46,7 +46,7 @@ class Tag147SubjectTest {
     }
     @Test
     void FIX0147Test() {
-        FIXType fix147Subject = FIXType.SUBJECT;
+        FIXType fix147Subject = FIXType.FIX147_SUBJECT;
     }
     @Test
     void Tag0147Test() {

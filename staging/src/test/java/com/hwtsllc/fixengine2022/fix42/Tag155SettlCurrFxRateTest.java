@@ -46,7 +46,7 @@ class Tag155SettlCurrFxRateTest {
     }
     @Test
     void FIX0155Test() {
-        FIXType fix155SettlCurrFxRate = FIXType.SETTL_CURR_FX_RATE;
+        FIXType fix155SettlCurrFxRate = FIXType.FIX155_SETTL_CURR_FX_RATE;
     }
     @Test
     void Tag0155Test() {

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1032OrderHandlingInstSourceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1032OrderHandlingInstSourceTest {
 
     @Test
     void FIX1032Test() {
-        FIXType fix1032OrderHandlingInstSource = FIXType.ORDER_HANDLING_INST_SOURCE;
+        FIXType fix1032OrderHandlingInstSource = FIXType.FIX1032_ORDER_HANDLING_INST_SOURCE;
     }
     @Test
     void Tag1032Test() {

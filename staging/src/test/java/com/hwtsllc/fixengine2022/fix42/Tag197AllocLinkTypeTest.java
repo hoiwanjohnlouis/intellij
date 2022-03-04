@@ -46,7 +46,7 @@ class Tag197AllocLinkTypeTest {
     }
     @Test
     void FIX0197Test() {
-        FIXType fix197AllocLinkType = FIXType.ALLOC_LINK_TYPE;
+        FIXType fix197AllocLinkType = FIXType.FIX197_ALLOC_LINK_TYPE;
     }
     @Test
     void Tag0197Test() {

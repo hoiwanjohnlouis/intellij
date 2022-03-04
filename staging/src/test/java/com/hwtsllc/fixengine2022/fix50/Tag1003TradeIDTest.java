@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1003TradeIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1003TradeIDTest {
 
     @Test
     void FIX1003Test() {
-        FIXType fix1003TradeID = FIXType.TRADE_ID;
+        FIXType fix1003TradeID = FIXType.FIX1003_TRADE_ID;
     }
     @Test
     void Tag1003Test() {

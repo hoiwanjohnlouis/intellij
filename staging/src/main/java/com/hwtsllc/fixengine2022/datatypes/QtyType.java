@@ -16,5 +16,40 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+/**
+ *
+ * QtyType is a wrapper class for the Qty field
+ * Initially it will be a long.
+ */
 public class QtyType {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private long qty;
+
+    public QtyType(final long qty) {
+        this.qty = qty;
+    }
+
+    public long getQtyValue() {
+        return qty;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getQtyValue());
+        return sb.toString();
+    }
+    /**
+     *
+     * @param args Not used.
+     */
+    public static void main(String[] args) {
+        QtyType qtyType = new QtyType(12345L);
+        System.out.println(qtyType);
+    }
 }

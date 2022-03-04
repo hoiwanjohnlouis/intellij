@@ -47,7 +47,7 @@ class Tag180SecuritySettlAgentContactNameTest {
     }
     @Test
     void FIX0180Test() {
-        FIXType fix180SecuritySettlAgentContactName = FIXType.SECURITY_SETTL_AGENT_CONTACT_NAME;
+        FIXType fix180SecuritySettlAgentContactName = FIXType.FIX180_SECURITY_SETTL_AGENT_CONTACT_NAME;
     }
     @Test
     void Tag0180Test() {

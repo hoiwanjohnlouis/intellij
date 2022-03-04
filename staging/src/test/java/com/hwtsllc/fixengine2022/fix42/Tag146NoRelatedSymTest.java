@@ -46,7 +46,7 @@ class Tag146NoRelatedSymTest {
     }
     @Test
     void FIX0146Test() {
-        FIXType fix146NoRelatedSym = FIXType.NO_RELATED_SYM;
+        FIXType fix146NoRelatedSym = FIXType.FIX146_NO_RELATED_SYM;
     }
     @Test
     void Tag0146Test() {

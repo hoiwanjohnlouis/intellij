@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1107TriggerPriceTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1107TriggerPriceTypeTest {
 
     @Test
     void FIX1107Test() {
-        FIXType fix1107TriggerPriceType = FIXType.TRIGGER_PRICE_TYPE;
+        FIXType fix1107TriggerPriceType = FIXType.FIX1107_TRIGGER_PRICE_TYPE;
     }
     @Test
     void Tag1107Test() {

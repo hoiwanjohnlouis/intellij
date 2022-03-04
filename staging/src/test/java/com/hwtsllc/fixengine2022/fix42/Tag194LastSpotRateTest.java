@@ -46,7 +46,7 @@ class Tag194LastSpotRateTest {
     }
     @Test
     void FIX0194Test() {
-        FIXType fix194LastSpotRate = FIXType.LAST_SPOT_RATE;
+        FIXType fix194LastSpotRate = FIXType.FIX194_LAST_SPOT_RATE;
     }
     @Test
     void Tag0194Test() {

@@ -19,19 +19,16 @@ package com.hwtsllc.fixengine2022.datatypes;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+/**
+ *
+ * PriceType is a wrapper class for the Price field
+ * Initially it will be a double, later on it may become BigDecimal.
+ */
 public class PriceType {
-
-    // for logging purposes
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final double DEFAULT_VALUE = 0.00;
-
-    private final double price;
-
-    private PriceType() {
-        this.price = DEFAULT_VALUE;
-    }
+    private double price;
 
     public PriceType(final double price) {
         this.price = price;
@@ -47,5 +44,12 @@ public class PriceType {
         sb.append(getPriceValue());
         return sb.toString();
     }
-
+    /**
+     *
+     * @param args Not used.
+     */
+    public static void main(String[] args) {
+        PriceType priceType = new PriceType(123.45d);
+        System.out.println(priceType);
+    }
 }

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1138DisplayQtyTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1138DisplayQtyTest {
 
     @Test
     void FIX1138Test() {
-        FIXType fix1138DisplayQty = FIXType.DISPLAY_QTY;
+        FIXType fix1138DisplayQty = FIXType.FIX1138_DISPLAY_QTY;
     }
     @Test
     void Tag1138Test() {

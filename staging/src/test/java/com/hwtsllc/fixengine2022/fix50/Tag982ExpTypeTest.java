@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag982ExpTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag982ExpTypeTest {
 
     @Test
     void FIX0982Test() {
-        FIXType fix982ExpType = FIXType.EXP_TYPE;
+        FIXType fix982ExpType = FIXType.FIX982_EXP_TYPE;
     }
     @Test
     void Tag0982Test() {

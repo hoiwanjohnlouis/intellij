@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1024MDOriginTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1024MDOriginTypeTest {
 
     @Test
     void FIX1024Test() {
-        FIXType fix1024MDOriginType = FIXType.MD_ORIGIN_TYPE;
+        FIXType fix1024MDOriginType = FIXType.FIX1024_MD_ORIGIN_TYPE;
     }
     @Test
     void Tag1024Test() {

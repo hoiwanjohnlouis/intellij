@@ -46,7 +46,7 @@ class Tag188BidSpotRateTest {
     }
     @Test
     void FIX0188Test() {
-        FIXType fix188BidSpotRate = FIXType.BID_SPOT_RATE;
+        FIXType fix188BidSpotRate = FIXType.FIX188_BID_SPOT_RATE;
     }
     @Test
     void Tag0188Test() {

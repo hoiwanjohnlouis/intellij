@@ -46,7 +46,7 @@ class Tag164EmailThreadIDTest {
     }
     @Test
     void FIX0164Test() {
-        FIXType fix164EmailThreadID = FIXType.EMAIL_THREAD_ID;
+        FIXType fix164EmailThreadID = FIXType.FIX164_EMAIL_THREAD_ID;
     }
     @Test
     void Tag0164Test() {

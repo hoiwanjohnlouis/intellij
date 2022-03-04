@@ -46,7 +46,7 @@ class Tag150ExecTypeTest {
     }
     @Test
     void FIX0150Test() {
-        FIXType fix150ExecType = FIXType.EXEC_TYPE;
+        FIXType fix150ExecType = FIXType.FIX150_EXEC_TYPE;
     }
     @Test
     void Tag0150Test() {

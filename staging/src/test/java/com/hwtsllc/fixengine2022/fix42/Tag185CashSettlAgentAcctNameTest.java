@@ -47,7 +47,7 @@ class Tag185CashSettlAgentAcctNameTest {
     }
     @Test
     void FIX0185Test() {
-        FIXType fix185CashSettlAgentAcctName = FIXType.CASH_SETTL_AGENT_ACCT_NAME;
+        FIXType fix185CashSettlAgentAcctName = FIXType.FIX185_CASH_SETTL_AGENT_ACCT_NAME;
     }
     @Test
     void Tag0185Test() {

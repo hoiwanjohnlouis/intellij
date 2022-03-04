@@ -47,7 +47,7 @@ class Tag178SecuritySettlAgentAcctNumTest {
     }
     @Test
     void FIX0178Test() {
-        FIXType fix178SecuritySettlAgentAcctNum = FIXType.SECURITY_SETTL_AGENT_ACCT_NUM;
+        FIXType fix178SecuritySettlAgentAcctNum = FIXType.FIX178_SECURITY_SETTL_AGENT_ACCT_NUM;
     }
     @Test
     void Tag0178Test() {

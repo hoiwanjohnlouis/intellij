@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1026MDEntrySpotRateTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1026MDEntrySpotRateTest {
 
     @Test
     void FIX1026Test() {
-        FIXType fix1026MDEntrySpotRate = FIXType.MD_ENTRY_SPOT_RATE;
+        FIXType fix1026MDEntrySpotRate = FIXType.FIX1026_MD_ENTRY_SPOT_RATE;
     }
     @Test
     void Tag1026Test() {

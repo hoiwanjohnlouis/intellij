@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1030ReceivedDeptIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1030ReceivedDeptIDTest {
 
     @Test
     void FIX1030Test() {
-        FIXType fix1030ReceivedDeptID = FIXType.RECEIVED_DEPT_ID;
+        FIXType fix1030ReceivedDeptID = FIXType.FIX1030_RECEIVED_DEPT_ID;
     }
     @Test
     void Tag1030Test() {

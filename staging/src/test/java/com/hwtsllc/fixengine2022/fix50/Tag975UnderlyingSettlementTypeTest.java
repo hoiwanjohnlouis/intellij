@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag975UnderlyingSettlementTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag975UnderlyingSettlementTypeTest {
 
     @Test
     void FIX0975Test() {
-        FIXType fix975UnderlyingSettlementType = FIXType.UNDERLYING_SETTLEMENT_TYPE;
+        FIXType fix975UnderlyingSettlementType = FIXType.FIX975_UNDERLYING_SETTLEMENT_TYPE;
     }
     @Test
     void Tag0975Test() {

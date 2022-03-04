@@ -46,7 +46,7 @@ class Tag189BidForwardPointsTest {
     }
     @Test
     void FIX0189Test() {
-        FIXType fix189BidForwardPoints = FIXType.BID_FORWARD_POINTS;
+        FIXType fix189BidForwardPoints = FIXType.FIX189_BID_FORWARD_POINTS;
     }
     @Test
     void Tag0189Test() {

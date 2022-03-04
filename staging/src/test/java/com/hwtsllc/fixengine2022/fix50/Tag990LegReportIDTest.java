@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag990LegReportIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag990LegReportIDTest {
 
     @Test
     void FIX0990Test() {
-        FIXType fix990LegReportID = FIXType.LEG_REPORT_ID;
+        FIXType fix990LegReportID = FIXType.FIX990_LEG_REPORT_ID;
     }
     @Test
     void Tag0990Test() {

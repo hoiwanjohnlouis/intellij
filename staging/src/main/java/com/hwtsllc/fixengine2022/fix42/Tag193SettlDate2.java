@@ -16,5 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42;
 
+@Deprecated
 public class Tag193SettlDate2 {
 }

@@ -46,7 +46,7 @@ class Tag167SecurityTypeTest {
     }
     @Test
     void FIX0167Test() {
-        FIXType fix167SecurityType = FIXType.SECURITY_TYPE;
+        FIXType fix167SecurityType = FIXType.FIX167_SECURITY_TYPE;
     }
     @Test
     void Tag0167Test() {

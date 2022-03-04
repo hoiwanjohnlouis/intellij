@@ -46,7 +46,7 @@ class Tag169StandInstDBTypeTest {
     }
     @Test
     void FIX0169Test() {
-        FIXType fix169StandInstDBType = FIXType.STAND_INST_DB_TYPE;
+        FIXType fix169StandInstDBType = FIXType.FIX169_STAND_INST_DB_TYPE;
     }
     @Test
     void Tag0169Test() {

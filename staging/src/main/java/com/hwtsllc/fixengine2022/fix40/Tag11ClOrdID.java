@@ -32,7 +32,7 @@ public class Tag11ClOrdID extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args      Not used.
      */
     public static void main(String[] args) {
         Tag11ClOrdID tag11ClOrdID = new Tag11ClOrdID("ORDER-1234");

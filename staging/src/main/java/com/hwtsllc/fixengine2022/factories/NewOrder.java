@@ -24,8 +24,7 @@ import org.apache.log4j.Logger;
 
 public class NewOrder implements Comparable {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
-//    private static final Logger logger = LogManager.getRootLogger();
-    private static final Logger logger = LogManager.getLogger(NewOrder.class);
+    private static final Logger logger = LogManager.getRootLogger();
 
     private final Tag35MsgType tag35MsgType;
     private final Tag55Symbol tag55Symbol;
@@ -154,7 +153,7 @@ public class NewOrder implements Comparable {
 
     /**
      *
-     * @param args
+     * @param args Not used
      */
     public static void main(String[] args) {
         logger.trace("New Order");

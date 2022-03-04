@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1020TradeVolumeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1020TradeVolumeTest {
 
     @Test
     void FIX1020Test() {
-        FIXType fix1020TradeVolume = FIXType.TRADE_VOLUME;
+        FIXType fix1020TradeVolume = FIXType.FIX1020_TRADE_VOLUME;
     }
     @Test
     void Tag1020Test() {

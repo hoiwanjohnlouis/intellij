@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1014SideTrdRegTimestampSrcTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1014SideTrdRegTimestampSrcTest {
 
     @Test
     void FIX1014Test() {
-        FIXType fix1014SideTrdRegTimestampSrc = FIXType.SIDE_TRD_REG_TIMESTAMP_SRC;
+        FIXType fix1014SideTrdRegTimestampSrc = FIXType.FIX1014_SIDE_TRD_REG_TIMESTAMP_SRC;
     }
     @Test
     void Tag1014Test() {

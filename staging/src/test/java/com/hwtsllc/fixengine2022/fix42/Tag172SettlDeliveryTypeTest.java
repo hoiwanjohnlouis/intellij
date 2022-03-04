@@ -46,7 +46,7 @@ class Tag172SettlDeliveryTypeTest {
     }
     @Test
     void FIX0172Test() {
-        FIXType fix172SettlDeliveryType = FIXType.SETTL_DELIVERY_TYPE;
+        FIXType fix172SettlDeliveryType = FIXType.FIX172_SETTL_DELIVERY_TYPE;
     }
     @Test
     void Tag0172Test() {

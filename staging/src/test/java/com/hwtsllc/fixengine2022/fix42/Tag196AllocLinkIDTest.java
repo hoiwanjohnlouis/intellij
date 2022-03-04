@@ -46,7 +46,7 @@ class Tag196AllocLinkIDTest {
     }
     @Test
     void FIX0196Test() {
-        FIXType fix196AllocLinkID = FIXType.ALLOC_LINK_ID;
+        FIXType fix196AllocLinkID = FIXType.FIX196_ALLOC_LINK_ID;
     }
     @Test
     void Tag0196Test() {

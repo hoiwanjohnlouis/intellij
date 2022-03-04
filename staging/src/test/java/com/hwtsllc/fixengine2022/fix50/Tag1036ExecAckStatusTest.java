@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1036ExecAckStatusTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1036ExecAckStatusTest {
 
     @Test
     void FIX1036Test() {
-        FIXType fix1036ExecAckStatus = FIXType.EXEC_ACK_STATUS;
+        FIXType fix1036ExecAckStatus = FIXType.FIX1036_EXEC_ACK_STATUS;
     }
     @Test
     void Tag1036Test() {

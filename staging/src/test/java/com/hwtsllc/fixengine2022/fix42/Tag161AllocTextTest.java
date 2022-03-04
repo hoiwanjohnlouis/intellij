@@ -46,7 +46,7 @@ class Tag161AllocTextTest {
     }
     @Test
     void FIX0161Test() {
-        FIXType fix161AllocText = FIXType.ALLOC_TEXT;
+        FIXType fix161AllocText = FIXType.FIX161_ALLOC_TEXT;
     }
     @Test
     void Tag0161Test() {

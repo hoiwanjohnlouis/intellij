@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag989SecondaryIndividualAllocIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag989SecondaryIndividualAllocIDTest {
 
     @Test
     void FIX0989Test() {
-        FIXType fix989SecondaryIndividualAllocID = FIXType.SECONDARY_INDIVIDUAL_ALLOC_ID;
+        FIXType fix989SecondaryIndividualAllocID = FIXType.FIX989_SECONDARY_INDIVIDUAL_ALLOC_ID;
     }
     @Test
     void Tag0989Test() {

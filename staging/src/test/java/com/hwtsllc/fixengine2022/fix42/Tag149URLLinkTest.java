@@ -46,7 +46,7 @@ class Tag149URLLinkTest {
     }
     @Test
     void FIX0149Test() {
-        FIXType fix149URLLink = FIXType.URL_LINK;
+        FIXType fix149URLLink = FIXType.FIX149_URL_LINK;
     }
     @Test
     void Tag0149Test() {

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1017LegOptionRatioTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1017LegOptionRatioTest {
 
     @Test
     void FIX1017Test() {
-        FIXType fix1017LegOptionRatio = FIXType.LEG_OPTION_RATIO;
+        FIXType fix1017LegOptionRatio = FIXType.FIX1017_LEG_OPTION_RATIO;
     }
     @Test
     void Tag1017Test() {

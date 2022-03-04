@@ -94,8 +94,8 @@ public class TagType implements FixTagValuePairString, LogStringVerbose {
         return sb.toString();
     }
 
-    /*
-     *
+    /**
+     * @param args Not used.
      */
     public static void main(String[] args) {
 
@@ -104,7 +104,7 @@ public class TagType implements FixTagValuePairString, LogStringVerbose {
         System.out.println("t140.2.verbose:"+tag140PrevClosePx.toLogStringVerbose());
         System.out.println("t140.7.FixString:"+tag140PrevClosePx.toFixTagValuePairString());
 
-        TagType tag147Subject = new TagType(FIXType.SUBJECT,"This Is A Test Subject String");
+        TagType tag147Subject = new TagType(FIXType.FIX147_SUBJECT,"This Is A Test Subject String");
         System.out.println("t147.1:"+tag147Subject);
         System.out.println("t147.2.verbose:"+tag147Subject.toLogStringVerbose());
         System.out.println("t147.7.FixString:"+tag147Subject.toFixTagValuePairString());
@@ -124,7 +124,7 @@ public class TagType implements FixTagValuePairString, LogStringVerbose {
         System.out.println("t147.2.verbose:"+tag947StrikeCurrency.toLogStringVerbose());
         System.out.println("t147.7.FixString:"+tag947StrikeCurrency.toFixTagValuePairString());
 
-        TagType tag1020TradeVolume = new TagType(FIXType.TRADE_VOLUME,"1000000");
+        TagType tag1020TradeVolume = new TagType(FIXType.FIX1020_TRADE_VOLUME,"1000000");
         System.out.println("t147.1:"+tag1020TradeVolume);
         System.out.println("t147.2.verbose:"+tag1020TradeVolume.toLogStringVerbose());
         System.out.println("t147.7.FixString:"+tag1020TradeVolume.toFixTagValuePairString());

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1009SideQtyTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1009SideQtyTest {
 
     @Test
     void FIX1009Test() {
-        FIXType fix1009SideQty = FIXType.SIDE_QTY;
+        FIXType fix1009SideQty = FIXType.FIX1009_SIDE_QTY;
     }
     @Test
     void Tag1009Test() {

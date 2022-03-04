@@ -32,7 +32,7 @@ public class Tag2AdvID extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args      Not used.
      */
     public static void main(String[] args) {
         Tag2AdvID tag2AdvID = new Tag2AdvID("tag2 Adv ID");

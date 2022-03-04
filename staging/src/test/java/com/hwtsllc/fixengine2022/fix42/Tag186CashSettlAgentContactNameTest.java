@@ -47,7 +47,7 @@ class Tag186CashSettlAgentContactNameTest {
     }
     @Test
     void FIX0186Test() {
-        FIXType fix186CashSettlAgentContactName = FIXType.CASH_SETTL_AGENT_CONTACT_NAME;
+        FIXType fix186CashSettlAgentContactName = FIXType.FIX186_CASH_SETTL_AGENT_CONTACT_NAME;
     }
     @Test
     void Tag0186Test() {

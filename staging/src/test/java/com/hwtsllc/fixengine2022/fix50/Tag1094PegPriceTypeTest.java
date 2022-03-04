@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1094PegPriceTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1094PegPriceTypeTest {
 
     @Test
     void FIX1094Test() {
-        FIXType fix1094PegPriceType = FIXType.PEG_PRICE_TYPE;
+        FIXType fix1094PegPriceType = FIXType.FIX1094_PEG_PRICE_TYPE;
     }
     @Test
     void Tag1094Test() {

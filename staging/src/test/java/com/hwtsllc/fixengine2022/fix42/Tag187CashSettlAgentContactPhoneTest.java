@@ -47,7 +47,7 @@ class Tag187CashSettlAgentContactPhoneTest {
     }
     @Test
     void FIX0187Test() {
-        FIXType fix187CashSettlAgentContactPhone = FIXType.CASH_SETTL_AGENT_CONTACT_PHONE;
+        FIXType fix187CashSettlAgentContactPhone = FIXType.FIX187_CASH_SETTL_AGENT_CONTACT_PHONE;
     }
     @Test
     void Tag0187Test() {

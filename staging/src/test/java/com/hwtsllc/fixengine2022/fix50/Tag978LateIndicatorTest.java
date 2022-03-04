@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag978LateIndicatorTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag978LateIndicatorTest {
 
     @Test
     void FIX0978Test() {
-        FIXType fix978LateIndicator = FIXType.LATE_INDICATOR;
+        FIXType fix978LateIndicator = FIXType.FIX978_LATE_INDICATOR;
     }
     @Test
     void Tag0978Test() {

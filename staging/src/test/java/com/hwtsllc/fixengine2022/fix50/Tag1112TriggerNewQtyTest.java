@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1112TriggerNewQtyTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1112TriggerNewQtyTest {
 
     @Test
     void FIX1112Test() {
-        FIXType fix1112TriggerNewQty = FIXType.TRIGGER_NEW_QTY;
+        FIXType fix1112TriggerNewQty = FIXType.FIX1112_TRIGGER_NEW_QTY;
     }
     @Test
     void Tag1112Test() {

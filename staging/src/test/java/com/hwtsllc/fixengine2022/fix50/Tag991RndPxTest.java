@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag991RndPxTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag991RndPxTest {
 
     @Test
     void FIX0991Test() {
-        FIXType fix991RndPx = FIXType.RND_PX;
+        FIXType fix991RndPx = FIXType.FIX991_RND_PX;
     }
     @Test
     void Tag0991Test() {

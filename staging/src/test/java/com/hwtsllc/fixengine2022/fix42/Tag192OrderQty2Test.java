@@ -25,6 +25,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Deprecated
 class Tag192OrderQty2Test {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -46,7 +47,7 @@ class Tag192OrderQty2Test {
     }
     @Test
     void FIX0192Test() {
-        FIXType fix192OrderQty2 = FIXType.ORDER_QTY_2;
+        FIXType fix192OrderQty2 = FIXType.FIX192_ORDER_QTY_2;
     }
     @Test
     void Tag0192Test() {

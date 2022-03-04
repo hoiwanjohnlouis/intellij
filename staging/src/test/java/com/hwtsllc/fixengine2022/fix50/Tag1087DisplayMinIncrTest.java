@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1087DisplayMinIncrTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1087DisplayMinIncrTest {
 
     @Test
     void FIX1087Test() {
-        FIXType fix1087DisplayMinIncr = FIXType.DISPLAY_MIN_INCR;
+        FIXType fix1087DisplayMinIncr = FIXType.FIX1087_DISPLAY_MIN_INCR;
     }
     @Test
     void Tag1087Test() {

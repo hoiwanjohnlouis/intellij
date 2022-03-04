@@ -46,7 +46,7 @@ class Tag163SettlInstTransTypeTest {
     }
     @Test
     void FIX0163Test() {
-        FIXType fix163SettlInstTransType = FIXType.SETTL_INST_TRANS_TYPE;
+        FIXType fix163SettlInstTransType = FIXType.FIX163_SETTL_INST_TRANS_TYPE;
     }
     @Test
     void Tag0163Test() {

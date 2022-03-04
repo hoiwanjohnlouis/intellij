@@ -46,7 +46,7 @@ class Tag158AccruedInterestRateTest {
     }
     @Test
     void FIX0158Test() {
-        FIXType fix158AccruedInterestRate = FIXType.ACCRUED_INTEREST_RATE;
+        FIXType fix158AccruedInterestRate = FIXType.FIX158_ACCRUED_INTEREST_RATE;
     }
     @Test
     void Tag0158Test() {

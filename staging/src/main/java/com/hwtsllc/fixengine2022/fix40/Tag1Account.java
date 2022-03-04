@@ -34,7 +34,7 @@ public class Tag1Account extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args Not used.
      */
     public static void main(String[] args) {
         Tag1Account tag1Account = new Tag1Account("tag1 Account");

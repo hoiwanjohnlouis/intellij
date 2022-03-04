@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag969MinPriceIncrementTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag969MinPriceIncrementTest {
 
     @Test
     void FIX0969Test() {
-        FIXType fix969MinPriceIncrement = FIXType.MIN_PRICE_INCREMENT;
+        FIXType fix969MinPriceIncrement = FIXType.FIX969_MIN_PRICE_INCREMENT;
     }
     @Test
     void Tag0969Test() {

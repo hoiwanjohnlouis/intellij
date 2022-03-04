@@ -47,7 +47,7 @@ class Tag166SettlLocationTest {
     }
     @Test
     void FIX0166Test() {
-        FIXType fix166SettlLocation = FIXType.SETTL_LOCATION;
+        FIXType fix166SettlLocation = FIXType.FIX166_SETTL_LOCATION;
     }
     @Test
     void Tag0166Test() {

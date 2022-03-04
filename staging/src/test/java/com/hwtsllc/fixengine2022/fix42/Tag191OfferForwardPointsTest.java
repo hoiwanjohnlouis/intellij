@@ -46,7 +46,7 @@ class Tag191OfferForwardPointsTest {
     }
     @Test
     void FIX0191Test() {
-        FIXType fix191OfferForwardPoints = FIXType.OFFER_FORWARD_POINTS;
+        FIXType fix191OfferForwardPoints = FIXType.FIX191_OFFER_FORWARD_POINTS;
     }
     @Test
     void Tag0191Test() {

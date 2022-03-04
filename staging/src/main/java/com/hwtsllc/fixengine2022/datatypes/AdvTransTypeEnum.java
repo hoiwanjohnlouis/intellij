@@ -20,14 +20,14 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
- * AdvTransType enum defines all the possible values for AdvSide (FIX) fields.
+ * AdvTransTypeEnum enum defines all the possible values for AdvSide (FIX) fields.
  * It consists of 3 fields.
  *
  * String advTransTypeAction       type of transaction for field as defined by the FIX document, no duplicates
  * String advTransTypeName         short name of transaction for as defined by the FIX document, no duplicates
  * String advTransTypeDescription  describes what the action entails
  */
-public enum AdvTransType {
+public enum AdvTransTypeEnum {
 
     NEW ("N", "NEW", "New"),
     CANCEL ("C", "CANCEL", "Cancel"),
@@ -41,7 +41,7 @@ public enum AdvTransType {
     private final String advTransTypeName;
     private final String advTransTypeDescription;
 
-    AdvTransType(final String advTransTypeAction, final String advTransTypeName, final String advTransTypeDescription) {
+    AdvTransTypeEnum(final String advTransTypeAction, final String advTransTypeName, final String advTransTypeDescription) {
         this.advTransTypeAction = advTransTypeAction;
         this.advTransTypeName = advTransTypeName;
         this.advTransTypeDescription = advTransTypeDescription;
@@ -76,11 +76,11 @@ public enum AdvTransType {
 
     /**
      *
-     * @param args
+     * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(AdvTransType.NEW);
-        System.out.println(AdvTransType.CANCEL);
-        System.out.println(AdvTransType.REPLACE);
+        System.out.println(AdvTransTypeEnum.NEW);
+        System.out.println(AdvTransTypeEnum.CANCEL);
+        System.out.println(AdvTransTypeEnum.REPLACE);
     }
 }

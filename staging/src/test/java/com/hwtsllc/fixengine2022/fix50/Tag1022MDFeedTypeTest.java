@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1022MDFeedTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1022MDFeedTypeTest {
 
     @Test
     void FIX1022Test() {
-        FIXType fix1022MDFeedType = FIXType.MD_FEED_TYPE;
+        FIXType fix1022MDFeedType = FIXType.FIX1022_MD_FEED_TYPE;
     }
     @Test
     void Tag1022Test() {

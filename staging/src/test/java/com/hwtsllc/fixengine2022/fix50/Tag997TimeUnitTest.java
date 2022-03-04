@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag997TimeUnitTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag997TimeUnitTest {
 
     @Test
     void FIX0997Test() {
-        FIXType fix997TimeUnit = FIXType.TIME_UNIT;
+        FIXType fix997TimeUnit = FIXType.FIX997_TIME_UNIT;
     }
     @Test
     void Tag0997Test() {

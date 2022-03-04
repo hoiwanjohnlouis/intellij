@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag970PositionLimitTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag970PositionLimitTest {
 
     @Test
     void FIX0970Test() {
-        FIXType fix970PositionLimit = FIXType.POSITION_LIMIT;
+        FIXType fix970PositionLimit = FIXType.FIX970_POSITION_LIMIT;
     }
     @Test
     void Tag0970Test() {

@@ -46,7 +46,7 @@ class Tag165SettlInstSourceTest {
     }
     @Test
     void FIX0165Test() {
-        FIXType fix165SettlInstSource = FIXType.SETTL_INST_SOURCE;
+        FIXType fix165SettlInstSource = FIXType.FIX165_SETTL_INST_SOURCE;
     }
     @Test
     void Tag0165Test() {

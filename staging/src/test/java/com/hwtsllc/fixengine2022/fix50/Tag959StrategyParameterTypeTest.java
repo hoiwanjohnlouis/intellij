@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag959StrategyParameterTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag959StrategyParameterTypeTest {
 
     @Test
     void FIX0959Test() {
-        FIXType fix959StrategyParameterType = FIXType.STRATEGY_PARAMETER_TYPE;
+        FIXType fix959StrategyParameterType = FIXType.FIX959_STRATEGY_PARAMETER_TYPE;
     }
     @Test
     void Tag0959Test() {

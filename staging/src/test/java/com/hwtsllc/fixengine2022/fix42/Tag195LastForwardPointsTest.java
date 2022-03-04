@@ -46,7 +46,7 @@ class Tag195LastForwardPointsTest {
     }
     @Test
     void FIX0195Test() {
-        FIXType fix195LastForwardPoints = FIXType.LAST_FORWARD_POINTS;
+        FIXType fix195LastForwardPoints = FIXType.FIX195_LAST_FORWARD_POINTS;
     }
     @Test
     void Tag0195Test() {

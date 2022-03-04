@@ -46,7 +46,7 @@ class Tag143TargetLocationIDTest {
     }
     @Test
     void FIX0143Test() {
-        FIXType fix143TargetLocationID = FIXType.TARGET_LOCATION_ID;
+        FIXType fix143TargetLocationID = FIXType.FIX143_TARGET_LOCATION_ID;
     }
     @Test
     void Tag0143Test() {

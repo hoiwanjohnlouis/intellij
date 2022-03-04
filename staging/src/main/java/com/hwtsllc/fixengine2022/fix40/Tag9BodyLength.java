@@ -32,7 +32,7 @@ public class Tag9BodyLength extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args      Not used.
      */
     public static void main(String[] args) {
         Tag9BodyLength tag9BodyLength = new Tag9BodyLength("324");

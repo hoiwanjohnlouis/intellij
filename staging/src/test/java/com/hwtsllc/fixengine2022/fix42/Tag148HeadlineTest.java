@@ -46,7 +46,7 @@ class Tag148HeadlineTest {
     }
     @Test
     void FIX0148Test() {
-        FIXType fix148Headline = FIXType.HEADLINE;
+        FIXType fix148Headline = FIXType.FIX148_HEADLINE;
     }
     @Test
     void Tag0148Test() {

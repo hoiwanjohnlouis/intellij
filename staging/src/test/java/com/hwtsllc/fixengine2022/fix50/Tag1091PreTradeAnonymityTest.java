@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1091PreTradeAnonymityTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1091PreTradeAnonymityTest {
 
     @Test
     void FIX1091Test() {
-        FIXType fix1091PreTradeAnonymity = FIXType.PRE_TRADE_ANONYMITY;
+        FIXType fix1091PreTradeAnonymity = FIXType.FIX1091_PRE_TRADE_ANONYMITY;
     }
     @Test
     void Tag1091Test() {

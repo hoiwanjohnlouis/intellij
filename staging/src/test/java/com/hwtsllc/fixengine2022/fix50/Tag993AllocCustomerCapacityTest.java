@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag993AllocCustomerCapacityTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag993AllocCustomerCapacityTest {
 
     @Test
     void FIX0993Test() {
-        FIXType fix993AllocCustomerCapacity = FIXType.ALLOC_CUSTOMER_CAPACITY;
+        FIXType fix993AllocCustomerCapacity = FIXType.FIX993_ALLOC_CUSTOMER_CAPACITY;
     }
     @Test
     void Tag0993Test() {

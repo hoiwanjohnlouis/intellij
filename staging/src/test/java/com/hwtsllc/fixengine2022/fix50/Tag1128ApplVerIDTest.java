@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1128ApplVerIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1128ApplVerIDTest {
 
     @Test
     void FIX1128Test() {
-        FIXType fix1128ApplVerID = FIXType.APPL_VER_ID;
+        FIXType fix1128ApplVerID = FIXType.FIX1128_APPL_VER_ID;
     }
     @Test
     void Tag1128Test() {

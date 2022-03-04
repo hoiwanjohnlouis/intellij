@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1136AllocClearingFeeIndicatorTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1136AllocClearingFeeIndicatorTest {
 
     @Test
     void FIX1136Test() {
-        FIXType fix1136AllocClearingFeeIndicator = FIXType.ALLOC_CLEARING_FEE_INDICATOR;
+        FIXType fix1136AllocClearingFeeIndicator = FIXType.FIX1136_ALLOC_CLEARING_FEE_INDICATOR;
     }
     @Test
     void Tag1136Test() {

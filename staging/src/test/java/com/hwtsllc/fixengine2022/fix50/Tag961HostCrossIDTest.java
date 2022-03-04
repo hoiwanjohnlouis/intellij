@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag961HostCrossIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag961HostCrossIDTest {
 
     @Test
     void FIX0961Test() {
-        FIXType fix961HostCrossID = FIXType.HOST_CROSS_ID;
+        FIXType fix961HostCrossID = FIXType.FIX961_HOST_CROSS_ID;
     }
     @Test
     void Tag0961Test() {

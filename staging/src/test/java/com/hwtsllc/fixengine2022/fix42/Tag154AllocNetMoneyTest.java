@@ -46,7 +46,7 @@ class Tag154AllocNetMoneyTest {
     }
     @Test
     void FIX0154Test() {
-        FIXType fix154AllocNetMoney = FIXType.ALLOC_NET_MONEY;
+        FIXType fix154AllocNetMoney = FIXType.FIX154_ALLOC_NET_MONEY;
     }
     @Test
     void Tag0154Test() {

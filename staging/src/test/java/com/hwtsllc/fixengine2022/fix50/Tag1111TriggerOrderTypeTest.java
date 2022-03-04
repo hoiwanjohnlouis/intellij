@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1111TriggerOrderTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1111TriggerOrderTypeTest {
 
     @Test
     void FIX1111Test() {
-        FIXType fix1111TriggerOrderType = FIXType.TRIGGER_ORDER_TYPE;
+        FIXType fix1111TriggerOrderType = FIXType.FIX1111_TRIGGER_ORDER_TYPE;
     }
     @Test
     void Tag1111Test() {

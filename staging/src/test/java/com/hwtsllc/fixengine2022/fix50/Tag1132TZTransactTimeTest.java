@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1132TZTransactTimeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1132TZTransactTimeTest {
 
     @Test
     void FIX1132Test() {
-        FIXType fix1132TZTransactTime = FIXType.TZ_TRANSACT_TIME;
+        FIXType fix1132TZTransactTime = FIXType.FIX1132_TZ_TRANSACT_TIME;
     }
     @Test
     void Tag1132Test() {

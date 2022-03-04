@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag967StrikeMultiplierTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag967StrikeMultiplierTest {
 
     @Test
     void FIX0967Test() {
-        FIXType fix967StrikeMultiplier = FIXType.STRIKE_MULTIPLIER;
+        FIXType fix967StrikeMultiplier = FIXType.FIX967_STRIKE_MULTIPLIER;
     }
     @Test
     void Tag0967Test() {

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag968StrikeValueTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag968StrikeValueTest {
 
     @Test
     void FIX0968Test() {
-        FIXType fix968StrikeValue = FIXType.STRIKE_VALUE;
+        FIXType fix968StrikeValue = FIXType.FIX968_STRIKE_VALUE;
     }
     @Test
     void Tag0968Test() {

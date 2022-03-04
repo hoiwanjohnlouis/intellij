@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1029CustDirectedOrderTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1029CustDirectedOrderTest {
 
     @Test
     void FIX1029Test() {
-        FIXType fix1029CustDirectedOrder = FIXType.CUST_DIRECTED_ORDER;
+        FIXType fix1029CustDirectedOrder = FIXType.FIX1029_CUST_DIRECTED_ORDER;
     }
     @Test
     void Tag1029Test() {

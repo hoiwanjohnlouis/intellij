@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1133ExDestinationIDSourceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1133ExDestinationIDSourceTest {
 
     @Test
     void FIX1133Test() {
-        FIXType fix1133ExDestinationIDSource = FIXType.EX_DESTINATION_ID_SOURCE;
+        FIXType fix1133ExDestinationIDSource = FIXType.FIX1133_EX_DESTINATION_ID_SOURCE;
     }
     @Test
     void Tag1133Test() {

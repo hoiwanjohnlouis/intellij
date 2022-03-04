@@ -20,14 +20,14 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
- * AdvSideType enum defines all the possible values for AdvSide (FIX) fields.
+ * AdvSideEnum enum defines all the possible values for AdvSide (FIX) fields.
  * It consists of 3 fields.
  *
  * String advSideAction       type of transaction for field as defined by the FIX protocol document, no duplicates
  * String advSideName         short name of transaction for as defined by the FIX protocol document, no duplicates
  * String advSideDescription  describes what the action entails
  */
-public enum AdvSideType {
+public enum AdvSideEnum {
 
     BUY ("B", "BUY", "Buy"),
     SELL ("S", "SELL", "Sell"),
@@ -42,7 +42,7 @@ public enum AdvSideType {
     private final String advSideName;
     private final String advSideDescription;
 
-    AdvSideType(final String advSideAction, final String advSideName, final String advSideDescription) {
+    AdvSideEnum(final String advSideAction, final String advSideName, final String advSideDescription) {
         this.advSideAction = advSideAction;
         this.advSideName = advSideName;
         this.advSideDescription = advSideDescription;
@@ -77,12 +77,12 @@ public enum AdvSideType {
 
     /**
      *
-     * @param args
+     * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(AdvSideType.BUY);
-        System.out.println(AdvSideType.SELL);
-        System.out.println(AdvSideType.CROSS);
-        System.out.println(AdvSideType.TRADE);
+        System.out.println(AdvSideEnum.BUY);
+        System.out.println(AdvSideEnum.SELL);
+        System.out.println(AdvSideEnum.CROSS);
+        System.out.println(AdvSideEnum.TRADE);
     }
 }

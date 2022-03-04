@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1046UnderlyingFXRateCalcTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1046UnderlyingFXRateCalcTest {
 
     @Test
     void FIX1046Test() {
-        FIXType fix1046UnderlyingFXRateCalc = FIXType.UNDERLYING_FX_RATE_CALC;
+        FIXType fix1046UnderlyingFXRateCalc = FIXType.FIX1046_UNDERLYING_FX_RATE_CALC;
     }
     @Test
     void Tag1046Test() {

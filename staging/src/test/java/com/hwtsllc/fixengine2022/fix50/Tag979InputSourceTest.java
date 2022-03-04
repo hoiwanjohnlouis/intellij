@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag979InputSourceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag979InputSourceTest {
 
     @Test
     void FIX0979Test() {
-        FIXType fix979InputSource = FIXType.INPUT_SOURCE;
+        FIXType fix979InputSource = FIXType.FIX979_INPUT_SOURCE;
     }
     @Test
     void Tag0979Test() {

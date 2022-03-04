@@ -46,7 +46,7 @@ class Tag151LeavesQtyTest {
     }
     @Test
     void FIX0151Test() {
-        FIXType fix151LeavesQty = FIXType.LEAVES_QTY;
+        FIXType fix151LeavesQty = FIXType.FIX151_LEAVES_QTY;
     }
     @Test
     void Tag0151Test() {

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag972UnderlyingAllocationPercentTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag972UnderlyingAllocationPercentTest {
 
     @Test
     void FIX0972Test() {
-        FIXType fix972UnderlyingAllocationPercent = FIXType.UNDERLYING_ALLOCATION_PERCENT;
+        FIXType fix972UnderlyingAllocationPercent = FIXType.FIX972_UNDERLYING_ALLOCATION_PERCENT;
     }
     @Test
     void Tag0972Test() {

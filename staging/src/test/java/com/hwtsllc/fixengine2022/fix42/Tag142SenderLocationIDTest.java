@@ -46,7 +46,7 @@ class Tag142SenderLocationIDTest {
     }
     @Test
     void FIX0142Test() {
-        FIXType fix142SenderLocationID = FIXType.SENDER_LOCATION_ID;
+        FIXType fix142SenderLocationID = FIXType.FIX142_SENDER_LOCATION_ID;
     }
     @Test
     void Tag0142Test() {

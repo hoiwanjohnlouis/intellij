@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1033DeskTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1033DeskTypeTest {
 
     @Test
     void FIX1033Test() {
-        FIXType fix1033DeskType = FIXType.DESK_TYPE;
+        FIXType fix1033DeskType = FIXType.FIX1033_DESK_TYPE;
     }
     @Test
     void Tag1033Test() {

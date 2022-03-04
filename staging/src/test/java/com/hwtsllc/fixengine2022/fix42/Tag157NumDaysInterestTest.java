@@ -46,7 +46,7 @@ class Tag157NumDaysInterestTest {
     }
     @Test
     void FIX0157Test() {
-        FIXType fix157NumDaysInterest = FIXType.NUM_DAYS_INTEREST;
+        FIXType fix157NumDaysInterest = FIXType.FIX157_NUM_DAYS_INTEREST;
     }
     @Test
     void Tag0157Test() {

@@ -25,6 +25,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Deprecated
 class Tag193SettlDate2Test {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -46,7 +47,7 @@ class Tag193SettlDate2Test {
     }
     @Test
     void FIX0193Test() {
-        FIXType fix193SettlDate2 = FIXType.FUT_SETT_DATE_2;
+        FIXType fix193SettlDate2 = FIXType.FIX193_FUT_SETT_DATE_2;
     }
     @Test
     void Tag0193Test() {

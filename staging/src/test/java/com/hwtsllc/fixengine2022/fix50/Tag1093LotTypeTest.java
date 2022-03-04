@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1093LotTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1093LotTypeTest {
 
     @Test
     void FIX1093Test() {
-        FIXType fix1093LotType = FIXType.LOT_TYPE;
+        FIXType fix1093LotType = FIXType.FIX1093_LOT_TYPE;
     }
     @Test
     void Tag1093Test() {

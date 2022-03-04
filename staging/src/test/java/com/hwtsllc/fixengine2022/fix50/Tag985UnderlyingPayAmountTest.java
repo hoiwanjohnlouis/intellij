@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag985UnderlyingPayAmountTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag985UnderlyingPayAmountTest {
 
     @Test
     void FIX0985Test() {
-        FIXType fix985UnderlyingPayAmount = FIXType.UNDERLYING_PAY_AMOUNT;
+        FIXType fix985UnderlyingPayAmount = FIXType.FIX985_UNDERLYING_PAY_AMOUNT;
     }
     @Test
     void Tag0985Test() {

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1047AllocPositionEffectTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1047AllocPositionEffectTest {
 
     @Test
     void FIX1047Test() {
-        FIXType fix1047AllocPositionEffect = FIXType.ALLOC_POSITION_EFFECT;
+        FIXType fix1047AllocPositionEffect = FIXType.FIX1047_ALLOC_POSITION_EFFECT;
     }
     @Test
     void Tag1047Test() {

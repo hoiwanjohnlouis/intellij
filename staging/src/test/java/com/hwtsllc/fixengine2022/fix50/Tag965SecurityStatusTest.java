@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag965SecurityStatusTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag965SecurityStatusTest {
 
     @Test
     void FIX0965Test() {
-        FIXType fix965SecurityStatus = FIXType.SECURITY_STATUS;
+        FIXType fix965SecurityStatus = FIXType.FIX965_SECURITY_STATUS;
     }
     @Test
     void Tag0965Test() {

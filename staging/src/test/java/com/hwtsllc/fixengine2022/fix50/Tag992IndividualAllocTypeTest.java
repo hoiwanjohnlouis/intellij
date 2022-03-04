@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag992IndividualAllocTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag992IndividualAllocTypeTest {
 
     @Test
     void FIX0992Test() {
-        FIXType fix992IndividualAllocType = FIXType.INDIVIDUAL_ALLOC_TYPE;
+        FIXType fix992IndividualAllocType = FIXType.FIX992_INDIVIDUAL_ALLOC_TYPE;
     }
     @Test
     void Tag0992Test() {

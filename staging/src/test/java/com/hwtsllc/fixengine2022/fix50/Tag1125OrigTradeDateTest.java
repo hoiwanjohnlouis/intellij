@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1125OrigTradeDateTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1125OrigTradeDateTest {
 
     @Test
     void FIX1125Test() {
-        FIXType fix1125OrigTradeDate = FIXType.ORIG_TRADE_DATE;
+        FIXType fix1125OrigTradeDate = FIXType.FIX1125_ORIG_TRADE_DATE;
     }
     @Test
     void Tag1125Test() {

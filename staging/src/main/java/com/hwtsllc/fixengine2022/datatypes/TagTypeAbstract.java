@@ -22,6 +22,7 @@ import java.util.Locale;
 
 /**
  *
+ *
  */
 public abstract class TagTypeAbstract {
 

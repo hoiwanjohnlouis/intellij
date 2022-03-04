@@ -46,7 +46,7 @@ class Tag171StandInstDBIDTest {
     }
     @Test
     void FIX0171Test() {
-        FIXType fix171StandInstDBID = FIXType.STAND_INST_DB_ID;
+        FIXType fix171StandInstDBID = FIXType.FIX171_STAND_INST_DB_ID;
     }
     @Test
     void Tag0171Test() {

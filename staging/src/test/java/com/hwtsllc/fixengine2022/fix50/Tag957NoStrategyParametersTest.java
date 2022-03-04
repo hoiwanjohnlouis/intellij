@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag957NoStrategyParametersTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag957NoStrategyParametersTest {
 
     @Test
     void FIX0957Test() {
-        FIXType fix957NoStrategyParameters = FIXType.NO_STRATEGY_PARAMETERS;
+        FIXType fix957NoStrategyParameters = FIXType.FIX957_NO_STRATEGY_PARAMETERS;
     }
     @Test
     void Tag0957Test() {

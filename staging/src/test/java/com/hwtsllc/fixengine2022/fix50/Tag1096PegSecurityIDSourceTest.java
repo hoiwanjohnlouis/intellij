@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1096PegSecurityIDSourceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1096PegSecurityIDSourceTest {
 
     @Test
     void FIX1096Test() {
-        FIXType fix1096PegSecurityIDSource = FIXType.PEG_SECURITY_ID_SOURCE;
+        FIXType fix1096PegSecurityIDSource = FIXType.FIX1096_PEG_SECURITY_ID_SOURCE;
     }
     @Test
     void Tag1096Test() {

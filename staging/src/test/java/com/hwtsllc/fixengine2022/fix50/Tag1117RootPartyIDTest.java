@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1117RootPartyIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1117RootPartyIDTest {
 
     @Test
     void FIX1117Test() {
-        FIXType fix1117RootPartyID = FIXType.ROOT_PARTY_ID;
+        FIXType fix1117RootPartyID = FIXType.FIX1117_ROOT_PARTY_ID;
     }
     @Test
     void Tag1117Test() {

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag986UnderlyingCollectAmountTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag986UnderlyingCollectAmountTest {
 
     @Test
     void FIX0986Test() {
-        FIXType fix986UnderlyingCollectAmount = FIXType.UNDERLYING_COLLECT_AMOUNT;
+        FIXType fix986UnderlyingCollectAmount = FIXType.FIX986_UNDERLYING_COLLECT_AMOUNT;
     }
     @Test
     void Tag0986Test() {

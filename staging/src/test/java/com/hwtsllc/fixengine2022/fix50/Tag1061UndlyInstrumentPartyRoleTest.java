@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1061UndlyInstrumentPartyRoleTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1061UndlyInstrumentPartyRoleTest {
 
     @Test
     void FIX1061Test() {
-        FIXType fix1061UndlyInstrumentPartyRole = FIXType.UNDLY_INSTRUMENT_PARTY_ROLE;
+        FIXType fix1061UndlyInstrumentPartyRole = FIXType.FIX1061_UNDLY_INSTRUMENT_PARTY_ROLE;
     }
     @Test
     void Tag1061Test() {

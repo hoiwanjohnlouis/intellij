@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1008SideTrdSubTypTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1008SideTrdSubTypTest {
 
     @Test
     void FIX1008Test() {
-        FIXType fix1008SideTrdSubTyp = FIXType.SIDE_TRD_SUB_TYP;
+        FIXType fix1008SideTrdSubTyp = FIXType.FIX1008_SIDE_TRD_SUB_TYP;
     }
     @Test
     void Tag1008Test() {

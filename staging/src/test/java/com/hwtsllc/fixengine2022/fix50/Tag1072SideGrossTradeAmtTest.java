@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1072SideGrossTradeAmtTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1072SideGrossTradeAmtTest {
 
     @Test
     void FIX1072Test() {
-        FIXType fix1072SideGrossTradeAmt = FIXType.SIDE_GROSS_TRADE_AMT;
+        FIXType fix1072SideGrossTradeAmt = FIXType.FIX1072_SIDE_GROSS_TRADE_AMT;
     }
     @Test
     void Tag1072Test() {

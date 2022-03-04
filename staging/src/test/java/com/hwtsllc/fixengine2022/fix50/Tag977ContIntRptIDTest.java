@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag977ContIntRptIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag977ContIntRptIDTest {
 
     @Test
     void FIX0977Test() {
-        FIXType fix977ContIntRptID = FIXType.CONT_INT_RPT_ID;
+        FIXType fix977ContIntRptID = FIXType.FIX977_CONT_INT_RPT_ID;
     }
     @Test
     void Tag0977Test() {

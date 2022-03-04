@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1092PriceProtectionScopeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1092PriceProtectionScopeTest {
 
     @Test
     void FIX1092Test() {
-        FIXType fix1092PriceProtectionScope = FIXType.PRICE_PROTECTION_SCOPE;
+        FIXType fix1092PriceProtectionScope = FIXType.FIX1092_PRICE_PROTECTION_SCOPE;
     }
     @Test
     void Tag1092Test() {

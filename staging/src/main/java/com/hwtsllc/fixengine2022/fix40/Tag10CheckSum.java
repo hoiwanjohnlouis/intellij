@@ -32,7 +32,7 @@ public class Tag10CheckSum extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args      Not used.
      */
     public static void main(String[] args) {
         Tag10CheckSum tag10CheckSum = new Tag10CheckSum("234");

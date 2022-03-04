@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1044UnderlyingAdjustedQuantityTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1044UnderlyingAdjustedQuantityTest {
 
     @Test
     void FIX1044Test() {
-        FIXType fix1044UnderlyingAdjustedQuantity = FIXType.UNDERLYING_ADJUSTED_QUANTITY;
+        FIXType fix1044UnderlyingAdjustedQuantity = FIXType.FIX1044_UNDERLYING_ADJUSTED_QUANTITY;
     }
     @Test
     void Tag1044Test() {

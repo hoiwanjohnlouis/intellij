@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1069SwapPointsTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1069SwapPointsTest {
 
     @Test
     void FIX1069Test() {
-        FIXType fix1069SwapPoints = FIXType.SWAP_POINTS;
+        FIXType fix1069SwapPoints = FIXType.FIX1069_SWAP_POINTS;
     }
     @Test
     void Tag1069Test() {

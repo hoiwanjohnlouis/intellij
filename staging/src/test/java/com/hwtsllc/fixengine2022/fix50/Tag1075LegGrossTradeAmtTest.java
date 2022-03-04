@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1075LegGrossTradeAmtTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1075LegGrossTradeAmtTest {
 
     @Test
     void FIX1075Test() {
-        FIXType fix1075LegGrossTradeAmt = FIXType.LEG_GROSS_TRADE_AMT;
+        FIXType fix1075LegGrossTradeAmt = FIXType.FIX1075_LEG_GROSS_TRADE_AMT;
     }
     @Test
     void Tag1075Test() {

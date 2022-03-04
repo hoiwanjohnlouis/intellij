@@ -46,7 +46,7 @@ class Tag198SecondaryOrderIDTest {
     }
     @Test
     void FIX0198Test() {
-        FIXType fix198SecondaryOrderID = FIXType.SECONDARY_ORDER_ID;
+        FIXType fix198SecondaryOrderID = FIXType.FIX198_SECONDARY_ORDER_ID;
     }
     @Test
     void Tag0198Test() {

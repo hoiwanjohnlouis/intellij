@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1056CalculatedCcyLastQtyTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1056CalculatedCcyLastQtyTest {
 
     @Test
     void FIX1056Test() {
-        FIXType fix1056CalculatedCcyLastQty = FIXType.CALCULATED_CCY_LAST_QTY;
+        FIXType fix1056CalculatedCcyLastQty = FIXType.FIX1056_CALCULATED_CCY_LAST_QTY;
     }
     @Test
     void Tag1056Test() {

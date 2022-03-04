@@ -46,7 +46,7 @@ class Tag160SettlInstModeTest {
     }
     @Test
     void FIX0160Test() {
-        FIXType fix160SettlInstMode = FIXType.SETTL_INST_MODE;
+        FIXType fix160SettlInstMode = FIXType.FIX160_SETTL_INST_MODE;
     }
     @Test
     void Tag0160Test() {

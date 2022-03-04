@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1099PegSecurityDescTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1099PegSecurityDescTest {
 
     @Test
     void FIX1099Test() {
-        FIXType fix1099PegSecurityDesc = FIXType.PEG_SECURITY_DESC;
+        FIXType fix1099PegSecurityDesc = FIXType.FIX1099_PEG_SECURITY_DESC;
     }
     @Test
     void Tag1099Test() {

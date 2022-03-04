@@ -47,7 +47,7 @@ class Tag177SecuritySettlAgentCodeTest {
     }
     @Test
     void FIX0177Test() {
-        FIXType fix177SecuritySettlAgentCode = FIXType.SECURITY_SETTL_AGENT_CODE;
+        FIXType fix177SecuritySettlAgentCode = FIXType.FIX177_SECURITY_SETTL_AGENT_CODE;
     }
     @Test
     void Tag0177Test() {

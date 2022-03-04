@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1119RootPartyRoleTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1119RootPartyRoleTest {
 
     @Test
     void FIX1119Test() {
-        FIXType fix1119RootPartyRole = FIXType.ROOT_PARTY_ROLE;
+        FIXType fix1119RootPartyRole = FIXType.FIX1119_ROOT_PARTY_ROLE;
     }
     @Test
     void Tag1119Test() {

@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag984NoUnderlyingAmountsTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag984NoUnderlyingAmountsTest {
 
     @Test
     void FIX0984Test() {
-        FIXType fix984NoUnderlyingAmounts = FIXType.NO_UNDERLYING_AMOUNTS;
+        FIXType fix984NoUnderlyingAmounts = FIXType.FIX984_NO_UNDERLYING_AMOUNTS;
     }
     @Test
     void Tag0984Test() {

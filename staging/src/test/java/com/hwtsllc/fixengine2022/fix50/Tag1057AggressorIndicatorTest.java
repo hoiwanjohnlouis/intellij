@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1057AggressorIndicatorTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1057AggressorIndicatorTest {
 
     @Test
     void FIX1057Test() {
-        FIXType fix1057AggressorIndicator = FIXType.AGGRESSOR_INDICATOR;
+        FIXType fix1057AggressorIndicator = FIXType.FIX1057_AGGRESSOR_INDICATOR;
     }
     @Test
     void Tag1057Test() {

@@ -46,7 +46,7 @@ class Tag200MaturityMonthYearTest {
     }
     @Test
     void FIX0200Test() {
-        FIXType fix200MaturityMonthYear = FIXType.MATURITY_MONTH_YEAR;
+        FIXType fix200MaturityMonthYear = FIXType.FIX200_MATURITY_MONTH_YEAR;
     }
     @Test
     void Tag0200Test() {

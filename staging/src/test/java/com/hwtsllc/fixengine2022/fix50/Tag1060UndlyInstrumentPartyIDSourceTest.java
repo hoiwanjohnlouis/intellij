@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1060UndlyInstrumentPartyIDSourceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1060UndlyInstrumentPartyIDSourceTest {
 
     @Test
     void FIX1060Test() {
-        FIXType fix1060UndlyInstrumentPartyIDSource = FIXType.UNDLY_INSTRUMENT_PARTY_ID_SOURCE;
+        FIXType fix1060UndlyInstrumentPartyIDSource = FIXType.FIX1060_UNDLY_INSTRUMENT_PARTY_ID_SOURCE;
     }
     @Test
     void Tag1060Test() {

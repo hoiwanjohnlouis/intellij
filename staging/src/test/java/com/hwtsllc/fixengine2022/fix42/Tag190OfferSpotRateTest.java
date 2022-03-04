@@ -46,7 +46,7 @@ class Tag190OfferSpotRateTest {
     }
     @Test
     void FIX0190Test() {
-        FIXType fix190OfferSpotRate = FIXType.OFFER_SPOT_RATE;
+        FIXType fix190OfferSpotRate = FIXType.FIX190_OFFER_SPOT_RATE;
     }
     @Test
     void Tag0190Test() {

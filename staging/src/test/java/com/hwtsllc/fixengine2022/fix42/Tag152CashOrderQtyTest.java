@@ -46,7 +46,7 @@ class Tag152CashOrderQtyTest {
     }
     @Test
     void FIX0152Test() {
-        FIXType fix152CashOrderQty = FIXType.CASH_ORDER_QTY;
+        FIXType fix152CashOrderQty = FIXType.FIX152_CASH_ORDER_QTY;
     }
     @Test
     void Tag0152Test() {

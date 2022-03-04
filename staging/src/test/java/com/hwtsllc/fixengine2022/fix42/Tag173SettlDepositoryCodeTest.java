@@ -47,7 +47,7 @@ class Tag173SettlDepositoryCodeTest {
     }
     @Test
     void FIX0173Test() {
-        FIXType fix173SettlDepositoryCode = FIXType.SETTL_DEPOSITORY_CODE;
+        FIXType fix173SettlDepositoryCode = FIXType.FIX173_SETTL_DEPOSITORY_CODE;
     }
     @Test
     void Tag0173Test() {

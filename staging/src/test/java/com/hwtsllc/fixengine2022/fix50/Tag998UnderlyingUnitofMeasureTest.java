@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag998UnderlyingUnitofMeasureTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag998UnderlyingUnitofMeasureTest {
 
     @Test
     void FIX0998Test() {
-        FIXType fix998UnderlyingUnitofMeasure = FIXType.UNDERLYING_UNIT_OF_MEASURE;
+        FIXType fix998UnderlyingUnitofMeasure = FIXType.FIX998_UNDERLYING_UNIT_OF_MEASURE;
     }
     @Test
     void Tag0998Test() {

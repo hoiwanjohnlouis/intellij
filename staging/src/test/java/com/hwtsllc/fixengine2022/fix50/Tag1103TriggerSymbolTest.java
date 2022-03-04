@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1103TriggerSymbolTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1103TriggerSymbolTest {
 
     @Test
     void FIX1103Test() {
-        FIXType fix1103TriggerSymbol = FIXType.TRIGGER_SYMBOL;
+        FIXType fix1103TriggerSymbol = FIXType.FIX1103_TRIGGER_SYMBOL;
     }
     @Test
     void Tag1103Test() {

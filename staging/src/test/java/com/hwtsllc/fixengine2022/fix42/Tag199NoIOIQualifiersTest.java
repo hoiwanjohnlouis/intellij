@@ -46,7 +46,7 @@ class Tag199NoIOIQualifiersTest {
     }
     @Test
     void FIX0199Test() {
-        FIXType fix199NoIOIQualifiers = FIXType.NO_IOI_QUALIFIERS;
+        FIXType fix199NoIOIQualifiers = FIXType.FIX199_NO_IOI_QUALIFIERS;
     }
     @Test
     void Tag0199Test() {

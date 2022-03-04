@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1067LegBidForwardPointsTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1067LegBidForwardPointsTest {
 
     @Test
     void FIX1067Test() {
-        FIXType fix1067LegBidForwardPoints = FIXType.LEG_BID_FORWARD_POINTS;
+        FIXType fix1067LegBidForwardPoints = FIXType.FIX1067_LEG_BID_FORWARD_POINTS;
     }
     @Test
     void Tag1067Test() {

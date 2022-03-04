@@ -47,7 +47,7 @@ class Tag174SettlBrkrCodeTest {
     }
     @Test
     void FIX0174Test() {
-        FIXType fix174SettlBrkrCode = FIXType.SETTL_BRKR_CODE;
+        FIXType fix174SettlBrkrCode = FIXType.FIX174_SETTL_BRKR_CODE;
     }
     @Test
     void Tag0174Test() {

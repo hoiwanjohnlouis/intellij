@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1084DisplayMethodTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1084DisplayMethodTest {
 
     @Test
     void FIX1084Test() {
-        FIXType fix1084DisplayMethod = FIXType.DISPLAY_METHOD;
+        FIXType fix1084DisplayMethod = FIXType.FIX1084_DISPLAY_METHOD;
     }
     @Test
     void Tag1084Test() {

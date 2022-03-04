@@ -46,7 +46,7 @@ class Tag144OnBehalfOfLocationIDTest {
     }
     @Test
     void FIX0144Test() {
-        FIXType fix144OnBehalfOfLocationID = FIXType.ON_BEHALF_OF_LOCATION_ID;
+        FIXType fix144OnBehalfOfLocationID = FIXType.FIX144_ON_BEHALF_OF_LOCATION_ID;
     }
     @Test
     void Tag0144Test() {

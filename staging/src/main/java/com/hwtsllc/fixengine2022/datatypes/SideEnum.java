@@ -20,14 +20,14 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
- * AdvSideType enum defines all the possible values for AdvSide (FIX) fields.
+ * AdvSideEnum enum defines all the possible values for AdvSide (FIX) fields.
  * It consists of 3 fields.
  *
  * String sideAction           type of transaction for field as defined by the FIX protocol document, no duplicates
  * String sideName             short name of transaction for as defined by the FIX protocol document, no duplicates
  * String sideDescription      describes what the action entails
  */
-public enum SideType {
+public enum SideEnum {
 
     BUY ("1", "BUY", ""),
     SELL ("2", "SELL", ""),
@@ -54,7 +54,7 @@ public enum SideType {
     private final String sideName;
     private final String sideDescription;
 
-    SideType(final String sideAction, final String sideName, final String sideDescription) {
+    SideEnum(final String sideAction, final String sideName, final String sideDescription) {
         this.sideAction = sideAction;
         this.sideName = sideName;
         this.sideDescription = sideDescription;
@@ -89,10 +89,10 @@ public enum SideType {
 
     /**
      *
-     * @param args
+     * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(SideType.BUY);
-        System.out.println(SideType.SELL);
+        System.out.println(SideEnum.BUY);
+        System.out.println(SideEnum.SELL);
     }
 }

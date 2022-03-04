@@ -32,7 +32,7 @@ public class Tag7BeginSeqNo extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args      Not used.
      */
     public static void main(String[] args) {
         Tag7BeginSeqNo tag7BeginSeqNo = new Tag7BeginSeqNo("123456");

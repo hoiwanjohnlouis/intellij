@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag966SettleOnOpenFlagTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag966SettleOnOpenFlagTest {
 
     @Test
     void FIX0966Test() {
-        FIXType fix966SettleOnOpenFlag = FIXType.SETTLE_ON_OPEN_FLAG;
+        FIXType fix966SettleOnOpenFlag = FIXType.FIX966_SETTLE_ON_OPEN_FLAG;
     }
     @Test
     void Tag0966Test() {

@@ -46,7 +46,7 @@ class Tag201PutOrCallTest {
     }
     @Test
     void FIX0201Test() {
-        FIXType fix201PutOrCall = FIXType.PUT_OR_CALL;
+        FIXType fix201PutOrCall = FIXType.FIX201_PUT_OR_CALL;
     }
     @Test
     void Tag0201Test() {

@@ -47,7 +47,7 @@ class Tag181SecuritySettlAgentContachPhoneTest {
     }
     @Test
     void FIX0181Test() {
-        FIXType fix181SecuritySettlAgentContactPhone = FIXType.SECURITY_SETTL_AGENT_CONTACT_PHONE;
+        FIXType fix181SecuritySettlAgentContactPhone = FIXType.FIX181_SECURITY_SETTL_AGENT_CONTACT_PHONE;
     }
     @Test
     void Tag0181Test() {

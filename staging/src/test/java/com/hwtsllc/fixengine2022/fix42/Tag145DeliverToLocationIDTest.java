@@ -46,7 +46,7 @@ class Tag145DeliverToLocationIDTest {
     }
     @Test
     void FIX0145Test() {
-        FIXType fix145DeliverToLocationID = FIXType.DELIVER_TO_LOCATION_ID;
+        FIXType fix145DeliverToLocationID = FIXType.FIX145_DELIVER_TO_LOCATION_ID;
     }
     @Test
     void Tag0145Test() {

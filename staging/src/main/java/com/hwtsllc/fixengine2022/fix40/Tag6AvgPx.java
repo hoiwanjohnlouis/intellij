@@ -32,7 +32,7 @@ public class Tag6AvgPx extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args      Not used.
      */
     public static void main(String[] args) {
         Tag6AvgPx tag6AvgPx = new Tag6AvgPx("23.456789");

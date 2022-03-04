@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1011MessageEventSourceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1011MessageEventSourceTest {
 
     @Test
     void FIX1011Test() {
-        FIXType fix1011MessageEventSource = FIXType.MESSAGE_EVENT_SOURCE;
+        FIXType fix1011MessageEventSource = FIXType.FIX1011_MESSAGE_EVENT_SOURCE;
     }
     @Test
     void Tag1011Test() {

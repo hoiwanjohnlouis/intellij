@@ -46,7 +46,7 @@ class Tag153AllocAvgPxTest {
     }
     @Test
     void FIX0153Test() {
-        FIXType fix153AllocAvgPx = FIXType.ALLOC_AVG_PX;
+        FIXType fix153AllocAvgPx = FIXType.FIX153_ALLOC_AVG_PX;
     }
     @Test
     void Tag0153Test() {

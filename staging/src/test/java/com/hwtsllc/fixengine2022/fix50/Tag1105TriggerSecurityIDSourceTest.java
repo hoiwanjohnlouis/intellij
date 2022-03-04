@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1105TriggerSecurityIDSourceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1105TriggerSecurityIDSourceTest {
 
     @Test
     void FIX1105Test() {
-        FIXType fix1105TriggerSecurityIDSource = FIXType.TRIGGER_SECURITY_ID_SOURCE;
+        FIXType fix1105TriggerSecurityIDSource = FIXType.FIX1105_TRIGGER_SECURITY_ID_SOURCE;
     }
     @Test
     void Tag1105Test() {

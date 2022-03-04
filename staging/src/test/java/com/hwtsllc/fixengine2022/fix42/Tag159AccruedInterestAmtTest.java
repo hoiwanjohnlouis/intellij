@@ -46,7 +46,7 @@ class Tag159AccruedInterestAmtTest {
     }
     @Test
     void FIX0159Test() {
-        FIXType fix159AccruedInterestAmt = FIXType.ACCRUED_INTEREST_AMT;
+        FIXType fix159AccruedInterestAmt = FIXType.FIX159_ACCRUED_INTEREST_AMT;
     }
     @Test
     void Tag0159Test() {

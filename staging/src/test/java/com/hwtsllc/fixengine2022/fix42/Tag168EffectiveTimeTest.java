@@ -46,7 +46,7 @@ class Tag168EffectiveTimeTest {
     }
     @Test
     void FIX0168Test() {
-        FIXType fix168EffectiveTime = FIXType.EFFECTIVE_TIME;
+        FIXType fix168EffectiveTime = FIXType.FIX168_EFFECTIVE_TIME;
     }
     @Test
     void Tag0168Test() {

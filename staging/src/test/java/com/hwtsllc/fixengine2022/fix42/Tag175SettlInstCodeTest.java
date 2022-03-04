@@ -47,7 +47,7 @@ class Tag175SettlInstCodeTest {
     }
     @Test
     void FIX0175Test() {
-        FIXType fix175SettlInstCode = FIXType.SETTL_INST_CODE;
+        FIXType fix175SettlInstCode = FIXType.FIX175_SETTL_INST_CODE;
     }
     @Test
     void Tag0175Test() {

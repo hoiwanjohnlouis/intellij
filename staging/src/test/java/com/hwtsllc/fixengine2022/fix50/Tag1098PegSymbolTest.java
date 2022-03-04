@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1098PegSymbolTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1098PegSymbolTest {
 
     @Test
     void FIX1098Test() {
-        FIXType fix1098PegSymbol = FIXType.PEG_SYMBOL;
+        FIXType fix1098PegSymbol = FIXType.FIX1098_PEG_SYMBOL;
     }
     @Test
     void Tag1098Test() {

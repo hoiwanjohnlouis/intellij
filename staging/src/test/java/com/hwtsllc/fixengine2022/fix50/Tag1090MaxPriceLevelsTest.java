@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1090MaxPriceLevelsTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1090MaxPriceLevelsTest {
 
     @Test
     void FIX1090Test() {
-        FIXType fix1090MaxPriceLevels = FIXType.MAX_PRICE_LEVELS;
+        FIXType fix1090MaxPriceLevels = FIXType.FIX1090_MAX_PRICE_LEVELS;
     }
     @Test
     void Tag1090Test() {

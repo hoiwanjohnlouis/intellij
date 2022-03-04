@@ -46,7 +46,7 @@ class Tag170StandInstDBNameTest {
     }
     @Test
     void FIX0170Test() {
-        FIXType fix170StandInstDBName = FIXType.STAND_INST_DB_NAME;
+        FIXType fix170StandInstDBName = FIXType.FIX170_STAND_INST_DB_NAME;
     }
     @Test
     void Tag0170Test() {

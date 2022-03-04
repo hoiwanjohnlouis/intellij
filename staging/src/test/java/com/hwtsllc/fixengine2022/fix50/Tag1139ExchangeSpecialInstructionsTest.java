@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag1139ExchangeSpecialInstructionsTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag1139ExchangeSpecialInstructionsTest {
 
     @Test
     void FIX1139Test() {
-        FIXType fag1139ExchangeSpecialInstructions = FIXType.EXCHANGE_SPECIAL_INSTRUCTIONS;
+        FIXType fag1139ExchangeSpecialInstructions = FIXType.FIX1139_EXCHANGE_SPECIAL_INSTRUCTIONS;
     }
     @Test
     void Tag1139Test() {

@@ -40,7 +40,7 @@ public class Tag8BeginString extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args      Not used.
      */
     public static void main(String[] args) {
         Tag8BeginString tag8BeginString = new Tag8BeginString(Tag8BeginString.BEGIN_STRING_CURRENT);

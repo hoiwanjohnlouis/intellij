@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag962SideTimeInForceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag962SideTimeInForceTest {
 
     @Test
     void FIX0962Test() {
-        FIXType fix962SideTimeInForce = FIXType.SIDE_TIME_IN_FORCE;
+        FIXType fix962SideTimeInForce = FIXType.FIX962_SIDE_TIME_IN_FORCE;
     }
     @Test
     void Tag0962Test() {

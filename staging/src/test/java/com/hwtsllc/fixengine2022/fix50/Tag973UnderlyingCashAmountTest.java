@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag973UnderlyingCashAmountTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -40,7 +38,7 @@ class Tag973UnderlyingCashAmountTest {
 
     @Test
     void FIX0973Test() {
-        FIXType fix973UnderlyingCashAmount = FIXType.UNDERLYING_CASH_AMOUNT;
+        FIXType fix973UnderlyingCashAmount = FIXType.FIX973_UNDERLYING_CASH_AMOUNT;
     }
     @Test
     void Tag0973Test() {
