@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag102CxlRejReasonTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -54,10 +52,11 @@ class Tag102CxlRejReasonTest {
     }
     @Test
     void Tag0102Test() {
-        TagType tag102CxlRejReason = new TagType(FIXType.FIX102_CXL_REJ_REASON,"ABC987654321XYZ");
-        assertEquals( tag102CxlRejReason.getFIXName(), "CXL_REJ_REASON");
-        assertEquals( tag102CxlRejReason.getFIXNumber(), 102);
-        assertEquals( tag102CxlRejReason.getFIXDescription(), "CxlRejReason");
+        Tag102CxlRejReason tag102CxlRejReason;
+        //= new Tag102CxlRejReason(CxlRejReasonEnum);
+//        assertEquals( tag102CxlRejReason.getFIXName(), "CXL_REJ_REASON");
+//        assertEquals( tag102CxlRejReason.getFIXNumber(), 102);
+//        assertEquals( tag102CxlRejReason.getFIXDescription(), "CxlRejReason");
         logger.info(WHERE_AM_I + ":Successful Tag0102Test()");
     }
 }

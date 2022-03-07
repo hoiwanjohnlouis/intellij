@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag27IOISharesTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,7 +49,7 @@ class Tag27IOISharesTest {
     }
     @Test
     void Tag0027Test() {
-        TagType tag27IOIShares = new TagType(FIXType.FIX27_IOI_SHARES,"1234");
+        Tag27IOIShares tag27IOIShares = new Tag27IOIShares();
         assertEquals( "1234", tag27IOIShares.getDataValue());
         assertNotEquals( "11", tag27IOIShares.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0027Test()");

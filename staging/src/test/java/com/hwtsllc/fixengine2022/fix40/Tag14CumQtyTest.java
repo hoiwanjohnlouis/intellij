@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.QtyType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -29,7 +29,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag14CumQtyTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,7 +50,7 @@ class Tag14CumQtyTest {
     }
     @Test
     void Tag0014Test() {
-        TagType tag14CumQty = new TagType(FIXType.FIX13_COMM_TYPE,"100");
+        Tag14CumQty tag14CumQty = new Tag14CumQty(100L );
         assertEquals( "100", tag14CumQty.getDataValue());
         assertNotEquals( "11", tag14CumQty.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0014Test()");

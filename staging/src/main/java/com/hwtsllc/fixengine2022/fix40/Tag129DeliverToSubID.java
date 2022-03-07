@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -24,4 +25,15 @@ public class Tag129DeliverToSubID extends TagTypeAbstract {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
+    public Tag129DeliverToSubID(String dataValue) {
+        setFixType(FIXType.FIX129_DELIVER_TO_SUB_ID);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag129DeliverToSubID tag129DeliverToSubID = new Tag129DeliverToSubID("FIX129_DELIVER_TO_SUB_ID-BEST");
+        System.out.println(tag129DeliverToSubID);
+        System.out.println(tag129DeliverToSubID.toLogStringVerbose());
+        System.out.println(tag129DeliverToSubID.toFixTagValuePairString());
+    }
 }

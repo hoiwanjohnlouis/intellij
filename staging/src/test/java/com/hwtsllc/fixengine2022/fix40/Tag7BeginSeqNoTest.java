@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag7BeginSeqNoTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,7 +49,7 @@ class Tag7BeginSeqNoTest {
     }
     @Test
     void Tag0007Test() {
-        TagType tag7BeginSeqNo = new TagType(FIXType.FIX7_BEGIN_SEQ_NO,"12345");
+        Tag7BeginSeqNo tag7BeginSeqNo = new Tag7BeginSeqNo("12345");
         assertEquals( "12345", tag7BeginSeqNo.getDataValue());
         assertNotEquals( "6789", tag7BeginSeqNo.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0007Test()");

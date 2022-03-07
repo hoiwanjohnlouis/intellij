@@ -17,13 +17,29 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.QtyType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag15Currency extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final FIXType fixType = FIXType.FIX15_CURRENCY;
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX15_CURRENCY;
+    public Tag15Currency(String currency) {
+        setFixType(FIXType.FIX15_CURRENCY);
+        setDataValue(currency);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag14CumQty tag14CumQty = new Tag14CumQty(1234L);
+        System.out.println(tag14CumQty);
+        System.out.println(tag14CumQty.toLogStringVerbose());
+        System.out.println(tag14CumQty.toFixTagValuePairString());
+    }
 }

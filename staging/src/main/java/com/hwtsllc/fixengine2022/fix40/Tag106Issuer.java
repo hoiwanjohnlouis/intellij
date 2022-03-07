@@ -22,8 +22,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag106Issuer extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX106_ISSUER;
+    public Tag106Issuer(String dataValue) {
+        setFixType(FIXType.FIX106_ISSUER);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag106Issuer tag106Issuer = new Tag106Issuer("GNMA");
+        System.out.println(tag106Issuer);
+        System.out.println(tag106Issuer.toLogStringVerbose());
+        System.out.println(tag106Issuer.toFixTagValuePairString());
+    }
 }

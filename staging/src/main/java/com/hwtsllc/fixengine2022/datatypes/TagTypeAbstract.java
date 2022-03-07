@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 import java.util.Locale;
 
@@ -24,7 +26,7 @@ import java.util.Locale;
  *
  *
  */
-public abstract class TagTypeAbstract {
+public class TagTypeAbstract implements LogStringVerbose, FixTagValuePairString {
 
     private FIXType fixType;
     private String dataValue;

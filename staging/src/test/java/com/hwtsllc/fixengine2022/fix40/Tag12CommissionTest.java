@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag12CommissionTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,7 +49,7 @@ class Tag12CommissionTest {
     }
     @Test
     void Tag0012Test() {
-        TagType tag12Commission = new TagType(FIXType.FIX12_COMMISSION,"10");
+        Tag12Commission tag12Commission = new Tag12Commission("10");
         assertEquals( "10", tag12Commission.getDataValue());
         assertNotEquals( "11", tag12Commission.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0012Test()");

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -54,7 +53,7 @@ class  Tag1AccountTest {
     }
     @Test
     void Tag0001Test() {
-        TagType tag1Account = new TagType(FIXType.FIX1_ACCOUNT,"ABC987654321XYZ");
+        Tag1Account tag1Account = new Tag1Account("ABC987654321XYZ");
         assertEquals( "ABC987654321XYZ", tag1Account.getDataValue());
         assertNotEquals( "abcdefghij", tag1Account.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0001Test()");

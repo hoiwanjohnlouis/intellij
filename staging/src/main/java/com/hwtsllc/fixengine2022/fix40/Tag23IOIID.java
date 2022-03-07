@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag23IOIID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX23_IOI_ID;
+    public Tag23IOIID(String dataValue) {
+        setFixType(FIXType.FIX23_IOI_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag23IOIID tag23IOIID = new Tag23IOIID("JohnWick-43");
+        System.out.println(tag23IOIID);
+        System.out.println(tag23IOIID.toLogStringVerbose());
+        System.out.println(tag23IOIID.toFixTagValuePairString());
+    }
 }

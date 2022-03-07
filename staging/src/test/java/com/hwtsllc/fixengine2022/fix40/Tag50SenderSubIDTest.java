@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -50,7 +49,7 @@ class Tag50SenderSubIDTest {
     }
     @Test
     void Tag0050Test() {
-        TagType tag50SenderSubID = new TagType(FIXType.FIX50_SENDER_SUB_ID,"BEST");
+        Tag50SenderSubID tag50SenderSubID = new Tag50SenderSubID("BEST");
         assertEquals( "BEST", tag50SenderSubID.getDataValue());
         assertNotEquals( "A11", tag50SenderSubID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0050Test()");

@@ -16,5 +16,8 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public class NumInGroupType {
 }

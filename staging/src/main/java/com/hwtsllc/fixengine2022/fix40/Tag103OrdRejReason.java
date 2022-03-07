@@ -16,5 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-public enum Tag103OrdRejReason {
+import com.hwtsllc.fixengine2022.datatypes.Enum103OrdRejReason;
+import com.hwtsllc.fixengine2022.datatypes.Enum4AdvSide;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+public class Tag103OrdRejReason extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private Enum103OrdRejReason enum103OrdRejReason;
+
+    public Tag103OrdRejReason(Enum103OrdRejReason enum103OrdRejReason) {
+        setFixType(FIXType.FIX103_ORD_REJ_REASON);
+        setDataValue(enum103OrdRejReason.getAction());
+        this.enum103OrdRejReason = enum103OrdRejReason;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag103OrdRejReason tag103OrdRejReason = new Tag103OrdRejReason(Enum103OrdRejReason.OTHER);
+        System.out.println(Enum103OrdRejReason.OTHER);
+        System.out.println(tag103OrdRejReason);
+        System.out.println(tag103OrdRejReason.toFixTagValuePairString());
+    }
 }

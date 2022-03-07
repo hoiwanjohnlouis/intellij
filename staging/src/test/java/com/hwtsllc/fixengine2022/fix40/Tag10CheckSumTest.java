@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag10CheckSumTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,9 +49,9 @@ class Tag10CheckSumTest {
     }
     @Test
     void Tag0010Test() {
-        TagType tag10CheckSum = new TagType(FIXType.FIX10_CHECK_SUM,"ABCD");
-        assertEquals( "ABCD", tag10CheckSum.getDataValue());
-        assertNotEquals( "abcd", tag10CheckSum.getDataValue());
+        Tag10CheckSum tag10CheckSum = new Tag10CheckSum("ABC");
+        assertEquals( "ABC", tag10CheckSum.getDataValue());
+        assertNotEquals( "abc", tag10CheckSum.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0010Test()");
     }
 }

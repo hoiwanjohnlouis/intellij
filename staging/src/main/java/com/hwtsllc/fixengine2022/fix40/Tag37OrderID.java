@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag37OrderID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX37_ORDER_ID;
+    public Tag37OrderID(String dataValue) {
+        setFixType(FIXType.FIX37_ORDER_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag37OrderID tag37OrderID = new Tag37OrderID("JohnWick-2384");
+        System.out.println(tag37OrderID);
+        System.out.println(tag37OrderID.toLogStringVerbose());
+        System.out.println(tag37OrderID.toFixTagValuePairString());
+    }
 }

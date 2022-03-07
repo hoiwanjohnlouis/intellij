@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag6AvgPxTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -46,14 +44,14 @@ class Tag6AvgPxTest {
         assertEquals( 6, fix6AvgPx.getFIXNumber());
         assertEquals( "AvgPx", fix6AvgPx.getFIXDescription());
         assertNotEquals( "AVG PX", fix6AvgPx.getFIXName());
-        assertNotEquals( 66, fix6AvgPx.getFIXNumber());
+        assertNotEquals( 6666, fix6AvgPx.getFIXNumber());
         assertNotEquals( "Avg Px", fix6AvgPx.getFIXDescription());
     }
     @Test
     void Tag0006Test() {
-        TagType tag5AdvTransType = new TagType(FIXType.FIX6_AVG_PX,"123.45");
-        assertEquals( "123.45", tag5AdvTransType.getDataValue());
-        assertNotEquals( "67.89", tag5AdvTransType.getDataValue());
+        Tag6AvgPx tag6AvgPx = new Tag6AvgPx("123.45");
+        assertEquals( "123.45", tag6AvgPx.getDataValue());
+        assertNotEquals( "67.89", tag6AvgPx.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0006Test()");
     }
 }

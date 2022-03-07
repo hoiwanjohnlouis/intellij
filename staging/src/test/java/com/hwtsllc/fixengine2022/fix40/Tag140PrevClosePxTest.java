@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag140PrevClosePxTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -46,15 +44,12 @@ class Tag140PrevClosePxTest {
     @Test
     void FIX0140Test() {
         FIXType fix140PrevClosePx = FIXType.FIX140_PREV_CLOSE_PX;
-        assertEquals( fix140PrevClosePx.getFIXName(), "PREV_CLOSE_PX");
-        assertEquals( fix140PrevClosePx.getFIXNumber(), 140);
-        assertEquals( fix140PrevClosePx.getFIXDescription(), "PrevClosePx");
+        assertEquals( "PREV_CLOSE_PX", fix140PrevClosePx.getFIXName() );
+        assertEquals( 140, fix140PrevClosePx.getFIXNumber() );
+        assertEquals( "PrevClosePx", fix140PrevClosePx.getFIXDescription() );
     }
     @Test
     void Tag0140Test() {
-        TagType tag140PrevClosePx = new TagType(FIXType.FIX140_PREV_CLOSE_PX,"10.23");
-        assertEquals( tag140PrevClosePx.getFIXName(), "PREV_CLOSE_PX");
-        assertEquals( tag140PrevClosePx.getFIXNumber(), 140);
-        assertEquals( tag140PrevClosePx.getFIXDescription(), "PrevClosePx");
+        Tag140PrevClosePx tag140PrevClosePx = new Tag140PrevClosePx(10.23D);
     }
 }

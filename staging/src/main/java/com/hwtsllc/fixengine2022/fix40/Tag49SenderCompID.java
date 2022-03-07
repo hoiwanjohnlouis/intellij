@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag49SenderCompID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX49_SENDER_COMP_ID;
+    public Tag49SenderCompID(String dataValue) {
+        setFixType(FIXType.FIX49_SENDER_COMP_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag49SenderCompID tag49SenderCompID = new Tag49SenderCompID("JPMC");
+        System.out.println(tag49SenderCompID);
+        System.out.println(tag49SenderCompID.toLogStringVerbose());
+        System.out.println(tag49SenderCompID.toFixTagValuePairString());
+    }
 }

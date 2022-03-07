@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -48,16 +47,13 @@ class Tag105WaveNoTest {
     @Test
     void FIX0105Test() {
         FIXType fix105WaveNo = FIXType.FIX105_WAVE_NO;
-        assertEquals( fix105WaveNo.getFIXName(), "WAVE_NO");
-        assertEquals( fix105WaveNo.getFIXNumber(), 105);
-        assertEquals( fix105WaveNo.getFIXDescription(), "WaveNo");
+        assertEquals( "WAVE_NO", fix105WaveNo.getFIXName());
+        assertEquals( 105, fix105WaveNo.getFIXNumber());
+        assertEquals( "WaveNo", fix105WaveNo.getFIXDescription());
     }
     @Test
     void Tag0105Test() {
-        TagType tag105WaveNo = new TagType(FIXType.FIX105_WAVE_NO,"interested in Mahlers 4th Symphony");
-        assertEquals( tag105WaveNo.getFIXName(), "WAVE_NO");
-        assertEquals( tag105WaveNo.getFIXNumber(), 105);
-        assertEquals( tag105WaveNo.getFIXDescription(), "WaveNo");
-//        logger.info(WHERE_AM_I + ":Successful Tag0105Test()");
+        Tag105WaveNo tag105WaveNo = new Tag105WaveNo("interested in Mahlers 4th Symphony");
+        logger.info(WHERE_AM_I + ":Successful Tag0105Test()");
     }
 }

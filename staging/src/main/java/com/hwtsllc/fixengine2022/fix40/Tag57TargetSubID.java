@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag57TargetSubID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX57_TARGET_SUB_ID;
+    public Tag57TargetSubID(String dataValue) {
+        setFixType(FIXType.FIX57_TARGET_SUB_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag57TargetSubID tag57TargetSubID = new Tag57TargetSubID("FLYER");
+        System.out.println(tag57TargetSubID);
+        System.out.println(tag57TargetSubID.toLogStringVerbose());
+        System.out.println(tag57TargetSubID.toFixTagValuePairString());
+    }
 }

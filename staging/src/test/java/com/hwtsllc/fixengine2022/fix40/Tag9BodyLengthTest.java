@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag9BodyLengthTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,7 +49,7 @@ class Tag9BodyLengthTest {
     }
     @Test
     void Tag0009Test() {
-        TagType tag9BodyLength = new TagType(FIXType.FIX9_BODY_LENGTH,"120");
+        Tag9BodyLength tag9BodyLength = new Tag9BodyLength("120");
         assertEquals( "120", tag9BodyLength.getDataValue());
         assertNotEquals( "6789", tag9BodyLength.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0009Test()");

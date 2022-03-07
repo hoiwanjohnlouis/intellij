@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -24,4 +25,15 @@ public class Tag108HeartBtInt extends TagTypeAbstract {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
+    public Tag108HeartBtInt(String dataValue) {
+        setFixType(FIXType.FIX108_HEART_BT_INT);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag108HeartBtInt tag108HeartBtInt = new Tag108HeartBtInt("60");
+        System.out.println(tag108HeartBtInt);
+        System.out.println(tag108HeartBtInt.toLogStringVerbose());
+        System.out.println(tag108HeartBtInt.toFixTagValuePairString());
+    }
 }

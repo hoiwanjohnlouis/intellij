@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag45RefSeqNumTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,7 +49,7 @@ class Tag45RefSeqNumTest {
     }
     @Test
     void Tag0045Test() {
-        TagType tag45RefSeqNum = new TagType(FIXType.FIX45_REF_SEQ_NUM,"6789");
+        Tag45RefSeqNum tag45RefSeqNum = new Tag45RefSeqNum();
         assertEquals( "6789", tag45RefSeqNum.getDataValue());
         assertNotEquals( "11", tag45RefSeqNum.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0045Test()");

@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
+import com.hwtsllc.fixengine2022.datatypes.Enum8BeginString;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +29,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag8BeginStringTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,8 +50,8 @@ class Tag8BeginStringTest {
     }
     @Test
     void Tag0008Test() {
-        TagType tag8BeginString = new TagType(FIXType.FIX8_BEGIN_STRING,"FIX4.0");
-        assertEquals( "FIX4.0", tag8BeginString.getDataValue());
+        Tag8BeginString tag8BeginString = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_2);
+        assertEquals( "FIX4.2", tag8BeginString.getDataValue());
         assertNotEquals( "FIX4.4", tag8BeginString.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0008Test()");
     }

@@ -19,6 +19,12 @@ package com.hwtsllc.fixengine2022.datatypes;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+/**
+ * Used in various tags such as FIX121_FOREX_REQ, etc
+ *
+ * each tag uses the enum differently, review each tag independently
+ *
+ */
 public enum BooleanEnum {
     NO ("N", "NO", "No"),
     YES ("Y", "YES", "Yes"),
@@ -27,42 +33,60 @@ public enum BooleanEnum {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final String booleanAction;
-    private final String booleanName;
-    private final String booleanDescription;
+    private final String action;
+    private final String name;
+    private final String description;
 
-    BooleanEnum(final String booleanAction, final String booleanName, final String booleanDescription) {
-        this.booleanAction = booleanAction;
-        this.booleanName = booleanName;
-        this.booleanDescription = booleanDescription;
+    BooleanEnum(final String action, final String name, final String description) {
+        this.action = action;
+        this.name = name;
+        this.description = description;
     }
 
-    public String getBooleanTypeEnumName() {
+    public String getEnumName() {
         return this.name();
     }
-    public String getBooleanAction() {
-        return booleanAction;
+    public String getAction() {
+        return action;
     }
-    public String getBooleanName() {
-        return booleanName;
+    public String getName() {
+        return name;
     }
-    public String getBooleanDescription() {
-        return booleanDescription;
+    public String getDescription() {
+        return description;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(getBooleanTypeEnumName())
+        sb.append(getEnumName())
                 .append("=[")
-                .append(getBooleanAction())
+                .append(getAction())
                 .append(",")
-                .append(getBooleanName())
+                .append(getName())
                 .append(",")
-                .append(getBooleanDescription())
+                .append(getDescription())
                 .append("]");
         return sb.toString();
     }
+    public String toLogStringVerbose() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.getClass().getSimpleName())
+                .append("\n\tEnumName[")
+                .append(getEnumName())
+                .append("]")
+                .append("\n\tAction[")
+                .append(getAction())
+                .append("]")
+                .append("\n\tName[")
+                .append(getName())
+                .append("]")
+                .append("\n\tDescription[")
+                .append(getDescription())
+                .append("]");
+        return sb.toString();
+    }
+
 
     /**
      *

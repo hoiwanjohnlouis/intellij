@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
+import com.hwtsllc.fixengine2022.datatypes.Enum13CommType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +29,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag13CommTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,7 +50,7 @@ class Tag13CommTypeTest {
     }
     @Test
     void Tag0013Test() {
-        TagType fix13CommType = new TagType(FIXType.FIX13_COMM_TYPE,"PCT");
+        Tag13CommType fix13CommType = new Tag13CommType(Enum13CommType.PERCENT);
         assertEquals( "PCT", fix13CommType.getDataValue());
         assertNotEquals( "11", fix13CommType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0013Test()");

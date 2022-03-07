@@ -16,9 +16,7 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
 import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -31,7 +29,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class TestViews {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,17 +48,17 @@ public class TestViews {
     public static void main (String[] args) {
 
         Tag55Symbol tag55Symbol = new Tag55Symbol(Tag55Symbol.TESTA_TICKER_SYMBOL);
-        TradeView testView =
-                new TradeView.TradeViewBuilder(Tag35MsgType.EXECUTION_REPORT).
-                        buildTickerSymbol(tag55Symbol).
-                        build();
+        TradeView testView = null;
+//                new TradeView.TradeViewBuilder(Tag35MsgType.EXECUTION_REPORT).
+//                        buildTickerSymbol(tag55Symbol).
+//                        build();
         System.out.println(testView);
         logger.info(testView);
 
-        PriceView priceView =
-                new PriceView.PriceViewBuilder(Tag35MsgType.EXECUTION_REPORT).
-                        buildTickerSymbol(tag55Symbol).
-                        build();
+        PriceView priceView = null;
+//                new PriceView.PriceViewBuilder(Tag35MsgType.EXECUTION_REPORT).
+//                        buildTickerSymbol(tag55Symbol).
+//                        build();
         System.out.println(priceView);
     }
 }

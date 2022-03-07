@@ -32,7 +32,8 @@ public class Tag58Text extends TagTypeAbstract {
 
     public static void main(String[] args) {
         Tag58Text tag58TExt = new Tag58Text("hello from main routine");
-        System.out.println("t1.1:"+tag58TExt);
-        System.out.println("t1.2:"+tag58TExt.toLogStringVerbose());
+        System.out.println(tag58TExt);
+        System.out.println(tag58TExt.toLogStringVerbose());
+        System.out.println(tag58TExt.toFixTagValuePairString());
     }
 }

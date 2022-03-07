@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag15CurrencyTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,7 +49,7 @@ class Tag15CurrencyTest {
     }
     @Test
     void Tag0015Test() {
-        TagType tag15Currency = new TagType(FIXType.FIX15_CURRENCY,"USD");
+        Tag15Currency tag15Currency = new Tag15Currency("USD");
         assertEquals( "USD", tag15Currency.getDataValue());
         assertNotEquals( "EURO", tag15Currency.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0015Test()");

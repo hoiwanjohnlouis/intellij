@@ -17,13 +17,31 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.QtyType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag14CumQty extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX14_CUM_QTY;
+    private QtyType qtyType;
+
+    public Tag14CumQty(long qtyType) {
+        setFixType(FIXType.FIX14_CUM_QTY);
+        setDataValue(String.valueOf(qtyType));
+        this.qtyType = new QtyType(qtyType);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag14CumQty tag14CumQty = new Tag14CumQty(1234L);
+        System.out.println(tag14CumQty);
+        System.out.println(tag14CumQty.toLogStringVerbose());
+        System.out.println(tag14CumQty.toFixTagValuePairString());
+    }
 }

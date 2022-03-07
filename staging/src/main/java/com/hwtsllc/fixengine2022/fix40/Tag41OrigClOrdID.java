@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag41OrigClOrdID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX41_ORIG_CL_ORD_ID;
+    public Tag41OrigClOrdID(String dataValue) {
+        setFixType(FIXType.FIX41_ORIG_CL_ORD_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag41OrigClOrdID tag41OrigClOrdID = new Tag41OrigClOrdID("JohnWick-6");
+        System.out.println(tag41OrigClOrdID);
+        System.out.println(tag41OrigClOrdID.toLogStringVerbose());
+        System.out.println(tag41OrigClOrdID.toFixTagValuePairString());
+    }
 }

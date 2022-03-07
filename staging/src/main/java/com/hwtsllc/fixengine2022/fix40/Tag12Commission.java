@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag12Commission extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX12_COMMISSION;
+    public Tag12Commission(String dataValue) {
+        setFixType(FIXType.FIX12_COMMISSION);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag12Commission tag12Commission = new Tag12Commission("10.25");
+        System.out.println(tag12Commission);
+        System.out.println(tag12Commission.toLogStringVerbose());
+        System.out.println(tag12Commission.toFixTagValuePairString());
+    }
 }

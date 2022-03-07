@@ -23,8 +23,20 @@ import org.apache.log4j.Logger;
 
 @Deprecated
 public class Tag105WaveNo extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     private final FIXType fixType = FIXType.FIX105_WAVE_NO;
+
+    public Tag105WaveNo(String dataValue) {
+        setFixType(FIXType.FIX105_WAVE_NO);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag105WaveNo tag105WaveNo = new Tag105WaveNo("CATCH-A-WAVE 105");
+        System.out.println(tag105WaveNo);
+        System.out.println(tag105WaveNo.toLogStringVerbose());
+        System.out.println(tag105WaveNo.toFixTagValuePairString());
+    }
 }

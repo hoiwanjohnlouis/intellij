@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag56TargetCompID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX56_TARGET_COMP_ID;
+    public Tag56TargetCompID(String dataValue) {
+        setFixType(FIXType.FIX56_TARGET_COMP_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag56TargetCompID tag56TargetCompID = new Tag56TargetCompID("SUNG");
+        System.out.println(tag56TargetCompID);
+        System.out.println(tag56TargetCompID.toLogStringVerbose());
+        System.out.println(tag56TargetCompID.toFixTagValuePairString());
+    }
 }

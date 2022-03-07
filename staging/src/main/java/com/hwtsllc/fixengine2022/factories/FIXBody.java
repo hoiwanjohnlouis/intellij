@@ -29,8 +29,6 @@ public class FIXBody implements LogStringVerbose {
     // private static final Logger logger = LogManager.getRootLogger();
     private static final Logger logger = LogManager.getLogger(FIXBody.class);
 
-    private final Tag35MsgType tag35MsgType;
-    private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
     private final Tag140PrevClosePx tag140PrevClosePx;
     private final Tag31LastPx tag31LastPx;
@@ -39,8 +37,6 @@ public class FIXBody implements LogStringVerbose {
 
     //
     private FIXBody(FIXBody.Builder builder) {
-        this.tag35MsgType = builder.tag35MsgType;
-        this.tag55Symbol = builder.tag55Symbol;
         this.openingPrice = builder.openingPrice;
         this.tag140PrevClosePx = builder.tag140PrevClosePx;
         this.tag31LastPx = builder.tag31LastPx;
@@ -48,12 +44,6 @@ public class FIXBody implements LogStringVerbose {
         this.tag60TransactTime = builder.tag60TransactTime;
     }
 
-    public Tag35MsgType getMsgType() {
-        return tag35MsgType;
-    }
-    public Tag55Symbol getTickerSymbol() {
-        return tag55Symbol;
-    }
     public OpeningPrice getOpeningPrice() {
         return openingPrice;
     }
@@ -75,10 +65,7 @@ public class FIXBody implements LogStringVerbose {
         StringBuilder stringBuilder = new StringBuilder();
 
         // clean up the buffer before using.
-        stringBuilder.append(tag35MsgType.getTag35MsgTypeValue())
-            .append("\n")
-            .append(tag55Symbol.getTickerSymbol())
-            .append("\n")
+        stringBuilder
             .append(openingPrice.getPrice())
             .append("\n")
             .append(tag140PrevClosePx.getTag140PrevClosePxValue())
@@ -96,10 +83,7 @@ public class FIXBody implements LogStringVerbose {
         StringBuilder stringBuilder = new StringBuilder();
 
         // clean up the buffer before using.
-        stringBuilder.append(tag35MsgType)
-            .append("\n\t")
-            .append(tag55Symbol)
-            .append("\n\t")
+        stringBuilder
             .append(openingPrice)
             .append("\n\t")
             .append(tag140PrevClosePx)
@@ -121,10 +105,8 @@ public class FIXBody implements LogStringVerbose {
     public static class Builder {
         private StringBuilder stringBuilder = new StringBuilder();
 
-        private Tag35MsgType tag35MsgType;
         private Tag53Quantity tag53Shares;
         private Tag54Side tag54Side;
-        private Tag55Symbol tag55Symbol;              // 2
         private OpeningPrice openingPrice;              // 3
         private Tag140PrevClosePx tag140PrevClosePx;    // 4
         private Tag31LastPx tag31LastPx;          // 5
@@ -132,13 +114,7 @@ public class FIXBody implements LogStringVerbose {
         private Tag60TransactTime tag60TransactTime;  // 8
 
         // helper class to build object
-        public Builder(Tag35MsgType tag35MsgType) {
-            this.tag35MsgType = tag35MsgType;
-        }
-
-        public Builder buildTickerSymbol(String tickerSymbol) {
-            this.tag55Symbol = new Tag55Symbol(tickerSymbol);
-            return this;
+        public Builder() {
         }
 
         public Builder buildOpeningPrice(double openingPrice) {
@@ -177,8 +153,7 @@ public class FIXBody implements LogStringVerbose {
      */
     public static void main(String[] args) {
         FIXBody record =
-                new FIXBody.Builder(Tag35MsgType.NEW_ORDER)
-                        .buildTickerSymbol(Tag55Symbol.TESTA_TICKER_SYMBOL)
+                new FIXBody.Builder()
                         .buildOpeningPrice(12.34D)
                         .buildPreviousDaysClosingPrice(56.78D)
                         .buildLastTradePrice(90.12D)

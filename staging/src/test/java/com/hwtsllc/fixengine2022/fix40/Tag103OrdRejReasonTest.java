@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
+import com.hwtsllc.fixengine2022.datatypes.Enum103OrdRejReason;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -54,7 +54,7 @@ class Tag103OrdRejReasonTest {
     }
     @Test
     void Tag0103Test() {
-        TagType tag103OrdRejReason = new TagType(FIXType.FIX103_ORD_REJ_REASON,"ABC987654321XYZ");
+        Tag103OrdRejReason tag103OrdRejReason = new Tag103OrdRejReason(Enum103OrdRejReason.OTHER);
         assertEquals( tag103OrdRejReason.getFIXName(), "ORD_REJ_REASON");
         assertEquals( tag103OrdRejReason.getFIXNumber(), 103);
         assertEquals( tag103OrdRejReason.getFIXDescription(), "OrdRejReason");

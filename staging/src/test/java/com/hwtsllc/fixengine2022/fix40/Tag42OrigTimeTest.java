@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag42OrigTimeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,9 +49,9 @@ class Tag42OrigTimeTest {
     }
     @Test
     void Tag0042Test() {
-        TagType tag42OrigTime = new TagType(FIXType.FIX42_ORIG_TIME,"20220131");
-        assertEquals( "20220131", tag42OrigTime.getDataValue());
-        assertNotEquals( "A11", tag42OrigTime.getDataValue());
+        Tag42OrigTime tag42OrigTime;
+//        assertEquals( "20220131", tag42OrigTime.getDataValue());
+//        assertNotEquals( "A11", tag42OrigTime.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0042Test()");
     }
 }

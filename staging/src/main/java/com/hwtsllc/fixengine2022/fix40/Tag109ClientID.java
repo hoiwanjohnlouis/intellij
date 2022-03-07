@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -25,4 +26,15 @@ public class Tag109ClientID extends TagTypeAbstract {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
+    public Tag109ClientID(String dataValue) {
+        setFixType(FIXType.FIX109_CLIENT_ID);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag109ClientID tag109ClientID = new Tag109ClientID("Intel Corporation, Inc.");
+        System.out.println(tag109ClientID);
+        System.out.println(tag109ClientID.toLogStringVerbose());
+        System.out.println(tag109ClientID.toFixTagValuePairString());
+    }
 }

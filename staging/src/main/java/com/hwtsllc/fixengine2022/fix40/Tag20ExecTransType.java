@@ -21,9 +21,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 @Deprecated
-public enum Tag20ExecTransType {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag20ExecTransType {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     private final FIXType fixType = FIXType.FIX20_EXEC_TRANS_TYPE;

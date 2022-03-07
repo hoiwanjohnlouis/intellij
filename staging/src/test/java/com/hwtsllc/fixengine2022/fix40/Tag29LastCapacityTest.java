@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
+import com.hwtsllc.fixengine2022.datatypes.Enum29LastCapacity;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +29,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag29LastCapacityTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,9 +50,7 @@ class Tag29LastCapacityTest {
     }
     @Test
     void Tag0029Test() {
-        TagType tag29LastCapacity = new TagType(FIXType.FIX29_LAST_CAPACITY,"A");
-        assertEquals( "A", tag29LastCapacity.getDataValue());
-        assertNotEquals( "11", tag29LastCapacity.getDataValue());
+        Tag29LastCapacity tag29LastCapacity;
         logger.info(WHERE_AM_I + ":Successful Tag0029Test()");
     }
 }

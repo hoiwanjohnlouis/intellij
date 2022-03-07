@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.AdvSideEnum;
+import com.hwtsllc.fixengine2022.datatypes.Enum4AdvSide;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
@@ -26,12 +26,12 @@ public class Tag4AdvSide extends TagTypeAbstract {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private AdvSideEnum advSideEnum;
+    private Enum4AdvSide enum4AdvSide;
 
-    public Tag4AdvSide(AdvSideEnum advSideEnum) {
+    public Tag4AdvSide(Enum4AdvSide enum4AdvSide) {
         setFixType(FIXType.FIX4_ADV_SIDE);
-        setDataValue(advSideEnum.getAdvSideAction());
-        this.advSideEnum = advSideEnum;
+        setDataValue(enum4AdvSide.getAction());
+        this.enum4AdvSide = enum4AdvSide;
     }
 
     /**
@@ -39,14 +39,14 @@ public class Tag4AdvSide extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag4AdvSide tag4AdvSideBuy = new Tag4AdvSide(AdvSideEnum.BUY);
-        Tag4AdvSide tag4AdvSideSell = new Tag4AdvSide(AdvSideEnum.SELL);
-        Tag4AdvSide tag4AdvSideCross = new Tag4AdvSide(AdvSideEnum.CROSS);
-        Tag4AdvSide tag4AdvSideTrade = new Tag4AdvSide(AdvSideEnum.TRADE);
-        System.out.println(AdvSideEnum.BUY);
-        System.out.println(AdvSideEnum.SELL);
-        System.out.println(AdvSideEnum.CROSS);
-        System.out.println(AdvSideEnum.TRADE);
+        Tag4AdvSide tag4AdvSideBuy = new Tag4AdvSide(Enum4AdvSide.BUY);
+        Tag4AdvSide tag4AdvSideSell = new Tag4AdvSide(Enum4AdvSide.SELL);
+        Tag4AdvSide tag4AdvSideCross = new Tag4AdvSide(Enum4AdvSide.CROSS);
+        Tag4AdvSide tag4AdvSideTrade = new Tag4AdvSide(Enum4AdvSide.TRADE);
+        System.out.println(Enum4AdvSide.BUY);
+        System.out.println(Enum4AdvSide.SELL);
+        System.out.println(Enum4AdvSide.CROSS);
+        System.out.println(Enum4AdvSide.TRADE);
         System.out.println(tag4AdvSideBuy);
         System.out.println(tag4AdvSideSell);
         System.out.println(tag4AdvSideCross);

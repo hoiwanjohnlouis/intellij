@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag50SenderSubID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX50_SENDER_SUB_ID;
+    public Tag50SenderSubID(String dataValue) {
+        setFixType(FIXType.FIX50_SENDER_SUB_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag50SenderSubID tag50SenderSubID = new Tag50SenderSubID("FBCO");
+        System.out.println(tag50SenderSubID);
+        System.out.println(tag50SenderSubID.toLogStringVerbose());
+        System.out.println(tag50SenderSubID.toFixTagValuePairString());
+    }
 }

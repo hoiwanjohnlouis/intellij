@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -24,4 +25,15 @@ public class Tag112TestReqID extends TagTypeAbstract {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
+    public Tag112TestReqID(String dataValue) {
+        setFixType(FIXType.FIX112_TEST_REQ_ID);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag112TestReqID tag112TestReqID = new Tag112TestReqID("TEST-REQ-ID");
+        System.out.println(tag112TestReqID);
+        System.out.println(tag112TestReqID.toLogStringVerbose());
+        System.out.println(tag112TestReqID.toFixTagValuePairString());
+    }
 }

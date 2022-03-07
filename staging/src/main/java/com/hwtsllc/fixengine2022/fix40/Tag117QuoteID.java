@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -24,4 +25,15 @@ public class Tag117QuoteID extends TagTypeAbstract {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
+    public Tag117QuoteID(String dataValue) {
+        setFixType(FIXType.FIX117_QUOTE_ID);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag117QuoteID tag117QuoteID = new Tag117QuoteID("QUOTE-ID_MSCO");
+        System.out.println(tag117QuoteID);
+        System.out.println(tag117QuoteID.toLogStringVerbose());
+        System.out.println(tag117QuoteID.toFixTagValuePairString());
+    }
 }

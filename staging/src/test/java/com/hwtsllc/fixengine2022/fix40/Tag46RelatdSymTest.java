@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -30,7 +29,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag46RelatdSymTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -52,7 +50,7 @@ class Tag46RelatdSymTest {
     }
     @Test
     void Tag0046Test() {
-        TagType tag46RelatdSym = new TagType(FIXType.FIX46_RELATD_SYM,"N");
+        Tag46RelatdSym tag46RelatdSym = new Tag46RelatdSym();
         assertEquals( "N", tag46RelatdSym.getDataValue());
         assertNotEquals( "A11", tag46RelatdSym.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0046Test()");

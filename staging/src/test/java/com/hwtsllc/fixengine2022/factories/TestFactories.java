@@ -33,7 +33,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class TestFactories {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -50,16 +49,10 @@ public class TestFactories {
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
     }
 
+    /**
+     *
+     * @param args      Not used.
+     */
     public static void main (String[] args) {
-
-        //  testing ticker record construction
-        Tag55Symbol tag55Symbol = new Tag55Symbol(Tag55Symbol.TESTA_TICKER_SYMBOL);
-        TradeView testView =
-                new TradeView.TradeViewBuilder(Tag35MsgType.EXECUTION_REPORT).
-                        buildTickerSymbol(tag55Symbol).
-                        build();
-        System.out.println(testView);
-
     }
-
 }

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -51,7 +50,7 @@ class Tag34MsgSeqNumTest {
     }
     @Test
     void Tag0034Test() {
-        TagType tag34MsgSeqNum = new TagType(FIXType.FIX34_MSG_SEQ_NUM,"12345");
+        Tag34MsgSeqNum tag34MsgSeqNum = new Tag34MsgSeqNum();
         assertEquals( "12345", tag34MsgSeqNum.getDataValue());
         assertNotEquals( "11", tag34MsgSeqNum.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0034Test()");

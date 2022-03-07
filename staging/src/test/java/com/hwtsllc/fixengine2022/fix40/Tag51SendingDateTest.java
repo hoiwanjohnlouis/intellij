@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix43.Tag510NoDistribInsts;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -29,7 +30,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag51SendingDateTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -41,19 +41,23 @@ class Tag51SendingDateTest {
 
     @Test
     void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
     void FIX0051Test() {
         FIXType fix51SendingDate = FIXType.FIX51_SENDING_DATE;
+        assertEquals( "SENDING_DATE", fix51SendingDate.getFIXName());
+        assertEquals( 51, fix51SendingDate.getFIXNumber());
+        assertEquals( "SendingDate (no longer used)", fix51SendingDate.getFIXDescription());
+        assertNotEquals( "SENDING_DATE SENDING_DATE", fix51SendingDate.getFIXName());
+        assertNotEquals( 3123, fix51SendingDate.getFIXNumber());
+        assertNotEquals( "SendingDate SendingDate", fix51SendingDate.getFIXDescription());
     }
     @Test
     void Tag0051Test() {
-        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        Tag51SendingDate tag50SenderSubID = new Tag51SendingDate();
+        assertEquals( "BEST", tag50SenderSubID.getDataValue());
+        assertNotEquals( "A11", tag50SenderSubID.getDataValue());
+        logger.info(WHERE_AM_I + ":Successful Tag0050Test()");
     }
 }

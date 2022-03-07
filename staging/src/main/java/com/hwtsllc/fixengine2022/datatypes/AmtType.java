@@ -16,5 +16,9 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+/**
+ * Used in various tags such as FIX12_COMMISSION, FIX118_NET_MONEY, FIX119_SETTL_CURR_AMT, etc
+ *
+ */
 public class AmtType {
 }

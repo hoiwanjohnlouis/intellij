@@ -22,8 +22,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag66ListID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX66_LIST_ID;
+    public Tag66ListID(String dataValue) {
+        setFixType(FIXType.FIX66_LIST_ID);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag66ListID tag66ListID = new Tag66ListID("the quick brown fox jumped over the lazy dog");
+        System.out.println(tag66ListID);
+        System.out.println(tag66ListID.toLogStringVerbose());
+        System.out.println(tag66ListID.toFixTagValuePairString());
+    }
 }

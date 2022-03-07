@@ -22,8 +22,22 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag17ExecID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX17_EXEC_ID;
+    public Tag17ExecID(String dataValue) {
+        setFixType(FIXType.FIX17_EXEC_ID);
+        setDataValue(dataValue);
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag17ExecID tag17ExecID = new Tag17ExecID("JohnWick-9876");
+        System.out.println(tag17ExecID);
+        System.out.println(tag17ExecID.toLogStringVerbose());
+        System.out.println(tag17ExecID.toFixTagValuePairString());
+    }
 }

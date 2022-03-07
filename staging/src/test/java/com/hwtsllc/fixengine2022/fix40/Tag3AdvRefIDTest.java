@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -50,7 +49,7 @@ class Tag3AdvRefIDTest {
     }
     @Test
     void Tag0003Test() {
-        TagType tag3AdvRefID = new TagType(FIXType.FIX3_ADV_REF_ID,"hello from main routine");
+        Tag3AdvRefID tag3AdvRefID = new Tag3AdvRefID("hello from main routine");
         assertEquals( "hello from main routine", tag3AdvRefID.getDataValue());
         assertNotEquals( "goodbye from main routine", tag3AdvRefID.getDataValue());
     }

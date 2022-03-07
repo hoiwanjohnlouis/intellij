@@ -36,7 +36,7 @@ public enum FIXType {
     FIX2_ADV_ID(2, "ADV_ID", "AdvId"),
     FIX3_ADV_REF_ID(3, "ADV_REF_ID", "AdvRefId"),
     FIX4_ADV_SIDE(4, "ADV_SIDE", "AdvSide"),
-    FIX5_ADV_TRANS_TYPE(5, "ADV_TRANS_TYPE", "AdvTransTypeEnum"),
+    FIX5_ADV_TRANS_TYPE(5, "ADV_TRANS_TYPE", "Enum5AdvTransType"),
     FIX6_AVG_PX(6, "AVG_PX", "AvgPx"),
     FIX7_BEGIN_SEQ_NO(7, "BEGIN_SEQ_NO", "BeginSeqNo"),
     FIX8_BEGIN_STRING(8, "BEGIN_STRING", "BeginString"),
@@ -55,7 +55,7 @@ public enum FIXType {
     FIX20_EXEC_TRANS_TYPE(20, "EXEC_TRANS_TYPE", "ExecTransType (replaced)"),
 
     FIX21_HANDL_INST(21, "HANDL_INST", "HandlInst"),
-    FIX22_ID_SOURCE(22, "ID_SOURCE", "IDSource"),
+    FIX22_SECURITY_ID_SOURCE(22, "SECURITY_ID_SOURCE", "SecurityIDSource"),
     FIX23_IOI_ID(23, "IOI_ID", "IOIid"),
     FIX24_IOI_OTH_SVC(24, "IOI_OTH_SVC", "IOIOthSvc (no longer used)"),
     FIX25_IOI_QLTY_IND(25, "IOI_QLTY_IND", "IOIQltyInd"),
@@ -67,7 +67,7 @@ public enum FIXType {
 
     FIX31_LAST_PX(31, "LAST_PX", "LastPx"),
     FIX32_LAST_QTY(32, "LAST_QTY", "LastQty"),
-    FIX33_LINES_OF_TEXT(33, "LINES_OF_TEXT", "LinesOfText"),
+    FIX33_NO_LINES_OF_TEXT(33, "NO_LINES_OF_TEXT", "NoLinesOfText"),
     FIX34_MSG_SEQ_NUM(34, "MSG_SEQ_NUM", "MsgSeqNum"),
     FIX35_MSG_TYPE(35, "MSG_TYPE", "MsgType"),
     FIX36_NEW_SEQ_NO(36, "NEW_SEQ_NO", "NewSeqNo"),
@@ -1438,7 +1438,7 @@ public enum FIXType {
         System.out.println(FIXType.FIX20_EXEC_TRANS_TYPE);
 
         System.out.println(FIXType.FIX21_HANDL_INST);
-        System.out.println(FIXType.FIX22_ID_SOURCE);
+        System.out.println(FIXType.FIX22_SECURITY_ID_SOURCE);
         System.out.println(FIXType.FIX23_IOI_ID);
         System.out.println(FIXType.FIX24_IOI_OTH_SVC);
         System.out.println(FIXType.FIX25_IOI_QLTY_IND);
@@ -1450,7 +1450,7 @@ public enum FIXType {
 
         System.out.println(FIXType.FIX31_LAST_PX);
         System.out.println(FIXType.FIX32_LAST_QTY);
-        System.out.println(FIXType.FIX33_LINES_OF_TEXT);
+        System.out.println(FIXType.FIX33_NO_LINES_OF_TEXT);
         System.out.println(FIXType.FIX34_MSG_SEQ_NUM);
         System.out.println(FIXType.FIX35_MSG_TYPE);
         System.out.println(FIXType.FIX36_NEW_SEQ_NO);

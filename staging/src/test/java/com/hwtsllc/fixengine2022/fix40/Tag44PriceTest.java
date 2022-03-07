@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag44PriceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -51,9 +49,9 @@ class Tag44PriceTest {
     }
     @Test
     void Tag0044Test() {
-        TagType tag44Price = new TagType(FIXType.FIX44_PRICE,"10.43");
-        assertEquals( "10.43", tag44Price.getDataValue());
-        assertNotEquals( "11.01", tag44Price.getDataValue());
+        Tag44Price tag44Price;
+//        assertEquals( "10.43", tag44Price.getDataValue());
+//        assertNotEquals( "11.01", tag44Price.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0044Test()");
     }
 }

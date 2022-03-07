@@ -49,8 +49,7 @@ class FIXBodyTest {
     @Test
     void TestFIXBody1() {
         FIXBody record =
-                new FIXBody.Builder(Tag35MsgType.NEW_ORDER)
-                        .buildTickerSymbol(Tag55Symbol.TESTA_TICKER_SYMBOL)
+                new FIXBody.Builder()
                         .buildOpeningPrice(12.34D)
                         .buildPreviousDaysClosingPrice(56.78D)
                         .buildLastTradePrice(90.12D)

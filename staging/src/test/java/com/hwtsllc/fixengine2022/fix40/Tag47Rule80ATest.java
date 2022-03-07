@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix43.Tag470CountryOfIssue;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -30,7 +30,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag47Rule80ATest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -52,9 +51,10 @@ class Tag47Rule80ATest {
     }
     @Test
     void Tag0047Test() {
-        TagType tag47Rule80A = new TagType(FIXType.FIX47_RULE_80_A,"N");
-        assertEquals( "N", tag47Rule80A.getDataValue());
-        assertNotEquals( "A11", tag47Rule80A.getDataValue());
+        Tag47Rule80A tag47Rule80A;
+                // = new Tag47Rule80A(FIXType.FIX47_RULE_80_A,"N");
+//        assertEquals( "N", tag47Rule80A.getDataValue());
+//        assertNotEquals( "A11", tag47Rule80A.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0047Test()");
     }
 }

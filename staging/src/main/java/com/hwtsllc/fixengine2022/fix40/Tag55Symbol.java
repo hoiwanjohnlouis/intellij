@@ -16,41 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.FieldType;
 
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Tag55Symbol {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag55Symbol extends TagTypeAbstract {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     public final static String TESTA_TICKER_SYMBOL = "TESTA_SYMBOL";
     public final static String TESTB_TICKER_SYMBOL = "TESTB_SYMBOL";
 
-    private final FieldType fieldType = FieldType.TICKER_SYMBOL;
-    private final String tickerSymbol;
-
-    public Tag55Symbol(final String tickerSymbol) {
-        this.tickerSymbol = tickerSymbol;
+    public Tag55Symbol(String dataValue) {
+        setFixType(FIXType.FIX55_SYMBOL);
+        setDataValue(dataValue);
     }
 
-    public FieldType getFieldType() {
-        return fieldType;
-    }
-
-    public String getTickerSymbol() {
-        return tickerSymbol;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getFieldType().name());
-        sb.append(":[");
-        sb.append(getTickerSymbol());
-        sb.append("]");
-
-        return sb.toString();
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag55Symbol tag55Symbol = new Tag55Symbol("MSFT");
+        System.out.println(tag55Symbol);
+        System.out.println(tag55Symbol.toLogStringVerbose());
+        System.out.println(tag55Symbol.toFixTagValuePairString());
     }
 }

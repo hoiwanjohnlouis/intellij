@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Tag108HeartBtIntTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -54,7 +52,7 @@ class Tag108HeartBtIntTest {
     }
     @Test
     void Tag0108Test() {
-        TagType tag108HeartBtInt = new TagType(FIXType.FIX108_HEART_BT_INT,"60");
+        Tag108HeartBtInt tag108HeartBtInt = new Tag108HeartBtInt("60");
         assertEquals( tag108HeartBtInt.getFIXName(), "HEART_BT_INT");
         assertEquals( tag108HeartBtInt.getFIXNumber(), 108);
         assertEquals( tag108HeartBtInt.getFIXDescription(), "HeartBtInt");

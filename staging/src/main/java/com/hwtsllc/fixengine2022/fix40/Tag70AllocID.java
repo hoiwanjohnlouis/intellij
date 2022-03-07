@@ -22,8 +22,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Tag70AllocID extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private final FIXType fixType = FIXType.FIX70_ALLOC_ID;
+    public Tag70AllocID(String dataValue) {
+        setFixType(FIXType.FIX70_ALLOC_ID);
+        setDataValue(dataValue);
+    }
+
+    public static void main(String[] args) {
+        Tag70AllocID tag70AllocID = new Tag70AllocID("ALLOCATE-THE-TRADES");
+        System.out.println(tag70AllocID);
+        System.out.println(tag70AllocID.toLogStringVerbose());
+        System.out.println(tag70AllocID.toFixTagValuePairString());
+    }
 }

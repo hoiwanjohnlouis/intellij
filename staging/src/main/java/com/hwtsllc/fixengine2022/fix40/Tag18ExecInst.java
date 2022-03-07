@@ -20,9 +20,8 @@ import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Tag18ExecInst {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
+public class Tag18ExecInst {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     private final FIXType fixType = FIXType.FIX18_EXEC_INST;

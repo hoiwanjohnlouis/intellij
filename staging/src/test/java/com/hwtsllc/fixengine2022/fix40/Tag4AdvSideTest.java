@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40;
 
-import com.hwtsllc.fixengine2022.datatypes.TagType;
+import com.hwtsllc.fixengine2022.datatypes.Enum4AdvSide;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -51,8 +51,8 @@ class Tag4AdvSideTest {
     }
     @Test
     void Tag0004Test() {
-        TagType tag4AdvSide = new TagType(FIXType.FIX4_ADV_SIDE,"ABC987654321XYZ");
-        assertEquals( "ABC987654321XYZ", tag4AdvSide.getDataValue());
+        Tag4AdvSide tag4AdvSide = new Tag4AdvSide(Enum4AdvSide.BUY);
+        assertEquals( "B", tag4AdvSide.getDataValue());
         assertNotEquals( "abcdefghij", tag4AdvSide.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0004Test()");
     }
