@@ -16,8 +16,11 @@
 
 package com.hwtsllc.fixengine2022.msgs.application;
 
+import com.hwtsllc.fixengine2022.fix27.tags.Tag31LastPx;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag32LastQty;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag60TransactTime;
 import com.hwtsllc.fixengine2022.fix40.*;
-import com.hwtsllc.fixengine2022.fix40.Tag140PrevClosePx;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrevClosePx;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

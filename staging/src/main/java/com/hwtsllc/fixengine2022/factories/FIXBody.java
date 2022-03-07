@@ -16,9 +16,9 @@
 
 package com.hwtsllc.fixengine2022.factories;
 
+import com.hwtsllc.fixengine2022.fix27.tags.*;
 import com.hwtsllc.fixengine2022.fix40.*;
-import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
-import com.hwtsllc.fixengine2022.fix40.Tag140PrevClosePx;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrevClosePx;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 import org.apache.log4j.LogManager;

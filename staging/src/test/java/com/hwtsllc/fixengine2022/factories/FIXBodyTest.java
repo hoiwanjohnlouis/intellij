@@ -16,9 +16,6 @@
 
 package com.hwtsllc.fixengine2022.factories;
 
-import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
-import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
-import com.hwtsllc.fixengine2022.views.TradeView;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;

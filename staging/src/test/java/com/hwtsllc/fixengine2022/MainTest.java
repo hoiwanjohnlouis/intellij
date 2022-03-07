@@ -16,9 +16,6 @@
 
 package com.hwtsllc.fixengine2022;
 
-import com.hwtsllc.fixengine2022.factories.FIXBody;
-import com.hwtsllc.fixengine2022.fix40.Tag35MsgType;
-import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

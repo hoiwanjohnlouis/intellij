@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.fix40.Tag55Symbol;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag55Symbol;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;

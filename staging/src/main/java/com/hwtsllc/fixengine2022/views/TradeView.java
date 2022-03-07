@@ -16,6 +16,10 @@
 
 package com.hwtsllc.fixengine2022.views;
 
+import com.hwtsllc.fixengine2022.fix27.tags.Tag31LastPx;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag32LastQty;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag35MsgType;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag60TransactTime;
 import com.hwtsllc.fixengine2022.fix40.*;
 
 import org.apache.log4j.LogManager;
