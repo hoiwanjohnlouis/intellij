@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
- * Used in FIX5_ADV_TRANS_TYPE
- *
  * Enum5AdvTransType enum defines all the possible values for AdvSide (FIX) fields.
  * It consists of 3 fields.
  *
@@ -30,7 +28,6 @@ import org.apache.log4j.Logger;
  * String advTransTypeDescription  describes what the action entails
  */
 public enum Enum5AdvTransType {
-
     NEW ("N", "NEW", "New"),
     CANCEL ("C", "CANCEL", "Cancel"),
     REPLACE ("R", "REPLACE", "Replace"),

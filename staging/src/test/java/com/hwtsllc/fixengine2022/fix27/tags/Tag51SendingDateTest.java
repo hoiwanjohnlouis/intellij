@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag51SendingDate;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -55,9 +54,10 @@ class Tag51SendingDateTest {
     }
     @Test
     void Tag0051Test() {
-        Tag51SendingDate tag50SenderSubID = new Tag51SendingDate();
-        assertEquals( "BEST", tag50SenderSubID.getDataValue());
-        assertNotEquals( "A11", tag50SenderSubID.getDataValue());
+        Tag51SendingDate Tag51SendingDate;
+        //= new Tag51SendingDate();
+//        assertEquals( "BEST", Tag51SendingDate.getDataValue());
+//        assertNotEquals( "A11", Tag51SendingDate.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0050Test()");
     }
 }

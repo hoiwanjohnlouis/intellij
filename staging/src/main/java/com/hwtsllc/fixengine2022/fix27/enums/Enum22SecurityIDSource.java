@@ -24,6 +24,31 @@ import org.apache.log4j.Logger;
  *
  */
 public enum Enum22SecurityIDSource {
+    CUSIP("1", "CUSIP", "1 - CUSIP - Committee on Uniform Securities Identification Procedures" ),
+    SEDOL("2", "SEDOL", "2 - SEDOL - Stock Exchange Daily Official List," ),
+    QUIK("3", "QUIK", "3 - QUIK" ),
+    ISIN("4", "ISIN", "4 - ISIN - The International Securities Identification Number" ),
+    RIC("5", "RIC", "5 - RIC - Reuters Instrument Code" ),
+    ISO_CURRENCY_CODE("6", "ISO_CURRENCY_CODE", "6 - ISO Currency Code" ),
+    ISO_COUNTRY_CODE("7", "ISO_COUNTRY_CODE", "7 - ISO Country Code" ),
+    EXCHANGE_SYMBOL("8", "EXCHANGE_SYMBOL", "8 - Exchange Symbol" ),
+    CTA("9", "CTA",
+            "9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)" ),
+    BLOOMBERG("A", "BLOOMBERG", "A - Bloomberg Symbol" ),
+    WERTPAPIER("B", "WERTPAPIER", "B - Wertpapier" ),
+    DUTCH("C", "DUTCH", "C - Dutch" ),
+    VALOREN("D", "VALOREN", "D - Valoren" ),
+    SICOVAM("E", "SICOVAM", "E - Sicovam" ),
+    BELGIAN("F", "BELGIAN", "F - Belgian" ),
+    COMMON("G", "COMMON", "G - Common (Clearstream and Euroclear)" ),
+    CLEARING_HOUSE_OR_ORGANIZATION("H", "CLEARING_HOUSE_OR_ORGANIZATION",
+            "H - Clearing House or Clearing Organization" ),
+    ISDA_PRODUCT_SPECIFICATION("I", "ISDA_PRODUCT_SPECIFICATION",
+            "I - ISDA/FpML Product Specification (XML in EncodedSecurityDesc)" ),
+    OPTION_PRICE_REPORTING_AUTHORITY("J", "OPTION_PRICE_REPORTING_AUTHORITY",
+            "J - Option Price Reporting Authority" ),
+    ISDA_PRODUCT_URL("K", "ISDA_PRODUCT_URL", "K - ISDA/FpML Product URL (URL in SecurityID)" ),
+    LETTER_OF_CREDIT("L", "LETTER_OF_CREDIT", "L - Letter of Credit" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -87,6 +112,30 @@ public enum Enum22SecurityIDSource {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum22SecurityIDSource.CUSIP);
+        System.out.println(Enum22SecurityIDSource.SEDOL);
+        System.out.println(Enum22SecurityIDSource.QUIK);
+        System.out.println(Enum22SecurityIDSource.ISIN);
+        System.out.println(Enum22SecurityIDSource.RIC);
+
+        System.out.println(Enum22SecurityIDSource.ISO_CURRENCY_CODE);
+        System.out.println(Enum22SecurityIDSource.ISO_COUNTRY_CODE);
+        System.out.println(Enum22SecurityIDSource.EXCHANGE_SYMBOL);
+        System.out.println(Enum22SecurityIDSource.CTA);
+        System.out.println(Enum22SecurityIDSource.BLOOMBERG);
+
+        System.out.println(Enum22SecurityIDSource.WERTPAPIER);
+        System.out.println(Enum22SecurityIDSource.DUTCH);
+        System.out.println(Enum22SecurityIDSource.VALOREN);
+        System.out.println(Enum22SecurityIDSource.SICOVAM);
+        System.out.println(Enum22SecurityIDSource.BELGIAN);
+
+        System.out.println(Enum22SecurityIDSource.COMMON);
+        System.out.println(Enum22SecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION);
+        System.out.println(Enum22SecurityIDSource.ISDA_PRODUCT_SPECIFICATION);
+        System.out.println(Enum22SecurityIDSource.OPTION_PRICE_REPORTING_AUTHORITY);
+        System.out.println(Enum22SecurityIDSource.ISDA_PRODUCT_URL);
+
+        System.out.println(Enum22SecurityIDSource.LETTER_OF_CREDIT);
     }
 }

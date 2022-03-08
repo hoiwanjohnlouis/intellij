@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag241UnderlyingCouponPaymentDate;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -50,9 +51,10 @@ class Tag24IOIOthSvcTest {
     }
     @Test
     void Tag0024Test() {
-        TagType tag24IOIOthSvc = new TagType(FIXType.FIX24_IOI_OTH_SVC,"A");
-        assertEquals( "A", tag24IOIOthSvc.getDataValue());
-        assertNotEquals( "11", tag24IOIOthSvc.getDataValue());
+        Tag24IOIOthSvc tag24IOIOthSvc;
+        //= new Tag24IOIOthSvc();
+//        assertEquals( "A", tag24IOIOthSvc.getDataValue());
+//        assertNotEquals( "11", tag24IOIOthSvc.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0024Test()");
     }
 }

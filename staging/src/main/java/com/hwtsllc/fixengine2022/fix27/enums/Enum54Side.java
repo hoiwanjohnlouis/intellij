@@ -28,7 +28,6 @@ import org.apache.log4j.Logger;
  * String sideDescription      describes what the action entails
  */
 public enum Enum54Side {
-
     BUY ("1", "BUY", "Buy"),
     SELL ("2", "SELL", "Sell"),
     BUY_MINUS ("3", "BUY_MINUS", "Buy minus"),

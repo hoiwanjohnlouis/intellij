@@ -52,8 +52,8 @@ class Tag13CommTypeTest {
     @Test
     void Tag0013Test() {
         Tag13CommType fix13CommType = new Tag13CommType(Enum13CommType.PERCENT);
-        assertEquals( "PCT", fix13CommType.getDataValue());
-        assertNotEquals( "11", fix13CommType.getDataValue());
+        assertEquals( "2", fix13CommType.getDataValue());
+        assertNotEquals( "3333", fix13CommType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0013Test()");
     }
 }

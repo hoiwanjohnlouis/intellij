@@ -50,9 +50,10 @@ class Tag30LastMktTest {
     }
     @Test
     void Tag0030Test() {
-        Tag30LastMkt tag30LastMkt = new Tag30LastMkt();
-        assertEquals( "N", tag30LastMkt.getDataValue());
-        assertNotEquals( "A11", tag30LastMkt.getDataValue());
+        Tag30LastMkt tag30LastMkt;
+        //= new Tag30LastMkt();
+//        assertEquals( "N", tag30LastMkt.getDataValue());
+//        assertNotEquals( "A11", tag30LastMkt.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0030Test()");
     }
 }

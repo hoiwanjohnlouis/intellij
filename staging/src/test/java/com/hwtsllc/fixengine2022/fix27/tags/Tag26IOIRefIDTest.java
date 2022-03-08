@@ -49,7 +49,7 @@ class Tag26IOIRefIDTest {
     }
     @Test
     void Tag0026Test() {
-        TagType tag26IOIRefID = new TagType(FIXType.FIX26_IOI_REF_ID,"A");
+        Tag26IOIRefID tag26IOIRefID = new Tag26IOIRefID("A");
         assertEquals( "A", tag26IOIRefID.getDataValue());
         assertNotEquals( "11", tag26IOIRefID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0026Test()");

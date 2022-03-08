@@ -19,10 +19,6 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-/**
- *
- * Used in FIX13_COMM_TYPE
- */
 public enum Enum13CommType {
     PER_UNIT ("1", "PER_UNIT", "Per Unit (implying shares, par, currency, etc.)"),
     PERCENT ("2", "PERCENT", "Percent"),

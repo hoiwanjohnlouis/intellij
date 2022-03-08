@@ -32,7 +32,7 @@ public class Tag16EndSeqNo extends TagTypeAbstract {
 
     /**
      *
-     * @param args
+     * @param args          no used
      */
     public static void main(String[] args) {
         Tag16EndSeqNo tag16EndSeqNo = new Tag16EndSeqNo("987654321");

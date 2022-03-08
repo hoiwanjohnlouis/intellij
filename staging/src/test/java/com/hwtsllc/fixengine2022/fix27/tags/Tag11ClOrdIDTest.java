@@ -51,7 +51,7 @@ class Tag11ClOrdIDTest {
     @Test
     void Tag0011Test() {
         Tag11ClOrdID tag11ClOrdID = new Tag11ClOrdID("MLCO-ABCD1234");
-        assertEquals( "ABCD1234", tag11ClOrdID.getDataValue());
+        assertEquals( "MLCO-ABCD1234", tag11ClOrdID.getDataValue());
         assertNotEquals( "abcd", tag11ClOrdID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0011Test()");
     }

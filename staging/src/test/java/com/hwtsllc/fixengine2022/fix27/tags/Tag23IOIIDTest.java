@@ -49,7 +49,7 @@ class Tag23IOIIDTest {
     }
     @Test
     void Tag0023Test() {
-        TagType tag23IOIID = new TagType(FIXType.FIX23_IOI_ID,"A");
+        Tag23IOIID tag23IOIID = new Tag23IOIID("A");
         assertEquals( "A", tag23IOIID.getDataValue());
         assertNotEquals( "11", tag23IOIID.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0023Test()");

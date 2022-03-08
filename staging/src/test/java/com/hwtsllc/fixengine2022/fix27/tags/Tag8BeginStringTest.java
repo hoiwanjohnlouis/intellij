@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.fix27.enums.Enum8BeginString;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag8BeginString;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -52,8 +51,8 @@ class Tag8BeginStringTest {
     @Test
     void Tag0008Test() {
         Tag8BeginString tag8BeginString = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_2);
-        assertEquals( "FIX4.2", tag8BeginString.getDataValue());
-        assertNotEquals( "FIX4.4", tag8BeginString.getDataValue());
+        assertEquals( "FIX.4.2", tag8BeginString.getDataValue());
+        assertNotEquals( "FIX.4.22", tag8BeginString.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0008Test()");
     }
 }

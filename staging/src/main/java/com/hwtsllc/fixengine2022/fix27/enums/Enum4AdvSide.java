@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
- * Used in FIX4_ADV_SIDE
- *
  * Enum4AdvSide enum defines all the possible values for AdvSide (FIX) fields.
  * It consists of 3 fields.
  *
@@ -30,7 +28,6 @@ import org.apache.log4j.Logger;
  * String description       describes what the action entails
  */
 public enum Enum4AdvSide {
-
     BUY ("B", "BUY", "Buy"),
     SELL ("S", "SELL", "Sell"),
     CROSS ("X", "CROSS", "Cross"),
