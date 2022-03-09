@@ -18,9 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,10 +34,58 @@ class Enum27IOIQtyTest {
     void tearDown() {
     }
 
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Enum27IOIQtyTest()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Enum27IOIQtyTest()");
+    }
+
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0027Test() {
+        Enum27IOIQty enumType;
+
+        enumType = Enum27IOIQty.ONE_BILLION;
+        assertEquals("0", enumType.getAction());
+        assertEquals("ONE_BILLION", enumType.getName());
+        assertEquals("0 - 1,000,000,000", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum27IOIQty.SMALL;
+        assertEquals("S", enumType.getAction());
+        assertEquals("SMALL", enumType.getName());
+        assertEquals("S - Small", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum27IOIQty.MEDIUM;
+        assertEquals("M", enumType.getAction());
+        assertEquals("MEDIUM", enumType.getName());
+        assertEquals("M - Medium", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum27IOIQty.LARGE;
+        assertEquals("L", enumType.getAction());
+        assertEquals("LARGE", enumType.getName());
+        assertEquals("L - Large", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum27IOIQty.UNDISCLOSED_QUANTITY;
+        assertEquals("U", enumType.getAction());
+        assertEquals("UNDISCLOSED_QUANTITY", enumType.getName());
+        assertEquals("U - Undisclosed Quantity", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

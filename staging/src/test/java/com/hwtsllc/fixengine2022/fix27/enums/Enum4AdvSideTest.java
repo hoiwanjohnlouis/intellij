@@ -16,11 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,10 +35,50 @@ class Enum4AdvSideTest {
     void tearDown() {
     }
 
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Enum4AdvSideTest()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Enum4AdvSideTest()");
+    }
+
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0004Test() {
+        Enum4AdvSide enumType;
+
+        enumType = Enum4AdvSide.BUY;
+        assertEquals("B", enumType.getAction());
+        assertEquals("BUY", enumType.getName());
+        assertEquals("B - Buy", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum4AdvSide.SELL;
+        assertEquals("S", enumType.getAction());
+        assertEquals("SELL", enumType.getName());
+        assertEquals("S - Sell", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum4AdvSide.CROSS;
+        assertEquals("X", enumType.getAction());
+        assertEquals("CROSS", enumType.getName());
+        assertEquals("X - Cross", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum4AdvSide.TRADE;
+        assertEquals("T", enumType.getAction());
+        assertEquals("TRADE", enumType.getName());
+        assertEquals("T - Trade", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

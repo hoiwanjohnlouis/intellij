@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.SeqNumType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -25,9 +26,12 @@ public class Tag7BeginSeqNo extends TagTypeAbstract {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    public Tag7BeginSeqNo(String dataValue) {
+    private SeqNumType seqNum;
+
+    public Tag7BeginSeqNo(final String dataValue) {
         setFixType(FIXType.FIX7_BEGIN_SEQ_NO);
         setDataValue(dataValue);
+        // this.seqNum = (int) dataValue;
     }
 
     /**

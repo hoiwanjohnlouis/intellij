@@ -18,9 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,10 +34,50 @@ class Enum20ExecTransTypeTest {
     void tearDown() {
     }
 
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Enum20ExecTransTypeTest()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Enum20ExecTransTypeTest()");
+    }
+
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0020Test() {
+        Enum20ExecTransType enumType;
+
+        enumType = Enum20ExecTransType.NEW;
+        assertEquals("0", enumType.getAction());
+        assertEquals("NEW", enumType.getName());
+        assertEquals("0 - New", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum20ExecTransType.CANCEL;
+        assertEquals("1", enumType.getAction());
+        assertEquals("CANCEL", enumType.getName());
+        assertEquals("1 - Cancel", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum20ExecTransType.CORRECT;
+        assertEquals("2", enumType.getAction());
+        assertEquals("CORRECT", enumType.getName());
+        assertEquals("2 - Correct", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum20ExecTransType.STATUS;
+        assertEquals("3", enumType.getAction());
+        assertEquals("STATUS", enumType.getName());
+        assertEquals("3 - Status", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

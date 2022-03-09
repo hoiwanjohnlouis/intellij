@@ -22,11 +22,12 @@ import org.apache.log4j.Logger;
 public enum Enum102CxlRejReason {
     TOO_LATE_TO_CANCEL("0", "TOO_LATE_TO_CANCEL", "Too late to cancel"),
     UNKNOWN_ORDER("1", "UNKNOWN_ORDER", "Unknown order"),
-    BROKER_OPTION("2", "BROKER_OPTION", "Broker Option"),
+    BROKER_OR_EXCHANGE_OPTION("2", "BROKER_OR_EXCHANGE_OPTION", "Broker or Exchange Option"),
     PENDING_STATUS("3", "PENDING_STATUS", "Pending status"),
-    UNABLE_TO_PROCESS("4", "PENDING_STATUS", "Unable to process Order Mass Cancel Request"),
-    UNMATCHED_ORIG_ORD_MOD_TIME("5", "UNMATCHED_ORIG_ORD_MOD_TIME", "OrigOrdModTime (586) did not match last " +
-            "TransactTime (60) of order"),
+    UNABLE_TO_PROCESS_MASS_CANCEL_REQUEST("4", "UNABLE_TO_PROCESS_MASS_CANCEL_REQUEST",
+            "Unable to process Order Mass Cancel Request"),
+    UNMATCHED_ORIG_ORD_MOD_TIME("5", "UNMATCHED_ORIG_ORD_MOD_TIME",
+            "OrigOrdModTime (586) did not match last TransactTime (60) of order"),
     DUPLICATE_CLORDID("6", "DUPLICATE_CLORDID", "Duplicate ClOrdID (11) received"),
     INVALID_PRICE_INCREMENT("18", "INVALID_PRICE_INCREMENT", "Invalid price increment"),
     OTHER("99", "OTHER", "Other"),
@@ -79,8 +80,13 @@ public enum Enum102CxlRejReason {
     public static void main(String[] args) {
         System.out.println(Enum102CxlRejReason.TOO_LATE_TO_CANCEL);
         System.out.println(Enum102CxlRejReason.UNKNOWN_ORDER);
-        System.out.println(Enum102CxlRejReason.BROKER_OPTION);
+        System.out.println(Enum102CxlRejReason.BROKER_OR_EXCHANGE_OPTION);
         System.out.println(Enum102CxlRejReason.PENDING_STATUS);
-    }
+        System.out.println(Enum102CxlRejReason.UNABLE_TO_PROCESS_MASS_CANCEL_REQUEST);
 
+        System.out.println(Enum102CxlRejReason.UNMATCHED_ORIG_ORD_MOD_TIME);
+        System.out.println(Enum102CxlRejReason.DUPLICATE_CLORDID);
+        System.out.println(Enum102CxlRejReason.INVALID_PRICE_INCREMENT);
+        System.out.println(Enum102CxlRejReason.OTHER);
+    }
 }

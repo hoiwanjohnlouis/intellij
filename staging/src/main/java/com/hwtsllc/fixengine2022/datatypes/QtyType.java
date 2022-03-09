@@ -22,26 +22,32 @@ import org.apache.log4j.Logger;
 /**
  *
  * QtyType is a wrapper class for the Qty field
- * Initially it will be a long.
+ * Initially it will be a int.
  */
 public class QtyType {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private long qty;
+    private int dataValue;
 
-    public QtyType(final long qty) {
-        this.qty = qty;
+    public QtyType(final int dataValue) {
+        this.dataValue = dataValue;
     }
 
-    public long getQtyValue() {
-        return qty;
+    public long getDataValue() {
+        return dataValue;
+    }
+    public void setDataValue(final int dataValue) {
+        this.dataValue = dataValue;
+    }
+    public void incrementDataValue(final int dataValue) {
+        this.dataValue = this.dataValue + dataValue;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(getQtyValue());
+        sb.append(getDataValue());
         return sb.toString();
     }
     /**
@@ -49,7 +55,11 @@ public class QtyType {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        QtyType qtyType = new QtyType(12345L);
+        QtyType qtyType = new QtyType(12345);
         System.out.println(qtyType);
+        qtyType.setDataValue(200);
+        System.out.println(qtyType.getDataValue());
+        qtyType.incrementDataValue(200);
+        System.out.println(qtyType.getDataValue());
     }
 }

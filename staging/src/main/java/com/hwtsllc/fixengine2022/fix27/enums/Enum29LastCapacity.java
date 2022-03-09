@@ -20,10 +20,10 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum29LastCapacity {
-    AGENT("1", "AGENT", "Agent" ),
-    CROSS_AS_AGENT("2", "CROSS_AS_AGENT", "Cross as agent" ),
-    CROSS_AS_PRINCIPAL("3", "CROSS_AS_PRINCIPAL", "Cross as principal" ),
-    PRINCIPAL("4", "PRINCIPAL", "Principal" ),
+    AGENT("1", "AGENT", "1 - Agent" ),
+    CROSS_AS_AGENT("2", "CROSS_AS_AGENT", "2 - Cross as agent" ),
+    CROSS_AS_PRINCIPAL("3", "CROSS_AS_PRINCIPAL", "3 - Cross as principal" ),
+    PRINCIPAL("4", "PRINCIPAL", "4 - Principal" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

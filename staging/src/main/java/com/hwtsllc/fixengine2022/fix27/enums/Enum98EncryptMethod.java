@@ -20,6 +20,13 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum98EncryptMethod {
+    NONE_OR_OTHER("0", "NONE_OR_OTHER", "0 - None / Other"),
+    PKCS("1", "PKCS", "1 - PKCS (Proprietary)"),
+    DES_ECB("2", "DES_ECB", "2 - DES (ECB Mode)"),
+    PKCS_DES("3", "PKCS_DES", "3 - PKCS / DES (Proprietary)"),
+    PGP_DES("4", "PGP_DES", "4 - PGP / DES (Defunct)"),
+    PGP_DES_MD5("5", "PGP_DES_MD5", "5 - PGP / DES-MD5 (See app note on FIX web site)"),
+    PEM_DES_MD5("6", "PEM_DES_MD5", "6 - PEM / DES-MD5 (see app note on FIX web site)"),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +90,12 @@ public enum Enum98EncryptMethod {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum98EncryptMethod.NONE_OR_OTHER);
+        System.out.println(Enum98EncryptMethod.PKCS);
+        System.out.println(Enum98EncryptMethod.DES_ECB);
+        System.out.println(Enum98EncryptMethod.PKCS_DES);
+        System.out.println(Enum98EncryptMethod.PGP_DES);
+        System.out.println(Enum98EncryptMethod.PGP_DES_MD5);
+        System.out.println(Enum98EncryptMethod.PEM_DES_MD5);
     }
 }

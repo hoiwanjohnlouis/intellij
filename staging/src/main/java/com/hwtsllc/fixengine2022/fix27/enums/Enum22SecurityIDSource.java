@@ -19,13 +19,9 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-/**
- * Used in FIX20_EXEC_TRANS_TYPE
- *
- */
 public enum Enum22SecurityIDSource {
     CUSIP("1", "CUSIP", "1 - CUSIP - Committee on Uniform Securities Identification Procedures" ),
-    SEDOL("2", "SEDOL", "2 - SEDOL - Stock Exchange Daily Official List," ),
+    SEDOL("2", "SEDOL", "2 - SEDOL - Stock Exchange Daily Official List" ),
     QUIK("3", "QUIK", "3 - QUIK" ),
     ISIN("4", "ISIN", "4 - ISIN - The International Securities Identification Number" ),
     RIC("5", "RIC", "5 - RIC - Reuters Instrument Code" ),

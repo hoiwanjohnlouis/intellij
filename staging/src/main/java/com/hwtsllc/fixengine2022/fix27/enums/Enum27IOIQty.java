@@ -20,11 +20,11 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum27IOIQty {
-    ONE_BILLION("0", "ONE_BILLION", "1,000,000,000" ),
-    SMALL("S", "SMALL", "Small" ),
-    MEDIUM("M", "MEDIUM", "Medium" ),
-    LARGE("L", "LARGE", "Large" ),
-    UNDISCLOSED_QUANTITY("U", "UNDISCLOSED_QUANTITY", "Undisclosed Quantity" ),
+    ONE_BILLION("0", "ONE_BILLION", "0 - 1,000,000,000" ),
+    SMALL("S", "SMALL", "S - Small" ),
+    MEDIUM("M", "MEDIUM", "M - Medium" ),
+    LARGE("L", "LARGE", "L - Large" ),
+    UNDISCLOSED_QUANTITY("U", "UNDISCLOSED_QUANTITY", "U - Undisclosed Quantity" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

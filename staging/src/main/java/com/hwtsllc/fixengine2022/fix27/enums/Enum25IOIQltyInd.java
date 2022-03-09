@@ -20,9 +20,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum25IOIQltyInd {
-    HIGH("H", "HIGH", "High" ),
-    LOW("L", "LOW", "Low" ),
-    MEDIUM("M", "MEDIUM", "Medium" ),
+    HIGH("H", "HIGH", "H - High" ),
+    LOW("L", "LOW", "L - Low" ),
+    MEDIUM("M", "MEDIUM", "M - Medium" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

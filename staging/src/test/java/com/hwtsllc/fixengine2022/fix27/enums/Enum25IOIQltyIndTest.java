@@ -18,9 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,10 +34,42 @@ class Enum25IOIQltyIndTest {
     void tearDown() {
     }
 
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Enum25IOIQltyIndTest()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Enum25IOIQltyIndTest()");
+    }
+
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0025Test() {
+        Enum25IOIQltyInd enumType;
+
+        enumType = Enum25IOIQltyInd.HIGH;
+        assertEquals("H", enumType.getAction());
+        assertEquals("HIGH", enumType.getName());
+        assertEquals("H - High", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum25IOIQltyInd.LOW;
+        assertEquals("L", enumType.getAction());
+        assertEquals("LOW", enumType.getName());
+        assertEquals("L - Low", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum25IOIQltyInd.MEDIUM;
+        assertEquals("M", enumType.getAction());
+        assertEquals("MEDIUM", enumType.getName());
+        assertEquals("M - Medium", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

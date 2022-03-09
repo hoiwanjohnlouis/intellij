@@ -24,10 +24,10 @@ import org.apache.log4j.Logger;
  * Used in FIX20_EXEC_TRANS_TYPE
  */
 public enum Enum20ExecTransType {
-    NEW("0", "NEW", "New" ),
-    CANCEL("1", "CANCEL", "Cancel" ),
-    CORRECT("2", "CORRECT", "Correct" ),
-    STATUS("3", "STATUS", "Status" ),
+    NEW("0", "NEW", "0 - New" ),
+    CANCEL("1", "CANCEL", "1 - Cancel" ),
+    CORRECT("2", "CORRECT", "2 - Correct" ),
+    STATUS("3", "STATUS", "3 - Status" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

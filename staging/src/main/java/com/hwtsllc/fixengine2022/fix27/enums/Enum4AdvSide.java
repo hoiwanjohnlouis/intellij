@@ -28,10 +28,10 @@ import org.apache.log4j.Logger;
  * String description       describes what the action entails
  */
 public enum Enum4AdvSide {
-    BUY ("B", "BUY", "Buy"),
-    SELL ("S", "SELL", "Sell"),
-    CROSS ("X", "CROSS", "Cross"),
-    TRADE ("T", "TRADE", "Trade"),
+    BUY ("B", "BUY", "B - Buy"),
+    SELL ("S", "SELL", "S - Sell"),
+    CROSS ("X", "CROSS", "X - Cross"),
+    TRADE ("T", "TRADE", "T - Trade"),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

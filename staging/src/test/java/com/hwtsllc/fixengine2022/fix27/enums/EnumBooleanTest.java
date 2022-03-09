@@ -18,9 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,10 +34,24 @@ class EnumBooleanTest {
     void tearDown() {
     }
 
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting EnumBooleanTest()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed EnumBooleanTest()");
+    }
+
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void EnumBooleanTest() {
+        EnumBoolean enumBooleanNo = EnumBoolean.NO;
+        assertEquals("N",enumBooleanNo.getAction());
+        assertNotEquals("NN",enumBooleanNo.getAction());
+
+        EnumBoolean enumBooleanYes = EnumBoolean.YES;
+        assertEquals("Y",enumBooleanYes.getAction());
+        assertNotEquals("YY",enumBooleanYes.getAction());
     }
 }

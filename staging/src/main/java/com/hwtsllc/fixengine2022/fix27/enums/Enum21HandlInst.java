@@ -21,11 +21,11 @@ import org.apache.log4j.Logger;
 
 public enum Enum21HandlInst {
     AUTOMATIC_EXECUTION_NO_BROKER("1", "AUTOMATIC_EXECUTION_NO_BROKER",
-            "Automated execution order, private, no Broker intervention" ),
+            "1 - Automated execution order, private, no Broker intervention" ),
     AUTOMATIC_EXECUTION_BROKER_OKAY("2", "AUTOMATIC_EXECUTION_BROKER_OKAY",
-            "Automated execution order, public, Broker intervention OK" ),
+            "2 - Automated execution order, public, Broker intervention OK" ),
     MANUAL_ORDER_BEST_EXECUTION("3", "MANUAL_ORDER_BEST_EXECUTION",
-            "Manual order, best execution" ),
+            "3 - Manual order, best execution" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

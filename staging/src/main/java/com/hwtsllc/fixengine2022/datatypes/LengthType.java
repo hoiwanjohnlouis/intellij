@@ -20,4 +20,36 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class LengthType {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private int dataValue;
+
+    public LengthType(final int dataValue) {
+        this.dataValue = dataValue;
+    }
+
+    public long getDataValue() {
+        return dataValue;
+    }
+    public void setDataValue(final int dataValue)  {
+        this.dataValue = dataValue;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getDataValue());
+        return sb.toString();
+    }
+    /**
+     *
+     * @param args Not used.
+     */
+    public static void main(String[] args) {
+        LengthType lengthType = new LengthType(12345);
+        System.out.println(lengthType);
+        lengthType.setDataValue(3456);
+        System.out.println(lengthType);
+    }
 }

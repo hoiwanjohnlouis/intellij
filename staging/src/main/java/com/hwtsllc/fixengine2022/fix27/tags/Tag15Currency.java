@@ -36,7 +36,7 @@ public class Tag15Currency extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag14CumQty tag14CumQty = new Tag14CumQty(1234L);
+        Tag14CumQty tag14CumQty = new Tag14CumQty(1234);
         System.out.println(tag14CumQty);
         System.out.println(tag14CumQty.toLogStringVerbose());
         System.out.println(tag14CumQty.toFixTagValuePairString());

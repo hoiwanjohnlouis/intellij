@@ -20,12 +20,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum13CommType {
-    PER_UNIT ("1", "PER_UNIT", "Per Unit (implying shares, par, currency, etc.)"),
-    PERCENT ("2", "PERCENT", "Percent"),
-    ABSOLUTE ("3", "ABSOLUTE", "Absolute (total monetary amount)"),
-    PERCENTAGE_WAIVED_CASH_DISCOUNT ("4", "PERCENTAGE_WAIVED_CASH_DISCOUNT", "Percent waived cash discount (for CIV buy orders)"),
-    PERCENTAGE_WAIVED_ENHANCED_UNITS ("5", "PERCENTAGE_WAIVED_ENHANCED_UNITS", "Percent waived enhanced units (for CIV buy orders)"),
-    POINTS_PER_BOND ("6", "POINTS_PER_BOND", "Points per bond or contract"),
+    PER_UNIT ("1", "PER_UNIT",
+            "1 - Per Unit (implying shares, par, currency, etc.)"),
+    PERCENT ("2", "PERCENT",
+            "2 - Percent"),
+    ABSOLUTE ("3", "ABSOLUTE",
+            "3 - Absolute (total monetary amount)"),
+    PERCENTAGE_WAIVED_CASH_DISCOUNT ("4", "PERCENTAGE_WAIVED_CASH_DISCOUNT",
+            "4 - Percentage waived - cash discount (for CIV buy orders)"),
+    PERCENTAGE_WAIVED_ENHANCED_UNITS ("5", "PERCENTAGE_WAIVED_ENHANCED_UNITS",
+            "5 - Percentage waived - enhanced units (for CIV buy orders)"),
+    POINTS_PER_BOND ("6", "POINTS_PER_BOND",
+            "6 - Points per bond or contract"),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

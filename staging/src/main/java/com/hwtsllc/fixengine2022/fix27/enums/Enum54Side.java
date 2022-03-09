@@ -28,23 +28,26 @@ import org.apache.log4j.Logger;
  * String sideDescription      describes what the action entails
  */
 public enum Enum54Side {
-    BUY ("1", "BUY", "Buy"),
-    SELL ("2", "SELL", "Sell"),
-    BUY_MINUS ("3", "BUY_MINUS", "Buy minus"),
-    SELL_PLUS ("4", "SELL_PLUS", "Sell plus"),
-    SELL_SHORT ("5", "SELL_SHORT", "Sell short"),
-    SELL_SHORT_EXEMPT ("6", "SELL_SHORT_EXEMPT", "Sell short exempt"),
-    UNDISCLOSED ("7", "UNDISCLOSED", "Undisclosed (valid for IOI and List Order messages only)"),
+    BUY ("1", "BUY", "1 - Buy"),
+    SELL ("2", "SELL", "2 - Sell"),
+    BUY_MINUS ("3", "BUY_MINUS", "3 - Buy minus"),
+    SELL_PLUS ("4", "SELL_PLUS", "4 - Sell plus"),
+    SELL_SHORT ("5", "SELL_SHORT", "5 - Sell short"),
+    SELL_SHORT_EXEMPT ("6", "SELL_SHORT_EXEMPT", "6 - Sell short exempt"),
+    UNDISCLOSED ("7", "UNDISCLOSED",
+            "7 - Undisclosed (valid for IOI and List Order messages only)"),
     CROSS ("8", "CROSS",
-            "Cross (orders where counterparty is an exchange, valid for all messages except IOIs)"),
-    CROSS_SHORT ("9", "CROSS_SHORT", "Cross short"),
-    CROSS_SHORT_EXEMPT ("A", "CROSS_SHORT_EXEMPT", "Cross short exempt"),
-    AS_DEFINED ("B", "AS_DEFINED", "As Defined (for use with multileg instruments)"),
-    OPPOSITE ("C", "OPPOSITE", "Opposite (for use with multileg instruments)"),
-    SUBSCRIBE ("D", "SUBSCRIBE", "Subscribe (e.g. CIV)"),
-    REDEEM ("E", "REDEEM", "Redeem (e.g. CIV)"),
-    LEND_FINANCING ("F", "LEND_FINANCING", "Lend (FINANCING - identifies direction of collateral)"),
-    BORROW_FINANCING ("G", "BORROW_FINANCING", "Borrow (FINANCING - identifies direction of collateral)"),
+            "8 - Cross (orders where counterparty is an exchange, valid for all messages except IOIs)"),
+    CROSS_SHORT ("9", "CROSS_SHORT", "9 - Cross short"),
+    CROSS_SHORT_EXEMPT ("A", "CROSS_SHORT_EXEMPT", "A - Cross short exempt"),
+    AS_DEFINED ("B", "AS_DEFINED", "B - As Defined (for use with multileg instruments)"),
+    OPPOSITE ("C", "OPPOSITE", "C - Opposite (for use with multileg instruments)"),
+    SUBSCRIBE ("D", "SUBSCRIBE", "D - Subscribe (e.g. CIV)"),
+    REDEEM ("E", "REDEEM", "E - Redeem (e.g. CIV)"),
+    LEND_FINANCING ("F", "LEND_FINANCING",
+            "F - Lend (FINANCING - identifies direction of collateral)"),
+    BORROW_FINANCING ("G", "BORROW_FINANCING",
+            "G - Borrow (FINANCING - identifies direction of collateral)"),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -77,7 +80,7 @@ public enum Enum54Side {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getEnumName());
-        sb.append(":[");
+        sb.append("=[");
         sb.append(getAction());
         sb.append(",");
         sb.append(getName());

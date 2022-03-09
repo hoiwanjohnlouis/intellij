@@ -50,7 +50,7 @@ class Tag14CumQtyTest {
     }
     @Test
     void Tag0014Test() {
-        Tag14CumQty tag14CumQty = new Tag14CumQty(100L );
+        Tag14CumQty tag14CumQty = new Tag14CumQty(100 );
         assertEquals( "100", tag14CumQty.getDataValue());
         assertNotEquals( "11", tag14CumQty.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0014Test()");

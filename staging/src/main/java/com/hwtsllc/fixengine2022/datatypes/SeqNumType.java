@@ -28,26 +28,26 @@ public class SeqNumType {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private int seqNum;
+    private int dataValue;
 
-    public SeqNumType(final int seqNum) {
-        this.seqNum = seqNum;
+    public SeqNumType(final int dataValue) {
+        this.dataValue = dataValue;
     }
 
-    public long getSeqNumValue() {
-        return seqNum;
+    public long getDataValue() {
+        return dataValue;
     }
-    public void setSeqNumValue(final int seqNum)  {
-        this.seqNum = seqNum;
+    public void setDataValue(final int dataValue)  {
+        this.dataValue = dataValue;
     }
-    public void incrementSeqNumValue()  {
-        this.seqNum++;
+    public void incrementDataValue()  {
+        this.dataValue++;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(getSeqNumValue());
+        sb.append(getDataValue());
         return sb.toString();
     }
     /**
@@ -55,11 +55,11 @@ public class SeqNumType {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        SeqNumType seqNum = new SeqNumType(12345);
-        System.out.println(seqNum);
-        seqNum.setSeqNumValue(3456);
-        System.out.println(seqNum);
-        seqNum.incrementSeqNumValue();
-        System.out.println(seqNum);
+        SeqNumType seqNumType = new SeqNumType(12345);
+        System.out.println(seqNumType);
+        seqNumType.setDataValue(3456);
+        System.out.println(seqNumType);
+        seqNumType.incrementDataValue();
+        System.out.println(seqNumType);
     }
 }

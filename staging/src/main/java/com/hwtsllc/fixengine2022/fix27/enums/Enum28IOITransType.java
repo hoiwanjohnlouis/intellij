@@ -20,9 +20,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum28IOITransType {
-    NEW("N", "NEW", "New" ),
-    CANCEL("C", "CANCEL", "Cancel" ),
-    REPLACE("R", "REPLACE", "Replace" ),
+    NEW("N", "NEW", "N - New" ),
+    CANCEL("C", "CANCEL", "C - Cancel" ),
+    REPLACE("R", "REPLACE", "R - Replace" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

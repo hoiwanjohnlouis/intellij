@@ -28,20 +28,23 @@ public class PriceType {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
-    private double price;
+    private double dataValue;
 
-    public PriceType(final double price) {
-        this.price = price;
+    public PriceType(final double dataValue) {
+        this.dataValue = dataValue;
     }
 
-    public double getPriceValue() {
-        return price;
+    public double getDataValue() {
+        return dataValue;
+    }
+    public void setDataValue(final double dataValue) {
+        this.dataValue = dataValue;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(getPriceValue());
+        sb.append(getDataValue());
         return sb.toString();
     }
     /**
@@ -51,5 +54,7 @@ public class PriceType {
     public static void main(String[] args) {
         PriceType priceType = new PriceType(123.45d);
         System.out.println(priceType);
+        priceType.setDataValue(67.89d);
+        System.out.println(priceType.getDataValue());
     }
 }

@@ -22,13 +22,24 @@ import org.apache.log4j.Logger;
 public class Main {
     private static final String WHERE_AM_I = Main.class.getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Main.class);
 
     /*
      *
      */
     public static void main(String[] args) {
-        logger.trace(WHERE_AM_I + ".1:Hello from Main");
+        StringBuilder stringbuilder = new StringBuilder();
+        stringbuilder.append("hello")
+                .append(" ")
+                .append("from main.");
+        System.out.println(stringbuilder);
+
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("goodbye")
+                        .append(" ")
+                        .append("from main.");
+        System.out.println(stringBuffer);
+
+//        logger.trace(WHERE_AM_I + ".1:Hello from Main");
 //        logger.info(WHERE_AM_I + ".2:Hello from Main");
 //        logger.warn(WHERE_AM_I + ".3:Hello from Main");
 //        logger.error(WHERE_AM_I + ".4:Hello from Main");

@@ -20,21 +20,23 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum39OrdStatus {
-    NEW("0", "NEW", "New" ),
-    PARTIALLY_FILLED("1", "PARTIALLY_FILLED", "Partially filled" ),
-    FILLED("2", "FILLED", "Filled" ),
-    DONE_FOR_DAY("3", "DONE_FOR_DAY", "Done for day" ),
-    CANCELED("4", "CANCELED", "Canceled" ),
-    REPLACED("5", "REPLACED", "Replaced (No longer used)" ),
-    PENDING_CANCEL("6", "PENDING_CANCEL", "Pending Cancel (i.e. result of Order Cancel Request)" ),
-    STOPPED("7", "STOPPED", "Stopped" ),
-    REJECTED("8", "REJECTED", "Rejected" ),
-    SUSPENDED("9", "SUSPENDED", "Suspended" ),
-    PENDING_NEW("A", "PENDING_NEW", "Pending New" ),
-    CALCULATED("B", "CALCULATED", "Calculated" ),
-    EXPIRED("C", "EXPIRED", "Expired" ),
-    ACCEPTED_FOR_BIDDING("D", "ACCEPTED_FOR_BIDDING", "Accepted for Bidding" ),
-    PENDING_REPLACE("E", "PENDING_REPLACE", "Pending Replace (i.e. result of Order Cancel/Replace Request)" ),
+    NEW("0", "NEW", "0 - New" ),
+    PARTIALLY_FILLED("1", "PARTIALLY_FILLED", "1 - Partially filled" ),
+    FILLED("2", "FILLED", "2 - Filled" ),
+    DONE_FOR_DAY("3", "DONE_FOR_DAY", "3 - Done for day" ),
+    CANCELED("4", "CANCELED", "4 - Canceled" ),
+    REPLACED("5", "REPLACED", "5 - Replaced (No longer used)" ),
+    PENDING_CANCEL("6", "PENDING_CANCEL",
+            "6 - Pending Cancel (i.e. result of Order Cancel Request)" ),
+    STOPPED("7", "STOPPED", "7 - Stopped" ),
+    REJECTED("8", "REJECTED", "8 - Rejected" ),
+    SUSPENDED("9", "SUSPENDED", "9 - Suspended" ),
+    PENDING_NEW("A", "PENDING_NEW", "A - Pending New" ),
+    CALCULATED("B", "CALCULATED", "B - Calculated" ),
+    EXPIRED("C", "EXPIRED", "C - Expired" ),
+    ACCEPTED_FOR_BIDDING("D", "ACCEPTED_FOR_BIDDING", "D - Accepted for Bidding" ),
+    PENDING_REPLACE("E", "PENDING_REPLACE",
+            "E - Pending Replace (i.e. result of Order Cancel/Replace Request)" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

@@ -20,4 +20,38 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class NumInGroupType {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+
+    private int dataValue;
+
+    public NumInGroupType(final int dataValue) {
+        this.dataValue = dataValue;
+    }
+
+    public long getDataValue() {
+        return dataValue;
+    }
+    public void setDataValue(final int dataValue) {
+        this.dataValue = dataValue;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getDataValue());
+        return sb.toString();
+    }
+    /**
+     *
+     * @param args Not used.
+     */
+    public static void main(String[] args) {
+        QtyType qtyType = new QtyType(12345);
+        System.out.println(qtyType);
+        qtyType.setDataValue(200);
+        System.out.println(qtyType.getDataValue());
+        qtyType.incrementDataValue(200);
+        System.out.println(qtyType.getDataValue());
+    }
 }
