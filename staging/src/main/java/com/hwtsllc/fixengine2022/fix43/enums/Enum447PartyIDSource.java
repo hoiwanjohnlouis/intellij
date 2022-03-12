@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
+import com.hwtsllc.fixengine2022.fix42.enums.Enum442MultiLegReportingType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -83,6 +84,11 @@ public enum Enum447PartyIDSource {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum447PartyIDSource oneEnum : Enum447PartyIDSource.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -90,12 +90,11 @@ public enum Enum98EncryptMethod {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum98EncryptMethod.NONE_OR_OTHER);
-        System.out.println(Enum98EncryptMethod.PKCS);
-        System.out.println(Enum98EncryptMethod.DES_ECB);
-        System.out.println(Enum98EncryptMethod.PKCS_DES);
-        System.out.println(Enum98EncryptMethod.PGP_DES);
-        System.out.println(Enum98EncryptMethod.PGP_DES_MD5);
-        System.out.println(Enum98EncryptMethod.PEM_DES_MD5);
+        /*
+         * dump all the enum values
+         */
+        for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

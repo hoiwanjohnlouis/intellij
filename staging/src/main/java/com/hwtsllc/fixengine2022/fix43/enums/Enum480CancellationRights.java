@@ -83,6 +83,11 @@ public enum Enum480CancellationRights {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

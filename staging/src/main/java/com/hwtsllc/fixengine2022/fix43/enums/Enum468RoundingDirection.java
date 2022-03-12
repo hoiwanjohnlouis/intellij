@@ -83,6 +83,11 @@ public enum Enum468RoundingDirection {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

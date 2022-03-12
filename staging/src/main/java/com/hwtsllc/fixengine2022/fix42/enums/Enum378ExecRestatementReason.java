@@ -83,6 +83,11 @@ public enum Enum378ExecRestatementReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

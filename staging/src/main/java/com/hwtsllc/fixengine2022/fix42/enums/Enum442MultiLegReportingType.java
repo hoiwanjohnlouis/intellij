@@ -83,6 +83,11 @@ public enum Enum442MultiLegReportingType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

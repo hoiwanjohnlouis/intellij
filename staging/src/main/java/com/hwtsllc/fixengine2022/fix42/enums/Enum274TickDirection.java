@@ -87,9 +87,11 @@ public enum Enum274TickDirection {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum274TickDirection.PLUS_TICK);
-        System.out.println(Enum274TickDirection.ZERO_PLUS_TICK);
-        System.out.println(Enum274TickDirection.MINUS_TICK);
-        System.out.println(Enum274TickDirection.ZERO_MINUS_TICK);
+        /*
+         * dump all the enum values
+         */
+        for (Enum274TickDirection oneEnum : Enum274TickDirection.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

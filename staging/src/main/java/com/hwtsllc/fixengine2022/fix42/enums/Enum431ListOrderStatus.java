@@ -83,6 +83,11 @@ public enum Enum431ListOrderStatus {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum431ListOrderStatus oneEnum : Enum431ListOrderStatus.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -86,8 +86,11 @@ public enum Enum61Urgency {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum61Urgency.NORMAL);
-        System.out.println(Enum61Urgency.FLASH);
-        System.out.println(Enum61Urgency.BACKGROUND);
+        /*
+         * dump all the enum values
+         */
+        for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

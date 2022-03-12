@@ -83,6 +83,11 @@ public enum Enum373SessionRejectReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum373SessionRejectReason oneEnum : Enum373SessionRejectReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40.enums;
 
+import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -90,13 +91,11 @@ public enum Enum127DKReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum127DKReason.UNKNOWN_SYMBOL);
-        System.out.println(Enum127DKReason.WRONG_SIDE);
-        System.out.println(Enum127DKReason.QUANTITY_EXCEEDS_ORDER);
-        System.out.println(Enum127DKReason.NO_MATCHING_ORDER);
-        System.out.println(Enum127DKReason.PRICE_EXCEEDS_LIMIT);
-
-        System.out.println(Enum127DKReason.CALCULATION_DIFFERENCE);
-        System.out.println(Enum127DKReason.OTHER);
+        /*
+         * dump all the enum values
+         */
+        for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

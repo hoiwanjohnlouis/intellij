@@ -111,19 +111,11 @@ public enum Enum88AllocRejCode {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum88AllocRejCode.UNKNOWN_ACCOUNT);
-        System.out.println(Enum88AllocRejCode.INCORRECT_QUANTITY);
-        System.out.println(Enum88AllocRejCode.INCORRECT_AVERAGE_PRICE);
-        System.out.println(Enum88AllocRejCode.UNKNOWN_EXECUTING_BROKER_MNEMONIC);
-        System.out.println(Enum88AllocRejCode.COMMISSION_DIFFERENCE);
-        System.out.println(Enum88AllocRejCode.UNKNOWN_ORDERID);
-        System.out.println(Enum88AllocRejCode.UNKNOWN_LISTID);
-        System.out.println(Enum88AllocRejCode.OTHER);
-        System.out.println(Enum88AllocRejCode.INCORRECT_ALLOCATED_QUANTITY);
-        System.out.println(Enum88AllocRejCode.CALCULATION_DIFFERENCE);
-        System.out.println(Enum88AllocRejCode.UNKNOWN_OR_STALE_EXECID);
-        System.out.println(Enum88AllocRejCode.MISMATCHED_DATA);
-        System.out.println(Enum88AllocRejCode.UNKNOWN_CLORDID);
-        System.out.println(Enum88AllocRejCode.WAREHOUSE_REQUEST_REJECTED);
+        /*
+         * dump all the enum values
+         */
+        for (Enum88AllocRejCode oneEnum : Enum88AllocRejCode.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

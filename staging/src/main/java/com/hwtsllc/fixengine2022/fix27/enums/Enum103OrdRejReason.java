@@ -119,26 +119,11 @@ public enum Enum103OrdRejReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum103OrdRejReason.BROKER_OR_EXCHANGE);
-        System.out.println(Enum103OrdRejReason.UNKNOWN_SYMBOL);
-        System.out.println(Enum103OrdRejReason.EXCHANGE_CLOSED);
-        System.out.println(Enum103OrdRejReason.ORDER_EXCEEDS_LIMIT);
-        System.out.println(Enum103OrdRejReason.TOO_LATE_TO_ENTER);
-
-        System.out.println(Enum103OrdRejReason.UNKNOWN_ORDER);
-        System.out.println(Enum103OrdRejReason.DUPLICATE_ORDER);
-        System.out.println(Enum103OrdRejReason.DUPLICATE_VERBAL_ORDER);
-        System.out.println(Enum103OrdRejReason.STALE_ORDER);
-        System.out.println(Enum103OrdRejReason.TRADE_ALONG_REQUIRED);
-
-        System.out.println(Enum103OrdRejReason.INVALID_INVESTOR_ID);
-        System.out.println(Enum103OrdRejReason.UNSUPPORTED_ORDER_CHARACTERISTIC);
-        System.out.println(Enum103OrdRejReason.SURVEILLANCE_OPTION);
-        System.out.println(Enum103OrdRejReason.INCORRECT_QUANTITY);
-        System.out.println(Enum103OrdRejReason.INCORRECT_ALLOCATED_QUANTITY);
-
-        System.out.println(Enum103OrdRejReason.UNKNOWN_ACCOUNT);
-        System.out.println(Enum103OrdRejReason.INVALID_PRICE_INCREMENT);
-        System.out.println(Enum103OrdRejReason.OTHER);
+        /*
+         * dump all the enum values
+         */
+        for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

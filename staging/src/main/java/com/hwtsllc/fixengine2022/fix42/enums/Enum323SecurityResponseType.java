@@ -83,6 +83,11 @@ public enum Enum323SecurityResponseType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

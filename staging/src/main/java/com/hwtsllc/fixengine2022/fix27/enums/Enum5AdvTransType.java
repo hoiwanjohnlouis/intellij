@@ -96,8 +96,11 @@ public enum Enum5AdvTransType {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(Enum5AdvTransType.NEW);
-        System.out.println(Enum5AdvTransType.CANCEL);
-        System.out.println(Enum5AdvTransType.REPLACE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

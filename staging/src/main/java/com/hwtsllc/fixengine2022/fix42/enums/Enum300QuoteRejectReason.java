@@ -40,7 +40,6 @@ public enum Enum300QuoteRejectReason {
             "9 - Not authorized to quote security" ),
     OTHER( "99", "OTHER",
             "99 - Other" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -104,16 +103,11 @@ public enum Enum300QuoteRejectReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum300QuoteRejectReason.UNKNOWN_SYMBOL);
-        System.out.println(Enum300QuoteRejectReason.EXCHANGE_CLOSED);
-        System.out.println(Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT);
-        System.out.println(Enum300QuoteRejectReason.TOO_LATE_TO_ENTER);
-        System.out.println(Enum300QuoteRejectReason.UNKNOWN_QUOTE);
-
-        System.out.println(Enum300QuoteRejectReason.DUPLICATE_QUOTE);
-        System.out.println(Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD);
-        System.out.println(Enum300QuoteRejectReason.INVALID_PRICE);
-        System.out.println(Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY);
-        System.out.println(Enum300QuoteRejectReason.OTHER);
+        /*
+         * dump all the enum values
+         */
+        for (Enum300QuoteRejectReason oneEnum : Enum300QuoteRejectReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

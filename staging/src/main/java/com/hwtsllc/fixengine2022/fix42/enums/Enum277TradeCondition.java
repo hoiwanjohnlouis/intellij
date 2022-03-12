@@ -83,6 +83,11 @@ public enum Enum277TradeCondition {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum277TradeCondition oneEnum : Enum277TradeCondition.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

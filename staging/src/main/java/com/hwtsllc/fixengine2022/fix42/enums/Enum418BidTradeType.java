@@ -83,6 +83,11 @@ public enum Enum418BidTradeType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

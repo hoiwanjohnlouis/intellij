@@ -90,12 +90,11 @@ public enum Enum81ProcessCode {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum81ProcessCode.REGULAR);
-        System.out.println(Enum81ProcessCode.SOFT_DOLLAR);
-        System.out.println(Enum81ProcessCode.STEP_IN);
-        System.out.println(Enum81ProcessCode.STEP_OUT);
-        System.out.println(Enum81ProcessCode.SOFT_DOLLAR_STEP_IN);
-        System.out.println(Enum81ProcessCode.SOFT_DOLLAR_STEP_OUT);
-        System.out.println(Enum81ProcessCode.PLAN_SPONSOR);
+        /*
+         * dump all the enum values
+         */
+        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

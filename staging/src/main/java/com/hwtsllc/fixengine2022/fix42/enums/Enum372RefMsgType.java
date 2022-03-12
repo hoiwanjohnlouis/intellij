@@ -83,6 +83,11 @@ public enum Enum372RefMsgType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum372RefMsgType oneEnum : Enum372RefMsgType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

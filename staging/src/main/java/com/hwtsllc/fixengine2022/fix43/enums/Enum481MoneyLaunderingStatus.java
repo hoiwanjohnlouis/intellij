@@ -83,6 +83,11 @@ public enum Enum481MoneyLaunderingStatus {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum481MoneyLaunderingStatus oneEnum : Enum481MoneyLaunderingStatus.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

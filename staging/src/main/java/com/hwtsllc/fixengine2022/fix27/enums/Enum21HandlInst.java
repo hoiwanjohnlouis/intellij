@@ -89,8 +89,11 @@ public enum Enum21HandlInst {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER);
-        System.out.println(Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY);
-        System.out.println(Enum21HandlInst.MANUAL_ORDER_BEST_EXECUTION);
+        /*
+         * dump all the enum values
+         */
+        for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

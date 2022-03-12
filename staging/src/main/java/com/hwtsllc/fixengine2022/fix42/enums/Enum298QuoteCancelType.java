@@ -93,10 +93,11 @@ public enum Enum298QuoteCancelType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
-        System.out.println(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
-        System.out.println(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
-        System.out.println(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
-        System.out.println(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

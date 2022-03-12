@@ -86,8 +86,11 @@ public enum Enum94EmailType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum94EmailType.NEW);
-        System.out.println(Enum94EmailType.REPLY);
-        System.out.println(Enum94EmailType.ADMIN_REPLY);
+        /*
+         * dump all the enum values
+         */
+        for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

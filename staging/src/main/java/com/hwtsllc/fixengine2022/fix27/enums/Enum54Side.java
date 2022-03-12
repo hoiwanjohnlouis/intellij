@@ -113,21 +113,11 @@ public enum Enum54Side {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(Enum54Side.BUY);
-        System.out.println(Enum54Side.SELL);
-        System.out.println(Enum54Side.BUY_MINUS);
-        System.out.println(Enum54Side.SELL_PLUS);
-        System.out.println(Enum54Side.SELL_SHORT);
-        System.out.println(Enum54Side.SELL_SHORT_EXEMPT);
-        System.out.println(Enum54Side.UNDISCLOSED);
-        System.out.println(Enum54Side.CROSS);
-        System.out.println(Enum54Side.CROSS_SHORT);
-        System.out.println(Enum54Side.CROSS_SHORT_EXEMPT);
-        System.out.println(Enum54Side.AS_DEFINED);
-        System.out.println(Enum54Side.OPPOSITE);
-        System.out.println(Enum54Side.SUBSCRIBE);
-        System.out.println(Enum54Side.REDEEM);
-        System.out.println(Enum54Side.LEND_FINANCING);
-        System.out.println(Enum54Side.BORROW_FINANCING);
+        /*
+         * dump all the enum values
+         */
+        for (Enum54Side oneEnum : Enum54Side.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

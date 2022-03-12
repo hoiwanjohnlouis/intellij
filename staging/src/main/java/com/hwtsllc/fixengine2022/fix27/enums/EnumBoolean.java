@@ -93,7 +93,11 @@ public enum EnumBoolean {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(EnumBoolean.NO);
-        System.out.println(EnumBoolean.YES);
+        /*
+         * dump all the enum values
+         */
+        for (EnumBoolean oneEnum : EnumBoolean.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

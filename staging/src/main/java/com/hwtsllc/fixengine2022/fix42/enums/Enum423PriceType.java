@@ -83,6 +83,11 @@ public enum Enum423PriceType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum423PriceType oneEnum : Enum423PriceType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

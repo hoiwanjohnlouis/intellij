@@ -108,30 +108,11 @@ public enum Enum22SecurityIDSource {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum22SecurityIDSource.CUSIP);
-        System.out.println(Enum22SecurityIDSource.SEDOL);
-        System.out.println(Enum22SecurityIDSource.QUIK);
-        System.out.println(Enum22SecurityIDSource.ISIN);
-        System.out.println(Enum22SecurityIDSource.RIC);
-
-        System.out.println(Enum22SecurityIDSource.ISO_CURRENCY_CODE);
-        System.out.println(Enum22SecurityIDSource.ISO_COUNTRY_CODE);
-        System.out.println(Enum22SecurityIDSource.EXCHANGE_SYMBOL);
-        System.out.println(Enum22SecurityIDSource.CTA);
-        System.out.println(Enum22SecurityIDSource.BLOOMBERG);
-
-        System.out.println(Enum22SecurityIDSource.WERTPAPIER);
-        System.out.println(Enum22SecurityIDSource.DUTCH);
-        System.out.println(Enum22SecurityIDSource.VALOREN);
-        System.out.println(Enum22SecurityIDSource.SICOVAM);
-        System.out.println(Enum22SecurityIDSource.BELGIAN);
-
-        System.out.println(Enum22SecurityIDSource.COMMON);
-        System.out.println(Enum22SecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION);
-        System.out.println(Enum22SecurityIDSource.ISDA_PRODUCT_SPECIFICATION);
-        System.out.println(Enum22SecurityIDSource.OPTION_PRICE_REPORTING_AUTHORITY);
-        System.out.println(Enum22SecurityIDSource.ISDA_PRODUCT_URL);
-
-        System.out.println(Enum22SecurityIDSource.LETTER_OF_CREDIT);
+        /*
+         * dump all the enum values
+         */
+        for (Enum22SecurityIDSource oneEnum : Enum22SecurityIDSource.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

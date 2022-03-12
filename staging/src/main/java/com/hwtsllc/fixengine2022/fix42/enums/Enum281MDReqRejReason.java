@@ -48,7 +48,6 @@ public enum Enum281MDReqRejReason {
             "C - Unsupported MDImplicitDelete" ),
     INSUFFICIENT_CREDIT( "D", "INSUFFICIENT_CREDIT",
             "D - Insufficient credit" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -112,21 +111,11 @@ public enum Enum281MDReqRejReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum281MDReqRejReason.UNKNOWN_SYMBOL);
-        System.out.println(Enum281MDReqRejReason.DUPLICATE_MDREQID);
-        System.out.println(Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH);
-        System.out.println(Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS);
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE);
-
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH);
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE);
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK);
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE);
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID);
-
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_SCOPE);
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG);
-        System.out.println(Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE);
-        System.out.println(Enum281MDReqRejReason.UNKNOWN_SYMBOL);
+        /*
+         * dump all the enum values
+         */
+        for (Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

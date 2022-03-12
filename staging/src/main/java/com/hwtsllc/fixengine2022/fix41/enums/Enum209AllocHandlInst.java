@@ -86,8 +86,11 @@ public enum Enum209AllocHandlInst {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum209AllocHandlInst.MATCH);
-        System.out.println(Enum209AllocHandlInst.FORWARD);
-        System.out.println(Enum209AllocHandlInst.FORWARD_AND_MATCH);
+        /*
+         * dump all the enum values
+         */
+        for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

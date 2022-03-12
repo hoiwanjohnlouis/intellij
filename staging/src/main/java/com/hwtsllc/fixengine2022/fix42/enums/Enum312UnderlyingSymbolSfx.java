@@ -83,6 +83,11 @@ public enum Enum312UnderlyingSymbolSfx {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum312UnderlyingSymbolSfx oneEnum : Enum312UnderlyingSymbolSfx.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

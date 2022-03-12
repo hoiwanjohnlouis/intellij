@@ -23,7 +23,6 @@ public enum Enum291FinancialStatus {
     BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
     PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
     RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -87,8 +86,11 @@ public enum Enum291FinancialStatus {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum291FinancialStatus.BANKRUPT);
-        System.out.println(Enum291FinancialStatus.PENDING_DELISTING);
-        System.out.println(Enum291FinancialStatus.RESTRICTED);
+        /*
+         * dump all the enum values
+         */
+        for (Enum291FinancialStatus oneEnum : Enum291FinancialStatus.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

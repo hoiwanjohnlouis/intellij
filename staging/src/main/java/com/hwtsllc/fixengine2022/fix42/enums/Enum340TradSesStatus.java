@@ -83,6 +83,11 @@ public enum Enum340TradSesStatus {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum340TradSesStatus oneEnum : Enum340TradSesStatus.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

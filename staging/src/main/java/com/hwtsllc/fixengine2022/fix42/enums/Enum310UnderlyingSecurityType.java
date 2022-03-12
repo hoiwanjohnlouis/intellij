@@ -83,6 +83,11 @@ public enum Enum310UnderlyingSecurityType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum310UnderlyingSecurityType oneEnum : Enum310UnderlyingSecurityType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

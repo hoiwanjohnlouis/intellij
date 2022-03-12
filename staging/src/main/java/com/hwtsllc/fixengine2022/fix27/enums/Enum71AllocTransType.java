@@ -94,12 +94,11 @@ public enum Enum71AllocTransType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum71AllocTransType.NEW);
-        System.out.println(Enum71AllocTransType.REPLACE);
-        System.out.println(Enum71AllocTransType.CANCEL);
-        System.out.println(Enum71AllocTransType.PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY);
-        System.out.println(Enum71AllocTransType.CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY);
-        System.out.println(Enum71AllocTransType.CALCULATED_WITHOUT_PRELIMINARY);
-        System.out.println(Enum71AllocTransType.REVERSAL);
+        /*
+         * dump all the enum values
+         */
+        for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

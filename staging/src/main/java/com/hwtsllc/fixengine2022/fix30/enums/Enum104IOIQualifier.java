@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix30.enums;
 
-import com.hwtsllc.fixengine2022.msgs.application.Quote;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -102,26 +101,11 @@ public enum Enum104IOIQualifier {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum104IOIQualifier.ALL_OR_NONE);
-        System.out.println(Enum104IOIQualifier.MARKET_ON_CLOSE);
-        System.out.println(Enum104IOIQualifier.AT_THE_CLOSE);
-        System.out.println(Enum104IOIQualifier.VWAP);
-        System.out.println(Enum104IOIQualifier.IN_TOUCH_WITH);
-
-        System.out.println(Enum104IOIQualifier.LIMIT);
-        System.out.println(Enum104IOIQualifier.MORE_BEHIND);
-        System.out.println(Enum104IOIQualifier.AT_THE_OPEN);
-        System.out.println(Enum104IOIQualifier.TAKING_A_POSITION);
-        System.out.println(Enum104IOIQualifier.AT_THE_MARKET);
-
-        System.out.println(Enum104IOIQualifier.READY_TO_TRADE);
-        System.out.println(Enum104IOIQualifier.PORTFOLIO_SHOWN);
-        System.out.println(Enum104IOIQualifier.THROUGH_THE_DAY);
-        System.out.println(Enum104IOIQualifier.VERSUS);
-        System.out.println(Enum104IOIQualifier.INDICATION_WORKING_AWAY);
-
-        System.out.println(Enum104IOIQualifier.CROSSING_OPPORTUNITY);
-        System.out.println(Enum104IOIQualifier.AT_THE_MIDPOINT);
-        System.out.println(Enum104IOIQualifier.PRE_OPEN);
+        /*
+         * dump all the enum values
+         */
+        for (Enum104IOIQualifier oneEnum : Enum104IOIQualifier.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

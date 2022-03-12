@@ -90,10 +90,11 @@ public enum Enum8BeginString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(Enum8BeginString.BEGIN_STRING_4_0);
-        System.out.println(Enum8BeginString.BEGIN_STRING_4_2);
-        System.out.println(Enum8BeginString.BEGIN_STRING_4_3);
-        System.out.println(Enum8BeginString.BEGIN_STRING_4_4);
-        System.out.println(Enum8BeginString.BEGIN_STRING_5_0);
+        /*
+         * dump all the enum values
+         */
+        for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

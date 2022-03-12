@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
+import com.hwtsllc.fixengine2022.fix42.enums.Enum276QuoteCondition;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -96,9 +97,11 @@ public enum Enum4AdvSide {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(Enum4AdvSide.BUY);
-        System.out.println(Enum4AdvSide.SELL);
-        System.out.println(Enum4AdvSide.CROSS);
-        System.out.println(Enum4AdvSide.TRADE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

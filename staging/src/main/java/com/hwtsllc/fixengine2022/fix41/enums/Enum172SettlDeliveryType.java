@@ -95,9 +95,11 @@ public enum Enum172SettlDeliveryType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum172SettlDeliveryType.VERSUS);
-        System.out.println(Enum172SettlDeliveryType.FREE);
-        System.out.println(Enum172SettlDeliveryType.TRI_PARTY);
-        System.out.println(Enum172SettlDeliveryType.HOLD_IN_CUSTODY);
+        /*
+         * dump all the enum values
+         */
+        for (Enum172SettlDeliveryType oneEnum : Enum172SettlDeliveryType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

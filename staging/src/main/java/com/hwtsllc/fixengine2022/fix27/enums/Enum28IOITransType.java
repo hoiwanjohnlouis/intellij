@@ -86,8 +86,11 @@ public enum Enum28IOITransType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum28IOITransType.NEW);
-        System.out.println(Enum28IOITransType.CANCEL);
-        System.out.println(Enum28IOITransType.REPLACE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

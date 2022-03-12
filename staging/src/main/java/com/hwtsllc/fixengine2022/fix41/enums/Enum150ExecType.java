@@ -16,11 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
+import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.parallel.Execution;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Replace;
 
 public enum Enum150ExecType {
     NEW( "0", "NEW",
@@ -127,28 +125,11 @@ public enum Enum150ExecType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum150ExecType.NEW);
-        System.out.println(Enum150ExecType.DONE_FOR_DAY);
-        System.out.println(Enum150ExecType.CANCELED);
-        System.out.println(Enum150ExecType.REPLACED);
-        System.out.println(Enum150ExecType.PENDING_CANCEL);
-
-        System.out.println(Enum150ExecType.STOPPED);
-        System.out.println(Enum150ExecType.REJECTED);
-        System.out.println(Enum150ExecType.SUSPENDED);
-        System.out.println(Enum150ExecType.PENDING_NEW);
-        System.out.println(Enum150ExecType.CALCULATED);
-
-        System.out.println(Enum150ExecType.EXPIRED);
-        System.out.println(Enum150ExecType.RESTATED);
-        System.out.println(Enum150ExecType.PENDING_REPLACE);
-        System.out.println(Enum150ExecType.TRADE_PARTIAL_OR_FILLED);
-        System.out.println(Enum150ExecType.TRADE_CORRECT);
-
-        System.out.println(Enum150ExecType.TRADE_CANCEL);
-        System.out.println(Enum150ExecType.ORDER_STATUS);
-        System.out.println(Enum150ExecType.TRADE_IN_CLEARING_HOLD);
-        System.out.println(Enum150ExecType.TRADE_RELEASE_TO_CLEARING);
-        System.out.println(Enum150ExecType.TRIGGERED_OR_ACTIVATED);
+        /*
+         * dump all the enum values
+         */
+        for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

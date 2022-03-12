@@ -83,6 +83,11 @@ public enum Enum416IncTaxInd {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

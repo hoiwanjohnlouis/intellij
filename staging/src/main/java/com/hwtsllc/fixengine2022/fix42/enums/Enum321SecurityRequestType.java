@@ -83,6 +83,11 @@ public enum Enum321SecurityRequestType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

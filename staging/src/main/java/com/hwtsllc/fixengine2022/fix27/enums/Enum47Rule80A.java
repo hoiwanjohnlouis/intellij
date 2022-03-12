@@ -132,31 +132,11 @@ public enum Enum47Rule80A {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum47Rule80A.AGENCY_SINGLE_ORDER);
-        System.out.println(Enum47Rule80A.SHORT_EXEMPT_A);
-        System.out.println(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_MEMBER);
-        System.out.println(Enum47Rule80A.PROGRAM_INDEX_ARB_MEMBER);
-        System.out.println(Enum47Rule80A.SHORT_EXEMPT_P);
-
-        System.out.println(Enum47Rule80A.SHORT_EXEMPT_W);
-        System.out.println(Enum47Rule80A.SHORT_EXEMPT_I);
-        System.out.println(Enum47Rule80A.INDIVIDUAL_INVESTOR_SINGLE_ORDER);
-        System.out.println(Enum47Rule80A.PROGRAM_INDEX_ARB_INDIVIDUAL);
-        System.out.println(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_INDIVIDUAL);
-
-        System.out.println(Enum47Rule80A.SHORT_EXEMPT_MARKET_MAKER_P_O);
-        System.out.println(Enum47Rule80A.PROGRAM_INDEX_ARB_OTHER_MEMBER);
-        System.out.println(Enum47Rule80A.PROPRIETARY_MARKET_MAKER_CLEARING);
-        System.out.println(Enum47Rule80A.PRINCIPAL);
-        System.out.println(Enum47Rule80A.NON_MEMBER_MARKET_MAKER);
-
-        System.out.println(Enum47Rule80A.SPECIALIST_TRADES);
-        System.out.println(Enum47Rule80A.UNAFFILIATED_MEMBER_MARKET_MAKER);
-        System.out.println(Enum47Rule80A.PROGRAM_INDEX_ARB_OTHER_AGENCY);
-        System.out.println(Enum47Rule80A.AGENT_FOR_OTHER_MEMBER);
-        System.out.println(Enum47Rule80A.SHORT_EXEMPT_MARKET_MAKER_W_T);
-
-        System.out.println(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_OTHER_AGENCY);
-        System.out.println(Enum47Rule80A.SHORT_EXEMPT_NON_MEMBER_MARKET_MAKER_A_R);
+        /*
+         * dump all the enum values
+         */
+        for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -95,12 +95,11 @@ public enum Enum160SettlInstMode {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum160SettlInstMode.DEFAULT);
-        System.out.println(Enum160SettlInstMode.STANDING_INSTRUCTIONS_PROVIDED);
-        System.out.println(Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING);
-        System.out.println(Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_STANDING);
-        System.out.println(Enum160SettlInstMode.SPECIFIC_ORDER_SINGLE_ACCOUNT);
-
-        System.out.println(Enum160SettlInstMode.REQUEST_REJECT);
+        /*
+         * dump all the enum values
+         */
+        for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

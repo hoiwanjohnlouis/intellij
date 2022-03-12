@@ -83,6 +83,11 @@ public enum Enum305UnderlyingSecurityIDSource {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum305UnderlyingSecurityIDSource oneEnum : Enum305UnderlyingSecurityIDSource.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

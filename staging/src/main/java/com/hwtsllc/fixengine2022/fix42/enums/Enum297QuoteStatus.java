@@ -52,7 +52,6 @@ public enum Enum297QuoteStatus {
             "14 - Canceled Due To Lock Market" ),
     CANCELED_DUE_TO_CROSS_MARKET( "15", "CANCELED_DUE_TO_CROSS_MARKET",
             "15 - Canceled Due To Cross Market" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -116,24 +115,11 @@ public enum Enum297QuoteStatus {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum297QuoteStatus.ACCEPTED);
-        System.out.println(Enum297QuoteStatus.CANCEL_FOR_SYMBOL);
-        System.out.println(Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE);
-        System.out.println(Enum297QuoteStatus.CANCELED_FOR_UNDERLYING);
-        System.out.println(Enum297QuoteStatus.CANCELED_ALL);
-
-        System.out.println(Enum297QuoteStatus.REJECTED);
-        System.out.println(Enum297QuoteStatus.REMOVED_FROM_MARKET);
-        System.out.println(Enum297QuoteStatus.EXPIRED);
-        System.out.println(Enum297QuoteStatus.QUERY);
-        System.out.println(Enum297QuoteStatus.QUOTE_NOT_FOUND);
-
-        System.out.println(Enum297QuoteStatus.PENDING);
-        System.out.println(Enum297QuoteStatus.PASS);
-        System.out.println(Enum297QuoteStatus.LOCKED_MARKET_WARNING);
-        System.out.println(Enum297QuoteStatus.CROSS_MARKET_WARNING);
-        System.out.println(Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET);
-
-        System.out.println(Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET);
+        /*
+         * dump all the enum values
+         */
+        for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

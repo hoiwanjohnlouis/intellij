@@ -263,110 +263,11 @@ public enum Enum35MsgType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum35MsgType.HEARTBEAT);
-        System.out.println(Enum35MsgType.TEST_REQUEST);
-        System.out.println(Enum35MsgType.RESEND_REQUEST);
-        System.out.println(Enum35MsgType.REJECT);
-        System.out.println(Enum35MsgType.SEQUENCE_RESET);
-        System.out.println(Enum35MsgType.LOGOUT);
-        System.out.println(Enum35MsgType.INDICATION_OF_INTEREST);
-        System.out.println(Enum35MsgType.ADVERTISEMENT);
-        System.out.println(Enum35MsgType.EXECUTION_REPORT);
-        System.out.println(Enum35MsgType.ORDER_CANCEL_REJECT);
-
-        System.out.println(Enum35MsgType.LOGON);
-        System.out.println(Enum35MsgType.NEWS);
-        System.out.println(Enum35MsgType.EMAIL);
-        System.out.println(Enum35MsgType.NEW_ORDER_SINGLE);
-        System.out.println(Enum35MsgType.NEW_ORDER_LIST);
-        System.out.println(Enum35MsgType.ORDER_CANCEL_REQUEST);
-        System.out.println(Enum35MsgType.ORDER_MODIFICATION);
-        System.out.println(Enum35MsgType.ORDER_STATUS_REQUEST);
-        System.out.println(Enum35MsgType.ALLOCATION_INSTRUCTION);
-        System.out.println(Enum35MsgType.LIST_CANCEL_REQUEST);
-        System.out.println(Enum35MsgType.LIST_EXECUTE);
-        System.out.println(Enum35MsgType.LIST_STATUS_REQUEST);
-        System.out.println(Enum35MsgType.LIST_STATUS);
-        System.out.println(Enum35MsgType.ALLOCATION_INSTRUCTION_ACK);
-        System.out.println(Enum35MsgType.DONT_KNOW_TRADE);
-        System.out.println(Enum35MsgType.QUOTE_REQUEST);
-        System.out.println(Enum35MsgType.QUOTE);
-        System.out.println(Enum35MsgType.SETTLEMENT_INSTRUCTIONS);
-        System.out.println(Enum35MsgType.MARKET_DATA_REQUEST);
-        System.out.println(Enum35MsgType.MARKET_DATA_REFRESH);
-        System.out.println(Enum35MsgType.MARKET_DATA_INCREMENTAL_REFRESH);
-        System.out.println(Enum35MsgType.MARKET_DATA_REQUEST_REJECT);
-        System.out.println(Enum35MsgType.QUOTE_CANCEL);
-
-        System.out.println(Enum35MsgType.QUOTE_STATUS_REQUEST);
-        System.out.println(Enum35MsgType.MASS_QUOTE_ACKNOWLEDGEMENT);
-        System.out.println(Enum35MsgType.SECURITY_DEFINITION_REQUEST);
-        System.out.println(Enum35MsgType.SECURITY_DEFINITION);
-        System.out.println(Enum35MsgType.SECURITY_STATUS_REQUEST);
-        System.out.println(Enum35MsgType.SECURITY_STATUS);
-        System.out.println(Enum35MsgType.TRADING_SESSION_STATUS_REQUEST);
-        System.out.println(Enum35MsgType.TRADING_SESSION_STATUS);
-        System.out.println(Enum35MsgType.MASS_QUOTE);
-        System.out.println(Enum35MsgType.BUSINESS_MESSAGE_REJECT);
-        System.out.println(Enum35MsgType.BID_REQUEST);
-        System.out.println(Enum35MsgType.BID_RESPONSE);
-        System.out.println(Enum35MsgType.LIST_STRIKE_PRICE);
-        System.out.println(Enum35MsgType.XML_MESSAGE);
-        System.out.println(Enum35MsgType.REGISTRATION_INSTRUCTIONS);
-        System.out.println(Enum35MsgType.REGISTRATION_INSTRUCTIONS_RESPONSE);
-        System.out.println(Enum35MsgType.ORDER_MASS_CANCEL_REQUEST);
-        System.out.println(Enum35MsgType.ORDER_MASS_CANCEL_REPORT);
-        System.out.println(Enum35MsgType.NEW_ORDER_CROSS);
-        System.out.println(Enum35MsgType.CROSS_ORDER_MODIFICATION_REQUEST);
-        System.out.println(Enum35MsgType.CROSS_ORDER_CANCEL_REQUEST);
-        System.out.println(Enum35MsgType.SECURITY_TYPE_REQUEST);
-        System.out.println(Enum35MsgType.SECURITY_TYPES);
-        System.out.println(Enum35MsgType.SECURITY_LIST_REQUEST);
-        System.out.println(Enum35MsgType.SECURITY_LIST);
-        System.out.println(Enum35MsgType.DERIVATIVE_SECURITY_LIST_REQUEST);
-
-        System.out.println(Enum35MsgType.DERIVATIVE_SECURITY_LIST);
-        System.out.println(Enum35MsgType.NEW_ORDER_MULTILEG);
-        System.out.println(Enum35MsgType.MULTILEG_ORDER_MODIFICATION_REQUEST);
-        System.out.println(Enum35MsgType.TRADE_CAPTURE_REPORT_REQUEST);
-        System.out.println(Enum35MsgType.TRADE_CAPTURE_REPORT);
-        System.out.println(Enum35MsgType.ORDER_MASS_STATUS_REQUEST);
-        System.out.println(Enum35MsgType.QUOTE_REQUEST_REJECT);
-        System.out.println(Enum35MsgType.RFQ_REQUEST);
-        System.out.println(Enum35MsgType.QUOTE_STATUS_REPORT);
-        System.out.println(Enum35MsgType.QUOTE_RESPONSE);
-        System.out.println(Enum35MsgType.CONFIRMATION);
-        System.out.println(Enum35MsgType.POSITION_MAINTENANCE_REQUEST);
-        System.out.println(Enum35MsgType.POSITION_MAINTENANCE_REPORT);
-        System.out.println(Enum35MsgType.REQUEST_FOR_POSITIONS);
-        System.out.println(Enum35MsgType.REQUEST_FOR_POSITIONS_ACK);
-        System.out.println(Enum35MsgType.POSITION_REPORT);
-        System.out.println(Enum35MsgType.TRADE_CAPTURE_REPORT_REQUEST_ACK);
-        System.out.println(Enum35MsgType.TRADE_CAPTURE_REPORT_ACK);
-        System.out.println(Enum35MsgType.ALLOCATION_CLAIM);
-        System.out.println(Enum35MsgType.ALLOCATION_CLAIM_ACK);
-        System.out.println(Enum35MsgType.AFFIRMATION);
-        System.out.println(Enum35MsgType.SETTLEMENT_INSTRUCTION_REQUEST);
-        System.out.println(Enum35MsgType.ASSIGNMENT_REPORT);
-        System.out.println(Enum35MsgType.COLLATERAL_REQUEST);
-        System.out.println(Enum35MsgType.COLLATERAL_ASSIGNMENT);
-        System.out.println(Enum35MsgType.COLLATERAL_RESPONSE);
-
-        System.out.println(Enum35MsgType.COLLATERAL_REPORT);
-        System.out.println(Enum35MsgType.COLLATERAL_INQUIRY);
-        System.out.println(Enum35MsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_REQUEST);
-        System.out.println(Enum35MsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_RESPONSE);
-        System.out.println(Enum35MsgType.USER_REQUEST);
-        System.out.println(Enum35MsgType.USER_RESPONSE);
-        System.out.println(Enum35MsgType.COLLATERAL_INQUIRY_ACK);
-        System.out.println(Enum35MsgType.CONFIRMATION_REQUEST);
-        System.out.println(Enum35MsgType.TRADING_SESSION_LIST_REQUEST);
-        System.out.println(Enum35MsgType.TRADING_SESSION_LIST);
-        System.out.println(Enum35MsgType.SECURITY_LIST_UPDATE_REPORT);
-        System.out.println(Enum35MsgType.ADJUSTED_POSITION_REPORT);
-        System.out.println(Enum35MsgType.ALLOCATION_INSTRUCTION_ALERT);
-        System.out.println(Enum35MsgType.EXECUTION_ACKNOWLEDGEMENT);
-        System.out.println(Enum35MsgType.CONTRARY_INTENTION_REPORT);
-        System.out.println(Enum35MsgType.SECURITY_DEFINITION_UPDATE_REPORT);
+        /*
+         * dump all the enum values
+         */
+        for (Enum35MsgType oneEnum : Enum35MsgType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

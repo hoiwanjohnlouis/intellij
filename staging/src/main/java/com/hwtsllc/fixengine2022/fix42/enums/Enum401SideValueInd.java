@@ -83,6 +83,11 @@ public enum Enum401SideValueInd {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

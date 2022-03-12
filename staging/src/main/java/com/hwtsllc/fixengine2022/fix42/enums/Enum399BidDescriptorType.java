@@ -83,6 +83,11 @@ public enum Enum399BidDescriptorType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

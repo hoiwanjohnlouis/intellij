@@ -100,20 +100,11 @@ public enum Enum39OrdStatus {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum39OrdStatus.NEW);
-        System.out.println(Enum39OrdStatus.PARTIALLY_FILLED);
-        System.out.println(Enum39OrdStatus.FILLED);
-        System.out.println(Enum39OrdStatus.DONE_FOR_DAY);
-        System.out.println(Enum39OrdStatus.CANCELED);
-        System.out.println(Enum39OrdStatus.REPLACED);
-        System.out.println(Enum39OrdStatus.PENDING_CANCEL);
-        System.out.println(Enum39OrdStatus.STOPPED);
-        System.out.println(Enum39OrdStatus.REJECTED);
-        System.out.println(Enum39OrdStatus.SUSPENDED);
-        System.out.println(Enum39OrdStatus.PENDING_NEW);
-        System.out.println(Enum39OrdStatus.CALCULATED);
-        System.out.println(Enum39OrdStatus.EXPIRED);
-        System.out.println(Enum39OrdStatus.ACCEPTED_FOR_BIDDING);
-        System.out.println(Enum39OrdStatus.PENDING_REPLACE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

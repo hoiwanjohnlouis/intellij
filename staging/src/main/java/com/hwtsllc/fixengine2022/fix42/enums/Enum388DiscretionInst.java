@@ -83,6 +83,11 @@ public enum Enum388DiscretionInst {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum388DiscretionInst oneEnum : Enum388DiscretionInst.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

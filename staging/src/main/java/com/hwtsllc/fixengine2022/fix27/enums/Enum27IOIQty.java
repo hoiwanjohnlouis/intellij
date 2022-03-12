@@ -88,10 +88,11 @@ public enum Enum27IOIQty {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum27IOIQty.ONE_BILLION);
-        System.out.println(Enum27IOIQty.SMALL);
-        System.out.println(Enum27IOIQty.MEDIUM);
-        System.out.println(Enum27IOIQty.LARGE);
-        System.out.println(Enum27IOIQty.UNDISCLOSED_QUANTITY);
+        /*
+         * dump all the enum values
+         */
+        for (Enum27IOIQty oneEnum : Enum27IOIQty.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

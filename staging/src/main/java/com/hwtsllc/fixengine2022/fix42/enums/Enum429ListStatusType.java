@@ -83,6 +83,11 @@ public enum Enum429ListStatusType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum429ListStatusType oneEnum : Enum429ListStatusType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

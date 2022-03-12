@@ -105,12 +105,11 @@ public enum Enum166SettlLocation {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum166SettlLocation.CEDEL);
-        System.out.println(Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY);
-        System.out.println(Enum166SettlLocation.EURO_CLEAR);
-        System.out.println(Enum166SettlLocation.FEDERAL_BOOK_ENTRY);
-        System.out.println(Enum166SettlLocation.PHYSICAL);
-
-        System.out.println(Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY);
+        /*
+         * dump all the enum values
+         */
+        for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

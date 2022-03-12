@@ -95,19 +95,11 @@ public enum Enum221BenchmarkCurveName {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum221BenchmarkCurveName.EONIA);
-        System.out.println(Enum221BenchmarkCurveName.EUREPO);
-        System.out.println(Enum221BenchmarkCurveName.EURIBOR);
-        System.out.println(Enum221BenchmarkCurveName.FUTURESWAP);
-        System.out.println(Enum221BenchmarkCurveName.LIBID);
-
-        System.out.println(Enum221BenchmarkCurveName.LIBOR);
-        System.out.println(Enum221BenchmarkCurveName.MUNIAAA);
-        System.out.println(Enum221BenchmarkCurveName.OTHER);
-        System.out.println(Enum221BenchmarkCurveName.PFANDBRIEFE);
-        System.out.println(Enum221BenchmarkCurveName.SONIA);
-
-        System.out.println(Enum221BenchmarkCurveName.SWAP);
-        System.out.println(Enum221BenchmarkCurveName.TREASURY);
+        /*
+         * dump all the enum values
+         */
+        for (Enum221BenchmarkCurveName oneEnum : Enum221BenchmarkCurveName.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

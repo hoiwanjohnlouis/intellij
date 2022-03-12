@@ -88,10 +88,11 @@ public enum Enum279MDUpdateAction {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum279MDUpdateAction.NEW);
-        System.out.println(Enum279MDUpdateAction.CHANGE);
-        System.out.println(Enum279MDUpdateAction.DELETE);
-        System.out.println(Enum279MDUpdateAction.DELETE_THRU);
-        System.out.println(Enum279MDUpdateAction.DELETE_FROM);
+        /*
+         * dump all the enum values
+         */
+        for (Enum279MDUpdateAction oneEnum : Enum279MDUpdateAction.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

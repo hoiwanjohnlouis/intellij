@@ -85,7 +85,11 @@ public enum Enum201PutOrCall {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum201PutOrCall.PUT);
-        System.out.println(Enum201PutOrCall.CALL);
+        /*
+         * dump all the enum values
+         */
+        for (Enum201PutOrCall oneEnum : Enum201PutOrCall.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

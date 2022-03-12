@@ -87,9 +87,11 @@ public enum Enum77PositionEffect {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum77PositionEffect.CLOSE);
-        System.out.println(Enum77PositionEffect.FIFO);
-        System.out.println(Enum77PositionEffect.OPEN);
-        System.out.println(Enum77PositionEffect.ROLLED);
+        /*
+         * dump all the enum values
+         */
+        for (Enum77PositionEffect oneEnum : Enum77PositionEffect.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

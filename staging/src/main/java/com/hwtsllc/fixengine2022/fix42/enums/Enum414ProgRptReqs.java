@@ -83,6 +83,11 @@ public enum Enum414ProgRptReqs {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum414ProgRptReqs oneEnum : Enum414ProgRptReqs.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

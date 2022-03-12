@@ -22,7 +22,6 @@ import org.apache.log4j.Logger;
 public enum Enum285DeleteReason {
     CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
     ERROR( "1", "ERROR", "1 - Error" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -86,7 +85,11 @@ public enum Enum285DeleteReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
-        System.out.println(Enum285DeleteReason.ERROR);
+        /*
+         * dump all the enum values
+         */
+        for (Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

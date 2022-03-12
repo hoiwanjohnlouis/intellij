@@ -89,8 +89,11 @@ public enum Enum263SubscriptionRequestType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum263SubscriptionRequestType.SNAPSHOT);
-        System.out.println(Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT);
-        System.out.println(Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT);
+        /*
+         * dump all the enum values
+         */
+        for (Enum263SubscriptionRequestType oneEnum : Enum263SubscriptionRequestType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

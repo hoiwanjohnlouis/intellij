@@ -83,6 +83,11 @@ public enum Enum492PaymentMethod {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

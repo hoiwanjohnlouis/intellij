@@ -83,6 +83,11 @@ public enum Enum462UnderlyingProduct {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum462UnderlyingProduct oneEnum : Enum462UnderlyingProduct.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

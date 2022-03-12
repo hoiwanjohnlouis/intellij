@@ -87,9 +87,11 @@ public enum Enum163SettlInstTransType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum163SettlInstTransType.NEW);
-        System.out.println(Enum163SettlInstTransType.CANCEL);
-        System.out.println(Enum163SettlInstTransType.REPLACE);
-        System.out.println(Enum163SettlInstTransType.RESTATE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

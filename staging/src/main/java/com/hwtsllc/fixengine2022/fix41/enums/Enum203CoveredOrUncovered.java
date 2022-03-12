@@ -85,7 +85,11 @@ public enum Enum203CoveredOrUncovered {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum203CoveredOrUncovered.COVERED);
-        System.out.println(Enum203CoveredOrUncovered.UNCOVERED);
+        /*
+         * dump all the enum values
+         */
+        for (Enum203CoveredOrUncovered oneEnum : Enum203CoveredOrUncovered.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

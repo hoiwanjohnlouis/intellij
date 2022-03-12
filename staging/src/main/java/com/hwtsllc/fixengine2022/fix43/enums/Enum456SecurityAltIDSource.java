@@ -83,6 +83,11 @@ public enum Enum456SecurityAltIDSource {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum456SecurityAltIDSource oneEnum : Enum456SecurityAltIDSource.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

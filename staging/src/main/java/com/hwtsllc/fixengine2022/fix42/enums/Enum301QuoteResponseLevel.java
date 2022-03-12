@@ -83,6 +83,11 @@ public enum Enum301QuoteResponseLevel {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

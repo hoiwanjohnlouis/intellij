@@ -83,6 +83,11 @@ public enum Enum658QuoteRequestRejectReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum658QuoteRequestRejectReason oneEnum : Enum658QuoteRequestRejectReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -85,7 +85,11 @@ public enum Enum197AllocLinkType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum197AllocLinkType.FX_NETTING);
-        System.out.println(Enum197AllocLinkType.FX_SWAP);
+        /*
+         * dump all the enum values
+         */
+        for (Enum197AllocLinkType oneEnum : Enum197AllocLinkType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

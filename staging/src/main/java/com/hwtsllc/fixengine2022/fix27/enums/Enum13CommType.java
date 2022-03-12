@@ -95,11 +95,11 @@ public enum Enum13CommType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum13CommType.PER_UNIT);
-        System.out.println(Enum13CommType.PERCENT);
-        System.out.println(Enum13CommType.ABSOLUTE);
-        System.out.println(Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT);
-        System.out.println(Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS);
-        System.out.println(Enum13CommType.POINTS_PER_BOND);
+        /*
+         * dump all the enum values
+         */
+        for (Enum13CommType oneEnum : Enum13CommType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

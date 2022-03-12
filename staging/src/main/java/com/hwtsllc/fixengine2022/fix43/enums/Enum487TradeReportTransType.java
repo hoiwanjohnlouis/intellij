@@ -83,6 +83,11 @@ public enum Enum487TradeReportTransType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum487TradeReportTransType oneEnum : Enum487TradeReportTransType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

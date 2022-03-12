@@ -85,7 +85,11 @@ public enum Enum265MDUpdateType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum265MDUpdateType.FULL_REFRESH);
-        System.out.println(Enum265MDUpdateType.INCREMENTAL_REFRESH);
+        /*
+         * dump all the enum values
+         */
+        for (Enum265MDUpdateType oneEnum : Enum265MDUpdateType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

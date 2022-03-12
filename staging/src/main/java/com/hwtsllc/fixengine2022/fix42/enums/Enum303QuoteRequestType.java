@@ -83,6 +83,11 @@ public enum Enum303QuoteRequestType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum303QuoteRequestType oneEnum : Enum303QuoteRequestType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

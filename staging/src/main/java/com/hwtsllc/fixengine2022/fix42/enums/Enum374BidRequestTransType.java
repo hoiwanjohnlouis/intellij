@@ -83,6 +83,11 @@ public enum Enum374BidRequestTransType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum374BidRequestTransType oneEnum : Enum374BidRequestTransType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

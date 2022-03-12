@@ -46,7 +46,6 @@ public enum Enum269MDEntryType {
     SESSION_LOW_OFFER( "O", "SESSION_LOW_OFFER", "O - Session Low Offer" ),
     EARLY_PRICES( "P", "EARLY_PRICES", "P - Early Prices" ),
     AUCTION_CLEARING_PRICE( "Q", "AUCTION_CLEARING_PRICE", "Q - Auction Clearing Price" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -110,36 +109,11 @@ public enum Enum269MDEntryType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum269MDEntryType.BID);
-        System.out.println(Enum269MDEntryType.OFFER);
-        System.out.println(Enum269MDEntryType.TRADE);
-        System.out.println(Enum269MDEntryType.INDEX_VALUE);
-        System.out.println(Enum269MDEntryType.OPENING_PRICE);
-
-        System.out.println(Enum269MDEntryType.CLOSING_PRICE);
-        System.out.println(Enum269MDEntryType.SETTLEMENT_PRICE);
-        System.out.println(Enum269MDEntryType.TRADING_SESSION_HIGH_PRICE);
-        System.out.println(Enum269MDEntryType.TRADING_SESSION_LOW_PRICE);
-        System.out.println(Enum269MDEntryType.TRADING_SESSION_VWAP_PRICE);
-
-        System.out.println(Enum269MDEntryType.IMBALANCE);
-        System.out.println(Enum269MDEntryType.TRADE_VOLUME);
-        System.out.println(Enum269MDEntryType.OPEN_INTEREST);
-        System.out.println(Enum269MDEntryType.COMPOSITE_UNDERLYING_PRICE);
-        System.out.println(Enum269MDEntryType.SIMULATED_SELL_PRICE);
-
-        System.out.println(Enum269MDEntryType.SIMULATED_BUY_PRICE);
-        System.out.println(Enum269MDEntryType.MARGIN_RATE);
-        System.out.println(Enum269MDEntryType.MID_PRICE);
-        System.out.println(Enum269MDEntryType.EMPTY_BOOK);
-        System.out.println(Enum269MDEntryType.SETTLE_HIGH_PRICE);
-
-        System.out.println(Enum269MDEntryType.SETTLE_LOW_PRICE);
-        System.out.println(Enum269MDEntryType.PRIOR_SETTLE_PRICE);
-        System.out.println(Enum269MDEntryType.SESSION_HIGH_BID);
-        System.out.println(Enum269MDEntryType.SESSION_LOW_OFFER);
-        System.out.println(Enum269MDEntryType.EARLY_PRICES);
-
-        System.out.println(Enum269MDEntryType.AUCTION_CLEARING_PRICE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum269MDEntryType oneEnum : Enum269MDEntryType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

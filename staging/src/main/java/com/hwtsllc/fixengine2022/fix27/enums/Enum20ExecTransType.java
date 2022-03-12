@@ -91,9 +91,11 @@ public enum Enum20ExecTransType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum20ExecTransType.NEW);
-        System.out.println(Enum20ExecTransType.CANCEL);
-        System.out.println(Enum20ExecTransType.CORRECT);
-        System.out.println(Enum20ExecTransType.STATUS);
+        /*
+         * dump all the enum values
+         */
+        for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

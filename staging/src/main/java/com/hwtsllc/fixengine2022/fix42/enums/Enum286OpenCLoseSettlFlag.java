@@ -32,7 +32,6 @@ public enum Enum286OpenCLoseSettlFlag {
             "4 - Entry from previous business day" ),
     THEORETICAL_PRICE_VALUE( "5", "THEORETICAL_PRICE_VALUE",
             "5 - Theoretical Price value" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -96,11 +95,11 @@ public enum Enum286OpenCLoseSettlFlag {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT);
-        System.out.println(Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT);
-        System.out.println(Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT);
-        System.out.println(Enum286OpenCLoseSettlFlag.EXPECTED);
-        System.out.println(Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY);
-        System.out.println(Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum286OpenCLoseSettlFlag oneEnum : Enum286OpenCLoseSettlFlag.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

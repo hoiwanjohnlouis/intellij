@@ -42,7 +42,6 @@ public enum Enum292CorporateAction {
     SYMBOL_CONVERSION( "T", "SYMBOL_CONVERSION", "T - Symbol Conversion" ),
     CUSIP_OR_NAME_CHANGE( "U", "CUSIP_OR_NAME_CHANGE", "U - CUSIP / Name Change" ),
     LEAP_ROLLOVER( "V", "LEAP_ROLLOVER", "V - Leap Rollover" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -106,31 +105,11 @@ public enum Enum292CorporateAction {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum292CorporateAction.EX_DIVIDEND);
-        System.out.println(Enum292CorporateAction.EX_DISTRIBUTION);
-        System.out.println(Enum292CorporateAction.EX_RIGHTS);
-        System.out.println(Enum292CorporateAction.NEW);
-        System.out.println(Enum292CorporateAction.EX_INTEREST);
-
-        System.out.println(Enum292CorporateAction.CASH_DIVIDEND);
-        System.out.println(Enum292CorporateAction.STOCK_DIVIDEND);
-        System.out.println(Enum292CorporateAction.NON_INTEGER_STOCK_SPLIT);
-        System.out.println(Enum292CorporateAction.REVERSE_STOCK_SPLIT);
-        System.out.println(Enum292CorporateAction.STANDARD_INTEGER_STOCK_SPLIT);
-
-        System.out.println(Enum292CorporateAction.POSITION_CONSOLIDATION);
-        System.out.println(Enum292CorporateAction.LIQUIDATION_REORGANIZATION);
-        System.out.println(Enum292CorporateAction.MERGER_REORGANIZATION);
-        System.out.println(Enum292CorporateAction.RIGHTS_OFFERING);
-        System.out.println(Enum292CorporateAction.SHAREHOLDER_MEETING);
-
-        System.out.println(Enum292CorporateAction.SPINOFF);
-        System.out.println(Enum292CorporateAction.TENDER_OFFER);
-        System.out.println(Enum292CorporateAction.WARRANT);
-        System.out.println(Enum292CorporateAction.SPECIAL_ACTION);
-        System.out.println(Enum292CorporateAction.SYMBOL_CONVERSION);
-
-        System.out.println(Enum292CorporateAction.CUSIP_OR_NAME_CHANGE);
-        System.out.println(Enum292CorporateAction.LEAP_ROLLOVER);
+        /*
+         * dump all the enum values
+         */
+        for (Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -86,8 +86,11 @@ public enum Enum165SettlInstSource {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum165SettlInstSource.BROKER_INSTRUCTIONS);
-        System.out.println(Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS);
-        System.out.println(Enum165SettlInstSource.INVESTOR);
+        /*
+         * dump all the enum values
+         */
+        for (Enum165SettlInstSource oneEnum : Enum165SettlInstSource.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

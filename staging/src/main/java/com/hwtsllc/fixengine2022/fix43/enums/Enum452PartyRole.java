@@ -83,6 +83,11 @@ public enum Enum452PartyRole {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum452PartyRole oneEnum : Enum452PartyRole.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

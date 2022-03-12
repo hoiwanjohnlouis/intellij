@@ -112,29 +112,11 @@ public enum Enum40OrdType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum40OrdType.MARKET);
-        System.out.println(Enum40OrdType.LIMIT);
-        System.out.println(Enum40OrdType.STOP_OR_STOP_LOSS);
-        System.out.println(Enum40OrdType.STOP_LIMIT);
-        System.out.println(Enum40OrdType.MARKET_ON_CLOSE);
-        System.out.println(Enum40OrdType.WITH_OR_WITHOUT);
-        System.out.println(Enum40OrdType.LIMIT_OR_BETTER);
-        System.out.println(Enum40OrdType.LIMIT_WITH_OR_WITHOUT);
-        System.out.println(Enum40OrdType.ON_BASIS);
-        System.out.println(Enum40OrdType.ON_CLOSE);
-        System.out.println(Enum40OrdType.LIMIT_ON_CLOSE);
-        System.out.println(Enum40OrdType.FOREX_MARKET);
-        System.out.println(Enum40OrdType.PREVIOUSLY_QUOTED);
-        System.out.println(Enum40OrdType.PREVIOUSLY_INDICATED);
-        System.out.println(Enum40OrdType.FOREX_LIMIT);
-        System.out.println(Enum40OrdType.FOREX_SWAP);
-        System.out.println(Enum40OrdType.FOREX_PREVIOUSLY_QUOTED);
-        System.out.println(Enum40OrdType.FUNARI);
-        System.out.println(Enum40OrdType.MARKET_IF_TOUCHED);
-        System.out.println(Enum40OrdType.MARKET_WITH_LEFT_OVER_AS_LIMIT);
-        System.out.println(Enum40OrdType.PREVIOUS_FUND_VALUATION_POINT);
-        System.out.println(Enum40OrdType.NEXT_FUND_VALUATION_POINT);
-        System.out.println(Enum40OrdType.PEGGED);
-        System.out.println(Enum40OrdType.COUNTER_ORDER_SELECTION);
+        /*
+         * dump all the enum values
+         */
+        for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

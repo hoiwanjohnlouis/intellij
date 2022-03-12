@@ -83,6 +83,11 @@ public enum Enum959StrategyParameterType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -83,6 +83,11 @@ public enum Enum380BusinessRejectReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum380BusinessRejectReason oneEnum : Enum380BusinessRejectReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -92,15 +92,11 @@ public enum Enum219Benchmark {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum219Benchmark.CURVE);
-        System.out.println(Enum219Benchmark.FIVE_YEAR);
-        System.out.println(Enum219Benchmark.OLD_FIVE_YEAR);
-        System.out.println(Enum219Benchmark.TEN_YEAR);
-        System.out.println(Enum219Benchmark.OLD_TEN_YEAR);
-
-        System.out.println(Enum219Benchmark.THIRTY_YEAR);
-        System.out.println(Enum219Benchmark.OLD_THIRTY_YEAR);
-        System.out.println(Enum219Benchmark.THREE_MONTH);
-        System.out.println(Enum219Benchmark.SIX_MONTH);
+        /*
+         * dump all the enum values
+         */
+        for (Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

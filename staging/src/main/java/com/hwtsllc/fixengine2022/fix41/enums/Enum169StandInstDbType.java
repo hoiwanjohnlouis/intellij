@@ -98,10 +98,11 @@ public enum Enum169StandInstDbType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum169StandInstDbType.OTHER);
-        System.out.println(Enum169StandInstDbType.DTC_SID);
-        System.out.println(Enum169StandInstDbType.THOMPSON_ALERT);
-        System.out.println(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
-        System.out.println(Enum169StandInstDbType.ACCOUNT_NET);
+        /*
+         * dump all the enum values
+         */
+        for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

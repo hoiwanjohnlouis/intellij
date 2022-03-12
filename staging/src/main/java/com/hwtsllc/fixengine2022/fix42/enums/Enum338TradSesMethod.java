@@ -83,6 +83,11 @@ public enum Enum338TradSesMethod {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum338TradSesMethod oneEnum : Enum338TradSesMethod.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

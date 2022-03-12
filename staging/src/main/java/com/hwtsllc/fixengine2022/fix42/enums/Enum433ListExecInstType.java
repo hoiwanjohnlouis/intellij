@@ -83,6 +83,11 @@ public enum Enum433ListExecInstType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum433ListExecInstType oneEnum : Enum433ListExecInstType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

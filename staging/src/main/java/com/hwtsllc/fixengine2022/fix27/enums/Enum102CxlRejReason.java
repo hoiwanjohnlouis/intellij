@@ -85,15 +85,11 @@ public enum Enum102CxlRejReason {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        System.out.println(Enum102CxlRejReason.TOO_LATE_TO_CANCEL);
-        System.out.println(Enum102CxlRejReason.UNKNOWN_ORDER);
-        System.out.println(Enum102CxlRejReason.BROKER_OR_EXCHANGE_OPTION);
-        System.out.println(Enum102CxlRejReason.PENDING_STATUS);
-        System.out.println(Enum102CxlRejReason.UNABLE_TO_PROCESS_MASS_CANCEL_REQUEST);
-
-        System.out.println(Enum102CxlRejReason.UNMATCHED_ORIG_ORD_MOD_TIME);
-        System.out.println(Enum102CxlRejReason.DUPLICATE_CLORDID);
-        System.out.println(Enum102CxlRejReason.INVALID_PRICE_INCREMENT);
-        System.out.println(Enum102CxlRejReason.OTHER);
+        /*
+         * dump all the enum values
+         */
+        for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

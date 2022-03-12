@@ -83,6 +83,11 @@ public enum Enum477DistribPaymentMethod {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

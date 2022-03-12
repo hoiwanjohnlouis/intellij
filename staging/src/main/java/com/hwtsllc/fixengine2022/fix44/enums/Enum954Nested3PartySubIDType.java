@@ -83,6 +83,11 @@ public enum Enum954Nested3PartySubIDType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum954Nested3PartySubIDType oneEnum : Enum954Nested3PartySubIDType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

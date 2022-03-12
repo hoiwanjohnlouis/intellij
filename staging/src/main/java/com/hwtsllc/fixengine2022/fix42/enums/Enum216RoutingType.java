@@ -87,9 +87,11 @@ public enum Enum216RoutingType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum216RoutingType.TARGET_FIRM);
-        System.out.println(Enum216RoutingType.TARGET_LIST);
-        System.out.println(Enum216RoutingType.BLOCK_FIRM);
-        System.out.println(Enum216RoutingType.BLOCK_LIST);
+        /*
+         * dump all the enum values
+         */
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

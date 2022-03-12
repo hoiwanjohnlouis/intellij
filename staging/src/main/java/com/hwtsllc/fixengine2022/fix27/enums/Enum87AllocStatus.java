@@ -91,13 +91,11 @@ public enum Enum87AllocStatus {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum87AllocStatus.ACCEPTED);
-        System.out.println(Enum87AllocStatus.BLOCK_LEVEL_REJECT);
-        System.out.println(Enum87AllocStatus.ACCOUNT_LEVEL_REJECT);
-        System.out.println(Enum87AllocStatus.RECEIVED_NOT_PROCESSED);
-        System.out.println(Enum87AllocStatus.INCOMPLETE);
-        System.out.println(Enum87AllocStatus.REJECTED_BY_INTERMEDIARY);
-        System.out.println(Enum87AllocStatus.ALLOCATION_PENDING);
-        System.out.println(Enum87AllocStatus.REVERSED);
+        /*
+         * dump all the enum values
+         */
+        for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

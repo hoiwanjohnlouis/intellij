@@ -83,6 +83,11 @@ public enum Enum660AcctIDSource {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum660AcctIDSource oneEnum : Enum660AcctIDSource.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

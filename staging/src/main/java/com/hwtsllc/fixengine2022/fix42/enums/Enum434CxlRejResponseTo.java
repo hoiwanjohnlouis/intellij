@@ -83,6 +83,11 @@ public enum Enum434CxlRejResponseTo {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum434CxlRejResponseTo oneEnum : Enum434CxlRejResponseTo.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

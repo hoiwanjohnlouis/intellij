@@ -54,7 +54,6 @@ public enum Enum235YieldType {
     TRUE( "TRUE", "TRUE", "TRUE - True Yield" ),
     VALUE1_32( "VALUE1_32", "VALUE1_32", "VALUE1_32 - Yield Value Of 1/32" ),
     WORST( "WORST", "WORST", "WORST - Yield To Worst" ),
-
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -118,45 +117,11 @@ public enum Enum235YieldType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum235YieldType.AFTERTAX);
-        System.out.println(Enum235YieldType.ANNUAL);
-        System.out.println(Enum235YieldType.ATISSUE);
-        System.out.println(Enum235YieldType.AVGMATURITY);
-        System.out.println(Enum235YieldType.BOOK);
-
-        System.out.println(Enum235YieldType.CALL);
-        System.out.println(Enum235YieldType.CHANGE);
-        System.out.println(Enum235YieldType.CLOSE);
-        System.out.println(Enum235YieldType.COMPOUND);
-        System.out.println(Enum235YieldType.CURRENT);
-
-        System.out.println(Enum235YieldType.GOVTEQUIV);
-        System.out.println(Enum235YieldType.GROSS);
-        System.out.println(Enum235YieldType.INFLATION);
-        System.out.println(Enum235YieldType.INVERSEFLOATER);
-        System.out.println(Enum235YieldType.LASTCLOSE);
-
-        System.out.println(Enum235YieldType.LASTMONTH);
-        System.out.println(Enum235YieldType.LASTQUARTER);
-        System.out.println(Enum235YieldType.LASTYEAR);
-        System.out.println(Enum235YieldType.LONGAVGLIFE);
-        System.out.println(Enum235YieldType.MARK);
-
-        System.out.println(Enum235YieldType.MATURITY);
-        System.out.println(Enum235YieldType.NEXTREFUND);
-        System.out.println(Enum235YieldType.OPENAVG);
-        System.out.println(Enum235YieldType.PREVCLOSE);
-        System.out.println(Enum235YieldType.PROCEEDS);
-
-        System.out.println(Enum235YieldType.PUT);
-        System.out.println(Enum235YieldType.SEMIANNUAL);
-        System.out.println(Enum235YieldType.SHORTAVGLIFE);
-        System.out.println(Enum235YieldType.SIMPLE);
-        System.out.println(Enum235YieldType.TAXEQUIV);
-
-        System.out.println(Enum235YieldType.TENDER);
-        System.out.println(Enum235YieldType.TRUE);
-        System.out.println(Enum235YieldType.VALUE1_32);
-        System.out.println(Enum235YieldType.WORST);
+        /*
+         * dump all the enum values
+         */
+        for (Enum235YieldType oneEnum : Enum235YieldType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

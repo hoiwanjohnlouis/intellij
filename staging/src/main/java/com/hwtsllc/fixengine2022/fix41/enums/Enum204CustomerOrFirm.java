@@ -85,7 +85,11 @@ public enum Enum204CustomerOrFirm {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum204CustomerOrFirm.CUSTOMER);
-        System.out.println(Enum204CustomerOrFirm.FIRM);
+        /*
+         * dump all the enum values
+         */
+        for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

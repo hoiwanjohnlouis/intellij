@@ -83,6 +83,11 @@ public enum Enum339TrdSesMode {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum339TrdSesMode oneEnum : Enum339TrdSesMode.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

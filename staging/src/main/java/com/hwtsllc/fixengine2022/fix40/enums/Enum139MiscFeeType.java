@@ -97,21 +97,11 @@ public enum Enum139MiscFeeType {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum139MiscFeeType.REGULATORY);
-        System.out.println(Enum139MiscFeeType.TAX);
-        System.out.println(Enum139MiscFeeType.LOCAL_COMMISSION);
-        System.out.println(Enum139MiscFeeType.EXCHANGE_FEES);
-        System.out.println(Enum139MiscFeeType.STAMP);
-
-        System.out.println(Enum139MiscFeeType.LEVY);
-        System.out.println(Enum139MiscFeeType.OTHER);
-        System.out.println(Enum139MiscFeeType.MARKUP);
-        System.out.println(Enum139MiscFeeType.CONSUMPTION_TAX);
-        System.out.println(Enum139MiscFeeType.PER_TRANSACTION);
-
-        System.out.println(Enum139MiscFeeType.CONVERSION);
-        System.out.println(Enum139MiscFeeType.AGENT);
-        System.out.println(Enum139MiscFeeType.TRANSFER_FEE);
-        System.out.println(Enum139MiscFeeType.SECURITY_LENDING);
+        /*
+         * dump all the enum values
+         */
+        for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

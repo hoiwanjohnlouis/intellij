@@ -83,6 +83,11 @@ public enum Enum484PriceType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

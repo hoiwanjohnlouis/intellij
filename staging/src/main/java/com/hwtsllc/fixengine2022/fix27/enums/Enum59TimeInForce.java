@@ -91,13 +91,11 @@ public enum Enum59TimeInForce {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum59TimeInForce.DAY);
-        System.out.println(Enum59TimeInForce.GOOD_TILL_CANCEL);
-        System.out.println(Enum59TimeInForce.AT_THE_OPENING);
-        System.out.println(Enum59TimeInForce.IMMEDIATE_OR_CANCEL);
-        System.out.println(Enum59TimeInForce.FILL_OR_KILL);
-        System.out.println(Enum59TimeInForce.GOOD_TILL_CROSSING);
-        System.out.println(Enum59TimeInForce.GOOD_TILL_DATE);
-        System.out.println(Enum59TimeInForce.AT_THE_CLOSE);
+        /*
+         * dump all the enum values
+         */
+        for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

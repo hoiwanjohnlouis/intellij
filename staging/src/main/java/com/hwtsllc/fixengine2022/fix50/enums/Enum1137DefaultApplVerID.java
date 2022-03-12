@@ -83,6 +83,11 @@ public enum Enum1137DefaultApplVerID {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values for review
+         */
+        for (Enum1137DefaultApplVerID oneEnum : Enum1137DefaultApplVerID.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

@@ -83,6 +83,11 @@ public enum Enum326SecurityTradingStatus {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        /*
+         * dump all the enum values
+         */
+        for (Enum326SecurityTradingStatus oneEnum : Enum326SecurityTradingStatus.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }

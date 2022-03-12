@@ -87,9 +87,11 @@ public enum Enum29LastCapacity {
      *
      */
     public static void main(String[] args) {
-        System.out.println(Enum29LastCapacity.AGENT);
-        System.out.println(Enum29LastCapacity.CROSS_AS_AGENT);
-        System.out.println(Enum29LastCapacity.CROSS_AS_PRINCIPAL);
-        System.out.println(Enum29LastCapacity.PRINCIPAL);
+        /*
+         * dump all the enum values
+         */
+        for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
+            System.out.println(oneEnum);
+        }
     }
 }
