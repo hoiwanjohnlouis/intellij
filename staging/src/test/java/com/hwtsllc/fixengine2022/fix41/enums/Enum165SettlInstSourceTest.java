@@ -45,9 +45,34 @@ class Enum165SettlInstSourceTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0165Test() {
+        Enum165SettlInstSource enumType;
+
+        /*
+         * 1-3 msg types
+         */
+        enumType = Enum165SettlInstSource.BROKER_INSTRUCTIONS;
+        assertEquals("1", enumType.getAction());
+        assertEquals("BROKER_INSTRUCTIONS", enumType.getName());
+        assertEquals("1 - Broker Instructions", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS;
+        assertEquals("2", enumType.getAction());
+        assertEquals("INSTITUTION_INSTRUCTIONS", enumType.getName());
+        assertEquals("2 - Institution Instructions", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum165SettlInstSource.INVESTOR;
+        assertEquals("3", enumType.getAction());
+        assertEquals("INVESTOR", enumType.getName());
+        assertEquals("3 - Investor (e.g. CIV use)", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

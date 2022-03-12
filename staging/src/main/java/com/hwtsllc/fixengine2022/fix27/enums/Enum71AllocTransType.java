@@ -20,16 +20,17 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum71AllocTransType {
-    NEW("0", "NEW", "New" ),
-    REPLACE("1", "REPLACE", "Replace" ),
-    CANCEL("2", "CANCEL", "Cancel" ),
+    NEW("0", "NEW", "0 - New" ),
+    REPLACE("1", "REPLACE", "1 - Replace" ),
+    CANCEL("2", "CANCEL", "2 - Cancel" ),
     PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY("3", "PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY",
-            "Preliminary (without MiscFees and NetMoney) (Removed/Replaced)" ),
+            "3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)" ),
     CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY("4", "CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY",
-            "Calculated (includes MiscFees and NetMoney) (Removed/Replaced)" ),
+            "4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)" ),
     CALCULATED_WITHOUT_PRELIMINARY("5", "CALCULATED_WITHOUT_PRELIMINARY",
-            "Calculated without Preliminary (sent unsolicited by broker, includes MiscFees and NetMoney) (Removed/Replaced)" ),
-    REVERSAL("6", "REVERSAL", "Reversal" ),
+            "5 - Calculated without Preliminary " +
+                    "(sent unsolicited by broker, includes MiscFees and NetMoney) (Removed/Replaced)" ),
+    REVERSAL("6", "REVERSAL", "6 - Reversal" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

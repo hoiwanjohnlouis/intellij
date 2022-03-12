@@ -20,6 +20,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum156SettlCurrFxRateCalc {
+    MULTIPLY( "M", "MULTIPLY", "M - Multiply" ),
+    DIVIDE( "D", "DIVIDE", "D - Divide" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +85,7 @@ public enum Enum156SettlCurrFxRateCalc {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum156SettlCurrFxRateCalc.MULTIPLY);
+        System.out.println(Enum156SettlCurrFxRateCalc.DIVIDE);
     }
 }

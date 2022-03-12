@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40.enums;
 
+import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
@@ -45,9 +46,66 @@ class Enum127DKReasonTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0127Test() {
+        Enum127DKReason enumType;
+
+        /*
+         * A-Z msg types
+         */
+        enumType = Enum127DKReason.UNKNOWN_SYMBOL;
+        assertEquals("A", enumType.getAction());
+        assertEquals("UNKNOWN_SYMBOL", enumType.getName());
+        assertEquals("A - Unknown Symbol", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum127DKReason.WRONG_SIDE;
+        assertEquals("B", enumType.getAction());
+        assertEquals("WRONG_SIDE", enumType.getName());
+        assertEquals("B - Wrong Side", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum127DKReason.QUANTITY_EXCEEDS_ORDER;
+        assertEquals("C", enumType.getAction());
+        assertEquals("QUANTITY_EXCEEDS_ORDER", enumType.getName());
+        assertEquals("C - Quantity Exceeds Order", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum127DKReason.NO_MATCHING_ORDER;
+        assertEquals("D", enumType.getAction());
+        assertEquals("NO_MATCHING_ORDER", enumType.getName());
+        assertEquals("D - No Matching Order", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum127DKReason.PRICE_EXCEEDS_LIMIT;
+        assertEquals("E", enumType.getAction());
+        assertEquals("PRICE_EXCEEDS_LIMIT", enumType.getName());
+        assertEquals("E - Price Exceeds Limit", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum127DKReason.CALCULATION_DIFFERENCE;
+        assertEquals("F", enumType.getAction());
+        assertEquals("CALCULATION_DIFFERENCE", enumType.getName());
+        assertEquals("F - Calculation Difference", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum127DKReason.OTHER;
+        assertEquals("Z", enumType.getAction());
+        assertEquals("OTHER", enumType.getName());
+        assertEquals("Z - Other", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

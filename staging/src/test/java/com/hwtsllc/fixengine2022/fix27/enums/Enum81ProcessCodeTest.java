@@ -45,9 +45,66 @@ class Enum81ProcessCodeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0081Test() {
+        Enum81ProcessCode enumType;
+
+        /*
+         * 0-6 msg types
+         */
+        enumType = Enum81ProcessCode.REGULAR;
+        assertEquals("0", enumType.getAction());
+        assertEquals("REGULAR", enumType.getName());
+        assertEquals("0 - Regular", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum81ProcessCode.SOFT_DOLLAR;
+        assertEquals("1", enumType.getAction());
+        assertEquals("SOFT_DOLLAR", enumType.getName());
+        assertEquals("1 - Soft Dollar", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum81ProcessCode.STEP_IN;
+        assertEquals("2", enumType.getAction());
+        assertEquals("STEP_IN", enumType.getName());
+        assertEquals("2 - Step In", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum81ProcessCode.STEP_OUT;
+        assertEquals("3", enumType.getAction());
+        assertEquals("STEP_OUT", enumType.getName());
+        assertEquals("3 - Step Out", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum81ProcessCode.SOFT_DOLLAR_STEP_IN;
+        assertEquals("4", enumType.getAction());
+        assertEquals("SOFT_DOLLAR_STEP_IN", enumType.getName());
+        assertEquals("4 - Soft Dollar, Step In", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum81ProcessCode.SOFT_DOLLAR_STEP_OUT;
+        assertEquals("5", enumType.getAction());
+        assertEquals("SOFT_DOLLAR_STEP_OUT", enumType.getName());
+        assertEquals("5 - Soft Dollar, Step Out", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum81ProcessCode.PLAN_SPONSOR;
+        assertEquals("6", enumType.getAction());
+        assertEquals("PLAN_SPONSOR", enumType.getName());
+        assertEquals("6 - Plan Sponsor", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

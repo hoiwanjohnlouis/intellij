@@ -20,6 +20,29 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum292CorporateAction {
+    EX_DIVIDEND( "A", "EX_DIVIDEND", "A - Ex-Dividend" ),
+    EX_DISTRIBUTION( "B", "EX_DISTRIBUTION", "B - Ex-Distribution" ),
+    EX_RIGHTS( "C", "EX_RIGHTS", "C - Ex-Rights" ),
+    NEW( "D", "NEW", "D - New" ),
+    EX_INTEREST( "E", "EX_INTEREST", "E - Ex-Interest" ),
+    CASH_DIVIDEND( "F", "CASH_DIVIDEND", "F - Cash Dividend" ),
+    STOCK_DIVIDEND( "G", "STOCK_DIVIDEND", "G - Stock Dividend" ),
+    NON_INTEGER_STOCK_SPLIT( "H", "NON_INTEGER_STOCK_SPLIT", "H - Non-Integer Stock Split" ),
+    REVERSE_STOCK_SPLIT( "I", "REVERSE_STOCK_SPLIT", "I - Reverse Stock Split" ),
+    STANDARD_INTEGER_STOCK_SPLIT( "J", "STANDARD_INTEGER_STOCK_SPLIT", "J - Standard-Integer Stock Split" ),
+    POSITION_CONSOLIDATION( "K", "POSITION_CONSOLIDATION", "K - Position Consolidation" ),
+    LIQUIDATION_REORGANIZATION( "L", "LIQUIDATION_REORGANIZATION", "L - Liquidation Reorganization" ),
+    MERGER_REORGANIZATION( "M", "MERGER_REORGANIZATION", "M - Merger Reorganization" ),
+    RIGHTS_OFFERING( "N", "RIGHTS_OFFERING", "N - Rights Offering" ),
+    SHAREHOLDER_MEETING( "O", "SHAREHOLDER_MEETING", "O - Shareholder Meeting" ),
+    SPINOFF( "P", "SPINOFF", "P - Spinoff" ),
+    TENDER_OFFER( "Q", "TENDER_OFFER", "Q - Tender Offer" ),
+    WARRANT( "R", "WARRANT", "R - Warrant" ),
+    SPECIAL_ACTION( "S", "SPECIAL_ACTION", "S - Special Action" ),
+    SYMBOL_CONVERSION( "T", "SYMBOL_CONVERSION", "T - Symbol Conversion" ),
+    CUSIP_OR_NAME_CHANGE( "U", "CUSIP_OR_NAME_CHANGE", "U - CUSIP / Name Change" ),
+    LEAP_ROLLOVER( "V", "LEAP_ROLLOVER", "V - Leap Rollover" ),
+
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +106,31 @@ public enum Enum292CorporateAction {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum292CorporateAction.EX_DIVIDEND);
+        System.out.println(Enum292CorporateAction.EX_DISTRIBUTION);
+        System.out.println(Enum292CorporateAction.EX_RIGHTS);
+        System.out.println(Enum292CorporateAction.NEW);
+        System.out.println(Enum292CorporateAction.EX_INTEREST);
+
+        System.out.println(Enum292CorporateAction.CASH_DIVIDEND);
+        System.out.println(Enum292CorporateAction.STOCK_DIVIDEND);
+        System.out.println(Enum292CorporateAction.NON_INTEGER_STOCK_SPLIT);
+        System.out.println(Enum292CorporateAction.REVERSE_STOCK_SPLIT);
+        System.out.println(Enum292CorporateAction.STANDARD_INTEGER_STOCK_SPLIT);
+
+        System.out.println(Enum292CorporateAction.POSITION_CONSOLIDATION);
+        System.out.println(Enum292CorporateAction.LIQUIDATION_REORGANIZATION);
+        System.out.println(Enum292CorporateAction.MERGER_REORGANIZATION);
+        System.out.println(Enum292CorporateAction.RIGHTS_OFFERING);
+        System.out.println(Enum292CorporateAction.SHAREHOLDER_MEETING);
+
+        System.out.println(Enum292CorporateAction.SPINOFF);
+        System.out.println(Enum292CorporateAction.TENDER_OFFER);
+        System.out.println(Enum292CorporateAction.WARRANT);
+        System.out.println(Enum292CorporateAction.SPECIAL_ACTION);
+        System.out.println(Enum292CorporateAction.SYMBOL_CONVERSION);
+
+        System.out.println(Enum292CorporateAction.CUSIP_OR_NAME_CHANGE);
+        System.out.println(Enum292CorporateAction.LEAP_ROLLOVER);
     }
 }

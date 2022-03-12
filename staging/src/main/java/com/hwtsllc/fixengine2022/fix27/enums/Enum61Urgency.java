@@ -20,9 +20,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum61Urgency {
-    NORMAL("0", "NORMAL", "Normal" ),
-    FLASH("1", "FLASH", "Flash" ),
-    BACKGROUND("2", "BACKGROUND", "Background" ),
+    NORMAL("0", "NORMAL", "0 - Normal" ),
+    FLASH("1", "FLASH", "1 - Flash" ),
+    BACKGROUND("2", "BACKGROUND", "2 - Background" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

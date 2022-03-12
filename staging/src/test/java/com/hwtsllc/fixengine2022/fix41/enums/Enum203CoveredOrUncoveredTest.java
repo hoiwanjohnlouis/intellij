@@ -45,9 +45,26 @@ class Enum203CoveredOrUncoveredTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0203Test() {
+        Enum203CoveredOrUncovered enumType;
+
+        /*
+         * 0-1 msg types
+         */
+        enumType = Enum203CoveredOrUncovered.COVERED;
+        assertEquals("0", enumType.getAction());
+        assertEquals("COVERED", enumType.getName());
+        assertEquals("0 - Covered", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum203CoveredOrUncovered.UNCOVERED;
+        assertEquals("1", enumType.getAction());
+        assertEquals("UNCOVERED", enumType.getName());
+        assertEquals("1 - Uncovered", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

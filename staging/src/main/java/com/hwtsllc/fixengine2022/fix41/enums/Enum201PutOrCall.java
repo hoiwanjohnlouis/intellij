@@ -20,6 +20,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum201PutOrCall {
+    PUT( "0", "PUT", "0 - Put" ),
+    CALL( "1", "CALL", "1 - Call" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +85,7 @@ public enum Enum201PutOrCall {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum201PutOrCall.PUT);
+        System.out.println(Enum201PutOrCall.CALL);
     }
 }

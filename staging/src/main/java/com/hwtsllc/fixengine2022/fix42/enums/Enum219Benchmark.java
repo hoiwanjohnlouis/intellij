@@ -20,6 +20,15 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum219Benchmark {
+    CURVE( "1", "CURVE", "1 - CURVE" ),
+    FIVE_YEAR( "2", "5YR", "2 - 5YR" ),
+    OLD_FIVE_YEAR( "3", "OLD5", "3 - OLD5" ),
+    TEN_YEAR( "4", "10YR", "4 - 10YR" ),
+    OLD_TEN_YEAR( "5", "OLD10", "5 - OLD10" ),
+    THIRTY_YEAR( "6", "30YR", "6 - 30YR" ),
+    OLD_THIRTY_YEAR( "7", "OLD30", "7 - OLD30" ),
+    THREE_MONTH( "8", "3MOLIBOR", "8 - 3MOLIBOR" ),
+    SIX_MONTH( "9", "6MOLIBOR", "9 - 6MOLIBOR" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +92,15 @@ public enum Enum219Benchmark {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum219Benchmark.CURVE);
+        System.out.println(Enum219Benchmark.FIVE_YEAR);
+        System.out.println(Enum219Benchmark.OLD_FIVE_YEAR);
+        System.out.println(Enum219Benchmark.TEN_YEAR);
+        System.out.println(Enum219Benchmark.OLD_TEN_YEAR);
+
+        System.out.println(Enum219Benchmark.THIRTY_YEAR);
+        System.out.println(Enum219Benchmark.OLD_THIRTY_YEAR);
+        System.out.println(Enum219Benchmark.THREE_MONTH);
+        System.out.println(Enum219Benchmark.SIX_MONTH);
     }
 }

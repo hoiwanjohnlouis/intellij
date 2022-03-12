@@ -45,9 +45,34 @@ class Enum61UrgencyTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0061Test() {
+        Enum61Urgency enumType;
+
+        /*
+         * 0-2 msg types
+         */
+        enumType = Enum61Urgency.NORMAL;
+        assertEquals("0", enumType.getAction());
+        assertEquals("NORMAL", enumType.getName());
+        assertEquals("0 - Normal", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum61Urgency.FLASH;
+        assertEquals("1", enumType.getAction());
+        assertEquals("FLASH", enumType.getName());
+        assertEquals("1 - Flash", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum61Urgency.BACKGROUND;
+        assertEquals("2", enumType.getAction());
+        assertEquals("BACKGROUND", enumType.getName());
+        assertEquals("2 - Background", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

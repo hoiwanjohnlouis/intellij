@@ -20,6 +20,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum172SettlDeliveryType {
+    VERSUS( "0",
+            "VERSUS",
+            "0 - Versus. Payment: Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment" ),
+    FREE( "1",
+            "FREE",
+            "1 - Free: Deliver (if Sell) or Receive (if Buy) Free" ),
+    TRI_PARTY( "2",
+            "TRI_PARTY",
+            "2 - Tri-Party" ),
+    HOLD_IN_CUSTODY( "3",
+            "HOLD_IN_CUSTODY",
+            "3 - Hold In Custody" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +95,9 @@ public enum Enum172SettlDeliveryType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum172SettlDeliveryType.VERSUS);
+        System.out.println(Enum172SettlDeliveryType.FREE);
+        System.out.println(Enum172SettlDeliveryType.TRI_PARTY);
+        System.out.println(Enum172SettlDeliveryType.HOLD_IN_CUSTODY);
     }
 }

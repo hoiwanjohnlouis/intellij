@@ -45,9 +45,69 @@ class Enum71AllocTransTypeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0071Test() {
+        Enum71AllocTransType enumType;
+
+        /*
+         * 0-6 msg types
+         */
+        enumType = Enum71AllocTransType.NEW;
+        assertEquals("0", enumType.getAction());
+        assertEquals("NEW", enumType.getName());
+        assertEquals("0 - New", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum71AllocTransType.REPLACE;
+        assertEquals("1", enumType.getAction());
+        assertEquals("REPLACE", enumType.getName());
+        assertEquals("1 - Replace", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum71AllocTransType.CANCEL;
+        assertEquals("2", enumType.getAction());
+        assertEquals("CANCEL", enumType.getName());
+        assertEquals("2 - Cancel", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum71AllocTransType.PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY;
+        assertEquals("3", enumType.getAction());
+        assertEquals("PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY", enumType.getName());
+        assertEquals("3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)",
+                enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum71AllocTransType.CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY;
+        assertEquals("4", enumType.getAction());
+        assertEquals("CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY", enumType.getName());
+        assertEquals("4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)",
+                enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum71AllocTransType.CALCULATED_WITHOUT_PRELIMINARY;
+        assertEquals("5", enumType.getAction());
+        assertEquals("CALCULATED_WITHOUT_PRELIMINARY", enumType.getName());
+        assertEquals("5 - Calculated without Preliminary (sent unsolicited by broker, " +
+                "includes MiscFees and NetMoney) (Removed/Replaced)", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum71AllocTransType.REVERSAL;
+        assertEquals("6", enumType.getAction());
+        assertEquals("REVERSAL", enumType.getName());
+        assertEquals("6 - Reversal", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

@@ -20,6 +20,16 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum298QuoteCancelType {
+    CANCEL_FOR_SYMBOL( "1", "CANCEL_FOR_SYMBOL",
+            "1 - Cancel for Symbol(s)" ),
+    CANCEL_FOR_SECURITY_TYPE( "2", "CANCEL_FOR_SECURITY_TYPE",
+            "2 - Cancel for Security Type(s)" ),
+    CANCEL_FOR_UNDERLYING_SYMBOL( "3", "CANCEL_FOR_UNDERLYING_SYMBOL",
+            "3 - Cancel for Underlying Symbol" ),
+    CANCEL_ALL_QUOTES( "4", "CANCEL_ALL_QUOTES",
+            "4 - Cancel All Quotes" ),
+    CANCEL_QUOTEID_QUOTE("5", "CANCEL_QUOTEID_QUOTE",
+            "5 - Cancel quote specified in QuoteID" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +93,10 @@ public enum Enum298QuoteCancelType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
+        System.out.println(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
+        System.out.println(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
+        System.out.println(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
+        System.out.println(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
     }
 }

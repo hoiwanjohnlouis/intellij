@@ -20,6 +20,10 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum216RoutingType {
+    TARGET_FIRM( "1", "TARGET_FIRM", "1 - Target Firm" ),
+    TARGET_LIST( "2", "TARGET_LIST", "2 - Target List" ),
+    BLOCK_FIRM( "3", "BLOCK_FIRM", "3 - Block Firm" ),
+    BLOCK_LIST( "4", "BLOCK_LIST", "4 - Block List" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +87,9 @@ public enum Enum216RoutingType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum216RoutingType.TARGET_FIRM);
+        System.out.println(Enum216RoutingType.TARGET_LIST);
+        System.out.println(Enum216RoutingType.BLOCK_FIRM);
+        System.out.println(Enum216RoutingType.BLOCK_LIST);
     }
 }

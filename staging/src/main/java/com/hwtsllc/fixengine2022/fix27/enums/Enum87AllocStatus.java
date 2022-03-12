@@ -20,14 +20,14 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum87AllocStatus {
-    ACCEPTED("0", "ACCEPTED", "accepted (successfully processed)" ),
-    BLOCK_LEVEL_REJECT("1", "BLOCK_LEVEL_REJECT", "block level reject" ),
-    ACCOUNT_LEVEL_REJECT("2", "ACCOUNT_LEVEL_REJECT", "account level reject" ),
-    RECEIVED_NOT_PROCESSED("3", "RECEIVED_NOT_PROCESSED", "received (received, not yet processed)" ),
-    INCOMPLETE("4", "INCOMPLETE", "incomplete" ),
-    REJECTED_BY_INTERMEDIARY("5", "REJECTED_BY_INTERMEDIARY", "rejected by intermediary" ),
-    ALLOCATION_PENDING("6", "ALLOCATION_PENDING", "allocation pending" ),
-    REVERSED("7", "REVERSED", "reversed" ),
+    ACCEPTED("0", "ACCEPTED", "0 -accepted (successfully processed)" ),
+    BLOCK_LEVEL_REJECT("1", "BLOCK_LEVEL_REJECT", "1 - block level reject" ),
+    ACCOUNT_LEVEL_REJECT("2", "ACCOUNT_LEVEL_REJECT", "2 - account level reject" ),
+    RECEIVED_NOT_PROCESSED("3", "RECEIVED_NOT_PROCESSED", "3 - received (received, not yet processed)" ),
+    INCOMPLETE("4", "INCOMPLETE", "4 - incomplete" ),
+    REJECTED_BY_INTERMEDIARY("5", "REJECTED_BY_INTERMEDIARY", "5 - rejected by intermediary" ),
+    ALLOCATION_PENDING("6", "ALLOCATION_PENDING", "6 - allocation pending" ),
+    REVERSED("7", "REVERSED", "7 - reversed" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

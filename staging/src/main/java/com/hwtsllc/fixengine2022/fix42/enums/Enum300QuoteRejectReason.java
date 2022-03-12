@@ -20,6 +20,27 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum300QuoteRejectReason {
+    UNKNOWN_SYMBOL( "1", "UNKNOWN_SYMBOL",
+            "1 - Unknown Symbol (security)" ),
+    EXCHANGE_CLOSED( "2", "EXCHANGE_SECURITY_CLOSED",
+            "2 - Exchange (Security) closed" ),
+    QUOTE_REQUEST_EXCEEDS_LIMIT( "3", "QUOTE_REQUEST_EXCEEDS_LIMIT",
+            "3 - Quote Request exceeds limit" ),
+    TOO_LATE_TO_ENTER( "4", "TOO_LATE_TO_ENTER",
+            "4 - Too late to enter" ),
+    UNKNOWN_QUOTE( "5", "UNKNOWN_QUOTE",
+            "5 - Unknown Quote" ),
+    DUPLICATE_QUOTE( "6", "DUPLICATE_QUOTE",
+            "6 - Duplicate Quote" ),
+    INVALID_BID_ASK_SPREAD( "7", "INVALID_BID_ASK_SPREAD",
+            "7 - Invalid bid/ask spread" ),
+    INVALID_PRICE( "8", "INVALID_PRICE",
+            "8 - Invalid price" ),
+    NOT_AUTHORIZED_TO_QUOTE_SECURITY( "9", "NOT_AUTHORIZED_TO_QUOTE_SECURITY",
+            "9 - Not authorized to quote security" ),
+    OTHER( "99", "OTHER",
+            "99 - Other" ),
+
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +104,16 @@ public enum Enum300QuoteRejectReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum300QuoteRejectReason.UNKNOWN_SYMBOL);
+        System.out.println(Enum300QuoteRejectReason.EXCHANGE_CLOSED);
+        System.out.println(Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT);
+        System.out.println(Enum300QuoteRejectReason.TOO_LATE_TO_ENTER);
+        System.out.println(Enum300QuoteRejectReason.UNKNOWN_QUOTE);
+
+        System.out.println(Enum300QuoteRejectReason.DUPLICATE_QUOTE);
+        System.out.println(Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD);
+        System.out.println(Enum300QuoteRejectReason.INVALID_PRICE);
+        System.out.println(Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY);
+        System.out.println(Enum300QuoteRejectReason.OTHER);
     }
 }

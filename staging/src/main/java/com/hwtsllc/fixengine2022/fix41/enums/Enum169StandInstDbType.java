@@ -20,6 +20,21 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum169StandInstDbType {
+    OTHER( "0",
+            "OTHER",
+            "0 - Other" ),
+    DTC_SID( "1",
+            "DTC_SID",
+            "1 - DTC SID" ),
+    THOMPSON_ALERT( "2",
+            "THOMPSON_ALERT",
+            "2 - Thomson ALERT" ),
+    GLOBAL_CUSTODIAN( "3",
+            "GLOBAL_CUSTODIAN",
+            "3 - A Global Custodian (StandInstDBName (70) must be provided)" ),
+    ACCOUNT_NET( "4",
+            "ACCOUNT_NET",
+            "4 - AccountNet" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +98,10 @@ public enum Enum169StandInstDbType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum169StandInstDbType.OTHER);
+        System.out.println(Enum169StandInstDbType.DTC_SID);
+        System.out.println(Enum169StandInstDbType.THOMPSON_ALERT);
+        System.out.println(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
+        System.out.println(Enum169StandInstDbType.ACCOUNT_NET);
     }
 }

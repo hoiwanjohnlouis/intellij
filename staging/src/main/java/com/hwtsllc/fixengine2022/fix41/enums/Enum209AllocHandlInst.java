@@ -20,6 +20,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum209AllocHandlInst {
+    MATCH( "1", "MATCH", "1 - Match" ),
+    FORWARD( "2", "FORWARD", "2 - Forward" ),
+    FORWARD_AND_MATCH( "3", "FORWARD_AND_MATCH", "3 - Forward and Match" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +86,8 @@ public enum Enum209AllocHandlInst {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum209AllocHandlInst.MATCH);
+        System.out.println(Enum209AllocHandlInst.FORWARD);
+        System.out.println(Enum209AllocHandlInst.FORWARD_AND_MATCH);
     }
 }

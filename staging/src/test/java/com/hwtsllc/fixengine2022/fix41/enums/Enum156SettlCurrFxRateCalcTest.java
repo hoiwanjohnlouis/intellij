@@ -45,9 +45,26 @@ class Enum156SettlCurrFxRateCalcTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0156Test() {
+        Enum156SettlCurrFxRateCalc enumType;
+
+        /*
+         * M,D msg types
+         */
+        enumType = Enum156SettlCurrFxRateCalc.MULTIPLY;
+        assertEquals("M", enumType.getAction());
+        assertEquals("MULTIPLY", enumType.getName());
+        assertEquals("M - Multiply", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum156SettlCurrFxRateCalc.DIVIDE;
+        assertEquals("D", enumType.getAction());
+        assertEquals("DIVIDE", enumType.getName());
+        assertEquals("D - Divide", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

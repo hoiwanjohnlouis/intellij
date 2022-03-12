@@ -45,7 +45,7 @@ class Enum40OrdTypeTest {
     }
 
     @Test
-    void eNUM0040Test() {
+    void Enum0040Test() {
         Enum40OrdType enumType;
 
         /*

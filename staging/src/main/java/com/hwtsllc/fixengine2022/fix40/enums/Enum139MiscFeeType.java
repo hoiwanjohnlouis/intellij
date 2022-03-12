@@ -20,6 +20,20 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum139MiscFeeType {
+    REGULATORY( "1", "REGULATORY", "1 - Regulatory (e.g. SEC)" ),
+    TAX( "2", "TAX", "2 - Tax" ),
+    LOCAL_COMMISSION( "3", "LOCAL_COMMISSION", "3 - Local Commission" ),
+    EXCHANGE_FEES( "4", "EXCHANGE_FEES", "4 - Exchange Fees" ),
+    STAMP( "5", "STAMP", "5 - Stamp" ),
+    LEVY( "6", "LEVY", "6 - Levy" ),
+    OTHER( "7", "OTHER", "7 - Other" ),
+    MARKUP( "8", "MARKUP", "8 - Markup" ),
+    CONSUMPTION_TAX( "9", "CONSUMPTION_TAX", "9 - Consumption Tax" ),
+    PER_TRANSACTION( "10", "PER_TRANSACTION", "10 - Per transaction" ),
+    CONVERSION( "11", "CONVERSION", "11 - Conversion" ),
+    AGENT( "12", "AGENT", "12 - Agent" ),
+    TRANSFER_FEE( "13", "TRANSFER_FEE", "13 - Transfer Fee" ),
+    SECURITY_LENDING( "14", "SECURITY_LENDING", "14 - Security Lending" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +97,21 @@ public enum Enum139MiscFeeType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum139MiscFeeType.REGULATORY);
+        System.out.println(Enum139MiscFeeType.TAX);
+        System.out.println(Enum139MiscFeeType.LOCAL_COMMISSION);
+        System.out.println(Enum139MiscFeeType.EXCHANGE_FEES);
+        System.out.println(Enum139MiscFeeType.STAMP);
+
+        System.out.println(Enum139MiscFeeType.LEVY);
+        System.out.println(Enum139MiscFeeType.OTHER);
+        System.out.println(Enum139MiscFeeType.MARKUP);
+        System.out.println(Enum139MiscFeeType.CONSUMPTION_TAX);
+        System.out.println(Enum139MiscFeeType.PER_TRANSACTION);
+
+        System.out.println(Enum139MiscFeeType.CONVERSION);
+        System.out.println(Enum139MiscFeeType.AGENT);
+        System.out.println(Enum139MiscFeeType.TRANSFER_FEE);
+        System.out.println(Enum139MiscFeeType.SECURITY_LENDING);
     }
 }

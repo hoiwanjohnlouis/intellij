@@ -20,6 +20,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum203CoveredOrUncovered {
+    COVERED( "0", "COVERED", "0 - Covered" ),
+    UNCOVERED( "1", "UNCOVERED", "1 - Uncovered" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +85,7 @@ public enum Enum203CoveredOrUncovered {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum203CoveredOrUncovered.COVERED);
+        System.out.println(Enum203CoveredOrUncovered.UNCOVERED);
     }
 }

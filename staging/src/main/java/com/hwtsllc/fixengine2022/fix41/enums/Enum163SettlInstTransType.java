@@ -20,6 +20,10 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum163SettlInstTransType {
+    NEW( "N", "NEW", "N - New" ),
+    CANCEL( "C", "CANCEL", "C - Cancel" ),
+    REPLACE( "R", "REPLACE", "R - Replace" ),
+    RESTATE( "T", "RESTATE", "T - Restate" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +87,9 @@ public enum Enum163SettlInstTransType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum163SettlInstTransType.NEW);
+        System.out.println(Enum163SettlInstTransType.CANCEL);
+        System.out.println(Enum163SettlInstTransType.REPLACE);
+        System.out.println(Enum163SettlInstTransType.RESTATE);
     }
 }

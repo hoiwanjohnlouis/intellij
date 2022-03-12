@@ -45,9 +45,26 @@ class Enum204CustomerOrFirmTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0204Test() {
+        Enum204CustomerOrFirm enumType;
+
+        /*
+         * 0-1 msg types
+         */
+        enumType = Enum204CustomerOrFirm.CUSTOMER;
+        assertEquals("0", enumType.getAction());
+        assertEquals("CUSTOMER", enumType.getName());
+        assertEquals("0 - Customer", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum204CustomerOrFirm.FIRM;
+        assertEquals("1", enumType.getAction());
+        assertEquals("FIRM", enumType.getName());
+        assertEquals("1 - Firm", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

@@ -18,8 +18,52 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Replace;
 
 public enum Enum150ExecType {
+    NEW( "0", "NEW",
+            "0 - New" ),
+    DONE_FOR_DAY( "3", "DONE_FOR_DAY",
+            "3 - Done for day" ),
+    CANCELED( "4", "CANCELED",
+            "4 - Canceled" ),
+    REPLACED( "5", "REPLACED",
+            "5 - Replaced" ),
+    PENDING_CANCEL( "6", "PENDING_CANCEL",
+            "6 - Pending Cancel (e.g. result of Order Cancel Request)" ),
+    STOPPED( "7", "STOPPED",
+            "7 - Stopped" ),
+    REJECTED( "8", "REJECTED",
+            "8 - Rejected" ),
+    SUSPENDED( "9", "SUSPENDED",
+            "9 - Suspended" ),
+    PENDING_NEW( "A", "PENDING_NEW",
+            "A - Pending New" ),
+    CALCULATED( "B", "CALCULATED",
+            "B - Calculated" ),
+    EXPIRED( "C", "EXPIRED",
+            "C - Expired" ),
+    RESTATED( "D", "RESTATED",
+            "D - Restated (Execution Report sent unsolicited by sell side, " +
+            "with ExecRestatementReason (378) set)" ),
+    PENDING_REPLACE( "E", "PENDING_REPLACE",
+            "E - Pending Replace (e.g. result of Order Cancel/Replace Request)" ),
+    TRADE_PARTIAL_OR_FILLED( "F", "TRADE_PARTIAL_OR_FILLED",
+            "F - Trade (partial fill or fill)" ),
+    TRADE_CORRECT( "G", "TRADE_CORRECT",
+            "G - Trade Correct" ),
+    TRADE_CANCEL( "H", "TRADE_CANCEL",
+            "H - Trade Cancel" ),
+    ORDER_STATUS( "I", "ORDER_STATUS",
+            "I - Order Status" ),
+    TRADE_IN_CLEARING_HOLD( "J", "TRADE_IN_CLEARING_HOLD",
+            "J - Trade in a Clearing Hold" ),
+    TRADE_RELEASE_TO_CLEARING( "K", "TRADE_RELEASE_TO_CLEARING",
+            "K - Trade has been released to Clearing" ),
+    TRIGGERED_OR_ACTIVATED( "L", "TRIGGERED_OR_ACTIVATED",
+            "L - Triggered or Activated by System" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +127,28 @@ public enum Enum150ExecType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum150ExecType.NEW);
+        System.out.println(Enum150ExecType.DONE_FOR_DAY);
+        System.out.println(Enum150ExecType.CANCELED);
+        System.out.println(Enum150ExecType.REPLACED);
+        System.out.println(Enum150ExecType.PENDING_CANCEL);
+
+        System.out.println(Enum150ExecType.STOPPED);
+        System.out.println(Enum150ExecType.REJECTED);
+        System.out.println(Enum150ExecType.SUSPENDED);
+        System.out.println(Enum150ExecType.PENDING_NEW);
+        System.out.println(Enum150ExecType.CALCULATED);
+
+        System.out.println(Enum150ExecType.EXPIRED);
+        System.out.println(Enum150ExecType.RESTATED);
+        System.out.println(Enum150ExecType.PENDING_REPLACE);
+        System.out.println(Enum150ExecType.TRADE_PARTIAL_OR_FILLED);
+        System.out.println(Enum150ExecType.TRADE_CORRECT);
+
+        System.out.println(Enum150ExecType.TRADE_CANCEL);
+        System.out.println(Enum150ExecType.ORDER_STATUS);
+        System.out.println(Enum150ExecType.TRADE_IN_CLEARING_HOLD);
+        System.out.println(Enum150ExecType.TRADE_RELEASE_TO_CLEARING);
+        System.out.println(Enum150ExecType.TRIGGERED_OR_ACTIVATED);
     }
 }

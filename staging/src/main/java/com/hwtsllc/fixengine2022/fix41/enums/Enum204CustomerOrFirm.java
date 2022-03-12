@@ -20,6 +20,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum204CustomerOrFirm {
+    CUSTOMER( "0", "CUSTOMER", "0 - Customer" ),
+    FIRM( "1", "FIRM", "1 - Firm" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +85,7 @@ public enum Enum204CustomerOrFirm {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum204CustomerOrFirm.CUSTOMER);
+        System.out.println(Enum204CustomerOrFirm.FIRM);
     }
 }

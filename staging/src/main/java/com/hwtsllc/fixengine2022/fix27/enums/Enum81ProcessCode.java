@@ -20,13 +20,13 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum81ProcessCode {
-    REGULAR("0", "REGULAR", "Regular" ),
-    SOFT_DOLLAR("1", "SOFT_DOLLAR", "Soft Dollar" ),
-    STEP_IN("2", "STEP_IN", "Step In" ),
-    STEP_OUT("3", "STEP_OUT", "Step Out" ),
-    SOFT_DOLLAR_STEP_IN("4", "SOFT_DOLLAR_STEP_IN", "Soft Dollar, Step In" ),
-    SOFT_DOLLAR_STEP_OUT("5", "SOFT_DOLLAR_STEP_OUT", "Soft Dollar, Step Out" ),
-    PLAN_SPONSOR("6", "PLAN_SPONSOR", "Plan Sponsor" ),
+    REGULAR("0", "REGULAR", "0 - Regular" ),
+    SOFT_DOLLAR("1", "SOFT_DOLLAR", "1 - Soft Dollar" ),
+    STEP_IN("2", "STEP_IN", "2 - Step In" ),
+    STEP_OUT("3", "STEP_OUT", "3 - Step Out" ),
+    SOFT_DOLLAR_STEP_IN("4", "SOFT_DOLLAR_STEP_IN", "4 - Soft Dollar, Step In" ),
+    SOFT_DOLLAR_STEP_OUT("5", "SOFT_DOLLAR_STEP_OUT", "5 - Soft Dollar, Step Out" ),
+    PLAN_SPONSOR("6", "PLAN_SPONSOR", "6 - Plan Sponsor" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

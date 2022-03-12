@@ -20,6 +20,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum265MDUpdateType {
+    FULL_REFRESH( "0", "FULL_REFRESH", "0 - Full refresh" ),
+    INCREMENTAL_REFRESH( "1", "INCREMENTAL_REFRESH", "1 - Incremental refresh" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +85,7 @@ public enum Enum265MDUpdateType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum265MDUpdateType.FULL_REFRESH);
+        System.out.println(Enum265MDUpdateType.INCREMENTAL_REFRESH);
     }
 }

@@ -20,6 +20,11 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum279MDUpdateAction {
+    NEW( "0", "NEW", "0 - New" ),
+    CHANGE( "1", "CHANGE", "1 - Change" ),
+    DELETE( "2", "DELETE", "2 - Delete" ),
+    DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
+    DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +88,10 @@ public enum Enum279MDUpdateAction {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum279MDUpdateAction.NEW);
+        System.out.println(Enum279MDUpdateAction.CHANGE);
+        System.out.println(Enum279MDUpdateAction.DELETE);
+        System.out.println(Enum279MDUpdateAction.DELETE_THRU);
+        System.out.println(Enum279MDUpdateAction.DELETE_FROM);
     }
 }

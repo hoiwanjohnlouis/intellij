@@ -45,9 +45,26 @@ class Enum201PutOrCallTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0201Test() {
+        Enum201PutOrCall enumType;
+
+        /*
+         * 0-1 msg types
+         */
+        enumType = Enum201PutOrCall.PUT;
+        assertEquals("0", enumType.getAction());
+        assertEquals("PUT", enumType.getName());
+        assertEquals("0 - Put", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum201PutOrCall.CALL;
+        assertEquals("1", enumType.getAction());
+        assertEquals("CALL", enumType.getName());
+        assertEquals("1 - Call", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

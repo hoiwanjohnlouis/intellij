@@ -26,8 +26,8 @@ import org.apache.log4j.Logger;
  *
  */
 public enum EnumBoolean {
-    NO ("N", "NO", "No"),
-    YES ("Y", "YES", "Yes"),
+    NO ("N", "NO", "N - No"),
+    YES ("Y", "YES", "Y - Yes"),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

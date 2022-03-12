@@ -20,6 +20,10 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum274TickDirection {
+    PLUS_TICK( "0", "PLUS_TICK", "0 - Plus Tick" ),
+    ZERO_PLUS_TICK( "1", "ZERO_PLUS_TICK", "1 - Zero-Plus Tick" ),
+    MINUS_TICK( "2", "MINUS_TICK", "2 - Minus Tick" ),
+    ZERO_MINUS_TICK( "3", "ZERO_MINUS_TICK", "3 - Zero-Minus Tick" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +87,9 @@ public enum Enum274TickDirection {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum274TickDirection.PLUS_TICK);
+        System.out.println(Enum274TickDirection.ZERO_PLUS_TICK);
+        System.out.println(Enum274TickDirection.MINUS_TICK);
+        System.out.println(Enum274TickDirection.ZERO_MINUS_TICK);
     }
 }

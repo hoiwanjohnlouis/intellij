@@ -20,54 +20,54 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum47Rule80A {
-    AGENCY_SINGLE_ORDER("A", "",
+    AGENCY_SINGLE_ORDER("A", "AGENCY_SINGLE_ORDER",
             "A - Agency single order"),
-    SHORT_SELL_EXEMPT_A("B", "",
+    SHORT_EXEMPT_A("B", "SHORT_EXEMPT_A",
             "B - Short exempt transaction (refer to A type)"),
-    PROGRAM_NON_INDEX_ARB_MEMBER("C", "",
+    PROGRAM_NON_INDEX_ARB_MEMBER("C", "PROGRAM_NON_INDEX_ARB_MEMBER",
             "C - Program order, non-index arb, for Member firm/org"),
-    PROGRAM_INDEX_ARB_MEMBER("D", "",
+    PROGRAM_INDEX_ARB_MEMBER("D", "PROGRAM_INDEX_ARB_MEMBER",
             "D - Program order, index arb, for Member firm/org"),
-    SHORT_SELL_EXEMPT_P("E", "",
+    SHORT_EXEMPT_P("E", "SHORT_EXEMPT_P",
             "E - Short Exempt Transaction for Principal"),
-    SHORT_SELL_EXEMPT_W("F", "",
+    SHORT_EXEMPT_W("F", "SHORT_EXEMPT_W",
             "F - Short exempt transaction (refer to W type)"),
-    SHORT_SELL_EXEMPT_I("H", "",
+    SHORT_EXEMPT_I("H", "SHORT_EXEMPT_I",
             "H - Short exempt transaction (refer to I type)"),
-    INDIVIDUAL_INVESTOR_SINGLE_ORDER("I", "",
+    INDIVIDUAL_INVESTOR_SINGLE_ORDER("I", "INDIVIDUAL_INVESTOR_SINGLE_ORDER",
             "I - Individual Investor, single order"),
-    PROGRAM_INDEX_ARB_INDIVIDUAL("J", "",
+    PROGRAM_INDEX_ARB_INDIVIDUAL("J", "PROGRAM_INDEX_ARB_INDIVIDUAL",
             "J - Program Order, index arb, for individual customer"),
-    PROGRAM_NON_INDEX_ARB_INDIVIDUAL("K", "",
+    PROGRAM_NON_INDEX_ARB_INDIVIDUAL("K", "PROGRAM_NON_INDEX_ARB_INDIVIDUAL",
             "K - Program Order, non-index arb, for individual customer"),
-    AGENCY_SINGLE_ORDER("L", "",
-            "L - Short exempt transaction for member competing market-maker affliated with the " +
-                            "firm clearing the trade (refer to P and O types)"),
-    PROGRAM_INDEX_ARB_OTHER("M", "",
+    SHORT_EXEMPT_MARKET_MAKER_P_O("L", "SHORT_EXEMPT_MARKET_MAKER_P_O",
+            "L - Short exempt transaction for member competing market-maker affiliated " +
+                            "with the firm clearing the trade (refer to P and O types)"),
+    PROGRAM_INDEX_ARB_OTHER_MEMBER("M", "PROGRAM_INDEX_ARB_OTHER_MEMBER",
             "M - Program Order, index arb, for other member"),
-    PROGRAM_NON_INDEX_ARB_OTHER("N", "",
+    PROGRAM_NON_INDEX_ARB_OTHER_MEMBER("N", "PROGRAM_NON_INDEX_ARB_OTHER_MEMBER",
             "N - Program Order, non-index arb, for other member"),
-    AGENCY_SINGLE_ORDER("O", "",
-            "O - Proprietary transactions for competing market-maker that is affiliated with the" +
-                            " clearing memberr"),
-    PRINCIPAL("P", "",
+    PROPRIETARY_MARKET_MAKER_CLEARING("O", "PROPRIETARY_MARKET_MAKER_CLEARING",
+            "O - Proprietary transactions for competing market-maker that is affiliated " +
+                            "with the clearing member"),
+    PRINCIPAL("P", "PRINCIPAL",
             "P - Principal"),
-    AGENCY_SINGLE_ORDER("R", "",
+    NON_MEMBER_MARKET_MAKER("R", "NON_MEMBER_MARKET_MAKER",
             "R - Transactions for the account of a non-member competing market-maker"),
-    SPECIALIST_TRADES("S", "",
+    SPECIALIST_TRADES("S", "SPECIALIST_TRADES",
             "S - Specialist trades"),
-    AGENCY_SINGLE_ORDER("T", "",
+    UNAFFILIATED_MEMBER_MARKET_MAKER("T", "UNAFFILIATED_MEMBER_MARKET_MAKER",
             "T - Transactions for the account of an unaffiliated member's competing market-maker"),
-    AGENCY_SINGLE_ORDER("U", "",
+    PROGRAM_INDEX_ARB_OTHER_AGENCY("U", "PROGRAM_INDEX_ARB_OTHER_AGENCY",
             "U - Program Order, index arb, for other agency"),
-    AGENCY_SINGLE_ORDER("W", "",
+    AGENT_FOR_OTHER_MEMBER("W", "AGENT_FOR_OTHER_MEMBER",
             "W - All other orders as agent for other member"),
-    AGENCY_SINGLE_ORDER("X", "",
+    SHORT_EXEMPT_MARKET_MAKER_W_T("X", "SHORT_EXEMPT_MARKET_MAKER_W_T",
             "X - Short exempt transaction for member competing market-maker not affiliated with " +
                             "the firm clearing the trade (refer to W and T types)"),
-    AGENCY_SINGLE_ORDER("Y", "",
+    PROGRAM_NON_INDEX_ARB_OTHER_AGENCY("Y", "PROGRAM_NON_INDEX_ARB_OTHER_AGENCY",
             "Y - Program Order, non-index arb, for other agency"),
-    AGENCY_SINGLE_ORDER("Z", "",
+    SHORT_EXEMPT_NON_MEMBER_MARKET_MAKER_A_R("Z", "SHORT_EXEMPT_NON_MEMBER_MARKET_MAKER_A_R",
             "Z - Short exempt transaction for non-member competing market-maker (refer to A and R types)"),
     ;
 
@@ -132,6 +132,31 @@ public enum Enum47Rule80A {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum47Rule80A.AGENCY_SINGLE_ORDER);
+        System.out.println(Enum47Rule80A.SHORT_EXEMPT_A);
+        System.out.println(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_MEMBER);
+        System.out.println(Enum47Rule80A.PROGRAM_INDEX_ARB_MEMBER);
+        System.out.println(Enum47Rule80A.SHORT_EXEMPT_P);
+
+        System.out.println(Enum47Rule80A.SHORT_EXEMPT_W);
+        System.out.println(Enum47Rule80A.SHORT_EXEMPT_I);
+        System.out.println(Enum47Rule80A.INDIVIDUAL_INVESTOR_SINGLE_ORDER);
+        System.out.println(Enum47Rule80A.PROGRAM_INDEX_ARB_INDIVIDUAL);
+        System.out.println(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_INDIVIDUAL);
+
+        System.out.println(Enum47Rule80A.SHORT_EXEMPT_MARKET_MAKER_P_O);
+        System.out.println(Enum47Rule80A.PROGRAM_INDEX_ARB_OTHER_MEMBER);
+        System.out.println(Enum47Rule80A.PROPRIETARY_MARKET_MAKER_CLEARING);
+        System.out.println(Enum47Rule80A.PRINCIPAL);
+        System.out.println(Enum47Rule80A.NON_MEMBER_MARKET_MAKER);
+
+        System.out.println(Enum47Rule80A.SPECIALIST_TRADES);
+        System.out.println(Enum47Rule80A.UNAFFILIATED_MEMBER_MARKET_MAKER);
+        System.out.println(Enum47Rule80A.PROGRAM_INDEX_ARB_OTHER_AGENCY);
+        System.out.println(Enum47Rule80A.AGENT_FOR_OTHER_MEMBER);
+        System.out.println(Enum47Rule80A.SHORT_EXEMPT_MARKET_MAKER_W_T);
+
+        System.out.println(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_OTHER_AGENCY);
+        System.out.println(Enum47Rule80A.SHORT_EXEMPT_NON_MEMBER_MARKET_MAKER_A_R);
     }
 }

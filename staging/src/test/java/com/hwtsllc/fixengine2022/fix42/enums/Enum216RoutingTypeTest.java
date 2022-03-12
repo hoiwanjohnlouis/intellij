@@ -16,12 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
+import com.hwtsllc.fixengine2022.fix41.enums.Enum209AllocHandlInst;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -37,16 +36,53 @@ class Enum216RoutingTypeTest {
     void tearDown() {
     }
 
-    @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Enum216RoutingTypeTest()");
     }
-    /**
-     *
-     */
-    public static void main(String[] args) {
-        System.out.println();
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Enum216RoutingTypeTest()");
+    }
+
+    @Test
+    void Enum0216Test() {
+        Enum216RoutingType enumType;
+
+        /*
+         * 1-4 msg types
+         */
+        enumType = Enum216RoutingType.TARGET_FIRM;
+        assertEquals("1", enumType.getAction());
+        assertEquals("TARGET_FIRM", enumType.getName());
+        assertEquals("1 - Target Firm", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum216RoutingType.TARGET_LIST;
+        assertEquals("2", enumType.getAction());
+        assertEquals("TARGET_LIST", enumType.getName());
+        assertEquals("2 - Target List", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum216RoutingType.BLOCK_FIRM;
+        assertEquals("3", enumType.getAction());
+        assertEquals("BLOCK_FIRM", enumType.getName());
+        assertEquals("3 - Block Firm", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum216RoutingType.BLOCK_LIST;
+        assertEquals("4", enumType.getAction());
+        assertEquals("BLOCK_LIST", enumType.getName());
+        assertEquals("4 - Block List", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

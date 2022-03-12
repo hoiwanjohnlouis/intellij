@@ -14,15 +14,16 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.enums;
+package com.hwtsllc.fixengine2022.fix27.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Enum169StandInstDbTypeTest {
+class Enum77PositionEffectTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
@@ -36,57 +37,49 @@ class Enum169StandInstDbTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum169StandInstDbTypeTest()");
+        System.out.println("Starting Enum77PositionEffectTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum169StandInstDbTypeTest()");
+        System.out.println("Completed Enum77PositionEffectTest()");
     }
 
     @Test
-    void Enum0169Test() {
-        Enum169StandInstDbType enumType;
+    void Enum0077Test() {
+        Enum77PositionEffect enumType;
 
         /*
-         * 0-4 msg types
+         * C,F,O,R msg types
          */
-        enumType = Enum169StandInstDbType.OTHER;
-        assertEquals("0", enumType.getAction());
-        assertEquals("OTHER", enumType.getName());
-        assertEquals("0 - Other", enumType.getDescription());
+        enumType = Enum77PositionEffect.CLOSE;
+        assertEquals("C", enumType.getAction());
+        assertEquals("CLOSE", enumType.getName());
+        assertEquals("C - Close", enumType.getDescription());
         assertNotEquals("junkAction", enumType.getAction());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
-        enumType = Enum169StandInstDbType.DTC_SID;
-        assertEquals("1", enumType.getAction());
-        assertEquals("DTC_SID", enumType.getName());
-        assertEquals("1 - DTC SID", enumType.getDescription());
+        enumType = Enum77PositionEffect.FIFO;
+        assertEquals("F", enumType.getAction());
+        assertEquals("FIFO", enumType.getName());
+        assertEquals("F - First In, First Out", enumType.getDescription());
         assertNotEquals("junkAction", enumType.getAction());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
-        enumType = Enum169StandInstDbType.THOMPSON_ALERT;
-        assertEquals("2", enumType.getAction());
-        assertEquals("THOMPSON_ALERT", enumType.getName());
-        assertEquals("2 - Thomson ALERT", enumType.getDescription());
+        enumType = Enum77PositionEffect.OPEN;
+        assertEquals("O", enumType.getAction());
+        assertEquals("OPEN", enumType.getName());
+        assertEquals("O - Open", enumType.getDescription());
         assertNotEquals("junkAction", enumType.getAction());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
-        enumType = Enum169StandInstDbType.GLOBAL_CUSTODIAN;
-        assertEquals("3", enumType.getAction());
-        assertEquals("GLOBAL_CUSTODIAN", enumType.getName());
-        assertEquals("3 - A Global Custodian (StandInstDBName (70) must be provided)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
-
-        enumType = Enum169StandInstDbType.ACCOUNT_NET;
-        assertEquals("4", enumType.getAction());
-        assertEquals("ACCOUNT_NET", enumType.getName());
-        assertEquals("4 - AccountNet", enumType.getDescription());
+        enumType = Enum77PositionEffect.ROLLED;
+        assertEquals("R", enumType.getAction());
+        assertEquals("ROLLED", enumType.getName());
+        assertEquals("R - Rolled", enumType.getDescription());
         assertNotEquals("junkAction", enumType.getAction());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());

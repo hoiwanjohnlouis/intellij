@@ -21,6 +21,27 @@ import org.apache.log4j.Logger;
 
 @Deprecated
 public enum Enum166SettlLocation {
+    CEDEL( "CED",
+            "CEDEL",
+            "CED - CEDEL" ),
+    DEPOSITORY_TRUST_COMPANY( "DTC",
+            "DEPOSITORY_TRUST_COMPANY",
+            "DTC - Depository Trust Company" ),
+    EURO_CLEAR( "EUR",
+            "EURO_CLEAR",
+            "EUR - Euro clear" ),
+    FEDERAL_BOOK_ENTRY( "FED",
+            "FEDERAL_BOOK_ENTRY",
+            "FED - Federal Book Entry" ),
+    LOCAL_MARKET_SETTLE_LOCATION( "ISO_Country_Code",
+            "LOCAL_MARKET_SETTLE_LOCATION",
+            "ISO_Country_Code - Local Market Settle Location" ),
+    PHYSICAL( "PNY",
+            "PHYSICAL",
+            "PNY - Physical" ),
+    PARTICIPANT_TRUST_COMPANY( "PTC",
+            "PARTICIPANT_TRUST_COMPANY",
+            "PTC - Participant Trust Company" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -84,6 +105,12 @@ public enum Enum166SettlLocation {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum166SettlLocation.CEDEL);
+        System.out.println(Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY);
+        System.out.println(Enum166SettlLocation.EURO_CLEAR);
+        System.out.println(Enum166SettlLocation.FEDERAL_BOOK_ENTRY);
+        System.out.println(Enum166SettlLocation.PHYSICAL);
+
+        System.out.println(Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY);
     }
 }

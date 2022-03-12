@@ -45,9 +45,34 @@ class Enum209AllocHandlInstTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0209Test() {
+        Enum209AllocHandlInst enumType;
+
+        /*
+         * 1-3 msg types
+         */
+        enumType = Enum209AllocHandlInst.MATCH;
+        assertEquals("1", enumType.getAction());
+        assertEquals("MATCH", enumType.getName());
+        assertEquals("1 - Match", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum209AllocHandlInst.FORWARD;
+        assertEquals("2", enumType.getAction());
+        assertEquals("FORWARD", enumType.getName());
+        assertEquals("2 - Forward", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum209AllocHandlInst.FORWARD_AND_MATCH;
+        assertEquals("3", enumType.getAction());
+        assertEquals("FORWARD_AND_MATCH", enumType.getName());
+        assertEquals("3 - Forward and Match", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

@@ -20,6 +20,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum160SettlInstMode {
+    DEFAULT( "0", "DEFAULT",
+            "0 - Default (Replaced)" ),
+    STANDING_INSTRUCTIONS_PROVIDED( "1", "STANDING_INSTRUCTIONS_PROVIDED",
+            "1 - Standing Instructions Provided" ),
+    SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING( "2", "SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING",
+            "2 - Specific Allocation Account Overriding (Replaced)" ),
+    SPECIFIC_ALLOCATION_ACCOUNT_STANDING( "3", "SPECIFIC_ALLOCATION_ACCOUNT_STANDING",
+            "3 - Specific Allocation Account Standing (Replaced)" ),
+    SPECIFIC_ORDER_SINGLE_ACCOUNT( "4", "SPECIFIC_ORDER_SINGLE_ACCOUNT",
+            "4 - Specific Order for a single account (for CIV)" ),
+    REQUEST_REJECT( "5", "REQUEST_REJECT",
+            "5 - Request reject" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +95,12 @@ public enum Enum160SettlInstMode {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum160SettlInstMode.DEFAULT);
+        System.out.println(Enum160SettlInstMode.STANDING_INSTRUCTIONS_PROVIDED);
+        System.out.println(Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING);
+        System.out.println(Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_STANDING);
+        System.out.println(Enum160SettlInstMode.SPECIFIC_ORDER_SINGLE_ACCOUNT);
+
+        System.out.println(Enum160SettlInstMode.REQUEST_REJECT);
     }
 }

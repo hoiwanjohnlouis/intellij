@@ -20,6 +20,13 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum127DKReason {
+    UNKNOWN_SYMBOL("A", "UNKNOWN_SYMBOL", "A - Unknown Symbol"),
+    WRONG_SIDE("B", "WRONG_SIDE", "B - Wrong Side"),
+    QUANTITY_EXCEEDS_ORDER("C", "QUANTITY_EXCEEDS_ORDER", "C - Quantity Exceeds Order"),
+    NO_MATCHING_ORDER("D", "NO_MATCHING_ORDER", "D - No Matching Order"),
+    PRICE_EXCEEDS_LIMIT("E", "PRICE_EXCEEDS_LIMIT", "E - Price Exceeds Limit"),
+    CALCULATION_DIFFERENCE("F", "CALCULATION_DIFFERENCE", "F - Calculation Difference"),
+    OTHER("Z", "OTHER", "Z - Other"),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +90,13 @@ public enum Enum127DKReason {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum127DKReason.UNKNOWN_SYMBOL);
+        System.out.println(Enum127DKReason.WRONG_SIDE);
+        System.out.println(Enum127DKReason.QUANTITY_EXCEEDS_ORDER);
+        System.out.println(Enum127DKReason.NO_MATCHING_ORDER);
+        System.out.println(Enum127DKReason.PRICE_EXCEEDS_LIMIT);
+
+        System.out.println(Enum127DKReason.CALCULATION_DIFFERENCE);
+        System.out.println(Enum127DKReason.OTHER);
     }
 }

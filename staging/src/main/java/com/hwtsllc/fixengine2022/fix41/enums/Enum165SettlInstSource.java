@@ -20,6 +20,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum165SettlInstSource {
+    BROKER_INSTRUCTIONS( "1", "BROKER_INSTRUCTIONS", "1 - Broker Instructions" ),
+    INSTITUTION_INSTRUCTIONS( "2", "INSTITUTION_INSTRUCTIONS", "2 - Institution Instructions" ),
+    INVESTOR( "3", "INVESTOR", "3 - Investor (e.g. CIV use)" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +86,8 @@ public enum Enum165SettlInstSource {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum165SettlInstSource.BROKER_INSTRUCTIONS);
+        System.out.println(Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS);
+        System.out.println(Enum165SettlInstSource.INVESTOR);
     }
 }

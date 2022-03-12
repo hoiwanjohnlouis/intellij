@@ -20,6 +20,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum221BenchmarkCurveName {
+    EONIA( "EONIA", "EONIA", "EONIA - EONIA" ),
+    EUREPO( "EUREPO", "EUREPO", "EUREPO - EUREPO" ),
+    EURIBOR( "Euribor", "EURIBOR", "Euribor - Euribor" ),
+    FUTURESWAP( "FutureSWAP", "FUTURESWAP", "FutureSWAP - FutureSWAP" ),
+    LIBID( "LIBID", "LIBID", "LIBID - LIBID" ),
+    LIBOR( "LIBOR", "LIBOR", "LIBOR - LIBOR (London Inter-Bank Offer)" ),
+    MUNIAAA( "MuniAAA", "MUNIAAA", "MuniAAA - MuniAAA" ),
+    OTHER( "OTHER", "OTHER", "OTHER - OTHER" ),
+    PFANDBRIEFE( "Pfandbriefe", "PFANDBRIEFE", "Pfandbriefe - Pfandbriefe" ),
+    SONIA( "SONIA", "SONIA", "SONIA - SONIA" ),
+    SWAP( "SWAP", "SWAP", "SWAP - SWAP" ),
+    TREASURY( "Treasury", "TREASURY", "Treasury - Treasury" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +95,19 @@ public enum Enum221BenchmarkCurveName {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum221BenchmarkCurveName.EONIA);
+        System.out.println(Enum221BenchmarkCurveName.EUREPO);
+        System.out.println(Enum221BenchmarkCurveName.EURIBOR);
+        System.out.println(Enum221BenchmarkCurveName.FUTURESWAP);
+        System.out.println(Enum221BenchmarkCurveName.LIBID);
+
+        System.out.println(Enum221BenchmarkCurveName.LIBOR);
+        System.out.println(Enum221BenchmarkCurveName.MUNIAAA);
+        System.out.println(Enum221BenchmarkCurveName.OTHER);
+        System.out.println(Enum221BenchmarkCurveName.PFANDBRIEFE);
+        System.out.println(Enum221BenchmarkCurveName.SONIA);
+
+        System.out.println(Enum221BenchmarkCurveName.SWAP);
+        System.out.println(Enum221BenchmarkCurveName.TREASURY);
     }
 }

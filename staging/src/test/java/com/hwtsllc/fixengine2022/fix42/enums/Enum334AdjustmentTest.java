@@ -19,9 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -35,6 +33,16 @@ class Enum334AdjustmentTest {
 
     @AfterEach
     void tearDown() {
+    }
+
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Starting Enum334AdjustmentTest()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Completed Enum334AdjustmentTest()");
     }
 
     @Test

@@ -46,9 +46,58 @@ class Enum166SettlLocationTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0166Test() {
+        Enum166SettlLocation enumType;
+
+        /*
+         * CED, DTC, EUR, FED, PNY, & PTC msg types
+         */
+        enumType = Enum166SettlLocation.CEDEL;
+        assertEquals("CED", enumType.getAction());
+        assertEquals("CEDEL", enumType.getName());
+        assertEquals("CED - CEDEL", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY;
+        assertEquals("DTC", enumType.getAction());
+        assertEquals("DEPOSITORY_TRUST_COMPANY", enumType.getName());
+        assertEquals("DTC - Depository Trust Company", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum166SettlLocation.EURO_CLEAR;
+        assertEquals("EUR", enumType.getAction());
+        assertEquals("EURO_CLEAR", enumType.getName());
+        assertEquals("EUR - Euro clear", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum166SettlLocation.FEDERAL_BOOK_ENTRY;
+        assertEquals("FED", enumType.getAction());
+        assertEquals("FEDERAL_BOOK_ENTRY", enumType.getName());
+        assertEquals("FED - Federal Book Entry", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum166SettlLocation.PHYSICAL;
+        assertEquals("PNY", enumType.getAction());
+        assertEquals("PHYSICAL", enumType.getName());
+        assertEquals("PNY - Physical", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY;
+        assertEquals("PTC", enumType.getAction());
+        assertEquals("PARTICIPANT_TRUST_COMPANY", enumType.getName());
+        assertEquals("PTC - Participant Trust Company", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

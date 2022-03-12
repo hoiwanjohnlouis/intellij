@@ -45,9 +45,42 @@ class Enum163SettlInstTransTypeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0163Test() {
+        Enum163SettlInstTransType enumType;
+
+        /*
+         * N,C,R,T msg types
+         */
+        enumType = Enum163SettlInstTransType.NEW;
+        assertEquals("N", enumType.getAction());
+        assertEquals("NEW", enumType.getName());
+        assertEquals("N - New", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum163SettlInstTransType.CANCEL;
+        assertEquals("C", enumType.getAction());
+        assertEquals("CANCEL", enumType.getName());
+        assertEquals("C - Cancel", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum163SettlInstTransType.REPLACE;
+        assertEquals("R", enumType.getAction());
+        assertEquals("REPLACE", enumType.getName());
+        assertEquals("R - Replace", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum163SettlInstTransType.RESTATE;
+        assertEquals("T", enumType.getAction());
+        assertEquals("RESTATE", enumType.getName());
+        assertEquals("T - Restate", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
 }

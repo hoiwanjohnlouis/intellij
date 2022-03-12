@@ -20,6 +20,12 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum263SubscriptionRequestType {
+    SNAPSHOT( "0", "SNAPSHOT",
+            "0 - Snapshot" ),
+    SUBSCRIBE_SNAPSHOT( "1", "SUBSCRIBE_SNAPSHOT",
+            "1 - Snapshot + Updates (Subscribe)" ),
+    UNSUBSCRIBE_SNAPSHOT( "2", "UNSUBSCRIBE_SNAPSHOT",
+            "2 - Disable previous Snapshot + Update Request (Unsubscribe)" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +89,8 @@ public enum Enum263SubscriptionRequestType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum263SubscriptionRequestType.SNAPSHOT);
+        System.out.println(Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT);
+        System.out.println(Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT);
     }
 }

@@ -20,6 +20,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum197AllocLinkType {
+    FX_NETTING( "0", "FX_NETTING", "0 - FX Netting" ),
+    FX_SWAP( "1", "FX_SWAP", "1 - FX Swap" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -83,6 +85,7 @@ public enum Enum197AllocLinkType {
      *
      */
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(Enum197AllocLinkType.FX_NETTING);
+        System.out.println(Enum197AllocLinkType.FX_SWAP);
     }
 }
