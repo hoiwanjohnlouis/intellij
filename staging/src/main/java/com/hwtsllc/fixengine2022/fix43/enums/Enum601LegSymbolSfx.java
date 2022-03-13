@@ -21,7 +21,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum481MoneyLaunderingStatus implements FixEnumAccessors, LogStringVerbose {
+public enum Enum601LegSymbolSfx implements FixEnumAccessors, LogStringVerbose {
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -31,7 +31,7 @@ public enum Enum481MoneyLaunderingStatus implements FixEnumAccessors, LogStringV
     private final String name;
     private final String description;
 
-    Enum481MoneyLaunderingStatus(final String action, final String name, final String description) {
+    Enum601LegSymbolSfx(final String action, final String name, final String description) {
         this.action = action;
         this.name = name;
         this.description = description;
@@ -108,9 +108,9 @@ public enum Enum481MoneyLaunderingStatus implements FixEnumAccessors, LogStringV
      */
     public static void main(String[] args) {
         /*
-         * dump all the enum values for review
+         * dump all the enum values
          */
-        for (Enum481MoneyLaunderingStatus oneEnum : Enum481MoneyLaunderingStatus.values()) {
+        for (Enum601LegSymbolSfx oneEnum : Enum601LegSymbolSfx.values()) {
             System.out.println(oneEnum);
         }
     }

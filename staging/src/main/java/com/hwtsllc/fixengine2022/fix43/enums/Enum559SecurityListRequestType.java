@@ -16,12 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
+import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
 import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum481MoneyLaunderingStatus implements FixEnumAccessors, LogStringVerbose {
+public enum Enum559SecurityListRequestType implements FixEnumAccessors, LogStringVerbose {
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -31,7 +32,7 @@ public enum Enum481MoneyLaunderingStatus implements FixEnumAccessors, LogStringV
     private final String name;
     private final String description;
 
-    Enum481MoneyLaunderingStatus(final String action, final String name, final String description) {
+    Enum559SecurityListRequestType(final String action, final String name, final String description) {
         this.action = action;
         this.name = name;
         this.description = description;
@@ -108,9 +109,9 @@ public enum Enum481MoneyLaunderingStatus implements FixEnumAccessors, LogStringV
      */
     public static void main(String[] args) {
         /*
-         * dump all the enum values for review
+         * dump all the enum values
          */
-        for (Enum481MoneyLaunderingStatus oneEnum : Enum481MoneyLaunderingStatus.values()) {
+        for (Enum559SecurityListRequestType oneEnum : Enum559SecurityListRequestType.values()) {
             System.out.println(oneEnum);
         }
     }

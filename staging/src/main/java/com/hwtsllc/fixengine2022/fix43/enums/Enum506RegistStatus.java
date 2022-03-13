@@ -37,32 +37,37 @@ public enum Enum506RegistStatus implements FixEnumAccessors, LogStringVerbose {
         this.description = description;
     }
 
+    /**
+     * standard wrapper to retrieve the specific enum name
+     */
+    @Override
     public String getEnumName() {
         return this.name();
     }
+    /**
+     * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
+     */
+    @Override
     public String getAction() {
         return action;
     }
+    /**
+     * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
+     */
+    @Override
     public String getName() {
         return name;
     }
+    /**
+     * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
+     */
+    @Override
     public String getDescription() {
         return description;
     }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getEnumName())
-                .append("=[")
-                .append(getAction())
-                .append(",")
-                .append(getName())
-                .append(",")
-                .append(getDescription())
-                .append("]");
-        return sb.toString();
-    }
+    /**
+     * standard wrapper to format a detailed string describing this enum
+     */
     @Override
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
@@ -77,6 +82,22 @@ public enum Enum506RegistStatus implements FixEnumAccessors, LogStringVerbose {
                 .append(getName())
                 .append("]")
                 .append("\n\tDescription[")
+                .append(getDescription())
+                .append("]");
+        return sb.toString();
+    }
+    /**
+     * standard wrapper to format a simple string describing this enum
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getEnumName())
+                .append("=[")
+                .append(getAction())
+                .append(",")
+                .append(getName())
+                .append(",")
                 .append(getDescription())
                 .append("]");
         return sb.toString();
