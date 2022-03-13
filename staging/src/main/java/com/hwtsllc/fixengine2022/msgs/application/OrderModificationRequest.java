@@ -16,5 +16,16 @@
 
 package com.hwtsllc.fixengine2022.msgs.application;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public class OrderModificationRequest {
+    private final String WHERE_AM_I = this.getClass().getSimpleName();
+    private static final Logger logger = LogManager.getRootLogger();
+    /**
+     *
+     * @param args Not used
+     */
+    public static void main(String[] args) {
+    }
 }
