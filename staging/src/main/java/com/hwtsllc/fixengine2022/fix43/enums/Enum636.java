@@ -17,10 +17,12 @@
 package com.hwtsllc.fixengine2022.fix43.enums;
 
 import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum636 {
+public enum Enum636 implements FixEnumAccessors, LogStringVerbose {
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -36,32 +38,23 @@ public enum Enum636 {
         this.description = description;
     }
 
+    @Override
     public String getEnumName() {
         return this.name();
     }
+    @Override
     public String getAction() {
         return action;
     }
+    @Override
     public String getName() {
         return name;
     }
+    @Override
     public String getDescription() {
         return description;
     }
-
     @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getEnumName())
-                .append("=[")
-                .append(getAction())
-                .append(",")
-                .append(getName())
-                .append(",")
-                .append(getDescription())
-                .append("]");
-        return sb.toString();
-    }
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
@@ -75,6 +68,19 @@ public enum Enum636 {
                 .append(getName())
                 .append("]")
                 .append("\n\tDescription[")
+                .append(getDescription())
+                .append("]");
+        return sb.toString();
+    }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getEnumName())
+                .append("=[")
+                .append(getAction())
+                .append(",")
+                .append(getName())
+                .append(",")
                 .append(getDescription())
                 .append("]");
         return sb.toString();

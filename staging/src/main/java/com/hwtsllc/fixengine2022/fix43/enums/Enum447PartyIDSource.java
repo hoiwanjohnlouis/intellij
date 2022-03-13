@@ -16,11 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.fix42.enums.Enum442MultiLegReportingType;
+import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum447PartyIDSource {
+public enum Enum447PartyIDSource implements FixEnumAccessors, LogStringVerbose {
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -62,6 +63,7 @@ public enum Enum447PartyIDSource {
                 .append("]");
         return sb.toString();
     }
+    @Override
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())

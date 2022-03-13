@@ -16,7 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.fix42.enums.Enum276QuoteCondition;
+import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -28,7 +29,7 @@ import org.apache.log4j.Logger;
  * String name              short name of transaction for as defined by the FIX protocol document, no duplicates
  * String description       describes what the action entails
  */
-public enum Enum4AdvSide {
+public enum Enum4AdvSide implements FixEnumAccessors, LogStringVerbose {
     BUY ("B", "BUY", "B - Buy"),
     SELL ("S", "SELL", "S - Sell"),
     CROSS ("X", "CROSS", "X - Cross"),
@@ -48,15 +49,19 @@ public enum Enum4AdvSide {
         this.description = description;
     }
 
+    @Override
     public String getEnumName() {
         return this.name();
     }
+    @Override
     public String getAction() {
         return action;
     }
+    @Override
     public String getName() {
         return name;
     }
+    @Override
     public String getDescription() {
         return description;
     }
@@ -74,6 +79,7 @@ public enum Enum4AdvSide {
                 .append("]");
         return sb.toString();
     }
+    @Override
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())

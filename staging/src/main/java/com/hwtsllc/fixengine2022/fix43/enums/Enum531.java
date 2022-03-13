@@ -17,10 +17,12 @@
 package com.hwtsllc.fixengine2022.fix43.enums;
 
 import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum531 {
+public enum Enum531 implements FixEnumAccessors, LogStringVerbose {
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -62,6 +64,7 @@ public enum Enum531 {
                 .append("]");
         return sb.toString();
     }
+    @Override
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
