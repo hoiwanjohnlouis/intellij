@@ -16,11 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix40.enums;
 
-import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
+import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum127DKReason {
+public enum Enum127DKReason implements FixEnumAccessors, LogStringVerbose {
     UNKNOWN_SYMBOL("A", "UNKNOWN_SYMBOL", "A - Unknown Symbol"),
     WRONG_SIDE("B", "WRONG_SIDE", "B - Wrong Side"),
     QUANTITY_EXCEEDS_ORDER("C", "QUANTITY_EXCEEDS_ORDER", "C - Quantity Exceeds Order"),
@@ -43,32 +44,38 @@ public enum Enum127DKReason {
         this.description = description;
     }
 
+    /**
+     * standard wrapper to retrieve the specific enum name
+     */
+    @Override
     public String getEnumName() {
         return this.name();
     }
+    /**
+     * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
+     */
+    @Override
     public String getAction() {
         return action;
     }
+    /**
+     * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
+     */
+    @Override
     public String getName() {
         return name;
     }
+    /**
+     * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
+     */
+    @Override
     public String getDescription() {
         return description;
     }
-
+    /**
+     * standard wrapper to format a detailed string describing this enum
+     */
     @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getEnumName())
-                .append("=[")
-                .append(getAction())
-                .append(",")
-                .append(getName())
-                .append(",")
-                .append(getDescription())
-                .append("]");
-        return sb.toString();
-    }
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
@@ -82,6 +89,22 @@ public enum Enum127DKReason {
                 .append(getName())
                 .append("]")
                 .append("\n\tDescription[")
+                .append(getDescription())
+                .append("]");
+        return sb.toString();
+    }
+    /**
+     * standard wrapper to format a simple string describing this enum
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getEnumName())
+                .append("=[")
+                .append(getAction())
+                .append(",")
+                .append(getName())
+                .append(",")
                 .append(getDescription())
                 .append("]");
         return sb.toString();
