@@ -16,12 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
 import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum660AcctIDSource implements FixEnumAccessors, LogStringVerbose {
+public enum Enum798AllocAccountType implements FixEnumAccessors, LogStringVerbose {
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -31,7 +32,7 @@ public enum Enum660AcctIDSource implements FixEnumAccessors, LogStringVerbose {
     private final String name;
     private final String description;
 
-    Enum660AcctIDSource(final String action, final String name, final String description) {
+    Enum798AllocAccountType(final String action, final String name, final String description) {
         this.action = action;
         this.name = name;
         this.description = description;
@@ -108,9 +109,9 @@ public enum Enum660AcctIDSource implements FixEnumAccessors, LogStringVerbose {
      */
     public static void main(String[] args) {
         /*
-         * dump all the enum values for review
+         * dump all the enum values
          */
-        for (Enum660AcctIDSource oneEnum : Enum660AcctIDSource.values()) {
+        for (Enum798AllocAccountType oneEnum : Enum798AllocAccountType.values()) {
             System.out.println(oneEnum);
         }
     }

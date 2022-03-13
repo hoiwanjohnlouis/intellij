@@ -21,7 +21,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum660AcctIDSource implements FixEnumAccessors, LogStringVerbose {
+public enum Enum786SettlPartySubIDType implements FixEnumAccessors, LogStringVerbose {
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -31,7 +31,7 @@ public enum Enum660AcctIDSource implements FixEnumAccessors, LogStringVerbose {
     private final String name;
     private final String description;
 
-    Enum660AcctIDSource(final String action, final String name, final String description) {
+    Enum786SettlPartySubIDType(final String action, final String name, final String description) {
         this.action = action;
         this.name = name;
         this.description = description;
@@ -108,9 +108,9 @@ public enum Enum660AcctIDSource implements FixEnumAccessors, LogStringVerbose {
      */
     public static void main(String[] args) {
         /*
-         * dump all the enum values for review
+         * dump all the enum values
          */
-        for (Enum660AcctIDSource oneEnum : Enum660AcctIDSource.values()) {
+        for (Enum786SettlPartySubIDType oneEnum : Enum786SettlPartySubIDType.values()) {
             System.out.println(oneEnum);
         }
     }
