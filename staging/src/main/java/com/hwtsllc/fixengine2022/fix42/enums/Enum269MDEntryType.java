@@ -16,10 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
+import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum269MDEntryType {
+public enum Enum269MDEntryType implements FixEnumAccessors, LogStringVerbose {
+    /*
+     * 0-9 msg types
+     */
     BID( "0", "BID", "0 - Bid" ),
     OFFER( "1", "OFFER", "1 - Offer" ),
     TRADE( "2", "TRADE", "2 - Trade" ),
@@ -30,6 +35,10 @@ public enum Enum269MDEntryType {
     TRADING_SESSION_HIGH_PRICE( "7", "TRADING_SESSION_HIGH_PRICE", "7 - Trading Session High Price" ),
     TRADING_SESSION_LOW_PRICE( "8", "TRADING_SESSION_LOW_PRICE", "8 - Trading Session Low Price" ),
     TRADING_SESSION_VWAP_PRICE( "9", "TRADING_SESSION_VWAP_PRICE", "9 - Trading Session VWAP Price" ),
+
+    /*
+     * A-Q msg types
+     */
     IMBALANCE( "A", "IMBALANCE", "A - Imbalance" ),
     TRADE_VOLUME( "B", "TRADE_VOLUME", "B - Trade Volume" ),
     OPEN_INTEREST( "C", "OPEN_INTEREST", "C - Open Interest" ),
@@ -61,32 +70,38 @@ public enum Enum269MDEntryType {
         this.description = description;
     }
 
+    /**
+     * standard wrapper to retrieve the specific enum name
+     */
+    @Override
     public String getEnumName() {
         return this.name();
     }
+    /**
+     * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
+     */
+    @Override
     public String getAction() {
         return action;
     }
+    /**
+     * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
+     */
+    @Override
     public String getName() {
         return name;
     }
+    /**
+     * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
+     */
+    @Override
     public String getDescription() {
         return description;
     }
-
+    /**
+     * standard wrapper to format a detailed string describing this enum
+     */
     @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getEnumName())
-                .append("=[")
-                .append(getAction())
-                .append(",")
-                .append(getName())
-                .append(",")
-                .append(getDescription())
-                .append("]");
-        return sb.toString();
-    }
     public String toLogStringVerbose() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
@@ -100,6 +115,22 @@ public enum Enum269MDEntryType {
                 .append(getName())
                 .append("]")
                 .append("\n\tDescription[")
+                .append(getDescription())
+                .append("]");
+        return sb.toString();
+    }
+    /**
+     * standard wrapper to format a simple string describing this enum
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getEnumName())
+                .append("=[")
+                .append(getAction())
+                .append(",")
+                .append(getName())
+                .append(",")
                 .append(getDescription())
                 .append("]");
         return sb.toString();
