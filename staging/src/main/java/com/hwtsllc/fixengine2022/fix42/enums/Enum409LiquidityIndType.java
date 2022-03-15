@@ -23,8 +23,12 @@ import org.apache.log4j.Logger;
 
 public enum Enum409LiquidityIndType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-4 msg types
      */
+    FIVE_DAY_MOVING_AVERAGE( "1", "FIVE_DAY_MOVING_AVERAGE", "1 - 5-day moving average" ),
+    TWENTY_DAY_MOVING_AVERAGE( "2", "TWENTY_DAY_MOVING_AVERAGE", "2 - 20-day moving average" ),
+    NORMAL_MARKET_SIZE( "3", "NORMAL_MARKET_SIZE", "3 - Normal market size" ),
+    OTHER( "4", "OTHER", "4 - Other" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

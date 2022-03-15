@@ -23,8 +23,11 @@ import org.apache.log4j.Logger;
 
 public enum Enum394BidType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-3 msg types
      */
+    NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
+    DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
+    NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

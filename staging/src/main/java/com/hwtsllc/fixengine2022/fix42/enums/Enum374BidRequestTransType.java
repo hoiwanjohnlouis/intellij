@@ -23,8 +23,10 @@ import org.apache.log4j.Logger;
 
 public enum Enum374BidRequestTransType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * C, and N msg types
      */
+    CANCEL( "C", "CANCEL", "C - Cancel" ),
+    NEW( "N", "NEW", "N - New" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

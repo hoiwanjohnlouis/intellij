@@ -23,8 +23,11 @@ import org.apache.log4j.Logger;
 
 public enum Enum334Adjustment implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-3 msg types
      */
+    CANCEL( "1", "CANCEL", "1 - Cancel" ),
+    ERROR( "2", "ERROR", "2 - Error" ),
+    CORRECTION( "3", "CORRECTION", "3 - Correction" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

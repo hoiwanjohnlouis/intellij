@@ -23,8 +23,10 @@ import org.apache.log4j.Logger;
 
 public enum Enum416IncTaxInd implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-2 msg types
      */
+    NET( "1", "NET", "1 - Net" ),
+    GROSS( "2", "GROSS", "2 - Gross" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

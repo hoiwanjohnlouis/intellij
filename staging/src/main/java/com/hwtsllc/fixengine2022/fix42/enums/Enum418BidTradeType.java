@@ -23,8 +23,12 @@ import org.apache.log4j.Logger;
 
 public enum Enum418BidTradeType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * A, G, J, and R msg types
      */
+    AGENCY( "A", "AGENCY", "A - Agency" ),
+    VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
+    GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
+    RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

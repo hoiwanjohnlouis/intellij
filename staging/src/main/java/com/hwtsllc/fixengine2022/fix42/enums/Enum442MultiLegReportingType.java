@@ -23,8 +23,14 @@ import org.apache.log4j.Logger;
 
 public enum Enum442MultiLegReportingType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-3 msg types
      */
+    SINGLE_SECURITY( "1", "SINGLE_SECURITY",
+            "1 - Single security (defualt if not specified)" ),
+    INDIVIDUAL_LEG_SECURITY( "2", "INDIVIDUAL_LEG_SECURITY",
+            "2 - Individual leg of a multi=leg security" ),
+    MULTI_LEG_SECURITY( "3", "MULTI_LEG_SECURITY",
+            "3 - Multi-leg security" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

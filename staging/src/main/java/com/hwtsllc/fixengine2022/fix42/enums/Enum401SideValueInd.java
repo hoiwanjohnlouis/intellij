@@ -23,8 +23,10 @@ import org.apache.log4j.Logger;
 
 public enum Enum401SideValueInd implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-2 msg types
      */
+    SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
+    SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

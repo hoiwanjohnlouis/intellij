@@ -23,8 +23,18 @@ import org.apache.log4j.Logger;
 
 public enum Enum321SecurityRequestType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 0-3 msg types
      */
+    REQUEST_SECURITY_IDENTITY( "0", "REQUEST_SECURITY_IDENTITY",
+            "0 - Request Security identity and specifications" ),
+    REQUEST_SPECIFIED_SECURITY( "1", "REQUEST_SPECIFIED_SECURITY",
+            "1 - Request Security identity for the specifications provided " +
+                    "(name of the security is not supplied)" ),
+    REQUEST_LIST_SECURITY_TYPES( "2", "REQUEST_LIST_SECURITY_TYPES",
+            "2 - Request List Security Types" ),
+    REQUEST_LIST_SECURITIES( "3", "REQUEST_LIST_SECURITIES",
+            "3 - Request List Securities (can be qualified with Symbol, SecurityType, TradingSessionID, " +
+                    "SecurityExchange. If provided, then only list Securities for the specific type.)" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

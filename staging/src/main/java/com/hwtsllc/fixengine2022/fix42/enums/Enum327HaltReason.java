@@ -21,12 +21,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum303QuoteRequestType implements FixEnumAccessors, LogStringVerbose {
+public enum Enum327HaltReason implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 1-2 msg types
+     * D, E, I, M, P, and X msg types
      */
-    MANUAL( "1", "MANUAL", "1 - Manual" ),
-    AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
+    NEWS_DISSEMINATION( "D", "NEWS_DISSEMINATION", "D - News Dissemination" ),
+    ORDER_INFLUX( "E", "ORDER_INFLUX", "E - Order Influx" ),
+    ORDER_IMBALANCE( "I", "ORDER_IMBALANCE", "I - Order Imbalance" ),
+    ADDITIONAL_INFORMATION( "M", "ADDITIONAL_INFORMATION", "M - Additional Information" ),
+    NEW_PENDING( "P", "NEW_PENDING", "P - New Pending" ),
+    EQUIPMENT_CHANGE_OVER( "X", "EQUIPMENT_CHANGE_OVER", "X - Equipment Changeover" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -36,7 +40,7 @@ public enum Enum303QuoteRequestType implements FixEnumAccessors, LogStringVerbos
     private final String name;
     private final String description;
 
-    Enum303QuoteRequestType(final String action, final String name, final String description) {
+    Enum327HaltReason(final String action, final String name, final String description) {
         this.action = action;
         this.name = name;
         this.description = description;
@@ -115,7 +119,7 @@ public enum Enum303QuoteRequestType implements FixEnumAccessors, LogStringVerbos
         /*
          * dump all the enum values
          */
-        for (Enum303QuoteRequestType oneEnum : Enum303QuoteRequestType.values()) {
+        for (Enum327HaltReason oneEnum : Enum327HaltReason.values()) {
             System.out.println(oneEnum);
         }
     }

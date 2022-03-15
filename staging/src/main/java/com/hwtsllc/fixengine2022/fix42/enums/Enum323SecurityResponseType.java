@@ -23,8 +23,20 @@ import org.apache.log4j.Logger;
 
 public enum Enum323SecurityResponseType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-6 msg types
      */
+    ACCEPT_SECURITY_AS_IS( "1", "ACCEPT_SECURITY_AS_IS",
+            "1 - Accept security proposal as-is" ),
+    ACCEPT_SECURITY_REVISIONS( "2", "ACCEPT_SECURITY_REVISIONS",
+            "2 - Accept security proposal with revisions as indicated in the message" ),
+    LIST_OF_SECURITY_TYPES( "3", "LIST_OF_SECURITY_TYPES",
+            "3 - List of security types returned per request" ),
+    LIST_OF_SECURITIES_PER_REQUEST( "4", "LIST_OF_SECURITIES_PER_REQUEST",
+            "4 - List of securities returned per request" ),
+    REJECT_SECURITY_PROPOSAL( "5", "REJECT_SECURITY_PROPOSAL",
+            "5 - Reject security proposal" ),
+    CANNOT_MATCH_SELECTION( "6", "CANNOT_MATCH_SELECTION",
+            "6 - Cannot match selection criteria" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

@@ -23,8 +23,11 @@ import org.apache.log4j.Logger;
 
 public enum Enum301QuoteResponseLevel implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 0-2 msg types
      */
+    NO_ACKNOWLEDGEMENT( "0", "NO_ACKNOWLEDGEMENT", "0 - No Acknowledgement (default)" ),
+    ACKNOWLEDGE_NEGATIVE_OR_ERRORS( "1", "ACKNOWLEDGE_NEGATIVE_OR_ERRORS", "1 - Acknowledge only negative or erroneous quotes" ),
+    ACKNOWLEDGE_EACH_QUOTE( "2", "ACKNOWLEDGE_EACH_QUOTE", "2 - Acknowledge each quote messages" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

@@ -23,8 +23,30 @@ import org.apache.log4j.Logger;
 
 public enum Enum326SecurityTradingStatus implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-10, 12-23 msg types. skipped 11.
      */
+    OPENING_DELAY( "1", "OPENING_DELAY", "1 - Opening delay" ),
+    TRADING_HALT( "2", "TRADING_HALT", "2 - Trading halt" ),
+    RESUME( "3", "RESUME", "3 - Resume" ),
+    NO_OPEN_NO_RESUME( "4", "NO_OPEN_NO_RESUME", "4 - No Open / No Resume" ),
+    PRICE_INDICATION( "5", "PRICE_INDICATION", "5 - Price indication" ),
+    TRADING_RANGE_INDICATION( "6", "TRADING_RANGE_INDICATION", "6 - Trading Range Indication" ),
+    MARKET_IMBALANCE_BUY( "7", "MARKET_IMBALANCE_BUY", "7 - Market Imbalance Buy" ),
+    MARKET_IMBALANCE_SELL( "8", "MARKET_IMBALANCE_SELL", "8 - Market Imbalance Sell" ),
+    MARKET_ON_CLOSE_IMBALANCE_BUY( "9", "MARKET_ON_CLOSE_IMBALANCE_BUY", "9 - Market on Close Imbalance Buy" ),
+    MARKET_ON_CLOSE_IMBALANCE_SELL( "10", "MARKET_ON_CLOSE_IMBALANCE_SELL", "10 - Market on Close Imbalance Sell" ),
+    NO_MARKET_IMBALANCE( "12", "NO_MARKET_IMBALANCE", "12 - No Market Imbalance" ),
+    NO_MARKET_ON_CLOSE_IMBALANCE( "13", "NO_MARKET_ON_CLOSE_IMBALANCE", "13 - No Market on Close Imbalance" ),
+    ITS_PRE_OPENING( "14", "ITS_PRE_OPENING", "14 - ITS Pre-opening" ),
+    NEW_PRICE_INDICATION( "15", "NEW_PRICE_INDICATION", "15 - New Price Indication" ),
+    TRADE_DISSEMINATION_TIME( "16", "TRADE_DISSEMINATION_TIME", "16 - Trade Dissemination Time" ),
+    READY_TO_TRADE( "17", "READY_TO_TRADE", "17 - Ready to trade (start of session)" ),
+    NOT_AVAILABLE_FOR_TRADING( "18", "NOT_AVAILABLE_FOR_TRADING", "18 - Not available for trading (end of session)" ),
+    NOT_TRADED_ON_THIS_MARKET( "19", "NOT_TRADED_ON_THIS_MARKET", "19 - Not traded on this market" ),
+    UNKNOWN_OR_INVALID( "20", "UNKNOWN_OR_INVALID", "20 - Unknown or Invalid" ),
+    PRE_OPEN( "21", "PRE_OPEN", "21 - Pre-open" ),
+    OPENING_ROTATION( "22", "OPENING_ROTATION", "22 - Opening Rotation" ),
+    FAST_MARKET( "23", "FAST_MARKET", "23 - Fast Market" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

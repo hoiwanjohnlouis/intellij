@@ -23,8 +23,15 @@ import org.apache.log4j.Logger;
 
 public enum Enum340TradSesStatus implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 0-6 msg types
      */
+    UNKNOWN( "0", "UNKNOWN", "0 - Unknown" ),
+    HALTED( "1", "HALTED", "1 - Halted" ),
+    OPEN( "2", "OPEN", "2 - Open" ),
+    CLOSED( "3", "CLOSED", "3 - Closed" ),
+    PRE_OPEN( "4", "PRE_OPEN", "4 - Pre-Open" ),
+    PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
+    REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

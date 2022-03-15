@@ -23,8 +23,15 @@ import org.apache.log4j.Logger;
 
 public enum Enum431ListOrderStatus implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-7 msg types
      */
+    IN_BIDDING_PROCESS( "1", "IN_BIDDING_PROCESS", "1 - In bidding process" ),
+    RECEIVED_FOR_EXECUTION( "2", "RECEIVED_FOR_EXECUTION", "2 - Received for execution" ),
+    EXECUTING( "3", "EXECUTING", "3 - Executing" ),
+    CANCELLING( "4", "CANCELLING", "4 - Cancelling" ),
+    ALERT( "5", "ALERT", "5 - Alert" ),
+    ALL_DONE( "6", "ALL_DONE", "6 - All Done" ),
+    REJECT( "7", "REJECT", "7 - Reject" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

@@ -23,8 +23,34 @@ import org.apache.log4j.Logger;
 
 public enum Enum378ExecRestatementReason implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 0-11, 99 msg types
      */
+    GT_CORPORATE_ACTION( "0", "GT_CORPORATE_ACTION",
+            "0 - GT corporate action" ),
+    GT_RENEWAL_RESTATEMENT( "1", "GT_RENEWAL_RESTATEMENT",
+            "1 - GT renewal / restatement (no corporate action)" ),
+    VERBAL_CHANGE( "2", "VERBAL_CHANGE",
+            "2 - Verbal change" ),
+    REPRICING_OF_ORDER( "3", "REPRICING_OF_ORDER",
+            "3 - Repricing of order" ),
+    BROKER_OPTION( "4", "BROKER_OPTION",
+            "4 - Broker option" ),
+    PARTIAL_DECLINE_OF_ORDER_QTY( "5", "PARTIAL_DECLINE_OF_ORDER_QTY",
+            "5 - Partial decline of Order Qty (e.g. exchange initiated partial cancel)" ),
+    CANCEL_ON_TRADING_HALT( "6", "CANCEL_ON_TRADING_HALT",
+            "6 - Cancel on Trading Halt" ),
+    CANCEL_ON_SYSTEM_FAILURE( "7", "CANCEL_ON_SYSTEM_FAILURE",
+            "7 - Cancel on System Failure" ),
+    MARKET_EXCHANGE_OPTION( "8", "MARKET_EXCHANGE_OPTION",
+            "8 - Market (Exchange) option" ),
+    CANCELED_NOT_BEST( "9", "CANCELED_NOT_BEST",
+            "9 - Canceled, not best" ),
+    WAREHOUSE_RECAP( "10", "WAREHOUSE_RECAP",
+            "10 - Warehouse Recap" ),
+    PEG_REFRESH( "11", "PEG_REFRESH",
+            "11 - Peg Refresh" ),
+    OTHER( "99", "OTHER",
+            "99 - Other" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

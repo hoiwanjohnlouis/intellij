@@ -23,8 +23,12 @@ import org.apache.log4j.Logger;
 
 public enum Enum434CxlRejResponseTo implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-2 msg types
      */
+    ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST",
+            "1 - Order cancel request" ),
+    ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST",
+            "2 - Order cancel/replace request" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

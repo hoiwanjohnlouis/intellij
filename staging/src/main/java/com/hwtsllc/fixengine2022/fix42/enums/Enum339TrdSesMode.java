@@ -23,8 +23,11 @@ import org.apache.log4j.Logger;
 
 public enum Enum339TrdSesMode implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-3 msg types
      */
+    TESTING( "1", "TESTING", "1 - Testing" ),
+    SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
+    PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

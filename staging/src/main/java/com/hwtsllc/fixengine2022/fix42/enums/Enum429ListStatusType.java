@@ -23,8 +23,14 @@ import org.apache.log4j.Logger;
 
 public enum Enum429ListStatusType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-6 msg types
      */
+    ACK( "1", "ACK", "1 - Ack" ),
+    RESPONSE( "2", "RESPONSE", "2 - Response" ),
+    TIMED( "3", "TIMED", "3 - Timed" ),
+    EXEC_STARTED( "4", "EXEC_STARTED", "4 - Exec Started" ),
+    ALL_DONE( "5", "ALL_DONE", "5 - All Done" ),
+    ALERT( "6", "ALERT", "6 - Alert" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

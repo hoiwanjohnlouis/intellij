@@ -23,8 +23,19 @@ import org.apache.log4j.Logger;
 
 public enum Enum368QuoteEntryRejectReason implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-9, 99 msg types
      */
+    UNKNOWN_SYMBOL( "1", "UNKNOWN_SYMBOL", "1 - Unknown symbol (security)" ),
+    EXCHANGE_CLOSED( "2", "EXCHANGE_CLOSED", "2 - Exchange (security) closed" ),
+    QUOTE_EXCEEDS_LIMIT( "3", "QUOTE_EXCEEDS_LIMIT", "3 - Quote exceeds limit" ),
+    TOO_LATE_TO_ENTER( "4", "TOO_LATE_TO_ENTER", "4 - Too late to enter" ),
+    UNKNOWN_QUOTE( "5", "UNKNOWN_QUOTE", "5 - Unknown quote" ),
+    DUPLICATE_QUOTE( "6", "DUPLICATE_QUOTE", "6 - Duplicate quote" ),
+    INVALID_BID_ASK_SPREAD( "7", "INVALID_BID_ASK_SPREAD", "7 - Invalid bid/ask spread" ),
+    INVALID_PRICE( "8", "INVALID_PRICE", "8 - Invalid price" ),
+    NOT_AUTHORIZED_TO_QUOTE_SECURITY( "9", "NOT_AUTHORIZED_TO_QUOTE_SECURITY",
+            "9 - Not authorized to quote security" ),
+    OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

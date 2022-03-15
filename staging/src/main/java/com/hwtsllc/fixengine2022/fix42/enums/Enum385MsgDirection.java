@@ -23,8 +23,10 @@ import org.apache.log4j.Logger;
 
 public enum Enum385MsgDirection implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * R, and S msg types
      */
+    RECEIVE( "R", "RECEIVE", "R - Receive" ),
+    SEND( "S", "SEND", "S - Send" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

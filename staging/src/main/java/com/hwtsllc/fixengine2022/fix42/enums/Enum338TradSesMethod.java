@@ -23,8 +23,11 @@ import org.apache.log4j.Logger;
 
 public enum Enum338TradSesMethod implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-3 msg types
      */
+    ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
+    OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
+    TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();

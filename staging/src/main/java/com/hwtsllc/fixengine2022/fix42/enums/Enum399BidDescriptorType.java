@@ -23,8 +23,11 @@ import org.apache.log4j.Logger;
 
 public enum Enum399BidDescriptorType implements FixEnumAccessors, LogStringVerbose {
     /*
-     * 0-1 msg types
+     * 1-3 msg types
      */
+    SECTOR( "1", "SECTOR", "1 - Sector" ),
+    COUNTRY( "2", "COUNTRY", "2 - Country" ),
+    INDEX( "3", "INDEX", "3 - Index" ),
     ;
 
     private final String WHERE_AM_I = this.getClass().getSimpleName();
