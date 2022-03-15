@@ -36,16 +36,22 @@ class Enum265MDUpdateTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum265MDUpdateTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum265MDUpdateTypeTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0265Test() {
+        Enum265MDUpdateType enumType;
+
+        /*
+         * 0-1 msg types
+         */
+        enumType = Enum265MDUpdateType.FULL_REFRESH;
+        enumType = Enum265MDUpdateType.INCREMENTAL_REFRESH;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

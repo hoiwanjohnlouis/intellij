@@ -36,16 +36,23 @@ class Enum263SubscriptionRequestTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum263SubscriptionRequestTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum263SubscriptionRequestTypeTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0263Test() {
+        Enum263SubscriptionRequestType enumType;
+
+        /*
+         * 0-2 msg types
+         */
+        enumType = Enum263SubscriptionRequestType.SNAPSHOT;
+        enumType = Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT;
+        enumType = Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

@@ -36,12 +36,10 @@ class Enum81ProcessCodeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum81ProcessCodeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum81ProcessCodeTest()");
     }
 
     @Test

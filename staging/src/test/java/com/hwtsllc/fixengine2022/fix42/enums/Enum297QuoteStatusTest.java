@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum297QuoteStatusTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,35 @@ class Enum297QuoteStatusTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum297QuoteStatusTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum297QuoteStatusTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0297Test() {
+        Enum297QuoteStatus enumType;
+
+        /*
+         * 0-15 msg types
+         */
+        enumType = Enum297QuoteStatus.ACCEPTED;
+        enumType = Enum297QuoteStatus.CANCEL_FOR_SYMBOL;
+        enumType = Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE;
+        enumType = Enum297QuoteStatus.CANCELED_FOR_UNDERLYING;
+        enumType = Enum297QuoteStatus.CANCELED_ALL;
+        enumType = Enum297QuoteStatus.REJECTED;
+        enumType = Enum297QuoteStatus.REMOVED_FROM_MARKET;
+        enumType = Enum297QuoteStatus.EXPIRED;
+        enumType = Enum297QuoteStatus.QUERY;
+        enumType = Enum297QuoteStatus.QUOTE_NOT_FOUND;
+        enumType = Enum297QuoteStatus.PENDING;
+        enumType = Enum297QuoteStatus.PASS;
+        enumType = Enum297QuoteStatus.LOCKED_MARKET_WARNING;
+        enumType = Enum297QuoteStatus.CROSS_MARKET_WARNING;
+        enumType = Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET;
+        enumType = Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET;
     }
     /**
      *

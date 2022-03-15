@@ -18,10 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
 import org.junit.jupiter.api.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class Enum394BidTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -37,19 +34,22 @@ class Enum394BidTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum394BidTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum394BidTypeTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0394Test() {
+        Enum394BidType enumType;
+
+        /*
+         * 1-3 msg types
+         */
+        enumType = Enum394BidType.NON_DISCLOSED;
+        enumType = Enum394BidType.DISCLOSED;
+        enumType = Enum394BidType.NO_BIDDING;
     }
     /**
      *

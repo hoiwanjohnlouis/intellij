@@ -36,12 +36,10 @@ class Enum87AllocStatusTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum87AllocStatusTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum87AllocStatusTest()");
     }
 
     @Test

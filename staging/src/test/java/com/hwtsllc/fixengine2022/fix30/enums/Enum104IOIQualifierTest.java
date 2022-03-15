@@ -16,12 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix30.enums;
 
-import com.hwtsllc.fixengine2022.fix27.enums.Enum103OrdRejReason;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum104IOIQualifierTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -37,12 +37,10 @@ class Enum104IOIQualifierTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum104IOIQualifierTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum104IOIQualifierTest()");
     }
 
     @Test

@@ -36,12 +36,10 @@ class Enum8BeginStringTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum8BeginStringTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum8BeginStringTest()");
     }
 
     @Test

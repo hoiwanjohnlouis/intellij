@@ -36,12 +36,10 @@ class Enum18ExecInstTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum18ExecInstTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum18ExecInstTest()");
     }
 
     @Test

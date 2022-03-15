@@ -22,9 +22,12 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same as TAG 310
+     */
 
     /*
-     * Deprecated
+     * Deprecated, 4
      */
     DEPRECATED_FUTURE( "FUT", "DEPRECATED_FUTURE",
             "FUT - Future (Deprecated)" ),
@@ -36,7 +39,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "USTB - US Treasury Bill (Deprecated Value Use TBILL)" ),
 
     /*
-     * Agency
+     * Agency, 5
      */
     EURO_SUPRANATIONAL_COUPON( "EUSUPRA", "EURO_SUPRANATIONAL_COUPON",
             "EUSUPRA - Euro Supranational Coupon (Agency)" ),
@@ -50,7 +53,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "SUPRA - USD Supranational Coupons (Agency)" ),
 
     /*
-     * Corporate
+     * Corporate, 8
      */
     CORPORATE_BOND( "CORP", "CORPORATE_BOND",
             "CORP - Corporate Bond" ),
@@ -70,13 +73,13 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "YANK - Yankee Corporate Bond" ),
 
     /*
-     * Currency
+     * Currency, 1
      */
     FOREIGN_EXCHANGE_CONTRACT( "FOR", "FOREIGN_EXCHANGE_CONTRACT",
             "FOR - Foreign Exchange Contract (Currency)" ),
 
     /*
-     * Equity
+     * Equity, 2
      */
     COMMON_STOCK( "CS", "COMMON_STOCK",
             "CS - Common Stock (Equity)" ),
@@ -84,7 +87,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "PS - Preferred Stock (Equity)" ),
 
     /*
-     * Finance
+     * Finance, 5
      */
     REPURCHASE( "REPO", "REPURCHASE",
             "REPO - Repurchase (Financing)" ),
@@ -98,7 +101,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "SECPLEDGE - Securities Pledge (Financing)" ),
 
     /*
-     * Government
+     * Government, 9
      */
     BRADY_BOND( "BRADY", "BRADY_BOND",
             "BRADY - Brady Bond (Government)" ),
@@ -120,7 +123,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "TBILL - US Treasury Bill (Government)" ),
 
     /*
-     * Loan
+     * Loan, 13
      */
     TERM_LOAN( "TERM", "TERM_LOAN",
             "TERM - Term Loan" ),
@@ -150,7 +153,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "RETIRED - Retired" ),
 
     /*
-     * Money Market
+     * Money Market, 18
      */
     BANKERS_ACCEPTANCE( "BA", "BANKERS_ACCEPTANCE",
             "BA - Bankers Acceptance" ),
@@ -190,7 +193,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "YCD - Yankee Certificate Of Deposit" ),
 
     /*
-     * Mortgage
+     * Mortgage, 11
      */
     ASSET_BACKED_SECURITIES( "ABS", "ASSET_BACKED_SECURITIES",
             "ABS - Asset-backed Securities" ),
@@ -216,7 +219,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "TBA - To Be Announced" ),
 
     /*
-     * Municipal
+     * Municipal, 16
      */
     OTHER_ANTICIPATION_NOTES( "AN", "OTHER_ANTICIPATION_NOTES",
             "AN - Other Anticipation Notes (BAN, GAN, etc.)" ),
@@ -252,7 +255,7 @@ public enum Enum167SecurityType implements FixEnumAccessors, LogStringVerbose {
             "WAR - Warrant" ),
 
     /*
-     * Other
+     * Other, 7
      */
     MUTUAL_FUND( "MF", "MUTUAL_FUND",
             "MF - Mutual Fund" ),

@@ -36,16 +36,26 @@ class Enum286OpenCLoseSettlFlagTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum286OpenCLoseSettlFlagTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum286OpenCLoseSettlFlagTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0286Test() {
+        Enum286OpenCLoseSettlFlag enumType;
+
+        /*
+         * 0-5 msg types
+         */
+        enumType = Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT;
+        enumType = Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT;
+        enumType = Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT;
+        enumType = Enum286OpenCLoseSettlFlag.EXPECTED;
+        enumType = Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY;
+        enumType = Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

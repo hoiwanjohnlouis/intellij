@@ -37,12 +37,10 @@ class Enum166SettlLocationTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum166SettlLocationTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum166SettlLocationTest()");
     }
 
     @Test

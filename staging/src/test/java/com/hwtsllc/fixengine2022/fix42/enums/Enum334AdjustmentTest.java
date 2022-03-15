@@ -18,10 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
 import org.junit.jupiter.api.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class Enum334AdjustmentTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -37,19 +34,22 @@ class Enum334AdjustmentTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum334AdjustmentTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum334AdjustmentTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0334Test() {
+        Enum334Adjustment enumType;
+
+        /*
+         * 1-3 msg types
+         */
+        enumType = Enum334Adjustment.CANCEL;
+        enumType = Enum334Adjustment.ERROR;
+        enumType = Enum334Adjustment.CORRECTION;
     }
     /**
      *

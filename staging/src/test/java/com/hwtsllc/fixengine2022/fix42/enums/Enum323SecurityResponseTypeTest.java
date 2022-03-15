@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum323SecurityResponseTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,25 @@ class Enum323SecurityResponseTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum323SecurityResponseTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum323SecurityResponseTypeTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0323Test() {
+        Enum323SecurityResponseType enumType;
+
+        /*
+         * 1-6 msg types
+         */
+        enumType = Enum323SecurityResponseType.ACCEPT_SECURITY_AS_IS;
+        enumType = Enum323SecurityResponseType.ACCEPT_SECURITY_REVISIONS;
+        enumType = Enum323SecurityResponseType.LIST_OF_SECURITY_TYPES;
+        enumType = Enum323SecurityResponseType.LIST_OF_SECURITIES_PER_REQUEST;
+        enumType = Enum323SecurityResponseType.REJECT_SECURITY_PROPOSAL;
+        enumType = Enum323SecurityResponseType.CANNOT_MATCH_SELECTION;
     }
     /**
      *

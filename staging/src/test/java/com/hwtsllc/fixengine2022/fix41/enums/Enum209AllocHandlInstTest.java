@@ -36,12 +36,10 @@ class Enum209AllocHandlInstTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum209AllocHandlInstTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum209AllocHandlInstTest()");
     }
 
     @Test

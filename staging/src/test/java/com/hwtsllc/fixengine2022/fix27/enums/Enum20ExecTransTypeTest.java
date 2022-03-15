@@ -36,12 +36,10 @@ class Enum20ExecTransTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum20ExecTransTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum20ExecTransTypeTest()");
     }
 
     @Test

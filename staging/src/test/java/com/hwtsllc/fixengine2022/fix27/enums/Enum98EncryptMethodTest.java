@@ -36,12 +36,10 @@ class Enum98EncryptMethodTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum98EncryptMethodTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum98EncryptMethodTest()");
     }
 
     @Test

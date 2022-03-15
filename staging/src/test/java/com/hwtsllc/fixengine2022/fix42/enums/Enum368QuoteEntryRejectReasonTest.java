@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum368QuoteEntryRejectReasonTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,29 @@ class Enum368QuoteEntryRejectReasonTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum368QuoteEntryRejectReasonTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum368QuoteEntryRejectReasonTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0368Test() {
+        Enum368QuoteEntryRejectReason enumType;
+
+        /*
+         * 1-9, 99 msg types
+         */
+        enumType = Enum368QuoteEntryRejectReason.UNKNOWN_SYMBOL;
+        enumType = Enum368QuoteEntryRejectReason.EXCHANGE_CLOSED;
+        enumType = Enum368QuoteEntryRejectReason.QUOTE_EXCEEDS_LIMIT;
+        enumType = Enum368QuoteEntryRejectReason.TOO_LATE_TO_ENTER;
+        enumType = Enum368QuoteEntryRejectReason.UNKNOWN_QUOTE;
+        enumType = Enum368QuoteEntryRejectReason.DUPLICATE_QUOTE;
+        enumType = Enum368QuoteEntryRejectReason.INVALID_BID_ASK_SPREAD;
+        enumType = Enum368QuoteEntryRejectReason.INVALID_PRICE;
+        enumType = Enum368QuoteEntryRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY;
+        enumType = Enum368QuoteEntryRejectReason.OTHER;
     }
     /**
      *

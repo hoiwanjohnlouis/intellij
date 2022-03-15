@@ -37,12 +37,10 @@ class Enum77PositionEffectTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum77PositionEffectTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum77PositionEffectTest()");
     }
 
     @Test

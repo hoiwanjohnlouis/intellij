@@ -36,12 +36,10 @@ class Enum35MsgTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum35MsgTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum35MsgTypeTest()");
     }
 
     @Test

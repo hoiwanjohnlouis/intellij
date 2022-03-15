@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum340TradSesStatusTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,26 @@ class Enum340TradSesStatusTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum340TradSesStatusTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum340TradSesStatusTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0340Test() {
+        Enum340TradSesStatus enumType;
+
+        /*
+         * 0-6 msg types
+         */
+        enumType = Enum340TradSesStatus.UNKNOWN;
+        enumType = Enum340TradSesStatus.HALTED;
+        enumType = Enum340TradSesStatus.OPEN;
+        enumType = Enum340TradSesStatus.CLOSED;
+        enumType = Enum340TradSesStatus.PRE_OPEN;
+        enumType = Enum340TradSesStatus.PRE_CLOSE;
+        enumType = Enum340TradSesStatus.REQUEST_REJECTED;
     }
     /**
      *

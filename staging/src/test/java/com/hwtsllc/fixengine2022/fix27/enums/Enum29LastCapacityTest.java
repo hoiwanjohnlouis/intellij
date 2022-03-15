@@ -36,12 +36,10 @@ class Enum29LastCapacityTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum29LastCapacityTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum29LastCapacityTest()");
     }
 
     @Test

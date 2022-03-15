@@ -17,12 +17,12 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag58Text;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag58TextTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -38,12 +38,10 @@ class Tag58TextTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Tag58TextTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Tag58TextTest()");
     }
 
     @Test

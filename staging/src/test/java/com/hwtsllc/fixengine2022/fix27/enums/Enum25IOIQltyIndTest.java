@@ -36,12 +36,10 @@ class Enum25IOIQltyIndTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum25IOIQltyIndTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum25IOIQltyIndTest()");
     }
 
     @Test

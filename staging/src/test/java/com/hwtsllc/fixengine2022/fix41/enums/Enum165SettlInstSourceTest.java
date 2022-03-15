@@ -36,12 +36,10 @@ class Enum165SettlInstSourceTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum165SettlInstSourceTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum165SettlInstSourceTest()");
     }
 
     @Test

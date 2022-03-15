@@ -25,12 +25,12 @@ public class FIXStandardHeader implements LogStringVerbose {
     private static final Logger logger = LogManager.getRootLogger();
 
     @Override
-    public String toString() {
+    public String toLogStringVerbose() {
         StringBuilder stringBuilder = new StringBuilder();
         return stringBuilder.toString();
     }
     @Override
-    public String toLogStringVerbose() {
+    public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         return stringBuilder.toString();
     }
@@ -42,5 +42,4 @@ public class FIXStandardHeader implements LogStringVerbose {
     public static void main(String[] args) {
         logger.trace("Hello from FIXStandardHeader");
     }
-
 }

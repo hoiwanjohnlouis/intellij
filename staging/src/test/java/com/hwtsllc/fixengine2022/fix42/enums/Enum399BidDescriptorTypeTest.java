@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum399BidDescriptorTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,22 @@ class Enum399BidDescriptorTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum399BidDescriptorTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum399BidDescriptorTypeTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0399Test() {
+        Enum399BidDescriptorType enumType;
+
+        /*
+         * 1-3 msg types
+         */
+        enumType = Enum399BidDescriptorType.SECTOR;
+        enumType = Enum399BidDescriptorType.COUNTRY;
+        enumType = Enum399BidDescriptorType.INDEX;
     }
     /**
      *

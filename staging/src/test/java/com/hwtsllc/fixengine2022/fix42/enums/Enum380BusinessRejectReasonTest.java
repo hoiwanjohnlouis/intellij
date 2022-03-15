@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum380BusinessRejectReasonTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,27 @@ class Enum380BusinessRejectReasonTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum380BusinessRejectReasonTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum380BusinessRejectReasonTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0380Test() {
+        Enum380BusinessRejectReason enumType;
+
+        /*
+         * 0-7, 18 msg types
+         */
+        enumType = Enum380BusinessRejectReason.OTHER;
+        enumType = Enum380BusinessRejectReason.UNKNOWN_ID;
+        enumType = Enum380BusinessRejectReason.UNKNOWN_SECURITY;
+        enumType = Enum380BusinessRejectReason.UNKNOWN_MESSAGE_TYPE;
+        enumType = Enum380BusinessRejectReason.APPLICATION_NOT_AVAILABLE;
+        enumType = Enum380BusinessRejectReason.REQUIRED_FIELD_MISSING;
+        enumType = Enum380BusinessRejectReason.DELIVERTO_FIRM_NOT_AVAILABLE;
+        enumType = Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT;
     }
     /**
      *

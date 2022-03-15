@@ -36,12 +36,10 @@ class Enum88AllocRejCodeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum88AllocRejCodeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum88AllocRejCodeTest()");
     }
 
     @Test

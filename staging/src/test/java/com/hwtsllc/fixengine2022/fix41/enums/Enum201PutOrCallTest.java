@@ -36,12 +36,10 @@ class Enum201PutOrCallTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum201PutOrCallTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum201PutOrCallTest()");
     }
 
     @Test

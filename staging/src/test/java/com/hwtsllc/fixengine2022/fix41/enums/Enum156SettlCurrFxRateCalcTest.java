@@ -36,12 +36,10 @@ class Enum156SettlCurrFxRateCalcTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum156SettlCurrFxRateCalcTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum156SettlCurrFxRateCalcTest()");
     }
 
     @Test

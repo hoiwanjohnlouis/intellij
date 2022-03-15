@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
 import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;

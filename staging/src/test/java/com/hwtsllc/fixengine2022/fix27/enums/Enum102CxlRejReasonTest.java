@@ -36,12 +36,10 @@ class Enum102CxlRejReasonTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum102CxlRejReasonTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum102CxlRejReasonTest()");
     }
 
     @Test

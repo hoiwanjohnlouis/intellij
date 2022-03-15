@@ -36,12 +36,10 @@ class Enum172SettlDeliveryTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum172SettlDeliveryTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum172SettlDeliveryTypeTest()");
     }
 
     @Test

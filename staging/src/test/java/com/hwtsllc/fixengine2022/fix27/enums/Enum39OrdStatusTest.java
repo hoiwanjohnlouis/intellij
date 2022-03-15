@@ -36,12 +36,10 @@ class Enum39OrdStatusTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum39OrdStatusTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum39OrdStatusTest()");
     }
 
     @Test

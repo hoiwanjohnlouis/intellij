@@ -20,7 +20,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum301QuoteResponseLevelTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -36,19 +37,42 @@ class Enum301QuoteResponseLevelTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum301QuoteResponseLevelTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum301QuoteResponseLevelTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0301Test() {
+        Enum301QuoteResponseLevel enumType;
+
+        /*
+         * 0-2 msg types
+         */
+        enumType = Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT;
+        assertEquals("0", enumType.getAction());
+        assertEquals("NO_ACKNOWLEDGEMENT", enumType.getName());
+        assertEquals("0 - No Acknowledgement (default)", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS;
+        assertEquals("1", enumType.getAction());
+        assertEquals("ACKNOWLEDGE_NEGATIVE_OR_ERRORS", enumType.getName());
+        assertEquals("1 - Acknowledge only negative or erroneous quotes", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
+
+        enumType = Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE;
+        assertEquals("2", enumType.getAction());
+        assertEquals("ACKNOWLEDGE_EACH_QUOTE", enumType.getName());
+        assertEquals("2 - Acknowledge each quote messages", enumType.getDescription());
+        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkName", enumType.getName());
+        assertNotEquals("junkDescription", enumType.getDescription());
     }
     /**
      *

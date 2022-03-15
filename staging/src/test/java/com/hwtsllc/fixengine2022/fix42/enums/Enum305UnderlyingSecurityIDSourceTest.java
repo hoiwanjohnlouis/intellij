@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum305UnderlyingSecurityIDSourceTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,45 @@ class Enum305UnderlyingSecurityIDSourceTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum305UnderlyingSecurityIDSourceTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum305UnderlyingSecurityIDSourceTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0305Test() {
+        Enum305UnderlyingSecurityIDSource enumType;
+
+        /*
+         * 1-9 msg types
+         */
+        enumType = Enum305UnderlyingSecurityIDSource.CUSIP;
+        enumType = Enum305UnderlyingSecurityIDSource.SEDOL;
+        enumType = Enum305UnderlyingSecurityIDSource.QUIK;
+        enumType = Enum305UnderlyingSecurityIDSource.ISIN;
+        enumType = Enum305UnderlyingSecurityIDSource.RIC;
+        enumType = Enum305UnderlyingSecurityIDSource.ISO_CURRENCY_CODE;
+        enumType = Enum305UnderlyingSecurityIDSource.ISO_COUNTRY_CODE;
+        enumType = Enum305UnderlyingSecurityIDSource.EXCHANGE_SYMBOL;
+        enumType = Enum305UnderlyingSecurityIDSource.CTA;
+        enumType = Enum305UnderlyingSecurityIDSource.CUSIP;
+
+        /*
+         * A-L msg types
+         */
+        enumType = Enum305UnderlyingSecurityIDSource.BLOOMBERG;
+        enumType = Enum305UnderlyingSecurityIDSource.WERTPAPIER;
+        enumType = Enum305UnderlyingSecurityIDSource.DUTCH;
+        enumType = Enum305UnderlyingSecurityIDSource.VALOREN;
+        enumType = Enum305UnderlyingSecurityIDSource.SICOVAM;
+        enumType = Enum305UnderlyingSecurityIDSource.BELGIAN;
+        enumType = Enum305UnderlyingSecurityIDSource.COMMON;
+        enumType = Enum305UnderlyingSecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION;
+        enumType = Enum305UnderlyingSecurityIDSource.ISDA_PRODUCT_SPECIFICATION;
+        enumType = Enum305UnderlyingSecurityIDSource.OPTION_PRICE_REPORTING_AUTHORITY;
+        enumType = Enum305UnderlyingSecurityIDSource.ISDA_PRODUCT_URL;
+        enumType = Enum305UnderlyingSecurityIDSource.LETTER_OF_CREDIT;
     }
     /**
      *

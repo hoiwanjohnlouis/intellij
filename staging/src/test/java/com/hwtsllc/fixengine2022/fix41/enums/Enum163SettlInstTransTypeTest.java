@@ -36,12 +36,10 @@ class Enum163SettlInstTransTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum163SettlInstTransTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum163SettlInstTransTypeTest()");
     }
 
     @Test

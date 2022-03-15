@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum298QuoteCancelTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,24 @@ class Enum298QuoteCancelTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum298QuoteCancelTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum298QuoteCancelTypeTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0298Test() {
+        Enum298QuoteCancelType enumType;
+
+        /*
+         * 1-5 msg types
+         */
+        enumType = Enum298QuoteCancelType.CANCEL_FOR_SYMBOL;
+        enumType = Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE;
+        enumType = Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL;
+        enumType = Enum298QuoteCancelType.CANCEL_ALL_QUOTES;
+        enumType = Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE;
     }
     /**
      *

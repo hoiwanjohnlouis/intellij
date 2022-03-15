@@ -36,16 +36,29 @@ class Enum219BenchmarkTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum219BenchmarkTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum219BenchmarkTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0219Test() {
+        Enum219Benchmark enumType;
+
+        /*
+         * 1-9 msg types
+         */
+        enumType = Enum219Benchmark.CURVE;
+        enumType = Enum219Benchmark.FIVE_YEAR;
+        enumType = Enum219Benchmark.OLD_FIVE_YEAR;
+        enumType = Enum219Benchmark.TEN_YEAR;
+        enumType = Enum219Benchmark.OLD_TEN_YEAR;
+        enumType = Enum219Benchmark.THIRTY_YEAR;
+        enumType = Enum219Benchmark.OLD_THIRTY_YEAR;
+        enumType = Enum219Benchmark.THREE_MONTH;
+        enumType = Enum219Benchmark.SIX_MONTH;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

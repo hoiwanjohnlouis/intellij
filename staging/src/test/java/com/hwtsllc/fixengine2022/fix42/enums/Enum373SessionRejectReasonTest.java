@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum373SessionRejectReasonTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,39 @@ class Enum373SessionRejectReasonTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum373SessionRejectReasonTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum373SessionRejectReasonTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0373Test() {
+        Enum373SessionRejectReason enumType;
+
+        /*
+         * 0-17, 99 msg types
+         */
+        enumType = Enum373SessionRejectReason.INVALID_TAG_NUMBER;
+        enumType = Enum373SessionRejectReason.REQUIRED_TAG_MISSING;
+        enumType = Enum373SessionRejectReason.TAG_NOT_DEFINED_FOR_THIS_MESSAGE_TYPE;
+        enumType = Enum373SessionRejectReason.UNDEFINED_TAG;
+        enumType = Enum373SessionRejectReason.TAG_SPECIFIED_WITHOUT_A_VALUE;
+        enumType = Enum373SessionRejectReason.INCORRECT_VALUE_FOR_THIS_TAG;
+        enumType = Enum373SessionRejectReason.INCORRECT_DATA_FORMAT;
+        enumType = Enum373SessionRejectReason.DECRYPTION_PROBLEM;
+        enumType = Enum373SessionRejectReason.SIGNATURE_PROBLEM;
+        enumType = Enum373SessionRejectReason.COMPID_PROBLEM;
+        enumType = Enum373SessionRejectReason.SENDINGTIME_ACCURACY_PROBLEM;
+        enumType = Enum373SessionRejectReason.INVALID_MSGTYPE;
+        enumType = Enum373SessionRejectReason.XML_VALIDATION_ERROR;
+        enumType = Enum373SessionRejectReason.DUPLICATE_TAG;
+        enumType = Enum373SessionRejectReason.TAG_SPECIFIED_OUT_OF_ORDER;
+        enumType = Enum373SessionRejectReason.REPEATING_GROUP_FIELDS_OUT_OF_ORDER;
+        enumType = Enum373SessionRejectReason.INCORRECT_NUMINGROUP_COUNT;
+        enumType = Enum373SessionRejectReason.VALUE_INCLUDES_FIELD_DELIMITER;
+
+        enumType = Enum373SessionRejectReason.OTHER;
     }
     /**
      *

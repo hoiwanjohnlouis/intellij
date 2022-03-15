@@ -36,16 +36,51 @@ class Enum269MDEntryTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum269MDEntryTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum269MDEntryTypeTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0269Test() {
+        Enum269MDEntryType enumType;
+
+        /*
+         * 0-9
+         */
+        enumType = Enum269MDEntryType.BID;
+        enumType = Enum269MDEntryType.OFFER;
+        enumType = Enum269MDEntryType.TRADE;
+        enumType = Enum269MDEntryType.INDEX_VALUE;
+        enumType = Enum269MDEntryType.OPENING_PRICE;
+        enumType = Enum269MDEntryType.CLOSING_PRICE;
+        enumType = Enum269MDEntryType.SETTLEMENT_PRICE;
+        enumType = Enum269MDEntryType.TRADING_SESSION_HIGH_PRICE;
+        enumType = Enum269MDEntryType.TRADING_SESSION_LOW_PRICE;
+        enumType = Enum269MDEntryType.TRADING_SESSION_VWAP_PRICE;
+
+        /*
+         * A-Q
+         */
+        enumType = Enum269MDEntryType.IMBALANCE;
+        enumType = Enum269MDEntryType.TRADE_VOLUME;
+        enumType = Enum269MDEntryType.OPEN_INTEREST;
+        enumType = Enum269MDEntryType.COMPOSITE_UNDERLYING_PRICE;
+        enumType = Enum269MDEntryType.SIMULATED_SELL_PRICE;
+        enumType = Enum269MDEntryType.SIMULATED_BUY_PRICE;
+        enumType = Enum269MDEntryType.MARGIN_RATE;
+        enumType = Enum269MDEntryType.MID_PRICE;
+        enumType = Enum269MDEntryType.EMPTY_BOOK;
+        enumType = Enum269MDEntryType.SETTLE_HIGH_PRICE;
+        enumType = Enum269MDEntryType.SETTLE_LOW_PRICE;
+        enumType = Enum269MDEntryType.PRIOR_SETTLE_PRICE;
+        enumType = Enum269MDEntryType.SESSION_HIGH_BID;
+        enumType = Enum269MDEntryType.SESSION_LOW_OFFER;
+        enumType = Enum269MDEntryType.EARLY_PRICES;
+        enumType = Enum269MDEntryType.AUCTION_CLEARING_PRICE;
+
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

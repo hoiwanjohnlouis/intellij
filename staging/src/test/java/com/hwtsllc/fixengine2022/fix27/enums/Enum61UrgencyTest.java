@@ -36,12 +36,10 @@ class Enum61UrgencyTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum61UrgencyTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum61UrgencyTest()");
     }
 
     @Test

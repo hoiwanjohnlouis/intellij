@@ -36,12 +36,10 @@ class Enum59TimeInForceTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum59TimeInForceTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum59TimeInForceTest()");
     }
 
     @Test

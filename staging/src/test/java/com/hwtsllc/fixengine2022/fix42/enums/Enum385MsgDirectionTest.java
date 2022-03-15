@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum385MsgDirectionTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,21 @@ class Enum385MsgDirectionTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum385MsgDirectionTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum385MsgDirectionTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0385Test() {
+        Enum385MsgDirection enumType;
+
+        /*
+         * R, and S msg types
+         */
+        enumType = Enum385MsgDirection.RECEIVE;
+        enumType = Enum385MsgDirection.SEND;
     }
     /**
      *

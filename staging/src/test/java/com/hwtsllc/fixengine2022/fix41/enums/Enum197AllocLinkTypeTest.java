@@ -36,12 +36,10 @@ class Enum197AllocLinkTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum197AllocLinkTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum197AllocLinkTypeTest()");
     }
 
     @Test

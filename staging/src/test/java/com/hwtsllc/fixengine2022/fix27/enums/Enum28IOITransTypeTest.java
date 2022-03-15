@@ -36,12 +36,10 @@ class Enum28IOITransTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum28IOITransTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum28IOITransTypeTest()");
     }
 
     @Test

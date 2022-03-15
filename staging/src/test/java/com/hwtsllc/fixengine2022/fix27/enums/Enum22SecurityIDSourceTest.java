@@ -36,12 +36,10 @@ class Enum22SecurityIDSourceTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum22SecurityIDSourceTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum22SecurityIDSourceTest()");
     }
 
     @Test

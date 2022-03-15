@@ -36,12 +36,10 @@ class Enum167SecurityTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum167SecurityTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum167SecurityTypeTest()");
     }
 
     @Test

@@ -22,6 +22,13 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum35MsgType implements FixEnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same as TAG 372
+     */
+
+    /*
+     * 0-9 msg types
+     */
     HEARTBEAT("0", "HEARTBEAT", "0 - Heartbeat" ),
     TEST_REQUEST("1", "TEST_REQUEST", "1 - Test Request" ),
     RESEND_REQUEST("2", "RESEND_REQUEST", "2 - Resend Request" ),
@@ -33,6 +40,9 @@ public enum Enum35MsgType implements FixEnumAccessors, LogStringVerbose {
     EXECUTION_REPORT("8", "EXECUTION_REPORT", "8 - Execution Report" ),
     ORDER_CANCEL_REJECT("9", "ORDER_CANCEL_REJECT", "9 - Order Cancel Reject" ),
 
+    /*
+     * A-Z msg types, skipping "I", and "O"
+     */
     LOGON("A", "LOGON", "A - Logon" ),
     NEWS("B", "NEWS", "B - News" ),
     EMAIL("C", "EMAIL", "C - Email" ),
@@ -59,6 +69,9 @@ public enum Enum35MsgType implements FixEnumAccessors, LogStringVerbose {
             "Y - Market Data Request Reject" ),
     QUOTE_CANCEL("Z", "QUOTE_CANCEL", "Z - Quote Cancel" ),
 
+    /*
+     * a-z msg types
+     */
     QUOTE_STATUS_REQUEST("a", "QUOTE_STATUS_REQUEST",
             "a - Quote Status Request" ),
     MASS_QUOTE_ACKNOWLEDGEMENT("b", "MASS_QUOTE_ACKNOWLEDGEMENT",
@@ -112,6 +125,9 @@ public enum Enum35MsgType implements FixEnumAccessors, LogStringVerbose {
     DERIVATIVE_SECURITY_LIST_REQUEST("z", "DERIVATIVE_SECURITY_LIST_REQUEST",
             "z - Derivative Security List Request" ),
 
+    /*
+     * AA-AZ msg types
+     */
     DERIVATIVE_SECURITY_LIST("AA", "DERIVATIVE_SECURITY_LIST",
             "AA - Derivative Security List" ),
     NEW_ORDER_MULTILEG("AB", "NEW_ORDER_MULTILEG",
@@ -165,6 +181,9 @@ public enum Enum35MsgType implements FixEnumAccessors, LogStringVerbose {
     COLLATERAL_RESPONSE("AZ", "COLLATERAL_RESPONSE",
             "AZ - Collateral Response" ),
 
+    /*
+     * BA-BP msg types
+     */
     COLLATERAL_REPORT("BA", "COLLATERAL_REPORT",
             "BA - Collateral Report" ),
     COLLATERAL_INQUIRY("BB", "COLLATERAL_INQUIRY",

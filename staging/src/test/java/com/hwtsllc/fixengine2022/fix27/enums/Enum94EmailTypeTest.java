@@ -36,12 +36,10 @@ class Enum94EmailTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum94EmailTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum94EmailTypeTest()");
     }
 
     @Test

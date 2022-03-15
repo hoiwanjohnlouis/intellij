@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum292CorporateActionTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,41 @@ class Enum292CorporateActionTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum292CorporateActionTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum292CorporateActionTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0292Test() {
+        Enum292CorporateAction enumType;
+
+        /*
+         * A-V msg types
+         */
+        enumType = Enum292CorporateAction.EX_DIVIDEND;
+        enumType = Enum292CorporateAction.EX_DISTRIBUTION;
+        enumType = Enum292CorporateAction.EX_RIGHTS;
+        enumType = Enum292CorporateAction.NEW;
+        enumType = Enum292CorporateAction.EX_INTEREST;
+        enumType = Enum292CorporateAction.CASH_DIVIDEND;
+        enumType = Enum292CorporateAction.STOCK_DIVIDEND;
+        enumType = Enum292CorporateAction.NON_INTEGER_STOCK_SPLIT;
+        enumType = Enum292CorporateAction.REVERSE_STOCK_SPLIT;
+        enumType = Enum292CorporateAction.STANDARD_INTEGER_STOCK_SPLIT;
+        enumType = Enum292CorporateAction.POSITION_CONSOLIDATION;
+        enumType = Enum292CorporateAction.LIQUIDATION_REORGANIZATION;
+        enumType = Enum292CorporateAction.MERGER_REORGANIZATION;
+        enumType = Enum292CorporateAction.RIGHTS_OFFERING;
+        enumType = Enum292CorporateAction.SHAREHOLDER_MEETING;
+        enumType = Enum292CorporateAction.SPINOFF;
+        enumType = Enum292CorporateAction.TENDER_OFFER;
+        enumType = Enum292CorporateAction.WARRANT;
+        enumType = Enum292CorporateAction.SPECIAL_ACTION;
+        enumType = Enum292CorporateAction.SYMBOL_CONVERSION;
+        enumType = Enum292CorporateAction.CUSIP_OR_NAME_CHANGE;
+        enumType = Enum292CorporateAction.LEAP_ROLLOVER;
     }
     /**
      *

@@ -36,16 +36,30 @@ class Enum300QuoteRejectReasonTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum300QuoteRejectReasonTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum300QuoteRejectReasonTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0300Test() {
+        Enum300QuoteRejectReason enumType;
+
+        /*
+         * 1-9, 99 msg types
+         */
+        enumType = Enum300QuoteRejectReason.UNKNOWN_SYMBOL;
+        enumType = Enum300QuoteRejectReason.EXCHANGE_CLOSED;
+        enumType = Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT;
+        enumType = Enum300QuoteRejectReason.TOO_LATE_TO_ENTER;
+        enumType = Enum300QuoteRejectReason.UNKNOWN_QUOTE;
+        enumType = Enum300QuoteRejectReason.DUPLICATE_QUOTE;
+        enumType = Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD;
+        enumType = Enum300QuoteRejectReason.INVALID_PRICE;
+        enumType = Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY;
+        enumType = Enum300QuoteRejectReason.OTHER;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

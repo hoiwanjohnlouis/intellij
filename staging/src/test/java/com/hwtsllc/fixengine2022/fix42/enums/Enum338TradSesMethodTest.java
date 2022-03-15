@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum338TradSesMethodTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,22 @@ class Enum338TradSesMethodTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum338TradSesMethodTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum338TradSesMethodTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0338Test() {
+        Enum338TradSesMethod enumType;
+
+        /*
+         * 1-3 msg types
+         */
+        enumType = Enum338TradSesMethod.ELECTRONIC;
+        enumType = Enum338TradSesMethod.OPEN_OUTCRY;
+        enumType = Enum338TradSesMethod.TWO_PARTY;
     }
     /**
      *

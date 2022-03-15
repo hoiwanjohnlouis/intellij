@@ -36,12 +36,10 @@ class Enum203CoveredOrUncoveredTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum203CoveredOrUncoveredTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum203CoveredOrUncoveredTest()");
     }
 
     @Test

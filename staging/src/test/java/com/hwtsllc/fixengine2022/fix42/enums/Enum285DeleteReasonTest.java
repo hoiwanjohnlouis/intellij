@@ -36,16 +36,22 @@ class Enum285DeleteReasonTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum285DeleteReasonTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum285DeleteReasonTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0285Test() {
+        Enum285DeleteReason enumType;
+
+        /*
+         * 0-1 msg types
+         */
+        enumType = Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST;
+        enumType = Enum285DeleteReason.ERROR;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

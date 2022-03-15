@@ -22,6 +22,13 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum22SecurityIDSource implements FixEnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same as TAG 305
+     */
+
+    /*
+     * 0-9 msg types
+     */
     CUSIP("1", "CUSIP", "1 - CUSIP - Committee on Uniform Securities Identification Procedures" ),
     SEDOL("2", "SEDOL", "2 - SEDOL - Stock Exchange Daily Official List" ),
     QUIK("3", "QUIK", "3 - QUIK" ),
@@ -32,6 +39,10 @@ public enum Enum22SecurityIDSource implements FixEnumAccessors, LogStringVerbose
     EXCHANGE_SYMBOL("8", "EXCHANGE_SYMBOL", "8 - Exchange Symbol" ),
     CTA("9", "CTA",
             "9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)" ),
+
+    /*
+     * A-L msg types
+     */
     BLOOMBERG("A", "BLOOMBERG", "A - Bloomberg Symbol" ),
     WERTPAPIER("B", "WERTPAPIER", "B - Wertpapier" ),
     DUTCH("C", "DUTCH", "C - Dutch" ),

@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum281MDReqRejReasonTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,37 @@ class Enum281MDReqRejReasonTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum281MDReqRejReasonTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum281MDReqRejReasonTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0281Test() {
+        Enum281MDReqRejReason enumType;
+
+        /*
+         * 0-9 msg types
+         */
+        enumType = Enum281MDReqRejReason.UNKNOWN_SYMBOL;
+        enumType = Enum281MDReqRejReason.DUPLICATE_MDREQID;
+        enumType = Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH;
+        enumType = Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS;
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE;
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH;
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE;
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK;
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE;
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID;
+
+        /*
+         * A-D msg types
+         */
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_SCOPE;
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG;
+        enumType = Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE;
+        enumType = Enum281MDReqRejReason.INSUFFICIENT_CREDIT;
     }
     /**
      *

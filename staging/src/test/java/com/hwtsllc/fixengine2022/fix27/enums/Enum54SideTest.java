@@ -36,12 +36,10 @@ class Enum54SideTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum54SideTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum54SideTest()");
     }
 
     @Test

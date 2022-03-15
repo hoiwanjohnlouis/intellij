@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum321SecurityRequestTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,23 @@ class Enum321SecurityRequestTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum321SecurityRequestTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum321SecurityRequestTypeTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0321Test() {
+        Enum321SecurityRequestType enumType;
+
+        /*
+         * 0-3 msg types
+         */
+        enumType = Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY;
+        enumType = Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY;
+        enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES;
+        enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITIES;
     }
     /**
      *

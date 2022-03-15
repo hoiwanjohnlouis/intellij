@@ -36,16 +36,51 @@ class Enum235YieldTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum235YieldTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum235YieldTypeTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0235Test() {
+        Enum235YieldType enumType;
+
+        enumType = Enum235YieldType.AFTERTAX;
+        enumType = Enum235YieldType.ANNUAL;
+        enumType = Enum235YieldType.ATISSUE;
+        enumType = Enum235YieldType.AVGMATURITY;
+        enumType = Enum235YieldType.BOOK;
+        enumType = Enum235YieldType.CALL;
+        enumType = Enum235YieldType.CHANGE;
+        enumType = Enum235YieldType.CLOSE;
+        enumType = Enum235YieldType.COMPOUND;
+        enumType = Enum235YieldType.CURRENT;
+        enumType = Enum235YieldType.GOVTEQUIV;
+        enumType = Enum235YieldType.GROSS;
+        enumType = Enum235YieldType.INFLATION;
+        enumType = Enum235YieldType.INVERSEFLOATER;
+        enumType = Enum235YieldType.LASTCLOSE;
+        enumType = Enum235YieldType.LASTMONTH;
+        enumType = Enum235YieldType.LASTQUARTER;
+        enumType = Enum235YieldType.LASTYEAR;
+        enumType = Enum235YieldType.LONGAVGLIFE;
+        enumType = Enum235YieldType.MARK;
+        enumType = Enum235YieldType.MATURITY;
+        enumType = Enum235YieldType.NEXTREFUND;
+        enumType = Enum235YieldType.OPENAVG;
+        enumType = Enum235YieldType.PREVCLOSE;
+        enumType = Enum235YieldType.PROCEEDS;
+        enumType = Enum235YieldType.PUT;
+        enumType = Enum235YieldType.SEMIANNUAL;
+        enumType = Enum235YieldType.SHORTAVGLIFE;
+        enumType = Enum235YieldType.SIMPLE;
+        enumType = Enum235YieldType.TAXEQUIV;
+        enumType = Enum235YieldType.TENDER;
+        enumType = Enum235YieldType.TRUE;
+        enumType = Enum235YieldType.VALUE1_32;
+        enumType = Enum235YieldType.WORST;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

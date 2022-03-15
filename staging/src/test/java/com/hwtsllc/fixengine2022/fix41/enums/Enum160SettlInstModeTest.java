@@ -36,12 +36,10 @@ class Enum160SettlInstModeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum160SettlInstModeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum160SettlInstModeTest()");
     }
 
     @Test

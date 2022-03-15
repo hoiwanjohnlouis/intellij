@@ -36,12 +36,10 @@ class Enum71AllocTransTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum71AllocTransTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum71AllocTransTypeTest()");
     }
 
     @Test

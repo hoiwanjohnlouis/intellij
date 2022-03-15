@@ -36,12 +36,10 @@ class Enum21HandlInstTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum21HandlInstTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum21HandlInstTest()");
     }
 
     @Test

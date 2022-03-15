@@ -32,7 +32,7 @@ public enum Enum896CollInquiryQualifier implements FixEnumAccessors, LogStringVe
     private final String name;
     private final String description;
 
-    Enum216RoutingType(final String action, final String name, final String description) {
+    Enum896CollInquiryQualifier(final String action, final String name, final String description) {
         this.action = action;
         this.name = name;
         this.description = description;
@@ -111,7 +111,7 @@ public enum Enum896CollInquiryQualifier implements FixEnumAccessors, LogStringVe
         /*
          * dump all the enum values
          */
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum896CollInquiryQualifier oneEnum : Enum896CollInquiryQualifier.values()) {
             System.out.println(oneEnum);
         }
     }

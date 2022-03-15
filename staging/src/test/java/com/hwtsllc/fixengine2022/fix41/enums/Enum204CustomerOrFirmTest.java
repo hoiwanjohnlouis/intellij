@@ -36,12 +36,10 @@ class Enum204CustomerOrFirmTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum204CustomerOrFirmTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum204CustomerOrFirmTest()");
     }
 
     @Test

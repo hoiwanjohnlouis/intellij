@@ -36,16 +36,25 @@ class Enum279MDUpdateActionTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum279MDUpdateActionTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum279MDUpdateActionTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0279Test() {
+        Enum279MDUpdateAction enumType;
+
+        /*
+         * 0-4 msg types
+         */
+        enumType = Enum279MDUpdateAction.NEW;
+        enumType = Enum279MDUpdateAction.CHANGE;
+        enumType = Enum279MDUpdateAction.DELETE;
+        enumType = Enum279MDUpdateAction.DELETE_THRU;
+        enumType = Enum279MDUpdateAction.DELETE_FROM;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

@@ -36,16 +36,29 @@ class Enum221BenchmarkCurveNameTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum221BenchmarkCurveNameTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum221BenchmarkCurveNameTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0221Test() {
+        Enum221BenchmarkCurveName enumType;
+
+        enumType = Enum221BenchmarkCurveName.EONIA;
+        enumType = Enum221BenchmarkCurveName.EUREPO;
+        enumType = Enum221BenchmarkCurveName.EURIBOR;
+        enumType = Enum221BenchmarkCurveName.FUTURESWAP;
+        enumType = Enum221BenchmarkCurveName.LIBID;
+        enumType = Enum221BenchmarkCurveName.LIBOR;
+        enumType = Enum221BenchmarkCurveName.MUNIAAA;
+        enumType = Enum221BenchmarkCurveName.OTHER;
+        enumType = Enum221BenchmarkCurveName.PFANDBRIEFE;
+        enumType = Enum221BenchmarkCurveName.SONIA;
+        enumType = Enum221BenchmarkCurveName.SWAP;
+        enumType = Enum221BenchmarkCurveName.TREASURY;
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

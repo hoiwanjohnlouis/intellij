@@ -36,12 +36,10 @@ class Enum139MiscFeeTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum139MiscFeeTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum139MiscFeeTypeTest()");
     }
 
     @Test

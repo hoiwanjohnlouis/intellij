@@ -36,16 +36,25 @@ class Enum274TickDirectionTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum274TickDirectionTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum274TickDirectionTest()");
     }
 
     @Test
-    void Test() {
+    void Enum0274Test() {
+        Enum274TickDirection enumType;
+
+        /*
+         * 0-3
+         */
+        enumType = Enum274TickDirection.PLUS_TICK;
+        enumType = Enum274TickDirection.ZERO_PLUS_TICK;
+        enumType = Enum274TickDirection.MINUS_TICK;
+        enumType = Enum274TickDirection.ZERO_MINUS_TICK;
+
+
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");

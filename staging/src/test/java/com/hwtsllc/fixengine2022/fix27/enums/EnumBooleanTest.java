@@ -36,12 +36,10 @@ class EnumBooleanTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting EnumBooleanTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed EnumBooleanTest()");
     }
 
     @Test

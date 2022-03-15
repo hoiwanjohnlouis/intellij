@@ -36,12 +36,10 @@ class Enum169StandInstDbTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum169StandInstDbTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum169StandInstDbTypeTest()");
     }
 
     @Test

@@ -36,12 +36,10 @@ class Enum13CommTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum13CommTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum13CommTypeTest()");
     }
 
     @Test

@@ -16,12 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum150ExecTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -37,12 +37,10 @@ class Enum150ExecTypeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum150ExecTypeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum150ExecTypeTest()");
     }
 
     @Test

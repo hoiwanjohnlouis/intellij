@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum388DiscretionInstTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,27 @@ class Enum388DiscretionInstTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum388DiscretionInstTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum388DiscretionInstTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0388Test() {
+        Enum388DiscretionInst enumType;
+
+        /*
+         * 0-7 msg types
+         */
+        enumType = Enum388DiscretionInst.RELATED_TO_DISPLAYED_PRICE;
+        enumType = Enum388DiscretionInst.RELATED_TO_MARKET_PRICE;
+        enumType = Enum388DiscretionInst.RELATED_TO_PRIMARY_PRICE;
+        enumType = Enum388DiscretionInst.RELATED_TO_LOCAL_PRIMARY_PRICE;
+        enumType = Enum388DiscretionInst.RELATED_TO_MIDPOINT_PRICE;
+        enumType = Enum388DiscretionInst.RELATED_TO_LAST_TRADE_PRICE;
+        enumType = Enum388DiscretionInst.RELATED_TO_VWAP;
+        enumType = Enum388DiscretionInst.AVERAGE_PRICE_GUARANTEE;
     }
     /**
      *

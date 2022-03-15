@@ -36,12 +36,10 @@ class Enum47Rule80ATest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum47Rule80ATest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum47Rule80ATest()");
     }
 
     @Test

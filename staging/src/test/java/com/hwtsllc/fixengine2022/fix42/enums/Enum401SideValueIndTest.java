@@ -14,18 +14,46 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.msgs.application;
+package com.hwtsllc.fixengine2022.fix42.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.junit.jupiter.api.*;
 
-public class Advertisments {
+class Enum401SideValueIndTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
+    @BeforeAll
+    static void beforeAll() {
+    }
+
+    @AfterAll
+    static void afterAll() {
+    }
+
+    @Test
+    void Enum0401Test() {
+        Enum401SideValueInd enumType;
+
+        /*
+         * 1-2 msg types
+         */
+        enumType = Enum401SideValueInd.SIDE_VALUE_1;
+        enumType = Enum401SideValueInd.SIDE_VALUE_2;
+    }
     /**
      *
-     * @param args Not used
      */
     public static void main(String[] args) {
+        System.out.println();
     }
 }

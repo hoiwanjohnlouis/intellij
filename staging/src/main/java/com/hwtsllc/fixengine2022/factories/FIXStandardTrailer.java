@@ -22,16 +22,15 @@ import org.apache.log4j.Logger;
 
 public class FIXStandardTrailer implements LogStringVerbose {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
-    // private static final Logger logger = LogManager.getRootLogger();
-    private static final Logger logger = LogManager.getLogger(FIXStandardTrailer.class);
+    private static final Logger logger = LogManager.getRootLogger();
 
     @Override
-    public String toString() {
+    public String toLogStringVerbose() {
         StringBuilder stringBuilder = new StringBuilder();
         return stringBuilder.toString();
     }
     @Override
-    public String toLogStringVerbose() {
+    public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         return stringBuilder.toString();
     }
@@ -43,5 +42,4 @@ public class FIXStandardTrailer implements LogStringVerbose {
     public static void main(String[] args) {
         logger.trace("Hello from FIXStandardTrailer");
     }
-
 }

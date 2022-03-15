@@ -18,10 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
 import org.junit.jupiter.api.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class Enum339TrdSesModeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -37,19 +34,22 @@ class Enum339TrdSesModeTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum339TrdSesModeTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum339TrdSesModeTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0339Test() {
+        Enum339TrdSesMode enumType;
+
+        /*
+         * 1-3 msg types
+         */
+        enumType = Enum339TrdSesMode.TESTING;
+        enumType = Enum339TrdSesMode.SIMULATED;
+        enumType = Enum339TrdSesMode.PRODUCTION;
     }
     /**
      *

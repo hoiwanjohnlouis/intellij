@@ -20,8 +20,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Enum326SecurityTradingStatusTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -36,19 +34,42 @@ class Enum326SecurityTradingStatusTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Enum326SecurityTradingStatusTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Enum326SecurityTradingStatusTest()");
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    void Enum0326Test() {
+        Enum326SecurityTradingStatus enumType;
+
+        /*
+         * 1-10, 12-23 msg types. skipped 11.
+         */
+        enumType = Enum326SecurityTradingStatus.OPENING_DELAY;
+        enumType = Enum326SecurityTradingStatus.TRADING_HALT;
+        enumType = Enum326SecurityTradingStatus.RESUME;
+        enumType = Enum326SecurityTradingStatus.NO_OPEN_NO_RESUME;
+        enumType = Enum326SecurityTradingStatus.PRICE_INDICATION;
+        enumType = Enum326SecurityTradingStatus.TRADING_RANGE_INDICATION;
+        enumType = Enum326SecurityTradingStatus.MARKET_IMBALANCE_BUY;
+        enumType = Enum326SecurityTradingStatus.MARKET_IMBALANCE_SELL;
+        enumType = Enum326SecurityTradingStatus.MARKET_ON_CLOSE_IMBALANCE_BUY;
+        enumType = Enum326SecurityTradingStatus.MARKET_ON_CLOSE_IMBALANCE_SELL;
+
+        enumType = Enum326SecurityTradingStatus.NO_MARKET_IMBALANCE;
+        enumType = Enum326SecurityTradingStatus.NO_MARKET_ON_CLOSE_IMBALANCE;
+        enumType = Enum326SecurityTradingStatus.ITS_PRE_OPENING;
+        enumType = Enum326SecurityTradingStatus.NEW_PRICE_INDICATION;
+        enumType = Enum326SecurityTradingStatus.TRADE_DISSEMINATION_TIME;
+        enumType = Enum326SecurityTradingStatus.READY_TO_TRADE;
+        enumType = Enum326SecurityTradingStatus.NOT_AVAILABLE_FOR_TRADING;
+        enumType = Enum326SecurityTradingStatus.NOT_TRADED_ON_THIS_MARKET;
+        enumType = Enum326SecurityTradingStatus.UNKNOWN_OR_INVALID;
+        enumType = Enum326SecurityTradingStatus.PRE_OPEN;
+        enumType = Enum326SecurityTradingStatus.OPENING_ROTATION;
+        enumType = Enum326SecurityTradingStatus.FAST_MARKET;
     }
     /**
      *
