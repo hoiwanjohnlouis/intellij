@@ -16,13 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
 class Tag540TotalAccruedInterestAmtTest {
@@ -43,5 +45,9 @@ class Tag540TotalAccruedInterestAmtTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
         assertEquals(1,1);
         assertNotEquals(2,1);
+    }
+    @Test
+    void FIX0540Test() {
+        FIXType fix540TotalAccruedInterestAmt = FIXType.TOTAL_ACCRUED_INTEREST_AMT;
     }
 }

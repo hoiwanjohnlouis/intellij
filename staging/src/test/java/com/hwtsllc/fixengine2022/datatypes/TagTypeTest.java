@@ -16,14 +16,11 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class TagTypeTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -41,186 +38,10 @@ class TagTypeTest {
     }
 
 
-
-
     /*
      * Start of FIX4.3 as defined by the FIX Protocol Specification 4.3
      *  Tags: 447-659
      */
-    @Test
-    void Tag0447Test() {
-    }
-    @Test
-    void Tag0448Test() {
-    }
-    @Test
-    void Tag0449Test() {
-    }
-    @Test
-    void Tag0450Test() {
-    }
-    @Test
-    void Tag0451Test() {
-    }
-    @Test
-    void Tag0452Test() {
-    }
-    @Test
-    void Tag0453Test() {
-    }
-    @Test
-    void Tag0454Test() {
-    }
-    @Test
-    void Tag0455Test() {
-    }
-    @Test
-    void Tag0456Test() {
-    }
-    @Test
-    void Tag0457Test() {
-    }
-    @Test
-    void Tag0458Test() {
-    }
-    @Test
-    void Tag0459Test() {
-    }
-    @Test
-    void Tag0460Test() {
-    }
-    @Test
-    void Tag0461Test() {
-    }
-    @Test
-    void Tag0462Test() {
-    }
-    @Test
-    void Tag0463Test() {
-    }
-    @Test
-    void Tag0464Test() {
-    }
-    @Test
-    void Tag0465Test() {
-    }
-    @Test
-    void Tag0466Test() {
-    }
-    @Test
-    void Tag0467Test() {
-    }
-    @Test
-    void Tag0468Test() {
-    }
-    @Test
-    void Tag0469Test() {
-    }
-    @Test
-    void Tag0470Test() {
-    }
-    @Test
-    void Tag0471Test() {
-    }
-    @Test
-    void Tag0472Test() {
-    }
-    @Test
-    void Tag0473Test() {
-    }
-    @Test
-    void Tag0474Test() {
-    }
-    @Test
-    void Tag0475Test() {
-    }
-    @Test
-    void Tag0476Test() {
-    }
-    @Test
-    void Tag0477Test() {
-    }
-    @Test
-    void Tag0478Test() {
-    }
-    @Test
-    void Tag0479Test() {
-    }
-    @Test
-    void Tag0480Test() {
-    }
-    @Test
-    void Tag0481Test() {
-    }
-    @Test
-    void Tag0482Test() {
-    }
-    @Test
-    void Tag0483Test() {
-    }
-    @Test
-    void Tag0484Test() {
-    }
-    @Test
-    void Tag0485Test() {
-    }
-    @Test
-    void Tag0486Test() {
-    }
-    @Test
-    void Tag0487Test() {
-    }
-    @Test
-    void Tag0488Test() {
-    }
-    @Test
-    void Tag0489Test() {
-    }
-    @Test
-    void Tag0490Test() {
-    }
-    @Test
-    void Tag0491Test() {
-    }
-    @Test
-    void Tag0492Test() {
-    }
-    @Test
-    void Tag0493Test() {
-    }
-    @Test
-    void Tag0494Test() {
-    }
-    @Test
-    void Tag0495Test() {
-    }
-    @Test
-    void Tag0496Test() {
-    }
-    @Test
-    void Tag0497Test() {
-    }
-    @Test
-    void Tag0498Test() {
-    }
-    @Test
-    void Tag0499Test() {
-    }
-    @Test
-    void Tag0500Test() {
-    }
-    @Test
-    void Tag0501Test() {
-    }
-    @Test
-    void Tag0502Test() {
-    }
-    @Test
-    void Tag0503Test() {
-    }
-    @Test
-    void Tag0504Test() {
-    }
     @Test
     void Tag0505Test() {
     }

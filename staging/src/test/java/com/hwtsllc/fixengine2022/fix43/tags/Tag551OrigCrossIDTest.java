@@ -16,13 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag551OrigCrossIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -42,5 +44,9 @@ class Tag551OrigCrossIDTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
         assertEquals(1,1);
         assertNotEquals(2,1);
+    }
+    @Test
+    void FIX0551Test() {
+        FIXType fix551OrigCrossID = FIXType.ORIG_CROSS_ID;
     }
 }

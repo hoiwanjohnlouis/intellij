@@ -16,13 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
 class Tag653SecDefStatusTest {
@@ -43,5 +45,9 @@ class Tag653SecDefStatusTest {
         assertEquals(1,1);
         assertNotEquals(2,1);
         logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
+    }
+    @Test
+    void FIX0653Test() {
+        FIXType fix653SecDefStatus = FIXType.SEC_DEF_STATUS;
     }
 }

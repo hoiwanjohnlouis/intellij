@@ -16,13 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag503CardStartDateTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -42,5 +44,12 @@ class Tag503CardStartDateTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
         assertEquals(1,1);
         assertNotEquals(2,1);
+    }
+    @Test
+    void FIX0503Test() {
+        FIXType fix503CardStartDate = FIXType.CARD_START_DATE;
+    }
+    @Test
+    void Tag0503Test() {
     }
 }

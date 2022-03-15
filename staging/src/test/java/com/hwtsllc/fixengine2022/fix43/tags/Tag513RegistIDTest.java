@@ -16,13 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag513RegistIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -42,5 +44,9 @@ class Tag513RegistIDTest {
         logger.info(WHERE_AM_I + ":Successful Test()");
         assertEquals(1,1);
         assertNotEquals(2,1);
+    }
+    @Test
+    void FIX0513Test() {
+        FIXType fix513RegistID = FIXType.REGIST_ID;
     }
 }
