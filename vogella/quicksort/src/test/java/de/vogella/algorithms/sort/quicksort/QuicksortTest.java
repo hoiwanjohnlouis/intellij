@@ -1,13 +1,11 @@
 package de.vogella.algorithms.sort.quicksort;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.Arrays;
 import java.util.Random;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class QuicksortTest {
 
@@ -15,13 +13,25 @@ public class QuicksortTest {
     private final static int SIZE = 7;
     private final static int MAX = 7919; // 20;
 
-    @Before
-    public void setup() throws Exception {
+    @BeforeEach
+    void setup() throws Exception {
         numbers = new int[SIZE];
         Random generator = new Random();
         for (int i = 0, j = numbers.length; i < j; i++) {
             numbers[i] = generator.nextInt(MAX);
         }
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
+    @BeforeAll
+    static void beforeAll() {
+    }
+
+    @AfterAll
+    static void afterAll() {
     }
 
     @Test
