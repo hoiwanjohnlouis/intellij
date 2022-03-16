@@ -49,4 +49,7 @@ class Tag555NoLegsTest {
     void FIX0555Test() {
         FIXType fix555NoLegs = FIXType.NO_LEGS;
     }
+    @Test
+    void Tag0555Test() {
+    }
 }

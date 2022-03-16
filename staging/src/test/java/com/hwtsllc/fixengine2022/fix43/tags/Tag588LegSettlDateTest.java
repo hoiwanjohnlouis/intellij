@@ -49,4 +49,7 @@ class Tag588LegSettlDateTest {
     void FIX0588Test() {
         FIXType fix588LegSettlDate = FIXType.LEG_SETTL_DATE;
     }
+    @Test
+    void Tag0588Test() {
+    }
 }

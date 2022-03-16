@@ -49,4 +49,7 @@ class Tag516OrderPercentTest {
     void FIX0516Test() {
         FIXType fix516OrderPercent = FIXType.ORDER_PERCENT;
     }
+    @Test
+    void Tag0516Test() {
+    }
 }

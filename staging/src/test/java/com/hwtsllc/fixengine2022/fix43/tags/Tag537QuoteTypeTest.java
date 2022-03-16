@@ -49,4 +49,7 @@ class Tag537QuoteTypeTest {
     void FIX0537Test() {
         FIXType fix537QuoteType = FIXType.QUOTE_TYPE;
     }
+    @Test
+    void Tag0537Test() {
+    }
 }

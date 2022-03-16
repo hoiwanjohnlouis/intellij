@@ -49,4 +49,7 @@ class Tag521ContAmtCurrTest {
     void FIX0521Test() {
         FIXType fix521ContAmtCurr = FIXType.CONT_AMT_CURR;
     }
+    @Test
+    void Tag0521Test() {
+    }
 }

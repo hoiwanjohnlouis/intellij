@@ -49,4 +49,7 @@ class Tag596LegCountryOfIssueTest {
     void FIX0596Test() {
         FIXType fix596LegCountryOfIssue = FIXType.LEG_COUNTRY_OF_ISSUE;
     }
+    @Test
+    void Tag0596Test() {
+    }
 }

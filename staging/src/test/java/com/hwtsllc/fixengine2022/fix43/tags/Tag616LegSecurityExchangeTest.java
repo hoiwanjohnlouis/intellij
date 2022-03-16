@@ -49,4 +49,7 @@ class Tag616LegSecurityExchangeTest {
     void FIX0616Test() {
         FIXType fix616LegSecurityExchange = FIXType.LEG_SECURITY_EXCHANGE;
     }
+    @Test
+    void Tag0616Test() {
+    }
 }

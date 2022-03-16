@@ -49,4 +49,7 @@ class Tag578TradeInputSourceTest {
     void FIX0578Test() {
         FIXType fix578TradeInputSource = FIXType.TRADE_INPUT_SOURCE;
     }
+    @Test
+    void Tag0578Test() {
+    }
 }

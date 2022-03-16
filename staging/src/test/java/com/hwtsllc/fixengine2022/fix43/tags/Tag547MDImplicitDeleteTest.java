@@ -49,4 +49,7 @@ class Tag547MDImplicitDeleteTest {
     void FIX0547Test() {
         FIXType fix547MDImplicitDelete = FIXType.MD_IMPLICIT_DELETE;
     }
+    @Test
+    void Tag0547Test() {
+    }
 }

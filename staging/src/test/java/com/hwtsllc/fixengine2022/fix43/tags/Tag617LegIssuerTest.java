@@ -49,4 +49,7 @@ class Tag617LegIssuerTest {
     void FIX0617Test() {
         FIXType fix617LegIssuer = FIXType.LEG_ISSUER;
     }
+    @Test
+    void Tag0617Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag595UnderlyingInstrRegistryTest {
     void FIX0595Test() {
         FIXType fix595UnderlyingInstrRegistry = FIXType.UNDERLYING_INSTR_REGISTRY;
     }
+    @Test
+    void Tag0595Test() {
+    }
 }

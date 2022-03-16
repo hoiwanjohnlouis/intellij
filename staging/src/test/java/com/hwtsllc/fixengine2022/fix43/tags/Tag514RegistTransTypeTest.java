@@ -49,4 +49,7 @@ class Tag514RegistTransTypeTest {
     void FIX0514Test() {
         FIXType fix514RegistTransType = FIXType.REGIST_TRANS_TYPE;
     }
+    @Test
+    void Tag0514Test() {
+    }
 }

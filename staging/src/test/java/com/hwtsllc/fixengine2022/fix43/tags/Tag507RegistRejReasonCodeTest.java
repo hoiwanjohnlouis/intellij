@@ -49,4 +49,7 @@ class Tag507RegistRejReasonCodeTest {
     void FIX0507Test() {
         FIXType fix507RegistRejReasonCode = FIXType.REGIST_REJ_REASON_CODE;
     }
+    @Test
+    void Tag0507Test() {
+    }
 }

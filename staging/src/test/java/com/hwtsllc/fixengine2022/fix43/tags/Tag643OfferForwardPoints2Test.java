@@ -49,4 +49,7 @@ class Tag643OfferForwardPoints2Test {
     void FIX0643Test() {
         FIXType fix643OfferForwardPoints2 = FIXType.OFFER_FORWARD_POINTS_2;
     }
+    @Test
+    void Tag0643Test() {
+    }
 }

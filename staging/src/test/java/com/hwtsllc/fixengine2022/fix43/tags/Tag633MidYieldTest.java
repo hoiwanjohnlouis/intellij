@@ -49,4 +49,7 @@ class Tag633MidYieldTest {
     void FIX0633Test() {
         FIXType fix633MidYield = FIXType.MID_YIELD;
     }
+    @Test
+    void Tag0633Test() {
+    }
 }

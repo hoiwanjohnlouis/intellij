@@ -49,4 +49,7 @@ class Tag641LastForwardPoints2Test {
     void FIX0641Test() {
         FIXType fix641LastForwardPoints2 = FIXType.LAST_FORWARD_POINTS_2;
     }
+    @Test
+    void Tag0641Test() {
+    }
 }

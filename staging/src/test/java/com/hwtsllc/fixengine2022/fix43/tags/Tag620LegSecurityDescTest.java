@@ -49,4 +49,7 @@ class Tag620LegSecurityDescTest {
     void FIX0620Test() {
         FIXType fix620LegSecurityDesc = FIXType.LEG_SECURITY_DESC;
     }
+    @Test
+    void Tag0620Test() {
+    }
 }

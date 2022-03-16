@@ -49,4 +49,7 @@ class Tag593UnderlyingStateOrProvinceOfIssueTest {
     void FIX0593Test() {
         FIXType fix593UnderlyingStateOrProvinceOfIssue = FIXType.UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE;
     }
+    @Test
+    void Tag0593Test() {
+    }
 }

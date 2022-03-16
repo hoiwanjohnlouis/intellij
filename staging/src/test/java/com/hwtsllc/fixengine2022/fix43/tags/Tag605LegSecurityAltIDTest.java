@@ -49,4 +49,7 @@ class Tag605LegSecurityAltIDTest {
     void FIX0605Test() {
         FIXType fix605LegSecurityAltID = FIXType.LEG_SECURITY_ALT_ID;
     }
+    @Test
+    void Tag0605Test() {
+    }
 }

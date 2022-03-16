@@ -49,4 +49,7 @@ class Tag638PriorityIndicatorTest {
     void FIX0638Test() {
         FIXType fix638PriorityIndicator = FIXType.PRIORITY_INDICATOR;
     }
+    @Test
+    void Tag0638Test() {
+    }
 }

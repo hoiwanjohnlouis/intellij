@@ -49,4 +49,7 @@ class Tag652UnderlyingLastQtyTest {
     void FIX0652Test() {
         FIXType fix652UnderlyingLastQty = FIXType.UNDERLYING_LAST_QTY;
     }
+    @Test
+    void Tag0652Test() {
+    }
 }

@@ -50,4 +50,7 @@ class Tag540TotalAccruedInterestAmtTest {
     void FIX0540Test() {
         FIXType fix540TotalAccruedInterestAmt = FIXType.TOTAL_ACCRUED_INTEREST_AMT;
     }
+    @Test
+    void Tag0540Test() {
+    }
 }

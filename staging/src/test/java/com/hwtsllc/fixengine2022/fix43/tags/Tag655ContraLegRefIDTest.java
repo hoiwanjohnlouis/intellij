@@ -49,4 +49,7 @@ class Tag655ContraLegRefIDTest {
     void FIX0655Test() {
         FIXType fix655ContraLegRefID = FIXType.CONTRA_LEG_REF_ID;
     }
+    @Test
+    void Tag0655Test() {
+    }
 }

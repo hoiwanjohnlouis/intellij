@@ -49,4 +49,7 @@ class Tag561RoundLotTest {
     void FIX0561Test() {
         FIXType fix561RoundLot = FIXType.ROUND_LOT;
     }
+    @Test
+    void Tag0561Test() {
+    }
 }

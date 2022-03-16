@@ -49,4 +49,7 @@ class Tag524NestedPartyIDTest {
     void FIX0524Test() {
         FIXType fix524NestedPartyID = FIXType.NESTED_PARTY_ID;
     }
+    @Test
+    void Tag0524Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag569TradeRequestTypeTest {
     void FIX0569Test() {
         FIXType fix569TradeRequestType = FIXType.TRADE_REQUEST_TYPE;
     }
+    @Test
+    void Tag0569Test() {
+    }
 }

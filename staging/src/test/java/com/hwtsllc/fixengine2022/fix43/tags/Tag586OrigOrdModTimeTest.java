@@ -49,4 +49,7 @@ class Tag586OrigOrdModTimeTest {
     void FIX0586Test() {
         FIXType fix586OrigOrdModTime = FIXType.ORIG_ORD_MOD_TIME;
     }
+    @Test
+    void Tag0586Test() {
+    }
 }

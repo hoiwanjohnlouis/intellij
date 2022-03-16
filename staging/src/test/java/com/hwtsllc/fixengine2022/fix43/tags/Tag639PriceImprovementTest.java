@@ -49,4 +49,7 @@ class Tag639PriceImprovementTest {
     void FIX0639Test() {
         FIXType fix639PriceImprovement = FIXType.PRICE_IMPROVEMENT;
     }
+    @Test
+    void Tag0639Test() {
+    }
 }

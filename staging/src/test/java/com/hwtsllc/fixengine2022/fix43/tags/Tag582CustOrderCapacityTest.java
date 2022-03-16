@@ -49,4 +49,7 @@ class Tag582CustOrderCapacityTest {
     void FIX0582Test() {
         FIXType fix582CustOrderCapacity = FIXType.CUST_ORDER_CAPACITY;
     }
+    @Test
+    void Tag0582Test() {
+    }
 }

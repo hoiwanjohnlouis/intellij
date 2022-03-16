@@ -49,4 +49,7 @@ class Tag640Price2Test {
     void FIX0640Test() {
         FIXType fix640Price2 = FIXType.PRICE_2;
     }
+    @Test
+    void Tag0640Test() {
+    }
 }

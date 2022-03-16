@@ -49,4 +49,7 @@ class Tag570PreviouslyReportedTest {
     void FIX0570Test() {
         FIXType fix570PreviouslyReported = FIXType.PREVIOUSLY_REPORTED;
     }
+    @Test
+    void Tag0570Test() {
+    }
 }

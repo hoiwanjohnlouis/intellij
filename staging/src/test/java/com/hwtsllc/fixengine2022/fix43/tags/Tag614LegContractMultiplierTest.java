@@ -49,4 +49,7 @@ class Tag614LegContractMultiplierTest {
     void FIX0614Test() {
         FIXType fix614LegContractMultiplier = FIXType.LEG_CONTRACT_MULTIPLIER;
     }
+    @Test
+    void Tag0614Test() {
+    }
 }

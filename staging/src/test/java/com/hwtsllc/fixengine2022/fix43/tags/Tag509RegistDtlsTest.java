@@ -49,4 +49,7 @@ class Tag509RegistDtlsTest {
     void FIX0509Test() {
         FIXType fix509RegistDtls = FIXType.REGIST_DTLS;
     }
+    @Test
+    void Tag0509Test() {
+    }
 }

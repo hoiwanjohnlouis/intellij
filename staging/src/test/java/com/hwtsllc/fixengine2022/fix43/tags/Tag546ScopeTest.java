@@ -49,4 +49,7 @@ class Tag546ScopeTest {
     void FIX0546Test() {
         FIXType fix546Scope = FIXType.SCOPE;
     }
+    @Test
+    void Tag0546Test() {
+    }
 }

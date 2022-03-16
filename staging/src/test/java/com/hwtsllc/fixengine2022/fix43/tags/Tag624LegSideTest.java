@@ -49,4 +49,7 @@ class Tag624LegSideTest {
     void FIX0624Test() {
         FIXType fix624LegSide = FIXType.LEG_SIDE;
     }
+    @Test
+    void Tag0624Test() {
+    }
 }

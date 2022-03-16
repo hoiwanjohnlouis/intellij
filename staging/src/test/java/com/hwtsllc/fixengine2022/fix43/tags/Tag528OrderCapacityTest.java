@@ -49,4 +49,7 @@ class Tag528OrderCapacityTest {
     void FIX0528Test() {
         FIXType fix528OrderCapacity = FIXType.ORDER_CAPACITY;
     }
+    @Test
+    void Tag0528Test() {
+    }
 }

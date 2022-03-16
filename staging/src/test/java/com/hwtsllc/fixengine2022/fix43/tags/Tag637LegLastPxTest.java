@@ -49,4 +49,7 @@ class Tag637LegLastPxTest {
     void FIX0637Test() {
         FIXType fix637LegLastPx = FIXType.LEG_LAST_PX;
     }
+    @Test
+    void Tag0637Test() {
+    }
 }

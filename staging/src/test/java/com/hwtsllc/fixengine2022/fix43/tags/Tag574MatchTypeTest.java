@@ -49,4 +49,7 @@ class Tag574MatchTypeTest {
     void FIX0574Test() {
         FIXType fix574MatchType = FIXType.MATCH_TYPE;
     }
+    @Test
+    void Tag0574Test() {
+    }
 }

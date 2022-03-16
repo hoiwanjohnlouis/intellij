@@ -49,4 +49,7 @@ class Tag648MinOfferSizeTest {
     void FIX0648Test() {
         FIXType fix648MinOfferSize = FIXType.MIN_OFFER_SIZE;
     }
+    @Test
+    void Tag0648Test() {
+    }
 }

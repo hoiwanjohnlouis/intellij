@@ -49,4 +49,7 @@ class Tag580NoDatesTest {
     void FIX0580Test() {
         FIXType fix580NoDates = FIXType.NO_DATES;
     }
+    @Test
+    void Tag0580Test() {
+    }
 }

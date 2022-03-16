@@ -49,4 +49,7 @@ class Tag618EncodedLegIssuerLenTest {
     void FIX0618Test() {
         FIXType fix618EncodedLegIssuerLen = FIXType.ENCODED_LEG_ISSUER_LEN;
     }
+    @Test
+    void Tag0618Test() {
+    }
 }

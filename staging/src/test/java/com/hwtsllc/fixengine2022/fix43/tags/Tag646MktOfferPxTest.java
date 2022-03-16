@@ -49,4 +49,7 @@ class Tag646MktOfferPxTest {
     void FIX0646Test() {
         FIXType fix646MktOfferPx = FIXType.MKT_OFFER_PX;
     }
+    @Test
+    void Tag0646Test() {
+    }
 }

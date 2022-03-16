@@ -49,4 +49,7 @@ class Tag598LegLocaleOfIssueTest {
     void FIX0598Test() {
         FIXType fix598LegLocaleOfIssue = FIXType.LEG_LOCALE_OF_ISSUE;
     }
+    @Test
+    void Tag0598Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag518NoContAmtsTest {
     void FIX0518Test() {
         FIXType fix518NoContAmts = FIXType.NO_CONT_AMTS;
     }
+    @Test
+    void Tag0518Test() {
+    }
 }

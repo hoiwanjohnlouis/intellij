@@ -49,4 +49,7 @@ class Tag549CrossTypeTest {
     void FIX0549Test() {
         FIXType fix549CrossType = FIXType.CROSS_TYPE;
     }
+    @Test
+    void Tag0549Test() {
+    }
 }

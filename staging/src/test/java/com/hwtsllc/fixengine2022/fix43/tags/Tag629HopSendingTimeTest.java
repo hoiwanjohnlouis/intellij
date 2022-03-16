@@ -49,4 +49,7 @@ class Tag629HopSendingTimeTest {
     void FIX0629Test() {
         FIXType fix629HopSendingTime = FIXType.HOP_SENDING_TIME;
     }
+    @Test
+    void Tag0629Test() {
+    }
 }

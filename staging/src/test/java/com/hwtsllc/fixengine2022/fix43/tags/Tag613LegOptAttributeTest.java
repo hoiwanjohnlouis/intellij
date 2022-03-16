@@ -49,4 +49,7 @@ class Tag613LegOptAttributeTest {
     void FIX0613Test() {
         FIXType fix613LegOptAttribute = FIXType.LEG_OPT_ATTRIBUTE;
     }
+    @Test
+    void Tag0613Test() {
+    }
 }

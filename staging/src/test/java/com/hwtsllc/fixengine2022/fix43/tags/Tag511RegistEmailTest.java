@@ -49,4 +49,7 @@ class Tag511RegistEmailTest {
     void FIX0511Test() {
         FIXType fix511RegistEmail = FIXType.REGIST_EMAIL;
     }
+    @Test
+    void Tag0511Test() {
+    }
 }

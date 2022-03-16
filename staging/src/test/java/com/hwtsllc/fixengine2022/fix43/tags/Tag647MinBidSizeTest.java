@@ -49,4 +49,7 @@ class Tag647MinBidSizeTest {
     void FIX0647Test() {
         FIXType fix647MinBidSize = FIXType.MIN_BID_SIZE;
     }
+    @Test
+    void Tag0647Test() {
+    }
 }

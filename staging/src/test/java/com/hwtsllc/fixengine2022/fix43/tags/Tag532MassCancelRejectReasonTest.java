@@ -49,4 +49,7 @@ class Tag532MassCancelRejectReasonTest {
     void FIX0532Test() {
         FIXType fix532MassCancelRejectReason = FIXType.MASS_CANCEL_REJECT_REASON;
     }
+    @Test
+    void Tag0532Test() {
+    }
 }

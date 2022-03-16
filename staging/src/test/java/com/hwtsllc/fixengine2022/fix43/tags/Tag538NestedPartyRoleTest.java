@@ -49,4 +49,7 @@ class Tag538NestedPartyRoleTest {
     void FIX0538Test() {
         FIXType fix538NestedPartyRole = FIXType.NESTED_PARTY_ROLE;
     }
+    @Test
+    void Tag0538Test() {
+    }
 }

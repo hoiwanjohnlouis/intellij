@@ -49,4 +49,7 @@ class Tag533TotalAffectedOrdersTest {
     void FIX0533Test() {
         FIXType fix533TotalAffectedOrders = FIXType.TOTAL_AFFECTED_ORDERS;
     }
+    @Test
+    void Tag0533Test() {
+    }
 }

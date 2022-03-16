@@ -49,4 +49,7 @@ class Tag597LegStateOrProvinceOfIssueTest {
     void FIX0597Test() {
         FIXType fix597LegStateOrProvinceOfIssue = FIXType.LEG_STATE_OR_PROVINCE_OF_ISSUE;
     }
+    @Test
+    void Tag0597Test() {
+    }
 }

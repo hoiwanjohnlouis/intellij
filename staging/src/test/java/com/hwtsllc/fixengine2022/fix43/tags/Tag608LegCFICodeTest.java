@@ -49,4 +49,7 @@ class Tag608LegCFICodeTest {
     void FIX0608Test() {
         FIXType fix608LegCFICode = FIXType.LEG_CFI_CODE;
     }
+    @Test
+    void Tag0608Test() {
+    }
 }

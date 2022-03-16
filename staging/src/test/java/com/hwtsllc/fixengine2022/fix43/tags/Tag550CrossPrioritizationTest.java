@@ -49,4 +49,7 @@ class Tag550CrossPrioritizationTest {
     void FIX0550Test() {
         FIXType fix550CrossPrioritization = FIXType.CROSS_PRIORITIZATION;
     }
+    @Test
+    void Tag0550Test() {
+    }
 }

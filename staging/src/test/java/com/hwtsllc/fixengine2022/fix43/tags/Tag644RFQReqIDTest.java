@@ -49,4 +49,7 @@ class Tag644RFQReqIDTest {
     void FIX0644Test() {
         FIXType fix644RFQReqID = FIXType.RFQ_REQ_ID;
     }
+    @Test
+    void Tag0644Test() {
+    }
 }

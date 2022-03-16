@@ -49,4 +49,7 @@ class Tag584MassStatusReqIDTest {
     void FIX0584Test() {
         FIXType fix584MassStatusReqID = FIXType.MASS_STATUS_REQ_ID;
     }
+    @Test
+    void Tag0584Test() {
+    }
 }

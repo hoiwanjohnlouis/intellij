@@ -49,4 +49,7 @@ class Tag583ClOrdLinkIDTest {
     void FIX0583Test() {
         FIXType fix583ClOrdLinkID = FIXType.CL_ORD_LINK_ID;
     }
+    @Test
+    void Tag0583Test() {
+    }
 }

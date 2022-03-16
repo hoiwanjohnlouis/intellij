@@ -49,4 +49,7 @@ class Tag529OrderRestrictionsTest {
     void FIX0529Test() {
         FIXType fix529OrderRestrictions = FIXType.ORDER_RESTRICTIONS;
     }
+    @Test
+    void Tag0529Test() {
+    }
 }

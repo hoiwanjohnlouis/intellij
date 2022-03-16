@@ -49,4 +49,7 @@ class Tag564LegPositionEffectTest {
     void FIX0564Test() {
         FIXType fix564LegPositionEffect = FIXType.LEG_POSITION_EFFECT;
     }
+    @Test
+    void Tag0564Test() {
+    }
 }

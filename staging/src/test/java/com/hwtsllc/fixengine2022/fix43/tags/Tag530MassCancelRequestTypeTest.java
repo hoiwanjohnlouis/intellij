@@ -49,4 +49,7 @@ class Tag530MassCancelRequestTypeTest {
     void FIX0530Test() {
         FIXType fix530MassCancelRequestType = FIXType.MASS_CANCEL_REQUEST_TYPE;
     }
+    @Test
+    void Tag0530Test() {
+    }
 }

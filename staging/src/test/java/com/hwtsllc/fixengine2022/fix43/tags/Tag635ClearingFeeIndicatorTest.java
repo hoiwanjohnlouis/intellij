@@ -49,4 +49,7 @@ class Tag635ClearingFeeIndicatorTest {
     void FIX0635Test() {
         FIXType fix635ClearingFeeIndicator = FIXType.CLEARING_FEE_INDICATOR;
     }
+    @Test
+    void Tag0635Test() {
+    }
 }

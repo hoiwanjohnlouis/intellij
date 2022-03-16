@@ -49,4 +49,7 @@ class Tag659SideComplianceIDTest {
     void FIX0659Test() {
         FIXType fix659SideComplianceID = FIXType.SIDE_COMPLIANCE_ID;
     }
+    @Test
+    void Tag0659Test() {
+    }
 }

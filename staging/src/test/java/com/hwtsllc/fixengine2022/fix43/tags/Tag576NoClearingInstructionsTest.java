@@ -49,4 +49,7 @@ class Tag576NoClearingInstructionsTest {
     void FIX0576Test() {
         FIXType fix576NoClearingInstructions = FIXType.NO_CLEARING_INSTRUCTIONS;
     }
+    @Test
+    void Tag0576Test() {
+    }
 }

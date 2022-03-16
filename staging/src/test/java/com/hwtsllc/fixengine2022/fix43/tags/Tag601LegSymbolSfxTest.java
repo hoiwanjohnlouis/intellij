@@ -49,4 +49,7 @@ class Tag601LegSymbolSfxTest {
     void FIX0601Test() {
         FIXType fix601LegSymbolSfx = FIXType.LEG_SYMBOL_SFX;
     }
+    @Test
+    void Tag0601Test() {
+    }
 }

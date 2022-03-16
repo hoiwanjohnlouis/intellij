@@ -49,4 +49,7 @@ class Tag650LegalConfirmTest {
     void FIX0650Test() {
         FIXType fix650LegalConfirm = FIXType.LEGAL_CONFIRM;
     }
+    @Test
+    void Tag0650Test() {
+    }
 }

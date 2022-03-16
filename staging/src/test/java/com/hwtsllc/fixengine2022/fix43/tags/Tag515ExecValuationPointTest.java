@@ -49,4 +49,7 @@ class Tag515ExecValuationPointTest {
     void FIX0515Test() {
         FIXType fix515ExecValuationPoint = FIXType.EXEC_VALUATION_POINT;
     }
+    @Test
+    void Tag0515Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag581AccountTypeTest {
     void FIX0581Test() {
         FIXType fix581AccountType = FIXType.ACCOUNT_TYPE;
     }
+    @Test
+    void Tag0581Test() {
+    }
 }

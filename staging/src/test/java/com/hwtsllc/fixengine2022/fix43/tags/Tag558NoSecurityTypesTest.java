@@ -49,4 +49,7 @@ class Tag558NoSecurityTypesTest {
     void FIX0558Test() {
         FIXType fix558NoSecurityTypes = FIXType.NO_SECURITY_TYPES;
     }
+    @Test
+    void Tag0558Test() {
+    }
 }

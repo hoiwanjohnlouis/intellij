@@ -49,4 +49,7 @@ class Tag517OwnershipTypeTest {
     void FIX0517Test() {
         FIXType fix517OwnershipType = FIXType.OWNERSHIP_TYPE;
     }
+    @Test
+    void Tag0517Test() {
+    }
 }

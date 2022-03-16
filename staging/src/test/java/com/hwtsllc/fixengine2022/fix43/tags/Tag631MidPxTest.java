@@ -49,4 +49,7 @@ class Tag631MidPxTest {
     void FIX0631Test() {
         FIXType fix631MidPx = FIXType.MID_PX;
     }
+    @Test
+    void Tag0631Test() {
+    }
 }

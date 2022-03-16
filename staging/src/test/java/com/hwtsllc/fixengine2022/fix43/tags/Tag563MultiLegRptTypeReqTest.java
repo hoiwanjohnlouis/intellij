@@ -49,4 +49,7 @@ class Tag563MultiLegRptTypeReqTest {
     void FIX0563Test() {
         FIXType fix563MultiLegRptTypeReq = FIXType.MULTI_LEG_RPT_TYPE_REQ;
     }
+    @Test
+    void Tag0563Test() {
+    }
 }

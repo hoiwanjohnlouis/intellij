@@ -49,4 +49,7 @@ class Tag562MinTradeVolTest {
     void FIX0562Test() {
         FIXType fix562MinTradeVol = FIXType.MIN_TRADE_VOL;
     }
+    @Test
+    void Tag0562Test() {
+    }
 }

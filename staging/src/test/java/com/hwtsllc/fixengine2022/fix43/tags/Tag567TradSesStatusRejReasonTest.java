@@ -49,4 +49,7 @@ class Tag567TradSesStatusRejReasonTest {
     void FIX0567Test() {
         FIXType fix567TradSesStatusRejReason = FIXType.TRAD_SES_STATUS_REJ_REASON;
     }
+    @Test
+    void Tag0567Test() {
+    }
 }

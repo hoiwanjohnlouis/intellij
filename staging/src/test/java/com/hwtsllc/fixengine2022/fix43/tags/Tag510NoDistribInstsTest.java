@@ -49,4 +49,7 @@ class Tag510NoDistribInstsTest {
     void FIX0510Test() {
         FIXType fix510NoDistribInsts = FIXType.NO_DISTRIB_INSTS;
     }
+    @Test
+    void Tag0510Test() {
+    }
 }

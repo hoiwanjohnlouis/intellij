@@ -49,4 +49,7 @@ class Tag636WorkingIndicatorTest {
     void FIX0636Test() {
         FIXType fix636WorkingIndicator = FIXType.WORKING_INDICATOR;
     }
+    @Test
+    void Tag0636Test() {
+    }
 }

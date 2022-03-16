@@ -49,4 +49,7 @@ class Tag610LegMaturityMonthYearTest {
     void FIX0610Test() {
         FIXType fix610LegMaturityMonthYear = FIXType.LEG_MATURITY_MONTH_YEAR;
     }
+    @Test
+    void Tag0610Test() {
+    }
 }

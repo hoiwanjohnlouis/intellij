@@ -49,4 +49,7 @@ class Tag609LegSecurityTypeTest {
     void FIX0609Test() {
         FIXType fix609LegSecurityType = FIXType.LEG_SECURITY_TYPE;
     }
+    @Test
+    void Tag0609Test() {
+    }
 }

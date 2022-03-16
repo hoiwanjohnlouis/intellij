@@ -49,4 +49,7 @@ class Tag590BookingUnitTest {
     void FIX0590Test() {
         FIXType fix590BookingUnit = FIXType.BOOKING_UNIT;
     }
+    @Test
+    void Tag0590Test() {
+    }
 }

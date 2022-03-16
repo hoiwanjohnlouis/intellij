@@ -49,4 +49,7 @@ class Tag657SettlCurrOfferFxRateTest {
     void FIX0657Test() {
         FIXType fix657SettlCurrOfferFxRate = FIXType.SETTL_CURR_OFFER_FX_RATE;
     }
+    @Test
+    void Tag0657Test() {
+    }
 }

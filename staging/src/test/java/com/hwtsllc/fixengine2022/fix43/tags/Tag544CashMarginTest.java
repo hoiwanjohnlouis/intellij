@@ -49,4 +49,7 @@ class Tag544CashMarginTest {
     void FIX0544Test() {
         FIXType fix544CashMargin = FIXType.CASH_MARGIN;
     }
+    @Test
+    void Tag0544Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag630HopRefIDTest {
     void FIX0630Test() {
         FIXType fix630HopRefID = FIXType.HOP_REF_ID;
     }
+    @Test
+    void Tag0630Test() {
+    }
 }

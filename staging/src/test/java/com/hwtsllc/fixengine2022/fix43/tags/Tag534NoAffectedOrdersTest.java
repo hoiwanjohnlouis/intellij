@@ -49,4 +49,7 @@ class Tag534NoAffectedOrdersTest {
     void FIX0534Test() {
         FIXType fix534NoAffectedOrders = FIXType.NO_AFFECTED_ORDERS;
     }
+    @Test
+    void Tag0534Test() {
+    }
 }

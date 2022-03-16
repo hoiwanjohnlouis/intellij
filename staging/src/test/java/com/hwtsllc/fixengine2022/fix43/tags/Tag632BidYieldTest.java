@@ -49,4 +49,7 @@ class Tag632BidYieldTest {
     void FIX0632Test() {
         FIXType fix632BidYield = FIXType.BID_YIELD;
     }
+    @Test
+    void Tag0632Test() {
+    }
 }

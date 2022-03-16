@@ -49,4 +49,7 @@ class Tag541MaturityDateTest {
     void FIX0541Test() {
         FIXType fix541MaturityDate = FIXType.MATURITY_DATE;
     }
+    @Test
+    void Tag0541Test() {
+    }
 }

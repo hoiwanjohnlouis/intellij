@@ -49,4 +49,7 @@ class Tag512DistribPercentageTest {
     void FIX0512Test() {
         FIXType fix512DistribPercentage = FIXType.DISTRIB_PERCENTAGE;
     }
+    @Test
+    void Tag0512Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag527SecondaryExecIDTest {
     void FIX0527Test() {
         FIXType fix527SecondaryExecID = FIXType.SECONDARY_EXEC_ID;
     }
+    @Test
+    void Tag0527Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag526SecondaryClOrdIDTest {
     void FIX0526Test() {
         FIXType fix526SecondaryClOrdID = FIXType.SECONDARY_CL_ORD_ID;
     }
+    @Test
+    void Tag0526Test() {
+    }
 }

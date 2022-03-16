@@ -49,4 +49,7 @@ class Tag607LegProductTest {
     void FIX0607Test() {
         FIXType fix607LegProduct = FIXType.LEG_PRODUCT;
     }
+    @Test
+    void Tag0607Test() {
+    }
 }

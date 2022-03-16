@@ -49,4 +49,7 @@ class Tag625TradingSessionSubIDTest {
     void FIX0625Test() {
         FIXType fix625TradingSessionSubID = FIXType.TRADING_SESSION_SUB_ID;
     }
+    @Test
+    void Tag0625Test() {
+    }
 }

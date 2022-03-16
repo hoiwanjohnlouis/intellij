@@ -49,4 +49,7 @@ class Tag651UnderlyingLastPxTest {
     void FIX0651Test() {
         FIXType fix651UnderlyingLastPx = FIXType.UNDERLYING_LAST_PX;
     }
+    @Test
+    void Tag0651Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag621EncodedLegSecurityDescLenTest {
     void FIX0621Test() {
         FIXType fix621EncodedLegSecurityDescLen = FIXType.ENCODED_LEG_SECURITY_DESC_LEN;
     }
+    @Test
+    void Tag0621Test() {
+    }
 }

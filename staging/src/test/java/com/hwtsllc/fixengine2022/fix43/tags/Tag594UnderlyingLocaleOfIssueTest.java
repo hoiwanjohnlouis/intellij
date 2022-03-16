@@ -49,4 +49,7 @@ class Tag594UnderlyingLocaleOfIssueTest {
     void FIX0594Test() {
         FIXType fix594UnderlyingLocaleOfIssue = FIXType.UNDERLYING_LOCALE_OF_ISSUE;
     }
+    @Test
+    void Tag0594Test() {
+    }
 }

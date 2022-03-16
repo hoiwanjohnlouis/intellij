@@ -49,4 +49,7 @@ class Tag591PreallocMethodTest {
     void FIX0591Test() {
         FIXType fix591PreallocMethod = FIXType.PREALLOC_METHOD;
     }
+    @Test
+    void Tag0591Test() {
+    }
 }

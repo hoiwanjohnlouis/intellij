@@ -49,4 +49,7 @@ class Tag552NoSidesTest {
     void FIX0552Test() {
         FIXType fix552NoSides = FIXType.NO_SIDES;
     }
+    @Test
+    void Tag0552Test() {
+    }
 }

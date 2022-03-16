@@ -49,4 +49,7 @@ class Tag565LegCoveredOrUncoveredTest {
     void FIX0565Test() {
         FIXType fix565LegCoveredOrUncovered = FIXType.LEG_COVERED_OR_UNCOVERED;
     }
+    @Test
+    void Tag0565Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag623LegRatioQtyTest {
     void FIX0623Test() {
         FIXType fix623LegRatioQty = FIXType.LEG_RATIO_QTY;
     }
+    @Test
+    void Tag0623Test() {
+    }
 }

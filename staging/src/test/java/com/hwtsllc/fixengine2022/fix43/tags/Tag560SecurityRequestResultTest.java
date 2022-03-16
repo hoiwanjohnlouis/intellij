@@ -49,4 +49,7 @@ class Tag560SecurityRequestResultTest {
     void FIX0560Test() {
         FIXType fix560SecurityRequestResult = FIXType.SECURITY_REQUEST_RESULT;
     }
+    @Test
+    void Tag0560Test() {
+    }
 }

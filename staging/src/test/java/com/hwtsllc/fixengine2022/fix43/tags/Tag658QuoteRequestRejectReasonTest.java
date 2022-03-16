@@ -49,4 +49,7 @@ class Tag658QuoteRequestRejectReasonTest {
     void FIX0658Test() {
         FIXType fix658QuoteRequestRejectReason = FIXType.QUOTE_REQUEST_REJECT_REASON;
     }
+    @Test
+    void Tag0658Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag626AllocTypeTest {
     void FIX0626Test() {
         FIXType fix626AllocType = FIXType.ALLOC_TYPE;
     }
+    @Test
+    void Tag0626Test() {
+    }
 }

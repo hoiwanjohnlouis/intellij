@@ -49,4 +49,7 @@ class Tag599LegInstrRegistryTest {
     void FIX0599Test() {
         FIXType fix599LegInstrRegistry = FIXType.LEG_INSTR_REGISTRY;
     }
+    @Test
+    void Tag0599Test() {
+    }
 }

@@ -32,16 +32,24 @@ public class Main {
                 .append(" ")
                 .append("from main.");
         System.out.println(stringbuilder);
+        System.out.println(new StringBuilder()
+                .append("hello")
+                .append(" ")
+                .append("from main."));
 
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("goodbye")
                         .append(" ")
                         .append("from main.");
         System.out.println(stringBuffer);
+        System.out.println(new StringBuffer()
+                .append("goodbye")
+                .append(" ")
+                .append("from main."));
 
-//        logger.trace(WHERE_AM_I + ".1:Hello from Main");
+        logger.trace(WHERE_AM_I + ".1:Hello from Main");
         logger.info(WHERE_AM_I + ".2:Hello from Main");
-//        logger.warn(WHERE_AM_I + ".3:Hello from Main");
-//        logger.error(WHERE_AM_I + ".4:Hello from Main");
+        logger.warn(WHERE_AM_I + ".3:Hello from Main");
+        logger.error(WHERE_AM_I + ".4:Hello from Main");
     }
 }

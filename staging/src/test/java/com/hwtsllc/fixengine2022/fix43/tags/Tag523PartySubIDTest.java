@@ -49,4 +49,7 @@ class Tag523PartySubIDTest {
     void FIX0523Test() {
         FIXType fix523PartySubID = FIXType.PARTY_SUB_ID;
     }
+    @Test
+    void Tag0523Test() {
+    }
 }

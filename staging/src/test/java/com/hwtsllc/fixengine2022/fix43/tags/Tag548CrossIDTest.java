@@ -49,4 +49,7 @@ class Tag548CrossIDTest {
     void FIX0548Test() {
         FIXType fix548CrossID = FIXType.CROSS_ID;
     }
+    @Test
+    void Tag0548Test() {
+    }
 }

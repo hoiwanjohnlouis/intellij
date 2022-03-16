@@ -50,4 +50,7 @@ class Tag653SecDefStatusTest {
     void FIX0653Test() {
         FIXType fix653SecDefStatus = FIXType.SEC_DEF_STATUS;
     }
+    @Test
+    void Tag0653Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag592UnderlyingCountryOfIssueTest {
     void FIX0592Test() {
         FIXType fix592UnderlyingCountryOfIssue = FIXType.UNDERLYING_COUNTRY_OF_ISSUE;
     }
+    @Test
+    void Tag0592Test() {
+    }
 }

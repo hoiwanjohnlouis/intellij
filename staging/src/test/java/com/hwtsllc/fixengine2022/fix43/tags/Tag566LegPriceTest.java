@@ -49,4 +49,7 @@ class Tag566LegPriceTest {
     void FIX0566Test() {
         FIXType fix566LegPrice = FIXType.LEG_PRICE;
     }
+    @Test
+    void Tag0566Test() {
+    }
 }

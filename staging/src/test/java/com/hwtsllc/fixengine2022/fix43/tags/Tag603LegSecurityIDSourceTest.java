@@ -49,4 +49,7 @@ class Tag603LegSecurityIDSourceTest {
     void FIX0603Test() {
         FIXType fix603LegSecurityIDSource = FIXType.LEG_SECURITY_ID_SOURCE;
     }
+    @Test
+    void Tag0603Test() {
+    }
 }

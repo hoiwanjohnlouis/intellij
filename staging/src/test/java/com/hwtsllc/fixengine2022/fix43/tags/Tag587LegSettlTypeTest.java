@@ -49,4 +49,7 @@ class Tag587LegSettlTypeTest {
     void FIX0587Test() {
         FIXType fix587LegSettlType = FIXType.LEG_SETTL_TYPE;
     }
+    @Test
+    void Tag0587Test() {
+    }
 }

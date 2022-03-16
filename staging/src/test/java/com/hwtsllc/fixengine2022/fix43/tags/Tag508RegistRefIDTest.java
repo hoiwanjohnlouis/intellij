@@ -49,4 +49,7 @@ class Tag508RegistRefIDTest {
     void FIX0508Test() {
         FIXType fix508RegistRefID = FIXType.REGIST_REF_ID;
     }
+    @Test
+    void Tag0508Test() {
+    }
 }

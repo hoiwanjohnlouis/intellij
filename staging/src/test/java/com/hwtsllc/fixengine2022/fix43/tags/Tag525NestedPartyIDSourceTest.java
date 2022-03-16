@@ -49,4 +49,7 @@ class Tag525NestedPartyIDSourceTest {
     void FIX0525Test() {
         FIXType fix525NestedPartyIDSource = FIXType.NESTED_PARTY_ID_SOURCE;
     }
+    @Test
+    void Tag0525Test() {
+    }
 }

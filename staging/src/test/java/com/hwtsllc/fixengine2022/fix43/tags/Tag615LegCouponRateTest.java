@@ -49,4 +49,7 @@ class Tag615LegCouponRateTest {
     void FIX0615Test() {
         FIXType fix615LegCouponRate = FIXType.LEG_COUPON_RATE;
     }
+    @Test
+    void Tag0615Test() {
+    }
 }

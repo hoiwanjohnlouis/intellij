@@ -49,4 +49,7 @@ class Tag506RegistStatusTest {
     void FIX0506Test() {
         FIXType fix506RegistStatus = FIXType.REGIST_STATUS;
     }
+    @Test
+    void Tag0506Test() {
+    }
 }

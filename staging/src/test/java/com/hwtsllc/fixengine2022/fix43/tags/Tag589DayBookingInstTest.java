@@ -49,4 +49,7 @@ class Tag589DayBookingInstTest {
     void FIX0589Test() {
         FIXType fix589DayBookingInst = FIXType.DAY_BOOKING_INST;
     }
+    @Test
+    void Tag0589Test() {
+    }
 }

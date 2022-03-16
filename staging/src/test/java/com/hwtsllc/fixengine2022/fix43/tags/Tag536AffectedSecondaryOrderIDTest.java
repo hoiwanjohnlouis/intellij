@@ -49,4 +49,7 @@ class Tag536AffectedSecondaryOrderIDTest {
     void FIX0536Test() {
         FIXType fix536AffectedSecondaryOrderID = FIXType.AFFECTED_SECONDARY_ORDER_ID;
     }
+    @Test
+    void Tag0536Test() {
+    }
 }

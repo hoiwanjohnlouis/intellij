@@ -49,4 +49,7 @@ class Tag542UnderlyingMaturityDateTest {
     void FIX0542Test() {
         FIXType fix542UnderlyingMaturityDate = FIXType.UNDERLYING_MATURITY_DATE;
     }
+    @Test
+    void Tag0542Test() {
+    }
 }

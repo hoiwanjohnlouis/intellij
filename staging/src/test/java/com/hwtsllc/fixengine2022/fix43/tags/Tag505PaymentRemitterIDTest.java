@@ -49,4 +49,7 @@ class Tag505PaymentRemitterIDTest {
     void FIX0505Test() {
         FIXType fix505PaymentRemitterID = FIXType.PAYMENT_REMITTER_ID;
     }
+    @Test
+    void Tag0505Test() {
+    }
 }

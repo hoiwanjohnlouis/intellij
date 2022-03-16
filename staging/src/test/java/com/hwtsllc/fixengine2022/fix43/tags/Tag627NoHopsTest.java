@@ -49,4 +49,7 @@ class Tag627NoHopsTest {
     void FIX0627Test() {
         FIXType fix627NoHops = FIXType.NO_HOPS;
     }
+    @Test
+    void Tag0627Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag573MatchStatusTest {
     void FIX0573Test() {
         FIXType fix573MatchStatus = FIXType.MATCH_STATUS;
     }
+    @Test
+    void Tag0573Test() {
+    }
 }

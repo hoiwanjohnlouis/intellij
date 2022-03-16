@@ -49,4 +49,7 @@ class Tag656SettlCurrBidFxRateTest {
     void FIX0656Test() {
         FIXType fix656SettlCurrBidFxRate = FIXType.SETTL_CURR_BID_FX_RATE;
     }
+    @Test
+    void Tag0656Test() {
+    }
 }

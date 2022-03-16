@@ -49,4 +49,7 @@ class Tag559SecurityListRequestTypeTest {
     void FIX0559Test() {
         FIXType fix559SecurityListRequestType = FIXType.SECURITY_LIST_REQUEST_TYPE;
     }
+    @Test
+    void Tag0559Test() {
+    }
 }

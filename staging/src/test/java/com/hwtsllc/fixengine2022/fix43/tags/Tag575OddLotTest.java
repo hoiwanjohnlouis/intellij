@@ -49,4 +49,7 @@ class Tag575OddLotTest {
     void FIX0575Test() {
         FIXType fix575OddLot = FIXType.ODD_LOT;
     }
+    @Test
+    void Tag0575Test() {
+    }
 }
