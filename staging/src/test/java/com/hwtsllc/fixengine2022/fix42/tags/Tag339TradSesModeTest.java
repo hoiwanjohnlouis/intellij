@@ -46,7 +46,7 @@ class Tag339TradSesModeTest {
     }
     @Test
     void FIX0339Test() {
-        FIXType fix339TradSesMode = FIXType.TRAD_SES_MODE;
+        FIXType fix339TradSesMode = FIXType.FIX339_TRAD_SES_MODE;
     }
     @Test
     void Tag0339Test() {

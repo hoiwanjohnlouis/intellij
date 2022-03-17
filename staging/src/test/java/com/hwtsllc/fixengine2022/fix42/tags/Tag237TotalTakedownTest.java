@@ -46,7 +46,7 @@ class Tag237TotalTakedownTest {
     }
     @Test
     void FIX0237Test() {
-        FIXType fix237TotalTakedown = FIXType.TOTAL_TAKEDOWN;
+        FIXType fix237TotalTakedown = FIXType.FIX237_TOTAL_TAKEDOWN;
     }
     @Test
     void Tag0237Test() {

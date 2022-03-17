@@ -18,16 +18,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag12Commission extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag12Commission(String dataValue) {
         setFixType(FIXType.FIX12_COMMISSION);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -35,9 +33,9 @@ public class Tag12Commission extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag12Commission tag12Commission = new Tag12Commission("10.25");
-        System.out.println(tag12Commission);
-        System.out.println(tag12Commission.toLogStringVerbose());
-        System.out.println(tag12Commission.toFixTagValuePairString());
+        Tag12Commission tagData = new Tag12Commission("10.25");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

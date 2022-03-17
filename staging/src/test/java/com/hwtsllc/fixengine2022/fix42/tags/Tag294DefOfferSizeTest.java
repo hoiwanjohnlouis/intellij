@@ -46,7 +46,7 @@ class Tag294DefOfferSizeTest {
     }
     @Test
     void FIX0294Test() {
-        FIXType fix294DefOfferSize = FIXType.DEF_OFFER_SIZE;
+        FIXType fix294DefOfferSize = FIXType.FIX294_DEF_OFFER_SIZE;
     }
     @Test
     void Tag0294Test() {

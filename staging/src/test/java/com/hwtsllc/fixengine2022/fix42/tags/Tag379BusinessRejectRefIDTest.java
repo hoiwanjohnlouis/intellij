@@ -46,7 +46,7 @@ class Tag379BusinessRejectRefIDTest {
     }
     @Test
     void FIX0379Test() {
-        FIXType fix379BusinessRejectRefID = FIXType.BUSINESS_REJECT_REF_ID;
+        FIXType fix379BusinessRejectRefID = FIXType.FIX379_BUSINESS_REJECT_REF_ID;
     }
     @Test
     void Tag0379Test() {

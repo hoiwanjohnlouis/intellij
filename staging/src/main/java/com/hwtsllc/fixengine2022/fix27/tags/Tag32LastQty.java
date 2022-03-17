@@ -16,47 +16,28 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FieldType;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+public class Tag32LastQty extends TagTypeAbstract {
+    private final String dataValue;
 
-public class Tag32LastQty {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final static double DEFAULT_VALUE = 0.00;
 
-    private final double DEFAULT_VALUE = 0.00;
-
-    private final FieldType fieldType;
-    private final double tag32LastQty;
-
-    //
-    public Tag32LastQty() {
-        this.fieldType = FieldType.DEFAULT_LAST_TRADE_QUANTITY;
-        this.tag32LastQty = DEFAULT_VALUE;
+    public Tag32LastQty(String dataValue) {
+        setFixType(FIXType.FIX31_LAST_PX);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
-    public Tag32LastQty(final double tag32LastQty) {
-        this.fieldType = FieldType.LAST_TRADE_QUANTITY;
-        this.tag32LastQty = tag32LastQty;
-    }
-
-    public FieldType getFieldType() {
-        return fieldType;
-    }
-
-    public double getTag32LastQtyValue() {
-        return tag32LastQty;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getFieldType().name());
-        sb.append(":[");
-        sb.append(getTag32LastQtyValue());
-        sb.append("]");
-
-        return sb.toString();
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag32LastQty tagType = new Tag32LastQty("JohnWick-43");
+        System.out.println(tagType);
+        System.out.println(tagType.toLogStringVerbose());
+        System.out.println(tagType.toFixTagValuePairString());
     }
 }

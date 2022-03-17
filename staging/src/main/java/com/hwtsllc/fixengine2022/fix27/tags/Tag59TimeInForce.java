@@ -17,13 +17,25 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public enum Tag59TimeInForce {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag59TimeInForce extends TagTypeAbstract {
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX59_TIME_IN_FORCE;
+    public Tag59TimeInForce(String dataValue) {
+        setFixType(FIXType.FIX59_TIME_IN_FORCE);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag59TimeInForce tagData = new Tag59TimeInForce("JohnWick-453");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

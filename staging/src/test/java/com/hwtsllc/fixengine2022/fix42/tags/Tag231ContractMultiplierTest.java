@@ -46,7 +46,7 @@ class Tag231ContractMultiplierTest {
     }
     @Test
     void FIX0231Test() {
-        FIXType fix231ContractMultiplier = FIXType.CONTRACT_MULTIPLIER;
+        FIXType fix231ContractMultiplier = FIXType.FIX231_CONTRACT_MULTIPLIER;
     }
     @Test
     void Tag0231Test() {

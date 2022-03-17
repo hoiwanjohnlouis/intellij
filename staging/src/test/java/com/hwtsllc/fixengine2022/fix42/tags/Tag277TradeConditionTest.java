@@ -46,7 +46,7 @@ class Tag277TradeConditionTest {
     }
     @Test
     void FIX0277Test() {
-        FIXType fix277TradeCondition = FIXType.TRADE_CONDITION;
+        FIXType fix277TradeCondition = FIXType.FIX277_TRADE_CONDITION;
     }
     @Test
     void Tag0277Test() {

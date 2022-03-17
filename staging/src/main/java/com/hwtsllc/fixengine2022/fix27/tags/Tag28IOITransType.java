@@ -17,13 +17,26 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum28IOITransType;
 
-public enum Tag28IOITransType {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag28IOITransType extends TagTypeAbstract {
+    private final Enum28IOITransType dataValue;
 
-    private final FIXType fixType = FIXType.FIX28_IOI_TRANS_TYPE;
+    public Tag28IOITransType(Enum28IOITransType dataValue) {
+        setFixType(FIXType.FIX28_IOI_TRANS_TYPE);
+        setDataValue(dataValue.getAction());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag28IOITransType tagData = new Tag28IOITransType(Enum28IOITransType.NEW);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

@@ -46,7 +46,7 @@ class Tag202StrikePriceTest {
     }
     @Test
     void FIX0202Test() {
-        FIXType fix202StrikePrice = FIXType.STRIKE_PRICE;
+        FIXType fix202StrikePrice = FIXType.FIX202_STRIKE_PRICE;
     }
     @Test
     void Tag0202Test() {

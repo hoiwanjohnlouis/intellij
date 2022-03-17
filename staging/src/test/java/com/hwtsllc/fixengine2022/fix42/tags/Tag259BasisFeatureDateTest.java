@@ -46,7 +46,7 @@ class Tag259BasisFeatureDateTest {
     }
     @Test
     void FIX0259Test() {
-        FIXType fix259BasisFeatureDate = FIXType.BASIS_FEATURE_DATE;
+        FIXType fix259BasisFeatureDate = FIXType.FIX259_BASIS_FEATURE_DATE;
     }
     @Test
     void Tag0259Test() {

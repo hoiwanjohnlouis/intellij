@@ -46,7 +46,7 @@ class Tag232NoStipulationsTest {
     }
     @Test
     void FIX0232Test() {
-        FIXType fix232NoStipulations = FIXType.NO_STIPULATIONS;
+        FIXType fix232NoStipulations = FIXType.FIX232_NO_STIPULATIONS;
     }
     @Test
     void Tag0232Test() {

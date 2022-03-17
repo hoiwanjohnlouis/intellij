@@ -46,7 +46,7 @@ class Tag268NoMDEntriesTest {
     }
     @Test
     void FIX0268Test() {
-        FIXType fix268NoMDEntries = FIXType.NO_MD_ENTRIES;
+        FIXType fix268NoMDEntries = FIXType.FIX268_NO_MD_ENTRIES;
     }
     @Test
     void Tag0268Test() {

@@ -46,7 +46,7 @@ class Tag214SettlInstRefIDTest {
     }
     @Test
     void FIX0214Test() {
-        FIXType fix214SettlInstRefID = FIXType.SETTL_INST_REF_ID;
+        FIXType fix214SettlInstRefID = FIXType.FIX214_SETTL_INST_REF_ID;
     }
     @Test
     void Tag0214Test() {

@@ -17,29 +17,43 @@
 package com.hwtsllc.fixengine2022;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.TagDataAccessors;
 
-public class TagMine extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class TagMine extends FIXTypeWrapper implements FixTagValuePairString, TagDataAccessors {
+    private String dataValue;
 
     public TagMine(String dataValue) {
         setFixType(FIXType.FIX58_TEXT);
-        setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
+    /**
+     * standard wrapper to retrieve this tags data
+     */
+    @Override
+    public String getDataValue() {
+        return this.dataValue;
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return String.valueOf(getFIXNumber())
+                .concat("=")
+                .concat(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
     public static void main(String[] args) {
         TagMine tagMine = new TagMine("hello from main routine");
         System.out.println("t1.1:"+tagMine);
         System.out.println("t1.2.verbose:"+tagMine.toLogStringVerbose());
-        System.out.println("t1.3.FIXTypeName:"+tagMine.getFIXTypeName());
-        System.out.println("t1.4.FIXNumber:"+tagMine.getFIXNumber());
-        System.out.println("t1.5.FIXName:"+tagMine.getFIXName());
-        System.out.println("t1.6.FIXDescription:"+tagMine.getFIXDescription());
         System.out.println("t1.7.DataValue:"+tagMine.getDataValue());
         System.out.println("t1.8.FixString:"+tagMine.toFixTagValuePairString());
-
     }
 }

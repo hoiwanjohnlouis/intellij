@@ -46,7 +46,7 @@ class Tag210MaxShowTest {
     }
     @Test
     void FIX0210Test() {
-        FIXType fix210MaxShow = FIXType.MAX_SHOW;
+        FIXType fix210MaxShow = FIXType.FIX210_MAX_SHOW;
     }
     @Test
     void Tag0210Test() {

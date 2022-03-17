@@ -47,7 +47,7 @@ class Tag318UnderlyingCurrencyTest {
     }
     @Test
     void FIX0318Test() {
-        FIXType fix318UnderlyingCurrency = FIXType.UNDERLYING_CURRENCY;
+        FIXType fix318UnderlyingCurrency = FIXType.FIX318_UNDERLYING_CURRENCY;
     }
     @Test
     void Tag0318Test() {

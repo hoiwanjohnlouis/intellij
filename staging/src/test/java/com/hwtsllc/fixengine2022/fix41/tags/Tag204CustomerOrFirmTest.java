@@ -47,7 +47,7 @@ class Tag204CustomerOrFirmTest {
     }
     @Test
     void FIX0204Test() {
-        FIXType fix204CustomerOrFirm = FIXType.CUSTOMER_OR_FIRM;
+        FIXType fix204CustomerOrFirm = FIXType.FIX204_CUSTOMER_OR_FIRM;
     }
     @Test
     void Tag0204Test() {

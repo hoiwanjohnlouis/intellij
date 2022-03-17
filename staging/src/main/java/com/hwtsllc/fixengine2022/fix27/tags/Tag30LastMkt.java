@@ -17,13 +17,25 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public enum Tag30LastMkt {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag30LastMkt extends TagTypeAbstract {
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX30_LAST_MKT;
+    public Tag30LastMkt(String dataValue) {
+        setFixType(FIXType.FIX30_LAST_MKT);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag30LastMkt tagData = new Tag30LastMkt("JohnWick-453");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

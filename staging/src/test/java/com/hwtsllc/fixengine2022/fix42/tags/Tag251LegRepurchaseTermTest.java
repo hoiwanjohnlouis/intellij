@@ -47,7 +47,7 @@ class Tag251LegRepurchaseTermTest {
     }
     @Test
     void FIX0251Test() {
-        FIXType fix251LegRepurchaseTerm = FIXType.LEG_REPURCHASE_TERM;
+        FIXType fix251LegRepurchaseTerm = FIXType.FIX251_LEG_REPURCHASE_TERM;
     }
     @Test
     void Tag0251Test() {

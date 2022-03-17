@@ -46,7 +46,7 @@ class Tag311UnderlyingSymbolTest {
     }
     @Test
     void FIX0311Test() {
-        FIXType fix311UnderlyingSymbol = FIXType.UNDERLYING_SYMBOL;
+        FIXType fix311UnderlyingSymbol = FIXType.FIX311_UNDERLYING_SYMBOL;
     }
     @Test
     void Tag0311Test() {

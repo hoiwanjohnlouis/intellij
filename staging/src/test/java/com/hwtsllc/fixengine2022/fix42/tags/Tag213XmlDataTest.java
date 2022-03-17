@@ -46,7 +46,7 @@ class Tag213XmlDataTest {
     }
     @Test
     void FIX0213Test() {
-        FIXType fix213XmlData = FIXType.XML_DATA;
+        FIXType fix213XmlData = FIXType.FIX213_XML_DATA;
     }
     @Test
     void Tag0213Test() {

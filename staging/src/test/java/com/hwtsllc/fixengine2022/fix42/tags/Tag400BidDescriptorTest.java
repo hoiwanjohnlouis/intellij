@@ -46,7 +46,7 @@ class Tag400BidDescriptorTest {
     }
     @Test
     void FIX0400Test() {
-        FIXType fix400BidDescriptor = FIXType.BID_DESCRIPTOR;
+        FIXType fix400BidDescriptor = FIXType.FIX400_BID_DESCRIPTOR;
     }
     @Test
     void Tag0400Test() {

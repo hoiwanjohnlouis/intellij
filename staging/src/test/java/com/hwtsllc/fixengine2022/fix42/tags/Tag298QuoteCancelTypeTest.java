@@ -46,7 +46,7 @@ class Tag298QuoteCancelTypeTest {
     }
     @Test
     void FIX0298Test() {
-        FIXType fix298QuoteCancelType = FIXType.QUOTE_CANCEL_TYPE;
+        FIXType fix298QuoteCancelType = FIXType.FIX298_QUOTE_CANCEL_TYPE;
     }
     @Test
     void Tag0298Test() {

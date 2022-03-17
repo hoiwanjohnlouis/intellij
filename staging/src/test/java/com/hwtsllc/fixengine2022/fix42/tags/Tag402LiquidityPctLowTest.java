@@ -46,7 +46,7 @@ class Tag402LiquidityPctLowTest {
     }
     @Test
     void FIX0402Test() {
-        FIXType fix402LiquidityPctLow = FIXType.LIQUIDITY_PCT_LOW;
+        FIXType fix402LiquidityPctLow = FIXType.FIX402_LIQUIDITY_PCT_LOW;
     }
     @Test
     void Tag0402Test() {

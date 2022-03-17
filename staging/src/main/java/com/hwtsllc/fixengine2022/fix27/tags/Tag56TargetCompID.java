@@ -18,16 +18,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag56TargetCompID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag56TargetCompID(String dataValue) {
         setFixType(FIXType.FIX56_TARGET_COMP_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -35,9 +33,9 @@ public class Tag56TargetCompID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag56TargetCompID tag56TargetCompID = new Tag56TargetCompID("SUNG");
-        System.out.println(tag56TargetCompID);
-        System.out.println(tag56TargetCompID.toLogStringVerbose());
-        System.out.println(tag56TargetCompID.toFixTagValuePairString());
+        Tag56TargetCompID tagData = new Tag56TargetCompID("SUNG");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

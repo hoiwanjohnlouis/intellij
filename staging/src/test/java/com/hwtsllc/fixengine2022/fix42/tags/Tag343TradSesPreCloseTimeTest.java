@@ -46,7 +46,7 @@ class Tag343TradSesPreCloseTimeTest {
     }
     @Test
     void FIX0343Test() {
-        FIXType fix343TradSesPreCloseTime = FIXType.TRAD_SES_PRE_CLOSE_TIME;
+        FIXType fix343TradSesPreCloseTime = FIXType.FIX343_TRAD_SES_PRE_CLOSE_TIME;
     }
     @Test
     void Tag0343Test() {

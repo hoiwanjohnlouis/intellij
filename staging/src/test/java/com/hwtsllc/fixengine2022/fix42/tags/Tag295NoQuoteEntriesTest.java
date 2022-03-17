@@ -46,7 +46,7 @@ class Tag295NoQuoteEntriesTest {
     }
     @Test
     void FIX0295Test() {
-        FIXType fix295NoQuoteEntries = FIXType.NO_QUOTE_ENTRIES;
+        FIXType fix295NoQuoteEntries = FIXType.FIX295_NO_QUOTE_ENTRIES;
     }
     @Test
     void Tag0295Test() {

@@ -46,7 +46,7 @@ class Tag221BenchmarkCurveNameTest {
     }
     @Test
     void FIX0221Test() {
-        FIXType fix221BenchmarkCurveName = FIXType.BENCHMARK_CURVE_NAME;
+        FIXType fix221BenchmarkCurveName = FIXType.FIX221_BENCHMARK_CURVE_NAME;
     }
     @Test
     void Tag0221Test() {

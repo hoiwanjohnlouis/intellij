@@ -46,7 +46,7 @@ class Tag287SellerDaysTest {
     }
     @Test
     void FIX0287Test() {
-        FIXType fix287SellerDays = FIXType.SELLER_DAYS;
+        FIXType fix287SellerDays = FIXType.FIX287_SELLER_DAYS;
     }
     @Test
     void Tag0287Test() {

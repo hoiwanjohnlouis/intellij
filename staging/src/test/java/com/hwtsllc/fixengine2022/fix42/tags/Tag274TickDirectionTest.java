@@ -46,7 +46,7 @@ class Tag274TickDirectionTest {
     }
     @Test
     void FIX0274Test() {
-        FIXType fix274TickDirection = FIXType.TICK_DIRECTION;
+        FIXType fix274TickDirection = FIXType.FIX274_TICK_DIRECTION;
     }
     @Test
     void Tag0274Test() {

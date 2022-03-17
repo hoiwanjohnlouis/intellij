@@ -46,7 +46,7 @@ class Tag341TradSesStartTimeTest {
     }
     @Test
     void FIX0341Test() {
-        FIXType fix341TradSesStartTime = FIXType.TRAD_SES_START_TIME;
+        FIXType fix341TradSesStartTime = FIXType.FIX341_TRAD_SES_START_TIME;
     }
     @Test
     void Tag0341Test() {

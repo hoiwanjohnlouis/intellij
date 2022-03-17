@@ -46,7 +46,7 @@ class Tag281MDReqRejReasonTest {
     }
     @Test
     void FIX0281Test() {
-        FIXType fix281MDReqRejReason = FIXType.MD_REQ_REJ_REASON;
+        FIXType fix281MDReqRejReason = FIXType.FIX281_MD_REQ_REJ_REASON;
     }
     @Test
     void Tag0281Test() {

@@ -46,7 +46,7 @@ class Tag438ContraTradeTimeTest {
     }
     @Test
     void FIX0438Test() {
-        FIXType fix438ContraTradeTime = FIXType.CONTRA_TRADE_TIME;
+        FIXType fix438ContraTradeTime = FIXType.FIX438_CONTRA_TRADE_TIME;
     }
     @Test
     void Tag0438Test() {

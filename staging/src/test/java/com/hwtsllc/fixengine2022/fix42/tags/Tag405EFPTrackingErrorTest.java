@@ -46,7 +46,7 @@ class Tag405EFPTrackingErrorTest {
     }
     @Test
     void FIX0405Test() {
-        FIXType fix405EFPTrackingError = FIXType.EFP_TRACKING_ERROR;
+        FIXType fix405EFPTrackingError = FIXType.FIX405_EFP_TRACKING_ERROR;
     }
     @Test
     void Tag0405Test() {

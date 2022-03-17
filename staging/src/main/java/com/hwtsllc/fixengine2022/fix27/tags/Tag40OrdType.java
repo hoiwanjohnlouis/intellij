@@ -17,14 +17,25 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public enum Tag40OrdType {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag40OrdType extends TagTypeAbstract {
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX40_ORD_TYPE;
+    public Tag40OrdType(String dataValue) {
+        setFixType(FIXType.FIX40_ORD_TYPE);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
 
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag40OrdType tagData = new Tag40OrdType("JohnWick-2384");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

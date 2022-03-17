@@ -46,7 +46,7 @@ class Tag249LegIssueDateTest {
     }
     @Test
     void FIX0249Test() {
-        FIXType fix249LegIssueDate = FIXType.LEG_ISSUE_DATE;
+        FIXType fix249LegIssueDate = FIXType.FIX249_LEG_ISSUE_DATE;
     }
     @Test
     void Tag0249Test() {

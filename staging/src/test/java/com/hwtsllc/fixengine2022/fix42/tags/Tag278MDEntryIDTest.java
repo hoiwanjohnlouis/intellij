@@ -46,7 +46,7 @@ class Tag278MDEntryIDTest {
     }
     @Test
     void FIX0278Test() {
-        FIXType fix278MDEntryID = FIXType.MD_ENTRY_ID;
+        FIXType fix278MDEntryID = FIXType.FIX278_MD_ENTRY_ID;
     }
     @Test
     void Tag0278Test() {

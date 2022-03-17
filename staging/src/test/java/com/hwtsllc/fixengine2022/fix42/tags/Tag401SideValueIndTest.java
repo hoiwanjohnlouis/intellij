@@ -46,7 +46,7 @@ class Tag401SideValueIndTest {
     }
     @Test
     void FIX0401Test() {
-        FIXType fix401SideValueInd = FIXType.SIDE_VALUE_IND;
+        FIXType fix401SideValueInd = FIXType.FIX401_SIDE_VALUE_IND;
     }
     @Test
     void Tag0401Test() {

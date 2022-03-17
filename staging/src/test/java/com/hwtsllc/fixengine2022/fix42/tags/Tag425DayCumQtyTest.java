@@ -46,7 +46,7 @@ class Tag425DayCumQtyTest {
     }
     @Test
     void FIX0425Test() {
-        FIXType fix425DayCumQty = FIXType.DAY_CUM_QTY;
+        FIXType fix425DayCumQty = FIXType.FIX425_DAY_CUM_QTY;
     }
     @Test
     void Tag0425Test() {

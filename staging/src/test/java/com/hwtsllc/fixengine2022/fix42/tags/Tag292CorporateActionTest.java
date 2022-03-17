@@ -46,7 +46,7 @@ class Tag292CorporateActionTest {
     }
     @Test
     void FIX0292Test() {
-        FIXType fix292CorporateAction = FIXType.CORPORATE_ACTION;
+        FIXType fix292CorporateAction = FIXType.FIX292_CORPORATE_ACTION;
     }
     @Test
     void Tag0292Test() {

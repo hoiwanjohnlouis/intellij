@@ -46,7 +46,7 @@ class Tag428NoStrikesTest {
     }
     @Test
     void FIX0428Test() {
-        FIXType fix428NoStrikes = FIXType.NO_STRIKES;
+        FIXType fix428NoStrikes = FIXType.FIX428_NO_STRIKES;
     }
     @Test
     void Tag0428Test() {

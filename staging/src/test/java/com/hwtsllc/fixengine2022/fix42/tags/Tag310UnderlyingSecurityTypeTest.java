@@ -46,7 +46,7 @@ class Tag310UnderlyingSecurityTypeTest {
     }
     @Test
     void FIX0310Test() {
-        FIXType fix310UnderlyingSecurityType = FIXType.UNDERLYING_SECURITY_TYPE;
+        FIXType fix310UnderlyingSecurityType = FIXType.FIX310_UNDERLYING_SECURITY_TYPE;
     }
     @Test
     void Tag0310Test() {

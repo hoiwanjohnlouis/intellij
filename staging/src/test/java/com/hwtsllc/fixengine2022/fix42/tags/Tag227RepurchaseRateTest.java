@@ -47,7 +47,7 @@ class Tag227RepurchaseRateTest {
     }
     @Test
     void FIX0227Test() {
-        FIXType fix227RepurchaseRate = FIXType.REPURCHASE_RATE;
+        FIXType fix227RepurchaseRate = FIXType.FIX227_REPURCHASE_RATE;
     }
     @Test
     void Tag0227Test() {

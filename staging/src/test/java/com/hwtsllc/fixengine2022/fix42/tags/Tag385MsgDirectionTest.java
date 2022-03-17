@@ -46,7 +46,7 @@ class Tag385MsgDirectionTest {
     }
     @Test
     void FIX0385Test() {
-        FIXType fix385MsgDirection = FIXType.MSG_DIRECTION;
+        FIXType fix385MsgDirection = FIXType.FIX385_MSG_DIRECTION;
     }
     @Test
     void Tag0385Test() {

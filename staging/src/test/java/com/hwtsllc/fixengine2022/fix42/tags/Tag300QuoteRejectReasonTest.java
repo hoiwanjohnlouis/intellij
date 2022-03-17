@@ -46,7 +46,7 @@ class Tag300QuoteRejectReasonTest {
     }
     @Test
     void FIX0300Test() {
-        FIXType fix300QuoteRejectReason = FIXType.QUOTE_REJECT_REASON;
+        FIXType fix300QuoteRejectReason = FIXType.FIX300_QUOTE_REJECT_REASON;
     }
     @Test
     void Tag0300Test() {

@@ -46,7 +46,7 @@ class Tag296NoQuoteSetsTest {
     }
     @Test
     void FIX0296Test() {
-        FIXType fix296NoQuoteSets = FIXType.NO_QUOTE_SETS;
+        FIXType fix296NoQuoteSets = FIXType.FIX296_NO_QUOTE_SETS;
     }
     @Test
     void Tag0296Test() {

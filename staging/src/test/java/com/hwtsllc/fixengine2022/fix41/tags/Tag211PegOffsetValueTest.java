@@ -46,7 +46,7 @@ class Tag211PegOffsetValueTest {
     }
     @Test
     void FIX0211Test() {
-        FIXType fix211PegDifference = FIXType.PEG_DIFFERENCE;
+        FIXType fix211PegDifference = FIXType.FIX211_PEG_DIFFERENCE;
     }
     @Test
     void Tag0211Test() {

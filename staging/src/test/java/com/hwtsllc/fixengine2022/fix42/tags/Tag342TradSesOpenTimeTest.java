@@ -46,7 +46,7 @@ class Tag342TradSesOpenTimeTest {
     }
     @Test
     void FIX0342Test() {
-        FIXType fix342TradSesOpenTime = FIXType.TRAD_SES_OPEN_TIME;
+        FIXType fix342TradSesOpenTime = FIXType.FIX342_TRAD_SES_OPEN_TIME;
     }
     @Test
     void Tag0342Test() {

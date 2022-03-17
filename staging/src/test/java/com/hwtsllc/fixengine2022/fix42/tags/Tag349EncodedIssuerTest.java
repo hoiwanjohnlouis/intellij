@@ -46,7 +46,7 @@ class Tag349EncodedIssuerTest {
 
     @Test
     void FIX0349Test() {
-        FIXType fix349EncodedIssuer = FIXType.ENCODED_ISSUER;
+        FIXType fix349EncodedIssuer = FIXType.FIX349_ENCODED_ISSUER;
     }
     @Test
     void Tag0349Test() {

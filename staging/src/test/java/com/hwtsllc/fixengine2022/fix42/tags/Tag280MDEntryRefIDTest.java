@@ -46,7 +46,7 @@ class Tag280MDEntryRefIDTest {
     }
     @Test
     void FIX0280Test() {
-        FIXType fix280MDEntryRefID = FIXType.MD_ENTRY_REF_ID;
+        FIXType fix280MDEntryRefID = FIXType.FIX280_MD_ENTRY_REF_ID;
     }
     @Test
     void Tag0280Test() {

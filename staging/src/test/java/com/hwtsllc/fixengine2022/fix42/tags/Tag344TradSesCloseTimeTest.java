@@ -46,7 +46,7 @@ class Tag344TradSesCloseTimeTest {
     }
     @Test
     void FIX0344Test() {
-        FIXType fix344TradSesCloseTime = FIXType.TRAD_SES_CLOSE_TIME;
+        FIXType fix344TradSesCloseTime = FIXType.FIX344_TRAD_SES_CLOSE_TIME;
     }
     @Test
     void Tag0344Test() {

@@ -46,7 +46,7 @@ class Tag335TradSesReqIDTest {
     }
     @Test
     void FIX0335Test() {
-        FIXType fix335TradSesReqID = FIXType.TRAD_SES_REQ_ID;
+        FIXType fix335TradSesReqID = FIXType.FIX335_TRAD_SES_REQ_ID;
     }
     @Test
     void Tag0335Test() {

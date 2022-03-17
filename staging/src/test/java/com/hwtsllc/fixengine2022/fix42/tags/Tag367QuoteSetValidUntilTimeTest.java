@@ -46,7 +46,7 @@ class Tag367QuoteSetValidUntilTimeTest {
     }
     @Test
     void FIX0367Test() {
-        FIXType fix367QuoteSetValidUntilTime = FIXType.QUOTE_SET_VALID_UNTIL_TIME;
+        FIXType fix367QuoteSetValidUntilTime = FIXType.FIX367_QUOTE_SET_VALID_UNTIL_TIME;
     }
     @Test
     void Tag0367Test() {

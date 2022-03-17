@@ -46,7 +46,7 @@ class Tag272MDEntryDateTest {
     }
     @Test
     void FIX0272Test() {
-        FIXType fix272MDEntryDate = FIXType.MD_ENTRY_DATE;
+        FIXType fix272MDEntryDate = FIXType.FIX272_MD_ENTRY_DATE;
     }
     @Test
     void Tag0272Test() {

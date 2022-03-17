@@ -46,7 +46,7 @@ class Tag309UnderlyingSecurityIDTest {
     }
     @Test
     void FIX0309Test() {
-        FIXType fix309UnderlyingSecurityID = FIXType.UNDERLYING_SECURITY_ID;
+        FIXType fix309UnderlyingSecurityID = FIXType.FIX309_UNDERLYING_SECURITY_ID;
     }
     @Test
     void Tag0309Test() {

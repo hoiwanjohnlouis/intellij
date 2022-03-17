@@ -18,16 +18,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag26IOIRefID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag26IOIRefID(String dataValue) {
         setFixType(FIXType.FIX26_IOI_REF_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -35,9 +33,9 @@ public class Tag26IOIRefID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag26IOIRefID tag26IOIRefID = new Tag26IOIRefID("JohnWick-453");
-        System.out.println(tag26IOIRefID);
-        System.out.println(tag26IOIRefID.toLogStringVerbose());
-        System.out.println(tag26IOIRefID.toFixTagValuePairString());
+        Tag26IOIRefID tagData = new Tag26IOIRefID("JohnWick-453");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

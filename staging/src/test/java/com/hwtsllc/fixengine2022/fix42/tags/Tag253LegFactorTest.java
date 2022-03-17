@@ -46,7 +46,7 @@ class Tag253LegFactorTest {
     }
     @Test
     void FIX0253Test() {
-        FIXType fix253LegFactor = FIXType.LEG_FACTOR;
+        FIXType fix253LegFactor = FIXType.FIX253_LEG_FACTOR;
     }
     @Test
     void Tag0253Test() {

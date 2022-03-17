@@ -47,7 +47,7 @@ class Tag219BenchmarkTest {
     }
     @Test
     void FIX0219Test() {
-        FIXType fix219Benchmark = FIXType.BENCHMARK;
+        FIXType fix219Benchmark = FIXType.FIX219_BENCHMARK;
     }
     @Test
     void Tag0219Test() {

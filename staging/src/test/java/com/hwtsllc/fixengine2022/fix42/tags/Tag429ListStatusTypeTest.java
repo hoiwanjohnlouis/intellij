@@ -46,7 +46,7 @@ class Tag429ListStatusTypeTest {
     }
     @Test
     void FIX0429Test() {
-        FIXType fix429ListStatusType = FIXType.LIST_STATUS_TYPE;
+        FIXType fix429ListStatusType = FIXType.FIX429_LIST_STATUS_TYPE;
     }
     @Test
     void Tag0429Test() {

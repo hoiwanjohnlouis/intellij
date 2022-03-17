@@ -46,7 +46,7 @@ class Tag334AdjustmentTest {
     }
     @Test
     void FIX0334Test() {
-        FIXType fix334Adjustment = FIXType.ADJUSTMENT;
+        FIXType fix334Adjustment = FIXType.FIX334_ADJUSTMENT;
     }
     @Test
     void Tag0334Test() {

@@ -46,7 +46,7 @@ class Tag406FairValueTest {
     }
     @Test
     void FIX0406Test() {
-        FIXType fix406FairValue = FIXType.FAIR_VALUE;
+        FIXType fix406FairValue = FIXType.FIX406_FAIR_VALUE;
     }
     @Test
     void Tag0406Test() {

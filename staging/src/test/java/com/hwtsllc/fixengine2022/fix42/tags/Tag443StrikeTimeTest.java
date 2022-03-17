@@ -46,7 +46,7 @@ class Tag443StrikeTimeTest {
     }
     @Test
     void FIX0443Test() {
-        FIXType fix443StrikeTime = FIXType.STRIKE_TIME;
+        FIXType fix443StrikeTime = FIXType.FIX443_STRIKE_TIME;
     }
     @Test
     void Tag0443Test() {

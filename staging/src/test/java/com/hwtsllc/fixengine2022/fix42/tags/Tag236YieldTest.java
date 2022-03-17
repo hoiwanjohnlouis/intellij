@@ -46,7 +46,7 @@ class Tag236YieldTest {
     }
     @Test
     void FIX0236Test() {
-        FIXType fix236Yield = FIXType.YIELD;
+        FIXType fix236Yield = FIXType.FIX236_YIELD;
     }
     @Test
     void Tag0236Test() {

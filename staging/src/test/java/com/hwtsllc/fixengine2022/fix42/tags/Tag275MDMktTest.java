@@ -46,7 +46,7 @@ class Tag275MDMktTest {
     }
     @Test
     void FIX0275Test() {
-        FIXType fix275MDMkt = FIXType.MD_MKT;
+        FIXType fix275MDMkt = FIXType.FIX275_MD_MKT;
     }
     @Test
     void Tag0275Test() {

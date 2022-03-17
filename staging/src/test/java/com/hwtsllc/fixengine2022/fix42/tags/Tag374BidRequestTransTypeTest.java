@@ -46,7 +46,7 @@ class Tag374BidRequestTransTypeTest {
     }
     @Test
     void FIX0374Test() {
-        FIXType fix374BidRequestTransType = FIXType.BID_REQUEST_TRANS_TYPE;
+        FIXType fix374BidRequestTransType = FIXType.FIX374_BID_REQUEST_TRANS_TYPE;
     }
     @Test
     void Tag0374Test() {

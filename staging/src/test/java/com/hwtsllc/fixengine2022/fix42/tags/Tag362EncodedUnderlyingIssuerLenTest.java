@@ -46,7 +46,7 @@ class Tag362EncodedUnderlyingIssuerLenTest {
     }
     @Test
     void FIX0362Test() {
-        FIXType fix362EncodedUnderlyingIssuerLen = FIXType.ENCODED_UNDERLYING_ISSUER_LEN;
+        FIXType fix362EncodedUnderlyingIssuerLen = FIXType.FIX362_ENCODED_UNDERLYING_ISSUER_LEN;
     }
     @Test
     void Tag0362Test() {

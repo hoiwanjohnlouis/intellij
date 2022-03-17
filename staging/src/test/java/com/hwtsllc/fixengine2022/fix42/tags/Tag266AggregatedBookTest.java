@@ -46,7 +46,7 @@ class Tag266AggregatedBookTest {
     }
     @Test
     void FIX0266Test() {
-        FIXType fix266AggregatedBook = FIXType.AGGREGATED_BOOK;
+        FIXType fix266AggregatedBook = FIXType.FIX266_AGGREGATED_BOOK;
     }
     @Test
     void Tag0266Test() {

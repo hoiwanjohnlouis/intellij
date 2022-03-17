@@ -46,7 +46,7 @@ class Tag337ContraTraderTest {
     }
     @Test
     void FIX0337Test() {
-        FIXType fix337ContraTrader = FIXType.CONTRA_TRADER;
+        FIXType fix337ContraTrader = FIXType.FIX337_CONTRA_TRADER;
     }
     @Test
     void Tag0337Test() {

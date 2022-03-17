@@ -46,7 +46,7 @@ class Tag382NoContraBrokersTest {
     }
     @Test
     void FIX0382Test() {
-        FIXType fix382NoContraBrokers = FIXType.NO_CONTRA_BROKERS;
+        FIXType fix382NoContraBrokers = FIXType.FIX382_NO_CONTRA_BROKERS;
     }
     @Test
     void Tag0382Test() {

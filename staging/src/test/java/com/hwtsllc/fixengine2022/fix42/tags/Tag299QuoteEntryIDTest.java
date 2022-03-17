@@ -46,7 +46,7 @@ class Tag299QuoteEntryIDTest {
     }
     @Test
     void FIX0299Test() {
-        FIXType fix299QuoteEntryID = FIXType.QUOTE_ENTRY_ID;
+        FIXType fix299QuoteEntryID = FIXType.FIX299_QUOTE_ENTRY_ID;
     }
     @Test
     void Tag0299Test() {

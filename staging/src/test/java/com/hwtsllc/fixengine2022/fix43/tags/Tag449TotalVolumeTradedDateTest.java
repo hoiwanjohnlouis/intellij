@@ -48,7 +48,7 @@ class Tag449TotalVolumeTradedDateTest {
     }
     @Test
     void FIX0449Test() {
-        FIXType fix449TotalVolumeTradedDate = FIXType.TOTAL_VOLUME_TRADED_DATE;
+        FIXType fix449TotalVolumeTradedDate = FIXType.FIX449_TOTAL_VOLUME_TRADED_DATE;
     }
     @Test
     void Tag0449Test() {

@@ -46,7 +46,7 @@ class Tag393TotalNumSecuritiesTest {
     }
     @Test
     void FIX0393Test() {
-        FIXType fix393TotalNumSecurities = FIXType.TOTAL_NUM_SECURITIES;
+        FIXType fix393TotalNumSecurities = FIXType.FIX393_TOTAL_NUM_SECURITIES;
     }
     @Test
     void Tag0393Test() {

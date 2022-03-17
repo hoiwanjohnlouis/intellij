@@ -46,7 +46,7 @@ class Tag258TradedFlatSwitchTest {
     }
     @Test
     void FIX0258Test() {
-        FIXType fix258TradedFlatSwitch = FIXType.TRADED_FLAT_SWITCH;
+        FIXType fix258TradedFlatSwitch = FIXType.FIX258_TRADED_FLAT_SWITCH;
     }
     @Test
     void Tag0258Test() {

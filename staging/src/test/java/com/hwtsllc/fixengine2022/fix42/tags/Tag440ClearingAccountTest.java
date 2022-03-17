@@ -46,7 +46,7 @@ class Tag440ClearingAccountTest {
     }
     @Test
     void FIX0440Test() {
-        FIXType fix440ClearingAccount = FIXType.CLEARING_ACCOUNT;
+        FIXType fix440ClearingAccount = FIXType.FIX440_CLEARING_ACCOUNT;
     }
     @Test
     void Tag0440Test() {

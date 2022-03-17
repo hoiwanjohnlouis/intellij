@@ -46,7 +46,7 @@ class Tag355EncodedTextTest {
     }
     @Test
     void FIX0355Test() {
-        FIXType fix355EncodedText = FIXType.ENCODED_TEXT;
+        FIXType fix355EncodedText = FIXType.FIX355_ENCODED_TEXT;
     }
     @Test
     void Tag0355Test() {

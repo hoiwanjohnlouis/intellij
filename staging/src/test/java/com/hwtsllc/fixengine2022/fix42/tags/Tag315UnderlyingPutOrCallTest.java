@@ -47,7 +47,7 @@ class Tag315UnderlyingPutOrCallTest {
     }
     @Test
     void FIX0315Test() {
-        FIXType fix315UnderlyingPutOrCall = FIXType.UNDERLYING_PUT_OR_CALL;
+        FIXType fix315UnderlyingPutOrCall = FIXType.FIX315_UNDERLYING_PUT_OR_CALL;
     }
     @Test
     void Tag0315Test() {

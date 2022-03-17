@@ -46,7 +46,7 @@ class Tag320SecurityReqIDTest {
     }
     @Test
     void FIX0320Test() {
-        FIXType fix320SecurityReqID = FIXType.SECURITY_REQ_ID;
+        FIXType fix320SecurityReqID = FIXType.FIX320_SECURITY_REQ_ID;
     }
     @Test
     void Tag0320Test() {

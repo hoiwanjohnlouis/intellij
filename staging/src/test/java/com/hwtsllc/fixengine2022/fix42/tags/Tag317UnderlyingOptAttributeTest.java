@@ -46,7 +46,7 @@ class Tag317UnderlyingOptAttributeTest {
     }
     @Test
     void FIX0317Test() {
-        FIXType fix317UnderlyingOptAttribute = FIXType.UNDERLYING_OPT_ATTRIBUTE;
+        FIXType fix317UnderlyingOptAttribute = FIXType.FIX317_UNDERLYING_OPT_ATTRIBUTE;
     }
     @Test
     void Tag0317Test() {

@@ -16,6 +16,8 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+
 /**
  * FIXType enum defines all the Financial Exchange Protocol's (FIX) fields.  
  * It consists of 3 fields.
@@ -24,7 +26,7 @@ package com.hwtsllc.fixengine2022.datatypes;
  * String  name         short NAME of the field as defined by the FIX protocol document, no duplicates
  * String  description  a short blurb which describes what information the field contains
  */
-public enum FIXType {
+public enum FIXType implements LogStringVerbose {
 
     // 1-100
 
@@ -268,280 +270,280 @@ public enum FIXType {
     // 201-300
 
     FIX201_PUT_OR_CALL(201, "PUT_OR_CALL", "PutOrCall (replaced)"),
-    STRIKE_PRICE(202, "STRIKE_PRICE", "StrikePrice"),
-    COVERED_OR_UNCOVERED(203, "COVERED_OR_UNCOVERED", "CoveredOrUncovered"),
-    CUSTOMER_OR_FIRM(204, "CUSTOMER_OR_FIRM", "CustomerOrFirm (replaced)"),
-    MATURITY_DAY(205, "MATURITY_DAY", "MaturityDay (replaced)"),
-    OPT_ATTRIBUTE(206, "OPT_ATTRIBUTE", "OptAttribute"),
-    SECURITY_EXCHANGE(207, "SECURITY_EXCHANGE", "SecurityExchange"),
-    NOTIFY_BROKER_OF_CREDIT(208, "NOTIFY_BROKER_OF_CREDIT", "NotifyBrokerOfCredit"),
-    ALLOC_HANDL_INST(209, "ALLOC_HANDL_INST", "AllocHandlInst"),
-    MAX_SHOW(210, "MAX_SHOW", "MaxShow"),
+    FIX202_STRIKE_PRICE(202, "STRIKE_PRICE", "StrikePrice"),
+    FIX203_COVERED_OR_UNCOVERED(203, "COVERED_OR_UNCOVERED", "CoveredOrUncovered"),
+    FIX204_CUSTOMER_OR_FIRM(204, "CUSTOMER_OR_FIRM", "CustomerOrFirm (replaced)"),
+    FIX205_MATURITY_DAY(205, "MATURITY_DAY", "MaturityDay (replaced)"),
+    FIX206_OPT_ATTRIBUTE(206, "OPT_ATTRIBUTE", "OptAttribute"),
+    FIX207_SECURITY_EXCHANGE(207, "SECURITY_EXCHANGE", "SecurityExchange"),
+    FIX208_NOTIFY_BROKER_OF_CREDIT(208, "NOTIFY_BROKER_OF_CREDIT", "NotifyBrokerOfCredit"),
+    FIX209_ALLOC_HANDL_INST(209, "ALLOC_HANDL_INST", "AllocHandlInst"),
+    FIX210_MAX_SHOW(210, "MAX_SHOW", "MaxShow"),
 
-    PEG_DIFFERENCE(211, "PEG_DIFFERENCE", "PegDifference"),
-    XML_DATA_LEN(212, "XML_DATA_LEN", "XmlDataLen"),
-    XML_DATA(213, "XML_DATA", "XmlData"),
-    SETTL_INST_REF_ID(214, "SETTL_INST_REF_ID", "SettlInstRefID"),
-    NO_ROUTING_IDS(215, "NO_ROUTING_IDS", "NoRoutingIDs"),
-    ROUTING_TYPE(216, "ROUTING_TYPE", "RoutingType"),
-    ROUTING_ID(217, "ROUTING_ID", "RoutingID"),
-    SPREAD_TO_BENCHMARK(218, "SPREAD_TO_BENCHMARK", "SpreadToBenchmark"),
-    BENCHMARK(219, "BENCHMARK", "Benchmark (no longer used)"),
-    BENCHMARK_CURVE_CURRENCY(220, "BENCHMARK_CURVE_CURRENCY", "BenchmarkCurveCurrency"),
+    FIX211_PEG_DIFFERENCE(211, "PEG_DIFFERENCE", "PegDifference"),
+    FIX212_XML_DATA_LEN(212, "XML_DATA_LEN", "XmlDataLen"),
+    FIX213_XML_DATA(213, "XML_DATA", "XmlData"),
+    FIX214_SETTL_INST_REF_ID(214, "SETTL_INST_REF_ID", "SettlInstRefID"),
+    FIX215_NO_ROUTING_IDS(215, "NO_ROUTING_IDS", "NoRoutingIDs"),
+    FIX216_ROUTING_TYPE(216, "ROUTING_TYPE", "RoutingType"),
+    FIX217_ROUTING_ID(217, "ROUTING_ID", "RoutingID"),
+    FIX218_SPREAD_TO_BENCHMARK(218, "SPREAD_TO_BENCHMARK", "SpreadToBenchmark"),
+    FIX219_BENCHMARK(219, "BENCHMARK", "Benchmark (no longer used)"),
+    FIX220_BENCHMARK_CURVE_CURRENCY(220, "BENCHMARK_CURVE_CURRENCY", "BenchmarkCurveCurrency"),
 
-    BENCHMARK_CURVE_NAME(221, "BENCHMARK_CURVE_NAME", "BenchmarkCurveName"),
-    BENCHMARK_CURVE_POINT(222, "BENCHMARK_CURVE_POINT", "BenchmarkCurvePoint"),
-    COUPON_RATE(223, "COUPON_RATE", "CouponRate"),
-    COUPON_PAYMENT_DATE(224, "COUPON_PAYMENT_DATE", "CouponPaymentDate"),
-    ISSUE_DATE(225, "ISSUE_DATE", "IssueDate"),
-    REPURCHASE_TERM(226, "REPURCHASE_TERM", "RepurchaseTerm (Deprecated)"),
-    REPURCHASE_RATE(227, "REPURCHASE_RATE", "RepurchaseRate (Deprecated)"),
-    FACTOR(228, "FACTOR", "Factor"),
-    TRADE_ORIGINATION_DATE(229, "TRADE_ORIGINATION_DATE", "TradeOriginationDate"),
-    EX_DATE(230, "EX_DATE", "ExDate"),
+    FIX221_BENCHMARK_CURVE_NAME(221, "BENCHMARK_CURVE_NAME", "BenchmarkCurveName"),
+    FIX222_BENCHMARK_CURVE_POINT(222, "BENCHMARK_CURVE_POINT", "BenchmarkCurvePoint"),
+    FIX223_COUPON_RATE(223, "COUPON_RATE", "CouponRate"),
+    FIX224_COUPON_PAYMENT_DATE(224, "COUPON_PAYMENT_DATE", "CouponPaymentDate"),
+    FIX225_ISSUE_DATE(225, "ISSUE_DATE", "IssueDate"),
+    FIX226_REPURCHASE_TERM(226, "REPURCHASE_TERM", "RepurchaseTerm (Deprecated)"),
+    FIX227_REPURCHASE_RATE(227, "REPURCHASE_RATE", "RepurchaseRate (Deprecated)"),
+    FIX228_FACTOR(228, "FACTOR", "Factor"),
+    FIX229_TRADE_ORIGINATION_DATE(229, "TRADE_ORIGINATION_DATE", "TradeOriginationDate"),
+    FIX230_EX_DATE(230, "EX_DATE", "ExDate"),
 
-    CONTRACT_MULTIPLIER(231, "CONTRACT_MULTIPLIER", "ContractMultiplier"),
-    NO_STIPULATIONS(232, "NO_STIPULATIONS", "NoStipulations"),
-    STIPULATION_TYPE(233, "STIPULATION_TYPE", "StipulationType"),
-    STIPULATION_VALUE(234, "STIPULATION_VALUE", "StipulationValue"),
-    YIELD_TYPE(235, "YIELD_TYPE", "YieldType"),
-    YIELD(236, "YIELD", "Yield"),
-    TOTAL_TAKEDOWN(237, "TOTAL_TAKEDOWN", "TotalTakedown"),
-    CONCESSION(238, "CONCESSION", "Concession"),
-    REPO_COLLATERAL_SECURITY_TYPE(239, "REPO_COLLATERAL_SECURITY_TYPE", "RepoCollateralSecurityType (Deprecated)"),
-    REDEMPTION_DATE(240, "REDEMPTION_DATE", "RedemptionDate (Deprecated)"),
+    FIX231_CONTRACT_MULTIPLIER(231, "CONTRACT_MULTIPLIER", "ContractMultiplier"),
+    FIX232_NO_STIPULATIONS(232, "NO_STIPULATIONS", "NoStipulations"),
+    FIX233_STIPULATION_TYPE(233, "STIPULATION_TYPE", "StipulationType"),
+    FIX234_STIPULATION_VALUE(234, "STIPULATION_VALUE", "StipulationValue"),
+    FIX235_YIELD_TYPE(235, "YIELD_TYPE", "YieldType"),
+    FIX236_YIELD(236, "YIELD", "Yield"),
+    FIX237_TOTAL_TAKEDOWN(237, "TOTAL_TAKEDOWN", "TotalTakedown"),
+    FIX238_CONCESSION(238, "CONCESSION", "Concession"),
+    FIX239_REPO_COLLATERAL_SECURITY_TYPE(239, "REPO_COLLATERAL_SECURITY_TYPE", "RepoCollateralSecurityType (Deprecated)"),
+    FIX240_REDEMPTION_DATE(240, "REDEMPTION_DATE", "RedemptionDate (Deprecated)"),
 
-    UNDERLYING_COUPON_PAYMENT_DATE(241, "UNDERLYING_COUPON_PAYMENT_DATE", "UnderlyingCouponPaymentDate"),
-    UNDERLYING_ISSUE_DATE(242, "UNDERLYING_ISSUE_DATE", "UnderlyingIssueDate"),
-    UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE(243, "UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", "UnderlyingRepoCollateralSecurityType (Deprecated"),
-    UNDERLYING_REPURCHASE_TERM(244, "UNDERLYING_REPURCHASE_TERM", "UnderlyingRepurchaseTerm (Deprecated)"),
-    UNDERLYING_REPURCHASE_RATE(245, "UNDERLYING_REPURCHASE_RATE", "UnderlyingRepurchaseRate (Deprecated)"),
-    UNDERLYING_FACTOR(246, "UNDERLYING_FACTOR", "UnderlyingFactor"),
-    UNDERLYING_REDEMPTION_DATE(247, "UNDERLYING_REDEMPTION_DATE", "UnderlyingRedemptionDate (Deprecated)"),
-    LEG_COUPON_PAYMENT_DATE(248, "LEG_COUPON_PAYMENT_DATE", "LegCouponPaymentDate"),
-    LEG_ISSUE_DATE(249, "LEG_ISSUE_DATE", "LegIssueDate"),
-    LEG_REPO_COLLATERAL_SECURITY_TYPE(250, "LEG_REPO_COLLATERAL_SECURITY_TYPE", "LegRepoCollateralSecurityType (Deprecated)"),
+    FIX241_UNDERLYING_COUPON_PAYMENT_DATE(241, "UNDERLYING_COUPON_PAYMENT_DATE", "UnderlyingCouponPaymentDate"),
+    FIX242_UNDERLYING_ISSUE_DATE(242, "UNDERLYING_ISSUE_DATE", "UnderlyingIssueDate"),
+    FIX243_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE(243, "UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", "UnderlyingRepoCollateralSecurityType (Deprecated"),
+    FIX244_UNDERLYING_REPURCHASE_TERM(244, "UNDERLYING_REPURCHASE_TERM", "UnderlyingRepurchaseTerm (Deprecated)"),
+    FIX245_UNDERLYING_REPURCHASE_RATE(245, "UNDERLYING_REPURCHASE_RATE", "UnderlyingRepurchaseRate (Deprecated)"),
+    FIX246_UNDERLYING_FACTOR(246, "UNDERLYING_FACTOR", "UnderlyingFactor"),
+    FIX247_UNDERLYING_REDEMPTION_DATE(247, "UNDERLYING_REDEMPTION_DATE", "UnderlyingRedemptionDate (Deprecated)"),
+    FIX248_LEG_COUPON_PAYMENT_DATE(248, "LEG_COUPON_PAYMENT_DATE", "LegCouponPaymentDate"),
+    FIX249_LEG_ISSUE_DATE(249, "LEG_ISSUE_DATE", "LegIssueDate"),
+    FIX250_LEG_REPO_COLLATERAL_SECURITY_TYPE(250, "LEG_REPO_COLLATERAL_SECURITY_TYPE", "LegRepoCollateralSecurityType (Deprecated)"),
 
-    LEG_REPURCHASE_TERM(251, "LEG_REPURCHASE_TERM", "LegRepurchaseTerm (Deprecated)"),
-    LEG_REPURCHASE_RATE(252, "LEG_REPURCHASE_RATE", "LegRepurchaseRate (Deprecated)"),
-    LEG_FACTOR(253, "LEG_FACTOR", "LegFactor"),
-    LEG_REDEMPTION_DATE(254, "LEG_REDEMPTION_DATE", "LegRedemptionDate (Deprecated)"),
-    CREDIT_RATING(255, "CREDIT_RATING", "CreditRating"),
-    UNDERLYING_CREDIT_RATING(256, "UNDERLYING_CREDIT_RATING", "UnderlyingCreditRating"),
-    LEG_CREDIT_RATING(257, "LEG_CREDIT_RATING", "LegCreditRating"),
-    TRADED_FLAT_SWITCH(258, "TRADED_FLAT_SWITCH", "TradedFlatSwitch"),
-    BASIS_FEATURE_DATE(259, "BASIS_FEATURE_DATE", "BasisFeatureDate"),
-    BASIS_FEATURE_PRICE(260, "BASIS_FEATURE_PRICE", "BasisFeaturePrice"),
+    FIX251_LEG_REPURCHASE_TERM(251, "LEG_REPURCHASE_TERM", "LegRepurchaseTerm (Deprecated)"),
+    FIX252_LEG_REPURCHASE_RATE(252, "LEG_REPURCHASE_RATE", "LegRepurchaseRate (Deprecated)"),
+    FIX253_LEG_FACTOR(253, "LEG_FACTOR", "LegFactor"),
+    FIX254_LEG_REDEMPTION_DATE(254, "LEG_REDEMPTION_DATE", "LegRedemptionDate (Deprecated)"),
+    FIX255_CREDIT_RATING(255, "CREDIT_RATING", "CreditRating"),
+    FIX256_UNDERLYING_CREDIT_RATING(256, "UNDERLYING_CREDIT_RATING", "UnderlyingCreditRating"),
+    FIX257_LEG_CREDIT_RATING(257, "LEG_CREDIT_RATING", "LegCreditRating"),
+    FIX258_TRADED_FLAT_SWITCH(258, "TRADED_FLAT_SWITCH", "TradedFlatSwitch"),
+    FIX259_BASIS_FEATURE_DATE(259, "BASIS_FEATURE_DATE", "BasisFeatureDate"),
+    FIX260_BASIS_FEATURE_PRICE(260, "BASIS_FEATURE_PRICE", "BasisFeaturePrice"),
 
-    MD_REQ_ID(262, "MD_REQ_ID", "MDReqID"),
-    SUBSCRIPTION_REQUEST_TYPE(263, "SUBSCRIPTION_REQUEST_TYPE", "SubscriptionRequestType"),
-    MARKET_DEPTH(264, "MARKET_DEPTH", "MarketDepth"),
-    MD_UPDATE_TYPE(265, "MD_UPDATE_TYPE", "MDUpdateType"),
-    AGGREGATED_BOOK(266, "AGGREGATED_BOOK", "AggregatedBook"),
-    NO_MD_ENTRY_TYPES(267, "NO_MD_ENTRY_TYPES", "NoMDEntryTypes"),
-    NO_MD_ENTRIES(268, "NO_MD_ENTRIES", "NoMDEntries"),
-    MD_ENTRY_TYPE(269, "MD_ENTRY_TYPE", "MDEntryType"),
-    MD_ENTRY_PX(270, "MD_ENTRY_PX", "MDEntryPx"),
+    FIX262_MD_REQ_ID(262, "MD_REQ_ID", "MDReqID"),
+    FIX263_SUBSCRIPTION_REQUEST_TYPE(263, "SUBSCRIPTION_REQUEST_TYPE", "SubscriptionRequestType"),
+    FIX264_MARKET_DEPTH(264, "MARKET_DEPTH", "MarketDepth"),
+    FIX265_MD_UPDATE_TYPE(265, "MD_UPDATE_TYPE", "MDUpdateType"),
+    FIX266_AGGREGATED_BOOK(266, "AGGREGATED_BOOK", "AggregatedBook"),
+    FIX267_NO_MD_ENTRY_TYPES(267, "NO_MD_ENTRY_TYPES", "NoMDEntryTypes"),
+    FIX268_NO_MD_ENTRIES(268, "NO_MD_ENTRIES", "NoMDEntries"),
+    FIX269_MD_ENTRY_TYPE(269, "MD_ENTRY_TYPE", "MDEntryType"),
+    FIX270_MD_ENTRY_PX(270, "MD_ENTRY_PX", "MDEntryPx"),
 
-    MD_ENTRY_SIZE(271, "MD_ENTRY_SIZE", "MDEntrySize"),
-    MD_ENTRY_DATE(272, "MD_ENTRY_DATE", "MDEntryDate"),
-    MD_ENTRY_TIME(273, "MD_ENTRY_TIME", "MDEntryTime"),
-    TICK_DIRECTION(274, "TICK_DIRECTION", "TickDirection"),
-    MD_MKT(275, "MD_MKT", "MDMkt"),
-    QUOTE_CONDITION(276, "QUOTE_CONDITION", "QuoteCondition"),
-    TRADE_CONDITION(277, "TRADE_CONDITION", "TradeCondition"),
-    MD_ENTRY_ID(278, "MD_ENTRY_ID", "MDEntryID"),
-    MD_UPDATE_ACTION(279, "MD_UPDATE_ACTION", "MDUpdateAction"),
-    MD_ENTRY_REF_ID(280, "MD_ENTRY_REF_ID", "MDEntryRefID"),
+    FIX271_MD_ENTRY_SIZE(271, "MD_ENTRY_SIZE", "MDEntrySize"),
+    FIX272_MD_ENTRY_DATE(272, "MD_ENTRY_DATE", "MDEntryDate"),
+    FIX273_MD_ENTRY_TIME(273, "MD_ENTRY_TIME", "MDEntryTime"),
+    FIX274_TICK_DIRECTION(274, "TICK_DIRECTION", "TickDirection"),
+    FIX275_MD_MKT(275, "MD_MKT", "MDMkt"),
+    FIX276_QUOTE_CONDITION(276, "QUOTE_CONDITION", "QuoteCondition"),
+    FIX277_TRADE_CONDITION(277, "TRADE_CONDITION", "TradeCondition"),
+    FIX278_MD_ENTRY_ID(278, "MD_ENTRY_ID", "MDEntryID"),
+    FIX279_MD_UPDATE_ACTION(279, "MD_UPDATE_ACTION", "MDUpdateAction"),
+    FIX280_MD_ENTRY_REF_ID(280, "MD_ENTRY_REF_ID", "MDEntryRefID"),
 
-    MD_REQ_REJ_REASON(281, "MD_REQ_REJ_REASON", "MDReqRejReason"),
-    MD_ENTRY_ORIGINATOR(282, "MD_ENTRY_ORIGINATOR", "MDEntryOriginator"),
-    LOCATION_ID(283, "LOCATION_ID", "LocationID"),
-    DESK_ID(284, "DESK_ID", "DeskID"),
-    DELETE_REASON(285, "DELETE_REASON", "DeleteReason"),
-    OPEN_CLOSE_SETTLE_FLAG(286, "OPEN_CLOSE_SETTLE_FLAG", "OpenCloseSettleFlag"),
-    SELLER_DAYS(287, "SELLER_DAYS", "SellerDays"),
-    MD_ENTRY_BUYER(288, "MD_ENTRY_BUYER", "MDEntryBuyer"),
-    MD_ENTRY_SELLER(289, "MD_ENTRY_SELLER", "MDEntrySeller"),
-    MD_ENTRY_POSITION_NO(290, "MD_ENTRY_POSITION_NO", "MDEntryPositionNo"),
+    FIX281_MD_REQ_REJ_REASON(281, "MD_REQ_REJ_REASON", "MDReqRejReason"),
+    FIX282_MD_ENTRY_ORIGINATOR(282, "MD_ENTRY_ORIGINATOR", "MDEntryOriginator"),
+    FIX283_LOCATION_ID(283, "LOCATION_ID", "LocationID"),
+    FIX284_DESK_ID(284, "DESK_ID", "DeskID"),
+    FIX285_DELETE_REASON(285, "DELETE_REASON", "DeleteReason"),
+    FIX286_OPEN_CLOSE_SETTLE_FLAG(286, "OPEN_CLOSE_SETTLE_FLAG", "OpenCloseSettleFlag"),
+    FIX287_SELLER_DAYS(287, "SELLER_DAYS", "SellerDays"),
+    FIX288_MD_ENTRY_BUYER(288, "MD_ENTRY_BUYER", "MDEntryBuyer"),
+    FIX289_MD_ENTRY_SELLER(289, "MD_ENTRY_SELLER", "MDEntrySeller"),
+    FIX290_MD_ENTRY_POSITION_NO(290, "MD_ENTRY_POSITION_NO", "MDEntryPositionNo"),
 
-    FINANCIAL_STATUS(291, "FINANCIAL_STATUS", "FinancialStatus"),
-    CORPORATE_ACTION(292, "CORPORATE_ACTION", "CorporateAction"),
-    DEF_BID_SIZE(293, "DEF_BID_SIZE", "DefBidSize"),
-    DEF_OFFER_SIZE(294, "DEF_OFFER_SIZE", "DefOfferSize"),
-    NO_QUOTE_ENTRIES(295, "NO_QUOTE_ENTRIES", "NoQuoteEntries"),
-    NO_QUOTE_SETS(296, "NO_QUOTE_SETS", "NoQuoteSets"),
-    QUOTE_ACK_STATUS(297, "QUOTE_ACK_STATUS", "QuoteAckStatus"),
-    QUOTE_CANCEL_TYPE(298, "QUOTE_CANCEL_TYPE", "QuoteCancelType"),
-    QUOTE_ENTRY_ID(299, "QUOTE_ENTRY_ID", "QuoteEntryID"),
-    QUOTE_REJECT_REASON(300, "QUOTE_REJECT_REASON", "QuoteRejectReason"),
+    FIX291_FINANCIAL_STATUS(291, "FINANCIAL_STATUS", "FinancialStatus"),
+    FIX292_CORPORATE_ACTION(292, "CORPORATE_ACTION", "CorporateAction"),
+    FIX293_DEF_BID_SIZE(293, "DEF_BID_SIZE", "DefBidSize"),
+    FIX294_DEF_OFFER_SIZE(294, "DEF_OFFER_SIZE", "DefOfferSize"),
+    FIX295_NO_QUOTE_ENTRIES(295, "NO_QUOTE_ENTRIES", "NoQuoteEntries"),
+    FIX296_NO_QUOTE_SETS(296, "NO_QUOTE_SETS", "NoQuoteSets"),
+    FIX297_QUOTE_ACK_STATUS(297, "QUOTE_ACK_STATUS", "QuoteAckStatus"),
+    FIX298_QUOTE_CANCEL_TYPE(298, "QUOTE_CANCEL_TYPE", "QuoteCancelType"),
+    FIX299_QUOTE_ENTRY_ID(299, "QUOTE_ENTRY_ID", "QuoteEntryID"),
+    FIX300_QUOTE_REJECT_REASON(300, "QUOTE_REJECT_REASON", "QuoteRejectReason"),
 
 
     // 301-400
 
-    QUOTE_RESPONSE_LEVEL(301, "QUOTE_RESPONSE_LEVEL", "QuoteResponseLevel"),
-    QUOTE_SET_ID(302, "QUOTE_SET_ID", "QuoteSetID"),
-    QUOTE_REQUEST_TYPE(303, "QUOTE_REQUEST_TYPE", "QuoteRequestType"),
-    TOT_QUOTE_ENTRIES(304, "TOT_QUOTE_ENTRIES", "TotQuoteEntries"),
-    UNDERLYING_ID_SOURCE(305, "UNDERLYING_ID_SOURCE", "UnderlyingIDSource"),
-    UNDERLYING_ISSUER(306, "UNDERLYING_ISSUER", "UnderlyingIssuer"),
-    UNDERLYING_SECURITY_DESC(307, "UNDERLYING_SECURITY_DESC", "UnderlyingSecurityDesc"),
-    UNDERLYING_SECURITY_EXCHANGE(308, "UNDERLYING_SECURITY_EXCHANGE", "UnderlyingSecurityExchange"),
-    UNDERLYING_SECURITY_ID(309, "UNDERLYING_SECURITY_ID", "UnderlyingSecurityID"),
-    UNDERLYING_SECURITY_TYPE(310, "UNDERLYING_SECURITY_TYPE", "UnderlyingSecurityType"),
+    FIX301_QUOTE_RESPONSE_LEVEL(301, "QUOTE_RESPONSE_LEVEL", "QuoteResponseLevel"),
+    FIX302_QUOTE_SET_ID(302, "QUOTE_SET_ID", "QuoteSetID"),
+    FIX303_QUOTE_REQUEST_TYPE(303, "QUOTE_REQUEST_TYPE", "QuoteRequestType"),
+    FIX304_TOT_QUOTE_ENTRIES(304, "TOT_QUOTE_ENTRIES", "TotQuoteEntries"),
+    FIX305_UNDERLYING_ID_SOURCE(305, "UNDERLYING_ID_SOURCE", "UnderlyingIDSource"),
+    FIX306_UNDERLYING_ISSUER(306, "UNDERLYING_ISSUER", "UnderlyingIssuer"),
+    FIX307_UNDERLYING_SECURITY_DESC(307, "UNDERLYING_SECURITY_DESC", "UnderlyingSecurityDesc"),
+    FIX308_UNDERLYING_SECURITY_EXCHANGE(308, "UNDERLYING_SECURITY_EXCHANGE", "UnderlyingSecurityExchange"),
+    FIX309_UNDERLYING_SECURITY_ID(309, "UNDERLYING_SECURITY_ID", "UnderlyingSecurityID"),
+    FIX310_UNDERLYING_SECURITY_TYPE(310, "UNDERLYING_SECURITY_TYPE", "UnderlyingSecurityType"),
 
-    UNDERLYING_SYMBOL(311, "UNDERLYING_SYMBOL", "UnderlyingSymbol"),
-    UNDERLYING_SYMBOL_SFX(312, "UNDERLYING_SYMBOL_SFX", "UnderlyingSymbolSfx"),
-    UNDERLYING_MATURITY_MONTH_YEAR(313, "UNDERLYING_MATURITY_MONTH_YEAR", "UnderlyingMaturityMonthYear"),
-    UNDERLYING_MATURITY_DAY(314, "UNDERLYING_MATURITY_DAY", "UnderlyingMaturityDay (replaced)"),
-    UNDERLYING_PUT_OR_CALL(315, "UNDERLYING_PUT_OR_CALL", "UnderlyingPutOrCall (replaced)"),
-    UNDERLYING_STRIKE_PRICE(316, "UNDERLYING_STRIKE_PRICE", "UnderlyingStrikePrice"),
-    UNDERLYING_OPT_ATTRIBUTE(317, "UNDERLYING_OPT_ATTRIBUTE", "UnderlyingOptAttribute"),
-    UNDERLYING_CURRENCY(318, "UNDERLYING_CURRENCY", "UnderlyingCurrency"),
-    RATIO_QTY(319, "RATIO_QTY", "RatioQty (unused)"),
-    SECURITY_REQ_ID(320, "SECURITY_REQ_ID", "SecurityReqID"),
+    FIX311_UNDERLYING_SYMBOL(311, "UNDERLYING_SYMBOL", "UnderlyingSymbol"),
+    FIX312_UNDERLYING_SYMBOL_SFX(312, "UNDERLYING_SYMBOL_SFX", "UnderlyingSymbolSfx"),
+    FIX313_UNDERLYING_MATURITY_MONTH_YEAR(313, "UNDERLYING_MATURITY_MONTH_YEAR", "UnderlyingMaturityMonthYear"),
+    FIX314_UNDERLYING_MATURITY_DAY(314, "UNDERLYING_MATURITY_DAY", "UnderlyingMaturityDay (replaced)"),
+    FIX315_UNDERLYING_PUT_OR_CALL(315, "UNDERLYING_PUT_OR_CALL", "UnderlyingPutOrCall (replaced)"),
+    FIX316_UNDERLYING_STRIKE_PRICE(316, "UNDERLYING_STRIKE_PRICE", "UnderlyingStrikePrice"),
+    FIX317_UNDERLYING_OPT_ATTRIBUTE(317, "UNDERLYING_OPT_ATTRIBUTE", "UnderlyingOptAttribute"),
+    FIX318_UNDERLYING_CURRENCY(318, "UNDERLYING_CURRENCY", "UnderlyingCurrency"),
+    FIX319_RATIO_QTY(319, "RATIO_QTY", "RatioQty (unused)"),
+    FIX320_SECURITY_REQ_ID(320, "SECURITY_REQ_ID", "SecurityReqID"),
 
-    SECURITY_REQUEST_TYPE(321, "SECURITY_REQUEST_TYPE", "SecurityRequestType"),
-    SECURITY_RESPONSE_ID(322, "SECURITY_RESPONSE_ID", "SecurityResponseID"),
-    SECURITY_RESPONSE_TYPE(323, "SECURITY_RESPONSE_TYPE", "SecurityResponseType"),
-    SECURITY_STATUS_REQ_ID(324, "SECURITY_STATUS_REQ_ID", "SecurityStatusReqID"),
-    UNSOLICITED_INDICATOR(325, "UNSOLICITED_INDICATOR", "UnsolicitedIndicator"),
-    SECURITY_TRADING_STATUS(326, "SECURITY_TRADING_STATUS", "SecurityTradingStatus"),
-    HALT_REASON(327, "HALT_REASON", "HaltReason"),
-    IN_VIEW_OF_COMMON(328, "IN_VIEW_OF_COMMON", "InViewOfCommon"),
-    DUE_TO_RELATED(329, "DUE_TO_RELATED", "DueToRelated"),
-    BUY_VOLUME(330, "BUY_VOLUME", "BuyVolume"),
+    FIX321_SECURITY_REQUEST_TYPE(321, "SECURITY_REQUEST_TYPE", "SecurityRequestType"),
+    FIX322_SECURITY_RESPONSE_ID(322, "SECURITY_RESPONSE_ID", "SecurityResponseID"),
+    FIX323_SECURITY_RESPONSE_TYPE(323, "SECURITY_RESPONSE_TYPE", "SecurityResponseType"),
+    FIX324_SECURITY_STATUS_REQ_ID(324, "SECURITY_STATUS_REQ_ID", "SecurityStatusReqID"),
+    FIX325_UNSOLICITED_INDICATOR(325, "UNSOLICITED_INDICATOR", "UnsolicitedIndicator"),
+    FIX326_SECURITY_TRADING_STATUS(326, "SECURITY_TRADING_STATUS", "SecurityTradingStatus"),
+    FIX327_HALT_REASON(327, "HALT_REASON", "HaltReason"),
+    FIX328_IN_VIEW_OF_COMMON(328, "IN_VIEW_OF_COMMON", "InViewOfCommon"),
+    FIX329_DUE_TO_RELATED(329, "DUE_TO_RELATED", "DueToRelated"),
+    FIX330_BUY_VOLUME(330, "BUY_VOLUME", "BuyVolume"),
 
-    SELL_VOLUME(331, "SELL_VOLUME", "SellVolume"),
-    HIGH_PX(332, "HIGH_PX", "HighPx"),
-    LOW_PX(333, "LOW_PX", "LowPx"),
-    ADJUSTMENT(334, "ADJUSTMENT", "Adjustment"),
-    TRAD_SES_REQ_ID(335, "TRAD_SES_REQ_ID", "TradSesReqID"),
-    TRADING_SESSION_ID(336, "TRADING_SESSION_ID", "TradingSessionID"),
-    CONTRA_TRADER(337, "CONTRA_TRADER", "ContraTrader"),
-    TRAD_SES_METHOD(338, "TRAD_SES_METHOD", "TradSesMethod"),
-    TRAD_SES_MODE(339, "TRAD_SES_MODE", "TradSesMode"),
-    TRAD_SES_STATUS(340, "TRAD_SES_STATUS", "TradSesStatus"),
+    FIX331_SELL_VOLUME(331, "SELL_VOLUME", "SellVolume"),
+    FIX332_HIGH_PX(332, "HIGH_PX", "HighPx"),
+    FIX333_LOW_PX(333, "LOW_PX", "LowPx"),
+    FIX334_ADJUSTMENT(334, "ADJUSTMENT", "Adjustment"),
+    FIX335_TRAD_SES_REQ_ID(335, "TRAD_SES_REQ_ID", "TradSesReqID"),
+    FIX336_TRADING_SESSION_ID(336, "TRADING_SESSION_ID", "TradingSessionID"),
+    FIX337_CONTRA_TRADER(337, "CONTRA_TRADER", "ContraTrader"),
+    FIX338_TRAD_SES_METHOD(338, "TRAD_SES_METHOD", "TradSesMethod"),
+    FIX339_TRAD_SES_MODE(339, "TRAD_SES_MODE", "TradSesMode"),
+    FIX340_TRAD_SES_STATUS(340, "TRAD_SES_STATUS", "TradSesStatus"),
 
-    TRAD_SES_START_TIME(341, "TRAD_SES_START_TIME", "TradSesStartTime"),
-    TRAD_SES_OPEN_TIME(342, "TRAD_SES_OPEN_TIME", "TradSesOpenTime"),
-    TRAD_SES_PRE_CLOSE_TIME(343, "TRAD_SES_PRE_CLOSE_TIME", "TradSesPreCloseTime"),
-    TRAD_SES_CLOSE_TIME(344, "TRAD_SES_CLOSE_TIME", "TradSesCloseTime"),
-    TRAD_SES_END_TIME(345, "TRAD_SES_END_TIME", "TradSesEndTime"),
-    NUMBER_OF_ORDERS(346, "NUMBER_OF_ORDERS", "NumberOfOrders"),
-    MESSAGE_ENCODING(347, "MESSAGE_ENCODING", "MessageEncoding"),
-    ENCODED_ISSUER_LEN(348, "ENCODED_ISSUER_LEN", "EncodedIssuerLen"),
-    ENCODED_ISSUER(349, "ENCODED_ISSUER", "EncodedIssuer"),
-    ENCODED_SECURITY_DESC_LEN(350, "ENCODED_SECURITY_DESC_LEN", "EncodedSecurityDescLen"),
+    FIX341_TRAD_SES_START_TIME(341, "TRAD_SES_START_TIME", "TradSesStartTime"),
+    FIX342_TRAD_SES_OPEN_TIME(342, "TRAD_SES_OPEN_TIME", "TradSesOpenTime"),
+    FIX343_TRAD_SES_PRE_CLOSE_TIME(343, "TRAD_SES_PRE_CLOSE_TIME", "TradSesPreCloseTime"),
+    FIX344_TRAD_SES_CLOSE_TIME(344, "TRAD_SES_CLOSE_TIME", "TradSesCloseTime"),
+    FIX345_TRAD_SES_END_TIME(345, "TRAD_SES_END_TIME", "TradSesEndTime"),
+    FIX346_NUMBER_OF_ORDERS(346, "NUMBER_OF_ORDERS", "NumberOfOrders"),
+    FIX347_MESSAGE_ENCODING(347, "MESSAGE_ENCODING", "MessageEncoding"),
+    FIX348_ENCODED_ISSUER_LEN(348, "ENCODED_ISSUER_LEN", "EncodedIssuerLen"),
+    FIX349_ENCODED_ISSUER(349, "ENCODED_ISSUER", "EncodedIssuer"),
+    FIX350_ENCODED_SECURITY_DESC_LEN(350, "ENCODED_SECURITY_DESC_LEN", "EncodedSecurityDescLen"),
 
-    ENCODED_SECURITY_DESC(351, "ENCODED_SECURITY_DESC", "EncodedSecurityDesc"),
-    ENCODED_LIST_EXEC_INST_LEN(352, "ENCODED_LIST_EXEC_INST_LEN", "EncodedListExecInstLen"),
-    ENCODED_LIST_EXEC_INST(353, "ENCODED_LIST_EXEC_INST", "EncodedListExecInst"),
-    ENCODED_TEXT_LEN(354, "ENCODED_TEXT_LEN", "EncodedTextLen"),
-    ENCODED_TEXT(355, "ENCODED_TEXT", "EncodedText"),
-    ENCODED_SUBJECT_LEN(356, "ENCODED_SUBJECT_LEN", "EncodedSubjectLen"),
-    ENCODED_SUBJECT(357, "ENCODED_SUBJECT", "EncodedSubject"),
-    ENCODED_HEADLINE_LEN(358, "ENCODED_HEADLINE_LEN", "EncodedHeadlineLen"),
-    ENCODED_HEADLINE(359, "ENCODED_HEADLINE", "EncodedHeadline"),
-    ENCODED_ALLOC_TEXT_LEN(360, "ENCODED_ALLOC_TEXT_LEN", "EncodedAllocTextLen"),
+    FIX351_ENCODED_SECURITY_DESC(351, "ENCODED_SECURITY_DESC", "EncodedSecurityDesc"),
+    FIX352_ENCODED_LIST_EXEC_INST_LEN(352, "ENCODED_LIST_EXEC_INST_LEN", "EncodedListExecInstLen"),
+    FIX353_ENCODED_LIST_EXEC_INST(353, "ENCODED_LIST_EXEC_INST", "EncodedListExecInst"),
+    FIX354_ENCODED_TEXT_LEN(354, "ENCODED_TEXT_LEN", "EncodedTextLen"),
+    FIX355_ENCODED_TEXT(355, "ENCODED_TEXT", "EncodedText"),
+    FIX356_ENCODED_SUBJECT_LEN(356, "ENCODED_SUBJECT_LEN", "EncodedSubjectLen"),
+    FIX357_ENCODED_SUBJECT(357, "ENCODED_SUBJECT", "EncodedSubject"),
+    FIX358_ENCODED_HEADLINE_LEN(358, "ENCODED_HEADLINE_LEN", "EncodedHeadlineLen"),
+    FIX359_ENCODED_HEADLINE(359, "ENCODED_HEADLINE", "EncodedHeadline"),
+    FIX360_ENCODED_ALLOC_TEXT_LEN(360, "ENCODED_ALLOC_TEXT_LEN", "EncodedAllocTextLen"),
 
-    ENCODED_ALLOC_TEXT(361, "ENCODED_ALLOC_TEXT", "EncodedAllocText"),
-    ENCODED_UNDERLYING_ISSUER_LEN(362, "ENCODED_UNDERLYING_ISSUER_LEN", "EncodedUnderlyingIssuerLen"),
-    ENCODED_UNDERLYING_ISSUER(363, "ENCODED_UNDERLYING_ISSUER", "EncodedUnderlyingIssuer"),
-    ENCODED_UNDERLYING_SECURITY_DESC_LEN(364, "ENCODED_UNDERLYING_SECURITY_DESC_LEN", "EncodedUnderlyingSecurityDescLen"),
-    ENCODED_UNDERLYING_SECURITY_DESC(365, "ENCODED_UNDERLYING_SECURITY_DESC", "EncodedUnderlyingSecurityDesc"),
-    ALLOC_PRICE(366, "ALLOC_PRICE", "AllocPrice"),
-    QUOTE_SET_VALID_UNTIL_TIME(367, "QUOTE_SET_VALID_UNTIL_TIME", "QuoteSetValidUntilTime"),
-    QUOTE_ENTRY_REJECT_REASON(368, "QUOTE_ENTRY_REJECT_REASON", "QuoteEntryRejectReason"),
-    LAST_MSG_SEQ_NUM_PROCESSED(369, "LAST_MSG_SEQ_NUM_PROCESSED", "LastMsgSeqNumProcessed"),
-    ON_BEHALF_OF_SENDING_TIME(370, "ON_BEHALF_OF_SENDING_TIME", "OnBehalfOfSendingTime"),
+    FIX361_ENCODED_ALLOC_TEXT(361, "ENCODED_ALLOC_TEXT", "EncodedAllocText"),
+    FIX362_ENCODED_UNDERLYING_ISSUER_LEN(362, "ENCODED_UNDERLYING_ISSUER_LEN", "EncodedUnderlyingIssuerLen"),
+    FIX363_ENCODED_UNDERLYING_ISSUER(363, "ENCODED_UNDERLYING_ISSUER", "EncodedUnderlyingIssuer"),
+    FIX364_ENCODED_UNDERLYING_SECURITY_DESC_LEN(364, "ENCODED_UNDERLYING_SECURITY_DESC_LEN", "EncodedUnderlyingSecurityDescLen"),
+    FIX365_ENCODED_UNDERLYING_SECURITY_DESC(365, "ENCODED_UNDERLYING_SECURITY_DESC", "EncodedUnderlyingSecurityDesc"),
+    FIX366_ALLOC_PRICE(366, "ALLOC_PRICE", "AllocPrice"),
+    FIX367_QUOTE_SET_VALID_UNTIL_TIME(367, "QUOTE_SET_VALID_UNTIL_TIME", "QuoteSetValidUntilTime"),
+    FIX368_QUOTE_ENTRY_REJECT_REASON(368, "QUOTE_ENTRY_REJECT_REASON", "QuoteEntryRejectReason"),
+    FIX369_LAST_MSG_SEQ_NUM_PROCESSED(369, "LAST_MSG_SEQ_NUM_PROCESSED", "LastMsgSeqNumProcessed"),
+    FIX370_ON_BEHALF_OF_SENDING_TIME(370, "ON_BEHALF_OF_SENDING_TIME", "OnBehalfOfSendingTime"),
 
-    REF_TAG_ID(371, "REF_TAG_ID", "RefTagID"),
-    REF_MSG_TYPE(372, "REF_MSG_TYPE", "RefMsgType"),
-    SESSION_REJECT_REASON(373, "SESSION_REJECT_REASON", "SessionRejectReason"),
-    BID_REQUEST_TRANS_TYPE(374, "BID_REQUEST_TRANS_TYPE", "BidRequestTransType"),
-    CONTRA_BROKER(375, "CONTRA_BROKER", "ContraBroker"),
-    COMPLIANCE_ID(376, "COMPLIANCE_ID", "ComplianceID"),
-    SOLICITED_FLAG(377, "SOLICITED_FLAG", "SolicitedFlag"),
-    EXEC_RESTATEMENT_REASON(378, "EXEC_RESTATEMENT_REASON", "ExecRestatementReason"),
-    BUSINESS_REJECT_REF_ID(379, "BUSINESS_REJECT_REF_ID", "BusinessRejectRefID"),
-    BUSINESS_REJECT_REASON(380, "BUSINESS_REJECT_REASON", "BusinessRejectReason"),
+    FIX371_REF_TAG_ID(371, "REF_TAG_ID", "RefTagID"),
+    FIX372_REF_MSG_TYPE(372, "REF_MSG_TYPE", "RefMsgType"),
+    FIX373_SESSION_REJECT_REASON(373, "SESSION_REJECT_REASON", "SessionRejectReason"),
+    FIX374_BID_REQUEST_TRANS_TYPE(374, "BID_REQUEST_TRANS_TYPE", "BidRequestTransType"),
+    FIX375_CONTRA_BROKER(375, "CONTRA_BROKER", "ContraBroker"),
+    FIX376_COMPLIANCE_ID(376, "COMPLIANCE_ID", "ComplianceID"),
+    FIX377_SOLICITED_FLAG(377, "SOLICITED_FLAG", "SolicitedFlag"),
+    FIX378_EXEC_RESTATEMENT_REASON(378, "EXEC_RESTATEMENT_REASON", "ExecRestatementReason"),
+    FIX379_BUSINESS_REJECT_REF_ID(379, "BUSINESS_REJECT_REF_ID", "BusinessRejectRefID"),
+    FIX380_BUSINESS_REJECT_REASON(380, "BUSINESS_REJECT_REASON", "BusinessRejectReason"),
 
-    GROSS_TRADE_AMT(381, "GROSS_TRADE_AMT", "GrossTradeAmt"),
-    NO_CONTRA_BROKERS(382, "NO_CONTRA_BROKERS", "NoContraBrokers"),
-    MAX_MESSAGE_SIZE(383, "MAX_MESSAGE_SIZE", "MaxMessageSize"),
-    NO_MSG_TYPES(384, "NO_MSG_TYPES", "NoMsgTypes"),
-    MSG_DIRECTION(385, "MSG_DIRECTION", "MsgDirection"),
-    NO_TRADING_SESSIONS(386, "NO_TRADING_SESSIONS", "NoTradingSessions"),
-    TOTAL_VOLUME_TRADED(387, "TOTAL_VOLUME_TRADED", "TotalVolumeTraded"),
-    DISCRETION_INST(388, "DISCRETION_INST", "DiscretionInst"),
-    DISCRETION_OFFSET(389, "DISCRETION_OFFSET", "DiscretionOffset"),
-    BID_ID(390, "BID_ID", "BidID"),
+    FIX381_GROSS_TRADE_AMT(381, "GROSS_TRADE_AMT", "GrossTradeAmt"),
+    FIX382_NO_CONTRA_BROKERS(382, "NO_CONTRA_BROKERS", "NoContraBrokers"),
+    FIX383_MAX_MESSAGE_SIZE(383, "MAX_MESSAGE_SIZE", "MaxMessageSize"),
+    FIX384_NO_MSG_TYPES(384, "NO_MSG_TYPES", "NoMsgTypes"),
+    FIX385_MSG_DIRECTION(385, "MSG_DIRECTION", "MsgDirection"),
+    FIX386_NO_TRADING_SESSIONS(386, "NO_TRADING_SESSIONS", "NoTradingSessions"),
+    FIX387_TOTAL_VOLUME_TRADED(387, "TOTAL_VOLUME_TRADED", "TotalVolumeTraded"),
+    FIX388_DISCRETION_INST(388, "DISCRETION_INST", "DiscretionInst"),
+    FIX389_DISCRETION_OFFSET(389, "DISCRETION_OFFSET", "DiscretionOffset"),
+    FIX390_BID_ID(390, "BID_ID", "BidID"),
 
-    CLIENT_BID_ID(391, "CLIENT_BID_ID", "ClientBidID"),
-    LIST_NAME(392, "LIST_NAME", "ListName"),
-    TOTAL_NUM_SECURITIES(393, "TOTAL_NUM_SECURITIES", "TotalNumSecurities"),
-    BID_TYPE(394, "BID_TYPE", "BidType"),
-    NUM_TICKETS(395, "NUM_TICKETS", "NumTickets"),
-    SIDE_VALUE1(396, "SIDE_VALUE1", "SideValue1"),
-    SIDE_VALUE2(397, "SIDE_VALUE2", "SideValue2"),
-    NO_BID_DESCRIPTORS(398, "NO_BID_DESCRIPTORS", "NoBidDescriptors"),
-    BID_DESCRIPTOR_TYPE(399, "BID_DESCRIPTOR_TYPE", "BidDescriptorType"),
-    BID_DESCRIPTOR(400, "BID_DESCRIPTOR", "BidDescriptor"),
+    FIX391_CLIENT_BID_ID(391, "CLIENT_BID_ID", "ClientBidID"),
+    FIX392_LIST_NAME(392, "LIST_NAME", "ListName"),
+    FIX393_TOTAL_NUM_SECURITIES(393, "TOTAL_NUM_SECURITIES", "TotalNumSecurities"),
+    FIX394_BID_TYPE(394, "BID_TYPE", "BidType"),
+    FIX395_NUM_TICKETS(395, "NUM_TICKETS", "NumTickets"),
+    FIX396_SIDE_VALUE1(396, "SIDE_VALUE1", "SideValue1"),
+    FIX397_SIDE_VALUE2(397, "SIDE_VALUE2", "SideValue2"),
+    FIX398_NO_BID_DESCRIPTORS(398, "NO_BID_DESCRIPTORS", "NoBidDescriptors"),
+    FIX399_BID_DESCRIPTOR_TYPE(399, "BID_DESCRIPTOR_TYPE", "BidDescriptorType"),
+    FIX400_BID_DESCRIPTOR(400, "BID_DESCRIPTOR", "BidDescriptor"),
 
 
     // 401-500
 
-    SIDE_VALUE_IND(401, "SIDE_VALUE_IND", "SideValueInd"),
-    LIQUIDITY_PCT_LOW(402, "LIQUIDITY_PCT_LOW", "LiquidityPctLow"),
-    LIQUIDITY_PCT_HIGH(403, "LIQUIDITY_PCT_HIGH", "LiquidityPctHigh"),
-    LIQUIDITY_VALUE(404, "LIQUIDITY_VALUE", "LiquidityValue"),
-    EFP_TRACKING_ERROR(405, "EFP_TRACKING_ERROR", "EFPTrackingError"),
-    FAIR_VALUE(406, "FAIR_VALUE", "FairValue"),
-    OUTSIDE_INDEX_PCT(407, "OUTSIDE_INDEX_PCT", "OutsideIndexPct"),
-    VALUE_OF_FUTURES(408, "VALUE_OF_FUTURES", "ValueOfFutures"),
-    LIQUIDITY_IND_TYPE(409, "LIQUIDITY_IND_TYPE", "LiquidityIndType"),
-    WT_AVERAGE_LIQUIDITY(410, "WT_AVERAGE_LIQUIDITY", "WtAverageLiquidity"),
+    FIX401_SIDE_VALUE_IND(401, "SIDE_VALUE_IND", "SideValueInd"),
+    FIX402_LIQUIDITY_PCT_LOW(402, "LIQUIDITY_PCT_LOW", "LiquidityPctLow"),
+    FIX403_LIQUIDITY_PCT_HIGH(403, "LIQUIDITY_PCT_HIGH", "LiquidityPctHigh"),
+    FIX404_LIQUIDITY_VALUE(404, "LIQUIDITY_VALUE", "LiquidityValue"),
+    FIX405_EFP_TRACKING_ERROR(405, "EFP_TRACKING_ERROR", "EFPTrackingError"),
+    FIX406_FAIR_VALUE(406, "FAIR_VALUE", "FairValue"),
+    FIX407_OUTSIDE_INDEX_PCT(407, "OUTSIDE_INDEX_PCT", "OutsideIndexPct"),
+    FIX408_VALUE_OF_FUTURES(408, "VALUE_OF_FUTURES", "ValueOfFutures"),
+    FIX409_LIQUIDITY_IND_TYPE(409, "LIQUIDITY_IND_TYPE", "LiquidityIndType"),
+    FIX410_WT_AVERAGE_LIQUIDITY(410, "WT_AVERAGE_LIQUIDITY", "WtAverageLiquidity"),
 
-    EXCHANGE_FOR_PHYSICAL(411, "EXCHANGE_FOR_PHYSICAL", "ExchangeForPhysical"),
-    OUT_MAIN_CNTRY_U_INDEX(412, "OUT_MAIN_CNTRY_U_INDEX", "OutMainCntryUIndex"),
-    CROSS_PERCENT(413, "CROSS_PERCENT", "CrossPercent"),
-    PROG_RPT_REQS(414, "PROG_RPT_REQS", "ProgRptReqs"),
-    PROG_PERIOD_INTERVAL(415, "PROG_PERIOD_INTERVAL", "ProgPeriodInterval"),
-    INC_TAX_IND(416, "INC_TAX_IND", "IncTaxInd"),
-    NUM_BIDDERS(417, "NUM_BIDDERS", "NumBidders"),
-    TRADE_TYPE(418, "TRADE_TYPE", "TradeType"),
-    BASIS_PX_TYPE(419, "BASIS_PX_TYPE", "BasisPxType"),
-    NO_BID_COMPONENTS(420, "NO_BID_COMPONENTS", "NoBidComponents"),
+    FIX411_EXCHANGE_FOR_PHYSICAL(411, "EXCHANGE_FOR_PHYSICAL", "ExchangeForPhysical"),
+    FIX412_OUT_MAIN_CNTRY_U_INDEX(412, "OUT_MAIN_CNTRY_U_INDEX", "OutMainCntryUIndex"),
+    FIX413_CROSS_PERCENT(413, "CROSS_PERCENT", "CrossPercent"),
+    FIX414_PROG_RPT_REQS(414, "PROG_RPT_REQS", "ProgRptReqs"),
+    FIX415_PROG_PERIOD_INTERVAL(415, "PROG_PERIOD_INTERVAL", "ProgPeriodInterval"),
+    FIX416_INC_TAX_IND(416, "INC_TAX_IND", "IncTaxInd"),
+    FIX417_NUM_BIDDERS(417, "NUM_BIDDERS", "NumBidders"),
+    FIX418_TRADE_TYPE(418, "TRADE_TYPE", "TradeType"),
+    FIX419_BASIS_PX_TYPE(419, "BASIS_PX_TYPE", "BasisPxType"),
+    FIX420_NO_BID_COMPONENTS(420, "NO_BID_COMPONENTS", "NoBidComponents"),
 
-    COUNTRY(421, "COUNTRY", "Country"),
-    TOT_NO_STRIKES(422, "TOT_NO_STRIKES", "TotNoStrikes"),
-    PRICE_TYPE(423, "PRICE_TYPE", "PriceType"),
-    DAY_ORDER_QTY(424, "DAY_ORDER_QTY", "DayOrderQty"),
-    DAY_CUM_QTY(425, "DAY_CUM_QTY", "DayCumQty"),
-    DAY_AVG_PX(426, "DAY_AVG_PX", "DayAvgPx"),
-    GT_BOOKING_INST(427, "GT_BOOKING_INST", "GTBookingInst"),
-    NO_STRIKES(428, "NO_STRIKES", "NoStrikes"),
-    LIST_STATUS_TYPE(429, "LIST_STATUS_TYPE", "ListStatusType"),
-    NET_GROSS_IND(430, "NET_GROSS_IND", "NetGrossInd"),
+    FIX421_COUNTRY(421, "COUNTRY", "Country"),
+    FIX422_TOT_NO_STRIKES(422, "TOT_NO_STRIKES", "TotNoStrikes"),
+    FIX423_PRICE_TYPE(423, "PRICE_TYPE", "PriceType"),
+    FIX424_DAY_ORDER_QTY(424, "DAY_ORDER_QTY", "DayOrderQty"),
+    FIX425_DAY_CUM_QTY(425, "DAY_CUM_QTY", "DayCumQty"),
+    FIX426_DAY_AVG_PX(426, "DAY_AVG_PX", "DayAvgPx"),
+    FIX427_GT_BOOKING_INST(427, "GT_BOOKING_INST", "GTBookingInst"),
+    FIX428_NO_STRIKES(428, "NO_STRIKES", "NoStrikes"),
+    FIX429_LIST_STATUS_TYPE(429, "LIST_STATUS_TYPE", "ListStatusType"),
+    FIX430_NET_GROSS_IND(430, "NET_GROSS_IND", "NetGrossInd"),
 
-    LIST_ORDER_STATUS(431, "LIST_ORDER_STATUS", "ListOrderStatus"),
-    EXPIRE_DATE(432, "EXPIRE_DATE", "ExpireDate"),
-    LIST_EXEC_INST_TYPE(433, "LIST_EXEC_INST_TYPE", "ListExecInstType"),
-    CXL_REJ_RESPONSE_TO(434, "CXL_REJ_RESPONSE_TO", "CxlRejResponseTo"),
-    UNDERLYING_COUPON_RATE(435, "UNDERLYING_COUPON_RATE", "UnderlyingCouponRate"),
-    UNDERLYING_CONTRACT_MULTIPLIER(436, "UNDERLYING_CONTRACT_MULTIPLIER", "UnderlyingContractMultiplier"),
-    CONTRA_TRADE_QTY(437, "CONTRA_TRADE_QTY", "ContraTradeQty"),
-    CONTRA_TRADE_TIME(438, "CONTRA_TRADE_TIME", "ContraTradeTime"),
-    CLEARING_FIRM(439, "CLEARING_FIRM", "ClearingFirm"),
-    CLEARING_ACCOUNT(440, "CLEARING_ACCOUNT", "ClearingAccount"),
+    FIX431_LIST_ORDER_STATUS(431, "LIST_ORDER_STATUS", "ListOrderStatus"),
+    FIX432_EXPIRE_DATE(432, "EXPIRE_DATE", "ExpireDate"),
+    FIX433_LIST_EXEC_INST_TYPE(433, "LIST_EXEC_INST_TYPE", "ListExecInstType"),
+    FIX434_CXL_REJ_RESPONSE_TO(434, "CXL_REJ_RESPONSE_TO", "CxlRejResponseTo"),
+    FIX435_UNDERLYING_COUPON_RATE(435, "UNDERLYING_COUPON_RATE", "UnderlyingCouponRate"),
+    FIX436_UNDERLYING_CONTRACT_MULTIPLIER(436, "UNDERLYING_CONTRACT_MULTIPLIER", "UnderlyingContractMultiplier"),
+    FIX437_CONTRA_TRADE_QTY(437, "CONTRA_TRADE_QTY", "ContraTradeQty"),
+    FIX438_CONTRA_TRADE_TIME(438, "CONTRA_TRADE_TIME", "ContraTradeTime"),
+    FIX439_CLEARING_FIRM(439, "CLEARING_FIRM", "ClearingFirm"),
+    FIX440_CLEARING_ACCOUNT(440, "CLEARING_ACCOUNT", "ClearingAccount"),
 
-    LIQUIDITY_NUM_SECURITIES(441, "LIQUIDITY_NUM_SECURITIES", "LiquidityNumSecurities"),
-    MULTI_LEG_REPORTING_TYPE(442, "MULTI_LEG_REPORTING_TYPE", "MultiLegReportingType"),
-    STRIKE_TIME(443, "STRIKE_TIME", "StrikeTime"),
-    LIST_STATUS_TEXT(444, "LIST_STATUS_TEXT", "ListStatusText"),
-    LIST_STATUS_ENCODED_TEXT_LEN(445, "LIST_STATUS_ENCODED_TEXT_LEN", "ListStatusEncodedTextLen"),
-    LIST_STATUS_ENCODED_TEXT(446, "LIST_STATUS_ENCODED_TEXT", "ListStatusEncodedText"),
+    FIX441_LIQUIDITY_NUM_SECURITIES(441, "LIQUIDITY_NUM_SECURITIES", "LiquidityNumSecurities"),
+    FIX442_MULTI_LEG_REPORTING_TYPE(442, "MULTI_LEG_REPORTING_TYPE", "MultiLegReportingType"),
+    FIX443_STRIKE_TIME(443, "STRIKE_TIME", "StrikeTime"),
+    FIX444_LIST_STATUS_TEXT(444, "LIST_STATUS_TEXT", "ListStatusText"),
+    FIX445_LIST_STATUS_ENCODED_TEXT_LEN(445, "LIST_STATUS_ENCODED_TEXT_LEN", "ListStatusEncodedTextLen"),
+    FIX446_LIST_STATUS_ENCODED_TEXT(446, "LIST_STATUS_ENCODED_TEXT", "ListStatusEncodedText"),
     /*
      *
      * End of FIX4.2
@@ -553,10 +555,10 @@ public enum FIXType {
      * Start of FIX4.3 as defined by the FIX Protocol Specification 4.3
      *  Tags: 447-659
      */
-    PARTY_ID_SOURCE(447, "PARTY_ID_SOURCE", "PartyIDSource"),
-    PARTY_ID(448, "PARTY_ID", "PartyID"),
-    TOTAL_VOLUME_TRADED_DATE(449, "TOTAL_VOLUME_TRADED_DATE", "TotalVolumeTradedDate (replaced)"),
-    TOTAL_VOLUME_TRADED_TIME(450, "TOTAL_VOLUME_TRADED_TIME", "TotalVolumeTradedTime (replaced)"),
+    FIX447_PARTY_ID_SOURCE(447, "PARTY_ID_SOURCE", "PartyIDSource"),
+    FIX448_PARTY_ID(448, "PARTY_ID", "PartyID"),
+    FIX449_TOTAL_VOLUME_TRADED_DATE(449, "TOTAL_VOLUME_TRADED_DATE", "TotalVolumeTradedDate (replaced)"),
+    FIX450_TOTAL_VOLUME_TRADED_TIME(450, "TOTAL_VOLUME_TRADED_TIME", "TotalVolumeTradedTime (replaced)"),
 
     NET_CHG_PREV_DAY(451, "NET_CHG_PREV_DAY", "NetChgPrevDay"),
     PARTY_ROLE(452, "PARTY_ROLE", "PartyRole"),
@@ -1388,1353 +1390,45 @@ public enum FIXType {
     }
 
     @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getFIXTypeName())
-                .append("=[")
-                .append(getFIXNumber())
-                .append(",")
-                .append(getFIXName())
-                .append(",")
-                .append(getFIXDescription())
-                .append("]");
-        return sb.toString();
+    public String toLogStringVerbose() {
+        String sb = this.getClass().getSimpleName()
+                .concat("\n\tFIXTypeName[")
+                .concat(getFIXTypeName())
+                .concat("]")
+                .concat("\n\tFIXNumber[")
+                .concat(String.valueOf( getFIXNumber() ))
+                .concat("]")
+                .concat("\n\tFIXName[")
+                .concat(getFIXName())
+                .concat("]")
+                .concat("\n\tFIXDescription[")
+                .concat(getFIXDescription())
+                .concat("]");
+        return sb;
     }
-
-
+    @Override
+    public String toString() {
+        String sb = getFIXTypeName()
+                .concat("=[")
+                .concat(String.valueOf( getFIXNumber() ))
+                .concat(",")
+                .concat(getFIXName())
+                .concat(",")
+                .concat(getFIXDescription())
+                .concat("]");
+        return sb;
+    }
 
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-
-        // 1-100
-
         /*
-         * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
-         *  Tags: 1-140
+         * dump all the enum values
          */
-        System.out.println(FIXType.FIX1_ACCOUNT);
-        System.out.println(FIXType.FIX2_ADV_ID);
-        System.out.println(FIXType.FIX3_ADV_REF_ID);
-        System.out.println(FIXType.FIX4_ADV_SIDE);
-        System.out.println(FIXType.FIX5_ADV_TRANS_TYPE);
-        System.out.println(FIXType.FIX6_AVG_PX);
-        System.out.println(FIXType.FIX7_BEGIN_SEQ_NO);
-        System.out.println(FIXType.FIX8_BEGIN_STRING);
-        System.out.println(FIXType.FIX9_BODY_LENGTH);
-        System.out.println(FIXType.FIX10_CHECK_SUM);
-
-        System.out.println(FIXType.FIX11_CL_ORD_ID);
-        System.out.println(FIXType.FIX12_COMMISSION);
-        System.out.println(FIXType.FIX13_COMM_TYPE);
-        System.out.println(FIXType.FIX14_CUM_QTY);
-        System.out.println(FIXType.FIX15_CURRENCY);
-        System.out.println(FIXType.FIX16_END_SEQ_NO);
-        System.out.println(FIXType.FIX17_EXEC_ID);
-        System.out.println(FIXType.FIX18_EXEC_INST);
-        System.out.println(FIXType.FIX19_EXEC_REF_ID);
-        System.out.println(FIXType.FIX20_EXEC_TRANS_TYPE);
-
-        System.out.println(FIXType.FIX21_HANDL_INST);
-        System.out.println(FIXType.FIX22_SECURITY_ID_SOURCE);
-        System.out.println(FIXType.FIX23_IOI_ID);
-        System.out.println(FIXType.FIX24_IOI_OTH_SVC);
-        System.out.println(FIXType.FIX25_IOI_QLTY_IND);
-        System.out.println(FIXType.FIX26_IOI_REF_ID);
-        System.out.println(FIXType.FIX27_IOI_SHARES);
-        System.out.println(FIXType.FIX28_IOI_TRANS_TYPE);
-        System.out.println(FIXType.FIX29_LAST_CAPACITY);
-        System.out.println(FIXType.FIX30_LAST_MKT);
-
-        System.out.println(FIXType.FIX31_LAST_PX);
-        System.out.println(FIXType.FIX32_LAST_QTY);
-        System.out.println(FIXType.FIX33_NO_LINES_OF_TEXT);
-        System.out.println(FIXType.FIX34_MSG_SEQ_NUM);
-        System.out.println(FIXType.FIX35_MSG_TYPE);
-        System.out.println(FIXType.FIX36_NEW_SEQ_NO);
-        System.out.println(FIXType.FIX37_ORDER_ID);
-        System.out.println(FIXType.FIX38_ORDER_QTY);
-        System.out.println(FIXType.FIX39_ORD_STATUS);
-        System.out.println(FIXType.FIX40_ORD_TYPE);
-
-        System.out.println(FIXType.FIX41_ORIG_CL_ORD_ID);
-        System.out.println(FIXType.FIX42_ORIG_TIME);
-        System.out.println(FIXType.FIX43_POSS_DUP_FLAG);
-        System.out.println(FIXType.FIX44_PRICE);
-        System.out.println(FIXType.FIX45_REF_SEQ_NUM);
-        System.out.println(FIXType.FIX46_RELATD_SYM);
-        System.out.println(FIXType.FIX47_RULE_80_A);
-        System.out.println(FIXType.FIX48_SECURITY_ID);
-        System.out.println(FIXType.FIX49_SENDER_COMP_ID);
-        System.out.println(FIXType.FIX50_SENDER_SUB_ID);
-
-        System.out.println(FIXType.FIX51_SENDING_DATE);
-        System.out.println(FIXType.FIX52_SENDING_TIME);
-        System.out.println(FIXType.FIX53_QUANTITY);
-        System.out.println(FIXType.FIX54_SIDE);
-        System.out.println(FIXType.FIX55_SYMBOL);
-        System.out.println(FIXType.FIX56_TARGET_COMP_ID);
-        System.out.println(FIXType.FIX57_TARGET_SUB_ID);
-        System.out.println(FIXType.FIX58_TEXT);
-        System.out.println(FIXType.FIX59_TIME_IN_FORCE);
-        System.out.println(FIXType.FIX60_TRANSACT_TIME);
-
-        System.out.println(FIXType.FIX61_URGENCY);
-        System.out.println(FIXType.FIX62_VALID_UNTIL_TIME);
-        System.out.println(FIXType.FIX63_SETTLMNT_TYP);
-        System.out.println(FIXType.FIX64_FUT_SETT_DATE);
-        System.out.println(FIXType.FIX65_SYMBOL_SFX);
-        System.out.println(FIXType.FIX66_LIST_ID);
-        System.out.println(FIXType.FIX67_LIST_SEQ_NO);
-        System.out.println(FIXType.FIX68_TOT_NO_ORDERS);
-        System.out.println(FIXType.FIX69_LIST_EXEC_INST);
-        System.out.println(FIXType.FIX70_ALLOC_ID);
-
-        System.out.println(FIXType.FIX71_ALLOC_TRANS_TYPE);
-        System.out.println(FIXType.FIX72_REF_ALLOC_ID);
-        System.out.println(FIXType.FIX73_NO_ORDERS);
-        System.out.println(FIXType.FIX74_AVG_PRX_PRECISION);
-        System.out.println(FIXType.FIX75_TRADE_DATE);
-        System.out.println(FIXType.FIX76_EXEC_BROKER);
-        System.out.println(FIXType.FIX77_OPEN_CLOSE);
-        System.out.println(FIXType.FIX78_NO_ALLOCS);
-        System.out.println(FIXType.FIX79_ALLOC_ACCOUNT);
-        System.out.println(FIXType.FIX80_ALLOC_SHARES);
-
-        System.out.println(FIXType.FIX81_PROCESS_CODE);
-        System.out.println(FIXType.FIX82_NO_RPTS);
-        System.out.println(FIXType.FIX83_RPT_SEQ);
-        System.out.println(FIXType.FIX84_CXL_QTY);
-        System.out.println(FIXType.FIX85_NO_DLVY_INST);
-        System.out.println(FIXType.FIX86_DLVY_INST);
-        System.out.println(FIXType.FIX87_ALLOC_STATUS);
-        System.out.println(FIXType.FIX88_ALLOC_REJ_CODE);
-        System.out.println(FIXType.FIX89_SIGNATURE);
-        System.out.println(FIXType.FIX90_SECURE_DATA_LEN);
-
-        System.out.println(FIXType.FIX91_SECURE_DATA);
-        System.out.println(FIXType.FIX92_BROKER_OF_CREDIT);
-        System.out.println(FIXType.FIX93_SIGNATURE_LENGTH);
-        System.out.println(FIXType.FIX94_EMAIL_TYPE);
-        System.out.println(FIXType.FIX95_RAW_DATA_LENGTH);
-        System.out.println(FIXType.FIX96_RAW_DATA);
-        System.out.println(FIXType.FIX97_POSS_RESEND);
-        System.out.println(FIXType.FIX98_ENCRYPT_METHOD);
-        System.out.println(FIXType.FIX99_STOP_PX);
-        System.out.println(FIXType.FIX100_EX_DESTINATION);
-
-
-        // 101-200
-
-        System.out.println(FIX102_CXL_REJ_REASON);
-        System.out.println(FIX103_ORD_REJ_REASON);
-        System.out.println(FIX104_IOI_QUALIFIER);
-        System.out.println(FIX105_WAVE_NO);
-        System.out.println(FIX106_ISSUER);
-        System.out.println(FIX107_SECURITY_DESC);
-        System.out.println(FIX108_HEART_BT_INT);
-        System.out.println(FIX109_CLIENT_ID);
-        System.out.println(FIX110_MIN_QTY);
-
-        System.out.println(FIX111_MAX_FLOOR);
-        System.out.println(FIX112_TEST_REQ_ID);
-        System.out.println(FIX113_REPORT_TO_EXCH);
-        System.out.println(FIX114_LOCATE_REQD);
-        System.out.println(FIX115_ON_BEHALF_OF_COMP_ID);
-        System.out.println(FIX116_ON_BEHALF_OF_SUB_ID);
-        System.out.println(FIX117_QUOTE_ID);
-        System.out.println(FIX118_NET_MONEY);
-        System.out.println(FIX119_SETTL_CURR_AMT);
-        System.out.println(FIX120_SETTL_CURRENCY);
-
-        System.out.println(FIX121_FOREX_REQ);
-        System.out.println(FIX122_ORIG_SENDING_TIME);
-        System.out.println(FIX123_GAP_FILL_FLAG);
-        System.out.println(FIX124_NO_EXECS);
-        System.out.println(FIX125_CXL_TYPE);
-        System.out.println(FIX126_EXPIRE_TIME);
-        System.out.println(FIX127_DK_REASON);
-        System.out.println(FIX128_DELIVER_TO_COMP_ID);
-        System.out.println(FIX129_DELIVER_TO_SUB_ID);
-        System.out.println(FIX130_IOI_NATURAL_FLAG);
-
-        System.out.println(FIX131_QUOTE_REQ_ID);
-        System.out.println(FIX132_BID_PX);
-        System.out.println(FIX133_OFFER_PX);
-        System.out.println(FIX134_BID_SIZE);
-        System.out.println(FIX135_OFFER_SIZE);
-        System.out.println(FIX136_NO_MISC_FEES);
-        System.out.println(FIX137_MISC_FEE_AMT);
-        System.out.println(FIX138_MISC_FEE_CURR);
-        System.out.println(FIX139_MISC_FEE_TYPE);
-        System.out.println(FIX140_PREV_CLOSE_PX);
-        /*
-         *
-         * End of FIX4.0
-         *
-         */
-
-
-        /*
-         * Start of FIX4.2 as defined by the FIX Protocol Specification 4.2
-         *  Tags: 141-446
-         */
-        System.out.println(FIX141_RESET_SEQ_NUM_FLAG);
-        System.out.println(FIX142_SENDER_LOCATION_ID);
-        System.out.println(FIX143_TARGET_LOCATION_ID);
-        System.out.println(FIX144_ON_BEHALF_OF_LOCATION_ID);
-        System.out.println(FIX145_DELIVER_TO_LOCATION_ID);
-        System.out.println(FIX146_NO_RELATED_SYM);
-        System.out.println(FIX147_SUBJECT);
-        System.out.println(FIX148_HEADLINE);
-        System.out.println(FIX149_URL_LINK);
-        System.out.println(FIX150_EXEC_TYPE);
-
-        System.out.println(FIX151_LEAVES_QTY);
-        System.out.println(FIX152_CASH_ORDER_QTY);
-        System.out.println(FIX153_ALLOC_AVG_PX);
-        System.out.println(FIX154_ALLOC_NET_MONEY);
-        System.out.println(FIX155_SETTL_CURR_FX_RATE);
-        System.out.println(FIX156_SETTL_CURR_FX_RATE_CALC);
-        System.out.println(FIX157_NUM_DAYS_INTEREST);
-        System.out.println(FIX158_ACCRUED_INTEREST_RATE);
-        System.out.println(FIX159_ACCRUED_INTEREST_AMT);
-        System.out.println(FIX160_SETTL_INST_MODE);
-
-        System.out.println(FIX161_ALLOC_TEXT);
-        System.out.println(FIX162_SETTL_INST_ID);
-        System.out.println(FIX163_SETTL_INST_TRANS_TYPE);
-        System.out.println(FIX164_EMAIL_THREAD_ID);
-        System.out.println(FIX165_SETTL_INST_SOURCE);
-        System.out.println(FIX166_SETTL_LOCATION);
-        System.out.println(FIX167_SECURITY_TYPE);
-        System.out.println(FIX168_EFFECTIVE_TIME);
-        System.out.println(FIX169_STAND_INST_DB_TYPE);
-        System.out.println(FIX170_STAND_INST_DB_NAME);
-
-        System.out.println(FIX171_STAND_INST_DB_ID);
-        System.out.println(FIX172_SETTL_DELIVERY_TYPE);
-        System.out.println(FIX173_SETTL_DEPOSITORY_CODE);
-        System.out.println(FIX174_SETTL_BRKR_CODE);
-        System.out.println(FIX175_SETTL_INST_CODE);
-        System.out.println(FIX176_SECURITY_SETTL_AGENT_NAME);
-        System.out.println(FIX177_SECURITY_SETTL_AGENT_CODE);
-        System.out.println(FIX178_SECURITY_SETTL_AGENT_ACCT_NUM);
-        System.out.println(FIX179_SECURITY_SETTL_AGENT_ACCT_NAME);
-        System.out.println(FIX180_SECURITY_SETTL_AGENT_CONTACT_NAME);
-
-        System.out.println(FIX181_SECURITY_SETTL_AGENT_CONTACT_PHONE);
-        System.out.println(FIX182_CASH_SETTL_AGENT_NAME);
-        System.out.println(FIX183_CASH_SETTL_AGENT_CODE);
-        System.out.println(FIX184_CASH_SETTL_AGENT_ACCT_NUM);
-        System.out.println(FIX185_CASH_SETTL_AGENT_ACCT_NAME);
-        System.out.println(FIX186_CASH_SETTL_AGENT_CONTACT_NAME);
-        System.out.println(FIX187_CASH_SETTL_AGENT_CONTACT_PHONE);
-        System.out.println(FIX188_BID_SPOT_RATE);
-        System.out.println(FIX189_BID_FORWARD_POINTS);
-        System.out.println(FIX190_OFFER_SPOT_RATE);
-
-        System.out.println(FIX191_OFFER_FORWARD_POINTS);
-        System.out.println(FIX192_ORDER_QTY_2);
-        System.out.println(FIX193_FUT_SETT_DATE_2);
-        System.out.println(FIX194_LAST_SPOT_RATE);
-        System.out.println(FIX195_LAST_FORWARD_POINTS);
-        System.out.println(FIX196_ALLOC_LINK_ID);
-        System.out.println(FIX197_ALLOC_LINK_TYPE);
-        System.out.println(FIX198_SECONDARY_ORDER_ID);
-        System.out.println(FIX199_NO_IOI_QUALIFIERS);
-        System.out.println(FIX200_MATURITY_MONTH_YEAR);
-
-
-        // 201-300
-
-        System.out.println(FIX201_PUT_OR_CALL);
-        System.out.println(STRIKE_PRICE);
-        System.out.println(COVERED_OR_UNCOVERED);
-        System.out.println(CUSTOMER_OR_FIRM);
-        System.out.println(MATURITY_DAY);
-        System.out.println(OPT_ATTRIBUTE);
-        System.out.println(SECURITY_EXCHANGE);
-        System.out.println(NOTIFY_BROKER_OF_CREDIT);
-        System.out.println(ALLOC_HANDL_INST);
-        System.out.println(MAX_SHOW);
-
-        System.out.println(PEG_DIFFERENCE);
-        System.out.println(XML_DATA_LEN);
-        System.out.println(XML_DATA);
-        System.out.println(SETTL_INST_REF_ID);
-        System.out.println(NO_ROUTING_IDS);
-        System.out.println(ROUTING_TYPE);
-        System.out.println(ROUTING_ID);
-        System.out.println(SPREAD_TO_BENCHMARK);
-        System.out.println(BENCHMARK);
-        System.out.println(BENCHMARK_CURVE_CURRENCY);
-
-        System.out.println(BENCHMARK_CURVE_NAME);
-        System.out.println(BENCHMARK_CURVE_POINT);
-        System.out.println(COUPON_RATE);
-        System.out.println(COUPON_PAYMENT_DATE);
-        System.out.println(ISSUE_DATE);
-        System.out.println(REPURCHASE_TERM);
-        System.out.println(REPURCHASE_RATE);
-        System.out.println(FACTOR);
-        System.out.println(TRADE_ORIGINATION_DATE);
-        System.out.println(EX_DATE);
-
-        System.out.println(CONTRACT_MULTIPLIER);
-        System.out.println(NO_STIPULATIONS);
-        System.out.println(STIPULATION_TYPE);
-        System.out.println(STIPULATION_VALUE);
-        System.out.println(YIELD_TYPE);
-        System.out.println(YIELD);
-        System.out.println(TOTAL_TAKEDOWN);
-        System.out.println(CONCESSION);
-        System.out.println(REPO_COLLATERAL_SECURITY_TYPE);
-        System.out.println(REDEMPTION_DATE);
-
-        System.out.println(UNDERLYING_COUPON_PAYMENT_DATE);
-        System.out.println(UNDERLYING_ISSUE_DATE);
-        System.out.println(UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE);
-        System.out.println(UNDERLYING_REPURCHASE_TERM);
-        System.out.println(UNDERLYING_REPURCHASE_RATE);
-        System.out.println(UNDERLYING_FACTOR);
-        System.out.println(UNDERLYING_REDEMPTION_DATE);
-        System.out.println(LEG_COUPON_PAYMENT_DATE);
-        System.out.println(LEG_ISSUE_DATE);
-        System.out.println(LEG_REPO_COLLATERAL_SECURITY_TYPE);
-
-        System.out.println(LEG_REPURCHASE_TERM);
-        System.out.println(LEG_REPURCHASE_RATE);
-        System.out.println(LEG_FACTOR);
-        System.out.println(LEG_REDEMPTION_DATE);
-        System.out.println(CREDIT_RATING);
-        System.out.println(UNDERLYING_CREDIT_RATING);
-        System.out.println(LEG_CREDIT_RATING);
-        System.out.println(TRADED_FLAT_SWITCH);
-        System.out.println(BASIS_FEATURE_DATE);
-        System.out.println(BASIS_FEATURE_PRICE);
-
-        System.out.println(MD_REQ_ID);
-        System.out.println(SUBSCRIPTION_REQUEST_TYPE);
-        System.out.println(MARKET_DEPTH);
-        System.out.println(MD_UPDATE_TYPE);
-        System.out.println(AGGREGATED_BOOK);
-        System.out.println(NO_MD_ENTRY_TYPES);
-        System.out.println(NO_MD_ENTRIES);
-        System.out.println(MD_ENTRY_TYPE);
-        System.out.println(MD_ENTRY_PX);
-
-        System.out.println(MD_ENTRY_SIZE);
-        System.out.println(MD_ENTRY_DATE);
-        System.out.println(MD_ENTRY_TIME);
-        System.out.println(TICK_DIRECTION);
-        System.out.println(MD_MKT);
-        System.out.println(QUOTE_CONDITION);
-        System.out.println(TRADE_CONDITION);
-        System.out.println(MD_ENTRY_ID);
-        System.out.println(MD_UPDATE_ACTION);
-        System.out.println(MD_ENTRY_REF_ID);
-
-        System.out.println(MD_REQ_REJ_REASON);
-        System.out.println(MD_ENTRY_ORIGINATOR);
-        System.out.println(LOCATION_ID);
-        System.out.println(DESK_ID);
-        System.out.println(DELETE_REASON);
-        System.out.println(OPEN_CLOSE_SETTLE_FLAG);
-        System.out.println(SELLER_DAYS);
-        System.out.println(MD_ENTRY_BUYER);
-        System.out.println(MD_ENTRY_SELLER);
-        System.out.println(MD_ENTRY_POSITION_NO);
-
-        System.out.println(FINANCIAL_STATUS);
-        System.out.println(CORPORATE_ACTION);
-        System.out.println(DEF_BID_SIZE);
-        System.out.println(DEF_OFFER_SIZE);
-        System.out.println(NO_QUOTE_ENTRIES);
-        System.out.println(NO_QUOTE_SETS);
-        System.out.println(QUOTE_ACK_STATUS);
-        System.out.println(QUOTE_CANCEL_TYPE);
-        System.out.println(QUOTE_ENTRY_ID);
-        System.out.println(QUOTE_REJECT_REASON);
-
-
-        // 301-400
-
-        System.out.println(QUOTE_RESPONSE_LEVEL);
-        System.out.println(QUOTE_SET_ID);
-        System.out.println(QUOTE_REQUEST_TYPE);
-        System.out.println(TOT_QUOTE_ENTRIES);
-        System.out.println(UNDERLYING_ID_SOURCE);
-        System.out.println(UNDERLYING_ISSUER);
-        System.out.println(UNDERLYING_SECURITY_DESC);
-        System.out.println(UNDERLYING_SECURITY_EXCHANGE);
-        System.out.println(UNDERLYING_SECURITY_ID);
-        System.out.println(UNDERLYING_SECURITY_TYPE);
-
-        System.out.println(UNDERLYING_SYMBOL);
-        System.out.println(UNDERLYING_SYMBOL_SFX);
-        System.out.println(UNDERLYING_MATURITY_MONTH_YEAR);
-        System.out.println(UNDERLYING_MATURITY_DAY);
-        System.out.println(UNDERLYING_PUT_OR_CALL);
-        System.out.println(UNDERLYING_STRIKE_PRICE);
-        System.out.println(UNDERLYING_OPT_ATTRIBUTE);
-        System.out.println(UNDERLYING_CURRENCY);
-        System.out.println(RATIO_QTY);
-        System.out.println(SECURITY_REQ_ID);
-
-        System.out.println(SECURITY_REQUEST_TYPE);
-        System.out.println(SECURITY_RESPONSE_ID);
-        System.out.println(SECURITY_RESPONSE_TYPE);
-        System.out.println(SECURITY_STATUS_REQ_ID);
-        System.out.println(UNSOLICITED_INDICATOR);
-        System.out.println(SECURITY_TRADING_STATUS);
-        System.out.println(HALT_REASON);
-        System.out.println(IN_VIEW_OF_COMMON);
-        System.out.println(DUE_TO_RELATED);
-        System.out.println(BUY_VOLUME);
-
-        System.out.println(SELL_VOLUME);
-        System.out.println(HIGH_PX);
-        System.out.println(LOW_PX);
-        System.out.println(ADJUSTMENT);
-        System.out.println(TRAD_SES_REQ_ID);
-        System.out.println(TRADING_SESSION_ID);
-        System.out.println(CONTRA_TRADER);
-        System.out.println(TRAD_SES_METHOD);
-        System.out.println(TRAD_SES_MODE);
-        System.out.println(TRAD_SES_STATUS);
-
-        System.out.println(TRAD_SES_START_TIME);
-        System.out.println(TRAD_SES_OPEN_TIME);
-        System.out.println(TRAD_SES_PRE_CLOSE_TIME);
-        System.out.println(TRAD_SES_CLOSE_TIME);
-        System.out.println(TRAD_SES_END_TIME);
-        System.out.println(NUMBER_OF_ORDERS);
-        System.out.println(MESSAGE_ENCODING);
-        System.out.println(ENCODED_ISSUER_LEN);
-        System.out.println(ENCODED_ISSUER);
-        System.out.println(ENCODED_SECURITY_DESC_LEN);
-
-        System.out.println(ENCODED_SECURITY_DESC);
-        System.out.println(ENCODED_LIST_EXEC_INST_LEN);
-        System.out.println(ENCODED_LIST_EXEC_INST);
-        System.out.println(ENCODED_TEXT_LEN);
-        System.out.println(ENCODED_TEXT);
-        System.out.println(ENCODED_SUBJECT_LEN);
-        System.out.println(ENCODED_SUBJECT);
-        System.out.println(ENCODED_HEADLINE_LEN);
-        System.out.println(ENCODED_HEADLINE);
-        System.out.println(ENCODED_ALLOC_TEXT_LEN);
-
-        System.out.println(ENCODED_ALLOC_TEXT);
-        System.out.println(ENCODED_UNDERLYING_ISSUER_LEN);
-        System.out.println(ENCODED_UNDERLYING_ISSUER);
-        System.out.println(ENCODED_UNDERLYING_SECURITY_DESC_LEN);
-        System.out.println(ENCODED_UNDERLYING_SECURITY_DESC);
-        System.out.println(ALLOC_PRICE);
-        System.out.println(QUOTE_SET_VALID_UNTIL_TIME);
-        System.out.println(QUOTE_ENTRY_REJECT_REASON);
-        System.out.println(LAST_MSG_SEQ_NUM_PROCESSED);
-        System.out.println(ON_BEHALF_OF_SENDING_TIME);
-
-        System.out.println(REF_TAG_ID);
-        System.out.println(REF_MSG_TYPE);
-        System.out.println(SESSION_REJECT_REASON);
-        System.out.println(BID_REQUEST_TRANS_TYPE);
-        System.out.println(CONTRA_BROKER);
-        System.out.println(COMPLIANCE_ID);
-        System.out.println(SOLICITED_FLAG);
-        System.out.println(EXEC_RESTATEMENT_REASON);
-        System.out.println(BUSINESS_REJECT_REF_ID);
-        System.out.println(BUSINESS_REJECT_REASON);
-
-        System.out.println(GROSS_TRADE_AMT);
-        System.out.println(NO_CONTRA_BROKERS);
-        System.out.println(MAX_MESSAGE_SIZE);
-        System.out.println(NO_MSG_TYPES);
-        System.out.println(MSG_DIRECTION);
-        System.out.println(NO_TRADING_SESSIONS);
-        System.out.println(TOTAL_VOLUME_TRADED);
-        System.out.println(DISCRETION_INST);
-        System.out.println(DISCRETION_OFFSET);
-        System.out.println(BID_ID);
-
-        System.out.println(CLIENT_BID_ID);
-        System.out.println(LIST_NAME);
-        System.out.println(TOTAL_NUM_SECURITIES);
-        System.out.println(BID_TYPE);
-        System.out.println(NUM_TICKETS);
-        System.out.println(SIDE_VALUE1);
-        System.out.println(SIDE_VALUE2);
-        System.out.println(NO_BID_DESCRIPTORS);
-        System.out.println(BID_DESCRIPTOR_TYPE);
-        System.out.println(BID_DESCRIPTOR);
-
-
-        // 401-500
-
-        System.out.println(SIDE_VALUE_IND);
-        System.out.println(LIQUIDITY_PCT_LOW);
-        System.out.println(LIQUIDITY_PCT_HIGH);
-        System.out.println(LIQUIDITY_VALUE);
-        System.out.println(EFP_TRACKING_ERROR);
-        System.out.println(FAIR_VALUE);
-        System.out.println(OUTSIDE_INDEX_PCT);
-        System.out.println(VALUE_OF_FUTURES);
-        System.out.println(LIQUIDITY_IND_TYPE);
-        System.out.println(WT_AVERAGE_LIQUIDITY);
-
-        System.out.println(EXCHANGE_FOR_PHYSICAL);
-        System.out.println(OUT_MAIN_CNTRY_U_INDEX);
-        System.out.println(CROSS_PERCENT);
-        System.out.println(PROG_RPT_REQS);
-        System.out.println(PROG_PERIOD_INTERVAL);
-        System.out.println(INC_TAX_IND);
-        System.out.println(NUM_BIDDERS);
-        System.out.println(TRADE_TYPE);
-        System.out.println(BASIS_PX_TYPE);
-        System.out.println(NO_BID_COMPONENTS);
-
-        System.out.println(COUNTRY);
-        System.out.println(TOT_NO_STRIKES);
-        System.out.println(PRICE_TYPE);
-        System.out.println(DAY_ORDER_QTY);
-        System.out.println(DAY_CUM_QTY);
-        System.out.println(DAY_AVG_PX);
-        System.out.println(GT_BOOKING_INST);
-        System.out.println(NO_STRIKES);
-        System.out.println(LIST_STATUS_TYPE);
-        System.out.println(NET_GROSS_IND);
-
-        System.out.println(LIST_ORDER_STATUS);
-        System.out.println(EXPIRE_DATE);
-        System.out.println(LIST_EXEC_INST_TYPE);
-        System.out.println(CXL_REJ_RESPONSE_TO);
-        System.out.println(UNDERLYING_COUPON_RATE);
-        System.out.println(UNDERLYING_CONTRACT_MULTIPLIER);
-        System.out.println(CONTRA_TRADE_QTY);
-        System.out.println(CONTRA_TRADE_TIME);
-        System.out.println(CLEARING_FIRM);
-        System.out.println(CLEARING_ACCOUNT);
-
-        System.out.println(LIQUIDITY_NUM_SECURITIES);
-        System.out.println(MULTI_LEG_REPORTING_TYPE);
-        System.out.println(STRIKE_TIME);
-        System.out.println(LIST_STATUS_TEXT);
-        System.out.println(LIST_STATUS_ENCODED_TEXT_LEN);
-        System.out.println(LIST_STATUS_ENCODED_TEXT);
-        /*
-         *
-         * End of FIX4.2
-         *
-         */
-
-
-        /*
-         * Start of FIX4.3 as defined by the FIX Protocol Specification 4.3
-         *  Tags: 447-659
-         */
-        System.out.println(PARTY_ID_SOURCE);
-        System.out.println(PARTY_ID);
-        System.out.println(TOTAL_VOLUME_TRADED_DATE);
-        System.out.println(TOTAL_VOLUME_TRADED_TIME);
-
-        System.out.println(NET_CHG_PREV_DAY);
-        System.out.println(PARTY_ROLE);
-        System.out.println(NO_PARTY_IDS);
-        System.out.println(NO_SECURITY_ALT_ID);
-        System.out.println(SECURITY_ALT_ID);
-        System.out.println(SECURITY_ALT_ID_SOURCE);
-        System.out.println(NO_UNDERLYING_SECURITY_ALT_ID);
-        System.out.println(UNDERLYING_SECURITY_ALT_ID);
-        System.out.println(UNDERLYING_SECURITY_ALT_ID_SOURCE);
-        System.out.println(PRODUCT);
-
-        System.out.println(CFI_CODE);
-        System.out.println(UNDERLYING_PRODUCT);
-        System.out.println(UNDERLYING_CFI_CODE);
-        System.out.println(TEST_MESSAGE_INDICATOR);
-        System.out.println(QUANTITY_TYPE);
-        System.out.println(BOOKING_REF_ID);
-        System.out.println(INDIVIDUAL_ALLOC_ID);
-        System.out.println(ROUNDING_DIRECTION);
-        System.out.println(ROUNDING_MODULUS);
-        System.out.println(COUNTRY_OF_ISSUE);
-
-        System.out.println(STATE_OR_PROVINCE_OF_ISSUE);
-        System.out.println(LOCALE_OF_ISSUE);
-        System.out.println(NO_REGIST_DTLS);
-        System.out.println(MAILING_DTLS);
-        System.out.println(INVESTOR_COUNTRY_OF_RESIDENCE);
-        System.out.println(PAYMENT_REF);
-        System.out.println(DISTRIB_PAYMENT_METHOD);
-        System.out.println(CASH_DISTRIB_CURR);
-        System.out.println(COMM_CURRENCY);
-        System.out.println(CANCELLATION_RIGHTS);
-
-        System.out.println(MONEY_LAUNDERING_STATUS);
-        System.out.println(MAILING_INST);
-        System.out.println(TRANS_BKD_TIME);
-        System.out.println(EXEC_PRICE_TYPE);
-        System.out.println(EXEC_PRICE_ADJUSTMENT);
-        System.out.println(DATE_OF_BIRTH);
-        System.out.println(TRADE_REPORT_TRANS_TYPE);
-        System.out.println(CARD_HOLDER_NAME);
-        System.out.println(CARD_NUMBER);
-        System.out.println(CARD_EXP_DATE);
-
-        System.out.println(CARD_ISS_NUM);
-        System.out.println(PAYMENT_METHOD);
-        System.out.println(REGIST_ACCT_TYPE);
-        System.out.println(DESIGNATION);
-        System.out.println(TAX_ADVANTAGE_TYPE);
-        System.out.println(REGIST_REJ_REASON_TEXT);
-        System.out.println(FUND_RENEW_WAIV);
-        System.out.println(CASH_DISTRIB_AGENT_NAME);
-        System.out.println(CASH_DISTRIB_AGENT_CODE);
-        System.out.println(CASH_DISTRIB_AGENT_ACCT_NUMBER);
-
-
-        // 501-600
-
-        System.out.println(CASH_DISTRIB_PAY_REF);
-        System.out.println(CASH_DISTRIB_AGENT_ACCT_NAME);
-        System.out.println(CARD_START_DATE);
-        System.out.println(PAYMENT_DATE);
-        System.out.println(PAYMENT_REMITTER_ID);
-        System.out.println(REGIST_STATUS);
-        System.out.println(REGIST_REJ_REASON_CODE);
-        System.out.println(REGIST_REF_ID);
-        System.out.println(REGIST_DTLS);
-        System.out.println(NO_DISTRIB_INSTS);
-
-        System.out.println(REGIST_EMAIL);
-        System.out.println(DISTRIB_PERCENTAGE);
-        System.out.println(REGIST_ID);
-        System.out.println(REGIST_TRANS_TYPE);
-        System.out.println(EXEC_VALUATION_POINT);
-        System.out.println(ORDER_PERCENT);
-        System.out.println(OWNERSHIP_TYPE);
-        System.out.println(NO_CONT_AMTS);
-        System.out.println(CONT_AMT_TYPE);
-        System.out.println(CONT_AMT_VALUE);
-
-        System.out.println(CONT_AMT_CURR);
-        System.out.println(OWNER_TYPE);
-        System.out.println(PARTY_SUB_ID);
-        System.out.println(NESTED_PARTY_ID);
-        System.out.println(NESTED_PARTY_ID_SOURCE);
-        System.out.println(SECONDARY_CL_ORD_ID);
-        System.out.println(SECONDARY_EXEC_ID);
-        System.out.println(ORDER_CAPACITY);
-        System.out.println(ORDER_RESTRICTIONS);
-        System.out.println(MASS_CANCEL_REQUEST_TYPE);
-
-        System.out.println(MASS_CANCEL_RESPONSE);
-        System.out.println(MASS_CANCEL_REJECT_REASON);
-        System.out.println(TOTAL_AFFECTED_ORDERS);
-        System.out.println(NO_AFFECTED_ORDERS);
-        System.out.println(AFFECTED_ORDER_ID);
-        System.out.println(AFFECTED_SECONDARY_ORDER_ID);
-        System.out.println(QUOTE_TYPE);
-        System.out.println(NESTED_PARTY_ROLE);
-        System.out.println(NO_NESTED_PARTY_IDS);
-        System.out.println(TOTAL_ACCRUED_INTEREST_AMT);
-
-        System.out.println(MATURITY_DATE);
-        System.out.println(UNDERLYING_MATURITY_DATE);
-        System.out.println(INSTR_REGISTRY);
-        System.out.println(CASH_MARGIN);
-        System.out.println(NESTED_PARTY_SUB_ID);
-        System.out.println(SCOPE);
-        System.out.println(MD_IMPLICIT_DELETE);
-        System.out.println(CROSS_ID);
-        System.out.println(CROSS_TYPE);
-        System.out.println(CROSS_PRIORITIZATION);
-
-        System.out.println(ORIG_CROSS_ID);
-        System.out.println(NO_SIDES);
-        System.out.println(FIX553_USERNAME);
-        System.out.println(FIX554_PASSWORD);
-        System.out.println(NO_LEGS);
-        System.out.println(LEG_CURRENCY);
-        System.out.println(TOT_NO_SECURITY_TYPES);
-        System.out.println(NO_SECURITY_TYPES);
-        System.out.println(SECURITY_LIST_REQUEST_TYPE);
-        System.out.println(SECURITY_REQUEST_RESULT);
-
-        System.out.println(ROUND_LOT);
-        System.out.println(MIN_TRADE_VOL);
-        System.out.println(MULTI_LEG_RPT_TYPE_REQ);
-        System.out.println(LEG_POSITION_EFFECT);
-        System.out.println(LEG_COVERED_OR_UNCOVERED);
-        System.out.println(LEG_PRICE);
-        System.out.println(TRAD_SES_STATUS_REJ_REASON);
-        System.out.println(TRADE_REQUEST_ID);
-        System.out.println(TRADE_REQUEST_TYPE);
-        System.out.println(PREVIOUSLY_REPORTED);
-
-        System.out.println(TRADE_REPORT_ID);
-        System.out.println(TRADE_REPORT_REF_ID);
-        System.out.println(MATCH_STATUS);
-        System.out.println(MATCH_TYPE);
-        System.out.println(ODD_LOT);
-        System.out.println(NO_CLEARING_INSTRUCTIONS);
-        System.out.println(CLEARING_INSTRUCTION);
-        System.out.println(TRADE_INPUT_SOURCE);
-        System.out.println(TRADE_INPUT_DEVICE);
-        System.out.println(NO_DATES);
-
-        System.out.println(ACCOUNT_TYPE);
-        System.out.println(CUST_ORDER_CAPACITY);
-        System.out.println(CL_ORD_LINK_ID);
-        System.out.println(MASS_STATUS_REQ_ID);
-        System.out.println(MASS_STATUS_REQ_TYPE);
-        System.out.println(ORIG_ORD_MOD_TIME);
-        System.out.println(LEG_SETTL_TYPE);
-        System.out.println(LEG_SETTL_DATE);
-        System.out.println(DAY_BOOKING_INST);
-        System.out.println(BOOKING_UNIT);
-
-        System.out.println(PREALLOC_METHOD);
-        System.out.println(UNDERLYING_COUNTRY_OF_ISSUE);
-        System.out.println(UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE);
-        System.out.println(UNDERLYING_LOCALE_OF_ISSUE);
-        System.out.println(UNDERLYING_INSTR_REGISTRY);
-        System.out.println(LEG_COUNTRY_OF_ISSUE);
-        System.out.println(LEG_STATE_OR_PROVINCE_OF_ISSUE);
-        System.out.println(LEG_LOCALE_OF_ISSUE);
-        System.out.println(LEG_INSTR_REGISTRY);
-        System.out.println(LEG_SYMBOL);
-
-
-        // 601-700
-
-        System.out.println(LEG_SYMBOL_SFX);
-        System.out.println(LEG_SECURITY_ID);
-        System.out.println(LEG_SECURITY_ID_SOURCE);
-        System.out.println(NO_LEG_SECURITY_ALT_ID);
-        System.out.println(LEG_SECURITY_ALT_ID);
-        System.out.println(LEG_SECURITY_ALT_ID_SOURCE);
-        System.out.println(LEG_PRODUCT);
-        System.out.println(LEG_CFI_CODE);
-        System.out.println(LEG_SECURITY_TYPE);
-        System.out.println(LEG_MATURITY_MONTH_YEAR);
-
-        System.out.println(LEG_MATURITY_DATE);
-        System.out.println(LEG_STRIKE_PRICE);
-        System.out.println(LEG_OPT_ATTRIBUTE);
-        System.out.println(LEG_CONTRACT_MULTIPLIER);
-        System.out.println(LEG_COUPON_RATE);
-        System.out.println(LEG_SECURITY_EXCHANGE);
-        System.out.println(LEG_ISSUER);
-        System.out.println(ENCODED_LEG_ISSUER_LEN);
-        System.out.println(ENCODED_LEG_ISSUER);
-        System.out.println(LEG_SECURITY_DESC);
-
-        System.out.println(ENCODED_LEG_SECURITY_DESC_LEN);
-        System.out.println(ENCODED_LEG_SECURITY_DESC);
-        System.out.println(LEG_RATIO_QTY);
-        System.out.println(LEG_SIDE);
-        System.out.println(TRADING_SESSION_SUB_ID);
-        System.out.println(ALLOC_TYPE);
-        System.out.println(NO_HOPS);
-        System.out.println(HOP_COMP_ID);
-        System.out.println(HOP_SENDING_TIME);
-        System.out.println(HOP_REF_ID);
-
-        System.out.println(MID_PX);
-        System.out.println(BID_YIELD);
-        System.out.println(MID_YIELD);
-        System.out.println(OFFER_YIELD);
-        System.out.println(CLEARING_FEE_INDICATOR);
-        System.out.println(WORKING_INDICATOR);
-        System.out.println(LEG_LAST_PX);
-        System.out.println(PRIORITY_INDICATOR);
-        System.out.println(PRICE_IMPROVEMENT);
-        System.out.println(PRICE_2);
-
-        System.out.println(LAST_FORWARD_POINTS_2);
-        System.out.println(BID_FORWARD_POINTS_2);
-        System.out.println(OFFER_FORWARD_POINTS_2);
-        System.out.println(RFQ_REQ_ID);
-        System.out.println(MKT_BID_PX);
-        System.out.println(MKT_OFFER_PX);
-        System.out.println(MIN_BID_SIZE);
-        System.out.println(MIN_OFFER_SIZE);
-        System.out.println(QUOTE_STATUS_REQ_ID);
-        System.out.println(LEGAL_CONFIRM);
-
-        System.out.println(UNDERLYING_LAST_PX);
-        System.out.println(UNDERLYING_LAST_QTY);
-        System.out.println(SEC_DEF_STATUS);
-        System.out.println(LEG_REF_ID);
-        System.out.println(CONTRA_LEG_REF_ID);
-        System.out.println(SETTL_CURR_BID_FX_RATE);
-        System.out.println(SETTL_CURR_OFFER_FX_RATE);
-        System.out.println(QUOTE_REQUEST_REJECT_REASON);
-        System.out.println(SIDE_COMPLIANCE_ID);
-        /*
-         *
-         * End of FIX4.3
-         *
-         */
-
-
-        /*
-         * Start of FIX4.4 as defined by the FIX Protocol Specification 4.4
-         *  Tags: 660-956
-         */
-        System.out.println(ACCT_ID_SOURCE);
-
-        System.out.println(ALLOC_ACCT_ID_SOURCE);
-        System.out.println(BENCHMARK_PRICE);
-        System.out.println(BENCHMARK_PRICE_TYPE);
-        System.out.println(CONFIRM_ID);
-        System.out.println(CONFIRM_STATUS);
-        System.out.println(CONFIRM_TRANS_TYPE);
-        System.out.println(CONTRACT_SETTL_MONTH);
-        System.out.println(DELIVERY_FORM);
-        System.out.println(LAST_PAR_PX);
-        System.out.println(NO_LEG_ALLOCS);
-
-        System.out.println(LEG_ALLOC_ACCOUNT);
-        System.out.println(LEG_INDIVIDUAL_ALLOC_ID);
-        System.out.println(LEG_ALLOC_QTY);
-        System.out.println(LEG_ALLOC_ACCT_ID_SOURCE);
-        System.out.println(LEG_SETTL_CURRENCY);
-        System.out.println(LEG_BENCHMARK_CURVE_CURRENCY);
-        System.out.println(LEG_BENCHMARK_CURVE_NAME);
-        System.out.println(LEG_BENCHMARK_CURVE_POINT);
-        System.out.println(LEG_BENCHMARK_PRICE);
-        System.out.println(LEG_BENCHMARK_PRICE_TYPE);
-
-        System.out.println(LEG_BID_PX);
-        System.out.println(LEG_IOI_QTY);
-        System.out.println(NO_LEG_STIPULATIONS);
-        System.out.println(LEG_OFFER_PX);
-        System.out.println(LEG_ORDER_QTY);
-        System.out.println(LEG_PRICE_TYPE);
-        System.out.println(LEG_QTY);
-        System.out.println(LEG_STIPULATION_TYPE);
-        System.out.println(LEG_STIPULATION_VALUE);
-        System.out.println(LEG_SWAP_TYPE);
-
-        System.out.println(POOL);
-        System.out.println(QUOTE_PRICE_TYPE);
-        System.out.println(QUOTE_RESP_ID);
-        System.out.println(QUOTE_RESP_TYPE);
-        System.out.println(QUOTE_QUALIFIER);
-        System.out.println(YIELD_REDEMPTION_DATE);
-        System.out.println(YIELD_REDEMPTION_PRICE);
-        System.out.println(YIELD_REDEMPTION_PRICE_TYPE);
-        System.out.println(BENCHMARK_SECURITY_ID);
-        System.out.println(REVERSAL_INDICATOR);
-
-
-        // 701-800
-
-        System.out.println(YIELD_CALC_DATE);
-        System.out.println(NO_POSITIONS);
-        System.out.println(POS_TYPE);
-        System.out.println(LONG_QTY);
-        System.out.println(SHORT_QTY);
-        System.out.println(POS_QTY_STATUS);
-        System.out.println(POS_AMT_TYPE);
-        System.out.println(POS_AMT);
-        System.out.println(POS_TRANS_TYPE);
-        System.out.println(POS_REQ_ID);
-
-        System.out.println(NO_UNDERLYINGS);
-        System.out.println(POS_MAINT_ACTION);
-        System.out.println(ORIG_POS_REQ_REF_ID);
-        System.out.println(POS_MAINT_RPT_REF_ID);
-        System.out.println(CLEARING_BUSINESS_DATE);
-        System.out.println(SETTL_SESS_ID);
-        System.out.println(SETTL_SESS_SUB_ID);
-        System.out.println(ADJUSTMENT_TYPE);
-        System.out.println(CONTRARY_INSTRUCTION_INDICATOR);
-        System.out.println(PRIOR_SPREAD_INDICATOR);
-
-        System.out.println(POS_MAINT_RPT_ID);
-        System.out.println(POS_MAINT_STATUS);
-        System.out.println(POS_MAINT_RESULT);
-        System.out.println(POS_REQ_TYPE);
-        System.out.println(RESPONSE_TRANSPORT_TYPE);
-        System.out.println(RESPONSE_DESTINATION);
-        System.out.println(TOTAL_NUM_POS_REPORTS);
-        System.out.println(POS_REQ_RESULT);
-        System.out.println(POS_REQ_STATUS);
-        System.out.println(SETTL_PRICE);
-
-        System.out.println(SETTL_PRICE_TYPE);
-        System.out.println(UNDERLYING_SETTL_PRICE);
-        System.out.println(UNDERLYING_SETTL_PRICE_TYPE);
-        System.out.println(PRIOR_SETTL_PRICE);
-        System.out.println(NO_QUOTE_QUALIFIERS);
-        System.out.println(ALLOC_SETTL_CURRENCY);
-        System.out.println(ALLOC_SETTL_CURR_AMT);
-        System.out.println(INTEREST_AT_MATURITY);
-        System.out.println(LEG_DATED_DATE);
-        System.out.println(LEG_POOL);
-
-        System.out.println(ALLOC_INTEREST_AT_MATURITY);
-        System.out.println(ALLOC_ACCRUED_INTEREST_AMT);
-        System.out.println(DELIVERY_DATE);
-        System.out.println(ASSIGNMENT_METHOD);
-        System.out.println(ASSIGNMENT_UNIT);
-        System.out.println(OPEN_INTEREST);
-        System.out.println(EXERCISE_METHOD);
-        System.out.println(TOT_NUM_TRADE_REPORTS);
-        System.out.println(TRADE_REQUEST_RESULT);
-        System.out.println(TRADE_REQUEST_STATUS);
-
-        System.out.println(TRADE_REPORT_REJECT_REASON);
-        System.out.println(SIDE_MULTI_LEG_REPORTING_TYPE);
-        System.out.println(NO_POS_AMT);
-        System.out.println(AUTO_ACCEPT_INDICATOR);
-        System.out.println(ALLOC_REPORT_ID);
-        System.out.println(NO_NESTED_2_PARTY_IDS);
-        System.out.println(NESTED_2_PARTY_ID);
-        System.out.println(NESTED_2_PARTY_ID_SOURCE);
-        System.out.println(NESTED_2_PARTY_ROLE);
-        System.out.println(NESTED_2_PARTY_SUB_ID);
-
-        System.out.println(BENCHMARK_SECURITY_ID_SOURCE);
-        System.out.println(SECURITY_SUB_TYPE);
-        System.out.println(UNDERLYING_SECURITY_SUB_TYPE);
-        System.out.println(LEG_SECURITY_SUB_TYPE);
-        System.out.println(ALLOWABLE_ONE_SIDEDNESS_PCT);
-        System.out.println(ALLOWABLE_ONE_SIDEDNESS_VALUE);
-        System.out.println(ALLOWABLE_ONE_SIDEDNESS_CURR);
-        System.out.println(NO_TRD_REG_TIMESTAMPS);
-        System.out.println(TRD_REG_TIMESTAMP);
-        System.out.println(TRD_REG_TIMESTAMP_TYPE);
-
-        System.out.println(TRD_REG_TIMESTAMP_ORIGIN);
-        System.out.println(CONFIRM_REF_ID);
-        System.out.println(CONFIRM_TYPE);
-        System.out.println(CONFIRM_REJ_REASON);
-        System.out.println(BOOKING_TYPE);
-        System.out.println(INDIVIDUAL_ALLOC_REJ_CODE);
-        System.out.println(SETTL_INST_MSG_ID);
-        System.out.println(NO_SETTL_INST);
-        System.out.println(LAST_UPDATE_TIME);
-        System.out.println(ALLOC_SETTL_INST_TYPE);
-
-        System.out.println(NO_SETTL_PARTY_IDS);
-        System.out.println(SETTL_PARTY_ID);
-        System.out.println(SETTL_PARTY_ID_SOURCE);
-        System.out.println(SETTL_PARTY_ROLE);
-        System.out.println(SETTL_PARTY_SUB_ID);
-        System.out.println(SETTL_PARTY_SUB_ID_TYPE);
-        System.out.println(DLVY_INST_TYPE);
-        System.out.println(TERMINATION_TYPE);
-        System.out.println(NEXT_EXPECTED_MSG_SEQ_NUM);
-        System.out.println(ORD_STATUS_REQ_ID);
-
-        System.out.println(SETTL_INST_REQ_ID);
-        System.out.println(SETTL_INST_REQ_REJ_CODE);
-        System.out.println(SECONDARY_ALLOC_ID);
-        System.out.println(ALLOC_REPORT_TYPE);
-        System.out.println(ALLOC_REPORT_REF_ID);
-        System.out.println(ALLOC_CANC_REPLACE_REASON);
-        System.out.println(COPY_MSG_INDICATOR);
-        System.out.println(ALLOC_ACCOUNT_TYPE);
-        System.out.println(ORDER_AVG_PX);
-        System.out.println(ORDER_BOOKING_QTY);
-
-
-        // 801-900
-
-        System.out.println(NO_SETTL_PARTY_SUB_IDS);
-        System.out.println(NO_PARTY_SUB_IDS);
-        System.out.println(PARTY_SUB_ID_TYPE);
-        System.out.println(NO_NESTED_PARTY_SUB_IDS);
-        System.out.println(NESTED_PARTY_SUB_ID_TYPE);
-        System.out.println(NO_NESTED_2_PARTY_SUB_IDS);
-        System.out.println(NESTED_2_PARTY_SUB_ID_TYPE);
-        System.out.println(ALLOC_INTERMED_REQ_TYPE);
-        System.out.println(UNDERLYING_PX);
-
-        System.out.println(PRICE_DELTA);
-        System.out.println(APPL_QUEUE_MAX);
-        System.out.println(APPL_QUEUE_DEPTH);
-        System.out.println(APPL_QUEUE_RESOLUTION);
-        System.out.println(APPL_QUEUE_ACTION);
-        System.out.println(NO_ALT_MD_SOURCE);
-        System.out.println(ALT_MD_SOURCE_ID);
-        System.out.println(SECONDARY_TRADE_REPORT_ID);
-        System.out.println(AVG_PX_INDICATOR);
-        System.out.println(TRADE_LINK_ID);
-
-        System.out.println(ORDER_INPUT_DEVICE);
-        System.out.println(UNDERLYING_TRADING_SESSION_ID);
-        System.out.println(UNDERLYING_TRADING_SESSION_SUB_ID);
-        System.out.println(TRADE_LEG_REF_ID);
-        System.out.println(EXCHANGE_RULE);
-        System.out.println(TRADE_ALLOC_INDICATOR);
-        System.out.println(EXPIRATION_CYCLE);
-        System.out.println(TRD_TYPE);
-        System.out.println(TRD_SUB_TYPE);
-        System.out.println(TRANSFER_REASON);
-
-        System.out.println(ASGN_REQ_ID);
-        System.out.println(TOT_NUM_ASSIGNMENT_REPORTS);
-        System.out.println(ASGN_RPT_ID);
-        System.out.println(THRESHOLD_AMOUNT);
-        System.out.println(PEG_MOVE_TYPE);
-        System.out.println(PEG_OFFSET_TYPE);
-        System.out.println(PEG_LIMIT_TYPE);
-        System.out.println(PEG_ROUND_DIRECTION);
-        System.out.println(PEGGED_PRICE);
-        System.out.println(PEG_SCOPE);
-
-        System.out.println(DISCRETION_MOVE_TYPE);
-        System.out.println(DISCRETION_OFFSET_TYPE);
-        System.out.println(DISCRETION_LIMIT_TYPE);
-        System.out.println(DISCRETION_ROUND_DIRECTION);
-        System.out.println(DISCRETION_PRICE);
-        System.out.println(DISCRETION_SCOPE);
-        System.out.println(TARGET_STRATEGY);
-        System.out.println(TARGET_STRATEGY_PARAMETERS);
-        System.out.println(PARTICIPATION_RATE);
-        System.out.println(TARGET_STRATEGY_PERFORMANCE);
-
-        System.out.println(LAST_LIQUIDITY_IND);
-        System.out.println(PUBLISH_TRD_INDICATOR);
-        System.out.println(SHORT_SALE_REASON);
-        System.out.println(QTY_TYPE);
-        System.out.println(SECONDARY_TRD_TYPE);
-        System.out.println(TRADE_REPORT_TYPE);
-        System.out.println(ALLOC_NO_ORDERS_TYPE);
-        System.out.println(SHARED_COMMISSION);
-        System.out.println(CONFIRM_REQ_ID);
-        System.out.println(AVG_PAR_PX);
-
-        System.out.println(REPORTED_PX);
-        System.out.println(NO_CAPACITIES);
-        System.out.println(ORDER_CAPACITY_QTY);
-        System.out.println(NO_EVENTS);
-        System.out.println(EVENT_TYPE);
-        System.out.println(EVENT_DATE);
-        System.out.println(EVENT_PX);
-        System.out.println(EVENT_TEXT);
-        System.out.println(PCT_AT_RISK);
-        System.out.println(NO_INSTR_ATTRIB);
-
-        System.out.println(INSTR_ATTRIB_TYPE);
-        System.out.println(INSTR_ATTRIB_VALUE);
-        System.out.println(DATED_DATE);
-        System.out.println(INTEREST_ACCRUAL_DATE);
-        System.out.println(CP_PROGRAM);
-        System.out.println(CP_REG_TYPE);
-        System.out.println(UNDERLYING_CP_PROGRAM);
-        System.out.println(UNDERLYING_CP_REGTYPE);
-        System.out.println(UNDERLYING_QTY);
-        System.out.println(TRD_MATCH_ID);
-
-        System.out.println(SECONDARY_TRADE_REPORT_REF_ID);
-        System.out.println(UNDERLYING_DIRTY_PRICE);
-        System.out.println(UNDERLYING_END_PRICE);
-        System.out.println(UNDERLYING_START_VALUE);
-        System.out.println(UNDERLYING_CURRENT_VALUE);
-        System.out.println(UNDERLYING_END_VALUE);
-        System.out.println(NO_UNDERLYING_STIPS);
-        System.out.println(UNDERLYING_STIP_TYPE);
-        System.out.println(UNDERLYING_STIP_VALUE);
-        System.out.println(MATURITY_NET_MONEY);
-
-        System.out.println(MISC_FEE_BASIS);
-        System.out.println(TOT_NO_ALLOCS);
-        System.out.println(LAST_FRAGMENT);
-        System.out.println(COLL_REQ_ID);
-        System.out.println(COLL_ASGN_REASON);
-        System.out.println(COLL_INQUIRY_QUALIFIER);
-        System.out.println(NO_TRADES);
-        System.out.println(MARGIN_RATIO);
-        System.out.println(MARGIN_EXCESS);
-        System.out.println(TOTAL_NET_VALUE);
-
-
-        // 901-1000
-
-        System.out.println(CASH_OUTSTANDING);
-        System.out.println(COLL_ASGN_ID);
-        System.out.println(COLL_ASGN_TRANS_TYPE);
-        System.out.println(COLL_RESP_ID);
-        System.out.println(COLL_ASGN_RESP_TYPE);
-        System.out.println(COLL_ASGN_REJECT_REASON);
-        System.out.println(COLL_ASGN_REF_ID);
-        System.out.println(COLL_RPT_ID);
-        System.out.println(COLL_INQUIRY_ID);
-        System.out.println(COLL_STATUS);
-
-        System.out.println(TOT_NUM_REPORTS);
-        System.out.println(LAST_RPT_REQUESTED);
-        System.out.println(AGREEMENT_DESC);
-        System.out.println(AGREEMENT_ID);
-        System.out.println(AGREEMENT_DATE);
-        System.out.println(START_DATE);
-        System.out.println(END_DATE);
-        System.out.println(AGREEMENT_CURRENCY);
-        System.out.println(DELIVERY_TYPE);
-        System.out.println(END_ACCRUED_INTEREST_AMT);
-
-        System.out.println(START_CASH);
-        System.out.println(END_CASH);
-        System.out.println(USER_REQUEST_ID);
-        System.out.println(USER_REQUEST_TYPE);
-        System.out.println(NEW_PASSWORD);
-        System.out.println(USER_STATUS);
-        System.out.println(USER_STATUS_TEXT);
-        System.out.println(STATUS_VALUE);
-        System.out.println(STATUS_TEXT);
-        System.out.println(REF_COMP_ID);
-
-        System.out.println(REF_SUB_ID);
-        System.out.println(NETWORK_RESPONSE_ID);
-        System.out.println(NETWORK_REQUEST_ID);
-        System.out.println(LAST_NETWORK_RESPONSE_ID);
-        System.out.println(NETWORK_REQUEST_TYPE);
-        System.out.println(NO_COMP_IDS);
-        System.out.println(NETWORK_STATUS_RESPONSE_TYPE);
-        System.out.println(NO_COLL_INQUIRY_QUALIFIER);
-        System.out.println(TRD_RPT_STATUS);
-        System.out.println(AFFIRM_STATUS);
-
-        System.out.println(UNDERLYING_STRIKE_CURRENCY);
-        System.out.println(LEG_STRIKE_CURRENCY);
-        System.out.println(TIME_BRACKET);
-        System.out.println(COLL_ACTION);
-        System.out.println(COLL_INQUIRY_STATUS);
-        System.out.println(COLL_INQUIRY_RESULT);
-        System.out.println(STRIKE_CURRENCY);
-        System.out.println(NO_NESTED_3_PARTY_IDS);
-        System.out.println(NESTED_3_PARTY_ID);
-        System.out.println(NESTED_3_PARTY_ID_SOURCE);
-
-        System.out.println(NESTED_3_PARTY_ROLE);
-        System.out.println(NO_NESTED_3_PARTY_SUB_IDS);
-        System.out.println(NESTED_3_PARTY_SUB_ID);
-        System.out.println(NESTED_3_PARTY_SUB_ID_TYPE);
-        System.out.println(LEG_CONTRACT_SETTL_MONTH);
-        System.out.println(LEG_INTEREST_ACCRUAL_DATE);
-        /*
-         *
-         * End of FIX4.4
-         *
-         */
-
-
-        /*
-         * Start of FIX5.0 as defined by the FIX Protocol Specification 5.0
-         *  Tags: 957-1139
-         */
-        System.out.println(FIX957_NO_STRATEGY_PARAMETERS);
-        System.out.println(FIX958_STRATEGY_PARAMETER_NAME);
-        System.out.println(FIX959_STRATEGY_PARAMETER_TYPE);
-        System.out.println(FIX960_STRATEGY_PARAMETER_VALUE);
-
-        System.out.println(FIX961_HOST_CROSS_ID);
-        System.out.println(FIX962_SIDE_TIME_IN_FORCE);
-        System.out.println(FIX963_MD_REPORT_ID);
-        System.out.println(FIX964_SECURITY_REPORT_ID);
-        System.out.println(FIX965_SECURITY_STATUS);
-        System.out.println(FIX966_SETTLE_ON_OPEN_FLAG);
-        System.out.println(FIX967_STRIKE_MULTIPLIER);
-        System.out.println(FIX968_STRIKE_VALUE);
-        System.out.println(FIX969_MIN_PRICE_INCREMENT);
-        System.out.println(FIX970_POSITION_LIMIT);
-
-        System.out.println(FIX971_NT_POSITION_LIMIT);
-        System.out.println(FIX972_UNDERLYING_ALLOCATION_PERCENT);
-        System.out.println(FIX973_UNDERLYING_CASH_AMOUNT);
-        System.out.println(FIX974_UNDERLYING_CASH_TYPE);
-        System.out.println(FIX975_UNDERLYING_SETTLEMENT_TYPE);
-        System.out.println(FIX976_QUANTITY_DATE);
-        System.out.println(FIX977_CONT_INT_RPT_ID);
-        System.out.println(FIX978_LATE_INDICATOR);
-        System.out.println(FIX979_INPUT_SOURCE);
-        System.out.println(FIX980_SECURITY_UPDATE_ACTION);
-
-        System.out.println(FIX981_NO_EXPIRATION);
-        System.out.println(FIX982_EXP_TYPE);
-        System.out.println(FIX983_EXP_QTY);
-        System.out.println(FIX984_NO_UNDERLYING_AMOUNTS);
-        System.out.println(FIX985_UNDERLYING_PAY_AMOUNT);
-        System.out.println(FIX986_UNDERLYING_COLLECT_AMOUNT);
-        System.out.println(FIX987_UNDERLYING_SETTLEMENT_DATE);
-        System.out.println(FIX988_UNDERLYING_SETTLEMENT_STATUS);
-        System.out.println(FIX989_SECONDARY_INDIVIDUAL_ALLOC_ID);
-        System.out.println(FIX990_LEG_REPORT_ID);
-
-        System.out.println(FIX991_RND_PX);
-        System.out.println(FIX992_INDIVIDUAL_ALLOC_TYPE);
-        System.out.println(FIX993_ALLOC_CUSTOMER_CAPACITY);
-        System.out.println(FIX994_TIER_CODE);
-        System.out.println(FIX996_UNIT_OF_MEASURE);
-        System.out.println(FIX997_TIME_UNIT);
-        System.out.println(FIX998_UNDERLYING_UNIT_OF_MEASURE);
-        System.out.println(FIX999_LEG_UNIT_OF_MEASURE);
-        System.out.println(FIX1000_UNDERLYING_TIME_UNIT);
-
-
-        // 1001-1100
-
-        System.out.println(FIX1001_LEG_TIME_UNIT);
-        System.out.println(FIX1002_ALLOC_METHOD);
-        System.out.println(FIX1003_TRADE_ID);
-        System.out.println(FIX1005_SIDE_TRADE_REPORT_ID);
-        System.out.println(FIX1006_SIDE_FILL_STATION_CD);
-        System.out.println(FIX1007_SIDE_REASON_CD);
-        System.out.println(FIX1008_SIDE_TRD_SUB_TYP);
-        System.out.println(FIX1009_SIDE_QTY);
-
-        System.out.println(FIX1011_MESSAGE_EVENT_SOURCE);
-        System.out.println(FIX1012_SIDE_TRD_REG_TIMESTAMP);
-        System.out.println(FIX1013_SIDE_TRD_REG_TIMESTAMP_TYPE);
-        System.out.println(FIX1014_SIDE_TRD_REG_TIMESTAMP_SRC);
-        System.out.println(FIX1015_AS_OF_INDICATOR);
-        System.out.println(FIX1016_NO_SIDE_TRD_REG_TS);
-        System.out.println(FIX1017_LEG_OPTION_RATIO);
-        System.out.println(FIX1018_NO_INSTRUMENT_PARTIES);
-        System.out.println(FIX1019_INSTRUMENT_PARTY_ID);
-        System.out.println(FIX1020_TRADE_VOLUME);
-
-        System.out.println(FIX1021_MD_BOOK_TYPE);
-        System.out.println(FIX1022_MD_FEED_TYPE);
-        System.out.println(FIX1023_MD_PRICE_LEVEL);
-        System.out.println(FIX1024_MD_ORIGIN_TYPE);
-        System.out.println(FIX1025_FIRST_PX);
-        System.out.println(FIX1026_MD_ENTRY_SPOT_RATE);
-        System.out.println(FIX1027_MD_ENTRY_FORWARD_POINTS);
-        System.out.println(FIX1028_MANUAL_ORDER_INDICATOR);
-        System.out.println(FIX1029_CUST_DIRECTED_ORDER);
-        System.out.println(FIX1030_RECEIVED_DEPT_ID);
-
-        System.out.println(FIX1031_CUST_ORDER_HANDLING_INST);
-        System.out.println(FIX1032_ORDER_HANDLING_INST_SOURCE);
-        System.out.println(FIX1033_DESK_TYPE);
-        System.out.println(FIX1034_DESK_TYPE_SOURCE);
-        System.out.println(FIX1035_DESK_ORDER_HANDLING_INST);
-        System.out.println(FIX1036_EXEC_ACK_STATUS);
-        System.out.println(FIX1037_UNDERLYING_DELIVERY_AMOUNT);
-        System.out.println(FIX1038_UNDERLYING_CAP_VALUE);
-        System.out.println(FIX1039_UNDERLYING_SETTL_METHOD);
-        System.out.println(FIX1040_SECONDARY_TRADE_ID);
-
-        System.out.println(FIX1041_FIRM_TRADE_ID);
-        System.out.println(FIX1042_SECONDARY_FIRM_TRADE_ID);
-        System.out.println(FIX1043_COLL_APPL_TYPE);
-        System.out.println(FIX1044_UNDERLYING_ADJUSTED_QUANTITY);
-        System.out.println(FIX1045_UNDERLYING_FX_RATE);
-        System.out.println(FIX1046_UNDERLYING_FX_RATE_CALC);
-        System.out.println(FIX1047_ALLOC_POSITION_EFFECT);
-        System.out.println(FIX1048_DEALING_CAPACITY);
-        System.out.println(FIX1049_INSTRMT_ASSIGNMENT_METHOD);
-        System.out.println(FIX1050_INSTRUMENT_PARTY_ID_SOURCE);
-
-        System.out.println(FIX1051_INSTRUMENT_PARTY_ROLE);
-        System.out.println(FIX1052_NO_INSTRUMENT_PARTY_SUB_IDS);
-        System.out.println(FIX1053_INSTRUMENT_PARTY_SUB_ID);
-        System.out.println(FIX1054_INSTRUMENT_PARTY_SUB_ID_TYPE);
-        System.out.println(FIX1055_POSITION_CURRENCY);
-        System.out.println(FIX1056_CALCULATED_CCY_LAST_QTY);
-        System.out.println(FIX1057_AGGRESSOR_INDICATOR);
-        System.out.println(FIX1058_NO_UNDLY_INSTRUMENT_PARTIES);
-        System.out.println(FIX1059_UNDLY_INSTRUMENT_PARTY_ID);
-        System.out.println(FIX1060_UNDLY_INSTRUMENT_PARTY_ID_SOURCE);
-
-        System.out.println(FIX1061_UNDLY_INSTRUMENT_PARTY_ROLE);
-        System.out.println(FIX1062_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS);
-        System.out.println(FIX1063_UNDLY_INSTRUMENT_PARTY_SUB_ID);
-        System.out.println(FIX1064_UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE);
-        System.out.println(FIX1065_BID_SWAP_POINTS);
-        System.out.println(FIX1066_OFFER_SWAP_POINTS);
-        System.out.println(FIX1067_LEG_BID_FORWARD_POINTS);
-        System.out.println(FIX1068_LEG_OFFER_FORWARD_POINTS);
-        System.out.println(FIX1069_SWAP_POINTS);
-        System.out.println(FIX1070_MD_QUOTE_TYPE);
-
-        System.out.println(FIX1071_LAST_SWAP_POINTS);
-        System.out.println(FIX1072_SIDE_GROSS_TRADE_AMT);
-        System.out.println(FIX1073_LEG_LAST_FORWARD_POINTS);
-        System.out.println(FIX1074_LEG_CALCULATED_CCY_LAST_QTY);
-        System.out.println(FIX1075_LEG_GROSS_TRADE_AMT);
-        System.out.println(FIX1079_MATURITY_TIME);
-        System.out.println(FIX1080_REF_ORDER_ID);
-
-        System.out.println(FIX1081_REF_ORDER_ID_SOURCE);
-        System.out.println(FIX1082_SECONDARY_DISPLAY_QTY);
-        System.out.println(FIX1083_DISPLAY_WHEN);
-        System.out.println(FIX1084_DISPLAY_METHOD);
-        System.out.println(FIX1085_DISPLAY_LOW_QTY);
-        System.out.println(FIX1086_DISPLAY_HIGH_QTY);
-        System.out.println(FIX1087_DISPLAY_MIN_INCR);
-        System.out.println(FIX1088_REFRESH_QTY);
-        System.out.println(FIX1089_MATCH_INCREMENT);
-        System.out.println(FIX1090_MAX_PRICE_LEVELS);
-
-        System.out.println(FIX1091_PRE_TRADE_ANONYMITY);
-        System.out.println(FIX1092_PRICE_PROTECTION_SCOPE);
-        System.out.println(FIX1093_LOT_TYPE);
-        System.out.println(FIX1094_PEG_PRICE_TYPE);
-        System.out.println(FIX1095_PEGGED_REF_PRICE);
-        System.out.println(FIX1096_PEG_SECURITY_ID_SOURCE);
-        System.out.println(FIX1097_PEG_SECURITY_ID);
-        System.out.println(FIX1098_PEG_SYMBOL);
-        System.out.println(FIX1099_PEG_SECURITY_DESC);
-        System.out.println(FIX1100_TRIGGER_TYPE);
-
-
-        // 1101-1200
-
-        System.out.println(FIX1101_TRIGGER_ACTION);
-        System.out.println(FIX1102_TRIGGER_PRICE);
-        System.out.println(FIX1103_TRIGGER_SYMBOL);
-        System.out.println(FIX1104_TRIGGER_SECURITY_ID);
-        System.out.println(FIX1105_TRIGGER_SECURITY_ID_SOURCE);
-        System.out.println(FIX1106_TRIGGER_SECURITY_DESC);
-        System.out.println(FIX1107_TRIGGER_PRICE_TYPE);
-        System.out.println(FIX1108_TRIGGER_PRICE_TYPE_SCOPE);
-        System.out.println(FIX1109_TRIGGER_PRICE_DIRECTION);
-        System.out.println(FIX1110_TRIGGER_NEW_PRICE);
-
-        System.out.println(FIX1111_TRIGGER_ORDER_TYPE);
-        System.out.println(FIX1112_TRIGGER_NEW_QTY);
-        System.out.println(FIX1113_TRIGGER_TRADING_SESSION_ID);
-        System.out.println(FIX1114_TRIGGER_TRADING_SESSION_SUB_ID);
-        System.out.println(FIX1115_ORDER_CATEGORY);
-        System.out.println(FIX1116_NO_ROOT_PARTY_IDS);
-        System.out.println(FIX1117_ROOT_PARTY_ID);
-        System.out.println(FIX1118_ROOT_PARTY_ID_SOURCE);
-        System.out.println(FIX1119_ROOT_PARTY_ROLE);
-        System.out.println(FIX1120_NO_ROOT_PARTY_SUB_IDS);
-
-        System.out.println(FIX1121_ROOT_PARTY_SUB_ID);
-        System.out.println(FIX1122_ROOT_PARTY_SUB_ID_TYPE);
-        System.out.println(FIX1123_TRADE_HANDLING_INSTR);
-        System.out.println(FIX1124_ORIG_TRADE_HANDLING_INSTR);
-        System.out.println(FIX1125_ORIG_TRADE_DATE);
-        System.out.println(FIX1126_ORIG_TRADE_ID);
-        System.out.println(FIX1127_ORIG_SECONDARY_TRADE_ID);
-        System.out.println(FIX1128_APPL_VER_ID);
-        System.out.println(FIX1129_CSTM_APPL_VER_ID);
-        System.out.println(FIX1130_REF_APPL_VER_ID);
-
-        System.out.println(FIX1131_REF_CSTM_APPL_VER_ID);
-        System.out.println(FIX1132_TZ_TRANSACT_TIME);
-        System.out.println(FIX1133_EX_DESTINATION_ID_SOURCE);
-        System.out.println(FIX1134_REPORTED_PX_DIFF);
-        System.out.println(FIX1135_RPT_SYS);
-        System.out.println(FIX1136_ALLOC_CLEARING_FEE_INDICATOR);
-        System.out.println(FIX1137_DEFAULT_APPL_VER_ID);
-        System.out.println(FIX1138_DISPLAY_QTY);
-        System.out.println(FIX1139_EXCHANGE_SPECIAL_INSTRUCTIONS);
-
+        for (FIXType oneFIX : FIXType.values()) {
+            System.out.println(oneFIX);
+        }
     }
-
 }

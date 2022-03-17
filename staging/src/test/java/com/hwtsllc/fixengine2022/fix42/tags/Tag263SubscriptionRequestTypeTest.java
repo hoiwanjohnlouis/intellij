@@ -46,7 +46,7 @@ class Tag263SubscriptionRequestTypeTest {
     }
     @Test
     void FIX0263Test() {
-        FIXType fix263SubscriptionRequestType = FIXType.SUBSCRIPTION_REQUEST_TYPE;
+        FIXType fix263SubscriptionRequestType = FIXType.FIX263_SUBSCRIPTION_REQUEST_TYPE;
     }
     @Test
     void Tag0263Test() {

@@ -46,7 +46,7 @@ class Tag364EncodedUnderlyingSecurityDescLenTest {
     }
     @Test
     void FIX0364Test() {
-        FIXType fix364EncodedUnderlyingSecurityDescLen = FIXType.ENCODED_UNDERLYING_SECURITY_DESC_LEN;
+        FIXType fix364EncodedUnderlyingSecurityDescLen = FIXType.FIX364_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
     }
     @Test
     void Tag0364Test() {

@@ -46,7 +46,7 @@ class Tag403LiquidityPctHighTest {
     }
     @Test
     void FIX0403Test() {
-        FIXType fix403LiquidityPctHigh = FIXType.LIQUIDITY_PCT_HIGH;
+        FIXType fix403LiquidityPctHigh = FIXType.FIX403_LIQUIDITY_PCT_HIGH;
     }
     @Test
     void Tag0403Test() {

@@ -46,7 +46,7 @@ class Tag388DiscretionInstTest {
     }
     @Test
     void FIX0388Test() {
-        FIXType fix388DiscretionInst = FIXType.DISCRETION_INST;
+        FIXType fix388DiscretionInst = FIXType.FIX388_DISCRETION_INST;
     }
     @Test
     void Tag0388Test() {

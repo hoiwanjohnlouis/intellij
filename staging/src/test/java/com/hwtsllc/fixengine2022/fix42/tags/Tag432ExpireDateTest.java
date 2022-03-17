@@ -46,7 +46,7 @@ class Tag432ExpireDateTest {
     }
     @Test
     void FIX0432Test() {
-        FIXType fix432ExpireDate = FIXType.EXPIRE_DATE;
+        FIXType fix432ExpireDate = FIXType.FIX432_EXPIRE_DATE;
     }
     @Test
     void Tag0432Test() {

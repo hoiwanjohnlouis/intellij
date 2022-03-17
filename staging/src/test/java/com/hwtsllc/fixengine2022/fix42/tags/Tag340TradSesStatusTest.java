@@ -46,7 +46,7 @@ class Tag340TradSesStatusTest {
     }
     @Test
     void FIX0340Test() {
-        FIXType fix340TradSesStatus = FIXType.TRAD_SES_STATUS;
+        FIXType fix340TradSesStatus = FIXType.FIX340_TRAD_SES_STATUS;
     }
     @Test
     void Tag0340Test() {

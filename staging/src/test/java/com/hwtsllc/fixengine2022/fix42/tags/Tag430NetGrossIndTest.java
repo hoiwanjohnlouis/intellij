@@ -46,7 +46,7 @@ class Tag430NetGrossIndTest {
     }
     @Test
     void FIX0430Test() {
-        FIXType fix430NetGrossInd = FIXType.NET_GROSS_IND;
+        FIXType fix430NetGrossInd = FIXType.FIX430_NET_GROSS_IND;
     }
     @Test
     void Tag0430Test() {

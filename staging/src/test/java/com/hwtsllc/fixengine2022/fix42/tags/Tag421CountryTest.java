@@ -46,7 +46,7 @@ class Tag421CountryTest {
     }
     @Test
     void FIX0421Test() {
-        FIXType fix421Country = FIXType.COUNTRY;
+        FIXType fix421Country = FIXType.FIX421_COUNTRY;
     }
     @Test
     void Tag0421Test() {

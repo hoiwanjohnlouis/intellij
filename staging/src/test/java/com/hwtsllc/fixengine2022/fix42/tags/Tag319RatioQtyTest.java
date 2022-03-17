@@ -47,7 +47,7 @@ class Tag319RatioQtyTest {
     }
     @Test
     void FIX0319Test() {
-        FIXType fix319RatioQty = FIXType.RATIO_QTY;
+        FIXType fix319RatioQty = FIXType.FIX319_RATIO_QTY;
     }
     @Test
     void Tag0319Test() {

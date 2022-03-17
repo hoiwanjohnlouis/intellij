@@ -18,16 +18,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag50SenderSubID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag50SenderSubID(String dataValue) {
         setFixType(FIXType.FIX50_SENDER_SUB_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -35,9 +33,9 @@ public class Tag50SenderSubID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag50SenderSubID tag50SenderSubID = new Tag50SenderSubID("FBCO");
-        System.out.println(tag50SenderSubID);
-        System.out.println(tag50SenderSubID.toLogStringVerbose());
-        System.out.println(tag50SenderSubID.toFixTagValuePairString());
+        Tag50SenderSubID tagData = new Tag50SenderSubID("FBCO");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

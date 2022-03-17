@@ -17,11 +17,9 @@
 package com.hwtsllc.fixengine2022.views;
 
 import com.hwtsllc.fixengine2022.fix27.tags.Tag31LastPx;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag32LastQty;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag35MsgType;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag60TransactTime;
-import com.hwtsllc.fixengine2022.fix40.*;
-
+import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -30,22 +28,16 @@ public class PriceView {
     private static final Logger logger = LogManager.getRootLogger();
 
     private final OpeningPrice lastTradeOpeningPrice;
-    private final Tag32LastQty tag32LastQty;
     private final Tag60TransactTime tag60TransactTime;
 
     //
     private PriceView(PriceViewBuilder priceViewBuilder) {
         this.lastTradeOpeningPrice = priceViewBuilder.lastTradeOpeningPrice;
-        this.tag32LastQty = priceViewBuilder.tag32LastQty;
         this.tag60TransactTime = priceViewBuilder.tag60TransactTime;
     }
 
     public OpeningPrice getLastTradePrice() {
         return lastTradeOpeningPrice;
-    }
-
-    public Tag32LastQty getLastTradeQuantity() {
-        return tag32LastQty;
     }
 
     public Tag60TransactTime getLastTradeTimeStamp() {
@@ -57,7 +49,6 @@ public class PriceView {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(lastTradeOpeningPrice);
         stringBuilder.append("\n");
-        stringBuilder.append(tag32LastQty);
         stringBuilder.append("\n");
         stringBuilder.append(tag60TransactTime);
 
@@ -70,21 +61,16 @@ public class PriceView {
         private final String DEBUG_TAG = this.getClass().getSimpleName();
 
         private OpeningPrice lastTradeOpeningPrice;
-        private Tag32LastQty tag32LastQty;
+
         private Tag60TransactTime tag60TransactTime;
 
         //
         public PriceViewBuilder(Tag35MsgType tag35MsgType) {
             this.lastTradeOpeningPrice = new OpeningPrice(Tag31LastPx.TESTA_SYMBOL_LAST_PX);
-            this.tag32LastQty = new Tag32LastQty();
             this.tag60TransactTime = new Tag60TransactTime("18991231235959");
         }
         public PriceViewBuilder buildTradePrice(OpeningPrice lastTradeOpeningPrice) {
             this.lastTradeOpeningPrice = lastTradeOpeningPrice;
-            return this;
-        }
-        public PriceViewBuilder buildTradeQuantity(Tag32LastQty tag32LastQty) {
-            this.tag32LastQty = tag32LastQty;
             return this;
         }
         public PriceViewBuilder buildTradeTimeStamp(Tag60TransactTime tag60TransactTime) {

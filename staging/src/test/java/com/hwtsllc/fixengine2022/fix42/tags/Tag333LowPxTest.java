@@ -46,7 +46,7 @@ class Tag333LowPxTest {
     }
     @Test
     void FIX0333Test() {
-        FIXType fix333LowPx = FIXType.LOW_PX;
+        FIXType fix333LowPx = FIXType.FIX333_LOW_PX;
     }
     @Test
     void Tag0333Test() {

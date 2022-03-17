@@ -46,7 +46,7 @@ class Tag269MDEntryTypeTest {
     }
     @Test
     void FIX0269Test() {
-        FIXType fix269MDEntryType = FIXType.MD_ENTRY_TYPE;
+        FIXType fix269MDEntryType = FIXType.FIX269_MD_ENTRY_TYPE;
     }
     @Test
     void Tag0269Test() {

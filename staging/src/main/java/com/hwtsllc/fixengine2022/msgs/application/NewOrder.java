@@ -16,12 +16,9 @@
 
 package com.hwtsllc.fixengine2022.msgs.application;
 
-import com.hwtsllc.fixengine2022.fix27.tags.Tag31LastPx;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag32LastQty;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag60TransactTime;
-import com.hwtsllc.fixengine2022.fix40.*;
+import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
 import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrevClosePx;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -31,16 +28,12 @@ public class NewOrder implements Comparable {
 
     private final OpeningPrice openingPrice;
     private final Tag140PrevClosePx tag140PrevClosePx;
-    private final Tag31LastPx tag31LastPx;
-    private final Tag32LastQty tag32LastQty;
     private final Tag60TransactTime tag60TransactTime;
 
     //
     private NewOrder(Builder builder) {
         this.openingPrice = builder.openingPrice;
         this.tag140PrevClosePx = builder.tag140PrevClosePx;
-        this.tag31LastPx = builder.tag31LastPx;
-        this.tag32LastQty = builder.tag32LastQty;
         this.tag60TransactTime = builder.tag60TransactTime;
     }
 
@@ -49,12 +42,6 @@ public class NewOrder implements Comparable {
     }
     public Tag140PrevClosePx getPreviousDaysClosingPrice() {
         return tag140PrevClosePx;
-    }
-    public Tag31LastPx getLastTradePrice() {
-        return tag31LastPx;
-    }
-    public Tag32LastQty getLastTradeQuantity() {
-        return tag32LastQty;
     }
     public Tag60TransactTime getLastTradeTimeStamp() {
         return tag60TransactTime;
@@ -70,12 +57,6 @@ public class NewOrder implements Comparable {
         stringBuilder.append(openingPrice.getPrice());
         stringBuilder.append("\n");
         stringBuilder.append(tag140PrevClosePx.getTag140PrevClosePxValue());
-        stringBuilder.append("\n");
-        stringBuilder.append(tag31LastPx.getTag31LastPxValue());
-        stringBuilder.append("\n");
-        stringBuilder.append(tag32LastQty.getTag32LastQtyValue());
-        stringBuilder.append("\n");
-        stringBuilder.append(tag60TransactTime.getTimeStamp());
 
         return stringBuilder.toString();
     }
@@ -94,8 +75,6 @@ public class NewOrder implements Comparable {
 
         private OpeningPrice openingPrice;              // 3
         private Tag140PrevClosePx tag140PrevClosePx;    // 4
-        private Tag31LastPx tag31LastPx;          // 5
-        private Tag32LastQty tag32LastQty;    // 6
         private Tag60TransactTime tag60TransactTime;  // 8
 
         // helper class to build object
@@ -105,14 +84,6 @@ public class NewOrder implements Comparable {
         }
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
             this.tag140PrevClosePx = new Tag140PrevClosePx(previousDaysClosingPrice);
-            return this;
-        }
-        public Builder buildLastTradePrice(double lastTradePrice) {
-            this.tag31LastPx = new Tag31LastPx(lastTradePrice);
-            return this;
-        }
-        public Builder buildLastTradeQuantity(double lastTradeQuantity) {
-            this.tag32LastQty = new Tag32LastQty(lastTradeQuantity);
             return this;
         }
         public Builder buildLastTradeTimeStamp(String lastTradeTimeStamp) {

@@ -46,7 +46,7 @@ class Tag380BusinessRejectReasonTest {
     }
     @Test
     void FIX0380Test() {
-        FIXType fix380BusinessRejectReason = FIXType.BUSINESS_REJECT_REASON;
+        FIXType fix380BusinessRejectReason = FIXType.FIX380_BUSINESS_REJECT_REASON;
     }
     @Test
     void Tag0380Test() {

@@ -46,7 +46,7 @@ class Tag391ClientBidIDTest {
     }
     @Test
     void FIX0391Test() {
-        FIXType fix391ClientBidID = FIXType.CLIENT_BID_ID;
+        FIXType fix391ClientBidID = FIXType.FIX391_CLIENT_BID_ID;
     }
     @Test
     void Tag0391Test() {

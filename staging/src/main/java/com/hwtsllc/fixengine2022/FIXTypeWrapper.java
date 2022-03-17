@@ -14,42 +14,29 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.datatypes;
+package com.hwtsllc.fixengine2022;
 
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-/**
- *
- *
- */
-public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePairString {
-    private FIXType fixType;
-    private String dataValue;
+public abstract class FIXTypeWrapper implements LogStringVerbose {
+    private FIXType fixValue;
 
     public void setFixType(FIXType fixType) {
-        this.fixType = fixType;
+        this.fixValue = fixType;
     }
-    public void setDataValue(String dataValue) {
-        this.dataValue = dataValue;
-    }
-
     public String getFIXTypeName() {
-        return fixType.getFIXTypeName();
+        return fixValue.getFIXTypeName();
     }
     public int getFIXNumber() {
-        return fixType.getFIXNumber();
+        return fixValue.getFIXNumber();
     }
     public String getFIXName() {
-        return fixType.getFIXName();
+        return fixValue.getFIXName();
     }
     public String getFIXDescription() {
-        return fixType.getFIXDescription();
+        return fixValue.getFIXDescription();
     }
-    public String getDataValue() {
-        return this.dataValue;
-    }
-
     @Override
     public String toLogStringVerbose() {
         return this.getClass().getSimpleName()
@@ -64,16 +51,7 @@ public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePa
                 .concat("]")
                 .concat("\n\tFIXDescription[")
                 .concat(getFIXDescription())
-                .concat("]")
-                .concat("\n\tDataValue[")
-                .concat(getDataValue())
                 .concat("]");
-    }
-    @Override
-    public String toFixTagValuePairString() {
-        return String.valueOf(getFIXNumber())
-                .concat("=")
-                .concat(getDataValue());
     }
     @Override
     public String toString() {
@@ -86,8 +64,6 @@ public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePa
                 .concat(getFIXName())
                 .concat(",")
                 .concat(getFIXDescription())
-                .concat(",")
-                .concat(getDataValue())
                 .concat("]");
     }
 }

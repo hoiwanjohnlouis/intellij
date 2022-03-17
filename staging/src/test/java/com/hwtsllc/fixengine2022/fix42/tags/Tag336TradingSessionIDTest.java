@@ -46,7 +46,7 @@ class Tag336TradingSessionIDTest {
     }
     @Test
     void FIX0336Test() {
-        FIXType fix336TradingSessionID = FIXType.TRADING_SESSION_ID;
+        FIXType fix336TradingSessionID = FIXType.FIX336_TRADING_SESSION_ID;
     }
     @Test
     void Tag0336Test() {

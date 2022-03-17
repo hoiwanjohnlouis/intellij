@@ -46,7 +46,7 @@ class Tag394BidTypeTest {
     }
     @Test
     void FIX0394Test() {
-        FIXType fix394BidType = FIXType.BID_TYPE;
+        FIXType fix394BidType = FIXType.FIX394_BID_TYPE;
     }
     @Test
     void Tag0394Test() {

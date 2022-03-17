@@ -18,16 +18,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag41OrigClOrdID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag41OrigClOrdID(String dataValue) {
         setFixType(FIXType.FIX41_ORIG_CL_ORD_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -35,9 +33,9 @@ public class Tag41OrigClOrdID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag41OrigClOrdID tag41OrigClOrdID = new Tag41OrigClOrdID("JohnWick-6");
-        System.out.println(tag41OrigClOrdID);
-        System.out.println(tag41OrigClOrdID.toLogStringVerbose());
-        System.out.println(tag41OrigClOrdID.toFixTagValuePairString());
+        Tag41OrigClOrdID tagData = new Tag41OrigClOrdID("JohnWick-6");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

@@ -46,7 +46,7 @@ class Tag356EncodedSubjectLenTest {
     }
     @Test
     void FIX0356Test() {
-        FIXType fix356EncodedSubjectLen = FIXType.ENCODED_SUBJECT_LEN;
+        FIXType fix356EncodedSubjectLen = FIXType.FIX356_ENCODED_SUBJECT_LEN;
     }
     @Test
     void Tag0356Test() {

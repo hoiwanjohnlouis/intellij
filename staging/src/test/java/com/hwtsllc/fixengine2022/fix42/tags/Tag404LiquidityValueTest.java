@@ -46,7 +46,7 @@ class Tag404LiquidityValueTest {
     }
     @Test
     void FIX0404Test() {
-        FIXType fix404LiquidityValue = FIXType.LIQUIDITY_VALUE;
+        FIXType fix404LiquidityValue = FIXType.FIX404_LIQUIDITY_VALUE;
     }
     @Test
     void Tag0404Test() {

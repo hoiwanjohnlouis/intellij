@@ -46,7 +46,7 @@ class Tag446ListStatusEncodedTextTest {
     }
     @Test
     void FIX0446Test() {
-        FIXType fix446ListStatusEncodedText = FIXType.LIST_STATUS_ENCODED_TEXT;
+        FIXType fix446ListStatusEncodedText = FIXType.FIX446_LIST_STATUS_ENCODED_TEXT;
     }
     @Test
     void Tag0446Test() {

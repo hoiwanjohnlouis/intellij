@@ -46,7 +46,7 @@ class Tag445ListStatusEncodedTextLenTest {
     }
     @Test
     void FIX0445Test() {
-        FIXType fix445ListStatusEncodedTextLen = FIXType.LIST_STATUS_ENCODED_TEXT_LEN;
+        FIXType fix445ListStatusEncodedTextLen = FIXType.FIX445_LIST_STATUS_ENCODED_TEXT_LEN;
     }
     @Test
     void Tag0445Test() {

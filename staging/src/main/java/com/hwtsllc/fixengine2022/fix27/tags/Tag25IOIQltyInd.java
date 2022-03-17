@@ -17,13 +17,25 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public enum Tag25IOIQltyInd {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag25IOIQltyInd extends TagTypeAbstract {
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX25_IOI_QLTY_IND;
+    public Tag25IOIQltyInd(String dataValue) {
+        setFixType(FIXType.FIX25_IOI_QLTY_IND);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag25IOIQltyInd tagData = new Tag25IOIQltyInd("JohnWick-43");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

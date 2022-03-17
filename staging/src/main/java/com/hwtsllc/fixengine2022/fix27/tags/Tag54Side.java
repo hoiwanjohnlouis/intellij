@@ -17,53 +17,25 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public enum Tag54Side {
+public class Tag54Side extends TagTypeAbstract {
+    private final String dataValue;
 
-    BUY ("1"),
-    SELL ("2"),
-    BUY_MINUS ("3"),
-    SELL_PLUS ("4"),
-    SELL_SHORT ("5"),
-    SELL_SHORT_EXEMPT ("6"),
-    UNDISCLOSED ("7"),
-    CROSS ("8"),
-    CROSS_SHORT ("9"),
-    CROSS_SHORT_EXEMPT ("A"),
-    AS_DEFINED ("B"),
-    OPPOSITE ("C"),
-    SUBSCRIBE ("D"),
-    REDEEM ("E"),
-    LEND_FINANCING ("F"),
-    BORROW_FINANCING ("G"),
-    ;
-
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    private final FIXType fixType = FIXType.FIX54_SIDE;
-
-    private final String tag35SideValue;
-//  private final String tag35SideDescription;
-
-    Tag54Side(final String side) {
-        this.tag35SideValue = side;
+    public Tag54Side(String dataValue) {
+        setFixType(FIXType.FIX54_SIDE);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
-    public String getOrderSideValue() {
-        return tag35SideValue;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.name());
-        sb.append(":[");
-        sb.append(getOrderSideValue());
-        sb.append("]");
-
-        return sb.toString();
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag54Side tagData = new Tag54Side("JohnWick-453");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

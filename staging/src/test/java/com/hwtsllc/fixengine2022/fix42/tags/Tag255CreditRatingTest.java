@@ -46,7 +46,7 @@ class Tag255CreditRatingTest {
     }
     @Test
     void FIX0255Test() {
-        FIXType fix255CreditRating = FIXType.CREDIT_RATING;
+        FIXType fix255CreditRating = FIXType.FIX255_CREDIT_RATING;
     }
     @Test
     void Tag0255Test() {

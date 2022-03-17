@@ -46,7 +46,7 @@ class Tag209AllocHandlInstTest {
     }
     @Test
     void FIX0209Test() {
-        FIXType fix209AllocHandlInst = FIXType.ALLOC_HANDL_INST;
+        FIXType fix209AllocHandlInst = FIXType.FIX209_ALLOC_HANDL_INST;
     }
     @Test
     void Tag0209Test() {

@@ -46,7 +46,7 @@ class Tag383MaxMessageSizeTest {
     }
     @Test
     void FIX0383Test() {
-        FIXType fix383MaxMessageSize = FIXType.MAX_MESSAGE_SIZE;
+        FIXType fix383MaxMessageSize = FIXType.FIX383_MAX_MESSAGE_SIZE;
     }
     @Test
     void Tag0383Test() {

@@ -46,7 +46,7 @@ class Tag239RepoCollateralSecurityTypeTest {
     }
     @Test
     void FIX0239Test() {
-        FIXType fix239RepoCollateralSecurityType = FIXType.REPO_COLLATERAL_SECURITY_TYPE;
+        FIXType fix239RepoCollateralSecurityType = FIXType.FIX239_REPO_COLLATERAL_SECURITY_TYPE;
     }
     @Test
     void Tag0239Test() {

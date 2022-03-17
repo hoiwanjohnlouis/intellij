@@ -46,7 +46,7 @@ class Tag354EncodedTextLenTest {
     }
     @Test
     void FIX0354Test() {
-        FIXType fix354EncodedTextLen = FIXType.ENCODED_TEXT_LEN;
+        FIXType fix354EncodedTextLen = FIXType.FIX354_ENCODED_TEXT_LEN;
     }
     @Test
     void Tag0354Test() {

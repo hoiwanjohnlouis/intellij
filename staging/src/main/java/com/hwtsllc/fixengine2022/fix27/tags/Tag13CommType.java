@@ -16,39 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
 
 public class Tag13CommType extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private Enum13CommType dataValue;
 
-    private Enum13CommType enum13CommType;
-
-    public Tag13CommType(Enum13CommType enum13CommType) {
+    public Tag13CommType(Enum13CommType dataValue) {
         setFixType(FIXType.FIX13_COMM_TYPE);
-        setDataValue(enum13CommType.getAction());
-        this.enum13CommType = enum13CommType;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(super.toString())
-                .append(",\n\t")
-                .append(enum13CommType);
-        return sb.toString();
-    }
-    @Override
-    public String toLogStringVerbose() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(super.toLogStringVerbose())
-                .append(",\n\t")
-                .append(enum13CommType.toLogStringVerbose());
-        return sb.toString();
+        setDataValue(dataValue.getAction());
+        this.dataValue = dataValue;
     }
 
     /**

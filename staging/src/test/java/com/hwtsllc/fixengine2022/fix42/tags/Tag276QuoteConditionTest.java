@@ -46,7 +46,7 @@ class Tag276QuoteConditionTest {
     }
     @Test
     void FIX0276Test() {
-        FIXType fix276QuoteCondition = FIXType.QUOTE_CONDITION;
+        FIXType fix276QuoteCondition = FIXType.FIX276_QUOTE_CONDITION;
     }
     @Test
     void Tag0276Test() {

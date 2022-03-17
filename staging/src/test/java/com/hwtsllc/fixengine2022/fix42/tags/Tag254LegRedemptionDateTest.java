@@ -47,7 +47,7 @@ class Tag254LegRedemptionDateTest {
     }
     @Test
     void FIX0254Test() {
-        FIXType fix254LegRedemptionDate = FIXType.LEG_REDEMPTION_DATE;
+        FIXType fix254LegRedemptionDate = FIXType.FIX254_LEG_REDEMPTION_DATE;
     }
     @Test
     void Tag0254Test() {

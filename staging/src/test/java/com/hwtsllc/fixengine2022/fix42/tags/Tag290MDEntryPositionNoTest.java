@@ -46,7 +46,7 @@ class Tag290MDEntryPositionNoTest {
     }
     @Test
     void FIX0290Test() {
-        FIXType fix290MDEntryPositionNo = FIXType.MD_ENTRY_POSITION_NO;
+        FIXType fix290MDEntryPositionNo = FIXType.FIX290_MD_ENTRY_POSITION_NO;
     }
     @Test
     void Tag0290Test() {

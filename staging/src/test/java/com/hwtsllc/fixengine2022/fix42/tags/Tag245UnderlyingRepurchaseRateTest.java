@@ -47,7 +47,7 @@ class Tag245UnderlyingRepurchaseRateTest {
     }
     @Test
     void FIX0245Test() {
-        FIXType fix245UnderlyingRepurchaseRate = FIXType.UNDERLYING_REPURCHASE_RATE;
+        FIXType fix245UnderlyingRepurchaseRate = FIXType.FIX245_UNDERLYING_REPURCHASE_RATE;
     }
     @Test
     void Tag0245Test() {

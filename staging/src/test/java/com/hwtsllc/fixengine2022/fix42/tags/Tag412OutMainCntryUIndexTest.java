@@ -46,7 +46,7 @@ class Tag412OutMainCntryUIndexTest {
     }
     @Test
     void FIX0412Test() {
-        FIXType fix412OutMainCntryUIndex = FIXType.OUT_MAIN_CNTRY_U_INDEX;
+        FIXType fix412OutMainCntryUIndex = FIXType.FIX412_OUT_MAIN_CNTRY_U_INDEX;
     }
     @Test
     void Tag0412Test() {

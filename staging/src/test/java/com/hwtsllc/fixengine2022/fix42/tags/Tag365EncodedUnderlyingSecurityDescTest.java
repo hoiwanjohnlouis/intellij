@@ -46,7 +46,7 @@ class Tag365EncodedUnderlyingSecurityDescTest {
     }
     @Test
     void FIX0365Test() {
-        FIXType fix365EncodedUnderlyingSecurityDesc = FIXType.ENCODED_UNDERLYING_SECURITY_DESC;
+        FIXType fix365EncodedUnderlyingSecurityDesc = FIXType.FIX365_ENCODED_UNDERLYING_SECURITY_DESC;
     }
     @Test
     void Tag0365Test() {

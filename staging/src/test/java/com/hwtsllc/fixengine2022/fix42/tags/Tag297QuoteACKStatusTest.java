@@ -46,7 +46,7 @@ class Tag297QuoteACKStatusTest {
     }
     @Test
     void FIX0297Test() {
-        FIXType fix297QuoteAckStatus = FIXType.QUOTE_ACK_STATUS;
+        FIXType fix297QuoteAckStatus = FIXType.FIX297_QUOTE_ACK_STATUS;
     }
     @Test
     void Tag0297Test() {

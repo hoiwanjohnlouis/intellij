@@ -46,7 +46,7 @@ class Tag442MultiLegReportingTypeTest {
     }
     @Test
     void FIX0442Test() {
-        FIXType fix442MultiLegReportingType = FIXType.MULTI_LEG_REPORTING_TYPE;
+        FIXType fix442MultiLegReportingType = FIXType.FIX442_MULTI_LEG_REPORTING_TYPE;
     }
     @Test
     void Tag0442Test() {

@@ -46,7 +46,7 @@ class Tag271MDEntrySizeTest {
     }
     @Test
     void FIX0271Test() {
-        FIXType fix271MDEntrySize = FIXType.MD_ENTRY_SIZE;
+        FIXType fix271MDEntrySize = FIXType.FIX271_MD_ENTRY_SIZE;
     }
     @Test
     void Tag0271Test() {

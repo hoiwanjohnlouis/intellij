@@ -17,56 +17,25 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public enum Tag35MsgType {
+public class Tag35MsgType extends TagTypeAbstract {
+    private final String dataValue;
 
-    HEARTBEAT("0", "Heartbeat"),
-    TEST_REQUEST("1", "Test Request"),
-    RESEND_REQUEST("2", "Resend Request"),
-    REJECT("3", "Reject"),
-    SEQUENCE_RESET("4", "Sequence Reset"),
-    LOGOUT("5", "Logout"),
-    EXECUTION_REPORT("8", "Execution Report"),
-    ORDER_CANCEL_REJECT("9", "Order Cancel Reject"),
-    NEW_ORDER("D", "New Order - Single"),
-    ORDER_CANCEL_REQUEST("F", "Order Cancel Request"),
-    ORDER_MODIFICATION_REQUEST("G", "Order Cancel/Replace Request"),
-    ORDER_STATUS_REQUEST("H", "Order Status Request"),
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    private final FIXType fixType = FIXType.FIX35_MSG_TYPE;
-
-    private final String tag35MsgTypeValue;
-    private final String tag35MsgTypeDescription;
-
-    Tag35MsgType(final String msgType, final String msgDescription) {
-        this.tag35MsgTypeValue = msgType;
-        this.tag35MsgTypeDescription = msgDescription;
+    public Tag35MsgType(String dataValue) {
+        setFixType(FIXType.FIX34_MSG_SEQ_NUM);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
-    public String getTag35MsgTypeValue() {
-        return tag35MsgTypeValue;
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag35MsgType tagData = new Tag35MsgType("JohnWick-453");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
-    public String getTag35MsgTypeDescription() {
-        return tag35MsgTypeDescription;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.name());
-        sb.append(":[");
-        sb.append(getTag35MsgTypeValue());
-        sb.append("]");
-        sb.append(":[");
-        sb.append(getTag35MsgTypeDescription());
-        sb.append("]");
-
-        return sb.toString();
-    }
-
 }

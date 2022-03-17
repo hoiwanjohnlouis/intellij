@@ -46,7 +46,7 @@ class Tag350EncodedSecurityDescLenTest {
     }
     @Test
     void FIX0350Test() {
-        FIXType fix350EncodedSecurityDescLen = FIXType.ENCODED_SECURITY_DESC_LEN;
+        FIXType fix350EncodedSecurityDescLen = FIXType.FIX350_ENCODED_SECURITY_DESC_LEN;
     }
     @Test
     void Tag0350Test() {

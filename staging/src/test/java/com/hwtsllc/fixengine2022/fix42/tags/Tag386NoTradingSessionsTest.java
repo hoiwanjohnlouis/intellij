@@ -46,7 +46,7 @@ class Tag386NoTradingSessionsTest {
     }
     @Test
     void FIX0386Test() {
-        FIXType fix386NoTradingSessions = FIXType.NO_TRADING_SESSIONS;
+        FIXType fix386NoTradingSessions = FIXType.FIX386_NO_TRADING_SESSIONS;
     }
     @Test
     void Tag0386Test() {

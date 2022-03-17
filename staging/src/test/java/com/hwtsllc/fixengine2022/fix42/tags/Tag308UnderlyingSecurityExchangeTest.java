@@ -46,7 +46,7 @@ class Tag308UnderlyingSecurityExchangeTest {
     }
     @Test
     void FIX0308Test() {
-        FIXType fix308UnderlyingSecurityExchange = FIXType.UNDERLYING_SECURITY_EXCHANGE;
+        FIXType fix308UnderlyingSecurityExchange = FIXType.FIX308_UNDERLYING_SECURITY_EXCHANGE;
     }
     @Test
     void Tag0308Test() {

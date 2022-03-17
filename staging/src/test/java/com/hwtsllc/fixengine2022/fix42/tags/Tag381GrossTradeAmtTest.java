@@ -46,7 +46,7 @@ class Tag381GrossTradeAmtTest {
     }
     @Test
     void FIX0381Test() {
-        FIXType fix381GrossTradeAmt = FIXType.GROSS_TRADE_AMT;
+        FIXType fix381GrossTradeAmt = FIXType.FIX381_GROSS_TRADE_AMT;
     }
     @Test
     void Tag0381Test() {

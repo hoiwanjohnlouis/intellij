@@ -46,7 +46,7 @@ class Tag302QuoteSetIDTest {
     }
     @Test
     void FIX0302Test() {
-        FIXType fix302QuoteSetID = FIXType.QUOTE_SET_ID;
+        FIXType fix302QuoteSetID = FIXType.FIX302_QUOTE_SET_ID;
     }
     @Test
     void Tag0302Test() {

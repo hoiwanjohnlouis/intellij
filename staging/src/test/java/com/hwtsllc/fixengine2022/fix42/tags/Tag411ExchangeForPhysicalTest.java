@@ -46,7 +46,7 @@ class Tag411ExchangeForPhysicalTest {
     }
     @Test
     void FIX0411Test() {
-        FIXType fix411ExchangeForPhysical = FIXType.EXCHANGE_FOR_PHYSICAL;
+        FIXType fix411ExchangeForPhysical = FIXType.FIX411_EXCHANGE_FOR_PHYSICAL;
     }
     @Test
     void Tag0411Test() {

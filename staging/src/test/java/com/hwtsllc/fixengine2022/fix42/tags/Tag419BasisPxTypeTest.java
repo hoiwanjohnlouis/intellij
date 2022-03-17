@@ -46,7 +46,7 @@ class Tag419BasisPxTypeTest {
     }
     @Test
     void FIX0419Test() {
-        FIXType fix419BasisPxType = FIXType.BASIS_PX_TYPE;
+        FIXType fix419BasisPxType = FIXType.FIX419_BASIS_PX_TYPE;
     }
     @Test
     void Tag0419Test() {

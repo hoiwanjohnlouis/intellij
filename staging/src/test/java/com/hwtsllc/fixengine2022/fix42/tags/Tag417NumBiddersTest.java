@@ -46,7 +46,7 @@ class Tag417NumBiddersTest {
     }
     @Test
     void FIX0417Test() {
-        FIXType fix417NumBidders = FIXType.NUM_BIDDERS;
+        FIXType fix417NumBidders = FIXType.FIX417_NUM_BIDDERS;
     }
     @Test
     void Tag0417Test() {

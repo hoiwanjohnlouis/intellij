@@ -46,7 +46,7 @@ class Tag230ExDateTest {
     }
     @Test
     void FIX0230Test() {
-        FIXType fix230ExDate = FIXType.EX_DATE;
+        FIXType fix230ExDate = FIXType.FIX230_EX_DATE;
     }
     @Test
     void Tag0230Test() {

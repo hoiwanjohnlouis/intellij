@@ -46,7 +46,7 @@ class Tag327HaltReasonTest {
     }
     @Test
     void FIX0327Test() {
-        FIXType fix327HaltReason = FIXType.HALT_REASON;
+        FIXType fix327HaltReason = FIXType.FIX327_HALT_REASON;
     }
     @Test
     void Tag0327Test() {

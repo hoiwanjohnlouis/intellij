@@ -46,7 +46,7 @@ class Tag222BenchmarkCurvePointTest {
     }
     @Test
     void FIX0222Test() {
-        FIXType fix222BenchmarkCurvePoint = FIXType.BENCHMARK_CURVE_POINT;
+        FIXType fix222BenchmarkCurvePoint = FIXType.FIX222_BENCHMARK_CURVE_POINT;
     }
     @Test
     void Tag0222Test() {

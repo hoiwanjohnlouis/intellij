@@ -46,7 +46,7 @@ class Tag370OnBehalfOfSendingTimeTest {
     }
     @Test
     void FIX0370Test() {
-        FIXType fix370OnBehalfOfSendingTime = FIXType.ON_BEHALF_OF_SENDING_TIME;
+        FIXType fix370OnBehalfOfSendingTime = FIXType.FIX370_ON_BEHALF_OF_SENDING_TIME;
     }
     @Test
     void Tag0370Test() {

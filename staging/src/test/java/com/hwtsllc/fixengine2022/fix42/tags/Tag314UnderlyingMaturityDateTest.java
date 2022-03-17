@@ -47,7 +47,7 @@ class Tag314UnderlyingMaturityDateTest {
     }
     @Test
     void FIX0314Test() {
-        FIXType fix314UnderlyingMaturityDate = FIXType.UNDERLYING_MATURITY_DAY;
+        FIXType fix314UnderlyingMaturityDate = FIXType.FIX314_UNDERLYING_MATURITY_DAY;
     }
     @Test
     void Tag0314Test() {

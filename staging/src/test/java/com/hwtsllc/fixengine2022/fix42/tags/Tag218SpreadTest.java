@@ -46,7 +46,7 @@ class Tag218SpreadTest {
     }
     @Test
     void FIX0218Test() {
-        FIXType fix218Spread = FIXType.SPREAD_TO_BENCHMARK;
+        FIXType fix218Spread = FIXType.FIX218_SPREAD_TO_BENCHMARK;
     }
     @Test
     void Tag0218Test() {

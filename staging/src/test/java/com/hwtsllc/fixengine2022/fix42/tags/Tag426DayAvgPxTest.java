@@ -46,7 +46,7 @@ class Tag426DayAvgPxTest {
     }
     @Test
     void FIX0426Test() {
-        FIXType fix426DayAvgPx = FIXType.DAY_AVG_PX;
+        FIXType fix426DayAvgPx = FIXType.FIX426_DAY_AVG_PX;
     }
     @Test
     void Tag0426Test() {

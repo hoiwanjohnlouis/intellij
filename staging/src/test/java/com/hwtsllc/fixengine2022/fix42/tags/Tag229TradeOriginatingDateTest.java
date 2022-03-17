@@ -46,7 +46,7 @@ class Tag229TradeOriginatingDateTest {
     }
     @Test
     void FIX0229Test() {
-        FIXType fix229TradeOriginatingDate = FIXType.TRADE_ORIGINATION_DATE;
+        FIXType fix229TradeOriginatingDate = FIXType.FIX229_TRADE_ORIGINATION_DATE;
     }
     @Test
     void Tag0229Test() {

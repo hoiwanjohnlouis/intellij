@@ -18,16 +18,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag17ExecID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag17ExecID(String dataValue) {
         setFixType(FIXType.FIX17_EXEC_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -35,9 +33,9 @@ public class Tag17ExecID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag17ExecID tag17ExecID = new Tag17ExecID("JohnWick-9876");
-        System.out.println(tag17ExecID);
-        System.out.println(tag17ExecID.toLogStringVerbose());
-        System.out.println(tag17ExecID.toFixTagValuePairString());
+        Tag17ExecID tagData = new Tag17ExecID("JohnWick-9876");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

@@ -46,7 +46,7 @@ class Tag423PriceTypeTest {
     }
     @Test
     void FIX0423Test() {
-        FIXType fix423PriceType = FIXType.PRICE_TYPE;
+        FIXType fix423PriceType = FIXType.FIX423_PRICE_TYPE;
     }
     @Test
     void Tag0423Test() {

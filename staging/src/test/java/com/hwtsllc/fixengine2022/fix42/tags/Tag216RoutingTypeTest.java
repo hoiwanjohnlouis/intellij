@@ -46,7 +46,7 @@ class Tag216RoutingTypeTest {
     }
     @Test
     void FIX0216Test() {
-        FIXType fix216RoutingType = FIXType.ROUTING_TYPE;
+        FIXType fix216RoutingType = FIXType.FIX216_ROUTING_TYPE;
     }
     @Test
     void Tag0216Test() {

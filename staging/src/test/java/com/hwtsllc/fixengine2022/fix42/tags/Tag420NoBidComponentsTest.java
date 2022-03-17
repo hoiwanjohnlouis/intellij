@@ -46,7 +46,7 @@ class Tag420NoBidComponentsTest {
     }
     @Test
     void FIX0420Test() {
-        FIXType fix420NoBidComponents = FIXType.NO_BID_COMPONENTS;
+        FIXType fix420NoBidComponents = FIXType.FIX420_NO_BID_COMPONENTS;
     }
     @Test
     void Tag0420Test() {

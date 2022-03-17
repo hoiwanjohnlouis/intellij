@@ -46,7 +46,7 @@ class Tag433ListExecInstTypeTest {
     }
     @Test
     void FIX0433Test() {
-        FIXType fix433ListExecInstType = FIXType.LIST_EXEC_INST_TYPE;
+        FIXType fix433ListExecInstType = FIXType.FIX433_LIST_EXEC_INST_TYPE;
     }
     @Test
     void Tag0433Test() {

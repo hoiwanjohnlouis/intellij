@@ -46,7 +46,7 @@ class Tag289MDEntrySellerTest {
     }
     @Test
     void FIX0289Test() {
-        FIXType fix289MDEntrySeller = FIXType.MD_ENTRY_SELLER;
+        FIXType fix289MDEntrySeller = FIXType.FIX289_MD_ENTRY_SELLER;
     }
     @Test
     void Tag0289Test() {

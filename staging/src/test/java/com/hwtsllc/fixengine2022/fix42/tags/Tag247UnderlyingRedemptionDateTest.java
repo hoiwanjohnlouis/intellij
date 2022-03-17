@@ -47,7 +47,7 @@ class Tag247UnderlyingRedemptionDateTest {
     }
     @Test
     void FIX0247Test() {
-        FIXType fix247UnderlyingRedemptionDate = FIXType.UNDERLYING_REDEMPTION_DATE;
+        FIXType fix247UnderlyingRedemptionDate = FIXType.FIX247_UNDERLYING_REDEMPTION_DATE;
     }
     @Test
     void Tag0247Test() {

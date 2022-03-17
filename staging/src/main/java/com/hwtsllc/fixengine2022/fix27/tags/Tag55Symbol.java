@@ -17,14 +17,10 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag55Symbol extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public final static String TESTA_TICKER_SYMBOL = "TESTA_SYMBOL";
     public final static String TESTB_TICKER_SYMBOL = "TESTB_SYMBOL";
@@ -32,6 +28,7 @@ public class Tag55Symbol extends TagTypeAbstract {
     public Tag55Symbol(String dataValue) {
         setFixType(FIXType.FIX55_SYMBOL);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -39,9 +36,9 @@ public class Tag55Symbol extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag55Symbol tag55Symbol = new Tag55Symbol("MSFT");
-        System.out.println(tag55Symbol);
-        System.out.println(tag55Symbol.toLogStringVerbose());
-        System.out.println(tag55Symbol.toFixTagValuePairString());
+        Tag55Symbol tagData = new Tag55Symbol("MSFT");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

@@ -46,7 +46,7 @@ class Tag285DeleteReasonTest {
     }
     @Test
     void FIX0285Test() {
-        FIXType fix285DeleteReason = FIXType.DELETE_REASON;
+        FIXType fix285DeleteReason = FIXType.FIX285_DELETE_REASON;
     }
     @Test
     void Tag0285Test() {

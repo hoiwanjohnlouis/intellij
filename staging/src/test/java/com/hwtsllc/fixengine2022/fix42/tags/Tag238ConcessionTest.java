@@ -46,7 +46,7 @@ class Tag238ConcessionTest {
     }
     @Test
     void FIX0238Test() {
-        FIXType fix238Concession = FIXType.CONCESSION;
+        FIXType fix238Concession = FIXType.FIX238_CONCESSION;
     }
     @Test
     void Tag0238Test() {

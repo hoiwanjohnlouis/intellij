@@ -47,7 +47,7 @@ class Tag244UnderlyingRepurchaseTermTest {
     }
     @Test
     void FIX0244Test() {
-        FIXType fix244UnderlyingRepurchaseTerm = FIXType.UNDERLYING_REPURCHASE_TERM;
+        FIXType fix244UnderlyingRepurchaseTerm = FIXType.FIX244_UNDERLYING_REPURCHASE_TERM;
     }
     @Test
     void Tag0244Test() {

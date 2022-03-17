@@ -46,7 +46,7 @@ class Tag291FinancialStatusTest {
     }
     @Test
     void FIX0291Test() {
-        FIXType fix291FinancialStatus = FIXType.FINANCIAL_STATUS;
+        FIXType fix291FinancialStatus = FIXType.FIX291_FINANCIAL_STATUS;
     }
     @Test
     void Tag0291Test() {

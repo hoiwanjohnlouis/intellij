@@ -48,7 +48,7 @@ class Tag450TotalVolumeTradedTimeTest {
     }
     @Test
     void FIX0450Test() {
-        FIXType fix450TotalVolumeTradedTime = FIXType.TOTAL_VOLUME_TRADED_TIME;
+        FIXType fix450TotalVolumeTradedTime = FIXType.FIX450_TOTAL_VOLUME_TRADED_TIME;
     }
     @Test
     void Tag0450Test() {

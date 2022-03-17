@@ -46,7 +46,7 @@ class Tag389DiscretionOffsetTest {
     }
     @Test
     void FIX0389Test() {
-        FIXType fix389DiscretionOffset = FIXType.DISCRETION_OFFSET;
+        FIXType fix389DiscretionOffset = FIXType.FIX389_DISCRETION_OFFSET;
     }
     @Test
     void Tag0389Test() {

@@ -46,7 +46,7 @@ class Tag331SellVolumeTest {
     }
     @Test
     void FIX0331Test() {
-        FIXType fix331SellVolume = FIXType.SELL_VOLUME;
+        FIXType fix331SellVolume = FIXType.FIX331_SELL_VOLUME;
     }
     @Test
     void Tag0331Test() {

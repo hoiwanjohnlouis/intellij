@@ -46,7 +46,7 @@ class Tag368QuoteEntryRejectReasonTest {
     }
     @Test
     void FIX0368Test() {
-        FIXType fix368QuoteEntryRejectReason = FIXType.QUOTE_ENTRY_REJECT_REASON;
+        FIXType fix368QuoteEntryRejectReason = FIXType.FIX368_QUOTE_ENTRY_REJECT_REASON;
     }
     @Test
     void Tag0368Test() {

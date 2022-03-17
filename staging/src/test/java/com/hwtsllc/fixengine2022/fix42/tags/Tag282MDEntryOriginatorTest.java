@@ -46,7 +46,7 @@ class Tag282MDEntryOriginatorTest {
     }
     @Test
     void FIX0282Test() {
-        FIXType fix282MDEntryOriginator = FIXType.MD_ENTRY_ORIGINATOR;
+        FIXType fix282MDEntryOriginator = FIXType.FIX282_MD_ENTRY_ORIGINATOR;
     }
     @Test
     void Tag0282Test() {

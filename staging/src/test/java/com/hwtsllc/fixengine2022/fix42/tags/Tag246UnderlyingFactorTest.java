@@ -46,7 +46,7 @@ class Tag246UnderlyingFactorTest {
     }
     @Test
     void FIX0246Test() {
-        FIXType fix246UnderlyingFactor = FIXType.UNDERLYING_FACTOR;
+        FIXType fix246UnderlyingFactor = FIXType.FIX246_UNDERLYING_FACTOR;
     }
     @Test
     void Tag0246Test() {

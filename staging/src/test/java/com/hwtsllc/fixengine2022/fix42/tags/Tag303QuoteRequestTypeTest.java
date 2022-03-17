@@ -46,7 +46,7 @@ class Tag303QuoteRequestTypeTest {
     }
     @Test
     void FIX0303Test() {
-        FIXType fix303QuoteRequestType = FIXType.QUOTE_REQUEST_TYPE;
+        FIXType fix303QuoteRequestType = FIXType.FIX303_QUOTE_REQUEST_TYPE;
     }
     @Test
     void Tag0303Test() {

@@ -46,7 +46,7 @@ class Tag208NotifyBrokerOfCreditTest {
     }
     @Test
     void FIX0208Test() {
-        FIXType fix208NotifyBrokerOfCredit = FIXType.NOTIFY_BROKER_OF_CREDIT;
+        FIXType fix208NotifyBrokerOfCredit = FIXType.FIX208_NOTIFY_BROKER_OF_CREDIT;
     }
     @Test
     void Tag0208Test() {

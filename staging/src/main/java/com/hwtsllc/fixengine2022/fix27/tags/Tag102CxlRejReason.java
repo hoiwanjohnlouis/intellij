@@ -16,5 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-public enum Tag102CxlRejReason {
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+
+public class Tag102CxlRejReason extends TagTypeAbstract {
 }

@@ -46,7 +46,7 @@ class Tag241UnderlyingCouponPaymentDateTest {
     }
     @Test
     void FIX0241Test() {
-        FIXType fix241UnderlyingCouponPaymentDate = FIXType.UNDERLYING_COUPON_PAYMENT_DATE;
+        FIXType fix241UnderlyingCouponPaymentDate = FIXType.FIX241_UNDERLYING_COUPON_PAYMENT_DATE;
     }
     @Test
     void Tag0241Test() {

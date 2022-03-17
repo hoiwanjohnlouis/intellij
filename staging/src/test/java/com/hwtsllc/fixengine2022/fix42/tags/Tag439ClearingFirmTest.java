@@ -46,7 +46,7 @@ class Tag439ClearingFirmTest {
     }
     @Test
     void FIX0439Test() {
-        FIXType fix439ClearingFirm = FIXType.CLEARING_FIRM;
+        FIXType fix439ClearingFirm = FIXType.FIX439_CLEARING_FIRM;
     }
     @Test
     void Tag0439Test() {

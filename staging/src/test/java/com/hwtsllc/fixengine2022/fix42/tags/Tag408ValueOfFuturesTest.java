@@ -46,7 +46,7 @@ class Tag408ValueOfFuturesTest {
     }
     @Test
     void FIX0408Test() {
-        FIXType fix408ValueOfFutures = FIXType.VALUE_OF_FUTURES;
+        FIXType fix408ValueOfFutures = FIXType.FIX408_VALUE_OF_FUTURES;
     }
     @Test
     void Tag0408Test() {

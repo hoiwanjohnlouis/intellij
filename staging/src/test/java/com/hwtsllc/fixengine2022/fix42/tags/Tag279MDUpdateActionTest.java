@@ -46,7 +46,7 @@ class Tag279MDUpdateActionTest {
     }
     @Test
     void FIX0279Test() {
-        FIXType fix279MDUpdateAction = FIXType.MD_UPDATE_ACTION;
+        FIXType fix279MDUpdateAction = FIXType.FIX279_MD_UPDATE_ACTION;
     }
     @Test
     void Tag0279Test() {

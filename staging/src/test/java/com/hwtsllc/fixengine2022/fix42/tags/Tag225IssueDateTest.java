@@ -46,7 +46,7 @@ class Tag225IssueDateTest {
     }
     @Test
     void FIX0225Test() {
-        FIXType fix225IssueDate = FIXType.ISSUE_DATE;
+        FIXType fix225IssueDate = FIXType.FIX225_ISSUE_DATE;
     }
     @Test
     void Tag0225Test() {

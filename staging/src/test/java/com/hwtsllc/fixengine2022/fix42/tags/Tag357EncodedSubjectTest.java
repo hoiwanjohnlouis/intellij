@@ -46,7 +46,7 @@ class Tag357EncodedSubjectTest {
     }
     @Test
     void FIX0357Test() {
-        FIXType fix357EncodedSubject = FIXType.ENCODED_SUBJECT;
+        FIXType fix357EncodedSubject = FIXType.FIX357_ENCODED_SUBJECT;
     }
     @Test
     void Tag0357Test() {

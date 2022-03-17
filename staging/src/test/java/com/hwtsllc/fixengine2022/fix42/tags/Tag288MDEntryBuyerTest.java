@@ -46,7 +46,7 @@ class Tag288MDEntryBuyerTest {
     }
     @Test
     void FIX0288Test() {
-        FIXType fix288MDEntryBuyer = FIXType.MD_ENTRY_BUYER;
+        FIXType fix288MDEntryBuyer = FIXType.FIX288_MD_ENTRY_BUYER;
     }
     @Test
     void Tag0288Test() {

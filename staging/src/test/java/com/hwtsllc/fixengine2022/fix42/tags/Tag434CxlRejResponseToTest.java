@@ -46,7 +46,7 @@ class Tag434CxlRejResponseToTest {
     }
     @Test
     void FIX0434Test() {
-        FIXType fix434CxlRejResponseTo = FIXType.CXL_REJ_RESPONSE_TO;
+        FIXType fix434CxlRejResponseTo = FIXType.FIX434_CXL_REJ_RESPONSE_TO;
     }
     @Test
     void Tag0434Test() {

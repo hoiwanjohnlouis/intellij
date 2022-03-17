@@ -46,7 +46,7 @@ class Tag431ListOrderStatusTest {
     }
     @Test
     void FIX0431Test() {
-        FIXType fix431ListOrderStatus = FIXType.LIST_ORDER_STATUS;
+        FIXType fix431ListOrderStatus = FIXType.FIX431_LIST_ORDER_STATUS;
     }
     @Test
     void Tag0431Test() {

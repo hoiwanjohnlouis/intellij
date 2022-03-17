@@ -46,7 +46,7 @@ class Tag363EncodedUnderlyingIssuerTest {
     }
     @Test
     void FIX0363Test() {
-        FIXType fix363EncodedUnderlyingIssuer = FIXType.ENCODED_UNDERLYING_ISSUER;
+        FIXType fix363EncodedUnderlyingIssuer = FIXType.FIX363_ENCODED_UNDERLYING_ISSUER;
     }
     @Test
     void Tag0363Test() {

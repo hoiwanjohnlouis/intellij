@@ -46,7 +46,7 @@ class Tag441LiquidityNumSecuritiesTest {
     }
     @Test
     void FIX0441Test() {
-        FIXType fix441LiquidityNumSecurities = FIXType.LIQUIDITY_NUM_SECURITIES;
+        FIXType fix441LiquidityNumSecurities = FIXType.FIX441_LIQUIDITY_NUM_SECURITIES;
     }
     @Test
     void Tag0441Test() {

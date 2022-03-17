@@ -46,7 +46,7 @@ class Tag361EncodedAllocTextTest {
     }
     @Test
     void FIX0361Test() {
-        FIXType fix361EncodedAllocText = FIXType.ENCODED_ALLOC_TEXT;
+        FIXType fix361EncodedAllocText = FIXType.FIX361_ENCODED_ALLOC_TEXT;
     }
     @Test
     void Tag0361Test() {

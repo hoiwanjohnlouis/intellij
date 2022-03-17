@@ -47,7 +47,7 @@ class Tag448PartyIDTest {
     }
     @Test
     void FIX0448Test() {
-        FIXType fix448PartyID = FIXType.PARTY_ID;
+        FIXType fix448PartyID = FIXType.FIX448_PARTY_ID;
     }
     @Test
     void Tag0448Test() {

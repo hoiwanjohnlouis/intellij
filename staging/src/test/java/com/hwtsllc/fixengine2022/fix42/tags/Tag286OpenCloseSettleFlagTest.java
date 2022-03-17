@@ -46,7 +46,7 @@ class Tag286OpenCloseSettleFlagTest {
     }
     @Test
     void FIX0286Test() {
-        FIXType fix286OpenCloseSettleFlag = FIXType.OPEN_CLOSE_SETTLE_FLAG;
+        FIXType fix286OpenCloseSettleFlag = FIXType.FIX286_OPEN_CLOSE_SETTLE_FLAG;
     }
     @Test
     void Tag0286Test() {

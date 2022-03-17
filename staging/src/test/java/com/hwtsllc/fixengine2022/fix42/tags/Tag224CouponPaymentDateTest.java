@@ -46,7 +46,7 @@ class Tag224CouponPaymentDateTest {
     }
     @Test
     void FIX0224Test() {
-        FIXType fix224CouponPaymentDate = FIXType.COUPON_PAYMENT_DATE;
+        FIXType fix224CouponPaymentDate = FIXType.FIX224_COUPON_PAYMENT_DATE;
     }
     @Test
     void Tag0224Test() {

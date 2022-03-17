@@ -46,7 +46,7 @@ class Tag346NumberOfOrdersTest {
     }
     @Test
     void FIX0346Test() {
-        FIXType fix346NumberOfOrders = FIXType.NUMBER_OF_ORDERS;
+        FIXType fix346NumberOfOrders = FIXType.FIX346_NUMBER_OF_ORDERS;
     }
     @Test
     void Tag0346Test() {

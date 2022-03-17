@@ -47,7 +47,7 @@ class Tag447PartyIDSourceTest {
     }
     @Test
     void FIX0447Test() {
-        FIXType fix447PartyIDSource = FIXType.PARTY_ID_SOURCE;
+        FIXType fix447PartyIDSource = FIXType.FIX447_PARTY_ID_SOURCE;
     }
     @Test
     void Tag0447Test() {

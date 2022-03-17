@@ -46,7 +46,7 @@ class Tag212XmlDataLenTest {
     }
     @Test
     void FIX0212Test() {
-        FIXType fix212XmlDataLen = FIXType.XML_DATA_LEN;
+        FIXType fix212XmlDataLen = FIXType.FIX212_XML_DATA_LEN;
     }
     @Test
     void Tag0212Test() {

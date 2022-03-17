@@ -46,7 +46,7 @@ class Tag242UnderlyingIssueDateTest {
     }
     @Test
     void FIX0242Test() {
-        FIXType fix242UnderlyingIssueDate = FIXType.UNDERLYING_ISSUE_DATE;
+        FIXType fix242UnderlyingIssueDate = FIXType.FIX242_UNDERLYING_ISSUE_DATE;
     }
     @Test
     void Tag0242Test() {

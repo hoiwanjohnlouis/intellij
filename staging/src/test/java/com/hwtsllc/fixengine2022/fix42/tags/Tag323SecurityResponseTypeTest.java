@@ -46,7 +46,7 @@ class Tag323SecurityResponseTypeTest {
     }
     @Test
     void FIX0323Test() {
-        FIXType fix323SecurityResponseType = FIXType.SECURITY_RESPONSE_TYPE;
+        FIXType fix323SecurityResponseType = FIXType.FIX323_SECURITY_RESPONSE_TYPE;
     }
     @Test
     void Tag0323Test() {

@@ -46,7 +46,7 @@ class Tag414ProgRptReqsTest {
     }
     @Test
     void FIX0414Test() {
-        FIXType fix414ProgRptReqs = FIXType.PROG_RPT_REQS;
+        FIXType fix414ProgRptReqs = FIXType.FIX414_PROG_RPT_REQS;
     }
     @Test
     void Tag0414Test() {

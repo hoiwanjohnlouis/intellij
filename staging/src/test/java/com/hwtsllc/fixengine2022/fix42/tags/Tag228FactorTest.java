@@ -46,7 +46,7 @@ class Tag228FactorTest {
     }
     @Test
     void FIX0228Test() {
-        FIXType fix228Factor = FIXType.FACTOR;
+        FIXType fix228Factor = FIXType.FIX228_FACTOR;
     }
     @Test
     void Tag0228Test() {

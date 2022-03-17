@@ -46,7 +46,7 @@ class Tag371RefTagIDTest {
     }
     @Test
     void FIX0371Test() {
-        FIXType fix371RefTagID = FIXType.REF_TAG_ID;
+        FIXType fix371RefTagID = FIXType.FIX371_REF_TAG_ID;
     }
     @Test
     void Tag0371Test() {

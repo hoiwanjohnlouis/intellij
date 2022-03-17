@@ -27,7 +27,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class FIXBodyTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -49,9 +48,6 @@ class FIXBodyTest {
                 new FIXBody.Builder()
                         .buildOpeningPrice(12.34D)
                         .buildPreviousDaysClosingPrice(56.78D)
-                        .buildLastTradePrice(90.12D)
-                        .buildLastTradeQuantity(123.4D)
-                        .buildLastTradeTimeStamp("102346 EST")
                         .build();
 
         System.out.println(record);

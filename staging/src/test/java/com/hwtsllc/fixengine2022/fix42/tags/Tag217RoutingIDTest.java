@@ -46,7 +46,7 @@ class Tag217RoutingIDTest {
     }
     @Test
     void FIX0217Test() {
-        FIXType fix217RoutingID = FIXType.ROUTING_ID;
+        FIXType fix217RoutingID = FIXType.FIX217_ROUTING_ID;
     }
     @Test
     void Tag0217Test() {

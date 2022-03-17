@@ -46,7 +46,7 @@ class Tag316UnderlyingStrikePriceTest {
     }
     @Test
     void FIX0316Test() {
-        FIXType fix316UnderlyingStrikePrice = FIXType.UNDERLYING_STRIKE_PRICE;
+        FIXType fix316UnderlyingStrikePrice = FIXType.FIX316_UNDERLYING_STRIKE_PRICE;
     }
     @Test
     void Tag0316Test() {

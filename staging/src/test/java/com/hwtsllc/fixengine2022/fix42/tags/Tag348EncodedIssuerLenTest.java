@@ -46,7 +46,7 @@ class Tag348EncodedIssuerLenTest {
     }
     @Test
     void FIX0348Test() {
-        FIXType fix348EncodedIssuerLen = FIXType.ENCODED_ISSUER_LEN;
+        FIXType fix348EncodedIssuerLen = FIXType.FIX348_ENCODED_ISSUER_LEN;
     }
     @Test
     void Tag0348Test() {

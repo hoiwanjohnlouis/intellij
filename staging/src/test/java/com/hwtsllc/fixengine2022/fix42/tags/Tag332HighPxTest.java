@@ -46,7 +46,7 @@ class Tag332HighPxTest {
     }
     @Test
     void FIX0332Test() {
-        FIXType fix332HighPx = FIXType.HIGH_PX;
+        FIXType fix332HighPx = FIXType.FIX332_HIGH_PX;
     }
     @Test
     void Tag0332Test() {

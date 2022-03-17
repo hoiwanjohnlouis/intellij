@@ -46,7 +46,7 @@ class Tag399BidDescriptorTypeTest {
     }
     @Test
     void FIX0399Test() {
-        FIXType fix399BidDescriptorType = FIXType.BID_DESCRIPTOR_TYPE;
+        FIXType fix399BidDescriptorType = FIXType.FIX399_BID_DESCRIPTOR_TYPE;
     }
     @Test
     void Tag0399Test() {

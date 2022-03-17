@@ -46,7 +46,7 @@ class Tag265MDUpdateTypeTest {
     }
     @Test
     void FIX0265Test() {
-        FIXType fix265MDUpdateType = FIXType.MD_UPDATE_TYPE;
+        FIXType fix265MDUpdateType = FIXType.FIX265_MD_UPDATE_TYPE;
     }
     @Test
     void Tag0265Test() {

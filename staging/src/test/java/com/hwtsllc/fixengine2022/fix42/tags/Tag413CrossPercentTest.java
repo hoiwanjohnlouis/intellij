@@ -46,7 +46,7 @@ class Tag413CrossPercentTest {
     }
     @Test
     void FIX0413Test() {
-        FIXType fix413CrossPercent = FIXType.CROSS_PERCENT;
+        FIXType fix413CrossPercent = FIXType.FIX413_CROSS_PERCENT;
     }
     @Test
     void Tag0413Test() {

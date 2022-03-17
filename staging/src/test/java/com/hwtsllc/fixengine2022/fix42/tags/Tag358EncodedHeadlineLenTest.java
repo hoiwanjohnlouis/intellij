@@ -46,7 +46,7 @@ class Tag358EncodedHeadlineLenTest {
     }
     @Test
     void FIX0358Test() {
-        FIXType fix358EncodedHeadlineLen = FIXType.ENCODED_HEADLINE_LEN;
+        FIXType fix358EncodedHeadlineLen = FIXType.FIX358_ENCODED_HEADLINE_LEN;
     }
     @Test
     void Tag0358Test() {

@@ -46,7 +46,7 @@ class Tag352EncodedListExecInstLenTest {
     }
     @Test
     void FIX0352Test() {
-        FIXType fix352EncodedListExecInstLen = FIXType.ENCODED_LIST_EXEC_INST_LEN;
+        FIXType fix352EncodedListExecInstLen = FIXType.FIX352_ENCODED_LIST_EXEC_INST_LEN;
     }
     @Test
     void Tag0352Test() {

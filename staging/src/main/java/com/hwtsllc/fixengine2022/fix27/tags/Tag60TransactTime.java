@@ -16,10 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FieldType;
-
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
 /**
  * 	UTCTimestamp:  Time/date combination represented in UTC (Universal Time Coordinated, also known as “GMT”) in either
@@ -38,38 +36,26 @@ import org.apache.log4j.Logger;
  *      During a leap second insertion, a UTCTimestamp field may read "19981231-23:59:59", "19981231-23:59:60", "19990101-00:00:00".
  *      (see http://tycho.usno.navy.mil/leapsec.html)
  */
-public class Tag60TransactTime {
-
-    // for logging purposes
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    private final FieldType fieldType = FieldType.LAST_TRADE_TIME_STAMP;
-    private final String timeStamp;
+public class Tag60TransactTime extends TagTypeAbstract {
+    private final String dataValue;
 
     public final static String TESTA_TRANSACT_TIME = "18991231-23:59:60";
     public final static String TESTB_TRANSACT_TIME = "18991231-00:00:00";
 
-    public Tag60TransactTime(final String timeStamp) {
-        this.timeStamp = timeStamp;
+    public Tag60TransactTime(String dataValue) {
+        setFixType(FIXType.FIX60_TRANSACT_TIME);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
-    public FieldType getFieldType() {
-        return fieldType;
-    }
-
-    public String getTimeStamp() {
-        return timeStamp;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getFieldType().name());
-        sb.append(":[");
-        sb.append(getTimeStamp());
-        sb.append("]");
-
-        return sb.toString();
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag60TransactTime tagData = new Tag60TransactTime("JohnWick-453");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

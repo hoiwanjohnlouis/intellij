@@ -46,7 +46,7 @@ class Tag373SessionRejectReasonTest {
     }
     @Test
     void FIX0373Test() {
-        FIXType fix373SessionRejectReason = FIXType.SESSION_REJECT_REASON;
+        FIXType fix373SessionRejectReason = FIXType.FIX373_SESSION_REJECT_REASON;
     }
     @Test
     void Tag0373Test() {

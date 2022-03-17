@@ -46,7 +46,7 @@ class Tag329DueToRelatedTest {
     }
     @Test
     void FIX0329Test() {
-        FIXType fix329DueToRelated = FIXType.DUE_TO_RELATED;
+        FIXType fix329DueToRelated = FIXType.FIX329_DUE_TO_RELATED;
     }
     @Test
     void Tag0329Test() {

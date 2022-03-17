@@ -46,7 +46,7 @@ class Tag359EncodedHeadlineTest {
     }
     @Test
     void FIX0359Test() {
-        FIXType fix359EncodedHeadline = FIXType.ENCODED_HEADLINE;
+        FIXType fix359EncodedHeadline = FIXType.FIX359_ENCODED_HEADLINE;
     }
     @Test
     void Tag0359Test() {

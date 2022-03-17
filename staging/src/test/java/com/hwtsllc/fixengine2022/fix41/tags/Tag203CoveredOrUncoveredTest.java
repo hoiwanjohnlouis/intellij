@@ -46,7 +46,7 @@ class Tag203CoveredOrUncoveredTest {
     }
     @Test
     void FIX0203Test() {
-        FIXType fix203CoveredOrUncovered = FIXType.COVERED_OR_UNCOVERED;
+        FIXType fix203CoveredOrUncovered = FIXType.FIX203_COVERED_OR_UNCOVERED;
     }
     @Test
     void Tag0203Test() {

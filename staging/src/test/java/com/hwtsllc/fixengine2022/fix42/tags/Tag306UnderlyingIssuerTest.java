@@ -46,7 +46,7 @@ class Tag306UnderlyingIssuerTest {
     }
     @Test
     void FIX0306Test() {
-        FIXType fix306UnderlyingIssuer = FIXType.UNDERLYING_ISSUER;
+        FIXType fix306UnderlyingIssuer = FIXType.FIX306_UNDERLYING_ISSUER;
     }
     @Test
     void Tag0306Test() {

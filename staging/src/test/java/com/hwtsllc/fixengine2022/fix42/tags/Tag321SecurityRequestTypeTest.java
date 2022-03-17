@@ -46,7 +46,7 @@ class Tag321SecurityRequestTypeTest {
     }
     @Test
     void FIX0321Test() {
-        FIXType fix321SecurityRequestType = FIXType.SECURITY_REQUEST_TYPE;
+        FIXType fix321SecurityRequestType = FIXType.FIX321_SECURITY_REQUEST_TYPE;
     }
     @Test
     void Tag0321Test() {

@@ -46,7 +46,7 @@ class Tag360EncodedAllocTextLenTest {
     }
     @Test
     void FIX0360Test() {
-        FIXType fix360EncodedAllocTextLen = FIXType.ENCODED_ALLOC_TEXT_LEN;
+        FIXType fix360EncodedAllocTextLen = FIXType.FIX360_ENCODED_ALLOC_TEXT_LEN;
     }
     @Test
     void Tag0360Test() {

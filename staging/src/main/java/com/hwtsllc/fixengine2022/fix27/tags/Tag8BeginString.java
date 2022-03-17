@@ -16,22 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.fix27.enums.Enum8BeginString;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum8BeginString;
 
 public class Tag8BeginString extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private Enum8BeginString dataValue;
 
-    private Enum8BeginString enum8BeginString;
-
-    public Tag8BeginString(Enum8BeginString enum8BeginString) {
+    public Tag8BeginString(Enum8BeginString dataValue) {
         setFixType(FIXType.FIX8_BEGIN_STRING);
-        setDataValue(enum8BeginString.getAction());
-        this.enum8BeginString = enum8BeginString;
+        setDataValue(dataValue.getAction());
+        this.dataValue = dataValue;
     }
 
     /**
@@ -39,9 +34,9 @@ public class Tag8BeginString extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag8BeginString tag8BeginString = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_2);
-        System.out.println(tag8BeginString);
-        System.out.println(tag8BeginString.toLogStringVerbose());
-        System.out.println(tag8BeginString.toFixTagValuePairString());
+        Tag8BeginString tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_2);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

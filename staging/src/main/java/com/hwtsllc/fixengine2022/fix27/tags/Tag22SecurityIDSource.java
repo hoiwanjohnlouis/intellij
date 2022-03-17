@@ -17,13 +17,27 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum22SecurityIDSource;
 
-public enum Tag22SecurityIDSource {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag22SecurityIDSource extends TagTypeAbstract {
+    private final Enum22SecurityIDSource dataValue;
 
-    private final FIXType fixType = FIXType.FIX22_SECURITY_ID_SOURCE;
+    public Tag22SecurityIDSource(Enum22SecurityIDSource dataValue) {
+        setFixType(FIXType.FIX22_SECURITY_ID_SOURCE);
+        setDataValue(dataValue.getAction());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Enum22SecurityIDSource enumData = Enum22SecurityIDSource.CUSIP;
+        Tag22SecurityIDSource tagData = new Tag22SecurityIDSource(enumData);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

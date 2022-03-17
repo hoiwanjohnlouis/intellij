@@ -18,16 +18,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag3AdvRefID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag3AdvRefID(String dataValue) {
         setFixType(FIXType.FIX3_ADV_REF_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -35,9 +33,9 @@ public class Tag3AdvRefID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag3AdvRefID tag3AdvRefID = new Tag3AdvRefID("tag3 Adv Ref ID");
-        System.out.println(tag3AdvRefID);
-        System.out.println(tag3AdvRefID.toLogStringVerbose());
-        System.out.println(tag3AdvRefID.toFixTagValuePairString());
+        Tag3AdvRefID tagData = new Tag3AdvRefID("tag3 Adv Ref ID");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

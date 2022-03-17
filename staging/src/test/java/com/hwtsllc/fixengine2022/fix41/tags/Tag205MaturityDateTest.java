@@ -47,7 +47,7 @@ class Tag205MaturityDateTest {
     }
     @Test
     void FIX0205Test() {
-        FIXType fix205MaturityDay = FIXType.MATURITY_DAY;
+        FIXType fix205MaturityDay = FIXType.FIX205_MATURITY_DAY;
     }
     @Test
     void Tag0205Test() {

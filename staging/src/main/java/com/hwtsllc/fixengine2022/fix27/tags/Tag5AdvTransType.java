@@ -16,22 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
 
 public class Tag5AdvTransType extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private Enum5AdvTransType dataValue;
 
-    private Enum5AdvTransType enum5AdvTransType;
-
-    public Tag5AdvTransType(Enum5AdvTransType enum5AdvTransType) {
+    public Tag5AdvTransType(Enum5AdvTransType dataValue) {
         setFixType(FIXType.FIX5_ADV_TRANS_TYPE);
-        setDataValue(enum5AdvTransType.getAction());
-        this.enum5AdvTransType = enum5AdvTransType;
+        setDataValue(dataValue.getAction());
+        this.dataValue = dataValue;
     }
 
     /**
@@ -39,9 +34,10 @@ public class Tag5AdvTransType extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag5AdvTransType tag5AdvTransTypeNew = new Tag5AdvTransType(Enum5AdvTransType.NEW);
-        System.out.println(Enum5AdvTransType.NEW);
-        System.out.println(tag5AdvTransTypeNew);
-        System.out.println(tag5AdvTransTypeNew.toFixTagValuePairString());
+        Enum5AdvTransType enumData = Enum5AdvTransType.NEW;
+        Tag5AdvTransType tagData = new Tag5AdvTransType(enumData);
+        System.out.println(enumData);
+        System.out.println(tagData);
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

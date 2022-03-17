@@ -46,7 +46,7 @@ class Tag293DefBidSizeTest {
     }
     @Test
     void FIX0293Test() {
-        FIXType fix293DefBidSize = FIXType.DEF_BID_SIZE;
+        FIXType fix293DefBidSize = FIXType.FIX293_DEF_BID_SIZE;
     }
     @Test
     void Tag0293Test() {

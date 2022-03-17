@@ -46,7 +46,7 @@ class Tag223CouponRateTest {
     }
     @Test
     void FIX0223Test() {
-        FIXType fix223CouponRate = FIXType.COUPON_RATE;
+        FIXType fix223CouponRate = FIXType.FIX223_COUPON_RATE;
     }
     @Test
     void Tag0223Test() {

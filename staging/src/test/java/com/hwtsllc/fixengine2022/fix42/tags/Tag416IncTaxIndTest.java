@@ -46,7 +46,7 @@ class Tag416IncTaxIndTest {
     }
     @Test
     void FIX0416Test() {
-        FIXType fix416IncTaxInd = FIXType.INC_TAX_IND;
+        FIXType fix416IncTaxInd = FIXType.FIX416_INC_TAX_IND;
     }
     @Test
     void Tag0416Test() {

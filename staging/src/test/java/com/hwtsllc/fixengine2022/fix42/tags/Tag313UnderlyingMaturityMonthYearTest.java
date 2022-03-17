@@ -46,7 +46,7 @@ class Tag313UnderlyingMaturityMonthYearTest {
     }
     @Test
     void FIX0313Test() {
-        FIXType fix313UnderlyingMaturityMonthYear = FIXType.UNDERLYING_MATURITY_MONTH_YEAR;
+        FIXType fix313UnderlyingMaturityMonthYear = FIXType.FIX313_UNDERLYING_MATURITY_MONTH_YEAR;
     }
     @Test
     void Tag0313Test() {

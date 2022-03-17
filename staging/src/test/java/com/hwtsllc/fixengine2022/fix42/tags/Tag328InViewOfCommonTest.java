@@ -46,7 +46,7 @@ class Tag328InViewOfCommonTest {
     }
     @Test
     void FIX0328Test() {
-        FIXType fix328InViewOfCommon = FIXType.IN_VIEW_OF_COMMON;
+        FIXType fix328InViewOfCommon = FIXType.FIX328_IN_VIEW_OF_COMMON;
     }
     @Test
     void Tag0328Test() {

@@ -46,7 +46,7 @@ class Tag326SecurityTradingStatusTest {
     }
     @Test
     void FIX0326Test() {
-        FIXType fix326SecurityTradingStatus = FIXType.SECURITY_TRADING_STATUS;
+        FIXType fix326SecurityTradingStatus = FIXType.FIX326_SECURITY_TRADING_STATUS;
     }
     @Test
     void Tag0326Test() {

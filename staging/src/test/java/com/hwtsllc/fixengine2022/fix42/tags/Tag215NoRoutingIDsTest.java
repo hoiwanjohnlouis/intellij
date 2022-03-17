@@ -46,7 +46,7 @@ class Tag215NoRoutingIDsTest {
     }
     @Test
     void FIX0215Test() {
-        FIXType fix215NoRoutingIDs = FIXType.NO_ROUTING_IDS;
+        FIXType fix215NoRoutingIDs = FIXType.FIX215_NO_ROUTING_IDS;
     }
     @Test
     void Tag0215Test() {

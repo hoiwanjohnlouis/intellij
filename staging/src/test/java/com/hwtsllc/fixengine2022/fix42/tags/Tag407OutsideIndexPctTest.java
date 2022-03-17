@@ -46,7 +46,7 @@ class Tag407OutsideIndexPctTest {
     }
     @Test
     void FIX0407Test() {
-        FIXType fix407OutsideIndexPct = FIXType.OUTSIDE_INDEX_PCT;
+        FIXType fix407OutsideIndexPct = FIXType.FIX407_OUTSIDE_INDEX_PCT;
     }
     @Test
     void Tag0407Test() {

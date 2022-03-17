@@ -46,7 +46,7 @@ class Tag409LiquidityIndTypeTest {
     }
     @Test
     void FIX0409Test() {
-        FIXType fix409LiquidityIndType = FIXType.LIQUIDITY_IND_TYPE;
+        FIXType fix409LiquidityIndType = FIXType.FIX409_LIQUIDITY_IND_TYPE;
     }
     @Test
     void Tag0409Test() {

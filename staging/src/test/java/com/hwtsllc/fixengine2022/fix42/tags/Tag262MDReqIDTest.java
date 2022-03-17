@@ -46,7 +46,7 @@ class Tag262MDReqIDTest {
     }
     @Test
     void FIX0262Test() {
-        FIXType fix262MDReqID = FIXType.MD_REQ_ID;
+        FIXType fix262MDReqID = FIXType.FIX262_MD_REQ_ID;
     }
     @Test
     void Tag0262Test() {

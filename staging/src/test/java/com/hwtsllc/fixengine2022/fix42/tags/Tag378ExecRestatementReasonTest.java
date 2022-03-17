@@ -46,7 +46,7 @@ class Tag378ExecRestatementReasonTest {
     }
     @Test
     void FIX0378Test() {
-        FIXType fix378ExecRestatementReason = FIXType.EXEC_RESTATEMENT_REASON;
+        FIXType fix378ExecRestatementReason = FIXType.FIX378_EXEC_RESTATEMENT_REASON;
     }
     @Test
     void Tag0378Test() {

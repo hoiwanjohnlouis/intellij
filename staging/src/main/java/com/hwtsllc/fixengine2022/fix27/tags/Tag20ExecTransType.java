@@ -17,13 +17,27 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum20ExecTransType;
 
 @Deprecated
-public class Tag20ExecTransType {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag20ExecTransType extends TagTypeAbstract {
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX20_EXEC_TRANS_TYPE;
+    public Tag20ExecTransType(String dataValue) {
+        setFixType(FIXType.FIX20_EXEC_TRANS_TYPE);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag20ExecTransType tagData = new Tag20ExecTransType(Enum20ExecTransType.NEW.getAction());
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

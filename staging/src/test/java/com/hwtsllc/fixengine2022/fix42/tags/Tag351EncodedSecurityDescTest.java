@@ -46,7 +46,7 @@ class Tag351EncodedSecurityDescTest {
     }
     @Test
     void FIX0351Test() {
-        FIXType fix351EncodedSecurityDesc = FIXType.ENCODED_SECURITY_DESC;
+        FIXType fix351EncodedSecurityDesc = FIXType.FIX351_ENCODED_SECURITY_DESC;
     }
     @Test
     void Tag0351Test() {

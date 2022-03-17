@@ -47,7 +47,7 @@ class Tag240RedemptionDateTest {
     }
     @Test
     void FIX0240Test() {
-        FIXType fix240RedemptionDate = FIXType.REDEMPTION_DATE;
+        FIXType fix240RedemptionDate = FIXType.FIX240_REDEMPTION_DATE;
     }
     @Test
     void Tag0240Test() {

@@ -46,7 +46,7 @@ class Tag437ContraTradeQtyTest {
     }
     @Test
     void FIX0437Test() {
-        FIXType fix437ContraTradeQty = FIXType.CONTRA_TRADE_QTY;
+        FIXType fix437ContraTradeQty = FIXType.FIX437_CONTRA_TRADE_QTY;
     }
     @Test
     void Tag0437Test() {

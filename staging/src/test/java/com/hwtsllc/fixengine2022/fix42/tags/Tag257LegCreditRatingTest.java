@@ -46,7 +46,7 @@ class Tag257LegCreditRatingTest {
     }
     @Test
     void FIX0257Test() {
-        FIXType fix257LegCreditRating = FIXType.LEG_CREDIT_RATING;
+        FIXType fix257LegCreditRating = FIXType.FIX257_LEG_CREDIT_RATING;
     }
     @Test
     void Tag0257Test() {

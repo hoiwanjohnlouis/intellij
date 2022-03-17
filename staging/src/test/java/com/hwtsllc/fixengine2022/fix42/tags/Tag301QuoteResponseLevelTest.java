@@ -46,7 +46,7 @@ class Tag301QuoteResponseLevelTest {
     }
     @Test
     void FIX0301Test() {
-        FIXType fix301QuoteResponseLevel = FIXType.QUOTE_RESPONSE_LEVEL;
+        FIXType fix301QuoteResponseLevel = FIXType.FIX301_QUOTE_RESPONSE_LEVEL;
     }
     @Test
     void Tag0301Test() {

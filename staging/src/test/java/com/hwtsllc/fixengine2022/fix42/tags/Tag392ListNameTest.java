@@ -46,7 +46,7 @@ class Tag392ListNameTest {
     }
     @Test
     void FIX0392Test() {
-        FIXType fix392ListName = FIXType.LIST_NAME;
+        FIXType fix392ListName = FIXType.FIX392_LIST_NAME;
     }
     @Test
     void Tag0392Test() {

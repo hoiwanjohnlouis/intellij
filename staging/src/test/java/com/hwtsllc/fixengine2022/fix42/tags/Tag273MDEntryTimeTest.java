@@ -46,7 +46,7 @@ class Tag273MDEntryTimeTest {
     }
     @Test
     void FIX0273Test() {
-        FIXType fix273MDEntryTime = FIXType.MD_ENTRY_TIME;
+        FIXType fix273MDEntryTime = FIXType.FIX273_MD_ENTRY_TIME;
     }
     @Test
     void Tag0273Test() {

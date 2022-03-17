@@ -46,7 +46,7 @@ class Tag235YieldTypeTest {
     }
     @Test
     void FIX0235Test() {
-        FIXType fix235YieldType = FIXType.YIELD_TYPE;
+        FIXType fix235YieldType = FIXType.FIX235_YIELD_TYPE;
     }
     @Test
     void Tag0235Test() {

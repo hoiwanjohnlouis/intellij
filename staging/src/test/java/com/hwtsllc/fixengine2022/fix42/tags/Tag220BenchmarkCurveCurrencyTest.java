@@ -46,7 +46,7 @@ class Tag220BenchmarkCurveCurrencyTest {
     }
     @Test
     void FIX0220Test() {
-        FIXType fix220BenchmarkCurveCurrency = FIXType.BENCHMARK_CURVE_CURRENCY;
+        FIXType fix220BenchmarkCurveCurrency = FIXType.FIX220_BENCHMARK_CURVE_CURRENCY;
     }
     @Test
     void Tag0220Test() {

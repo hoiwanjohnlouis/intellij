@@ -46,7 +46,7 @@ class Tag325UnsolicitedIndicatorTest {
     }
     @Test
     void FIX0325Test() {
-        FIXType fix325UnsolicitedIndicator = FIXType.UNSOLICITED_INDICATOR;
+        FIXType fix325UnsolicitedIndicator = FIXType.FIX325_UNSOLICITED_INDICATOR;
     }
     @Test
     void Tag0325Test() {

@@ -46,7 +46,7 @@ class Tag260BasisFeaturePriceTest {
     }
     @Test
     void FIX0260Test() {
-        FIXType fix260BasisFeaturePrice = FIXType.BASIS_FEATURE_PRICE;
+        FIXType fix260BasisFeaturePrice = FIXType.FIX260_BASIS_FEATURE_PRICE;
     }
     @Test
     void Tag0260Test() {

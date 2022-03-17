@@ -46,7 +46,7 @@ class Tag322SecurityResponseIDTest {
     }
     @Test
     void FIX0322Test() {
-        FIXType fix322SecurityResponseID = FIXType.SECURITY_RESPONSE_ID;
+        FIXType fix322SecurityResponseID = FIXType.FIX322_SECURITY_RESPONSE_ID;
     }
     @Test
     void Tag0322Test() {

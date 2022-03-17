@@ -46,7 +46,7 @@ class Tag376ComplianceIDTest {
     }
     @Test
     void FIX0376Test() {
-        FIXType fix376ComplianceID = FIXType.COMPLIANCE_ID;
+        FIXType fix376ComplianceID = FIXType.FIX376_COMPLIANCE_ID;
     }
     @Test
     void Tag0376Test() {

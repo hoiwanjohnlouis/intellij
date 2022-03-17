@@ -46,7 +46,7 @@ class Tag207SecurityExchangeTest {
     }
     @Test
     void FIX0207Test() {
-        FIXType fix207SecurityExchange = FIXType.SECURITY_EXCHANGE;
+        FIXType fix207SecurityExchange = FIXType.FIX207_SECURITY_EXCHANGE;
     }
     @Test
     void Tag0207Test() {

@@ -46,7 +46,7 @@ class Tag256UnderlyingCreditRatingTest {
     }
     @Test
     void FIX0256Test() {
-        FIXType fix256UnderlyingCreditRating = FIXType.UNDERLYING_CREDIT_RATING;
+        FIXType fix256UnderlyingCreditRating = FIXType.FIX256_UNDERLYING_CREDIT_RATING;
     }
     @Test
     void Tag0256Test() {

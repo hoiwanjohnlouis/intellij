@@ -46,7 +46,7 @@ class Tag345TradSesEndTimeTest {
     }
     @Test
     void FIX0345Test() {
-        FIXType fix345TradSesEndTime = FIXType.TRAD_SES_END_TIME;
+        FIXType fix345TradSesEndTime = FIXType.FIX345_TRAD_SES_END_TIME;
     }
     @Test
     void Tag0345Test() {

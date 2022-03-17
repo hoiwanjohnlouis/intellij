@@ -46,7 +46,7 @@ class Tag369LastMsgSeqNumProcessedTest {
     }
     @Test
     void FIX0369Test() {
-        FIXType fix369LastMsgSeqNumProcessed = FIXType.LAST_MSG_SEQ_NUM_PROCESSED;
+        FIXType fix369LastMsgSeqNumProcessed = FIXType.FIX369_LAST_MSG_SEQ_NUM_PROCESSED;
     }
     @Test
     void Tag0369Test() {

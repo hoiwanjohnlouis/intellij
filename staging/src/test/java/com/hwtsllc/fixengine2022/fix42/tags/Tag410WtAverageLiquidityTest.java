@@ -46,7 +46,7 @@ class Tag410WtAverageLiquidityTest {
     }
     @Test
     void FIX0410Test() {
-        FIXType fix410WtAverageLiquidity = FIXType.WT_AVERAGE_LIQUIDITY;
+        FIXType fix410WtAverageLiquidity = FIXType.FIX410_WT_AVERAGE_LIQUIDITY;
     }
     @Test
     void Tag0410Test() {

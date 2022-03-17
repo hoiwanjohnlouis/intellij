@@ -18,13 +18,25 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 @Deprecated
 public class Tag24IOIOthSvc extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX24_IOI_OTH_SVC;
+    public Tag24IOIOthSvc(String dataValue) {
+        setFixType(FIXType.FIX24_IOI_OTH_SVC);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag24IOIOthSvc tagData = new Tag24IOIOthSvc("JohnWick-43");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

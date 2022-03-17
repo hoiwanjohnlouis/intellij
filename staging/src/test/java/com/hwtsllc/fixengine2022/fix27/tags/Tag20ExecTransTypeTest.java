@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum20ExecTransType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -50,7 +51,7 @@ class Tag20ExecTransTypeTest {
     }
     @Test
     void Tag0020Test() {
-        Tag20ExecTransType tag20ExecTransType = new Tag20ExecTransType();
+        Tag20ExecTransType tag20ExecTransType = new Tag20ExecTransType(Enum20ExecTransType.NEW.getAction());
 //        assertEquals( "A", tag20ExecTransType.getDataValue());
 //        assertNotEquals( "11", tag20ExecTransType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0020Test()");

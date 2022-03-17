@@ -46,7 +46,7 @@ class Tag304TotQuoteEntriesTest {
     }
     @Test
     void FIX0304Test() {
-        FIXType fix304TotQuoteEntries = FIXType.TOT_QUOTE_ENTRIES;
+        FIXType fix304TotQuoteEntries = FIXType.FIX304_TOT_QUOTE_ENTRIES;
     }
     @Test
     void Tag0304Test() {

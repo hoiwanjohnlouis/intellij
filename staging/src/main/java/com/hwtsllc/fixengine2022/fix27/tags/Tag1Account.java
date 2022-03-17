@@ -18,16 +18,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag1Account extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag1Account(String dataValue) {
         setFixType(FIXType.FIX1_ACCOUNT);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -35,9 +33,9 @@ public class Tag1Account extends TagTypeAbstract {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        Tag1Account tag1Account = new Tag1Account("tag1 Account");
-        System.out.println(tag1Account);
-        System.out.println(tag1Account.toLogStringVerbose());
-        System.out.println(tag1Account.toFixTagValuePairString());
+        Tag1Account tagData = new Tag1Account("tag1 Account");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

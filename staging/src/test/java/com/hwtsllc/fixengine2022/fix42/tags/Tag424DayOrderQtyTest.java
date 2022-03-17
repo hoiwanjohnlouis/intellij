@@ -46,7 +46,7 @@ class Tag424DayOrderQtyTest {
     }
     @Test
     void FIX0424Test() {
-        FIXType fix424DayOrderQty = FIXType.DAY_ORDER_QTY;
+        FIXType fix424DayOrderQty = FIXType.FIX424_DAY_ORDER_QTY;
     }
     @Test
     void Tag0424Test() {

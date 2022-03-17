@@ -46,7 +46,7 @@ class Tag372RefMsgTypeTest {
     }
     @Test
     void FIX0372Test() {
-        FIXType fix372RefMsgType = FIXType.REF_MSG_TYPE;
+        FIXType fix372RefMsgType = FIXType.FIX372_REF_MSG_TYPE;
     }
     @Test
     void Tag0372Test() {

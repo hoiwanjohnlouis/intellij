@@ -46,7 +46,7 @@ class Tag353EncodedListExecInstTest {
     }
     @Test
     void FIX0353Test() {
-        FIXType fix353EncodedListExecInst = FIXType.ENCODED_LIST_EXEC_INST;
+        FIXType fix353EncodedListExecInst = FIXType.FIX353_ENCODED_LIST_EXEC_INST;
     }
     @Test
     void Tag0353Test() {

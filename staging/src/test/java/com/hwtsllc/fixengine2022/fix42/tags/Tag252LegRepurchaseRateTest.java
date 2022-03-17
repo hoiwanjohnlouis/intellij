@@ -47,7 +47,7 @@ class Tag252LegRepurchaseRateTest {
     }
     @Test
     void FIX0252Test() {
-        FIXType fix252LegRepurchaseRate = FIXType.LEG_REPURCHASE_RATE;
+        FIXType fix252LegRepurchaseRate = FIXType.FIX252_LEG_REPURCHASE_RATE;
     }
     @Test
     void Tag0252Test() {

@@ -46,7 +46,7 @@ class Tag305UnderlyingIDSourceTest {
     }
     @Test
     void FIX0305Test() {
-        FIXType fix305UnderlyingIDSource = FIXType.UNDERLYING_ID_SOURCE;
+        FIXType fix305UnderlyingIDSource = FIXType.FIX305_UNDERLYING_ID_SOURCE;
     }
     @Test
     void Tag0305Test() {

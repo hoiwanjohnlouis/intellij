@@ -16,22 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
 
 public class Tag4AdvSide extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private Enum4AdvSide dataValue;
 
-    private Enum4AdvSide enum4AdvSide;
-
-    public Tag4AdvSide(Enum4AdvSide enum4AdvSide) {
+    public Tag4AdvSide(Enum4AdvSide dataValue) {
         setFixType(FIXType.FIX4_ADV_SIDE);
-        setDataValue(enum4AdvSide.getAction());
-        this.enum4AdvSide = enum4AdvSide;
+        setDataValue(dataValue.getAction());
+        this.dataValue = dataValue;
     }
 
     /**
@@ -39,21 +34,21 @@ public class Tag4AdvSide extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag4AdvSide tag4AdvSideBuy = new Tag4AdvSide(Enum4AdvSide.BUY);
-        Tag4AdvSide tag4AdvSideSell = new Tag4AdvSide(Enum4AdvSide.SELL);
-        Tag4AdvSide tag4AdvSideCross = new Tag4AdvSide(Enum4AdvSide.CROSS);
-        Tag4AdvSide tag4AdvSideTrade = new Tag4AdvSide(Enum4AdvSide.TRADE);
+        Tag4AdvSide tagDataBuy = new Tag4AdvSide(Enum4AdvSide.BUY);
+        Tag4AdvSide tagDataSell = new Tag4AdvSide(Enum4AdvSide.SELL);
+        Tag4AdvSide tagDataCross = new Tag4AdvSide(Enum4AdvSide.CROSS);
+        Tag4AdvSide tagDataTrade = new Tag4AdvSide(Enum4AdvSide.TRADE);
         System.out.println(Enum4AdvSide.BUY);
         System.out.println(Enum4AdvSide.SELL);
         System.out.println(Enum4AdvSide.CROSS);
         System.out.println(Enum4AdvSide.TRADE);
-        System.out.println(tag4AdvSideBuy);
-        System.out.println(tag4AdvSideSell);
-        System.out.println(tag4AdvSideCross);
-        System.out.println(tag4AdvSideTrade);
-        System.out.println(tag4AdvSideBuy.toFixTagValuePairString());
-        System.out.println(tag4AdvSideSell.toFixTagValuePairString());
-        System.out.println(tag4AdvSideCross.toFixTagValuePairString());
-        System.out.println(tag4AdvSideTrade.toFixTagValuePairString());
+        System.out.println(tagDataBuy);
+        System.out.println(tagDataSell);
+        System.out.println(tagDataCross);
+        System.out.println(tagDataTrade);
+        System.out.println(tagDataBuy.toFixTagValuePairString());
+        System.out.println(tagDataSell.toFixTagValuePairString());
+        System.out.println(tagDataCross.toFixTagValuePairString());
+        System.out.println(tagDataTrade.toFixTagValuePairString());
     }
 }

@@ -46,7 +46,7 @@ class Tag435UnderlyingCouponRateTest {
     }
     @Test
     void FIX0435Test() {
-        FIXType fix435UnderlyingCouponRate = FIXType.UNDERLYING_COUPON_RATE;
+        FIXType fix435UnderlyingCouponRate = FIXType.FIX435_UNDERLYING_COUPON_RATE;
     }
     @Test
     void Tag0435Test() {

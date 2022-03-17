@@ -46,7 +46,7 @@ class Tag427GTBookingInstTest {
     }
     @Test
     void FIX0427Test() {
-        FIXType fix427GTBookingInst = FIXType.GT_BOOKING_INST;
+        FIXType fix427GTBookingInst = FIXType.FIX427_GT_BOOKING_INST;
     }
     @Test
     void Tag0427Test() {

@@ -46,7 +46,7 @@ class Tag284DeskIDTest {
     }
     @Test
     void FIX0284Test() {
-        FIXType fix284DeskID = FIXType.DESK_ID;
+        FIXType fix284DeskID = FIXType.FIX284_DESK_ID;
     }
     @Test
     void Tag0284Test() {

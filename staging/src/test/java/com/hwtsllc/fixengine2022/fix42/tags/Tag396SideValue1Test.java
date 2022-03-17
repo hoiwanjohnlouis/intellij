@@ -46,7 +46,7 @@ class Tag396SideValue1Test {
     }
     @Test
     void FIX0396Test() {
-        FIXType fix396SideValue1 = FIXType.SIDE_VALUE1;
+        FIXType fix396SideValue1 = FIXType.FIX396_SIDE_VALUE1;
     }
     @Test
     void Tag0396Test() {

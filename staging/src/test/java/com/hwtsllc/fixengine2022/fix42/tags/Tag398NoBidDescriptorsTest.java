@@ -46,7 +46,7 @@ class Tag398NoBidDescriptorsTest {
     }
     @Test
     void FIX0398Test() {
-        FIXType fix398NoBidDescriptors = FIXType.NO_BID_DESCRIPTORS;
+        FIXType fix398NoBidDescriptors = FIXType.FIX398_NO_BID_DESCRIPTORS;
     }
     @Test
     void Tag0398Test() {

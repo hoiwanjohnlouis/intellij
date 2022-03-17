@@ -46,7 +46,7 @@ class Tag338TradSesMethodTest {
     }
     @Test
     void FIX0338Test() {
-        FIXType fix338TradSesMethod = FIXType.TRAD_SES_METHOD;
+        FIXType fix338TradSesMethod = FIXType.FIX338_TRAD_SES_METHOD;
     }
     @Test
     void Tag0338Test() {

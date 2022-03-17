@@ -46,7 +46,7 @@ class Tag324SecurityStatusReqIDTest {
     }
     @Test
     void FIX0324Test() {
-        FIXType fix324SecurityStatusReqID = FIXType.SECURITY_STATUS_REQ_ID;
+        FIXType fix324SecurityStatusReqID = FIXType.FIX324_SECURITY_STATUS_REQ_ID;
     }
     @Test
     void Tag0324Test() {

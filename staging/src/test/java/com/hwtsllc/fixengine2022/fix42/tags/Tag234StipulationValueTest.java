@@ -46,7 +46,7 @@ class Tag234StipulationValueTest {
     }
     @Test
     void FIX0234Test() {
-        FIXType fix234StipulationValue = FIXType.STIPULATION_VALUE;
+        FIXType fix234StipulationValue = FIXType.FIX234_STIPULATION_VALUE;
     }
     @Test
     void Tag0234Test() {

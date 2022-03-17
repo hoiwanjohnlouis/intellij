@@ -46,7 +46,7 @@ class Tag436UnderlyingContractMultiplierTest {
     }
     @Test
     void FIX0436Test() {
-        FIXType fix436UnderlyingContractMultiplier = FIXType.UNDERLYING_CONTRACT_MULTIPLIER;
+        FIXType fix436UnderlyingContractMultiplier = FIXType.FIX436_UNDERLYING_CONTRACT_MULTIPLIER;
     }
     @Test
     void Tag0436Test() {

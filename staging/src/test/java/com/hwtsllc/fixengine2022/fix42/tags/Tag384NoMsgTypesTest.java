@@ -46,7 +46,7 @@ class Tag384NoMsgTypesTest {
     }
     @Test
     void FIX0384Test() {
-        FIXType fix384NoMsgTypes = FIXType.NO_MSG_TYPES;
+        FIXType fix384NoMsgTypes = FIXType.FIX384_NO_MSG_TYPES;
     }
     @Test
     void Tag0384Test() {

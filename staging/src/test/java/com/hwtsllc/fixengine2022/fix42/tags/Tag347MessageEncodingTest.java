@@ -46,7 +46,7 @@ class Tag347MessageEncodingTest {
     }
     @Test
     void FIX0347Test() {
-        FIXType fix347MessageEncoding = FIXType.MESSAGE_ENCODING;
+        FIXType fix347MessageEncoding = FIXType.FIX347_MESSAGE_ENCODING;
     }
     @Test
     void Tag0347Test() {

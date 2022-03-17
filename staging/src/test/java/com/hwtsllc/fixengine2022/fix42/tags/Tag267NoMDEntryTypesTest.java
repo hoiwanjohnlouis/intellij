@@ -46,7 +46,7 @@ class Tag267NoMDEntryTypesTest {
     }
     @Test
     void FIX0267Test() {
-        FIXType fix267NoMDEntryTypes = FIXType.NO_MD_ENTRY_TYPES;
+        FIXType fix267NoMDEntryTypes = FIXType.FIX267_NO_MD_ENTRY_TYPES;
     }
     @Test
     void Tag0267Test() {

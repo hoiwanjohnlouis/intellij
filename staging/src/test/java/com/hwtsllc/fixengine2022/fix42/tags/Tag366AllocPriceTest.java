@@ -46,7 +46,7 @@ class Tag366AllocPriceTest {
     }
     @Test
     void FIX0366Test() {
-        FIXType fix366AllocPrice = FIXType.ALLOC_PRICE;
+        FIXType fix366AllocPrice = FIXType.FIX366_ALLOC_PRICE;
     }
     @Test
     void Tag0366Test() {

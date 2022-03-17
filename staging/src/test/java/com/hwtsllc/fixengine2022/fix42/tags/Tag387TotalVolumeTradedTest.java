@@ -46,7 +46,7 @@ class Tag387TotalVolumeTradedTest {
     }
     @Test
     void FIX0387Test() {
-        FIXType fix387TotalVolumeTraded = FIXType.TOTAL_VOLUME_TRADED;
+        FIXType fix387TotalVolumeTraded = FIXType.FIX387_TOTAL_VOLUME_TRADED;
     }
     @Test
     void Tag0387Test() {

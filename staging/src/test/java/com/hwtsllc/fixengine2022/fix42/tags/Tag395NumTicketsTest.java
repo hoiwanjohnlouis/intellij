@@ -45,7 +45,7 @@ class Tag395NumTicketsTest {
     }
     @Test
     void FIX0395Test() {
-        FIXType fix395NumTickets = FIXType.NUM_TICKETS;
+        FIXType fix395NumTickets = FIXType.FIX395_NUM_TICKETS;
     }
     @Test
     void Tag0395Test() {

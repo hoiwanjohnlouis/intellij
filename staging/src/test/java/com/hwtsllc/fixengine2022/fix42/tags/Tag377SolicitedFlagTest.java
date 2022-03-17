@@ -46,7 +46,7 @@ class Tag377SolicitedFlagTest {
     }
     @Test
     void FIX0377Test() {
-        FIXType fix377SolicitedFlag = FIXType.SOLICITED_FLAG;
+        FIXType fix377SolicitedFlag = FIXType.FIX377_SOLICITED_FLAG;
     }
     @Test
     void Tag0377Test() {

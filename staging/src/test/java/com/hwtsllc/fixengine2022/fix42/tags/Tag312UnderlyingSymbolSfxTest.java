@@ -46,7 +46,7 @@ class Tag312UnderlyingSymbolSfxTest {
     }
     @Test
     void FIX0312Test() {
-        FIXType fix312UnderlyingSymbolSfx = FIXType.UNDERLYING_SYMBOL_SFX;
+        FIXType fix312UnderlyingSymbolSfx = FIXType.FIX312_UNDERLYING_SYMBOL_SFX;
     }
     @Test
     void Tag0312Test() {

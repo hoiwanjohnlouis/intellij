@@ -46,7 +46,7 @@ class Tag206OptAttributeTest {
     }
     @Test
     void FIX0206Test() {
-        FIXType fix206OptAttribute = FIXType.OPT_ATTRIBUTE;
+        FIXType fix206OptAttribute = FIXType.FIX206_OPT_ATTRIBUTE;
     }
     @Test
     void Tag0206Test() {

@@ -17,13 +17,26 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum21HandlInst;
 
-public enum Tag21HandlInst {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag21HandlInst extends TagTypeAbstract {
+    private Enum21HandlInst dataValue;
 
-    private final FIXType fixType = FIXType.FIX21_HANDL_INST;
+    public Tag21HandlInst(Enum21HandlInst dataValue) {
+        setFixType(FIXType.FIX21_HANDL_INST);
+        setDataValue(dataValue.getAction());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag21HandlInst tagData = new Tag21HandlInst(Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

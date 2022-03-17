@@ -46,7 +46,7 @@ class Tag264MarketDepthTest {
     }
     @Test
     void FIX0264Test() {
-        FIXType fix264MarketDepth = FIXType.MARKET_DEPTH;
+        FIXType fix264MarketDepth = FIXType.FIX264_MARKET_DEPTH;
     }
     @Test
     void Tag0264Test() {

@@ -46,7 +46,7 @@ class Tag418TradeTypeTest {
     }
     @Test
     void FIX0418Test() {
-        FIXType fix418TradeType = FIXType.TRADE_TYPE;
+        FIXType fix418TradeType = FIXType.FIX418_TRADE_TYPE;
     }
     @Test
     void Tag0418Test() {

@@ -46,7 +46,7 @@ class Tag415ProgPeriodIntervalTest {
     }
     @Test
     void FIX0415Test() {
-        FIXType fix415ProgPeriodInterval = FIXType.PROG_PERIOD_INTERVAL;
+        FIXType fix415ProgPeriodInterval = FIXType.FIX415_PROG_PERIOD_INTERVAL;
     }
     @Test
     void Tag0415Test() {

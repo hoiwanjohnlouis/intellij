@@ -46,7 +46,7 @@ class Tag444ListStatusTextTest {
     }
     @Test
     void FIX0444Test() {
-        FIXType fix444ListStatusText = FIXType.LIST_STATUS_TEXT;
+        FIXType fix444ListStatusText = FIXType.FIX444_LIST_STATUS_TEXT;
     }
     @Test
     void Tag0444Test() {

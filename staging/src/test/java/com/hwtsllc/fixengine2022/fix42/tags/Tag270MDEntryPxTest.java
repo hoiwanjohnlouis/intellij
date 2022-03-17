@@ -46,7 +46,7 @@ class Tag270MDEntryPxTest {
     }
     @Test
     void FIX0270Test() {
-        FIXType fix270MDEntryPx = FIXType.MD_ENTRY_PX;
+        FIXType fix270MDEntryPx = FIXType.FIX270_MD_ENTRY_PX;
     }
     @Test
     void Tag0270Test() {
