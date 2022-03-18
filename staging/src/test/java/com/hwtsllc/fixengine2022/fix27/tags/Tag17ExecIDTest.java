@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag17ExecID;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag17ExecIDTest {
     @Test
     void FIX0017Test() {
         FIXType fix17ExecID = FIXType.FIX17_EXEC_ID;
-        assertEquals( "EXEC_ID", fix17ExecID.getFIXName());
-        assertEquals( 17, fix17ExecID.getFIXNumber());
-        assertEquals( "ExecID", fix17ExecID.getFIXDescription());
-        assertNotEquals( "EXEC_ID EXEC_ID", fix17ExecID.getFIXName());
-        assertNotEquals( 111, fix17ExecID.getFIXNumber());
-        assertNotEquals( "123 ExecID", fix17ExecID.getFIXDescription());
+        assertEquals( "EXEC_ID", fix17ExecID.getName());
+        assertEquals( 17, fix17ExecID.getNumber());
+        assertEquals( "ExecID", fix17ExecID.getDescription());
+        assertNotEquals( "EXEC_ID EXEC_ID", fix17ExecID.getName());
+        assertNotEquals( 111, fix17ExecID.getNumber());
+        assertNotEquals( "123 ExecID", fix17ExecID.getDescription());
     }
     @Test
     void Tag0017Test() {

@@ -47,42 +47,42 @@ class Enum27IOIQtyTest {
         Enum27IOIQty enumType;
 
         enumType = Enum27IOIQty.ONE_BILLION;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("ONE_BILLION", enumType.getName());
         assertEquals("0 - 1,000,000,000", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum27IOIQty.SMALL;
-        assertEquals("S", enumType.getAction());
+        assertEquals("S", enumType.getID());
         assertEquals("SMALL", enumType.getName());
         assertEquals("S - Small", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum27IOIQty.MEDIUM;
-        assertEquals("M", enumType.getAction());
+        assertEquals("M", enumType.getID());
         assertEquals("MEDIUM", enumType.getName());
         assertEquals("M - Medium", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum27IOIQty.LARGE;
-        assertEquals("L", enumType.getAction());
+        assertEquals("L", enumType.getID());
         assertEquals("LARGE", enumType.getName());
         assertEquals("L - Large", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum27IOIQty.UNDISCLOSED_QUANTITY;
-        assertEquals("U", enumType.getAction());
+        assertEquals("U", enumType.getID());
         assertEquals("UNDISCLOSED_QUANTITY", enumType.getName());
         assertEquals("U - Undisclosed Quantity", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

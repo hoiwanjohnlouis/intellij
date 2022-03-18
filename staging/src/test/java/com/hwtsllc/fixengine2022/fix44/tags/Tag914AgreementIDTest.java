@@ -49,4 +49,7 @@ class Tag914AgreementIDTest {
     void FIX0914Test() {
         FIXType Tag914AgreementID = FIXType.AGREEMENT_ID;
     }
+    @Test
+    void Tag0914Test() {
+    }
 }

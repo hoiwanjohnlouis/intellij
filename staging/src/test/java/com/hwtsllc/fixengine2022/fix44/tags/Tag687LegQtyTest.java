@@ -49,4 +49,7 @@ class Tag687LegQtyTest {
     void FIX0687Test() {
         FIXType Tag687LegQty = FIXType.LEG_QTY;
     }
+    @Test
+    void Tag0687Test() {
+    }
 }

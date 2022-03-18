@@ -49,4 +49,7 @@ class Tag699BenchmarkSecurityIDTest {
     void FIX0699Test() {
         FIXType Tag699BenchmarkSecurityID = FIXType.BENCHMARK_SECURITY_ID;
     }
+    @Test
+    void Tag0699Test() {
+    }
 }

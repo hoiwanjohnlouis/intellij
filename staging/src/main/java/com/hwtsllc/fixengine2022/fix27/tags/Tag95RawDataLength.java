@@ -18,12 +18,27 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag95RawDataLength extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX95_RAW_DATA_LENGTH;
+    public final static String TESTA_RAW_DATA_LENGTH = "23";
+    public final static String TESTB_RAW_DATA_LENGTH = "18";
+
+    public Tag95RawDataLength(String dataValue) {
+        setFixType(FIXType.FIX95_RAW_DATA_LENGTH);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag95RawDataLength tagData = new Tag95RawDataLength(TESTA_RAW_DATA_LENGTH);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag9BodyLength;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag9BodyLengthTest {
     @Test
     void FIX0009Test() {
         FIXType fix9BodyLength = FIXType.FIX9_BODY_LENGTH;
-        assertEquals( "BODY_LENGTH", fix9BodyLength.getFIXName());
-        assertEquals( 9, fix9BodyLength.getFIXNumber());
-        assertEquals( "BodyLength", fix9BodyLength.getFIXDescription());
-        assertNotEquals( "BODY_ LENGTH", fix9BodyLength.getFIXName());
-        assertNotEquals( 99, fix9BodyLength.getFIXNumber());
-        assertNotEquals( "Body Length", fix9BodyLength.getFIXDescription());
+        assertEquals( "BODY_LENGTH", fix9BodyLength.getName());
+        assertEquals( 9, fix9BodyLength.getNumber());
+        assertEquals( "BodyLength", fix9BodyLength.getDescription());
+        assertNotEquals( "BODY_ LENGTH", fix9BodyLength.getName());
+        assertNotEquals( 99, fix9BodyLength.getNumber());
+        assertNotEquals( "Body Length", fix9BodyLength.getDescription());
     }
     @Test
     void Tag0009Test() {

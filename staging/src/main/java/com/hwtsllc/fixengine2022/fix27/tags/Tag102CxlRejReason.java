@@ -16,7 +16,30 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum102CxlRejReason;
 
 public class Tag102CxlRejReason extends TagTypeAbstract {
+    private Enum102CxlRejReason dataValue;
+
+    public final static Enum102CxlRejReason TESTA_CXL_REJ_REASON = Enum102CxlRejReason.TOO_LATE_TO_CANCEL;
+    public final static Enum102CxlRejReason TESTB_CXL_REJ_REASON = Enum102CxlRejReason.OTHER;
+
+    public Tag102CxlRejReason(Enum102CxlRejReason dataValue) {
+        setFixType(FIXType.FIX102_CXL_REJ_REASON);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag102CxlRejReason tagData = new Tag102CxlRejReason(TESTA_CXL_REJ_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

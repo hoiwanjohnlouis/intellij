@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag42OrigTime;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag42OrigTimeTest {
     @Test
     void FIX0042Test() {
         FIXType fix42OrigTime = FIXType.FIX42_ORIG_TIME;
-        assertEquals( "ORIG_TIME", fix42OrigTime.getFIXName());
-        assertEquals( 42, fix42OrigTime.getFIXNumber());
-        assertEquals( "OrigTime", fix42OrigTime.getFIXDescription());
-        assertNotEquals( "ORIG_TIME ORIG_TIME", fix42OrigTime.getFIXName());
-        assertNotEquals( 3123, fix42OrigTime.getFIXNumber());
-        assertNotEquals( "OrigTime OrigTime", fix42OrigTime.getFIXDescription());
+        assertEquals( "ORIG_TIME", fix42OrigTime.getName());
+        assertEquals( 42, fix42OrigTime.getNumber());
+        assertEquals( "OrigTime", fix42OrigTime.getDescription());
+        assertNotEquals( "ORIG_TIME ORIG_TIME", fix42OrigTime.getName());
+        assertNotEquals( 3123, fix42OrigTime.getNumber());
+        assertNotEquals( "OrigTime OrigTime", fix42OrigTime.getDescription());
     }
     @Test
     void Tag0042Test() {

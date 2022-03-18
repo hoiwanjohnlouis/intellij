@@ -18,12 +18,27 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag90SecureDataLen extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX90_SECURE_DATA_LEN;
+    public final static String TESTA_SECURE_DATA_LEN = "26";
+    public final static String TESTB_SECURE_DATA_LEN = "21";
+
+    public Tag90SecureDataLen(String dataValue) {
+        setFixType(FIXType.FIX90_SECURE_DATA_LEN);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag90SecureDataLen tagData = new Tag90SecureDataLen(TESTA_SECURE_DATA_LEN);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

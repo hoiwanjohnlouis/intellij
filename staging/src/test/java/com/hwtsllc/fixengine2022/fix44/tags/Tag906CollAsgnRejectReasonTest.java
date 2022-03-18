@@ -49,4 +49,7 @@ class Tag906CollAsgnRejectReasonTest {
     void FIX0906Test() {
         FIXType Tag906CollAsgnRejectReason = FIXType.COLL_ASGN_REJECT_REASON;
     }
+    @Test
+    void Tag0906Test() {
+    }
 }

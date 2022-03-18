@@ -49,4 +49,7 @@ class Tag938NoCollInquiryQualifierTest {
     void FIX0938Test() {
         FIXType Tag938NoCollInquiryQualifier = FIXType.NO_COLL_INQUIRY_QUALIFIER;
     }
+    @Test
+    void Tag0938Test() {
+    }
 }

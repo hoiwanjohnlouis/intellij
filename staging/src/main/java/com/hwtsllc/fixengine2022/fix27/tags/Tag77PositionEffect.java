@@ -18,13 +18,16 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum21HandlInst;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum77PositionEffect;
 
-public class Tag21HandlInst extends TagTypeAbstract {
-    private Enum21HandlInst dataValue;
+public class Tag77PositionEffect extends TagTypeAbstract {
+    private final Enum77PositionEffect dataValue;
 
-    public Tag21HandlInst(Enum21HandlInst dataValue) {
-        setFixType(FIXType.FIX21_HANDL_INST);
+    public final static Enum77PositionEffect TESTA_POSITION_EFFECT = Enum77PositionEffect.OPEN;
+    public final static Enum77PositionEffect TESTB_POSITION_EFFECT = Enum77PositionEffect.FIFO;
+
+    public Tag77PositionEffect(Enum77PositionEffect dataValue) {
+        setFixType(FIXType.FIX77_OPEN_CLOSE);
         setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
@@ -34,7 +37,7 @@ public class Tag21HandlInst extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag21HandlInst tagData = new Tag21HandlInst(Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER);
+        Tag77PositionEffect tagData = new Tag77PositionEffect(TESTA_POSITION_EFFECT);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

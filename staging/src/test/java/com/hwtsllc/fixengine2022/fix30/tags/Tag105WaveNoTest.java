@@ -47,9 +47,9 @@ class Tag105WaveNoTest {
     @Test
     void FIX0105Test() {
         FIXType fix105WaveNo = FIXType.FIX105_WAVE_NO;
-        assertEquals( "WAVE_NO", fix105WaveNo.getFIXName());
-        assertEquals( 105, fix105WaveNo.getFIXNumber());
-        assertEquals( "WaveNo", fix105WaveNo.getFIXDescription());
+        assertEquals( "WAVE_NO", fix105WaveNo.getName());
+        assertEquals( 105, fix105WaveNo.getNumber());
+        assertEquals( "WaveNo", fix105WaveNo.getDescription());
     }
     @Test
     void Tag0105Test() {

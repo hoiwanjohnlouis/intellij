@@ -49,4 +49,7 @@ class Tag944CollActionTest {
     void FIX0944Test() {
         FIXType Tag944CollAction = FIXType.COLL_ACTION;
     }
+    @Test
+    void Tag0944Test() {
+    }
 }

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag102CxlRejReason;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -47,9 +46,9 @@ class Tag102CxlRejReasonTest {
     @Test
     void FIX0102Test() {
         FIXType fix102CxlRejReason = FIXType.FIX102_CXL_REJ_REASON;
-        assertEquals( fix102CxlRejReason.getFIXName(), "CXL_REJ_REASON");
-        assertEquals( fix102CxlRejReason.getFIXNumber(), 102);
-        assertEquals( fix102CxlRejReason.getFIXDescription(), "CxlRejReason");
+        assertEquals( fix102CxlRejReason.getName(), "CXL_REJ_REASON");
+        assertEquals( fix102CxlRejReason.getNumber(), 102);
+        assertEquals( fix102CxlRejReason.getDescription(), "CxlRejReason");
     }
     @Test
     void Tag0102Test() {

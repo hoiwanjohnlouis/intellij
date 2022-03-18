@@ -49,4 +49,7 @@ class Tag688LegStipulationTypeTest {
     void FIX0688Test() {
         FIXType Tag688LegStipulationType = FIXType.LEG_STIPULATION_TYPE;
     }
+    @Test
+    void Tag0688Test() {
+    }
 }

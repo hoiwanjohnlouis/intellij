@@ -47,15 +47,15 @@ class Tag123GapFillFlagTest {
     @Test
     void FIX0123Test() {
         FIXType fix123GapFillFlag = FIXType.FIX123_GAP_FILL_FLAG;
-        assertEquals( fix123GapFillFlag.getFIXName(), "GAP_FILL_FLAG");
-        assertEquals( fix123GapFillFlag.getFIXNumber(), 123);
-        assertEquals( fix123GapFillFlag.getFIXDescription(), "GapFillFlag");
+        assertEquals( fix123GapFillFlag.getName(), "GAP_FILL_FLAG");
+        assertEquals( fix123GapFillFlag.getNumber(), 123);
+        assertEquals( fix123GapFillFlag.getDescription(), "GapFillFlag");
     }
     @Test
     void Tag0123Test() {
         FIXType tag123GapFillFlag = FIXType.FIX123_GAP_FILL_FLAG;
-        assertEquals( tag123GapFillFlag.getFIXName(), "GAP_FILL_FLAG");
-        assertEquals( tag123GapFillFlag.getFIXNumber(), 123);
-        assertEquals( tag123GapFillFlag.getFIXDescription(), "GapFillFlag");
+        assertEquals( tag123GapFillFlag.getName(), "GAP_FILL_FLAG");
+        assertEquals( tag123GapFillFlag.getNumber(), 123);
+        assertEquals( tag123GapFillFlag.getDescription(), "GapFillFlag");
     }
 }

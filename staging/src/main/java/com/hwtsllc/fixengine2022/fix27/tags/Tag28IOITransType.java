@@ -25,7 +25,7 @@ public class Tag28IOITransType extends TagTypeAbstract {
 
     public Tag28IOITransType(Enum28IOITransType dataValue) {
         setFixType(FIXType.FIX28_IOI_TRANS_TYPE);
-        setDataValue(dataValue.getAction());
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

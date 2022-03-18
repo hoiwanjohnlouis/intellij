@@ -50,18 +50,18 @@ class Enum201PutOrCallTest {
          * 0-1 msg types
          */
         enumType = Enum201PutOrCall.PUT;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("PUT", enumType.getName());
         assertEquals("0 - Put", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum201PutOrCall.CALL;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("CALL", enumType.getName());
         assertEquals("1 - Call", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

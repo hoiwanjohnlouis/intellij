@@ -47,15 +47,15 @@ class Tag128DeliverToCompIDTest {
     @Test
     void FIX0128Test() {
         FIXType fix128DeliverToCompID = FIXType.FIX128_DELIVER_TO_COMP_ID;
-        assertEquals( fix128DeliverToCompID.getFIXName(), "DELIVER_TO_COMP_ID");
-        assertEquals( fix128DeliverToCompID.getFIXNumber(), 128);
-        assertEquals( fix128DeliverToCompID.getFIXDescription(), "DeliverToCompID");
+        assertEquals( fix128DeliverToCompID.getName(), "DELIVER_TO_COMP_ID");
+        assertEquals( fix128DeliverToCompID.getNumber(), 128);
+        assertEquals( fix128DeliverToCompID.getDescription(), "DeliverToCompID");
     }
     @Test
     void Tag0128Test() {
         FIXType tag128DeliverToCompID = FIXType.FIX128_DELIVER_TO_COMP_ID;
-        assertEquals( tag128DeliverToCompID.getFIXName(), "DELIVER_TO_COMP_ID");
-        assertEquals( tag128DeliverToCompID.getFIXNumber(), 128);
-        assertEquals( tag128DeliverToCompID.getFIXDescription(), "DeliverToCompID");
+        assertEquals( tag128DeliverToCompID.getName(), "DELIVER_TO_COMP_ID");
+        assertEquals( tag128DeliverToCompID.getNumber(), 128);
+        assertEquals( tag128DeliverToCompID.getDescription(), "DeliverToCompID");
     }
 }

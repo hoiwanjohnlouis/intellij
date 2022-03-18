@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag10CheckSum;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag10CheckSumTest {
     @Test
     void FIX0010Test() {
         FIXType fix10CheckSum = FIXType.FIX10_CHECK_SUM;
-        assertEquals( "CHECK_SUM", fix10CheckSum.getFIXName());
-        assertEquals( 10, fix10CheckSum.getFIXNumber());
-        assertEquals( "CheckSum", fix10CheckSum.getFIXDescription());
-        assertNotEquals( "CHECK_SUM CHECK_SUM", fix10CheckSum.getFIXName());
-        assertNotEquals( 100, fix10CheckSum.getFIXNumber());
-        assertNotEquals( "123 CheckSum", fix10CheckSum.getFIXDescription());
+        assertEquals( "CHECK_SUM", fix10CheckSum.getName());
+        assertEquals( 10, fix10CheckSum.getNumber());
+        assertEquals( "CheckSum", fix10CheckSum.getDescription());
+        assertNotEquals( "CHECK_SUM CHECK_SUM", fix10CheckSum.getName());
+        assertNotEquals( 100, fix10CheckSum.getNumber());
+        assertNotEquals( "123 CheckSum", fix10CheckSum.getDescription());
     }
     @Test
     void Tag0010Test() {

@@ -49,4 +49,7 @@ class Tag672LegIndividualAllocIDTest {
     void FIX0672Test() {
         FIXType Tag672LegIndividualAllocID = FIXType.LEG_INDIVIDUAL_ALLOC_ID;
     }
+    @Test
+    void Tag0672Test() {
+    }
 }

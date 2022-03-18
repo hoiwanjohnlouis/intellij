@@ -49,4 +49,7 @@ class Tag675LegSettlCurrencyTest {
     void FIX0675Test() {
         FIXType Tag675LegSettlCurrency = FIXType.LEG_SETTL_CURRENCY;
     }
+    @Test
+    void Tag0675Test() {
+    }
 }

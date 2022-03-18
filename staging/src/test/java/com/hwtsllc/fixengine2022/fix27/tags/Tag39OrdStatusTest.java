@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag39OrdStatus;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag39OrdStatusTest {
     @Test
     void FIX0039Test() {
         FIXType fix39OrdStatus = FIXType.FIX39_ORD_STATUS;
-        assertEquals( "ORD_STATUS", fix39OrdStatus.getFIXName());
-        assertEquals( 39, fix39OrdStatus.getFIXNumber());
-        assertEquals( "OrdStatus", fix39OrdStatus.getFIXDescription());
-        assertNotEquals( "ORD_STATUS ORD_STATUS", fix39OrdStatus.getFIXName());
-        assertNotEquals( 312, fix39OrdStatus.getFIXNumber());
-        assertNotEquals( "OrdStatus OrdStatus", fix39OrdStatus.getFIXDescription());
+        assertEquals( "ORD_STATUS", fix39OrdStatus.getName());
+        assertEquals( 39, fix39OrdStatus.getNumber());
+        assertEquals( "OrdStatus", fix39OrdStatus.getDescription());
+        assertNotEquals( "ORD_STATUS ORD_STATUS", fix39OrdStatus.getName());
+        assertNotEquals( 312, fix39OrdStatus.getNumber());
+        assertNotEquals( "OrdStatus OrdStatus", fix39OrdStatus.getDescription());
     }
     @Test
     void Tag0039Test() {

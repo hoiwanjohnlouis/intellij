@@ -49,4 +49,7 @@ class Tag907CollAsgnRefIDTest {
     void FIX0907Test() {
         FIXType Tag907CollAsgnRefID = FIXType.COLL_ASGN_REF_ID;
     }
+    @Test
+    void Tag0907Test() {
+    }
 }

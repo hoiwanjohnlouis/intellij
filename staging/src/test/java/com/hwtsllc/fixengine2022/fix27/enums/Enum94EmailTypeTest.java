@@ -50,26 +50,26 @@ class Enum94EmailTypeTest {
          * 0-2 msg types
          */
         enumType = Enum94EmailType.NEW;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("NEW", enumType.getName());
         assertEquals("0 - New", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum94EmailType.REPLY;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("REPLY", enumType.getName());
         assertEquals("1 - Reply", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum94EmailType.ADMIN_REPLY;
-        assertEquals("2", enumType.getAction());
+        assertEquals("2", enumType.getID());
         assertEquals("ADMIN_REPLY", enumType.getName());
         assertEquals("2 - Admin Reply", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

@@ -18,12 +18,28 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum81ProcessCode;
 
 public class Tag81ProcessCode extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final Enum81ProcessCode dataValue;
 
-    private final FIXType fixType = FIXType.FIX81_PROCESS_CODE;
+    public final static Enum81ProcessCode TESTA_PROCESS_CODE = Enum81ProcessCode.REGULAR;
+    public final static Enum81ProcessCode TESTB_PROCESS_CODE = Enum81ProcessCode.PLAN_SPONSOR;
+
+    public Tag81ProcessCode(Enum81ProcessCode dataValue) {
+        setFixType(FIXType.FIX81_PROCESS_CODE);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag81ProcessCode tagData = new Tag81ProcessCode(TESTA_PROCESS_CODE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

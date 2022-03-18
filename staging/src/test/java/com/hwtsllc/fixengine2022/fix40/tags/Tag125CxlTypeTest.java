@@ -48,15 +48,15 @@ class Tag125CxlTypeTest {
     @Test
     void FIX0125Test() {
         FIXType fix125CxlType = FIXType.FIX125_CXL_TYPE;
-        assertEquals( fix125CxlType.getFIXName(), "CXL_TYPE");
-        assertEquals( fix125CxlType.getFIXNumber(), 125);
-        assertEquals( fix125CxlType.getFIXDescription(), "CxlType (no longer used)");
+        assertEquals( fix125CxlType.getName(), "CXL_TYPE");
+        assertEquals( fix125CxlType.getNumber(), 125);
+        assertEquals( fix125CxlType.getDescription(), "CxlType (no longer used)");
     }
     @Test
     void Tag0125Test() {
         FIXType tag125CxlType = FIXType.FIX125_CXL_TYPE;
-        assertEquals( tag125CxlType.getFIXName(), "CXL_TYPE");
-        assertEquals( tag125CxlType.getFIXNumber(), 125);
-        assertEquals( tag125CxlType.getFIXDescription(), "CxlType (no longer used)");
+        assertEquals( tag125CxlType.getName(), "CXL_TYPE");
+        assertEquals( tag125CxlType.getNumber(), 125);
+        assertEquals( tag125CxlType.getDescription(), "CxlType (no longer used)");
     }
 }

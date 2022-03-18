@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag44Price;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag44PriceTest {
     @Test
     void FIX0044Test() {
         FIXType fix44Price = FIXType.FIX44_PRICE;
-        assertEquals( "PRICE", fix44Price.getFIXName());
-        assertEquals( 44, fix44Price.getFIXNumber());
-        assertEquals( "Price", fix44Price.getFIXDescription());
-        assertNotEquals( "PRICE PRICE", fix44Price.getFIXName());
-        assertNotEquals( 3123, fix44Price.getFIXNumber());
-        assertNotEquals( "Price Price", fix44Price.getFIXDescription());
+        assertEquals( "PRICE", fix44Price.getName());
+        assertEquals( 44, fix44Price.getNumber());
+        assertEquals( "Price", fix44Price.getDescription());
+        assertNotEquals( "PRICE PRICE", fix44Price.getName());
+        assertNotEquals( 3123, fix44Price.getNumber());
+        assertNotEquals( "Price Price", fix44Price.getDescription());
     }
     @Test
     void Tag0044Test() {

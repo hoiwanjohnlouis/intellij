@@ -40,12 +40,12 @@ class Tag23IOIIDTest {
     @Test
     void FIX0023Test() {
         FIXType fix23IOIID = FIXType.FIX23_IOI_ID;
-        assertEquals( "IOI_ID", fix23IOIID.getFIXName());
-        assertEquals( 23, fix23IOIID.getFIXNumber());
-        assertEquals( "IOIid", fix23IOIID.getFIXDescription());
-        assertNotEquals( "IOI_ID IOI_ID", fix23IOIID.getFIXName());
-        assertNotEquals( 2323, fix23IOIID.getFIXNumber());
-        assertNotEquals( "123 IOIid", fix23IOIID.getFIXDescription());
+        assertEquals( "IOI_ID", fix23IOIID.getName());
+        assertEquals( 23, fix23IOIID.getNumber());
+        assertEquals( "IOIid", fix23IOIID.getDescription());
+        assertNotEquals( "IOI_ID IOI_ID", fix23IOIID.getName());
+        assertNotEquals( 2323, fix23IOIID.getNumber());
+        assertNotEquals( "123 IOIid", fix23IOIID.getDescription());
     }
     @Test
     void Tag0023Test() {

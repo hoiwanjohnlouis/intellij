@@ -46,16 +46,16 @@ class Tag111MaxFloorTest {
     @Test
     void FIX0111Test() {
         FIXType fix111MaxFloor = FIXType.FIX111_MAX_FLOOR;
-        assertEquals( fix111MaxFloor.getFIXName(), "MAX_FLOOR");
-        assertEquals( fix111MaxFloor.getFIXNumber(), 111);
-        assertEquals( fix111MaxFloor.getFIXDescription(), "MaxFloor");
+        assertEquals( fix111MaxFloor.getName(), "MAX_FLOOR");
+        assertEquals( fix111MaxFloor.getNumber(), 111);
+        assertEquals( fix111MaxFloor.getDescription(), "MaxFloor");
     }
     @Test
     void Tag0111Test() {
         FIXType tag111MaxFloor = FIXType.FIX111_MAX_FLOOR;
-        assertEquals( tag111MaxFloor.getFIXName(), "MAX_FLOOR");
-        assertEquals( tag111MaxFloor.getFIXNumber(), 111);
-        assertEquals( tag111MaxFloor.getFIXDescription(), "MaxFloor");
+        assertEquals( tag111MaxFloor.getName(), "MAX_FLOOR");
+        assertEquals( tag111MaxFloor.getNumber(), 111);
+        assertEquals( tag111MaxFloor.getDescription(), "MaxFloor");
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

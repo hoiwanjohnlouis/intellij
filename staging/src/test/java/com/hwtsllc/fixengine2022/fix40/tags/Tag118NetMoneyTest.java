@@ -47,15 +47,15 @@ class Tag118NetMoneyTest {
     @Test
     void FIX0118Test() {
         FIXType fix118NetMoney = FIXType.FIX118_NET_MONEY;
-        assertEquals( fix118NetMoney.getFIXName(), "NET_MONEY");
-        assertEquals( fix118NetMoney.getFIXNumber(), 118);
-        assertEquals( fix118NetMoney.getFIXDescription(), "NetMoney");
+        assertEquals( fix118NetMoney.getName(), "NET_MONEY");
+        assertEquals( fix118NetMoney.getNumber(), 118);
+        assertEquals( fix118NetMoney.getDescription(), "NetMoney");
     }
     @Test
     void Tag0118Test() {
         FIXType tag118NetMoney = FIXType.FIX118_NET_MONEY;
-        assertEquals( tag118NetMoney.getFIXName(), "NET_MONEY");
-        assertEquals( tag118NetMoney.getFIXNumber(), 118);
-        assertEquals( tag118NetMoney.getFIXDescription(), "NetMoney");
+        assertEquals( tag118NetMoney.getName(), "NET_MONEY");
+        assertEquals( tag118NetMoney.getNumber(), 118);
+        assertEquals( tag118NetMoney.getDescription(), "NetMoney");
     }
 }

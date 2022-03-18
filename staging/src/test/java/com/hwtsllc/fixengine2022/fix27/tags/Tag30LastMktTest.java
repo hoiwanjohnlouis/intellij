@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag30LastMkt;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag30LastMktTest {
     @Test
     void FIX0030Test() {
         FIXType fix30LastMkt = FIXType.FIX30_LAST_MKT;
-        assertEquals( "LAST_MKT", fix30LastMkt.getFIXName());
-        assertEquals( 30, fix30LastMkt.getFIXNumber());
-        assertEquals( "LastMkt", fix30LastMkt.getFIXDescription());
-        assertNotEquals( "LAST_MKT LAST_MKT", fix30LastMkt.getFIXName());
-        assertNotEquals( 2020, fix30LastMkt.getFIXNumber());
-        assertNotEquals( "123 LastMkt", fix30LastMkt.getFIXDescription());
+        assertEquals( "LAST_MKT", fix30LastMkt.getName());
+        assertEquals( 30, fix30LastMkt.getNumber());
+        assertEquals( "LastMkt", fix30LastMkt.getDescription());
+        assertNotEquals( "LAST_MKT LAST_MKT", fix30LastMkt.getName());
+        assertNotEquals( 2020, fix30LastMkt.getNumber());
+        assertNotEquals( "123 LastMkt", fix30LastMkt.getDescription());
     }
     @Test
     void Tag0030Test() {

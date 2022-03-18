@@ -49,4 +49,7 @@ class Tag673LegAllocQtyTest {
     void FIX0673Test() {
         FIXType Tag673LegAllocQty = FIXType.LEG_ALLOC_QTY;
     }
+    @Test
+    void Tag0673Test() {
+    }
 }

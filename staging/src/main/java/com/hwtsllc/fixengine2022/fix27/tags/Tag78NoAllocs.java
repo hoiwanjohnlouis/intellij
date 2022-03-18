@@ -18,12 +18,27 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag78NoAllocs extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX78_NO_ALLOCS;
+    public final static String TESTA_NO_ALLOCS = "79";
+    public final static String TESTB_NO_ALLOCS = "79";
+
+    public Tag78NoAllocs(String dataValue) {
+        setFixType(FIXType.FIX78_NO_ALLOCS);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag78NoAllocs tagData = new Tag78NoAllocs(TESTA_NO_ALLOCS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

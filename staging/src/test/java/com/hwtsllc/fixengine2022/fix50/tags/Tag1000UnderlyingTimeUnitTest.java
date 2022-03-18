@@ -41,9 +41,9 @@ class Tag1000UnderlyingTimeUnitTest {
     @Test
     void FIX1000Test() {
         FIXType fix1000UnderlyingTimeUnit = FIXType.FIX1000_UNDERLYING_TIME_UNIT;
-        assertEquals( "UNDERLYING_TIME_UNIT", fix1000UnderlyingTimeUnit.getFIXName());
-        assertEquals( 1000, fix1000UnderlyingTimeUnit.getFIXNumber());
-        assertEquals( "UnderlyingTimeUnit", fix1000UnderlyingTimeUnit.getFIXDescription());
+        assertEquals( "UNDERLYING_TIME_UNIT", fix1000UnderlyingTimeUnit.getName());
+        assertEquals( 1000, fix1000UnderlyingTimeUnit.getNumber());
+        assertEquals( "UnderlyingTimeUnit", fix1000UnderlyingTimeUnit.getDescription());
     }
     @Test
     void Tag1000Test() {

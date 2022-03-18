@@ -49,4 +49,7 @@ class Tag695QuoteQualifierTest {
     void FIX0695Test() {
         FIXType Tag695QuoteQualifier = FIXType.QUOTE_QUALIFIER;
     }
+    @Test
+    void Tag0695Test() {
+    }
 }

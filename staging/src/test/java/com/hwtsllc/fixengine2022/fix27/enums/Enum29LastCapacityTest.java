@@ -47,34 +47,34 @@ class Enum29LastCapacityTest {
         Enum29LastCapacity enumType;
 
         enumType = Enum29LastCapacity.AGENT;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("AGENT", enumType.getName());
         assertEquals("1 - Agent", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum29LastCapacity.CROSS_AS_AGENT;
-        assertEquals("2", enumType.getAction());
+        assertEquals("2", enumType.getID());
         assertEquals("CROSS_AS_AGENT", enumType.getName());
         assertEquals("2 - Cross as agent", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum29LastCapacity.CROSS_AS_PRINCIPAL;
-        assertEquals("3", enumType.getAction());
+        assertEquals("3", enumType.getID());
         assertEquals("CROSS_AS_PRINCIPAL", enumType.getName());
         assertEquals("3 - Cross as principal", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum29LastCapacity.PRINCIPAL;
-        assertEquals("4", enumType.getAction());
+        assertEquals("4", enumType.getID());
         assertEquals("PRINCIPAL", enumType.getName());
         assertEquals("4 - Principal", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

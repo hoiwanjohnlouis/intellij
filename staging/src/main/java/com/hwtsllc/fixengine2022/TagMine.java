@@ -40,7 +40,7 @@ public class TagMine extends FIXTypeWrapper implements FixTagValuePairString, Ta
      */
     @Override
     public String toFixTagValuePairString() {
-        return String.valueOf(getFIXNumber())
+        return String.valueOf(getAction())
                 .concat("=")
                 .concat(getDataValue());
     }

@@ -49,4 +49,7 @@ class Tag939TrdRptStatusTest {
     void FIX0939Test() {
         FIXType Tag939TrdRptStatus = FIXType.TRD_RPT_STATUS;
     }
+    @Test
+    void Tag0939Test() {
+    }
 }

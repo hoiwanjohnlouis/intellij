@@ -41,12 +41,12 @@ class Tag32LastQtyTest {
     @Test
     void FIX0032Test() {
         FIXType fix32LastQty = FIXType.FIX32_LAST_QTY;
-        assertEquals( "LAST_QTY", fix32LastQty.getFIXName());
-        assertEquals( 32, fix32LastQty.getFIXNumber());
-        assertEquals( "LastQty", fix32LastQty.getFIXDescription());
-        assertNotEquals( "LAST_QTY LAST_QTY", fix32LastQty.getFIXName());
-        assertNotEquals( 312, fix32LastQty.getFIXNumber());
-        assertNotEquals( "LastQty LastQty", fix32LastQty.getFIXDescription());
+        assertEquals( "LAST_QTY", fix32LastQty.getName());
+        assertEquals( 32, fix32LastQty.getNumber());
+        assertEquals( "LastQty", fix32LastQty.getDescription());
+        assertNotEquals( "LAST_QTY LAST_QTY", fix32LastQty.getName());
+        assertNotEquals( 312, fix32LastQty.getNumber());
+        assertNotEquals( "LastQty LastQty", fix32LastQty.getDescription());
     }
     @Test
     void Tag0032Test() {

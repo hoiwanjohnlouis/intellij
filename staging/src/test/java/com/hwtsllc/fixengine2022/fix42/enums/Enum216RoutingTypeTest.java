@@ -51,34 +51,34 @@ class Enum216RoutingTypeTest {
          * 1-4 msg types
          */
         enumType = Enum216RoutingType.TARGET_FIRM;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("TARGET_FIRM", enumType.getName());
         assertEquals("1 - Target Firm", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum216RoutingType.TARGET_LIST;
-        assertEquals("2", enumType.getAction());
+        assertEquals("2", enumType.getID());
         assertEquals("TARGET_LIST", enumType.getName());
         assertEquals("2 - Target List", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum216RoutingType.BLOCK_FIRM;
-        assertEquals("3", enumType.getAction());
+        assertEquals("3", enumType.getID());
         assertEquals("BLOCK_FIRM", enumType.getName());
         assertEquals("3 - Block Firm", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum216RoutingType.BLOCK_LIST;
-        assertEquals("4", enumType.getAction());
+        assertEquals("4", enumType.getID());
         assertEquals("BLOCK_LIST", enumType.getName());
         assertEquals("4 - Block List", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

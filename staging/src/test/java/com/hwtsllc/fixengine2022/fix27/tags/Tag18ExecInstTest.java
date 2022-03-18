@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag18ExecInst;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag18ExecInstTest {
     @Test
     void FIX0018Test() {
         FIXType fix18ExecInst = FIXType.FIX18_EXEC_INST;
-        assertEquals( "EXEC_INST", fix18ExecInst.getFIXName());
-        assertEquals( 18, fix18ExecInst.getFIXNumber());
-        assertEquals( "ExecInst", fix18ExecInst.getFIXDescription());
-        assertNotEquals( "EXEC_INST EXEC_INST", fix18ExecInst.getFIXName());
-        assertNotEquals( 1818, fix18ExecInst.getFIXNumber());
-        assertNotEquals( "123 ExecInst", fix18ExecInst.getFIXDescription());
+        assertEquals( "EXEC_INST", fix18ExecInst.getName());
+        assertEquals( 18, fix18ExecInst.getNumber());
+        assertEquals( "ExecInst", fix18ExecInst.getDescription());
+        assertNotEquals( "EXEC_INST EXEC_INST", fix18ExecInst.getName());
+        assertNotEquals( 1818, fix18ExecInst.getNumber());
+        assertNotEquals( "123 ExecInst", fix18ExecInst.getDescription());
     }
     @Test
     void Tag0018Test() {

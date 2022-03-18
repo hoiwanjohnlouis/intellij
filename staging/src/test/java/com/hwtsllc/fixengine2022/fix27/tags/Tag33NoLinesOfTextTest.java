@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag33NoLinesOfText;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag33NoLinesOfTextTest {
     @Test
     void FIX0033Test() {
         FIXType fix33LinesOfText = FIXType.FIX33_NO_LINES_OF_TEXT;
-        assertEquals( "NO_LINES_OF_TEXT", fix33LinesOfText.getFIXName());
-        assertEquals( 33, fix33LinesOfText.getFIXNumber());
-        assertEquals( "NoLinesOfText", fix33LinesOfText.getFIXDescription());
-        assertNotEquals( "NO_LINES_OF_TEXT NO_LINES_OF_TEXT", fix33LinesOfText.getFIXName());
-        assertNotEquals( 3172, fix33LinesOfText.getFIXNumber());
-        assertNotEquals( "NoLinesOfText NoLinesOfText", fix33LinesOfText.getFIXDescription());
+        assertEquals( "NO_LINES_OF_TEXT", fix33LinesOfText.getName());
+        assertEquals( 33, fix33LinesOfText.getNumber());
+        assertEquals( "NoLinesOfText", fix33LinesOfText.getDescription());
+        assertNotEquals( "NO_LINES_OF_TEXT NO_LINES_OF_TEXT", fix33LinesOfText.getName());
+        assertNotEquals( 3172, fix33LinesOfText.getNumber());
+        assertNotEquals( "NoLinesOfText NoLinesOfText", fix33LinesOfText.getDescription());
     }
     @Test
     void Tag0033Test() {

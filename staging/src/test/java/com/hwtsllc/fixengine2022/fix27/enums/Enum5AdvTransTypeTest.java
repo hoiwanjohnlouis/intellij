@@ -47,26 +47,26 @@ class Enum5AdvTransTypeTest {
         Enum5AdvTransType enumType;
 
         enumType = Enum5AdvTransType.NEW;
-        assertEquals("N", enumType.getAction());
+        assertEquals("N", enumType.getID());
         assertEquals("NEW", enumType.getName());
         assertEquals("N - New", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum5AdvTransType.CANCEL;
-        assertEquals("C", enumType.getAction());
+        assertEquals("C", enumType.getID());
         assertEquals("CANCEL", enumType.getName());
         assertEquals("C - Cancel", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum5AdvTransType.REPLACE;
-        assertEquals("R", enumType.getAction());
+        assertEquals("R", enumType.getID());
         assertEquals("REPLACE", enumType.getName());
         assertEquals("R - Replace", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

@@ -50,18 +50,18 @@ class Enum203CoveredOrUncoveredTest {
          * 0-1 msg types
          */
         enumType = Enum203CoveredOrUncovered.COVERED;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("COVERED", enumType.getName());
         assertEquals("0 - Covered", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum203CoveredOrUncovered.UNCOVERED;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("UNCOVERED", enumType.getName());
         assertEquals("1 - Uncovered", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

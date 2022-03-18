@@ -25,7 +25,7 @@ public class Tag22SecurityIDSource extends TagTypeAbstract {
 
     public Tag22SecurityIDSource(Enum22SecurityIDSource dataValue) {
         setFixType(FIXType.FIX22_SECURITY_ID_SOURCE);
-        setDataValue(dataValue.getAction());
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

@@ -25,7 +25,7 @@ public class Tag4AdvSide extends TagTypeAbstract {
 
     public Tag4AdvSide(Enum4AdvSide dataValue) {
         setFixType(FIXType.FIX4_ADV_SIDE);
-        setDataValue(dataValue.getAction());
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

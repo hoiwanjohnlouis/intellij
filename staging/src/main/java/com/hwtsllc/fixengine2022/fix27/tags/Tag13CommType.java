@@ -25,7 +25,7 @@ public class Tag13CommType extends TagTypeAbstract {
 
     public Tag13CommType(Enum13CommType dataValue) {
         setFixType(FIXType.FIX13_COMM_TYPE);
-        setDataValue(dataValue.getAction());
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

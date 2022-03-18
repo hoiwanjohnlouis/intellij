@@ -18,13 +18,28 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 @Deprecated
 public class Tag85NoDlvyInst extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX85_NO_DLVY_INST;
+    public final static String TESTA_NO_DLVY_INST = "85";
+    public final static String TESTB_NO_DLVY_INST = "58";
+
+    public Tag85NoDlvyInst(String dataValue) {
+        setFixType(FIXType.FIX85_NO_DLVY_INST);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag85NoDlvyInst tagData = new Tag85NoDlvyInst(TESTA_NO_DLVY_INST);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

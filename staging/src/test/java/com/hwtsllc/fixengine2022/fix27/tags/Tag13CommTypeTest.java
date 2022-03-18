@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag13CommType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,12 +41,12 @@ class Tag13CommTypeTest {
     @Test
     void FIX0013Test() {
         FIXType fix13CommType = FIXType.FIX13_COMM_TYPE;
-        assertEquals( "COMM_TYPE", fix13CommType.getFIXName());
-        assertEquals( 13, fix13CommType.getFIXNumber());
-        assertEquals( "CommType", fix13CommType.getFIXDescription());
-        assertNotEquals( "Not My COMM_TYPE", fix13CommType.getFIXName());
-        assertNotEquals( 163223, fix13CommType.getFIXNumber());
-        assertNotEquals( "123 CommType", fix13CommType.getFIXDescription());
+        assertEquals( "COMM_TYPE", fix13CommType.getName());
+        assertEquals( 13, fix13CommType.getNumber());
+        assertEquals( "CommType", fix13CommType.getDescription());
+        assertNotEquals( "Not My COMM_TYPE", fix13CommType.getName());
+        assertNotEquals( 163223, fix13CommType.getNumber());
+        assertNotEquals( "123 CommType", fix13CommType.getDescription());
     }
     @Test
     void Tag0013Test() {

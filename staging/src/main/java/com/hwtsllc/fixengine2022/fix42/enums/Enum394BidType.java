@@ -16,12 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum394BidType implements FixEnumAccessors, LogStringVerbose {
+public enum Enum394BidType implements EnumAccessors, LogStringVerbose {
     /*
      * 1-3 msg types
      */
@@ -54,7 +54,7 @@ public enum Enum394BidType implements FixEnumAccessors, LogStringVerbose {
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getAction() {
+    public String getID() {
         return action;
     }
     /**
@@ -82,7 +82,7 @@ public enum Enum394BidType implements FixEnumAccessors, LogStringVerbose {
                 .append(getEnumName())
                 .append("]")
                 .append("\n\tAction[")
-                .append(getAction())
+                .append(getID())
                 .append("]")
                 .append("\n\tName[")
                 .append(getName())
@@ -100,7 +100,7 @@ public enum Enum394BidType implements FixEnumAccessors, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(getEnumName())
                 .append("=[")
-                .append(getAction())
+                .append(getID())
                 .append(",")
                 .append(getName())
                 .append(",")

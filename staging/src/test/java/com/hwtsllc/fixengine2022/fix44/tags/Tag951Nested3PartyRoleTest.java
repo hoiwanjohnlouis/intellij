@@ -49,4 +49,7 @@ class Tag951Nested3PartyRoleTest {
     void FIX0951Test() {
         FIXType Tag951Nested3PartyRole = FIXType.NESTED_3_PARTY_ROLE;
     }
+    @Test
+    void Tag0951Test() {
+    }
 }

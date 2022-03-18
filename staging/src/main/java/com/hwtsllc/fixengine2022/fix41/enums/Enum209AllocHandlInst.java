@@ -16,12 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum209AllocHandlInst implements FixEnumAccessors, LogStringVerbose {
+public enum Enum209AllocHandlInst implements EnumAccessors, LogStringVerbose {
     MATCH( "1", "MATCH", "1 - Match" ),
     FORWARD( "2", "FORWARD", "2 - Forward" ),
     FORWARD_AND_MATCH( "3", "FORWARD_AND_MATCH", "3 - Forward and Match" ),
@@ -51,7 +51,7 @@ public enum Enum209AllocHandlInst implements FixEnumAccessors, LogStringVerbose 
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getAction() {
+    public String getID() {
         return action;
     }
     /**
@@ -79,7 +79,7 @@ public enum Enum209AllocHandlInst implements FixEnumAccessors, LogStringVerbose 
                 .append(getEnumName())
                 .append("]")
                 .append("\n\tAction[")
-                .append(getAction())
+                .append(getID())
                 .append("]")
                 .append("\n\tName[")
                 .append(getName())
@@ -97,7 +97,7 @@ public enum Enum209AllocHandlInst implements FixEnumAccessors, LogStringVerbose 
         StringBuilder sb = new StringBuilder();
         sb.append(getEnumName())
                 .append("=[")
-                .append(getAction())
+                .append(getID())
                 .append(",")
                 .append(getName())
                 .append(",")

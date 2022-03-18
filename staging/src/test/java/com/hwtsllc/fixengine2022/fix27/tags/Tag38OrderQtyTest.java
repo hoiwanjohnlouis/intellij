@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag38OrderQty;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag38OrderQtyTest {
     @Test
     void FIX0038Test() {
         FIXType fix38OrderQty = FIXType.FIX38_ORDER_QTY;
-        assertEquals( "ORDER_QTY", fix38OrderQty.getFIXName());
-        assertEquals( 38, fix38OrderQty.getFIXNumber());
-        assertEquals( "OrderQty", fix38OrderQty.getFIXDescription());
-        assertNotEquals( "ORDER_QTY ORDER_QTY", fix38OrderQty.getFIXName());
-        assertNotEquals( 312, fix38OrderQty.getFIXNumber());
-        assertNotEquals( "OrderQty OrderQty", fix38OrderQty.getFIXDescription());
+        assertEquals( "ORDER_QTY", fix38OrderQty.getName());
+        assertEquals( 38, fix38OrderQty.getNumber());
+        assertEquals( "OrderQty", fix38OrderQty.getDescription());
+        assertNotEquals( "ORDER_QTY ORDER_QTY", fix38OrderQty.getName());
+        assertNotEquals( 312, fix38OrderQty.getNumber());
+        assertNotEquals( "OrderQty OrderQty", fix38OrderQty.getDescription());
     }
     @Test
     void Tag0038Test() {

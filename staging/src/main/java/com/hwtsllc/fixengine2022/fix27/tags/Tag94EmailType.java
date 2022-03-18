@@ -18,13 +18,28 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum94EmailType;
 
 public class Tag94EmailType extends TagTypeAbstract {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final Enum94EmailType dataValue;
 
-    private final FIXType fixType = FIXType.FIX94_EMAIL_TYPE;
+    public final static Enum94EmailType TESTA_EMAIL_TYPE = Enum94EmailType.NEW;
+    public final static Enum94EmailType TESTB_EMAIL_TYPE = Enum94EmailType.ADMIN_REPLY;
+
+    public Tag94EmailType(Enum94EmailType dataValue) {
+        setFixType(FIXType.FIX94_EMAIL_TYPE);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag94EmailType tagData = new Tag94EmailType(TESTA_EMAIL_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

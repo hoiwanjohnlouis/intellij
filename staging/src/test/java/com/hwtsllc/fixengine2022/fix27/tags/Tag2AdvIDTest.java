@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag2AdvID;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,12 +41,12 @@ class Tag2AdvIDTest {
     @Test
     void FIX0002Test() {
         FIXType fix2AdvID = FIXType.FIX2_ADV_ID;
-        assertEquals( "ADV_ID", fix2AdvID.getFIXName());
-        assertEquals( 2, fix2AdvID.getFIXNumber());
-        assertEquals( "AdvId", fix2AdvID.getFIXDescription());
-        assertNotEquals( "ADV ID", fix2AdvID.getFIXName());
-        assertNotEquals( 22, fix2AdvID.getFIXNumber());
-        assertNotEquals( "Adv Id", fix2AdvID.getFIXDescription());
+        assertEquals( "ADV_ID", fix2AdvID.getName());
+        assertEquals( 2, fix2AdvID.getNumber());
+        assertEquals( "AdvId", fix2AdvID.getDescription());
+        assertNotEquals( "ADV ID", fix2AdvID.getName());
+        assertNotEquals( 22, fix2AdvID.getNumber());
+        assertNotEquals( "Adv Id", fix2AdvID.getDescription());
     }
     @Test
     void Tag0002Test() {

@@ -51,8 +51,8 @@ class Tag83RptSeqTest {
     @Test
     void Tag0083Test() {
         FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getNumber(), 100);
+        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
     }
 }

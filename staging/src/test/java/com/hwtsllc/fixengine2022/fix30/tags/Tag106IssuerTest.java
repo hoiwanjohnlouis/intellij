@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix30.tags.Tag106Issuer;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -47,15 +46,15 @@ class Tag106IssuerTest {
     @Test
     void FIX0106Test() {
         FIXType fix106Issuer = FIXType.FIX106_ISSUER;
-        assertEquals( fix106Issuer.getFIXName(), "ISSUER");
-        assertEquals( fix106Issuer.getFIXNumber(), 106);
-        assertEquals( fix106Issuer.getFIXDescription(), "Issuer");
+        assertEquals( fix106Issuer.getName(), "ISSUER");
+        assertEquals( fix106Issuer.getNumber(), 106);
+        assertEquals( fix106Issuer.getDescription(), "Issuer");
     }
     @Test
     void Tag0106Test() {
         Tag106Issuer tag106Issuer = new Tag106Issuer("show me the money");
-        assertEquals( tag106Issuer.getFIXName(), "ISSUER");
-        assertEquals( tag106Issuer.getFIXNumber(), 106);
-        assertEquals( tag106Issuer.getFIXDescription(), "Issuer");
+        assertEquals( tag106Issuer.getName(), "ISSUER");
+        assertEquals( tag106Issuer.getNumber(), 106);
+        assertEquals( tag106Issuer.getDescription(), "Issuer");
     }
 }

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag100ExDestination;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -48,12 +47,12 @@ class Tag100ExDestinationTest {
     @Test
     void FIX0100Test() {
         FIXType fix100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( fix100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( fix100ExDestination.getFIXNumber(), 100);
-        assertEquals( fix100ExDestination.getFIXDescription(), "ExDestination");
-        assertNotEquals( fix100ExDestination.getFIXName(), "Not My EX_DESTINATION");
-        assertNotEquals( fix100ExDestination.getFIXNumber(), 2);
-        assertNotEquals( fix100ExDestination.getFIXDescription(), "123 Account");
+        assertEquals( fix100ExDestination.getName(), "EX_DESTINATION");
+        assertEquals( fix100ExDestination.getNumber(), 100);
+        assertEquals( fix100ExDestination.getDescription(), "ExDestination");
+        assertNotEquals( fix100ExDestination.getName(), "Not My EX_DESTINATION");
+        assertNotEquals( fix100ExDestination.getNumber(), 2);
+        assertNotEquals( fix100ExDestination.getDescription(), "123 Account");
     }
     @Test
     void Tag0100Test() {

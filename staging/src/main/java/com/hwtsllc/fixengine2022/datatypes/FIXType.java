@@ -559,7 +559,7 @@ public enum FIXType implements LogStringVerbose {
     FIX448_PARTY_ID(448, "PARTY_ID", "PartyID"),
     FIX449_TOTAL_VOLUME_TRADED_DATE(449, "TOTAL_VOLUME_TRADED_DATE", "TotalVolumeTradedDate (replaced)"),
     FIX450_TOTAL_VOLUME_TRADED_TIME(450, "TOTAL_VOLUME_TRADED_TIME", "TotalVolumeTradedTime (replaced)"),
-
+// TODO: add FIXnnn_ prefix to FIX4.3
     NET_CHG_PREV_DAY(451, "NET_CHG_PREV_DAY", "NetChgPrevDay"),
     PARTY_ROLE(452, "PARTY_ROLE", "PartyRole"),
     NO_PARTY_IDS(453, "NO_PARTY_IDS", "NoPartyIDs"),
@@ -806,6 +806,7 @@ public enum FIXType implements LogStringVerbose {
      * Start of FIX4.4 as defined by the FIX Protocol Specification 4.4
      *  Tags: 660-956
      */
+// TODO: add FIXnnn_ prefix to FIX4.4
     ACCT_ID_SOURCE(660, "ACCT_ID_SOURCE", "AcctIDSource"),
 
     ALLOC_ACCT_ID_SOURCE(661, "ALLOC_ACCT_ID_SOURCE", "AllocAcctIDSource"),
@@ -1376,47 +1377,45 @@ public enum FIXType implements LogStringVerbose {
         this.fixName = fixName;
         this.fixDescription = fixDescription;
     }
-    public String getFIXTypeName() {
+    public String getEnumName() {
         return this.name();
     }
-    public int getFIXNumber() {
+    public int getNumber() {
         return fixNumber;
     }
-    public String getFIXName() {
+    public String getName() {
         return fixName;
     }
-    public String getFIXDescription() {
+    public String getDescription() {
         return fixDescription;
     }
 
     @Override
     public String toLogStringVerbose() {
-        String sb = this.getClass().getSimpleName()
+        return this.getClass().getSimpleName()
                 .concat("\n\tFIXTypeName[")
-                .concat(getFIXTypeName())
+                .concat(getEnumName())
                 .concat("]")
                 .concat("\n\tFIXNumber[")
-                .concat(String.valueOf( getFIXNumber() ))
+                .concat(String.valueOf( getNumber() ))
                 .concat("]")
                 .concat("\n\tFIXName[")
-                .concat(getFIXName())
+                .concat(getName())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
-                .concat(getFIXDescription())
+                .concat(getDescription())
                 .concat("]");
-        return sb;
     }
     @Override
     public String toString() {
-        String sb = getFIXTypeName()
+        return getEnumName()
                 .concat("=[")
-                .concat(String.valueOf( getFIXNumber() ))
+                .concat(String.valueOf( getNumber() ))
                 .concat(",")
-                .concat(getFIXName())
+                .concat(getName())
                 .concat(",")
-                .concat(getFIXDescription())
+                .concat(getDescription())
                 .concat("]");
-        return sb;
     }
 
     /**

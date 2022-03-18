@@ -49,4 +49,7 @@ class Tag943TimeBracketTest {
     void FIX0943Test() {
         FIXType Tag943TimeBracket = FIXType.TIME_BRACKET;
     }
+    @Test
+    void Tag0943Test() {
+    }
 }

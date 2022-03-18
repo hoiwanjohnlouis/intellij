@@ -49,4 +49,7 @@ class Tag936NoCompIDsTest {
     void FIX0936Test() {
         FIXType Tag936NoCompIDs = FIXType.NO_COMP_IDS;
     }
+    @Test
+    void Tag0936Test() {
+    }
 }

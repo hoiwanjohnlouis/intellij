@@ -48,34 +48,34 @@ class Enum4AdvSideTest {
         Enum4AdvSide enumType;
 
         enumType = Enum4AdvSide.BUY;
-        assertEquals("B", enumType.getAction());
+        assertEquals("B", enumType.getID());
         assertEquals("BUY", enumType.getName());
         assertEquals("B - Buy", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum4AdvSide.SELL;
-        assertEquals("S", enumType.getAction());
+        assertEquals("S", enumType.getID());
         assertEquals("SELL", enumType.getName());
         assertEquals("S - Sell", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum4AdvSide.CROSS;
-        assertEquals("X", enumType.getAction());
+        assertEquals("X", enumType.getID());
         assertEquals("CROSS", enumType.getName());
         assertEquals("X - Cross", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum4AdvSide.TRADE;
-        assertEquals("T", enumType.getAction());
+        assertEquals("T", enumType.getID());
         assertEquals("TRADE", enumType.getName());
         assertEquals("T - Trade", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

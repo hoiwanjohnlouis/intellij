@@ -18,13 +18,28 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum88AllocRejCode;
 
 public class Tag88AllocRejCode extends TagTypeAbstract {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final Enum88AllocRejCode dataValue;
 
-    private final FIXType fixType = FIXType.FIX88_ALLOC_REJ_CODE;
+    public final static Enum88AllocRejCode TESTA_ALLOC_STATUS = Enum88AllocRejCode.UNKNOWN_ACCOUNT;
+    public final static Enum88AllocRejCode TESTB_ALLOC_STATUS = Enum88AllocRejCode.CALCULATION_DIFFERENCE;
+
+    public Tag88AllocRejCode(Enum88AllocRejCode dataValue) {
+        setFixType(FIXType.FIX88_ALLOC_REJ_CODE);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag88AllocRejCode tagData = new Tag88AllocRejCode(TESTA_ALLOC_STATUS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

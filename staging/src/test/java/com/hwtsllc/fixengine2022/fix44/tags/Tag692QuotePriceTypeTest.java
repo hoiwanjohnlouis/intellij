@@ -49,4 +49,7 @@ class Tag692QuotePriceTypeTest {
     void FIX0692Test() {
         FIXType Tag692QuotePriceType = FIXType.QUOTE_PRICE_TYPE;
     }
+    @Test
+    void Tag0692Test() {
+    }
 }

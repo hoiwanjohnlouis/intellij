@@ -49,4 +49,7 @@ class Tag940AffirmStatusTest {
     void FIX0940Test() {
         FIXType Tag940AffirmStatus = FIXType.AFFIRM_STATUS;
     }
+    @Test
+    void Tag0940Test() {
+    }
 }

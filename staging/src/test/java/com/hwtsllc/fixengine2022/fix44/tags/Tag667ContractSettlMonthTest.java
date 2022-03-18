@@ -49,4 +49,7 @@ class Tag667ContractSettlMonthTest {
     void FIX0667Test() {
         FIXType Tag667ContractSettlMonth = FIXType.CONTRACT_SETTL_MONTH;
     }
+    @Test
+    void Tag0667Test() {
+    }
 }

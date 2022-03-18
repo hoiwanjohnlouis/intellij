@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag1Account extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_ACCOUNT = "BilboBaggins-1-Account";
+    public final static String TESTB_ACCOUNT = "Gandalf-1-Account";
+
     public Tag1Account(String dataValue) {
         setFixType(FIXType.FIX1_ACCOUNT);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag1Account extends TagTypeAbstract {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        Tag1Account tagData = new Tag1Account("tag1 Account");
+        Tag1Account tagData = new Tag1Account(TESTA_ACCOUNT);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

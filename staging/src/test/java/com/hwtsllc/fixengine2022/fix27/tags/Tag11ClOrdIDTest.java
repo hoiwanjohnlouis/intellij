@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag11ClOrdID;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag11ClOrdIDTest {
     @Test
     void FIX0011Test() {
         FIXType fix11ClOrdID = FIXType.FIX11_CL_ORD_ID;
-        assertEquals( "CL_ORD_ID", fix11ClOrdID.getFIXName());
-        assertEquals( 11, fix11ClOrdID.getFIXNumber());
-        assertEquals( "ClOrdID", fix11ClOrdID.getFIXDescription());
-        assertNotEquals( "CL_ORD_ID CL_ORD_ID", fix11ClOrdID.getFIXName());
-        assertNotEquals( 111, fix11ClOrdID.getFIXNumber());
-        assertNotEquals( "123 ClOrdID", fix11ClOrdID.getFIXDescription());
+        assertEquals( "CL_ORD_ID", fix11ClOrdID.getName());
+        assertEquals( 11, fix11ClOrdID.getNumber());
+        assertEquals( "ClOrdID", fix11ClOrdID.getDescription());
+        assertNotEquals( "CL_ORD_ID CL_ORD_ID", fix11ClOrdID.getName());
+        assertNotEquals( 111, fix11ClOrdID.getNumber());
+        assertNotEquals( "123 ClOrdID", fix11ClOrdID.getDescription());
     }
     @Test
     void Tag0011Test() {

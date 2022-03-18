@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag5AdvTransType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -43,12 +42,12 @@ class Tag5Enum5AdvTransTypeTest {
     @Test
     void FIX0005Test() {
         FIXType fix5AdvTransType = FIXType.FIX5_ADV_TRANS_TYPE;
-        assertEquals( "ADV_TRANS_TYPE", fix5AdvTransType.getFIXName());
-        assertEquals( 5, fix5AdvTransType.getFIXNumber());
-        assertEquals( "Enum5AdvTransType", fix5AdvTransType.getFIXDescription());
-        assertNotEquals( "ADV-TRANS-TYPE", fix5AdvTransType.getFIXName());
-        assertNotEquals( 55, fix5AdvTransType.getFIXNumber());
-        assertNotEquals( "Adv Trans Type", fix5AdvTransType.getFIXDescription());
+        assertEquals( "ADV_TRANS_TYPE", fix5AdvTransType.getName());
+        assertEquals( 5, fix5AdvTransType.getNumber());
+        assertEquals( "Enum5AdvTransType", fix5AdvTransType.getDescription());
+        assertNotEquals( "ADV-TRANS-TYPE", fix5AdvTransType.getName());
+        assertNotEquals( 55, fix5AdvTransType.getNumber());
+        assertNotEquals( "Adv Trans Type", fix5AdvTransType.getDescription());
     }
     @Test
     void Tag0005Test() {

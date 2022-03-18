@@ -16,12 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix30.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum104IOIQualifier implements FixEnumAccessors, LogStringVerbose {
+public enum Enum104IOIQualifier implements EnumAccessors, LogStringVerbose {
     ALL_OR_NONE("A", "ALL_OR_NONE", "A - All or None (AON)"),
     MARKET_ON_CLOSE("B", "MARKET_ON_CLOSE", "B - Market On Close (MOC) (held to close)"),
     AT_THE_CLOSE("C", "AT_THE_CLOSE", "C - At the close (around/not held to close)"),
@@ -66,7 +66,7 @@ public enum Enum104IOIQualifier implements FixEnumAccessors, LogStringVerbose {
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getAction() {
+    public String getID() {
         return action;
     }
     /**
@@ -94,7 +94,7 @@ public enum Enum104IOIQualifier implements FixEnumAccessors, LogStringVerbose {
                 .append(getEnumName())
                 .append("]")
                 .append("\n\tAction[")
-                .append(getAction())
+                .append(getID())
                 .append("]")
                 .append("\n\tName[")
                 .append(getName())
@@ -112,7 +112,7 @@ public enum Enum104IOIQualifier implements FixEnumAccessors, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(getEnumName())
                 .append("=[")
-                .append(getAction())
+                .append(getID())
                 .append(",")
                 .append(getName())
                 .append(",")

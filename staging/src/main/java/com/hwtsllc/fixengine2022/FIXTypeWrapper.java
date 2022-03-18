@@ -25,45 +25,45 @@ public abstract class FIXTypeWrapper implements LogStringVerbose {
     public void setFixType(FIXType fixType) {
         this.fixValue = fixType;
     }
-    public String getFIXTypeName() {
-        return fixValue.getFIXTypeName();
+    public String getEnumName() {
+        return fixValue.getEnumName();
     }
-    public int getFIXNumber() {
-        return fixValue.getFIXNumber();
+    public String getAction() {
+        return String.valueOf(fixValue.getNumber());
     }
-    public String getFIXName() {
-        return fixValue.getFIXName();
+    public String getName() {
+        return fixValue.getName();
     }
-    public String getFIXDescription() {
-        return fixValue.getFIXDescription();
+    public String getDescription() {
+        return fixValue.getDescription();
     }
     @Override
     public String toLogStringVerbose() {
         return this.getClass().getSimpleName()
                 .concat("\n\tFIXTypeName[")
-                .concat(getFIXTypeName())
+                .concat(getEnumName())
                 .concat("]")
                 .concat("\n\tFIXNumber[")
-                .concat(String.valueOf(getFIXNumber()))
+                .concat(String.valueOf(getAction()))
                 .concat("]")
                 .concat("\n\tFIXName[")
-                .concat(getFIXName())
+                .concat(getName())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
-                .concat(getFIXDescription())
+                .concat(getDescription())
                 .concat("]");
     }
     @Override
     public String toString() {
         return this.getClass().getSimpleName()
                 .concat("=[")
-                .concat(getFIXTypeName())
+                .concat(getEnumName())
                 .concat(",")
-                .concat(String.valueOf(getFIXNumber()))
+                .concat(String.valueOf(getAction()))
                 .concat(",")
-                .concat(getFIXName())
+                .concat(getName())
                 .concat(",")
-                .concat(getFIXDescription())
+                .concat(getDescription())
                 .concat("]");
     }
 }

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag34MsgSeqNum;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,12 +41,12 @@ class Tag34MsgSeqNumTest {
     @Test
     void FIX0034Test() {
         FIXType fix34MsgSeqNum = FIXType.FIX34_MSG_SEQ_NUM;
-        assertEquals( "MSG_SEQ_NUM", fix34MsgSeqNum.getFIXName());
-        assertEquals( 34, fix34MsgSeqNum.getFIXNumber());
-        assertEquals( "MsgSeqNum", fix34MsgSeqNum.getFIXDescription());
-        assertNotEquals( "MSG_SEQ_NUM MSG_SEQ_NUM", fix34MsgSeqNum.getFIXName());
-        assertNotEquals( 312, fix34MsgSeqNum.getFIXNumber());
-        assertNotEquals( "MsgSeqNum MsgSeqNum", fix34MsgSeqNum.getFIXDescription());
+        assertEquals( "MSG_SEQ_NUM", fix34MsgSeqNum.getName());
+        assertEquals( 34, fix34MsgSeqNum.getNumber());
+        assertEquals( "MsgSeqNum", fix34MsgSeqNum.getDescription());
+        assertNotEquals( "MSG_SEQ_NUM MSG_SEQ_NUM", fix34MsgSeqNum.getName());
+        assertNotEquals( 312, fix34MsgSeqNum.getNumber());
+        assertNotEquals( "MsgSeqNum MsgSeqNum", fix34MsgSeqNum.getDescription());
     }
     @Test
     void Tag0034Test() {

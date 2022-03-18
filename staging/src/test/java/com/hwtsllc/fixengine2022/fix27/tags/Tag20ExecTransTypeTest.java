@@ -42,16 +42,16 @@ class Tag20ExecTransTypeTest {
     @Test
     void FIX0020Test() {
         FIXType fix20ExecTransType = FIXType.FIX20_EXEC_TRANS_TYPE;
-        assertEquals( "EXEC_TRANS_TYPE", fix20ExecTransType.getFIXName());
-        assertEquals( 20, fix20ExecTransType.getFIXNumber());
-        assertEquals( "ExecTransType (replaced)", fix20ExecTransType.getFIXDescription());
-        assertNotEquals( "EXEC_TRANS_TYPE EXEC_TRANS_TYPE", fix20ExecTransType.getFIXName());
-        assertNotEquals( 2020, fix20ExecTransType.getFIXNumber());
-        assertNotEquals( "123 ExecTransType (replaced)", fix20ExecTransType.getFIXDescription());
+        assertEquals( "EXEC_TRANS_TYPE", fix20ExecTransType.getName());
+        assertEquals( 20, fix20ExecTransType.getNumber());
+        assertEquals( "ExecTransType (replaced)", fix20ExecTransType.getDescription());
+        assertNotEquals( "EXEC_TRANS_TYPE EXEC_TRANS_TYPE", fix20ExecTransType.getName());
+        assertNotEquals( 2020, fix20ExecTransType.getNumber());
+        assertNotEquals( "123 ExecTransType (replaced)", fix20ExecTransType.getDescription());
     }
     @Test
     void Tag0020Test() {
-        Tag20ExecTransType tag20ExecTransType = new Tag20ExecTransType(Enum20ExecTransType.NEW.getAction());
+        Tag20ExecTransType tag20ExecTransType = new Tag20ExecTransType(Enum20ExecTransType.NEW.getID());
 //        assertEquals( "A", tag20ExecTransType.getDataValue());
 //        assertNotEquals( "11", tag20ExecTransType.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0020Test()");

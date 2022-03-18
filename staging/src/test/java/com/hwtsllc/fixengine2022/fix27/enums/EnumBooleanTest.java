@@ -47,18 +47,18 @@ class EnumBooleanTest {
         EnumBoolean enumType;
 
         enumType = EnumBoolean.NO;
-        assertEquals("N",enumType.getAction());
+        assertEquals("N",enumType.getID());
         assertEquals("NO", enumType.getName());
         assertEquals("N - No", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = EnumBoolean.YES;
-        assertEquals("Y", enumType.getAction());
+        assertEquals("Y", enumType.getID());
         assertEquals("YES", enumType.getName());
         assertEquals("Y - Yes", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

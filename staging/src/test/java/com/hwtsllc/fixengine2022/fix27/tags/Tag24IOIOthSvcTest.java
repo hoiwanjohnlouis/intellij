@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag241UnderlyingCouponPaymentDate;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -42,12 +41,12 @@ class Tag24IOIOthSvcTest {
     @Test
     void FIX0024Test() {
         FIXType fix24IOIOthSvc = FIXType.FIX24_IOI_OTH_SVC;
-        assertEquals( "IOI_OTH_SVC", fix24IOIOthSvc.getFIXName());
-        assertEquals( 24, fix24IOIOthSvc.getFIXNumber());
-        assertEquals( "IOIOthSvc (no longer used)", fix24IOIOthSvc.getFIXDescription());
-        assertNotEquals( "IOI_OTH_SVC IOI_OTH_SVC", fix24IOIOthSvc.getFIXName());
-        assertNotEquals( 2424, fix24IOIOthSvc.getFIXNumber());
-        assertNotEquals( "123 IOIOthSvc (no longer used)", fix24IOIOthSvc.getFIXDescription());
+        assertEquals( "IOI_OTH_SVC", fix24IOIOthSvc.getName());
+        assertEquals( 24, fix24IOIOthSvc.getNumber());
+        assertEquals( "IOIOthSvc (no longer used)", fix24IOIOthSvc.getDescription());
+        assertNotEquals( "IOI_OTH_SVC IOI_OTH_SVC", fix24IOIOthSvc.getName());
+        assertNotEquals( 2424, fix24IOIOthSvc.getNumber());
+        assertNotEquals( "123 IOIOthSvc (no longer used)", fix24IOIOthSvc.getDescription());
     }
     @Test
     void Tag0024Test() {

@@ -18,22 +18,20 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag70AllocID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
     public Tag70AllocID(String dataValue) {
         setFixType(FIXType.FIX70_ALLOC_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag70AllocID tag70AllocID = new Tag70AllocID("ALLOCATE-THE-TRADES");
-        System.out.println(tag70AllocID);
-        System.out.println(tag70AllocID.toLogStringVerbose());
-        System.out.println(tag70AllocID.toFixTagValuePairString());
+        Tag70AllocID tagData = new Tag70AllocID("ALLOCATE-THE-TRADES");
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

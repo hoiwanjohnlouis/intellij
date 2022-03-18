@@ -50,26 +50,26 @@ class Enum61UrgencyTest {
          * 0-2 msg types
          */
         enumType = Enum61Urgency.NORMAL;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("NORMAL", enumType.getName());
         assertEquals("0 - Normal", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum61Urgency.FLASH;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("FLASH", enumType.getName());
         assertEquals("1 - Flash", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum61Urgency.BACKGROUND;
-        assertEquals("2", enumType.getAction());
+        assertEquals("2", enumType.getID());
         assertEquals("BACKGROUND", enumType.getName());
         assertEquals("2 - Background", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

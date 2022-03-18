@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -25,7 +25,7 @@ import org.apache.log4j.Logger;
  *
  * Used in FIX18_EXEC_INST
  */
-public enum Enum18ExecInst implements FixEnumAccessors, LogStringVerbose {
+public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
     STAY_ON_OFFER_SIDE("0", "STAY_ON_OFFER_SIDE", "0 - Stay on offer side" ),
     NOT_HELD("1", "NOT_HELD", "1 - Not held" ),
     WORK("2", "WORK", "2 - Work" ),
@@ -110,7 +110,7 @@ public enum Enum18ExecInst implements FixEnumAccessors, LogStringVerbose {
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getAction() {
+    public String getID() {
         return action;
     }
     /**
@@ -138,7 +138,7 @@ public enum Enum18ExecInst implements FixEnumAccessors, LogStringVerbose {
                 .append(getEnumName())
                 .append("]")
                 .append("\n\tAction[")
-                .append(getAction())
+                .append(getID())
                 .append("]")
                 .append("\n\tName[")
                 .append(getName())
@@ -156,7 +156,7 @@ public enum Enum18ExecInst implements FixEnumAccessors, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(getEnumName())
                 .append("=[")
-                .append(getAction())
+                .append(getID())
                 .append(",")
                 .append(getName())
                 .append(",")

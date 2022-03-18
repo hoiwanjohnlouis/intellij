@@ -45,15 +45,15 @@ class Tag133OfferPxTest {
     @Test
     void FIX0133Test() {
         FIXType fix133OfferPx = FIXType.FIX133_OFFER_PX;
-        assertEquals( fix133OfferPx.getFIXName(), "OFFER_PX");
-        assertEquals( fix133OfferPx.getFIXNumber(), 133);
-        assertEquals( fix133OfferPx.getFIXDescription(), "OfferPx");
+        assertEquals( fix133OfferPx.getName(), "OFFER_PX");
+        assertEquals( fix133OfferPx.getNumber(), 133);
+        assertEquals( fix133OfferPx.getDescription(), "OfferPx");
     }
     @Test
     void Tag0133Test() {
         FIXType tag133OfferPx = FIXType.FIX133_OFFER_PX;
-        assertEquals( tag133OfferPx.getFIXName(), "OFFER_PX");
-        assertEquals( tag133OfferPx.getFIXNumber(), 133);
-        assertEquals( tag133OfferPx.getFIXDescription(), "OfferPx");
+        assertEquals( tag133OfferPx.getName(), "OFFER_PX");
+        assertEquals( tag133OfferPx.getNumber(), 133);
+        assertEquals( tag133OfferPx.getDescription(), "OfferPx");
     }
 }

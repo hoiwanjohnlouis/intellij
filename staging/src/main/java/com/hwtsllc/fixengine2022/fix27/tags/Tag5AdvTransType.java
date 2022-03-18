@@ -25,7 +25,7 @@ public class Tag5AdvTransType extends TagTypeAbstract {
 
     public Tag5AdvTransType(Enum5AdvTransType dataValue) {
         setFixType(FIXType.FIX5_ADV_TRANS_TYPE);
-        setDataValue(dataValue.getAction());
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

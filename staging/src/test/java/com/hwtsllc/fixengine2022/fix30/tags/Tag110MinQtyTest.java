@@ -46,16 +46,16 @@ class Tag110MinQtyTest {
     @Test
     void FIX0110Test() {
         FIXType fix110MinQty = FIXType.FIX110_MIN_QTY;
-        assertEquals( fix110MinQty.getFIXName(), "MIN_QTY");
-        assertEquals( fix110MinQty.getFIXNumber(), 110);
-        assertEquals( fix110MinQty.getFIXDescription(), "MinQty");
+        assertEquals( fix110MinQty.getName(), "MIN_QTY");
+        assertEquals( fix110MinQty.getNumber(), 110);
+        assertEquals( fix110MinQty.getDescription(), "MinQty");
     }
     @Test
     void Tag0110Test() {
         FIXType tag110MinQty = FIXType.FIX110_MIN_QTY;
-        assertEquals( tag110MinQty.getFIXName(), "MIN_QTY");
-        assertEquals( tag110MinQty.getFIXNumber(), 110);
-        assertEquals( tag110MinQty.getFIXDescription(), "MinQty");
+        assertEquals( tag110MinQty.getName(), "MIN_QTY");
+        assertEquals( tag110MinQty.getNumber(), 110);
+        assertEquals( tag110MinQty.getDescription(), "MinQty");
         logger.info(WHERE_AM_I + ":Successful Tag0110Test()");
     }
 }

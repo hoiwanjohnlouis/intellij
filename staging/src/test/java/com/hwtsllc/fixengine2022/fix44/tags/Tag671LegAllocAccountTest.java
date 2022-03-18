@@ -49,4 +49,7 @@ class Tag671LegAllocAccountTest {
     void FIX0671Test() {
         FIXType Tag671LegAllocAccount = FIXType.LEG_ALLOC_ACCOUNT;
     }
+    @Test
+    void Tag0671Test() {
+    }
 }

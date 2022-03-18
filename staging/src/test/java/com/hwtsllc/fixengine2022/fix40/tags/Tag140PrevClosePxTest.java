@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrevClosePx;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -45,9 +44,9 @@ class Tag140PrevClosePxTest {
     @Test
     void FIX0140Test() {
         FIXType fix140PrevClosePx = FIXType.FIX140_PREV_CLOSE_PX;
-        assertEquals( "PREV_CLOSE_PX", fix140PrevClosePx.getFIXName() );
-        assertEquals( 140, fix140PrevClosePx.getFIXNumber() );
-        assertEquals( "PrevClosePx", fix140PrevClosePx.getFIXDescription() );
+        assertEquals( "PREV_CLOSE_PX", fix140PrevClosePx.getName() );
+        assertEquals( 140, fix140PrevClosePx.getNumber() );
+        assertEquals( "PrevClosePx", fix140PrevClosePx.getDescription() );
     }
     @Test
     void Tag0140Test() {

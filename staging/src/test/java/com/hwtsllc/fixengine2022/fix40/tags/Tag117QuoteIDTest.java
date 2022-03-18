@@ -46,16 +46,16 @@ class Tag117QuoteIDTest {
     @Test
     void FIX0117Test() {
         FIXType fix117QuoteID = FIXType.FIX117_QUOTE_ID;
-        assertEquals( fix117QuoteID.getFIXName(), "QUOTE_ID");
-        assertEquals( fix117QuoteID.getFIXNumber(), 117);
-        assertEquals( fix117QuoteID.getFIXDescription(), "QuoteID");
+        assertEquals( fix117QuoteID.getName(), "QUOTE_ID");
+        assertEquals( fix117QuoteID.getNumber(), 117);
+        assertEquals( fix117QuoteID.getDescription(), "QuoteID");
     }
     @Test
     void Tag0117Test() {
         FIXType tag117QuoteID = FIXType.FIX117_QUOTE_ID;
-        assertEquals( tag117QuoteID.getFIXName(), "QUOTE_ID");
-        assertEquals( tag117QuoteID.getFIXNumber(), 117);
-        assertEquals( tag117QuoteID.getFIXDescription(), "QuoteID");
+        assertEquals( tag117QuoteID.getName(), "QUOTE_ID");
+        assertEquals( tag117QuoteID.getNumber(), 117);
+        assertEquals( tag117QuoteID.getDescription(), "QuoteID");
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

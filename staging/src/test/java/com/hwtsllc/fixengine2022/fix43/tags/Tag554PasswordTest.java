@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix43.tags.Tag554Password;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
@@ -49,14 +48,14 @@ class Tag554PasswordTest {
     @Test
     void FIX0554Test() {
         FIXType fix554Password = FIXType.FIX554_PASSWORD;
-        assertEquals( "FIX554_PASSWORD", fix554Password.getFIXTypeName());
-        assertEquals( 554, fix554Password.getFIXNumber());
-        assertEquals( "PASSWORD", fix554Password.getFIXName());
-        assertEquals( "Password", fix554Password.getFIXDescription());
-        assertNotEquals( "Not My FIX554_PASSWORD", fix554Password.getFIXTypeName());
-        assertNotEquals( 9999, fix554Password.getFIXNumber());
-        assertNotEquals( "Not My PASSWORD", fix554Password.getFIXName());
-        assertNotEquals( "Not My Password", fix554Password.getFIXDescription());
+        assertEquals( "FIX554_PASSWORD", fix554Password.getEnumName());
+        assertEquals( 554, fix554Password.getNumber());
+        assertEquals( "PASSWORD", fix554Password.getName());
+        assertEquals( "Password", fix554Password.getDescription());
+        assertNotEquals( "Not My FIX554_PASSWORD", fix554Password.getEnumName());
+        assertNotEquals( 9999, fix554Password.getNumber());
+        assertNotEquals( "Not My PASSWORD", fix554Password.getName());
+        assertNotEquals( "Not My Password", fix554Password.getDescription());
     }
     @Test
     void Tag0554Test() {

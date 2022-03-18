@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag4AdvSide;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -43,12 +42,12 @@ class Tag4AdvSideTest {
     @Test
     void FIX0004Test() {
         FIXType fix4AdvSide = FIXType.FIX4_ADV_SIDE;
-        assertEquals( "ADV_SIDE", fix4AdvSide.getFIXName());
-        assertEquals( 4, fix4AdvSide.getFIXNumber());
-        assertEquals( "AdvSide", fix4AdvSide.getFIXDescription());
-        assertNotEquals( "ADV SIDE", fix4AdvSide.getFIXName());
-        assertNotEquals( 44, fix4AdvSide.getFIXNumber());
-        assertNotEquals( "Adv Side", fix4AdvSide.getFIXDescription());
+        assertEquals( "ADV_SIDE", fix4AdvSide.getName());
+        assertEquals( 4, fix4AdvSide.getNumber());
+        assertEquals( "AdvSide", fix4AdvSide.getDescription());
+        assertNotEquals( "ADV SIDE", fix4AdvSide.getName());
+        assertNotEquals( 44, fix4AdvSide.getNumber());
+        assertNotEquals( "Adv Side", fix4AdvSide.getDescription());
     }
     @Test
     void Tag0004Test() {

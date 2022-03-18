@@ -50,35 +50,35 @@ class Enum172SettlDeliveryTypeTest {
          * 0-4 msg types
          */
         enumType = Enum172SettlDeliveryType.VERSUS;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("VERSUS", enumType.getName());
         assertEquals("0 - Versus. Payment: Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment",
                 enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum172SettlDeliveryType.FREE;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("FREE", enumType.getName());
         assertEquals("1 - Free: Deliver (if Sell) or Receive (if Buy) Free", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum172SettlDeliveryType.TRI_PARTY;
-        assertEquals("2", enumType.getAction());
+        assertEquals("2", enumType.getID());
         assertEquals("TRI_PARTY", enumType.getName());
         assertEquals("2 - Tri-Party", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum172SettlDeliveryType.HOLD_IN_CUSTODY;
-        assertEquals("3", enumType.getAction());
+        assertEquals("3", enumType.getID());
         assertEquals("HOLD_IN_CUSTODY", enumType.getName());
         assertEquals("3 - Hold In Custody", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

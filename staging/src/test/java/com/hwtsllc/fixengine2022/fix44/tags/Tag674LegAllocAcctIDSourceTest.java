@@ -49,4 +49,7 @@ class Tag674LegAllocAcctIDSourceTest {
     void FIX0674Test() {
         FIXType Tag674LegAllocAcctIDSource = FIXType.LEG_ALLOC_ACCT_ID_SOURCE;
     }
+    @Test
+    void Tag0674Test() {
+    }
 }

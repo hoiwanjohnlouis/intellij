@@ -47,26 +47,26 @@ class Enum25IOIQltyIndTest {
         Enum25IOIQltyInd enumType;
 
         enumType = Enum25IOIQltyInd.HIGH;
-        assertEquals("H", enumType.getAction());
+        assertEquals("H", enumType.getID());
         assertEquals("HIGH", enumType.getName());
         assertEquals("H - High", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum25IOIQltyInd.LOW;
-        assertEquals("L", enumType.getAction());
+        assertEquals("L", enumType.getID());
         assertEquals("LOW", enumType.getName());
         assertEquals("L - Low", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum25IOIQltyInd.MEDIUM;
-        assertEquals("M", enumType.getAction());
+        assertEquals("M", enumType.getID());
         assertEquals("MEDIUM", enumType.getName());
         assertEquals("M - Medium", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

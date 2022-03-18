@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag36NewSeqNo;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag36NewSeqNoTest {
     @Test
     void FIX0036Test() {
         FIXType fix36NewSeqNo = FIXType.FIX36_NEW_SEQ_NO;
-        assertEquals( "NEW_SEQ_NO", fix36NewSeqNo.getFIXName());
-        assertEquals( 36, fix36NewSeqNo.getFIXNumber());
-        assertEquals( "NewSeqNo", fix36NewSeqNo.getFIXDescription());
-        assertNotEquals( "NEW_SEQ_NO NEW_SEQ_NO", fix36NewSeqNo.getFIXName());
-        assertNotEquals( 312, fix36NewSeqNo.getFIXNumber());
-        assertNotEquals( "NewSeqNo NewSeqNo", fix36NewSeqNo.getFIXDescription());
+        assertEquals( "NEW_SEQ_NO", fix36NewSeqNo.getName());
+        assertEquals( 36, fix36NewSeqNo.getNumber());
+        assertEquals( "NewSeqNo", fix36NewSeqNo.getDescription());
+        assertNotEquals( "NEW_SEQ_NO NEW_SEQ_NO", fix36NewSeqNo.getName());
+        assertNotEquals( 312, fix36NewSeqNo.getNumber());
+        assertNotEquals( "NewSeqNo NewSeqNo", fix36NewSeqNo.getDescription());
     }
     @Test
     void Tag0036Test() {

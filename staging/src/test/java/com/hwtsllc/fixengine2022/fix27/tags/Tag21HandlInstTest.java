@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag21HandlInst;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag21HandlInstTest {
     @Test
     void FIX0021Test() {
         FIXType fix21HandlInst = FIXType.FIX21_HANDL_INST;
-        assertEquals( "HANDL_INST", fix21HandlInst.getFIXName());
-        assertEquals( 21, fix21HandlInst.getFIXNumber());
-        assertEquals( "HandlInst", fix21HandlInst.getFIXDescription());
-        assertNotEquals( "HANDL_INST HANDL_INST", fix21HandlInst.getFIXName());
-        assertNotEquals( 2121, fix21HandlInst.getFIXNumber());
-        assertNotEquals( "123 HandlInst", fix21HandlInst.getFIXDescription());
+        assertEquals( "HANDL_INST", fix21HandlInst.getName());
+        assertEquals( 21, fix21HandlInst.getNumber());
+        assertEquals( "HandlInst", fix21HandlInst.getDescription());
+        assertNotEquals( "HANDL_INST HANDL_INST", fix21HandlInst.getName());
+        assertNotEquals( 2121, fix21HandlInst.getNumber());
+        assertNotEquals( "123 HandlInst", fix21HandlInst.getDescription());
     }
     @Test
     void Tag0021Test() {

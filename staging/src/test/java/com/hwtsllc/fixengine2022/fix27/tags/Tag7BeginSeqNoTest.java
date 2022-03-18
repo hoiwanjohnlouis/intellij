@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag7BeginSeqNo;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag7BeginSeqNoTest {
     @Test
     void FIX0007Test() {
         FIXType fix7BeginSeqNo = FIXType.FIX7_BEGIN_SEQ_NO;
-        assertEquals( "BEGIN_SEQ_NO", fix7BeginSeqNo.getFIXName());
-        assertEquals( 7, fix7BeginSeqNo.getFIXNumber());
-        assertEquals( "BeginSeqNo", fix7BeginSeqNo.getFIXDescription());
-        assertNotEquals( "BEGIN;SEQ_NO", fix7BeginSeqNo.getFIXName());
-        assertNotEquals( 77, fix7BeginSeqNo.getFIXNumber());
-        assertNotEquals( "Begin Seq No", fix7BeginSeqNo.getFIXDescription());
+        assertEquals( "BEGIN_SEQ_NO", fix7BeginSeqNo.getName());
+        assertEquals( 7, fix7BeginSeqNo.getNumber());
+        assertEquals( "BeginSeqNo", fix7BeginSeqNo.getDescription());
+        assertNotEquals( "BEGIN;SEQ_NO", fix7BeginSeqNo.getName());
+        assertNotEquals( 77, fix7BeginSeqNo.getNumber());
+        assertNotEquals( "Begin Seq No", fix7BeginSeqNo.getDescription());
     }
     @Test
     void Tag0007Test() {

@@ -16,10 +16,10 @@
 
 package com.hwtsllc.fixengine2022.interfaces;
 
-public interface FixEnumAccessors {
+public interface EnumAccessors {
     // concrete definitions are by whom inherits this class
-    public String getEnumName();
-    public String getAction();
-    public String getName();
-    public String getDescription();
+    String getEnumName();
+    String getID();
+    String getName();
+    String getDescription();
 }

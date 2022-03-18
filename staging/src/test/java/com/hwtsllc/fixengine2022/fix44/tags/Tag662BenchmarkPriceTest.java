@@ -49,4 +49,7 @@ class Tag662BenchmarkPriceTest {
     void FIX0662Test() {
         FIXType Tag662BenchmarkPrice = FIXType.BENCHMARK_PRICE;
     }
+    @Test
+    void Tag0662Test() {
+    }
 }

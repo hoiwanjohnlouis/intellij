@@ -49,4 +49,7 @@ class Tag910CollStatusTest {
     void FIX0910Test() {
         FIXType Tag910CollStatus = FIXType.COLL_STATUS;
     }
+    @Test
+    void Tag0910Test() {
+    }
 }

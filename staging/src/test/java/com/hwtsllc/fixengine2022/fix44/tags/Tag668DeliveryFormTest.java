@@ -49,4 +49,7 @@ class Tag668DeliveryFormTest {
     void FIX0668Test() {
         FIXType Tag668DeliveryForm = FIXType.DELIVERY_FORM;
     }
+    @Test
+    void Tag0668Test() {
+    }
 }

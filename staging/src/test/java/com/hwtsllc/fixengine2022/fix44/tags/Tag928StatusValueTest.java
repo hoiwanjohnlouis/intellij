@@ -49,4 +49,7 @@ class Tag928StatusValueTest {
     void FIX0928Test() {
         FIXType Tag928StatusValue = FIXType.STATUS_VALUE;
     }
+    @Test
+    void Tag0928Test() {
+    }
 }

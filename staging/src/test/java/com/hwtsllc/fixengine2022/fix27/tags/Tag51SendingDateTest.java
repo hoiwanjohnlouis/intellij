@@ -45,12 +45,12 @@ class Tag51SendingDateTest {
     @Test
     void FIX0051Test() {
         FIXType fix51SendingDate = FIXType.FIX51_SENDING_DATE;
-        assertEquals( "SENDING_DATE", fix51SendingDate.getFIXName());
-        assertEquals( 51, fix51SendingDate.getFIXNumber());
-        assertEquals( "SendingDate (no longer used)", fix51SendingDate.getFIXDescription());
-        assertNotEquals( "SENDING_DATE SENDING_DATE", fix51SendingDate.getFIXName());
-        assertNotEquals( 3123, fix51SendingDate.getFIXNumber());
-        assertNotEquals( "SendingDate SendingDate", fix51SendingDate.getFIXDescription());
+        assertEquals( "SENDING_DATE", fix51SendingDate.getName());
+        assertEquals( 51, fix51SendingDate.getNumber());
+        assertEquals( "SendingDate (no longer used)", fix51SendingDate.getDescription());
+        assertNotEquals( "SENDING_DATE SENDING_DATE", fix51SendingDate.getName());
+        assertNotEquals( 3123, fix51SendingDate.getNumber());
+        assertNotEquals( "SendingDate SendingDate", fix51SendingDate.getDescription());
     }
     @Test
     void Tag0051Test() {

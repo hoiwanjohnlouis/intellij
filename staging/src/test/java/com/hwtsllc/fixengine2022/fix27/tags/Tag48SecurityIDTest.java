@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag48SecurityID;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag48SecurityIDTest {
     @Test
     void FIX0048Test() {
         FIXType fix48SecurityID = FIXType.FIX48_SECURITY_ID;
-        assertEquals( "SECURITY_ID", fix48SecurityID.getFIXName());
-        assertEquals( 48, fix48SecurityID.getFIXNumber());
-        assertEquals( "SecurityID", fix48SecurityID.getFIXDescription());
-        assertNotEquals( "SECURITY_ID SECURITY_ID", fix48SecurityID.getFIXName());
-        assertNotEquals( 3123, fix48SecurityID.getFIXNumber());
-        assertNotEquals( "SecurityID SecurityID", fix48SecurityID.getFIXDescription());
+        assertEquals( "SECURITY_ID", fix48SecurityID.getName());
+        assertEquals( 48, fix48SecurityID.getNumber());
+        assertEquals( "SecurityID", fix48SecurityID.getDescription());
+        assertNotEquals( "SECURITY_ID SECURITY_ID", fix48SecurityID.getName());
+        assertNotEquals( 3123, fix48SecurityID.getNumber());
+        assertNotEquals( "SecurityID SecurityID", fix48SecurityID.getDescription());
     }
     @Test
     void Tag0048Test() {

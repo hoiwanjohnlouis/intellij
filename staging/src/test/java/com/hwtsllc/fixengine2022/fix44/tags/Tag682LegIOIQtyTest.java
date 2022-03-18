@@ -49,4 +49,7 @@ class Tag682LegIOIQtyTest {
     void FIX0682Test() {
         FIXType Tag682LegIOIQty = FIXType.LEG_IOI_QTY;
     }
+    @Test
+    void Tag0682Test() {
+    }
 }

@@ -51,34 +51,34 @@ class Enum77PositionEffectTest {
          * C,F,O,R msg types
          */
         enumType = Enum77PositionEffect.CLOSE;
-        assertEquals("C", enumType.getAction());
+        assertEquals("C", enumType.getID());
         assertEquals("CLOSE", enumType.getName());
         assertEquals("C - Close", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum77PositionEffect.FIFO;
-        assertEquals("F", enumType.getAction());
+        assertEquals("F", enumType.getID());
         assertEquals("FIFO", enumType.getName());
         assertEquals("F - First In, First Out", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum77PositionEffect.OPEN;
-        assertEquals("O", enumType.getAction());
+        assertEquals("O", enumType.getID());
         assertEquals("OPEN", enumType.getName());
         assertEquals("O - Open", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum77PositionEffect.ROLLED;
-        assertEquals("R", enumType.getAction());
+        assertEquals("R", enumType.getID());
         assertEquals("ROLLED", enumType.getName());
         assertEquals("R - Rolled", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

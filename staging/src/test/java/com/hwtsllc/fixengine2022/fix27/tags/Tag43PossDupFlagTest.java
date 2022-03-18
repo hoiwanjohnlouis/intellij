@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag43PossDupFlag;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag43PossDupFlagTest {
     @Test
     void FIX0043Test() {
         FIXType fix43PossDupFlag = FIXType.FIX43_POSS_DUP_FLAG;
-        assertEquals( "POSS_DUP_FLAG", fix43PossDupFlag.getFIXName());
-        assertEquals( 43, fix43PossDupFlag.getFIXNumber());
-        assertEquals( "PossDupFlag", fix43PossDupFlag.getFIXDescription());
-        assertNotEquals( "POSS_DUP_FLAG POSS_DUP_FLAG", fix43PossDupFlag.getFIXName());
-        assertNotEquals( 3123, fix43PossDupFlag.getFIXNumber());
-        assertNotEquals( "PossDupFlag PossDupFlag", fix43PossDupFlag.getFIXDescription());
+        assertEquals( "POSS_DUP_FLAG", fix43PossDupFlag.getName());
+        assertEquals( 43, fix43PossDupFlag.getNumber());
+        assertEquals( "PossDupFlag", fix43PossDupFlag.getDescription());
+        assertNotEquals( "POSS_DUP_FLAG POSS_DUP_FLAG", fix43PossDupFlag.getName());
+        assertNotEquals( 3123, fix43PossDupFlag.getNumber());
+        assertNotEquals( "PossDupFlag PossDupFlag", fix43PossDupFlag.getDescription());
     }
     @Test
     void Tag0043Test() {

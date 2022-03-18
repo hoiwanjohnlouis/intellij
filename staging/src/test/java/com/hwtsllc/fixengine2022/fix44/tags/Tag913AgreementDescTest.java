@@ -49,4 +49,7 @@ class Tag913AgreementDescTest {
     void FIX0913Test() {
         FIXType Tag913AgreementDesc = FIXType.AGREEMENT_DESC;
     }
+    @Test
+    void Tag0913Test() {
+    }
 }

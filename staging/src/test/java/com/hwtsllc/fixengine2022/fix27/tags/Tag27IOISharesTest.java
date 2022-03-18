@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag27IOIShares;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag27IOISharesTest {
     @Test
     void FIX0027Test() {
         FIXType fix27IOIShares = FIXType.FIX27_IOI_SHARES;
-        assertEquals( "IOI_SHARES", fix27IOIShares.getFIXName());
-        assertEquals( 27, fix27IOIShares.getFIXNumber());
-        assertEquals( "IOIShares", fix27IOIShares.getFIXDescription());
-        assertNotEquals( "IOI_SHARES IOI_SHARES", fix27IOIShares.getFIXName());
-        assertNotEquals( 2020, fix27IOIShares.getFIXNumber());
-        assertNotEquals( "123 IOIShares", fix27IOIShares.getFIXDescription());
+        assertEquals( "IOI_SHARES", fix27IOIShares.getName());
+        assertEquals( 27, fix27IOIShares.getNumber());
+        assertEquals( "IOIShares", fix27IOIShares.getDescription());
+        assertNotEquals( "IOI_SHARES IOI_SHARES", fix27IOIShares.getName());
+        assertNotEquals( 2020, fix27IOIShares.getNumber());
+        assertNotEquals( "123 IOIShares", fix27IOIShares.getDescription());
     }
     @Test
     void Tag0027Test() {

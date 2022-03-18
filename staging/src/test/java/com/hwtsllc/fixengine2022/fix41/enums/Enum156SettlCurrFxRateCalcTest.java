@@ -50,18 +50,18 @@ class Enum156SettlCurrFxRateCalcTest {
          * M,D msg types
          */
         enumType = Enum156SettlCurrFxRateCalc.MULTIPLY;
-        assertEquals("M", enumType.getAction());
+        assertEquals("M", enumType.getID());
         assertEquals("MULTIPLY", enumType.getName());
         assertEquals("M - Multiply", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum156SettlCurrFxRateCalc.DIVIDE;
-        assertEquals("D", enumType.getAction());
+        assertEquals("D", enumType.getID());
         assertEquals("DIVIDE", enumType.getName());
         assertEquals("D - Divide", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

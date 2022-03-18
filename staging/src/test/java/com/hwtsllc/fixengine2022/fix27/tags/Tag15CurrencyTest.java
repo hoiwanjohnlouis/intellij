@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag15Currency;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag15CurrencyTest {
     @Test
     void FIX0015Test() {
         FIXType fix15Currency = FIXType.FIX15_CURRENCY;
-        assertEquals( "CURRENCY", fix15Currency.getFIXName());
-        assertEquals( 15, fix15Currency.getFIXNumber());
-        assertEquals( "Currency", fix15Currency.getFIXDescription());
-        assertNotEquals( "CURRENCY CURRENCY", fix15Currency.getFIXName());
-        assertNotEquals( 111, fix15Currency.getFIXNumber());
-        assertNotEquals( "123 Currency", fix15Currency.getFIXDescription());
+        assertEquals( "CURRENCY", fix15Currency.getName());
+        assertEquals( 15, fix15Currency.getNumber());
+        assertEquals( "Currency", fix15Currency.getDescription());
+        assertNotEquals( "CURRENCY CURRENCY", fix15Currency.getName());
+        assertNotEquals( 111, fix15Currency.getNumber());
+        assertNotEquals( "123 Currency", fix15Currency.getDescription());
     }
     @Test
     void Tag0015Test() {

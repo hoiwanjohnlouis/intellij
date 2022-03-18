@@ -49,4 +49,7 @@ class Tag696YieldRedemptionDateTest {
     void FIX0696Test() {
         FIXType Tag696YieldRedemptionDate = FIXType.YIELD_REDEMPTION_DATE;
     }
+    @Test
+    void Tag0696Test() {
+    }
 }

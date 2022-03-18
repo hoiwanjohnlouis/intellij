@@ -18,13 +18,28 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 @Deprecated
 public class Tag92BrokerOfCredit extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX92_BROKER_OF_CREDIT;
+    public final static String TESTA_BROKER_OF_CREDIT = "BilboBaggins-92-BrokerOfCredit";
+    public final static String TESTB_BROKER_OF_CREDIT = "Gandalf-92-BrokerOfCredit";
+
+    public Tag92BrokerOfCredit(String dataValue) {
+        setFixType(FIXType.FIX92_BROKER_OF_CREDIT);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag92BrokerOfCredit tagData = new Tag92BrokerOfCredit(TESTA_BROKER_OF_CREDIT);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

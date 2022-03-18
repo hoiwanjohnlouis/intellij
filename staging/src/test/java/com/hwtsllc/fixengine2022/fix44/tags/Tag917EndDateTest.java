@@ -49,4 +49,7 @@ class Tag917EndDateTest {
     void FIX0917Test() {
         FIXType Tag917EndDate = FIXType.END_DATE;
     }
+    @Test
+    void Tag0917Test() {
+    }
 }

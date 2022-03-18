@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix30.tags.Tag107SecurityDesc;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -47,15 +46,15 @@ class Tag107SecurityDescTest {
     @Test
     void FIX0107Test() {
         FIXType fix107SecurityDesc = FIXType.FIX107_SECURITY_DESC;
-        assertEquals( fix107SecurityDesc.getFIXName(), "SECURITY_DESC");
-        assertEquals( fix107SecurityDesc.getFIXNumber(), 107);
-        assertEquals( fix107SecurityDesc.getFIXDescription(), "SecurityDesc");
+        assertEquals( fix107SecurityDesc.getName(), "SECURITY_DESC");
+        assertEquals( fix107SecurityDesc.getNumber(), 107);
+        assertEquals( fix107SecurityDesc.getDescription(), "SecurityDesc");
     }
     @Test
     void Tag0107Test() {
         Tag107SecurityDesc tag107SecurityDesc = new Tag107SecurityDesc("International Widgets, Inc.");
-        assertEquals( tag107SecurityDesc.getFIXName(), "SECURITY_DESC");
-        assertEquals( tag107SecurityDesc.getFIXNumber(), 107);
-        assertEquals( tag107SecurityDesc.getFIXDescription(), "SecurityDesc");
+        assertEquals( tag107SecurityDesc.getName(), "SECURITY_DESC");
+        assertEquals( tag107SecurityDesc.getNumber(), 107);
+        assertEquals( tag107SecurityDesc.getDescription(), "SecurityDesc");
     }
 }

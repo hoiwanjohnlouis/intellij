@@ -17,13 +17,28 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public enum Tag97PossResend {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag97PossResend extends TagTypeAbstract {
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX97_POSS_RESEND;
+    public final static String TESTA_POSS_RESEND = "BilboBaggins-97-PossResend";
+    public final static String TESTB_POSS_RESEND = "Gandalf-97-PossResend";
+
+    public Tag97PossResend(String dataValue) {
+        setFixType(FIXType.FIX97_POSS_RESEND);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag97PossResend tagData = new Tag97PossResend(TESTA_POSS_RESEND);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

@@ -34,10 +34,10 @@ public class Tag554Password extends TagTypeAbstract {
         Tag554Password tag554Password = new Tag554Password("tag554 Password");
         System.out.println("t1.1:" + tag554Password);
         System.out.println("t1.2:" + tag554Password.toLogStringVerbose());
-        System.out.println("t1.3.FIXTypeName:" + tag554Password.getFIXTypeName());
-        System.out.println("t1.4.FIXNumber:" + tag554Password.getFIXNumber());
-        System.out.println("t1.5.FIXName:" + tag554Password.getFIXName());
-        System.out.println("t1.6.FIXDescription:" + tag554Password.getFIXDescription());
+        System.out.println("t1.3.FIXTypeName:" + tag554Password.getEnumName());
+        System.out.println("t1.4.FIXNumber:" + tag554Password.getNumber());
+        System.out.println("t1.5.FIXName:" + tag554Password.getName());
+        System.out.println("t1.6.FIXDescription:" + tag554Password.getDescription());
         System.out.println("t1.7.DataValue:" + tag554Password.getDataValue());
         System.out.println("t1.8.FixString:" + tag554Password.toFixTagValuePairString());
     }

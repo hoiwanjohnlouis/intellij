@@ -18,13 +18,25 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum61Urgency;
 
 public class Tag61Urgency extends TagTypeAbstract {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final Enum61Urgency dataValue;
 
-    private final FIXType fixType = FIXType.FIX61_URGENCY;
+    public Tag61Urgency(Enum61Urgency dataValue) {
+        setFixType(FIXType.FIX61_URGENCY);
+        setDataValue( dataValue.getID() );
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag61Urgency tagData = new Tag61Urgency( Enum61Urgency.NORMAL );
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

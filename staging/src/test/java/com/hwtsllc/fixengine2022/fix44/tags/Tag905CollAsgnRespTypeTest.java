@@ -49,4 +49,7 @@ class Tag905CollAsgnRespTypeTest {
     void FIX0905Test() {
         FIXType Tag905CollAsgnRespType = FIXType.COLL_ASGN_RESP_TYPE;
     }
+    @Test
+    void Tag0905Test() {
+    }
 }

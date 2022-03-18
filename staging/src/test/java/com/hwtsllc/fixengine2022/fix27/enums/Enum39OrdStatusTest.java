@@ -50,82 +50,82 @@ class Enum39OrdStatusTest {
          * 0-9 msg types
          */
         enumType = Enum39OrdStatus.NEW;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("NEW", enumType.getName());
         assertEquals("0 - New", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.PARTIALLY_FILLED;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("PARTIALLY_FILLED", enumType.getName());
         assertEquals("1 - Partially filled", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.FILLED;
-        assertEquals("2", enumType.getAction());
+        assertEquals("2", enumType.getID());
         assertEquals("FILLED", enumType.getName());
         assertEquals("2 - Filled", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.DONE_FOR_DAY;
-        assertEquals("3", enumType.getAction());
+        assertEquals("3", enumType.getID());
         assertEquals("DONE_FOR_DAY", enumType.getName());
         assertEquals("3 - Done for day", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.CANCELED;
-        assertEquals("4", enumType.getAction());
+        assertEquals("4", enumType.getID());
         assertEquals("CANCELED", enumType.getName());
         assertEquals("4 - Canceled", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.REPLACED;
-        assertEquals("5", enumType.getAction());
+        assertEquals("5", enumType.getID());
         assertEquals("REPLACED", enumType.getName());
         assertEquals("5 - Replaced (No longer used)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.PENDING_CANCEL;
-        assertEquals("6", enumType.getAction());
+        assertEquals("6", enumType.getID());
         assertEquals("PENDING_CANCEL", enumType.getName());
         assertEquals("6 - Pending Cancel (i.e. result of Order Cancel Request)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.STOPPED;
-        assertEquals("7", enumType.getAction());
+        assertEquals("7", enumType.getID());
         assertEquals("STOPPED", enumType.getName());
         assertEquals("7 - Stopped", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.REJECTED;
-        assertEquals("8", enumType.getAction());
+        assertEquals("8", enumType.getID());
         assertEquals("REJECTED", enumType.getName());
         assertEquals("8 - Rejected", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.SUSPENDED;
-        assertEquals("9", enumType.getAction());
+        assertEquals("9", enumType.getID());
         assertEquals("SUSPENDED", enumType.getName());
         assertEquals("9 - Suspended", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
@@ -133,42 +133,42 @@ class Enum39OrdStatusTest {
          * A-E msg types
          */
         enumType = Enum39OrdStatus.PENDING_NEW;
-        assertEquals("A", enumType.getAction());
+        assertEquals("A", enumType.getID());
         assertEquals("PENDING_NEW", enumType.getName());
         assertEquals("A - Pending New", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.CALCULATED;
-        assertEquals("B", enumType.getAction());
+        assertEquals("B", enumType.getID());
         assertEquals("CALCULATED", enumType.getName());
         assertEquals("B - Calculated", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.EXPIRED;
-        assertEquals("C", enumType.getAction());
+        assertEquals("C", enumType.getID());
         assertEquals("EXPIRED", enumType.getName());
         assertEquals("C - Expired", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.ACCEPTED_FOR_BIDDING;
-        assertEquals("D", enumType.getAction());
+        assertEquals("D", enumType.getID());
         assertEquals("ACCEPTED_FOR_BIDDING", enumType.getName());
         assertEquals("D - Accepted for Bidding", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum39OrdStatus.PENDING_REPLACE;
-        assertEquals("E", enumType.getAction());
+        assertEquals("E", enumType.getID());
         assertEquals("PENDING_REPLACE", enumType.getName());
         assertEquals("E - Pending Replace (i.e. result of Order Cancel/Replace Request)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

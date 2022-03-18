@@ -31,17 +31,17 @@ public abstract class TagAbstract <T1> implements LogStringVerbose, FixTagValueP
         this.dataValue = dataValue;
     }
 
-    public String getFIXTypeName() {
-        return fixType.getFIXTypeName();
+    public String getEnumName() {
+        return fixType.getEnumName();
     }
-    public int getFIXNumber() {
-        return fixType.getFIXNumber();
+    public String getAction() {
+        return String.valueOf( fixType.getNumber() );
     }
-    public String getFIXName() {
-        return fixType.getFIXName();
+    public String getName() {
+        return fixType.getName();
     }
-    public String getFIXDescription() {
-        return fixType.getFIXDescription();
+    public String getDescription() {
+        return fixType.getDescription();
     }
     public T1 getDataValue() {
         return this.dataValue;
@@ -49,46 +49,40 @@ public abstract class TagAbstract <T1> implements LogStringVerbose, FixTagValueP
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.getClass().getSimpleName())
-                .append("=[")
-                .append(getFIXTypeName())
-                .append(",")
-                .append(getFIXNumber())
-                .append(",")
-                .append(getFIXName())
-                .append(",")
-                .append(getFIXDescription())
-                .append(",")
-                .append(getDataValue())
-                .append("]");
-        return sb.toString();
+        return this.getClass().getSimpleName()
+                .concat("=[")
+                .concat(getEnumName())
+                .concat(",")
+                .concat(getAction())
+                .concat(",")
+                .concat(getName())
+                .concat(",")
+                .concat(getDescription())
+                .concat(",")
+                .concat( String.valueOf(getDataValue()) )
+                .concat("]");
     }
     public String toLogStringVerbose() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.getClass().getSimpleName())
-                .append("\n\tFIXTypeName[")
-                .append(getFIXTypeName())
-                .append("]")
-                .append("\n\tFIXNumber[")
-                .append(getFIXNumber())
-                .append("]")
-                .append("\n\tFIXName[")
-                .append(getFIXName())
-                .append("]")
-                .append("\n\tFIXDescription[")
-                .append(getFIXDescription())
-                .append("]")
-                .append("\n\tDataValue[")
-                .append(getDataValue())
-                .append("]");
-        return sb.toString();
+        return this.getClass().getSimpleName()
+                .concat("\n\tFIXTypeName[")
+                .concat(getEnumName())
+                .concat("]")
+                .concat("\n\tFIXNumber[")
+                .concat( getAction() )
+                .concat("]")
+                .concat("\n\tFIXName[")
+                .concat(getName())
+                .concat("]")
+                .concat("\n\tFIXDescription[")
+                .concat(getDescription())
+                .concat("]")
+                .concat("\n\tDataValue[")
+                .concat( String.valueOf(getDataValue()) )
+                .concat("]");
     }
     public String toFixTagValuePairString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getFIXNumber())
-                .append("=")
-                .append(getDataValue());
-        return sb.toString();
+        return getAction()
+                .concat("=")
+                .concat( String.valueOf(getDataValue()) );
     }
 }

@@ -45,15 +45,15 @@ class Tag137MiscFeeAmtTest {
     @Test
     void FIX0137Test() {
         FIXType fix137MiscFeeAmt = FIXType.FIX137_MISC_FEE_AMT;
-        assertEquals( fix137MiscFeeAmt.getFIXName(), "MISC_FEE_AMT");
-        assertEquals( fix137MiscFeeAmt.getFIXNumber(), 137);
-        assertEquals( fix137MiscFeeAmt.getFIXDescription(), "MiscFeeAmt");
+        assertEquals( fix137MiscFeeAmt.getName(), "MISC_FEE_AMT");
+        assertEquals( fix137MiscFeeAmt.getNumber(), 137);
+        assertEquals( fix137MiscFeeAmt.getDescription(), "MiscFeeAmt");
     }
     @Test
     void Tag0137Test() {
         FIXType tag137MiscFeeAmt = FIXType.FIX137_MISC_FEE_AMT;
-        assertEquals( tag137MiscFeeAmt.getFIXName(), "MISC_FEE_AMT");
-        assertEquals( tag137MiscFeeAmt.getFIXNumber(), 137);
-        assertEquals( tag137MiscFeeAmt.getFIXDescription(), "MiscFeeAmt");
+        assertEquals( tag137MiscFeeAmt.getName(), "MISC_FEE_AMT");
+        assertEquals( tag137MiscFeeAmt.getNumber(), 137);
+        assertEquals( tag137MiscFeeAmt.getDescription(), "MiscFeeAmt");
     }
 }

@@ -25,7 +25,7 @@ public class Tag8BeginString extends TagTypeAbstract {
 
     public Tag8BeginString(Enum8BeginString dataValue) {
         setFixType(FIXType.FIX8_BEGIN_STRING);
-        setDataValue(dataValue.getAction());
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

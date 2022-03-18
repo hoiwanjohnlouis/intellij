@@ -50,18 +50,18 @@ class Enum197AllocLinkTypeTest {
          * 0-1 msg types
          */
         enumType = Enum197AllocLinkType.FX_NETTING;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("FX_NETTING", enumType.getName());
         assertEquals("0 - FX Netting", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum197AllocLinkType.FX_SWAP;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("FX_SWAP", enumType.getName());
         assertEquals("1 - FX Swap", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 

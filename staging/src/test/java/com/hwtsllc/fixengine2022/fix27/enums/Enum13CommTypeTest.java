@@ -47,50 +47,50 @@ class Enum13CommTypeTest {
         Enum13CommType enumType;
 
         enumType = Enum13CommType.PER_UNIT;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("PER_UNIT", enumType.getName());
         assertEquals("1 - Per Unit (implying shares, par, currency, etc.)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum13CommType.PERCENT;
-        assertEquals("2", enumType.getAction());
+        assertEquals("2", enumType.getID());
         assertEquals("PERCENT", enumType.getName());
         assertEquals("2 - Percent", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum13CommType.ABSOLUTE;
-        assertEquals("3", enumType.getAction());
+        assertEquals("3", enumType.getID());
         assertEquals("ABSOLUTE", enumType.getName());
         assertEquals("3 - Absolute (total monetary amount)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT;
-        assertEquals("4", enumType.getAction());
+        assertEquals("4", enumType.getID());
         assertEquals("PERCENTAGE_WAIVED_CASH_DISCOUNT", enumType.getName());
         assertEquals("4 - Percentage waived - cash discount (for CIV buy orders)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS;
-        assertEquals("5", enumType.getAction());
+        assertEquals("5", enumType.getID());
         assertEquals("PERCENTAGE_WAIVED_ENHANCED_UNITS", enumType.getName());
         assertEquals("5 - Percentage waived - enhanced units (for CIV buy orders)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum13CommType.POINTS_PER_BOND;
-        assertEquals("6", enumType.getAction());
+        assertEquals("6", enumType.getID());
         assertEquals("POINTS_PER_BOND", enumType.getName());
         assertEquals("6 - Points per bond or contract", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

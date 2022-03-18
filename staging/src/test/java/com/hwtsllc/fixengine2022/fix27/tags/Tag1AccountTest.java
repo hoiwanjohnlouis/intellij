@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag1Account;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,14 +42,14 @@ class  Tag1AccountTest {
     @Test
     void FIX0001Test() {
         FIXType fix1Account = FIXType.FIX1_ACCOUNT;
-        assertEquals( "FIX1_ACCOUNT", fix1Account.getFIXTypeName());
-        assertEquals( 1, fix1Account.getFIXNumber());
-        assertEquals( "ACCOUNT", fix1Account.getFIXName());
-        assertEquals( "Account", fix1Account.getFIXDescription());
-        assertNotEquals( "Not My FIX1_ACCOUNT", fix1Account.getFIXTypeName());
-        assertNotEquals( 11, fix1Account.getFIXNumber());
-        assertNotEquals( "Not My ACCOUNT", fix1Account.getFIXName());
-        assertNotEquals( "123 Account", fix1Account.getFIXDescription());
+        assertEquals( "FIX1_ACCOUNT", fix1Account.getEnumName());
+        assertEquals( 1, fix1Account.getNumber());
+        assertEquals( "ACCOUNT", fix1Account.getName());
+        assertEquals( "Account", fix1Account.getDescription());
+        assertNotEquals( "Not My FIX1_ACCOUNT", fix1Account.getEnumName());
+        assertNotEquals( 11, fix1Account.getNumber());
+        assertNotEquals( "Not My ACCOUNT", fix1Account.getName());
+        assertNotEquals( "123 Account", fix1Account.getDescription());
     }
     @Test
     void Tag0001Test() {

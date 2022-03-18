@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag22SecurityIDSource;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag22SecurityIDSourceTest {
     @Test
     void FIX0022Test() {
         FIXType fix22IDSource = FIXType.FIX22_SECURITY_ID_SOURCE;
-        assertEquals( "SECURITY_ID_SOURCE", fix22IDSource.getFIXName());
-        assertEquals( 22, fix22IDSource.getFIXNumber());
-        assertEquals( "SecurityIDSource", fix22IDSource.getFIXDescription());
-        assertNotEquals( "SECURITY_ID_SOURCE SECURITY_ID_SOURCE", fix22IDSource.getFIXName());
-        assertNotEquals( 2222, fix22IDSource.getFIXNumber());
-        assertNotEquals( "SecurityIDSource SecurityIDSource", fix22IDSource.getFIXDescription());
+        assertEquals( "SECURITY_ID_SOURCE", fix22IDSource.getName());
+        assertEquals( 22, fix22IDSource.getNumber());
+        assertEquals( "SecurityIDSource", fix22IDSource.getDescription());
+        assertNotEquals( "SECURITY_ID_SOURCE SECURITY_ID_SOURCE", fix22IDSource.getName());
+        assertNotEquals( 2222, fix22IDSource.getNumber());
+        assertNotEquals( "SecurityIDSource SecurityIDSource", fix22IDSource.getDescription());
     }
     @Test
     void Tag0022Test() {

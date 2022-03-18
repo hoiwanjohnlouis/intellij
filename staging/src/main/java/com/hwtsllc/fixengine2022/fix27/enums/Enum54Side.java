@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -29,7 +29,7 @@ import org.apache.log4j.Logger;
  * String sideName             short name of transaction for as defined by the FIX protocol document, no duplicates
  * String sideDescription      describes what the action entails
  */
-public enum Enum54Side implements FixEnumAccessors, LogStringVerbose {
+public enum Enum54Side implements EnumAccessors, LogStringVerbose {
     BUY ("1", "BUY", "1 - Buy"),
     SELL ("2", "SELL", "2 - Sell"),
     BUY_MINUS ("3", "BUY_MINUS", "3 - Buy minus"),
@@ -76,7 +76,7 @@ public enum Enum54Side implements FixEnumAccessors, LogStringVerbose {
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getAction() {
+    public String getID() {
         return action;
     }
     /**
@@ -104,7 +104,7 @@ public enum Enum54Side implements FixEnumAccessors, LogStringVerbose {
                 .append(getEnumName())
                 .append("]")
                 .append("\n\tAction[")
-                .append(getAction())
+                .append(getID())
                 .append("]")
                 .append("\n\tName[")
                 .append(getName())
@@ -122,7 +122,7 @@ public enum Enum54Side implements FixEnumAccessors, LogStringVerbose {
         StringBuilder sb = new StringBuilder();
         sb.append(getEnumName())
                 .append("=[")
-                .append(getAction())
+                .append(getID())
                 .append(",")
                 .append(getName())
                 .append(",")

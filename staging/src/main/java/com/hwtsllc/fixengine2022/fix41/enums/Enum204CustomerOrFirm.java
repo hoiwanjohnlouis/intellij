@@ -16,12 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.FixEnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public enum Enum204CustomerOrFirm implements FixEnumAccessors, LogStringVerbose {
+public enum Enum204CustomerOrFirm implements EnumAccessors, LogStringVerbose {
     CUSTOMER( "0", "CUSTOMER", "0 - Customer" ),
     FIRM( "1", "FIRM", "1 - Firm" ),
     ;
@@ -50,7 +50,7 @@ public enum Enum204CustomerOrFirm implements FixEnumAccessors, LogStringVerbose 
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getAction() {
+    public String getID() {
         return action;
     }
     /**
@@ -78,7 +78,7 @@ public enum Enum204CustomerOrFirm implements FixEnumAccessors, LogStringVerbose 
                 .append(getEnumName())
                 .append("]")
                 .append("\n\tAction[")
-                .append(getAction())
+                .append(getID())
                 .append("]")
                 .append("\n\tName[")
                 .append(getName())
@@ -96,7 +96,7 @@ public enum Enum204CustomerOrFirm implements FixEnumAccessors, LogStringVerbose 
         StringBuilder sb = new StringBuilder();
         sb.append(getEnumName())
                 .append("=[")
-                .append(getAction())
+                .append(getID())
                 .append(",")
                 .append(getName())
                 .append(",")

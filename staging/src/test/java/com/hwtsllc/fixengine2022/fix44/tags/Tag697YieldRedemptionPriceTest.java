@@ -49,4 +49,7 @@ class Tag697YieldRedemptionPriceTest {
     void FIX0697Test() {
         FIXType Tag697YieldRedemptionPrice = FIXType.YIELD_REDEMPTION_PRICE;
     }
+    @Test
+    void Tag0697Test() {
+    }
 }

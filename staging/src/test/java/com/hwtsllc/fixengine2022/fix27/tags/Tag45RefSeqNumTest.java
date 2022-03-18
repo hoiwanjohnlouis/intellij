@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag45RefSeqNum;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag45RefSeqNumTest {
     @Test
     void FIX0045Test() {
         FIXType fix45RefSeqNum = FIXType.FIX45_REF_SEQ_NUM;
-        assertEquals( "REF_SEQ_NUM", fix45RefSeqNum.getFIXName());
-        assertEquals( 45, fix45RefSeqNum.getFIXNumber());
-        assertEquals( "RefSeqNum", fix45RefSeqNum.getFIXDescription());
-        assertNotEquals( "REF_SEQ_NUM REF_SEQ_NUM", fix45RefSeqNum.getFIXName());
-        assertNotEquals( 3123, fix45RefSeqNum.getFIXNumber());
-        assertNotEquals( "RefSeqNum RefSeqNum", fix45RefSeqNum.getFIXDescription());
+        assertEquals( "REF_SEQ_NUM", fix45RefSeqNum.getName());
+        assertEquals( 45, fix45RefSeqNum.getNumber());
+        assertEquals( "RefSeqNum", fix45RefSeqNum.getDescription());
+        assertNotEquals( "REF_SEQ_NUM REF_SEQ_NUM", fix45RefSeqNum.getName());
+        assertNotEquals( 3123, fix45RefSeqNum.getNumber());
+        assertNotEquals( "RefSeqNum RefSeqNum", fix45RefSeqNum.getDescription());
     }
     @Test
     void Tag0045Test() {

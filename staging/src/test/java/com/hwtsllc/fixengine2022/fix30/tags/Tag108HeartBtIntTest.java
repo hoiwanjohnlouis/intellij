@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix30.tags.Tag108HeartBtInt;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -47,15 +46,15 @@ class Tag108HeartBtIntTest {
     @Test
     void FIX0108Test() {
         FIXType fix108HeartBtInt = FIXType.FIX108_HEART_BT_INT;
-        assertEquals( fix108HeartBtInt.getFIXName(), "HEART_BT_INT");
-        assertEquals( fix108HeartBtInt.getFIXNumber(), 108);
-        assertEquals( fix108HeartBtInt.getFIXDescription(), "HeartBtInt");
+        assertEquals( fix108HeartBtInt.getName(), "HEART_BT_INT");
+        assertEquals( fix108HeartBtInt.getNumber(), 108);
+        assertEquals( fix108HeartBtInt.getDescription(), "HeartBtInt");
     }
     @Test
     void Tag0108Test() {
         Tag108HeartBtInt tag108HeartBtInt = new Tag108HeartBtInt("60");
-        assertEquals( tag108HeartBtInt.getFIXName(), "HEART_BT_INT");
-        assertEquals( tag108HeartBtInt.getFIXNumber(), 108);
-        assertEquals( tag108HeartBtInt.getFIXDescription(), "HeartBtInt");
+        assertEquals( tag108HeartBtInt.getName(), "HEART_BT_INT");
+        assertEquals( tag108HeartBtInt.getNumber(), 108);
+        assertEquals( tag108HeartBtInt.getDescription(), "HeartBtInt");
     }
 }

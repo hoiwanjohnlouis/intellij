@@ -45,15 +45,15 @@ class Tag129DeliverToSubIDTest {
     @Test
     void FIX0129Test() {
         FIXType fix129DeliverToSubID = FIXType.FIX129_DELIVER_TO_SUB_ID;
-        assertEquals( fix129DeliverToSubID.getFIXName(), "DELIVER_TO_SUB_ID");
-        assertEquals( fix129DeliverToSubID.getFIXNumber(), 129);
-        assertEquals( fix129DeliverToSubID.getFIXDescription(), "DeliverToSubID");
+        assertEquals( fix129DeliverToSubID.getName(), "DELIVER_TO_SUB_ID");
+        assertEquals( fix129DeliverToSubID.getNumber(), 129);
+        assertEquals( fix129DeliverToSubID.getDescription(), "DeliverToSubID");
     }
     @Test
     void Tag0129Test() {
         FIXType tag129DeliverToSubID = FIXType.FIX129_DELIVER_TO_SUB_ID;
-        assertEquals( tag129DeliverToSubID.getFIXName(), "DELIVER_TO_SUB_ID");
-        assertEquals( tag129DeliverToSubID.getFIXNumber(), 129);
-        assertEquals( tag129DeliverToSubID.getFIXDescription(), "DeliverToSubID");
+        assertEquals( tag129DeliverToSubID.getName(), "DELIVER_TO_SUB_ID");
+        assertEquals( tag129DeliverToSubID.getNumber(), 129);
+        assertEquals( tag129DeliverToSubID.getDescription(), "DeliverToSubID");
     }
 }

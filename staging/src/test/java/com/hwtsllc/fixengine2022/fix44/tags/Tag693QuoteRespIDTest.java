@@ -49,4 +49,7 @@ class Tag693QuoteRespIDTest {
     void FIX0693Test() {
         FIXType Tag693QuoteRespID = FIXType.QUOTE_RESP_ID;
     }
+    @Test
+    void Tag0693Test() {
+    }
 }

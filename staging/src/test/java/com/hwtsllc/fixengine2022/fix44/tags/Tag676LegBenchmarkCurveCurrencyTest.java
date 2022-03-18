@@ -49,4 +49,7 @@ class Tag676LegBenchmarkCurveCurrencyTest {
     void FIX0676Test() {
         FIXType Tag676LegBenchmarkCurveCurrency = FIXType.LEG_BENCHMARK_CURVE_CURRENCY;
     }
+    @Test
+    void Tag0676Test() {
+    }
 }

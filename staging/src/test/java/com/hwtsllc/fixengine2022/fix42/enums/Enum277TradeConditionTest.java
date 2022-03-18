@@ -51,10 +51,10 @@ class Enum277TradeConditionTest {
          * 0 msg types
          */
         enumType = Enum277TradeCondition.CANCEL;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("CANCEL", enumType.getName());
         assertEquals("0 - Cancel", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
@@ -142,10 +142,10 @@ class Enum277TradeConditionTest {
 
 
         enumType = Enum277TradeCondition.BURST_BASKET;
-        assertEquals("AT", enumType.getAction());
+        assertEquals("AT", enumType.getID());
         assertEquals("BURST_BASKET", enumType.getName());
         assertEquals("AT - Burst Basket", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

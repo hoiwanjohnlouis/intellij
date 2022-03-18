@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag16EndSeqNo;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag16EndSeqNoTest {
     @Test
     void FIX0016Test() {
         FIXType fix16EndSeqNo = FIXType.FIX16_END_SEQ_NO;
-        assertEquals( "END_SEQ_NO", fix16EndSeqNo.getFIXName());
-        assertEquals( 16, fix16EndSeqNo.getFIXNumber());
-        assertEquals( "EndSeqNo", fix16EndSeqNo.getFIXDescription());
-        assertNotEquals( "END_SEQ_NO END_SEQ_NO", fix16EndSeqNo.getFIXName());
-        assertNotEquals( 111, fix16EndSeqNo.getFIXNumber());
-        assertNotEquals( "123 EndSeqNo", fix16EndSeqNo.getFIXDescription());
+        assertEquals( "END_SEQ_NO", fix16EndSeqNo.getName());
+        assertEquals( 16, fix16EndSeqNo.getNumber());
+        assertEquals( "EndSeqNo", fix16EndSeqNo.getDescription());
+        assertNotEquals( "END_SEQ_NO END_SEQ_NO", fix16EndSeqNo.getName());
+        assertNotEquals( 111, fix16EndSeqNo.getNumber());
+        assertNotEquals( "123 EndSeqNo", fix16EndSeqNo.getDescription());
     }
     @Test
     void Tag0016Test() {

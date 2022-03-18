@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag14CumQty;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag14CumQtyTest {
     @Test
     void FIX0014Test() {
         FIXType fix14CumQty = FIXType.FIX14_CUM_QTY;
-        assertEquals( "CUM_QTY", fix14CumQty.getFIXName());
-        assertEquals( 14, fix14CumQty.getFIXNumber());
-        assertEquals( "CumQty", fix14CumQty.getFIXDescription());
-        assertNotEquals( "CUM_QTY CUM_QTY", fix14CumQty.getFIXName());
-        assertNotEquals( 1414, fix14CumQty.getFIXNumber());
-        assertNotEquals( "123 CumQty", fix14CumQty.getFIXDescription());
+        assertEquals( "CUM_QTY", fix14CumQty.getName());
+        assertEquals( 14, fix14CumQty.getNumber());
+        assertEquals( "CumQty", fix14CumQty.getDescription());
+        assertNotEquals( "CUM_QTY CUM_QTY", fix14CumQty.getName());
+        assertNotEquals( 1414, fix14CumQty.getNumber());
+        assertNotEquals( "123 CumQty", fix14CumQty.getDescription());
     }
     @Test
     void Tag0014Test() {

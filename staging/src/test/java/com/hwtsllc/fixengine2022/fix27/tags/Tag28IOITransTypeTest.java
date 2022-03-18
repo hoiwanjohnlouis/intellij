@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag28IOITransType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag28IOITransTypeTest {
     @Test
     void FIX0028Test() {
         FIXType fix28IOITransType = FIXType.FIX28_IOI_TRANS_TYPE;
-        assertEquals( "IOI_TRANS_TYPE", fix28IOITransType.getFIXName());
-        assertEquals( 28, fix28IOITransType.getFIXNumber());
-        assertEquals( "IOITransType", fix28IOITransType.getFIXDescription());
-        assertNotEquals( "IOI_TRANS_TYPE IOI_TRANS_TYPE", fix28IOITransType.getFIXName());
-        assertNotEquals( 2020, fix28IOITransType.getFIXNumber());
-        assertNotEquals( "123 IOITransType", fix28IOITransType.getFIXDescription());
+        assertEquals( "IOI_TRANS_TYPE", fix28IOITransType.getName());
+        assertEquals( 28, fix28IOITransType.getNumber());
+        assertEquals( "IOITransType", fix28IOITransType.getDescription());
+        assertNotEquals( "IOI_TRANS_TYPE IOI_TRANS_TYPE", fix28IOITransType.getName());
+        assertNotEquals( 2020, fix28IOITransType.getNumber());
+        assertNotEquals( "123 IOITransType", fix28IOITransType.getDescription());
     }
     @Test
     void Tag0028Test() {

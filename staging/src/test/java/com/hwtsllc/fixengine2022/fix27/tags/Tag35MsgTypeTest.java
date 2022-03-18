@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag35MsgType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag35MsgTypeTest {
     @Test
     void FIX0035Test() {
         FIXType fix35MsgType = FIXType.FIX35_MSG_TYPE;
-        assertEquals( "MSG_TYPE", fix35MsgType.getFIXName());
-        assertEquals( 35, fix35MsgType.getFIXNumber());
-        assertEquals( "MsgType", fix35MsgType.getFIXDescription());
-        assertNotEquals( "MSG_TYPE MSG_TYPE", fix35MsgType.getFIXName());
-        assertNotEquals( 312, fix35MsgType.getFIXNumber());
-        assertNotEquals( "MsgType MsgType", fix35MsgType.getFIXDescription());
+        assertEquals( "MSG_TYPE", fix35MsgType.getName());
+        assertEquals( 35, fix35MsgType.getNumber());
+        assertEquals( "MsgType", fix35MsgType.getDescription());
+        assertNotEquals( "MSG_TYPE MSG_TYPE", fix35MsgType.getName());
+        assertNotEquals( 312, fix35MsgType.getNumber());
+        assertNotEquals( "MsgType MsgType", fix35MsgType.getDescription());
     }
     @Test
     void Tag0035Test() {

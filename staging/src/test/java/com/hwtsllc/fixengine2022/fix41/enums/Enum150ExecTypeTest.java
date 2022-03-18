@@ -51,66 +51,66 @@ class Enum150ExecTypeTest {
          * 0-9 msg types
          */
         enumType = Enum150ExecType.NEW;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("NEW", enumType.getName());
         assertEquals("0 - New", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.DONE_FOR_DAY;
-        assertEquals("3", enumType.getAction());
+        assertEquals("3", enumType.getID());
         assertEquals("DONE_FOR_DAY", enumType.getName());
         assertEquals("3 - Done for day", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.CANCELED;
-        assertEquals("4", enumType.getAction());
+        assertEquals("4", enumType.getID());
         assertEquals("CANCELED", enumType.getName());
         assertEquals("4 - Canceled", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.REPLACED;
-        assertEquals("5", enumType.getAction());
+        assertEquals("5", enumType.getID());
         assertEquals("REPLACED", enumType.getName());
         assertEquals("5 - Replaced", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.PENDING_CANCEL;
-        assertEquals("6", enumType.getAction());
+        assertEquals("6", enumType.getID());
         assertEquals("PENDING_CANCEL", enumType.getName());
         assertEquals("6 - Pending Cancel (e.g. result of Order Cancel Request)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.STOPPED;
-        assertEquals("7", enumType.getAction());
+        assertEquals("7", enumType.getID());
         assertEquals("STOPPED", enumType.getName());
         assertEquals("7 - Stopped", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.REJECTED;
-        assertEquals("8", enumType.getAction());
+        assertEquals("8", enumType.getID());
         assertEquals("REJECTED", enumType.getName());
         assertEquals("8 - Rejected", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.SUSPENDED;
-        assertEquals("9", enumType.getAction());
+        assertEquals("9", enumType.getID());
         assertEquals("SUSPENDED", enumType.getName());
         assertEquals("9 - Suspended", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
@@ -118,100 +118,100 @@ class Enum150ExecTypeTest {
          * A-L msg types
          */
         enumType = Enum150ExecType.PENDING_NEW;
-        assertEquals("A", enumType.getAction());
+        assertEquals("A", enumType.getID());
         assertEquals("PENDING_NEW", enumType.getName());
         assertEquals("A - Pending New", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.CALCULATED;
-        assertEquals("B", enumType.getAction());
+        assertEquals("B", enumType.getID());
         assertEquals("CALCULATED", enumType.getName());
         assertEquals("B - Calculated", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.EXPIRED;
-        assertEquals("C", enumType.getAction());
+        assertEquals("C", enumType.getID());
         assertEquals("EXPIRED", enumType.getName());
         assertEquals("C - Expired", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.RESTATED;
-        assertEquals("D", enumType.getAction());
+        assertEquals("D", enumType.getID());
         assertEquals("RESTATED", enumType.getName());
         assertEquals("D - Restated (Execution Report sent unsolicited by sell side, " +
                 "with ExecRestatementReason (378) set)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.PENDING_REPLACE;
-        assertEquals("E", enumType.getAction());
+        assertEquals("E", enumType.getID());
         assertEquals("PENDING_REPLACE", enumType.getName());
         assertEquals("E - Pending Replace (e.g. result of Order Cancel/Replace Request)",
                 enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.TRADE_PARTIAL_OR_FILLED;
-        assertEquals("F", enumType.getAction());
+        assertEquals("F", enumType.getID());
         assertEquals("TRADE_PARTIAL_OR_FILLED", enumType.getName());
         assertEquals("F - Trade (partial fill or fill)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.TRADE_CORRECT;
-        assertEquals("G", enumType.getAction());
+        assertEquals("G", enumType.getID());
         assertEquals("TRADE_CORRECT", enumType.getName());
         assertEquals("G - Trade Correct", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.TRADE_CANCEL;
-        assertEquals("H", enumType.getAction());
+        assertEquals("H", enumType.getID());
         assertEquals("TRADE_CANCEL", enumType.getName());
         assertEquals("H - Trade Cancel", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.ORDER_STATUS;
-        assertEquals("I", enumType.getAction());
+        assertEquals("I", enumType.getID());
         assertEquals("ORDER_STATUS", enumType.getName());
         assertEquals("I - Order Status", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.TRADE_IN_CLEARING_HOLD;
-        assertEquals("J", enumType.getAction());
+        assertEquals("J", enumType.getID());
         assertEquals("TRADE_IN_CLEARING_HOLD", enumType.getName());
         assertEquals("J - Trade in a Clearing Hold", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.TRADE_RELEASE_TO_CLEARING;
-        assertEquals("K", enumType.getAction());
+        assertEquals("K", enumType.getID());
         assertEquals("TRADE_RELEASE_TO_CLEARING", enumType.getName());
         assertEquals("K - Trade has been released to Clearing", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum150ExecType.TRIGGERED_OR_ACTIVATED;
-        assertEquals("L", enumType.getAction());
+        assertEquals("L", enumType.getID());
         assertEquals("TRIGGERED_OR_ACTIVATED", enumType.getName());
         assertEquals("L - Triggered or Activated by System", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

@@ -49,4 +49,7 @@ class Tag947StrikeCurrencyTest {
     void FIX0947Test() {
         FIXType Tag947StrikeCurrency = FIXType.STRIKE_CURRENCY;
     }
+    @Test
+    void Tag0947Test() {
+    }
 }

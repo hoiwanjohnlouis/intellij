@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix30.tags.Tag104IOIQualifier;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -48,9 +47,9 @@ class Tag104IOIQualifierTest {
     @Test
     void FIX0104Test() {
         FIXType fix104IOIQualifier = FIXType.FIX104_IOI_QUALIFIER;
-        assertEquals( fix104IOIQualifier.getFIXName(), "IOI_QUALIFIER");
-        assertEquals( fix104IOIQualifier.getFIXNumber(), 104);
-        assertEquals( fix104IOIQualifier.getFIXDescription(), "IOIQualifier");
+        assertEquals( fix104IOIQualifier.getName(), "IOI_QUALIFIER");
+        assertEquals( fix104IOIQualifier.getNumber(), 104);
+        assertEquals( fix104IOIQualifier.getDescription(), "IOIQualifier");
     }
     @Test
     void Tag0104Test() {

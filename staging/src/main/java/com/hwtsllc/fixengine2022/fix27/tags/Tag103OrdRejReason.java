@@ -16,22 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.fix27.enums.Enum103OrdRejReason;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum103OrdRejReason;
 
 public class Tag103OrdRejReason extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private Enum103OrdRejReason dataValue;
 
-    private Enum103OrdRejReason enum103OrdRejReason;
+    public final static Enum103OrdRejReason TESTA_ORD_REJ_REASON = Enum103OrdRejReason.BROKER_OR_EXCHANGE;
+    public final static Enum103OrdRejReason TESTB_ORD_REJ_REASON = Enum103OrdRejReason.OTHER;
 
-    public Tag103OrdRejReason(Enum103OrdRejReason enum103OrdRejReason) {
+    public Tag103OrdRejReason(Enum103OrdRejReason dataValue) {
         setFixType(FIXType.FIX103_ORD_REJ_REASON);
-        setDataValue(enum103OrdRejReason.getAction());
-        this.enum103OrdRejReason = enum103OrdRejReason;
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
     }
 
     /**
@@ -39,7 +37,7 @@ public class Tag103OrdRejReason extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag103OrdRejReason tag103OrdRejReason = new Tag103OrdRejReason(Enum103OrdRejReason.OTHER);
+        Tag103OrdRejReason tag103OrdRejReason = new Tag103OrdRejReason(TESTA_ORD_REJ_REASON);
         System.out.println(Enum103OrdRejReason.OTHER);
         System.out.println(tag103OrdRejReason);
         System.out.println(tag103OrdRejReason.toFixTagValuePairString());

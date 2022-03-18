@@ -49,4 +49,7 @@ class Tag916StartDateTest {
     void FIX0916Test() {
         FIXType Tag916StartDate = FIXType.START_DATE;
     }
+    @Test
+    void Tag0916Test() {
+    }
 }

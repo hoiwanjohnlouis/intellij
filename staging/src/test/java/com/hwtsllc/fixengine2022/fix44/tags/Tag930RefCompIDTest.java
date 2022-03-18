@@ -49,4 +49,7 @@ class Tag930RefCompIDTest {
     void FIX0930Test() {
         FIXType Tag930RefCompID = FIXType.REF_COMP_ID;
     }
+    @Test
+    void Tag0930Test() {
+    }
 }

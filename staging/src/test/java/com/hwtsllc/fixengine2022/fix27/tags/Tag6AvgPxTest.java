@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag6AvgPx;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag6AvgPxTest {
     @Test
     void FIX0006Test() {
         FIXType fix6AvgPx = FIXType.FIX6_AVG_PX;
-        assertEquals( "AVG_PX", fix6AvgPx.getFIXName());
-        assertEquals( 6, fix6AvgPx.getFIXNumber());
-        assertEquals( "AvgPx", fix6AvgPx.getFIXDescription());
-        assertNotEquals( "AVG PX", fix6AvgPx.getFIXName());
-        assertNotEquals( 6666, fix6AvgPx.getFIXNumber());
-        assertNotEquals( "Avg Px", fix6AvgPx.getFIXDescription());
+        assertEquals( "AVG_PX", fix6AvgPx.getName());
+        assertEquals( 6, fix6AvgPx.getNumber());
+        assertEquals( "AvgPx", fix6AvgPx.getDescription());
+        assertNotEquals( "AVG PX", fix6AvgPx.getName());
+        assertNotEquals( 6666, fix6AvgPx.getNumber());
+        assertNotEquals( "Avg Px", fix6AvgPx.getDescription());
     }
     @Test
     void Tag0006Test() {

@@ -49,4 +49,7 @@ class Tag923UserRequestIDTest {
     void FIX0923Test() {
         FIXType Tag923UserRequestID = FIXType.USER_REQUEST_ID;
     }
+    @Test
+    void Tag0923Test() {
+    }
 }

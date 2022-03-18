@@ -40,27 +40,27 @@ class TagTypeAbstractTest {
     @Test
     void FIX0058Test() {
         FIXType fix58Text = FIXType.FIX58_TEXT;
-        assertEquals( "FIX58_TEXT", fix58Text.getFIXTypeName());
-        assertEquals( 58, fix58Text.getFIXNumber());
-        assertEquals( "TEXT", fix58Text.getFIXName());
-        assertEquals( "Text", fix58Text.getFIXDescription());
-        assertNotEquals( "FIX58_TEXT FIX58_TEXT", fix58Text.getFIXTypeName());
-        assertNotEquals( 100, fix58Text.getFIXNumber());
-        assertNotEquals( "TEXT TEXT", fix58Text.getFIXName());
-        assertNotEquals( "123 TEXT", fix58Text.getFIXDescription());
+        assertEquals( "FIX58_TEXT", fix58Text.getEnumName());
+        assertEquals( 58, fix58Text.getNumber());
+        assertEquals( "TEXT", fix58Text.getName());
+        assertEquals( "Text", fix58Text.getDescription());
+        assertNotEquals( "FIX58_TEXT FIX58_TEXT", fix58Text.getEnumName());
+        assertNotEquals( 100, fix58Text.getNumber());
+        assertNotEquals( "TEXT TEXT", fix58Text.getName());
+        assertNotEquals( "123 TEXT", fix58Text.getDescription());
     }
     @Test
     void Tag0058Test() {
         Tag58Text tag58Text = new Tag58Text("hello from main routine");
-        assertEquals( "FIX58_TEXT", tag58Text.getFIXTypeName());
-        assertEquals( 58, tag58Text.getFIXNumber());
-        assertEquals( "TEXT", tag58Text.getFIXName());
-        assertEquals( "Text", tag58Text.getFIXDescription());
+        assertEquals( "FIX58_TEXT", tag58Text.getEnumName());
+        assertEquals( 58, tag58Text.getNumber());
+        assertEquals( "TEXT", tag58Text.getName());
+        assertEquals( "Text", tag58Text.getDescription());
         assertEquals( "hello from main routine", tag58Text.getDataValue());
-        assertNotEquals( "FIX58_TEXT FIX58_TEXT", tag58Text.getFIXTypeName());
-        assertNotEquals( 100, tag58Text.getFIXNumber());
-        assertNotEquals( "TEXT TEXT", tag58Text.getFIXName());
-        assertNotEquals( "123 TEXT", tag58Text.getFIXDescription());
+        assertNotEquals( "FIX58_TEXT FIX58_TEXT", tag58Text.getEnumName());
+        assertNotEquals( 100, tag58Text.getNumber());
+        assertNotEquals( "TEXT TEXT", tag58Text.getName());
+        assertNotEquals( "123 TEXT", tag58Text.getDescription());
         assertNotEquals( "goodbye from main routine", tag58Text.getDataValue());
     }
 }

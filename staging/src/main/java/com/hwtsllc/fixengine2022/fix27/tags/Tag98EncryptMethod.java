@@ -17,13 +17,29 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum98EncryptMethod;
 
-public enum Tag98EncryptMethod {
-    ;
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag98EncryptMethod extends TagTypeAbstract {
+    private final Enum98EncryptMethod dataValue;
 
-    private final FIXType fixType = FIXType.FIX98_ENCRYPT_METHOD;
+    public final static Enum98EncryptMethod TESTA_ENCRYPT_METHOD = Enum98EncryptMethod.NONE_OR_OTHER;
+    public final static Enum98EncryptMethod TESTB_ENCRYPT_METHOD = Enum98EncryptMethod.PEM_DES_MD5;
+
+    public Tag98EncryptMethod(Enum98EncryptMethod dataValue) {
+        setFixType(FIXType.FIX98_ENCRYPT_METHOD);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag98EncryptMethod tagData = new Tag98EncryptMethod(TESTA_ENCRYPT_METHOD);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

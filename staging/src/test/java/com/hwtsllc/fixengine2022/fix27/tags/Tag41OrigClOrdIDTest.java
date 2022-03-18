@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag41OrigClOrdID;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag41OrigClOrdIDTest {
     @Test
     void FIX0041Test() {
         FIXType fix41OrigClOrdID = FIXType.FIX41_ORIG_CL_ORD_ID;
-        assertEquals( "ORIG_CL_ORD_ID", fix41OrigClOrdID.getFIXName());
-        assertEquals( 41, fix41OrigClOrdID.getFIXNumber());
-        assertEquals( "OrigClOrdID", fix41OrigClOrdID.getFIXDescription());
-        assertNotEquals( "ORIG_CL_ORD_ID ORIG_CL_ORD_ID", fix41OrigClOrdID.getFIXName());
-        assertNotEquals( 3123, fix41OrigClOrdID.getFIXNumber());
-        assertNotEquals( "OrigClOrdID OrigClOrdID", fix41OrigClOrdID.getFIXDescription());
+        assertEquals( "ORIG_CL_ORD_ID", fix41OrigClOrdID.getName());
+        assertEquals( 41, fix41OrigClOrdID.getNumber());
+        assertEquals( "OrigClOrdID", fix41OrigClOrdID.getDescription());
+        assertNotEquals( "ORIG_CL_ORD_ID ORIG_CL_ORD_ID", fix41OrigClOrdID.getName());
+        assertNotEquals( 3123, fix41OrigClOrdID.getNumber());
+        assertNotEquals( "OrigClOrdID OrigClOrdID", fix41OrigClOrdID.getDescription());
     }
     @Test
     void Tag0041Test() {

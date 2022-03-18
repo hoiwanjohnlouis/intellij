@@ -49,4 +49,7 @@ class Tag945CollInquiryStatusTest {
     void FIX0945Test() {
         FIXType Tag945CollInquiryStatus = FIXType.COLL_INQUIRY_STATUS;
     }
+    @Test
+    void Tag0945Test() {
+    }
 }

@@ -49,4 +49,7 @@ class Tag903CollAsgnTransTypeTest {
     void FIX0903Test() {
         FIXType Tag903CollAsgnTransType = FIXType.COLL_ASGN_TRANS_TYPE;
     }
+    @Test
+    void Tag0903Test() {
+    }
 }

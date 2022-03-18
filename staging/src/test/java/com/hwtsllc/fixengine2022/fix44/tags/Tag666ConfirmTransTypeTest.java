@@ -49,4 +49,7 @@ class Tag666ConfirmTransTypeTest {
     void FIX0666Test() {
         FIXType Tag666ConfirmTransType = FIXType.CONFIRM_TRANS_TYPE;
     }
+    @Test
+    void Tag0666Test() {
+    }
 }

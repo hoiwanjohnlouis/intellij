@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.fix27.enums.Enum103OrdRejReason;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag103OrdRejReason;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -49,16 +48,16 @@ class Tag103OrdRejReasonTest {
     @Test
     void FIX0103Test() {
         FIXType fix103OrdRejReason = FIXType.FIX103_ORD_REJ_REASON;
-        assertEquals( fix103OrdRejReason.getFIXName(), "ORD_REJ_REASON");
-        assertEquals( fix103OrdRejReason.getFIXNumber(), 103);
-        assertEquals( fix103OrdRejReason.getFIXDescription(), "OrdRejReason");
+        assertEquals( fix103OrdRejReason.getName(), "ORD_REJ_REASON");
+        assertEquals( fix103OrdRejReason.getNumber(), 103);
+        assertEquals( fix103OrdRejReason.getDescription(), "OrdRejReason");
     }
     @Test
     void Tag0103Test() {
         Tag103OrdRejReason tag103OrdRejReason = new Tag103OrdRejReason(Enum103OrdRejReason.OTHER);
-        assertEquals( tag103OrdRejReason.getFIXName(), "ORD_REJ_REASON");
-        assertEquals( tag103OrdRejReason.getFIXNumber(), 103);
-        assertEquals( tag103OrdRejReason.getFIXDescription(), "OrdRejReason");
+        assertEquals( tag103OrdRejReason.getName(), "ORD_REJ_REASON");
+        assertEquals( tag103OrdRejReason.getNumber(), 103);
+        assertEquals( tag103OrdRejReason.getDescription(), "OrdRejReason");
         logger.info(WHERE_AM_I + ":Successful Tag0103Test()");
     }
 }

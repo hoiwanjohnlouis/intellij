@@ -49,4 +49,7 @@ class Tag922EndCashTest {
     void FIX0922Test() {
         FIXType Tag922EndCash = FIXType.END_CASH;
     }
+    @Test
+    void Tag0922Test() {
+    }
 }

@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag2AdvID extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_ADV_ID = "BilboBaggins-2-AdvID";
+    public final static String TESTB_ADV_ID = "Gandalf-2-AdvID";
+
     public Tag2AdvID(String dataValue) {
         setFixType(FIXType.FIX2_ADV_ID);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag2AdvID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag2AdvID tagData = new Tag2AdvID("tag2 Adv ID");
+        Tag2AdvID tagData = new Tag2AdvID(TESTA_ADV_ID);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

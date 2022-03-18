@@ -47,26 +47,26 @@ class Enum21HandlInstTest {
         Enum21HandlInst enumType;
 
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("AUTOMATIC_EXECUTION_NO_BROKER", enumType.getName());
         assertEquals("1 - Automated execution order, private, no Broker intervention", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY;
-        assertEquals("2", enumType.getAction());
+        assertEquals("2", enumType.getID());
         assertEquals("AUTOMATIC_EXECUTION_BROKER_OKAY", enumType.getName());
         assertEquals("2 - Automated execution order, public, Broker intervention OK", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum21HandlInst.MANUAL_ORDER_BEST_EXECUTION;
-        assertEquals("3", enumType.getAction());
+        assertEquals("3", enumType.getID());
         assertEquals("MANUAL_ORDER_BEST_EXECUTION", enumType.getName());
         assertEquals("3 - Manual order, best execution", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

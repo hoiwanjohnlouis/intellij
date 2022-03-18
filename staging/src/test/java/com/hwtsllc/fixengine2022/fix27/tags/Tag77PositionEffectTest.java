@@ -25,7 +25,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Tag77OpenCloseTest {
+class Tag77PositionEffectTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
     // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
@@ -51,8 +51,8 @@ class Tag77OpenCloseTest {
     @Test
     void Tag0077Test() {
         FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
+        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
+        assertEquals( tag100ExDestination.getNumber(), 100);
+        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
     }
 }

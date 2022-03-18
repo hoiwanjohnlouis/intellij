@@ -50,18 +50,18 @@ class Enum204CustomerOrFirmTest {
          * 0-1 msg types
          */
         enumType = Enum204CustomerOrFirm.CUSTOMER;
-        assertEquals("0", enumType.getAction());
+        assertEquals("0", enumType.getID());
         assertEquals("CUSTOMER", enumType.getName());
         assertEquals("0 - Customer", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
 
         enumType = Enum204CustomerOrFirm.FIRM;
-        assertEquals("1", enumType.getAction());
+        assertEquals("1", enumType.getID());
         assertEquals("FIRM", enumType.getName());
         assertEquals("1 - Firm", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getAction());
+        assertNotEquals("junkAction", enumType.getID());
         assertNotEquals("junkName", enumType.getName());
         assertNotEquals("junkDescription", enumType.getDescription());
     }

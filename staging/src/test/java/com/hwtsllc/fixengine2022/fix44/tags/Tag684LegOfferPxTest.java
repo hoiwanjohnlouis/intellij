@@ -49,4 +49,7 @@ class Tag684LegOfferPxTest {
     void FIX0684Test() {
         FIXType Tag684LegOfferPx = FIXType.LEG_OFFER_PX;
     }
+    @Test
+    void Tag0684Test() {
+    }
 }

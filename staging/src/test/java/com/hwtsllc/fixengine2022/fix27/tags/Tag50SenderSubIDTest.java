@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag50SenderSubID;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag50SenderSubIDTest {
     @Test
     void FIX0050Test() {
         FIXType fix50SenderSubID = FIXType.FIX50_SENDER_SUB_ID;
-        assertEquals( "SENDER_SUB_ID", fix50SenderSubID.getFIXName());
-        assertEquals( 50, fix50SenderSubID.getFIXNumber());
-        assertEquals( "SenderSubID", fix50SenderSubID.getFIXDescription());
-        assertNotEquals( "SENDER_SUB_ID SENDER_SUB_ID", fix50SenderSubID.getFIXName());
-        assertNotEquals( 3123, fix50SenderSubID.getFIXNumber());
-        assertNotEquals( "SenderSubID SenderSubID", fix50SenderSubID.getFIXDescription());
+        assertEquals( "SENDER_SUB_ID", fix50SenderSubID.getName());
+        assertEquals( 50, fix50SenderSubID.getNumber());
+        assertEquals( "SenderSubID", fix50SenderSubID.getDescription());
+        assertNotEquals( "SENDER_SUB_ID SENDER_SUB_ID", fix50SenderSubID.getName());
+        assertNotEquals( 3123, fix50SenderSubID.getNumber());
+        assertNotEquals( "SenderSubID SenderSubID", fix50SenderSubID.getDescription());
     }
     @Test
     void Tag0050Test() {

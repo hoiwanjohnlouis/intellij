@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag12Commission;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +40,12 @@ class Tag12CommissionTest {
     @Test
     void FIX0012Test() {
         FIXType fix12Commission = FIXType.FIX12_COMMISSION;
-        assertEquals( "COMMISSION", fix12Commission.getFIXName());
-        assertEquals( 12, fix12Commission.getFIXNumber());
-        assertEquals( "Commission", fix12Commission.getFIXDescription());
-        assertNotEquals( "Not My COMMISSION", fix12Commission.getFIXName());
-        assertNotEquals( 163223, fix12Commission.getFIXNumber());
-        assertNotEquals( "123 Commission", fix12Commission.getFIXDescription());
+        assertEquals( "COMMISSION", fix12Commission.getName());
+        assertEquals( 12, fix12Commission.getNumber());
+        assertEquals( "Commission", fix12Commission.getDescription());
+        assertNotEquals( "Not My COMMISSION", fix12Commission.getName());
+        assertNotEquals( 163223, fix12Commission.getNumber());
+        assertNotEquals( "123 Commission", fix12Commission.getDescription());
     }
     @Test
     void Tag0012Test() {

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag3AdvRefID;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
@@ -39,14 +38,14 @@ class Tag3AdvRefIDTest {
     @Test
     void FIX0003Test() {
         FIXType fix3AdvRefID = FIXType.FIX3_ADV_REF_ID;
-        assertEquals( "FIX3_ADV_REF_ID", fix3AdvRefID.getFIXTypeName());
-        assertEquals( 3, fix3AdvRefID.getFIXNumber());
-        assertEquals( "ADV_REF_ID", fix3AdvRefID.getFIXName());
-        assertEquals( "AdvRefId", fix3AdvRefID.getFIXDescription());
-        assertNotEquals( "Not My FIX3_ADV_REF_ID", fix3AdvRefID.getFIXTypeName());
-        assertNotEquals( 9999, fix3AdvRefID.getFIXNumber());
-        assertNotEquals( "Not My ADV_REF_ID", fix3AdvRefID.getFIXName());
-        assertNotEquals( "Not My AdvRefId", fix3AdvRefID.getFIXDescription());
+        assertEquals( "FIX3_ADV_REF_ID", fix3AdvRefID.getEnumName());
+        assertEquals( 3, fix3AdvRefID.getNumber());
+        assertEquals( "ADV_REF_ID", fix3AdvRefID.getName());
+        assertEquals( "AdvRefId", fix3AdvRefID.getDescription());
+        assertNotEquals( "Not My FIX3_ADV_REF_ID", fix3AdvRefID.getEnumName());
+        assertNotEquals( 9999, fix3AdvRefID.getNumber());
+        assertNotEquals( "Not My ADV_REF_ID", fix3AdvRefID.getName());
+        assertNotEquals( "Not My AdvRefId", fix3AdvRefID.getDescription());
     }
     @Test
     void Tag0003Test() {

@@ -49,4 +49,7 @@ class Tag690LegSwapTypeTest {
     void FIX0690Test() {
         FIXType Tag690LegSwapType = FIXType.LEG_SWAP_TYPE;
     }
+    @Test
+    void Tag0690Test() {
+    }
 }
