@@ -41,10 +41,10 @@ class Tag16EndSeqNoTest {
     void FIX0016Test() {
         FIXType fix16EndSeqNo = FIXType.FIX16_END_SEQ_NO;
         assertEquals( "END_SEQ_NO", fix16EndSeqNo.getName());
-        assertEquals( 16, fix16EndSeqNo.getNumber());
+        assertEquals( "16", fix16EndSeqNo.getID());
         assertEquals( "EndSeqNo", fix16EndSeqNo.getDescription());
         assertNotEquals( "END_SEQ_NO END_SEQ_NO", fix16EndSeqNo.getName());
-        assertNotEquals( 111, fix16EndSeqNo.getNumber());
+        assertNotEquals( "111", fix16EndSeqNo.getID());
         assertNotEquals( "123 EndSeqNo", fix16EndSeqNo.getDescription());
     }
     @Test

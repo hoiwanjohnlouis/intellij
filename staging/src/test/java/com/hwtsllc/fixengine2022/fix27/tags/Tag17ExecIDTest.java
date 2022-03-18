@@ -41,10 +41,10 @@ class Tag17ExecIDTest {
     void FIX0017Test() {
         FIXType fix17ExecID = FIXType.FIX17_EXEC_ID;
         assertEquals( "EXEC_ID", fix17ExecID.getName());
-        assertEquals( 17, fix17ExecID.getNumber());
+        assertEquals( "17", fix17ExecID.getID());
         assertEquals( "ExecID", fix17ExecID.getDescription());
         assertNotEquals( "EXEC_ID EXEC_ID", fix17ExecID.getName());
-        assertNotEquals( 111, fix17ExecID.getNumber());
+        assertNotEquals( "111", fix17ExecID.getID());
         assertNotEquals( "123 ExecID", fix17ExecID.getDescription());
     }
     @Test

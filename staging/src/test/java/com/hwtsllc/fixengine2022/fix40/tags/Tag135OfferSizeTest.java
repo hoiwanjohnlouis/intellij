@@ -39,21 +39,15 @@ class Tag135OfferSizeTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0135Test() {
         FIXType fix135OfferSize = FIXType.FIX135_OFFER_SIZE;
-        assertEquals( fix135OfferSize.getName(), "OFFER_SIZE");
-        assertEquals( fix135OfferSize.getNumber(), 135);
-        assertEquals( fix135OfferSize.getDescription(), "OfferSize");
+        assertEquals( "OFFER_SIZE", fix135OfferSize.getName());
+        assertEquals( "135", fix135OfferSize.getID());
+        assertEquals( "OfferSize", fix135OfferSize.getDescription());
     }
     @Test
     void Tag0135Test() {
-        FIXType tag135OfferSize = FIXType.FIX135_OFFER_SIZE;
-        assertEquals( tag135OfferSize.getName(), "OFFER_SIZE");
-        assertEquals( tag135OfferSize.getNumber(), 135);
-        assertEquals( tag135OfferSize.getDescription(), "OfferSize");
+        Tag135OfferSize tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0135Test()");
     }
 }

@@ -41,10 +41,10 @@ class Tag10CheckSumTest {
     void FIX0010Test() {
         FIXType fix10CheckSum = FIXType.FIX10_CHECK_SUM;
         assertEquals( "CHECK_SUM", fix10CheckSum.getName());
-        assertEquals( 10, fix10CheckSum.getNumber());
+        assertEquals( "10", fix10CheckSum.getID());
         assertEquals( "CheckSum", fix10CheckSum.getDescription());
         assertNotEquals( "CHECK_SUM CHECK_SUM", fix10CheckSum.getName());
-        assertNotEquals( 100, fix10CheckSum.getNumber());
+        assertNotEquals( "100", fix10CheckSum.getID());
         assertNotEquals( "123 CheckSum", fix10CheckSum.getDescription());
     }
     @Test

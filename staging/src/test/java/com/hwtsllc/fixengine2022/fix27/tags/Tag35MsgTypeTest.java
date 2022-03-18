@@ -41,10 +41,10 @@ class Tag35MsgTypeTest {
     void FIX0035Test() {
         FIXType fix35MsgType = FIXType.FIX35_MSG_TYPE;
         assertEquals( "MSG_TYPE", fix35MsgType.getName());
-        assertEquals( 35, fix35MsgType.getNumber());
+        assertEquals( "35", fix35MsgType.getID());
         assertEquals( "MsgType", fix35MsgType.getDescription());
         assertNotEquals( "MSG_TYPE MSG_TYPE", fix35MsgType.getName());
-        assertNotEquals( 312, fix35MsgType.getNumber());
+        assertNotEquals( "312", fix35MsgType.getID());
         assertNotEquals( "MsgType MsgType", fix35MsgType.getDescription());
     }
     @Test

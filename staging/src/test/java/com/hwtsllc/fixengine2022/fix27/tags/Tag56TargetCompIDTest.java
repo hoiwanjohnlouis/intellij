@@ -51,8 +51,8 @@ class Tag56TargetCompIDTest {
     @Test
     void Tag0056Test() {
         FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getNumber(), 100);
-        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
+        assertEquals( "EX_DESTINATION", tag100ExDestination.getName());
+        assertEquals( "100", tag100ExDestination.getID());
+        assertEquals( "ExDestination", tag100ExDestination.getDescription());
     }
 }

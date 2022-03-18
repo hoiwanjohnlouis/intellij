@@ -41,10 +41,10 @@ class Tag29LastCapacityTest {
     void FIX0029Test() {
         FIXType fix29LastCapacity = FIXType.FIX29_LAST_CAPACITY;
         assertEquals( "LAST_CAPACITY", fix29LastCapacity.getName());
-        assertEquals( 29, fix29LastCapacity.getNumber());
+        assertEquals( "29", fix29LastCapacity.getID());
         assertEquals( "LastCapacity", fix29LastCapacity.getDescription());
         assertNotEquals( "LAST_CAPACITY LAST_CAPACITY", fix29LastCapacity.getName());
-        assertNotEquals( 2020, fix29LastCapacity.getNumber());
+        assertNotEquals( "2020", fix29LastCapacity.getID());
         assertNotEquals( "123 LastCapacity", fix29LastCapacity.getDescription());
     }
     @Test

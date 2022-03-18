@@ -39,23 +39,15 @@ class Tag115OnBehalfOfCompIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    @Test
     void FIX0115Test() {
         FIXType fix115OnBehalfOfCompID = FIXType.FIX115_ON_BEHALF_OF_COMP_ID;
         assertEquals( fix115OnBehalfOfCompID.getName(), "ON_BEHALF_OF_COMP_ID");
-        assertEquals( fix115OnBehalfOfCompID.getNumber(), 115);
+        assertEquals( fix115OnBehalfOfCompID.getID(), "115");
         assertEquals( fix115OnBehalfOfCompID.getDescription(), "OnBehalfOfCompID");
     }
     @Test
     void Tag0115Test() {
-        FIXType tag115OnBehalfOfCompID = FIXType.FIX115_ON_BEHALF_OF_COMP_ID;
-        assertEquals( tag115OnBehalfOfCompID.getName(), "ON_BEHALF_OF_COMP_ID");
-        assertEquals( tag115OnBehalfOfCompID.getNumber(), 115);
-        assertEquals( tag115OnBehalfOfCompID.getDescription(), "OnBehalfOfCompID");
-        logger.info(WHERE_AM_I + ":Successful Test()");
+        Tag115OnBehalfOfCompID tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0115Test()");
     }
 }

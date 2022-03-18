@@ -41,10 +41,10 @@ class Tag27IOISharesTest {
     void FIX0027Test() {
         FIXType fix27IOIShares = FIXType.FIX27_IOI_SHARES;
         assertEquals( "IOI_SHARES", fix27IOIShares.getName());
-        assertEquals( 27, fix27IOIShares.getNumber());
+        assertEquals( "27", fix27IOIShares.getID());
         assertEquals( "IOIShares", fix27IOIShares.getDescription());
         assertNotEquals( "IOI_SHARES IOI_SHARES", fix27IOIShares.getName());
-        assertNotEquals( 2020, fix27IOIShares.getNumber());
+        assertNotEquals( "2020", fix27IOIShares.getID());
         assertNotEquals( "123 IOIShares", fix27IOIShares.getDescription());
     }
     @Test

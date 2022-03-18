@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag70AllocIDTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -39,20 +37,12 @@ class Tag70AllocIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0070Test() {
         FIXType fix70AllocID = FIXType.FIX70_ALLOC_ID;
     }
     @Test
     void Tag0070Test() {
-        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getNumber(), 100);
-        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
+        Tag70AllocID tagData;
+        logger.info("Successful Tag0070Test()");
     }
 }

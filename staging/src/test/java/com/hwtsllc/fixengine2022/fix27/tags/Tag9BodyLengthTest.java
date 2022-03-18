@@ -41,10 +41,10 @@ class Tag9BodyLengthTest {
     void FIX0009Test() {
         FIXType fix9BodyLength = FIXType.FIX9_BODY_LENGTH;
         assertEquals( "BODY_LENGTH", fix9BodyLength.getName());
-        assertEquals( 9, fix9BodyLength.getNumber());
+        assertEquals( "9", fix9BodyLength.getID());
         assertEquals( "BodyLength", fix9BodyLength.getDescription());
         assertNotEquals( "BODY_ LENGTH", fix9BodyLength.getName());
-        assertNotEquals( 99, fix9BodyLength.getNumber());
+        assertNotEquals( "99", fix9BodyLength.getID());
         assertNotEquals( "Body Length", fix9BodyLength.getDescription());
     }
     @Test

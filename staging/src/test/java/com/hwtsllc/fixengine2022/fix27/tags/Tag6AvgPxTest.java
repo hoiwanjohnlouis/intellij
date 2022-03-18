@@ -41,10 +41,10 @@ class Tag6AvgPxTest {
     void FIX0006Test() {
         FIXType fix6AvgPx = FIXType.FIX6_AVG_PX;
         assertEquals( "AVG_PX", fix6AvgPx.getName());
-        assertEquals( 6, fix6AvgPx.getNumber());
+        assertEquals( "6", fix6AvgPx.getID());
         assertEquals( "AvgPx", fix6AvgPx.getDescription());
         assertNotEquals( "AVG PX", fix6AvgPx.getName());
-        assertNotEquals( 6666, fix6AvgPx.getNumber());
+        assertNotEquals( "6666", fix6AvgPx.getID());
         assertNotEquals( "Avg Px", fix6AvgPx.getDescription());
     }
     @Test

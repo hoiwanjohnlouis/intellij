@@ -42,10 +42,10 @@ class Tag13CommTypeTest {
     void FIX0013Test() {
         FIXType fix13CommType = FIXType.FIX13_COMM_TYPE;
         assertEquals( "COMM_TYPE", fix13CommType.getName());
-        assertEquals( 13, fix13CommType.getNumber());
+        assertEquals( "13", fix13CommType.getID());
         assertEquals( "CommType", fix13CommType.getDescription());
         assertNotEquals( "Not My COMM_TYPE", fix13CommType.getName());
-        assertNotEquals( 163223, fix13CommType.getNumber());
+        assertNotEquals( "163223", fix13CommType.getID());
         assertNotEquals( "123 CommType", fix13CommType.getDescription());
     }
     @Test

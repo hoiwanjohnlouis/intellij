@@ -17,13 +17,12 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix44.tags.Tag860AvgParPx;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Tag86DlvyInstTest {
@@ -40,20 +39,12 @@ class Tag86DlvyInstTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0086Test() {
         FIXType fix86DlvyInst = FIXType.FIX86_DLVY_INST;
     }
     @Test
     void Tag0086Test() {
-        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getNumber(), 100);
-        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
+        Tag860AvgParPx tagData;
+        logger.info("Successful Tag0086Test()");
     }
 }

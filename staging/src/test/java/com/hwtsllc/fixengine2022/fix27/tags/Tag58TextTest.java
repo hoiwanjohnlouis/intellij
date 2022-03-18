@@ -48,11 +48,11 @@ class Tag58TextTest {
     void FIX0058Test() {
         FIXType fix58Text = FIXType.FIX58_TEXT;
         assertEquals( "FIX58_TEXT", fix58Text.getEnumName());
-        assertEquals( 58, fix58Text.getNumber());
+        assertEquals( "58", fix58Text.getID());
         assertEquals( "TEXT", fix58Text.getName());
         assertEquals( "Text", fix58Text.getDescription());
         assertNotEquals( "FIX58_TEXT FIX58_TEXT", fix58Text.getEnumName());
-        assertNotEquals( 100, fix58Text.getNumber());
+        assertNotEquals( "100", fix58Text.getID());
         assertNotEquals( "TEXT TEXT", fix58Text.getName());
         assertNotEquals( "123 TEXT", fix58Text.getDescription());
     }

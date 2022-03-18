@@ -35,7 +35,7 @@ public abstract class TagAbstract <T1> implements LogStringVerbose, FixTagValueP
         return fixType.getEnumName();
     }
     public String getAction() {
-        return String.valueOf( fixType.getNumber() );
+        return String.valueOf( fixType.getID() );
     }
     public String getName() {
         return fixType.getName();

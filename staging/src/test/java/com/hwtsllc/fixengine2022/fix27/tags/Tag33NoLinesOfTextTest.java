@@ -41,10 +41,10 @@ class Tag33NoLinesOfTextTest {
     void FIX0033Test() {
         FIXType fix33LinesOfText = FIXType.FIX33_NO_LINES_OF_TEXT;
         assertEquals( "NO_LINES_OF_TEXT", fix33LinesOfText.getName());
-        assertEquals( 33, fix33LinesOfText.getNumber());
+        assertEquals( "33", fix33LinesOfText.getID());
         assertEquals( "NoLinesOfText", fix33LinesOfText.getDescription());
         assertNotEquals( "NO_LINES_OF_TEXT NO_LINES_OF_TEXT", fix33LinesOfText.getName());
-        assertNotEquals( 3172, fix33LinesOfText.getNumber());
+        assertNotEquals( "3172", fix33LinesOfText.getID());
         assertNotEquals( "NoLinesOfText NoLinesOfText", fix33LinesOfText.getDescription());
     }
     @Test

@@ -21,7 +21,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag554PasswordTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -37,30 +38,29 @@ class Tag554PasswordTest {
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("Starting Tag554PasswordTest()");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println("Completed Tag554PasswordTest()");
     }
 
     @Test
     void FIX0554Test() {
         FIXType fix554Password = FIXType.FIX554_PASSWORD;
         assertEquals( "FIX554_PASSWORD", fix554Password.getEnumName());
-        assertEquals( 554, fix554Password.getNumber());
+        assertEquals( "554", fix554Password.getID());
         assertEquals( "PASSWORD", fix554Password.getName());
         assertEquals( "Password", fix554Password.getDescription());
         assertNotEquals( "Not My FIX554_PASSWORD", fix554Password.getEnumName());
-        assertNotEquals( 9999, fix554Password.getNumber());
+        assertNotEquals( "9999", fix554Password.getID());
         assertNotEquals( "Not My PASSWORD", fix554Password.getName());
         assertNotEquals( "Not My Password", fix554Password.getDescription());
     }
     @Test
     void Tag0554Test() {
-        Tag554Password tag554Password = new Tag554Password("JohnWick");
-        assertEquals( "JohnWick", tag554Password.getDataValue());
-        assertNotEquals( "goodbye JohnWick", tag554Password.getDataValue());
+        Tag554Password tagData = new Tag554Password("JohnWick");
+        assertEquals( "JohnWick", tagData.getDataValue());
+        assertNotEquals( "goodbye JohnWick", tagData.getDataValue());
+        logger.info("Successful Tag0554Test()");
     }
 }

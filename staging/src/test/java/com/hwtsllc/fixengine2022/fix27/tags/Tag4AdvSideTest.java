@@ -43,10 +43,10 @@ class Tag4AdvSideTest {
     void FIX0004Test() {
         FIXType fix4AdvSide = FIXType.FIX4_ADV_SIDE;
         assertEquals( "ADV_SIDE", fix4AdvSide.getName());
-        assertEquals( 4, fix4AdvSide.getNumber());
+        assertEquals( "4", fix4AdvSide.getID());
         assertEquals( "AdvSide", fix4AdvSide.getDescription());
         assertNotEquals( "ADV SIDE", fix4AdvSide.getName());
-        assertNotEquals( 44, fix4AdvSide.getNumber());
+        assertNotEquals( "44", fix4AdvSide.getID());
         assertNotEquals( "Adv Side", fix4AdvSide.getDescription());
     }
     @Test

@@ -39,23 +39,15 @@ class Tag121ForexReqTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0121Test() {
         FIXType fix121ForexReq = FIXType.FIX121_FOREX_REQ;
         assertEquals( fix121ForexReq.getName(), "FOREX_REQ");
-        assertEquals( fix121ForexReq.getNumber(), 121);
+        assertEquals( fix121ForexReq.getID(), "121");
         assertEquals( fix121ForexReq.getDescription(), "ForexReq");
     }
     @Test
     void Tag0121Test() {
-        FIXType tag121ForexReq = FIXType.FIX121_FOREX_REQ;
-        assertEquals( tag121ForexReq.getName(), "FOREX_REQ");
-        assertEquals( tag121ForexReq.getNumber(), 121);
-        assertEquals( tag121ForexReq.getDescription(), "ForexReq");
+        Tag121ForexReq tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0121Test()");
     }
 }

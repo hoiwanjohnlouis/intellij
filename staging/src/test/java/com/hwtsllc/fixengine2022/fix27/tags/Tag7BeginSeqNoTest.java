@@ -41,10 +41,10 @@ class Tag7BeginSeqNoTest {
     void FIX0007Test() {
         FIXType fix7BeginSeqNo = FIXType.FIX7_BEGIN_SEQ_NO;
         assertEquals( "BEGIN_SEQ_NO", fix7BeginSeqNo.getName());
-        assertEquals( 7, fix7BeginSeqNo.getNumber());
+        assertEquals( "7", fix7BeginSeqNo.getID());
         assertEquals( "BeginSeqNo", fix7BeginSeqNo.getDescription());
         assertNotEquals( "BEGIN;SEQ_NO", fix7BeginSeqNo.getName());
-        assertNotEquals( 77, fix7BeginSeqNo.getNumber());
+        assertNotEquals( "77", fix7BeginSeqNo.getID());
         assertNotEquals( "Begin Seq No", fix7BeginSeqNo.getDescription());
     }
     @Test

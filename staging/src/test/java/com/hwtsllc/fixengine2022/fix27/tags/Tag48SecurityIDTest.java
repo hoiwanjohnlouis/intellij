@@ -41,10 +41,10 @@ class Tag48SecurityIDTest {
     void FIX0048Test() {
         FIXType fix48SecurityID = FIXType.FIX48_SECURITY_ID;
         assertEquals( "SECURITY_ID", fix48SecurityID.getName());
-        assertEquals( 48, fix48SecurityID.getNumber());
+        assertEquals( "48", fix48SecurityID.getID());
         assertEquals( "SecurityID", fix48SecurityID.getDescription());
         assertNotEquals( "SECURITY_ID SECURITY_ID", fix48SecurityID.getName());
-        assertNotEquals( 3123, fix48SecurityID.getNumber());
+        assertNotEquals( "3123", fix48SecurityID.getID());
         assertNotEquals( "SecurityID SecurityID", fix48SecurityID.getDescription());
     }
     @Test

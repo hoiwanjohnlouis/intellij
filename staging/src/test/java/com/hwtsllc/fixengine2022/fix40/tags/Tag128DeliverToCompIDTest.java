@@ -39,23 +39,15 @@ class Tag128DeliverToCompIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0128Test() {
         FIXType fix128DeliverToCompID = FIXType.FIX128_DELIVER_TO_COMP_ID;
         assertEquals( fix128DeliverToCompID.getName(), "DELIVER_TO_COMP_ID");
-        assertEquals( fix128DeliverToCompID.getNumber(), 128);
+        assertEquals( fix128DeliverToCompID.getID(), "128");
         assertEquals( fix128DeliverToCompID.getDescription(), "DeliverToCompID");
     }
     @Test
     void Tag0128Test() {
-        FIXType tag128DeliverToCompID = FIXType.FIX128_DELIVER_TO_COMP_ID;
-        assertEquals( tag128DeliverToCompID.getName(), "DELIVER_TO_COMP_ID");
-        assertEquals( tag128DeliverToCompID.getNumber(), 128);
-        assertEquals( tag128DeliverToCompID.getDescription(), "DeliverToCompID");
+        Tag128DeliverToCompID tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0128Test()");
     }
 }

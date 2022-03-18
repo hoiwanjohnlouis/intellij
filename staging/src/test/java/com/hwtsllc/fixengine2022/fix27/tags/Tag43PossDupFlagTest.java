@@ -41,10 +41,10 @@ class Tag43PossDupFlagTest {
     void FIX0043Test() {
         FIXType fix43PossDupFlag = FIXType.FIX43_POSS_DUP_FLAG;
         assertEquals( "POSS_DUP_FLAG", fix43PossDupFlag.getName());
-        assertEquals( 43, fix43PossDupFlag.getNumber());
+        assertEquals( "43", fix43PossDupFlag.getID());
         assertEquals( "PossDupFlag", fix43PossDupFlag.getDescription());
         assertNotEquals( "POSS_DUP_FLAG POSS_DUP_FLAG", fix43PossDupFlag.getName());
-        assertNotEquals( 3123, fix43PossDupFlag.getNumber());
+        assertNotEquals( "3123", fix43PossDupFlag.getID());
         assertNotEquals( "PossDupFlag PossDupFlag", fix43PossDupFlag.getDescription());
     }
     @Test

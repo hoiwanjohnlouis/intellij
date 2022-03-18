@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag93SignatureLengthTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -39,20 +37,12 @@ class Tag93SignatureLengthTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0093Test() {
         FIXType fix93SignatureLength = FIXType.FIX93_SIGNATURE_LENGTH;
     }
     @Test
     void Tag0093Test() {
-        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getNumber(), 100);
-        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
+        Tag93SignatureLength tagData;
+        logger.info("Successful Tag0093Test()");
     }
 }

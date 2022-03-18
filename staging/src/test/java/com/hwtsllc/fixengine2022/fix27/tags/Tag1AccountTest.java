@@ -17,14 +17,14 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class  Tag1AccountTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -43,11 +43,11 @@ class  Tag1AccountTest {
     void FIX0001Test() {
         FIXType fix1Account = FIXType.FIX1_ACCOUNT;
         assertEquals( "FIX1_ACCOUNT", fix1Account.getEnumName());
-        assertEquals( 1, fix1Account.getNumber());
+        assertEquals( "1", fix1Account.getID());
         assertEquals( "ACCOUNT", fix1Account.getName());
         assertEquals( "Account", fix1Account.getDescription());
         assertNotEquals( "Not My FIX1_ACCOUNT", fix1Account.getEnumName());
-        assertNotEquals( 11, fix1Account.getNumber());
+        assertNotEquals( "11", fix1Account.getID());
         assertNotEquals( "Not My ACCOUNT", fix1Account.getName());
         assertNotEquals( "123 Account", fix1Account.getDescription());
     }

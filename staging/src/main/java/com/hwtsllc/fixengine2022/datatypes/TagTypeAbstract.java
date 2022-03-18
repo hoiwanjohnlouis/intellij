@@ -37,8 +37,8 @@ public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePa
     public String getEnumName() {
         return fixType.getEnumName();
     }
-    public int getNumber() {
-        return fixType.getNumber();
+    public String getID() {
+        return fixType.getID();
     }
     public String getName() {
         return fixType.getName();
@@ -57,7 +57,7 @@ public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePa
                 .concat(getEnumName())
                 .concat("]")
                 .concat("\n\tFIXNumber[")
-                .concat(String.valueOf(getNumber()))
+                .concat(getID())
                 .concat("]")
                 .concat("\n\tFIXName[")
                 .concat(getName())
@@ -71,7 +71,7 @@ public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePa
     }
     @Override
     public String toFixTagValuePairString() {
-        return String.valueOf(getNumber())
+        return String.valueOf(getID())
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -81,7 +81,7 @@ public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePa
                 .concat("=[")
                 .concat(getEnumName())
                 .concat(",")
-                .concat(String.valueOf(getNumber()))
+                .concat(getID())
                 .concat(",")
                 .concat(getName())
                 .concat(",")

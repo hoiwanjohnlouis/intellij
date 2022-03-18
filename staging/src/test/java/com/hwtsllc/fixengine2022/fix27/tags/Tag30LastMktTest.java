@@ -41,10 +41,10 @@ class Tag30LastMktTest {
     void FIX0030Test() {
         FIXType fix30LastMkt = FIXType.FIX30_LAST_MKT;
         assertEquals( "LAST_MKT", fix30LastMkt.getName());
-        assertEquals( 30, fix30LastMkt.getNumber());
+        assertEquals( "30", fix30LastMkt.getID());
         assertEquals( "LastMkt", fix30LastMkt.getDescription());
         assertNotEquals( "LAST_MKT LAST_MKT", fix30LastMkt.getName());
-        assertNotEquals( 2020, fix30LastMkt.getNumber());
+        assertNotEquals( "2020", fix30LastMkt.getID());
         assertNotEquals( "123 LastMkt", fix30LastMkt.getDescription());
     }
     @Test

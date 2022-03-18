@@ -40,23 +40,15 @@ class Tag125CxlTypeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0125Test() {
         FIXType fix125CxlType = FIXType.FIX125_CXL_TYPE;
         assertEquals( fix125CxlType.getName(), "CXL_TYPE");
-        assertEquals( fix125CxlType.getNumber(), 125);
+        assertEquals( fix125CxlType.getID(), "125");
         assertEquals( fix125CxlType.getDescription(), "CxlType (no longer used)");
     }
     @Test
     void Tag0125Test() {
-        FIXType tag125CxlType = FIXType.FIX125_CXL_TYPE;
-        assertEquals( tag125CxlType.getName(), "CXL_TYPE");
-        assertEquals( tag125CxlType.getNumber(), 125);
-        assertEquals( tag125CxlType.getDescription(), "CxlType (no longer used)");
+        Tag125CxlTypeTest tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0125Test()");
     }
 }

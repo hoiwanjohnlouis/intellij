@@ -23,8 +23,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag68TotNoOrdersTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
@@ -39,20 +37,12 @@ class Tag68TotNoOrdersTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0068Test() {
         FIXType fix68TotNoOrders = FIXType.FIX68_TOT_NO_ORDERS;
     }
     @Test
     void Tag0068Test() {
-        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getNumber(), 100);
-        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
+        Tag68TotNoOrders tagData;
+        logger.info("Successful Tag0068Test()");
     }
 }

@@ -39,23 +39,16 @@ class Tag113ReportToExchTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    @Test
     void FIX0113Test() {
         FIXType fix113ReportToExch = FIXType.FIX113_REPORT_TO_EXCH;
-        assertEquals( fix113ReportToExch.getName(), "REPORT_TO_EXCH");
-        assertEquals( fix113ReportToExch.getNumber(), 113);
-        assertEquals( fix113ReportToExch.getDescription(), "ReportToExch");
+        assertEquals( "REPORT_TO_EXCH", fix113ReportToExch.getName());
+        assertEquals( "113", fix113ReportToExch.getID());
+        assertEquals( "ReportToExch", fix113ReportToExch.getDescription());
     }
     @Test
     void Tag0113Test() {
-        FIXType tag113ReportToExch = FIXType.FIX113_REPORT_TO_EXCH;
-        assertEquals( tag113ReportToExch.getName(), "REPORT_TO_EXCH");
-        assertEquals( tag113ReportToExch.getNumber(), 113);
-        assertEquals( tag113ReportToExch.getDescription(), "ReportToExch");
-        logger.info(WHERE_AM_I + ":Successful Test()");
+        Tag113ReportToExch tagData;
+        //= new Tag113ReportToExch("");
+        logger.info(WHERE_AM_I + ":Successful Tag0113Test()");
     }
 }

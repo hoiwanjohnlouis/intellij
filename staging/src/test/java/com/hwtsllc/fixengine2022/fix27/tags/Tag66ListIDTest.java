@@ -39,20 +39,12 @@ class Tag66ListIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0066Test() {
         FIXType fix66ListID = FIXType.FIX66_LIST_ID;
     }
     @Test
     void Tag0066Test() {
-        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getNumber(), 100);
-        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
+        Tag66ListID tagData;
+        logger.info("Successful Tag0066Test()");
     }
 }

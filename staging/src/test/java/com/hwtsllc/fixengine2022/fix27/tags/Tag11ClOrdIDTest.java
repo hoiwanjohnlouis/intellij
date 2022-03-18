@@ -41,10 +41,10 @@ class Tag11ClOrdIDTest {
     void FIX0011Test() {
         FIXType fix11ClOrdID = FIXType.FIX11_CL_ORD_ID;
         assertEquals( "CL_ORD_ID", fix11ClOrdID.getName());
-        assertEquals( 11, fix11ClOrdID.getNumber());
+        assertEquals( "11", fix11ClOrdID.getID());
         assertEquals( "ClOrdID", fix11ClOrdID.getDescription());
         assertNotEquals( "CL_ORD_ID CL_ORD_ID", fix11ClOrdID.getName());
-        assertNotEquals( 111, fix11ClOrdID.getNumber());
+        assertNotEquals( "111", fix11ClOrdID.getID());
         assertNotEquals( "123 ClOrdID", fix11ClOrdID.getDescription());
     }
     @Test

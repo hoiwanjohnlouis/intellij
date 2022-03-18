@@ -41,10 +41,10 @@ class Tag14CumQtyTest {
     void FIX0014Test() {
         FIXType fix14CumQty = FIXType.FIX14_CUM_QTY;
         assertEquals( "CUM_QTY", fix14CumQty.getName());
-        assertEquals( 14, fix14CumQty.getNumber());
+        assertEquals( "14", fix14CumQty.getID());
         assertEquals( "CumQty", fix14CumQty.getDescription());
         assertNotEquals( "CUM_QTY CUM_QTY", fix14CumQty.getName());
-        assertNotEquals( 1414, fix14CumQty.getNumber());
+        assertNotEquals( "1414", fix14CumQty.getID());
         assertNotEquals( "123 CumQty", fix14CumQty.getDescription());
     }
     @Test

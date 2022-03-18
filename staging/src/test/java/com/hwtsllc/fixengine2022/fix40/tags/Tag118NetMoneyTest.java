@@ -39,23 +39,15 @@ class Tag118NetMoneyTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0118Test() {
         FIXType fix118NetMoney = FIXType.FIX118_NET_MONEY;
         assertEquals( fix118NetMoney.getName(), "NET_MONEY");
-        assertEquals( fix118NetMoney.getNumber(), 118);
+        assertEquals( fix118NetMoney.getID(), "118");
         assertEquals( fix118NetMoney.getDescription(), "NetMoney");
     }
     @Test
     void Tag0118Test() {
-        FIXType tag118NetMoney = FIXType.FIX118_NET_MONEY;
-        assertEquals( tag118NetMoney.getName(), "NET_MONEY");
-        assertEquals( tag118NetMoney.getNumber(), 118);
-        assertEquals( tag118NetMoney.getDescription(), "NetMoney");
+        Tag118NetMoney tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0118Test()");
     }
 }

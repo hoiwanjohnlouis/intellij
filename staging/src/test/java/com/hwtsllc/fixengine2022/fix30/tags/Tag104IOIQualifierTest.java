@@ -39,25 +39,16 @@ class Tag104IOIQualifierTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0104Test() {
         FIXType fix104IOIQualifier = FIXType.FIX104_IOI_QUALIFIER;
-        assertEquals( fix104IOIQualifier.getName(), "IOI_QUALIFIER");
-        assertEquals( fix104IOIQualifier.getNumber(), 104);
-        assertEquals( fix104IOIQualifier.getDescription(), "IOIQualifier");
+        assertEquals("IOI_QUALIFIER", fix104IOIQualifier.getName());
+        assertEquals("104", fix104IOIQualifier.getID());
+        assertEquals("IOIQualifier", fix104IOIQualifier.getDescription());
     }
     @Test
     void Tag0104Test() {
-        Tag104IOIQualifier tag104IOIQualifier;
+        Tag104IOIQualifier tagData;
     //' = new Tag104IOIQualifier(Enum104IOIQualifier.values());
-//        assertEquals( "IOI_QUALIFIER", tag104IOIQualifier.getFIXName());
-//        assertEquals( 104, tag104IOIQualifier.getFIXNumber());
-//        assertEquals( "IOIQualifier", tag104IOIQualifier.getFIXDescription());
         logger.info(WHERE_AM_I + ":Successful Tag0104Test()");
     }
 }

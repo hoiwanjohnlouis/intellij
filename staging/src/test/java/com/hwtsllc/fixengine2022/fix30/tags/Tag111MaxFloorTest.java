@@ -39,23 +39,15 @@ class Tag111MaxFloorTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    @Test
     void FIX0111Test() {
         FIXType fix111MaxFloor = FIXType.FIX111_MAX_FLOOR;
-        assertEquals( fix111MaxFloor.getName(), "MAX_FLOOR");
-        assertEquals( fix111MaxFloor.getNumber(), 111);
-        assertEquals( fix111MaxFloor.getDescription(), "MaxFloor");
+        assertEquals( "MAX_FLOOR", fix111MaxFloor.getName());
+        assertEquals( "111", fix111MaxFloor.getID());
+        assertEquals( "MaxFloor", fix111MaxFloor.getDescription());
     }
     @Test
     void Tag0111Test() {
-        FIXType tag111MaxFloor = FIXType.FIX111_MAX_FLOOR;
-        assertEquals( tag111MaxFloor.getName(), "MAX_FLOOR");
-        assertEquals( tag111MaxFloor.getNumber(), 111);
-        assertEquals( tag111MaxFloor.getDescription(), "MaxFloor");
+        Tag111MaxFloor tagData;
         logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

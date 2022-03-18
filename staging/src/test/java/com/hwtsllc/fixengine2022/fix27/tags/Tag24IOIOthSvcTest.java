@@ -42,10 +42,10 @@ class Tag24IOIOthSvcTest {
     void FIX0024Test() {
         FIXType fix24IOIOthSvc = FIXType.FIX24_IOI_OTH_SVC;
         assertEquals( "IOI_OTH_SVC", fix24IOIOthSvc.getName());
-        assertEquals( 24, fix24IOIOthSvc.getNumber());
+        assertEquals( "24", fix24IOIOthSvc.getID());
         assertEquals( "IOIOthSvc (no longer used)", fix24IOIOthSvc.getDescription());
         assertNotEquals( "IOI_OTH_SVC IOI_OTH_SVC", fix24IOIOthSvc.getName());
-        assertNotEquals( 2424, fix24IOIOthSvc.getNumber());
+        assertNotEquals( "2424", fix24IOIOthSvc.getID());
         assertNotEquals( "123 IOIOthSvc (no longer used)", fix24IOIOthSvc.getDescription());
     }
     @Test

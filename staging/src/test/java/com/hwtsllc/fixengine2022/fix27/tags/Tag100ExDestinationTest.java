@@ -39,31 +39,18 @@ class Tag100ExDestinationTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0100Test() {
         FIXType fix100ExDestination = FIXType.FIX100_EX_DESTINATION;
         assertEquals( fix100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( fix100ExDestination.getNumber(), 100);
+        assertEquals( fix100ExDestination.getID(), "100");
         assertEquals( fix100ExDestination.getDescription(), "ExDestination");
         assertNotEquals( fix100ExDestination.getName(), "Not My EX_DESTINATION");
-        assertNotEquals( fix100ExDestination.getNumber(), 2);
+        assertNotEquals( fix100ExDestination.getID(), "2");
         assertNotEquals( fix100ExDestination.getDescription(), "123 Account");
     }
     @Test
     void Tag0100Test() {
-        Tag100ExDestination tag100ExDestination;
-        //= new Tag100ExDestination();
-//        assertEquals( tag100ExDestination.getFIXName(), "EX_DESTINATION");
-//        assertEquals( tag100ExDestination.getFIXNumber(), 100);
-//        assertEquals( tag100ExDestination.getFIXDescription(), "ExDestination");
-//        assertNotEquals( tag100ExDestination.getFIXName(), "Not My EX_DESTINATION");
-//        assertNotEquals( tag100ExDestination.getFIXNumber(), 2);
-//        assertNotEquals( tag100ExDestination.getFIXDescription(), "123 Account");
-        logger.info(WHERE_AM_I + ":Successful Tag0001Test()");
+        Tag100ExDestination tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0100Test()");
     }
 }

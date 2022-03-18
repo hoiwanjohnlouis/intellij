@@ -17,11 +17,13 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag102CxlRejReason;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag553UsernameTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -49,19 +51,20 @@ class Tag553UsernameTest {
     void FIX0553Test() {
         FIXType fix553Username = FIXType.FIX553_USERNAME;
         assertEquals( "FIX553_USERNAME", fix553Username.getEnumName());
-        assertEquals( 553, fix553Username.getNumber());
+        assertEquals( "553", fix553Username.getID());
         assertEquals( "USERNAME", fix553Username.getName());
         assertEquals( "Username", fix553Username.getDescription());
         assertNotEquals( "Not My FIX553_USERNAME", fix553Username.getEnumName());
-        assertNotEquals( 9999, fix553Username.getNumber());
+        assertNotEquals( "9999", fix553Username.getID());
         assertNotEquals( "Not My USERNAME", fix553Username.getName());
         assertNotEquals( "Not My Username", fix553Username.getDescription());
     }
     @Test
     void Tag0553Test() {
-        Tag553Username tag553Username = new Tag553Username("JohnWick");
-        assertEquals( "JohnWick", tag553Username.getDataValue());
-        assertNotEquals( "goodbye JohnWick", tag553Username.getDataValue());
+        Tag553Username tagData = new Tag553Username("JohnWick");
+        assertEquals( "JohnWick", tagData.getDataValue());
+        assertNotEquals( "goodbye JohnWick", tagData.getDataValue());
+        logger.info("Successful Tag0553Test()");
     }
 
 }

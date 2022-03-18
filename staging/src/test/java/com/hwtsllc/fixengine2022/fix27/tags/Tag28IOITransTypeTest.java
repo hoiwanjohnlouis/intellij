@@ -41,10 +41,10 @@ class Tag28IOITransTypeTest {
     void FIX0028Test() {
         FIXType fix28IOITransType = FIXType.FIX28_IOI_TRANS_TYPE;
         assertEquals( "IOI_TRANS_TYPE", fix28IOITransType.getName());
-        assertEquals( 28, fix28IOITransType.getNumber());
+        assertEquals( "28", fix28IOITransType.getID());
         assertEquals( "IOITransType", fix28IOITransType.getDescription());
         assertNotEquals( "IOI_TRANS_TYPE IOI_TRANS_TYPE", fix28IOITransType.getName());
-        assertNotEquals( 2020, fix28IOITransType.getNumber());
+        assertNotEquals( "2020", fix28IOITransType.getID());
         assertNotEquals( "123 IOITransType", fix28IOITransType.getDescription());
     }
     @Test

@@ -41,10 +41,10 @@ class Tag39OrdStatusTest {
     void FIX0039Test() {
         FIXType fix39OrdStatus = FIXType.FIX39_ORD_STATUS;
         assertEquals( "ORD_STATUS", fix39OrdStatus.getName());
-        assertEquals( 39, fix39OrdStatus.getNumber());
+        assertEquals( "39", fix39OrdStatus.getID());
         assertEquals( "OrdStatus", fix39OrdStatus.getDescription());
         assertNotEquals( "ORD_STATUS ORD_STATUS", fix39OrdStatus.getName());
-        assertNotEquals( 312, fix39OrdStatus.getNumber());
+        assertNotEquals( "312", fix39OrdStatus.getID());
         assertNotEquals( "OrdStatus OrdStatus", fix39OrdStatus.getDescription());
     }
     @Test

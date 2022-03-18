@@ -39,23 +39,15 @@ class Tag112TestReqIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    @Test
     void FIX0112Test() {
         FIXType fix112TestReqID = FIXType.FIX112_TEST_REQ_ID;
-        assertEquals( fix112TestReqID.getName(), "TEST_REQ_ID");
-        assertEquals( fix112TestReqID.getNumber(), 112);
-        assertEquals( fix112TestReqID.getDescription(), "TestReqID");
+        assertEquals( "TEST_REQ_ID", fix112TestReqID.getName());
+        assertEquals( "112", fix112TestReqID.getID());
+        assertEquals( "TestReqID", fix112TestReqID.getDescription());
     }
     @Test
     void Tag0112Test() {
-        FIXType tag112TestReqID = FIXType.FIX112_TEST_REQ_ID;
-        assertEquals( tag112TestReqID.getName(), "TEST_REQ_ID");
-        assertEquals( tag112TestReqID.getNumber(), 112);
-        assertEquals( tag112TestReqID.getDescription(), "TestReqID");
+        Tag112TestReqID tagData;
         logger.info(WHERE_AM_I + ":Successful Tag0112Test()");
     }
 }

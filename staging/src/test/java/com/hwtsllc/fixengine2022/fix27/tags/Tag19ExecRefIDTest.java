@@ -41,10 +41,10 @@ class Tag19ExecRefIDTest {
     void FIX0019Test() {
         FIXType fix19ExecRefID = FIXType.FIX19_EXEC_REF_ID;
         assertEquals( "EXEC_REF_ID", fix19ExecRefID.getName());
-        assertEquals( 19, fix19ExecRefID.getNumber());
+        assertEquals( "19", fix19ExecRefID.getID());
         assertEquals( "ExecRefID", fix19ExecRefID.getDescription());
         assertNotEquals( "EXEC_REF_ID EXEC_REF_ID", fix19ExecRefID.getName());
-        assertNotEquals( 111, fix19ExecRefID.getNumber());
+        assertNotEquals( "111", fix19ExecRefID.getID());
         assertNotEquals( "123 ExecRefID", fix19ExecRefID.getDescription());
     }
     @Test

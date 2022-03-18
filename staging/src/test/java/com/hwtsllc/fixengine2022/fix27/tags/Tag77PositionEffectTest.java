@@ -47,12 +47,11 @@ class Tag77PositionEffectTest {
     @Test
     void FIX0077Test() {
         FIXType fix77OpenClose = FIXType.FIX77_OPEN_CLOSE;
+        assertEquals( "OPEN_CLOSE", fix77OpenClose.getName());
+        assertEquals( "77", fix77OpenClose.getID());
+        assertEquals( "OpenClose", fix77OpenClose.getDescription());
     }
     @Test
     void Tag0077Test() {
-        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( tag100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( tag100ExDestination.getNumber(), 100);
-        assertEquals( tag100ExDestination.getDescription(), "ExDestination");
     }
 }

@@ -39,23 +39,15 @@ class Tag114LocateReqdTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    @Test
     void FIX0114Test() {
         FIXType fix114LocateReqd = FIXType.FIX114_LOCATE_REQD;
-        assertEquals( fix114LocateReqd.getName(), "LOCATE_REQD");
-        assertEquals( fix114LocateReqd.getNumber(), 114);
-        assertEquals( fix114LocateReqd.getDescription(), "LocateReqd");
+        assertEquals( "LOCATE_REQD", fix114LocateReqd.getName());
+        assertEquals( "114", fix114LocateReqd.getID());
+        assertEquals( "LocateReqd", fix114LocateReqd.getDescription());
     }
     @Test
     void Tag0114Test() {
-        FIXType tag114LocateReqd = FIXType.FIX114_LOCATE_REQD;
-        assertEquals( tag114LocateReqd.getName(), "LOCATE_REQD");
-        assertEquals( tag114LocateReqd.getNumber(), 114);
-        assertEquals( tag114LocateReqd.getDescription(), "LocateReqd");
-        logger.info(WHERE_AM_I + ":Successful Test()");
+        Tag114LocateReqd tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0114Test()");
     }
 }

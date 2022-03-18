@@ -42,10 +42,10 @@ class Tag34MsgSeqNumTest {
     void FIX0034Test() {
         FIXType fix34MsgSeqNum = FIXType.FIX34_MSG_SEQ_NUM;
         assertEquals( "MSG_SEQ_NUM", fix34MsgSeqNum.getName());
-        assertEquals( 34, fix34MsgSeqNum.getNumber());
+        assertEquals( "34", fix34MsgSeqNum.getID());
         assertEquals( "MsgSeqNum", fix34MsgSeqNum.getDescription());
         assertNotEquals( "MSG_SEQ_NUM MSG_SEQ_NUM", fix34MsgSeqNum.getName());
-        assertNotEquals( 312, fix34MsgSeqNum.getNumber());
+        assertNotEquals( "312", fix34MsgSeqNum.getID());
         assertNotEquals( "MsgSeqNum MsgSeqNum", fix34MsgSeqNum.getDescription());
     }
     @Test

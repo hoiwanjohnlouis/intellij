@@ -42,18 +42,18 @@ class Tag47Rule80ATest {
     void FIX0047Test() {
         FIXType fix47Rule80A = FIXType.FIX47_RULE_80_A;
         assertEquals( "RULE_80_A", fix47Rule80A.getName());
-        assertEquals( 47, fix47Rule80A.getNumber());
+        assertEquals( "47", fix47Rule80A.getID());
         assertEquals( "Rule80A (no longer used)", fix47Rule80A.getDescription());
         assertNotEquals( "RULE_80_A RULE_80_A", fix47Rule80A.getName());
-        assertNotEquals( 3123, fix47Rule80A.getNumber());
+        assertNotEquals( "3123", fix47Rule80A.getID());
         assertNotEquals( "Rule80A (no longer used) Rule80A (no longer used)", fix47Rule80A.getDescription());
     }
     @Test
     void Tag0047Test() {
-        Tag47Rule80A tag47Rule80A;
+        Tag47Rule80A tagData;
                 // = new Tag47Rule80A(FIXType.FIX47_RULE_80_A,"N");
 //        assertEquals( "N", tag47Rule80A.getDataValue());
 //        assertNotEquals( "A11", tag47Rule80A.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0047Test()");
+        logger.info("Successful Tag0047Test()");
     }
 }

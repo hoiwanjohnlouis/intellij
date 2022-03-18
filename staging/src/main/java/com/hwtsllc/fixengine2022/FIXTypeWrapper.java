@@ -29,7 +29,7 @@ public abstract class FIXTypeWrapper implements LogStringVerbose {
         return fixValue.getEnumName();
     }
     public String getAction() {
-        return String.valueOf(fixValue.getNumber());
+        return String.valueOf(fixValue.getID());
     }
     public String getName() {
         return fixValue.getName();

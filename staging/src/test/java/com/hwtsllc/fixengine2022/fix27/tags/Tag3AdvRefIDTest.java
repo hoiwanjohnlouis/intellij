@@ -39,11 +39,11 @@ class Tag3AdvRefIDTest {
     void FIX0003Test() {
         FIXType fix3AdvRefID = FIXType.FIX3_ADV_REF_ID;
         assertEquals( "FIX3_ADV_REF_ID", fix3AdvRefID.getEnumName());
-        assertEquals( 3, fix3AdvRefID.getNumber());
+        assertEquals( "3", fix3AdvRefID.getID());
         assertEquals( "ADV_REF_ID", fix3AdvRefID.getName());
         assertEquals( "AdvRefId", fix3AdvRefID.getDescription());
         assertNotEquals( "Not My FIX3_ADV_REF_ID", fix3AdvRefID.getEnumName());
-        assertNotEquals( 9999, fix3AdvRefID.getNumber());
+        assertNotEquals( "9999", fix3AdvRefID.getID());
         assertNotEquals( "Not My ADV_REF_ID", fix3AdvRefID.getName());
         assertNotEquals( "Not My AdvRefId", fix3AdvRefID.getDescription());
     }

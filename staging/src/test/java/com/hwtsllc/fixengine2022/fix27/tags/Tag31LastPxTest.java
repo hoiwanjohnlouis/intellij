@@ -42,10 +42,10 @@ class Tag31LastPxTest {
     void FIX0031Test() {
         FIXType fix31LastPx = FIXType.FIX31_LAST_PX;
         assertEquals( "LAST_PX", fix31LastPx.getName());
-        assertEquals( 31, fix31LastPx.getNumber());
+        assertEquals( "31", fix31LastPx.getID());
         assertEquals( "LastPx", fix31LastPx.getDescription());
         assertNotEquals( "LAST_PX LAST_PX", fix31LastPx.getName());
-        assertNotEquals( 312, fix31LastPx.getNumber());
+        assertNotEquals( "312", fix31LastPx.getID());
         assertNotEquals( "LastPx LastPx", fix31LastPx.getDescription());
     }
     @Test

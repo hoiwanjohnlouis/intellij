@@ -41,10 +41,10 @@ class Tag18ExecInstTest {
     void FIX0018Test() {
         FIXType fix18ExecInst = FIXType.FIX18_EXEC_INST;
         assertEquals( "EXEC_INST", fix18ExecInst.getName());
-        assertEquals( 18, fix18ExecInst.getNumber());
+        assertEquals( "18", fix18ExecInst.getID());
         assertEquals( "ExecInst", fix18ExecInst.getDescription());
         assertNotEquals( "EXEC_INST EXEC_INST", fix18ExecInst.getName());
-        assertNotEquals( 1818, fix18ExecInst.getNumber());
+        assertNotEquals( "1818", fix18ExecInst.getID());
         assertNotEquals( "123 ExecInst", fix18ExecInst.getDescription());
     }
     @Test

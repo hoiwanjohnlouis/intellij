@@ -41,10 +41,10 @@ class Tag36NewSeqNoTest {
     void FIX0036Test() {
         FIXType fix36NewSeqNo = FIXType.FIX36_NEW_SEQ_NO;
         assertEquals( "NEW_SEQ_NO", fix36NewSeqNo.getName());
-        assertEquals( 36, fix36NewSeqNo.getNumber());
+        assertEquals( "36", fix36NewSeqNo.getID());
         assertEquals( "NewSeqNo", fix36NewSeqNo.getDescription());
         assertNotEquals( "NEW_SEQ_NO NEW_SEQ_NO", fix36NewSeqNo.getName());
-        assertNotEquals( 312, fix36NewSeqNo.getNumber());
+        assertNotEquals( 312, fix36NewSeqNo.getID());
         assertNotEquals( "NewSeqNo NewSeqNo", fix36NewSeqNo.getDescription());
     }
     @Test

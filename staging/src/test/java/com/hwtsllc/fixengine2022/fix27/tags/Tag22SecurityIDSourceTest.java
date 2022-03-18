@@ -41,10 +41,10 @@ class Tag22SecurityIDSourceTest {
     void FIX0022Test() {
         FIXType fix22IDSource = FIXType.FIX22_SECURITY_ID_SOURCE;
         assertEquals( "SECURITY_ID_SOURCE", fix22IDSource.getName());
-        assertEquals( 22, fix22IDSource.getNumber());
+        assertEquals( "22", fix22IDSource.getID());
         assertEquals( "SecurityIDSource", fix22IDSource.getDescription());
         assertNotEquals( "SECURITY_ID_SOURCE SECURITY_ID_SOURCE", fix22IDSource.getName());
-        assertNotEquals( 2222, fix22IDSource.getNumber());
+        assertNotEquals( "2222", fix22IDSource.getID());
         assertNotEquals( "SecurityIDSource SecurityIDSource", fix22IDSource.getDescription());
     }
     @Test

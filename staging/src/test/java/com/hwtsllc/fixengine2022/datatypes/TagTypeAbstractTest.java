@@ -23,7 +23,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class TagTypeAbstractTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
@@ -41,26 +42,18 @@ class TagTypeAbstractTest {
     void FIX0058Test() {
         FIXType fix58Text = FIXType.FIX58_TEXT;
         assertEquals( "FIX58_TEXT", fix58Text.getEnumName());
-        assertEquals( 58, fix58Text.getNumber());
+        assertEquals( "58", fix58Text.getID());
         assertEquals( "TEXT", fix58Text.getName());
         assertEquals( "Text", fix58Text.getDescription());
         assertNotEquals( "FIX58_TEXT FIX58_TEXT", fix58Text.getEnumName());
-        assertNotEquals( 100, fix58Text.getNumber());
+        assertNotEquals( "100", fix58Text.getID());
         assertNotEquals( "TEXT TEXT", fix58Text.getName());
         assertNotEquals( "123 TEXT", fix58Text.getDescription());
     }
     @Test
     void Tag0058Test() {
-        Tag58Text tag58Text = new Tag58Text("hello from main routine");
-        assertEquals( "FIX58_TEXT", tag58Text.getEnumName());
-        assertEquals( 58, tag58Text.getNumber());
-        assertEquals( "TEXT", tag58Text.getName());
-        assertEquals( "Text", tag58Text.getDescription());
-        assertEquals( "hello from main routine", tag58Text.getDataValue());
-        assertNotEquals( "FIX58_TEXT FIX58_TEXT", tag58Text.getEnumName());
-        assertNotEquals( 100, tag58Text.getNumber());
-        assertNotEquals( "TEXT TEXT", tag58Text.getName());
-        assertNotEquals( "123 TEXT", tag58Text.getDescription());
-        assertNotEquals( "goodbye from main routine", tag58Text.getDataValue());
+        Tag58Text tagData = new Tag58Text("hello from main routine");
+        assertEquals( "hello from main routine", tagData.getDataValue());
+        logger.info("Successful Tag0058Test()");
     }
 }

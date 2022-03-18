@@ -41,10 +41,10 @@ class Tag25IOIQltyIndTest {
     void FIX0025Test() {
         FIXType fix25IOIQltyInd = FIXType.FIX25_IOI_QLTY_IND;
         assertEquals( "IOI_QLTY_IND", fix25IOIQltyInd.getName());
-        assertEquals( 25, fix25IOIQltyInd.getNumber());
+        assertEquals( "25", fix25IOIQltyInd.getID());
         assertEquals( "IOIQltyInd", fix25IOIQltyInd.getDescription());
         assertNotEquals( "IOI_QLTY_IND IOI_QLTY_IND", fix25IOIQltyInd.getName());
-        assertNotEquals( 2525, fix25IOIQltyInd.getNumber());
+        assertNotEquals( "2525", fix25IOIQltyInd.getID());
         assertNotEquals( "123 IOIQltyInd", fix25IOIQltyInd.getDescription());
     }
     @Test

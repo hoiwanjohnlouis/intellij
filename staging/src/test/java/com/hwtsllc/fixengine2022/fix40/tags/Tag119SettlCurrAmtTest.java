@@ -39,23 +39,15 @@ class Tag119SettlCurrAmtTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0119Test() {
         FIXType fix119SettlCurrAmt = FIXType.FIX119_SETTL_CURR_AMT;
         assertEquals( fix119SettlCurrAmt.getName(), "SETTL_CURR_AMT");
-        assertEquals( fix119SettlCurrAmt.getNumber(), 119);
+        assertEquals( fix119SettlCurrAmt.getID(), "119");
         assertEquals( fix119SettlCurrAmt.getDescription(), "SettlCurrAmt");
     }
     @Test
     void Tag0119Test() {
-        FIXType tag119SettlCurrAmt = FIXType.FIX119_SETTL_CURR_AMT;
-        assertEquals( tag119SettlCurrAmt.getName(), "SETTL_CURR_AMT");
-        assertEquals( tag119SettlCurrAmt.getNumber(), 119);
-        assertEquals( tag119SettlCurrAmt.getDescription(), "SettlCurrAmt");
+        Tag119SettlCurrAmt tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0119Test()");
     }
 }

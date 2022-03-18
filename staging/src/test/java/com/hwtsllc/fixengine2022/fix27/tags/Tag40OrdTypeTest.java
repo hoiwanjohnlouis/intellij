@@ -41,17 +41,17 @@ class Tag40OrdTypeTest {
     void FIX0040Test() {
         FIXType fix40OrdType = FIXType.FIX40_ORD_TYPE;
         assertEquals( "ORD_TYPE", fix40OrdType.getName());
-        assertEquals( 40, fix40OrdType.getNumber());
+        assertEquals( "40", fix40OrdType.getID());
         assertEquals( "OrdType", fix40OrdType.getDescription());
         assertNotEquals( "ORD_TYPE ORD_TYPE", fix40OrdType.getName());
-        assertNotEquals( 3123, fix40OrdType.getNumber());
+        assertNotEquals( "3123", fix40OrdType.getID());
         assertNotEquals( "OrdType OrdType", fix40OrdType.getDescription());
     }
     @Test
     void Tag0040Test() {
-        Tag40OrdType tag40OrdType;
+        Tag40OrdType tagData;
 //        assertEquals( "N", tag40OrdType.getDataValue());
 //        assertNotEquals( "A11", tag40OrdType.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0040Test()");
+        logger.info("Successful Tag0040Test()");
     }
 }

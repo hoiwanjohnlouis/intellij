@@ -43,10 +43,10 @@ class Tag5Enum5AdvTransTypeTest {
     void FIX0005Test() {
         FIXType fix5AdvTransType = FIXType.FIX5_ADV_TRANS_TYPE;
         assertEquals( "ADV_TRANS_TYPE", fix5AdvTransType.getName());
-        assertEquals( 5, fix5AdvTransType.getNumber());
+        assertEquals( "5", fix5AdvTransType.getID());
         assertEquals( "Enum5AdvTransType", fix5AdvTransType.getDescription());
         assertNotEquals( "ADV-TRANS-TYPE", fix5AdvTransType.getName());
-        assertNotEquals( 55, fix5AdvTransType.getNumber());
+        assertNotEquals( "55", fix5AdvTransType.getID());
         assertNotEquals( "Adv Trans Type", fix5AdvTransType.getDescription());
     }
     @Test

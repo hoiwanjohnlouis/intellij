@@ -38,23 +38,16 @@ class Tag107SecurityDescTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0107Test() {
         FIXType fix107SecurityDesc = FIXType.FIX107_SECURITY_DESC;
-        assertEquals( fix107SecurityDesc.getName(), "SECURITY_DESC");
-        assertEquals( fix107SecurityDesc.getNumber(), 107);
-        assertEquals( fix107SecurityDesc.getDescription(), "SecurityDesc");
+        assertEquals( "SECURITY_DESC", fix107SecurityDesc.getName());
+        assertEquals( "107", fix107SecurityDesc.getID());
+        assertEquals( "SecurityDesc", fix107SecurityDesc.getDescription());
     }
     @Test
     void Tag0107Test() {
-        Tag107SecurityDesc tag107SecurityDesc = new Tag107SecurityDesc("International Widgets, Inc.");
-        assertEquals( tag107SecurityDesc.getName(), "SECURITY_DESC");
-        assertEquals( tag107SecurityDesc.getNumber(), 107);
-        assertEquals( tag107SecurityDesc.getDescription(), "SecurityDesc");
+        Tag107SecurityDesc tagData = new Tag107SecurityDesc("International Widgets, Inc.");
+        assertEquals("International Widgets, Inc.", tagData.getDataValue() );
+        logger.info(WHERE_AM_I + ":Successful Tag0107Test()");
     }
 }

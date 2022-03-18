@@ -39,21 +39,15 @@ class Tag134BidSizeTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0134Test() {
         FIXType fix134BidSize = FIXType.FIX134_BID_SIZE;
         assertEquals( fix134BidSize.getName(), "BID_SIZE");
-        assertEquals( fix134BidSize.getNumber(), 134);
+        assertEquals( fix134BidSize.getID(), "134");
         assertEquals( fix134BidSize.getDescription(), "BidSize");
     }
     @Test
     void Tag0134Test() {
-        FIXType tag134BidSize = FIXType.FIX134_BID_SIZE;
-        assertEquals( tag134BidSize.getName(), "BID_SIZE");
-        assertEquals( tag134BidSize.getNumber(), 134);
-        assertEquals( tag134BidSize.getDescription(), "BidSize");
+        Tag134BidSize tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0134Test()");
     }
 }

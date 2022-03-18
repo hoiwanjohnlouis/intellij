@@ -38,23 +38,16 @@ class Tag106IssuerTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0106Test() {
         FIXType fix106Issuer = FIXType.FIX106_ISSUER;
-        assertEquals( fix106Issuer.getName(), "ISSUER");
-        assertEquals( fix106Issuer.getNumber(), 106);
-        assertEquals( fix106Issuer.getDescription(), "Issuer");
+        assertEquals( "ISSUER", fix106Issuer.getName());
+        assertEquals( "106", fix106Issuer.getID());
+        assertEquals( "Issuer", fix106Issuer.getDescription());
     }
     @Test
     void Tag0106Test() {
-        Tag106Issuer tag106Issuer = new Tag106Issuer("show me the money");
-        assertEquals( tag106Issuer.getName(), "ISSUER");
-        assertEquals( tag106Issuer.getNumber(), 106);
-        assertEquals( tag106Issuer.getDescription(), "Issuer");
+        Tag106Issuer tagData = new Tag106Issuer("show me the money");
+        assertEquals("show me the money", tagData.getDataValue() );
+        logger.info(WHERE_AM_I + ":Successful Tag0106Test()");
     }
 }

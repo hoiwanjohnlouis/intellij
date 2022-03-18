@@ -16,23 +16,25 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  * FIXType enum defines all the Financial Exchange Protocol's (FIX) fields.  
  * It consists of 3 fields.
  *
- * int     number       the is ID of the field as defined by the FIX protocol document, no duplicates
+ * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
+ *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String
  * String  name         short NAME of the field as defined by the FIX protocol document, no duplicates
  * String  description  a short blurb which describes what information the field contains
  */
-public enum FIXType implements LogStringVerbose {
+public enum FIXType implements EnumAccessors, LogStringVerbose {
 
     // 1-100
 
     /*
-     * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
-     *  Tags: 1-140
+     * Start of FIX2.7 as defined by the FIX Protocol Specification 2.7
+     *  Tags: 1-103
      */
     FIX1_ACCOUNT(1, "ACCOUNT", "Account"),
     FIX2_ADV_ID(2, "ADV_ID", "AdvId"),
@@ -149,6 +151,17 @@ public enum FIXType implements LogStringVerbose {
 
     FIX102_CXL_REJ_REASON(102, "CXL_REJ_REASON", "CxlRejReason"),
     FIX103_ORD_REJ_REASON(103, "ORD_REJ_REASON", "OrdRejReason"),
+    /*
+     *
+     * End of FIX2.7
+     *
+     */
+
+
+    /*
+     * Start of FIX3.0 as defined by the FIX Protocol Specification 3.0
+     *  Tags: 104-113
+     */
     FIX104_IOI_QUALIFIER(104, "IOI_QUALIFIER", "IOIQualifier"),
     FIX105_WAVE_NO(105, "WAVE_NO", "WaveNo"),
     FIX106_ISSUER(106, "ISSUER", "Issuer"),
@@ -160,6 +173,17 @@ public enum FIXType implements LogStringVerbose {
     FIX111_MAX_FLOOR(111, "MAX_FLOOR", "MaxFloor"),
     FIX112_TEST_REQ_ID(112, "TEST_REQ_ID", "TestReqID"),
     FIX113_REPORT_TO_EXCH(113, "REPORT_TO_EXCH", "ReportToExch"),
+    /*
+     *
+     * End of FIX3.0
+     *
+     */
+
+
+    /*
+     * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
+     *  Tags: 114-140
+     */
     FIX114_LOCATE_REQD(114, "LOCATE_REQD", "LocateReqd"),
     FIX115_ON_BEHALF_OF_COMP_ID(115, "ON_BEHALF_OF_COMP_ID", "OnBehalfOfCompID"),
     FIX116_ON_BEHALF_OF_SUB_ID(116, "ON_BEHALF_OF_SUB_ID", "OnBehalfOfSubID"),
@@ -1368,26 +1392,50 @@ public enum FIXType implements LogStringVerbose {
     ///////////////////////////////////////////////////////////////////////////
 
 
-    private final int fixNumber;
-    private final String fixName;
-    private final String fixDescription;
+    private final String id;
+    private final String name;
+    private final String description;
 
-    FIXType(final int fixNumber, final String fixName, final String fixDescription) {
-        this.fixNumber = fixNumber;
-        this.fixName = fixName;
-        this.fixDescription = fixDescription;
+    FIXType(final int id, final String name, final String description) {
+        /*
+         *  Even though fixNumber is an *int*, this app treats it as a String,
+         *  so convert the field at load time instead of changing the lines.
+         *
+         *  todo: convert all definition lines to be String instead of int.
+         *
+         */
+        this.id = String.valueOf(id);
+        this.name = name;
+        this.description = description;
     }
+
+    /**
+     * standard wrapper to retrieve the specific enum name
+     */
+    @Override
     public String getEnumName() {
         return this.name();
     }
-    public int getNumber() {
-        return fixNumber;
+    /**
+     * standard wrapper to retrieve the specific ID code for this enum. eg: the first field
+     */
+    @Override
+    public String getID() {
+        return id;
     }
+    /**
+     * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
+     */
+    @Override
     public String getName() {
-        return fixName;
+        return name;
     }
+    /**
+     * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
+     */
+    @Override
     public String getDescription() {
-        return fixDescription;
+        return description;
     }
 
     @Override
@@ -1397,7 +1445,7 @@ public enum FIXType implements LogStringVerbose {
                 .concat(getEnumName())
                 .concat("]")
                 .concat("\n\tFIXNumber[")
-                .concat(String.valueOf( getNumber() ))
+                .concat(getID())
                 .concat("]")
                 .concat("\n\tFIXName[")
                 .concat(getName())
@@ -1410,7 +1458,7 @@ public enum FIXType implements LogStringVerbose {
     public String toString() {
         return getEnumName()
                 .concat("=[")
-                .concat(String.valueOf( getNumber() ))
+                .concat(getID())
                 .concat(",")
                 .concat(getName())
                 .concat(",")

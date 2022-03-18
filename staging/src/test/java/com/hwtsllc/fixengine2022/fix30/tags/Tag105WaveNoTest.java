@@ -39,21 +39,16 @@ class Tag105WaveNoTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0105Test() {
         FIXType fix105WaveNo = FIXType.FIX105_WAVE_NO;
         assertEquals( "WAVE_NO", fix105WaveNo.getName());
-        assertEquals( 105, fix105WaveNo.getNumber());
+        assertEquals( "105", fix105WaveNo.getID());
         assertEquals( "WaveNo", fix105WaveNo.getDescription());
     }
     @Test
     void Tag0105Test() {
-        Tag105WaveNo tag105WaveNo = new Tag105WaveNo("interested in Mahlers 4th Symphony");
+        Tag105WaveNo tagData = new Tag105WaveNo("interested in Mahlers 4th Symphony");
+        assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
         logger.info(WHERE_AM_I + ":Successful Tag0105Test()");
     }
 }

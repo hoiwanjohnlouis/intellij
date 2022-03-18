@@ -41,18 +41,18 @@ class Tag45RefSeqNumTest {
     void FIX0045Test() {
         FIXType fix45RefSeqNum = FIXType.FIX45_REF_SEQ_NUM;
         assertEquals( "REF_SEQ_NUM", fix45RefSeqNum.getName());
-        assertEquals( 45, fix45RefSeqNum.getNumber());
+        assertEquals( "45", fix45RefSeqNum.getID());
         assertEquals( "RefSeqNum", fix45RefSeqNum.getDescription());
         assertNotEquals( "REF_SEQ_NUM REF_SEQ_NUM", fix45RefSeqNum.getName());
-        assertNotEquals( 3123, fix45RefSeqNum.getNumber());
+        assertNotEquals( "3123", fix45RefSeqNum.getID());
         assertNotEquals( "RefSeqNum RefSeqNum", fix45RefSeqNum.getDescription());
     }
     @Test
     void Tag0045Test() {
-        Tag45RefSeqNum tag45RefSeqNum;
+        Tag45RefSeqNum tagData;
         //= new Tag45RefSeqNum();
 //        assertEquals( "6789", tag45RefSeqNum.getDataValue());
 //        assertNotEquals( "11", tag45RefSeqNum.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0045Test()");
+        logger.info("Successful Tag0045Test()");
     }
 }

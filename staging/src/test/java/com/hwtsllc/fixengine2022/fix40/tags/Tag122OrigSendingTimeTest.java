@@ -39,23 +39,15 @@ class Tag122OrigSendingTimeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0122Test() {
         FIXType fix122OrigSendingTime = FIXType.FIX122_ORIG_SENDING_TIME;
         assertEquals( fix122OrigSendingTime.getName(), "ORIG_SENDING_TIME");
-        assertEquals( fix122OrigSendingTime.getNumber(), 122);
+        assertEquals( fix122OrigSendingTime.getID(), "122");
         assertEquals( fix122OrigSendingTime.getDescription(), "OrigSendingTime");
     }
     @Test
     void Tag0122Test() {
-        FIXType tag122OrigSendingTime = FIXType.FIX122_ORIG_SENDING_TIME;
-        assertEquals( tag122OrigSendingTime.getName(), "ORIG_SENDING_TIME");
-        assertEquals( tag122OrigSendingTime.getNumber(), 122);
-        assertEquals( tag122OrigSendingTime.getDescription(), "OrigSendingTime");
+        Tag122OrigSendingTime tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0122Test()");
     }
 }

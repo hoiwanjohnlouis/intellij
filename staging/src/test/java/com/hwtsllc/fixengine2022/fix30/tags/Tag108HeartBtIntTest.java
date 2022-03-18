@@ -38,23 +38,16 @@ class Tag108HeartBtIntTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0108Test() {
         FIXType fix108HeartBtInt = FIXType.FIX108_HEART_BT_INT;
-        assertEquals( fix108HeartBtInt.getName(), "HEART_BT_INT");
-        assertEquals( fix108HeartBtInt.getNumber(), 108);
-        assertEquals( fix108HeartBtInt.getDescription(), "HeartBtInt");
+        assertEquals( "HEART_BT_INT", fix108HeartBtInt.getName());
+        assertEquals( "108", fix108HeartBtInt.getID());
+        assertEquals( "HeartBtInt", fix108HeartBtInt.getDescription());
     }
     @Test
     void Tag0108Test() {
-        Tag108HeartBtInt tag108HeartBtInt = new Tag108HeartBtInt("60");
-        assertEquals( tag108HeartBtInt.getName(), "HEART_BT_INT");
-        assertEquals( tag108HeartBtInt.getNumber(), 108);
-        assertEquals( tag108HeartBtInt.getDescription(), "HeartBtInt");
+        Tag108HeartBtInt tagData = new Tag108HeartBtInt("60");
+        assertEquals("60", tagData.getDataValue() );
+        logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

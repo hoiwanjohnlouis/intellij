@@ -41,17 +41,17 @@ class Tag42OrigTimeTest {
     void FIX0042Test() {
         FIXType fix42OrigTime = FIXType.FIX42_ORIG_TIME;
         assertEquals( "ORIG_TIME", fix42OrigTime.getName());
-        assertEquals( 42, fix42OrigTime.getNumber());
+        assertEquals( "42", fix42OrigTime.getID());
         assertEquals( "OrigTime", fix42OrigTime.getDescription());
         assertNotEquals( "ORIG_TIME ORIG_TIME", fix42OrigTime.getName());
-        assertNotEquals( 3123, fix42OrigTime.getNumber());
+        assertNotEquals( "3123", fix42OrigTime.getID());
         assertNotEquals( "OrigTime OrigTime", fix42OrigTime.getDescription());
     }
     @Test
     void Tag0042Test() {
-        Tag42OrigTime tag42OrigTime;
+        Tag42OrigTime tagData;
 //        assertEquals( "20220131", tag42OrigTime.getDataValue());
 //        assertNotEquals( "A11", tag42OrigTime.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0042Test()");
+        logger.info("Successful Tag0042Test()");
     }
 }

@@ -39,23 +39,15 @@ class Tag127DKReasonTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0127Test() {
         FIXType fix127DKReason = FIXType.FIX127_DK_REASON;
         assertEquals( fix127DKReason.getName(), "DK_REASON");
-        assertEquals( fix127DKReason.getNumber(), 127);
+        assertEquals( fix127DKReason.getID(), "127");
         assertEquals( fix127DKReason.getDescription(), "DKReason");
     }
     @Test
     void Tag0127Test() {
-        FIXType tag127DKReason = FIXType.FIX127_DK_REASON;
-        assertEquals( tag127DKReason.getName(), "DK_REASON");
-        assertEquals( tag127DKReason.getNumber(), 127);
-        assertEquals( tag127DKReason.getDescription(), "DKReason");
+        Tag127DKReason tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0127Test()");
     }
 }

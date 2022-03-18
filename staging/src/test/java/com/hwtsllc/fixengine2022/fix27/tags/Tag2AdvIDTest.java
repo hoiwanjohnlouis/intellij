@@ -42,10 +42,10 @@ class Tag2AdvIDTest {
     void FIX0002Test() {
         FIXType fix2AdvID = FIXType.FIX2_ADV_ID;
         assertEquals( "ADV_ID", fix2AdvID.getName());
-        assertEquals( 2, fix2AdvID.getNumber());
+        assertEquals( "2", fix2AdvID.getID());
         assertEquals( "AdvId", fix2AdvID.getDescription());
         assertNotEquals( "ADV ID", fix2AdvID.getName());
-        assertNotEquals( 22, fix2AdvID.getNumber());
+        assertNotEquals( "22", fix2AdvID.getID());
         assertNotEquals( "Adv Id", fix2AdvID.getDescription());
     }
     @Test

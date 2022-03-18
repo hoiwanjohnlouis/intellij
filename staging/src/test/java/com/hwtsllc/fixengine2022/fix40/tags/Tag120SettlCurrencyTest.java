@@ -39,23 +39,15 @@ class Tag120SettlCurrencyTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    @Test
     void FIX0120Test() {
         FIXType fix120SettlCurrency = FIXType.FIX120_SETTL_CURRENCY;
         assertEquals( fix120SettlCurrency.getName(), "SETTL_CURRENCY");
-        assertEquals( fix120SettlCurrency.getNumber(), 120);
+        assertEquals( fix120SettlCurrency.getID(), "120");
         assertEquals( fix120SettlCurrency.getDescription(), "SettlCurrency");
     }
     @Test
     void Tag0120Test() {
-        FIXType tag120SettlCurrency = FIXType.FIX120_SETTL_CURRENCY;
-        assertEquals( tag120SettlCurrency.getName(), "SETTL_CURRENCY");
-        assertEquals( tag120SettlCurrency.getNumber(), 120);
-        assertEquals( tag120SettlCurrency.getDescription(), "SettlCurrency");
-        logger.info(WHERE_AM_I + ":Successful Test()");
+        Tag120SettlCurrency tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0120Test()");
     }
 }

@@ -41,10 +41,10 @@ class Tag12CommissionTest {
     void FIX0012Test() {
         FIXType fix12Commission = FIXType.FIX12_COMMISSION;
         assertEquals( "COMMISSION", fix12Commission.getName());
-        assertEquals( 12, fix12Commission.getNumber());
+        assertEquals( "12", fix12Commission.getID());
         assertEquals( "Commission", fix12Commission.getDescription());
         assertNotEquals( "Not My COMMISSION", fix12Commission.getName());
-        assertNotEquals( 163223, fix12Commission.getNumber());
+        assertNotEquals( "163223", fix12Commission.getID());
         assertNotEquals( "123 Commission", fix12Commission.getDescription());
     }
     @Test

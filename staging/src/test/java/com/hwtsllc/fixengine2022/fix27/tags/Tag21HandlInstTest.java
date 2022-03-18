@@ -41,10 +41,10 @@ class Tag21HandlInstTest {
     void FIX0021Test() {
         FIXType fix21HandlInst = FIXType.FIX21_HANDL_INST;
         assertEquals( "HANDL_INST", fix21HandlInst.getName());
-        assertEquals( 21, fix21HandlInst.getNumber());
+        assertEquals( "21", fix21HandlInst.getID());
         assertEquals( "HandlInst", fix21HandlInst.getDescription());
         assertNotEquals( "HANDL_INST HANDL_INST", fix21HandlInst.getName());
-        assertNotEquals( 2121, fix21HandlInst.getNumber());
+        assertNotEquals( "2121", fix21HandlInst.getID());
         assertNotEquals( "123 HandlInst", fix21HandlInst.getDescription());
     }
     @Test

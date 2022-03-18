@@ -39,25 +39,21 @@ class Tag51SendingDateTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0051Test() {
         FIXType fix51SendingDate = FIXType.FIX51_SENDING_DATE;
         assertEquals( "SENDING_DATE", fix51SendingDate.getName());
-        assertEquals( 51, fix51SendingDate.getNumber());
+        assertEquals( "51", fix51SendingDate.getID());
         assertEquals( "SendingDate (no longer used)", fix51SendingDate.getDescription());
         assertNotEquals( "SENDING_DATE SENDING_DATE", fix51SendingDate.getName());
-        assertNotEquals( 3123, fix51SendingDate.getNumber());
+        assertNotEquals( "3123", fix51SendingDate.getID());
         assertNotEquals( "SendingDate SendingDate", fix51SendingDate.getDescription());
     }
     @Test
     void Tag0051Test() {
-        Tag51SendingDate Tag51SendingDate;
+        Tag51SendingDate tagData;
         //= new Tag51SendingDate();
 //        assertEquals( "BEST", Tag51SendingDate.getDataValue());
 //        assertNotEquals( "A11", Tag51SendingDate.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0050Test()");
+        logger.info("Successful Tag0050Test()");
     }
 }

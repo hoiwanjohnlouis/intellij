@@ -39,23 +39,15 @@ class Tag124NoExecsTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0124Test() {
         FIXType fix124NoExecs = FIXType.FIX124_NO_EXECS;
-        assertEquals( fix124NoExecs.getName(), "NO_EXECS");
-        assertEquals( fix124NoExecs.getNumber(), 124);
-        assertEquals( fix124NoExecs.getDescription(), "NoExecs");
+        assertEquals( "NO_EXECS", fix124NoExecs.getName());
+        assertEquals( "124", fix124NoExecs.getID());
+        assertEquals( "NoExecs", fix124NoExecs.getDescription());
     }
     @Test
     void Tag0124Test() {
-        FIXType tag124NoExecs = FIXType.FIX124_NO_EXECS;
-        assertEquals( tag124NoExecs.getName(), "NO_EXECS");
-        assertEquals( tag124NoExecs.getNumber(), 124);
-        assertEquals( tag124NoExecs.getDescription(), "NoExecs");
+        Tag124NoExecs tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0124Test()");
     }
 }

@@ -42,18 +42,18 @@ class Tag46RelatdSymTest {
     void FIX0046Test() {
         FIXType fix46RelatdSym = FIXType.FIX46_RELATD_SYM;
         assertEquals( "RELATD_SYM", fix46RelatdSym.getName());
-        assertEquals( 46, fix46RelatdSym.getNumber());
+        assertEquals( "46", fix46RelatdSym.getID());
         assertEquals( "RelatdSym (No longer used)", fix46RelatdSym.getDescription());
         assertNotEquals( "RELATD_SYM RELATD_SYM", fix46RelatdSym.getName());
-        assertNotEquals( 3123, fix46RelatdSym.getNumber());
+        assertNotEquals( "3123", fix46RelatdSym.getID());
         assertNotEquals( "RelatdSym (No longer used) RelatdSym (No longer used)", fix46RelatdSym.getDescription());
     }
     @Test
     void Tag0046Test() {
-        Tag46RelatdSym tag46RelatdSym;
+        Tag46RelatdSym tagData;
         //= new Tag46RelatdSym();
 //        assertEquals( "N", tag46RelatdSym.getDataValue());
 //        assertNotEquals( "A11", tag46RelatdSym.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0046Test()");
+        logger.info("Successful Tag0046Test()");
     }
 }

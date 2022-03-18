@@ -39,23 +39,16 @@ class Tag109ClientIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0109Test() {
         FIXType fix109ClientID = FIXType.FIX109_CLIENT_ID;
-        assertEquals( fix109ClientID.getName(), "CLIENT_ID");
-        assertEquals( fix109ClientID.getNumber(), 109);
-        assertEquals( fix109ClientID.getDescription(), "ClientID (replaced)");
+        assertEquals( "CLIENT_ID", fix109ClientID.getName());
+        assertEquals( "109", fix109ClientID.getID());
+        assertEquals( "ClientID (replaced)", fix109ClientID.getDescription());
     }
     @Test
     void Tag0109Test() {
-        Tag109ClientID tag109ClientID = new Tag109ClientID("SOME-ACCT-NUMBER");
-        assertEquals( tag109ClientID.getName(), "CLIENT_ID");
-        assertEquals( tag109ClientID.getNumber(), 109);
-        assertEquals( tag109ClientID.getDescription(), "ClientID (replaced)");
+        Tag109ClientID tagData = new Tag109ClientID("SOME-ACCT-NUMBER");
+        assertEquals("SOME-ACCT-NUMBER", tagData.getDataValue() );
+        logger.info(WHERE_AM_I + ":Successful Test()");
     }
 }

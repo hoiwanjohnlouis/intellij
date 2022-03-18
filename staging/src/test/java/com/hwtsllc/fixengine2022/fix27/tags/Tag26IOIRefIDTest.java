@@ -41,10 +41,10 @@ class Tag26IOIRefIDTest {
     void FIX0026Test() {
         FIXType fix26IOIRefID = FIXType.FIX26_IOI_REF_ID;
         assertEquals( "IOI_REF_ID", fix26IOIRefID.getName());
-        assertEquals( 26, fix26IOIRefID.getNumber());
+        assertEquals( "26", fix26IOIRefID.getID());
         assertEquals( "IOIRefID", fix26IOIRefID.getDescription());
         assertNotEquals( "IOI_REF_ID IOI_REF_ID", fix26IOIRefID.getName());
-        assertNotEquals( 2020, fix26IOIRefID.getNumber());
+        assertNotEquals( "2020", fix26IOIRefID.getID());
         assertNotEquals( "123 IOIRefID", fix26IOIRefID.getDescription());
     }
     @Test

@@ -43,10 +43,10 @@ class Tag20ExecTransTypeTest {
     void FIX0020Test() {
         FIXType fix20ExecTransType = FIXType.FIX20_EXEC_TRANS_TYPE;
         assertEquals( "EXEC_TRANS_TYPE", fix20ExecTransType.getName());
-        assertEquals( 20, fix20ExecTransType.getNumber());
+        assertEquals( "20", fix20ExecTransType.getID());
         assertEquals( "ExecTransType (replaced)", fix20ExecTransType.getDescription());
         assertNotEquals( "EXEC_TRANS_TYPE EXEC_TRANS_TYPE", fix20ExecTransType.getName());
-        assertNotEquals( 2020, fix20ExecTransType.getNumber());
+        assertNotEquals( "2020", fix20ExecTransType.getID());
         assertNotEquals( "123 ExecTransType (replaced)", fix20ExecTransType.getDescription());
     }
     @Test

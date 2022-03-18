@@ -23,12 +23,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Tag1000UnderlyingTimeUnitTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -42,10 +40,12 @@ class Tag1000UnderlyingTimeUnitTest {
     void FIX1000Test() {
         FIXType fix1000UnderlyingTimeUnit = FIXType.FIX1000_UNDERLYING_TIME_UNIT;
         assertEquals( "UNDERLYING_TIME_UNIT", fix1000UnderlyingTimeUnit.getName());
-        assertEquals( 1000, fix1000UnderlyingTimeUnit.getNumber());
+        assertEquals( "1000", fix1000UnderlyingTimeUnit.getID());
         assertEquals( "UnderlyingTimeUnit", fix1000UnderlyingTimeUnit.getDescription());
     }
     @Test
     void Tag1000Test() {
+        Tag1000UnderlyingTimeUnit tagData;
+        logger.info("Successful Tag1000Test()");
     }
 }

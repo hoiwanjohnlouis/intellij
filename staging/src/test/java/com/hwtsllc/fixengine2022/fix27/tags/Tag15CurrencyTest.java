@@ -41,10 +41,10 @@ class Tag15CurrencyTest {
     void FIX0015Test() {
         FIXType fix15Currency = FIXType.FIX15_CURRENCY;
         assertEquals( "CURRENCY", fix15Currency.getName());
-        assertEquals( 15, fix15Currency.getNumber());
+        assertEquals( "15", fix15Currency.getID());
         assertEquals( "Currency", fix15Currency.getDescription());
         assertNotEquals( "CURRENCY CURRENCY", fix15Currency.getName());
-        assertNotEquals( 111, fix15Currency.getNumber());
+        assertNotEquals( "111", fix15Currency.getID());
         assertNotEquals( "123 Currency", fix15Currency.getDescription());
     }
     @Test

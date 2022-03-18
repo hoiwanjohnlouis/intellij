@@ -39,21 +39,15 @@ class Tag132BidPxTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0132Test() {
         FIXType fix132BidPx = FIXType.FIX132_BID_PX;
         assertEquals( fix132BidPx.getName(), "BID_PX");
-        assertEquals( fix132BidPx.getNumber(), 132);
+        assertEquals( fix132BidPx.getID(), "132");
         assertEquals( fix132BidPx.getDescription(), "BidPx");
     }
     @Test
     void Tag0132Test() {
-        FIXType tag132BidPx = FIXType.FIX132_BID_PX;
-        assertEquals( tag132BidPx.getName(), "BID_PX");
-        assertEquals( tag132BidPx.getNumber(), 132);
-        assertEquals( tag132BidPx.getDescription(), "BidPx");
+        Tag132BidPx tagData;
+        logger.info(WHERE_AM_I + ":Successful Tag0132Test()");
     }
 }

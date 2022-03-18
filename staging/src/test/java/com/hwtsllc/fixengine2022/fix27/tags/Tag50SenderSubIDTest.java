@@ -41,10 +41,10 @@ class Tag50SenderSubIDTest {
     void FIX0050Test() {
         FIXType fix50SenderSubID = FIXType.FIX50_SENDER_SUB_ID;
         assertEquals( "SENDER_SUB_ID", fix50SenderSubID.getName());
-        assertEquals( 50, fix50SenderSubID.getNumber());
+        assertEquals( "50", fix50SenderSubID.getID());
         assertEquals( "SenderSubID", fix50SenderSubID.getDescription());
         assertNotEquals( "SENDER_SUB_ID SENDER_SUB_ID", fix50SenderSubID.getName());
-        assertNotEquals( 3123, fix50SenderSubID.getNumber());
+        assertNotEquals( "3123", fix50SenderSubID.getID());
         assertNotEquals( "SenderSubID SenderSubID", fix50SenderSubID.getDescription());
     }
     @Test

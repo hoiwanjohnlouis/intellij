@@ -41,10 +41,10 @@ class Tag49SenderCompIDTest {
     void FIX0049Test() {
         FIXType fix49SenderCompID = FIXType.FIX49_SENDER_COMP_ID;
         assertEquals( "SENDER_COMP_ID", fix49SenderCompID.getName());
-        assertEquals( 49, fix49SenderCompID.getNumber());
+        assertEquals( "49", fix49SenderCompID.getID());
         assertEquals( "SenderCompID", fix49SenderCompID.getDescription());
         assertNotEquals( "SENDER_COMP_ID SENDER_COMP_ID", fix49SenderCompID.getName());
-        assertNotEquals( 3123, fix49SenderCompID.getNumber());
+        assertNotEquals( "3123", fix49SenderCompID.getID());
         assertNotEquals( "SenderCompID SenderCompID", fix49SenderCompID.getDescription());
     }
     @Test

@@ -38,18 +38,16 @@ class Tag140PrevClosePxTest {
     }
 
     @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0140Test() {
         FIXType fix140PrevClosePx = FIXType.FIX140_PREV_CLOSE_PX;
         assertEquals( "PREV_CLOSE_PX", fix140PrevClosePx.getName() );
-        assertEquals( 140, fix140PrevClosePx.getNumber() );
+        assertEquals( "140", fix140PrevClosePx.getID() );
         assertEquals( "PrevClosePx", fix140PrevClosePx.getDescription() );
     }
     @Test
     void Tag0140Test() {
-        Tag140PrevClosePx tag140PrevClosePx = new Tag140PrevClosePx(10.23D);
+        Tag140PrevClosePx tagData = new Tag140PrevClosePx(10.23D);
+        // assertEquals(10.23D, tagData.);
+        logger.info(WHERE_AM_I + ":Successful Tag0139Test()");
     }
 }

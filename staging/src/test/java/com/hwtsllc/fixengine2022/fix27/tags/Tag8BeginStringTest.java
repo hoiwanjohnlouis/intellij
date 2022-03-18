@@ -42,10 +42,10 @@ class Tag8BeginStringTest {
     void FIX0008Test() {
         FIXType fix8BeginString = FIXType.FIX8_BEGIN_STRING;
         assertEquals( "BEGIN_STRING", fix8BeginString.getName());
-        assertEquals( 8, fix8BeginString.getNumber());
+        assertEquals( "8", fix8BeginString.getID());
         assertEquals( "BeginString", fix8BeginString.getDescription());
         assertNotEquals( "BEGIN STRING", fix8BeginString.getName());
-        assertNotEquals( 88, fix8BeginString.getNumber());
+        assertNotEquals( "88", fix8BeginString.getID());
         assertNotEquals( "123 BeginString", fix8BeginString.getDescription());
     }
     @Test
