@@ -23,6 +23,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static com.hwtsllc.fixengine2022.fix27.tags.Tag21HandlInst.TESTA_HANDL_INST;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag21HandlInstTest {
@@ -49,10 +50,11 @@ class Tag21HandlInstTest {
     }
     @Test
     void Tag0021Test() {
-        Tag21HandlInst tag21HandlInst;
-        //= new Tag21HandlInst(FIXType.FIX21_HANDL_INST,"A");
-//        assertEquals( "A", tag21HandlInst.getDataValue());
-//        assertNotEquals( "11", tag21HandlInst.getDataValue());
+        Tag21HandlInst tagData ;
+
+        tagData = new Tag21HandlInst(TESTA_HANDL_INST);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( "11", tagData.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0021Test()");
     }
 }

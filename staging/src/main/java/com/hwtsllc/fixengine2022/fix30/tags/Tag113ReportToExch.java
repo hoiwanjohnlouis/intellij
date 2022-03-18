@@ -16,5 +16,30 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
-public enum Tag113ReportToExch {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
+
+public class Tag113ReportToExch extends TagTypeAbstract {
+    private final Enum104IOIQualifier dataValue;
+
+    public final static Enum104IOIQualifier TESTA_REPORT_TO_EXCH = Enum104IOIQualifier.ALL_OR_NONE; // fake data
+    public final static Enum104IOIQualifier TESTB_REPORT_TO_EXCH = Enum104IOIQualifier.PRE_OPEN;
+
+    public Tag113ReportToExch(Enum104IOIQualifier dataValue) {
+        setFixType(FIXType.FIX113_REPORT_TO_EXCH);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag113ReportToExch tagData = new Tag113ReportToExch(TESTA_REPORT_TO_EXCH);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

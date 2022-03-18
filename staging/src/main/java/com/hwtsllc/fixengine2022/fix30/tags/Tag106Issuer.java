@@ -18,22 +18,23 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag106Issuer extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
+
+    public final static String TESTA_ISSUER = "BilboBaggins-106-Issuer"; // fake data
+    public final static String TESTB_ISSUER = "Gandalf-106-Issuer";
 
     public Tag106Issuer(String dataValue) {
         setFixType(FIXType.FIX106_ISSUER);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag106Issuer tag106Issuer = new Tag106Issuer("GNMA");
-        System.out.println(tag106Issuer);
-        System.out.println(tag106Issuer.toLogStringVerbose());
-        System.out.println(tag106Issuer.toFixTagValuePairString());
+        Tag106Issuer tagData = new Tag106Issuer(TESTA_ISSUER);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

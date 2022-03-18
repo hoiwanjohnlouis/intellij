@@ -18,25 +18,24 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 @Deprecated
 public class Tag105WaveNo extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX105_WAVE_NO;
+    public final static String TESTA_WAVE_NO = "BilboBaggins-105-WaveNo"; // fake data
+    public final static String TESTB_WAVE_NO = "Gandalf-105-WaveNo";
 
     public Tag105WaveNo(String dataValue) {
         setFixType(FIXType.FIX105_WAVE_NO);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag105WaveNo tag105WaveNo = new Tag105WaveNo("CATCH-A-WAVE 105");
-        System.out.println(tag105WaveNo);
-        System.out.println(tag105WaveNo.toLogStringVerbose());
-        System.out.println(tag105WaveNo.toFixTagValuePairString());
+        Tag105WaveNo tagData = new Tag105WaveNo(TESTA_WAVE_NO);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

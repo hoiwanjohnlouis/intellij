@@ -18,22 +18,23 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag108HeartBtInt extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
+
+    public final static String TESTA_HEART_BT_INT = "60"; // fake data
+    public final static String TESTB_HEART_BT_INT = "60";
 
     public Tag108HeartBtInt(String dataValue) {
         setFixType(FIXType.FIX108_HEART_BT_INT);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag108HeartBtInt tag108HeartBtInt = new Tag108HeartBtInt("60");
-        System.out.println(tag108HeartBtInt);
-        System.out.println(tag108HeartBtInt.toLogStringVerbose());
-        System.out.println(tag108HeartBtInt.toFixTagValuePairString());
+        Tag108HeartBtInt tagData = new Tag108HeartBtInt(TESTA_HEART_BT_INT);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

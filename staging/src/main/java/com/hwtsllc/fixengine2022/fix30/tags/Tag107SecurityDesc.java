@@ -18,22 +18,23 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag107SecurityDesc extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
+
+    public final static String TESTA_SECURITY_DESC = "BilboBaggins-107-SecurityDesc"; // fake data
+    public final static String TESTB_SECURITY_DESC = "Gandalf-107-SecurityDesc";
 
     public Tag107SecurityDesc(String dataValue) {
         setFixType(FIXType.FIX107_SECURITY_DESC);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag107SecurityDesc tag107SecurityDesc = new Tag107SecurityDesc("Intel Corporation, Inc.");
-        System.out.println(tag107SecurityDesc);
-        System.out.println(tag107SecurityDesc.toLogStringVerbose());
-        System.out.println(tag107SecurityDesc.toFixTagValuePairString());
+        Tag107SecurityDesc tagData = new Tag107SecurityDesc(TESTA_SECURITY_DESC);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

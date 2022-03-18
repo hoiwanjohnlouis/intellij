@@ -18,23 +18,24 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 @Deprecated
 public class Tag109ClientID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
+
+    public final static String TESTA_CLIENT_ID = "BilboBaggins-109-ClientID"; // fake data
+    public final static String TESTB_CLIENT_ID = "Gandalf-109-ClientID";
 
     public Tag109ClientID(String dataValue) {
         setFixType(FIXType.FIX109_CLIENT_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag109ClientID tag109ClientID = new Tag109ClientID("Intel Corporation, Inc.");
-        System.out.println(tag109ClientID);
-        System.out.println(tag109ClientID.toLogStringVerbose());
-        System.out.println(tag109ClientID.toFixTagValuePairString());
+        Tag109ClientID tagData = new Tag109ClientID(TESTA_CLIENT_ID);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.fix27.tags.Tag31LastPx;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag35MsgType;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag60TransactTime;
 import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
@@ -66,7 +65,6 @@ public class PriceView {
 
         //
         public PriceViewBuilder(Tag35MsgType tag35MsgType) {
-            this.lastTradeOpeningPrice = new OpeningPrice(Tag31LastPx.TESTA_SYMBOL_LAST_PX);
             this.tag60TransactTime = new Tag60TransactTime("18991231235959");
         }
         public PriceViewBuilder buildTradePrice(OpeningPrice lastTradeOpeningPrice) {

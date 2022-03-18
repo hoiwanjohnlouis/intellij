@@ -23,6 +23,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static com.hwtsllc.fixengine2022.fix27.tags.Tag14CumQty.TESTA_CUM_QTY;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag14CumQtyTest {
@@ -49,9 +50,9 @@ class Tag14CumQtyTest {
     }
     @Test
     void Tag0014Test() {
-        Tag14CumQty tag14CumQty = new Tag14CumQty(100 );
-        assertEquals( "100", tag14CumQty.getDataValue());
+        Tag14CumQty tag14CumQty = new Tag14CumQty(TESTA_CUM_QTY);
+        assertEquals( "12345", tag14CumQty.getDataValue());
         assertNotEquals( "11", tag14CumQty.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0014Test()");
+        logger.info("Successful Tag0014Test()");
     }
 }

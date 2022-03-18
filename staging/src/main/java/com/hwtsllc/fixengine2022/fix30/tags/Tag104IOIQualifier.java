@@ -18,12 +18,27 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag104IOIQualifier extends TagTypeAbstract {
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
-    private final FIXType fixType = FIXType.FIX104_IOI_QUALIFIER;
+    public final static String TESTA_IOI_QUALIFIER = "BilboBaggins-104-IOIQualifier"; // fake data
+    public final static String TESTB_IOI_QUALIFIER = "Gandalf-104-IOIQualifier";
+
+    public Tag104IOIQualifier(String dataValue) {
+        setFixType(FIXType.FIX104_IOI_QUALIFIER);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag104IOIQualifier tagData = new Tag104IOIQualifier(TESTA_IOI_QUALIFIER);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

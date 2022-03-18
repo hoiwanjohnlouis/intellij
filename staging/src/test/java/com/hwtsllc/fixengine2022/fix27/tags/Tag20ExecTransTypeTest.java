@@ -17,14 +17,14 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum20ExecTransType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
 class Tag20ExecTransTypeTest {
@@ -41,19 +41,19 @@ class Tag20ExecTransTypeTest {
 
     @Test
     void FIX0020Test() {
-        FIXType fix20ExecTransType = FIXType.FIX20_EXEC_TRANS_TYPE;
-        assertEquals( "EXEC_TRANS_TYPE", fix20ExecTransType.getName());
-        assertEquals( "20", fix20ExecTransType.getID());
-        assertEquals( "ExecTransType (replaced)", fix20ExecTransType.getDescription());
-        assertNotEquals( "EXEC_TRANS_TYPE EXEC_TRANS_TYPE", fix20ExecTransType.getName());
-        assertNotEquals( "2020", fix20ExecTransType.getID());
-        assertNotEquals( "123 ExecTransType (replaced)", fix20ExecTransType.getDescription());
+        FIXType fixData = FIXType.FIX20_EXEC_TRANS_TYPE;
+        assertEquals( "EXEC_TRANS_TYPE", fixData.getName());
+        assertEquals( "20", fixData.getID());
+        assertEquals( "ExecTransType (replaced)", fixData.getDescription());
+        assertNotEquals( "EXEC_TRANS_TYPE EXEC_TRANS_TYPE", fixData.getName());
+        assertNotEquals( "2020", fixData.getID());
+        assertNotEquals( "123 ExecTransType (replaced)", fixData.getDescription());
     }
     @Test
     void Tag0020Test() {
-        Tag20ExecTransType tag20ExecTransType = new Tag20ExecTransType(Enum20ExecTransType.NEW.getID());
-//        assertEquals( "A", tag20ExecTransType.getDataValue());
-//        assertNotEquals( "11", tag20ExecTransType.getDataValue());
+        Tag20ExecTransType tagData = new Tag20ExecTransType(Tag20ExecTransType.TESTA_EXEC_TRANS_TYPE);
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( "11", tagData.getDataValue());
         logger.info(WHERE_AM_I + ":Successful Tag0020Test()");
     }
 }

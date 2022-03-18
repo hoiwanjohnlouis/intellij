@@ -16,12 +16,29 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag111MaxFloor extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
+    public final static String TESTA_MAX_FLOOR = "BilboBaggins-111-MaxFloor"; // fake data
+    public final static String TESTB_MAX_FLOOR = "Gandalf-111-MaxFloor";
+
+    public Tag111MaxFloor(String dataValue) {
+        setFixType(FIXType.FIX111_MAX_FLOOR);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    /**
+     *
+     * @param args      Not used.
+     */
+    public static void main(String[] args) {
+        Tag111MaxFloor tagData = new Tag111MaxFloor(TESTA_MAX_FLOOR);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }
