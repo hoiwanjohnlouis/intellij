@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag55Symbol extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_TICKER_SYMBOL = "TESTA_SYMBOL";
-    public final static String TESTB_TICKER_SYMBOL = "TESTB_SYMBOL";
+    public final static String TESTA_TICKER_SYMBOL = "TESTA";
+    public final static String TESTB_TICKER_SYMBOL = "TESTB";
 
     public Tag55Symbol(String dataValue) {
         setFixType(FIXType.FIX55_SYMBOL);
@@ -36,7 +36,7 @@ public class Tag55Symbol extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag55Symbol tagData = new Tag55Symbol("MSFT");
+        Tag55Symbol tagData = new Tag55Symbol(TESTA_TICKER_SYMBOL);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

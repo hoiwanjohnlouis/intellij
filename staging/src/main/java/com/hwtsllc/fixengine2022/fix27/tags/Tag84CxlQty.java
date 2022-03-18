@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag84CxlQty extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_CXL_QTY = "84";
-    public final static String TESTB_CXL_QTY = "84";
+    public final static String TESTA_CXL_QTY = "BilboBaggins-84-CxlQty"; // fake data
+    public final static String TESTB_CXL_QTY = "Gandalf-84-CxlQty";
 
     public Tag84CxlQty(String dataValue) {
         setFixType(FIXType.FIX84_CXL_QTY);

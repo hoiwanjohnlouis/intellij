@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag62ValidUntilTime extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_VALID_UNTIL_TIME = "BilboBaggins-62-ValidUntilTime"; // fake data
+    public final static String TESTB_VALID_UNTIL_TIME = "Gandalf-62-ValidUntilTime";
+
     public Tag62ValidUntilTime(String dataValue) {
         setFixType(FIXType.FIX62_VALID_UNTIL_TIME);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag62ValidUntilTime extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag62ValidUntilTime tagData = new Tag62ValidUntilTime("JohnWick-453");
+        Tag62ValidUntilTime tagData = new Tag62ValidUntilTime(TESTA_VALID_UNTIL_TIME);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -17,16 +17,18 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.QtyType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
 public class Tag14CumQty extends TagTypeAbstract {
-    private QtyType qtyType;
+    private String dataValue;
 
-    public Tag14CumQty(int qtyType) {
+    public final static String TESTA_CUM_QTY = "12345"; // fake data
+    public final static String TESTB_CUM_QTY = "67890";
+
+    public Tag14CumQty(String dataValue) {
         setFixType(FIXType.FIX14_CUM_QTY);
-        setDataValue(String.valueOf(qtyType));
-        this.qtyType = new QtyType(qtyType);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     /**
@@ -34,7 +36,7 @@ public class Tag14CumQty extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag14CumQty tagData = new Tag14CumQty(1234);
+        Tag14CumQty tagData = new Tag14CumQty(TESTA_CUM_QTY);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

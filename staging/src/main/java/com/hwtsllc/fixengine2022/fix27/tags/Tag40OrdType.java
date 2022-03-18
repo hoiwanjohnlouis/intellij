@@ -18,13 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum40OrdType;
 
 public class Tag40OrdType extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum40OrdType dataValue;
 
-    public Tag40OrdType(String dataValue) {
+    public final static Enum40OrdType TESTA_ORDER_TYPE = Enum40OrdType.MARKET; // fake data
+    public final static Enum40OrdType TESTB_ORDER_TYPE = Enum40OrdType.LIMIT;
+
+    public Tag40OrdType(Enum40OrdType dataValue) {
         setFixType(FIXType.FIX40_ORD_TYPE);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 
@@ -33,7 +37,7 @@ public class Tag40OrdType extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag40OrdType tagData = new Tag40OrdType("JohnWick-2384");
+        Tag40OrdType tagData = new Tag40OrdType(TESTA_ORDER_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

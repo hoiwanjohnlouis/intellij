@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag69ListExecInst extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_LIST_EXEC_INST = "BilboBaggins-69-ListExecInst"; // fake data
+    public final static String TESTB_LIST_EXEC_INST = "Gandalf-69-ListExecInst";
+
     public Tag69ListExecInst(String dataValue) {
         setFixType(FIXType.FIX69_LIST_EXEC_INST);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag69ListExecInst extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag69ListExecInst tagData = new Tag69ListExecInst("JohnWick-453");
+        Tag69ListExecInst tagData = new Tag69ListExecInst(TESTA_LIST_EXEC_INST);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

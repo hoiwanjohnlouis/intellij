@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum21HandlInst;
 public class Tag21HandlInst extends TagTypeAbstract {
     private Enum21HandlInst dataValue;
 
+    public final static Enum21HandlInst TESTA_HANDL_INST = Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER; // fake data
+    public final static Enum21HandlInst TESTB_HANDL_INST = Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY;
+
     public Tag21HandlInst(Enum21HandlInst dataValue) {
         setFixType(FIXType.FIX21_HANDL_INST);
         setDataValue(dataValue.getID());
@@ -34,7 +37,7 @@ public class Tag21HandlInst extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag21HandlInst tagData = new Tag21HandlInst(Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER);
+        Tag21HandlInst tagData = new Tag21HandlInst(TESTA_HANDL_INST);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

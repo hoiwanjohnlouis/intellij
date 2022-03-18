@@ -18,13 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum29LastCapacity;
 
 public class Tag29LastCapacity extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum29LastCapacity dataValue;
 
-    public Tag29LastCapacity(String dataValue) {
+    public final static Enum29LastCapacity TESTA_LAST_CAPACITY = Enum29LastCapacity.AGENT; // fake data
+    public final static Enum29LastCapacity TESTB_LAST_CAPACITY = Enum29LastCapacity.PRINCIPAL;
+
+    public Tag29LastCapacity(Enum29LastCapacity dataValue) {
         setFixType(FIXType.FIX29_LAST_CAPACITY);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 
@@ -33,7 +37,7 @@ public class Tag29LastCapacity extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag29LastCapacity tagData = new Tag29LastCapacity("JohnWick-453");
+        Tag29LastCapacity tagData = new Tag29LastCapacity(TESTA_LAST_CAPACITY);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

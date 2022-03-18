@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag63SettlmntTyp extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_SETTLMNT_TYP = "BilboBaggins-63-SettlmntTyp"; // fake data
+    public final static String TESTB_SETTLMNT_TYP = "Gandalf-63-SettlmntTyp";
+
     public Tag63SettlmntTyp(String dataValue) {
         setFixType(FIXType.FIX63_SETTLMNT_TYP);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag63SettlmntTyp extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag63SettlmntTyp tagData = new Tag63SettlmntTyp("JohnWick-453");
+        Tag63SettlmntTyp tagData = new Tag63SettlmntTyp(TESTA_SETTLMNT_TYP);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

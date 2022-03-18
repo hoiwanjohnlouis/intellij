@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum8BeginString;
 public class Tag8BeginString extends TagTypeAbstract {
     private Enum8BeginString dataValue;
 
+    public final static Enum8BeginString TESTA_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_2_7;
+    public final static Enum8BeginString TESTB_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_4_2;
+
     public Tag8BeginString(Enum8BeginString dataValue) {
         setFixType(FIXType.FIX8_BEGIN_STRING);
         setDataValue(dataValue.getID());
@@ -34,7 +37,7 @@ public class Tag8BeginString extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag8BeginString tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_2);
+        Tag8BeginString tagData = new Tag8BeginString(TESTA_BEGIN_STRING);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

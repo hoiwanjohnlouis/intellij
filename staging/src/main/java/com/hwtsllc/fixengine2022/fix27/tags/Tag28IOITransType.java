@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum28IOITransType;
 public class Tag28IOITransType extends TagTypeAbstract {
     private final Enum28IOITransType dataValue;
 
+    public final static Enum28IOITransType TESTA_IOI_TRANS_TYPE = Enum28IOITransType.NEW;   // fake data
+    public final static Enum28IOITransType TESTB_IOI_TRANS_TYPE = Enum28IOITransType.REPLACE;
+
     public Tag28IOITransType(Enum28IOITransType dataValue) {
         setFixType(FIXType.FIX28_IOI_TRANS_TYPE);
         setDataValue(dataValue.getID());
@@ -34,7 +37,7 @@ public class Tag28IOITransType extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag28IOITransType tagData = new Tag28IOITransType(Enum28IOITransType.NEW);
+        Tag28IOITransType tagData = new Tag28IOITransType(TESTA_IOI_TRANS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

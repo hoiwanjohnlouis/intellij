@@ -23,8 +23,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag85NoDlvyInst extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_NO_DLVY_INST = "85";
-    public final static String TESTB_NO_DLVY_INST = "58";
+    public final static String TESTA_NO_DLVY_INST = "BilboBaggins-85-NoDlvyInst"; // fake data
+    public final static String TESTB_NO_DLVY_INST = "Gandalf-85-NoDlvyInst";
 
     public Tag85NoDlvyInst(String dataValue) {
         setFixType(FIXType.FIX85_NO_DLVY_INST);

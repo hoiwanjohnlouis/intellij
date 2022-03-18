@@ -18,13 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 
 public class Tag43PossDupFlag extends TagTypeAbstract {
-    private final String dataValue;
+    private final EnumBoolean dataValue;
 
-    public Tag43PossDupFlag(String dataValue) {
+    public final static EnumBoolean TESTA_POSS_DUP_FLAG = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_POSS_DUP_FLAG = EnumBoolean.YES;
+
+    public Tag43PossDupFlag(EnumBoolean dataValue) {
         setFixType(FIXType.FIX43_POSS_DUP_FLAG);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 
@@ -33,7 +37,7 @@ public class Tag43PossDupFlag extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag43PossDupFlag tagData = new Tag43PossDupFlag("JohnWick-453");
+        Tag43PossDupFlag tagData = new Tag43PossDupFlag(TESTA_POSS_DUP_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

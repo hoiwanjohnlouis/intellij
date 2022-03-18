@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag49SenderCompID extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_SENDER_COMP_ID = "BilboBaggins-49-SenderCompID"; // fake data
+    public final static String TESTB_SENDER_COMP_ID = "Gandalf-49-SenderCompID";
+
     public Tag49SenderCompID(String dataValue) {
         setFixType(FIXType.FIX49_SENDER_COMP_ID);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag49SenderCompID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag49SenderCompID tagData = new Tag49SenderCompID("JPMC");
+        Tag49SenderCompID tagData = new Tag49SenderCompID(TESTA_SENDER_COMP_ID);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
 public class Tag5AdvTransType extends TagTypeAbstract {
     private Enum5AdvTransType dataValue;
 
+    public final static Enum5AdvTransType TESTA_ADV_TRANS_TYPE = Enum5AdvTransType.NEW;
+    public final static Enum5AdvTransType TESTB_ADV_TRANS_TYPE = Enum5AdvTransType.REPLACE;
+
     public Tag5AdvTransType(Enum5AdvTransType dataValue) {
         setFixType(FIXType.FIX5_ADV_TRANS_TYPE);
         setDataValue(dataValue.getID());
@@ -34,7 +37,7 @@ public class Tag5AdvTransType extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Enum5AdvTransType enumData = Enum5AdvTransType.NEW;
+        Enum5AdvTransType enumData = TESTA_ADV_TRANS_TYPE;
         Tag5AdvTransType tagData = new Tag5AdvTransType(enumData);
         System.out.println(enumData);
         System.out.println(tagData);

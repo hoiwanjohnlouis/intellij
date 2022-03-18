@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag15Currency extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_CURRENCY = "USD"; // fake data
+    public final static String TESTB_CURRENCY = "EUR";
+
     public Tag15Currency(String dataValue) {
         setFixType(FIXType.FIX15_CURRENCY);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag15Currency extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag14CumQty tagData = new Tag14CumQty(1234);
+        Tag15Currency tagData = new Tag15Currency(TESTA_CURRENCY);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

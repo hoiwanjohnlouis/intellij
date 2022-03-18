@@ -22,7 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag32LastQty extends TagTypeAbstract {
     private final String dataValue;
 
-    private final static double DEFAULT_VALUE = 0.00;
+    public final static String TESTA_LAST_QTY = "100"; // fake data
+    public final static String TESTB_LAST_QTY = "20";
 
     public Tag32LastQty(String dataValue) {
         setFixType(FIXType.FIX31_LAST_PX);
@@ -35,7 +36,7 @@ public class Tag32LastQty extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag32LastQty tagType = new Tag32LastQty("JohnWick-43");
+        Tag32LastQty tagType = new Tag32LastQty(TESTA_LAST_QTY);
         System.out.println(tagType);
         System.out.println(tagType.toLogStringVerbose());
         System.out.println(tagType.toFixTagValuePairString());

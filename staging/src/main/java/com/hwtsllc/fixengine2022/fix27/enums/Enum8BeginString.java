@@ -22,6 +22,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public enum Enum8BeginString implements EnumAccessors, LogStringVerbose {
+    BEGIN_STRING_2_7( "FIX.2.7","BEGIN_STRING_2_7","Begin String 2.7"),
+    BEGIN_STRING_3_0( "FIX.3.0","BEGIN_STRING_3_0","Begin String 3.0"),
     BEGIN_STRING_4_0( "FIX.4.0","BEGIN_STRING_4_0","Begin String 4.0"),
     BEGIN_STRING_4_1( "FIX.4.1","BEGIN_STRING_4_1","Begin String 4.1"),
     BEGIN_STRING_4_2( "FIX.4.2","BEGIN_STRING_4_2","Begin String 4.2"),
@@ -76,37 +78,33 @@ public enum Enum8BeginString implements EnumAccessors, LogStringVerbose {
      */
     @Override
     public String toLogStringVerbose() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.getClass().getSimpleName())
-                .append("\n\tEnumName[")
-                .append(getEnumName())
-                .append("]")
-                .append("\n\tAction[")
-                .append(getID())
-                .append("]")
-                .append("\n\tName[")
-                .append(getName())
-                .append("]")
-                .append("\n\tDescription[")
-                .append(getDescription())
-                .append("]");
-        return sb.toString();
+        return this.getClass().getSimpleName()
+                .concat("\n\tEnumName[")
+                .concat(getEnumName())
+                .concat("]")
+                .concat("\n\tAction[")
+                .concat(getID())
+                .concat("]")
+                .concat("\n\tName[")
+                .concat(getName())
+                .concat("]")
+                .concat("\n\tDescription[")
+                .concat(getDescription())
+                .concat("]");
     }
     /**
      * standard wrapper to format a simple string describing this enum
      */
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getEnumName())
-                .append("=[")
-                .append(getID())
-                .append(",")
-                .append(getName())
-                .append(",")
-                .append(getDescription())
-                .append("]");
-        return sb.toString();
+        return getEnumName()
+                .concat("=[")
+                .concat(getID())
+                .concat(",")
+                .concat(getName())
+                .concat(",")
+                .concat(getDescription())
+                .concat("]");
     }
 
     /**

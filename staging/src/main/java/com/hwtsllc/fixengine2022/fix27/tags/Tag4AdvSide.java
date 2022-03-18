@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
 public class Tag4AdvSide extends TagTypeAbstract {
     private Enum4AdvSide dataValue;
 
+    public final static Enum4AdvSide TESTA_ADV_SIDE = Enum4AdvSide.BUY;
+    public final static Enum4AdvSide TESTB_ADV_SIDE = Enum4AdvSide.SELL;
+
     public Tag4AdvSide(Enum4AdvSide dataValue) {
         setFixType(FIXType.FIX4_ADV_SIDE);
         setDataValue(dataValue.getID());

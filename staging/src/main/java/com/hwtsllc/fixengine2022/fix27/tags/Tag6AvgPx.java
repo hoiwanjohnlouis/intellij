@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag6AvgPx extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_AVG_PX = "12.345";
+    public final static String TESTB_AVG_PX = "67.89";
+
     public Tag6AvgPx(String dataValue) {
         setFixType(FIXType.FIX6_AVG_PX);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag6AvgPx extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag6AvgPx tagData = new Tag6AvgPx("23.456789");
+        Tag6AvgPx tagData = new Tag6AvgPx(TESTA_AVG_PX);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

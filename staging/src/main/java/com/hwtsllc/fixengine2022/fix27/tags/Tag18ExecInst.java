@@ -18,13 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum18ExecInst;
 
 public class Tag18ExecInst extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum18ExecInst dataValue;
 
-    public Tag18ExecInst(String dataValue) {
+    public final static Enum18ExecInst TESTA_EXEC_INST = Enum18ExecInst.STAY_ON_OFFER_SIDE; // fake data
+    public final static Enum18ExecInst TESTB_EXEC_INST = Enum18ExecInst.STAY_ON_BID_SIDE;
+
+    public Tag18ExecInst(Enum18ExecInst dataValue) {
         setFixType(FIXType.FIX18_EXEC_INST);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 
@@ -33,7 +37,7 @@ public class Tag18ExecInst extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag17ExecID tagData = new Tag17ExecID("JohnWick-9876");
+        Tag18ExecInst tagData = new Tag18ExecInst(TESTA_EXEC_INST);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

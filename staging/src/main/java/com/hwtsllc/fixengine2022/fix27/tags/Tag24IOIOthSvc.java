@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag24IOIOthSvc extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_IOI_OTH_SVC = "BilboBaggins-24-IOIOthSvc"; // fake data
+    public final static String TESTB_IOI_OTH_SVC = "Gandalf-24-IOIOthSvc";
+
     public Tag24IOIOthSvc(String dataValue) {
         setFixType(FIXType.FIX24_IOI_OTH_SVC);
         setDataValue(dataValue);
@@ -34,7 +37,7 @@ public class Tag24IOIOthSvc extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag24IOIOthSvc tagData = new Tag24IOIOthSvc("JohnWick-43");
+        Tag24IOIOthSvc tagData = new Tag24IOIOthSvc(TESTA_IOI_OTH_SVC);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

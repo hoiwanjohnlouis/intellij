@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag45RefSeqNum extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_REF_SEQ_NO = "567";  // same as tag34 TESTA_MSG_SEQ_NO
+    public final static String TESTB_REF_SEQ_NO = "1482";  // same as tag34 TESTB_MSG_SEQ_NO
+
     public Tag45RefSeqNum(String dataValue) {
         setFixType(FIXType.FIX45_REF_SEQ_NUM);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag45RefSeqNum extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag45RefSeqNum tagData = new Tag45RefSeqNum("JohnWick-453");
+        Tag45RefSeqNum tagData = new Tag45RefSeqNum(TESTA_REF_SEQ_NO);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

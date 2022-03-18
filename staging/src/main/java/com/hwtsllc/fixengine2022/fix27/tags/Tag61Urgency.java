@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum61Urgency;
 public class Tag61Urgency extends TagTypeAbstract {
     private final Enum61Urgency dataValue;
 
+    public final static Enum61Urgency TESTA_URGENCY = Enum61Urgency.NORMAL; // fake data
+    public final static Enum61Urgency TESTB_URGENCY = Enum61Urgency.BACKGROUND;
+
     public Tag61Urgency(Enum61Urgency dataValue) {
         setFixType(FIXType.FIX61_URGENCY);
         setDataValue( dataValue.getID() );
@@ -34,7 +37,7 @@ public class Tag61Urgency extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag61Urgency tagData = new Tag61Urgency( Enum61Urgency.NORMAL );
+        Tag61Urgency tagData = new Tag61Urgency(TESTA_URGENCY);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

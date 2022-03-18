@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag26IOIRefID extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_IOI_REF_ID = "BilboBaggins-26-IOIRefID"; // fake data
+    public final static String TESTB_IOI_REF_ID = "Gandalf-26-IOIRefID";
+
     public Tag26IOIRefID(String dataValue) {
         setFixType(FIXType.FIX26_IOI_REF_ID);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag26IOIRefID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag26IOIRefID tagData = new Tag26IOIRefID("JohnWick-453");
+        Tag26IOIRefID tagData = new Tag26IOIRefID(TESTA_IOI_REF_ID);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

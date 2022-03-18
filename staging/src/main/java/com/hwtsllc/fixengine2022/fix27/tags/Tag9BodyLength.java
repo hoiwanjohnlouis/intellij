@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag9BodyLength extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_BODY_LENGTH = "123";
+    public final static String TESTB_BODY_LENGTH = "456";
+
     public Tag9BodyLength(String dataValue) {
         setFixType(FIXType.FIX9_BODY_LENGTH);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag9BodyLength extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag9BodyLength tagData = new Tag9BodyLength("324");
+        Tag9BodyLength tagData = new Tag9BodyLength(TESTA_BODY_LENGTH);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

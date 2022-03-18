@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag42OrigTime extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_ORIG_TIME = "BilboBaggins-42-OrigTime"; // fake data
+    public final static String TESTB_ORIG_TIME = "Gandalf-42-OrigTime";
+
     private final FIXType fixType = FIXType.FIX42_ORIG_TIME;
     public Tag42OrigTime(String dataValue) {
         setFixType(FIXType.FIX42_ORIG_TIME);
@@ -34,7 +37,7 @@ public class Tag42OrigTime extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag42OrigTime tagData = new Tag42OrigTime("JohnWick-2384");
+        Tag42OrigTime tagData = new Tag42OrigTime(TESTA_ORIG_TIME);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag82NoRpts extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_NO_RPTS = "82";
-    public final static String TESTB_NO_RPTS = "82";
+    public final static String TESTA_NO_RPTS = "1";
+    public final static String TESTB_NO_RPTS = "2";
 
     public Tag82NoRpts(String dataValue) {
         setFixType(FIXType.FIX82_NO_RPTS);

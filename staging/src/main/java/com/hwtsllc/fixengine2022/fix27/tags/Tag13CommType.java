@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
 public class Tag13CommType extends TagTypeAbstract {
     private Enum13CommType dataValue;
 
+    public final static Enum13CommType TESTA_COMMISSION = Enum13CommType.PER_UNIT; // fake data
+    public final static Enum13CommType TESTB_COMMISSION = Enum13CommType.POINTS_PER_BOND;
+
     public Tag13CommType(Enum13CommType dataValue) {
         setFixType(FIXType.FIX13_COMM_TYPE);
         setDataValue(dataValue.getID());

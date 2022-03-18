@@ -18,16 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 
 public class Tag97PossResend extends TagTypeAbstract {
-    private final String dataValue;
+    private final EnumBoolean dataValue;
 
-    public final static String TESTA_POSS_RESEND = "BilboBaggins-97-PossResend";
-    public final static String TESTB_POSS_RESEND = "Gandalf-97-PossResend";
+    public final static EnumBoolean TESTA_POSS_RESEND = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_POSS_RESEND = EnumBoolean.YES;
 
-    public Tag97PossResend(String dataValue) {
+    public Tag97PossResend(EnumBoolean dataValue) {
         setFixType(FIXType.FIX97_POSS_RESEND);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

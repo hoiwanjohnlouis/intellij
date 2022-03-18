@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag33NoLinesOfText extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_NO_LINES_OF_TEXT = "1";
+    public final static String TESTB_NO_LINES_OF_TEXT = "3";
+
     public Tag33NoLinesOfText(String dataValue) {
         setFixType(FIXType.FIX33_NO_LINES_OF_TEXT);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag33NoLinesOfText extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag33NoLinesOfText tag33NoLinesOfText = new Tag33NoLinesOfText("JohnWick-4253. Yeah.... I'm back!");
+        Tag33NoLinesOfText tag33NoLinesOfText = new Tag33NoLinesOfText(TESTA_NO_LINES_OF_TEXT);
         System.out.println(tag33NoLinesOfText);
         System.out.println(tag33NoLinesOfText.toLogStringVerbose());
         System.out.println(tag33NoLinesOfText.toFixTagValuePairString());

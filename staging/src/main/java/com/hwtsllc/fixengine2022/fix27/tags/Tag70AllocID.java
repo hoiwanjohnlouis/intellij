@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag70AllocID extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_ALLOC_ID = "BilboBaggins-70-AllocID"; // fake data
+    public final static String TESTB_ALLOC_ID = "Gandalf-70-AllocID";
+
     public Tag70AllocID(String dataValue) {
         setFixType(FIXType.FIX70_ALLOC_ID);
         setDataValue(dataValue);
@@ -29,7 +32,7 @@ public class Tag70AllocID extends TagTypeAbstract {
     }
 
     public static void main(String[] args) {
-        Tag70AllocID tagData = new Tag70AllocID("ALLOCATE-THE-TRADES");
+        Tag70AllocID tagData = new Tag70AllocID(TESTA_ALLOC_ID);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag68TotNoOrders extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_TOT_NO_ORDERS = "1";
+    public final static String TESTB_TOT_NO_ORDERS = "3";
+
     public Tag68TotNoOrders(String dataValue) {
         setFixType(FIXType.FIX68_TOT_NO_ORDERS);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag68TotNoOrders extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag68TotNoOrders tagData = new Tag68TotNoOrders("JohnWick-453");
+        Tag68TotNoOrders tagData = new Tag68TotNoOrders(TESTA_TOT_NO_ORDERS);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

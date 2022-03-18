@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag58Text extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_TEXT = "BilboBaggins-58-ClOrdID"; // fake data
+    public final static String TESTB_TEXT = "Gandalf-58-ClOrdID";
+
     public Tag58Text(String dataValue) {
         setFixType(FIXType.FIX58_TEXT);
         setDataValue(dataValue);
@@ -29,7 +32,7 @@ public class Tag58Text extends TagTypeAbstract {
     }
 
     public static void main(String[] args) {
-        Tag58Text tag58TExt = new Tag58Text("hello from main routine");
+        Tag58Text tag58TExt = new Tag58Text(TESTA_TEXT);
         System.out.println(tag58TExt);
         System.out.println(tag58TExt.toLogStringVerbose());
         System.out.println(tag58TExt.toFixTagValuePairString());

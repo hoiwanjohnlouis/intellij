@@ -18,13 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum54Side;
 
 public class Tag54Side extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum54Side dataValue;
 
-    public Tag54Side(String dataValue) {
+    public final static Enum54Side TESTA_SIDE = Enum54Side.BUY; // fake data
+    public final static Enum54Side TESTB_SIDE = Enum54Side.SELL;
+
+    public Tag54Side(Enum54Side dataValue) {
         setFixType(FIXType.FIX54_SIDE);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 
@@ -33,7 +37,7 @@ public class Tag54Side extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag54Side tagData = new Tag54Side("JohnWick-453");
+        Tag54Side tagData = new Tag54Side(TESTA_SIDE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

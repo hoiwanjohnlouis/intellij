@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag16EndSeqNo extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_END_SEQ_NO = "455";
+    public final static String TESTB_END_SEQ_NO = "1234";
+
     public Tag16EndSeqNo(String dataValue) {
         setFixType(FIXType.FIX16_END_SEQ_NO);
         setDataValue(dataValue);

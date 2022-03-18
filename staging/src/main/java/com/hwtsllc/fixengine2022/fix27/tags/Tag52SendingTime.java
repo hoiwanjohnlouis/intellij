@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag52SendingTime extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_SENDING_TIME = "BilboBaggins-52-SendingTime"; // fake data
+    public final static String TESTB_SENDING_TIME = "Gandalf-52-SendingTime";
+
     public Tag52SendingTime(String dataValue) {
         setFixType(FIXType.FIX52_SENDING_TIME);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag52SendingTime extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag52SendingTime tagData = new Tag52SendingTime("JohnWick-453");
+        Tag52SendingTime tagData = new Tag52SendingTime(TESTA_SENDING_TIME);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

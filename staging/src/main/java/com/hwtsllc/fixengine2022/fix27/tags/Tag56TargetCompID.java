@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag56TargetCompID extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_TARGET_COMP_ID = "BilboBaggins-56-TargetCompID"; // fake data
+    public final static String TESTB_TARGET_COMP_ID = "Gandalf-56-TargetCompID";
+
     public Tag56TargetCompID(String dataValue) {
         setFixType(FIXType.FIX56_TARGET_COMP_ID);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag56TargetCompID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag56TargetCompID tagData = new Tag56TargetCompID("SUNG");
+        Tag56TargetCompID tagData = new Tag56TargetCompID(TESTA_TARGET_COMP_ID);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag46RelatdSym extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_RELATED_SYM = "TESTA";
+    public final static String TESTB_RELATED_SYM = "TESTB";
+
     public Tag46RelatdSym(String dataValue) {
         setFixType(FIXType.FIX46_RELATD_SYM);
         setDataValue(dataValue);
@@ -34,7 +37,7 @@ public class Tag46RelatdSym extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag46RelatdSym tagData = new Tag46RelatdSym("JohnWick-453");
+        Tag46RelatdSym tagData = new Tag46RelatdSym(TESTA_RELATED_SYM);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

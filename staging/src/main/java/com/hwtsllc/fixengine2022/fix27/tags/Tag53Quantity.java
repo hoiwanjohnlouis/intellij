@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag53Quantity extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_QUANTITY = "1000"; // fake data
+    public final static String TESTB_QUANTITY = "3300";
+
     public Tag53Quantity(String dataValue) {
         setFixType(FIXType.FIX53_QUANTITY);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag53Quantity extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag53Quantity tagData = new Tag53Quantity("JohnWick-453");
+        Tag53Quantity tagData = new Tag53Quantity(TESTA_QUANTITY);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

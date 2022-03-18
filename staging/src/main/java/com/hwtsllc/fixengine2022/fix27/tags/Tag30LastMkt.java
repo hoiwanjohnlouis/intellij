@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag30LastMkt extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_LAST_MKT = "BilboBaggins-30-LastMkt"; // fake data
+    public final static String TESTB_LAST_MKT = "BilboBaggins-30-LastMkt";
+
     public Tag30LastMkt(String dataValue) {
         setFixType(FIXType.FIX30_LAST_MKT);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag30LastMkt extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag30LastMkt tagData = new Tag30LastMkt("JohnWick-453");
+        Tag30LastMkt tagData = new Tag30LastMkt(TESTA_LAST_MKT);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -18,13 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum59TimeInForce;
 
 public class Tag59TimeInForce extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum59TimeInForce dataValue;
 
-    public Tag59TimeInForce(String dataValue) {
+    public final static Enum59TimeInForce TESTA_TIME_IN_FORCE = Enum59TimeInForce.DAY; // fake data
+    public final static Enum59TimeInForce TESTB_TIME_IN_FORCE = Enum59TimeInForce.AT_THE_CLOSE;
+
+    public Tag59TimeInForce(Enum59TimeInForce dataValue) {
         setFixType(FIXType.FIX59_TIME_IN_FORCE);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 
@@ -33,7 +37,7 @@ public class Tag59TimeInForce extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag59TimeInForce tagData = new Tag59TimeInForce("JohnWick-453");
+        Tag59TimeInForce tagData = new Tag59TimeInForce(TESTA_TIME_IN_FORCE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag41OrigClOrdID extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_ORIG_CL_ORD_ID = "BilboBaggins-11-ClOrdID"; // fake data
+    public final static String TESTB_ORIG_CL_ORD_ID = "Gandalf-11-ClOrdID";
+
     public Tag41OrigClOrdID(String dataValue) {
         setFixType(FIXType.FIX41_ORIG_CL_ORD_ID);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag41OrigClOrdID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag41OrigClOrdID tagData = new Tag41OrigClOrdID("JohnWick-6");
+        Tag41OrigClOrdID tagData = new Tag41OrigClOrdID(TESTA_ORIG_CL_ORD_ID);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

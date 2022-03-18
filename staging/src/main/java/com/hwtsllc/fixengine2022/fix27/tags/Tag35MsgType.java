@@ -18,13 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
 
 public class Tag35MsgType extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum35MsgType dataValue;
 
-    public Tag35MsgType(String dataValue) {
+    public final static Enum35MsgType TESTA_MSG_TYPE = Enum35MsgType.HEARTBEAT; // fake data
+    public final static Enum35MsgType TESTB_MSG_TYPE = Enum35MsgType.LOGOUT;
+
+    public Tag35MsgType(Enum35MsgType dataValue) {
         setFixType(FIXType.FIX34_MSG_SEQ_NUM);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 
@@ -33,7 +37,7 @@ public class Tag35MsgType extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag35MsgType tagData = new Tag35MsgType("JohnWick-453");
+        Tag35MsgType tagData = new Tag35MsgType(TESTA_MSG_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

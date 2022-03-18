@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag34MsgSeqNum extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_MSG_SEQ_NO = "567";
+    public final static String TESTB_MSG_SEQ_NO = "1482";
+
     public Tag34MsgSeqNum(String dataValue) {
         setFixType(FIXType.FIX34_MSG_SEQ_NUM);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag34MsgSeqNum extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag30LastMkt tagData = new Tag30LastMkt("JohnWick-453");
+        Tag34MsgSeqNum tagData = new Tag34MsgSeqNum(TESTA_MSG_SEQ_NO);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

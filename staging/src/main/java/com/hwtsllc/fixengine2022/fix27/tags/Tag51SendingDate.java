@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag51SendingDate extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_SENDING_DATE = "BilboBaggins-51-SendingDate"; // fake data
+    public final static String TESTB_SENDING_DATE = "Gandalf-51-SendingDate";
+
     public Tag51SendingDate(String dataValue) {
         setFixType(FIXType.FIX51_SENDING_DATE);
         setDataValue(dataValue);
@@ -34,7 +37,7 @@ public class Tag51SendingDate extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag51SendingDate tagData = new Tag51SendingDate("JohnWick-453");
+        Tag51SendingDate tagData = new Tag51SendingDate(TESTA_SENDING_DATE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

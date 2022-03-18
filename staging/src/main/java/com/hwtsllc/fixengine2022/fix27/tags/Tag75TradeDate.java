@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag75TradeDate extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_TRADE_DATE = "BilboBaggins-75-TradeDate"; // fake data
+    public final static String TESTB_TRADE_DATE = "Gandalf-75-TradeDate";
+
     public Tag75TradeDate(String dataValue) {
         setFixType(FIXType.FIX75_TRADE_DATE);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag75TradeDate extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag75TradeDate tagData = new Tag75TradeDate("JohnWick-75");
+        Tag75TradeDate tagData = new Tag75TradeDate(TESTA_TRADE_DATE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag44Price extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_PRICE = "38.21";
+    public final static String TESTB_PRICE = "38.17";
+
     public Tag44Price(String dataValue) {
         setFixType(FIXType.FIX44_PRICE);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag44Price extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag44Price tagData = new Tag44Price("JohnWick-453");
+        Tag44Price tagData = new Tag44Price(TESTA_PRICE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

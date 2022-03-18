@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag47Rule80A extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_RULE80A = "TESTA"; // fake data
+    public final static String TESTB_RULE80A = "TESTB";
+
     public Tag47Rule80A(String dataValue) {
         setFixType(FIXType.FIX47_RULE_80_A);
         setDataValue(dataValue);

@@ -23,6 +23,9 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum22SecurityIDSource;
 public class Tag22SecurityIDSource extends TagTypeAbstract {
     private final Enum22SecurityIDSource dataValue;
 
+    public final static Enum22SecurityIDSource TESTA_SECURITY_ID_SOURCE = Enum22SecurityIDSource.CUSIP; // fake data
+    public final static Enum22SecurityIDSource TESTB_SECURITY_ID_SOURCE = Enum22SecurityIDSource.RIC;
+
     public Tag22SecurityIDSource(Enum22SecurityIDSource dataValue) {
         setFixType(FIXType.FIX22_SECURITY_ID_SOURCE);
         setDataValue(dataValue.getID());
@@ -34,8 +37,7 @@ public class Tag22SecurityIDSource extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Enum22SecurityIDSource enumData = Enum22SecurityIDSource.CUSIP;
-        Tag22SecurityIDSource tagData = new Tag22SecurityIDSource(enumData);
+        Tag22SecurityIDSource tagData = new Tag22SecurityIDSource(TESTA_SECURITY_ID_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

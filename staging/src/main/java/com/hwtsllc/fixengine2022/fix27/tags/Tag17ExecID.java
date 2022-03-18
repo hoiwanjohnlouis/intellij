@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag17ExecID extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_EXEC_ID = "BilboBaggins-17-ExecID"; // fake data
+    public final static String TESTB_EXEC_ID = "Gandalf-17-ExecID";
+
     public Tag17ExecID(String dataValue) {
         setFixType(FIXType.FIX17_EXEC_ID);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag17ExecID extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag17ExecID tagData = new Tag17ExecID("JohnWick-9876");
+        Tag17ExecID tagData = new Tag17ExecID(TESTA_EXEC_ID);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

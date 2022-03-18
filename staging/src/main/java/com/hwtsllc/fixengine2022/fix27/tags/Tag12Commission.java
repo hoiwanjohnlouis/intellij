@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag12Commission extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_COMMISSION = "1.23"; // fake data
+    public final static String TESTB_COMMISSION = "4.56";
+
     public Tag12Commission(String dataValue) {
         setFixType(FIXType.FIX12_COMMISSION);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag12Commission extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag12Commission tagData = new Tag12Commission("10.25");
+        Tag12Commission tagData = new Tag12Commission(TESTA_COMMISSION);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

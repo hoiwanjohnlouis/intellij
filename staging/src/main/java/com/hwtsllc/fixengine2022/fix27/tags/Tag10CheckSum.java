@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag10CheckSum extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_CHECK_SUM = "789"; // fake data
+    public final static String TESTB_CHECK_SUM = "123";
+
     public Tag10CheckSum(String dataValue) {
         setFixType(FIXType.FIX10_CHECK_SUM);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag10CheckSum extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag10CheckSum tagData = new Tag10CheckSum("234");
+        Tag10CheckSum tagData = new Tag10CheckSum(TESTA_CHECK_SUM);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

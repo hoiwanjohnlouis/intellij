@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag71AllocTransType extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_ALLOC_TRANS_TYPE = "BilboBaggins-71-AllocTransType"; // fake data
+    public final static String TESTB_ALLOC_TRANS_TYPE = "Gandalf-71-AllocTransType";
+
     public Tag71AllocTransType(String dataValue) {
         setFixType(FIXType.FIX71_ALLOC_TRANS_TYPE);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag71AllocTransType extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag71AllocTransType tagData = new Tag71AllocTransType("JohnWick-71");
+        Tag71AllocTransType tagData = new Tag71AllocTransType(TESTA_ALLOC_TRANS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

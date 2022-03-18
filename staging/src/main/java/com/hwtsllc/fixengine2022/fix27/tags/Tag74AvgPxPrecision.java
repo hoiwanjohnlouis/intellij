@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag74AvgPxPrecision extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_AVG_PX_PRECISION = "BilboBaggins-74-AvgPxPrecision"; // fake data
+    public final static String TESTB_AVG_PX_PRECISION = "Gandalf-74-AvgPxPrecision";
+
     public Tag74AvgPxPrecision(String dataValue) {
         setFixType(FIXType.FIX74_AVG_PRX_PRECISION);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag74AvgPxPrecision extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag74AvgPxPrecision tagData = new Tag74AvgPxPrecision("JohnWick-74");
+        Tag74AvgPxPrecision tagData = new Tag74AvgPxPrecision(TESTA_AVG_PX_PRECISION);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag27IOIShares extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_IOI_SHARES = "BilboBaggins-27-IOIShares"; // fake data
+    public final static String TESTB_IOI_SHARES = "Gandalf-27-IOIShares";
+
     public Tag27IOIShares(String dataValue) {
         setFixType(FIXType.FIX27_IOI_SHARES);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag27IOIShares extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag27IOIShares tagData = new Tag27IOIShares("JohnWick-453");
+        Tag27IOIShares tagData = new Tag27IOIShares(TESTA_IOI_SHARES);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

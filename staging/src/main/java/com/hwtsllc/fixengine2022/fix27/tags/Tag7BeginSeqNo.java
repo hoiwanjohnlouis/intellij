@@ -17,16 +17,18 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.SeqNumType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
 public class Tag7BeginSeqNo extends TagTypeAbstract {
-    private SeqNumType dataValue;
+    private String dataValue;
+
+    public final static String TESTA_BEGIN_SEQ_NO = "123";
+    public final static String TESTB_BEGIN_SEQ_NO = "456";
 
     public Tag7BeginSeqNo(final String dataValue) {
         setFixType(FIXType.FIX7_BEGIN_SEQ_NO);
         setDataValue(dataValue);
-        // this.seqNum = (int) dataValue;
+        this.dataValue = dataValue;
     }
 
     /**
@@ -34,7 +36,7 @@ public class Tag7BeginSeqNo extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag7BeginSeqNo tagData = new Tag7BeginSeqNo("123456");
+        Tag7BeginSeqNo tagData = new Tag7BeginSeqNo(TESTA_BEGIN_SEQ_NO);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

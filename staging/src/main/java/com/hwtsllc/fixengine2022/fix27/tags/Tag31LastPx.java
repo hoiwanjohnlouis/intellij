@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag31LastPx extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static double TESTA_SYMBOL_LAST_PX = 123.45;
-    public final static double TESTB_SYMBOL_LAST_PX = 67.89;
+    public final static String TESTA_LAST_PX = "123.45";
+    public final static String TESTB_LAST_PX = "67.89";
 
     public Tag31LastPx(String dataValue) {
         setFixType(FIXType.FIX31_LAST_PX);
@@ -36,7 +36,7 @@ public class Tag31LastPx extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag31LastPx tagType = new Tag31LastPx("JohnWick-43");
+        Tag31LastPx tagType = new Tag31LastPx(TESTA_LAST_PX);
         System.out.println(tagType);
         System.out.println(tagType.toLogStringVerbose());
         System.out.println(tagType.toFixTagValuePairString());

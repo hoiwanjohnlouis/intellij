@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag65SymbolSfx extends TagTypeAbstract {
     private final String dataValue;
 
+    public final static String TESTA_SYMBOL_SFX = "TESTA";
+    public final static String TESTB_SYMBOL_SFX = "TESTB";
+
     public Tag65SymbolSfx(String dataValue) {
         setFixType(FIXType.FIX65_SYMBOL_SFX);
         setDataValue(dataValue);
@@ -33,7 +36,7 @@ public class Tag65SymbolSfx extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag65SymbolSfx tagData = new Tag65SymbolSfx("JohnWick-453");
+        Tag65SymbolSfx tagData = new Tag65SymbolSfx(TESTA_SYMBOL_SFX);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
