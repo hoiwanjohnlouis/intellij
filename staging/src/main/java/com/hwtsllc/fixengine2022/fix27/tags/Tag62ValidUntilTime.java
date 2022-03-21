@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag62ValidUntilTime extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_VALID_UNTIL_TIME = "BilboBaggins-62-ValidUntilTime"; // fake data
-    public final static String TESTB_VALID_UNTIL_TIME = "Gandalf-62-ValidUntilTime";
+    public final static String TESTA_VALID_UNTIL_TIME = "BilboBaggins-62ValidUntilTime"; // fake data
+    public final static String TESTB_VALID_UNTIL_TIME = "Gandalf-62ValidUntilTime";
 
     public Tag62ValidUntilTime(String dataValue) {
         setFixType(FIXType.FIX62_VALID_UNTIL_TIME);

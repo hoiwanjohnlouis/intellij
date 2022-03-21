@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag82NoRptsTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag82NoRptsTest {
 
     @Test
     void FIX0082Test() {
-        FIXType fix82NoRpts = FIXType.FIX82_NO_RPTS;
+        FIXType fixData = FIXType.FIX82_NO_RPTS;
+        assertEquals( "NO_RPTS", fixData.getName());
+        assertEquals( "82", fixData.getID());
+        assertEquals( "NoRpts", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0082Test() {
         Tag82NoRpts tagData;
+
+        tagData = new Tag82NoRpts("Gimli-82NoRpts");
+        assertEquals( "Gimli-82NoRpts", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0082Test()");
     }
 }

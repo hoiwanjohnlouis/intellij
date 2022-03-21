@@ -27,7 +27,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Tag24IOIOthSvcTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,20 +39,23 @@ class Tag24IOIOthSvcTest {
 
     @Test
     void FIX0024Test() {
-        FIXType fix24IOIOthSvc = FIXType.FIX24_IOI_OTH_SVC;
-        assertEquals( "IOI_OTH_SVC", fix24IOIOthSvc.getName());
-        assertEquals( "24", fix24IOIOthSvc.getID());
-        assertEquals( "IOIOthSvc (no longer used)", fix24IOIOthSvc.getDescription());
-        assertNotEquals( "IOI_OTH_SVC IOI_OTH_SVC", fix24IOIOthSvc.getName());
-        assertNotEquals( "2424", fix24IOIOthSvc.getID());
-        assertNotEquals( "123 IOIOthSvc (no longer used)", fix24IOIOthSvc.getDescription());
+        FIXType fixData = FIXType.FIX24_IOI_OTH_SVC;
+        assertEquals( "IOI_OTH_SVC", fixData.getName());
+        assertEquals( "24", fixData.getID());
+        assertEquals( "IOIOthSvc (no longer used)", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0024Test() {
-        Tag24IOIOthSvc tag24IOIOthSvc;
-        //= new Tag24IOIOthSvc();
-//        assertEquals( "A", tag24IOIOthSvc.getDataValue());
-//        assertNotEquals( "11", tag24IOIOthSvc.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0024Test()");
+        Tag24IOIOthSvc tagData;
+
+        tagData = new Tag24IOIOthSvc("A");
+        assertEquals( "A", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0024Test()");
     }
 }

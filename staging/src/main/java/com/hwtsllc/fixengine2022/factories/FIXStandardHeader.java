@@ -21,23 +21,20 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class FIXStandardHeader implements LogStringVerbose {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @Override
     public String toLogStringVerbose() {
-        StringBuilder stringBuilder = new StringBuilder();
-        return stringBuilder.toString();
+        return "hello from toLogStringVerbose()";
     }
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        return stringBuilder.toString();
+        return "hello from toString()";
     }
 
     /**
      *
-     * @param args
+     * @param args   not used yet
      */
     public static void main(String[] args) {
         logger.trace("Hello from FIXStandardHeader");

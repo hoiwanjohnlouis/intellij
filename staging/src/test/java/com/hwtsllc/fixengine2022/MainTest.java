@@ -27,9 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MainTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -43,6 +41,6 @@ class MainTest {
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
+        logger.info("Successful Test()");
     }
 }

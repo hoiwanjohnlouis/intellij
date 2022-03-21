@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag23IOIIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag23IOIIDTest {
 
     @Test
     void FIX0023Test() {
-        FIXType fix23IOIID = FIXType.FIX23_IOI_ID;
-        assertEquals( "IOI_ID", fix23IOIID.getName());
-        assertEquals( "23", fix23IOIID.getID());
-        assertEquals( "IOIid", fix23IOIID.getDescription());
-        assertNotEquals( "IOI_ID IOI_ID", fix23IOIID.getName());
-        assertNotEquals( "2323", fix23IOIID.getID());
-        assertNotEquals( "123 IOIid", fix23IOIID.getDescription());
+        FIXType fixData = FIXType.FIX23_IOI_ID;
+        assertEquals( "IOI_ID", fixData.getName());
+        assertEquals( "23", fixData.getID());
+        assertEquals( "IOIid", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0023Test() {
-        Tag23IOIID tag23IOIID = new Tag23IOIID("A");
-        assertEquals( "A", tag23IOIID.getDataValue());
-        assertNotEquals( "11", tag23IOIID.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0023Test()");
+        Tag23IOIID tagData;
+
+        tagData = new Tag23IOIID("A");
+        assertEquals( "A", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info( "Successful Tag0023Test()");
     }
 }

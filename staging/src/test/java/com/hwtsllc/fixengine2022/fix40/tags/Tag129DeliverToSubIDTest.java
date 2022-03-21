@@ -40,14 +40,23 @@ class Tag129DeliverToSubIDTest {
 
     @Test
     void FIX0129Test() {
-        FIXType fix129DeliverToSubID = FIXType.FIX129_DELIVER_TO_SUB_ID;
-        assertEquals( "DELIVER_TO_SUB_ID", fix129DeliverToSubID.getName());
-        assertEquals( "129", fix129DeliverToSubID.getID());
-        assertEquals( "DeliverToSubID", fix129DeliverToSubID.getDescription());
+        FIXType fixData = FIXType.FIX129_DELIVER_TO_SUB_ID;
+        assertEquals( "DELIVER_TO_SUB_ID", fixData.getName());
+        assertEquals( "129", fixData.getID());
+        assertEquals( "DeliverToSubID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0129Test() {
         Tag129DeliverToSubID tagData;
+
+        tagData = new Tag129DeliverToSubID("HanHyoJoo-129DeliverToSubID");
+        assertEquals( "HanHyoJoo-129DeliverToSubID", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info(WHERE_AM_I + ":Successful Tag0129Test()");
     }
 }

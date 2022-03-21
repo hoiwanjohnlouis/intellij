@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag27IOIShares extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_IOI_SHARES = "BilboBaggins-27-IOIShares"; // fake data
-    public final static String TESTB_IOI_SHARES = "Gandalf-27-IOIShares";
+    public final static String TESTA_IOI_SHARES = "BilboBaggins-27IOIShares"; // fake data
+    public final static String TESTB_IOI_SHARES = "Gandalf-27IOIShares";
 
     public Tag27IOIShares(String dataValue) {
         setFixType(FIXType.FIX27_IOI_SHARES);

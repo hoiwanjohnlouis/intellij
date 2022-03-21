@@ -47,7 +47,7 @@ public class TestViews {
 
     public static void main (String[] args) {
 
-        Tag55Symbol tag55Symbol = new Tag55Symbol(Tag55Symbol.TESTA_TICKER_SYMBOL);
+        Tag55Symbol tag55Symbol = new Tag55Symbol(Tag55Symbol.TESTA_SYMBOL);
         TradeView testView = null;
 //                new TradeView.TradeViewBuilder(Tag35MsgType.EXECUTION_REPORT).
 //                        buildTickerSymbol(tag55Symbol).

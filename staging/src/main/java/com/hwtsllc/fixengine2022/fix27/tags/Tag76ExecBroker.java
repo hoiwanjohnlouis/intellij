@@ -23,8 +23,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag76ExecBroker extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_EXEC_BROKER = "BilboBaggins-76-ExecBroker"; // fake data
-    public final static String TESTB_EXEC_BROKER = "Gandalf-76-ExecBroker";
+    public final static String TESTA_EXEC_BROKER = "BilboBaggins-76ExecBroker"; // fake data
+    public final static String TESTB_EXEC_BROKER = "Gandalf-76ExecBroker";
 
     public Tag76ExecBroker(String dataValue) {
         setFixType(FIXType.FIX76_EXEC_BROKER);

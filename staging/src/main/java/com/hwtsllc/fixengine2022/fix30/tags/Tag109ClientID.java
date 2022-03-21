@@ -23,8 +23,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag109ClientID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_CLIENT_ID = "BilboBaggins-109-ClientID"; // fake data
-    public final static String TESTB_CLIENT_ID = "Gandalf-109-ClientID";
+    public final static String TESTA_CLIENT_ID = "BilboBaggins-109ClientID"; // fake data
+    public final static String TESTB_CLIENT_ID = "Gandalf-109ClientID";
 
     public Tag109ClientID(String dataValue) {
         setFixType(FIXType.FIX109_CLIENT_ID);

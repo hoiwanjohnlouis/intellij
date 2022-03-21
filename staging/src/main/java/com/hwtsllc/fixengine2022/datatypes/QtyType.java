@@ -16,50 +16,54 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *
- * QtyType is a wrapper class for the Qty field
- * Initially it will be a int.
+ * QtyType is a wrapper class for any QtyType field
+ * Initially it will be an int.
  */
-public class QtyType {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
+public class QtyType implements LogStringVerbose {
     private int dataValue;
 
     public QtyType(final int dataValue) {
         this.dataValue = dataValue;
     }
 
-    public long getDataValue() {
+    public int getDataValue() {
         return dataValue;
     }
-    public void setDataValue(final int dataValue) {
+    public void setDataValue(final int dataValue)  {
         this.dataValue = dataValue;
     }
-    public void incrementDataValue(final int dataValue) {
-        this.dataValue = this.dataValue + dataValue;
-    }
 
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return this.getClass().getSimpleName()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getDataValue());
-        return sb.toString();
+        return String.valueOf(getDataValue());
     }
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-        QtyType qtyType = new QtyType(12345);
-        System.out.println(qtyType);
-        qtyType.setDataValue(200);
-        System.out.println(qtyType.getDataValue());
-        qtyType.incrementDataValue(200);
-        System.out.println(qtyType.getDataValue());
+        QtyType dataType = new QtyType(12345);
+        System.out.println(dataType);
+        System.out.println(dataType.toLogStringVerbose());
+        dataType.setDataValue(3456);
+        System.out.println(dataType);
+        System.out.println(dataType.toLogStringVerbose());
     }
 }

@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag107SecurityDescTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,15 +38,23 @@ class Tag107SecurityDescTest {
 
     @Test
     void FIX0107Test() {
-        FIXType fix107SecurityDesc = FIXType.FIX107_SECURITY_DESC;
-        assertEquals( "SECURITY_DESC", fix107SecurityDesc.getName());
-        assertEquals( "107", fix107SecurityDesc.getID());
-        assertEquals( "SecurityDesc", fix107SecurityDesc.getDescription());
+        FIXType fixData = FIXType.FIX107_SECURITY_DESC;
+        assertEquals( "SECURITY_DESC", fixData.getName());
+        assertEquals( "107", fixData.getID());
+        assertEquals( "SecurityDesc", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0107Test() {
-        Tag107SecurityDesc tagData = new Tag107SecurityDesc("International Widgets, Inc.");
+        Tag107SecurityDesc tagData;
+
+        tagData = new Tag107SecurityDesc("International Widgets, Inc.");
         assertEquals("International Widgets, Inc.", tagData.getDataValue() );
-        logger.info(WHERE_AM_I + ":Successful Tag0107Test()");
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0107Test()");
     }
 }

@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag58Text extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_TEXT = "BilboBaggins-58-ClOrdID"; // fake data
-    public final static String TESTB_TEXT = "Gandalf-58-ClOrdID";
+    public final static String TESTA_TEXT = "BilboBaggins-58ClOrdID"; // fake data
+    public final static String TESTB_TEXT = "Gandalf-58ClOrdID";
 
     public Tag58Text(String dataValue) {
         setFixType(FIXType.FIX58_TEXT);

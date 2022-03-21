@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag79AllocAccountTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag79AllocAccountTest {
 
     @Test
     void FIX0079Test() {
-        FIXType fix79AllocAccount = FIXType.FIX79_ALLOC_ACCOUNT;
+        FIXType fixData = FIXType.FIX79_ALLOC_ACCOUNT;
+        assertEquals( "ALLOC_ACCOUNT", fixData.getName());
+        assertEquals( "79", fixData.getID());
+        assertEquals( "AllocAccount", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0079Test() {
         Tag79AllocAccount tagData;
+
+        tagData = new Tag79AllocAccount("Gollum-9AllocAccount");
+        assertEquals( "Gollum-9AllocAccount", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0079Test()");
     }
 }

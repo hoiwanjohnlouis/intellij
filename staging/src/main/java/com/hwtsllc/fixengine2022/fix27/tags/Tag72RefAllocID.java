@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag72RefAllocID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_REF_ALLOC_ID = "BilboBaggins-72-RefAllocID"; // fake data
-    public final static String TESTB_REF_ALLOC_ID = "Gandalf-72-RefAllocID";
+    public final static String TESTA_REF_ALLOC_ID = "BilboBaggins-72RefAllocID"; // fake data
+    public final static String TESTB_REF_ALLOC_ID = "Gandalf-72RefAllocID";
 
     public Tag72RefAllocID(String dataValue) {
         setFixType(FIXType.FIX72_REF_ALLOC_ID);

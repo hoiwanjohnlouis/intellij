@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag106Issuer extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_ISSUER = "BilboBaggins-106-Issuer"; // fake data
-    public final static String TESTB_ISSUER = "Gandalf-106-Issuer";
+    public final static String TESTA_ISSUER = "BilboBaggins-106Issuer"; // fake data
+    public final static String TESTB_ISSUER = "Gandalf-106Issuer";
 
     public Tag106Issuer(String dataValue) {
         setFixType(FIXType.FIX106_ISSUER);

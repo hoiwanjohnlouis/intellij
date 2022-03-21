@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag100ExDestination extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_EX_DESTINATION = "BilboBaggins-100-ExDestination";
-    public final static String TESTB_EX_DESTINATION = "Gandalf-100-ExDestination";
+    public final static String TESTA_EX_DESTINATION = "BilboBaggins-100ExDestination";
+    public final static String TESTB_EX_DESTINATION = "Gandalf-100ExDestination";
 
     public Tag100ExDestination(String dataValue) {
         setFixType(FIXType.FIX100_EX_DESTINATION);

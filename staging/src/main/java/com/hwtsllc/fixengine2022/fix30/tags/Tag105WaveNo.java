@@ -23,8 +23,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag105WaveNo extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_WAVE_NO = "BilboBaggins-105-WaveNo"; // fake data
-    public final static String TESTB_WAVE_NO = "Gandalf-105-WaveNo";
+    public final static String TESTA_WAVE_NO = "BilboBaggins-105WaveNo"; // fake data
+    public final static String TESTB_WAVE_NO = "Gandalf-105WaveNo";
 
     public Tag105WaveNo(String dataValue) {
         setFixType(FIXType.FIX105_WAVE_NO);

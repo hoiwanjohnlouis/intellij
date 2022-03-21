@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag33NoLinesOfTextTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag33NoLinesOfTextTest {
 
     @Test
     void FIX0033Test() {
-        FIXType fix33LinesOfText = FIXType.FIX33_NO_LINES_OF_TEXT;
-        assertEquals( "NO_LINES_OF_TEXT", fix33LinesOfText.getName());
-        assertEquals( "33", fix33LinesOfText.getID());
-        assertEquals( "NoLinesOfText", fix33LinesOfText.getDescription());
-        assertNotEquals( "NO_LINES_OF_TEXT NO_LINES_OF_TEXT", fix33LinesOfText.getName());
-        assertNotEquals( "3172", fix33LinesOfText.getID());
-        assertNotEquals( "NoLinesOfText NoLinesOfText", fix33LinesOfText.getDescription());
+        FIXType fixData = FIXType.FIX33_NO_LINES_OF_TEXT;
+        assertEquals( "NO_LINES_OF_TEXT", fixData.getName());
+        assertEquals( "33", fixData.getID());
+        assertEquals( "NoLinesOfText", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0033Test() {
-        Tag33NoLinesOfText tag33LinesOfText = new Tag33NoLinesOfText("1");
-        assertEquals( "1", tag33LinesOfText.getDataValue());
-        assertNotEquals( "11", tag33LinesOfText.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0033Test()");
+        Tag33NoLinesOfText tagData;
+
+        tagData = new Tag33NoLinesOfText("1");
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0033Test()");
     }
 }

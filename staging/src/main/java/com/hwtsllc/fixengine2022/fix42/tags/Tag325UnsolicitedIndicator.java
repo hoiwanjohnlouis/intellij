@@ -16,5 +16,28 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-public class Tag325UnsolicitedIndicator {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag325UnsolicitedIndicator extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_UNSOLICITED_INDICATOR = EnumBoolean.NO ;
+                                    // N - Msg is being sent as a result of a prior request
+    public final static EnumBoolean TESTB_UNSOLICITED_INDICATOR = EnumBoolean.YES;
+                                    // Y - Msg is being sent unsolicited
+
+    public Tag325UnsolicitedIndicator(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX325_UNSOLICITED_INDICATOR);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag325UnsolicitedIndicator tagData = new Tag325UnsolicitedIndicator(TESTA_UNSOLICITED_INDICATOR);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

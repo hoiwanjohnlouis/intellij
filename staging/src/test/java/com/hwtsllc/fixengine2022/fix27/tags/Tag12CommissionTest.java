@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag12CommissionTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag12CommissionTest {
 
     @Test
     void FIX0012Test() {
-        FIXType fix12Commission = FIXType.FIX12_COMMISSION;
-        assertEquals( "COMMISSION", fix12Commission.getName());
-        assertEquals( "12", fix12Commission.getID());
-        assertEquals( "Commission", fix12Commission.getDescription());
-        assertNotEquals( "Not My COMMISSION", fix12Commission.getName());
-        assertNotEquals( "163223", fix12Commission.getID());
-        assertNotEquals( "123 Commission", fix12Commission.getDescription());
+        FIXType fixData = FIXType.FIX12_COMMISSION;
+        assertEquals( "COMMISSION", fixData.getName());
+        assertEquals( "12", fixData.getID());
+        assertEquals( "Commission", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0012Test() {
-        Tag12Commission tag12Commission = new Tag12Commission("10");
-        assertEquals( "10", tag12Commission.getDataValue());
-        assertNotEquals( "11", tag12Commission.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0012Test()");
+        Tag12Commission tagData;
+
+        tagData = new Tag12Commission("10");
+        assertEquals( "10", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0012Test()");
     }
 }

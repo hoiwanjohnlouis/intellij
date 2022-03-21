@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-public enum Tag127DKReason {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix40.enums.Enum127DKReason;
+
+public class Tag127DKReason extends TagTypeAbstract {
+    private final Enum127DKReason dataValue;
+
+    public final static Enum127DKReason TESTA_DK_REASON = Enum127DKReason.UNKNOWN_SYMBOL; // fake data
+    public final static Enum127DKReason TESTB_DK_REASON = Enum127DKReason.OTHER;
+
+    public Tag127DKReason(Enum127DKReason dataValue) {
+        setFixType(FIXType.FIX127_DK_REASON);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag127DKReason tagData = new Tag127DKReason(TESTA_DK_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

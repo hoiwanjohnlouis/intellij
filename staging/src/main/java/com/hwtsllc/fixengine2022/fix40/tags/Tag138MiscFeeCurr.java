@@ -16,12 +16,25 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag138MiscFeeCurr extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
+    public final static String TESTA_MISC_FEE_CURR = "BilboBaggins-138MiscFeeCurr"; // fake data
+    public final static String TESTB_MISC_FEE_CURR = "Gandalf-138MiscFeeCurr";
+
+    public Tag138MiscFeeCurr(String dataValue) {
+        setFixType(FIXType.FIX138_MISC_FEE_CURR);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag138MiscFeeCurr tagData = new Tag138MiscFeeCurr(TESTA_MISC_FEE_CURR);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

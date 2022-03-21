@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag112TestReqIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag112TestReqIDTest {
 
     @Test
     void FIX0112Test() {
-        FIXType fix112TestReqID = FIXType.FIX112_TEST_REQ_ID;
-        assertEquals( "TEST_REQ_ID", fix112TestReqID.getName());
-        assertEquals( "112", fix112TestReqID.getID());
-        assertEquals( "TestReqID", fix112TestReqID.getDescription());
+        FIXType fixData = FIXType.FIX112_TEST_REQ_ID;
+        assertEquals( "TEST_REQ_ID", fixData.getName());
+        assertEquals( "112", fixData.getID());
+        assertEquals( "TestReqID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0112Test() {
         Tag112TestReqID tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0112Test()");
+
+        tagData = new Tag112TestReqID("30");
+        assertEquals( "30", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0112Test()");
     }
 }

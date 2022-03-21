@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag91SecureData extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_SECURE_DATA = "BilboBaggins-91-SecureData";
-    public final static String TESTB_SECURE_DATA = "Gandalf-91-SecureData";
+    public final static String TESTA_SECURE_DATA = "BilboBaggins-91SecureData";
+    public final static String TESTB_SECURE_DATA = "Gandalf-91SecureData";
 
     public Tag91SecureData(String dataValue) {
         setFixType(FIXType.FIX91_SECURE_DATA);

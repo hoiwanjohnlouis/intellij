@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag78NoAllocs extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_NO_ALLOCS = "BilboBaggins-78-NoAllocs"; // fake data
-    public final static String TESTB_NO_ALLOCS = "Gandalf-78-NoAllocs";
+    public final static String TESTA_NO_ALLOCS = "BilboBaggins-78NoAllocs"; // fake data
+    public final static String TESTB_NO_ALLOCS = "Gandalf-78NoAllocs";
 
     public Tag78NoAllocs(String dataValue) {
         setFixType(FIXType.FIX78_NO_ALLOCS);

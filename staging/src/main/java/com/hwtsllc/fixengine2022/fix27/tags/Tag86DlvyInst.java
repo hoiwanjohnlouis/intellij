@@ -23,8 +23,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag86DlvyInst extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_DLVY_INST = "BilboBaggins-86-DlvyInst"; // fake data
-    public final static String TESTB_DLVY_INST = "Gandalf-86-DlvyInst";
+    public final static String TESTA_DLVY_INST = "BilboBaggins-86DlvyInst"; // fake data
+    public final static String TESTB_DLVY_INST = "Gandalf-86DlvyInst";
 
     public Tag86DlvyInst(String dataValue) {
         setFixType(FIXType.FIX86_DLVY_INST);

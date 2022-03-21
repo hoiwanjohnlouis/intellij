@@ -17,16 +17,18 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum81ProcessCode;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag81ProcessCodeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +40,44 @@ class Tag81ProcessCodeTest {
 
     @Test
     void FIX0081Test() {
-        FIXType fix81ProcessCode = FIXType.FIX81_PROCESS_CODE;
+        FIXType fixData = FIXType.FIX81_PROCESS_CODE;
+        assertEquals( "PROCESS_CODE", fixData.getName());
+        assertEquals( "81", fixData.getID());
+        assertEquals( "ProcessCode", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0081Test() {
         Tag81ProcessCode tagData;
+
+        /*
+         * 0-6 AllocRejCode types
+         */
+        tagData = new Tag81ProcessCode(Enum81ProcessCode.REGULAR);
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag81ProcessCode(Enum81ProcessCode.SOFT_DOLLAR);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag81ProcessCode(Enum81ProcessCode.STEP_IN);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag81ProcessCode(Enum81ProcessCode.STEP_OUT);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag81ProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_IN);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag81ProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_OUT);
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag81ProcessCode(Enum81ProcessCode.PLAN_SPONSOR);
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0081Test()");
     }
 }

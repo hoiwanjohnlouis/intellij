@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag100ExDestinationTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,17 +38,23 @@ class Tag100ExDestinationTest {
 
     @Test
     void FIX0100Test() {
-        FIXType fix100ExDestination = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( fix100ExDestination.getName(), "EX_DESTINATION");
-        assertEquals( fix100ExDestination.getID(), "100");
-        assertEquals( fix100ExDestination.getDescription(), "ExDestination");
-        assertNotEquals( fix100ExDestination.getName(), "Not My EX_DESTINATION");
-        assertNotEquals( fix100ExDestination.getID(), "2");
-        assertNotEquals( fix100ExDestination.getDescription(), "123 Account");
+        FIXType fixData = FIXType.FIX100_EX_DESTINATION;
+        assertEquals( "EX_DESTINATION", fixData.getName());
+        assertEquals( "100", fixData.getID());
+        assertEquals( "ExDestination", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0100Test() {
         Tag100ExDestination tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0100Test()");
+
+        tagData = new Tag100ExDestination("JPMC");
+        assertEquals( "JPMC", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0100Test()");
     }
 }

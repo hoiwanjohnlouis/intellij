@@ -23,12 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag62ValidUntilTimeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -39,16 +38,24 @@ class Tag62ValidUntilTimeTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0062Test() {
-        FIXType fix62ValidUntilTime = FIXType.FIX62_VALID_UNTIL_TIME;
+        FIXType fixData = FIXType.FIX62_VALID_UNTIL_TIME;
+        assertEquals( "VALID_UNTIL_TIME", fixData.getName());
+        assertEquals( "62", fixData.getID());
+        assertEquals( "ValidUntilTime", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0062Test() {
+        Tag62ValidUntilTime tagData;
+
+        tagData = new Tag62ValidUntilTime("20220401 000001");
+        assertEquals( "20220401 000001", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0062Test()");
     }
 }

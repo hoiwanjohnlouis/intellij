@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag30LastMkt extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_LAST_MKT = "BilboBaggins-30-LastMkt"; // fake data
-    public final static String TESTB_LAST_MKT = "BilboBaggins-30-LastMkt";
+    public final static String TESTA_LAST_MKT = "BilboBaggins-30LastMkt"; // fake data
+    public final static String TESTB_LAST_MKT = "BilboBaggins-30LastMkt";
 
     public Tag30LastMkt(String dataValue) {
         setFixType(FIXType.FIX30_LAST_MKT);

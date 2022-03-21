@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag83RptSeq extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_RPT_SEQ = "BilboBaggins-83-RptSeq"; // fake data
-    public final static String TESTB_RPT_SEQ = "Gandalf-83-RptSeq";
+    public final static String TESTA_RPT_SEQ = "BilboBaggins-83RptSeq"; // fake data
+    public final static String TESTB_RPT_SEQ = "Gandalf-83RptSeq";
 
     public Tag83RptSeq(String dataValue) {
         setFixType(FIXType.FIX83_RPT_SEQ);

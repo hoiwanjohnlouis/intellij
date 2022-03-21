@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag96RawData extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_RAW_DATA = "BilboBaggins-96-RawData";
-    public final static String TESTB_RAW_DATA = "Gandalf-96-RawData";
+    public final static String TESTA_RAW_DATA = "BilboBaggins-96RawData";
+    public final static String TESTB_RAW_DATA = "Gandalf-96RawData";
 
     public Tag96RawData(String dataValue) {
         setFixType(FIXType.FIX96_RAW_DATA);

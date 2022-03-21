@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -26,9 +27,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag114LocateReqdTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +39,26 @@ class Tag114LocateReqdTest {
 
     @Test
     void FIX0114Test() {
-        FIXType fix114LocateReqd = FIXType.FIX114_LOCATE_REQD;
-        assertEquals( "LOCATE_REQD", fix114LocateReqd.getName());
-        assertEquals( "114", fix114LocateReqd.getID());
-        assertEquals( "LocateReqd", fix114LocateReqd.getDescription());
+        FIXType fixData = FIXType.FIX114_LOCATE_REQD;
+        assertEquals( "LOCATE_REQD", fixData.getName());
+        assertEquals( "114", fixData.getID());
+        assertEquals( "LocateReqd", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0114Test() {
         Tag114LocateReqd tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0114Test()");
+
+        tagData = new Tag114LocateReqd(EnumBoolean.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag114LocateReqd(EnumBoolean.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0114Test()");
     }
 }

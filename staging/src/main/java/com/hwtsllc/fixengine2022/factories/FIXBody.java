@@ -23,7 +23,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class FIXBody implements LogStringVerbose {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     private final OpeningPrice openingPrice;
@@ -35,23 +34,13 @@ public class FIXBody implements LogStringVerbose {
         this.tag140PrevClosePx = builder.tag140PrevClosePx;
     }
 
-    public OpeningPrice getOpeningPrice() {
-        return openingPrice;
-    }
-    public Tag140PrevClosePx getPreviousDaysClosingPrice() {
-        return tag140PrevClosePx;
-    }
-
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
 
         // clean up the buffer before using.
         stringBuilder
-            .append(openingPrice.getPrice())
-            .append("\n")
-            .append(tag140PrevClosePx.getTag140PrevClosePxValue());
-
+            .append(openingPrice.getPrice());
         return stringBuilder.toString();
     }
     @Override
@@ -67,14 +56,12 @@ public class FIXBody implements LogStringVerbose {
         return stringBuilder.toString();
     }
 
-    public int compareTo(Object o) {
-        return 0;
-    }
+//    public int compareTo(Object o) {
+//        return 0;
+//    }
 
     // static builder helper class
     public static class Builder {
-        private StringBuilder stringBuilder = new StringBuilder();
-
         private OpeningPrice openingPrice;              // 3
         private Tag140PrevClosePx tag140PrevClosePx;    // 4
 
@@ -88,7 +75,7 @@ public class FIXBody implements LogStringVerbose {
         }
 
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.tag140PrevClosePx = new Tag140PrevClosePx(previousDaysClosingPrice);
+            this.tag140PrevClosePx = new Tag140PrevClosePx(String.valueOf(previousDaysClosingPrice));
             return this;
         }
 
@@ -99,7 +86,7 @@ public class FIXBody implements LogStringVerbose {
 
     /**
      *
-     * @param args
+     * @param args   not used yet
      */
     public static void main(String[] args) {
         FIXBody record =
@@ -109,5 +96,7 @@ public class FIXBody implements LogStringVerbose {
                         .build();
         logger.trace(record);
         logger.trace(record.toLogStringVerbose());
+        System.out.println(record);
+        System.out.println(record.toLogStringVerbose());
     }
 }

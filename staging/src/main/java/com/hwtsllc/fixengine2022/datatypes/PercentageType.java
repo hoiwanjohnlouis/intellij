@@ -16,8 +16,32 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
 public class PercentageType {
+    private double dataValue;
+
+    public PercentageType(final double dataValue) {
+        this.dataValue = dataValue;
+    }
+
+    public double getDataValue() {
+        return dataValue;
+    }
+    public void setDataValue(final double dataValue) {
+        this.dataValue = dataValue;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+    /**
+     *
+     * @param args Not used.
+     */
+    public static void main(String[] args) {
+        AmtType amtType = new AmtType(123.45d);
+        System.out.println(amtType);
+        amtType.setDataValue(67.89d);
+        System.out.println(amtType.getDataValue());
+    }
 }

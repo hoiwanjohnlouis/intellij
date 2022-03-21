@@ -27,7 +27,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Tag109ClientIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,15 +39,23 @@ class Tag109ClientIDTest {
 
     @Test
     void FIX0109Test() {
-        FIXType fix109ClientID = FIXType.FIX109_CLIENT_ID;
-        assertEquals( "CLIENT_ID", fix109ClientID.getName());
-        assertEquals( "109", fix109ClientID.getID());
-        assertEquals( "ClientID (replaced)", fix109ClientID.getDescription());
+        FIXType fixData = FIXType.FIX109_CLIENT_ID;
+        assertEquals( "CLIENT_ID", fixData.getName());
+        assertEquals( "109", fixData.getID());
+        assertEquals( "ClientID (replaced)", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0109Test() {
-        Tag109ClientID tagData = new Tag109ClientID("SOME-ACCT-NUMBER");
+        Tag109ClientID tagData;
+
+        tagData = new Tag109ClientID("SOME-ACCT-NUMBER");
         assertEquals("SOME-ACCT-NUMBER", tagData.getDataValue() );
-        logger.info(WHERE_AM_I + ":Successful Test()");
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0109Test()");
     }
 }

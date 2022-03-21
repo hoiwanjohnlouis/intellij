@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag19ExecRefIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag19ExecRefIDTest {
 
     @Test
     void FIX0019Test() {
-        FIXType fix19ExecRefID = FIXType.FIX19_EXEC_REF_ID;
-        assertEquals( "EXEC_REF_ID", fix19ExecRefID.getName());
-        assertEquals( "19", fix19ExecRefID.getID());
-        assertEquals( "ExecRefID", fix19ExecRefID.getDescription());
-        assertNotEquals( "EXEC_REF_ID EXEC_REF_ID", fix19ExecRefID.getName());
-        assertNotEquals( "111", fix19ExecRefID.getID());
-        assertNotEquals( "123 ExecRefID", fix19ExecRefID.getDescription());
+        FIXType fixData = FIXType.FIX19_EXEC_REF_ID;
+        assertEquals( "EXEC_REF_ID", fixData.getName());
+        assertEquals( "19", fixData.getID());
+        assertEquals( "ExecRefID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0019Test() {
-        Tag19ExecRefID tag19ExecRefID = new Tag19ExecRefID("6789-XYZ");
-        assertEquals( "6789-XYZ", tag19ExecRefID.getDataValue());
-        assertNotEquals( "11-ABCD", tag19ExecRefID.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0019Test()");
+        Tag19ExecRefID tagData;
+
+        tagData = new Tag19ExecRefID("6789-XYZ");
+        assertEquals( "6789-XYZ", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0019Test()");
     }
 }

@@ -16,12 +16,25 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag133OfferPx extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
+    public final static String TESTA_OFFER_PX = "BilboBaggins-133OfferPx"; // fake data
+    public final static String TESTB_OFFER_PX = "Gandalf-133OfferPx";
+
+    public Tag133OfferPx(String dataValue) {
+        setFixType(FIXType.FIX133_OFFER_PX);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag133OfferPx tagData = new Tag133OfferPx(TESTA_OFFER_PX);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

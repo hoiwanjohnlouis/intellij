@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag110MinQtyTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,15 +38,23 @@ class Tag110MinQtyTest {
 
     @Test
     void FIX0110Test() {
-        FIXType fix110MinQty = FIXType.FIX110_MIN_QTY;
-        assertEquals( "MIN_QTY", fix110MinQty.getName());
-        assertEquals( "110", fix110MinQty.getID());
-        assertEquals( "MinQty", fix110MinQty.getDescription());
+        FIXType fixData = FIXType.FIX110_MIN_QTY;
+        assertEquals( "MIN_QTY", fixData.getName());
+        assertEquals( "110", fixData.getID());
+        assertEquals( "MinQty", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0110Test() {
         Tag110MinQty tagData;
-        //= new Tag110MinQty();
-        logger.info(WHERE_AM_I + ":Successful Tag0110Test()");
+
+        tagData = new Tag110MinQty("11");
+        assertEquals( "11", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0110Test()");
     }
 }

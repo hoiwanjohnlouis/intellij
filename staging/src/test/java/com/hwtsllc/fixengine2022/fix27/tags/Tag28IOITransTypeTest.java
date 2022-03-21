@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum28IOITransType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -26,7 +27,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag28IOITransTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,17 +39,29 @@ class Tag28IOITransTypeTest {
 
     @Test
     void FIX0028Test() {
-        FIXType fix28IOITransType = FIXType.FIX28_IOI_TRANS_TYPE;
-        assertEquals( "IOI_TRANS_TYPE", fix28IOITransType.getName());
-        assertEquals( "28", fix28IOITransType.getID());
-        assertEquals( "IOITransType", fix28IOITransType.getDescription());
-        assertNotEquals( "IOI_TRANS_TYPE IOI_TRANS_TYPE", fix28IOITransType.getName());
-        assertNotEquals( "2020", fix28IOITransType.getID());
-        assertNotEquals( "123 IOITransType", fix28IOITransType.getDescription());
+        FIXType fixData = FIXType.FIX28_IOI_TRANS_TYPE;
+        assertEquals( "IOI_TRANS_TYPE", fixData.getName());
+        assertEquals( "28", fixData.getID());
+        assertEquals( "IOITransType", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0028Test() {
-        Tag28IOITransType tag28IOITransType;
-        logger.info(WHERE_AM_I + ":Successful Tag0029Test()");
+        Tag28IOITransType tagData;
+
+        tagData = new Tag28IOITransType(Enum28IOITransType.NEW);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag28IOITransType(Enum28IOITransType.REPLACE);
+        assertEquals( "R", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag28IOITransType(Enum28IOITransType.CANCEL);
+        assertEquals( "C", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0028Test()");
     }
 }

@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag30LastMktTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,20 +38,23 @@ class Tag30LastMktTest {
 
     @Test
     void FIX0030Test() {
-        FIXType fix30LastMkt = FIXType.FIX30_LAST_MKT;
-        assertEquals( "LAST_MKT", fix30LastMkt.getName());
-        assertEquals( "30", fix30LastMkt.getID());
-        assertEquals( "LastMkt", fix30LastMkt.getDescription());
-        assertNotEquals( "LAST_MKT LAST_MKT", fix30LastMkt.getName());
-        assertNotEquals( "2020", fix30LastMkt.getID());
-        assertNotEquals( "123 LastMkt", fix30LastMkt.getDescription());
+        FIXType fixData = FIXType.FIX30_LAST_MKT;
+        assertEquals( "LAST_MKT", fixData.getName());
+        assertEquals( "30", fixData.getID());
+        assertEquals( "LastMkt", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0030Test() {
-        Tag30LastMkt tag30LastMkt;
-        //= new Tag30LastMkt();
-//        assertEquals( "N", tag30LastMkt.getDataValue());
-//        assertNotEquals( "A11", tag30LastMkt.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0030Test()");
+        Tag30LastMkt tagData;
+
+        tagData = new Tag30LastMkt("NYSE");
+        assertEquals( "NYSE", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info( "Successful Tag0030Test()");
     }
 }

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -26,7 +27,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag35MsgTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,17 +39,23 @@ class Tag35MsgTypeTest {
 
     @Test
     void FIX0035Test() {
-        FIXType fix35MsgType = FIXType.FIX35_MSG_TYPE;
-        assertEquals( "MSG_TYPE", fix35MsgType.getName());
-        assertEquals( "35", fix35MsgType.getID());
-        assertEquals( "MsgType", fix35MsgType.getDescription());
-        assertNotEquals( "MSG_TYPE MSG_TYPE", fix35MsgType.getName());
-        assertNotEquals( "312", fix35MsgType.getID());
-        assertNotEquals( "MsgType MsgType", fix35MsgType.getDescription());
+        FIXType fixData = FIXType.FIX35_MSG_TYPE;
+        assertEquals( "MSG_TYPE", fixData.getName());
+        assertEquals( "35", fixData.getID());
+        assertEquals( "MsgType", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0035Test() {
-        Tag35MsgType tag35MsgType;
-        logger.info(WHERE_AM_I + ":Successful Tag0035Test()");
+        Tag35MsgType tagData;
+
+        tagData = new Tag35MsgType(Enum35MsgType.NEW_ORDER_SINGLE);
+        assertEquals( "D", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0035Test()");
     }
 }

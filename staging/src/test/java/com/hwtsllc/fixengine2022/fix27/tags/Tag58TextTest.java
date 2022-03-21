@@ -25,7 +25,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag58TextTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -46,20 +45,24 @@ class Tag58TextTest {
 
     @Test
     void FIX0058Test() {
-        FIXType fix58Text = FIXType.FIX58_TEXT;
-        assertEquals( "FIX58_TEXT", fix58Text.getEnumName());
-        assertEquals( "58", fix58Text.getID());
-        assertEquals( "TEXT", fix58Text.getName());
-        assertEquals( "Text", fix58Text.getDescription());
-        assertNotEquals( "FIX58_TEXT FIX58_TEXT", fix58Text.getEnumName());
-        assertNotEquals( "100", fix58Text.getID());
-        assertNotEquals( "TEXT TEXT", fix58Text.getName());
-        assertNotEquals( "123 TEXT", fix58Text.getDescription());
+        FIXType fixData = FIXType.FIX58_TEXT;
+        assertEquals( "FIX58_TEXT", fixData.getEnumName());
+        assertEquals( "58", fixData.getID());
+        assertEquals( "TEXT", fixData.getName());
+        assertEquals( "Text", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0058Test() {
-        Tag58Text tag58Text = new Tag58Text("hello from main routine");
-        assertEquals( "hello from main routine", tag58Text.getDataValue());
-        assertNotEquals( "goodbye from main routine", tag58Text.getDataValue());
+        Tag58Text tagData;
+
+        tagData = new Tag58Text("hello from main routine");
+        assertEquals( "hello from main routine", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0058Test()");
     }
 }

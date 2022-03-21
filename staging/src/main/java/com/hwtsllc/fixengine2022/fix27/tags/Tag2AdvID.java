@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag2AdvID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_ADV_ID = "BilboBaggins-2-AdvID";
-    public final static String TESTB_ADV_ID = "Gandalf-2-AdvID";
+    public final static String TESTA_ADV_ID = "BilboBaggins-2AdvID";
+    public final static String TESTB_ADV_ID = "Gandalf-2AdvID";
 
     public Tag2AdvID(String dataValue) {
         setFixType(FIXType.FIX2_ADV_ID);

@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag68TotNoOrdersTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag68TotNoOrdersTest {
 
     @Test
     void FIX0068Test() {
-        FIXType fix68TotNoOrders = FIXType.FIX68_TOT_NO_ORDERS;
+        FIXType fixData = FIXType.FIX68_TOT_NO_ORDERS;
+        assertEquals( "TOT_NO_ORDERS", fixData.getName());
+        assertEquals( "68", fixData.getID());
+        assertEquals( "TotNoOrders (formerly named: ListNoOrds)", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0068Test() {
         Tag68TotNoOrders tagData;
+
+        tagData = new Tag68TotNoOrders("ARWEN-68TotNoOrders");
+        assertEquals( "ARWEN-68TotNoOrders", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0068Test()");
     }
 }

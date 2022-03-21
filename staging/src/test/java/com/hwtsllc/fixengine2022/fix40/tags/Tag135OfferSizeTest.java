@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag135OfferSizeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag135OfferSizeTest {
 
     @Test
     void FIX0135Test() {
-        FIXType fix135OfferSize = FIXType.FIX135_OFFER_SIZE;
-        assertEquals( "OFFER_SIZE", fix135OfferSize.getName());
-        assertEquals( "135", fix135OfferSize.getID());
-        assertEquals( "OfferSize", fix135OfferSize.getDescription());
+        FIXType fixData = FIXType.FIX135_OFFER_SIZE;
+        assertEquals( "OFFER_SIZE", fixData.getName());
+        assertEquals( "135", fixData.getID());
+        assertEquals( "OfferSize", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0135Test() {
         Tag135OfferSize tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0135Test()");
+
+        tagData = new Tag135OfferSize("LimSungMin-135OfferSize");
+        assertEquals( "LimSungMin-135OfferSize", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0135Test()");
     }
 }

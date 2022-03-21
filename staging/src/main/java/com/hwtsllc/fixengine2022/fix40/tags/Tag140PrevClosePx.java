@@ -16,47 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FieldType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public class Tag140PrevClosePx {
-    // for logging purposes
-    private final String DEBUG_TAG = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+public class Tag140PrevClosePx extends TagTypeAbstract {
+    private final String dataValue;
 
-    private final double DEFAULT_VALUE = 0.00;
+    public final static String TESTA_PREV_CLOSE_PX = "BilboBaggins-140PrevClosePx"; // fake data
+    public final static String TESTB_PREV_CLOSE_PX = "Gandalf-140PrevClosePx";
 
-    private final FieldType fieldType;
-    private final double tag140PrevClosePx;
-
-    public Tag140PrevClosePx() {
-        this.fieldType = FieldType.DEFAULT_PREVIOUS_DAYS_CLOSING_PRICE;
-        this.tag140PrevClosePx = DEFAULT_VALUE;
+    public Tag140PrevClosePx(String dataValue) {
+        setFixType(FIXType.FIX140_PREV_CLOSE_PX);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
-    public Tag140PrevClosePx(final double tag140PrevClosePx) {
-        this.fieldType = FieldType.PREVIOUS_DAYS_CLOSING_PRICE;
-        this.tag140PrevClosePx = tag140PrevClosePx;
-    }
-
-    public FieldType getFieldType() {
-        return fieldType;
-    }
-
-    public double getTag140PrevClosePxValue() {
-        return tag140PrevClosePx;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getFieldType().name());
-        sb.append(":[");
-        sb.append(getTag140PrevClosePxValue());
-        sb.append("]");
-
-        return sb.toString();
+    public static void main(String[] args) {
+        Tag140PrevClosePx tagData = new Tag140PrevClosePx(TESTA_PREV_CLOSE_PX);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }
 

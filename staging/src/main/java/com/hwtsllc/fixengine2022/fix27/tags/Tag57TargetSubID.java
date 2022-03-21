@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag57TargetSubID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_TARGET_SUB_ID = "BilboBaggins-57-TargetSubID"; // fake data
-    public final static String TESTB_TARGET_SUB_ID = "Gandalf-57-TargetSubID";
+    public final static String TESTA_TARGET_SUB_ID = "BilboBaggins-57TargetSubID"; // fake data
+    public final static String TESTB_TARGET_SUB_ID = "Gandalf-57TargetSubID";
 
     public Tag57TargetSubID(String dataValue) {
         setFixType(FIXType.FIX57_TARGET_SUB_ID);

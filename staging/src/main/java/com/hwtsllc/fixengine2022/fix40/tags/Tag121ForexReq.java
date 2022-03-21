@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-public enum Tag121ForexReq {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag121ForexReq extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_FOREX_REQ = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_FOREX_REQ = EnumBoolean.YES;
+
+    public Tag121ForexReq(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX121_FOREX_REQ);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag121ForexReq tagData = new Tag121ForexReq(TESTA_FOREX_REQ);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

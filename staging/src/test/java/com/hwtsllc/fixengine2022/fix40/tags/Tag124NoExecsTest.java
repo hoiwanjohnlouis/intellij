@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag124NoExecsTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag124NoExecsTest {
 
     @Test
     void FIX0124Test() {
-        FIXType fix124NoExecs = FIXType.FIX124_NO_EXECS;
-        assertEquals( "NO_EXECS", fix124NoExecs.getName());
-        assertEquals( "124", fix124NoExecs.getID());
-        assertEquals( "NoExecs", fix124NoExecs.getDescription());
+        FIXType fixData = FIXType.FIX124_NO_EXECS;
+        assertEquals( "NO_EXECS", fixData.getName());
+        assertEquals( "124", fixData.getID());
+        assertEquals( "NoExecs", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0124Test() {
         Tag124NoExecs tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0124Test()");
+
+        tagData = new Tag124NoExecs("SonYeJin-124NoExecs");
+        assertEquals( "SonYeJin-124NoExecs", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0124Test()");
     }
 }

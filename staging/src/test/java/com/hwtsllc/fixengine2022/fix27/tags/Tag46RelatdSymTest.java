@@ -27,7 +27,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Tag46RelatdSymTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,20 +39,23 @@ class Tag46RelatdSymTest {
 
     @Test
     void FIX0046Test() {
-        FIXType fix46RelatdSym = FIXType.FIX46_RELATD_SYM;
-        assertEquals( "RELATD_SYM", fix46RelatdSym.getName());
-        assertEquals( "46", fix46RelatdSym.getID());
-        assertEquals( "RelatdSym (No longer used)", fix46RelatdSym.getDescription());
-        assertNotEquals( "RELATD_SYM RELATD_SYM", fix46RelatdSym.getName());
-        assertNotEquals( "3123", fix46RelatdSym.getID());
-        assertNotEquals( "RelatdSym (No longer used) RelatdSym (No longer used)", fix46RelatdSym.getDescription());
+        FIXType fixData = FIXType.FIX46_RELATD_SYM;
+        assertEquals( "RELATD_SYM", fixData.getName());
+        assertEquals( "46", fixData.getID());
+        assertEquals( "RelatdSym (No longer used)", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0046Test() {
         Tag46RelatdSym tagData;
-        //= new Tag46RelatdSym();
-//        assertEquals( "N", tag46RelatdSym.getDataValue());
-//        assertNotEquals( "A11", tag46RelatdSym.getDataValue());
+
+        tagData = new Tag46RelatdSym("IBM");
+        assertEquals( "IBM", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0046Test()");
     }
 }

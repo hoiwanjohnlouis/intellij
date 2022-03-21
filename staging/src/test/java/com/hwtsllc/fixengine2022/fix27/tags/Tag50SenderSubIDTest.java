@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag50SenderSubIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag50SenderSubIDTest {
 
     @Test
     void FIX0050Test() {
-        FIXType fix50SenderSubID = FIXType.FIX50_SENDER_SUB_ID;
-        assertEquals( "SENDER_SUB_ID", fix50SenderSubID.getName());
-        assertEquals( "50", fix50SenderSubID.getID());
-        assertEquals( "SenderSubID", fix50SenderSubID.getDescription());
-        assertNotEquals( "SENDER_SUB_ID SENDER_SUB_ID", fix50SenderSubID.getName());
-        assertNotEquals( "3123", fix50SenderSubID.getID());
-        assertNotEquals( "SenderSubID SenderSubID", fix50SenderSubID.getDescription());
+        FIXType fixData = FIXType.FIX50_SENDER_SUB_ID;
+        assertEquals( "SENDER_SUB_ID", fixData.getName());
+        assertEquals( "50", fixData.getID());
+        assertEquals( "SenderSubID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0050Test() {
-        Tag50SenderSubID tag50SenderSubID = new Tag50SenderSubID("BEST");
-        assertEquals( "BEST", tag50SenderSubID.getDataValue());
-        assertNotEquals( "A11", tag50SenderSubID.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0050Test()");
+        Tag50SenderSubID tagData;
+
+        tagData = new Tag50SenderSubID("BEST");
+        assertEquals( "BEST", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0050Test()");
     }
 }

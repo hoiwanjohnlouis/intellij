@@ -23,11 +23,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.hwtsllc.fixengine2022.fix27.tags.Tag14CumQty.TESTA_CUM_QTY;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag14CumQtyTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,19 +39,23 @@ class Tag14CumQtyTest {
 
     @Test
     void FIX0014Test() {
-        FIXType fix14CumQty = FIXType.FIX14_CUM_QTY;
-        assertEquals( "CUM_QTY", fix14CumQty.getName());
-        assertEquals( "14", fix14CumQty.getID());
-        assertEquals( "CumQty", fix14CumQty.getDescription());
-        assertNotEquals( "CUM_QTY CUM_QTY", fix14CumQty.getName());
-        assertNotEquals( "1414", fix14CumQty.getID());
-        assertNotEquals( "123 CumQty", fix14CumQty.getDescription());
+        FIXType fixData = FIXType.FIX14_CUM_QTY;
+        assertEquals( "CUM_QTY", fixData.getName());
+        assertEquals( "14", fixData.getID());
+        assertEquals( "CumQty", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0014Test() {
-        Tag14CumQty tag14CumQty = new Tag14CumQty(TESTA_CUM_QTY);
-        assertEquals( "12345", tag14CumQty.getDataValue());
-        assertNotEquals( "11", tag14CumQty.getDataValue());
+        Tag14CumQty tagData;
+
+        tagData = new Tag14CumQty("12345");
+        assertEquals( "12345", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0014Test()");
     }
 }

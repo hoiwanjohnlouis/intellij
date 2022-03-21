@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag48SecurityIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,20 +38,23 @@ class Tag48SecurityIDTest {
 
     @Test
     void FIX0048Test() {
-        FIXType fix48SecurityID = FIXType.FIX48_SECURITY_ID;
-        assertEquals( "SECURITY_ID", fix48SecurityID.getName());
-        assertEquals( "48", fix48SecurityID.getID());
-        assertEquals( "SecurityID", fix48SecurityID.getDescription());
-        assertNotEquals( "SECURITY_ID SECURITY_ID", fix48SecurityID.getName());
-        assertNotEquals( "3123", fix48SecurityID.getID());
-        assertNotEquals( "SecurityID SecurityID", fix48SecurityID.getDescription());
+        FIXType fixData = FIXType.FIX48_SECURITY_ID;
+        assertEquals( "SECURITY_ID", fixData.getName());
+        assertEquals( "48", fixData.getID());
+        assertEquals( "SecurityID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0048Test() {
-        Tag48SecurityID tag48SecurityID;
-                // = new Tag48SecurityID("TESTA");
-//        assertEquals( "TESTA", tag48SecurityID.getDataValue());
-//        assertNotEquals( "A11", tag48SecurityID.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0048Test()");
+        Tag48SecurityID tagData;
+
+        tagData = new Tag48SecurityID("TESTA");
+        assertEquals( "TESTA", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0048Test()");
     }
 }

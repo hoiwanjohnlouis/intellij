@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag95RawDataLength extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_RAW_DATA_LENGTH = "23";
-    public final static String TESTB_RAW_DATA_LENGTH = "18";
+    public final static String TESTA_RAW_DATA_LENGTH = "22";
+    public final static String TESTB_RAW_DATA_LENGTH = "17";
 
     public Tag95RawDataLength(String dataValue) {
         setFixType(FIXType.FIX95_RAW_DATA_LENGTH);

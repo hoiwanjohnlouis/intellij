@@ -18,22 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag128DeliverToCompID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
+
+    public final static String TESTA_DELIVER_TO_COMP_ID = "BilboBaggins-128DeliverToCompID"; // fake data
+    public final static String TESTB_DELIVER_TO_COMP_ID = "Gandalf-128DeliverToCompID";
 
     public Tag128DeliverToCompID(String dataValue) {
         setFixType(FIXType.FIX128_DELIVER_TO_COMP_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag128DeliverToCompID tag128DeliverToCompID = new Tag128DeliverToCompID("FIX128_DELIVER_TO_COMP_ID-FBCO");
-        System.out.println(tag128DeliverToCompID);
-        System.out.println(tag128DeliverToCompID.toLogStringVerbose());
-        System.out.println(tag128DeliverToCompID.toFixTagValuePairString());
+        Tag128DeliverToCompID tagData = new Tag128DeliverToCompID(TESTA_DELIVER_TO_COMP_ID);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

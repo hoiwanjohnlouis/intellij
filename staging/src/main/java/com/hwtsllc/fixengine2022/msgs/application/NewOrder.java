@@ -56,7 +56,6 @@ public class NewOrder implements Comparable {
         // clean up the buffer before using.
         stringBuilder.append(openingPrice.getPrice());
         stringBuilder.append("\n");
-        stringBuilder.append(tag140PrevClosePx.getTag140PrevClosePxValue());
 
         return stringBuilder.toString();
     }
@@ -83,7 +82,7 @@ public class NewOrder implements Comparable {
             return this;
         }
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.tag140PrevClosePx = new Tag140PrevClosePx(previousDaysClosingPrice);
+            this.tag140PrevClosePx = new Tag140PrevClosePx(Tag140PrevClosePx.TESTA_PREV_CLOSE_PX);
             return this;
         }
         public Builder buildLastTradeTimeStamp(String lastTradeTimeStamp) {

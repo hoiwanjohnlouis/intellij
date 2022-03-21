@@ -16,5 +16,28 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-public class Tag328InViewOfCommon {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag328InViewOfCommon extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_IN_VIEW_OF_COMMON = EnumBoolean.NO ;
+                                    // N - Halt was not related to a halt of the common stock
+    public final static EnumBoolean TESTB_IN_VIEW_OF_COMMON = EnumBoolean.YES;
+                                    // Y - Half was due to common stock being halted
+
+    public Tag328InViewOfCommon(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX328_IN_VIEW_OF_COMMON);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag328InViewOfCommon tagData = new Tag328InViewOfCommon(TESTA_IN_VIEW_OF_COMMON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

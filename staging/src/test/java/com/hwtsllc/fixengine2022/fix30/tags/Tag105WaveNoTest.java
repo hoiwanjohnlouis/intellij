@@ -27,7 +27,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Tag105WaveNoTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,15 +39,23 @@ class Tag105WaveNoTest {
 
     @Test
     void FIX0105Test() {
-        FIXType fix105WaveNo = FIXType.FIX105_WAVE_NO;
-        assertEquals( "WAVE_NO", fix105WaveNo.getName());
-        assertEquals( "105", fix105WaveNo.getID());
-        assertEquals( "WaveNo", fix105WaveNo.getDescription());
+        FIXType fixData = FIXType.FIX105_WAVE_NO;
+        assertEquals( "WAVE_NO", fixData.getName());
+        assertEquals( "105", fixData.getID());
+        assertEquals( "WaveNo", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0105Test() {
-        Tag105WaveNo tagData = new Tag105WaveNo("interested in Mahlers 4th Symphony");
+        Tag105WaveNo tagData;
+
+        tagData = new Tag105WaveNo("interested in Mahlers 4th Symphony");
         assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
-        logger.info(WHERE_AM_I + ":Successful Tag0105Test()");
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0105Test()");
     }
 }

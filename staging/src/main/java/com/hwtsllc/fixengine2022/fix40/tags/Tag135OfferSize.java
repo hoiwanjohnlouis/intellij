@@ -16,12 +16,25 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag135OfferSize extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
+    public final static String TESTA_OFFER_SIZE = "BilboBaggins-135OfferSize"; // fake data
+    public final static String TESTB_OFFER_SIZE = "Gandalf-135OfferSize";
+
+    public Tag135OfferSize(String dataValue) {
+        setFixType(FIXType.FIX135_OFFER_SIZE);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag135OfferSize tagData = new Tag135OfferSize(TESTA_OFFER_SIZE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

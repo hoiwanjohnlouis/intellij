@@ -17,17 +17,17 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum21HandlInst;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.hwtsllc.fixengine2022.fix27.tags.Tag21HandlInst.TESTA_HANDL_INST;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag21HandlInstTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,21 +40,29 @@ class Tag21HandlInstTest {
 
     @Test
     void FIX0021Test() {
-        FIXType fix21HandlInst = FIXType.FIX21_HANDL_INST;
-        assertEquals( "HANDL_INST", fix21HandlInst.getName());
-        assertEquals( "21", fix21HandlInst.getID());
-        assertEquals( "HandlInst", fix21HandlInst.getDescription());
-        assertNotEquals( "HANDL_INST HANDL_INST", fix21HandlInst.getName());
-        assertNotEquals( "2121", fix21HandlInst.getID());
-        assertNotEquals( "123 HandlInst", fix21HandlInst.getDescription());
+        FIXType fixData = FIXType.FIX21_HANDL_INST;
+        assertEquals( "HANDL_INST", fixData.getName());
+        assertEquals( "21", fixData.getID());
+        assertEquals( "HandlInst", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0021Test() {
-        Tag21HandlInst tagData ;
+        Tag21HandlInst tagData;
 
-        tagData = new Tag21HandlInst(TESTA_HANDL_INST);
+        tagData = new Tag21HandlInst(Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( "11", tagData.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0021Test()");
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag21HandlInst(Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag21HandlInst(Enum21HandlInst.MANUAL_ORDER_BEST_EXECUTION);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0021Test()");
     }
 }

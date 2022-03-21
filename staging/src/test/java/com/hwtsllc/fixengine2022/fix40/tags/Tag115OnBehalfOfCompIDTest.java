@@ -23,12 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag115OnBehalfOfCompIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +39,23 @@ class Tag115OnBehalfOfCompIDTest {
 
     @Test
     void FIX0115Test() {
-        FIXType fix115OnBehalfOfCompID = FIXType.FIX115_ON_BEHALF_OF_COMP_ID;
-        assertEquals( fix115OnBehalfOfCompID.getName(), "ON_BEHALF_OF_COMP_ID");
-        assertEquals( fix115OnBehalfOfCompID.getID(), "115");
-        assertEquals( fix115OnBehalfOfCompID.getDescription(), "OnBehalfOfCompID");
+        FIXType fixData = FIXType.FIX115_ON_BEHALF_OF_COMP_ID;
+        assertEquals( "ON_BEHALF_OF_COMP_ID", fixData.getName());
+        assertEquals( "115", fixData.getID());
+        assertEquals( "OnBehalfOfCompID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0115Test() {
         Tag115OnBehalfOfCompID tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0115Test()");
+
+        tagData = new Tag115OnBehalfOfCompID("Legolas-115OnBehalfOfCompID");
+        assertEquals( "Legolas-115OnBehalfOfCompID", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0115Test()");
     }
 }

@@ -27,9 +27,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag5Enum5AdvTransTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -41,19 +39,29 @@ class Tag5Enum5AdvTransTypeTest {
 
     @Test
     void FIX0005Test() {
-        FIXType fix5AdvTransType = FIXType.FIX5_ADV_TRANS_TYPE;
-        assertEquals( "ADV_TRANS_TYPE", fix5AdvTransType.getName());
-        assertEquals( "5", fix5AdvTransType.getID());
-        assertEquals( "Enum5AdvTransType", fix5AdvTransType.getDescription());
-        assertNotEquals( "ADV-TRANS-TYPE", fix5AdvTransType.getName());
-        assertNotEquals( "55", fix5AdvTransType.getID());
-        assertNotEquals( "Adv Trans Type", fix5AdvTransType.getDescription());
+        FIXType fixData = FIXType.FIX5_ADV_TRANS_TYPE;
+        assertEquals( "ADV_TRANS_TYPE", fixData.getName());
+        assertEquals( "5", fixData.getID());
+        assertEquals( "Enum5AdvTransType", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0005Test() {
-        Tag5AdvTransType tag5AdvTransType = new Tag5AdvTransType(Enum5AdvTransType.NEW);
-        assertEquals( "N", tag5AdvTransType.getDataValue());
-        assertNotEquals( "abcdefghij", tag5AdvTransType.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0005Test()");
+        Tag5AdvTransType tagData;
+
+        tagData = new Tag5AdvTransType(Enum5AdvTransType.NEW);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag5AdvTransType(Enum5AdvTransType.CANCEL);
+        assertEquals( "C", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag5AdvTransType(Enum5AdvTransType.REPLACE);
+        assertEquals( "R", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0005Test()");
     }
 }

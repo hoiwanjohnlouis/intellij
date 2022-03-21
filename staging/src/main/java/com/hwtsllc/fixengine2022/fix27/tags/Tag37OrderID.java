@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag37OrderID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_ORDER_ID = "BilboBaggins-37-OrderID"; // fake data
-    public final static String TESTB_ORDER_ID = "Gandalf-37-OrderID";
+    public final static String TESTA_ORDER_ID = "BilboBaggins-37OrderID"; // fake data
+    public final static String TESTB_ORDER_ID = "Gandalf-37OrderID";
 
     public Tag37OrderID(String dataValue) {
         setFixType(FIXType.FIX37_ORDER_ID);

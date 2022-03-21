@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag16EndSeqNoTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag16EndSeqNoTest {
 
     @Test
     void FIX0016Test() {
-        FIXType fix16EndSeqNo = FIXType.FIX16_END_SEQ_NO;
-        assertEquals( "END_SEQ_NO", fix16EndSeqNo.getName());
-        assertEquals( "16", fix16EndSeqNo.getID());
-        assertEquals( "EndSeqNo", fix16EndSeqNo.getDescription());
-        assertNotEquals( "END_SEQ_NO END_SEQ_NO", fix16EndSeqNo.getName());
-        assertNotEquals( "111", fix16EndSeqNo.getID());
-        assertNotEquals( "123 EndSeqNo", fix16EndSeqNo.getDescription());
+        FIXType fixData = FIXType.FIX16_END_SEQ_NO;
+        assertEquals( "END_SEQ_NO", fixData.getName());
+        assertEquals( "16", fixData.getID());
+        assertEquals( "EndSeqNo", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0016Test() {
-        Tag16EndSeqNo tag16EndSeqNo = new Tag16EndSeqNo("6789");
-        assertEquals( "6789", tag16EndSeqNo.getDataValue());
-        assertNotEquals( "11", tag16EndSeqNo.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0016Test()");
+        Tag16EndSeqNo tagData;
+
+        tagData = new Tag16EndSeqNo("6789");
+        assertEquals( "6789", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0016Test()");
     }
 }

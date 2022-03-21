@@ -39,19 +39,23 @@ class Tag37OrderIDTest {
 
     @Test
     void FIX0037Test() {
-        FIXType fix37OrderID = FIXType.FIX37_ORDER_ID;
-        assertEquals( "ORDER_ID", fix37OrderID.getName());
-        assertEquals( "37", fix37OrderID.getID());
-        assertEquals( "OrderID", fix37OrderID.getDescription());
-        assertNotEquals( "ORDER_ID ORDER_ID", fix37OrderID.getName());
-        assertNotEquals( "312", fix37OrderID.getID());
-        assertNotEquals( "OrderID OrderID", fix37OrderID.getDescription());
+        FIXType fixData = FIXType.FIX37_ORDER_ID;
+        assertEquals( "ORDER_ID", fixData.getName());
+        assertEquals( "37", fixData.getID());
+        assertEquals( "OrderID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0037Test() {
-        Tag37OrderID tagData = new Tag37OrderID("ORD-24601");
+        Tag37OrderID tagData;
+
+        tagData = new Tag37OrderID("ORD-24601");
         assertEquals( "ORD-24601", tagData.getDataValue());
-        assertNotEquals( "112233", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0037Test()");
     }
 }

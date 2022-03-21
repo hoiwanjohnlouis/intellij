@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-public class Tag258TradedFlatSwitch {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag258TradedFlatSwitch extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_TRADED_FLAT_SWITCH = EnumBoolean.NO ; // N - Not Traded Flat
+    public final static EnumBoolean TESTB_TRADED_FLAT_SWITCH = EnumBoolean.YES; // Y - Traded Flat
+
+    public Tag258TradedFlatSwitch(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX258_TRADED_FLAT_SWITCH);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag258TradedFlatSwitch tagData = new Tag258TradedFlatSwitch(TESTA_TRADED_FLAT_SWITCH);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

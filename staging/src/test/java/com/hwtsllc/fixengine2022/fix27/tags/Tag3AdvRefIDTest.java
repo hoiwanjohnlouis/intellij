@@ -24,7 +24,6 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag3AdvRefIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -37,20 +36,24 @@ class Tag3AdvRefIDTest {
 
     @Test
     void FIX0003Test() {
-        FIXType fix3AdvRefID = FIXType.FIX3_ADV_REF_ID;
-        assertEquals( "FIX3_ADV_REF_ID", fix3AdvRefID.getEnumName());
-        assertEquals( "3", fix3AdvRefID.getID());
-        assertEquals( "ADV_REF_ID", fix3AdvRefID.getName());
-        assertEquals( "AdvRefId", fix3AdvRefID.getDescription());
-        assertNotEquals( "Not My FIX3_ADV_REF_ID", fix3AdvRefID.getEnumName());
-        assertNotEquals( "9999", fix3AdvRefID.getID());
-        assertNotEquals( "Not My ADV_REF_ID", fix3AdvRefID.getName());
-        assertNotEquals( "Not My AdvRefId", fix3AdvRefID.getDescription());
+        FIXType fixData = FIXType.FIX3_ADV_REF_ID;
+        assertEquals( "FIX3_ADV_REF_ID", fixData.getEnumName());
+        assertEquals( "3", fixData.getID());
+        assertEquals( "ADV_REF_ID", fixData.getName());
+        assertEquals( "AdvRefId", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0003Test() {
-        Tag3AdvRefID tag3AdvRefID = new Tag3AdvRefID("hello from main routine");
-        assertEquals( "hello from main routine", tag3AdvRefID.getDataValue());
-        assertNotEquals( "goodbye from main routine", tag3AdvRefID.getDataValue());
+        Tag3AdvRefID tagData;
+
+        tagData = new Tag3AdvRefID("hello from main routine");
+        assertEquals( "hello from main routine", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0003Test()");
     }
 }

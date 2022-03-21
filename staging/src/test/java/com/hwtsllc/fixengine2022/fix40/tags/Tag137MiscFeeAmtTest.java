@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag137MiscFeeAmtTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag137MiscFeeAmtTest {
 
     @Test
     void FIX0137Test() {
-        FIXType fix137MiscFeeAmt = FIXType.FIX137_MISC_FEE_AMT;
-        assertEquals( fix137MiscFeeAmt.getName(), "MISC_FEE_AMT");
-        assertEquals( fix137MiscFeeAmt.getID(), "137");
-        assertEquals( fix137MiscFeeAmt.getDescription(), "MiscFeeAmt");
+        FIXType fixData = FIXType.FIX137_MISC_FEE_AMT;
+        assertEquals( "MISC_FEE_AMT", fixData.getName());
+        assertEquals( "137", fixData.getID());
+        assertEquals( "MiscFeeAmt", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0137Test() {
         Tag137MiscFeeAmt tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0137Test()");
+
+        tagData = new Tag137MiscFeeAmt("HanJiMin-137MiscFeeAmt");
+        assertEquals( "HanJiMin-137MiscFeeAmt", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0137Test()");
     }
 }

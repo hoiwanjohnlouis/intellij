@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum54Side;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -26,9 +27,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag54SideTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -39,17 +38,76 @@ class Tag54SideTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0054Test() {
-        FIXType fix54Side = FIXType.FIX54_SIDE;
+        FIXType fixData = FIXType.FIX54_SIDE;
+        assertEquals( "SIDE", fixData.getName());
+        assertEquals( "54", fixData.getID());
+        assertEquals( "Side", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0054Test() {
-        FIXType tag100ExDestination = FIXType.FIX100_EX_DESTINATION;
+        Tag54Side tagData;
+
+        /*
+         * 1-9 msg types
+         */
+        tagData = new Tag54Side(Enum54Side.BUY);
+        assertEquals("1", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.SELL);
+        assertEquals("2", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.BUY_MINUS);
+        assertEquals("3", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.SELL_PLUS);
+        assertEquals("4", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.SELL_SHORT);
+        assertEquals("5", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.SELL_SHORT_EXEMPT);
+        assertEquals("6", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.UNDISCLOSED);
+        assertEquals("7", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.CROSS);
+        assertEquals("8", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.CROSS_SHORT);
+        assertEquals("9", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         * A-G msg types
+         */
+        tagData = new Tag54Side(Enum54Side.CROSS_SHORT_EXEMPT);
+        assertEquals("A", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.AS_DEFINED);
+        assertEquals("B", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.OPPOSITE);
+        assertEquals("C", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.SUBSCRIBE);
+        assertEquals("D", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.REDEEM);
+        assertEquals("E", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.LEND_FINANCING);
+        assertEquals("F", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag54Side(Enum54Side.BORROW_FINANCING);
+        assertEquals("G", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0054Test()");
     }
 }

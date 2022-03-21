@@ -16,12 +16,25 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag136NoMiscFees extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
+    public final static String TESTA_NO_MISC_FEES = "BilboBaggins-136NoMiscFees"; // fake data
+    public final static String TESTB_NO_MISC_FEES = "Gandalf-136NoMiscFees";
+
+    public Tag136NoMiscFees(String dataValue) {
+        setFixType(FIXType.FIX136_NO_MISC_FEES);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag136NoMiscFees tagData = new Tag136NoMiscFees(TESTA_NO_MISC_FEES);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

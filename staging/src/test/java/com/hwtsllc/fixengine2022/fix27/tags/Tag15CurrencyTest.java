@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag15CurrencyTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag15CurrencyTest {
 
     @Test
     void FIX0015Test() {
-        FIXType fix15Currency = FIXType.FIX15_CURRENCY;
-        assertEquals( "CURRENCY", fix15Currency.getName());
-        assertEquals( "15", fix15Currency.getID());
-        assertEquals( "Currency", fix15Currency.getDescription());
-        assertNotEquals( "CURRENCY CURRENCY", fix15Currency.getName());
-        assertNotEquals( "111", fix15Currency.getID());
-        assertNotEquals( "123 Currency", fix15Currency.getDescription());
+        FIXType fixData = FIXType.FIX15_CURRENCY;
+        assertEquals( "CURRENCY", fixData.getName());
+        assertEquals( "15", fixData.getID());
+        assertEquals( "Currency", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0015Test() {
-        Tag15Currency tag15Currency = new Tag15Currency("USD");
-        assertEquals( "USD", tag15Currency.getDataValue());
-        assertNotEquals( "EURO", tag15Currency.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0015Test()");
+        Tag15Currency tagData;
+
+        tagData = new Tag15Currency("USD");
+        assertEquals( "USD", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0015Test()");
     }
 }

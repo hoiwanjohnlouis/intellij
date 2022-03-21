@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag55SymbolTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag55SymbolTest {
 
     @Test
     void FIX0055Test() {
-        FIXType fix55Symbol = FIXType.FIX55_SYMBOL;
+        FIXType fixData = FIXType.FIX55_SYMBOL;
+        assertEquals( "SYMBOL", fixData.getName());
+        assertEquals( "55", fixData.getID());
+        assertEquals( "Symbol", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0055Test() {
         Tag55Symbol tagData;
+
+        tagData = new Tag55Symbol("INTC");
+        assertEquals( "INTC", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0055Test()");
     }
 }

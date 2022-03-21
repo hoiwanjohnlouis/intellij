@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag110MinQty extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_MIN_QTY = "BilboBaggins-110-MinQty"; // fake data
-    public final static String TESTB_MIN_QTY = "Gandalf-110-MinQty";
+    public final static String TESTA_MIN_QTY = "11"; // fake data
+    public final static String TESTB_MIN_QTY = "22";
 
     public Tag110MinQty(String dataValue) {
         setFixType(FIXType.FIX110_MIN_QTY);

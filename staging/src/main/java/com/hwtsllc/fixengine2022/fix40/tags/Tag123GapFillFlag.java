@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-public enum Tag123GapFillFlag {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag123GapFillFlag extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_GAP_FILL_FLAG = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_GAP_FILL_FLAG = EnumBoolean.YES;
+
+    public Tag123GapFillFlag(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX123_GAP_FILL_FLAG);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag123GapFillFlag tagData = new Tag123GapFillFlag(TESTA_GAP_FILL_FLAG);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

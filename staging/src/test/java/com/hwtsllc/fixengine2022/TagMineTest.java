@@ -14,11 +14,9 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix27.tags;
+package com.hwtsllc.fixengine2022;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,10 +24,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag92BrokerOfCreditTest {
-    private static final Logger logger = LogManager.getRootLogger();
-
+class TagMineTest {
     @BeforeEach
     void setUp() {
     }
@@ -39,24 +34,23 @@ class Tag92BrokerOfCreditTest {
     }
 
     @Test
-    void FIX0092Test() {
-        FIXType fixData = FIXType.FIX92_BROKER_OF_CREDIT;
-        assertEquals( "BROKER_OF_CREDIT", fixData.getName());
-        assertEquals( "92", fixData.getID());
-        assertEquals( "BrokerOfCredit (replaced)", fixData.getDescription());
+    void FIX0009Test() {
+        FIXType fixData = FIXType.FIX9_BODY_LENGTH;
+        assertEquals( "FIX9_BODY_LENGTH", fixData.getEnumName());
+        assertEquals( "9", fixData.getID());
+        assertEquals( "BODY_LENGTH", fixData.getName());
+        assertEquals( "BodyLength", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0092Test() {
-        Tag92BrokerOfCredit tagData;
+    void Tag0009Test() {
+        TagMine tagData;
 
-        tagData = new Tag92BrokerOfCredit("Saruman-92BrokerOfCredit");
-        assertEquals( "Saruman-92BrokerOfCredit", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
-
-        logger.info("Successful Tag0092Test()");
+        tagData = new TagMine( new DataType(567));
+        assertEquals( 567, tagData.getDataValue());
+        assertNotEquals( 333, tagData.getDataValue());
     }
 }

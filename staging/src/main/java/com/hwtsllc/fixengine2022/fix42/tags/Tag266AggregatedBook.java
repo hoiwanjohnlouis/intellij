@@ -16,5 +16,28 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-public class Tag266AggregatedBook {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag266AggregatedBook extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_AGGREGATED_BOOK = EnumBoolean.NO ;
+                                    // N - book entries should not be aggregated
+    public final static EnumBoolean TESTB_AGGREGATED_BOOK = EnumBoolean.YES;
+                                    // Y - book entries to be aggregated
+
+    public Tag266AggregatedBook(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX266_AGGREGATED_BOOK);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag266AggregatedBook tagData = new Tag266AggregatedBook(TESTA_AGGREGATED_BOOK);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

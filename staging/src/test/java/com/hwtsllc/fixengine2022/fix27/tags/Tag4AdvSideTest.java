@@ -27,9 +27,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag4AdvSideTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -41,19 +39,32 @@ class Tag4AdvSideTest {
 
     @Test
     void FIX0004Test() {
-        FIXType fix4AdvSide = FIXType.FIX4_ADV_SIDE;
-        assertEquals( "ADV_SIDE", fix4AdvSide.getName());
-        assertEquals( "4", fix4AdvSide.getID());
-        assertEquals( "AdvSide", fix4AdvSide.getDescription());
-        assertNotEquals( "ADV SIDE", fix4AdvSide.getName());
-        assertNotEquals( "44", fix4AdvSide.getID());
-        assertNotEquals( "Adv Side", fix4AdvSide.getDescription());
+        FIXType fixData = FIXType.FIX4_ADV_SIDE;
+        assertEquals( "ADV_SIDE", fixData.getName());
+        assertEquals( "4", fixData.getID());
+        assertEquals( "AdvSide", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0004Test() {
-        Tag4AdvSide tag4AdvSide = new Tag4AdvSide(Enum4AdvSide.BUY);
-        assertEquals( "B", tag4AdvSide.getDataValue());
-        assertNotEquals( "abcdefghij", tag4AdvSide.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0004Test()");
+        Tag4AdvSide tagData;
+
+        tagData = new Tag4AdvSide(Enum4AdvSide.BUY);
+        assertEquals( "B", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag4AdvSide(Enum4AdvSide.SELL);
+        assertEquals( "S", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag4AdvSide(Enum4AdvSide.CROSS);
+        assertEquals( "X", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag4AdvSide(Enum4AdvSide.TRADE);
+        assertEquals( "T", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0004Test()");
     }
 }

@@ -27,7 +27,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag31LastPxTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,19 +39,23 @@ class Tag31LastPxTest {
 
     @Test
     void FIX0031Test() {
-        FIXType fix31LastPx = FIXType.FIX31_LAST_PX;
-        assertEquals( "LAST_PX", fix31LastPx.getName());
-        assertEquals( "31", fix31LastPx.getID());
-        assertEquals( "LastPx", fix31LastPx.getDescription());
-        assertNotEquals( "LAST_PX LAST_PX", fix31LastPx.getName());
-        assertNotEquals( "312", fix31LastPx.getID());
-        assertNotEquals( "LastPx LastPx", fix31LastPx.getDescription());
+        FIXType fixData = FIXType.FIX31_LAST_PX;
+        assertEquals( "LAST_PX", fixData.getName());
+        assertEquals( "31", fixData.getID());
+        assertEquals( "LastPx", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0031Test() {
-        Tag31LastPx tag31LastPx = new Tag31LastPx("98.23");
-//        assertEquals( "98.23", tag31LastPx.getDataValue());
-//        assertNotEquals( "91", tag31LastPx.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0031Test()");
+        Tag31LastPx tagData;
+
+        tagData = new Tag31LastPx("98.23");
+        assertEquals( "98.23", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0031Test()");
     }
 }

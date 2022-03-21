@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum25IOIQltyInd;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -26,7 +27,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag25IOIQltyIndTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,20 +39,31 @@ class Tag25IOIQltyIndTest {
 
     @Test
     void FIX0025Test() {
-        FIXType fix25IOIQltyInd = FIXType.FIX25_IOI_QLTY_IND;
-        assertEquals( "IOI_QLTY_IND", fix25IOIQltyInd.getName());
-        assertEquals( "25", fix25IOIQltyInd.getID());
-        assertEquals( "IOIQltyInd", fix25IOIQltyInd.getDescription());
-        assertNotEquals( "IOI_QLTY_IND IOI_QLTY_IND", fix25IOIQltyInd.getName());
-        assertNotEquals( "2525", fix25IOIQltyInd.getID());
-        assertNotEquals( "123 IOIQltyInd", fix25IOIQltyInd.getDescription());
+        FIXType fixData = FIXType.FIX25_IOI_QLTY_IND;
+        assertEquals( "IOI_QLTY_IND", fixData.getName());
+        assertEquals( "25", fixData.getID());
+        assertEquals( "IOIQltyInd", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0025Test() {
-        Tag25IOIQltyInd tag25IOIQltyInd;
-        // = new Tag25IOIQltyInd();
-//        assertEquals( "A", tag25IOIQltyInd.getDataValue());
-//        assertNotEquals( "11", tag25IOIQltyInd.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0025Test()");
+        Tag25IOIQltyInd tagData;
+
+        tagData = new Tag25IOIQltyInd(Enum25IOIQltyInd.HIGH);
+        assertEquals( "H", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag25IOIQltyInd(Enum25IOIQltyInd.MEDIUM);
+        assertEquals( "M", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag25IOIQltyInd(Enum25IOIQltyInd.LOW);
+        assertEquals( "L", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0025Test()");
     }
 }

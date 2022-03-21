@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-public class Tag411ExchangeForPhysical {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag411ExchangeForPhysical extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_EXCHANGE_FOR_PHYSICAL = EnumBoolean.NO;   // N - False
+    public final static EnumBoolean TESTB_EXCHANGE_FOR_PHYSICAL = EnumBoolean.YES;  // Y - True
+
+    public Tag411ExchangeForPhysical(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX411_EXCHANGE_FOR_PHYSICAL);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag411ExchangeForPhysical tagData = new Tag411ExchangeForPhysical(TESTA_EXCHANGE_FOR_PHYSICAL);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

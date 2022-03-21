@@ -27,7 +27,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag32LastQtyTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,19 +39,23 @@ class Tag32LastQtyTest {
 
     @Test
     void FIX0032Test() {
-        FIXType fix32LastQty = FIXType.FIX32_LAST_QTY;
-        assertEquals( "LAST_QTY", fix32LastQty.getName());
-        assertEquals( "32", fix32LastQty.getID());
-        assertEquals( "LastQty", fix32LastQty.getDescription());
-        assertNotEquals( "LAST_QTY LAST_QTY", fix32LastQty.getName());
-        assertNotEquals( "312", fix32LastQty.getID());
-        assertNotEquals( "LastQty LastQty", fix32LastQty.getDescription());
+        FIXType fixData = FIXType.FIX32_LAST_QTY;
+        assertEquals( "LAST_QTY", fixData.getName());
+        assertEquals( "32", fixData.getID());
+        assertEquals( "LastQty", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0032Test() {
-        Tag32LastQty tag32LastQty = new Tag32LastQty("200");
-//        assertEquals( "200", tag32LastQty.getDataValue());
-//        assertNotEquals( "2222", tag32LastQty.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0032Test()");
+        Tag32LastQty tagData;
+
+        tagData = new Tag32LastQty("200");
+        assertEquals( "200", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0032Test()");
     }
 }

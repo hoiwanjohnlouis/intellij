@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag79AllocAccount extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_ALLOC_ACCOUNT = "BilboBaggins-79-Alloc-Account";
-    public final static String TESTB_ALLOC_ACCOUNT = "Gandalf-79-Alloc-Account";
+    public final static String TESTA_ALLOC_ACCOUNT = "BilboBaggins-79Alloc-Account";
+    public final static String TESTB_ALLOC_ACCOUNT = "Gandalf-79Alloc-Account";
 
     public Tag79AllocAccount(String dataValue) {
         setFixType(FIXType.FIX79_ALLOC_ACCOUNT);

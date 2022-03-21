@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag10CheckSumTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag10CheckSumTest {
 
     @Test
     void FIX0010Test() {
-        FIXType fix10CheckSum = FIXType.FIX10_CHECK_SUM;
-        assertEquals( "CHECK_SUM", fix10CheckSum.getName());
-        assertEquals( "10", fix10CheckSum.getID());
-        assertEquals( "CheckSum", fix10CheckSum.getDescription());
-        assertNotEquals( "CHECK_SUM CHECK_SUM", fix10CheckSum.getName());
-        assertNotEquals( "100", fix10CheckSum.getID());
-        assertNotEquals( "123 CheckSum", fix10CheckSum.getDescription());
+        FIXType fixData = FIXType.FIX10_CHECK_SUM;
+        assertEquals( "CHECK_SUM", fixData.getName());
+        assertEquals( "10", fixData.getID());
+        assertEquals( "CheckSum", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0010Test() {
-        Tag10CheckSum tag10CheckSum = new Tag10CheckSum("ABC");
-        assertEquals( "ABC", tag10CheckSum.getDataValue());
-        assertNotEquals( "abc", tag10CheckSum.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0010Test()");
+        Tag10CheckSum tagData;
+
+        tagData = new Tag10CheckSum("ABC");
+        assertEquals( "ABC", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0010Test()");
     }
 }

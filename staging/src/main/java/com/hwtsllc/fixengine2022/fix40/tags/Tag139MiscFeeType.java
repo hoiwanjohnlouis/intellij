@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-public enum Tag139MiscFeeType {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
+
+public class Tag139MiscFeeType extends TagTypeAbstract {
+    private final Enum139MiscFeeType dataValue;
+
+    public final static Enum139MiscFeeType TESTA_MISC_FEE_TYPE = Enum139MiscFeeType.REGULATORY; // fake data
+    public final static Enum139MiscFeeType TESTB_MISC_FEE_TYPE = Enum139MiscFeeType.TRANSFER_FEE;
+
+    public Tag139MiscFeeType(Enum139MiscFeeType dataValue) {
+        setFixType(FIXType.FIX139_MISC_FEE_TYPE);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag139MiscFeeType tagData = new Tag139MiscFeeType(TESTA_MISC_FEE_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

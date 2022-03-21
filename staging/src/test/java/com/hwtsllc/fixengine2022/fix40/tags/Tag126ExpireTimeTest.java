@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag126ExpireTimeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag126ExpireTimeTest {
 
     @Test
     void FIX0126Test() {
-        FIXType fix126ExpireTime = FIXType.FIX126_EXPIRE_TIME;
-        assertEquals( fix126ExpireTime.getName(), "EXPIRE_TIME");
-        assertEquals( fix126ExpireTime.getID(), "126");
-        assertEquals( fix126ExpireTime.getDescription(), "ExpireTime");
+        FIXType fixData = FIXType.FIX126_EXPIRE_TIME;
+        assertEquals( "EXPIRE_TIME", fixData.getName());
+        assertEquals( "126", fixData.getID());
+        assertEquals( "ExpireTime", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0126Test() {
         Tag126ExpireTime tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0126Test()");
+
+        tagData = new Tag126ExpireTime("HaJiWon-126ExpireTime");
+        assertEquals( "HaJiWon-126ExpireTime", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0126Test()");
     }
 }

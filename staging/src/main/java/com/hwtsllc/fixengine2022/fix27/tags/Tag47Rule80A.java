@@ -18,17 +18,18 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum47Rule80A;
 
 @Deprecated
 public class Tag47Rule80A extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum47Rule80A dataValue;
 
-    public final static String TESTA_RULE80A = "TESTA"; // fake data
-    public final static String TESTB_RULE80A = "TESTB";
+    public final static Enum47Rule80A TESTA_RULE_80_A = Enum47Rule80A.AGENCY_SINGLE_ORDER; // fake data
+    public final static Enum47Rule80A TESTB_RULE_80_A = Enum47Rule80A.PRINCIPAL;
 
-    public Tag47Rule80A(String dataValue) {
+    public Tag47Rule80A(Enum47Rule80A dataValue) {
         setFixType(FIXType.FIX47_RULE_80_A);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 
@@ -37,7 +38,7 @@ public class Tag47Rule80A extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag47Rule80A tagData = new Tag47Rule80A("JohnWick-453");
+        Tag47Rule80A tagData = new Tag47Rule80A(TESTA_RULE_80_A);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag23IOIID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_IOI_ID = "BilboBaggins-23-IOIID"; // fake data
-    public final static String TESTB_IOI_ID = "Gandalf-23-IOIID";
+    public final static String TESTA_IOI_ID = "BilboBaggins-23IOIID"; // fake data
+    public final static String TESTB_IOI_ID = "Gandalf-23IOIID";
 
     public Tag23IOIID(String dataValue) {
         setFixType(FIXType.FIX23_IOI_ID);

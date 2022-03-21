@@ -18,22 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag131QuoteReqID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
+
+    public final static String TESTA_QUOTE_REQ_ID = "BilboBaggins-131QuoteReqID"; // fake data
+    public final static String TESTB_QUOTE_REQ_ID = "Gandalf-131QuoteReqID";
 
     public Tag131QuoteReqID(String dataValue) {
         setFixType(FIXType.FIX131_QUOTE_REQ_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag131QuoteReqID tag131QuoteReqID = new Tag131QuoteReqID("FIX131_QUOTE_REQ_ID-MLCO");
-        System.out.println(tag131QuoteReqID);
-        System.out.println(tag131QuoteReqID.toLogStringVerbose());
-        System.out.println(tag131QuoteReqID.toFixTagValuePairString());
+        Tag131QuoteReqID tagData = new Tag131QuoteReqID(TESTA_QUOTE_REQ_ID);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

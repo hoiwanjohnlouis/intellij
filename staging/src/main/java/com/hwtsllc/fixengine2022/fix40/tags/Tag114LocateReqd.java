@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-public enum Tag114LocateReqd {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag114LocateReqd extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_LOCATE_REQD = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_LOCATE_REQD = EnumBoolean.YES;
+
+    public Tag114LocateReqd(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX114_LOCATE_REQD);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag114LocateReqd tagData = new Tag114LocateReqd(TESTA_LOCATE_REQD);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

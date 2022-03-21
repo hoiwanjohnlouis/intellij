@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag52SendingTimeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag52SendingTimeTest {
 
     @Test
     void FIX0052Test() {
-        FIXType fix52SendingTime = FIXType.FIX52_SENDING_TIME;
+        FIXType fixData = FIXType.FIX52_SENDING_TIME;
+        assertEquals( "SENDING_TIME", fixData.getName());
+        assertEquals( "52", fixData.getID());
+        assertEquals( "SendingTime", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0052Test() {
         Tag52SendingTime tagData;
+
+        tagData = new Tag52SendingTime("20220320 141400");
+        assertEquals( "20220320 141400", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0052Test()");
     }
 }

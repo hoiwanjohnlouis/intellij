@@ -23,8 +23,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag51SendingDate extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_SENDING_DATE = "BilboBaggins-51-SendingDate"; // fake data
-    public final static String TESTB_SENDING_DATE = "Gandalf-51-SendingDate";
+    public final static String TESTA_SENDING_DATE = "BilboBaggins-51SendingDate"; // fake data
+    public final static String TESTB_SENDING_DATE = "Gandalf-51SendingDate";
 
     public Tag51SendingDate(String dataValue) {
         setFixType(FIXType.FIX51_SENDING_DATE);

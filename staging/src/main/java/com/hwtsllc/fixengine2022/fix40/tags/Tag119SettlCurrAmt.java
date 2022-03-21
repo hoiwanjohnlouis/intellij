@@ -16,12 +16,25 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag119SettlCurrAmt extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
 
+    public final static String TESTA_SETTL_CURR_AMT = "BilboBaggins-119SettlCurrAmt"; // fake data
+    public final static String TESTB_SETTL_CURR_AMT = "Gandalf-119SettlCurrAmt";
+
+    public Tag119SettlCurrAmt(String dataValue) {
+        setFixType(FIXType.FIX119_SETTL_CURR_AMT);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag119SettlCurrAmt tagData = new Tag119SettlCurrAmt(TESTA_SETTL_CURR_AMT);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

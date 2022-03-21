@@ -17,18 +17,18 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag130IOINaturalFlagTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +40,26 @@ class Tag130IOINaturalFlagTest {
 
     @Test
     void FIX0130Test() {
-        FIXType fix130IOINaturalFlag = FIXType.FIX130_IOI_NATURAL_FLAG;
-        assertEquals( fix130IOINaturalFlag.getName(), "IOI_NATURAL_FLAG");
-        assertEquals( fix130IOINaturalFlag.getID(), "130");
-        assertEquals( fix130IOINaturalFlag.getDescription(), "IOINaturalFlag");
+        FIXType fixData = FIXType.FIX130_IOI_NATURAL_FLAG;
+        assertEquals( "IOI_NATURAL_FLAG", fixData.getName());
+        assertEquals( "130", fixData.getID());
+        assertEquals( "IOINaturalFlag", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0130Test() {
         Tag130IOINaturalFlag tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0130Test()");
+
+        tagData = new Tag130IOINaturalFlag(EnumBoolean.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag130IOINaturalFlag(EnumBoolean.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0130Test()");
     }
 }

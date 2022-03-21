@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-public enum Tag130IOINaturalFlag {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag130IOINaturalFlag extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_IOI_NATURAL_FLAG = EnumBoolean.NO ; // fake data
+    public final static EnumBoolean TESTB_IOI_NATURAL_FLAG = EnumBoolean.YES;
+
+    public Tag130IOINaturalFlag(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX130_IOI_NATURAL_FLAG);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag130IOINaturalFlag tagData = new Tag130IOINaturalFlag(TESTA_IOI_NATURAL_FLAG);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag63SettlmntTypTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag63SettlmntTypTest {
 
     @Test
     void FIX0063Test() {
-        FIXType fix63SettlmntTyp = FIXType.FIX63_SETTLMNT_TYP;
+        FIXType fixData = FIXType.FIX63_SETTLMNT_TYP;
+        assertEquals( "SETTLMNT_TYP", fixData.getName());
+        assertEquals( "63", fixData.getID());
+        assertEquals( "SettlmntTyp", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0063Test() {
         Tag63SettlmntTyp tagData;
+
+        tagData = new Tag63SettlmntTyp("SamwiseGamgee-63SettlmntTyp");
+        assertEquals( "SamwiseGamgee-63SettlmntTyp", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0063Test()");
     }
 }

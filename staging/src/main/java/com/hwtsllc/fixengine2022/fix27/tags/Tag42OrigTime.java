@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag42OrigTime extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_ORIG_TIME = "BilboBaggins-42-OrigTime"; // fake data
-    public final static String TESTB_ORIG_TIME = "Gandalf-42-OrigTime";
+    public final static String TESTA_ORIG_TIME = "BilboBaggins-42OrigTime"; // fake data
+    public final static String TESTB_ORIG_TIME = "Gandalf-42OrigTime";
 
     private final FIXType fixType = FIXType.FIX42_ORIG_TIME;
     public Tag42OrigTime(String dataValue) {

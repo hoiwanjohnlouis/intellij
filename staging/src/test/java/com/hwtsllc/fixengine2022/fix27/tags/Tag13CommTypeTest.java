@@ -27,7 +27,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag13CommTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,19 +39,41 @@ class Tag13CommTypeTest {
 
     @Test
     void FIX0013Test() {
-        FIXType fix13CommType = FIXType.FIX13_COMM_TYPE;
-        assertEquals( "COMM_TYPE", fix13CommType.getName());
-        assertEquals( "13", fix13CommType.getID());
-        assertEquals( "CommType", fix13CommType.getDescription());
-        assertNotEquals( "Not My COMM_TYPE", fix13CommType.getName());
-        assertNotEquals( "163223", fix13CommType.getID());
-        assertNotEquals( "123 CommType", fix13CommType.getDescription());
+        FIXType fixData = FIXType.FIX13_COMM_TYPE;
+        assertEquals( "COMM_TYPE", fixData.getName());
+        assertEquals( "13", fixData.getID());
+        assertEquals( "CommType", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0013Test() {
-        Tag13CommType fix13CommType = new Tag13CommType(Enum13CommType.PERCENT);
-        assertEquals( "2", fix13CommType.getDataValue());
-        assertNotEquals( "3333", fix13CommType.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0013Test()");
+        Tag13CommType tagData;
+
+        /*
+         * 1-6 CommTypes
+         */
+        tagData = new Tag13CommType(Enum13CommType.PER_UNIT);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag13CommType(Enum13CommType.PERCENT);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag13CommType(Enum13CommType.ABSOLUTE);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag13CommType(Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag13CommType(Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS);
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag13CommType(Enum13CommType.POINTS_PER_BOND);
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0013Test()");
     }
 }

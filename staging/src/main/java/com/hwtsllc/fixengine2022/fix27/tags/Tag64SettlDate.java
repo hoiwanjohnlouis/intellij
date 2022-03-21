@@ -19,14 +19,14 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 
-public class Tag64FutSettDate extends TagTypeAbstract {
+public class Tag64SettlDate extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_FUT_SETT_DATE = "BilboBaggins-64-FutSettDate"; // fake data
-    public final static String TESTB_FUT_SETT_DATE = "Gandalf-64-FutSettDate";
+    public final static String TESTA_SETTL_DATE = "BilboBaggins-64SettlDate"; // fake data
+    public final static String TESTB_SETTL_DATE = "Gandalf-64SettlDate";
 
-    public Tag64FutSettDate(String dataValue) {
-        setFixType(FIXType.FIX64_FUT_SETT_DATE);
+    public Tag64SettlDate(String dataValue) {
+        setFixType(FIXType.FIX64_SETTL_DATE);
         setDataValue(dataValue);
         this.dataValue = dataValue;
     }
@@ -36,7 +36,7 @@ public class Tag64FutSettDate extends TagTypeAbstract {
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag64FutSettDate tagData = new Tag64FutSettDate(TESTA_FUT_SETT_DATE);
+        Tag64SettlDate tagData = new Tag64SettlDate(TESTA_SETTL_DATE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

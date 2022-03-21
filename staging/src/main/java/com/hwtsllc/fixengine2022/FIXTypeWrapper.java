@@ -37,6 +37,9 @@ public abstract class FIXTypeWrapper implements LogStringVerbose {
     public String getDescription() {
         return fixValue.getDescription();
     }
+    /**
+     * standard wrapper to format a detailed string describing this enum
+     */
     @Override
     public String toLogStringVerbose() {
         return this.getClass().getSimpleName()

@@ -18,16 +18,17 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
 
 public class Tag104IOIQualifier extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum104IOIQualifier dataValue;
 
-    public final static String TESTA_IOI_QUALIFIER = "BilboBaggins-104-IOIQualifier"; // fake data
-    public final static String TESTB_IOI_QUALIFIER = "Gandalf-104-IOIQualifier";
+    public final static Enum104IOIQualifier TESTA_IOI_QUALIFIER = Enum104IOIQualifier.ALL_OR_NONE; // fake data
+    public final static Enum104IOIQualifier TESTB_IOI_QUALIFIER = Enum104IOIQualifier.PRE_OPEN;
 
-    public Tag104IOIQualifier(String dataValue) {
+    public Tag104IOIQualifier(Enum104IOIQualifier dataValue) {
         setFixType(FIXType.FIX104_IOI_QUALIFIER);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

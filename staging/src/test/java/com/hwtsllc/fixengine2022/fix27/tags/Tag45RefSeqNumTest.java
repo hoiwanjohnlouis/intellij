@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag45RefSeqNumTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,20 +38,23 @@ class Tag45RefSeqNumTest {
 
     @Test
     void FIX0045Test() {
-        FIXType fix45RefSeqNum = FIXType.FIX45_REF_SEQ_NUM;
-        assertEquals( "REF_SEQ_NUM", fix45RefSeqNum.getName());
-        assertEquals( "45", fix45RefSeqNum.getID());
-        assertEquals( "RefSeqNum", fix45RefSeqNum.getDescription());
-        assertNotEquals( "REF_SEQ_NUM REF_SEQ_NUM", fix45RefSeqNum.getName());
-        assertNotEquals( "3123", fix45RefSeqNum.getID());
-        assertNotEquals( "RefSeqNum RefSeqNum", fix45RefSeqNum.getDescription());
+        FIXType fixData = FIXType.FIX45_REF_SEQ_NUM;
+        assertEquals( "REF_SEQ_NUM", fixData.getName());
+        assertEquals( "45", fixData.getID());
+        assertEquals( "RefSeqNum", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0045Test() {
         Tag45RefSeqNum tagData;
-        //= new Tag45RefSeqNum();
-//        assertEquals( "6789", tag45RefSeqNum.getDataValue());
-//        assertNotEquals( "11", tag45RefSeqNum.getDataValue());
+
+        tagData = new Tag45RefSeqNum("6789");
+        assertEquals( "6789", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0045Test()");
     }
 }

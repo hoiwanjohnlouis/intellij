@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag118NetMoneyTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag118NetMoneyTest {
 
     @Test
     void FIX0118Test() {
-        FIXType fix118NetMoney = FIXType.FIX118_NET_MONEY;
-        assertEquals( fix118NetMoney.getName(), "NET_MONEY");
-        assertEquals( fix118NetMoney.getID(), "118");
-        assertEquals( fix118NetMoney.getDescription(), "NetMoney");
+        FIXType fixData = FIXType.FIX118_NET_MONEY;
+        assertEquals( "NET_MONEY", fixData.getName());
+        assertEquals( "118", fixData.getID());
+        assertEquals( "NetMoney", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0118Test() {
         Tag118NetMoney tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0118Test()");
+
+        tagData = new Tag118NetMoney("Celeborn-118NetMoney");
+        assertEquals( "Celeborn-118NetMoney", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0118Test()");
     }
 }

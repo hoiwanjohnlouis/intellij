@@ -18,16 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum71AllocTransType;
 
 public class Tag71AllocTransType extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum71AllocTransType dataValue;
 
-    public final static String TESTA_ALLOC_TRANS_TYPE = "BilboBaggins-71-AllocTransType"; // fake data
-    public final static String TESTB_ALLOC_TRANS_TYPE = "Gandalf-71-AllocTransType";
+    public final static Enum71AllocTransType TESTA_ALLOC_TRANS_TYPE = Enum71AllocTransType.NEW; // fake data
+    public final static Enum71AllocTransType TESTB_ALLOC_TRANS_TYPE = Enum71AllocTransType.REVERSAL;
 
-    public Tag71AllocTransType(String dataValue) {
+    public Tag71AllocTransType(Enum71AllocTransType dataValue) {
         setFixType(FIXType.FIX71_ALLOC_TRANS_TYPE);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

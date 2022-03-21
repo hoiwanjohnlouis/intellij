@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag27IOISharesTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,20 +38,23 @@ class Tag27IOISharesTest {
 
     @Test
     void FIX0027Test() {
-        FIXType fix27IOIShares = FIXType.FIX27_IOI_SHARES;
-        assertEquals( "IOI_SHARES", fix27IOIShares.getName());
-        assertEquals( "27", fix27IOIShares.getID());
-        assertEquals( "IOIShares", fix27IOIShares.getDescription());
-        assertNotEquals( "IOI_SHARES IOI_SHARES", fix27IOIShares.getName());
-        assertNotEquals( "2020", fix27IOIShares.getID());
-        assertNotEquals( "123 IOIShares", fix27IOIShares.getDescription());
+        FIXType fixData = FIXType.FIX27_IOI_SHARES;
+        assertEquals( "IOI_SHARES", fixData.getName());
+        assertEquals( "27", fixData.getID());
+        assertEquals( "IOIShares", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0027Test() {
-        Tag27IOIShares tag27IOIShares;
-        //= new Tag27IOIShares();
-//        assertEquals( "1234", tag27IOIShares.getDataValue());
-//        assertNotEquals( "11", tag27IOIShares.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0027Test()");
+        Tag27IOIShares tagData;
+
+        tagData = new Tag27IOIShares("1234");
+        assertEquals( "1234", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0027Test()");
     }
 }

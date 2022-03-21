@@ -23,8 +23,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag24IOIOthSvc extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_IOI_OTH_SVC = "BilboBaggins-24-IOIOthSvc"; // fake data
-    public final static String TESTB_IOI_OTH_SVC = "Gandalf-24-IOIOthSvc";
+    public final static String TESTA_IOI_OTH_SVC = "BilboBaggins-24IOIOthSvc"; // fake data
+    public final static String TESTB_IOI_OTH_SVC = "Gandalf-24IOIOthSvc";
 
     public Tag24IOIOthSvc(String dataValue) {
         setFixType(FIXType.FIX24_IOI_OTH_SVC);

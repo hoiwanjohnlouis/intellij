@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag111MaxFloor extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_MAX_FLOOR = "BilboBaggins-111-MaxFloor"; // fake data
-    public final static String TESTB_MAX_FLOOR = "Gandalf-111-MaxFloor";
+    public final static String TESTA_MAX_FLOOR = "111"; // fake data
+    public final static String TESTB_MAX_FLOOR = "111";
 
     public Tag111MaxFloor(String dataValue) {
         setFixType(FIXType.FIX111_MAX_FLOOR);

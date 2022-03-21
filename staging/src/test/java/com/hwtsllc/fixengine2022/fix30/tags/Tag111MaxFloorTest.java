@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag111MaxFloorTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag111MaxFloorTest {
 
     @Test
     void FIX0111Test() {
-        FIXType fix111MaxFloor = FIXType.FIX111_MAX_FLOOR;
-        assertEquals( "MAX_FLOOR", fix111MaxFloor.getName());
-        assertEquals( "111", fix111MaxFloor.getID());
-        assertEquals( "MaxFloor", fix111MaxFloor.getDescription());
+        FIXType fixData = FIXType.FIX111_MAX_FLOOR;
+        assertEquals( "MAX_FLOOR", fixData.getName());
+        assertEquals( "111", fixData.getID());
+        assertEquals( "MaxFloor", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0111Test() {
         Tag111MaxFloor tagData;
-        logger.info(WHERE_AM_I + ":Successful Test()");
+
+        tagData = new Tag111MaxFloor("200");
+        assertEquals( "200", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0111Test()");
     }
 }

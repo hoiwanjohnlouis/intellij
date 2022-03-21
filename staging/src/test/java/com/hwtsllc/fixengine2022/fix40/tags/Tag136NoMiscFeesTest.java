@@ -40,14 +40,23 @@ class Tag136NoMiscFeesTest {
 
     @Test
     void FIX0136Test() {
-        FIXType fix136NoMiscFees = FIXType.FIX136_NO_MISC_FEES;
-        assertEquals( fix136NoMiscFees.getName(), "NO_MISC_FEES");
-        assertEquals( fix136NoMiscFees.getID(), "136");
-        assertEquals( fix136NoMiscFees.getDescription(), "NoMiscFees");
+        FIXType fixData = FIXType.FIX136_NO_MISC_FEES;
+        assertEquals( "NO_MISC_FEES", fixData.getName());
+        assertEquals( "136", fixData.getID());
+        assertEquals( "NoMiscFees", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0136Test() {
         Tag136NoMiscFees tagData;
+
+        tagData = new Tag136NoMiscFees("JungYooMi-136NoMiscFees");
+        assertEquals( "JungYooMi-136NoMiscFees", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info(WHERE_AM_I + ":Successful Tag0136Test()");
     }
 }

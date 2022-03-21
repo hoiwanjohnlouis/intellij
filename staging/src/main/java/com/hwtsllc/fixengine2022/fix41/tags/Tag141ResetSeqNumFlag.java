@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-public enum Tag141ResetSeqNumFlag {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag141ResetSeqNumFlag extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_RESET_SEQ_NUM_FLAG = EnumBoolean.NO ; // N - No
+    public final static EnumBoolean TESTB_RESET_SEQ_NUM_FLAG = EnumBoolean.YES; // Y - Yes, reset sequence numbers
+
+    public Tag141ResetSeqNumFlag(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX141_RESET_SEQ_NUM_FLAG);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag141ResetSeqNumFlag tagData = new Tag141ResetSeqNumFlag(TESTA_RESET_SEQ_NUM_FLAG);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

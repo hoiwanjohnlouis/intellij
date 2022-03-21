@@ -27,7 +27,7 @@ public class Tag77PositionEffect extends TagTypeAbstract {
     public final static Enum77PositionEffect TESTB_POSITION_EFFECT = Enum77PositionEffect.FIFO;
 
     public Tag77PositionEffect(Enum77PositionEffect dataValue) {
-        setFixType(FIXType.FIX77_OPEN_CLOSE);
+        setFixType(FIXType.FIX77_POSITION_EFFECT);
         setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }

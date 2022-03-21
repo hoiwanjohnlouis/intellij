@@ -27,7 +27,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag8BeginStringTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,19 +39,44 @@ class Tag8BeginStringTest {
 
     @Test
     void FIX0008Test() {
-        FIXType fix8BeginString = FIXType.FIX8_BEGIN_STRING;
-        assertEquals( "BEGIN_STRING", fix8BeginString.getName());
-        assertEquals( "8", fix8BeginString.getID());
-        assertEquals( "BeginString", fix8BeginString.getDescription());
-        assertNotEquals( "BEGIN STRING", fix8BeginString.getName());
-        assertNotEquals( "88", fix8BeginString.getID());
-        assertNotEquals( "123 BeginString", fix8BeginString.getDescription());
+        FIXType fixData = FIXType.FIX8_BEGIN_STRING;
+        assertEquals( "BEGIN_STRING", fixData.getName());
+        assertEquals( "8", fixData.getID());
+        assertEquals( "BeginString", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0008Test() {
-        Tag8BeginString tag8BeginString = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_2);
-        assertEquals( "FIX.4.2", tag8BeginString.getDataValue());
-        assertNotEquals( "FIX.4.22", tag8BeginString.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0008Test()");
+        Tag8BeginString tagData;
+
+        tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_2_7);
+        assertEquals( "FIX.2.7", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_3_0);
+        assertEquals( "FIX.3.0", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_0);
+        assertEquals( "FIX.4.0", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_1);
+        assertEquals( "FIX.4.1", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_2);
+        assertEquals( "FIX.4.2", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_3);
+        assertEquals( "FIX.4.3", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_4_4);
+        assertEquals( "FIX.4.4", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag8BeginString(Enum8BeginString.BEGIN_STRING_5_0);
+        assertEquals( "FIXT.1.1", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0008Test()");
     }
 }

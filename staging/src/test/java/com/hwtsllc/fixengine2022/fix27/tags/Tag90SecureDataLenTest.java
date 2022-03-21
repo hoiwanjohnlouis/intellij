@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag90SecureDataLenTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag90SecureDataLenTest {
 
     @Test
     void FIX0090Test() {
-        FIXType fix90SecureDataLen = FIXType.FIX90_SECURE_DATA_LEN;
+        FIXType fixData = FIXType.FIX90_SECURE_DATA_LEN;
+        assertEquals( "SECURE_DATA_LEN", fixData.getName());
+        assertEquals( "90", fixData.getID());
+        assertEquals( "SecureDataLen", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0090Test() {
         Tag90SecureDataLen tagData;
+
+        tagData = new Tag90SecureDataLen("20");
+        assertEquals( "20", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0090Test()");
     }
 }

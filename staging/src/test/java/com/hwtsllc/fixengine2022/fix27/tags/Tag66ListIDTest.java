@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag66ListIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,11 +38,23 @@ class Tag66ListIDTest {
 
     @Test
     void FIX0066Test() {
-        FIXType fix66ListID = FIXType.FIX66_LIST_ID;
+        FIXType fixData = FIXType.FIX66_LIST_ID;
+        assertEquals( "LIST_ID", fixData.getName());
+        assertEquals( "66", fixData.getID());
+        assertEquals( "ListID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0066Test() {
         Tag66ListID tagData;
+
+        tagData = new Tag66ListID("Faramir-66ListID");
+        assertEquals( "Faramir-66ListID", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0066Test()");
     }
 }

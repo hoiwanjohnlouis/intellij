@@ -27,9 +27,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Tag125CxlTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -41,14 +39,23 @@ class Tag125CxlTypeTest {
 
     @Test
     void FIX0125Test() {
-        FIXType fix125CxlType = FIXType.FIX125_CXL_TYPE;
-        assertEquals( fix125CxlType.getName(), "CXL_TYPE");
-        assertEquals( fix125CxlType.getID(), "125");
-        assertEquals( fix125CxlType.getDescription(), "CxlType (no longer used)");
+        FIXType fixData = FIXType.FIX125_CXL_TYPE;
+        assertEquals( "CXL_TYPE", fixData.getName());
+        assertEquals( "125", fixData.getID());
+        assertEquals( "CxlType (no longer used)", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0125Test() {
-        Tag125CxlTypeTest tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0125Test()");
+        Tag125CxlType tagData;
+
+        tagData = new Tag125CxlType("KimHaNeul-125CxlType");
+        assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0125Test()");
     }
 }

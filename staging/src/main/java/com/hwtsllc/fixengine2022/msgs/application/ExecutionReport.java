@@ -19,30 +19,17 @@ package com.hwtsllc.fixengine2022.msgs.application;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag55Symbol;
 import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrevClosePx;
 
 public class ExecutionReport {
     private final Enum35MsgType tag35MsgType;
     private final Tag55Symbol tag55Symbol;
     private final OpeningPrice openingPrice;
-    private final Tag140PrevClosePx tag140PrevClosePx;
 
     //
     private ExecutionReport(ExecutionReport.Builder builder) {
         this.tag35MsgType = builder.tag35MsgType;
         this.tag55Symbol = builder.tag55Symbol;
         this.openingPrice = builder.openingPrice;
-        this.tag140PrevClosePx = builder.tag140PrevClosePx;
-    }
-
-    public Tag55Symbol getTickerSymbol() {
-        return tag55Symbol;
-    }
-    public OpeningPrice getOpeningPrice() {
-        return openingPrice;
-    }
-    public Tag140PrevClosePx getPreviousDaysClosingPrice() {
-        return tag140PrevClosePx;
     }
 
     // If any EnemyShip object is printed to screen this shows up
@@ -53,7 +40,6 @@ public class ExecutionReport {
         // clean up the buffer before using.
         stringBuilder.append(openingPrice.getPrice());
         stringBuilder.append("\n");
-        stringBuilder.append(tag140PrevClosePx.getTag140PrevClosePxValue());
         return stringBuilder.toString();
     }
 
@@ -68,7 +54,6 @@ public class ExecutionReport {
         private Enum35MsgType tag35MsgType;
         private Tag55Symbol tag55Symbol;              // 2
         private OpeningPrice openingPrice;              // 3
-        private Tag140PrevClosePx tag140PrevClosePx;    // 4
 
         // helper class to build object
         public Builder(Enum35MsgType tag35MsgType) {
@@ -83,10 +68,6 @@ public class ExecutionReport {
             this.openingPrice = new OpeningPrice(openingPrice);
             return this;
         }
-        public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.tag140PrevClosePx = new Tag140PrevClosePx(previousDaysClosingPrice);
-            return this;
-        }
         public ExecutionReport build() {
             return new ExecutionReport(this);
         }
@@ -99,9 +80,8 @@ public class ExecutionReport {
     public static void main(String[] args) {
         ExecutionReport record =
                 new ExecutionReport.Builder(Enum35MsgType.EXECUTION_REPORT)
-                        .buildTickerSymbol(Tag55Symbol.TESTA_TICKER_SYMBOL)
+                        .buildTickerSymbol(Tag55Symbol.TESTA_SYMBOL)
                         .buildOpeningPrice(12.34D)
-                        .buildPreviousDaysClosingPrice(56.78D)
                         .build();
     }
 

@@ -27,9 +27,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag103OrdRejReasonTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,21 +38,80 @@ class Tag103OrdRejReasonTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0103Test() {
-        FIXType fix103OrdRejReason = FIXType.FIX103_ORD_REJ_REASON;
-        assertEquals( "ORD_REJ_REASON", fix103OrdRejReason.getName());
-        assertEquals( "103", fix103OrdRejReason.getID());
-        assertEquals( "OrdRejReason",  fix103OrdRejReason.getDescription());
+        FIXType fixData = FIXType.FIX103_ORD_REJ_REASON;
+        assertEquals( "ORD_REJ_REASON", fixData.getName());
+        assertEquals( "103", fixData.getID());
+        assertEquals( "OrdRejReason",  fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0103Test() {
-        Tag103OrdRejReason tag103OrdRejReason = new Tag103OrdRejReason(Enum103OrdRejReason.OTHER);
-        logger.info(WHERE_AM_I + ":Successful Tag0103Test()");
+        Tag103OrdRejReason tagData;
+
+        /*
+         * 1-15, 18, 99 OrdRejReason types
+         */
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.BROKER_OR_EXCHANGE);
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.UNKNOWN_SYMBOL);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.EXCHANGE_CLOSED);
+        assertEquals( "2", tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.ORDER_EXCEEDS_LIMIT);
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.TOO_LATE_TO_ENTER);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.UNKNOWN_ORDER);
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.DUPLICATE_ORDER);
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.DUPLICATE_VERBAL_ORDER);
+        assertEquals( "7", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.STALE_ORDER);
+        assertEquals( "8", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.TRADE_ALONG_REQUIRED);
+        assertEquals( "9", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.INVALID_INVESTOR_ID);
+        assertEquals( "10", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.UNSUPPORTED_ORDER_CHARACTERISTIC);
+        assertEquals( "11", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.SURVEILLANCE_OPTION);
+        assertEquals( "12", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.INCORRECT_QUANTITY);
+        assertEquals( "13", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.INCORRECT_ALLOCATED_QUANTITY);
+        assertEquals( "14", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.UNKNOWN_ACCOUNT);
+        assertEquals( "15", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.INVALID_PRICE_INCREMENT);
+        assertEquals( "18", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag103OrdRejReason(Enum103OrdRejReason.OTHER);
+        assertEquals( "99", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0103Test()");
     }
 }

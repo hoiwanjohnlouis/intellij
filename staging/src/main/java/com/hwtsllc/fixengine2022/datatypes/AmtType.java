@@ -16,17 +16,11 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
 /**
  * Used in various tags such as FIX12_COMMISSION, FIX118_NET_MONEY, FIX119_SETTL_CURR_AMT, etc
  *
  */
 public class AmtType {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
     private double dataValue;
 
     public AmtType(final double dataValue) {
@@ -42,9 +36,7 @@ public class AmtType {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getDataValue());
-        return sb.toString();
+        return String.valueOf(getDataValue());
     }
     /**
      *

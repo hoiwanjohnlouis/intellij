@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag52SendingTime extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_SENDING_TIME = "BilboBaggins-52-SendingTime"; // fake data
-    public final static String TESTB_SENDING_TIME = "Gandalf-52-SendingTime";
+    public final static String TESTA_SENDING_TIME = "BilboBaggins-52SendingTime"; // fake data
+    public final static String TESTB_SENDING_TIME = "Gandalf-52SendingTime";
 
     public Tag52SendingTime(String dataValue) {
         setFixType(FIXType.FIX52_SENDING_TIME);

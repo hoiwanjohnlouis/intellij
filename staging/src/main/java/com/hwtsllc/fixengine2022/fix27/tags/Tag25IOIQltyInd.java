@@ -18,16 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum25IOIQltyInd;
 
 public class Tag25IOIQltyInd extends TagTypeAbstract {
-    private final String dataValue;
+    private final Enum25IOIQltyInd dataValue;
 
-    public final static String TESTA_IOI_QLTY_IND = "BilboBaggins-25-IOIQltyInd"; // fake data
-    public final static String TESTB_IOI_QLTY_IND = "Gandalf-25-IOIQltyInd";
+    public final static Enum25IOIQltyInd TESTA_IOI_QLTY_IND = Enum25IOIQltyInd.LOW; // fake data
+    public final static Enum25IOIQltyInd TESTB_IOI_QLTY_IND = Enum25IOIQltyInd.HIGH;
 
-    public Tag25IOIQltyInd(String dataValue) {
+    public Tag25IOIQltyInd(Enum25IOIQltyInd dataValue) {
         setFixType(FIXType.FIX25_IOI_QLTY_IND);
-        setDataValue(dataValue);
+        setDataValue(dataValue.getID());
         this.dataValue = dataValue;
     }
 

@@ -18,15 +18,15 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 
 public class Tag113ReportToExch extends TagTypeAbstract {
-    private final Enum104IOIQualifier dataValue;
+    private final EnumBoolean dataValue;
 
-    public final static Enum104IOIQualifier TESTA_REPORT_TO_EXCH = Enum104IOIQualifier.ALL_OR_NONE; // fake data
-    public final static Enum104IOIQualifier TESTB_REPORT_TO_EXCH = Enum104IOIQualifier.PRE_OPEN;
+    public final static EnumBoolean TESTA_REPORT_TO_EXCH = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_REPORT_TO_EXCH = EnumBoolean.YES;
 
-    public Tag113ReportToExch(Enum104IOIQualifier dataValue) {
+    public Tag113ReportToExch(EnumBoolean dataValue) {
         setFixType(FIXType.FIX113_REPORT_TO_EXCH);
         setDataValue(dataValue.getID());
         this.dataValue = dataValue;

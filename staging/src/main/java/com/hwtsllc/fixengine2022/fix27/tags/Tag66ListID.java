@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag66ListID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_LIST_ID = "BilboBaggins-66-ListID"; // fake data
-    public final static String TESTB_LIST_ID = "Gandalf-66-ListID";
+    public final static String TESTA_LIST_ID = "BilboBaggins-66ListID"; // fake data
+    public final static String TESTB_LIST_ID = "Gandalf-66ListID";
 
     public Tag66ListID(String dataValue) {
         setFixType(FIXType.FIX66_LIST_ID);

@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag117QuoteIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag117QuoteIDTest {
 
     @Test
     void FIX0117Test() {
-        FIXType fix117QuoteID = FIXType.FIX117_QUOTE_ID;
-        assertEquals( fix117QuoteID.getName(), "QUOTE_ID");
-        assertEquals( fix117QuoteID.getID(), "117");
-        assertEquals( fix117QuoteID.getDescription(), "QuoteID");
+        FIXType fixData = FIXType.FIX117_QUOTE_ID;
+        assertEquals( "QUOTE_ID", fixData.getName());
+        assertEquals( "117", fixData.getID());
+        assertEquals( "QuoteID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0117Test() {
         Tag117QuoteID tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0117Test()");
+
+        tagData = new Tag117QuoteID("Galadriel-117QuoteID");
+        assertEquals( "Galadriel-117QuoteID", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0117Test()");
     }
 }

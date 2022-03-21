@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag65SymbolSfxTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag65SymbolSfxTest {
 
     @Test
     void FIX0065Test() {
-        FIXType fix65SymbolSfx = FIXType.FIX65_SYMBOL_SFX;
+        FIXType fixData = FIXType.FIX65_SYMBOL_SFX;
+        assertEquals( "SYMBOL_SFX", fixData.getName());
+        assertEquals( "65", fixData.getID());
+        assertEquals( "SymbolSfx", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0065Test() {
         Tag65SymbolSfx tagData;
+
+        tagData = new Tag65SymbolSfx("PerigrinTook-65SymbolSfx");
+        assertEquals( "PerigrinTook-65SymbolSfx", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0065Test()");
     }
 }

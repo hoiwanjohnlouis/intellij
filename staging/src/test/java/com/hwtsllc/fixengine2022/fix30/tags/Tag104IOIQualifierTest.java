@@ -17,18 +17,18 @@
 package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag104IOIQualifierTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,15 +40,77 @@ class Tag104IOIQualifierTest {
 
     @Test
     void FIX0104Test() {
-        FIXType fix104IOIQualifier = FIXType.FIX104_IOI_QUALIFIER;
-        assertEquals("IOI_QUALIFIER", fix104IOIQualifier.getName());
-        assertEquals("104", fix104IOIQualifier.getID());
-        assertEquals("IOIQualifier", fix104IOIQualifier.getDescription());
+        FIXType fixData = FIXType.FIX104_IOI_QUALIFIER;
+        assertEquals("IOI_QUALIFIER", fixData.getName());
+        assertEquals("104", fixData.getID());
+        assertEquals("IOIQualifier", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0104Test() {
         Tag104IOIQualifier tagData;
-    //' = new Tag104IOIQualifier(Enum104IOIQualifier.values());
-        logger.info(WHERE_AM_I + ":Successful Tag0104Test()");
+
+        /*
+         * A-Z IOI Qualifier types
+         */
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.ALL_OR_NONE);
+        assertEquals( "A", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.MARKET_ON_CLOSE);
+        assertEquals( "B", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.AT_THE_CLOSE);
+        assertEquals( "C", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.VWAP);
+        assertEquals( "D", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.IN_TOUCH_WITH);
+        assertEquals( "I", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.LIMIT);
+        assertEquals( "L", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.MORE_BEHIND);
+        assertEquals( "M", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.AT_THE_OPEN);
+        assertEquals( "O", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.TAKING_A_POSITION);
+        assertEquals( "P", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.AT_THE_MARKET);
+        assertEquals( "Q", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.READY_TO_TRADE);
+        assertEquals( "R", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.PORTFOLIO_SHOWN);
+        assertEquals( "S", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.THROUGH_THE_DAY);
+        assertEquals( "T", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.VERSUS);
+        assertEquals( "V", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.INDICATION_WORKING_AWAY);
+        assertEquals( "W", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.CROSSING_OPPORTUNITY);
+        assertEquals( "X", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.AT_THE_MIDPOINT);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag104IOIQualifier(Enum104IOIQualifier.PRE_OPEN);
+        assertEquals( "Z", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0104Test()");
     }
 }

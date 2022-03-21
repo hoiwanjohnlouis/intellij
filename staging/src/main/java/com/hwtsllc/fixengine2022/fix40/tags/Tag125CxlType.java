@@ -16,6 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+
 @Deprecated
-public class Tag125CxlType {
+public class Tag125CxlType extends TagTypeAbstract {
+    private final String dataValue;
+
+    public final static String TESTA_CXL_TYPE = "BilboBaggins-125CxlType"; // fake data
+    public final static String TESTB_CXL_TYPE = "Gandalf-125CxlType";
+
+    public Tag125CxlType(String dataValue) {
+        setFixType(FIXType.FIX125_CXL_TYPE);
+        setDataValue(dataValue);
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag125CxlType tagData = new Tag125CxlType(TESTA_CXL_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

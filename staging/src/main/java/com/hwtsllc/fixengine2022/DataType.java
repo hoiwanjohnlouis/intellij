@@ -14,19 +14,14 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.datatypes;
+package com.hwtsllc.fixengine2022;
 
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-/**
- *
- * SeqNumType is a wrapper class for any SeqNumType field
- * Initially it will be an int.
- */
-public class SeqNumType implements LogStringVerbose {
+public class DataType implements LogStringVerbose {
     private int dataValue;
 
-    public SeqNumType(final int dataValue) {
+    public DataType(final int dataValue) {
         this.dataValue = dataValue;
     }
 
@@ -49,7 +44,7 @@ public class SeqNumType implements LogStringVerbose {
     }
     /**
      * standard wrapper to format a simple string describing the data
-     */
+    */
     @Override
     public String toString() {
         return String.valueOf(getDataValue());
@@ -59,7 +54,7 @@ public class SeqNumType implements LogStringVerbose {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        SeqNumType dataType = new SeqNumType(12345);
+        DataType dataType = new DataType(12345);
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
         dataType.setDataValue(3456);

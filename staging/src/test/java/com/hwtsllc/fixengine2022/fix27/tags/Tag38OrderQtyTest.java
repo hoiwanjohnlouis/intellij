@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag38OrderQtyTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,20 +38,23 @@ class Tag38OrderQtyTest {
 
     @Test
     void FIX0038Test() {
-        FIXType fix38OrderQty = FIXType.FIX38_ORDER_QTY;
-        assertEquals( "ORDER_QTY", fix38OrderQty.getName());
-        assertEquals( "38", fix38OrderQty.getID());
-        assertEquals( "OrderQty", fix38OrderQty.getDescription());
-        assertNotEquals( "ORDER_QTY ORDER_QTY", fix38OrderQty.getName());
-        assertNotEquals( "312", fix38OrderQty.getID());
-        assertNotEquals( "OrderQty OrderQty", fix38OrderQty.getDescription());
+        FIXType fixData = FIXType.FIX38_ORDER_QTY;
+        assertEquals( "ORDER_QTY", fixData.getName());
+        assertEquals( "38", fixData.getID());
+        assertEquals( "OrderQty", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0038Test() {
         Tag38OrderQty tagData;
-        //= new Tag38OrderQty();
-//        assertEquals( "100", tag38OrderQty.getDataValue());
-//        assertNotEquals( "11", tag38OrderQty.getDataValue());
+
+        tagData = new Tag38OrderQty("100");
+        assertEquals( "100", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0038Test()");
     }
 }

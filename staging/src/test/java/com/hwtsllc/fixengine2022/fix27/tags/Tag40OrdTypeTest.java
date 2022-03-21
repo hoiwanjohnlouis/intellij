@@ -17,16 +17,17 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum40OrdType;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag40OrdTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +40,99 @@ class Tag40OrdTypeTest {
 
     @Test
     void FIX0040Test() {
-        FIXType fix40OrdType = FIXType.FIX40_ORD_TYPE;
-        assertEquals( "ORD_TYPE", fix40OrdType.getName());
-        assertEquals( "40", fix40OrdType.getID());
-        assertEquals( "OrdType", fix40OrdType.getDescription());
-        assertNotEquals( "ORD_TYPE ORD_TYPE", fix40OrdType.getName());
-        assertNotEquals( "3123", fix40OrdType.getID());
-        assertNotEquals( "OrdType OrdType", fix40OrdType.getDescription());
+        FIXType fixData = FIXType.FIX40_ORD_TYPE;
+        assertEquals( "ORD_TYPE", fixData.getName());
+        assertEquals( "40", fixData.getID());
+        assertEquals( "OrdType", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0040Test() {
         Tag40OrdType tagData;
-//        assertEquals( "N", tag40OrdType.getDataValue());
-//        assertNotEquals( "A11", tag40OrdType.getDataValue());
+
+        /*
+         * 1-9 Order Type msg
+         */
+        tagData = new Tag40OrdType(Enum40OrdType.MARKET);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.LIMIT);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.STOP_OR_STOP_LOSS);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.STOP_LIMIT);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.MARKET_ON_CLOSE);
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.WITH_OR_WITHOUT);
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.LIMIT_OR_BETTER);
+        assertEquals( "7", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.LIMIT_WITH_OR_WITHOUT);
+        assertEquals( "8", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.ON_BASIS);
+        assertEquals( "9", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         * A-Q Order Type msg
+         */
+        tagData = new Tag40OrdType(Enum40OrdType.ON_CLOSE);
+        assertEquals( "A", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.LIMIT_ON_CLOSE);
+        assertEquals( "B", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.FOREX_MARKET);
+        assertEquals( "C", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.PREVIOUSLY_QUOTED);
+        assertEquals( "D", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.PREVIOUSLY_INDICATED);
+        assertEquals( "E", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.FOREX_LIMIT);
+        assertEquals( "F", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.FOREX_SWAP);
+        assertEquals( "G", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.FOREX_PREVIOUSLY_QUOTED);
+        assertEquals( "H", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.FUNARI);
+        assertEquals( "I", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.MARKET_IF_TOUCHED);
+        assertEquals( "J", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.MARKET_WITH_LEFT_OVER_AS_LIMIT);
+        assertEquals( "K", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.PREVIOUS_FUND_VALUATION_POINT);
+        assertEquals( "L", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.NEXT_FUND_VALUATION_POINT);
+        assertEquals( "M", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.PEGGED);
+        assertEquals( "P", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag40OrdType(Enum40OrdType.COUNTER_ORDER_SELECTION);
+        assertEquals( "Q", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0040Test()");
     }
 }

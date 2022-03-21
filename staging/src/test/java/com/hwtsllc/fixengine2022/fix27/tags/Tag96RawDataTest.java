@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag96RawDataTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -42,13 +40,26 @@ class Tag96RawDataTest {
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
     }
     @Test
     void FIX0096Test() {
-        FIXType fix96RawData = FIXType.FIX96_RAW_DATA;
+        FIXType fixData = FIXType.FIX96_RAW_DATA;
+        assertEquals( "RAW_DATA", fixData.getName());
+        assertEquals( "96", fixData.getID());
+        assertEquals( "RawData", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0096Test() {
+        Tag96RawData tagData;
+
+        tagData = new Tag96RawData("FrodoBaggins-96RawData");
+        assertEquals( "FrodoBaggins-96RawData", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0096Test()");
     }
 }

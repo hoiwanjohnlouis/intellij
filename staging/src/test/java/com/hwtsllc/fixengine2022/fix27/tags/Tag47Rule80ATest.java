@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum47Rule80A;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -27,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Tag47Rule80ATest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -40,20 +40,23 @@ class Tag47Rule80ATest {
 
     @Test
     void FIX0047Test() {
-        FIXType fix47Rule80A = FIXType.FIX47_RULE_80_A;
-        assertEquals( "RULE_80_A", fix47Rule80A.getName());
-        assertEquals( "47", fix47Rule80A.getID());
-        assertEquals( "Rule80A (no longer used)", fix47Rule80A.getDescription());
-        assertNotEquals( "RULE_80_A RULE_80_A", fix47Rule80A.getName());
-        assertNotEquals( "3123", fix47Rule80A.getID());
-        assertNotEquals( "Rule80A (no longer used) Rule80A (no longer used)", fix47Rule80A.getDescription());
+        FIXType fixData = FIXType.FIX47_RULE_80_A;
+        assertEquals( "RULE_80_A", fixData.getName());
+        assertEquals( "47", fixData.getID());
+        assertEquals( "Rule80A (no longer used)", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0047Test() {
         Tag47Rule80A tagData;
-                // = new Tag47Rule80A(FIXType.FIX47_RULE_80_A,"N");
-//        assertEquals( "N", tag47Rule80A.getDataValue());
-//        assertNotEquals( "A11", tag47Rule80A.getDataValue());
+
+        tagData = new Tag47Rule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
+        assertEquals( "A", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0047Test()");
     }
 }

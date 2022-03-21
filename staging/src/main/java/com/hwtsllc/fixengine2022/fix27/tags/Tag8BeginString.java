@@ -24,7 +24,7 @@ public class Tag8BeginString extends TagTypeAbstract {
     private Enum8BeginString dataValue;
 
     public final static Enum8BeginString TESTA_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_2_7;
-    public final static Enum8BeginString TESTB_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_4_2;
+    public final static Enum8BeginString TESTB_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_4_0;
 
     public Tag8BeginString(Enum8BeginString dataValue) {
         setFixType(FIXType.FIX8_BEGIN_STRING);

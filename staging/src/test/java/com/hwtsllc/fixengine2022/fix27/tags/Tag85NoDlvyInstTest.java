@@ -23,13 +23,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
 class Tag85NoDlvyInstTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,16 +39,24 @@ class Tag85NoDlvyInstTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0085Test() {
-        FIXType fix85NoDlvyInst = FIXType.FIX85_NO_DLVY_INST;
+        FIXType fixData = FIXType.FIX85_NO_DLVY_INST;
+        assertEquals( "NO_DLVY_INST", fixData.getName());
+        assertEquals( "85", fixData.getID());
+        assertEquals( "NoDlvyInst (no longer used)", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0085Test() {
+        Tag85NoDlvyInst tagData;
+
+        tagData = new Tag85NoDlvyInst("Elrond-85NoDlvyInst");
+        assertEquals( "Elrond-85NoDlvyInst", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0085Test()");
     }
 }

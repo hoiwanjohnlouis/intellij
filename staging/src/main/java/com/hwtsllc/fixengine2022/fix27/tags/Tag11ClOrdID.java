@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag11ClOrdID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_CL_ORD_ID = "BilboBaggins-11-ClOrdID"; // fake data
-    public final static String TESTB_CL_ORD_ID = "Gandalf-11-ClOrdID";
+    public final static String TESTA_CL_ORD_ID = "BilboBaggins-11ClOrdID"; // fake data
+    public final static String TESTB_CL_ORD_ID = "Gandalf-11ClOrdID";
 
     public Tag11ClOrdID(String dataValue) {
         setFixType(FIXType.FIX11_CL_ORD_ID);

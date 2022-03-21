@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag7BeginSeqNoTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag7BeginSeqNoTest {
 
     @Test
     void FIX0007Test() {
-        FIXType fix7BeginSeqNo = FIXType.FIX7_BEGIN_SEQ_NO;
-        assertEquals( "BEGIN_SEQ_NO", fix7BeginSeqNo.getName());
-        assertEquals( "7", fix7BeginSeqNo.getID());
-        assertEquals( "BeginSeqNo", fix7BeginSeqNo.getDescription());
-        assertNotEquals( "BEGIN;SEQ_NO", fix7BeginSeqNo.getName());
-        assertNotEquals( "77", fix7BeginSeqNo.getID());
-        assertNotEquals( "Begin Seq No", fix7BeginSeqNo.getDescription());
+        FIXType fixData = FIXType.FIX7_BEGIN_SEQ_NO;
+        assertEquals( "BEGIN_SEQ_NO", fixData.getName());
+        assertEquals( "7", fixData.getID());
+        assertEquals( "BeginSeqNo", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0007Test() {
-        Tag7BeginSeqNo tag7BeginSeqNo = new Tag7BeginSeqNo("12345");
-        assertEquals( "12345", tag7BeginSeqNo.getDataValue());
-        assertNotEquals( "6789", tag7BeginSeqNo.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0007Test()");
+        Tag7BeginSeqNo tagData;
+
+        tagData = new Tag7BeginSeqNo("12345");
+        assertEquals( "12345", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0007Test()");
     }
 }

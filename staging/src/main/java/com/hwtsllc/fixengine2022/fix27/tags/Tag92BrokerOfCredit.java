@@ -23,8 +23,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag92BrokerOfCredit extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_BROKER_OF_CREDIT = "BilboBaggins-92-BrokerOfCredit";
-    public final static String TESTB_BROKER_OF_CREDIT = "Gandalf-92-BrokerOfCredit";
+    public final static String TESTA_BROKER_OF_CREDIT = "BilboBaggins-92BrokerOfCredit";
+    public final static String TESTB_BROKER_OF_CREDIT = "Gandalf-92BrokerOfCredit";
 
     public Tag92BrokerOfCredit(String dataValue) {
         setFixType(FIXType.FIX92_BROKER_OF_CREDIT);

@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag6AvgPxTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag6AvgPxTest {
 
     @Test
     void FIX0006Test() {
-        FIXType fix6AvgPx = FIXType.FIX6_AVG_PX;
-        assertEquals( "AVG_PX", fix6AvgPx.getName());
-        assertEquals( "6", fix6AvgPx.getID());
-        assertEquals( "AvgPx", fix6AvgPx.getDescription());
-        assertNotEquals( "AVG PX", fix6AvgPx.getName());
-        assertNotEquals( "6666", fix6AvgPx.getID());
-        assertNotEquals( "Avg Px", fix6AvgPx.getDescription());
+        FIXType fixData = FIXType.FIX6_AVG_PX;
+        assertEquals( "AVG_PX", fixData.getName());
+        assertEquals( "6", fixData.getID());
+        assertEquals( "AvgPx", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0006Test() {
-        Tag6AvgPx tag6AvgPx = new Tag6AvgPx("123.45");
-        assertEquals( "123.45", tag6AvgPx.getDataValue());
-        assertNotEquals( "67.89", tag6AvgPx.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0006Test()");
+        Tag6AvgPx tagData;
+
+        tagData = new Tag6AvgPx("123.45");
+        assertEquals( "123.45", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0006Test()");
     }
 }

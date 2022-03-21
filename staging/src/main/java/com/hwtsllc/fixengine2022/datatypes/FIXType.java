@@ -105,7 +105,7 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     FIX61_URGENCY(61, "URGENCY", "Urgency"),
     FIX62_VALID_UNTIL_TIME(62, "VALID_UNTIL_TIME", "ValidUntilTime"),
     FIX63_SETTLMNT_TYP(63, "SETTLMNT_TYP", "SettlmntTyp"),
-    FIX64_FUT_SETT_DATE(64, "FUT_SETT_DATE", "FutSettDate"),
+    FIX64_SETTL_DATE(64, "SETTL_DATE", "SettlDate"),
     FIX65_SYMBOL_SFX(65, "SYMBOL_SFX", "SymbolSfx"),
     FIX66_LIST_ID(66, "LIST_ID", "ListID"),
     FIX67_LIST_SEQ_NO(67, "LIST_SEQ_NO", "ListSeqNo"),
@@ -116,10 +116,10 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     FIX71_ALLOC_TRANS_TYPE(71, "ALLOC_TRANS_TYPE", "AllocTransType"),
     FIX72_REF_ALLOC_ID(72, "REF_ALLOC_ID", "RefAllocID"),
     FIX73_NO_ORDERS(73, "NO_ORDERS", "NoOrders"),
-    FIX74_AVG_PRX_PRECISION(74, "AVG_PRX_PRECISION", "AvgPrxPrecision"),
+    FIX74_AVG_PX_PRECISION(74, "AVG_PX_PRECISION", "AvgPxPrecision"),
     FIX75_TRADE_DATE(75, "TRADE_DATE", "TradeDate"),
     FIX76_EXEC_BROKER(76, "EXEC_BROKER", "ExecBroker (replaced)"),
-    FIX77_OPEN_CLOSE(77, "OPEN_CLOSE", "OpenClose"),
+    FIX77_POSITION_EFFECT(77, "POSITION_EFFECT", "PositionEffect"),
     FIX78_NO_ALLOCS(78, "NO_ALLOCS", "NoAllocs"),
     FIX79_ALLOC_ACCOUNT(79, "ALLOC_ACCOUNT", "AllocAccount"),
     FIX80_ALLOC_SHARES(80, "ALLOC_SHARES", "AllocShares"),
@@ -1396,6 +1396,15 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     private final String name;
     private final String description;
 
+    /*
+     * used in @Test routine.
+     */
+    public final static String JUNK_ENUM_NAME = "JunkEnumName";
+    public final static String JUNK_ID = "JunkID";
+    public final static String JUNK_NAME = "JunkName";
+    public final static String JUNK_DESCRIPTION = "JunkDescription";
+    public final static String JUNK_DATA_VALUE = "JunkDataValue";
+
     FIXType(final int id, final String name, final String description) {
         /*
          *  Even though fixNumber is an *int*, this app treats it as a String,
@@ -1437,7 +1446,6 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     public String getDescription() {
         return description;
     }
-
     @Override
     public String toLogStringVerbose() {
         return this.getClass().getSimpleName()

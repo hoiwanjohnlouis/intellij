@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag11ClOrdIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag11ClOrdIDTest {
 
     @Test
     void FIX0011Test() {
-        FIXType fix11ClOrdID = FIXType.FIX11_CL_ORD_ID;
-        assertEquals( "CL_ORD_ID", fix11ClOrdID.getName());
-        assertEquals( "11", fix11ClOrdID.getID());
-        assertEquals( "ClOrdID", fix11ClOrdID.getDescription());
-        assertNotEquals( "CL_ORD_ID CL_ORD_ID", fix11ClOrdID.getName());
-        assertNotEquals( "111", fix11ClOrdID.getID());
-        assertNotEquals( "123 ClOrdID", fix11ClOrdID.getDescription());
+        FIXType fixData = FIXType.FIX11_CL_ORD_ID;
+        assertEquals( "CL_ORD_ID", fixData.getName());
+        assertEquals( "11", fixData.getID());
+        assertEquals( "ClOrdID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0011Test() {
-        Tag11ClOrdID tag11ClOrdID = new Tag11ClOrdID("MLCO-ABCD1234");
-        assertEquals( "MLCO-ABCD1234", tag11ClOrdID.getDataValue());
-        assertNotEquals( "abcd", tag11ClOrdID.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0011Test()");
+        Tag11ClOrdID tagData;
+
+        tagData = new Tag11ClOrdID("MLCO-ABCD1234");
+        assertEquals( "MLCO-ABCD1234", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0011Test()");
     }
 }

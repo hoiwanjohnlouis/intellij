@@ -23,10 +23,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag84CxlQtyTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -38,11 +39,23 @@ class Tag84CxlQtyTest {
 
     @Test
     void FIX0084Test() {
-        FIXType fix84CxlQty = FIXType.FIX84_CXL_QTY;
+        FIXType fixData = FIXType.FIX84_CXL_QTY;
+        assertEquals( "CXL_QTY", fixData.getName());
+        assertEquals( "84", fixData.getID());
+        assertEquals( "CxlQty", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0084Test() {
         Tag84CxlQty tagData;
+
+        tagData = new Tag84CxlQty("Boromir-84CxlQty");
+        assertEquals( "Boromir-84CxlQty", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0084Test()");
     }
 }

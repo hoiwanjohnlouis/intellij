@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag42OrigTimeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,22 @@ class Tag42OrigTimeTest {
 
     @Test
     void FIX0042Test() {
-        FIXType fix42OrigTime = FIXType.FIX42_ORIG_TIME;
-        assertEquals( "ORIG_TIME", fix42OrigTime.getName());
-        assertEquals( "42", fix42OrigTime.getID());
-        assertEquals( "OrigTime", fix42OrigTime.getDescription());
-        assertNotEquals( "ORIG_TIME ORIG_TIME", fix42OrigTime.getName());
-        assertNotEquals( "3123", fix42OrigTime.getID());
-        assertNotEquals( "OrigTime OrigTime", fix42OrigTime.getDescription());
+        FIXType fixData = FIXType.FIX42_ORIG_TIME;
+        assertEquals( "ORIG_TIME", fixData.getName());
+        assertEquals( "42", fixData.getID());
+        assertEquals( "OrigTime", fixData.getDescription());
+        assertNotEquals( "JunkName", fixData.getName());
+        assertNotEquals( "JunkID", fixData.getID());
+        assertNotEquals( "JunkDescription", fixData.getDescription());
     }
     @Test
     void Tag0042Test() {
         Tag42OrigTime tagData;
-//        assertEquals( "20220131", tag42OrigTime.getDataValue());
-//        assertNotEquals( "A11", tag42OrigTime.getDataValue());
+
+        tagData = new Tag42OrigTime("20220131");
+        assertEquals( "20220131", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0042Test()");
     }
 }

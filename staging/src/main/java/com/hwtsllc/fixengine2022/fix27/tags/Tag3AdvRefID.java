@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag3AdvRefID extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_ADV_REF_ID = "BilboBaggins-3-AdvRefID";
-    public final static String TESTB_ADV_REF_ID = "Gandalf-3-AdvRefID";
+    public final static String TESTA_ADV_REF_ID = "BilboBaggins-3AdvRefID";
+    public final static String TESTB_ADV_REF_ID = "Gandalf-3AdvRefID";
 
     public Tag3AdvRefID(String dataValue) {
         setFixType(FIXType.FIX3_ADV_REF_ID);

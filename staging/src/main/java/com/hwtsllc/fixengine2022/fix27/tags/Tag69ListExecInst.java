@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag69ListExecInst extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_LIST_EXEC_INST = "BilboBaggins-69-ListExecInst"; // fake data
-    public final static String TESTB_LIST_EXEC_INST = "Gandalf-69-ListExecInst";
+    public final static String TESTA_LIST_EXEC_INST = "BilboBaggins-69ListExecInst"; // fake data
+    public final static String TESTB_LIST_EXEC_INST = "Gandalf-69ListExecInst";
 
     public Tag69ListExecInst(String dataValue) {
         setFixType(FIXType.FIX69_LIST_EXEC_INST);

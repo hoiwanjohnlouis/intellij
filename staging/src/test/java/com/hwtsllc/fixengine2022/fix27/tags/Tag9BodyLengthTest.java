@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag9BodyLengthTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag9BodyLengthTest {
 
     @Test
     void FIX0009Test() {
-        FIXType fix9BodyLength = FIXType.FIX9_BODY_LENGTH;
-        assertEquals( "BODY_LENGTH", fix9BodyLength.getName());
-        assertEquals( "9", fix9BodyLength.getID());
-        assertEquals( "BodyLength", fix9BodyLength.getDescription());
-        assertNotEquals( "BODY_ LENGTH", fix9BodyLength.getName());
-        assertNotEquals( "99", fix9BodyLength.getID());
-        assertNotEquals( "Body Length", fix9BodyLength.getDescription());
+        FIXType fixData = FIXType.FIX9_BODY_LENGTH;
+        assertEquals( "BODY_LENGTH", fixData.getName());
+        assertEquals( "9", fixData.getID());
+        assertEquals( "BodyLength", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0009Test() {
-        Tag9BodyLength tag9BodyLength = new Tag9BodyLength("120");
-        assertEquals( "120", tag9BodyLength.getDataValue());
-        assertNotEquals( "6789", tag9BodyLength.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0009Test()");
+        Tag9BodyLength tagData;
+
+        tagData = new Tag9BodyLength("120");
+        assertEquals( "120", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0009Test()");
     }
 }

@@ -27,9 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class  Tag1AccountTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -41,21 +39,24 @@ class  Tag1AccountTest {
 
     @Test
     void FIX0001Test() {
-        FIXType fix1Account = FIXType.FIX1_ACCOUNT;
-        assertEquals( "FIX1_ACCOUNT", fix1Account.getEnumName());
-        assertEquals( "1", fix1Account.getID());
-        assertEquals( "ACCOUNT", fix1Account.getName());
-        assertEquals( "Account", fix1Account.getDescription());
-        assertNotEquals( "Not My FIX1_ACCOUNT", fix1Account.getEnumName());
-        assertNotEquals( "11", fix1Account.getID());
-        assertNotEquals( "Not My ACCOUNT", fix1Account.getName());
-        assertNotEquals( "123 Account", fix1Account.getDescription());
+        FIXType fixData = FIXType.FIX1_ACCOUNT;
+        assertEquals( "FIX1_ACCOUNT", fixData.getEnumName());
+        assertEquals( "1", fixData.getID());
+        assertEquals( "ACCOUNT", fixData.getName());
+        assertEquals( "Account", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0001Test() {
-        Tag1Account tag1Account = new Tag1Account("ABC987654321XYZ");
-        assertEquals( "ABC987654321XYZ", tag1Account.getDataValue());
-        assertNotEquals( "abcdefghij", tag1Account.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0001Test()");
+        Tag1Account tagData;
+
+        tagData = new Tag1Account("ABC987654321XYZ");
+        assertEquals( "ABC987654321XYZ", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0001Test()");
     }
 }

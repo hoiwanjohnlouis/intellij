@@ -18,22 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag116OnBehalfOfSubID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
+
+    public final static String TESTA_ON_BEHALF_OF_SUB_ID = "BilboBaggins-116OnBehalfOfSubID"; // fake data
+    public final static String TESTB_ON_BEHALF_OF_SUB_ID = "Gandalf-116OnBehalfOfSubID";
 
     public Tag116OnBehalfOfSubID(String dataValue) {
         setFixType(FIXType.FIX116_ON_BEHALF_OF_SUB_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag116OnBehalfOfSubID tag116OnBehalfOfSubID = new Tag116OnBehalfOfSubID("MSCO");
-        System.out.println(tag116OnBehalfOfSubID);
-        System.out.println(tag116OnBehalfOfSubID.toLogStringVerbose());
-        System.out.println(tag116OnBehalfOfSubID.toFixTagValuePairString());
+        Tag116OnBehalfOfSubID tagData = new Tag116OnBehalfOfSubID(TESTA_ON_BEHALF_OF_SUB_ID);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

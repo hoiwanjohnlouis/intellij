@@ -22,11 +22,11 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag74AvgPxPrecision extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_AVG_PX_PRECISION = "BilboBaggins-74-AvgPxPrecision"; // fake data
-    public final static String TESTB_AVG_PX_PRECISION = "Gandalf-74-AvgPxPrecision";
+    public final static String TESTA_AVG_PX_PRECISION = "BilboBaggins-74AvgPxPrecision"; // fake data
+    public final static String TESTB_AVG_PX_PRECISION = "Gandalf-74AvgPxPrecision";
 
     public Tag74AvgPxPrecision(String dataValue) {
-        setFixType(FIXType.FIX74_AVG_PRX_PRECISION);
+        setFixType(FIXType.FIX74_AVG_PX_PRECISION);
         setDataValue(dataValue);
         this.dataValue = dataValue;
     }

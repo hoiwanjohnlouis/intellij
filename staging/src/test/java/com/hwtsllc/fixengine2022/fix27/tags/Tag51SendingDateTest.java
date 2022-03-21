@@ -40,20 +40,23 @@ class Tag51SendingDateTest {
 
     @Test
     void FIX0051Test() {
-        FIXType fix51SendingDate = FIXType.FIX51_SENDING_DATE;
-        assertEquals( "SENDING_DATE", fix51SendingDate.getName());
-        assertEquals( "51", fix51SendingDate.getID());
-        assertEquals( "SendingDate (no longer used)", fix51SendingDate.getDescription());
-        assertNotEquals( "SENDING_DATE SENDING_DATE", fix51SendingDate.getName());
-        assertNotEquals( "3123", fix51SendingDate.getID());
-        assertNotEquals( "SendingDate SendingDate", fix51SendingDate.getDescription());
+        FIXType fixData = FIXType.FIX51_SENDING_DATE;
+        assertEquals( "SENDING_DATE", fixData.getName());
+        assertEquals( "51", fixData.getID());
+        assertEquals( "SendingDate (no longer used)", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0051Test() {
         Tag51SendingDate tagData;
-        //= new Tag51SendingDate();
-//        assertEquals( "BEST", Tag51SendingDate.getDataValue());
-//        assertNotEquals( "A11", Tag51SendingDate.getDataValue());
-        logger.info("Successful Tag0050Test()");
+
+        tagData = new Tag51SendingDate("20220319 141400");
+        assertEquals( "20220319 141400", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0051Test()");
     }
 }

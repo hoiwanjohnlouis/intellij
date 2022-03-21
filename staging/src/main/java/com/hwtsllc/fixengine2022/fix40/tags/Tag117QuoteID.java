@@ -18,22 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class Tag117QuoteID extends TagTypeAbstract {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
+    private final String dataValue;
+
+    public final static String TESTA_QUOTE_ID = "BilboBaggins-117QuoteID"; // fake data
+    public final static String TESTB_QUOTE_ID = "Gandalf-117QuoteID";
 
     public Tag117QuoteID(String dataValue) {
         setFixType(FIXType.FIX117_QUOTE_ID);
         setDataValue(dataValue);
+        this.dataValue = dataValue;
     }
 
     public static void main(String[] args) {
-        Tag117QuoteID tag117QuoteID = new Tag117QuoteID("QUOTE-ID_MSCO");
-        System.out.println(tag117QuoteID);
-        System.out.println(tag117QuoteID.toLogStringVerbose());
-        System.out.println(tag117QuoteID.toFixTagValuePairString());
+        Tag117QuoteID tagData = new Tag117QuoteID(TESTA_QUOTE_ID);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

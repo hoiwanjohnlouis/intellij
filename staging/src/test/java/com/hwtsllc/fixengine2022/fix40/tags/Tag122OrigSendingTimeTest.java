@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag122OrigSendingTimeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag122OrigSendingTimeTest {
 
     @Test
     void FIX0122Test() {
-        FIXType fix122OrigSendingTime = FIXType.FIX122_ORIG_SENDING_TIME;
-        assertEquals( fix122OrigSendingTime.getName(), "ORIG_SENDING_TIME");
-        assertEquals( fix122OrigSendingTime.getID(), "122");
-        assertEquals( fix122OrigSendingTime.getDescription(), "OrigSendingTime");
+        FIXType fixData = FIXType.FIX122_ORIG_SENDING_TIME;
+        assertEquals( "ORIG_SENDING_TIME", fixData.getName());
+        assertEquals( "122", fixData.getID());
+        assertEquals( "OrigSendingTime", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0122Test() {
         Tag122OrigSendingTime tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0122Test()");
+
+        tagData = new Tag122OrigSendingTime("KimSoYeon-122OrigSendingTime");
+        assertEquals( "KimSoYeon-122OrigSendingTime", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0122Test()");
     }
 }

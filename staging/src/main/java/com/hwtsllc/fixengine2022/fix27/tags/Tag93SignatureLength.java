@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag93SignatureLength extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_SIGNATURE_LENGTH = "25";
-    public final static String TESTB_SIGNATURE_LENGTH = "20";
+    public final static String TESTA_SIGNATURE_LENGTH = "24";
+    public final static String TESTB_SIGNATURE_LENGTH = "19";
 
     public Tag93SignatureLength(String dataValue) {
         setFixType(FIXType.FIX93_SIGNATURE_LENGTH);

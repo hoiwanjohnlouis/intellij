@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag90SecureDataLen extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_SECURE_DATA_LEN = "26";
-    public final static String TESTB_SECURE_DATA_LEN = "21";
+    public final static String TESTA_SECURE_DATA_LEN = "25";
+    public final static String TESTB_SECURE_DATA_LEN = "20";
 
     public Tag90SecureDataLen(String dataValue) {
         setFixType(FIXType.FIX90_SECURE_DATA_LEN);

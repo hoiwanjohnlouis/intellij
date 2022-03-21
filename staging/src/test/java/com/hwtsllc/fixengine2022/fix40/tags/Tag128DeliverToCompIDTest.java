@@ -40,14 +40,23 @@ class Tag128DeliverToCompIDTest {
 
     @Test
     void FIX0128Test() {
-        FIXType fix128DeliverToCompID = FIXType.FIX128_DELIVER_TO_COMP_ID;
-        assertEquals( fix128DeliverToCompID.getName(), "DELIVER_TO_COMP_ID");
-        assertEquals( fix128DeliverToCompID.getID(), "128");
-        assertEquals( fix128DeliverToCompID.getDescription(), "DeliverToCompID");
+        FIXType fixData = FIXType.FIX128_DELIVER_TO_COMP_ID;
+        assertEquals( "DELIVER_TO_COMP_ID", fixData.getName());
+        assertEquals( "128", fixData.getID());
+        assertEquals( "DeliverToCompID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0128Test() {
         Tag128DeliverToCompID tagData;
+
+        tagData = new Tag128DeliverToCompID("SongJiHyo-128DeliverToCompID");
+        assertEquals( "SongJiHyo-128DeliverToCompID", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info(WHERE_AM_I + ":Successful Tag0128Test()");
     }
 }

@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag89Signature extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_SIGNATURE = "BilboBaggins-89-Signature";
-    public final static String TESTB_SIGNATURE = "Gandalf-89-Signature";
+    public final static String TESTA_SIGNATURE = "BilboBaggins-89Signature";
+    public final static String TESTB_SIGNATURE = "Gandalf-89Signature";
 
     public Tag89Signature(String dataValue) {
         setFixType(FIXType.FIX89_SIGNATURE);

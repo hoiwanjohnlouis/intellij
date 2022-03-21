@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag26IOIRefIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag26IOIRefIDTest {
 
     @Test
     void FIX0026Test() {
-        FIXType fix26IOIRefID = FIXType.FIX26_IOI_REF_ID;
-        assertEquals( "IOI_REF_ID", fix26IOIRefID.getName());
-        assertEquals( "26", fix26IOIRefID.getID());
-        assertEquals( "IOIRefID", fix26IOIRefID.getDescription());
-        assertNotEquals( "IOI_REF_ID IOI_REF_ID", fix26IOIRefID.getName());
-        assertNotEquals( "2020", fix26IOIRefID.getID());
-        assertNotEquals( "123 IOIRefID", fix26IOIRefID.getDescription());
+        FIXType fixData = FIXType.FIX26_IOI_REF_ID;
+        assertEquals( "IOI_REF_ID", fixData.getName());
+        assertEquals( "26", fixData.getID());
+        assertEquals( "IOIRefID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0026Test() {
-        Tag26IOIRefID tag26IOIRefID = new Tag26IOIRefID("A");
-        assertEquals( "A", tag26IOIRefID.getDataValue());
-        assertNotEquals( "11", tag26IOIRefID.getDataValue());
-        logger.info(WHERE_AM_I + ":Successful Tag0026Test()");
+        Tag26IOIRefID tagData;
+
+        tagData = new Tag26IOIRefID("A");
+        assertEquals( "A", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0026Test()");
     }
 }

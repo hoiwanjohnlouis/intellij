@@ -22,8 +22,8 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
 public class Tag107SecurityDesc extends TagTypeAbstract {
     private final String dataValue;
 
-    public final static String TESTA_SECURITY_DESC = "BilboBaggins-107-SecurityDesc"; // fake data
-    public final static String TESTB_SECURITY_DESC = "Gandalf-107-SecurityDesc";
+    public final static String TESTA_SECURITY_DESC = "BilboBaggins-107SecurityDesc"; // fake data
+    public final static String TESTB_SECURITY_DESC = "Gandalf-107SecurityDesc";
 
     public Tag107SecurityDesc(String dataValue) {
         setFixType(FIXType.FIX107_SECURITY_DESC);

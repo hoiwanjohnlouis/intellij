@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -26,7 +25,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Tag43PossDupFlagTest {
+class Tag64SettlDateTest {
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -38,23 +37,24 @@ class Tag43PossDupFlagTest {
     }
 
     @Test
-    void FIX0043Test() {
-        FIXType fixData = FIXType.FIX43_POSS_DUP_FLAG;
-        assertEquals( "POSS_DUP_FLAG", fixData.getName());
-        assertEquals( "43", fixData.getID());
-        assertEquals( "PossDupFlag", fixData.getDescription());
-        assertNotEquals( "JunkName", fixData.getName());
-        assertNotEquals( "JunkID", fixData.getID());
-        assertNotEquals( "JunkDescription", fixData.getDescription());
+    void FIX0064Test() {
+        FIXType fixData = FIXType.FIX64_SETTL_DATE;
+        assertEquals( "SETTL_DATE", fixData.getName());
+        assertEquals( "64", fixData.getID());
+        assertEquals( "SettlDate", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0043Test() {
-        Tag43PossDupFlag tagData;
+    void Tag0064Test() {
+        Tag64SettlDate tagData;
 
-        tagData = new Tag43PossDupFlag(EnumBoolean.NO);
-        assertEquals( "N", tagData.getDataValue());
+        tagData = new Tag64SettlDate("MeriadocBrandybuck-64SettlDate");
+        assertEquals( "MeriadocBrandybuck-64SettlDate", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
 
-        logger.info("Successful Tag0043Test()");
+        logger.info("Successful Tag0064Test()");
     }
 }

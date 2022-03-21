@@ -26,9 +26,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag120SettlCurrencyTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -40,14 +38,23 @@ class Tag120SettlCurrencyTest {
 
     @Test
     void FIX0120Test() {
-        FIXType fix120SettlCurrency = FIXType.FIX120_SETTL_CURRENCY;
-        assertEquals( fix120SettlCurrency.getName(), "SETTL_CURRENCY");
-        assertEquals( fix120SettlCurrency.getID(), "120");
-        assertEquals( fix120SettlCurrency.getDescription(), "SettlCurrency");
+        FIXType fixData = FIXType.FIX120_SETTL_CURRENCY;
+        assertEquals( "SETTL_CURRENCY", fixData.getName());
+        assertEquals( "120", fixData.getID());
+        assertEquals( "SettlCurrency", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0120Test() {
         Tag120SettlCurrency tagData;
-        logger.info(WHERE_AM_I + ":Successful Tag0120Test()");
+
+        tagData = new Tag120SettlCurrency("MoonChaeWon-120SettlCurrency");
+        assertEquals( "MoonChaeWon-120SettlCurrency", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0120Test()");
     }
 }

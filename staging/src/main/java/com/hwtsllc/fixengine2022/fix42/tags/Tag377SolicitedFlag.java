@@ -16,5 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-public class Tag377SolicitedFlag {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag377SolicitedFlag extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_SOLICITED_FLAG = EnumBoolean.NO ;     // N - Was not solicited
+    public final static EnumBoolean TESTB_SOLICITED_FLAG = EnumBoolean.YES;     // Y - Was solicited
+
+    public Tag377SolicitedFlag(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX377_SOLICITED_FLAG);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag377SolicitedFlag tagData = new Tag377SolicitedFlag(TESTA_SOLICITED_FLAG);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

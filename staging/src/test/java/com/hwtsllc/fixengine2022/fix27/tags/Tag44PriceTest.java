@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag44PriceTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,19 +38,23 @@ class Tag44PriceTest {
 
     @Test
     void FIX0044Test() {
-        FIXType fix44Price = FIXType.FIX44_PRICE;
-        assertEquals( "PRICE", fix44Price.getName());
-        assertEquals( "44", fix44Price.getID());
-        assertEquals( "Price", fix44Price.getDescription());
-        assertNotEquals( "PRICE PRICE", fix44Price.getName());
-        assertNotEquals( "3123", fix44Price.getID());
-        assertNotEquals( "Price Price", fix44Price.getDescription());
+        FIXType fixData = FIXType.FIX44_PRICE;
+        assertEquals( "PRICE", fixData.getName());
+        assertEquals( "44", fixData.getID());
+        assertEquals( "Price", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0044Test() {
         Tag44Price tagData;
-//        assertEquals( "10.43", tag44Price.getDataValue());
-//        assertNotEquals( "11.01", tag44Price.getDataValue());
+
+        tagData = new Tag44Price("10.43");
+        assertEquals( "10.43", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
         logger.info("Successful Tag0044Test()");
     }
 }

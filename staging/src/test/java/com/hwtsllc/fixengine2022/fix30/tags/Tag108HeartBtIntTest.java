@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag108HeartBtIntTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,15 +38,23 @@ class Tag108HeartBtIntTest {
 
     @Test
     void FIX0108Test() {
-        FIXType fix108HeartBtInt = FIXType.FIX108_HEART_BT_INT;
-        assertEquals( "HEART_BT_INT", fix108HeartBtInt.getName());
-        assertEquals( "108", fix108HeartBtInt.getID());
-        assertEquals( "HeartBtInt", fix108HeartBtInt.getDescription());
+        FIXType fixData = FIXType.FIX108_HEART_BT_INT;
+        assertEquals( "HEART_BT_INT", fixData.getName());
+        assertEquals( "108", fixData.getID());
+        assertEquals( "HeartBtInt", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0108Test() {
-        Tag108HeartBtInt tagData = new Tag108HeartBtInt("60");
+        Tag108HeartBtInt tagData;
+
+        tagData = new Tag108HeartBtInt("60");
         assertEquals("60", tagData.getDataValue() );
-        logger.info(WHERE_AM_I + ":Successful Test()");
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0108Test()");
     }
 }

@@ -26,7 +26,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag106IssuerTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
@@ -39,15 +38,23 @@ class Tag106IssuerTest {
 
     @Test
     void FIX0106Test() {
-        FIXType fix106Issuer = FIXType.FIX106_ISSUER;
-        assertEquals( "ISSUER", fix106Issuer.getName());
-        assertEquals( "106", fix106Issuer.getID());
-        assertEquals( "Issuer", fix106Issuer.getDescription());
+        FIXType fixData = FIXType.FIX106_ISSUER;
+        assertEquals( "ISSUER", fixData.getName());
+        assertEquals( "106", fixData.getID());
+        assertEquals( "Issuer", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0106Test() {
-        Tag106Issuer tagData = new Tag106Issuer("show me the money");
+        Tag106Issuer tagData;
+
+        tagData = new Tag106Issuer("show me the money");
         assertEquals("show me the money", tagData.getDataValue() );
-        logger.info(WHERE_AM_I + ":Successful Tag0106Test()");
+        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+
+        logger.info("Successful Tag0106Test()");
     }
 }

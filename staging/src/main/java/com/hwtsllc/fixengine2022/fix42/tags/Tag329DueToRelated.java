@@ -16,5 +16,28 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-public class Tag329DueToRelated {
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+
+public class Tag329DueToRelated extends TagTypeAbstract {
+    private final EnumBoolean dataValue;
+
+    public final static EnumBoolean TESTA_DUE_TO_RELATED = EnumBoolean.NO ;
+                                    // N - Halt was not related to a halt of the related security
+    public final static EnumBoolean TESTB_DUE_TO_RELATED = EnumBoolean.YES;
+                                    // Y - Half was due to the related security being halted
+
+    public Tag329DueToRelated(EnumBoolean dataValue) {
+        setFixType(FIXType.FIX329_DUE_TO_RELATED);
+        setDataValue(dataValue.getID());
+        this.dataValue = dataValue;
+    }
+
+    public static void main(String[] args) {
+        Tag329DueToRelated tagData = new Tag329DueToRelated(TESTA_DUE_TO_RELATED);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }
