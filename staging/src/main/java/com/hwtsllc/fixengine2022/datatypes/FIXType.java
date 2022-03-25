@@ -23,6 +23,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * FIXType enum defines all the Financial Exchange Protocol's (FIX) fields.  
  * It consists of 3 fields.
  *
+ *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Prootocol document.
+ *                      There may be a secondary prefix denoting the data type.
+ *                      ET = EnumType field
+ *                      ST = StringType field
+ *                      NIGT = NumInGroupType field, saved as int
+ *                      LT = LengthType field, saved as int
+ *                      QT = QtyType field, saved as int
+ *                      SNT = SeqNumType field, saved as int
+ *                      others to follow
  * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
  *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String
  * String  name         short NAME of the field as defined by the FIX protocol document, no duplicates
@@ -36,121 +45,121 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
      * Start of FIX2.7 as defined by the FIX Protocol Specification 2.7
      *  Tags: 1-103
      */
-    FIX1_ACCOUNT(1, "ACCOUNT", "Account"),
-    FIX2_ADV_ID(2, "ADV_ID", "AdvId"),
-    FIX3_ADV_REF_ID(3, "ADV_REF_ID", "AdvRefId"),
-    FIX4_ADV_SIDE(4, "ADV_SIDE", "AdvSide"),
-    FIX5_ADV_TRANS_TYPE(5, "ADV_TRANS_TYPE", "Enum5AdvTransType"),
+    FIX1_ST_ACCOUNT(1, "ACCOUNT", "Account"),
+    FIX2_ST_ADV_ID(2, "ADV_ID", "AdvId"),
+    FIX3_ST_ADV_REF_ID(3, "ADV_REF_ID", "AdvRefId"),
+    FIX4_ET_ADV_SIDE(4, "ADV_SIDE", "AdvSide"),
+    FIX5_ET_ADV_TRANS_TYPE(5, "ADV_TRANS_TYPE", "Enum5AdvTransType"),
     FIX6_AVG_PX(6, "AVG_PX", "AvgPx"),
     FIX7_BEGIN_SEQ_NO(7, "BEGIN_SEQ_NO", "BeginSeqNo"),
-    FIX8_BEGIN_STRING(8, "BEGIN_STRING", "BeginString"),
+    FIX8_ET_BEGIN_STRING(8, "BEGIN_STRING", "BeginString"),
     FIX9_BODY_LENGTH(9, "BODY_LENGTH", "BodyLength"),
     FIX10_CHECK_SUM(10, "CHECK_SUM", "CheckSum"),
 
-    FIX11_CL_ORD_ID(11, "CL_ORD_ID", "ClOrdID"),
+    FIX11_ST_CL_ORD_ID(11, "CL_ORD_ID", "ClOrdID"),
     FIX12_COMMISSION(12, "COMMISSION", "Commission"),
-    FIX13_COMM_TYPE(13, "COMM_TYPE", "CommType"),
+    FIX13_ET_COMM_TYPE(13, "COMM_TYPE", "CommType"),
     FIX14_CUM_QTY(14, "CUM_QTY", "CumQty"),
     FIX15_CURRENCY(15, "CURRENCY", "Currency"),
     FIX16_END_SEQ_NO(16, "END_SEQ_NO", "EndSeqNo"),
-    FIX17_EXEC_ID(17, "EXEC_ID", "ExecID"),
-    FIX18_EXEC_INST(18, "EXEC_INST", "ExecInst"),
-    FIX19_EXEC_REF_ID(19, "EXEC_REF_ID", "ExecRefID"),
-    FIX20_EXEC_TRANS_TYPE(20, "EXEC_TRANS_TYPE", "ExecTransType (replaced)"),
+    FIX17_ST_EXEC_ID(17, "EXEC_ID", "ExecID"),
+    FIX18_ET_EXEC_INST(18, "EXEC_INST", "ExecInst"),
+    FIX19_ST_EXEC_REF_ID(19, "EXEC_REF_ID", "ExecRefID"),
+    FIX20_ET_EXEC_TRANS_TYPE(20, "EXEC_TRANS_TYPE", "ExecTransType (replaced)"),
 
-    FIX21_HANDL_INST(21, "HANDL_INST", "HandlInst"),
-    FIX22_SECURITY_ID_SOURCE(22, "SECURITY_ID_SOURCE", "SecurityIDSource"),
-    FIX23_IOI_ID(23, "IOI_ID", "IOIid"),
+    FIX21_ET_HANDL_INST(21, "HANDL_INST", "HandlInst"),
+    FIX22_ET_SECURITY_ID_SOURCE(22, "SECURITY_ID_SOURCE", "SecurityIDSource"),
+    FIX23_ST_IOI_ID(23, "IOI_ID", "IOIid"),
     FIX24_IOI_OTH_SVC(24, "IOI_OTH_SVC", "IOIOthSvc (no longer used)"),
-    FIX25_IOI_QLTY_IND(25, "IOI_QLTY_IND", "IOIQltyInd"),
-    FIX26_IOI_REF_ID(26, "IOI_REF_ID", "IOIRefID"),
+    FIX25_ET_IOI_QLTY_IND(25, "IOI_QLTY_IND", "IOIQltyInd"),
+    FIX26_ST_IOI_REF_ID(26, "IOI_REF_ID", "IOIRefID"),
     FIX27_IOI_SHARES(27, "IOI_SHARES", "IOIShares"),
-    FIX28_IOI_TRANS_TYPE(28, "IOI_TRANS_TYPE", "IOITransType"),
-    FIX29_LAST_CAPACITY(29, "LAST_CAPACITY", "LastCapacity"),
+    FIX28_ET_IOI_TRANS_TYPE(28, "IOI_TRANS_TYPE", "IOITransType"),
+    FIX29_ET_LAST_CAPACITY(29, "LAST_CAPACITY", "LastCapacity"),
     FIX30_LAST_MKT(30, "LAST_MKT", "LastMkt"),
 
     FIX31_LAST_PX(31, "LAST_PX", "LastPx"),
     FIX32_LAST_QTY(32, "LAST_QTY", "LastQty"),
     FIX33_NO_LINES_OF_TEXT(33, "NO_LINES_OF_TEXT", "NoLinesOfText"),
     FIX34_MSG_SEQ_NUM(34, "MSG_SEQ_NUM", "MsgSeqNum"),
-    FIX35_MSG_TYPE(35, "MSG_TYPE", "MsgType"),
+    FIX35_ET_MSG_TYPE(35, "MSG_TYPE", "MsgType"),
     FIX36_NEW_SEQ_NO(36, "NEW_SEQ_NO", "NewSeqNo"),
-    FIX37_ORDER_ID(37, "ORDER_ID", "OrderID"),
+    FIX37_ST_ORDER_ID(37, "ORDER_ID", "OrderID"),
     FIX38_ORDER_QTY(38, "ORDER_QTY", "OrderQty"),
-    FIX39_ORD_STATUS(39, "ORD_STATUS", "OrdStatus"),
-    FIX40_ORD_TYPE(40, "ORD_TYPE", "OrdType"),
+    FIX39_ET_ORD_STATUS(39, "ORD_STATUS", "OrdStatus"),
+    FIX40_ET_ORD_TYPE(40, "ORD_TYPE", "OrdType"),
 
-    FIX41_ORIG_CL_ORD_ID(41, "ORIG_CL_ORD_ID", "OrigClOrdID"),
+    FIX41_ST_ORIG_CL_ORD_ID(41, "ORIG_CL_ORD_ID", "OrigClOrdID"),
     FIX42_ORIG_TIME(42, "ORIG_TIME", "OrigTime"),
-    FIX43_POSS_DUP_FLAG(43, "POSS_DUP_FLAG", "PossDupFlag"),
+    FIX43_ET_POSS_DUP_FLAG(43, "POSS_DUP_FLAG", "PossDupFlag"),
     FIX44_PRICE(44, "PRICE", "Price"),
     FIX45_REF_SEQ_NUM(45, "REF_SEQ_NUM", "RefSeqNum"),
-    FIX46_RELATD_SYM(46, "RELATD_SYM", "RelatdSym (No longer used)"),
-    FIX47_RULE_80_A(47, "RULE_80_A", "Rule80A (no longer used)"),
-    FIX48_SECURITY_ID(48, "SECURITY_ID", "SecurityID"),
-    FIX49_SENDER_COMP_ID(49, "SENDER_COMP_ID", "SenderCompID"),
-    FIX50_SENDER_SUB_ID(50, "SENDER_SUB_ID", "SenderSubID"),
+    FIX46_ST_RELATD_SYM(46, "RELATD_SYM", "RelatdSym (No longer used)"),
+    FIX47_ET_RULE_80_A(47, "RULE_80_A", "Rule80A (no longer used)"),
+    FIX48_ST_SECURITY_ID(48, "SECURITY_ID", "SecurityID"),
+    FIX49_ST_SENDER_COMP_ID(49, "SENDER_COMP_ID", "SenderCompID"),
+    FIX50_ST_SENDER_SUB_ID(50, "SENDER_SUB_ID", "SenderSubID"),
 
     FIX51_SENDING_DATE(51, "SENDING_DATE", "SendingDate (no longer used)"),
     FIX52_SENDING_TIME(52, "SENDING_TIME", "SendingTime"),
     FIX53_QUANTITY(53, "QUANTITY", "Quantity (formerly Shares)"),
-    FIX54_SIDE(54, "SIDE", "Side"),
-    FIX55_SYMBOL(55, "SYMBOL", "Symbol"),
-    FIX56_TARGET_COMP_ID(56, "TARGET_COMP_ID", "TargetCompID"),
-    FIX57_TARGET_SUB_ID(57, "TARGET_SUB_ID", "TargetSubID"),
-    FIX58_TEXT(58, "TEXT", "Text"),
-    FIX59_TIME_IN_FORCE(59, "TIME_IN_FORCE", "TimeInForce"),
+    FIX54_ET_SIDE(54, "SIDE", "Side"),
+    FIX55_ST_SYMBOL(55, "SYMBOL", "Symbol"),
+    FIX56_ST_TARGET_COMP_ID(56, "TARGET_COMP_ID", "TargetCompID"),
+    FIX57_ST_TARGET_SUB_ID(57, "TARGET_SUB_ID", "TargetSubID"),
+    FIX58_ST_TEXT(58, "TEXT", "Text"),
+    FIX59_ET_TIME_IN_FORCE(59, "TIME_IN_FORCE", "TimeInForce"),
     FIX60_TRANSACT_TIME(60, "TRANSACT_TIME", "TransactTime"),
 
-    FIX61_URGENCY(61, "URGENCY", "Urgency"),
+    FIX61_ET_URGENCY(61, "URGENCY", "Urgency"),
     FIX62_VALID_UNTIL_TIME(62, "VALID_UNTIL_TIME", "ValidUntilTime"),
     FIX63_SETTLMNT_TYP(63, "SETTLMNT_TYP", "SettlmntTyp"),
     FIX64_SETTL_DATE(64, "SETTL_DATE", "SettlDate"),
-    FIX65_SYMBOL_SFX(65, "SYMBOL_SFX", "SymbolSfx"),
-    FIX66_LIST_ID(66, "LIST_ID", "ListID"),
+    FIX65_ST_SYMBOL_SFX(65, "SYMBOL_SFX", "SymbolSfx"),
+    FIX66_ST_LIST_ID(66, "LIST_ID", "ListID"),
     FIX67_LIST_SEQ_NO(67, "LIST_SEQ_NO", "ListSeqNo"),
     FIX68_TOT_NO_ORDERS(68, "TOT_NO_ORDERS", "TotNoOrders (formerly named: ListNoOrds)"),
     FIX69_LIST_EXEC_INST(69, "LIST_EXEC_INST", "ListExecInst"),
-    FIX70_ALLOC_ID(70, "ALLOC_ID", "AllocID"),
+    FIX70_ST_ALLOC_ID(70, "ALLOC_ID", "AllocID"),
 
-    FIX71_ALLOC_TRANS_TYPE(71, "ALLOC_TRANS_TYPE", "AllocTransType"),
-    FIX72_REF_ALLOC_ID(72, "REF_ALLOC_ID", "RefAllocID"),
+    FIX71_ET_ALLOC_TRANS_TYPE(71, "ALLOC_TRANS_TYPE", "AllocTransType"),
+    FIX72_ST_REF_ALLOC_ID(72, "REF_ALLOC_ID", "RefAllocID"),
     FIX73_NO_ORDERS(73, "NO_ORDERS", "NoOrders"),
     FIX74_AVG_PX_PRECISION(74, "AVG_PX_PRECISION", "AvgPxPrecision"),
     FIX75_TRADE_DATE(75, "TRADE_DATE", "TradeDate"),
     FIX76_EXEC_BROKER(76, "EXEC_BROKER", "ExecBroker (replaced)"),
-    FIX77_POSITION_EFFECT(77, "POSITION_EFFECT", "PositionEffect"),
+    FIX77_ET_POSITION_EFFECT(77, "POSITION_EFFECT", "PositionEffect"),
     FIX78_NO_ALLOCS(78, "NO_ALLOCS", "NoAllocs"),
-    FIX79_ALLOC_ACCOUNT(79, "ALLOC_ACCOUNT", "AllocAccount"),
+    FIX79_ST_ALLOC_ACCOUNT(79, "ALLOC_ACCOUNT", "AllocAccount"),
     FIX80_ALLOC_SHARES(80, "ALLOC_SHARES", "AllocShares"),
 
-    FIX81_PROCESS_CODE(81, "PROCESS_CODE", "ProcessCode"),
+    FIX81_ET_PROCESS_CODE(81, "PROCESS_CODE", "ProcessCode"),
     FIX82_NO_RPTS(82, "NO_RPTS", "NoRpts"),
     FIX83_RPT_SEQ(83, "RPT_SEQ", "RptSeq"),
     FIX84_CXL_QTY(84, "CXL_QTY", "CxlQty"),
     FIX85_NO_DLVY_INST(85, "NO_DLVY_INST", "NoDlvyInst (no longer used)"),
     FIX86_DLVY_INST(86, "DLVY_INST", "DlvyInst (no longer used)"),
-    FIX87_ALLOC_STATUS(87, "ALLOC_STATUS", "AllocStatus"),
-    FIX88_ALLOC_REJ_CODE(88, "ALLOC_REJ_CODE", "AllocRejCode"),
+    FIX87_ET_ALLOC_STATUS(87, "ALLOC_STATUS", "AllocStatus"),
+    FIX88_ET_ALLOC_REJ_CODE(88, "ALLOC_REJ_CODE", "AllocRejCode"),
     FIX89_SIGNATURE(89, "SIGNATURE", "Signature"),
     FIX90_SECURE_DATA_LEN(90, "SECURE_DATA_LEN", "SecureDataLen"),
 
     FIX91_SECURE_DATA(91, "SECURE_DATA", "SecureData"),
     FIX92_BROKER_OF_CREDIT(92, "BROKER_OF_CREDIT", "BrokerOfCredit (replaced)"),
     FIX93_SIGNATURE_LENGTH(93, "SIGNATURE_LENGTH", "SignatureLength"),
-    FIX94_EMAIL_TYPE(94, "EMAIL_TYPE", "EmailType"),
+    FIX94_ET_EMAIL_TYPE(94, "EMAIL_TYPE", "EmailType"),
     FIX95_RAW_DATA_LENGTH(95, "RAW_DATA_LENGTH", "RawDataLength"),
     FIX96_RAW_DATA(96, "RAW_DATA", "RawData"),
-    FIX97_POSS_RESEND(97, "POSS_RESEND", "PossResend"),
-    FIX98_ENCRYPT_METHOD(98, "ENCRYPT_METHOD", "EncryptMethod"),
+    FIX97_ET_POSS_RESEND(97, "POSS_RESEND", "PossResend"),
+    FIX98_ET_ENCRYPT_METHOD(98, "ENCRYPT_METHOD", "EncryptMethod"),
     FIX99_STOP_PX(99, "STOP_PX", "StopPx"),
     FIX100_EX_DESTINATION(100, "EX_DESTINATION", "ExDestination"),
 
 
     // 101-200
 
-    FIX102_CXL_REJ_REASON(102, "CXL_REJ_REASON", "CxlRejReason"),
-    FIX103_ORD_REJ_REASON(103, "ORD_REJ_REASON", "OrdRejReason"),
+    FIX102_ET_CXL_REJ_REASON(102, "CXL_REJ_REASON", "CxlRejReason"),
+    FIX103_ET_ORD_REJ_REASON(103, "ORD_REJ_REASON", "OrdRejReason"),
     /*
      *
      * End of FIX2.7
@@ -162,7 +171,7 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
      * Start of FIX3.0 as defined by the FIX Protocol Specification 3.0
      *  Tags: 104-113
      */
-    FIX104_IOI_QUALIFIER(104, "IOI_QUALIFIER", "IOIQualifier"),
+    FIX104_ET_IOI_QUALIFIER(104, "IOI_QUALIFIER", "IOIQualifier"),
     FIX105_WAVE_NO(105, "WAVE_NO", "WaveNo"),
     FIX106_ISSUER(106, "ISSUER", "Issuer"),
     FIX107_SECURITY_DESC(107, "SECURITY_DESC", "SecurityDesc"),
@@ -172,7 +181,7 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
 
     FIX111_MAX_FLOOR(111, "MAX_FLOOR", "MaxFloor"),
     FIX112_TEST_REQ_ID(112, "TEST_REQ_ID", "TestReqID"),
-    FIX113_REPORT_TO_EXCH(113, "REPORT_TO_EXCH", "ReportToExch"),
+    FIX113_ET_REPORT_TO_EXCH(113, "REPORT_TO_EXCH", "ReportToExch"),
     /*
      *
      * End of FIX3.0
@@ -184,7 +193,7 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
      * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
      *  Tags: 114-140
      */
-    FIX114_LOCATE_REQD(114, "LOCATE_REQD", "LocateReqd"),
+    FIX114_ET_LOCATE_REQD(114, "LOCATE_REQD", "LocateReqd"),
     FIX115_ON_BEHALF_OF_COMP_ID(115, "ON_BEHALF_OF_COMP_ID", "OnBehalfOfCompID"),
     FIX116_ON_BEHALF_OF_SUB_ID(116, "ON_BEHALF_OF_SUB_ID", "OnBehalfOfSubID"),
     FIX117_QUOTE_ID(117, "QUOTE_ID", "QuoteID"),
@@ -192,16 +201,16 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     FIX119_SETTL_CURR_AMT(119, "SETTL_CURR_AMT", "SettlCurrAmt"),
     FIX120_SETTL_CURRENCY(120, "SETTL_CURRENCY", "SettlCurrency"),
 
-    FIX121_FOREX_REQ(121, "FOREX_REQ", "ForexReq"),
+    FIX121_ET_FOREX_REQ(121, "FOREX_REQ", "ForexReq"),
     FIX122_ORIG_SENDING_TIME(122, "ORIG_SENDING_TIME", "OrigSendingTime"),
-    FIX123_GAP_FILL_FLAG(123, "GAP_FILL_FLAG", "GapFillFlag"),
+    FIX123_ET_GAP_FILL_FLAG(123, "GAP_FILL_FLAG", "GapFillFlag"),
     FIX124_NO_EXECS(124, "NO_EXECS", "NoExecs"),
     FIX125_CXL_TYPE(125, "CXL_TYPE", "CxlType (no longer used)"),
     FIX126_EXPIRE_TIME(126, "EXPIRE_TIME", "ExpireTime"),
-    FIX127_DK_REASON(127, "DK_REASON", "DKReason"),
+    FIX127_ET_DK_REASON(127, "DK_REASON", "DKReason"),
     FIX128_DELIVER_TO_COMP_ID(128, "DELIVER_TO_COMP_ID", "DeliverToCompID"),
     FIX129_DELIVER_TO_SUB_ID(129, "DELIVER_TO_SUB_ID", "DeliverToSubID"),
-    FIX130_IOI_NATURAL_FLAG(130, "IOI_NATURAL_FLAG", "IOINaturalFlag"),
+    FIX130_ET_IOI_NATURAL_FLAG(130, "IOI_NATURAL_FLAG", "IOINaturalFlag"),
 
     FIX131_QUOTE_REQ_ID(131, "QUOTE_REQ_ID", "QuoteReqID"),
     FIX132_BID_PX(132, "BID_PX", "BidPx"),
@@ -211,7 +220,7 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     FIX136_NO_MISC_FEES(136, "NO_MISC_FEES", "NoMiscFees"),
     FIX137_MISC_FEE_AMT(137, "MISC_FEE_AMT", "MiscFeeAmt"),
     FIX138_MISC_FEE_CURR(138, "MISC_FEE_CURR", "MiscFeeCurr"),
-    FIX139_MISC_FEE_TYPE(139, "MISC_FEE_TYPE", "MiscFeeType"),
+    FIX139_ET_MISC_FEE_TYPE(139, "MISC_FEE_TYPE", "MiscFeeType"),
     FIX140_PREV_CLOSE_PX(140, "PREV_CLOSE_PX", "PrevClosePx"),
     /*
      *
@@ -1422,6 +1431,7 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
+
     public String getEnumName() {
         return this.name();
     }

@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.fix27.tags.Tag58Text;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag58StText;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -40,19 +40,17 @@ class TagTypeAbstractTest {
 
     @Test
     void FIX0058Test() {
-        FIXType fix58Text = FIXType.FIX58_TEXT;
-        assertEquals( "FIX58_TEXT", fix58Text.getEnumName());
+        FIXType fix58Text = FIXType.FIX58_ST_TEXT;
         assertEquals( "58", fix58Text.getID());
         assertEquals( "TEXT", fix58Text.getName());
         assertEquals( "Text", fix58Text.getDescription());
-        assertNotEquals( "FIX58_TEXT FIX58_TEXT", fix58Text.getEnumName());
         assertNotEquals( "100", fix58Text.getID());
         assertNotEquals( "TEXT TEXT", fix58Text.getName());
         assertNotEquals( "123 TEXT", fix58Text.getDescription());
     }
     @Test
     void Tag0058Test() {
-        Tag58Text tagData = new Tag58Text("hello from main routine");
+        Tag58StText tagData = new Tag58StText(new StringType("hello from main routine") );
         assertEquals( "hello from main routine", tagData.getDataValue());
         logger.info("Successful Tag0058Test()");
     }

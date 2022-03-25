@@ -23,12 +23,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag171StandInstDBIDTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1Account.class);
 
     @BeforeEach
     void setUp() {
@@ -39,16 +35,11 @@ class Tag171StandInstDBIDTest {
     }
 
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-    @Test
     void FIX0171Test() {
         FIXType fix171StandInstDBID = FIXType.FIX171_STAND_INST_DB_ID;
     }
     @Test
     void Tag0171Test() {
+        logger.info("Successful Tag0171Test()");
     }
 }

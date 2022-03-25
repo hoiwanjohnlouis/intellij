@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.fix27.tags.Tag35MsgType;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag35EtMsgType;
 import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -56,7 +56,7 @@ public class TradeView {
         private OpeningPrice lastTradeOpeningPrice;
 
         // static helper class to build object
-        public TradeViewBuilder(Tag35MsgType tag35MsgType) {
+        public TradeViewBuilder(Tag35EtMsgType tag35EtMsgType) {
         }
 
         public TradeViewBuilder buildOpeningPrice(OpeningPrice openingPrice) {

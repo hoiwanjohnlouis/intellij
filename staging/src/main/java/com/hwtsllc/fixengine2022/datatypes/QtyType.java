@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.DataIType;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**

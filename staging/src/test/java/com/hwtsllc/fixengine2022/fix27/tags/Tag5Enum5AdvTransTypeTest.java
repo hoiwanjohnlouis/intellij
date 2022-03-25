@@ -39,7 +39,7 @@ class Tag5Enum5AdvTransTypeTest {
 
     @Test
     void FIX0005Test() {
-        FIXType fixData = FIXType.FIX5_ADV_TRANS_TYPE;
+        FIXType fixData = FIXType.FIX5_ET_ADV_TRANS_TYPE;
         assertEquals( "ADV_TRANS_TYPE", fixData.getName());
         assertEquals( "5", fixData.getID());
         assertEquals( "Enum5AdvTransType", fixData.getDescription());
@@ -50,15 +50,15 @@ class Tag5Enum5AdvTransTypeTest {
     }
     @Test
     void Tag0005Test() {
-        Tag5AdvTransType tagData;
+        Tag5EtAdvTransType tagData;
 
-        tagData = new Tag5AdvTransType(Enum5AdvTransType.NEW);
+        tagData = new Tag5EtAdvTransType(Enum5AdvTransType.NEW);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag5AdvTransType(Enum5AdvTransType.CANCEL);
+        tagData = new Tag5EtAdvTransType(Enum5AdvTransType.CANCEL);
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag5AdvTransType(Enum5AdvTransType.REPLACE);
+        tagData = new Tag5EtAdvTransType(Enum5AdvTransType.REPLACE);
         assertEquals( "R", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
 

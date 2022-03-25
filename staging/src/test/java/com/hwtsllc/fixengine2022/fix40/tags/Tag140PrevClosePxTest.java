@@ -17,16 +17,14 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag140PrevClosePxTest {
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {
@@ -56,7 +54,5 @@ class Tag140PrevClosePxTest {
         tagData = new Tag140PrevClosePx("ParkEunHye-140PrevClosePx");
         assertEquals( "ParkEunHye-140PrevClosePx", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
-
-        logger.info("Successful Tag0139Test()");
     }
 }

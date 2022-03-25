@@ -2,15 +2,17 @@
 <Configuration>
 
     <Appenders>
+        <File name="file" fileName="app.log">
+            <PatternLayout pattern="%d{yyyyMMdd HH:mm:ss.SSS} [%t] %5level %logger{36} - %msg%n"/>
+        </File>
         <Console name="Console" target="SYSTEM_OUT">
-            <!-- <PatternLayout pattern="%d{yyMMdd HH:mm:ss,SSS} %-5p [%c{1}] %m%n"/>  -->
-            <!-- <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/> -->
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{yyMMdd HH:mm:ss.SSS} [%t] %5level %logger{36} - %msg%n"/>
         </Console>
     </Appenders>
 
     <Loggers>
         <Root level="info">
+            <AppenderRef ref="file"/>
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>

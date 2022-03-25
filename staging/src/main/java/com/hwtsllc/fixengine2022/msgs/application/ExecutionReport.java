@@ -16,31 +16,27 @@
 
 package com.hwtsllc.fixengine2022.msgs.application;
 
+import com.hwtsllc.fixengine2022.datatypes.StringType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag55Symbol;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag55StSymbol;
 import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
 
 public class ExecutionReport {
     private final Enum35MsgType tag35MsgType;
-    private final Tag55Symbol tag55Symbol;
+    private final Tag55StSymbol tag55StSymbol;
     private final OpeningPrice openingPrice;
 
     //
     private ExecutionReport(ExecutionReport.Builder builder) {
         this.tag35MsgType = builder.tag35MsgType;
-        this.tag55Symbol = builder.tag55Symbol;
+        this.tag55StSymbol = builder.tag55StSymbol;
         this.openingPrice = builder.openingPrice;
     }
 
     // If any EnemyShip object is printed to screen this shows up
     @Override
     public String toString() {
-
-        StringBuilder stringBuilder = new StringBuilder();
-        // clean up the buffer before using.
-        stringBuilder.append(openingPrice.getPrice());
-        stringBuilder.append("\n");
-        return stringBuilder.toString();
+        return String.valueOf(openingPrice.getPrice());
     }
 
     public int compareTo(Object o) {
@@ -52,7 +48,7 @@ public class ExecutionReport {
         private StringBuilder stringBuilder = new StringBuilder();
 
         private Enum35MsgType tag35MsgType;
-        private Tag55Symbol tag55Symbol;              // 2
+        private Tag55StSymbol tag55StSymbol;              // 2
         private OpeningPrice openingPrice;              // 3
 
         // helper class to build object
@@ -61,7 +57,7 @@ public class ExecutionReport {
         }
 
         public Builder buildTickerSymbol(String tickerSymbol) {
-            this.tag55Symbol = new Tag55Symbol(tickerSymbol);
+            this.tag55StSymbol = new Tag55StSymbol(new StringType(tickerSymbol) );
             return this;
         }
         public Builder buildOpeningPrice(double openingPrice) {
@@ -75,14 +71,14 @@ public class ExecutionReport {
 
     /**
      *
-     * @param args
+     * @param args      not used at this time
      */
     public static void main(String[] args) {
         ExecutionReport record =
                 new ExecutionReport.Builder(Enum35MsgType.EXECUTION_REPORT)
-                        .buildTickerSymbol(Tag55Symbol.TESTA_SYMBOL)
+                        .buildTickerSymbol(Tag55StSymbol.TESTA_ST_SYMBOL)
                         .buildOpeningPrice(12.34D)
                         .build();
+        System.out.println(record);
     }
-
 }
