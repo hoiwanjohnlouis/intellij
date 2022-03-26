@@ -17,23 +17,22 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag141ResetSeqNumFlagTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX0141Test() {
-        FIXType fix141ResetSeqNumFlag = FIXType.FIX141_RESET_SEQ_NUM_FLAG;
+        FIXType fixData = FIXType.FIX141_RESET_SEQ_NUM_FLAG;
+        assertEquals( "RESET_SEQ_NUM_FLAG", fixData.getName());
+        assertEquals( "141", fixData.getID());
+        assertEquals( "ResetSeqNumFlag", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0141Test() {
