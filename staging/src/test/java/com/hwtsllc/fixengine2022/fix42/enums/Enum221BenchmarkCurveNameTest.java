@@ -16,48 +16,105 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum221BenchmarkCurveNameTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0221Test() {
         Enum221BenchmarkCurveName enumType;
 
+        /*
+         * EONIA, EUREPO, EURIBOR, FUTURESWAP, LIBID, LIBOR, MUNIAAA,
+         * OTHER, PFANDBRIEFE, SONIA, SWAP, and TREASURY types
+         */
         enumType = Enum221BenchmarkCurveName.EONIA;
+        assertEquals("EONIA", enumType.getID());
+        assertEquals("EONIA", enumType.getName());
+        assertEquals("EONIA - EONIA", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.EUREPO;
+        assertEquals("EUREPO", enumType.getID());
+        assertEquals("EUREPO", enumType.getName());
+        assertEquals("EUREPO - EUREPO", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.EURIBOR;
+        assertEquals("Euribor", enumType.getID());
+        assertEquals("EURIBOR", enumType.getName());
+        assertEquals("Euribor - Euribor", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.FUTURESWAP;
+        assertEquals("FutureSWAP", enumType.getID());
+        assertEquals("FUTURESWAP", enumType.getName());
+        assertEquals("FutureSWAP - FutureSWAP", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.LIBID;
+        assertEquals("LIBID", enumType.getID());
+        assertEquals("LIBID", enumType.getName());
+        assertEquals("LIBID - LIBID", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.LIBOR;
+        assertEquals("LIBOR", enumType.getID());
+        assertEquals("LIBOR", enumType.getName());
+        assertEquals("LIBOR - LIBOR (London Inter-Bank Offer)", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.MUNIAAA;
+        assertEquals("MuniAAA", enumType.getID());
+        assertEquals("MUNIAAA", enumType.getName());
+        assertEquals("MuniAAA - MuniAAA", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.OTHER;
+        assertEquals("OTHER", enumType.getID());
+        assertEquals("OTHER", enumType.getName());
+        assertEquals("OTHER - OTHER", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.PFANDBRIEFE;
+        assertEquals("Pfandbriefe", enumType.getID());
+        assertEquals("PFANDBRIEFE", enumType.getName());
+        assertEquals("Pfandbriefe - Pfandbriefe", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.SONIA;
+        assertEquals("SONIA", enumType.getID());
+        assertEquals("SONIA", enumType.getName());
+        assertEquals("SONIA - SONIA", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.SWAP;
+        assertEquals("SWAP", enumType.getID());
+        assertEquals("SWAP", enumType.getName());
+        assertEquals("SWAP - SWAP", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum221BenchmarkCurveName.TREASURY;
-
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        assertEquals("Treasury", enumType.getID());
+        assertEquals("TREASURY", enumType.getName());
+        assertEquals("Treasury - Treasury", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

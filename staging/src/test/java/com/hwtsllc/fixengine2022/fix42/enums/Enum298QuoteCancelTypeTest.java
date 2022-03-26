@@ -19,23 +19,6 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import org.junit.jupiter.api.*;
 
 class Enum298QuoteCancelTypeTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0298Test() {
         Enum298QuoteCancelType enumType;

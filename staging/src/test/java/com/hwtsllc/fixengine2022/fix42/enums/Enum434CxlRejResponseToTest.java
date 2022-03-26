@@ -16,26 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum434CxlRejResponseToTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0434Test() {
         Enum434CxlRejResponseTo enumType;
@@ -44,7 +31,19 @@ class Enum434CxlRejResponseToTest {
          * 1-2 msg types
          */
         enumType = Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST;
+        assertEquals("1", enumType.getID());
+        assertEquals("ORDER_CANCEL_REQUEST", enumType.getName());
+        assertEquals("1 - Order cancel request", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST;
+        assertEquals("2", enumType.getID());
+        assertEquals("ORDER_MODIFICATION_REQUEST", enumType.getName());
+        assertEquals("2 - Order cancel/replace request", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

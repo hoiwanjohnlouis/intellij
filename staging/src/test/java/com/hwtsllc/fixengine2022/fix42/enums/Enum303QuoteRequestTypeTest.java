@@ -19,23 +19,6 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import org.junit.jupiter.api.*;
 
 class Enum303QuoteRequestTypeTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0303Test() {
         Enum303QuoteRequestType enumType;
