@@ -17,8 +17,6 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,8 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Tag1000UnderlyingTimeUnitTest {
-    private static final Logger logger = LogManager.getRootLogger();
-
     @BeforeEach
     void setUp() {
     }
@@ -46,6 +42,5 @@ class Tag1000UnderlyingTimeUnitTest {
     @Test
     void Tag1000Test() {
         Tag1000UnderlyingTimeUnit tagData;
-        logger.info("Successful Tag1000Test()");
     }
 }
