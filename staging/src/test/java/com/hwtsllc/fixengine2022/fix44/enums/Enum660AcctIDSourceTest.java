@@ -16,32 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
 class Enum660AcctIDSourceTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    /**
-     *
-     */
-    public static void main(String[] args) {
-        System.out.println();
+    void Enum0660Test() {
+        Enum660AcctIDSource enumType;
+
     }
 }

@@ -16,32 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.hwtsllc.fixengine2022.fix50.enums.Enum1137DefaultApplVerID;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
 class Enum954Nested3PartySubIDTypeTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    /**
-     *
-     */
-    public static void main(String[] args) {
-        System.out.println();
+    void Enum0954Test() {
+        Enum954Nested3PartySubIDType enumType;
+
     }
 }
