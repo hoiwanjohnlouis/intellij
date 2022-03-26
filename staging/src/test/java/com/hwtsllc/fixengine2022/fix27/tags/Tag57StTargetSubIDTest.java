@@ -52,6 +52,6 @@ class Tag57StTargetSubIDTest {
 
         tagData = new Tag57StTargetSubID(new StringType("MLCO") );
         assertEquals( "MLCO", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

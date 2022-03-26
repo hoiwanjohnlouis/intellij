@@ -35,8 +35,7 @@ class TagSTTest {
 
     @Test
     void FIX0009Test() {
-        FIXType fixData = FIXType.FIX9_BODY_LENGTH;
-        assertEquals( "FIX9_BODY_LENGTH", fixData.getEnumName());
+        FIXType fixData = FIXType.FIX9_LT_BODY_LENGTH;
         assertEquals( "9", fixData.getID());
         assertEquals( "BODY_LENGTH", fixData.getName());
         assertEquals( "BodyLength", fixData.getDescription());

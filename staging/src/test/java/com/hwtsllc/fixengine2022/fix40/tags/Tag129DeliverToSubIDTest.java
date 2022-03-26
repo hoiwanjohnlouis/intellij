@@ -55,7 +55,7 @@ class Tag129DeliverToSubIDTest {
 
         tagData = new Tag129DeliverToSubID("HanHyoJoo-129DeliverToSubID");
         assertEquals( "HanHyoJoo-129DeliverToSubID", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info(WHERE_AM_I + ":Successful Tag0129Test()");
     }

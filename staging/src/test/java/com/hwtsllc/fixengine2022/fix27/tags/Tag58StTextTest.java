@@ -57,6 +57,6 @@ class Tag58StTextTest {
 
         tagData = new Tag58StText(new StringType("hello from main routine"));
         assertEquals( "hello from main routine", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

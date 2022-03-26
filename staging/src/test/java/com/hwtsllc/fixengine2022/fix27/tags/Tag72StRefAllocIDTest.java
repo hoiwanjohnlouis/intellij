@@ -55,7 +55,7 @@ class Tag72StRefAllocIDTest {
 
         tagData = new Tag72StRefAllocID(new StringType(Tag72StRefAllocID.TESTA_ST_REF_ALLOC_ID) );
         assertEquals( Tag72StRefAllocID.TESTA_ST_REF_ALLOC_ID, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0072Test()");
     }

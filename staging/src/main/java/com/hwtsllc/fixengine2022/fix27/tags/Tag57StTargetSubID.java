@@ -36,9 +36,6 @@ public class Tag57StTargetSubID extends FIXTypeAbstract implements FixTagValuePa
     public String getDataValue() {
         return this.dataValue.getDataValue();
     }
-    public void setDataValue(final String dataValue)  {
-        this.dataValue.setDataValue(dataValue);
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -71,12 +68,13 @@ public class Tag57StTargetSubID extends FIXTypeAbstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag57StTargetSubID tagData = new Tag57StTargetSubID(new StringType(TESTA_ST_TARGET_SUB_ID) );
-        System.out.println("initial values");
+        Tag57StTargetSubID tagData;
+        tagData= new Tag57StTargetSubID(new StringType(TESTA_ST_TARGET_SUB_ID) );
+        System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        System.out.println("after updating dataValue");
-        tagData.setDataValue("8765");
+        tagData = new Tag57StTargetSubID(new StringType(TESTB_ST_TARGET_SUB_ID) );
+        System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
         System.out.println("Accessing FIXType Directly");

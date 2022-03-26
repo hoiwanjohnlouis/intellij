@@ -52,6 +52,6 @@ class Tag37StOrderIDTest {
 
         tagData = new Tag37StOrderID(new StringType("ORD-24601") );
         assertEquals( "ORD-24601", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

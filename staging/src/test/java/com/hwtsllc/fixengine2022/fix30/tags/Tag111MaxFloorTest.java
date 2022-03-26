@@ -53,7 +53,7 @@ class Tag111MaxFloorTest {
 
         tagData = new Tag111MaxFloor("200");
         assertEquals( "200", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0111Test()");
     }

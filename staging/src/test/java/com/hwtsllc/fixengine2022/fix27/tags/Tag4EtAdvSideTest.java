@@ -54,16 +54,16 @@ class Tag4EtAdvSideTest {
 
         tagData = new Tag4EtAdvSide(Enum4AdvSide.BUY);
         assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag4EtAdvSide(Enum4AdvSide.SELL);
         assertEquals( "S", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag4EtAdvSide(Enum4AdvSide.CROSS);
         assertEquals( "X", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag4EtAdvSide(Enum4AdvSide.TRADE);
         assertEquals( "T", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0004Test()");
     }

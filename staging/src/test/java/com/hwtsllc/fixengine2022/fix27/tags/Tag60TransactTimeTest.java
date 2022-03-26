@@ -54,7 +54,7 @@ class Tag60TransactTimeTest {
 
         tagData = new Tag60TransactTime("20220401 000000");
         assertEquals( "20220401 000000", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0060Test()");
     }

@@ -54,7 +54,7 @@ class Tag68TotNoOrdersTest {
 
         tagData = new Tag68TotNoOrders("ARWEN-68TotNoOrders");
         assertEquals( "ARWEN-68TotNoOrders", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0068Test()");
     }

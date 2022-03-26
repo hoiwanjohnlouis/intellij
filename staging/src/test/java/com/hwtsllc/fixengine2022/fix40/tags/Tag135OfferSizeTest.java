@@ -53,7 +53,7 @@ class Tag135OfferSizeTest {
 
         tagData = new Tag135OfferSize("LimSungMin-135OfferSize");
         assertEquals( "LimSungMin-135OfferSize", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0135Test()");
     }

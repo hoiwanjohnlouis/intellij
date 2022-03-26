@@ -28,10 +28,6 @@ public class StringType implements LogStringVerbose {
     public String getDataValue() {
         return dataValue;
     }
-    public void setDataValue(final String dataValue)  {
-        this.dataValue = dataValue;
-    }
-
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -55,9 +51,6 @@ public class StringType implements LogStringVerbose {
      */
     public static void main(String[] args) {
         StringType dataType = new StringType("12345");
-        System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
-        dataType.setDataValue("3456");
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

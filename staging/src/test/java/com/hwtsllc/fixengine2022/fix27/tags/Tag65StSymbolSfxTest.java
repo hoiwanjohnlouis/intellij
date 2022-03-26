@@ -55,7 +55,7 @@ class Tag65StSymbolSfxTest {
 
         tagData = new Tag65StSymbolSfx(new StringType("PerigrinTook-65SymbolSfx") );
         assertEquals( "PerigrinTook-65SymbolSfx", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0065Test()");
     }

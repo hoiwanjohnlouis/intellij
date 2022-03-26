@@ -18,8 +18,6 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 /**
  *
@@ -32,15 +30,12 @@ public enum Enum20ExecTransType implements EnumAccessors, LogStringVerbose {
     STATUS("3", "STATUS", "3 - Status" ),
     ;
 
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    private final String action;
+    private final String id;
     private final String name;
     private final String description;
 
-    Enum20ExecTransType(final String action, final String name, final String description) {
-        this.action = action;
+    Enum20ExecTransType(final String id, final String name, final String description) {
+        this.id = id;
         this.name = name;
         this.description = description;
     }
@@ -57,7 +52,7 @@ public enum Enum20ExecTransType implements EnumAccessors, LogStringVerbose {
      */
     @Override
     public String getID() {
-        return action;
+        return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field

@@ -57,10 +57,10 @@ class Tag123EtGapFillFlagTest {
 
         tagData = new Tag123EtGapFillFlag(EnumBoolean.NO);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag123EtGapFillFlag(EnumBoolean.YES);
         assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info(WHERE_AM_I + ":Successful Tag0123Test()");
     }

@@ -54,13 +54,13 @@ class Tag28EtIOITransTypeTest {
 
         tagData = new Tag28EtIOITransType(Enum28IOITransType.NEW);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag28EtIOITransType(Enum28IOITransType.REPLACE);
         assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag28EtIOITransType(Enum28IOITransType.CANCEL);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0028Test()");
     }

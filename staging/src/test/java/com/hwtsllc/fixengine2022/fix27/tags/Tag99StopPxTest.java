@@ -54,7 +54,7 @@ class Tag99StopPxTest {
 
         tagData = new Tag99StopPx("12.222");
         assertEquals( "12.222", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0099Test()");
     }

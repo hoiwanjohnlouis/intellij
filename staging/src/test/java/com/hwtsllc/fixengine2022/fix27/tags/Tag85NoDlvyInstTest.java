@@ -55,7 +55,7 @@ class Tag85NoDlvyInstTest {
 
         tagData = new Tag85NoDlvyInst("Elrond-85NoDlvyInst");
         assertEquals( "Elrond-85NoDlvyInst", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0085Test()");
     }

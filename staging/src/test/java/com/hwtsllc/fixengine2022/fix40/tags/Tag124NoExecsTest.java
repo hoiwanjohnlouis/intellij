@@ -53,7 +53,7 @@ class Tag124NoExecsTest {
 
         tagData = new Tag124NoExecs("SonYeJin-124NoExecs");
         assertEquals( "SonYeJin-124NoExecs", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0124Test()");
     }

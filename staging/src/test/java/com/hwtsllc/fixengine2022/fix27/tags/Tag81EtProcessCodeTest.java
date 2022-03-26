@@ -58,25 +58,25 @@ class Tag81EtProcessCodeTest {
          */
         tagData = new Tag81EtProcessCode(Enum81ProcessCode.REGULAR);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag81EtProcessCode(Enum81ProcessCode.SOFT_DOLLAR);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag81EtProcessCode(Enum81ProcessCode.STEP_IN);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag81EtProcessCode(Enum81ProcessCode.STEP_OUT);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag81EtProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_IN);
         assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag81EtProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_OUT);
         assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag81EtProcessCode(Enum81ProcessCode.PLAN_SPONSOR);
         assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0081Test()");
     }

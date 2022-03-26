@@ -54,7 +54,7 @@ class Tag62ValidUntilTimeTest {
 
         tagData = new Tag62ValidUntilTime("20220401 000001");
         assertEquals( "20220401 000001", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0062Test()");
     }

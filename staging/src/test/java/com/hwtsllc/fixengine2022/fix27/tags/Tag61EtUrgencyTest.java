@@ -58,13 +58,13 @@ class Tag61EtUrgencyTest {
          */
         tagData = new Tag61EtUrgency(Enum61Urgency.NORMAL);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag61EtUrgency(Enum61Urgency.FLASH);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag61EtUrgency(Enum61Urgency.BACKGROUND);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0061Test()");
     }

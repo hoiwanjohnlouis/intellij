@@ -54,7 +54,7 @@ class Tag52SendingTimeTest {
 
         tagData = new Tag52SendingTime("20220320 141400");
         assertEquals( "20220320 141400", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0052Test()");
     }

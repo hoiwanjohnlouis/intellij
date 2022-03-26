@@ -53,7 +53,7 @@ class Tag107SecurityDescTest {
 
         tagData = new Tag107SecurityDesc("International Widgets, Inc.");
         assertEquals("International Widgets, Inc.", tagData.getDataValue() );
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0107Test()");
     }

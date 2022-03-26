@@ -54,7 +54,7 @@ class Tag109ClientIDTest {
 
         tagData = new Tag109ClientID("SOME-ACCT-NUMBER");
         assertEquals("SOME-ACCT-NUMBER", tagData.getDataValue() );
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0109Test()");
     }

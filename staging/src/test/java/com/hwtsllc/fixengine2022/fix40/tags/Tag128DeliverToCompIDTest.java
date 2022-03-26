@@ -55,7 +55,7 @@ class Tag128DeliverToCompIDTest {
 
         tagData = new Tag128DeliverToCompID("SongJiHyo-128DeliverToCompID");
         assertEquals( "SongJiHyo-128DeliverToCompID", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info(WHERE_AM_I + ":Successful Tag0128Test()");
     }

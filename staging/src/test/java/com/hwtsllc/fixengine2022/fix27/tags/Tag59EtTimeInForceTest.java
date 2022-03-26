@@ -58,28 +58,28 @@ class Tag59EtTimeInForceTest {
          */
         tagData = new Tag59EtTimeInForce(Enum59TimeInForce.DAY);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag59EtTimeInForce(Enum59TimeInForce.GOOD_TILL_CANCEL);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag59EtTimeInForce(Enum59TimeInForce.AT_THE_OPENING);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag59EtTimeInForce(Enum59TimeInForce.IMMEDIATE_OR_CANCEL);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag59EtTimeInForce(Enum59TimeInForce.FILL_OR_KILL);
         assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag59EtTimeInForce(Enum59TimeInForce.GOOD_TILL_CROSSING);
         assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag59EtTimeInForce(Enum59TimeInForce.GOOD_TILL_DATE);
         assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag59EtTimeInForce(Enum59TimeInForce.AT_THE_CLOSE);
         assertEquals( "7", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0059Test()");
     }

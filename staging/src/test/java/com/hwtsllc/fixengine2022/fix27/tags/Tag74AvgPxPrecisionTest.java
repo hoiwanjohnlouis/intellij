@@ -53,7 +53,7 @@ class Tag74AvgPxPrecisionTest {
 
         tagData = new Tag74AvgPxPrecision("Saruman-74AvgPxPrecision");
         assertEquals( "Saruman-74AvgPxPrecision", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0074Test()");
     }

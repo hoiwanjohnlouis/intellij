@@ -53,7 +53,7 @@ class Tag122OrigSendingTimeTest {
 
         tagData = new Tag122OrigSendingTime("KimSoYeon-122OrigSendingTime");
         assertEquals( "KimSoYeon-122OrigSendingTime", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0122Test()");
     }

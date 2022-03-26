@@ -52,6 +52,6 @@ class Tag17StExecIDTest {
 
         tagData = new Tag17StExecID(new StringType("BEST-1234") );
         assertEquals( "BEST-1234", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

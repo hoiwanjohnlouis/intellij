@@ -56,16 +56,16 @@ class Tag20EtExecTransTypeTest {
 
         tagData = new Tag20EtExecTransType(Enum20ExecTransType.NEW);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag20EtExecTransType(Enum20ExecTransType.CANCEL);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag20EtExecTransType(Enum20ExecTransType.CORRECT);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag20EtExecTransType(Enum20ExecTransType.STATUS);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0020Test()");
     }

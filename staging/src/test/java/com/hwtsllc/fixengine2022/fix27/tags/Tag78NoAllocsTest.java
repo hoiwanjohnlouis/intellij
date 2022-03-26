@@ -54,7 +54,7 @@ class Tag78NoAllocsTest {
 
         tagData = new Tag78NoAllocs("Lestrade-78NoAllocs");
         assertEquals( "Lestrade-78NoAllocs", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0078Test()");
     }

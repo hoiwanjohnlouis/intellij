@@ -55,7 +55,7 @@ class Tag79StAllocAccountTest {
 
         tagData = new Tag79StAllocAccount(new StringType(Tag79StAllocAccount.TESTA_ST_ALLOC_ACCOUNT) );
         assertEquals( Tag79StAllocAccount.TESTA_ST_ALLOC_ACCOUNT, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0079Test()");
     }

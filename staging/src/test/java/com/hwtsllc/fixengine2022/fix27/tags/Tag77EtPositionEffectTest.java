@@ -57,16 +57,16 @@ class Tag77EtPositionEffectTest {
          */
         tagData = new Tag77EtPositionEffect(Enum77PositionEffect.OPEN);
         assertEquals( "O", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EtPositionEffect(Enum77PositionEffect.FIFO);
         assertEquals( "F", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EtPositionEffect(Enum77PositionEffect.CLOSE);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EtPositionEffect(Enum77PositionEffect.ROLLED);
         assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0077Test()");
     }

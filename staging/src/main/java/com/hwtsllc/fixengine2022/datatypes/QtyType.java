@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.DataIType;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
@@ -33,9 +32,6 @@ public class QtyType implements LogStringVerbose {
 
     public int getDataValue() {
         return dataValue;
-    }
-    public void setDataValue(final int dataValue)  {
-        this.dataValue = dataValue;
     }
 
     /**
@@ -60,10 +56,9 @@ public class QtyType implements LogStringVerbose {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        QtyType dataType = new QtyType(12345);
-        System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
-        dataType.setDataValue(3456);
+        QtyType dataType;
+
+        dataType = new QtyType(12345);
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

@@ -54,7 +54,7 @@ class Tag69ListExecInstTest {
 
         tagData = new Tag69ListExecInst("FrodoBaggins-69ListExecInst");
         assertEquals( "FrodoBaggins-69ListExecInst", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0069Test()");
     }

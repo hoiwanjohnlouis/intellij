@@ -52,6 +52,6 @@ class Tag49StSenderCompIDTest {
 
         tagData = new Tag49StSenderCompID(new StringType("JPMC") );
         assertEquals( "JPMC", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

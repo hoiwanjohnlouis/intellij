@@ -53,7 +53,7 @@ class Tag117QuoteIDTest {
 
         tagData = new Tag117QuoteID("Galadriel-117QuoteID");
         assertEquals( "Galadriel-117QuoteID", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0117Test()");
     }

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.DataIType;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
@@ -34,10 +33,6 @@ public class NumInGroupType implements LogStringVerbose {
     public int getDataValue() {
         return dataValue;
     }
-    public void setDataValue(final int dataValue)  {
-        this.dataValue = dataValue;
-    }
-
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -61,9 +56,6 @@ public class NumInGroupType implements LogStringVerbose {
      */
     public static void main(String[] args) {
         NumInGroupType dataType = new NumInGroupType(12345);
-        System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
-        dataType.setDataValue(3456);
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

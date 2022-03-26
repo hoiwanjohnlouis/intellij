@@ -55,7 +55,7 @@ class Tag46StRelatdSymTest {
 
         tagData = new Tag46StRelatdSym(new StringType("IBM") );
         assertEquals( "IBM", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0046Test()");
     }

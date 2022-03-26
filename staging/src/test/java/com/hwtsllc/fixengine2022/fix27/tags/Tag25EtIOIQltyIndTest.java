@@ -54,15 +54,15 @@ class Tag25EtIOIQltyIndTest {
 
         tagData = new Tag25EtIOIQltyInd(Enum25IOIQltyInd.HIGH);
         assertEquals( "H", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag25EtIOIQltyInd(Enum25IOIQltyInd.MEDIUM);
         assertEquals( "M", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag25EtIOIQltyInd(Enum25IOIQltyInd.LOW);
         assertEquals( "L", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0025Test()");
     }

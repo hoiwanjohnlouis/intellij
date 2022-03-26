@@ -60,26 +60,26 @@ class Tag127EtDKReasonTest {
          */
         tagData = new Tag127EtDKReason(Enum127DKReason.UNKNOWN_SYMBOL);
         assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag127EtDKReason(Enum127DKReason.WRONG_SIDE);
         assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag127EtDKReason(Enum127DKReason.QUANTITY_EXCEEDS_ORDER);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag127EtDKReason(Enum127DKReason.NO_MATCHING_ORDER);
         assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag127EtDKReason(Enum127DKReason.PRICE_EXCEEDS_LIMIT);
         assertEquals( "E", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag127EtDKReason(Enum127DKReason.CALCULATION_DIFFERENCE);
         assertEquals( "F", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag127EtDKReason(Enum127DKReason.OTHER);
         assertEquals( "Z", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info(WHERE_AM_I + ":Successful Tag0127Test()");
     }

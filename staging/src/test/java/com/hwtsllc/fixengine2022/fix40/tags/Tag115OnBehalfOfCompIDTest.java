@@ -54,7 +54,7 @@ class Tag115OnBehalfOfCompIDTest {
 
         tagData = new Tag115OnBehalfOfCompID("Legolas-115OnBehalfOfCompID");
         assertEquals( "Legolas-115OnBehalfOfCompID", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0115Test()");
     }

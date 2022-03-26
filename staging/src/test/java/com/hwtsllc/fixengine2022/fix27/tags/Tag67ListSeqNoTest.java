@@ -54,7 +54,7 @@ class Tag67ListSeqNoTest {
 
         tagData = new Tag67ListSeqNo("EOWYN-67ListSeqNo");
         assertEquals( "EOWYN-67ListSeqNo", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0067Test()");
     }

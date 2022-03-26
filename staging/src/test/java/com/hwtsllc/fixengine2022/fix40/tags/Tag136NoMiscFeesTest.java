@@ -55,7 +55,7 @@ class Tag136NoMiscFeesTest {
 
         tagData = new Tag136NoMiscFees("JungYooMi-136NoMiscFees");
         assertEquals( "JungYooMi-136NoMiscFees", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info(WHERE_AM_I + ":Successful Tag0136Test()");
     }

@@ -18,8 +18,6 @@ package com.hwtsllc.fixengine2022.fix40.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public enum Enum139MiscFeeType implements EnumAccessors, LogStringVerbose {
     REGULATORY( "1", "REGULATORY", "1 - Regulatory (e.g. SEC)" ),
@@ -38,15 +36,12 @@ public enum Enum139MiscFeeType implements EnumAccessors, LogStringVerbose {
     SECURITY_LENDING( "14", "SECURITY_LENDING", "14 - Security Lending" ),
     ;
 
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    private final String action;
+    private final String id;
     private final String name;
     private final String description;
 
-    Enum139MiscFeeType(final String action, final String name, final String description) {
-        this.action = action;
+    Enum139MiscFeeType(final String id, final String name, final String description) {
+        this.id = id;
         this.name = name;
         this.description = description;
     }
@@ -63,7 +58,7 @@ public enum Enum139MiscFeeType implements EnumAccessors, LogStringVerbose {
      */
     @Override
     public String getID() {
-        return action;
+        return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field

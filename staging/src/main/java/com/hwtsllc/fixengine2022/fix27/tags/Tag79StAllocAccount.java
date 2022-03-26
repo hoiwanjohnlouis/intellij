@@ -36,9 +36,6 @@ public class Tag79StAllocAccount extends FIXTypeAbstract implements FixTagValueP
     public String getDataValue() {
         return this.dataValue.getDataValue();
     }
-    public void setDataValue(final String dataValue)  {
-        this.dataValue.setDataValue(dataValue);
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -71,12 +68,13 @@ public class Tag79StAllocAccount extends FIXTypeAbstract implements FixTagValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag79StAllocAccount tagData = new Tag79StAllocAccount(new StringType(TESTA_ST_ALLOC_ACCOUNT)  );
-        System.out.println("initial values");
+        Tag79StAllocAccount tagData;
+        tagData= new Tag79StAllocAccount(new StringType(TESTA_ST_ALLOC_ACCOUNT) );
+        System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        System.out.println("after updating dataValue");
-        tagData.setDataValue("8765");
+        tagData = new Tag79StAllocAccount(new StringType(TESTA_ST_ALLOC_ACCOUNT) );
+        System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
         System.out.println("Accessing FIXType Directly");

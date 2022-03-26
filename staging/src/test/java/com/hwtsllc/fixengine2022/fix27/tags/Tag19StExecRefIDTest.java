@@ -52,6 +52,6 @@ class Tag19StExecRefIDTest {
 
         tagData = new Tag19StExecRefID(new StringType("6789-XYZ") );
         assertEquals( "6789-XYZ", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

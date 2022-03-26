@@ -54,7 +54,7 @@ class Tag24IOIOthSvcTest {
 
         tagData = new Tag24IOIOthSvc("A");
         assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0024Test()");
     }

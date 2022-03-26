@@ -54,7 +54,7 @@ class Tag11StClOrdIDTest {
 
         tagData = new Tag11StClOrdID(new StringType("MLCO-ABCD1234") );
         assertEquals( "MLCO-ABCD1234", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0011Test()");
     }

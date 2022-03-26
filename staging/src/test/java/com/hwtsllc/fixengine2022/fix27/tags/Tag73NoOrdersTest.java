@@ -54,7 +54,7 @@ class Tag73NoOrdersTest {
 
         tagData = new Tag73NoOrders("Smeagol-73NoOrders");
         assertEquals( "Smeagol-73NoOrders", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0073Test()");
     }

@@ -53,7 +53,7 @@ class Tag126ExpireTimeTest {
 
         tagData = new Tag126ExpireTime("HaJiWon-126ExpireTime");
         assertEquals( "HaJiWon-126ExpireTime", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0126Test()");
     }

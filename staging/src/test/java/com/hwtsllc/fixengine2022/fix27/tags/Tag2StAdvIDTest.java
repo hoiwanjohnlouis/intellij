@@ -54,7 +54,7 @@ class Tag2StAdvIDTest {
 
         tagData = new Tag2StAdvID(new StringType("ABC987654321XYZ") );
         assertEquals( "ABC987654321XYZ", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0002Test()");
     }

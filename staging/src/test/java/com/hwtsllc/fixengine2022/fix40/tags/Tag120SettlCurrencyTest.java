@@ -53,7 +53,7 @@ class Tag120SettlCurrencyTest {
 
         tagData = new Tag120SettlCurrency("MoonChaeWon-120SettlCurrency");
         assertEquals( "MoonChaeWon-120SettlCurrency", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0120Test()");
     }

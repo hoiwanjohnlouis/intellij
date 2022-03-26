@@ -54,7 +54,7 @@ class Tag105WaveNoTest {
 
         tagData = new Tag105WaveNo("interested in Mahlers 4th Symphony");
         assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0105Test()");
     }

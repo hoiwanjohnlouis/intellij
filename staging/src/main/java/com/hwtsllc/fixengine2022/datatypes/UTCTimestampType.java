@@ -16,5 +16,42 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-public class UTCTimestampType {
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+
+public class UTCTimestampType implements LogStringVerbose {
+    private String dataValue;
+
+    public UTCTimestampType(final String dataValue) {
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return dataValue;
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return this.getClass().getSimpleName()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return getDataValue();
+    }
+    /**
+     *
+     * @param args Not used.
+     */
+    public static void main(String[] args) {
+        UTCTimestampType dataType = new UTCTimestampType("12345");
+        System.out.println(dataType);
+        System.out.println(dataType.toLogStringVerbose());
+    }
 }

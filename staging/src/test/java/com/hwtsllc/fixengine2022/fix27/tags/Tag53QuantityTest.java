@@ -17,16 +17,15 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.QtyType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag53QuantityTest {
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {
@@ -38,7 +37,7 @@ class Tag53QuantityTest {
 
     @Test
     void FIX0053Test() {
-        FIXType fixData = FIXType.FIX53_QUANTITY;
+        FIXType fixData = FIXType.FIX53_QT_QUANTITY;
         assertEquals( "QUANTITY", fixData.getName());
         assertEquals( "53", fixData.getID());
         assertEquals( "Quantity (formerly Shares)", fixData.getDescription());
@@ -51,10 +50,8 @@ class Tag53QuantityTest {
     void Tag0053Test() {
         Tag53Quantity tagData;
 
-        tagData = new Tag53Quantity("400");
-        assertEquals( "400", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
-
-        logger.info("Successful Tag0053Test()");
+        tagData = new Tag53Quantity(new QtyType(400) );
+        assertEquals( 400, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_QT_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -55,7 +55,7 @@ class Tag47EtRule80ATest {
 
         tagData = new Tag47EtRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
         assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0047Test()");
     }

@@ -53,7 +53,7 @@ class Tag116OnBehalfOfSubIDTest {
 
         tagData = new Tag116OnBehalfOfSubID("Gimli-116OnBehalfOfSubID");
         assertEquals( "Gimli-116OnBehalfOfSubID", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0116Test()");
     }

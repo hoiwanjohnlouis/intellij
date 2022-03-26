@@ -53,7 +53,7 @@ class Tag134BidSizeTest {
 
         tagData = new Tag134BidSize("KimYooJung-134BidSize");
         assertEquals( "KimYooJung-134BidSize", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0134Test()");
     }

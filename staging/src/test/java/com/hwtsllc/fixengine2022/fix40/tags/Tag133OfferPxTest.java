@@ -53,7 +53,7 @@ class Tag133OfferPxTest {
 
         tagData = new Tag133OfferPx("OhYeonSeo-133OfferPx");
         assertEquals( "OhYeonSeo-133OfferPx", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0133Test()");
     }

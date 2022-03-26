@@ -17,28 +17,70 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.QtyType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag84CxlQty extends TagTypeAbstract {
-    private final String dataValue;
+public class Tag84CxlQty extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
+    private final QtyType dataValue;
 
-    public final static String TESTA_CXL_QTY = "BilboBaggins-84CxlQty"; // fake data
-    public final static String TESTB_CXL_QTY = "Gandalf-84CxlQty";
+    public final static int TESTA_QT_CXL_QTY = 84; // fake data
+    public final static int TESTB_QT_CXL_QTY = 48;
 
-    public Tag84CxlQty(String dataValue) {
-        setFixType(FIXType.FIX84_CXL_QTY);
-        setDataValue(dataValue);
+    public Tag84CxlQty(QtyType dataValue) {
+        setFixType(FIXType.FIX84_QT_CXL_QTY);
         this.dataValue = dataValue;
+    }
+
+    public int getDataValue() {
+        return this.dataValue.getDataValue();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(dataValue.toString());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag84CxlQty tagData = new Tag84CxlQty(TESTA_CXL_QTY);
-        System.out.println(tagData);
+        Tag84CxlQty tagData;
+        tagData = new Tag84CxlQty(new QtyType(TESTA_QT_CXL_QTY) );
+        System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
+        tagData = new Tag84CxlQty(new QtyType(TESTB_QT_CXL_QTY) );
+        System.out.println("initial values B");
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
     }
 }

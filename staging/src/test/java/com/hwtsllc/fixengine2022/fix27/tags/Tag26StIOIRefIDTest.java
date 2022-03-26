@@ -52,6 +52,6 @@ class Tag26StIOIRefIDTest {
 
         tagData = new Tag26StIOIRefID(new StringType("A") );
         assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -158,7 +158,7 @@ class Tag18EtExecInstTest {
         tagData = new Tag18EtExecInst(Enum18ExecInst.BEST_EXECUTION);
         assertEquals( "k", tagData.getDataValue());
 
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0018Test()");
     }

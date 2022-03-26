@@ -53,6 +53,6 @@ class Tag140PrevClosePxTest {
 
         tagData = new Tag140PrevClosePx("ParkEunHye-140PrevClosePx");
         assertEquals( "ParkEunHye-140PrevClosePx", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

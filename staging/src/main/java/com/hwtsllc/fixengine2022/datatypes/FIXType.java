@@ -51,17 +51,17 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     FIX4_ET_ADV_SIDE(4, "ADV_SIDE", "AdvSide"),
     FIX5_ET_ADV_TRANS_TYPE(5, "ADV_TRANS_TYPE", "Enum5AdvTransType"),
     FIX6_AVG_PX(6, "AVG_PX", "AvgPx"),
-    FIX7_BEGIN_SEQ_NO(7, "BEGIN_SEQ_NO", "BeginSeqNo"),
+    FIX7_SNT_BEGIN_SEQ_NO(7, "BEGIN_SEQ_NO", "BeginSeqNo"),
     FIX8_ET_BEGIN_STRING(8, "BEGIN_STRING", "BeginString"),
-    FIX9_BODY_LENGTH(9, "BODY_LENGTH", "BodyLength"),
-    FIX10_CHECK_SUM(10, "CHECK_SUM", "CheckSum"),
+    FIX9_LT_BODY_LENGTH(9, "BODY_LENGTH", "BodyLength"),
+    FIX10_ST_CHECK_SUM(10, "CHECK_SUM", "CheckSum"),
 
     FIX11_ST_CL_ORD_ID(11, "CL_ORD_ID", "ClOrdID"),
     FIX12_COMMISSION(12, "COMMISSION", "Commission"),
     FIX13_ET_COMM_TYPE(13, "COMM_TYPE", "CommType"),
-    FIX14_CUM_QTY(14, "CUM_QTY", "CumQty"),
+    FIX14_QT_CUM_QTY(14, "CUM_QTY", "CumQty"),
     FIX15_CURRENCY(15, "CURRENCY", "Currency"),
-    FIX16_END_SEQ_NO(16, "END_SEQ_NO", "EndSeqNo"),
+    FIX16_SNT_END_SEQ_NO(16, "END_SEQ_NO", "EndSeqNo"),
     FIX17_ST_EXEC_ID(17, "EXEC_ID", "ExecID"),
     FIX18_ET_EXEC_INST(18, "EXEC_INST", "ExecInst"),
     FIX19_ST_EXEC_REF_ID(19, "EXEC_REF_ID", "ExecRefID"),
@@ -73,19 +73,19 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     FIX24_IOI_OTH_SVC(24, "IOI_OTH_SVC", "IOIOthSvc (no longer used)"),
     FIX25_ET_IOI_QLTY_IND(25, "IOI_QLTY_IND", "IOIQltyInd"),
     FIX26_ST_IOI_REF_ID(26, "IOI_REF_ID", "IOIRefID"),
-    FIX27_IOI_SHARES(27, "IOI_SHARES", "IOIShares"),
+    FIX27_ET_IOI_SHARES(27, "IOI_SHARES", "IOIShares"),
     FIX28_ET_IOI_TRANS_TYPE(28, "IOI_TRANS_TYPE", "IOITransType"),
     FIX29_ET_LAST_CAPACITY(29, "LAST_CAPACITY", "LastCapacity"),
     FIX30_LAST_MKT(30, "LAST_MKT", "LastMkt"),
 
     FIX31_LAST_PX(31, "LAST_PX", "LastPx"),
-    FIX32_LAST_QTY(32, "LAST_QTY", "LastQty"),
-    FIX33_NO_LINES_OF_TEXT(33, "NO_LINES_OF_TEXT", "NoLinesOfText"),
+    FIX32_QT_LAST_QTY(32, "LAST_QTY", "LastQty"),
+    FIX33_NIGT_NO_LINES_OF_TEXT(33, "NO_LINES_OF_TEXT", "NoLinesOfText"),
     FIX34_MSG_SEQ_NUM(34, "MSG_SEQ_NUM", "MsgSeqNum"),
     FIX35_ET_MSG_TYPE(35, "MSG_TYPE", "MsgType"),
-    FIX36_NEW_SEQ_NO(36, "NEW_SEQ_NO", "NewSeqNo"),
+    FIX36_SNT_NEW_SEQ_NO(36, "NEW_SEQ_NO", "NewSeqNo"),
     FIX37_ST_ORDER_ID(37, "ORDER_ID", "OrderID"),
-    FIX38_ORDER_QTY(38, "ORDER_QTY", "OrderQty"),
+    FIX38_QT_ORDER_QTY(38, "ORDER_QTY", "OrderQty"),
     FIX39_ET_ORD_STATUS(39, "ORD_STATUS", "OrdStatus"),
     FIX40_ET_ORD_TYPE(40, "ORD_TYPE", "OrdType"),
 
@@ -102,7 +102,7 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
 
     FIX51_SENDING_DATE(51, "SENDING_DATE", "SendingDate (no longer used)"),
     FIX52_SENDING_TIME(52, "SENDING_TIME", "SendingTime"),
-    FIX53_QUANTITY(53, "QUANTITY", "Quantity (formerly Shares)"),
+    FIX53_QT_QUANTITY(53, "QUANTITY", "Quantity (formerly Shares)"),
     FIX54_ET_SIDE(54, "SIDE", "Side"),
     FIX55_ST_SYMBOL(55, "SYMBOL", "Symbol"),
     FIX56_ST_TARGET_COMP_ID(56, "TARGET_COMP_ID", "TargetCompID"),
@@ -131,25 +131,25 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     FIX77_ET_POSITION_EFFECT(77, "POSITION_EFFECT", "PositionEffect"),
     FIX78_NO_ALLOCS(78, "NO_ALLOCS", "NoAllocs"),
     FIX79_ST_ALLOC_ACCOUNT(79, "ALLOC_ACCOUNT", "AllocAccount"),
-    FIX80_ALLOC_SHARES(80, "ALLOC_SHARES", "AllocShares"),
+    FIX80_QT_ALLOC_SHARES(80, "ALLOC_SHARES", "AllocShares"),
 
     FIX81_ET_PROCESS_CODE(81, "PROCESS_CODE", "ProcessCode"),
     FIX82_NO_RPTS(82, "NO_RPTS", "NoRpts"),
     FIX83_RPT_SEQ(83, "RPT_SEQ", "RptSeq"),
-    FIX84_CXL_QTY(84, "CXL_QTY", "CxlQty"),
+    FIX84_QT_CXL_QTY(84, "CXL_QTY", "CxlQty"),
     FIX85_NO_DLVY_INST(85, "NO_DLVY_INST", "NoDlvyInst (no longer used)"),
-    FIX86_DLVY_INST(86, "DLVY_INST", "DlvyInst (no longer used)"),
+    FIX86_ST_DLVY_INST(86, "DLVY_INST", "DlvyInst (no longer used)"),
     FIX87_ET_ALLOC_STATUS(87, "ALLOC_STATUS", "AllocStatus"),
     FIX88_ET_ALLOC_REJ_CODE(88, "ALLOC_REJ_CODE", "AllocRejCode"),
-    FIX89_SIGNATURE(89, "SIGNATURE", "Signature"),
-    FIX90_SECURE_DATA_LEN(90, "SECURE_DATA_LEN", "SecureDataLen"),
+    FIX89_ST_SIGNATURE(89, "SIGNATURE", "Signature"),
+    FIX90_LT_SECURE_DATA_LEN(90, "SECURE_DATA_LEN", "SecureDataLen"),
 
-    FIX91_SECURE_DATA(91, "SECURE_DATA", "SecureData"),
+    FIX91_ST_SECURE_DATA(91, "SECURE_DATA", "SecureData"),
     FIX92_BROKER_OF_CREDIT(92, "BROKER_OF_CREDIT", "BrokerOfCredit (replaced)"),
-    FIX93_SIGNATURE_LENGTH(93, "SIGNATURE_LENGTH", "SignatureLength"),
+    FIX93_LT_SIGNATURE_LENGTH(93, "SIGNATURE_LENGTH", "SignatureLength"),
     FIX94_ET_EMAIL_TYPE(94, "EMAIL_TYPE", "EmailType"),
     FIX95_RAW_DATA_LENGTH(95, "RAW_DATA_LENGTH", "RawDataLength"),
-    FIX96_RAW_DATA(96, "RAW_DATA", "RawData"),
+    FIX96_ST_RAW_DATA(96, "RAW_DATA", "RawData"),
     FIX97_ET_POSS_RESEND(97, "POSS_RESEND", "PossResend"),
     FIX98_ET_ENCRYPT_METHOD(98, "ENCRYPT_METHOD", "EncryptMethod"),
     FIX99_STOP_PX(99, "STOP_PX", "StopPx"),
@@ -1412,7 +1412,11 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     public final static String JUNK_ID = "JunkID";
     public final static String JUNK_NAME = "JunkName";
     public final static String JUNK_DESCRIPTION = "JunkDescription";
-    public final static String JUNK_DATA_VALUE = "JunkDataValue";
+    public final static String JUNK_ST_DATA_VALUE = "JunkDataValue";
+    public final static int JUNK_LT_DATA_VALUE = -65535;
+    public final static int JUNK_NIGT_DATA_VALUE = -65535;
+    public final static int JUNK_QT_DATA_VALUE = -65535;
+    public final static int JUNK_SNT_DATA_VALUE = -65535;
 
     FIXType(final int id, final String name, final String description) {
         /*

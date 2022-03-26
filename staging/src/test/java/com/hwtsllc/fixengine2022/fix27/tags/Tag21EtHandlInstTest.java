@@ -55,13 +55,13 @@ class Tag21EtHandlInstTest {
 
         tagData = new Tag21EtHandlInst(Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag21EtHandlInst(Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag21EtHandlInst(Enum21HandlInst.MANUAL_ORDER_BEST_EXECUTION);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0021Test()");
     }

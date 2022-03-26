@@ -53,7 +53,7 @@ class Tag112TestReqIDTest {
 
         tagData = new Tag112TestReqID("30");
         assertEquals( "30", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0112Test()");
     }

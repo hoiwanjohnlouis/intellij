@@ -55,11 +55,11 @@ class Tag97EtPossResendTest {
 
         tagData = new Tag97EtPossResend(EnumBoolean.NO);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag97EtPossResend(EnumBoolean.YES);
         assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0097Test()");
     }

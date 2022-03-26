@@ -53,7 +53,7 @@ class Tag108HeartBtIntTest {
 
         tagData = new Tag108HeartBtInt("60");
         assertEquals("60", tagData.getDataValue() );
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0108Test()");
     }

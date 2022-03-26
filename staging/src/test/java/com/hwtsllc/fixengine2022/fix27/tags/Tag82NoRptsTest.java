@@ -54,7 +54,7 @@ class Tag82NoRptsTest {
 
         tagData = new Tag82NoRpts("Gimli-82NoRpts");
         assertEquals( "Gimli-82NoRpts", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0082Test()");
     }

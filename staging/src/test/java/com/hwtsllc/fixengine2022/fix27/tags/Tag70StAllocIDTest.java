@@ -52,6 +52,6 @@ class Tag70StAllocIDTest {
 
         tagData = new Tag70StAllocID(new StringType(Tag70StAllocID.TESTA_ST_ALLOC_ID) );
         assertEquals( Tag70StAllocID.TESTA_ST_ALLOC_ID, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

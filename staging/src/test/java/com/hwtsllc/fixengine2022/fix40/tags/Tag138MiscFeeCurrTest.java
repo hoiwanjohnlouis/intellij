@@ -53,7 +53,7 @@ class Tag138MiscFeeCurrTest {
 
         tagData = new Tag138MiscFeeCurr("SungHyunAh-138MiscFeeCurr");
         assertEquals( "SungHyunAh-138MiscFeeCurr", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0138Test()");
     }

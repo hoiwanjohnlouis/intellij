@@ -53,7 +53,7 @@ class Tag131QuoteReqIDTest {
 
         tagData = new Tag131QuoteReqID("MoonJiIn-131QuoteReqID");
         assertEquals( "MoonJiIn-131QuoteReqID", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0131Test()");
     }

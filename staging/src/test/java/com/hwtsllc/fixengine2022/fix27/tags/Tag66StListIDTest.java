@@ -52,6 +52,6 @@ class Tag66StListIDTest {
 
         tagData = new Tag66StListID(new StringType(Tag66StListID.TESTA_ST_LIST_ID) );
         assertEquals( Tag66StListID.TESTA_ST_LIST_ID, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

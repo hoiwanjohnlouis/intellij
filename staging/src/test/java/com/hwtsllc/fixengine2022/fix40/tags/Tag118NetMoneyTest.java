@@ -53,7 +53,7 @@ class Tag118NetMoneyTest {
 
         tagData = new Tag118NetMoney("Celeborn-118NetMoney");
         assertEquals( "Celeborn-118NetMoney", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0118Test()");
     }

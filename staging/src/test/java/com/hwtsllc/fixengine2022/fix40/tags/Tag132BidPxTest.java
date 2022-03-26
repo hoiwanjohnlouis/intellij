@@ -55,7 +55,7 @@ class Tag132BidPxTest {
 
         tagData = new Tag132BidPx("ParkHaSun-132BidPx");
         assertEquals( "ParkHaSun-132BidPx", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info(WHERE_AM_I + ":Successful Tag0132Test()");
     }

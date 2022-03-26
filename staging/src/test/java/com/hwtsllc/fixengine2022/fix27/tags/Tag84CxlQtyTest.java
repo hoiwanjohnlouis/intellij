@@ -17,8 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.QtyType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,7 +26,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag84CxlQtyTest {
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {
@@ -39,7 +37,7 @@ class Tag84CxlQtyTest {
 
     @Test
     void FIX0084Test() {
-        FIXType fixData = FIXType.FIX84_CXL_QTY;
+        FIXType fixData = FIXType.FIX84_QT_CXL_QTY;
         assertEquals( "CXL_QTY", fixData.getName());
         assertEquals( "84", fixData.getID());
         assertEquals( "CxlQty", fixData.getDescription());
@@ -52,10 +50,8 @@ class Tag84CxlQtyTest {
     void Tag0084Test() {
         Tag84CxlQty tagData;
 
-        tagData = new Tag84CxlQty("Boromir-84CxlQty");
-        assertEquals( "Boromir-84CxlQty", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
-
-        logger.info("Successful Tag0084Test()");
+        tagData = new Tag84CxlQty(new QtyType(8484));
+        assertEquals( 8484, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

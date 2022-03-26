@@ -55,7 +55,7 @@ class Tag76ExecBrokerTest {
 
         tagData = new Tag76ExecBroker("Denethor-76ExecBroker");
         assertEquals( "Denethor-76ExecBroker", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0076Test()");
     }

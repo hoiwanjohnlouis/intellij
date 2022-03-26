@@ -52,6 +52,6 @@ class Tag56StTargetCompIDTest {
 
         tagData = new Tag56StTargetCompID(new StringType("JPMC") );
         assertEquals( "JPMC", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

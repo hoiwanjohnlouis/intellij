@@ -53,7 +53,7 @@ class Tag64SettlDateTest {
 
         tagData = new Tag64SettlDate("MeriadocBrandybuck-64SettlDate");
         assertEquals( "MeriadocBrandybuck-64SettlDate", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info("Successful Tag0064Test()");
     }

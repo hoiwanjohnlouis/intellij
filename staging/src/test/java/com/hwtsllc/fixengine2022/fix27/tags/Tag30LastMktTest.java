@@ -53,7 +53,7 @@ class Tag30LastMktTest {
 
         tagData = new Tag30LastMkt("NYSE");
         assertEquals( "NYSE", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
 
         logger.info( "Successful Tag0030Test()");
     }
