@@ -17,23 +17,18 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag1109TriggerPriceDirectionTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX1109Test() {
-        FIXType fix1109TriggerPriceDirection = FIXType.FIX1109_TRIGGER_PRICE_DIRECTION;
+        FIXType fixData = FIXType.FIX1109_TRIGGER_PRICE_DIRECTION;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag1109Test() {

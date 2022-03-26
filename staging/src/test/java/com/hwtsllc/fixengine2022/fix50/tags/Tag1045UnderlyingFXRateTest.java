@@ -17,25 +17,18 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag1045UnderlyingFXRateTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX1045Test() {
-        FIXType fix1045UnderlyingFXRate = FIXType.FIX1045_UNDERLYING_FX_RATE;
+        FIXType fixData = FIXType.FIX1045_UNDERLYING_FX_RATE;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag1045Test() {

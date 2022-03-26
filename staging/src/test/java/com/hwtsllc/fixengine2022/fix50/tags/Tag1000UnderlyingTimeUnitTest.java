@@ -17,27 +17,17 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Tag1000UnderlyingTimeUnitTest {
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX1000Test() {
-        FIXType fix1000UnderlyingTimeUnit = FIXType.FIX1000_UNDERLYING_TIME_UNIT;
-        assertEquals( "UNDERLYING_TIME_UNIT", fix1000UnderlyingTimeUnit.getName());
-        assertEquals( "1000", fix1000UnderlyingTimeUnit.getID());
-        assertEquals( "UnderlyingTimeUnit", fix1000UnderlyingTimeUnit.getDescription());
+        FIXType fixData = FIXType.FIX1000_UNDERLYING_TIME_UNIT;
+        assertEquals( "UNDERLYING_TIME_UNIT", fixData.getName());
+        assertEquals( "1000", fixData.getID());
+        assertEquals( "UnderlyingTimeUnit", fixData.getDescription());
     }
     @Test
     void Tag1000Test() {

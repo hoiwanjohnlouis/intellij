@@ -17,23 +17,18 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag1061UndlyInstrumentPartyRoleTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX1061Test() {
-        FIXType fix1061UndlyInstrumentPartyRole = FIXType.FIX1061_UNDLY_INSTRUMENT_PARTY_ROLE;
+        FIXType fixData = FIXType.FIX1061_UNDLY_INSTRUMENT_PARTY_ROLE;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag1061Test() {

@@ -17,23 +17,18 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag1023MDPriceLevelTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX1023Test() {
-        FIXType fix1023MDPriceLevel = FIXType.FIX1023_MD_PRICE_LEVEL;
+        FIXType fixData = FIXType.FIX1023_MD_PRICE_LEVEL;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag1023Test() {

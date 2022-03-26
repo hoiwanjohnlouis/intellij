@@ -17,23 +17,12 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class Tag1132TZTransactTimeTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX1132Test() {
-        FIXType fix1132TZTransactTime = FIXType.FIX1132_TZ_TRANSACT_TIME;
+        FIXType fixData = FIXType.FIX1132_TZ_TRANSACT_TIME;
     }
     @Test
     void Tag1132Test() {

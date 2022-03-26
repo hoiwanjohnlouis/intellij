@@ -17,23 +17,22 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag961HostCrossIDTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX0961Test() {
-        FIXType fix961HostCrossID = FIXType.FIX961_HOST_CROSS_ID;
+        FIXType fixData = FIXType.FIX961_HOST_CROSS_ID;
+        assertEquals( "961", fixData.getID());
+        assertEquals( "HOST_CROSS_ID", fixData.getName());
+        assertEquals( "HostCrossID", fixData.getDescription());
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0961Test() {
