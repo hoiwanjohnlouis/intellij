@@ -16,32 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum660AcctIDSource;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
 class Enum658QuoteRequestRejectReasonTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
-    /**
-     *
-     */
-    public static void main(String[] args) {
-        System.out.println();
+    void Enum0658Test() {
+        Enum658QuoteRequestRejectReason enumType;
+
     }
 }
