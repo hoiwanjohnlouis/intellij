@@ -17,24 +17,12 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag137MiscFeeAmtTest {
-    private static final Logger logger = LogManager.getRootLogger();
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
 
     @Test
     void FIX0137Test() {
@@ -54,7 +42,5 @@ class Tag137MiscFeeAmtTest {
         tagData = new Tag137MiscFeeAmt("HanJiMin-137MiscFeeAmt");
         assertEquals( "HanJiMin-137MiscFeeAmt", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-
-        logger.info("Successful Tag0137Test()");
     }
 }

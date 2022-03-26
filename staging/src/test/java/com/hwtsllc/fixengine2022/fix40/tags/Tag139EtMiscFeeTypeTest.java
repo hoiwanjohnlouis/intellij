@@ -18,26 +18,12 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag139EtMiscFeeTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1StAccount.class);
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
 
     @Test
     void FIX0139Test() {
@@ -99,7 +85,5 @@ class Tag139EtMiscFeeTypeTest {
         tagData = new Tag139EtMiscFeeType(Enum139MiscFeeType.SECURITY_LENDING);
         assertEquals( "14", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-
-        logger.info(WHERE_AM_I + ":Successful Tag0139Test()");
     }
 }
