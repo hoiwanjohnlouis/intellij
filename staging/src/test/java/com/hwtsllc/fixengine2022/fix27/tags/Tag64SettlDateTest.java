@@ -17,24 +17,12 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag64SettlDateTest {
-    private static final Logger logger = LogManager.getRootLogger();
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
 
     @Test
     void FIX0064Test() {
@@ -54,7 +42,5 @@ class Tag64SettlDateTest {
         tagData = new Tag64SettlDate("MeriadocBrandybuck-64SettlDate");
         assertEquals( "MeriadocBrandybuck-64SettlDate", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-
-        logger.info("Successful Tag0064Test()");
     }
 }

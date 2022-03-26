@@ -18,8 +18,6 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.StringType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,19 +25,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag96StRawDataTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
     @Test
     void FIX0096Test() {
         FIXType fixData = FIXType.FIX96_ST_RAW_DATA;

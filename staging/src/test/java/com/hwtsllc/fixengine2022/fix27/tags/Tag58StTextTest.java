@@ -25,22 +25,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag58StTextTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void FIX0058Test() {
         FIXType fixData = FIXType.FIX58_ST_TEXT;

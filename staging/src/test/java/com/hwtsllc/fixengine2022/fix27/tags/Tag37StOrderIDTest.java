@@ -27,14 +27,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag37StOrderIDTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX0037Test() {
         FIXType fixData = FIXType.FIX37_ST_ORDER_ID;

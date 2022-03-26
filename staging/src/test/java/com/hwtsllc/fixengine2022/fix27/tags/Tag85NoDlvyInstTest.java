@@ -17,10 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,15 +24,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
 class Tag85NoDlvyInstTest {
-    private static final Logger logger = LogManager.getRootLogger();
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
 
     @Test
     void FIX0085Test() {
@@ -56,7 +43,5 @@ class Tag85NoDlvyInstTest {
         tagData = new Tag85NoDlvyInst("Elrond-85NoDlvyInst");
         assertEquals( "Elrond-85NoDlvyInst", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-
-        logger.info("Successful Tag0085Test()");
     }
 }
