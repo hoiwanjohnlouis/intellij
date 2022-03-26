@@ -23,8 +23,6 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Enum54SideTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {

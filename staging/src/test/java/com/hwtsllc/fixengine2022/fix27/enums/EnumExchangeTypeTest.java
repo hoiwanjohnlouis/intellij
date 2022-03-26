@@ -14,16 +14,11 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.enums;
+package com.hwtsllc.fixengine2022.fix27.enums;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
-class Enum447PartyIDSourceTest {
+class EnumExchangeTypeTest {
 
     @BeforeEach
     void setUp() {
@@ -33,15 +28,16 @@ class Enum447PartyIDSourceTest {
     void tearDown() {
     }
 
-    @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+    @BeforeAll
+    static void beforeAll() {
     }
-    /**
-     *
-     */
-    public static void main(String[] args) {
-        System.out.println();
+
+    @AfterAll
+    static void afterAll() {
+    }
+
+    @Test
+    void Enum0000Test() {
+        EnumExchangeType enumType;
     }
 }

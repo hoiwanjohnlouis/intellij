@@ -16,13 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
 class Enum419BasisPxTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {

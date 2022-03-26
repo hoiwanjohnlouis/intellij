@@ -16,17 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum658QuoteRequestRejectReasonTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {
@@ -40,7 +37,6 @@ class Enum658QuoteRequestRejectReasonTest {
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test(). More testing is needed.");
     }
     /**
      *

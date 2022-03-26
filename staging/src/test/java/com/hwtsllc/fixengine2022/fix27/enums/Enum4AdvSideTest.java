@@ -24,8 +24,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum4AdvSideTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {

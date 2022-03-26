@@ -21,8 +21,6 @@ import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
 class Enum340TradSesStatusTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {

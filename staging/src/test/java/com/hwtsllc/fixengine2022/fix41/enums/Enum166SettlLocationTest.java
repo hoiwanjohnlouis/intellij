@@ -24,8 +24,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Enum166SettlLocationTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
 
     @BeforeEach
     void setUp() {

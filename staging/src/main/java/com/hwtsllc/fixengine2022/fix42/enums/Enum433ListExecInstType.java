@@ -81,37 +81,33 @@ public enum Enum433ListExecInstType implements EnumAccessors, LogStringVerbose {
      */
     @Override
     public String toLogStringVerbose() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.getClass().getSimpleName())
-                .append("\n\tEnumName[")
-                .append(getEnumName())
-                .append("]")
-                .append("\n\tAction[")
-                .append(getID())
-                .append("]")
-                .append("\n\tName[")
-                .append(getName())
-                .append("]")
-                .append("\n\tDescription[")
-                .append(getDescription())
-                .append("]");
-        return sb.toString();
+        return this.getClass().getSimpleName()
+                .concat("\n\tEnumName[")
+                .concat(getEnumName())
+                .concat("]")
+                .concat("\n\tAction[")
+                .concat(getID())
+                .concat("]")
+                .concat("\n\tName[")
+                .concat(getName())
+                .concat("]")
+                .concat("\n\tDescription[")
+                .concat(getDescription())
+                .concat("]");
     }
     /**
      * standard wrapper to format a simple string describing this enum
      */
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getEnumName())
-                .append("=[")
-                .append(getID())
-                .append(",")
-                .append(getName())
-                .append(",")
-                .append(getDescription())
-                .append("]");
-        return sb.toString();
+        return getEnumName()
+                .concat("=[")
+                .concat(getID())
+                .concat(",")
+                .concat(getName())
+                .concat(",")
+                .concat(getDescription())
+                .concat("]");
     }
 
     /**

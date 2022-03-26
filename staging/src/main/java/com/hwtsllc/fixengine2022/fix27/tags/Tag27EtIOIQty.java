@@ -23,7 +23,7 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum27IOIQty;
 public class Tag27EtIOIQty extends TagTypeAbstract {
     private final Enum27IOIQty dataValue;
 
-    public final static Enum27IOIQty TESTA_ET_IOI_QTY = Enum27IOIQty.ONE_BILLION;; // fake data
+    public final static Enum27IOIQty TESTA_ET_IOI_QTY = Enum27IOIQty.ONE_BILLION; // fake data
     public final static Enum27IOIQty TESTB_ET_IOI_QTY = Enum27IOIQty.UNDISCLOSED_QUANTITY;
 
     public Tag27EtIOIQty(Enum27IOIQty dataValue) {
