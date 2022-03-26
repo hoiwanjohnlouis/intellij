@@ -23,22 +23,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum204CustomerOrFirmTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0204Test() {
         Enum204CustomerOrFirm enumType;

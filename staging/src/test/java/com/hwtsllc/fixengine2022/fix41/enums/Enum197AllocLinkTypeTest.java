@@ -23,22 +23,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum197AllocLinkTypeTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0197Test() {
         Enum197AllocLinkType enumType;

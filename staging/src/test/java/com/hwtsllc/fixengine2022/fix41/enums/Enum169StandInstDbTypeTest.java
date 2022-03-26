@@ -23,22 +23,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum169StandInstDbTypeTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0169Test() {
         Enum169StandInstDbType enumType;

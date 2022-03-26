@@ -23,22 +23,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum160SettlInstModeTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0160Test() {
         Enum160SettlInstMode enumType;

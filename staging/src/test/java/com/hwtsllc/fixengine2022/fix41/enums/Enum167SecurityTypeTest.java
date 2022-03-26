@@ -24,22 +24,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Enum167SecurityTypeTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void Enum0167Test() {
         Enum167SecurityType enumType;
