@@ -17,50 +17,28 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag554PasswordTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-    }
-
     @Test
     void FIX0554Test() {
-        FIXType fix554Password = FIXType.FIX554_PASSWORD;
-        assertEquals( "FIX554_PASSWORD", fix554Password.getEnumName());
-        assertEquals( "554", fix554Password.getID());
-        assertEquals( "PASSWORD", fix554Password.getName());
-        assertEquals( "Password", fix554Password.getDescription());
-        assertNotEquals( "Not My FIX554_PASSWORD", fix554Password.getEnumName());
-        assertNotEquals( "9999", fix554Password.getID());
-        assertNotEquals( "Not My PASSWORD", fix554Password.getName());
-        assertNotEquals( "Not My Password", fix554Password.getDescription());
+        FIXType fixData = FIXType.FIX554_PASSWORD;
+        assertEquals( "FIX554_PASSWORD", fixData.getEnumName());
+        assertEquals( "554", fixData.getID());
+        assertEquals( "PASSWORD", fixData.getName());
+        assertEquals( "Password", fixData.getDescription());
+        assertNotEquals( "Not My FIX554_PASSWORD", fixData.getEnumName());
+        assertNotEquals( "9999", fixData.getID());
+        assertNotEquals( "Not My PASSWORD", fixData.getName());
+        assertNotEquals( "Not My Password", fixData.getDescription());
     }
     @Test
     void Tag0554Test() {
         Tag554Password tagData = new Tag554Password("JohnWick");
         assertEquals( "JohnWick", tagData.getDataValue());
         assertNotEquals( "goodbye JohnWick", tagData.getDataValue());
-        logger.info("Successful Tag0554Test()");
     }
 }

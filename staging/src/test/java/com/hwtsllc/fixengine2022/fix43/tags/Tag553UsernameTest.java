@@ -17,53 +17,29 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag553UsernameTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @BeforeAll
-    static void beforeAll() {
-        System.out.println("Starting Tag553UsernameTest()");
-    }
-
-    @AfterAll
-    static void afterAll() {
-        System.out.println("Completed Tag553UsernameTest()");
-    }
-
     @Test
     void FIX0553Test() {
-        FIXType fix553Username = FIXType.FIX553_USERNAME;
-        assertEquals( "FIX553_USERNAME", fix553Username.getEnumName());
-        assertEquals( "553", fix553Username.getID());
-        assertEquals( "USERNAME", fix553Username.getName());
-        assertEquals( "Username", fix553Username.getDescription());
-        assertNotEquals( "Not My FIX553_USERNAME", fix553Username.getEnumName());
-        assertNotEquals( "9999", fix553Username.getID());
-        assertNotEquals( "Not My USERNAME", fix553Username.getName());
-        assertNotEquals( "Not My Username", fix553Username.getDescription());
+        FIXType fixData = FIXType.FIX553_USERNAME;
+        assertEquals( "FIX553_USERNAME", fixData.getEnumName());
+        assertEquals( "553", fixData.getID());
+        assertEquals( "USERNAME", fixData.getName());
+        assertEquals( "Username", fixData.getDescription());
+        assertNotEquals( "Not My FIX553_USERNAME", fixData.getEnumName());
+        assertNotEquals( "9999", fixData.getID());
+        assertNotEquals( "Not My USERNAME", fixData.getName());
+        assertNotEquals( "Not My Username", fixData.getDescription());
     }
     @Test
     void Tag0553Test() {
         Tag553Username tagData = new Tag553Username("JohnWick");
         assertEquals( "JohnWick", tagData.getDataValue());
         assertNotEquals( "goodbye JohnWick", tagData.getDataValue());
-        logger.info("Successful Tag0553Test()");
     }
 
 }
