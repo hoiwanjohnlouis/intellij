@@ -19,12 +19,17 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 @Deprecated
 class Tag219BenchmarkTest {
     @Test
     void FIX0219Test() {
-        FIXType fix219Benchmark = FIXType.FIX219_BENCHMARK;
-
+        FIXType fixData = FIXType.FIX219_BENCHMARK;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0219Test() {

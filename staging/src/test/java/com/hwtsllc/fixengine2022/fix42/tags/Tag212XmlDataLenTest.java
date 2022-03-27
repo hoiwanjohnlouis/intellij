@@ -19,11 +19,16 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag212XmlDataLenTest {
     @Test
     void FIX0212Test() {
-        FIXType fix212XmlDataLen = FIXType.FIX212_XML_DATA_LEN;
-
+        FIXType fixData = FIXType.FIX212_XML_DATA_LEN;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0212Test() {

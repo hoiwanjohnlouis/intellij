@@ -19,12 +19,17 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 @Deprecated
 class Tag243UnderlyingRepoCollateralSecurityTypeTest {
     @Test
     void FIX0243Test() {
-        FIXType fix243UnderlyingRepoCollateralSecurityType = FIXType.FIX243_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE;
-
+        FIXType fixData = FIXType.FIX243_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0243Test() {

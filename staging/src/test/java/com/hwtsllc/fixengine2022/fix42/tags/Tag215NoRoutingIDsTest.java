@@ -19,11 +19,16 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag215NoRoutingIDsTest {
     @Test
     void FIX0215Test() {
-        FIXType fix215NoRoutingIDs = FIXType.FIX215_NO_ROUTING_IDS;
-
+        FIXType fixData = FIXType.FIX215_NO_ROUTING_IDS;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0215Test() {

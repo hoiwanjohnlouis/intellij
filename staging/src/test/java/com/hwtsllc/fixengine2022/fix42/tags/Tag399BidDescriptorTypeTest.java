@@ -17,23 +17,12 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class Tag399BidDescriptorTypeTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX0399Test() {
-        FIXType fix399BidDescriptorType = FIXType.FIX399_BID_DESCRIPTOR_TYPE;
+        FIXType fixData = FIXType.FIX399_BID_DESCRIPTOR_TYPE;
     }
     @Test
     void Tag0399Test() {

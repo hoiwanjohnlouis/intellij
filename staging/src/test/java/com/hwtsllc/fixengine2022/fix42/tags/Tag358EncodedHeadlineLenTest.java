@@ -17,23 +17,12 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class Tag358EncodedHeadlineLenTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void FIX0358Test() {
-        FIXType fix358EncodedHeadlineLen = FIXType.FIX358_ENCODED_HEADLINE_LEN;
+        FIXType fixData = FIXType.FIX358_ENCODED_HEADLINE_LEN;
     }
     @Test
     void Tag0358Test() {

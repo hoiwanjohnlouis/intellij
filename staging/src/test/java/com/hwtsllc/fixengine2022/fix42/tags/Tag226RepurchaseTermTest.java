@@ -19,12 +19,17 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 @Deprecated
 class Tag226RepurchaseTermTest {
     @Test
     void FIX0226Test() {
-        FIXType fix226RepurchaseTerm = FIXType.FIX226_REPURCHASE_TERM;
-
+        FIXType fixData = FIXType.FIX226_REPURCHASE_TERM;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0226Test() {
