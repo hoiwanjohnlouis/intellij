@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag534NoAffectedOrdersTest {
     @Test
     void FIX0534Test() {
-        FIXType fixData = FIXType.NO_AFFECTED_ORDERS;
+        FIXType fixData = FIXType.FIX534_NO_AFFECTED_ORDERS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

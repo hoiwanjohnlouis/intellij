@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag481MoneyLaunderingStatusTest {
     @Test
     void FIX0481Test() {
-        FIXType fixData = FIXType.MONEY_LAUNDERING_STATUS;
+        FIXType fixData = FIXType.FIX481_MONEY_LAUNDERING_STATUS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

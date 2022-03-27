@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag642BidForwardPoints2Test {
     @Test
     void FIX0642Test() {
-        FIXType fixData = FIXType.BID_FORWARD_POINTS_2;
+        FIXType fixData = FIXType.FIX642_BID_FORWARD_POINTS_2;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

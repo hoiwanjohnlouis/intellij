@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag515ExecValuationPointTest {
     @Test
     void FIX0515Test() {
-        FIXType fixData = FIXType.EXEC_VALUATION_POINT;
+        FIXType fixData = FIXType.FIX515_EXEC_VALUATION_POINT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

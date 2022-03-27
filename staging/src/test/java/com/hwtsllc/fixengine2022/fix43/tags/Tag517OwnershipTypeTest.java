@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag517OwnershipTypeTest {
     @Test
     void FIX0517Test() {
-        FIXType fixData = FIXType.OWNERSHIP_TYPE;
+        FIXType fixData = FIXType.FIX517_OWNERSHIP_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

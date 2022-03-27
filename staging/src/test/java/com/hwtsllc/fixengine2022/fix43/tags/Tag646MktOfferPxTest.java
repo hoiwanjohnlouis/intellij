@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag646MktOfferPxTest {
     @Test
     void FIX0646Test() {
-        FIXType fixData = FIXType.MKT_OFFER_PX;
+        FIXType fixData = FIXType.FIX646_MKT_OFFER_PX;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

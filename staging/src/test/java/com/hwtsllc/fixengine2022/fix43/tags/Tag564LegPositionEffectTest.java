@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag564LegPositionEffectTest {
     @Test
     void FIX0564Test() {
-        FIXType fixData = FIXType.LEG_POSITION_EFFECT;
+        FIXType fixData = FIXType.FIX564_LEG_POSITION_EFFECT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

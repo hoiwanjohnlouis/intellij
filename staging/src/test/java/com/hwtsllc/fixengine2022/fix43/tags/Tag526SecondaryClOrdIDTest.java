@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag526SecondaryClOrdIDTest {
     @Test
     void FIX0526Test() {
-        FIXType fixData = FIXType.SECONDARY_CL_ORD_ID;
+        FIXType fixData = FIXType.FIX526_SECONDARY_CL_ORD_ID;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

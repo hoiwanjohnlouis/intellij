@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag505PaymentRemitterIDTest {
     @Test
     void FIX0505Test() {
-        FIXType fixData = FIXType.PAYMENT_REMITTER_ID;
+        FIXType fixData = FIXType.FIX505_PAYMENT_REMITTER_ID;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

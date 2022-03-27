@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag490CardExpDateTest {
     @Test
     void FIX0490Test() {
-        FIXType fixData = FIXType.CARD_EXP_DATE;
+        FIXType fixData = FIXType.FIX490_CARD_EXP_DATE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

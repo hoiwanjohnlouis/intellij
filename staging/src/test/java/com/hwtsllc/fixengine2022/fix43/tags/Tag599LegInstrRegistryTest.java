@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag599LegInstrRegistryTest {
     @Test
     void FIX0599Test() {
-        FIXType fixData = FIXType.LEG_INSTR_REGISTRY;
+        FIXType fixData = FIXType.FIX599_LEG_INSTR_REGISTRY;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

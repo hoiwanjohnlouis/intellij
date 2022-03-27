@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag547MDImplicitDeleteTest {
     @Test
     void FIX0547Test() {
-        FIXType fixData = FIXType.MD_IMPLICIT_DELETE;
+        FIXType fixData = FIXType.FIX547_MD_IMPLICIT_DELETE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

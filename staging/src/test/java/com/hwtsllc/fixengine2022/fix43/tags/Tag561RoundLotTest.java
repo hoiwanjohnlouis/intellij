@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag561RoundLotTest {
     @Test
     void FIX0561Test() {
-        FIXType fixData = FIXType.ROUND_LOT;
+        FIXType fixData = FIXType.FIX561_ROUND_LOT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

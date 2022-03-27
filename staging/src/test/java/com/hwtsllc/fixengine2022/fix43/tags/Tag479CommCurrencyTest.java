@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag479CommCurrencyTest {
     @Test
     void FIX0479Test() {
-        FIXType fixData = FIXType.COMM_CURRENCY;
+        FIXType fixData = FIXType.FIX479_COMM_CURRENCY;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag570PreviouslyReportedTest {
     @Test
     void FIX0570Test() {
-        FIXType fixData = FIXType.PREVIOUSLY_REPORTED;
+        FIXType fixData = FIXType.FIX570_PREVIOUSLY_REPORTED;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

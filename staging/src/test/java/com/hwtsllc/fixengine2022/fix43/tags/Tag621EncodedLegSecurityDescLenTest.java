@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag621EncodedLegSecurityDescLenTest {
     @Test
     void FIX0621Test() {
-        FIXType fixData = FIXType.ENCODED_LEG_SECURITY_DESC_LEN;
+        FIXType fixData = FIXType.FIX621_ENCODED_LEG_SECURITY_DESC_LEN;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

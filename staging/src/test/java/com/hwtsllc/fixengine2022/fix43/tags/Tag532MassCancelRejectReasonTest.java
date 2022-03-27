@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag532MassCancelRejectReasonTest {
     @Test
     void FIX0532Test() {
-        FIXType fixData = FIXType.MASS_CANCEL_REJECT_REASON;
+        FIXType fixData = FIXType.FIX532_MASS_CANCEL_REJECT_REASON;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

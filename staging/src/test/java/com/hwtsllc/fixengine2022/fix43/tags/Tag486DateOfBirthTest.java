@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag486DateOfBirthTest {
     @Test
     void FIX0486Test() {
-        FIXType fixData = FIXType.DATE_OF_BIRTH;
+        FIXType fixData = FIXType.FIX486_DATE_OF_BIRTH;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

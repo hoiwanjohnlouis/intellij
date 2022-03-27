@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag590BookingUnitTest {
     @Test
     void FIX0590Test() {
-        FIXType fixData = FIXType.BOOKING_UNIT;
+        FIXType fixData = FIXType.FIX590_BOOKING_UNIT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

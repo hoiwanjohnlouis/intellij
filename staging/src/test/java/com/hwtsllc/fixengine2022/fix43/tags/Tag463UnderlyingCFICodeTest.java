@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag463UnderlyingCFICodeTest {
     @Test
     void FIX0463Test() {
-        FIXType fixData = FIXType.UNDERLYING_CFI_CODE;
+        FIXType fixData = FIXType.FIX463_UNDERLYING_CFI_CODE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

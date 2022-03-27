@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag575OddLotTest {
     @Test
     void FIX0575Test() {
-        FIXType fixData = FIXType.ODD_LOT;
+        FIXType fixData = FIXType.FIX575_ODD_LOT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag477DistribPaymentMethodTest {
     @Test
     void FIX0477Test() {
-        FIXType fixData = FIXType.DISTRIB_PAYMENT_METHOD;
+        FIXType fixData = FIXType.FIX477_DISTRIB_PAYMENT_METHOD;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

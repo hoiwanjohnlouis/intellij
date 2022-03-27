@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag544CashMarginTest {
     @Test
     void FIX0544Test() {
-        FIXType fixData = FIXType.CASH_MARGIN;
+        FIXType fixData = FIXType.FIX544_CASH_MARGIN;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

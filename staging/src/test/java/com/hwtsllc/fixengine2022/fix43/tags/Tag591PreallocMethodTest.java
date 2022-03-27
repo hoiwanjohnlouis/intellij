@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag591PreallocMethodTest {
     @Test
     void FIX0591Test() {
-        FIXType fixData = FIXType.PREALLOC_METHOD;
+        FIXType fixData = FIXType.FIX591_PREALLOC_METHOD;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

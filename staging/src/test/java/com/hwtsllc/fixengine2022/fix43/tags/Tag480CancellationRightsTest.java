@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag480CancellationRightsTest {
     @Test
     void FIX0480Test() {
-        FIXType fixData = FIXType.CANCELLATION_RIGHTS;
+        FIXType fixData = FIXType.FIX480_CANCELLATION_RIGHTS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

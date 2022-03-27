@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag464TestMessageIndicatorTest {
     @Test
     void FIX0464Test() {
-        FIXType fixData = FIXType.TEST_MESSAGE_INDICATOR;
+        FIXType fixData = FIXType.FIX464_TEST_MESSAGE_INDICATOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

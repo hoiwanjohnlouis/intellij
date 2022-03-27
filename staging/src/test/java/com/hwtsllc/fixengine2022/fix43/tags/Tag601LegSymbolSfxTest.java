@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag601LegSymbolSfxTest {
     @Test
     void FIX0601Test() {
-        FIXType fixData = FIXType.LEG_SYMBOL_SFX;
+        FIXType fixData = FIXType.FIX601_LEG_SYMBOL_SFX;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag549CrossTypeTest {
     @Test
     void FIX0549Test() {
-        FIXType fixData = FIXType.CROSS_TYPE;
+        FIXType fixData = FIXType.FIX549_CROSS_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

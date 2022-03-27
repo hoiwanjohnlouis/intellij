@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag648MinOfferSizeTest {
     @Test
     void FIX0648Test() {
-        FIXType fixData = FIXType.MIN_OFFER_SIZE;
+        FIXType fixData = FIXType.FIX648_MIN_OFFER_SIZE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

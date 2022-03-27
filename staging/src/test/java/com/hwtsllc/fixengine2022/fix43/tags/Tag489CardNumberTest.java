@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag489CardNumberTest {
     @Test
     void FIX0489Test() {
-        FIXType fixData = FIXType.CARD_NUMBER;
+        FIXType fixData = FIXType.FIX489_CARD_NUMBER;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

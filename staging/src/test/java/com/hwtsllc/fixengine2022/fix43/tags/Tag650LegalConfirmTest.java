@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag650LegalConfirmTest {
     @Test
     void FIX0650Test() {
-        FIXType fixData = FIXType.LEGAL_CONFIRM;
+        FIXType fixData = FIXType.FIX650_LEGAL_CONFIRM;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

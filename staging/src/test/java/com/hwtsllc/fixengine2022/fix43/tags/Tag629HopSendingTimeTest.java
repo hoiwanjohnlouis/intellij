@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag629HopSendingTimeTest {
     @Test
     void FIX0629Test() {
-        FIXType fixData = FIXType.HOP_SENDING_TIME;
+        FIXType fixData = FIXType.FIX629_HOP_SENDING_TIME;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

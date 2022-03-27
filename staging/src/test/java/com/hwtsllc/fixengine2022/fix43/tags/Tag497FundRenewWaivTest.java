@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag497FundRenewWaivTest {
     @Test
     void FIX0497Test() {
-        FIXType fixData = FIXType.FUND_RENEW_WAIV;
+        FIXType fixData = FIXType.FIX497_FUND_RENEW_WAIV;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

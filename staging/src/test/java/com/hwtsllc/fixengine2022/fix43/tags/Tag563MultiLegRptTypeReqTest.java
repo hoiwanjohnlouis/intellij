@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag563MultiLegRptTypeReqTest {
     @Test
     void FIX0563Test() {
-        FIXType fixData = FIXType.MULTI_LEG_RPT_TYPE_REQ;
+        FIXType fixData = FIXType.FIX563_MULTI_LEG_RPT_TYPE_REQ;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag470CountryOfIssueTest {
     @Test
     void FIX0470Test() {
-        FIXType fixData = FIXType.COUNTRY_OF_ISSUE;
+        FIXType fixData = FIXType.FIX470_COUNTRY_OF_ISSUE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag498CashDistribAgentNameTest {
     @Test
     void FIX0498Test() {
-        FIXType fixData = FIXType.CASH_DISTRIB_AGENT_NAME;
+        FIXType fixData = FIXType.FIX498_CASH_DISTRIB_AGENT_NAME;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag577ClearingInstructionTest {
     @Test
     void FIX0577Test() {
-        FIXType fixData = FIXType.CLEARING_INSTRUCTION;
+        FIXType fixData = FIXType.FIX577_CLEARING_INSTRUCTION;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

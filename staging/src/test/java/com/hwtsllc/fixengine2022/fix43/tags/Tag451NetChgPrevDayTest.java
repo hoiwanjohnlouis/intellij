@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag451NetChgPrevDayTest {
     @Test
     void FIX0451Test() {
-        FIXType fixData = FIXType.NET_CHG_PREV_DAY;
+        FIXType fixData = FIXType.FIX451_NET_CHG_PREV_DAY;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

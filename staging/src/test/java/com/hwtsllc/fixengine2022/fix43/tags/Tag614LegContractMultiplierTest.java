@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag614LegContractMultiplierTest {
     @Test
     void FIX0614Test() {
-        FIXType fixData = FIXType.LEG_CONTRACT_MULTIPLIER;
+        FIXType fixData = FIXType.FIX614_LEG_CONTRACT_MULTIPLIER;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

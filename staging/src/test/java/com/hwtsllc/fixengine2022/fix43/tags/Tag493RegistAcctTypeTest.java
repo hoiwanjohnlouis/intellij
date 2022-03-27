@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag493RegistAcctTypeTest {
     @Test
     void FIX0493Test() {
-        FIXType fixData = FIXType.REGIST_ACCT_TYPE;
+        FIXType fixData = FIXType.FIX493_REGIST_ACCT_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

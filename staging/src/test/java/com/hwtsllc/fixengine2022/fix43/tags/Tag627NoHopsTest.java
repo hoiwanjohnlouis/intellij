@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag627NoHopsTest {
     @Test
     void FIX0627Test() {
-        FIXType fixData = FIXType.NO_HOPS;
+        FIXType fixData = FIXType.FIX627_NO_HOPS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

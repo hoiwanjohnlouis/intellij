@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag516OrderPercentTest {
     @Test
     void FIX0516Test() {
-        FIXType fixData = FIXType.ORDER_PERCENT;
+        FIXType fixData = FIXType.FIX516_ORDER_PERCENT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

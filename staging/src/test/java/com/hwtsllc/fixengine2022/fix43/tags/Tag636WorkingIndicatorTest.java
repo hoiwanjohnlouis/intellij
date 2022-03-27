@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag636WorkingIndicatorTest {
     @Test
     void FIX0636Test() {
-        FIXType fixData = FIXType.WORKING_INDICATOR;
+        FIXType fixData = FIXType.FIX636_WORKING_INDICATOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

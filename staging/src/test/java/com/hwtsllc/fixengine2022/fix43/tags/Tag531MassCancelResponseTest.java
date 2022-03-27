@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag531MassCancelResponseTest {
     @Test
     void FIX0531Test() {
-        FIXType fixData = FIXType.MASS_CANCEL_RESPONSE;
+        FIXType fixData = FIXType.FIX531_MASS_CANCEL_RESPONSE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

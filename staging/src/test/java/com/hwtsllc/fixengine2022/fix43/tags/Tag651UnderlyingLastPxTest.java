@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag651UnderlyingLastPxTest {
     @Test
     void FIX0651Test() {
-        FIXType fixData = FIXType.UNDERLYING_LAST_PX;
+        FIXType fixData = FIXType.FIX651_UNDERLYING_LAST_PX;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

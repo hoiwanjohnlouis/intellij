@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag469RoundingModulusTest {
     @Test
     void FIX0469Test() {
-        FIXType fixData = FIXType.ROUNDING_MODULUS;
+        FIXType fixData = FIXType.FIX469_;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

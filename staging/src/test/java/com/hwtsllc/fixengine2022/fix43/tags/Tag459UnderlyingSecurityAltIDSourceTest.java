@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag459UnderlyingSecurityAltIDSourceTest {
     @Test
     void FIX0459Test() {
-        FIXType fixData = FIXType.UNDERLYING_SECURITY_ALT_ID_SOURCE;
+        FIXType fixData = FIXType.FIX459_UNDERLYING_SECURITY_ALT_ID_SOURCE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

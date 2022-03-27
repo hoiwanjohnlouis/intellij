@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag656SettlCurrBidFxRateTest {
     @Test
     void FIX0656Test() {
-        FIXType fixData = FIXType.SETTL_CURR_BID_FX_RATE;
+        FIXType fixData = FIXType.FIX656_SETTL_CURR_BID_FX_RATE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

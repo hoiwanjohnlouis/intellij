@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag602LegSecurityIDTest {
     @Test
     void FIX0602Test() {
-        FIXType fixData = FIXType.LEG_SECURITY_ID;
+        FIXType fixData = FIXType.FIX602_LEG_SECURITY_ID;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

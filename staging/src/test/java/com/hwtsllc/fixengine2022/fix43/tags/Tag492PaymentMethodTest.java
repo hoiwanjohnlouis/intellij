@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag492PaymentMethodTest {
     @Test
     void FIX0492Test() {
-        FIXType fixData = FIXType.PAYMENT_METHOD;
+        FIXType fixData = FIXType.FIX492_PAYMENT_METHOD;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

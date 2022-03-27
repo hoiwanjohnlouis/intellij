@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag525NestedPartyIDSourceTest {
     @Test
     void FIX0525Test() {
-        FIXType fixData = FIXType.NESTED_PARTY_ID_SOURCE;
+        FIXType fixData = FIXType.FIX525_NESTED_PARTY_ID_SOURCE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

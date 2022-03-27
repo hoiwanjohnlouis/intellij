@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag521ContAmtCurrTest {
     @Test
     void FIX0521Test() {
-        FIXType fixData = FIXType.CONT_AMT_CURR;
+        FIXType fixData = FIXType.FIX521_CONT_AMT_CURR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag540TotalAccruedInterestAmtTest {
     @Test
     void FIX0540Test() {
-        FIXType fixData = FIXType.TOTAL_ACCRUED_INTEREST_AMT;
+        FIXType fixData = FIXType.FIX540_TOTAL_ACCRUED_INTEREST_AMT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
