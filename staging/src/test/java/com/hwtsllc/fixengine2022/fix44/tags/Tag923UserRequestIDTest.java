@@ -47,7 +47,7 @@ class Tag923UserRequestIDTest {
     }
     @Test
     void FIX0923Test() {
-        FIXType Tag923UserRequestID = FIXType.USER_REQUEST_ID;
+        FIXType fixData = FIXType.USER_REQUEST_ID;
     }
     @Test
     void Tag0923Test() {

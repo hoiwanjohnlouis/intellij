@@ -47,6 +47,6 @@ class Tag890MaturityNetMoneyTest {
     }
     @Test
     void FIX0890Test() {
-        FIXType Tag890MaturityNetMoney = FIXType.MATURITY_NET_MONEY;
+        FIXType fixData = FIXType.MATURITY_NET_MONEY;
     }
 }

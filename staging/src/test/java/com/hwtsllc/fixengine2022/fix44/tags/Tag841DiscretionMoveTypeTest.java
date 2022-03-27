@@ -47,6 +47,6 @@ class Tag841DiscretionMoveTypeTest {
     }
     @Test
     void FIX0841Test() {
-        FIXType Tag841DiscretionMoveType = FIXType.DISCRETION_MOVE_TYPE;
+        FIXType fixData = FIXType.DISCRETION_MOVE_TYPE;
     }
 }

@@ -47,6 +47,6 @@ class Tag858SharedCommissionTest {
     }
     @Test
     void FIX0858Test() {
-        FIXType Tag858SharedCommission = FIXType.SHARED_COMMISSION;
+        FIXType fixData = FIXType.SHARED_COMMISSION;
     }
 }

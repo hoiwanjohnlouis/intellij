@@ -47,7 +47,7 @@ class Tag948NoNested3PartyIDsTest {
     }
     @Test
     void FIX0948Test() {
-        FIXType Tag948NoNested3PartyIDs = FIXType.NO_NESTED_3_PARTY_IDS;
+        FIXType fixData = FIXType.NO_NESTED_3_PARTY_IDS;
     }
     @Test
     void Tag0948Test() {

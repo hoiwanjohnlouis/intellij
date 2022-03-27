@@ -47,6 +47,6 @@ class Tag715ClearingBusinessDateTest {
     }
     @Test
     void FIX0715Test() {
-        FIXType Tag715ClearingBusinessDate = FIXType.CLEARING_BUSINESS_DATE;
+        FIXType fixData = FIXType.CLEARING_BUSINESS_DATE;
     }
 }

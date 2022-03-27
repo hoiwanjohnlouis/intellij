@@ -47,6 +47,6 @@ class Tag853ShortSaleReasonTest {
     }
     @Test
     void FIX0853Test() {
-        FIXType Tag853ShortSaleReason = FIXType.SHORT_SALE_REASON;
+        FIXType fixData = FIXType.SHORT_SALE_REASON;
     }
 }

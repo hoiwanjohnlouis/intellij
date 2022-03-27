@@ -47,7 +47,7 @@ class Tag920EndAccruedInterestAmtTest {
     }
     @Test
     void FIX0920Test() {
-        FIXType Tag920EndAccruedInterestAmt = FIXType.END_ACCRUED_INTEREST_AMT;
+        FIXType fixData = FIXType.END_ACCRUED_INTEREST_AMT;
     }
     @Test
     void Tag0920Test() {

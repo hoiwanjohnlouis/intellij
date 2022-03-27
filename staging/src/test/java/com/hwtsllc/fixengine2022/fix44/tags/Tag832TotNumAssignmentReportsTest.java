@@ -47,6 +47,6 @@ class Tag832TotNumAssignmentReportsTest {
     }
     @Test
     void FIX0832Test() {
-        FIXType Tag832TotNumAssignmentReports = FIXType.TOT_NUM_ASSIGNMENT_REPORTS;
+        FIXType fixData = FIXType.TOT_NUM_ASSIGNMENT_REPORTS;
     }
 }

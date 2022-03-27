@@ -47,6 +47,6 @@ class Tag865EventTypeTest {
     }
     @Test
     void FIX0865Test() {
-        FIXType Tag865EventType = FIXType.EVENT_TYPE;
+        FIXType fixData = FIXType.EVENT_TYPE;
     }
 }

@@ -47,7 +47,7 @@ class Tag670NoLegAllocsTest {
     }
     @Test
     void FIX0670Test() {
-        FIXType Tag670NoLegAllocs = FIXType.NO_LEG_ALLOCS;
+        FIXType fixData = FIXType.NO_LEG_ALLOCS;
     }
     @Test
     void Tag0670Test() {

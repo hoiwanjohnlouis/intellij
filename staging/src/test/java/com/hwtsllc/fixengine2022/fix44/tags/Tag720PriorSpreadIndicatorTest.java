@@ -47,6 +47,6 @@ class Tag720PriorSpreadIndicatorTest {
     }
     @Test
     void FIX0720Test() {
-        FIXType Tag720PriorSpreadIndicator = FIXType.PRIOR_SPREAD_INDICATOR;
+        FIXType fixData = FIXType.PRIOR_SPREAD_INDICATOR;
     }
 }

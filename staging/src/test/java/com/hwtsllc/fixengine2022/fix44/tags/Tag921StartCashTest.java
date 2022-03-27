@@ -47,7 +47,7 @@ class Tag921StartCashTest {
     }
     @Test
     void FIX0921Test() {
-        FIXType Tag921StartCash = FIXType.START_CASH;
+        FIXType fixData = FIXType.START_CASH;
     }
     @Test
     void Tag0921Test() {

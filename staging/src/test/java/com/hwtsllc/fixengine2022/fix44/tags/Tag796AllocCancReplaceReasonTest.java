@@ -47,6 +47,6 @@ class Tag796AllocCancReplaceReasonTest {
     }
     @Test
     void FIX0796Test() {
-        FIXType Tag796AllocCancReplaceReason = FIXType.ALLOC_CANC_REPLACE_REASON;
+        FIXType fixData = FIXType.ALLOC_CANC_REPLACE_REASON;
     }
 }

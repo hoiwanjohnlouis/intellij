@@ -47,6 +47,6 @@ class Tag789NextExpectedMsgSeqNumTest {
     }
     @Test
     void FIX0789Test() {
-        FIXType Tag789NextExpectedMsgSeqNum = FIXType.NEXT_EXPECTED_MSG_SEQ_NUM;
+        FIXType fixData = FIXType.NEXT_EXPECTED_MSG_SEQ_NUM;
     }
 }

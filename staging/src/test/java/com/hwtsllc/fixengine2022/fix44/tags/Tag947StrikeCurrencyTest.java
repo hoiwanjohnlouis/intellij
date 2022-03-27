@@ -47,7 +47,7 @@ class Tag947StrikeCurrencyTest {
     }
     @Test
     void FIX0947Test() {
-        FIXType Tag947StrikeCurrency = FIXType.STRIKE_CURRENCY;
+        FIXType fixData = FIXType.STRIKE_CURRENCY;
     }
     @Test
     void Tag0947Test() {

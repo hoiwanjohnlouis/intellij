@@ -47,6 +47,6 @@ class Tag836PegOffsetTypeTest {
     }
     @Test
     void FIX0836Test() {
-        FIXType Tag836PegOffsetType = FIXType.PEG_OFFSET_TYPE;
+        FIXType fixData = FIXType.PEG_OFFSET_TYPE;
     }
 }

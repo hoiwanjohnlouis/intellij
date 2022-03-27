@@ -47,6 +47,6 @@ class Tag783SettlPartyIDSourceTest {
     }
     @Test
     void FIX0783Test() {
-        FIXType Tag783SettlPartyIDSource = FIXType.SETTL_PARTY_ID_SOURCE;
+        FIXType fixData = FIXType.SETTL_PARTY_ID_SOURCE;
     }
 }

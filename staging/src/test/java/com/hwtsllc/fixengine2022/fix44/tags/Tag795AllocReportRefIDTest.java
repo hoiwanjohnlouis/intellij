@@ -47,6 +47,6 @@ class Tag795AllocReportRefIDTest {
     }
     @Test
     void FIX0795Test() {
-        FIXType Tag795AllocReportRefID = FIXType.ALLOC_REPORT_REF_ID;
+        FIXType fixData = FIXType.ALLOC_REPORT_REF_ID;
     }
 }

@@ -47,6 +47,6 @@ class Tag851LastLiquidityIndTest {
     }
     @Test
     void FIX0851Test() {
-        FIXType Tag851LastLiquidityInd = FIXType.LAST_LIQUIDITY_IND;
+        FIXType fixData = FIXType.LAST_LIQUIDITY_IND;
     }
 }

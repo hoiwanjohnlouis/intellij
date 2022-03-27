@@ -47,7 +47,7 @@ class Tag918AgreementCurrencyTest {
     }
     @Test
     void FIX0918Test() {
-        FIXType Tag918AgreementCurrency = FIXType.AGREEMENT_CURRENCY;
+        FIXType fixData = FIXType.AGREEMENT_CURRENCY;
     }
     @Test
     void Tag0918Test() {

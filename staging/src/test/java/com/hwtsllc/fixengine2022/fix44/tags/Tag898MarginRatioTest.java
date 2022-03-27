@@ -47,6 +47,7 @@ class Tag898MarginRatioTest {
     }
     @Test
     void FIX0898Test() {
-        FIXType Tag898MarginRatio = FIXType.MARGIN_RATIO;
+        FIXType fixData = FIXType.MARGIN_RATIO;
+
     }
 }

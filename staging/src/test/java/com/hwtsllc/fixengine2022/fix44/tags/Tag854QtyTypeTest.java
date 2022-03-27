@@ -47,6 +47,6 @@ class Tag854QtyTypeTest {
     }
     @Test
     void FIX0854Test() {
-        FIXType Tag854QtyType = FIXType.QTY_TYPE;
+        FIXType fixData = FIXType.QTY_TYPE;
     }
 }

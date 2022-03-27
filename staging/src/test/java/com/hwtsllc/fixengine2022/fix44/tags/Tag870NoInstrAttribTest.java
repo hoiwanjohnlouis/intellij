@@ -47,6 +47,6 @@ class Tag870NoInstrAttribTest {
     }
     @Test
     void FIX0870Test() {
-        FIXType Tag870NoInstrAttrib = FIXType.NO_INSTR_ATTRIB;
+        FIXType fixData = FIXType.NO_INSTR_ATTRIB;
     }
 }

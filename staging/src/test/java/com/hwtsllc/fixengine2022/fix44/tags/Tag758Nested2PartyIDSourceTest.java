@@ -47,6 +47,6 @@ class Tag758Nested2PartyIDSourceTest {
     }
     @Test
     void FIX0758Test() {
-        FIXType Tag758Nested2PartyIDSource = FIXType.NESTED_2_PARTY_ID_SOURCE;
+        FIXType fixData = FIXType.NESTED_2_PARTY_ID_SOURCE;
     }
 }

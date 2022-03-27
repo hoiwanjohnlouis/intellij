@@ -47,6 +47,6 @@ class Tag803PartySubIDTypeTest {
     }
     @Test
     void FIX0803Test() {
-        FIXType Tag803PartySubIDType = FIXType.PARTY_SUB_ID_TYPE;
+        FIXType fixData = FIXType.PARTY_SUB_ID_TYPE;
     }
 }

@@ -47,6 +47,6 @@ class Tag767AllowableOneSidednessCurrTest {
     }
     @Test
     void FIX0767Test() {
-        FIXType Tag767AllowableOneSidednessCurr = FIXType.ALLOWABLE_ONE_SIDEDNESS_CURR;
+        FIXType fixData = FIXType.ALLOWABLE_ONE_SIDEDNESS_CURR;
     }
 }

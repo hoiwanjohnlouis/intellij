@@ -47,6 +47,6 @@ class Tag846DiscretionScopeTest {
     }
     @Test
     void FIX0846Test() {
-        FIXType Tag846DiscretionScope = FIXType.DISCRETION_SCOPE;
+        FIXType fixData = FIXType.DISCRETION_SCOPE;
     }
 }

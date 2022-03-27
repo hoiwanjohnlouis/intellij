@@ -47,7 +47,7 @@ class Tag934LastNetworkResponseIDTest {
     }
     @Test
     void FIX0934Test() {
-        FIXType Tag934LastNetworkResponseID = FIXType.LAST_NETWORK_RESPONSE_ID;
+        FIXType fixData = FIXType.LAST_NETWORK_RESPONSE_ID;
     }
     @Test
     void Tag0934Test() {

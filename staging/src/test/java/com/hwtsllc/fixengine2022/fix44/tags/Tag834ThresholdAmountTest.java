@@ -47,6 +47,6 @@ class Tag834ThresholdAmountTest {
     }
     @Test
     void FIX0834Test() {
-        FIXType Tag834ThresholdAmount = FIXType.THRESHOLD_AMOUNT;
+        FIXType fixData = FIXType.THRESHOLD_AMOUNT;
     }
 }

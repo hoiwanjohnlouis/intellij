@@ -47,6 +47,6 @@ class Tag864NoEventsTest {
     }
     @Test
     void FIX0864Test() {
-        FIXType Tag864NoEvents = FIXType.NO_EVENTS;
+        FIXType fixData = FIXType.NO_EVENTS;
     }
 }

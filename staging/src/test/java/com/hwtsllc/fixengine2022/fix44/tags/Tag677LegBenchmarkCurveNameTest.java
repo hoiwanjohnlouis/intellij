@@ -47,7 +47,7 @@ class Tag677LegBenchmarkCurveNameTest {
     }
     @Test
     void FIX0677Test() {
-        FIXType Tag677LegBenchmarkCurveName = FIXType.LEG_BENCHMARK_CURVE_NAME;
+        FIXType fixData = FIXType.LEG_BENCHMARK_CURVE_NAME;
     }
     @Test
     void Tag0677Test() {

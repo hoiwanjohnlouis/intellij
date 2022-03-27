@@ -47,6 +47,6 @@ class Tag837PegLimitTypeTest {
     }
     @Test
     void FIX0837Test() {
-        FIXType Tag837PegLimitType = FIXType.PEG_LIMIT_TYPE;
+        FIXType fixData = FIXType.PEG_LIMIT_TYPE;
     }
 }

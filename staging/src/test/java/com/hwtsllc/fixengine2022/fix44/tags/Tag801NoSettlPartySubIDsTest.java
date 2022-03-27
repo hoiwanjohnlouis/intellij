@@ -47,6 +47,6 @@ class Tag801NoSettlPartySubIDsTest {
     }
     @Test
     void FIX0801Test() {
-        FIXType Tag801NoSettlPartySubIDs = FIXType.NO_SETTL_PARTY_SUB_IDS;
+        FIXType fixData = FIXType.NO_SETTL_PARTY_SUB_IDS;
     }
 }

@@ -47,6 +47,6 @@ class Tag889UnderlyingStipValueTest {
     }
     @Test
     void FIX0889Test() {
-        FIXType Tag889UnderlyingStipValue = FIXType.UNDERLYING_STIP_VALUE;
+        FIXType fixData = FIXType.UNDERLYING_STIP_VALUE;
     }
 }

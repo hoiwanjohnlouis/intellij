@@ -47,6 +47,6 @@ class Tag771TrdRegTimestampOriginTest {
     }
     @Test
     void FIX0771Test() {
-        FIXType Tag771TrdRegTimestampOrigin = FIXType.TRD_REG_TIMESTAMP_ORIGIN;
+        FIXType fixData = FIXType.TRD_REG_TIMESTAMP_ORIGIN;
     }
 }

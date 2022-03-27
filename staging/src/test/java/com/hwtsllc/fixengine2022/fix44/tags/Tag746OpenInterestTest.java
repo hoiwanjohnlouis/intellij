@@ -47,6 +47,6 @@ class Tag746OpenInterestTest {
     }
     @Test
     void FIX0746Test() {
-        FIXType Tag746OpenInterest = FIXType.OPEN_INTEREST;
+        FIXType fixData = FIXType.OPEN_INTEREST;
     }
 }

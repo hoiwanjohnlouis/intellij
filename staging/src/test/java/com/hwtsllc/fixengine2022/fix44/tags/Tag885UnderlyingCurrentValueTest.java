@@ -47,6 +47,6 @@ class Tag885UnderlyingCurrentValueTest {
     }
     @Test
     void FIX0885Test() {
-        FIXType Tag885UnderlyingCurrentValue = FIXType.UNDERLYING_CURRENT_VALUE;
+        FIXType fixData = FIXType.UNDERLYING_CURRENT_VALUE;
     }
 }

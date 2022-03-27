@@ -47,6 +47,6 @@ class Tag880TrdMatchIDTest {
     }
     @Test
     void FIX0880Test() {
-        FIXType Tag880TrdMatchID = FIXType.TRD_MATCH_ID;
+        FIXType fixData = FIXType.TRD_MATCH_ID;
     }
 }

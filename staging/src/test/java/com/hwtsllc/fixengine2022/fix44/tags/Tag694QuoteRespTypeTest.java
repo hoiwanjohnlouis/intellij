@@ -47,7 +47,7 @@ class Tag694QuoteRespTypeTest {
     }
     @Test
     void FIX0694Test() {
-        FIXType Tag694QuoteRespType = FIXType.QUOTE_RESP_TYPE;
+        FIXType fixData = FIXType.QUOTE_RESP_TYPE;
     }
     @Test
     void Tag0694Test() {

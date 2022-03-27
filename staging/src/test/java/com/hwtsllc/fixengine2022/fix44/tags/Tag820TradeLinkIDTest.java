@@ -47,6 +47,6 @@ class Tag820TradeLinkIDTest {
     }
     @Test
     void FIX0820Test() {
-        FIXType Tag820TradeLinkID = FIXType.TRADE_LINK_ID;
+        FIXType fixData = FIXType.TRADE_LINK_ID;
     }
 }

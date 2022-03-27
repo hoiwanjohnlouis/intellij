@@ -47,6 +47,6 @@ class Tag831AsgnReqIDTest {
     }
     @Test
     void FIX0831Test() {
-        FIXType Tag831AsgnReqID = FIXType.ASGN_REQ_ID;
+        FIXType fixData = FIXType.ASGN_REQ_ID;
     }
 }

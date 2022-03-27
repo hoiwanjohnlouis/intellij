@@ -47,6 +47,6 @@ class Tag708PosAmtTest {
     }
     @Test
     void FIX0708Test() {
-        FIXType Tag708PosAmt = FIXType.POS_AMT;
+        FIXType fixData = FIXType.POS_AMT;
     }
 }

@@ -47,6 +47,6 @@ class Tag857AllocNoOrdersTypeTest {
     }
     @Test
     void FIX0857Test() {
-        FIXType Tag857AllocNoOrdersType = FIXType.ALLOC_NO_ORDERS_TYPE;
+        FIXType fixData = FIXType.ALLOC_NO_ORDERS_TYPE;
     }
 }

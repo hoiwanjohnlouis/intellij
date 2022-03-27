@@ -47,6 +47,6 @@ class Tag794AllocReportTypeTest {
     }
     @Test
     void FIX0794Test() {
-        FIXType Tag794AllocReportType = FIXType.ALLOC_REPORT_TYPE;
+        FIXType fixData = FIXType.ALLOC_REPORT_TYPE;
     }
 }

@@ -47,7 +47,7 @@ class Tag689LegStipulationValueTest {
     }
     @Test
     void FIX0689Test() {
-        FIXType Tag689LegStipulationValue = FIXType.LEG_STIPULATION_VALUE;
+        FIXType fixData = FIXType.LEG_STIPULATION_VALUE;
     }
     @Test
     void Tag0689Test() {

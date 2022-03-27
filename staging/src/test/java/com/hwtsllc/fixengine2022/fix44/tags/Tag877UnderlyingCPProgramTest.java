@@ -47,6 +47,6 @@ class Tag877UnderlyingCPProgramTest {
     }
     @Test
     void FIX0877Test() {
-        FIXType Tag877UnderlyingCPProgram = FIXType.UNDERLYING_CP_PROGRAM;
+        FIXType fixData = FIXType.UNDERLYING_CP_PROGRAM;
     }
 }

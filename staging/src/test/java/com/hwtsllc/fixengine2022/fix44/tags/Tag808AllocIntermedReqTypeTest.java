@@ -47,6 +47,6 @@ class Tag808AllocIntermedReqTypeTest {
     }
     @Test
     void FIX0808Test() {
-        FIXType Tag808AllocIntermedReqType = FIXType.ALLOC_INTERMED_REQ_TYPE;
+        FIXType fixData = FIXType.ALLOC_INTERMED_REQ_TYPE;
     }
 }

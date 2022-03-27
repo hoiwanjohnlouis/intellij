@@ -47,6 +47,6 @@ class Tag736AllocSettlCurrencyTest {
     }
     @Test
     void FIX0736Test() {
-        FIXType Tag736AllocSettlCurrency = FIXType.ALLOC_SETTL_CURRENCY;
+        FIXType fixData = FIXType.ALLOC_SETTL_CURRENCY;
     }
 }

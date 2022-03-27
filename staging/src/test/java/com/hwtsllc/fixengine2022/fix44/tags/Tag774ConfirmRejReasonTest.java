@@ -47,6 +47,6 @@ class Tag774ConfirmRejReasonTest {
     }
     @Test
     void FIX0774Test() {
-        FIXType Tag774ConfirmRejReason = FIXType.CONFIRM_REJ_REASON;
+        FIXType fixData = FIXType.CONFIRM_REJ_REASON;
     }
 }

@@ -47,7 +47,7 @@ class Tag680LegBenchmarkPriceTypeTest {
     }
     @Test
     void FIX0680Test() {
-        FIXType Tag680LegBenchmarkPriceType = FIXType.LEG_BENCHMARK_PRICE_TYPE;
+        FIXType fixData = FIXType.LEG_BENCHMARK_PRICE_TYPE;
     }
     @Test
     void Tag0680Test() {

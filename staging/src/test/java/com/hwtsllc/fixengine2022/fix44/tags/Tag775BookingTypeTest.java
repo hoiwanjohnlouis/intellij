@@ -47,6 +47,6 @@ class Tag775BookingTypeTest {
     }
     @Test
     void FIX0775Test() {
-        FIXType Tag775BookingType = FIXType.BOOKING_TYPE;
+        FIXType fixData = FIXType.BOOKING_TYPE;
     }
 }

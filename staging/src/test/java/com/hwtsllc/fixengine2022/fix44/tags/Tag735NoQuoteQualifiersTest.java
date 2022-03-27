@@ -47,6 +47,6 @@ class Tag735NoQuoteQualifiersTest {
     }
     @Test
     void FIX0735Test() {
-        FIXType Tag735NoQuoteQualifiers = FIXType.NO_QUOTE_QUALIFIERS;
+        FIXType fixData = FIXType.NO_QUOTE_QUALIFIERS;
     }
 }

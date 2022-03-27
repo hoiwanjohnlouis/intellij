@@ -47,6 +47,6 @@ class Tag814ApplQueueResolutionTest {
     }
     @Test
     void FIX0814Test() {
-        FIXType Tag814ApplQueueResolution = FIXType.APPL_QUEUE_RESOLUTION;
+        FIXType fixData = FIXType.APPL_QUEUE_RESOLUTION;
     }
 }

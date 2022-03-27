@@ -47,6 +47,6 @@ class Tag791SettlInstReqIDTest {
     }
     @Test
     void FIX0791Test() {
-        FIXType Tag791SettlInstReqID = FIXType.SETTL_INST_REQ_ID;
+        FIXType fixData = FIXType.SETTL_INST_REQ_ID;
     }
 }

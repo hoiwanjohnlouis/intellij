@@ -47,6 +47,6 @@ class Tag879UnderlyingQtyTest {
     }
     @Test
     void FIX0879Test() {
-        FIXType Tag879UnderlyingQty = FIXType.UNDERLYING_QTY;
+        FIXType fixData = FIXType.UNDERLYING_QTY;
     }
 }

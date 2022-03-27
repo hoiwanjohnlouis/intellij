@@ -47,6 +47,6 @@ class Tag839PeggedPriceTest {
     }
     @Test
     void FIX0839Test() {
-        FIXType Tag839PeggedPrice = FIXType.PEGGED_PRICE;
+        FIXType fixData = FIXType.PEGGED_PRICE;
     }
 }

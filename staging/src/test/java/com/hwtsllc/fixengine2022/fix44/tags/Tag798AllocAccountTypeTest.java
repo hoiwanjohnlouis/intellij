@@ -47,6 +47,6 @@ class Tag798AllocAccountTypeTest {
     }
     @Test
     void FIX0798Test() {
-        FIXType Tag798AllocAccountType = FIXType.ALLOC_ACCOUNT_TYPE;
+        FIXType fixData = FIXType.ALLOC_ACCOUNT_TYPE;
     }
 }

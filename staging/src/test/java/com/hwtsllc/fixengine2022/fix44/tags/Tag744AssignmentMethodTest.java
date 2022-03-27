@@ -47,6 +47,6 @@ class Tag744AssignmentMethodTest {
     }
     @Test
     void FIX0744Test() {
-        FIXType Tag744AssignmentMethod = FIXType.ASSIGNMENT_METHOD;
+        FIXType fixData = FIXType.ASSIGNMENT_METHOD;
     }
 }

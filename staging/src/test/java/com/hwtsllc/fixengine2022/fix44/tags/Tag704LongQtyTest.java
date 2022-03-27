@@ -47,6 +47,6 @@ class Tag704LongQtyTest {
     }
     @Test
     void FIX0704Test() {
-        FIXType Tag704LongQty = FIXType.LONG_QTY;
+        FIXType fixData = FIXType.LONG_QTY;
     }
 }

@@ -47,6 +47,6 @@ class Tag860AvgParPxTest {
     }
     @Test
     void FIX0860Test() {
-        FIXType Tag860AvgParPx = FIXType.AVG_PAR_PX;
+        FIXType fixData = FIXType.AVG_PAR_PX;
     }
 }

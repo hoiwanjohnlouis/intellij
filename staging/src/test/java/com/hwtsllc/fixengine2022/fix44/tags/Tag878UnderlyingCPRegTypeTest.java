@@ -47,6 +47,6 @@ class Tag878UnderlyingCPRegTypeTest {
     }
     @Test
     void FIX0878Test() {
-        FIXType Tag878UnderlyingCPRegType = FIXType.UNDERLYING_CP_REGTYPE;
+        FIXType fixData = FIXType.UNDERLYING_CP_REGTYPE;
     }
 }

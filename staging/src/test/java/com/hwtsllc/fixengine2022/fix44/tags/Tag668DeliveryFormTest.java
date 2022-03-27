@@ -47,7 +47,7 @@ class Tag668DeliveryFormTest {
     }
     @Test
     void FIX0668Test() {
-        FIXType Tag668DeliveryForm = FIXType.DELIVERY_FORM;
+        FIXType fixData = FIXType.DELIVERY_FORM;
     }
     @Test
     void Tag0668Test() {

@@ -47,6 +47,6 @@ class Tag881SecondaryTradeReportRefIDTest {
     }
     @Test
     void FIX0881Test() {
-        FIXType Tag881SecondaryTradeReportRefID = FIXType.SECONDARY_TRADE_REPORT_REF_ID;
+        FIXType fixData = FIXType.SECONDARY_TRADE_REPORT_REF_ID;
     }
 }

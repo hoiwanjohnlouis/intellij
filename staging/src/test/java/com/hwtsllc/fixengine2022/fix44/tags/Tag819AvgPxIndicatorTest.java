@@ -47,6 +47,6 @@ class Tag819AvgPxIndicatorTest {
     }
     @Test
     void FIX0819Test() {
-        FIXType Tag819AvgPxIndicator = FIXType.AVG_PX_INDICATOR;
+        FIXType fixData = FIXType.AVG_PX_INDICATOR;
     }
 }

@@ -47,7 +47,7 @@ class Tag908CollRptIDTest {
     }
     @Test
     void FIX0908Test() {
-        FIXType Tag908CollRptID = FIXType.COLL_RPT_ID;
+        FIXType fixData = FIXType.COLL_RPT_ID;
     }
     @Test
     void Tag0908Test() {

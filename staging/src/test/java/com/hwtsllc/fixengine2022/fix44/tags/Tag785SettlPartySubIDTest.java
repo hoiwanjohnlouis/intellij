@@ -47,6 +47,6 @@ class Tag785SettlPartySubIDTest {
     }
     @Test
     void FIX0785Test() {
-        FIXType Tag785SettlPartySubID = FIXType.SETTL_PARTY_SUB_ID;
+        FIXType fixData = FIXType.SETTL_PARTY_SUB_ID;
     }
 }

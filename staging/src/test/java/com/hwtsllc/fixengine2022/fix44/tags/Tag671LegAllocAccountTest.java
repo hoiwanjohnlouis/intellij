@@ -47,7 +47,7 @@ class Tag671LegAllocAccountTest {
     }
     @Test
     void FIX0671Test() {
-        FIXType Tag671LegAllocAccount = FIXType.LEG_ALLOC_ACCOUNT;
+        FIXType fixData = FIXType.LEG_ALLOC_ACCOUNT;
     }
     @Test
     void Tag0671Test() {

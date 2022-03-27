@@ -47,6 +47,6 @@ class Tag843DiscretionLimitTypeTest {
     }
     @Test
     void FIX0843Test() {
-        FIXType Tag843DiscretionLimitType = FIXType.DISCRETION_LIMIT_TYPE;
+        FIXType fixData = FIXType.DISCRETION_LIMIT_TYPE;
     }
 }

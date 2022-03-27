@@ -47,6 +47,6 @@ class Tag882UnderlyingDirtyPriceTest {
     }
     @Test
     void FIX0882Test() {
-        FIXType Tag882UnderlyingDirtyPrice = FIXType.UNDERLYING_DIRTY_PRICE;
+        FIXType fixData = FIXType.UNDERLYING_DIRTY_PRICE;
     }
 }

@@ -47,7 +47,7 @@ class Tag661AllocAcctIDSourceTest {
     }
     @Test
     void FIX0661Test() {
-        FIXType Tag661AllocAcctIDSource = FIXType.ALLOC_ACCT_ID_SOURCE;
+        FIXType fixData = FIXType.ALLOC_ACCT_ID_SOURCE;
     }
     @Test
     void Tag0661Test() {

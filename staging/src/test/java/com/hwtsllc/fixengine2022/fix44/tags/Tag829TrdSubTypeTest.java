@@ -47,6 +47,6 @@ class Tag829TrdSubTypeTest {
     }
     @Test
     void FIX0829Test() {
-        FIXType Tag829TrdSubType = FIXType.TRD_SUB_TYPE;
+        FIXType fixData = FIXType.TRD_SUB_TYPE;
     }
 }

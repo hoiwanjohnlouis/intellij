@@ -47,6 +47,6 @@ class Tag726ResponseDestinationTest {
     }
     @Test
     void FIX0726Test() {
-        FIXType Tag726ResponseDestination = FIXType.RESPONSE_DESTINATION;
+        FIXType fixData = FIXType.RESPONSE_DESTINATION;
     }
 }

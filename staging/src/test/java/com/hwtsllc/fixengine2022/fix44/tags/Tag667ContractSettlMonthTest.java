@@ -47,7 +47,7 @@ class Tag667ContractSettlMonthTest {
     }
     @Test
     void FIX0667Test() {
-        FIXType Tag667ContractSettlMonth = FIXType.CONTRACT_SETTL_MONTH;
+        FIXType fixData = FIXType.CONTRACT_SETTL_MONTH;
     }
     @Test
     void Tag0667Test() {

@@ -47,6 +47,6 @@ class Tag793SecondaryAllocIDTest {
     }
     @Test
     void FIX0793Test() {
-        FIXType Tag793SecondaryAllocID = FIXType.SECONDARY_ALLOC_ID;
+        FIXType fixData = FIXType.SECONDARY_ALLOC_ID;
     }
 }

@@ -47,7 +47,7 @@ class Tag900TotalNetValueTest {
     }
     @Test
     void FIX0900Test() {
-        FIXType Tag900TotalNetValue = FIXType.TOTAL_NET_VALUE;
+        FIXType fixData = FIXType.TOTAL_NET_VALUE;
     }
     @Test
     void Tag0900Test() {

@@ -47,6 +47,6 @@ class Tag824TradeLegRefIDTest {
     }
     @Test
     void FIX0824Test() {
-        FIXType Tag824TradeLegRefID = FIXType.TRADE_LEG_REF_ID;
+        FIXType fixData = FIXType.TRADE_LEG_REF_ID;
     }
 }

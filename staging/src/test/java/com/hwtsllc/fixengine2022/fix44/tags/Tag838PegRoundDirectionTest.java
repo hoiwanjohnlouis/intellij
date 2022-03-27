@@ -47,6 +47,6 @@ class Tag838PegRoundDirectionTest {
     }
     @Test
     void FIX0838Test() {
-        FIXType Tag838PegRoundDirection = FIXType.PEG_ROUND_DIRECTION;
+        FIXType fixData = FIXType.PEG_ROUND_DIRECTION;
     }
 }

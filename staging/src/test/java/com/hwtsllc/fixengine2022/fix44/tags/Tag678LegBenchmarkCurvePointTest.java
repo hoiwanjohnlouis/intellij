@@ -47,7 +47,7 @@ class Tag678LegBenchmarkCurvePointTest {
     }
     @Test
     void FIX0678Test() {
-        FIXType Tag678LegBenchmarkCurvePoint = FIXType.LEG_BENCHMARK_CURVE_POINT;
+        FIXType fixData = FIXType.LEG_BENCHMARK_CURVE_POINT;
     }
     @Test
     void Tag0678Test() {

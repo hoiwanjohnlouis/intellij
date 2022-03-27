@@ -47,6 +47,6 @@ class Tag703PosTypeTest {
     }
     @Test
     void FIX0703Test() {
-        FIXType Tag703PosType = FIXType.POS_TYPE;
+        FIXType fixData = FIXType.POS_TYPE;
     }
 }

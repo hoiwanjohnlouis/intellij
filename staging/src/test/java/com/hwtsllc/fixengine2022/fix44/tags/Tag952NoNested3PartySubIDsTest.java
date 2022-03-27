@@ -47,7 +47,7 @@ class Tag952NoNested3PartySubIDsTest {
     }
     @Test
     void FIX0952Test() {
-        FIXType Tag952NoNested3PartySubIDs = FIXType.NO_NESTED_3_PARTY_SUB_IDS;
+        FIXType fixData = FIXType.NO_NESTED_3_PARTY_SUB_IDS;
     }
     @Test
     void Tag0952Test() {

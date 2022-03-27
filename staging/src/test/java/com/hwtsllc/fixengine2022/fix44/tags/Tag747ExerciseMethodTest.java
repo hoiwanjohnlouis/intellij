@@ -47,6 +47,6 @@ class Tag747ExerciseMethodTest {
     }
     @Test
     void FIX0747Test() {
-        FIXType Tag747ExerciseMethod = FIXType.EXERCISE_METHOD;
+        FIXType fixData = FIXType.EXERCISE_METHOD;
     }
 }

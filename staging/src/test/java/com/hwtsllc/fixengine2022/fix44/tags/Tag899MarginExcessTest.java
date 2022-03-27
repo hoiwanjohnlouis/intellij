@@ -47,6 +47,7 @@ class Tag899MarginExcessTest {
     }
     @Test
     void FIX0899Test() {
-        FIXType Tag899MarginExcess = FIXType.MARGIN_EXCESS;
+        FIXType fixData = FIXType.MARGIN_EXCESS;
+
     }
 }

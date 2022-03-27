@@ -47,7 +47,7 @@ class Tag692QuotePriceTypeTest {
     }
     @Test
     void FIX0692Test() {
-        FIXType Tag692QuotePriceType = FIXType.QUOTE_PRICE_TYPE;
+        FIXType fixData = FIXType.QUOTE_PRICE_TYPE;
     }
     @Test
     void Tag0692Test() {

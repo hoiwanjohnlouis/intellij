@@ -47,7 +47,7 @@ class Tag682LegIOIQtyTest {
     }
     @Test
     void FIX0682Test() {
-        FIXType Tag682LegIOIQty = FIXType.LEG_IOI_QTY;
+        FIXType fixData = FIXType.LEG_IOI_QTY;
     }
     @Test
     void Tag0682Test() {

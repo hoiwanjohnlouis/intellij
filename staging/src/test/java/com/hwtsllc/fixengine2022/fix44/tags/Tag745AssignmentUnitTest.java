@@ -47,6 +47,6 @@ class Tag745AssignmentUnitTest {
     }
     @Test
     void FIX0745Test() {
-        FIXType Tag745AssignmentUnit = FIXType.ASSIGNMENT_UNIT;
+        FIXType fixData = FIXType.ASSIGNMENT_UNIT;
     }
 }

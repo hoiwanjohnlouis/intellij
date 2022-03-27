@@ -47,6 +47,6 @@ class Tag821OrderInputDeviceTest {
     }
     @Test
     void FIX0821Test() {
-        FIXType Tag821OrderInputDevice = FIXType.ORDER_INPUT_DEVICE;
+        FIXType fixData = FIXType.ORDER_INPUT_DEVICE;
     }
 }

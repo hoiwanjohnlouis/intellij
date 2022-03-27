@@ -47,6 +47,6 @@ class Tag741AllocInterestAtMaturityTest {
     }
     @Test
     void FIX0741Test() {
-        FIXType Tag741AllocInterestAtMaturity = FIXType.ALLOC_INTEREST_AT_MATURITY;
+        FIXType fixData = FIXType.ALLOC_INTEREST_AT_MATURITY;
     }
 }

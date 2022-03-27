@@ -47,6 +47,6 @@ class Tag862NoCapacitiesTest {
     }
     @Test
     void FIX0862Test() {
-        FIXType Tag862NoCapacities = FIXType.NO_CAPACITIES;
+        FIXType fixData = FIXType.NO_CAPACITIES;
     }
 }

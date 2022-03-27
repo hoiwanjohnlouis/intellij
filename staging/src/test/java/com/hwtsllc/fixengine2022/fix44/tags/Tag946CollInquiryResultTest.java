@@ -47,7 +47,7 @@ class Tag946CollInquiryResultTest {
     }
     @Test
     void FIX0946Test() {
-        FIXType Tag946CollInquiryResult = FIXType.COLL_INQUIRY_RESULT;
+        FIXType fixData = FIXType.COLL_INQUIRY_RESULT;
     }
     @Test
     void Tag0946Test() {

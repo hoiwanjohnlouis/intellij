@@ -47,7 +47,7 @@ class Tag683NoLegStipulationsTest {
     }
     @Test
     void FIX0683Test() {
-        FIXType Tag683NoLegStipulations = FIXType.NO_LEG_STIPULATIONS;
+        FIXType fixData = FIXType.NO_LEG_STIPULATIONS;
     }
     @Test
     void Tag0683Test() {

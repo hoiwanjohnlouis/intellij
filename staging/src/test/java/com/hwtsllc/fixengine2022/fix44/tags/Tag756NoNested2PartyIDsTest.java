@@ -47,6 +47,6 @@ class Tag756NoNested2PartyIDsTest {
     }
     @Test
     void FIX0756Test() {
-        FIXType Tag756NoNested2PartyIDs = FIXType.NO_NESTED_2_PARTY_IDS;
+        FIXType fixData = FIXType.NO_NESTED_2_PARTY_IDS;
     }
 }

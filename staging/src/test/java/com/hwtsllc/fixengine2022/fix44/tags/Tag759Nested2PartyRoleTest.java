@@ -47,6 +47,6 @@ class Tag759Nested2PartyRoleTest {
     }
     @Test
     void FIX0759Test() {
-        FIXType Tag759Nested2PartyRole = FIXType.NESTED_2_PARTY_ROLE;
+        FIXType fixData = FIXType.NESTED_2_PARTY_ROLE;
     }
 }

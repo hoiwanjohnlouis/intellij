@@ -47,6 +47,6 @@ class Tag743DeliveryDateTest {
     }
     @Test
     void FIX0743Test() {
-        FIXType Tag743DeliveryDate = FIXType.DELIVERY_DATE;
+        FIXType fixData = FIXType.DELIVERY_DATE;
     }
 }

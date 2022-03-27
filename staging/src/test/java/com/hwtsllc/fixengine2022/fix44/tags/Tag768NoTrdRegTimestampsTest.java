@@ -47,6 +47,6 @@ class Tag768NoTrdRegTimestampsTest {
     }
     @Test
     void FIX0768Test() {
-        FIXType Tag768NoTrdRegTimestamps = FIXType.NO_TRD_REG_TIMESTAMPS;
+        FIXType fixData = FIXType.NO_TRD_REG_TIMESTAMPS;
     }
 }

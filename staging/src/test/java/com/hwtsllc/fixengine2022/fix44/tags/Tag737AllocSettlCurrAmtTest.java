@@ -47,6 +47,6 @@ class Tag737AllocSettlCurrAmtTest {
     }
     @Test
     void FIX0737Test() {
-        FIXType Tag737AllocSettlCurrAmt = FIXType.ALLOC_SETTL_CURR_AMT;
+        FIXType fixData = FIXType.ALLOC_SETTL_CURR_AMT;
     }
 }

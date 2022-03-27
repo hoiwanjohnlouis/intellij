@@ -47,7 +47,7 @@ class Tag691PoolTest {
     }
     @Test
     void FIX0691Test() {
-        FIXType Tag691Pool = FIXType.POOL;
+        FIXType fixData = FIXType.POOL;
     }
     @Test
     void Tag0691Test() {

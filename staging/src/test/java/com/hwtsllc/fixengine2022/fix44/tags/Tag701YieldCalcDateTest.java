@@ -47,6 +47,6 @@ class Tag701YieldCalcDateTest {
     }
     @Test
     void FIX0701Test() {
-        FIXType Tag701YieldCalcDate = FIXType.YIELD_CALC_DATE;
+        FIXType fixData = FIXType.YIELD_CALC_DATE;
     }
 }

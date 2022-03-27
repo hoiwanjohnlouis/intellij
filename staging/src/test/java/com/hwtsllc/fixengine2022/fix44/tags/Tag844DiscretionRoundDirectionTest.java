@@ -47,6 +47,6 @@ class Tag844DiscretionRoundDirectionTest {
     }
     @Test
     void FIX0844Test() {
-        FIXType Tag844DiscretionRoundDirection = FIXType.DISCRETION_ROUND_DIRECTION;
+        FIXType fixData = FIXType.DISCRETION_ROUND_DIRECTION;
     }
 }

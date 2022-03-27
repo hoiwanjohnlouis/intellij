@@ -47,7 +47,7 @@ class Tag665ConfirmStatusTest {
     }
     @Test
     void FIX0665Test() {
-        FIXType Tag665ConfirmStatus = FIXType.CONFIRM_STATUS;
+        FIXType fixData = FIXType.CONFIRM_STATUS;
     }
     @Test
     void Tag0665Test() {

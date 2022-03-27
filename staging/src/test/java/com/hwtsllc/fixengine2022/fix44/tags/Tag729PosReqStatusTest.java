@@ -47,6 +47,6 @@ class Tag729PosReqStatusTest {
     }
     @Test
     void FIX0729Test() {
-        FIXType Tag729PosReqStatus = FIXType.POS_REQ_STATUS;
+        FIXType fixData = FIXType.POS_REQ_STATUS;
     }
 }

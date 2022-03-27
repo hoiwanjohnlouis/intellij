@@ -47,7 +47,7 @@ class Tag901CashOutstandingTest {
     }
     @Test
     void FIX0901Test() {
-        FIXType Tag901CashOutstanding = FIXType.CASH_OUTSTANDING;
+        FIXType fixData = FIXType.CASH_OUTSTANDING;
     }
     @Test
     void Tag0901Test() {

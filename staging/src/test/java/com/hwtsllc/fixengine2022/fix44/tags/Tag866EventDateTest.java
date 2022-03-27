@@ -47,6 +47,6 @@ class Tag866EventDateTest {
     }
     @Test
     void FIX0866Test() {
-        FIXType Tag866EventDate = FIXType.EVENT_DATE;
+        FIXType fixData = FIXType.EVENT_DATE;
     }
 }

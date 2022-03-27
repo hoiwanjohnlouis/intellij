@@ -47,7 +47,7 @@ class Tag927UserStatusTextTest {
     }
     @Test
     void FIX0927Test() {
-        FIXType Tag927UserStatusText = FIXType.USER_STATUS_TEXT;
+        FIXType fixData = FIXType.USER_STATUS_TEXT;
     }
     @Test
     void Tag0927Test() {

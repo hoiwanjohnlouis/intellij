@@ -47,6 +47,6 @@ class Tag751TradeReportRejectReasonTest {
     }
     @Test
     void FIX0751Test() {
-        FIXType Tag751TradeReportRejectReason = FIXType.TRADE_REPORT_REJECT_REASON;
+        FIXType fixData = FIXType.TRADE_REPORT_REJECT_REASON;
     }
 }

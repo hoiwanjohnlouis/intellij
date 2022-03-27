@@ -47,6 +47,6 @@ class Tag788TerminationTypeTest {
     }
     @Test
     void FIX0788Test() {
-        FIXType Tag788TerminationType = FIXType.TERMINATION_TYPE;
+        FIXType fixData = FIXType.TERMINATION_TYPE;
     }
 }

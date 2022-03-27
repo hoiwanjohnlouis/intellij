@@ -47,7 +47,7 @@ class Tag905CollAsgnRespTypeTest {
     }
     @Test
     void FIX0905Test() {
-        FIXType Tag905CollAsgnRespType = FIXType.COLL_ASGN_RESP_TYPE;
+        FIXType fixData = FIXType.COLL_ASGN_RESP_TYPE;
     }
     @Test
     void Tag0905Test() {

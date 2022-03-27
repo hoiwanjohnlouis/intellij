@@ -47,7 +47,7 @@ class Tag937NetworkStatusResponseTypeTest {
     }
     @Test
     void FIX0937Test() {
-        FIXType Tag937NetworkStatusResponseType = FIXType.NETWORK_STATUS_RESPONSE_TYPE;
+        FIXType fixData = FIXType.NETWORK_STATUS_RESPONSE_TYPE;
     }
     @Test
     void Tag0937Test() {

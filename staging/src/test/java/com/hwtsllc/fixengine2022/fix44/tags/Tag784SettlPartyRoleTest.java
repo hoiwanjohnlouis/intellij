@@ -47,6 +47,6 @@ class Tag784SettlPartyRoleTest {
     }
     @Test
     void FIX0784Test() {
-        FIXType Tag784SettlPartyRole = FIXType.SETTL_PARTY_ROLE;
+        FIXType fixData = FIXType.SETTL_PARTY_ROLE;
     }
 }

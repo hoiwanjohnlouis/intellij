@@ -47,7 +47,7 @@ class Tag925NewPasswordTest {
     }
     @Test
     void FIX0925Test() {
-        FIXType Tag925NewPassword = FIXType.NEW_PASSWORD;
+        FIXType fixData = FIXType.NEW_PASSWORD;
     }
     @Test
     void Tag0925Test() {

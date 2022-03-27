@@ -47,6 +47,6 @@ class Tag719ContraryInstructionIndicatorTest {
     }
     @Test
     void FIX0719Test() {
-        FIXType Tag719ContraryInstructionIndicator = FIXType.CONTRARY_INSTRUCTION_INDICATOR;
+        FIXType fixData = FIXType.CONTRARY_INSTRUCTION_INDICATOR;
     }
 }

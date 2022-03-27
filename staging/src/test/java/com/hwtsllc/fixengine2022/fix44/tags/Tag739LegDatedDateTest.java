@@ -47,6 +47,6 @@ class Tag739LegDatedDateTest {
     }
     @Test
     void FIX0739Test() {
-        FIXType Tag739LegDatedDate = FIXType.LEG_DATED_DATE;
+        FIXType fixData = FIXType.LEG_DATED_DATE;
     }
 }

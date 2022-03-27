@@ -47,7 +47,7 @@ class Tag669LastParPxTest {
     }
     @Test
     void FIX0669Test() {
-        FIXType Tag669LastParPx = FIXType.LAST_PAR_PX;
+        FIXType fixData = FIXType.LAST_PAR_PX;
     }
     @Test
     void Tag0669Test() {

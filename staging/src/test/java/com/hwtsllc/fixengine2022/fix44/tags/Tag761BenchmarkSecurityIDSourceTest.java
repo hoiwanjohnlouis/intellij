@@ -47,6 +47,6 @@ class Tag761BenchmarkSecurityIDSourceTest {
     }
     @Test
     void FIX0761Test() {
-        FIXType Tag761BenchmarkSecurityIDSource = FIXType.BENCHMARK_SECURITY_ID_SOURCE;
+        FIXType fixData = FIXType.BENCHMARK_SECURITY_ID_SOURCE;
     }
 }

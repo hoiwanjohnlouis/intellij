@@ -47,6 +47,6 @@ class Tag776IndividualAllocRejCodeTest {
     }
     @Test
     void FIX0776Test() {
-        FIXType Tag776IndividualAllocRejCode = FIXType.INDIVIDUAL_ALLOC_REJ_CODE;
+        FIXType fixData = FIXType.INDIVIDUAL_ALLOC_REJ_CODE;
     }
 }

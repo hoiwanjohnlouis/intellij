@@ -47,7 +47,7 @@ class Tag673LegAllocQtyTest {
     }
     @Test
     void FIX0673Test() {
-        FIXType Tag673LegAllocQty = FIXType.LEG_ALLOC_QTY;
+        FIXType fixData = FIXType.LEG_ALLOC_QTY;
     }
     @Test
     void Tag0673Test() {

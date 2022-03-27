@@ -47,7 +47,7 @@ class Tag936NoCompIDsTest {
     }
     @Test
     void FIX0936Test() {
-        FIXType Tag936NoCompIDs = FIXType.NO_COMP_IDS;
+        FIXType fixData = FIXType.NO_COMP_IDS;
     }
     @Test
     void Tag0936Test() {

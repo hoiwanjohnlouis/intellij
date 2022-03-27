@@ -47,6 +47,6 @@ class Tag850TargetStrategyPerformanceTest {
     }
     @Test
     void FIX0850Test() {
-        FIXType Tag850TargetStrategyPerformance = FIXType.TARGET_STRATEGY_PERFORMANCE;
+        FIXType fixData = FIXType.TARGET_STRATEGY_PERFORMANCE;
     }
 }

@@ -47,6 +47,6 @@ class Tag871InstrAttribTypeTest {
     }
     @Test
     void FIX0871Test() {
-        FIXType Tag871InstrAttribType = FIXType.INSTR_ATTRIB_TYPE;
+        FIXType fixData = FIXType.INSTR_ATTRIB_TYPE;
     }
 }

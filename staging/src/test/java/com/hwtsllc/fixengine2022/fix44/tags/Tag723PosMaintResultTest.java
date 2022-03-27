@@ -47,6 +47,6 @@ class Tag723PosMaintResultTest {
     }
     @Test
     void FIX0723Test() {
-        FIXType Tag723PosMaintResult = FIXType.POS_MAINT_RESULT;
+        FIXType fixData = FIXType.POS_MAINT_RESULT;
     }
 }

@@ -47,6 +47,6 @@ class Tag748TotNumTradeReportsTest {
     }
     @Test
     void FIX0748Test() {
-        FIXType Tag748TotNumTradeReports = FIXType.TOT_NUM_TRADE_REPORTS;
+        FIXType fixData = FIXType.TOT_NUM_TRADE_REPORTS;
     }
 }

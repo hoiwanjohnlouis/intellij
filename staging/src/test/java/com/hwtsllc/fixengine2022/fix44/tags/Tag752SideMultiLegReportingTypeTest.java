@@ -47,6 +47,6 @@ class Tag752SideMultiLegReportingTypeTest {
     }
     @Test
     void FIX0752Test() {
-        FIXType Tag752SideMultiLegReportingType = FIXType.SIDE_MULTI_LEG_REPORTING_TYPE;
+        FIXType fixData = FIXType.SIDE_MULTI_LEG_REPORTING_TYPE;
     }
 }

@@ -47,6 +47,6 @@ class Tag863OrderCapacityQtyTest {
     }
     @Test
     void FIX0863Test() {
-        FIXType Tag863OrderCapacityQty = FIXType.ORDER_CAPACITY_QTY;
+        FIXType fixData = FIXType.ORDER_CAPACITY_QTY;
     }
 }

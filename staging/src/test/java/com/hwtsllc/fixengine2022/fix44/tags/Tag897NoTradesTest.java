@@ -47,6 +47,6 @@ class Tag897NoTradesTest {
     }
     @Test
     void FIX0897Test() {
-        FIXType Tag897NoTrades = FIXType.NO_TRADES;
+        FIXType fixData = FIXType.NO_TRADES;
     }
 }

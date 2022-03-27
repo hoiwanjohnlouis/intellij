@@ -47,6 +47,6 @@ class Tag840PegScopeTest {
     }
     @Test
     void FIX0840Test() {
-        FIXType Tag840PegScope = FIXType.PEG_SCOPE;
+        FIXType fixData = FIXType.PEG_SCOPE;
     }
 }

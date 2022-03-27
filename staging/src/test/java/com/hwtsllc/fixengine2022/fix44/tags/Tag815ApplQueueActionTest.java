@@ -47,6 +47,6 @@ class Tag815ApplQueueActionTest {
     }
     @Test
     void FIX0815Test() {
-        FIXType Tag815ApplQueueAction = FIXType.APPL_QUEUE_ACTION;
+        FIXType fixData = FIXType.APPL_QUEUE_ACTION;
     }
 }

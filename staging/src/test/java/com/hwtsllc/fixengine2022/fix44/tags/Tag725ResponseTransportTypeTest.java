@@ -47,6 +47,6 @@ class Tag725ResponseTransportTypeTest {
     }
     @Test
     void FIX0725Test() {
-        FIXType Tag725ResponseTransportType = FIXType.RESPONSE_TRANSPORT_TYPE;
+        FIXType fixData = FIXType.RESPONSE_TRANSPORT_TYPE;
     }
 }

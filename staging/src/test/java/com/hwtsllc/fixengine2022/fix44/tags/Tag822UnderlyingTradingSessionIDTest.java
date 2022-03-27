@@ -47,6 +47,6 @@ class Tag822UnderlyingTradingSessionIDTest {
     }
     @Test
     void FIX0822Test() {
-        FIXType Tag822UnderlyingTradingSessionID = FIXType.UNDERLYING_TRADING_SESSION_ID;
+        FIXType fixData = FIXType.UNDERLYING_TRADING_SESSION_ID;
     }
 }

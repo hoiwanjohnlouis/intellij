@@ -47,6 +47,6 @@ class Tag787DlvyInstTypeTest {
     }
     @Test
     void FIX0787Test() {
-        FIXType Tag787DlvyInstType = FIXType.DLVY_INST_TYPE;
+        FIXType fixData = FIXType.DLVY_INST_TYPE;
     }
 }

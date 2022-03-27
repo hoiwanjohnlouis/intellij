@@ -47,7 +47,7 @@ class Tag912LastRptRequestedTest {
     }
     @Test
     void FIX0912Test() {
-        FIXType Tag912LastRptRequested = FIXType.LAST_RPT_REQUESTED;
+        FIXType fixData = FIXType.LAST_RPT_REQUESTED;
     }
     @Test
     void Tag0912Test() {

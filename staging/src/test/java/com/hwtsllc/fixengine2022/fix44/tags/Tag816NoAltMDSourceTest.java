@@ -47,6 +47,6 @@ class Tag816NoAltMDSourceTest {
     }
     @Test
     void FIX0816Test() {
-        FIXType Tag816NoAltMDSource = FIXType.NO_ALT_MD_SOURCE;
+        FIXType fixData = FIXType.NO_ALT_MD_SOURCE;
     }
 }

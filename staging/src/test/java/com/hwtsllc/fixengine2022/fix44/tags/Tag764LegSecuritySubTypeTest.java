@@ -47,6 +47,6 @@ class Tag764LegSecuritySubTypeTest {
     }
     @Test
     void FIX0764Test() {
-        FIXType Tag764LegSecuritySubType = FIXType.LEG_SECURITY_SUB_TYPE;
+        FIXType fixData = FIXType.LEG_SECURITY_SUB_TYPE;
     }
 }

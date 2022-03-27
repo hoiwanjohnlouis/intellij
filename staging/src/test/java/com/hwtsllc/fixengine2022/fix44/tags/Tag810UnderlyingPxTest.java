@@ -47,6 +47,6 @@ class Tag810UnderlyingPxTest {
     }
     @Test
     void FIX0810Test() {
-        FIXType Tag810UnderlyingPx = FIXType.UNDERLYING_PX;
+        FIXType fixData = FIXType.UNDERLYING_PX;
     }
 }

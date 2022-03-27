@@ -47,6 +47,6 @@ class Tag769TrdRegTimestampTest {
     }
     @Test
     void FIX0769Test() {
-        FIXType Tag769TrdRegTimestamp = FIXType.TRD_REG_TIMESTAMP;
+        FIXType fixData = FIXType.TRD_REG_TIMESTAMP;
     }
 }

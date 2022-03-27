@@ -47,6 +47,6 @@ class Tag716SettlSessIDTest {
     }
     @Test
     void FIX0716Test() {
-        FIXType Tag716SettlSessID = FIXType.SETTL_SESS_ID;
+        FIXType fixData = FIXType.SETTL_SESS_ID;
     }
 }

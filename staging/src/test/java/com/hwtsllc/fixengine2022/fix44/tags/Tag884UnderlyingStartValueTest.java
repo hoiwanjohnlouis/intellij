@@ -47,6 +47,6 @@ class Tag884UnderlyingStartValueTest {
     }
     @Test
     void FIX0884Test() {
-        FIXType Tag884UnderlyingStartValue = FIXType.UNDERLYING_START_VALUE;
+        FIXType fixData = FIXType.UNDERLYING_START_VALUE;
     }
 }

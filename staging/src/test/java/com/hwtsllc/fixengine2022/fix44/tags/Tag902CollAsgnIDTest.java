@@ -47,7 +47,7 @@ class Tag902CollAsgnIDTest {
     }
     @Test
     void FIX0902Test() {
-        FIXType Tag902CollAsgnID = FIXType.COLL_ASGN_ID;
+        FIXType fixData = FIXType.COLL_ASGN_ID;
     }
     @Test
     void Tag0902Test() {

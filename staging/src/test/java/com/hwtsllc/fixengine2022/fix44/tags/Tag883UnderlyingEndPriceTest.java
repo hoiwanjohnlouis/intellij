@@ -47,6 +47,6 @@ class Tag883UnderlyingEndPriceTest {
     }
     @Test
     void FIX0883Test() {
-        FIXType Tag883UnderlyingEndPrice = FIXType.UNDERLYING_END_PRICE;
+        FIXType fixData = FIXType.UNDERLYING_END_PRICE;
     }
 }

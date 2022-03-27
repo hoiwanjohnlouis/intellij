@@ -47,6 +47,6 @@ class Tag799OrderAvgPxTest {
     }
     @Test
     void FIX0799Test() {
-        FIXType Tag799OrderAvgPx = FIXType.ORDER_AVG_PX;
+        FIXType fixData = FIXType.ORDER_AVG_PX;
     }
 }

@@ -47,6 +47,6 @@ class Tag887NoUnderlyingStipsTest {
     }
     @Test
     void FIX0887Test() {
-        FIXType Tag887NoUnderlyingStips = FIXType.NO_UNDERLYING_STIPS;
+        FIXType fixData = FIXType.NO_UNDERLYING_STIPS;
     }
 }

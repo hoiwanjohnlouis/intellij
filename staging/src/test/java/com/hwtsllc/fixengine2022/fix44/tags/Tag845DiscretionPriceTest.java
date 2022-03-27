@@ -47,6 +47,6 @@ class Tag845DiscretionPriceTest {
     }
     @Test
     void FIX0845Test() {
-        FIXType Tag845DiscretionPrice = FIXType.DISCRETION_PRICE;
+        FIXType fixData = FIXType.DISCRETION_PRICE;
     }
 }

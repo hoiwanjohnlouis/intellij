@@ -47,6 +47,6 @@ class Tag848TargetStrategyParametersTest {
     }
     @Test
     void FIX0848Test() {
-        FIXType Tag848TargetStrategyParameters = FIXType.TARGET_STRATEGY_PARAMETERS;
+        FIXType fixData = FIXType.TARGET_STRATEGY_PARAMETERS;
     }
 }

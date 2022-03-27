@@ -47,6 +47,6 @@ class Tag705ShortQtyTest {
     }
     @Test
     void FIX0705Test() {
-        FIXType Tag705ShortQty = FIXType.SHORT_QTY;
+        FIXType fixData = FIXType.SHORT_QTY;
     }
 }

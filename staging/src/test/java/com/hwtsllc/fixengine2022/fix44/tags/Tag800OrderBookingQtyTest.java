@@ -47,6 +47,6 @@ class Tag800OrderBookingQtyTest {
     }
     @Test
     void FIX0800Test() {
-        FIXType Tag800OrderBookingQty = FIXType.ORDER_BOOKING_QTY;
+        FIXType fixData = FIXType.ORDER_BOOKING_QTY;
     }
 }

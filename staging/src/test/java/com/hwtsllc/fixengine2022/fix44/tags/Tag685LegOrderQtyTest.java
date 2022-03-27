@@ -47,7 +47,7 @@ class Tag685LegOrderQtyTest {
     }
     @Test
     void FIX0685Test() {
-        FIXType Tag685LegOrderQty = FIXType.LEG_ORDER_QTY;
+        FIXType fixData = FIXType.LEG_ORDER_QTY;
     }
     @Test
     void Tag0685Test() {

@@ -47,6 +47,6 @@ class Tag802NoPartySubIDsTest {
     }
     @Test
     void FIX0802Test() {
-        FIXType Tag802NoPartySubIDs = FIXType.NO_PARTY_SUB_IDS;
+        FIXType fixData = FIXType.NO_PARTY_SUB_IDS;
     }
 }

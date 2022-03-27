@@ -47,6 +47,6 @@ class Tag773ConfirmTypeTest {
     }
     @Test
     void FIX0773Test() {
-        FIXType Tag773ConfirmType = FIXType.CONFIRM_TYPE;
+        FIXType fixData = FIXType.CONFIRM_TYPE;
     }
 }

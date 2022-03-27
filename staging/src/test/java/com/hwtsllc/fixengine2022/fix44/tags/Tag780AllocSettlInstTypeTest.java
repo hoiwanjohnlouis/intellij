@@ -47,6 +47,6 @@ class Tag780AllocSettlInstTypeTest {
     }
     @Test
     void FIX0780Test() {
-        FIXType Tag780AllocSettlInstType = FIXType.ALLOC_SETTL_INST_TYPE;
+        FIXType fixData = FIXType.ALLOC_SETTL_INST_TYPE;
     }
 }

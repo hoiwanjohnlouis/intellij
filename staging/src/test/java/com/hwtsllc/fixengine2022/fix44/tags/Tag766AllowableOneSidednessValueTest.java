@@ -47,6 +47,6 @@ class Tag766AllowableOneSidednessValueTest {
     }
     @Test
     void FIX0766Test() {
-        FIXType Tag766AllowableOneSidednessValue = FIXType.ALLOWABLE_ONE_SIDEDNESS_VALUE;
+        FIXType fixData = FIXType.ALLOWABLE_ONE_SIDEDNESS_VALUE;
     }
 }

@@ -47,7 +47,7 @@ class Tag686LegPriceTypeTest {
     }
     @Test
     void FIX0686Test() {
-        FIXType Tag686LegPriceType = FIXType.LEG_PRICE_TYPE;
+        FIXType fixData = FIXType.LEG_PRICE_TYPE;
     }
     @Test
     void Tag0686Test() {

@@ -47,6 +47,6 @@ class Tag772ConfirmRefIDTest {
     }
     @Test
     void FIX0772Test() {
-        FIXType Tag772ConfirmRefID = FIXType.CONFIRM_REF_ID;
+        FIXType fixData = FIXType.CONFIRM_REF_ID;
     }
 }

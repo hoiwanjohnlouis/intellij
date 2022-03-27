@@ -47,6 +47,6 @@ class Tag797CopyMsgIndicatorTest {
     }
     @Test
     void FIX0797Test() {
-        FIXType Tag797CopyMsgIndicator = FIXType.COPY_MSG_INDICATOR;
+        FIXType fixData = FIXType.COPY_MSG_INDICATOR;
     }
 }

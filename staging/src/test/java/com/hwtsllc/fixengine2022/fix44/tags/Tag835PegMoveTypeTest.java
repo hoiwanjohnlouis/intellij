@@ -47,6 +47,6 @@ class Tag835PegMoveTypeTest {
     }
     @Test
     void FIX0835Test() {
-        FIXType Tag835PegMoveType = FIXType.PEG_MOVE_TYPE;
+        FIXType fixData = FIXType.PEG_MOVE_TYPE;
     }
 }

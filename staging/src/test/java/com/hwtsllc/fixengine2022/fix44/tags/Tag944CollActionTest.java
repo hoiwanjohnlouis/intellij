@@ -47,7 +47,7 @@ class Tag944CollActionTest {
     }
     @Test
     void FIX0944Test() {
-        FIXType Tag944CollAction = FIXType.COLL_ACTION;
+        FIXType fixData = FIXType.COLL_ACTION;
     }
     @Test
     void Tag0944Test() {

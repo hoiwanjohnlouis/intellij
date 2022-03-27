@@ -47,6 +47,6 @@ class Tag852PublishTrdIndicatorTest {
     }
     @Test
     void FIX0852Test() {
-        FIXType Tag852PublishTrdIndicator = FIXType.PUBLISH_TRD_INDICATOR;
+        FIXType fixData = FIXType.PUBLISH_TRD_INDICATOR;
     }
 }

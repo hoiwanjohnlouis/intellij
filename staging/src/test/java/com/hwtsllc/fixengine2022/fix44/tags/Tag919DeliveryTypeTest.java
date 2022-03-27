@@ -47,7 +47,7 @@ class Tag919DeliveryTypeTest {
     }
     @Test
     void FIX0919Test() {
-        FIXType Tag919DeliveryType = FIXType.DELIVERY_TYPE;
+        FIXType fixData = FIXType.DELIVERY_TYPE;
     }
     @Test
     void Tag0919Test() {

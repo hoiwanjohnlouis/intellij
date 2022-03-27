@@ -47,7 +47,7 @@ class Tag950Nested3PartyIDSourceTest {
     }
     @Test
     void FIX0950Test() {
-        FIXType Tag950Nested3PartyIDSource = FIXType.NESTED_3_PARTY_ID_SOURCE;
+        FIXType fixData = FIXType.NESTED_3_PARTY_ID_SOURCE;
     }
     @Test
     void Tag0950Test() {

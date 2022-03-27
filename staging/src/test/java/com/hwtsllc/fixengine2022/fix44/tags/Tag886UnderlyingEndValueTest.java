@@ -47,6 +47,6 @@ class Tag886UnderlyingEndValueTest {
     }
     @Test
     void FIX0886Test() {
-        FIXType Tag886UnderlyingEndValue = FIXType.UNDERLYING_END_VALUE;
+        FIXType fixData = FIXType.UNDERLYING_END_VALUE;
     }
 }

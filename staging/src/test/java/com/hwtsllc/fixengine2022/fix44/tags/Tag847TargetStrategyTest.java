@@ -47,6 +47,6 @@ class Tag847TargetStrategyTest {
     }
     @Test
     void FIX0847Test() {
-        FIXType Tag847TargetStrategy = FIXType.TARGET_STRATEGY;
+        FIXType fixData = FIXType.TARGET_STRATEGY;
     }
 }

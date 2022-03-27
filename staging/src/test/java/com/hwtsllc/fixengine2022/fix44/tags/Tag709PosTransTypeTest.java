@@ -47,6 +47,6 @@ class Tag709PosTransTypeTest {
     }
     @Test
     void FIX0709Test() {
-        FIXType Tag709PosTransType = FIXType.POS_TRANS_TYPE;
+        FIXType fixData = FIXType.POS_TRANS_TYPE;
     }
 }

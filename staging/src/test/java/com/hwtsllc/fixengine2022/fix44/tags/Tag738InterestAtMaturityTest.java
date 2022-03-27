@@ -47,6 +47,6 @@ class Tag738InterestAtMaturityTest {
     }
     @Test
     void FIX0738Test() {
-        FIXType Tag738InterestAtMaturity = FIXType.INTEREST_AT_MATURITY;
+        FIXType fixData = FIXType.INTEREST_AT_MATURITY;
     }
 }

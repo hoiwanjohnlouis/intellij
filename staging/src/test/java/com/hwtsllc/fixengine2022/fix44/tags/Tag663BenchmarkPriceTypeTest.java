@@ -47,7 +47,7 @@ class Tag663BenchmarkPriceTypeTest {
     }
     @Test
     void FIX0663Test() {
-        FIXType Tag663BenchmarkPriceType = FIXType.BENCHMARK_PRICE_TYPE;
+        FIXType fixData = FIXType.BENCHMARK_PRICE_TYPE;
     }
     @Test
     void Tag0663Test() {

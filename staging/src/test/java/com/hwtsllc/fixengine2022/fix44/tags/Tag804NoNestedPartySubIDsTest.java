@@ -47,6 +47,6 @@ class Tag804NoNestedPartySubIDsTest {
     }
     @Test
     void FIX0804Test() {
-        FIXType Tag804NoNestedPartySubIDs = FIXType.NO_NESTED_PARTY_SUB_IDS;
+        FIXType fixData = FIXType.NO_NESTED_PARTY_SUB_IDS;
     }
 }

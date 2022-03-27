@@ -47,6 +47,6 @@ class Tag828TrdTypeTest {
     }
     @Test
     void FIX0828Test() {
-        FIXType Tag828TrdType = FIXType.TRD_TYPE;
+        FIXType fixData = FIXType.TRD_TYPE;
     }
 }

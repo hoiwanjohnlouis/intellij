@@ -47,7 +47,7 @@ class Tag945CollInquiryStatusTest {
     }
     @Test
     void FIX0945Test() {
-        FIXType Tag945CollInquiryStatus = FIXType.COLL_INQUIRY_STATUS;
+        FIXType fixData = FIXType.COLL_INQUIRY_STATUS;
     }
     @Test
     void Tag0945Test() {

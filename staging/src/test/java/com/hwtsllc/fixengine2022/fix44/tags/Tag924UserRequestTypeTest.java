@@ -47,7 +47,7 @@ class Tag924UserRequestTypeTest {
     }
     @Test
     void FIX0924Test() {
-        FIXType Tag924UserRequestType = FIXType.USER_REQUEST_TYPE;
+        FIXType fixData = FIXType.USER_REQUEST_TYPE;
     }
     @Test
     void Tag0924Test() {

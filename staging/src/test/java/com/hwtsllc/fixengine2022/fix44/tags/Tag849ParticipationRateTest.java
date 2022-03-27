@@ -47,6 +47,6 @@ class Tag849ParticipationRateTest {
     }
     @Test
     void FIX0849Test() {
-        FIXType Tag849ParticipationRate = FIXType.PARTICIPATION_RATE;
+        FIXType fixData = FIXType.PARTICIPATION_RATE;
     }
 }

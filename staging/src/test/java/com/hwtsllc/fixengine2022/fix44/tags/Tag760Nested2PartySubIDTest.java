@@ -47,6 +47,6 @@ class Tag760Nested2PartySubIDTest {
     }
     @Test
     void FIX0760Test() {
-        FIXType Tag760Nested2PartySubID = FIXType.NESTED_2_PARTY_SUB_ID;
+        FIXType fixData = FIXType.NESTED_2_PARTY_SUB_ID;
     }
 }

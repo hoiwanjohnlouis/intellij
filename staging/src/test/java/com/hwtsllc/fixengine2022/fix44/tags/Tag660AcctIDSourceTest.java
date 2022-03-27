@@ -47,7 +47,7 @@ class Tag660AcctIDSourceTest {
     }
     @Test
     void FIX0660Test() {
-        FIXType Tag660AcctIDSource = FIXType.ACCT_ID_SOURCE;
+        FIXType fixData = FIXType.ACCT_ID_SOURCE;
     }
     @Test
     void Tag0660Test() {

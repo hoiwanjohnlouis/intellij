@@ -47,6 +47,6 @@ class Tag712PosMaintActionTest {
     }
     @Test
     void FIX0712Test() {
-        FIXType Tag712PosMaintAction = FIXType.POS_MAINT_ACTION;
+        FIXType fixData = FIXType.POS_MAINT_ACTION;
     }
 }

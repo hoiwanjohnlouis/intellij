@@ -47,6 +47,6 @@ class Tag817AltMDSourceIDTest {
     }
     @Test
     void FIX0817Test() {
-        FIXType Tag817AltMDSourceID = FIXType.ALT_MD_SOURCE_ID;
+        FIXType fixData = FIXType.ALT_MD_SOURCE_ID;
     }
 }

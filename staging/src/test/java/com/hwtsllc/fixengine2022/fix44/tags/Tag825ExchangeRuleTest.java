@@ -47,6 +47,6 @@ class Tag825ExchangeRuleTest {
     }
     @Test
     void FIX0825Test() {
-        FIXType Tag825ExchangeRule = FIXType.EXCHANGE_RULE;
+        FIXType fixData = FIXType.EXCHANGE_RULE;
     }
 }

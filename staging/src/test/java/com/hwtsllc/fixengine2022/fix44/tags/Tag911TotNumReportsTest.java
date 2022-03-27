@@ -47,7 +47,7 @@ class Tag911TotNumReportsTest {
     }
     @Test
     void FIX0911Test() {
-        FIXType Tag911TotNumReports = FIXType.TOT_NUM_REPORTS;
+        FIXType fixData = FIXType.TOT_NUM_REPORTS;
     }
     @Test
     void Tag0911Test() {

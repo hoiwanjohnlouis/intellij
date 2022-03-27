@@ -47,6 +47,6 @@ class Tag732UnderlyingSettlPriceTest {
     }
     @Test
     void FIX0732Test() {
-        FIXType Tag732UnderlyingSettlPrice = FIXType.UNDERLYING_SETTL_PRICE;
+        FIXType fixData = FIXType.UNDERLYING_SETTL_PRICE;
     }
 }

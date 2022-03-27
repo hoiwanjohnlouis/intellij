@@ -47,6 +47,6 @@ class Tag811PriceDeltaTest {
     }
     @Test
     void FIX0811Test() {
-        FIXType Tag811PriceDelta = FIXType.PRICE_DELTA;
+        FIXType fixData = FIXType.PRICE_DELTA;
     }
 }

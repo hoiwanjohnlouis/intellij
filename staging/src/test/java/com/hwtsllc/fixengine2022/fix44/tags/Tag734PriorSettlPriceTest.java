@@ -47,6 +47,6 @@ class Tag734PriorSettlPriceTest {
     }
     @Test
     void FIX0734Test() {
-        FIXType Tag734PriorSettlPrice = FIXType.PRIOR_SETTL_PRICE;
+        FIXType fixData = FIXType.PRIOR_SETTL_PRICE;
     }
 }

@@ -47,6 +47,6 @@ class Tag874InterestAccrualDateTest {
     }
     @Test
     void FIX0874Test() {
-        FIXType Tag874InterestAccrualDate = FIXType.INTEREST_ACCRUAL_DATE;
+        FIXType fixData = FIXType.INTEREST_ACCRUAL_DATE;
     }
 }

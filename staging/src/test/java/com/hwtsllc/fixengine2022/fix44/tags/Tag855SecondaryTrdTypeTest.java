@@ -47,6 +47,6 @@ class Tag855SecondaryTrdTypeTest {
     }
     @Test
     void FIX0855Test() {
-        FIXType Tag855SecondaryTrdType = FIXType.SECONDARY_TRD_TYPE;
+        FIXType fixData = FIXType.SECONDARY_TRD_TYPE;
     }
 }

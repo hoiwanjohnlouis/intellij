@@ -47,6 +47,6 @@ class Tag727TotalNumPosReportsTest {
     }
     @Test
     void FIX0727Test() {
-        FIXType Tag727TotalNumPosReports = FIXType.TOTAL_NUM_POS_REPORTS;
+        FIXType fixData = FIXType.TOTAL_NUM_POS_REPORTS;
     }
 }

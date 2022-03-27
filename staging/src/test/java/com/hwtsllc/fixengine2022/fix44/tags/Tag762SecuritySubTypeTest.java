@@ -47,6 +47,6 @@ class Tag762SecuritySubTypeTest {
     }
     @Test
     void FIX0762Test() {
-        FIXType Tag762SecuritySubType = FIXType.SECURITY_SUB_TYPE;
+        FIXType fixData = FIXType.SECURITY_SUB_TYPE;
     }
 }

@@ -47,7 +47,7 @@ class Tag688LegStipulationTypeTest {
     }
     @Test
     void FIX0688Test() {
-        FIXType Tag688LegStipulationType = FIXType.LEG_STIPULATION_TYPE;
+        FIXType fixData = FIXType.LEG_STIPULATION_TYPE;
     }
     @Test
     void Tag0688Test() {

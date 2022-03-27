@@ -47,6 +47,6 @@ class Tag813ApplQueueDepthTest {
     }
     @Test
     void FIX0813Test() {
-        FIXType Tag813ApplQueueDepth = FIXType.APPL_QUEUE_DEPTH;
+        FIXType fixData = FIXType.APPL_QUEUE_DEPTH;
     }
 }

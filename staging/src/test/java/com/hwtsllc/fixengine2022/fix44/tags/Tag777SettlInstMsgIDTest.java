@@ -47,6 +47,6 @@ class Tag777SettlInstMsgIDTest {
     }
     @Test
     void FIX0777Test() {
-        FIXType Tag777SettlInstMsgID = FIXType.SETTL_INST_MSG_ID;
+        FIXType fixData = FIXType.SETTL_INST_MSG_ID;
     }
 }

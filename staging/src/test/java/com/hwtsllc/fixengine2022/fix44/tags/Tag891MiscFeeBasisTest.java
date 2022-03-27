@@ -47,6 +47,6 @@ class Tag891MiscFeeBasisTest {
     }
     @Test
     void FIX0891Test() {
-        FIXType Tag891MiscFeeBasis = FIXType.MISC_FEE_BASIS;
+        FIXType fixData = FIXType.MISC_FEE_BASIS;
     }
 }

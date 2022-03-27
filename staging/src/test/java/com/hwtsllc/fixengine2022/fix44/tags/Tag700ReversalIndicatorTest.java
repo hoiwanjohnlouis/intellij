@@ -47,6 +47,6 @@ class Tag700ReversalIndicatorTest {
     }
     @Test
     void FIX0700Test() {
-        FIXType Tag700ReversalIndicator = FIXType.REVERSAL_INDICATOR;
+        FIXType fixData = FIXType.REVERSAL_INDICATOR;
     }
 }

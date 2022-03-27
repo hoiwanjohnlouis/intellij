@@ -47,7 +47,7 @@ class Tag935NetworkRequestTypeTest {
     }
     @Test
     void FIX0935Test() {
-        FIXType Tag935NetworkRequestType = FIXType.NETWORK_REQUEST_TYPE;
+        FIXType fixData = FIXType.NETWORK_REQUEST_TYPE;
     }
     @Test
     void Tag0935Test() {

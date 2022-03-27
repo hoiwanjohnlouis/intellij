@@ -47,6 +47,6 @@ class Tag790OrdStatusReqIDTest {
     }
     @Test
     void FIX0790Test() {
-        FIXType Tag790OrdStatusReqID = FIXType.ORD_STATUS_REQ_ID;
+        FIXType fixData = FIXType.ORD_STATUS_REQ_ID;
     }
 }

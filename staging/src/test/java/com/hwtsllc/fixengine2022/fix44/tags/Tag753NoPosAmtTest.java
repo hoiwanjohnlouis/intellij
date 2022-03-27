@@ -47,6 +47,6 @@ class Tag753NoPosAmtTest {
     }
     @Test
     void FIX0753Test() {
-        FIXType Tag753NoPosAmt = FIXType.NO_POS_AMT;
+        FIXType fixData = FIXType.NO_POS_AMT;
     }
 }

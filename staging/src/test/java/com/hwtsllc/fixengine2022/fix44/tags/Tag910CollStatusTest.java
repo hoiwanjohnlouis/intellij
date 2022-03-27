@@ -47,7 +47,7 @@ class Tag910CollStatusTest {
     }
     @Test
     void FIX0910Test() {
-        FIXType Tag910CollStatus = FIXType.COLL_STATUS;
+        FIXType fixData = FIXType.COLL_STATUS;
     }
     @Test
     void Tag0910Test() {

@@ -47,7 +47,7 @@ class Tag956LegInterestAccrualDateTest {
     }
     @Test
     void FIX0956Test() {
-        FIXType Tag956LegInterestAccrualDate = FIXType.LEG_INTEREST_ACCRUAL_DATE;
+        FIXType fixData = FIXType.LEG_INTEREST_ACCRUAL_DATE;
     }
     @Test
     void Tag0956Test() {

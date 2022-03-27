@@ -47,6 +47,6 @@ class Tag861ReportedPxTest {
     }
     @Test
     void FIX0861Test() {
-        FIXType Tag861ReportedPx = FIXType.REPORTED_PX;
+        FIXType fixData = FIXType.REPORTED_PX;
     }
 }

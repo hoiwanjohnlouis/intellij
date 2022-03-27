@@ -47,6 +47,6 @@ class Tag856TradeReportTypeTest {
     }
     @Test
     void FIX0856Test() {
-        FIXType Tag856TradeReportType = FIXType.TRADE_REPORT_TYPE;
+        FIXType fixData = FIXType.TRADE_REPORT_TYPE;
     }
 }

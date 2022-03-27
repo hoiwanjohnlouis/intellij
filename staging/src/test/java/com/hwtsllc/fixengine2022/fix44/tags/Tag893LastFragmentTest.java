@@ -47,6 +47,6 @@ class Tag893LastFragmentTest {
     }
     @Test
     void FIX0893Test() {
-        FIXType Tag893LastFragment = FIXType.LAST_FRAGMENT;
+        FIXType fixData = FIXType.LAST_FRAGMENT;
     }
 }

@@ -47,6 +47,6 @@ class Tag894CollReqIDTest {
     }
     @Test
     void FIX0894Test() {
-        FIXType Tag894CollReqID = FIXType.COLL_REQ_ID;
+        FIXType fixData = FIXType.COLL_REQ_ID;
     }
 }

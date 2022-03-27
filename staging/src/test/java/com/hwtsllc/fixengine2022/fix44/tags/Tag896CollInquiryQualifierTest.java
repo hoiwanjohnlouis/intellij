@@ -47,6 +47,6 @@ class Tag896CollInquiryQualifierTest {
     }
     @Test
     void FIX0896Test() {
-        FIXType Tag896CollInquiryQualifier = FIXType.COLL_INQUIRY_QUALIFIER;
+        FIXType fixData = FIXType.COLL_INQUIRY_QUALIFIER;
     }
 }

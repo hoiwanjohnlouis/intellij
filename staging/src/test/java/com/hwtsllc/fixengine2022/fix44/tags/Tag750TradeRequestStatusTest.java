@@ -47,6 +47,6 @@ class Tag750TradeRequestStatusTest {
     }
     @Test
     void FIX0750Test() {
-        FIXType Tag750TradeRequestStatus = FIXType.TRADE_REQUEST_STATUS;
+        FIXType fixData = FIXType.TRADE_REQUEST_STATUS;
     }
 }

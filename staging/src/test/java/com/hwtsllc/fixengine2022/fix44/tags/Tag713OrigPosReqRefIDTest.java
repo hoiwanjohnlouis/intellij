@@ -47,6 +47,6 @@ class Tag713OrigPosReqRefIDTest {
     }
     @Test
     void FIX0713Test() {
-        FIXType Tag713OrigPosReqRefID = FIXType.ORIG_POS_REQ_REF_ID;
+        FIXType fixData = FIXType.ORIG_POS_REQ_REF_ID;
     }
 }

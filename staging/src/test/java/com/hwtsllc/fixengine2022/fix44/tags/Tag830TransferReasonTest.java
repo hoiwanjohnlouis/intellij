@@ -47,6 +47,6 @@ class Tag830TransferReasonTest {
     }
     @Test
     void FIX0830Test() {
-        FIXType Tag830TransferReason = FIXType.TRANSFER_REASON;
+        FIXType fixData = FIXType.TRANSFER_REASON;
     }
 }

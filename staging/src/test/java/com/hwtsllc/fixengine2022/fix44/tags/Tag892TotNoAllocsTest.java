@@ -47,6 +47,6 @@ class Tag892TotNoAllocsTest {
     }
     @Test
     void FIX0892Test() {
-        FIXType Tag892TotNoAllocs = FIXType.TOT_NO_ALLOCS;
+        FIXType fixData = FIXType.TOT_NO_ALLOCS;
     }
 }

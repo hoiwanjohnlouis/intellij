@@ -47,7 +47,7 @@ class Tag941UnderlyingStrikeCurrencyTest {
     }
     @Test
     void FIX0941Test() {
-        FIXType Tag941UnderlyingStrikeCurrency = FIXType.UNDERLYING_STRIKE_CURRENCY;
+        FIXType fixData = FIXType.UNDERLYING_STRIKE_CURRENCY;
     }
     @Test
     void Tag0941Test() {

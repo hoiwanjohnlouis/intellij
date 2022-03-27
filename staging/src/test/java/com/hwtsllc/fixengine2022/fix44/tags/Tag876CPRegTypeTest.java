@@ -47,6 +47,6 @@ class Tag876CPRegTypeTest {
     }
     @Test
     void FIX0876Test() {
-        FIXType Tag876CPRegType = FIXType.CP_REG_TYPE;
+        FIXType fixData = FIXType.CP_REG_TYPE;
     }
 }

@@ -47,6 +47,6 @@ class Tag714PosMaintRptRefIDTest {
     }
     @Test
     void FIX0714Test() {
-        FIXType Tag714PosMaintRptRefID = FIXType.POS_MAINT_RPT_REF_ID;
+        FIXType fixData = FIXType.POS_MAINT_RPT_REF_ID;
     }
 }

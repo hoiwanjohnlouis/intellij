@@ -47,6 +47,6 @@ class Tag888UnderlyingStipTypeTest {
     }
     @Test
     void FIX0888Test() {
-        FIXType Tag888UnderlyingStipType = FIXType.UNDERLYING_STIP_TYPE;
+        FIXType fixData = FIXType.UNDERLYING_STIP_TYPE;
     }
 }

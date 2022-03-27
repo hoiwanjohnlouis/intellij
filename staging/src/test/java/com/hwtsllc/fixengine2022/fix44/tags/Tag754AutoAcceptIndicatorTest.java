@@ -47,6 +47,6 @@ class Tag754AutoAcceptIndicatorTest {
     }
     @Test
     void FIX0754Test() {
-        FIXType Tag754AutoAcceptIndicator = FIXType.AUTO_ACCEPT_INDICATOR;
+        FIXType fixData = FIXType.AUTO_ACCEPT_INDICATOR;
     }
 }

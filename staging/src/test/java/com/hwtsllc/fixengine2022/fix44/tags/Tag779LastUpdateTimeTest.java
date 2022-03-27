@@ -47,6 +47,6 @@ class Tag779LastUpdateTimeTest {
     }
     @Test
     void FIX0779Test() {
-        FIXType Tag779LastUpdateTime = FIXType.LAST_UPDATE_TIME;
+        FIXType fixData = FIXType.LAST_UPDATE_TIME;
     }
 }

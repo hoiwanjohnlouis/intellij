@@ -47,6 +47,6 @@ class Tag702NoPositionsTest {
     }
     @Test
     void FIX0702Test() {
-        FIXType Tag702NoPositions = FIXType.NO_POSITIONS;
+        FIXType fixData = FIXType.NO_POSITIONS;
     }
 }

@@ -47,6 +47,6 @@ class Tag895CollAsgnReasonTest {
     }
     @Test
     void FIX0895Test() {
-        FIXType Tag895CollAsgnReason = FIXType.COLL_ASGN_REASON;
+        FIXType fixData = FIXType.COLL_ASGN_REASON;
     }
 }

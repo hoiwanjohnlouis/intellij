@@ -47,6 +47,6 @@ class Tag711NoUnderlyingsTest {
     }
     @Test
     void FIX0711Test() {
-        FIXType Tag711NoUnderlyings = FIXType.NO_UNDERLYINGS;
+        FIXType fixData = FIXType.NO_UNDERLYINGS;
     }
 }

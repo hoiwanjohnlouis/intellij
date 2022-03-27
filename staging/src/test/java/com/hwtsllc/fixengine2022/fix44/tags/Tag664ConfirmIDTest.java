@@ -47,7 +47,7 @@ class Tag664ConfirmIDTest {
     }
     @Test
     void FIX0664Test() {
-        FIXType Tag664ConfirmID = FIXType.CONFIRM_ID;
+        FIXType fixData = FIXType.CONFIRM_ID;
     }
     @Test
     void Tag0664Test() {

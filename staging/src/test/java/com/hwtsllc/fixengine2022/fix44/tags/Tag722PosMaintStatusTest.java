@@ -47,6 +47,6 @@ class Tag722PosMaintStatusTest {
     }
     @Test
     void FIX0722Test() {
-        FIXType Tag722PosMaintStatus = FIXType.POS_MAINT_STATUS;
+        FIXType fixData = FIXType.POS_MAINT_STATUS;
     }
 }

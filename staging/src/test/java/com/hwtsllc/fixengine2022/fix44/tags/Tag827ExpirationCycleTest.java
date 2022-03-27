@@ -47,6 +47,6 @@ class Tag827ExpirationCycleTest {
     }
     @Test
     void FIX0827Test() {
-        FIXType Tag827ExpirationCycle = FIXType.EXPIRATION_CYCLE;
+        FIXType fixData = FIXType.EXPIRATION_CYCLE;
     }
 }

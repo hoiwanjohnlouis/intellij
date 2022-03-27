@@ -47,6 +47,6 @@ class Tag826TradeAllocIndicatorTest {
     }
     @Test
     void FIX0826Test() {
-        FIXType Tag826TradeAllocIndicator = FIXType.TRADE_ALLOC_INDICATOR;
+        FIXType fixData = FIXType.TRADE_ALLOC_INDICATOR;
     }
 }

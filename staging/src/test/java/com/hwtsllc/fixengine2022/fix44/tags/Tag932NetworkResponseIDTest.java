@@ -47,7 +47,7 @@ class Tag932NetworkResponseIDTest {
     }
     @Test
     void FIX0932Test() {
-        FIXType Tag932NetworkResponseID = FIXType.NETWORK_RESPONSE_ID;
+        FIXType fixData = FIXType.NETWORK_RESPONSE_ID;
     }
     @Test
     void Tag0932Test() {

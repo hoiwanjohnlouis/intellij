@@ -47,6 +47,6 @@ class Tag718AdjustmentTypeTest {
     }
     @Test
     void FIX0718Test() {
-        FIXType Tag718AdjustmentType = FIXType.ADJUSTMENT_TYPE;
+        FIXType fixData = FIXType.ADJUSTMENT_TYPE;
     }
 }

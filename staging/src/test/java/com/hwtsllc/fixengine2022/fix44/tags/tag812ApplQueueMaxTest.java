@@ -47,6 +47,6 @@ class tag812ApplQueueMaxTest {
     }
     @Test
     void FIX0812Test() {
-        FIXType tag812ApplQueueMax = FIXType.APPL_QUEUE_MAX;
+        FIXType fixData = FIXType.APPL_QUEUE_MAX;
     }
 }

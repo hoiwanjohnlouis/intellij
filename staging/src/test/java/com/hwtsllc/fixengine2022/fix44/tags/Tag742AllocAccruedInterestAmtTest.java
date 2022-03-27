@@ -47,6 +47,6 @@ class Tag742AllocAccruedInterestAmtTest {
     }
     @Test
     void FIX0742Test() {
-        FIXType Tag742AllocAccruedInterestAmt = FIXType.ALLOC_ACCRUED_INTEREST_AMT;
+        FIXType fixData = FIXType.ALLOC_ACCRUED_INTEREST_AMT;
     }
 }

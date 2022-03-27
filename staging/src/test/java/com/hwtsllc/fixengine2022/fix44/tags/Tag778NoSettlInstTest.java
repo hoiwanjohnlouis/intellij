@@ -47,6 +47,6 @@ class Tag778NoSettlInstTest {
     }
     @Test
     void FIX0778Test() {
-        FIXType Tag778NoSettlInst = FIXType.NO_SETTL_INST;
+        FIXType fixData = FIXType.NO_SETTL_INST;
     }
 }

@@ -47,6 +47,6 @@ class Tag842DiscretionOffsetTypeTest {
     }
     @Test
     void FIX0842Test() {
-        FIXType Tag842DiscretionOffsetType = FIXType.DISCRETION_OFFSET_TYPE;
+        FIXType fixData = FIXType.DISCRETION_OFFSET_TYPE;
     }
 }

@@ -47,6 +47,6 @@ class Tag740LegPoolTest {
     }
     @Test
     void FIX0740Test() {
-        FIXType Tag740LegPool = FIXType.LEG_POOL;
+        FIXType fixData = FIXType.LEG_POOL;
     }
 }

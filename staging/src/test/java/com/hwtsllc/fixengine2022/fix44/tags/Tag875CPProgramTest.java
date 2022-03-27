@@ -47,6 +47,6 @@ class Tag875CPProgramTest {
     }
     @Test
     void FIX0875Test() {
-        FIXType Tag875CPProgram = FIXType.CP_PROGRAM;
+        FIXType fixData = FIXType.CP_PROGRAM;
     }
 }

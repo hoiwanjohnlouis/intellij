@@ -47,6 +47,6 @@ class Tag710PosReqIDTest {
     }
     @Test
     void FIX0710Test() {
-        FIXType Tag710PosReqID = FIXType.POS_REQ_ID;
+        FIXType fixData = FIXType.POS_REQ_ID;
     }
 }

@@ -47,6 +47,6 @@ class Tag706PosQtyStatusTest {
     }
     @Test
     void FIX0706Test() {
-        FIXType Tag706PosQtyStatus = FIXType.POS_QTY_STATUS;
+        FIXType fixData = FIXType.POS_QTY_STATUS;
     }
 }

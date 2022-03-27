@@ -47,6 +47,6 @@ class Tag867EventPxTest {
     }
     @Test
     void FIX0867Test() {
-        FIXType Tag867EventPx = FIXType.EVENT_PX;
+        FIXType fixData = FIXType.EVENT_PX;
     }
 }

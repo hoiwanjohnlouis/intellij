@@ -47,6 +47,6 @@ class Tag731SettlPriceTypeTest {
     }
     @Test
     void FIX0731Test() {
-        FIXType Tag731SettlPriceType = FIXType.SETTL_PRICE_TYPE;
+        FIXType fixData = FIXType.SETTL_PRICE_TYPE;
     }
 }

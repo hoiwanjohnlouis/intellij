@@ -47,6 +47,6 @@ class Tag869PctAtRiskTest {
     }
     @Test
     void FIX0869Test() {
-        FIXType Tag869PctAtRisk = FIXType.PCT_AT_RISK;
+        FIXType fixData = FIXType.PCT_AT_RISK;
     }
 }
