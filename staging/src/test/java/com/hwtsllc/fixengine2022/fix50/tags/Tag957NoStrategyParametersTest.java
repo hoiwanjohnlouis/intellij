@@ -26,8 +26,8 @@ class Tag957NoStrategyParametersTest {
     void FIX0957Test() {
         FIXType fixData = FIXType.FIX957_NO_STRATEGY_PARAMETERS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test

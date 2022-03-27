@@ -16,7 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -30,10 +31,19 @@ class Enum265MDUpdateTypeTest {
          * 0-1 msg types
          */
         enumType = Enum265MDUpdateType.FULL_REFRESH;
+        assertEquals("0", enumType.getID());
+        assertEquals("FULL_REFRESH", enumType.getName());
+        assertEquals("0 - Full refresh", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum265MDUpdateType.INCREMENTAL_REFRESH;
-
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        assertEquals("1", enumType.getID());
+        assertEquals("INCREMENTAL_REFRESH", enumType.getName());
+        assertEquals("1 - Incremental refresh", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

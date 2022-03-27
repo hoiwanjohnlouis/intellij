@@ -37,7 +37,6 @@ class Enum216RoutingTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
-
         enumType = Enum216RoutingType.TARGET_LIST;
         assertEquals("2", enumType.getID());
         assertEquals("TARGET_LIST", enumType.getName());
@@ -45,7 +44,6 @@ class Enum216RoutingTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
-
         enumType = Enum216RoutingType.BLOCK_FIRM;
         assertEquals("3", enumType.getID());
         assertEquals("BLOCK_FIRM", enumType.getName());
@@ -53,7 +51,6 @@ class Enum216RoutingTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
-
         enumType = Enum216RoutingType.BLOCK_LIST;
         assertEquals("4", enumType.getID());
         assertEquals("BLOCK_LIST", enumType.getName());

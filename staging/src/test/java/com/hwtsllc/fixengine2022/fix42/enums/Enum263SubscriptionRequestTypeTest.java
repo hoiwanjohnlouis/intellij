@@ -16,7 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -30,11 +31,26 @@ class Enum263SubscriptionRequestTypeTest {
          * 0-2 msg types
          */
         enumType = Enum263SubscriptionRequestType.SNAPSHOT;
+        assertEquals("0", enumType.getID());
+        assertEquals("SNAPSHOT", enumType.getName());
+        assertEquals("0 - Snapshot", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT;
+        assertEquals("1", enumType.getID());
+        assertEquals("SUBSCRIBE_SNAPSHOT", enumType.getName());
+        assertEquals("1 - Snapshot + Updates (Subscribe)", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT;
-
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        assertEquals("2", enumType.getID());
+        assertEquals("UNSUBSCRIBE_SNAPSHOT", enumType.getName());
+        assertEquals("2 - Disable previous Snapshot + Update Request (Unsubscribe)", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *
