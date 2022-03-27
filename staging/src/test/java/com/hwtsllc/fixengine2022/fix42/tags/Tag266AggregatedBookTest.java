@@ -17,18 +17,11 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Tag266AggregatedBookTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1StAccount.class);
 
     @BeforeEach
     void setUp() {
@@ -38,12 +31,6 @@ class Tag266AggregatedBookTest {
     void tearDown() {
     }
 
-    @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
     @Test
     void FIX0266Test() {
         FIXType fix266AggregatedBook = FIXType.FIX266_AGGREGATED_BOOK;
