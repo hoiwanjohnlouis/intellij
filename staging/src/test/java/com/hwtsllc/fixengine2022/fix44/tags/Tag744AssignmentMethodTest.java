@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag744AssignmentMethodTest {
     @Test
     void FIX0744Test() {
-        FIXType fixData = FIXType.ASSIGNMENT_METHOD;
+        FIXType fixData = FIXType.FIX744_ASSIGNMENT_METHOD;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

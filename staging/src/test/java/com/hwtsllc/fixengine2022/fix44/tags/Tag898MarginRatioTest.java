@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag898MarginRatioTest {
     @Test
     void FIX0898Test() {
-        FIXType fixData = FIXType.MARGIN_RATIO;
+        FIXType fixData = FIXType.FIX898_MARGIN_RATIO;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

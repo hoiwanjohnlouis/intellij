@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag776IndividualAllocRejCodeTest {
     @Test
     void FIX0776Test() {
-        FIXType fixData = FIXType.INDIVIDUAL_ALLOC_REJ_CODE;
+        FIXType fixData = FIXType.FIX776_INDIVIDUAL_ALLOC_REJ_CODE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

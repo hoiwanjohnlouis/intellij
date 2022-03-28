@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag837PegLimitTypeTest {
     @Test
     void FIX0837Test() {
-        FIXType fixData = FIXType.PEG_LIMIT_TYPE;
+        FIXType fixData = FIXType.FIX837_PEG_LIMIT_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

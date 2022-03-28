@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag868EventTextTest {
     @Test
     void FIX0868Test() {
-        FIXType fixData = FIXType.EVENT_TEXT;
+        FIXType fixData = FIXType.FIX868_EVENT_TEXT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

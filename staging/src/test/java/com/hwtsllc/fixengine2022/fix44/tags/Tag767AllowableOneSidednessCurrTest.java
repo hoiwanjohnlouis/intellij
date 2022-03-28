@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag767AllowableOneSidednessCurrTest {
     @Test
     void FIX0767Test() {
-        FIXType fixData = FIXType.ALLOWABLE_ONE_SIDEDNESS_CURR;
+        FIXType fixData = FIXType.FIX767_ALLOWABLE_ONE_SIDEDNESS_CURR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

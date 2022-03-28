@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag749TradeRequestResultTest {
     @Test
     void FIX0749Test() {
-        FIXType fixData = FIXType.TRADE_REQUEST_RESULT;
+        FIXType fixData = FIXType.FIX749_TRADE_REQUEST_RESULT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

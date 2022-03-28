@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag794AllocReportTypeTest {
     @Test
     void FIX0794Test() {
-        FIXType fixData = FIXType.ALLOC_REPORT_TYPE;
+        FIXType fixData = FIXType.FIX794_ALLOC_REPORT_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

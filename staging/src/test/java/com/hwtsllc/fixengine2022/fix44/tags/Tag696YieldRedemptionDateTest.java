@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag696YieldRedemptionDateTest {
     @Test
     void FIX0696Test() {
-        FIXType fixData = FIXType.YIELD_REDEMPTION_DATE;
+        FIXType fixData = FIXType.FIX696_YIELD_REDEMPTION_DATE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag863OrderCapacityQtyTest {
     @Test
     void FIX0863Test() {
-        FIXType fixData = FIXType.ORDER_CAPACITY_QTY;
+        FIXType fixData = FIXType.FIX863_ORDER_CAPACITY_QTY;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

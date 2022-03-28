@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag892TotNoAllocsTest {
     @Test
     void FIX0892Test() {
-        FIXType fixData = FIXType.TOT_NO_ALLOCS;
+        FIXType fixData = FIXType.FIX892_TOT_NO_ALLOCS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

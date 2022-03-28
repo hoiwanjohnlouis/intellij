@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag759Nested2PartyRoleTest {
     @Test
     void FIX0759Test() {
-        FIXType fixData = FIXType.NESTED_2_PARTY_ROLE;
+        FIXType fixData = FIXType.FIX759_NESTED_2_PARTY_ROLE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

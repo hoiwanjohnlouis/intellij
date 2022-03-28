@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag676LegBenchmarkCurveCurrencyTest {
     @Test
     void FIX0676Test() {
-        FIXType fixData = FIXType.LEG_BENCHMARK_CURVE_CURRENCY;
+        FIXType fixData = FIXType.FIX676_LEG_BENCHMARK_CURVE_CURRENCY;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

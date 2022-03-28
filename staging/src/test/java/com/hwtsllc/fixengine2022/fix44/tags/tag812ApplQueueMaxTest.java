@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class tag812ApplQueueMaxTest {
     @Test
     void FIX0812Test() {
-        FIXType fixData = FIXType.APPL_QUEUE_MAX;
+        FIXType fixData = FIXType.FIX812_APPL_QUEUE_MAX;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

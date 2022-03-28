@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag671LegAllocAccountTest {
     @Test
     void FIX0671Test() {
-        FIXType fixData = FIXType.LEG_ALLOC_ACCOUNT;
+        FIXType fixData = FIXType.FIX671_LEG_ALLOC_ACCOUNT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

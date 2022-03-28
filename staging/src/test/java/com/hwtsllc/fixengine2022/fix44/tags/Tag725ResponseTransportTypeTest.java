@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag725ResponseTransportTypeTest {
     @Test
     void FIX0725Test() {
-        FIXType fixData = FIXType.RESPONSE_TRANSPORT_TYPE;
+        FIXType fixData = FIXType.FIX725_RESPONSE_TRANSPORT_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

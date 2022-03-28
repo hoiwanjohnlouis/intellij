@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag797CopyMsgIndicatorTest {
     @Test
     void FIX0797Test() {
-        FIXType fixData = FIXType.COPY_MSG_INDICATOR;
+        FIXType fixData = FIXType.FIX797_COPY_MSG_INDICATOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

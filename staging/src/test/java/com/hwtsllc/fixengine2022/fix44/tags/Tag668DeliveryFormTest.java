@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag668DeliveryFormTest {
     @Test
     void FIX0668Test() {
-        FIXType fixData = FIXType.DELIVERY_FORM;
+        FIXType fixData = FIXType.FIX668_DELIVERY_FORM;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

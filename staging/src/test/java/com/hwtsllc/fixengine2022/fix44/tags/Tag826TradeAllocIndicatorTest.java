@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag826TradeAllocIndicatorTest {
     @Test
     void FIX0826Test() {
-        FIXType fixData = FIXType.TRADE_ALLOC_INDICATOR;
+        FIXType fixData = FIXType.FIX826_TRADE_ALLOC_INDICATOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

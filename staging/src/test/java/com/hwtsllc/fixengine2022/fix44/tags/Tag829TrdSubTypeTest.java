@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag829TrdSubTypeTest {
     @Test
     void FIX0829Test() {
-        FIXType fixData = FIXType.TRD_SUB_TYPE;
+        FIXType fixData = FIXType.FIX829_TRD_SUB_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

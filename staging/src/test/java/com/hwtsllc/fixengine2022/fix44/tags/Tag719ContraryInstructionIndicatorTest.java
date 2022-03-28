@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag719ContraryInstructionIndicatorTest {
     @Test
     void FIX0719Test() {
-        FIXType fixData = FIXType.CONTRARY_INSTRUCTION_INDICATOR;
+        FIXType fixData = FIXType.FIX719_CONTRARY_INSTRUCTION_INDICATOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

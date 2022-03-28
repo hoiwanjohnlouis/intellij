@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag741AllocInterestAtMaturityTest {
     @Test
     void FIX0741Test() {
-        FIXType fixData = FIXType.ALLOC_INTEREST_AT_MATURITY;
+        FIXType fixData = FIXType.FIX741_ALLOC_INTEREST_AT_MATURITY;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

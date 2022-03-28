@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag734PriorSettlPriceTest {
     @Test
     void FIX0734Test() {
-        FIXType fixData = FIXType.PRIOR_SETTL_PRICE;
+        FIXType fixData = FIXType.FIX734_PRIOR_SETTL_PRICE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

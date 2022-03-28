@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag878UnderlyingCPRegTypeTest {
     @Test
     void FIX0878Test() {
-        FIXType fixData = FIXType.UNDERLYING_CP_REGTYPE;
+        FIXType fixData = FIXType.FIX878_UNDERLYING_CP_REGTYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

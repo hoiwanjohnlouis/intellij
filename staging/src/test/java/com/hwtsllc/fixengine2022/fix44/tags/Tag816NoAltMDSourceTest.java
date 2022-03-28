@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag816NoAltMDSourceTest {
     @Test
     void FIX0816Test() {
-        FIXType fixData = FIXType.NO_ALT_MD_SOURCE;
+        FIXType fixData = FIXType.FIX816_NO_ALT_MD_SOURCE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag903CollAsgnTransTypeTest {
     @Test
     void FIX0903Test() {
-        FIXType fixData = FIXType.COLL_ASGN_TRANS_TYPE;
+        FIXType fixData = FIXType.FIX903_COLL_ASGN_TRANS_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

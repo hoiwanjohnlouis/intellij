@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag726ResponseDestinationTest {
     @Test
     void FIX0726Test() {
-        FIXType fixData = FIXType.RESPONSE_DESTINATION;
+        FIXType fixData = FIXType.FIX726_RESPONSE_DESTINATION;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

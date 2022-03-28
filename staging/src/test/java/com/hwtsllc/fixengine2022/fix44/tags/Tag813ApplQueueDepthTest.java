@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag813ApplQueueDepthTest {
     @Test
     void FIX0813Test() {
-        FIXType fixData = FIXType.APPL_QUEUE_DEPTH;
+        FIXType fixData = FIXType.FIX813_APPL_QUEUE_DEPTH;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

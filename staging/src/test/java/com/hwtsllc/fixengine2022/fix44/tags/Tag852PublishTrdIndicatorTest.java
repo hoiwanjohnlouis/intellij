@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag852PublishTrdIndicatorTest {
     @Test
     void FIX0852Test() {
-        FIXType fixData = FIXType.PUBLISH_TRD_INDICATOR;
+        FIXType fixData = FIXType.FIX852_PUBLISH_TRD_INDICATOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

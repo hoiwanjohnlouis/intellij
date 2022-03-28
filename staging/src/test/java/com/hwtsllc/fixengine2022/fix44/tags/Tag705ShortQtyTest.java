@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag705ShortQtyTest {
     @Test
     void FIX0705Test() {
-        FIXType fixData = FIXType.SHORT_QTY;
+        FIXType fixData = FIXType.FIX705_SHORT_QTY;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag825ExchangeRuleTest {
     @Test
     void FIX0825Test() {
-        FIXType fixData = FIXType.EXCHANGE_RULE;
+        FIXType fixData = FIXType.FIX825_EXCHANGE_RULE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag752SideMultiLegReportingTypeTest {
     @Test
     void FIX0752Test() {
-        FIXType fixData = FIXType.SIDE_MULTI_LEG_REPORTING_TYPE;
+        FIXType fixData = FIXType.FIX752_SIDE_MULTI_LEG_REPORTING_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag882UnderlyingDirtyPriceTest {
     @Test
     void FIX0882Test() {
-        FIXType fixData = FIXType.UNDERLYING_DIRTY_PRICE;
+        FIXType fixData = FIXType.FIX882_UNDERLYING_DIRTY_PRICE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

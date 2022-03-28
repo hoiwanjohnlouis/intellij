@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag694QuoteRespTypeTest {
     @Test
     void FIX0694Test() {
-        FIXType fixData = FIXType.QUOTE_RESP_TYPE;
+        FIXType fixData = FIXType.FIX694_QUOTE_RESP_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

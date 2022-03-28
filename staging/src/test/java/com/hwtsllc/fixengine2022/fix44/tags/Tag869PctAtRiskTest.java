@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag869PctAtRiskTest {
     @Test
     void FIX0869Test() {
-        FIXType fixData = FIXType.PCT_AT_RISK;
+        FIXType fixData = FIXType.FIX869_PCT_AT_RISK;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

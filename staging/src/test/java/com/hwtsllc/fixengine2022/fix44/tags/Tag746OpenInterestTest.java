@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag746OpenInterestTest {
     @Test
     void FIX0746Test() {
-        FIXType fixData = FIXType.OPEN_INTEREST;
+        FIXType fixData = FIXType.FIX746_OPEN_INTEREST;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

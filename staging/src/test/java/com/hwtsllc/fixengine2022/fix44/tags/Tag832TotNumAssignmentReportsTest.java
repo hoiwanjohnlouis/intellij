@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag832TotNumAssignmentReportsTest {
     @Test
     void FIX0832Test() {
-        FIXType fixData = FIXType.TOT_NUM_ASSIGNMENT_REPORTS;
+        FIXType fixData = FIXType.FIX832_TOT_NUM_ASSIGNMENT_REPORTS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag688LegStipulationTypeTest {
     @Test
     void FIX0688Test() {
-        FIXType fixData = FIXType.LEG_STIPULATION_TYPE;
+        FIXType fixData = FIXType.FIX688_LEG_STIPULATION_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

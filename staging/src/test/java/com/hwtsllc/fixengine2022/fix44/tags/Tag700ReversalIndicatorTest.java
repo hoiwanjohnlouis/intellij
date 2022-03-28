@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag700ReversalIndicatorTest {
     @Test
     void FIX0700Test() {
-        FIXType fixData = FIXType.REVERSAL_INDICATOR;
+        FIXType fixData = FIXType.FIX700_REVERSAL_INDICATOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

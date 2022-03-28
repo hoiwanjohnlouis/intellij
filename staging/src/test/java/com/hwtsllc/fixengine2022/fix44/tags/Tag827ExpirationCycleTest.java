@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag827ExpirationCycleTest {
     @Test
     void FIX0827Test() {
-        FIXType fixData = FIXType.EXPIRATION_CYCLE;
+        FIXType fixData = FIXType.FIX827_EXPIRATION_CYCLE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag799OrderAvgPxTest {
     @Test
     void FIX0799Test() {
-        FIXType fixData = FIXType.ORDER_AVG_PX;
+        FIXType fixData = FIXType.FIX799_ORDER_AVG_PX;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

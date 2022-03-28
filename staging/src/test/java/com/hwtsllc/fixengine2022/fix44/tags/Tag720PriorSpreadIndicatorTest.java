@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag720PriorSpreadIndicatorTest {
     @Test
     void FIX0720Test() {
-        FIXType fixData = FIXType.PRIOR_SPREAD_INDICATOR;
+        FIXType fixData = FIXType.FIX720_PRIOR_SPREAD_INDICATOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

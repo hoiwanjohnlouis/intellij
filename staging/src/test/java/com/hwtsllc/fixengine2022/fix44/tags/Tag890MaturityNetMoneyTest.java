@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag890MaturityNetMoneyTest {
     @Test
     void FIX0890Test() {
-        FIXType fixData = FIXType.MATURITY_NET_MONEY;
+        FIXType fixData = FIXType.FIX890_MATURITY_NET_MONEY;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

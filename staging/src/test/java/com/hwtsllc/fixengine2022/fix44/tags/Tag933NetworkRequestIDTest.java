@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag933NetworkRequestIDTest {
     @Test
     void FIX0933Test() {
-        FIXType fixData = FIXType.NETWORK_REQUEST_ID;
+        FIXType fixData = FIXType.FIX933_NETWORK_REQUEST_ID;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag956LegInterestAccrualDateTest {
     @Test
     void FIX0956Test() {
-        FIXType fixData = FIXType.LEG_INTEREST_ACCRUAL_DATE;
+        FIXType fixData = FIXType.FIX956_LEG_INTEREST_ACCRUAL_DATE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

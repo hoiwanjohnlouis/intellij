@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag899MarginExcessTest {
     @Test
     void FIX0899Test() {
-        FIXType fixData = FIXType.MARGIN_EXCESS;
+        FIXType fixData = FIXType.FIX899_MARGIN_EXCESS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

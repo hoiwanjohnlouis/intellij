@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag858SharedCommissionTest {
     @Test
     void FIX0858Test() {
-        FIXType fixData = FIXType.SHARED_COMMISSION;
+        FIXType fixData = FIXType.FIX858_SHARED_COMMISSION;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

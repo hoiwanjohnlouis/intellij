@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag884UnderlyingStartValueTest {
     @Test
     void FIX0884Test() {
-        FIXType fixData = FIXType.UNDERLYING_START_VALUE;
+        FIXType fixData = FIXType.FIX884_UNDERLYING_START_VALUE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag747ExerciseMethodTest {
     @Test
     void FIX0747Test() {
-        FIXType fixData = FIXType.EXERCISE_METHOD;
+        FIXType fixData = FIXType.FIX747_EXERCISE_METHOD;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

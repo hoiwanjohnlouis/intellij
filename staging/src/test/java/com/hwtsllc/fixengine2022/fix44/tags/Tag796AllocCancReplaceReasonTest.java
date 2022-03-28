@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag796AllocCancReplaceReasonTest {
     @Test
     void FIX0796Test() {
-        FIXType fixData = FIXType.ALLOC_CANC_REPLACE_REASON;
+        FIXType fixData = FIXType.FIX796_ALLOC_CANC_REPLACE_REASON;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

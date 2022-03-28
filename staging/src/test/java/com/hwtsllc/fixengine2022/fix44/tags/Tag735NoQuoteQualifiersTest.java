@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag735NoQuoteQualifiersTest {
     @Test
     void FIX0735Test() {
-        FIXType fixData = FIXType.NO_QUOTE_QUALIFIERS;
+        FIXType fixData = FIXType.FIX735_NO_QUOTE_QUALIFIERS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

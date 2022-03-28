@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag851LastLiquidityIndTest {
     @Test
     void FIX0851Test() {
-        FIXType fixData = FIXType.LAST_LIQUIDITY_IND;
+        FIXType fixData = FIXType.FIX851_LAST_LIQUIDITY_IND;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

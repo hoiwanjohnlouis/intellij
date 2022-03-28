@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag838PegRoundDirectionTest {
     @Test
     void FIX0838Test() {
-        FIXType fixData = FIXType.PEG_ROUND_DIRECTION;
+        FIXType fixData = FIXType.FIX838_PEG_ROUND_DIRECTION;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

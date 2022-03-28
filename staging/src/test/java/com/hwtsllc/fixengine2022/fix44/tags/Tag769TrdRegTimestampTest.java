@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag769TrdRegTimestampTest {
     @Test
     void FIX0769Test() {
-        FIXType fixData = FIXType.TRD_REG_TIMESTAMP;
+        FIXType fixData = FIXType.FIX769_TRD_REG_TIMESTAMP;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

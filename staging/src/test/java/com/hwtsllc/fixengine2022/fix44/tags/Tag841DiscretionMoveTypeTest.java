@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag841DiscretionMoveTypeTest {
     @Test
     void FIX0841Test() {
-        FIXType fixData = FIXType.DISCRETION_MOVE_TYPE;
+        FIXType fixData = FIXType.FIX841_DISCRETION_MOVE_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

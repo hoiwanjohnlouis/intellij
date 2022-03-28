@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag737AllocSettlCurrAmtTest {
     @Test
     void FIX0737Test() {
-        FIXType fixData = FIXType.ALLOC_SETTL_CURR_AMT;
+        FIXType fixData = FIXType.FIX737_ALLOC_SETTL_CURR_AMT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

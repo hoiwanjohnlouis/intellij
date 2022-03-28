@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag900TotalNetValueTest {
     @Test
     void FIX0900Test() {
-        FIXType fixData = FIXType.TOTAL_NET_VALUE;
+        FIXType fixData = FIXType.FIX900_TOTAL_NET_VALUE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

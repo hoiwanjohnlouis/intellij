@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag912LastRptRequestedTest {
     @Test
     void FIX0912Test() {
-        FIXType fixData = FIXType.LAST_RPT_REQUESTED;
+        FIXType fixData = FIXType.FIX912_LAST_RPT_REQUESTED;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

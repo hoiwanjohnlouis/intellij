@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag823UnderlyingTradingSessionSubIDTest {
     @Test
     void FIX0823Test() {
-        FIXType fixData = FIXType.UNDERLYING_TRADING_SESSION_SUB_ID;
+        FIXType fixData = FIXType.FIX823_UNDERLYING_TRADING_SESSION_SUB_ID;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

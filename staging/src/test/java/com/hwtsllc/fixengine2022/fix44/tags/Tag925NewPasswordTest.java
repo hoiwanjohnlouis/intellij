@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag925NewPasswordTest {
     @Test
     void FIX0925Test() {
-        FIXType fixData = FIXType.NEW_PASSWORD;
+        FIXType fixData = FIXType.FIX925_NEW_PASSWORD;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

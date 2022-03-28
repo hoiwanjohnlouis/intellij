@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag714PosMaintRptRefIDTest {
     @Test
     void FIX0714Test() {
-        FIXType fixData = FIXType.POS_MAINT_RPT_REF_ID;
+        FIXType fixData = FIXType.FIX714_POS_MAINT_RPT_REF_ID;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag862NoCapacitiesTest {
     @Test
     void FIX0862Test() {
-        FIXType fixData = FIXType.NO_CAPACITIES;
+        FIXType fixData = FIXType.FIX862_NO_CAPACITIES;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

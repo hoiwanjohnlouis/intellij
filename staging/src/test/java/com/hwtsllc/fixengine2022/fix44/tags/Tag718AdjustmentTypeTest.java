@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag718AdjustmentTypeTest {
     @Test
     void FIX0718Test() {
-        FIXType fixData = FIXType.ADJUSTMENT_TYPE;
+        FIXType fixData = FIXType.FIX718_ADJUSTMENT_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

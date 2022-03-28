@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag846DiscretionScopeTest {
     @Test
     void FIX0846Test() {
-        FIXType fixData = FIXType.DISCRETION_SCOPE;
+        FIXType fixData = FIXType.FIX846_DISCRETION_SCOPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

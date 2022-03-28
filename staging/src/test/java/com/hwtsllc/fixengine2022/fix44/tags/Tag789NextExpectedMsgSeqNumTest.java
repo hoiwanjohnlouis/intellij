@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag789NextExpectedMsgSeqNumTest {
     @Test
     void FIX0789Test() {
-        FIXType fixData = FIXType.NEXT_EXPECTED_MSG_SEQ_NUM;
+        FIXType fixData = FIXType.FIX789_NEXT_EXPECTED_MSG_SEQ_NUM;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
