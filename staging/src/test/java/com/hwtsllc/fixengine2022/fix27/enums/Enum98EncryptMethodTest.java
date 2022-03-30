@@ -16,13 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum98EncryptMethodTest {
-
     @Test
     void Enum0098Test() {
         Enum98EncryptMethod enumType;
@@ -34,56 +34,56 @@ class Enum98EncryptMethodTest {
         assertEquals("0", enumType.getID());
         assertEquals("NONE_OR_OTHER", enumType.getName());
         assertEquals("0 - None / Other", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum98EncryptMethod.PKCS;
         assertEquals("1", enumType.getID());
         assertEquals("PKCS", enumType.getName());
         assertEquals("1 - PKCS (Proprietary)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum98EncryptMethod.DES_ECB;
         assertEquals("2", enumType.getID());
         assertEquals("DES_ECB", enumType.getName());
         assertEquals("2 - DES (ECB Mode)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum98EncryptMethod.PKCS_DES;
         assertEquals("3", enumType.getID());
         assertEquals("PKCS_DES", enumType.getName());
         assertEquals("3 - PKCS / DES (Proprietary)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum98EncryptMethod.PGP_DES;
         assertEquals("4", enumType.getID());
         assertEquals("PGP_DES", enumType.getName());
         assertEquals("4 - PGP / DES (Defunct)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum98EncryptMethod.PGP_DES_MD5;
         assertEquals("5", enumType.getID());
         assertEquals("PGP_DES_MD5", enumType.getName());
         assertEquals("5 - PGP / DES-MD5 (See app note on FIX web site)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum98EncryptMethod.PEM_DES_MD5;
         assertEquals("6", enumType.getID());
         assertEquals("PEM_DES_MD5", enumType.getName());
         assertEquals("6 - PEM / DES-MD5 (see app note on FIX web site)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

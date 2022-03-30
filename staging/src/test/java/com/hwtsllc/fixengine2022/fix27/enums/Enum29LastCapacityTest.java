@@ -16,47 +16,50 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum29LastCapacityTest {
-
     @Test
     void Enum0029Test() {
         Enum29LastCapacity enumType;
 
+        /*
+         * 1-4
+         */
         enumType = Enum29LastCapacity.AGENT;
         assertEquals("1", enumType.getID());
         assertEquals("AGENT", enumType.getName());
         assertEquals("1 - Agent", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum29LastCapacity.CROSS_AS_AGENT;
         assertEquals("2", enumType.getID());
         assertEquals("CROSS_AS_AGENT", enumType.getName());
         assertEquals("2 - Cross as agent", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum29LastCapacity.CROSS_AS_PRINCIPAL;
         assertEquals("3", enumType.getID());
         assertEquals("CROSS_AS_PRINCIPAL", enumType.getName());
         assertEquals("3 - Cross as principal", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum29LastCapacity.PRINCIPAL;
         assertEquals("4", enumType.getID());
         assertEquals("PRINCIPAL", enumType.getName());
         assertEquals("4 - Principal", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

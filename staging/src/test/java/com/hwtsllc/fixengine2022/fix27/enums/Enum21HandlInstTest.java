@@ -16,39 +16,42 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum21HandlInstTest {
-
     @Test
     void Enum0021Test() {
         Enum21HandlInst enumType;
 
+        /*
+         *  1-3
+         */
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER;
         assertEquals("1", enumType.getID());
         assertEquals("AUTOMATIC_EXECUTION_NO_BROKER", enumType.getName());
         assertEquals("1 - Automated execution order, private, no Broker intervention", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY;
         assertEquals("2", enumType.getID());
         assertEquals("AUTOMATIC_EXECUTION_BROKER_OKAY", enumType.getName());
         assertEquals("2 - Automated execution order, public, Broker intervention OK", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum21HandlInst.MANUAL_ORDER_BEST_EXECUTION;
         assertEquals("3", enumType.getID());
         assertEquals("MANUAL_ORDER_BEST_EXECUTION", enumType.getName());
         assertEquals("3 - Manual order, best execution", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }
