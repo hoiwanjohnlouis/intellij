@@ -16,7 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum281MDReqRejReasonTest {
     @Test
@@ -27,23 +30,77 @@ class Enum281MDReqRejReasonTest {
          * 0-9 msg types
          */
         enumType = Enum281MDReqRejReason.UNKNOWN_SYMBOL;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.DUPLICATE_MDREQID;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         /*
          * A-D msg types
          */
         enumType = Enum281MDReqRejReason.UNSUPPORTED_SCOPE;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum281MDReqRejReason.INSUFFICIENT_CREDIT;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

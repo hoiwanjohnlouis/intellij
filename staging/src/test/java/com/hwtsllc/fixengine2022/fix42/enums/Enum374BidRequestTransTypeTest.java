@@ -16,7 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum374BidRequestTransTypeTest {
     @Test
@@ -27,7 +30,14 @@ class Enum374BidRequestTransTypeTest {
          * C, and N msg types
          */
         enumType = Enum374BidRequestTransType.CANCEL;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum374BidRequestTransType.NEW;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

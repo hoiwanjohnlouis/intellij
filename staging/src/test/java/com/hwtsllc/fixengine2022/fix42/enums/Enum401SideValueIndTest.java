@@ -16,7 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum401SideValueIndTest {
     @Test
@@ -27,7 +30,14 @@ class Enum401SideValueIndTest {
          * 1-2 msg types
          */
         enumType = Enum401SideValueInd.SIDE_VALUE_1;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum401SideValueInd.SIDE_VALUE_2;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

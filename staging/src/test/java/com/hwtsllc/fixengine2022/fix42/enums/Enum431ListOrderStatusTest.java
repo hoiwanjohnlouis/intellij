@@ -16,7 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum431ListOrderStatusTest {
     @Test
@@ -27,12 +30,39 @@ class Enum431ListOrderStatusTest {
          * 1-7 msg types
          */
         enumType = Enum431ListOrderStatus.IN_BIDDING_PROCESS;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum431ListOrderStatus.EXECUTING;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum431ListOrderStatus.CANCELLING;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum431ListOrderStatus.ALERT;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum431ListOrderStatus.ALL_DONE;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum431ListOrderStatus.REJECT;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

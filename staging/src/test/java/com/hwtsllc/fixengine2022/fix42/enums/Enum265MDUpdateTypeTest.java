@@ -37,6 +37,7 @@ class Enum265MDUpdateTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum265MDUpdateType.INCREMENTAL_REFRESH;
         assertEquals("1", enumType.getID());
         assertEquals("INCREMENTAL_REFRESH", enumType.getName());

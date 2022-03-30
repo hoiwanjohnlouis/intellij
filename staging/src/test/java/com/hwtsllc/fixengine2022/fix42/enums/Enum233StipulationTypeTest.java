@@ -37,6 +37,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.AUTO_REINVESTMENT;
         assertEquals("AUTOREINV", enumType.getID());
         assertEquals("AUTO_REINVESTMENT", enumType.getName());
@@ -44,6 +45,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.BANK_QUALIFIED;
         assertEquals("BANKQUAL", enumType.getID());
         assertEquals("BANK_QUALIFIED", enumType.getName());
@@ -51,6 +53,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.BARGAIN_CONDITIONS;
         assertEquals("BGNCON", enumType.getID());
         assertEquals("BARGAIN_CONDITIONS", enumType.getName());
@@ -58,6 +61,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.COUPON_RANGE;
         assertEquals("COUPON", enumType.getID());
         assertEquals("COUPON_RANGE", enumType.getName());
@@ -73,6 +77,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.CUSTOM_START_END_DATE;
         assertEquals("CUSTOMDATE", enumType.getID());
         assertEquals("CUSTOM_START_END_DATE", enumType.getName());
@@ -80,6 +85,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.GEOGRAPHIC_AND_PERCENT_RANGE;
         assertEquals("GEOG", enumType.getID());
         assertEquals("GEOGRAPHIC_AND_PERCENT_RANGE", enumType.getName());
@@ -88,6 +94,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.VALUATION_DISCOUNT;
         assertEquals("HAIRCUT", enumType.getID());
         assertEquals("VALUATION_DISCOUNT", enumType.getName());
@@ -95,6 +102,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.INSURED;
         assertEquals("INSURED", enumType.getID());
         assertEquals("INSURED", enumType.getName());
@@ -110,6 +118,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.ISSUERS_TICKER;
         assertEquals("ISSUER", enumType.getID());
         assertEquals("ISSUERS_TICKER", enumType.getName());
@@ -117,6 +126,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.ISSUE_SIZE_RANGE;
         assertEquals("ISSUESIZE", enumType.getID());
         assertEquals("ISSUE_SIZE_RANGE", enumType.getName());
@@ -124,6 +134,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.LOOKBACK_DAYS;
         assertEquals("LOOKBACK", enumType.getID());
         assertEquals("LOOKBACK_DAYS", enumType.getName());
@@ -131,6 +142,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.EXPLICIT_LOT_IDENTIFIER;
         assertEquals("LOT", enumType.getID());
         assertEquals("EXPLICIT_LOT_IDENTIFIER", enumType.getName());
@@ -147,6 +159,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.MATURITY_YEAR_AND_MONTH;
         assertEquals("MAT", enumType.getID());
         assertEquals("MATURITY_YEAR_AND_MONTH", enumType.getName());
@@ -154,6 +167,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.MATURITY_RANGE;
         assertEquals("MATURITY", enumType.getID());
         assertEquals("MATURITY_RANGE", enumType.getName());
@@ -161,6 +175,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.MAXIMUM_SUBSTITUTIONS_REPO;
         assertEquals("MAXSUBS", enumType.getID());
         assertEquals("MAXIMUM_SUBSTITUTIONS_REPO", enumType.getName());
@@ -168,6 +183,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.MINIMUM_DENOMINATION;
         assertEquals("MINDNOM", enumType.getID());
         assertEquals("MINIMUM_DENOMINATION", enumType.getName());
@@ -183,6 +199,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.MINIMUM_QUANTITY;
         assertEquals("MINQTY", enumType.getID());
         assertEquals("MINIMUM_QUANTITY", enumType.getName());
@@ -190,6 +207,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.PAYMENT_FREQUENCY;
         assertEquals("PAYFREQ", enumType.getID());
         assertEquals("PAYMENT_FREQUENCY", enumType.getName());
@@ -197,6 +215,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.NUMBER_OF_PIECES;
         assertEquals("PIECES", enumType.getID());
         assertEquals("NUMBER_OF_PIECES", enumType.getName());
@@ -204,6 +223,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.POOLS_MAXIMUM;
         assertEquals("PMAX", enumType.getID());
         assertEquals("POOLS_MAXIMUM", enumType.getName());
@@ -219,6 +239,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.POOLS_PER_MILLION;
         assertEquals("PPM", enumType.getID());
         assertEquals("POOLS_PER_MILLION", enumType.getName());
@@ -226,6 +247,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.POOLS_PER_TRADE;
         assertEquals("PPT", enumType.getID());
         assertEquals("POOLS_PER_TRADE", enumType.getName());
@@ -233,6 +255,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.PRICE_RANGE;
         assertEquals("PRICE", enumType.getID());
         assertEquals("PRICE_RANGE", enumType.getName());
@@ -240,6 +263,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.PRICING_FREQUENCY;
         assertEquals("PRICEFREQ", enumType.getID());
         assertEquals("PRICING_FREQUENCY", enumType.getName());
@@ -255,6 +279,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.CALL_PROTECTION;
         assertEquals("PROTECT", enumType.getID());
         assertEquals("CALL_PROTECTION", enumType.getName());
@@ -262,6 +287,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.PURPOSE;
         assertEquals("PURPOSE", enumType.getID());
         assertEquals("PURPOSE", enumType.getName());
@@ -269,6 +295,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.BENCHMARK_PRICE_SOURCE;
         assertEquals("PXSOURCE", enumType.getID());
         assertEquals("BENCHMARK_PRICE_SOURCE", enumType.getName());
@@ -276,6 +303,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.RATING_SOURCE_AND_RANGE;
         assertEquals("RATING", enumType.getID());
         assertEquals("RATING_SOURCE_AND_RANGE", enumType.getName());
@@ -293,6 +321,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.RESTRICTED;
         assertEquals("RESTRICTED", enumType.getID());
         assertEquals("RESTRICTED", enumType.getName());
@@ -300,6 +329,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.MARKET_SECTOR;
         assertEquals("SECTOR", enumType.getID());
         assertEquals("MARKET_SECTOR", enumType.getName());
@@ -307,6 +337,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.SECURITY_TYPE;
         assertEquals("SECTYPE", enumType.getID());
         assertEquals("SECURITY_TYPE", enumType.getName());
@@ -314,6 +345,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.STRUCTURE;
         assertEquals("STRUCT", enumType.getID());
         assertEquals("STRUCTURE", enumType.getName());
@@ -329,6 +361,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.SUBSTITUTIONS_LEFT_REPO;
         assertEquals("SUBSLEFT", enumType.getID());
         assertEquals("SUBSTITUTIONS_LEFT_REPO", enumType.getName());
@@ -336,6 +369,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.FREEFORM_TEXT;
         assertEquals("TEXT", enumType.getID());
         assertEquals("FREEFORM_TEXT", enumType.getName());
@@ -343,6 +377,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.TRADE_VARIANCE;
         assertEquals("TRDVAR", enumType.getID());
         assertEquals("TRADE_VARIANCE", enumType.getName());
@@ -351,6 +386,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.WEIGHTED_AVERAGE_COUPON;
         assertEquals("WAC", enumType.getID());
         assertEquals("WEIGHTED_AVERAGE_COUPON", enumType.getName());
@@ -369,6 +405,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.WEIGHTED_AVERAGE_LOAN_AGE;
         assertEquals("WALA", enumType.getID());
         assertEquals("WEIGHTED_AVERAGE_LOAN_AGE", enumType.getName());
@@ -377,6 +414,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.WEIGHTED_AVERAGE_MATURITY;
         assertEquals("WAM", enumType.getID());
         assertEquals("WEIGHTED_AVERAGE_MATURITY", enumType.getName());
@@ -384,6 +422,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.WHOLE_POOL;
         assertEquals("WHOLE", enumType.getID());
         assertEquals("WHOLE_POOL", enumType.getName());
@@ -391,6 +430,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.YIELD_RANGE;
         assertEquals("YIELD", enumType.getID());
         assertEquals("YIELD_RANGE", enumType.getName());
@@ -410,6 +450,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.CONSTANT_PREPAYMENT_PENALTY;
         assertEquals("CPP", enumType.getID());
         assertEquals("CONSTANT_PREPAYMENT_PENALTY", enumType.getName());
@@ -417,6 +458,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.CONSTANT_PREPAYMENT_RATE;
         assertEquals("CPR", enumType.getID());
         assertEquals("CONSTANT_PREPAYMENT_RATE", enumType.getName());
@@ -424,6 +466,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.CONSTANT_PREPAYMENT_YIELD;
         assertEquals("CPY", enumType.getID());
         assertEquals("CONSTANT_PREPAYMENT_YIELD", enumType.getName());
@@ -431,6 +474,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.FINAL_CPR_HOME_EQUITY;
         assertEquals("HEP", enumType.getID());
         assertEquals("FINAL_CPR_HOME_EQUITY", enumType.getName());
@@ -446,6 +490,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.MONTHLY_PREPAYMENT_RATE;
         assertEquals("MPR", enumType.getID());
         assertEquals("MONTHLY_PREPAYMENT_RATE", enumType.getName());
@@ -453,6 +498,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.PERCENT_PROSPECTUS_PREPAYMENT;
         assertEquals("PPC", enumType.getID());
         assertEquals("PERCENT_PROSPECTUS_PREPAYMENT", enumType.getName());
@@ -460,6 +506,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.PERCENT_BMA_PREPAYMENT;
         assertEquals("PSA", enumType.getID());
         assertEquals("PERCENT_BMA_PREPAYMENT", enumType.getName());
@@ -467,6 +514,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum233StipulationType.SINGLE_MONTHLY_MORTALITY;
         assertEquals("SMM", enumType.getID());
         assertEquals("SINGLE_MONTHLY_MORTALITY", enumType.getName());

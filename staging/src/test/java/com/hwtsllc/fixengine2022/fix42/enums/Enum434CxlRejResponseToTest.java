@@ -37,6 +37,7 @@ class Enum434CxlRejResponseToTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST;
         assertEquals("2", enumType.getID());
         assertEquals("ORDER_MODIFICATION_REQUEST", enumType.getName());

@@ -16,9 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum279MDUpdateActionTest {
@@ -30,13 +30,29 @@ class Enum279MDUpdateActionTest {
          * 0-4 msg types
          */
         enumType = Enum279MDUpdateAction.NEW;
-        enumType = Enum279MDUpdateAction.CHANGE;
-        enumType = Enum279MDUpdateAction.DELETE;
-        enumType = Enum279MDUpdateAction.DELETE_THRU;
-        enumType = Enum279MDUpdateAction.DELETE_FROM;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        enumType = Enum279MDUpdateAction.CHANGE;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum279MDUpdateAction.DELETE;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum279MDUpdateAction.DELETE_THRU;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum279MDUpdateAction.DELETE_FROM;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

@@ -37,6 +37,7 @@ class Enum442MultiLegReportingTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY;
         assertEquals("2", enumType.getID());
         assertEquals("INDIVIDUAL_LEG_SECURITY", enumType.getName());
@@ -44,6 +45,7 @@ class Enum442MultiLegReportingTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum442MultiLegReportingType.MULTI_LEG_SECURITY;
         assertEquals("3", enumType.getID());
         assertEquals("MULTI_LEG_SECURITY", enumType.getName());

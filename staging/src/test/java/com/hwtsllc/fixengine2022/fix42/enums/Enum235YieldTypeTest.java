@@ -37,6 +37,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.ANNUAL;
         assertEquals("ANNUAL", enumType.getID());
         assertEquals("ANNUAL", enumType.getName());
@@ -44,6 +45,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.ATISSUE;
         assertEquals("ATISSUE", enumType.getID());
         assertEquals("ATISSUE", enumType.getName());
@@ -51,6 +53,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.AVGMATURITY;
         assertEquals("AVGMATURITY", enumType.getID());
         assertEquals("AVGMATURITY", enumType.getName());
@@ -58,6 +61,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.BOOK;
         assertEquals("BOOK", enumType.getID());
         assertEquals("BOOK", enumType.getName());
@@ -65,6 +69,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.CALL;
         assertEquals("CALL", enumType.getID());
         assertEquals("CALL", enumType.getName());
@@ -72,6 +77,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.CHANGE;
         assertEquals("CHANGE", enumType.getID());
         assertEquals("CHANGE", enumType.getName());
@@ -79,6 +85,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.CLOSE;
         assertEquals("CLOSE", enumType.getID());
         assertEquals("CLOSE", enumType.getName());
@@ -86,6 +93,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.COMPOUND;
         assertEquals("COMPOUND", enumType.getID());
         assertEquals("COMPOUND", enumType.getName());
@@ -93,6 +101,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.CURRENT;
         assertEquals("CURRENT", enumType.getID());
         assertEquals("CURRENT", enumType.getName());
@@ -100,6 +109,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.GOVTEQUIV;
         assertEquals("GOVTEQUIV", enumType.getID());
         assertEquals("GOVTEQUIV", enumType.getName());
@@ -107,6 +117,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.GROSS;
         assertEquals("GROSS", enumType.getID());
         assertEquals("GROSS", enumType.getName());
@@ -114,6 +125,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.INFLATION;
         assertEquals("INFLATION", enumType.getID());
         assertEquals("INFLATION", enumType.getName());
@@ -121,6 +133,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.INVERSEFLOATER;
         assertEquals("INVERSEFLOATER", enumType.getID());
         assertEquals("INVERSEFLOATER", enumType.getName());
@@ -128,6 +141,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.LASTCLOSE;
         assertEquals("LASTCLOSE", enumType.getID());
         assertEquals("LASTCLOSE", enumType.getName());
@@ -135,6 +149,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.LASTMONTH;
         assertEquals("LASTMONTH", enumType.getID());
         assertEquals("LASTMONTH", enumType.getName());
@@ -142,6 +157,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.LASTQUARTER;
         assertEquals("LASTQUARTER", enumType.getID());
         assertEquals("LASTQUARTER", enumType.getName());
@@ -149,6 +165,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.LASTYEAR;
         assertEquals("LASTYEAR", enumType.getID());
         assertEquals("LASTYEAR", enumType.getName());
@@ -156,6 +173,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.LONGAVGLIFE;
         assertEquals("LONGAVGLIFE", enumType.getID());
         assertEquals("LONGAVGLIFE", enumType.getName());
@@ -163,6 +181,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.MARK;
         assertEquals("MARK", enumType.getID());
         assertEquals("MARK", enumType.getName());
@@ -170,6 +189,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.MATURITY;
         assertEquals("MATURITY", enumType.getID());
         assertEquals("MATURITY", enumType.getName());
@@ -177,6 +197,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.NEXTREFUND;
         assertEquals("NEXTREFUND", enumType.getID());
         assertEquals("NEXTREFUND", enumType.getName());
@@ -184,6 +205,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.OPENAVG;
         assertEquals("OPENAVG", enumType.getID());
         assertEquals("OPENAVG", enumType.getName());
@@ -191,6 +213,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.PREVCLOSE;
         assertEquals("PREVCLOSE", enumType.getID());
         assertEquals("PREVCLOSE", enumType.getName());
@@ -198,6 +221,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.PROCEEDS;
         assertEquals("PROCEEDS", enumType.getID());
         assertEquals("PROCEEDS", enumType.getName());
@@ -205,6 +229,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.PUT;
         assertEquals("PUT", enumType.getID());
         assertEquals("PUT", enumType.getName());
@@ -212,6 +237,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.SEMIANNUAL;
         assertEquals("SEMIANNUAL", enumType.getID());
         assertEquals("SEMIANNUAL", enumType.getName());
@@ -219,6 +245,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.SHORTAVGLIFE;
         assertEquals("SHORTAVGLIFE", enumType.getID());
         assertEquals("SHORTAVGLIFE", enumType.getName());
@@ -226,6 +253,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.SIMPLE;
         assertEquals("SIMPLE", enumType.getID());
         assertEquals("SIMPLE", enumType.getName());
@@ -233,6 +261,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.TAXEQUIV;
         assertEquals("TAXEQUIV", enumType.getID());
         assertEquals("TAXEQUIV", enumType.getName());
@@ -240,6 +269,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.TENDER;
         assertEquals("TENDER", enumType.getID());
         assertEquals("TENDER", enumType.getName());
@@ -247,6 +277,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.TRUE;
         assertEquals("TRUE", enumType.getID());
         assertEquals("TRUE", enumType.getName());
@@ -254,6 +285,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.VALUE1_32;
         assertEquals("VALUE1_32", enumType.getID());
         assertEquals("VALUE1_32", enumType.getName());
@@ -261,6 +293,7 @@ class Enum235YieldTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum235YieldType.WORST;
         assertEquals("WORST", enumType.getID());
         assertEquals("WORST", enumType.getName());

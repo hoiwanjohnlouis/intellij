@@ -38,6 +38,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.EUREPO;
         assertEquals("EUREPO", enumType.getID());
         assertEquals("EUREPO", enumType.getName());
@@ -45,6 +46,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.EURIBOR;
         assertEquals("Euribor", enumType.getID());
         assertEquals("EURIBOR", enumType.getName());
@@ -52,6 +54,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.FUTURESWAP;
         assertEquals("FutureSWAP", enumType.getID());
         assertEquals("FUTURESWAP", enumType.getName());
@@ -59,6 +62,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.LIBID;
         assertEquals("LIBID", enumType.getID());
         assertEquals("LIBID", enumType.getName());
@@ -66,6 +70,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.LIBOR;
         assertEquals("LIBOR", enumType.getID());
         assertEquals("LIBOR", enumType.getName());
@@ -73,6 +78,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.MUNIAAA;
         assertEquals("MuniAAA", enumType.getID());
         assertEquals("MUNIAAA", enumType.getName());
@@ -80,6 +86,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.OTHER;
         assertEquals("OTHER", enumType.getID());
         assertEquals("OTHER", enumType.getName());
@@ -87,6 +94,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.PFANDBRIEFE;
         assertEquals("Pfandbriefe", enumType.getID());
         assertEquals("PFANDBRIEFE", enumType.getName());
@@ -94,6 +102,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.SONIA;
         assertEquals("SONIA", enumType.getID());
         assertEquals("SONIA", enumType.getName());
@@ -101,6 +110,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.SWAP;
         assertEquals("SWAP", enumType.getID());
         assertEquals("SWAP", enumType.getName());
@@ -108,6 +118,7 @@ class Enum221BenchmarkCurveNameTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum221BenchmarkCurveName.TREASURY;
         assertEquals("Treasury", enumType.getID());
         assertEquals("TREASURY", enumType.getName());

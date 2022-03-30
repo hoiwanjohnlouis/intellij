@@ -37,6 +37,7 @@ class Enum219BenchmarkTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum219Benchmark.FIVE_YEAR;
         assertEquals("2", enumType.getID());
         assertEquals("5YR", enumType.getName());
@@ -44,6 +45,7 @@ class Enum219BenchmarkTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum219Benchmark.OLD_FIVE_YEAR;
         assertEquals("3", enumType.getID());
         assertEquals("OLD5", enumType.getName());
@@ -51,6 +53,7 @@ class Enum219BenchmarkTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum219Benchmark.TEN_YEAR;
         assertEquals("4", enumType.getID());
         assertEquals("10YR", enumType.getName());
@@ -58,6 +61,7 @@ class Enum219BenchmarkTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum219Benchmark.OLD_TEN_YEAR;
         assertEquals("5", enumType.getID());
         assertEquals("OLD10", enumType.getName());
@@ -65,6 +69,7 @@ class Enum219BenchmarkTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum219Benchmark.THIRTY_YEAR;
         assertEquals("6", enumType.getID());
         assertEquals("30YR", enumType.getName());
@@ -72,6 +77,7 @@ class Enum219BenchmarkTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum219Benchmark.OLD_THIRTY_YEAR;
         assertEquals("7", enumType.getID());
         assertEquals("OLD30", enumType.getName());
@@ -79,6 +85,7 @@ class Enum219BenchmarkTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum219Benchmark.THREE_MONTH;
         assertEquals("8", enumType.getID());
         assertEquals("3MOLIBOR", enumType.getName());
@@ -86,6 +93,7 @@ class Enum219BenchmarkTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum219Benchmark.SIX_MONTH;
         assertEquals("9", enumType.getID());
         assertEquals("6MOLIBOR", enumType.getName());

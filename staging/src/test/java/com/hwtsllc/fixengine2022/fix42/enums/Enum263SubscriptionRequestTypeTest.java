@@ -37,6 +37,7 @@ class Enum263SubscriptionRequestTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT;
         assertEquals("1", enumType.getID());
         assertEquals("SUBSCRIBE_SNAPSHOT", enumType.getName());
@@ -44,6 +45,7 @@ class Enum263SubscriptionRequestTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT;
         assertEquals("2", enumType.getID());
         assertEquals("UNSUBSCRIBE_SNAPSHOT", enumType.getName());
