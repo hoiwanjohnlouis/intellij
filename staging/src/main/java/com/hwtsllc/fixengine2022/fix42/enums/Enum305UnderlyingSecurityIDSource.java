@@ -21,11 +21,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum305UnderlyingSecurityIDSource implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same as TAG 22
+     *  Information is the same for TAGS 22, 305, 456, 459,
      */
 
     /*
-     * 1-9 msg types
+     * 0-9 msg types
      */
     CUSIP("1", "CUSIP", "1 - CUSIP - Committee on Uniform Securities Identification Procedures" ),
     SEDOL("2", "SEDOL", "2 - SEDOL - Stock Exchange Daily Official List" ),

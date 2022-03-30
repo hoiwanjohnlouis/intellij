@@ -21,7 +21,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same as TAG 167
+     *  Information is the same as TAGS 167, 310
      */
 
     /*
