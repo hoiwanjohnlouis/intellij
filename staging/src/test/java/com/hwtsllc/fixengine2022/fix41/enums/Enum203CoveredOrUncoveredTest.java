@@ -16,13 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum203CoveredOrUncoveredTest {
-
+    /**
+     *  Information is the same for TAGS 203, 565
+     */
     @Test
     void Enum0203Test() {
         Enum203CoveredOrUncovered enumType;
@@ -34,16 +37,15 @@ class Enum203CoveredOrUncoveredTest {
         assertEquals("0", enumType.getID());
         assertEquals("COVERED", enumType.getName());
         assertEquals("0 - Covered", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
-
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
         enumType = Enum203CoveredOrUncovered.UNCOVERED;
         assertEquals("1", enumType.getID());
         assertEquals("UNCOVERED", enumType.getName());
         assertEquals("1 - Uncovered", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }
