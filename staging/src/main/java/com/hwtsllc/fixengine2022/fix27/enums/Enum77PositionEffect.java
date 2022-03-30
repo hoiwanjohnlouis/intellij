@@ -20,6 +20,13 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum77PositionEffect implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 77, 564
+     */
+
+    /*
+     *  C, F, O, and R types
+     */
     CLOSE("C", "CLOSE", "C - Close" ),
     FIFO("F", "FIFO", "F - First In, First Out" ),
     OPEN("O", "OPEN", "O - Open" ),

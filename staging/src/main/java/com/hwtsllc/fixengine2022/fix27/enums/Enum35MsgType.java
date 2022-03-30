@@ -21,7 +21,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum35MsgType implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same as TAG 372
+     *  Information is the same for TAGS 35, 372
      */
 
     /*

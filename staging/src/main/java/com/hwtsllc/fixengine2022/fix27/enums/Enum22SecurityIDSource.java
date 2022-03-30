@@ -21,7 +21,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum22SecurityIDSource implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same as TAG 305
+     *  Information is the same for TAGS 22, 305, 456, 459,
      */
 
     /*
