@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum305UnderlyingSecurityIDSourceTest {
     /**
-     *  Information is the same for TAGS 22, 305, 456, 459,
+     *  Information is the same for TAGS 22, 305, 456, 459, 603, 606;
      */
     @Test
     void Enum0305Test() {
