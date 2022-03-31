@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum167SecurityTypeTest {
     /**
-     *  Information is the same as TAG 167, 310
+     *  Information is the same as TAGS 167, 310, 609
      */
     @Test
     void Enum0167Test() {
