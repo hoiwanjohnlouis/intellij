@@ -16,12 +16,40 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum582CustOrderCapacityTest {
+    /**
+     *  Information is the same for TAGS 582
+     */
     @Test
     void Enum0582Test() {
         Enum582CustOrderCapacity enumType;
 
+        /*
+         *  1-4 types
+         */
+        enumType = Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum582CustOrderCapacity.ALL_OTHER;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

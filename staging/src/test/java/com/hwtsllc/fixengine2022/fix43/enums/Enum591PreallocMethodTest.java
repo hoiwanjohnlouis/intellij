@@ -16,12 +16,30 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum591PreallocMethodTest {
+    /**
+     *  Information is the same for TAGS 591
+     */
     @Test
     void Enum0591Test() {
         Enum591PreallocMethod enumType;
 
+        /*
+         *  0-1 types
+         */
+        enumType = Enum591PreallocMethod.PRO_RATA;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum591PreallocMethod.DO_NOT_PRO_RATA;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

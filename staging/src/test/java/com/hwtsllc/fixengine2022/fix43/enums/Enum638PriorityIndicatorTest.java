@@ -16,12 +16,30 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum638PriorityIndicatorTest {
+    /**
+     *  Information is the same for TAGS 638
+     */
     @Test
     void Enum0638Test() {
         Enum638PriorityIndicator enumType;
 
+        /*
+         *  0-1 types
+         */
+        enumType = Enum638PriorityIndicator.PRIORITY_UNCHANGED;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum638PriorityIndicator.LOST_PRIORITY;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

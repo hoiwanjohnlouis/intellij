@@ -16,12 +16,30 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum601LegSymbolSfxTest {
+    /**
+     *  Information is the same for TAGS 601
+     */
     @Test
     void Enum0601Test() {
         Enum601LegSymbolSfx enumType;
 
+        /*
+         *  CD, WI types
+         */
+        enumType = Enum601LegSymbolSfx.EUCP;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum601LegSymbolSfx.WHEN_ISSUED;
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }
