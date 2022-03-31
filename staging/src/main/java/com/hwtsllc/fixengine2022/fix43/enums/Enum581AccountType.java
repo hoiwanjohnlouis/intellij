@@ -20,6 +20,23 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum581AccountType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 581
+     */
+
+    /*
+     *  1-4, 6-8 types
+     */
+    CUSTOMER_BOOK( "1", "CUSTOMER_BOOK", "1 - Account is carried on customer side of the books" ),
+    NON_CUSTOMER_BOOK( "2", "NON_CUSTOMER_BOOK", "2 - Account is carried on non-customer side of books" ),
+    HOUSE_TRADER( "3", "HOUSE_TRADER", "3 - House Trader" ),
+    FLOOR_TRADER( "4", "FLOOR_TRADER", "4 - Floor Trader" ),
+
+    NON_CUSTOMER_CROSSED_MARGIN_BOOK( "6", "NON_CUSTOMER_CROSSED_MARGIN_BOOK",
+            "6 - Account is carried on non-customer side of books and is cross margined" ),
+    HOUSE_TRADER_CROSSED_MARGIN_BOOK( "7", "HOUSE_TRADER_CROSSED_MARGIN_BOOK",
+            "7 - Account is house trader and is cross margined" ),
+    JOINT_BACK_OFFICE( "8", "JOINT_BACK_OFFICE", "8 - Joint back office account (JBO)" ),
     ;
 
     private final String id;

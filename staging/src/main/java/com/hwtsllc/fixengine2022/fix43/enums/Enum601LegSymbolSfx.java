@@ -20,6 +20,17 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum601LegSymbolSfx implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 601
+     */
+
+    /*
+     *  CD, WI types
+     */
+    EUCP( "CD", "EUCP",
+            "CD - EUCP with lump-sum interest rather than discount price" ),
+    WHEN_ISSUED( "WI", "WHEN_ISSUED",
+            "WI - (When Issued) for a security to be reissued under an old CUSIP or ISIN" ),
     ;
 
     private final String id;

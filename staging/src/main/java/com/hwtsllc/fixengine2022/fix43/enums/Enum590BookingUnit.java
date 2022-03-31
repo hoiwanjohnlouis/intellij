@@ -20,6 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum590BookingUnit implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 590
+     */
+
+    /*
+     *  0-2 types
+     */
+    PARTIAL_EXECUTION_BOOKABLE( "0", "PARTIAL_EXECUTION_BOOKABLE",
+            "0 - Each partial execution is a bookable unit" ),
+    AGGREGATE_PARTIAL_EXECUTION( "1", "AGGREGATE_PARTIAL_EXECUTION",
+            "1 - Aggregate partial executions on this order, and book one trade per order" ),
+    AGGREGATE_EXECUTIONS( "2", "AGGREGATE_EXECUTIONS",
+            "2 - Aggregate executions for this symbol, side, and settlement date" ),
     ;
 
     private final String id;

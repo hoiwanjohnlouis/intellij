@@ -20,6 +20,21 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum585MassStatusReqType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 585
+     */
+
+    /*
+     *  1-8 types
+     */
+    STATUS_ORDERS_FOR_SECURITY( "1", "", "1 - Status for orders for a Security" ),
+    STATUS_ORDERS_FOR_UNDERLYING( "2", "", "2 - Status for orders for an Underlying Security" ),
+    STATUS_ORDERS_FOR_PRODUCT( "3", "", "3 - Status for orders for a Product" ),
+    STATUS_ORDERS_FOR_CFICODE( "4", "", "4 - Status for orders for a CFICode" ),
+    STATUS_ORDERS_FOR_SECURITYTYPE( "5", "", "5 - Status for orders for a SecurityType" ),
+    STATUS_ORDERS_FOR_SESSION( "6", "", "6 - Status for orders for a trading session" ),
+    STATUS_ALL_ORDERS( "7", "", "7 - Status for all orders" ),
+    STATUS_ORDERS_FOR_PARTYID( "8", "", "8 - Status for orders for a PartyID" ),
     ;
 
     private final String id;

@@ -20,6 +20,21 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum582CustOrderCapacity implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 582
+     */
+
+    /*
+     *  1-4 types
+     */
+    MEMBER_TRADING_ACCOUNT( "1", "MEMBER_TRADING_ACCOUNT",
+            "1 - Member trading for their own account" ),
+    CLEARING_FIRM_PROPRIETARY( "2", "CLEARING_FIRM_PROPRIETARY",
+            "2 - Clearing Firm trading for its proprietary account" ),
+    MEMBER_TRADING_FOR_ANOTHER( "3", "MEMBER_TRADING_FOR_ANOTHER",
+            "3 - Member trading for another member" ),
+    ALL_OTHER( "4", "ALL_OTHER",
+            "4 - All other" ),
     ;
 
     private final String id;

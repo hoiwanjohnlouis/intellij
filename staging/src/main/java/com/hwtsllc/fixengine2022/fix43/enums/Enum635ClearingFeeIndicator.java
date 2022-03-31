@@ -20,6 +20,30 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum635ClearingFeeIndicator implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 635
+     */
+
+    /*
+     *  1-5, 9, B, C, E, F, H, I, L, and M types
+     */
+    FIRST_YEAR_DELEGATE( "1", "FIRST_YEAR_DELEGATE", "1 - 1st year delegate trading for own account" ),
+    SECOND_YEAR_DELEGATE( "2", "SECOND_YEAR_DELEGATE", "2 - 2nd year delegate trading for own account" ),
+    THIRD_YEAR_DELEGATE( "3", "THIRD_YEAR_DELEGATE", "3 - 3rd year delegate trading for own account" ),
+    FOURTH_YEAR_DELEGATE( "4", "FOURTH_YEAR_DELEGATE", "4 - 4th year delegate trading for own account" ),
+    FIFTH_YEAR_DELEGATE( "5", "FIFTH_YEAR_DELEGATE", "5 - 5th year delegate trading for own account" ),
+
+    SIXTH_YEAR_DELEGATE( "9", "SIXTH_YEAR_DELEGATE", "9 - 6th year delegate trading for own account" ),
+
+    CBOE_MEMBER( "B", "CBOE_MEMBER", "B - CBOE Member" ),
+    NON_MEMBER_AND_CUSTOMER( "C", "NON_MEMBER_AND_CUSTOMER", "C - Non-member and Customer" ),
+    EQUITY_AND_CLEARING_MEMBER( "E", "EQUITY_AND_CLEARING_MEMBER", "E - Equity Member and Clearing Member" ),
+    FULL_AND_ASSOCIATE_AS_FLOOR( "F", "FULL_AND_ASSOCIATE_AS_FLOOR",
+            "F - Full and Associate Member trading for own account and as floor brokers" ),
+    H_AND_J_FIRMS( "H", "H_AND_J_FIRMS", "H - 106.H and 106.J firms" ),
+    GIM_IDEM_AND_COM( "I", "GIM_IDEM_AND_COM", "I - GIM, IDEM and COM Membership Interest Holders" ),
+    F_EMPLOYEES( "L", "F_EMPLOYEES", "L - Lessee 106.F Employees" ),
+    ALL_OTHER( "M", "ALL_OTHER", "M - All other ownership types" ),
     ;
 
     private final String id;

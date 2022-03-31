@@ -20,6 +20,26 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum658QuoteRequestRejectReason implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 658
+     */
+
+    /*
+     *  1-11, 99 types
+     */
+    UNKNOWN_SYMBOL( "1", "UNKNOWN_SYMBOL", "1 - Unknown Symbol (Security)" ),
+    EXCHANGE_CLOSED( "2", "EXCHANGE_CLOSED", "2 - Exchange (Security) Closed" ),
+    QUOTE_EXCEEDS_LIMIT( "3", "QUOTE_EXCEEDS_LIMIT", "3 - Quote Request Exceeds Limit" ),
+    TOO_LATE_TO_ENTER( "4", "TOO_LATE_TO_ENTER", "4 - Too Late to enter" ),
+    INVALID_PRICE( "5", "INVALID_PRICE", "5 - Invalid Price" ),
+    NOT_AUTHORIZED( "6", "NOT_AUTHORIZED", "6 - Not Authorized To Request Quote" ),
+    NO_MATCH_FOR_INQUIRY( "7", "NO_MATCH_FOR_INQUIRY", "7 - No Match For Inquiry" ),
+    NO_MARKET_FOR_INSTRUMENT( "8", "NO_MARKET_FOR_INSTRUMENT", "8 - No Market For Instrument" ),
+    NO_INVENTORY( "9", "NO_INVENTORY", "9 - No Inventory" ),
+    PASS( "10", "PASS", "10 - Pass" ),
+    INSUFFICIENT_CREDIT( "11", "INSUFFICIENT_CREDIT", "11 - Insufficient credit" ),
+
+    OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
     private final String id;

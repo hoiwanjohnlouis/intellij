@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum589DayBookingInst implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 589
+     */
+
+    /*
+     *  0-2 types
+     */
+    AUTO_BOOKING( "0", "AUTO_BOOKING", "0 - Can trigger booking without reference to the order initiator (auto)" ),
+    VERBAL_BOOKING( "1", "VERBAL_BOOKING", "1 - Speak with order initiator before booking (speak first)" ),
+    ACCUMULATE( "2", "ACCUMULATE", "2 - Accumulate" ),
     ;
 
     private final String id;

@@ -20,6 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum653SecDefStatus implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 653
+     */
+
+    /*
+     *  0-4 types
+     */
+    PENDING( "0", "PENDING", "0 - Pending Approval" ),
+    APPROVED( "1", "APPROVED", "1 - Approved (Accepted)" ),
+    REJECTED( "2", "REJECTED", "2 - Rejected" ),
+    UNAUTHORIZED( "3", "UNAUTHORIZED", "3 - Unauthorized Request" ),
+    INVALID( "4", "INVALID", "4 - Invalid Definition Request" ),
     ;
 
     private final String id;

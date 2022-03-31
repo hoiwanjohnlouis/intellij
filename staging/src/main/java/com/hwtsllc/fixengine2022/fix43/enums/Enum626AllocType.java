@@ -20,6 +20,36 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum626AllocType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 626
+     */
+
+    /*
+     *  1-14 types
+     */
+    CALCULATED_INCLUDES_MISCFEES_NETMONEY( "1", "CALCULATED_INCLUDES_MISCFEES_NETMONEY",
+            "1 - Calculated (includes MiscFees and NetMoney)" ),
+    PRELIMINARY_WITHOUT_MISCFEES_NETMONEY( "2", "PRELIMINARY_WITHOUT_MISCFEES_NETMONEY",
+            "2 - Preliminary (without MiscFees and NetMoney)" ),
+    SELLSIDE_USING_PRELIMINARY( "3", "SELLSIDE_USING_PRELIMINARY",
+            "3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney) (Replaced)" ),
+    SELLSIDE_WITHOUT_PRELIMINARY( "4", "SELLSIDE_WITHOUT_PRELIMINARY",
+            "4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, " +
+                    "includes MiscFees and NetMoney) (Replaced)" ),
+    READY_TO_BOOK_SINGLE_ORDER( "5", "READY_TO_BOOK_SINGLE_ORDER",
+            "5 - Ready-To-Book - Single Order" ),
+    BUYSIDE_READY_TO_BOOK( "6", "BUYSIDE_READY_TO_BOOK",
+            "6 - Buyside Ready-To-Book - Combined Set of Orders (Replaced)" ),
+    WAREHOUSE_INSTRUCTION( "7", "WAREHOUSE_INSTRUCTION",
+            "7 - Warehouse Instruction" ),
+    REQUEST_INTERMEDIARY( "8", "REQUEST_INTERMEDIARY",
+            "8 - Request to Intermediary" ),
+    ACCEPT( "9", "ACCEPT", "9 - Accept" ),
+    REJECT( "10", "REJECT", "10 - Reject" ),
+    ACCEPT_PENDING( "11", "ACCEPT_PENDING", "11 - Accept Pending" ),
+    INCOMPLETE_GROUP( "12", "INCOMPLETE_GROUP", "12 - Incomplete Group" ),
+    COMPLETE_GROUP( "13", "COMPLETE_GROUP", "13 - Complete Group" ),
+    REVERSAL_PENDING( "14", "REVERSAL_PENDING", "14 - Reversal Pending" ),
     ;
 
     private final String id;

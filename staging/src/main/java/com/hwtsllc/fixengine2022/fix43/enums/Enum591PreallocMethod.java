@@ -20,6 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum591PreallocMethod implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 591
+     */
+
+    /*
+     *  0-1 types
+     */
+    PRO_RATA( "0", "PRO_RATA", "0 - Pro-rata" ),
+    DO_NOT_PRO_RATA( "1", "DO_NOT_PRO_RATA", "1 - Do not pro-rata - discuss first" ),
     ;
 
     private final String id;

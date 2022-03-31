@@ -21,7 +21,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum460Product implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same for TAGS 460, 462
+     *  Information is the same for TAGS 460, 462, 607
      */
 
     /*

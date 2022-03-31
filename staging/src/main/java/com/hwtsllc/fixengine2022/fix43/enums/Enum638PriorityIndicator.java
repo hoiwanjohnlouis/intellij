@@ -20,6 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum638PriorityIndicator implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 638
+     */
+
+    /*
+     *  0-1 types
+     */
+    PRIORITY_UNCHANGED( "0", "PRIORITY_UNCHANGED", "0 - Priority unchanged" ),
+    LOST_PRIORITY( "1", "LOST_PRIORITY", "1 - Lost Priority as result of order change" ),
     ;
 
     private final String id;

@@ -20,6 +20,27 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum587LegSettlType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 587
+     */
+
+    /*
+     *  0-9, B, and C types
+     */
+    REGULAR( "0", "REGULAR", "0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)" ),
+    CASH( "1", "CASH", "1 - Cash (TOD / T+0)" ),
+    NEXT_DAY( "2", "NEXT_DAY", "2 - Next Day (TOM / T+1)" ),
+    T_PLUS_2( "3", "T_PLUS_2", "3 - T+2" ),
+    T_PLUS_3( "4", "T_PLUS_3", "4 - T+3" ),
+    T_PLUS_4( "5", "T_PLUS_4", "5 - T+4" ),
+    FUTURE( "6", "FUTURE", "6 - Future" ),
+    WHEN_ISSUED( "7", "WHEN_ISSUED", "7 - When And If Issued" ),
+    SELLERS_OPTION( "8", "SELLERS_OPTION", "8 - Sellers Option" ),
+    T_PLUS_5( "9", "T_PLUS_5", "9 - T+5" ),
+
+    BROKEN_DATE( "B", "BROKEN_DATE",
+            "B - Broken date - for FX expressing non-standard tenor, SettlDate (64) must be specified" ),
+    FX_SPOT( "C", "FX_SPOT", "C - FX Spot Next settlement (Spot+1, aka next day)" ),
     ;
 
     private final String id;

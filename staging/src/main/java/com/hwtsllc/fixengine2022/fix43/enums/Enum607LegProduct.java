@@ -20,6 +20,26 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum607LegProduct implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 460, 462, 607
+     */
+
+    /*
+     * 0-13 msg types
+     */
+    AGENCY("1", "AGENCY", "1 - AGENCY" ),
+    COMMODITY("2", "COMMODITY", "2 - COMMODITY" ),
+    CORPORATE("3", "CORPORATE", "3 - CORPORATE" ),
+    CURRENCY("4", "CURRENCY", "4 - CURRENCY" ),
+    EQUITY("5", "EQUITY", "5 - EQUITY" ),
+    GOVERNMENT("6", "GOVERNMENT", "6 - GOVERNMENT" ),
+    INDEX("7", "INDEX", "7 - INDEX" ),
+    LOAN("8", "LOAN", "8 - LOAN" ),
+    MONEY_MARKET("9", "MONEYMARKET", "9 - MONEYMARKET" ),
+    MORTGAGE("10", "MORTGAGE", "10 - MORTGAGE" ),
+    MUNICIPAL("11", "MUNICIPAL", "11 - MUNICIPAL" ),
+    OTHER("12", "OTHER", "12 - OTHER" ),
+    FINANCING("13", "FINANCING", "13 - FINANCING" ),
     ;
 
     private final String id;
