@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum468RoundingDirection implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 468
+     */
+
+    /*
+     * 0-2 types
+     */
+    ROUND_TO_NEAREST("0", "ROUND_TO_NEAREST", "0 - Round to nearest" ),
+    ROUND_DOWN("1", "ROUND_DOWN", "1 - Round down" ),
+    ROUND_UP("2", "ROUND_UP", "2 - Round up" ),
     ;
 
     private final String id;

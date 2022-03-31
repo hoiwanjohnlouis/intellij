@@ -20,6 +20,20 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum563MultiLegRptTypeReq implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 563
+     */
+
+    /*
+     *  0-2 types
+     */
+    MULITLEG_SECURITY_ONLY( "0", "MULITLEG_SECURITY_ONLY",
+            "0 - Report by mulitleg security only (do not report legs)" ),
+    MULTILEG_SECURITY_LEGS( "1", "MULTILEG_SECURITY_LEGS",
+            "1 - Report by multileg security and by instrument legs belonging to the multileg security" ),
+    INSTRUMENT_LEGS( "2", "INSTRUMENT_LEGS",
+            "2 - Report by instrument legs belonging to the multileg security only " +
+                    "(do not report status of multileg security)" ),
     ;
 
     private final String id;

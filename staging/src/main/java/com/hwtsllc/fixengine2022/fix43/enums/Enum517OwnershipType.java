@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum517OwnershipType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 517
+     */
+
+    /*
+     * J, T,and 2 types
+     */
+    JOINT_INVESTORS("J", "JOINT_INVESTORS", "J - Joint Investors" ),
+    TENANTS_IN_COMMON("T", "TENANTS_IN_COMMON", "T - Tenants in Common" ),
+    JOINT_TRUSTEES("2", "JOINT_TRUSTEES", "2 - Joint Trustees" ),
     ;
 
     private final String id;

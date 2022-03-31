@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum544CashMargin implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 544
+     */
+
+    /*
+     *  1-3 types
+     */
+    CASH( "1", "CASH", "1 - Cash" ),
+    MARGIN_OPEN( "2", "MARGIN_OPEN", "2 - Margin Open" ),
+    MARGIN_CLOSE( "3", "MARGIN_CLOSE", "3 - Margin Close" ),
     ;
 
     private final String id;

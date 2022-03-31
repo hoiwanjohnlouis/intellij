@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum546Scope implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 546
+     */
+
+    /*
+     *  1-3 types
+     */
+    LOCAL_MARKET( "1", "LOCAL_MARKET", "1 - Local Market (Exchange, ECN, ATS)" ),
+    NATIONAL( "2", "NATIONAL", "2 - National" ),
+    GLOBAL( "3", "GLOBAL", "3 - Global" ),
     ;
 
     private final String id;

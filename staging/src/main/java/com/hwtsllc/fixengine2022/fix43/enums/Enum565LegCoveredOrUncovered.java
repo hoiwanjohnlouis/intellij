@@ -20,6 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum565LegCoveredOrUncovered implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 203, 565
+     */
+
+    /*
+     *  0-1 types
+     */
+    COVERED( "0", "COVERED", "0 - Covered" ),
+    UNCOVERED( "1", "UNCOVERED", "1 - Uncovered" ),
     ;
 
     private final String id;

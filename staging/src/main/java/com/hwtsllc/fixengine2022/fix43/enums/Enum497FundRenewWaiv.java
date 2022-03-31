@@ -20,6 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum497FundRenewWaiv implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 497
+     */
+
+    /*
+     * N, Y types
+     */
+    NO("N", "NO", "N - No" ),
+    YES("Y", "YES", "Y - Yes" ),
     ;
 
     private final String id;

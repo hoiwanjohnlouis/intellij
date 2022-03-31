@@ -20,6 +20,37 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum624LegSide implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 54, 624
+     */
+
+    /*
+     * 1-9 type
+     */
+    BUY ("1", "BUY", "1 - Buy"),
+    SELL ("2", "SELL", "2 - Sell"),
+    BUY_MINUS ("3", "BUY_MINUS", "3 - Buy minus"),
+    SELL_PLUS ("4", "SELL_PLUS", "4 - Sell plus"),
+    SELL_SHORT ("5", "SELL_SHORT", "5 - Sell short"),
+    SELL_SHORT_EXEMPT ("6", "SELL_SHORT_EXEMPT", "6 - Sell short exempt"),
+    UNDISCLOSED ("7", "UNDISCLOSED",
+            "7 - Undisclosed (valid for IOI and List Order messages only)"),
+    CROSS ("8", "CROSS",
+            "8 - Cross (orders where counterparty is an exchange, valid for all messages except IOIs)"),
+    CROSS_SHORT ("9", "CROSS_SHORT", "9 - Cross short"),
+
+    /*
+     * A-G type
+     */
+    CROSS_SHORT_EXEMPT ("A", "CROSS_SHORT_EXEMPT", "A - Cross short exempt"),
+    AS_DEFINED ("B", "AS_DEFINED", "B - As Defined (for use with multileg instruments)"),
+    OPPOSITE ("C", "OPPOSITE", "C - Opposite (for use with multileg instruments)"),
+    SUBSCRIBE ("D", "SUBSCRIBE", "D - Subscribe (e.g. CIV)"),
+    REDEEM ("E", "REDEEM", "E - Redeem (e.g. CIV)"),
+    LEND_FINANCING ("F", "LEND_FINANCING",
+            "F - Lend (FINANCING - identifies direction of collateral)"),
+    BORROW_FINANCING ("G", "BORROW_FINANCING",
+            "G - Borrow (FINANCING - identifies direction of collateral)"),
     ;
 
     private final String id;

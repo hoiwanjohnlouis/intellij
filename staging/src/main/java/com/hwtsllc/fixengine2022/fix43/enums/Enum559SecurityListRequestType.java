@@ -20,6 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum559SecurityListRequestType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 559
+     */
+
+    /*
+     *  0-4 types
+     */
+    SYMBOL( "0", "SYMBOL", "0 - Symbol" ),
+    SECURITY_TYPE( "1", "SECURITY_TYPE", "1 - SecurityType and/or CFICode" ),
+    PRODUCT( "2", "PRODUCT", "2 - Product" ),
+    TRADING_SESSION_ID( "3", "TRADING_SESSION_ID", "3 - TradingSessionID" ),
+    ALL_SECURITIES( "4", "ALL_SECURITIES", "4 - All Securities" ),
     ;
 
     private final String id;

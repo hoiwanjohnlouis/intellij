@@ -20,6 +20,42 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum603LegSecurityIDSource implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 22, 305, 456, 459, 603, 606;
+     */
+
+    /*
+     * 0-9 msg types
+     */
+    CUSIP("1", "CUSIP", "1 - CUSIP - Committee on Uniform Securities Identification Procedures" ),
+    SEDOL("2", "SEDOL", "2 - SEDOL - Stock Exchange Daily Official List" ),
+    QUIK("3", "QUIK", "3 - QUIK" ),
+    ISIN("4", "ISIN", "4 - ISIN - The International Securities Identification Number" ),
+    RIC("5", "RIC", "5 - RIC - Reuters Instrument Code" ),
+    ISO_CURRENCY_CODE("6", "ISO_CURRENCY_CODE", "6 - ISO Currency Code" ),
+    ISO_COUNTRY_CODE("7", "ISO_COUNTRY_CODE", "7 - ISO Country Code" ),
+    EXCHANGE_SYMBOL("8", "EXCHANGE_SYMBOL", "8 - Exchange Symbol" ),
+    CTA("9", "CTA",
+            "9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)" ),
+
+    /*
+     * A-L msg types
+     */
+    BLOOMBERG("A", "BLOOMBERG", "A - Bloomberg Symbol" ),
+    WERTPAPIER("B", "WERTPAPIER", "B - Wertpapier" ),
+    DUTCH("C", "DUTCH", "C - Dutch" ),
+    VALOREN("D", "VALOREN", "D - Valoren" ),
+    SICOVAM("E", "SICOVAM", "E - Sicovam" ),
+    BELGIAN("F", "BELGIAN", "F - Belgian" ),
+    COMMON("G", "COMMON", "G - Common (Clearstream and Euroclear)" ),
+    CLEARING_HOUSE_OR_ORGANIZATION("H", "CLEARING_HOUSE_OR_ORGANIZATION",
+            "H - Clearing House or Clearing Organization" ),
+    ISDA_PRODUCT_SPECIFICATION("I", "ISDA_PRODUCT_SPECIFICATION",
+            "I - ISDA/FpML Product Specification (XML in EncodedSecurityDesc)" ),
+    OPTION_PRICE_REPORTING_AUTHORITY("J", "OPTION_PRICE_REPORTING_AUTHORITY",
+            "J - Option Price Reporting Authority" ),
+    ISDA_PRODUCT_URL("K", "ISDA_PRODUCT_URL", "K - ISDA/FpML Product URL (URL in SecurityID)" ),
+    LETTER_OF_CREDIT("L", "LETTER_OF_CREDIT", "L - Letter of Credit" ),
     ;
 
     private final String id;

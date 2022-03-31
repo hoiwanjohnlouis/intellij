@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum550CrossPrioritization implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 550
+     */
+
+    /*
+     *  0-2 types
+     */
+    NONE( "0", "NONE", "0 - None" ),
+    BUY_PRIORITY( "1", "BUY_PRIORITY", "1 - Buy side is prioritized" ),
+    SELL_PRIORITY( "2", "SELL_PRIORITY", "2 - Sell side is prioritized" ),
     ;
 
     private final String id;

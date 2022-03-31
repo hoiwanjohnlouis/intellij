@@ -20,6 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum567TradSesStatusRejReason implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 567
+     */
+
+    /*
+     *  1, and 99 types
+     */
+    UNKNOWN_TRADING_SESSION_ID( "1", "UNKNOWN_TRADING_SESSION_ID", "1 - Unknown or invalid TradingSessionID" ),
+    OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
     private final String id;

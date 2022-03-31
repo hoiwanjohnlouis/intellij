@@ -20,6 +20,28 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum492PaymentMethod implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 492
+     */
+
+    /*
+     * 1-15 types
+     */
+    CREST("1", "CREST", "1 - CREST" ),
+    NSCC("2", "NSCC", "2 - NSCC" ),
+    EUROCLEAR("3", "EUROCLEAR", "3 - Euroclear" ),
+    CLEARSTREAM("4", "CLEARSTREAM", "4 - Clearstream" ),
+    CHEQUE("5", "CHEQUE", "5 - Cheque" ),
+    TELEGRAPHIC_TRANSFER("6", "TELEGRAPHIC_TRANSFER", "6 - Telegraphic Transfer" ),
+    FED_WIRE("7", "FED_WIRE", "7 - Fed Wire" ),
+    DEBIT_CARD("8", "DEBIT_CARD", "8 - Debit Card" ),
+    DIRECT_DEBIT("9", "DIRECT_DEBIT", "9 - Direct Debit (BECS)" ),
+    DIRECT_CREDIT("10", "DIRECT_CREDIT", "10 - Direct Credit (BECS)" ),
+    CREDIT_CARD("11", "CREDIT_CARD", "11 - Credit Card" ),
+    ACH_DEBIT("12", "ACH_DEBIT", "12 - ACH Debit" ),
+    ACH_CREDIT("13", "ACH_CREDIT", "13 - ACH Credit" ),
+    BPAY("14", "BPAY", "14 - BPAY" ),
+    HIGH_VALUE_CLEARING_SYSTEM("15", "HVACS", "15 - High Value Clearing System (HVACS)" ),
     ;
 
     private final String id;

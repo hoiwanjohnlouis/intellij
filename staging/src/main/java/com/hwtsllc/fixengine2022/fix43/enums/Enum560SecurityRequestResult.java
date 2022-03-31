@@ -20,6 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum560SecurityRequestResult implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 560
+     */
+
+    /*
+     *  0-5 types
+     */
+    VALID_REQUEST( "0", "", "0 - Valid request" ),
+    UNSUPPORTED_REQUEST( "1", "", "1 - Invalid or unsupported request" ),
+    NO_INSTRUMENTS_FOUND( "2", "", "2 - No instruments found that match selection criteria" ),
+    NOT_AUTHORIZED( "3", "", "3 - Not authorized to retrieve instrument data" ),
+    INSTRUMENT_DATA_UNAVAILABLE( "4", "", "4 - Instrument data temporarily unavailable" ),
+    REQUEST_NOT_SUPPORTED( "5", "", "5 - Request for instrument data not supported" ),
     ;
 
     private final String id;

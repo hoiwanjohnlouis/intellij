@@ -20,6 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum569TradeRequestType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 569
+     */
+
+    /*
+     *  0,-4 types
+     */
+    ALL_TRADES( "0", "ALL_TRADES", "0 - All Trades" ),
+    MATCHED_TRADES( "1", "MATCHED_TRADES", "1 - Matched trades matching criteria provided on request (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)" ),
+    UNMATCHED_TRADES( "2", "UNMATCHED_TRADES", "2 - Unmatched trades that match criteria" ),
+    UNREPORTED_TRADES( "3", "UNREPORTED_TRADES", "3 - Unreported trades that match criteria" ),
+    ADVISORIES( "4", "ADVISORIES", "4 - Advisories that match criteria" ),
     ;
 
     private final String id;

@@ -20,6 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum481MoneyLaunderingStatus implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 481
+     */
+
+    /*
+     * Y, N, 1, 2, and 3 types
+     */
+    PASSED("Y", "PASSED", "Y - Passed" ),
+    NOT_CHECKED("N", "NOT_CHECKED", "N - Not Checked" ),
+    EXEMPT_BELOW_LIMIT("1", "EXEMPT_BELOW_LIMIT", "1 - Exempt - Below the Limit" ),
+    EXEMPT_CLIENT_MONEY("2", "EXEMPT_CLIENT_MONEY", "2 - Exempt - Client Money Type exemption" ),
+    EXEMPT_AUTHORISED("3", "EXEMPT_AUTHORISED", "3 - Exempt - Authorised Credit or financial institution" ),
     ;
 
     private final String id;

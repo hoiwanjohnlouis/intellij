@@ -20,6 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum547MDImplicitDelete implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 547
+     */
+
+    /*
+     *  N, and Y types
+     */
+    SERVER_SENDS_QUOTE_DELETE( "N", "SERVER_SENDS_QUOTE_DELETE",
+            "N - Server must send an explicit delete for bids or " +
+                    "offers falling outside the requested MarketDepth of the request" ),
+    CLIENT_DELETES_QUOTE( "Y", "CLIENT_DELETES_QUOTE",
+            "Y - Client has responsibility for implicitly deleting bids or " +
+                    "offers falling outside the MarketDepth of the request" ),
     ;
 
     private final String id;

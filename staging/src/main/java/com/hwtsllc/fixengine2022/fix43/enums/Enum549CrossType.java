@@ -20,6 +20,26 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum549CrossType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 549
+     */
+
+    /*
+     *  1-4 types
+     */
+    CROSS_AON( "1", "CROSS_AON",
+            "1 - Cross AON - cross tade which is executed complete or not. This is equivalent to an All_Or_None." ),
+    CROSS_IOC( "2", "CROSS_IOC",
+            "2 - Cross IOC - cross trade which is executed partially and the rest is cancelled. " +
+                    "Note: CrossPrioritization (550) field may be used to indicate " +
+                    "which side should fully execute in this scenario." ),
+    CROSS_ONE_SIDE( "3", "CROSS_ONE_SIDE",
+            "3 - Cross One Side - cross trade which is partially executed with the " +
+                    "unfilled portions remaining active. One side of the cross is fully executed " +
+                    "(as denoted by the CrossPrioritization (550) field)." ),
+    CROSS_SAME_PRICE( "4", "CROSS_SAME_PRICE",
+            "4 - Cross Same Price - cross trade is executed with existing orders with the same price. " +
+                    "The two sides potentially have different quantities." ),
     ;
 
     private final String id;

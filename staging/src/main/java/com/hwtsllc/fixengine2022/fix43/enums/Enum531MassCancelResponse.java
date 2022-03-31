@@ -20,6 +20,29 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum531MassCancelResponse implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 531
+     */
+
+    /*
+     *  0-7 types
+     */
+    CANCEL_REQUEST_REJECTED( "0", "CANCEL_REQUEST_REJECTED",
+            "0 - Cancel Request Rejected - See MassCancelRejectReason (532)" ),
+    CANCEL_ORDERS_FOR_SECURITY( "1", "CANCEL_ORDERS_FOR_SECURITY",
+            "1 - Cancel orders for a security" ),
+    CANCEL_ORDERS_FOR_UNDERLYING( "2", "CANCEL_ORDERS_FOR_UNDERLYING",
+            "2 - Cancel orders for an underlying security" ),
+    CANCEL_ORDERS_FOR_PRODUCT( "3", "CANCEL_ORDERS_FOR_PRODUCT",
+            "3 - Cancel orders for a Product" ),
+    CANCEL_ORDERS_FOR_CFICODE( "4", "CANCEL_ORDERS_FOR_CFICODE",
+            "4 - Cancel orders for a CFICode" ),
+    CANCEL_ORDERS_FOR_SECURITYTYPE( "5", "CANCEL_ORDERS_FOR_SECURITYTYPE",
+            "5 - Cancel orders for a SecurityType" ),
+    CANCEL_ORDERS_FOR_SESSION( "6", "CANCEL_ORDERS_FOR_SESSION",
+            "6 - Cancel orders for a trading session" ),
+    CANCEL_ALL_ORDERS( "7", "CANCEL_ALL_ORDERS",
+            "7 - Cancel all orders" ),
     ;
 
     private final String id;

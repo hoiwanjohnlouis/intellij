@@ -20,6 +20,33 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum529OrderRestrictions implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 529
+     */
+
+    /*
+     *  1-9, A types
+     */
+    PROGRAM_TRADE( "1", "PROGRAM_TRADE",
+            "1 - Program Trade" ),
+    INDEX_ARBITRAGE( "2", "INDEX_ARBITRAGE",
+            "2 - Index Arbitrage" ),
+    NON_INDEX_ARBITRAGE( "3", "NON_INDEX_ARBITRAGE",
+            "3 - Non-Index Arbitrage" ),
+    COMPETING_MARKET_MAKER( "4", "COMPETING_MARKET_MAKER",
+            "4 - Competing Market Maker" ),
+    SPECIALIST_IN_SECURITY( "5", "SPECIALIST_IN_SECURITY",
+            "5 - Acting as Market Maker or Specialist in the security" ),
+    SPECIALIST_IN_UNDERLYING_SECURITY( "6", "SPECIALIST_IN_UNDERLYING_SECURITY",
+            "6 - Acting as Market Maker of Specialist in the underlying security of a derivative security" ),
+    FOREIGN_ENTITY( "7", "FOREIGN_ENTITY",
+            "7 - Foreign Entity (of foreign government or regulatory jurisdiction)" ),
+    EXTERNAL_MARKET_PARTICIPANT( "8", "EXTERNAL_MARKET_PARTICIPANT",
+            "8 - External Market Participant" ),
+    EXTERNAL_INTER_CONNECTED( "9", "EXTERNAL_INTER_CONNECTED",
+            "9 - External Inter-connected Market Linkage" ),
+    RISKLESS_ARBITRAGE( "A", "RISKLESS_ARBITRAGE",
+            "A - Riskless Arbitrage" ),
     ;
 
     private final String id;

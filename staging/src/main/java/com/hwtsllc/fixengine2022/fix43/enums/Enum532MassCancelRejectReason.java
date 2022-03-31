@@ -20,6 +20,21 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum532MassCancelRejectReason implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 532
+     */
+
+    /*
+     *  0-6, 99 types
+     */
+    MASS_CANCEL_NOT_SUPPORTED( "0", "MASS_CANCEL_NOT_SUPPORTED", "0 - Mass Cancel Not Supported" ),
+    UNKNOWN_SECURITY( "1", "UNKNOWN_SECURITY", "1 - Invalid or Unknown Security" ),
+    UNKNOWN_UNDERLYING( "2", "UNKNOWN_UNDERLYING", "2 - Invalid or Unknown Underlying security" ),
+    UNKNOWN_PRODUCT( "3", "UNKNOWN_PRODUCT", "3 - Invalid or Unknown Product" ),
+    UNKNOWN_CFICODE( "4", "UNKNOWN_CFICODE", "4 - Invalid or Unknown CFICode" ),
+    UNKNOWN_SECURITYTYPE( "5", "UNKNOWN_SECURITYTYPE", "5 - Invalid or Unknown SecurityType" ),
+    UNKNOWN_SESSION( "6", "UNKNOWN_SESSION", "6 - Invalid or Unknown Trading Session" ),
+    OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
     private final String id;

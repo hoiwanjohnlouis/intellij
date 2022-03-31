@@ -20,6 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum528OrderCapacity implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 528
+     */
+
+    /*
+     *  A, G, I, P, R, and W types
+     */
+    AGENCY( "A", "AGENCY", "A - Agency" ),
+    PROPRIETARY( "G", "PROPRIETARY", "G - Proprietary" ),
+    INDIVIDUAL( "I", "INDIVIDUAL", "I - Individual" ),
+    PRINCIPAL( "P", "PRINCIPAL", "P - Principal (Note for CMS purposes, Principal includes Proprietary)" ),
+    RISKLESS_PRINCIPAL( "R", "RISKLESS_PRINCIPAL", "R - Riskless Principal" ),
+    AGENT_FOR_OTHER_MEMBER( "W", "AGENT_FOR_OTHER_MEMBER", "W - Agent for Other Member" ),
     ;
 
     private final String id;

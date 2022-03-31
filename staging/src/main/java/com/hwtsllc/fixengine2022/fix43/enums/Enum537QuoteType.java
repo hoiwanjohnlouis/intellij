@@ -20,6 +20,17 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum537QuoteType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 537
+     */
+
+    /*
+     *  0-3 types
+     */
+    INDICATIVE( "0", "INDICATIVE", "0 - Indicative" ),
+    TRADEABLE( "1", "TRADEABLE", "1 - Tradeable" ),
+    RESTRICTED_TRADEABLE( "2", "RESTRICTED_TRADEABLE", "2 - Restricted Tradeable" ),
+    COUNTER( "3", "COUNTER", "3 - Counter (tradeable)" ),
     ;
 
     private final String id;

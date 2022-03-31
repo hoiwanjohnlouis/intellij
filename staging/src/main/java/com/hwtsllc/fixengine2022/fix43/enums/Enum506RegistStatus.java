@@ -20,6 +20,17 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum506RegistStatus implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 506
+     */
+
+    /*
+     * A, R, H, and N types
+     */
+    ACCEPTED("A", "ACCEPTED", "A - Accepted" ),
+    REJECTED("R", "REJECTED", "R - Rejected" ),
+    HELD("H", "HELD", "H - Held" ),
+    REMINDER("N", "REMINDER", "N - Reminder - i.e. Registration Instructions are still outstanding" ),
     ;
 
     private final String id;

@@ -20,6 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum573MatchStatus implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 573
+     */
+
+    /*
+     *  0-2 types
+     */
+    COMPARED_MATCHED_AFFIRMED( "0", "COMPARED_MATCHED_AFFIRMED",
+            "0 - Compared, matched, or affirmed" ),
+    UNCOMPARED_UNMATCHED_UNAFFIRMED( "1", "UNCOMPARED_UNMATCHED_UNAFFIRMED",
+            "1 - Uncompared, unmatched, or unaffirmed" ),
+    ADVISORY( "2", "ADVISORY",
+            "2 - Advisory or alert" ),
     ;
 
     private final String id;

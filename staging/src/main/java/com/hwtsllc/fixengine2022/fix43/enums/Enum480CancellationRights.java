@@ -20,6 +20,17 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum480CancellationRights implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 480
+     */
+
+    /*
+     * Y, N, M, and O types
+     */
+    YES("Y", "YES", "Y - Yes" ),
+    EXECUTION_ONLY("N", "EXECUTION_ONLY", "N - No - Execution Only" ),
+    WAIVER_AGREEMENT("M", "WAIVER_AGREEMENT", "M - No - Waiver agreement" ),
+    INSTITUTIONAL("O", "INSTITUTIONAL", "O - No - Institutional" ),
     ;
 
     private final String id;

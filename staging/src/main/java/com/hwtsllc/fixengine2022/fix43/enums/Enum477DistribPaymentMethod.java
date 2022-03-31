@@ -20,6 +20,25 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum477DistribPaymentMethod implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 477
+     */
+
+    /*
+     * 1-12 types
+     */
+    CREST("1", "CREST", "1 - CREST" ),
+    NSCC("2", "NSCC", "2 - NSCC" ),
+    EUROCLEAR("3", "EUROCLEAR", "3 - Euroclear" ),
+    CLEARSTREAM("4", "CLEARSTREAM", "4 - Clearstream" ),
+    CHEQUE("5", "CHEQUE", "5 - Cheque" ),
+    TELEGRAPHIC_TRANSFER("6", "TELEGRAPHIC_TRANSFER", "6 - Telegraphic Transfer" ),
+    FED_WIRE("7", "FED_WIRE", "7 - Fed Wire" ),
+    DIRECT_CREDIT("8", "DIRECT_CREDIT", "8 - Direct Credit (BECS, BACS)" ),
+    ACH_CREDIT("9", "ACH_CREDIT", "9 - ACH Credit" ),
+    BPAY("10", "BPAY", "10 - BPAY" ),
+    HIGH_VALUE_CLEARING_SYSTEM("11", "HVACS", "11 - High Value Clearing System HVACS" ),
+    REINVEST_IN_FUND("12", "REINVEST_IN_FUND", "12 - Reinvest In Fund" ),
     ;
 
     private final String id;

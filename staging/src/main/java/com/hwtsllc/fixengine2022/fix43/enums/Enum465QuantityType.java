@@ -20,6 +20,21 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum465QuantityType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  Information is the same for TAGS 465
+     */
+
+    /*
+     * 1-8 types
+     */
+    SHARES("1", "SHARES", "1 - SHARES" ),
+    BONDS("2", "BONDS", "2 - BONDS" ),
+    CURRENT_FACE("3", "CURRENTFACE", "3 - CURRENTFACE" ),
+    ORIGINAL_FACE("4", "ORIGINALFACE", "4 - ORIGINALFACE" ),
+    CURRENCY("5", "CURRENCY", "5 - CURRENCY" ),
+    CONTRACTS("6", "CONTRACTS", "6 - CONTRACTS" ),
+    OTHER("7", "OTHER", "7 - OTHER" ),
+    PAR("8", "PAR", "8 - PAR" ),
     ;
 
     private final String id;
