@@ -21,119 +21,92 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Enum447PartyIDSourceTest {
+class Enum519ContAmtTypeTest {
     /**
-     *  Information is the same for TAGS 447, 525
+     *  Information is the same for TAGS 519
      */
     @Test
-    void Enum0447Test() {
-        Enum447PartyIDSource enumType;
+    void Enum0519Test() {
+        Enum519ContAmtType enumType;
 
         /*
-         * All PartyRoles
-         *  B-H types
+         * 1-15 types
          */
-        enumType = Enum447PartyIDSource.BANK_IDENTIFICATION_CODE;
+        enumType = Enum519ContAmtType.COMMISSION_AMOUNT_ACTUAL;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.GENERAL_IDENTIFIER;
+        enumType = Enum519ContAmtType.COMMISSION_PERCENT_ACTUAL;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.PROPRIETARY;
+        enumType = Enum519ContAmtType.INITIAL_CHARGE_AMOUNT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.ISO_COUNTRY_CODE;
+        enumType = Enum519ContAmtType.INITIAL_CHARGE_PERCENT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.SETTLEMENT_ENTITY_LOCATION;
+        enumType = Enum519ContAmtType.DISCOUNT_AMOUNT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.MARKET_IDENTIFIER_CODE;
+        enumType = Enum519ContAmtType.DISCOUNT_PERCENT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.CSD_MEMBER_CODE;
+        enumType = Enum519ContAmtType.DILUTION_LEVY_AMOUNT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-
-        /*
-         * For PartyRole = "InvestorID" and for CIV
-         * 6-9, A types
-         */
-        enumType = Enum447PartyIDSource.UK_NATIONAL_NUMBER;
+        enumType = Enum519ContAmtType.DILUTION_LEVY_PERCENT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.US_SOCIAL_SECURITY_NUMBER;
+        enumType = Enum519ContAmtType.EXIT_CHARGE_AMOUNT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.US_TAX_ID_NUMBER;
+        enumType = Enum519ContAmtType.EXIT_CHARGE_PERCENT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.AUSTRALIAN_BUSINESS_NUMBER;
+        enumType = Enum519ContAmtType.RENEWAL_COMMISSION_PERCENT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-
-        /*
-         * For PartyRole = "InvestorID" and for Equities
-         * 1-5 types
-         */
-        enumType = Enum447PartyIDSource.KOREAN_INVESTOR_ID;
+        enumType = Enum519ContAmtType.PROJECTED_FUND_VALUE;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID;
+        enumType = Enum519ContAmtType.RENEWAL_COMMISSION_ORDER_VALUE;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.TAIWANESE_TRADING_ACCT;
+        enumType = Enum519ContAmtType.RENEWAL_COMMISSION_FUND_VALUE;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum447PartyIDSource.MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER;
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
-
-        enumType = Enum447PartyIDSource.CHINESE_INVESTOR_ID;
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
-
-
-        /*
-         * For PartyRole="Broker of Credit"
-         * I type
-         */
-        enumType = Enum447PartyIDSource.DIRECTED_BROKER_ACRONYM;
+        enumType = Enum519ContAmtType.NET_SETTLEMENT_AMOUNT;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
