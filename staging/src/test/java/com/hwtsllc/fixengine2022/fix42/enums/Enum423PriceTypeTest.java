@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum423PriceTypeTest {
@@ -30,92 +31,146 @@ class Enum423PriceTypeTest {
          * 1-11, 13-19 msg types
          */
         enumType = Enum423PriceType.PERCENTAGE;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.PER_UNIT;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.FIXED_AMOUNT;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.DISCOUNT;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.PREMIUM;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.SPREAD;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.TED_PRICE;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.TED_YIELD;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.YIELD;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.FIXED_TRADE_PRICE;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.VARIABLE_TRADE_PRICE;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         enumType = Enum423PriceType.TICKS_IN_HALFS;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.TICKS_IN_FOURTHS;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.TICKS_IN_EIGHTHS;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.TICKS_IN_SIXTEENTHS;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.TICKS_IN_THIRTY_SECONDS;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.TICKS_IN_SIXTY_FOURTHS;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum423PriceType.TICKS_IN_ONE_TWENTY_EIGHTS;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

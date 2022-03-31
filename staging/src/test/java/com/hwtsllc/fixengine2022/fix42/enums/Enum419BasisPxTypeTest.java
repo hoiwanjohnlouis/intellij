@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum419BasisPxTypeTest {
@@ -30,68 +31,107 @@ class Enum419BasisPxTypeTest {
          * 2-9, A-D, Z msg types
          */
         enumType = Enum419BasisPxType.CLOSING_PRICE_MORNING;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.CLOSING_PRICE;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.CURRENT_PRICE;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.SQ;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.VWAP_DAY;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.VWAP_MORNING;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.VWAP_AFTERNOON;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.VWAP_DAY_EXCEPT_YORI;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         enumType = Enum419BasisPxType.VWAP_MORNING_EXCEPT_YORI;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.VWAP_AFTERNOON_EXCEPT_YORI;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.STRIKE;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum419BasisPxType.OPEN;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         enumType = Enum419BasisPxType.OTHER;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

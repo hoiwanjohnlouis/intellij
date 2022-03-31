@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum321SecurityRequestTypeTest {
@@ -30,21 +31,33 @@ class Enum321SecurityRequestTypeTest {
          * 0-3 msg types
          */
         enumType = Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITIES;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

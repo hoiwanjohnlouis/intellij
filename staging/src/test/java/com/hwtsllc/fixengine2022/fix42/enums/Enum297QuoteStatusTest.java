@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum297QuoteStatusTest {
@@ -30,81 +31,129 @@ class Enum297QuoteStatusTest {
          * 0-15 msg types
          */
         enumType = Enum297QuoteStatus.ACCEPTED;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.CANCEL_FOR_SYMBOL;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.CANCELED_FOR_UNDERLYING;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.CANCELED_ALL;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.REJECTED;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.REMOVED_FROM_MARKET;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.EXPIRED;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.QUERY;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.QUOTE_NOT_FOUND;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.PENDING;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.PASS;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.LOCKED_MARKET_WARNING;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.CROSS_MARKET_WARNING;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

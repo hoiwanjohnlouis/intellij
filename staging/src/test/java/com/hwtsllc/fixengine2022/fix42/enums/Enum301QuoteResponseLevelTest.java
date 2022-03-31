@@ -16,7 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -33,25 +34,25 @@ class Enum301QuoteResponseLevelTest {
         assertEquals("0", enumType.getID());
         assertEquals("NO_ACKNOWLEDGEMENT", enumType.getName());
         assertEquals("0 - No Acknowledgement (default)", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS;
         assertEquals("1", enumType.getID());
         assertEquals("ACKNOWLEDGE_NEGATIVE_OR_ERRORS", enumType.getName());
         assertEquals("1 - Acknowledge only negative or erroneous quotes", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE;
         assertEquals("2", enumType.getID());
         assertEquals("ACKNOWLEDGE_EACH_QUOTE", enumType.getName());
         assertEquals("2 - Acknowledge each quote messages", enumType.getDescription());
-        assertNotEquals("junkAction", enumType.getID());
-        assertNotEquals("junkName", enumType.getName());
-        assertNotEquals("junkDescription", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *
