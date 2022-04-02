@@ -25,7 +25,7 @@ public enum Enum569TradeRequestType implements EnumAccessors, LogStringVerbose {
      */
 
     /*
-     *  0,-4 types
+     *  0-4 types
      */
     ALL_TRADES( "0", "ALL_TRADES", "0 - All Trades" ),
     MATCHED_TRADES( "1", "MATCHED_TRADES", "1 - Matched trades matching criteria provided on request (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)" ),

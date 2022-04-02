@@ -36,7 +36,7 @@ public enum Enum507RegistRejReasonCode implements EnumAccessors, LogStringVerbos
     INVALID_MAILING_DETAILS("7", "INVALID_MAILING_DETAILS", "7 - Invalid/unacceptable Mailing Details" ),
     INVALID_MAILING_INSTRUCTIONS("8", "INVALID_MAILING_INSTRUCTIONS", "8 - Invalid/unacceptable Mailing Instructions" ),
     INVALID_INVESTOR_ID("9", "INVALID_INVESTOR_ID", "9 - Invalid/unacceptable Investor ID" ),
-    INVALID_INVESTOR_ID_SOURCE("10", "INVALID_INVESTOR_ID_SOURCE", "10 - Invalid/unaceeptable Investor ID Source" ),
+    INVALID_INVESTOR_ID_SOURCE("10", "INVALID_INVESTOR_ID_SOURCE", "10 - Invalid/unacceptable Investor ID Source" ),
     INVALID_DATE_OF_BIRTH("11", "INVALID_DATE_OF_BIRTH", "11 - Invalid/unacceptable Date Of Birth" ),
     INVALID_COUNTRY_OF_RESIDENCE("12", "INVALID_COUNTRY_OF_RESIDENCE", "12 - Invalid/unacceptable Investor Country Of Residence" ),
     INVALID_NO_DISTRIB_INSTNS("13", "INVALID_NO_DISTRIB_INSTNS", "13 - Invalid/unacceptable No Distrib Instns" ),
@@ -45,6 +45,8 @@ public enum Enum507RegistRejReasonCode implements EnumAccessors, LogStringVerbos
     INVALID_CDA_ACCT_NAME("16", "INVALID_CDA_ACCT_NAME", "16 - Invalid/unacceptable Cash Distrib Agent Acct Name" ),
     INVALID_CDA_CODE("17", "INVALID_CDA_CODE", "17 - Invalid/unacceptable Cash Distrib Agent Code" ),
     INVALID_CDA_ACCT_NUM("18", "INVALID_CDA_ACCT_NUM", "18 - Invalid/unacceptable Cash Distrib Agent Acct Num" ),
+
+
     OTHER("99", "OTHER", "99 - Other" ),
     ;
 

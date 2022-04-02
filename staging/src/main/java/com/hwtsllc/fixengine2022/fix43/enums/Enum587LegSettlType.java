@@ -25,7 +25,7 @@ public enum Enum587LegSettlType implements EnumAccessors, LogStringVerbose {
      */
 
     /*
-     *  0-9, B, and C types
+     *  0-9, types
      */
     REGULAR( "0", "REGULAR", "0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)" ),
     CASH( "1", "CASH", "1 - Cash (TOD / T+0)" ),
@@ -38,6 +38,9 @@ public enum Enum587LegSettlType implements EnumAccessors, LogStringVerbose {
     SELLERS_OPTION( "8", "SELLERS_OPTION", "8 - Sellers Option" ),
     T_PLUS_5( "9", "T_PLUS_5", "9 - T+5" ),
 
+    /*
+     *  B-C, types
+     */
     BROKEN_DATE( "B", "BROKEN_DATE",
             "B - Broken date - for FX expressing non-standard tenor, SettlDate (64) must be specified" ),
     FX_SPOT( "C", "FX_SPOT", "C - FX Spot Next settlement (Spot+1, aka next day)" ),

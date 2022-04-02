@@ -47,6 +47,7 @@ public enum Enum447PartyIDSource implements EnumAccessors, LogStringVerbose {
             "H - CSD participant/member code " +
                     "(e.g.. Euroclear, DTC, CREST or Kassenverein number)" ),
 
+
     /*
      * For PartyRole = "InvestorID" and for CIV
      * 6-9, A types
@@ -56,6 +57,7 @@ public enum Enum447PartyIDSource implements EnumAccessors, LogStringVerbose {
     US_TAX_ID_NUMBER("8", "US_TAX_ID_NUMBER", "8 - US Employer or Tax ID Number" ),
     AUSTRALIAN_BUSINESS_NUMBER("9", "AUSTRALIAN_BUSINESS_NUMBER", "9 - Australian Business Number" ),
     AUSTRALIAN_TAX_FILE_NUMBER("A", "AUSTRALIAN_TAX_FILE_NUMBER", "A - Australian Tax File Number" ),
+
 
     /*
      * For PartyRole = "InvestorID" and for Equities
@@ -71,6 +73,7 @@ public enum Enum447PartyIDSource implements EnumAccessors, LogStringVerbose {
             "4 - Malaysian Central Depository (MCD) number" ),
     CHINESE_INVESTOR_ID("5", "CHINESE_INVESTOR_ID",
             "5 - Chinese Investor ID" ),
+
 
     /*
      * For PartyRole="Broker of Credit"

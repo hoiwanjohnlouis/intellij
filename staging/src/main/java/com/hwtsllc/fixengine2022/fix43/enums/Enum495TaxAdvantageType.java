@@ -58,6 +58,7 @@ public enum Enum495TaxAdvantageType implements EnumAccessors, LogStringVerbose {
     EDUCATION_IRA_FUND_PROTOTYPE("28", "EDUCATION_IRA_FUND_PROTOTYPE", "28 - Education IRA (Fund Prototype) (US)" ),
     EDUCATION_IRA_NON_PROTOTYPE("29", "EDUCATION_IRA_NON_PROTOTYPE", "29 - Education IRA (Non-prototype) (US)" ),
 
+
     OTHER("999", "OTHER", "999 - Other" ),
     ;
 

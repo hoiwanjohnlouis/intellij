@@ -25,7 +25,7 @@ public enum Enum538NestedPartyRole implements EnumAccessors, LogStringVerbose {
      */
 
     /*
-     * 1-22, 24-78 msg types
+     *  1-22, msg types
      */
     EXECUTING_FIRM("1", "EXECUTING_FIRM", "1 - Executing Firm (formerly FIX 4.2 ExecBroker)" ),
     BROKER_OF_CREDIT("2", "BROKER_OF_CREDIT", "2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)" ),
@@ -51,6 +51,11 @@ public enum Enum538NestedPartyRole implements EnumAccessors, LogStringVerbose {
 
     CLEARING_ORGANIZATION("21", "CLEARING_ORGANIZATION", "21 - Clearing Organization" ),
     EXCHANGE("22", "EXCHANGE", "22 - Exchange" ),
+
+
+    /*
+     *  24-78 msg types
+     */
     CUSTOMER_ACCOUNT("24", "CUSTOMER_ACCOUNT", "24 - Customer Account" ),
     CORRESPONDENT_CLEARING_ORGANIZATION("25", "CORRESPONDENT_CLEARING_ORGANIZATION", "25 - Correspondent Clearing Organization" ),
     CORRESPONDENT_BROKER("26", "CORRESPONDENT_BROKER", "26 - Correspondent Broker" ),

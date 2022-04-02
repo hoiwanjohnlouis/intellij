@@ -25,7 +25,7 @@ public enum Enum532MassCancelRejectReason implements EnumAccessors, LogStringVer
      */
 
     /*
-     *  0-6, 99 types
+     *  0-6, types
      */
     MASS_CANCEL_NOT_SUPPORTED( "0", "MASS_CANCEL_NOT_SUPPORTED", "0 - Mass Cancel Not Supported" ),
     UNKNOWN_SECURITY( "1", "UNKNOWN_SECURITY", "1 - Invalid or Unknown Security" ),
@@ -34,6 +34,11 @@ public enum Enum532MassCancelRejectReason implements EnumAccessors, LogStringVer
     UNKNOWN_CFICODE( "4", "UNKNOWN_CFICODE", "4 - Invalid or Unknown CFICode" ),
     UNKNOWN_SECURITYTYPE( "5", "UNKNOWN_SECURITYTYPE", "5 - Invalid or Unknown SecurityType" ),
     UNKNOWN_SESSION( "6", "UNKNOWN_SESSION", "6 - Invalid or Unknown Trading Session" ),
+
+
+    /*
+     *  99 type
+     */
     OTHER( "99", "OTHER", "99 - Other" ),
     ;
 

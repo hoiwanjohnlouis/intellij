@@ -25,7 +25,7 @@ public enum Enum529OrderRestrictions implements EnumAccessors, LogStringVerbose 
      */
 
     /*
-     *  1-9, A types
+     *  1-9, types
      */
     PROGRAM_TRADE( "1", "PROGRAM_TRADE",
             "1 - Program Trade" ),
@@ -45,6 +45,11 @@ public enum Enum529OrderRestrictions implements EnumAccessors, LogStringVerbose 
             "8 - External Market Participant" ),
     EXTERNAL_INTER_CONNECTED( "9", "EXTERNAL_INTER_CONNECTED",
             "9 - External Inter-connected Market Linkage" ),
+
+
+    /*
+     *  A type
+     */
     RISKLESS_ARBITRAGE( "A", "RISKLESS_ARBITRAGE",
             "A - Riskless Arbitrage" ),
     ;

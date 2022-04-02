@@ -25,9 +25,14 @@ public enum Enum567TradSesStatusRejReason implements EnumAccessors, LogStringVer
      */
 
     /*
-     *  1, and 99 types
+     *  1, type
      */
     UNKNOWN_TRADING_SESSION_ID( "1", "UNKNOWN_TRADING_SESSION_ID", "1 - Unknown or invalid TradingSessionID" ),
+
+
+    /*
+     *  99 type
+     */
     OTHER( "99", "OTHER", "99 - Other" ),
     ;
 

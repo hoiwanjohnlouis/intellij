@@ -25,7 +25,7 @@ public enum Enum658QuoteRequestRejectReason implements EnumAccessors, LogStringV
      */
 
     /*
-     *  1-11, 99 types
+     *  1-11, types
      */
     UNKNOWN_SYMBOL( "1", "UNKNOWN_SYMBOL", "1 - Unknown Symbol (Security)" ),
     EXCHANGE_CLOSED( "2", "EXCHANGE_CLOSED", "2 - Exchange (Security) Closed" ),
@@ -39,6 +39,10 @@ public enum Enum658QuoteRequestRejectReason implements EnumAccessors, LogStringV
     PASS( "10", "PASS", "10 - Pass" ),
     INSUFFICIENT_CREDIT( "11", "INSUFFICIENT_CREDIT", "11 - Insufficient credit" ),
 
+
+    /*
+     *  99 type
+     */
     OTHER( "99", "OTHER", "99 - Other" ),
     ;
 

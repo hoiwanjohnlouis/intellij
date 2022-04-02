@@ -36,6 +36,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
     DEPRECATED_US_TREASURY_BILL( "USTB", "DEPRECATED_US_TREASURY_BILL",
             "USTB - US Treasury Bill (Deprecated Value Use TBILL)" ),
 
+
     /*
      * Agency, 5
      */
@@ -49,6 +50,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
             "PEF - Private Export Funding (Agency)" ),
     USD_SUPRANATIONAL_COUPON( "SUPRA", "USD_SUPRANATIONAL_COUPON",
             "SUPRA - USD Supranational Coupons (Agency)" ),
+
 
     /*
      * Corporate, 8
@@ -70,11 +72,13 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
     YANKEE_CORPORATE_BOND( "YANK", "YANKEE_CORPORATE_BOND",
             "YANK - Yankee Corporate Bond" ),
 
+
     /*
      * Currency, 1
      */
     FOREIGN_EXCHANGE_CONTRACT( "FOR", "FOREIGN_EXCHANGE_CONTRACT",
             "FOR - Foreign Exchange Contract (Currency)" ),
+
 
     /*
      * Equity, 2
@@ -83,6 +87,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
             "CS - Common Stock (Equity)" ),
     PREFERRED_STOCK( "PS", "PREFERRED_STOCK",
             "PS - Preferred Stock (Equity)" ),
+
 
     /*
      * Finance, 5
@@ -97,6 +102,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
             "SECLOAN - Securities Loan (Financing)" ),
     SECURITIES_PLEDGE( "SECPLEDGE", "SECURITIES_PLEDGE",
             "SECPLEDGE - Securities Pledge (Financing)" ),
+
 
     /*
      * Government, 9
@@ -119,6 +125,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
             "TNOTE - US Treasury Note (Government)" ),
     US_TREASURY_BILL( "TBILL", "US_TREASURY_BILL",
             "TBILL - US Treasury Bill (Government)" ),
+
 
     /*
      * Loan, 13
@@ -149,6 +156,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
             "AMENDED - Amended & Restated" ),
     RETIRED_LOAN( "RETIRED", "RETIRED_LOAN",
             "RETIRED - Retired" ),
+
 
     /*
      * Money Market, 18
@@ -190,6 +198,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
     YANKEE_CERTIFICATE_OF_DEPOSIT( "YCD", "YANKEE_CERTIFICATE_OF_DEPOSIT",
             "YCD - Yankee Certificate Of Deposit" ),
 
+
     /*
      * Mortgage, 11
      */
@@ -215,6 +224,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
             "PFAND - Pfandbriefe" ),
     TO_BE_ANNOUNCED( "TBA", "TO_BE_ANNOUNCED",
             "TBA - To Be Announced" ),
+
 
     /*
      * Municipal, 16
@@ -251,6 +261,7 @@ public enum Enum609LegSecurityType implements EnumAccessors, LogStringVerbose {
             "VRDN - Variable Rate Demand Note" ),
     WARRANT( "WAR", "WARRANT",
             "WAR - Warrant" ),
+
 
     /*
      * Other, 7

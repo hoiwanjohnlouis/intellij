@@ -35,6 +35,7 @@ public enum Enum574MatchType implements EnumAccessors, LogStringVerbose {
     GP_COUNTER_ORDER_SELECTION( "64", "GP_COUNTER_ORDER_SELECTION", "64 - Counter-Order Selection" ),
     GP_CALL_AUCTION( "65", "GP_CALL_AUCTION", "65 - Call Auction" ),
 
+
     /*
      *  NASDAQ
      *  M3-M6
@@ -43,6 +44,7 @@ public enum Enum574MatchType implements EnumAccessors, LogStringVerbose {
     M4( "M4", "M4", "M4 - ACT Default Trade" ),
     M5( "M5", "M5", "M5 - ACT Default After M2" ),
     M6( "M6", "M6", "M6 - ACT M6 Match" ),
+
 
     /*
      *  NYSE and AMEX
@@ -73,6 +75,7 @@ public enum Enum574MatchType implements EnumAccessors, LogStringVerbose {
     S4( "S4", "S4", "S4 - Summarized match using A4 exact match criteria except quantity is summarized" ),
     S5( "S5", "S5", "S5 - Summarized match using A5 exact match criteria except quantity is summarized" ),
 
+
     /*
      *  NYSE, AMEX, and NASDAQ
      *  M1-M2, MT types
@@ -84,6 +87,7 @@ public enum Enum574MatchType implements EnumAccessors, LogStringVerbose {
             "M2 - Summarized match minus badges and times: ACT M2 Match" ),
     MT( "MT", "MT",
             "MT - OCS Locked In: Non-ACT" ),
+
 
     /*
      *  OMX Order Routing

@@ -38,6 +38,7 @@ public enum Enum459UnderlyingSecurityAltIDSource implements EnumAccessors, LogSt
     CTA("9", "CTA",
             "9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)" ),
 
+
     /*
      * A-L msg types
      */

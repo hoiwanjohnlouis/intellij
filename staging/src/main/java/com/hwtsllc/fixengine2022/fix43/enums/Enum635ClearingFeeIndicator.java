@@ -25,7 +25,7 @@ public enum Enum635ClearingFeeIndicator implements EnumAccessors, LogStringVerbo
      */
 
     /*
-     *  1-5, 9, B, C, E, F, H, I, L, and M types
+     *  1-5, types
      */
     FIRST_YEAR_DELEGATE( "1", "FIRST_YEAR_DELEGATE", "1 - 1st year delegate trading for own account" ),
     SECOND_YEAR_DELEGATE( "2", "SECOND_YEAR_DELEGATE", "2 - 2nd year delegate trading for own account" ),
@@ -33,15 +33,38 @@ public enum Enum635ClearingFeeIndicator implements EnumAccessors, LogStringVerbo
     FOURTH_YEAR_DELEGATE( "4", "FOURTH_YEAR_DELEGATE", "4 - 4th year delegate trading for own account" ),
     FIFTH_YEAR_DELEGATE( "5", "FIFTH_YEAR_DELEGATE", "5 - 5th year delegate trading for own account" ),
 
+
+    /*
+     *  9, types
+     */
     SIXTH_YEAR_DELEGATE( "9", "SIXTH_YEAR_DELEGATE", "9 - 6th year delegate trading for own account" ),
 
+
+    /*
+     *  B-C, types
+     */
     CBOE_MEMBER( "B", "CBOE_MEMBER", "B - CBOE Member" ),
     NON_MEMBER_AND_CUSTOMER( "C", "NON_MEMBER_AND_CUSTOMER", "C - Non-member and Customer" ),
+
+
+    /*
+     *  E-F, types
+     */
     EQUITY_AND_CLEARING_MEMBER( "E", "EQUITY_AND_CLEARING_MEMBER", "E - Equity Member and Clearing Member" ),
     FULL_AND_ASSOCIATE_AS_FLOOR( "F", "FULL_AND_ASSOCIATE_AS_FLOOR",
             "F - Full and Associate Member trading for own account and as floor brokers" ),
+
+
+    /*
+     *  H-I, types
+     */
     H_AND_J_FIRMS( "H", "H_AND_J_FIRMS", "H - 106.H and 106.J firms" ),
     GIM_IDEM_AND_COM( "I", "GIM_IDEM_AND_COM", "I - GIM, IDEM and COM Membership Interest Holders" ),
+
+
+    /*
+     *  L-M, types
+     */
     F_EMPLOYEES( "L", "F_EMPLOYEES", "L - Lessee 106.F Employees" ),
     ALL_OTHER( "M", "ALL_OTHER", "M - All other ownership types" ),
     ;

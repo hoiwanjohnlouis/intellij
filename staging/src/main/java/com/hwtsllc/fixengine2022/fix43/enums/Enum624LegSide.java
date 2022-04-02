@@ -39,6 +39,7 @@ public enum Enum624LegSide implements EnumAccessors, LogStringVerbose {
             "8 - Cross (orders where counterparty is an exchange, valid for all messages except IOIs)"),
     CROSS_SHORT ("9", "CROSS_SHORT", "9 - Cross short"),
 
+
     /*
      * A-G type
      */
