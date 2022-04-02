@@ -31,24 +31,24 @@ class Enum338TradSesMethodTest {
          * 1-3 msg types
          */
         enumType = Enum338TradSesMethod.ELECTRONIC;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "1", enumType.getID());
+        assertEquals( "ELECTRONIC", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum338TradSesMethod.OPEN_OUTCRY;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "2", enumType.getID());
+        assertEquals( "OPEN_OUTCRY", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum338TradSesMethod.TWO_PARTY;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "3", enumType.getID());
+        assertEquals( "TWO_PARTY", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());

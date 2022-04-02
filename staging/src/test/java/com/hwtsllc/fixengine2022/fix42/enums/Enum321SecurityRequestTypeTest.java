@@ -31,32 +31,32 @@ class Enum321SecurityRequestTypeTest {
          * 0-3 msg types
          */
         enumType = Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "0", enumType.getID());
+        assertEquals( "REQUEST_SECURITY_IDENTITY", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "1", enumType.getID());
+        assertEquals( "REQUEST_SPECIFIED_SECURITY", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "2", enumType.getID());
+        assertEquals( "REQUEST_LIST_SECURITY_TYPES", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITIES;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "3", enumType.getID());
+        assertEquals( "REQUEST_LIST_SECURITIES", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());

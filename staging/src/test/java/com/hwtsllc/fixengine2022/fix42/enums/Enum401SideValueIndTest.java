@@ -31,17 +31,17 @@ class Enum401SideValueIndTest {
          * 1-2 msg types
          */
         enumType = Enum401SideValueInd.SIDE_VALUE_1;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1", enumType.getID());
+        assertEquals( "SIDE_VALUE_1", enumType.getName());
+        assertEquals( "1 - Side Value 1", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum401SideValueInd.SIDE_VALUE_2;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2", enumType.getID());
+        assertEquals( "SIDE_VALUE_2", enumType.getName());
+        assertEquals( "2 - Side Value 2", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

@@ -31,33 +31,33 @@ class Enum409LiquidityIndTypeTest {
          * 1-4 msg types
          */
         enumType = Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1", enumType.getID());
+        assertEquals( "FIVE_DAY_MOVING_AVERAGE", enumType.getName());
+        assertEquals( "1 - 5 Day Moving Average", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2", enumType.getID());
+        assertEquals( "TWENTY_DAY_MOVING_AVERAGE", enumType.getName());
+        assertEquals( "2 - 20 Day Moving Average", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum409LiquidityIndType.NORMAL_MARKET_SIZE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3", enumType.getID());
+        assertEquals( "NORMAL_MARKET_SIZE", enumType.getName());
+        assertEquals( "3 - Normal Market Size", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum409LiquidityIndType.OTHER;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "4", enumType.getID());
+        assertEquals( "OTHER", enumType.getName());
+        assertEquals( "4 - Other", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

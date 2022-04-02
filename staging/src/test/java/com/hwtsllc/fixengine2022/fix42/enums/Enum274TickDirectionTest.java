@@ -31,41 +31,35 @@ class Enum274TickDirectionTest {
          * 0-3
          */
         enumType = Enum274TickDirection.PLUS_TICK;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "0", enumType.getID());
+        assertEquals( "PLUS_TICK", enumType.getName());
+        assertEquals( "0 - Plus Tick", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum274TickDirection.ZERO_PLUS_TICK;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1", enumType.getID());
+        assertEquals( "ZERO_PLUS_TICK", enumType.getName());
+        assertEquals( "1 - Zero-Plus Tick", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum274TickDirection.MINUS_TICK;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2", enumType.getID());
+        assertEquals( "MINUS_TICK", enumType.getName());
+        assertEquals( "2 - Minus Tick", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum274TickDirection.ZERO_MINUS_TICK;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3", enumType.getID());
+        assertEquals( "ZERO_MINUS_TICK", enumType.getName());
+        assertEquals( "3 - Zero-Minus Tick", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
-    }
-    /**
-     *
-     */
-    public static void main(String[] args) {
-        System.out.println();
     }
 }

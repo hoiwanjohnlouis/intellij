@@ -31,33 +31,33 @@ class Enum418BidTradeTypeTest {
          * A, G, J, and R msg types
          */
         enumType = Enum418BidTradeType.AGENCY;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "A", enumType.getID());
+        assertEquals( "AGENCY", enumType.getName());
+        assertEquals( "A - Agency", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum418BidTradeType.VWAP_GUARANTEE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "G", enumType.getID());
+        assertEquals( "VWAP_GUARANTEE", enumType.getName());
+        assertEquals( "G - Vwap Guarantee", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum418BidTradeType.GUARANTEED_CLOSE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "J", enumType.getID());
+        assertEquals( "GUARANTEED_CLOSE", enumType.getName());
+        assertEquals( "J - Guaranteed Close", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum418BidTradeType.RISK_TRADE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "R", enumType.getID());
+        assertEquals( "RISK_TRADE", enumType.getName());
+        assertEquals( "RISK_TRADE", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

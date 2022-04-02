@@ -31,17 +31,17 @@ class Enum374BidRequestTransTypeTest {
          * C, and N msg types
          */
         enumType = Enum374BidRequestTransType.CANCEL;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "C", enumType.getID());
+        assertEquals( "CANCEL", enumType.getName());
+        assertEquals( "C - Cancel", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum374BidRequestTransType.NEW;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "N", enumType.getID());
+        assertEquals( "NEW", enumType.getName());
+        assertEquals( "N - New", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

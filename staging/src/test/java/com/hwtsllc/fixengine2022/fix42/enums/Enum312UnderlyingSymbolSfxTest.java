@@ -31,16 +31,16 @@ class Enum312UnderlyingSymbolSfxTest {
          * CD, and WI msg types for Fixed Income
          */
         enumType = Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "CD", enumType.getID());
+        assertEquals( "LUMP_SUM_INTEREST", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum312UnderlyingSymbolSfx.WHEN_ISSUED;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
+        assertEquals( "WI", enumType.getID());
+        assertEquals( "WHEN_ISSUED", enumType.getName());
         assertEquals( "", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
