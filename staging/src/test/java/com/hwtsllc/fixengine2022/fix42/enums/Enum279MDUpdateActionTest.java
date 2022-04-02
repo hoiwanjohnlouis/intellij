@@ -33,7 +33,7 @@ class Enum279MDUpdateActionTest {
         enumType = Enum279MDUpdateAction.NEW;
         assertEquals( "0", enumType.getID());
         assertEquals( "NEW", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "0 - New", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum279MDUpdateActionTest {
         enumType = Enum279MDUpdateAction.CHANGE;
         assertEquals( "1", enumType.getID());
         assertEquals( "CHANGE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Change", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +49,7 @@ class Enum279MDUpdateActionTest {
         enumType = Enum279MDUpdateAction.DELETE;
         assertEquals( "2", enumType.getID());
         assertEquals( "DELETE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Delete", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -57,7 +57,7 @@ class Enum279MDUpdateActionTest {
         enumType = Enum279MDUpdateAction.DELETE_THRU;
         assertEquals( "3", enumType.getID());
         assertEquals( "DELETE_THRU", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3 - Delete Thru", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -65,7 +65,7 @@ class Enum279MDUpdateActionTest {
         enumType = Enum279MDUpdateAction.DELETE_FROM;
         assertEquals( "4", enumType.getID());
         assertEquals( "DELETE_FROM", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "4 - Delete From", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

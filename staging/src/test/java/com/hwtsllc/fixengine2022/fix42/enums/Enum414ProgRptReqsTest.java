@@ -33,7 +33,10 @@ class Enum414ProgRptReqsTest {
         enumType = Enum414ProgRptReqs.BUY_SIDE_STATUS;
         assertEquals( "1", enumType.getID());
         assertEquals( "BUY_SIDE_STATUS", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Buy-side explicitly requests status using Statue Request (default), " +
+                        "the sell-side firm can, however, send a DONE status List STatus Response " +
+                        "in an unsolicited fashion",
+                enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +44,9 @@ class Enum414ProgRptReqsTest {
         enumType = Enum414ProgRptReqs.SELL_SIDE_STATUS;
         assertEquals( "2", enumType.getID());
         assertEquals( "SELL_SIDE_STATUS", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Sell-side periodically sends status using List Status. " +
+                        "Period optionally specified in ProgressPeriod",
+                enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +54,7 @@ class Enum414ProgRptReqsTest {
         enumType = Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS;
         assertEquals( "3", enumType.getID());
         assertEquals( "REAL_TIME_EXECUTION_REPORTS", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3 - Real-time execution reports (to be discourage)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

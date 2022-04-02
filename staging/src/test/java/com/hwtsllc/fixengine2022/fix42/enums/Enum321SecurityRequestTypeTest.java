@@ -33,7 +33,7 @@ class Enum321SecurityRequestTypeTest {
         enumType = Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY;
         assertEquals( "0", enumType.getID());
         assertEquals( "REQUEST_SECURITY_IDENTITY", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "0 - Request Security identity and specifications", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,9 @@ class Enum321SecurityRequestTypeTest {
         enumType = Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY;
         assertEquals( "1", enumType.getID());
         assertEquals( "REQUEST_SPECIFIED_SECURITY", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Request Security identity for the specifications provided " +
+                        "(name of the security is not supplied)",
+                enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +51,7 @@ class Enum321SecurityRequestTypeTest {
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES;
         assertEquals( "2", enumType.getID());
         assertEquals( "REQUEST_LIST_SECURITY_TYPES", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Request List Security Types", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -57,7 +59,10 @@ class Enum321SecurityRequestTypeTest {
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITIES;
         assertEquals( "3", enumType.getID());
         assertEquals( "REQUEST_LIST_SECURITIES", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3 - Request List Securities " +
+                        "(can be qualified with Symbol, SecurityType, TradingSessionID, SecurityExchange. " +
+                        "If provided, then only list Securities for the specific type.)",
+                enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

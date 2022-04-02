@@ -33,7 +33,7 @@ class Enum394BidTypeTest {
         enumType = Enum394BidType.NON_DISCLOSED;
         assertEquals( "1", enumType.getID());
         assertEquals( "NON_DISCLOSED", enumType.getName());
-        assertEquals( "1 - Non Disclosed", enumType.getDescription());
+        assertEquals( "1 - Non Disclosed style (e.g. US/European)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum394BidTypeTest {
         enumType = Enum394BidType.DISCLOSED;
         assertEquals( "2", enumType.getID());
         assertEquals( "DISCLOSED", enumType.getName());
-        assertEquals( "2 - Disclosed", enumType.getDescription());
+        assertEquals( "2 - Disclosed style (e.g. Japanese)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +49,7 @@ class Enum394BidTypeTest {
         enumType = Enum394BidType.NO_BIDDING;
         assertEquals( "3", enumType.getID());
         assertEquals( "NO_BIDDING", enumType.getName());
-        assertEquals( "3 - No Bidding", enumType.getDescription());
+        assertEquals( "3 - No bidding process", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

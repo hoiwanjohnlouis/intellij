@@ -41,7 +41,7 @@ class Enum418BidTradeTypeTest {
         enumType = Enum418BidTradeType.VWAP_GUARANTEE;
         assertEquals( "G", enumType.getID());
         assertEquals( "VWAP_GUARANTEE", enumType.getName());
-        assertEquals( "G - Vwap Guarantee", enumType.getDescription());
+        assertEquals( "G - VWAP Guarantee", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -57,7 +57,7 @@ class Enum418BidTradeTypeTest {
         enumType = Enum418BidTradeType.RISK_TRADE;
         assertEquals( "R", enumType.getID());
         assertEquals( "RISK_TRADE", enumType.getName());
-        assertEquals( "RISK_TRADE", enumType.getDescription());
+        assertEquals( "R - Risk Trade", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

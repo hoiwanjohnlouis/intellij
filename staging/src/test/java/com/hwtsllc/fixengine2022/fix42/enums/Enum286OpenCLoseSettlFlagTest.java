@@ -33,7 +33,7 @@ class Enum286OpenCLoseSettlFlagTest {
         enumType = Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT;
         assertEquals( "0", enumType.getID());
         assertEquals( "DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "0 - Daily Open / Close / Settlement entry", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum286OpenCLoseSettlFlagTest {
         enumType = Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT;
         assertEquals( "1", enumType.getID());
         assertEquals( "SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Session Open / Close / Settlement entry", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +49,7 @@ class Enum286OpenCLoseSettlFlagTest {
         enumType = Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT;
         assertEquals( "2", enumType.getID());
         assertEquals( "DELIVERY_SETTLEMENT", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Delivery Settlement entry", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -57,7 +57,7 @@ class Enum286OpenCLoseSettlFlagTest {
         enumType = Enum286OpenCLoseSettlFlag.EXPECTED;
         assertEquals( "3", enumType.getID());
         assertEquals( "EXPECTED", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3 - Expected entry", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -65,7 +65,7 @@ class Enum286OpenCLoseSettlFlagTest {
         enumType = Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY;
         assertEquals( "4", enumType.getID());
         assertEquals( "PREVIOUS_BUSINESS_DAY", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "4 - Entry from previous business day", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -73,7 +73,7 @@ class Enum286OpenCLoseSettlFlagTest {
         enumType = Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE;
         assertEquals( "5", enumType.getID());
         assertEquals( "THEORETICAL_PRICE_VALUE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "5 - Theoretical Price value", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

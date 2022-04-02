@@ -33,7 +33,7 @@ class Enum312UnderlyingSymbolSfxTest {
         enumType = Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST;
         assertEquals( "CD", enumType.getID());
         assertEquals( "LUMP_SUM_INTEREST", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "CD - EUCP with lump-sum interest rather than discount price", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum312UnderlyingSymbolSfxTest {
         enumType = Enum312UnderlyingSymbolSfx.WHEN_ISSUED;
         assertEquals( "WI", enumType.getID());
         assertEquals( "WHEN_ISSUED", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "WI - When Issued for a security to be reissued under an old CUSIP or ISIN", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

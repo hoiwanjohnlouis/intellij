@@ -65,6 +65,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
+
         /*
          * Agency msg types
          */
@@ -107,6 +108,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * Corporate msg types
@@ -175,6 +177,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
+
         /*
          * Currency msg types
          */
@@ -185,6 +188,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * Equity msg types
@@ -204,6 +208,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * Finance msg types
@@ -247,6 +252,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * Government msg types
@@ -322,6 +328,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * Loan msg types
@@ -429,6 +436,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * Money Market msg types
@@ -577,6 +585,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
+
         /*
          * Mortgage msg types
          */
@@ -667,6 +676,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * Municipal msg types
@@ -798,6 +808,7 @@ class Enum310UnderlyingSecurityTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * Other msg types

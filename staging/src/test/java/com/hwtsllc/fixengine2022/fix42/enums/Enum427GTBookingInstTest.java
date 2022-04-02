@@ -33,7 +33,7 @@ class Enum427GTBookingInstTest {
         enumType = Enum427GTBookingInst.BOOK_OUT_ALL_TRADES;
         assertEquals( "0", enumType.getID());
         assertEquals( "BOOK_OUT_ALL_TRADES", enumType.getName());
-        assertEquals( "0 - BOOK_OUT_ALL_TRADES", enumType.getDescription());
+        assertEquals( "0 - Book out all trades on day of execution", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum427GTBookingInstTest {
         enumType = Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES;
         assertEquals( "1", enumType.getID());
         assertEquals( "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES", enumType.getName());
-        assertEquals( "1 - ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES", enumType.getDescription());
+        assertEquals( "1 - Accumulate executions until order is filled or expires", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +49,7 @@ class Enum427GTBookingInstTest {
         enumType = Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE;
         assertEquals( "2", enumType.getID());
         assertEquals( "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE", enumType.getName());
-        assertEquals( "2 - ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE", enumType.getDescription());
+        assertEquals( "2 - Accumulate until verbally notified otherwise", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

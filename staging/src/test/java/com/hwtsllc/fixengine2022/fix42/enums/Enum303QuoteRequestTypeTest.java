@@ -33,7 +33,7 @@ class Enum303QuoteRequestTypeTest {
         enumType = Enum303QuoteRequestType.MANUAL;
         assertEquals( "1", enumType.getID());
         assertEquals( "MANUAL", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Manual", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum303QuoteRequestTypeTest {
         enumType = Enum303QuoteRequestType.AUTOMATIC;
         assertEquals( "2", enumType.getID());
         assertEquals( "AUTOMATIC", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Automatic", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

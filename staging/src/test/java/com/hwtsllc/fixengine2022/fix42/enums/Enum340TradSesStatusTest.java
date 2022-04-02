@@ -33,7 +33,7 @@ class Enum340TradSesStatusTest {
         enumType = Enum340TradSesStatus.UNKNOWN;
         assertEquals( "0", enumType.getID());
         assertEquals( "UNKNOWN", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "0 - Unknown", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum340TradSesStatusTest {
         enumType = Enum340TradSesStatus.HALTED;
         assertEquals( "1", enumType.getID());
         assertEquals( "HALTED", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Halted", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +49,7 @@ class Enum340TradSesStatusTest {
         enumType = Enum340TradSesStatus.OPEN;
         assertEquals( "2", enumType.getID());
         assertEquals( "OPEN", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Open", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -57,7 +57,7 @@ class Enum340TradSesStatusTest {
         enumType = Enum340TradSesStatus.CLOSED;
         assertEquals( "3", enumType.getID());
         assertEquals( "CLOSED", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3 - Closed", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -65,7 +65,7 @@ class Enum340TradSesStatusTest {
         enumType = Enum340TradSesStatus.PRE_OPEN;
         assertEquals( "4", enumType.getID());
         assertEquals( "PRE_OPEN", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "4 - Pre-Open", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -73,7 +73,7 @@ class Enum340TradSesStatusTest {
         enumType = Enum340TradSesStatus.PRE_CLOSE;
         assertEquals( "5", enumType.getID());
         assertEquals( "PRE_CLOSE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "5 - Pre-Close", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -81,7 +81,7 @@ class Enum340TradSesStatusTest {
         enumType = Enum340TradSesStatus.REQUEST_REJECTED;
         assertEquals( "6", enumType.getID());
         assertEquals( "REQUEST_REJECTED", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "6 - Request Rejected", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

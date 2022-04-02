@@ -33,15 +33,15 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.UNKNOWN_SYMBOL;
         assertEquals( "1", enumType.getID());
         assertEquals( "UNKNOWN_SYMBOL", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Unknown Symbol (security)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum300QuoteRejectReason.EXCHANGE_CLOSED;
+        enumType = Enum300QuoteRejectReason.EXCHANGE_SECURITY_CLOSED;
         assertEquals( "2", enumType.getID());
-        assertEquals( "EXCHANGE_CLOSED", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "EXCHANGE_SECURITY_CLOSED", enumType.getName());
+        assertEquals( "2 - Exchange (Security) closed", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +49,7 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT;
         assertEquals( "3", enumType.getID());
         assertEquals( "QUOTE_REQUEST_EXCEEDS_LIMIT", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3 - Quote Request exceeds limit", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -57,7 +57,7 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.TOO_LATE_TO_ENTER;
         assertEquals( "4", enumType.getID());
         assertEquals( "TOO_LATE_TO_ENTER", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "4 - Too late to enter", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -65,7 +65,7 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.UNKNOWN_QUOTE;
         assertEquals( "5", enumType.getID());
         assertEquals( "UNKNOWN_QUOTE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "5 - Unknown Quote", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -73,7 +73,7 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.DUPLICATE_QUOTE;
         assertEquals( "6", enumType.getID());
         assertEquals( "DUPLICATE_QUOTE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "6 - Duplicate Quote", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -81,7 +81,7 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD;
         assertEquals( "7", enumType.getID());
         assertEquals( "INVALID_BID_ASK_SPREAD", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "7 - Invalid bid/ask spread", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -89,7 +89,7 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.INVALID_PRICE;
         assertEquals( "8", enumType.getID());
         assertEquals( "INVALID_PRICE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "8 - Invalid price", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -97,7 +97,7 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY;
         assertEquals( "9", enumType.getID());
         assertEquals( "NOT_AUTHORIZED_TO_QUOTE_SECURITY", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "9 - Not authorized to quote security", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -106,7 +106,7 @@ class Enum300QuoteRejectReasonTest {
         enumType = Enum300QuoteRejectReason.OTHER;
         assertEquals( "99", enumType.getID());
         assertEquals( "OTHER", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "99 - Other", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

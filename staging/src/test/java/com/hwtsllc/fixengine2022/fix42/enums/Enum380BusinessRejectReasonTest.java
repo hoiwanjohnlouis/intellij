@@ -41,7 +41,7 @@ class Enum380BusinessRejectReasonTest {
         enumType = Enum380BusinessRejectReason.UNKNOWN_ID;
         assertEquals( "1", enumType.getID());
         assertEquals( "UNKNOWN_ID", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Unknown ID", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +49,7 @@ class Enum380BusinessRejectReasonTest {
         enumType = Enum380BusinessRejectReason.UNKNOWN_SECURITY;
         assertEquals( "2", enumType.getID());
         assertEquals( "UNKNOWN_SECURITY", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Unknown Security", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -57,7 +57,7 @@ class Enum380BusinessRejectReasonTest {
         enumType = Enum380BusinessRejectReason.UNKNOWN_MESSAGE_TYPE;
         assertEquals( "3", enumType.getID());
         assertEquals( "UNKNOWN_MESSAGE_TYPE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3 - Unknown Message Type", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -65,7 +65,7 @@ class Enum380BusinessRejectReasonTest {
         enumType = Enum380BusinessRejectReason.APPLICATION_NOT_AVAILABLE;
         assertEquals( "4", enumType.getID());
         assertEquals( "APPLICATION_NOT_AVAILABLE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "4 - Application not available", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -73,15 +73,23 @@ class Enum380BusinessRejectReasonTest {
         enumType = Enum380BusinessRejectReason.REQUIRED_FIELD_MISSING;
         assertEquals( "5", enumType.getID());
         assertEquals( "REQUIRED_FIELD_MISSING", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "5 - Conditionally required field missing", enumType.getDescription());
+        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
+        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum380BusinessRejectReason.NOT_AUTHORIZED;
+        assertEquals( "6", enumType.getID());
+        assertEquals( "NOT_AUTHORIZED", enumType.getName());
+        assertEquals( "6 - Not Authorized", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum380BusinessRejectReason.DELIVERTO_FIRM_NOT_AVAILABLE;
-        assertEquals( "6", enumType.getID());
+        assertEquals( "7", enumType.getID());
         assertEquals( "DELIVERTO_FIRM_NOT_AVAILABLE", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "7 - DeliverTo firm not available at this time", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -90,7 +98,7 @@ class Enum380BusinessRejectReasonTest {
         enumType = Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT;
         assertEquals( "18", enumType.getID());
         assertEquals( "INVALID_PRICE_INCREMENT", enumType.getName());
-        assertEquals( "18 - Invalid Price Increment", enumType.getDescription());
+        assertEquals( "18 - Invalid price increment", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

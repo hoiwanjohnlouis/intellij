@@ -31,49 +31,49 @@ class Enum327HaltReasonTest {
          * D, E, I, M, P, and X msg types
          */
         enumType = Enum327HaltReason.NEWS_DISSEMINATION;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "D", enumType.getID());
+        assertEquals( "NEWS_DISSEMINATION", enumType.getName());
+        assertEquals( "D - News Dissemination", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.ORDER_INFLUX;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "E", enumType.getID());
+        assertEquals( "ORDER_INFLUX", enumType.getName());
+        assertEquals( "E - Order Influx", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.ORDER_IMBALANCE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "I", enumType.getID());
+        assertEquals( "ORDER_IMBALANCE", enumType.getName());
+        assertEquals( "I - Order Imbalance", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.ADDITIONAL_INFORMATION;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "M", enumType.getID());
+        assertEquals( "ADDITIONAL_INFORMATION", enumType.getName());
+        assertEquals( "M - Additional Information", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.NEW_PENDING;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "P", enumType.getID());
+        assertEquals( "NEW_PENDING", enumType.getName());
+        assertEquals( "P - New Pending", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.EQUIPMENT_CHANGE_OVER;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "X", enumType.getID());
+        assertEquals( "EQUIPMENT_CHANGE_OVER", enumType.getName());
+        assertEquals( "X - Equipment Changeover", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

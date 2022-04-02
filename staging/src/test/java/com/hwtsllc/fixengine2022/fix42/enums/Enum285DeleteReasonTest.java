@@ -33,7 +33,7 @@ class Enum285DeleteReasonTest {
         enumType = Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST;
         assertEquals( "0", enumType.getID());
         assertEquals( "CANCELLATION_OR_TRADE_BUST", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "0 - Cancellation / Trade Bust", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum285DeleteReasonTest {
         enumType = Enum285DeleteReason.ERROR;
         assertEquals( "1", enumType.getID());
         assertEquals( "ERROR", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Error", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

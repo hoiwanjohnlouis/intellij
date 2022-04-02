@@ -38,571 +38,578 @@ class Enum277TradeConditionTest {
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
+
         /*
-         * A-Z msg types
+         * A-N, msg types
          */
         enumType = Enum277TradeCondition.CASH_MARKET;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "A", enumType.getID());
+        assertEquals( "CASH_MARKET", enumType.getName());
+        assertEquals( "A - Cash (only) Market", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.AVERAGE_PRICE_TRADE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "B", enumType.getID());
+        assertEquals( "AVERAGE_PRICE_TRADE", enumType.getName());
+        assertEquals( "B - Average Price Trade", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CASH_TRADE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "C", enumType.getID());
+        assertEquals( "CASH_TRADE", enumType.getName());
+        assertEquals( "C - Cash Trade (same day clearing)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.NEXT_DAY_MARKET;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "D", enumType.getID());
+        assertEquals( "NEXT_DAY_MARKET", enumType.getName());
+        assertEquals( "D - Next Day (only) Market", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.OPENING_REOPENING_TRADE_DETAIL;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "E", enumType.getID());
+        assertEquals( "OPENING_REOPENING_TRADE_DETAIL", enumType.getName());
+        assertEquals( "E - Opening/Reopening Trade Detail", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.INTRADAY_TRADE_DETAIL;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "F", enumType.getID());
+        assertEquals( "INTRADAY_TRADE_DETAIL", enumType.getName());
+        assertEquals( "F - Intraday Trade Detail", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.RULE_127_TRADE_NYSE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "G", enumType.getID());
+        assertEquals( "RULE_127_TRADE_NYSE", enumType.getName());
+        assertEquals( "G - Rule 127 Trade (NYSE)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.RULE_155_TRADE_AMEX;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "H", enumType.getID());
+        assertEquals( "RULE_155_TRADE_AMEX", enumType.getName());
+        assertEquals( "H - Rule 155 Trade (AMEX)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.SOLD_LAST;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "I", enumType.getID());
+        assertEquals( "SOLD_LAST", enumType.getName());
+        assertEquals( "I - Sold Last (late reporting)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.NEXT_DAY_TRADE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "J", enumType.getID());
+        assertEquals( "NEXT_DAY_TRADE", enumType.getName());
+        assertEquals( "J - Next Day Trade (next day clearing)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.OPENED;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "K", enumType.getID());
+        assertEquals( "OPENED", enumType.getName());
+        assertEquals( "K - Opened (late report of opened trade)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.SELLER;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "L", enumType.getID());
+        assertEquals( "SELLER", enumType.getName());
+        assertEquals( "L - Seller", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.SOLD;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "M", enumType.getID());
+        assertEquals( "SOLD", enumType.getName());
+        assertEquals( "M - Sold (out of sequence)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.STOPPED_STOCK;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "N", enumType.getID());
+        assertEquals( "STOPPED_STOCK", enumType.getName());
+        assertEquals( "N - Stopped Stock (guarantee of price but does not execute the order)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
+
+        /*
+         * P-Z msg types
+         */
         enumType = Enum277TradeCondition.IMBALANCE_MORE_BUYERS;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "P", enumType.getID());
+        assertEquals( "IMBALANCE_MORE_BUYERS", enumType.getName());
+        assertEquals( "P - Imbalance More Buyers (cannot be used in combination with Q)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.IMBALANCE_MORE_SELLERS;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "Q", enumType.getID());
+        assertEquals( "IMBALANCE_MORE_SELLERS", enumType.getName());
+        assertEquals( "Q - Imbalance More Sellers (cannot be used in combination with P)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.OPENING_PRICE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "R", enumType.getID());
+        assertEquals( "OPENING_PRICE", enumType.getName());
+        assertEquals( "R - Opening Price", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.BARGAIN_CONDITION_LSE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "S", enumType.getID());
+        assertEquals( "BARGAIN_CONDITION_LSE", enumType.getName());
+        assertEquals( "S - Bargain Condition (LSE)", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CONVERTED_PRICE_INDICATOR;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "T", enumType.getID());
+        assertEquals( "CONVERTED_PRICE_INDICATOR", enumType.getName());
+        assertEquals( "T - Converted Price Indicator", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.EXCHANGE_LAST;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "U", enumType.getID());
+        assertEquals( "EXCHANGE_LAST", enumType.getName());
+        assertEquals( "U - Exchange Last", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.FINAL_PRICE_OF_SESSION;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "V", enumType.getID());
+        assertEquals( "FINAL_PRICE_OF_SESSION", enumType.getName());
+        assertEquals( "V - Final Price of Session", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.EX_PIT;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "W", enumType.getID());
+        assertEquals( "EX_PIT", enumType.getName());
+        assertEquals( "W - Ex-pit", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CROSSED;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "X", enumType.getID());
+        assertEquals( "CROSSED", enumType.getName());
+        assertEquals( "X - Crossed", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.TRADES_FROM_MANUAL_OR_SLOW_QUOTE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "Y", enumType.getID());
+        assertEquals( "TRADES_FROM_MANUAL_OR_SLOW_QUOTE", enumType.getName());
+        assertEquals( "Y - Trades resulting from manual/slow quote", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.TRADES_FROM_INTERMARKET_SWEEP;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "Z", enumType.getID());
+        assertEquals( "TRADES_FROM_INTERMARKET_SWEEP", enumType.getName());
+        assertEquals( "Z - Trades resulting from intermarket sweep", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * a-z msg types
          */
         enumType = Enum277TradeCondition.VOLUME_ONLY;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "a", enumType.getID());
+        assertEquals( "VOLUME_ONLY", enumType.getName());
+        assertEquals( "a - Volume Only", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.DIRECT_PLUS;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "b", enumType.getID());
+        assertEquals( "DIRECT_PLUS", enumType.getName());
+        assertEquals( "b - Direct Plus", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.ACQUISITION;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "c", enumType.getID());
+        assertEquals( "ACQUISITION", enumType.getName());
+        assertEquals( "c - Acquisition", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.BUNCHED;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "d", enumType.getID());
+        assertEquals( "BUNCHED", enumType.getName());
+        assertEquals( "d - Bunched", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.DISTRIBUTION;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "e", enumType.getID());
+        assertEquals( "DISTRIBUTION", enumType.getName());
+        assertEquals( "e - Distribution", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.BUNCHED_SALE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "f", enumType.getID());
+        assertEquals( "BUNCHED_SALE", enumType.getName());
+        assertEquals( "f - Bunched Sale", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.SPLIT_TRADE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "g", enumType.getID());
+        assertEquals( "SPLIT_TRADE", enumType.getName());
+        assertEquals( "g - Split Trade", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_STOPPED;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "h", enumType.getID());
+        assertEquals( "CANCEL_STOPPED", enumType.getName());
+        assertEquals( "h - Cancel Stopped", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "i", enumType.getID());
+        assertEquals( "CANCEL_ETH", enumType.getName());
+        assertEquals( "i - Cancel ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_STOPPED_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "j", enumType.getID());
+        assertEquals( "CANCEL_STOPPED_ETH", enumType.getName());
+        assertEquals( "j - Cancel Stopped ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.OUT_OF_SEQUENCE_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "k", enumType.getID());
+        assertEquals( "OUT_OF_SEQUENCE_ETH", enumType.getName());
+        assertEquals( "k - Out of Sequence ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_LAST_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "l", enumType.getID());
+        assertEquals( "CANCEL_LAST_ETH", enumType.getName());
+        assertEquals( "l - Cancel Last ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.SOLD_LAST_SALE_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "m", enumType.getID());
+        assertEquals( "SOLD_LAST_SALE_ETH", enumType.getName());
+        assertEquals( "m - Sold Last Sale ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_LAST;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "n", enumType.getID());
+        assertEquals( "CANCEL_LAST", enumType.getName());
+        assertEquals( "n - Cancel Last", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.SOLD_LAST_SALE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "o", enumType.getID());
+        assertEquals( "SOLD_LAST_SALE", enumType.getName());
+        assertEquals( "o - Sold Last Sale", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_OPEN;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "p", enumType.getID());
+        assertEquals( "CANCEL_OPEN", enumType.getName());
+        assertEquals( "p - Cancel Open", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_OPEN_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "q", enumType.getID());
+        assertEquals( "CANCEL_OPEN_ETH", enumType.getName());
+        assertEquals( "q - Cancel Open ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.OPENED_SALE_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "r", enumType.getID());
+        assertEquals( "OPENED_SALE_ETH", enumType.getName());
+        assertEquals( "r - Opened Sale ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_ONLY;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "s", enumType.getID());
+        assertEquals( "CANCEL_ONLY", enumType.getName());
+        assertEquals( "s - Cancel Only", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CANCEL_ONLY_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "t", enumType.getID());
+        assertEquals( "CANCEL_ONLY_ETH", enumType.getName());
+        assertEquals( "t - Cancel Only ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.LATE_OPEN_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "u", enumType.getID());
+        assertEquals( "LATE_OPEN_ETH", enumType.getName());
+        assertEquals( "u - Late Open ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.AUTO_EXECUTION_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "v", enumType.getID());
+        assertEquals( "AUTO_EXECUTION_ETH", enumType.getName());
+        assertEquals( "v - Auto Execution ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.REOPEN;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "w", enumType.getID());
+        assertEquals( "REOPEN", enumType.getName());
+        assertEquals( "w - Reopen", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.REOPEN_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "x", enumType.getID());
+        assertEquals( "REOPEN_ETH", enumType.getName());
+        assertEquals( "x - Reopen ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.ADJUSTED;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "y", enumType.getID());
+        assertEquals( "ADJUSTED", enumType.getName());
+        assertEquals( "y - Adjusted", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.ADJUSTED_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "z", enumType.getID());
+        assertEquals( "ADJUSTED_ETH", enumType.getName());
+        assertEquals( "z - Adjusted ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * AA-AT msg types
          */
         enumType = Enum277TradeCondition.SPREAD;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AA", enumType.getID());
+        assertEquals( "SPREAD", enumType.getName());
+        assertEquals( "AA - Spread", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.SPREAD_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AB", enumType.getID());
+        assertEquals( "SPREAD_ETH", enumType.getName());
+        assertEquals( "AB - Spread ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.STRADDLE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AC", enumType.getID());
+        assertEquals( "STRADDLE", enumType.getName());
+        assertEquals( "AC - Straddle", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.STRADDLE_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AD", enumType.getID());
+        assertEquals( "STRADDLE_ETH", enumType.getName());
+        assertEquals( "AD - Straddle ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.STOPPED;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AE", enumType.getID());
+        assertEquals( "STOPPED", enumType.getName());
+        assertEquals( "AE - Stopped", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.STOPPED_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AF", enumType.getID());
+        assertEquals( "STOPPED_ETH", enumType.getName());
+        assertEquals( "AF - Stopped ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.REGULAR_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AG", enumType.getID());
+        assertEquals( "REGULAR_ETH", enumType.getName());
+        assertEquals( "AG - Regular ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.COMBO;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AH", enumType.getID());
+        assertEquals( "COMBO", enumType.getName());
+        assertEquals( "AH - Combo", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.COMBO_ETH;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AI", enumType.getID());
+        assertEquals( "COMBO_ETH", enumType.getName());
+        assertEquals( "AI - Combo ETH", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.OFFICIAL_CLOSING_PRICE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AJ", enumType.getID());
+        assertEquals( "OFFICIAL_CLOSING_PRICE", enumType.getName());
+        assertEquals( "AJ - Official Closing Price", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.PRIOR_REFERENCE_PRICE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AK", enumType.getID());
+        assertEquals( "PRIOR_REFERENCE_PRICE", enumType.getName());
+        assertEquals( "AK - Prior Reference Price", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.STOPPED_SOLD_LAST;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AL", enumType.getID());
+        assertEquals( "STOPPED_SOLD_LAST", enumType.getName());
+        assertEquals( "AL - Stopped Sold Last", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.STOPPED_OUT_OF_SEQUENCE;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AM", enumType.getID());
+        assertEquals( "STOPPED_OUT_OF_SEQUENCE", enumType.getName());
+        assertEquals( "AM - Stopped Out of Sequence", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.OFFICAL_CLOSING_PRICE_AN;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AN", enumType.getID());
+        assertEquals( "OFFICAL_CLOSING_PRICE_AN", enumType.getName());
+        assertEquals( "AN - Offical Closing Price", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.CROSSED_AO;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AO", enumType.getID());
+        assertEquals( "CROSSED_AO", enumType.getName());
+        assertEquals( "AO - Crossed", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.FAST_MARKET;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AP", enumType.getID());
+        assertEquals( "FAST_MARKET", enumType.getName());
+        assertEquals( "AP - Fast Market", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.AUTOMATIC_EXECUTION;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AQ", enumType.getID());
+        assertEquals( "AUTOMATIC_EXECUTION", enumType.getName());
+        assertEquals( "AQ - Automatic Execution", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.FORM_T;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AR", enumType.getID());
+        assertEquals( "FORM_T", enumType.getName());
+        assertEquals( "AR - Form T", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum277TradeCondition.BASKET_INDEX;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "AS", enumType.getID());
+        assertEquals( "BASKET_INDEX", enumType.getName());
+        assertEquals( "AS - Basket Index", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

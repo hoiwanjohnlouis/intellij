@@ -73,7 +73,7 @@ class Enum431ListOrderStatusTest {
         enumType = Enum431ListOrderStatus.ALL_DONE;
         assertEquals( "6", enumType.getID());
         assertEquals( "ALL_DONE", enumType.getName());
-        assertEquals( "6 - AllDone", enumType.getDescription());
+        assertEquals( "6 - All Done", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

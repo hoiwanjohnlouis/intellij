@@ -33,7 +33,7 @@ class Enum323SecurityResponseTypeTest {
         enumType = Enum323SecurityResponseType.ACCEPT_SECURITY_AS_IS;
         assertEquals( "1", enumType.getID());
         assertEquals( "ACCEPT_SECURITY_AS_IS", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Accept security proposal as-is", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,23 +41,24 @@ class Enum323SecurityResponseTypeTest {
         enumType = Enum323SecurityResponseType.ACCEPT_SECURITY_REVISIONS;
         assertEquals( "2", enumType.getID());
         assertEquals( "ACCEPT_SECURITY_REVISIONS", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Accept security proposal with revisions as indicated in the message",
+                enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum323SecurityResponseType.LIST_OF_SECURITY_TYPES;
+        enumType = Enum323SecurityResponseType.LIST_OF_SECURITY_TYPES_RETURNED;
         assertEquals( "3", enumType.getID());
-        assertEquals( "LIST_OF_SECURITY_TYPES", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "LIST_OF_SECURITY_TYPES_RETURNED", enumType.getName());
+        assertEquals( "3 - List of security types returned per request", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum323SecurityResponseType.LIST_OF_SECURITIES_PER_REQUEST;
+        enumType = Enum323SecurityResponseType.LIST_OF_SECURITIES_RETURNED_PER_REQUEST;
         assertEquals( "4", enumType.getID());
-        assertEquals( "LIST_OF_SECURITIES_PER_REQUEST", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "LIST_OF_SECURITIES_RETURNED_PER_REQUEST", enumType.getName());
+        assertEquals( "4 - List of securities returned per request", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -65,7 +66,7 @@ class Enum323SecurityResponseTypeTest {
         enumType = Enum323SecurityResponseType.REJECT_SECURITY_PROPOSAL;
         assertEquals( "5", enumType.getID());
         assertEquals( "REJECT_SECURITY_PROPOSAL", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "5 - Reject security proposal", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -73,7 +74,7 @@ class Enum323SecurityResponseTypeTest {
         enumType = Enum323SecurityResponseType.CANNOT_MATCH_SELECTION;
         assertEquals( "6", enumType.getID());
         assertEquals( "CANNOT_MATCH_SELECTION", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "6 - Cannot match selection criteria", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

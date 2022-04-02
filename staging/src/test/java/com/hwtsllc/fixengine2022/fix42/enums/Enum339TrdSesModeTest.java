@@ -33,7 +33,7 @@ class Enum339TrdSesModeTest {
         enumType = Enum339TrdSesMode.TESTING;
         assertEquals( "1", enumType.getID());
         assertEquals( "TESTING", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "1 - Testing", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum339TrdSesModeTest {
         enumType = Enum339TrdSesMode.SIMULATED;
         assertEquals( "2", enumType.getID());
         assertEquals( "SIMULATED", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2 - Simulated", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -49,7 +49,7 @@ class Enum339TrdSesModeTest {
         enumType = Enum339TrdSesMode.PRODUCTION;
         assertEquals( "3", enumType.getID());
         assertEquals( "PRODUCTION", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "3 - Production", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

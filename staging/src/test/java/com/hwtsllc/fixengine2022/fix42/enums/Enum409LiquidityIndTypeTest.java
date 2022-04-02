@@ -33,7 +33,7 @@ class Enum409LiquidityIndTypeTest {
         enumType = Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE;
         assertEquals( "1", enumType.getID());
         assertEquals( "FIVE_DAY_MOVING_AVERAGE", enumType.getName());
-        assertEquals( "1 - 5 Day Moving Average", enumType.getDescription());
+        assertEquals( "1 - 5-Day Moving Average", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -41,7 +41,7 @@ class Enum409LiquidityIndTypeTest {
         enumType = Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE;
         assertEquals( "2", enumType.getID());
         assertEquals( "TWENTY_DAY_MOVING_AVERAGE", enumType.getName());
-        assertEquals( "2 - 20 Day Moving Average", enumType.getDescription());
+        assertEquals( "2 - 20-Day Moving Average", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
