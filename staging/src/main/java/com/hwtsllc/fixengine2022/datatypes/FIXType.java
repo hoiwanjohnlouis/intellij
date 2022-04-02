@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      SNT = SeqNumType field, saved as int
  *                      others to follow
  * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
- *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String
+ *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String.
  * String  name         short NAME of the field as defined by the FIX protocol document, no duplicates
  * String  description  a short blurb which describes what information the field contains
  */
@@ -1384,12 +1384,15 @@ public enum FIXType implements EnumAccessors, LogStringVerbose {
     FIX1136_ALLOC_CLEARING_FEE_INDICATOR(1136, "ALLOC_CLEARING_FEE_INDICATOR", "AllocClearingFeeIndicator"),
     FIX1137_DEFAULT_APPL_VER_ID(1137, "DEFAULT_APPL_VER_ID", "DefaultApplVerID"),
     FIX1138_DISPLAY_QTY(1138, "DISPLAY_QTY", "DisplayQty"),
-    FIX1139_EXCHANGE_SPECIAL_INSTRUCTIONS(1139, "EXCHANGE_SPECIAL_INSTRUCTIONS", "ExchangeSpecialInstructions");
+    FIX1139_EXCHANGE_SPECIAL_INSTRUCTIONS(1139, "EXCHANGE_SPECIAL_INSTRUCTIONS", "ExchangeSpecialInstructions"),
     /*
      *
      * End of FIX5.0
      *
      */
+
+
+    ;
 
 
     ///////////////////////////////////////////////////////////////////////////
