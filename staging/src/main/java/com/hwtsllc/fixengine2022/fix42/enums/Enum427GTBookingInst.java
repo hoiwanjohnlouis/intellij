@@ -25,9 +25,9 @@ public enum Enum427GTBookingInst implements EnumAccessors, LogStringVerbose {
      */
     BOOK_OUT_ALL_TRADES( "0", "BOOK_OUT_ALL_TRADES",
             "0 - Book out all trades on day of execution" ),
-    ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES( "1", "ACCUMULATE_EXECUTIONS_UNTIL_FILLED",
+    ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES( "1", "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES",
             "1 - Accumulate executions until order is filled or expires" ),
-    ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE( "2", "ACCUMULATE_UNTIL_NOTIFIED",
+    ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE( "2", "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE",
             "2 - Accumulate until verbally notified otherwise" ),
     ;
 

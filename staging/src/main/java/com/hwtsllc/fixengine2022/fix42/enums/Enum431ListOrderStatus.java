@@ -23,8 +23,8 @@ public enum Enum431ListOrderStatus implements EnumAccessors, LogStringVerbose {
     /*
      * 1-7 msg types
      */
-    IN_BIDDING_PROCESS( "1", "IN_BIDDING_PROCESS", "1 - In bidding process" ),
-    RECEIVED_FOR_EXECUTION( "2", "RECEIVED_FOR_EXECUTION", "2 - Received for execution" ),
+    IN_BIDDING_PROCESS( "1", "IN_BIDDING_PROCESS", "1 - In Bidding Process" ),
+    RECEIVED_FOR_EXECUTION( "2", "RECEIVED_FOR_EXECUTION", "2 - Received For Execution" ),
     EXECUTING( "3", "EXECUTING", "3 - Executing" ),
     CANCELLING( "4", "CANCELLING", "4 - Cancelling" ),
     ALERT( "5", "ALERT", "5 - Alert" ),

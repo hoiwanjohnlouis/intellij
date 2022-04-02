@@ -28,7 +28,7 @@ public enum Enum414ProgRptReqs implements EnumAccessors, LogStringVerbose {
                     "firm can, however, send a DONE status List STatus Response in an unsolicited fashion" ),
     SELL_SIDE_STATUS( "2", "SELL_SIDE_STATUS",
             "2 - Sell-side periodically sends status using List Status. " +
-                    "Period optionally specified in ProgressPeriod." ),
+                    "Period optionally specified in ProgressPeriod" ),
     REAL_TIME_EXECUTION_REPORTS( "3", "REAL_TIME_EXECUTION_REPORTS",
             "3 - Real-time execution reports (to be discourage)" ),
     ;

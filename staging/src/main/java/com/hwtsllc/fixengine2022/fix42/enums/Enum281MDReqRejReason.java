@@ -24,7 +24,7 @@ public enum Enum281MDReqRejReason implements EnumAccessors, LogStringVerbose {
      * 0-9 msg types
      */
     UNKNOWN_SYMBOL( "0", "UNKNOWN_SYMBOL",
-            "0 - Unknown symbol" ),
+            "0 - Unknown Symbol" ),
     DUPLICATE_MDREQID( "1", "DUPLICATE_MDREQID",
             "1 - Duplicate MDReqID" ),
     INSUFFICIENT_BANDWIDTH( "2", "INSUFFICIENT_BANDWIDTH",

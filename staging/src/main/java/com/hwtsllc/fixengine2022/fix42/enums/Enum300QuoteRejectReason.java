@@ -25,7 +25,7 @@ public enum Enum300QuoteRejectReason implements EnumAccessors, LogStringVerbose 
      */
     UNKNOWN_SYMBOL( "1", "UNKNOWN_SYMBOL",
             "1 - Unknown Symbol (security)" ),
-    EXCHANGE_CLOSED( "2", "EXCHANGE_SECURITY_CLOSED",
+    EXCHANGE_SECURITY_CLOSED( "2", "EXCHANGE_SECURITY_CLOSED",
             "2 - Exchange (Security) closed" ),
     QUOTE_REQUEST_EXCEEDS_LIMIT( "3", "QUOTE_REQUEST_EXCEEDS_LIMIT",
             "3 - Quote Request exceeds limit" ),

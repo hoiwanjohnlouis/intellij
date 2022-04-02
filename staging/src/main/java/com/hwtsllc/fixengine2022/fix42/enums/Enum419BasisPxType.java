@@ -39,6 +39,7 @@ public enum Enum419BasisPxType implements EnumAccessors, LogStringVerbose {
             "8 - VWAP through an afternoon session" ),
     VWAP_DAY_EXCEPT_YORI( "9", "VWAP_DAY_EXCEPT_YORI",
             "9 - VWAP through a day except YORI (an opening auction)" ),
+
     VWAP_MORNING_EXCEPT_YORI( "A", "VWAP_MORNING_EXCEPT_YORI",
             "A - VWAP through a morning session except YORI (an opening auction)" ),
     VWAP_AFTERNOON_EXCEPT_YORI( "B", "VWAP_AFTERNOON_EXCEPT_YORI",
@@ -47,6 +48,7 @@ public enum Enum419BasisPxType implements EnumAccessors, LogStringVerbose {
             "C - Strike" ),
     OPEN( "D", "OPEN",
             "D - Open" ),
+
     OTHER( "Z", "OTHER",
             "Z - Others" ),
     ;
