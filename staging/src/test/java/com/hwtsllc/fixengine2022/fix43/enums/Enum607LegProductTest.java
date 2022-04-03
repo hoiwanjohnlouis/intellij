@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum607LegProductTest {
     /**
-     *  Information is the same for TAGS 460, 462, 607
+     *  Information is the same for TAGS 460, 462, 607,
      */
     @Test
     void Enum0607Test() {

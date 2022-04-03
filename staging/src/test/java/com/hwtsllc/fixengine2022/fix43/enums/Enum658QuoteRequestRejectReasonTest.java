@@ -30,7 +30,7 @@ class Enum658QuoteRequestRejectReasonTest {
         Enum658QuoteRequestRejectReason enumType;
 
         /*
-         *  1-11, 99 types
+         *  1-11, types
          */
         enumType = Enum658QuoteRequestRejectReason.UNKNOWN_SYMBOL;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
@@ -88,6 +88,9 @@ class Enum658QuoteRequestRejectReasonTest {
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
 
+        /*
+         *  99 type
+         */
         enumType = Enum658QuoteRequestRejectReason.OTHER;
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());

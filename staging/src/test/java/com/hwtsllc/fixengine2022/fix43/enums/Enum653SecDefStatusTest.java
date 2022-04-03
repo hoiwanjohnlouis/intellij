@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum653SecDefStatusTest {
@@ -34,26 +35,41 @@ class Enum653SecDefStatusTest {
          *  0-4 types
          */
         enumType = Enum653SecDefStatus.PENDING;
+        assertEquals("0", enumType.getID());
+        assertEquals("PENDING", enumType.getName());
+        assertEquals("0 - Pending", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum653SecDefStatus.APPROVED;
+        assertEquals("1", enumType.getID());
+        assertEquals("APPROVED", enumType.getName());
+        assertEquals("1 - Approved", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum653SecDefStatus.REJECTED;
+        assertEquals("2", enumType.getID());
+        assertEquals("REJECTED", enumType.getName());
+        assertEquals("2 - Rejected", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum653SecDefStatus.UNAUTHORIZED;
+        assertEquals("3", enumType.getID());
+        assertEquals("UNAUTHORIZED", enumType.getName());
+        assertEquals("3 - Unauthorized", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum653SecDefStatus.INVALID;
+        assertEquals("4", enumType.getID());
+        assertEquals("INVALID", enumType.getName());
+        assertEquals("4 - Invalid", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

@@ -105,6 +105,7 @@ class Enum456SecurityAltIDSourceTest {
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
+
         /*
          * A-L
          */
