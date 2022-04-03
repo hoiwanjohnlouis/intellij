@@ -28,7 +28,7 @@ public enum Enum525NestedPartyIDSource implements EnumAccessors, LogStringVerbos
      * All PartyRoles
      *  B-H types
      */
-    BANK_IDENTIFICATION_CODE("B", "BIC",
+    BANK_IDENTIFICATION_CODE("B", "BANK_IDENTIFICATION_CODE",
             "B - BIC (Bank Identification Code - SWIFT managed) code " +
                     "(ISO9362 - See Appendix 6-B)" ),
     GENERAL_IDENTIFIER("C", "GENERAL_IDENTIFIER",
@@ -41,7 +41,7 @@ public enum Enum525NestedPartyIDSource implements EnumAccessors, LogStringVerbos
             "F - Settlement Entity Location " +
                     "(note if Local Market Settlement, use E=ISO Country Code) " +
                     "(see Appendix 6-G for valid values)" ),
-    MARKET_IDENTIFIER_CODE("G", "MIC",
+    MARKET_IDENTIFIER_CODE("G", "MARKET_IDENTIFIER_CODE",
             "G - MIC (ISO 10383 - Market Identifier Code) (See Appendix 6-C)" ),
     CSD_MEMBER_CODE("H", "CSD_MEMBER_CODE",
             "H - CSD participant/member code " +
@@ -65,11 +65,11 @@ public enum Enum525NestedPartyIDSource implements EnumAccessors, LogStringVerbos
      */
     KOREAN_INVESTOR_ID("1", "KOREAN_INVESTOR_ID",
             "1 - Korean Investor ID" ),
-    TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID("2", "QFII/FID",
+    TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID("2", "TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID",
             "2 - Taiwanese Qualified Foreign Investor ID QFII/FID" ),
     TAIWANESE_TRADING_ACCT("3", "TAIWANESE_TRADING_ACCT",
             "3 - Taiwanese Trading Acct" ),
-    MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER("4", "MCD",
+    MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER("4", "MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER",
             "4 - Malaysian Central Depository (MCD) number" ),
     CHINESE_INVESTOR_ID("5", "CHINESE_INVESTOR_ID",
             "5 - Chinese Investor ID" ),
