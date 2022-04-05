@@ -27,14 +27,14 @@ public enum Enum585MassStatusReqType implements EnumAccessors, LogStringVerbose 
     /*
      *  1-8 types
      */
-    STATUS_ORDERS_FOR_SECURITY( "1", "", "1 - Status for orders for a Security" ),
-    STATUS_ORDERS_FOR_UNDERLYING( "2", "", "2 - Status for orders for an Underlying Security" ),
-    STATUS_ORDERS_FOR_PRODUCT( "3", "", "3 - Status for orders for a Product" ),
-    STATUS_ORDERS_FOR_CFICODE( "4", "", "4 - Status for orders for a CFICode" ),
-    STATUS_ORDERS_FOR_SECURITYTYPE( "5", "", "5 - Status for orders for a SecurityType" ),
-    STATUS_ORDERS_FOR_SESSION( "6", "", "6 - Status for orders for a trading session" ),
-    STATUS_ALL_ORDERS( "7", "", "7 - Status for all orders" ),
-    STATUS_ORDERS_FOR_PARTYID( "8", "", "8 - Status for orders for a PartyID" ),
+    STATUS_ORDERS_FOR_SECURITY( "1", "STATUS_ORDERS_FOR_SECURITY", "1 - Status for orders for a Security" ),
+    STATUS_ORDERS_FOR_UNDERLYING( "2", "STATUS_ORDERS_FOR_UNDERLYING", "2 - Status for orders for an Underlying Security" ),
+    STATUS_ORDERS_FOR_PRODUCT( "3", "STATUS_ORDERS_FOR_PRODUCT", "3 - Status for orders for a Product" ),
+    STATUS_ORDERS_FOR_CFICODE( "4", "STATUS_ORDERS_FOR_CFICODE", "4 - Status for orders for a CFICode" ),
+    STATUS_ORDERS_FOR_SECURITYTYPE( "5", "STATUS_ORDERS_FOR_SECURITYTYPE", "5 - Status for orders for a SecurityType" ),
+    STATUS_ORDERS_FOR_SESSION( "6", "STATUS_ORDERS_FOR_SESSION", "6 - Status for orders for a trading session" ),
+    STATUS_ALL_ORDERS( "7", "STATUS_ALL_ORDERS", "7 - Status for all orders" ),
+    STATUS_ORDERS_FOR_PARTYID( "8", "STATUS_ORDERS_FOR_PARTYID", "8 - Status for orders for a PartyID" ),
     ;
 
     private final String id;

@@ -25,6 +25,10 @@ public enum Enum538NestedPartyRole implements EnumAccessors, LogStringVerbose {
      */
 
     /*
+     * 1-22, 24-78 msg types
+     */
+
+    /*
      *  1-22, msg types
      */
     EXECUTING_FIRM("1", "EXECUTING_FIRM", "1 - Executing Firm (formerly FIX 4.2 ExecBroker)" ),

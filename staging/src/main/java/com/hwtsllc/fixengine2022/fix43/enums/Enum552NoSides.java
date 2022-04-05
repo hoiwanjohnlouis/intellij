@@ -27,8 +27,8 @@ public enum Enum552NoSides implements EnumAccessors, LogStringVerbose {
     /*
      *  1-2 types
      */
-    ONE_SIDE( "1", "", "1 - One Side" ),
-    BOTH_SIDES( "2", "", "2 - Both Sides" ),
+    ONE_SIDE( "1", "ONE_SIDE", "1 - One Side" ),
+    BOTH_SIDES( "2", "BOTH_SIDES", "2 - Both Sides" ),
     ;
 
     private final String id;

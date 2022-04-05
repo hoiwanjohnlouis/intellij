@@ -25,8 +25,21 @@ public enum Enum525NestedPartyIDSource implements EnumAccessors, LogStringVerbos
      */
 
     /*
-     * All PartyRoles
-     *  B-H types
+     *  All PartyRoles
+     *  B-H, types
+     *  For PartyRole = "InvestorID" and for CIV
+     *  6-9, types
+     *  For PartyRole = "InvestorID" and for CIV
+     *  A, types
+     *  For PartyRole = "InvestorID" and for Equities
+     *  1-5, types
+     *  For PartyRole="Broker of Credit"
+     *  I, type
+     */
+
+    /*
+     *  All PartyRoles
+     *  B-H, types
      */
     BANK_IDENTIFICATION_CODE("B", "BANK_IDENTIFICATION_CODE",
             "B - BIC (Bank Identification Code - SWIFT managed) code " +
@@ -49,19 +62,25 @@ public enum Enum525NestedPartyIDSource implements EnumAccessors, LogStringVerbos
 
 
     /*
-     * For PartyRole = "InvestorID" and for CIV
-     * 6-9, A types
+     *  For PartyRole = "InvestorID" and for CIV
+     *  6-9, types
      */
     UK_NATIONAL_NUMBER("6", "UK_NATIONAL_NUMBER", "6 - UK National Insurance or Pension Number" ),
     US_SOCIAL_SECURITY_NUMBER("7", "US_SSN", "7 - US Social Security Number" ),
     US_TAX_ID_NUMBER("8", "US_TAX_ID_NUMBER", "8 - US Employer or Tax ID Number" ),
     AUSTRALIAN_BUSINESS_NUMBER("9", "AUSTRALIAN_BUSINESS_NUMBER", "9 - Australian Business Number" ),
+
+
+    /*
+     *  For PartyRole = "InvestorID" and for CIV
+     *  A, types
+     */
     AUSTRALIAN_TAX_FILE_NUMBER("A", "AUSTRALIAN_TAX_FILE_NUMBER", "A - Australian Tax File Number" ),
 
 
     /*
-     * For PartyRole = "InvestorID" and for Equities
-     * 1-5 types
+     *  For PartyRole = "InvestorID" and for Equities
+     *  1-5, types
      */
     KOREAN_INVESTOR_ID("1", "KOREAN_INVESTOR_ID",
             "1 - Korean Investor ID" ),
@@ -76,8 +95,8 @@ public enum Enum525NestedPartyIDSource implements EnumAccessors, LogStringVerbos
 
 
     /*
-     * For PartyRole="Broker of Credit"
-     * I type
+     *  For PartyRole="Broker of Credit"
+     *  I, type
      */
     DIRECTED_BROKER_ACRONYM("I", "DIRECTED_BROKER_ACRONYM",
             "I - Directed broker three character acronym as defined in " +
