@@ -38,6 +38,30 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * String  description  a short blurb which describes what information the field contains
  */
 public enum FIX30 implements EnumAccessors, LogStringVerbose {
+
+
+    /*
+     * Start of FIX3.0 as defined by the FIX Protocol Specification 3.0
+     *  Tags: 104-113
+     */
+    FIX104_ET_IOI_QUALIFIER(104, "IOI_QUALIFIER", "IOIQualifier"),
+    FIX105_WAVE_NO(105, "WAVE_NO", "WaveNo"),
+    FIX106_ISSUER(106, "ISSUER", "Issuer"),
+    FIX107_SECURITY_DESC(107, "SECURITY_DESC", "SecurityDesc"),
+    FIX108_HEART_BT_INT(108, "HEART_BT_INT", "HeartBtInt"),
+    FIX109_CLIENT_ID(109, "CLIENT_ID", "ClientID (replaced)"),
+    FIX110_MIN_QTY(110, "MIN_QTY", "MinQty"),
+
+    FIX111_MAX_FLOOR(111, "MAX_FLOOR", "MaxFloor"),
+    FIX112_TEST_REQ_ID(112, "TEST_REQ_ID", "TestReqID"),
+    FIX113_ET_REPORT_TO_EXCH(113, "REPORT_TO_EXCH", "ReportToExch"),
+    /*
+     *
+     * End of FIX3.0
+     *
+     */
+
+
     ;
 
 

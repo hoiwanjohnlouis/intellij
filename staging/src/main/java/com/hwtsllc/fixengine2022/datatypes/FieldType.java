@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+@Deprecated
 public enum FieldType {
 
     DEFAULT_LAST_TRADE_QUANTITY,
