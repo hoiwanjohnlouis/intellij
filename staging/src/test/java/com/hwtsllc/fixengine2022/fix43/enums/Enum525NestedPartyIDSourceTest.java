@@ -31,8 +31,8 @@ class Enum525NestedPartyIDSourceTest {
         Enum525NestedPartyIDSource enumType;
 
         /*
-         * All PartyRoles
-         *  B-H types
+         *  All PartyRoles
+         *  B-H, types
          */
         enumType = Enum525NestedPartyIDSource.BANK_IDENTIFICATION_CODE;
         assertEquals("B", enumType.getID());
@@ -99,8 +99,8 @@ class Enum525NestedPartyIDSourceTest {
 
 
         /*
-         * For PartyRole = "InvestorID" and for CIV
-         * 6-9, types
+         *  For PartyRole = "InvestorID" and for CIV
+         *  6-9, types
          */
         enumType = Enum525NestedPartyIDSource.UK_NATIONAL_NUMBER;
         assertEquals("6", enumType.getID());
@@ -136,8 +136,8 @@ class Enum525NestedPartyIDSourceTest {
 
 
         /*
-         * For PartyRole = "InvestorID" and for CIV
-         * A, type
+         *  For PartyRole = "InvestorID" and for CIV
+         *  A, type
          */
         enumType = Enum525NestedPartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER;
         assertEquals("A", enumType.getID());
@@ -149,8 +149,8 @@ class Enum525NestedPartyIDSourceTest {
 
 
         /*
-         * For PartyRole = "InvestorID" and for Equities
-         * 1-5 types
+         *  For PartyRole = "InvestorID" and for Equities
+         *  1-5, types
          */
         enumType = Enum525NestedPartyIDSource.KOREAN_INVESTOR_ID;
         assertEquals("1", enumType.getID());
@@ -194,8 +194,8 @@ class Enum525NestedPartyIDSourceTest {
 
 
         /*
-         * For PartyRole="Broker of Credit"
-         * I type
+         *  For PartyRole="Broker of Credit"
+         *  I, type
          */
         enumType = Enum525NestedPartyIDSource.DIRECTED_BROKER_ACRONYM;
         assertEquals("I", enumType.getID());

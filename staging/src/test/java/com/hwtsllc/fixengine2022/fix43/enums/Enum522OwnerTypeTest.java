@@ -36,7 +36,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.INDIVIDUAL_INVESTOR;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,INDIVIDUAL_INVESTOR,1 - Individual Investor", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +44,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.PUBLIC_COMPANY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,PUBLIC_COMPANY,2 - Public Company", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -52,7 +52,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.PRIVATE_COMPANY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("3,PRIVATE_COMPANY,3 - Private Company", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -60,7 +60,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.INDIVIDUAL_TRUSTEE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("4,INDIVIDUAL_TRUSTEE,4 - Individual Trustee", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -68,7 +68,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.COMPANY_TRUSTEE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("5,COMPANY_TRUSTEE,5 - Company Trustee", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -76,7 +76,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.PENSION_PLAN;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("6,PENSION_PLAN,6 - Pension Plan", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -84,7 +84,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.CUSTODIAN_MINORS_ACT;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("7,CUSTODIAN_MINORS_ACT,7 - Custodian Under Gifts to Minors Act", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -92,7 +92,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.TRUSTS;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("8,TRUSTS,8 - Trusts", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -100,7 +100,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.FIDUCIARIES;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("9,FIDUCIARIES,9 - Fiduciaries", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -108,7 +108,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.NETWORKING_SUB_ACCOUNT;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("10,NETWORKING_SUB_ACCOUNT,10 - Networking Sub-account", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -116,7 +116,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.NON_PROFIT_ORGANIZATION;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("11,NON_PROFIT_ORGANIZATION,11 - Non-profit organization", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -124,7 +124,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.CORPORATE_BODY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("12,CORPORATE_BODY,12 - Corporate Body", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -132,7 +132,7 @@ class Enum522OwnerTypeTest {
         enumType = Enum522OwnerType.NOMINEE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("13,NOMINEE,13 - Nominee", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

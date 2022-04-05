@@ -36,7 +36,7 @@ class Enum497FundRenewWaivTest {
         enumType = Enum497FundRenewWaiv.NO;
         assertEquals("N", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("N,NO,N - No", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +44,7 @@ class Enum497FundRenewWaivTest {
         enumType = Enum497FundRenewWaiv.YES;
         assertEquals("Y", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("Y,YES,Y - Yes", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

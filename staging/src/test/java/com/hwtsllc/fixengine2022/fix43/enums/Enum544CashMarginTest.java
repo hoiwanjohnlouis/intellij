@@ -36,7 +36,7 @@ class Enum544CashMarginTest {
         enumType = Enum544CashMargin.CASH;
         assertEquals("1", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,CASH,1 - Cash", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +44,7 @@ class Enum544CashMarginTest {
         enumType = Enum544CashMargin.MARGIN_OPEN;
         assertEquals("2", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,MARGIN_OPEN,2 - Margin Open", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -52,7 +52,7 @@ class Enum544CashMarginTest {
         enumType = Enum544CashMargin.MARGIN_CLOSE;
         assertEquals("3", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("3,MARGIN_CLOSE,3 - Margin Close", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

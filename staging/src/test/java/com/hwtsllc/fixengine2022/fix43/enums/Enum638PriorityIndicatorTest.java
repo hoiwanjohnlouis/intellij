@@ -36,7 +36,7 @@ class Enum638PriorityIndicatorTest {
         enumType = Enum638PriorityIndicator.PRIORITY_UNCHANGED;
         assertEquals("0", enumType.getID());
         assertEquals("PRIORITY_UNCHANGED", enumType.getName());
-        assertEquals("0 - Priority Unchanged", enumType.getDescription());
+        assertEquals("0 - Priority unchanged", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +44,7 @@ class Enum638PriorityIndicatorTest {
         enumType = Enum638PriorityIndicator.LOST_PRIORITY;
         assertEquals("1", enumType.getID());
         assertEquals("LOST_PRIORITY", enumType.getName());
-        assertEquals("1 - Lost Priority", enumType.getDescription());
+        assertEquals("1 - Lost Priority as result of order change", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

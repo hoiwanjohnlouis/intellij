@@ -31,12 +31,16 @@ class Enum635ClearingFeeIndicatorTest {
         Enum635ClearingFeeIndicator enumType;
 
         /*
+         *  1-5, 9, B, C, E, F, H, I, L, M, types
+         */
+
+        /*
          *  1-5, types
          */
         enumType = Enum635ClearingFeeIndicator.FIRST_YEAR_DELEGATE;
         assertEquals("1", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,FIRST_YEAR_DELEGATE,1 - 1st year delegate trading for own account", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +48,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.SECOND_YEAR_DELEGATE;
         assertEquals("2", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,SECOND_YEAR_DELEGATE,2 - 2nd year delegate trading for own account", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -52,7 +56,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.THIRD_YEAR_DELEGATE;
         assertEquals("3", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("3,THIRD_YEAR_DELEGATE,3 - 3rd year delegate trading for own account", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -60,7 +64,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.FOURTH_YEAR_DELEGATE;
         assertEquals("4", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("4,FOURTH_YEAR_DELEGATE,4 - 4th year delegate trading for own account", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -68,7 +72,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.FIFTH_YEAR_DELEGATE;
         assertEquals("5", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("5,FIFTH_YEAR_DELEGATE,5 - 5th year delegate trading for own account", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -80,7 +84,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.SIXTH_YEAR_DELEGATE;
         assertEquals("9", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("9,SIXTH_YEAR_DELEGATE,9 - 6th year delegate trading for own account", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -92,7 +96,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.CBOE_MEMBER;
         assertEquals("B", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("B,CBOE_MEMBER,B - CBOE Member", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -100,7 +104,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.NON_MEMBER_AND_CUSTOMER;
         assertEquals("C", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("C,NON_MEMBER_AND_CUSTOMER,C - Non-member and Customer", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -112,7 +116,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.EQUITY_AND_CLEARING_MEMBER;
         assertEquals("E", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("E,EQUITY_AND_CLEARING_MEMBER,E - Equity Member and Clearing Member", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -120,7 +124,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.FULL_AND_ASSOCIATE_AS_FLOOR;
         assertEquals("F", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("F,FULL_AND_ASSOCIATE_AS_FLOOR,F - Full and Associate Member trading for own account and as floor brokers", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -132,7 +136,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.H_AND_J_FIRMS;
         assertEquals("H", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("H,H_AND_J_FIRMS,H - 106.H and 106.J firms", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -140,7 +144,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.GIM_IDEM_AND_COM;
         assertEquals("I", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("I,GIM_IDEM_AND_COM,I - GIM, IDEM and COM Membership Interest Holders", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -152,7 +156,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.F_EMPLOYEES;
         assertEquals("L", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("L,F_EMPLOYEES,L - Lessee 106.F Employees", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -160,7 +164,7 @@ class Enum635ClearingFeeIndicatorTest {
         enumType = Enum635ClearingFeeIndicator.ALL_OTHER;
         assertEquals("M", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("M,ALL_OTHER,M - All other ownership types", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

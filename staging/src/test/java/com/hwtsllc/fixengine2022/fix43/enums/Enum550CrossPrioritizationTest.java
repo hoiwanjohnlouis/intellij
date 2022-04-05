@@ -36,7 +36,7 @@ class Enum550CrossPrioritizationTest {
         enumType = Enum550CrossPrioritization.NONE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("0,NONE,0 - None", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +44,7 @@ class Enum550CrossPrioritizationTest {
         enumType = Enum550CrossPrioritization.BUY_PRIORITY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,BUY_PRIORITY,1 - Buy side is prioritized", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -52,7 +52,7 @@ class Enum550CrossPrioritizationTest {
         enumType = Enum550CrossPrioritization.SELL_PRIORITY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,SELL_PRIORITY,2 - Sell side is prioritized", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

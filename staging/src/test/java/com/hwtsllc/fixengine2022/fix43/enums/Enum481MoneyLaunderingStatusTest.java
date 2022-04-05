@@ -36,7 +36,7 @@ class Enum481MoneyLaunderingStatusTest {
         enumType = Enum481MoneyLaunderingStatus.PASSED;
         assertEquals("Y", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("Y,PASSED,Y - Passed", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -48,7 +48,7 @@ class Enum481MoneyLaunderingStatusTest {
         enumType = Enum481MoneyLaunderingStatus.NOT_CHECKED;
         assertEquals("N", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("N,NOT_CHECKED,N - Not Checked", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -60,7 +60,7 @@ class Enum481MoneyLaunderingStatusTest {
         enumType = Enum481MoneyLaunderingStatus.EXEMPT_BELOW_LIMIT;
         assertEquals("1", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,EXEMPT_BELOW_LIMIT,1 - Exempt - Below the Limit", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -68,7 +68,7 @@ class Enum481MoneyLaunderingStatusTest {
         enumType = Enum481MoneyLaunderingStatus.EXEMPT_CLIENT_MONEY;
         assertEquals("2", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,EXEMPT_CLIENT_MONEY,2 - Exempt - Client Money Type exemption", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -76,7 +76,7 @@ class Enum481MoneyLaunderingStatusTest {
         enumType = Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED;
         assertEquals("3", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("3,EXEMPT_AUTHORISED,3 - Exempt - Authorised Credit or financial institution", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

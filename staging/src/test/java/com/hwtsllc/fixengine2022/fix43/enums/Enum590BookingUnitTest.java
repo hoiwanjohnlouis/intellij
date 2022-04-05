@@ -36,7 +36,7 @@ class Enum590BookingUnitTest {
         enumType = Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("0,PARTIAL_EXECUTION_BOOKABLE,0 - Each partial execution is a bookable unit", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +44,7 @@ class Enum590BookingUnitTest {
         enumType = Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,AGGREGATE_PARTIAL_EXECUTION,1 - Aggregate partial executions on this order, and book one trade per order", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -52,7 +52,7 @@ class Enum590BookingUnitTest {
         enumType = Enum590BookingUnit.AGGREGATE_EXECUTIONS;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,AGGREGATE_EXECUTIONS,2 - Aggregate executions for this symbol, side, and settlement date", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

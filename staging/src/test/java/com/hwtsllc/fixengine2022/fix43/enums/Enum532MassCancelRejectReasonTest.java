@@ -31,12 +31,16 @@ class Enum532MassCancelRejectReasonTest {
         Enum532MassCancelRejectReason enumType;
 
         /*
+         *  0-6, 99, types
+         */
+
+        /*
          *  0-6, types
          */
         enumType = Enum532MassCancelRejectReason.MASS_CANCEL_NOT_SUPPORTED;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("0,MASS_CANCEL_NOT_SUPPORTED,0 - Mass Cancel Not Supported", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +48,7 @@ class Enum532MassCancelRejectReasonTest {
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SECURITY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,UNKNOWN_SECURITY,1 - Invalid or Unknown Security", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -52,7 +56,7 @@ class Enum532MassCancelRejectReasonTest {
         enumType = Enum532MassCancelRejectReason.UNKNOWN_UNDERLYING;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,UNKNOWN_UNDERLYING,2 - Invalid or Unknown Underlying security", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -60,7 +64,7 @@ class Enum532MassCancelRejectReasonTest {
         enumType = Enum532MassCancelRejectReason.UNKNOWN_PRODUCT;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("3,UNKNOWN_PRODUCT,3 - Invalid or Unknown Product", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -68,7 +72,7 @@ class Enum532MassCancelRejectReasonTest {
         enumType = Enum532MassCancelRejectReason.UNKNOWN_CFICODE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("4,UNKNOWN_CFICODE,4 - Invalid or Unknown CFICode", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -76,7 +80,7 @@ class Enum532MassCancelRejectReasonTest {
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("5,UNKNOWN_SECURITYTYPE,5 - Invalid or Unknown SecurityType", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -84,14 +88,14 @@ class Enum532MassCancelRejectReasonTest {
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SESSION;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("6,UNKNOWN_SESSION,6 - Invalid or Unknown Trading Session", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         /*
-         *  99 type
+         *  99, type
          */
         enumType = Enum532MassCancelRejectReason.OTHER;
         assertEquals("99", enumType.getID());

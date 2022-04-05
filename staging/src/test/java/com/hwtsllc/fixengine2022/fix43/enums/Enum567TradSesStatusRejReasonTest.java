@@ -31,24 +31,28 @@ class Enum567TradSesStatusRejReasonTest {
         Enum567TradSesStatusRejReason enumType;
 
         /*
+         *  1, 99, type(s)
+         */
+
+        /*
          *  1, type(s)
          */
         enumType = Enum567TradSesStatusRejReason.UNKNOWN_TRADING_SESSION_ID;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,UNKNOWN_TRADING_SESSION_ID,1 - Unknown or invalid TradingSessionID", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         /*
-         *  99 type(s)
+         *  99, type(s)
          */
         enumType = Enum567TradSesStatusRejReason.OTHER;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("99,OTHER,99 - Other", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

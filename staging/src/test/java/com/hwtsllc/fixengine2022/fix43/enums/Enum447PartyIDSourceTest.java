@@ -31,8 +31,21 @@ class Enum447PartyIDSourceTest {
         Enum447PartyIDSource enumType;
 
         /*
-         * All PartyRoles
-         *  B-H types
+         *  All PartyRoles
+         *  B-H, types
+         *  For PartyRole = "InvestorID" and for CIV
+         *  6-9, types
+         *  For PartyRole = "InvestorID" and for CIV
+         *  A, types
+         *  For PartyRole = "InvestorID" and for Equities
+         *  1-5, types
+         *  For PartyRole="Broker of Credit"
+         *  I, type
+         */
+
+        /*
+         *  All PartyRoles
+         *  B-H, types
          */
         enumType = Enum447PartyIDSource.BANK_IDENTIFICATION_CODE;
         assertEquals("B", enumType.getID());
@@ -99,8 +112,8 @@ class Enum447PartyIDSourceTest {
 
 
         /*
-         * For PartyRole = "InvestorID" and for CIV
-         * 6-9, types
+         *  For PartyRole = "InvestorID" and for CIV
+         *  6-9, types
          */
         enumType = Enum447PartyIDSource.UK_NATIONAL_NUMBER;
         assertEquals("6", enumType.getID());
@@ -136,8 +149,8 @@ class Enum447PartyIDSourceTest {
 
 
         /*
-         * For PartyRole = "InvestorID" and for CIV
-         * A, type
+         *  For PartyRole = "InvestorID" and for CIV
+         *  A, type
          */
         enumType = Enum447PartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER;
         assertEquals("A", enumType.getID());
@@ -149,8 +162,8 @@ class Enum447PartyIDSourceTest {
 
 
         /*
-         * For PartyRole = "InvestorID" and for Equities
-         * 1-5 types
+         *  For PartyRole = "InvestorID" and for Equities
+         *  1-5, types
          */
         enumType = Enum447PartyIDSource.KOREAN_INVESTOR_ID;
         assertEquals("1", enumType.getID());
@@ -194,8 +207,8 @@ class Enum447PartyIDSourceTest {
 
 
         /*
-         * For PartyRole="Broker of Credit"
-         * I type
+         *  For PartyRole="Broker of Credit"
+         *  I, type
          */
         enumType = Enum447PartyIDSource.DIRECTED_BROKER_ACRONYM;
         assertEquals("I", enumType.getID());

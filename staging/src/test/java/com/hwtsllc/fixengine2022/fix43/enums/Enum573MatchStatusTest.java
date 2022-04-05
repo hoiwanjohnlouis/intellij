@@ -36,7 +36,7 @@ class Enum573MatchStatusTest {
         enumType = Enum573MatchStatus.COMPARED_MATCHED_AFFIRMED;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("0,COMPARED_MATCHED_AFFIRMED,0 - Compared, matched, or affirmed", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +44,7 @@ class Enum573MatchStatusTest {
         enumType = Enum573MatchStatus.UNCOMPARED_UNMATCHED_UNAFFIRMED;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,UNCOMPARED_UNMATCHED_UNAFFIRMED,1 - Uncompared, unmatched, or unaffirmed", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -52,7 +52,7 @@ class Enum573MatchStatusTest {
         enumType = Enum573MatchStatus.ADVISORY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,ADVISORY,2 - Advisory or alert", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());

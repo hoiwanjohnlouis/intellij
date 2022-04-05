@@ -36,7 +36,7 @@ class Enum560SecurityRequestResultTest {
         enumType = Enum560SecurityRequestResult.VALID_REQUEST;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("0,VALID_REQUEST,0 - Valid request", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -44,7 +44,7 @@ class Enum560SecurityRequestResultTest {
         enumType = Enum560SecurityRequestResult.UNSUPPORTED_REQUEST;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1,UNSUPPORTED_REQUEST,1 - Invalid or unsupported request", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -52,7 +52,7 @@ class Enum560SecurityRequestResultTest {
         enumType = Enum560SecurityRequestResult.NO_INSTRUMENTS_FOUND;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2,NO_INSTRUMENTS_FOUND,2 - No instruments found that match selection criteria", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -60,7 +60,7 @@ class Enum560SecurityRequestResultTest {
         enumType = Enum560SecurityRequestResult.NOT_AUTHORIZED;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("3,NOT_AUTHORIZED,3 - Not authorized to retrieve instrument data", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -68,7 +68,7 @@ class Enum560SecurityRequestResultTest {
         enumType = Enum560SecurityRequestResult.INSTRUMENT_DATA_UNAVAILABLE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("4,INSTRUMENT_DATA_UNAVAILABLE,4 - Instrument data temporarily unavailable", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
@@ -76,7 +76,7 @@ class Enum560SecurityRequestResultTest {
         enumType = Enum560SecurityRequestResult.REQUEST_NOT_SUPPORTED;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("5,REQUEST_NOT_SUPPORTED,5 - Request for instrument data not supported", enumType.getDescription());
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
