@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag114EtLocateReqd extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+public class Tag126UtcttExpireTime extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyUTCTimestampType dataValue;
 
-    public final static EnumBoolean TESTA_ET_LOCATE_REQD = EnumBoolean.NO; // fake data
-    public final static EnumBoolean TESTB_ET_LOCATE_REQD = EnumBoolean.YES;
+    public final static String TESTA_UTCTT_EXPIRE_TIME = "BilboBaggins-126ExpireTime"; // fake data
+    public final static String TESTB_UTCTT_EXPIRE_TIME = "Gandalf-126ExpireTime";
 
-    public Tag114EtLocateReqd(EnumBoolean dataValue) {
-        setFixType(FIX40.FIX114_ET_LOCATE_REQD);
+    public Tag126UtcttExpireTime(MyUTCTimestampType dataValue) {
+        setFixType(FIX40.FIX126_UTCTT_EXPIRE_TIME);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.getDataValue();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag114EtLocateReqd extends FIX40Abstract implements FixTagValuePair
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag114EtLocateReqd extends FIX40Abstract implements FixTagValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag114EtLocateReqd tagData;
+        Tag126UtcttExpireTime tagData;
 
-        tagData = new Tag114EtLocateReqd(TESTA_ET_LOCATE_REQD);
+        tagData = new Tag126UtcttExpireTime(new MyUTCTimestampType(TESTA_UTCTT_EXPIRE_TIME) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag114EtLocateReqd(TESTB_ET_LOCATE_REQD);
+        tagData = new Tag126UtcttExpireTime(new MyUTCTimestampType(TESTB_UTCTT_EXPIRE_TIME) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

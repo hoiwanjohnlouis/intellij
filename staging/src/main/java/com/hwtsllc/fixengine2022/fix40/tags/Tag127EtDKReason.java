@@ -16,24 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
+import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum127DKReason;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag127EtDKReason extends TagTypeAbstract {
+public class Tag127EtDKReason extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum127DKReason dataValue;
 
     public final static Enum127DKReason TESTA_ET_DK_REASON = Enum127DKReason.UNKNOWN_SYMBOL; // fake data
     public final static Enum127DKReason TESTB_ET_DK_REASON = Enum127DKReason.OTHER;
 
     public Tag127EtDKReason(Enum127DKReason dataValue) {
-        setFixType(FIXType.FIX127_ET_DK_REASON);
-        setDataValue(dataValue.getID());
+        setFixType(FIX40.FIX127_ET_DK_REASON);
         this.dataValue = dataValue;
     }
 
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
     public static void main(String[] args) {
-        Tag127EtDKReason tagData = new Tag127EtDKReason(TESTA_ET_DK_REASON);
+        Tag127EtDKReason tagData;
+
+        tagData = new Tag127EtDKReason(TESTA_ET_DK_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag127EtDKReason(TESTB_ET_DK_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag114EtLocateReqd extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+public class Tag120CtSettlCurrency extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyCurrencyType dataValue;
 
-    public final static EnumBoolean TESTA_ET_LOCATE_REQD = EnumBoolean.NO; // fake data
-    public final static EnumBoolean TESTB_ET_LOCATE_REQD = EnumBoolean.YES;
+    public final static String TESTA_CT_SETTL_CURRENCY = "BilboBaggins-120SettlCurrency"; // fake data
+    public final static String TESTB_CT_SETTL_CURRENCY = "Gandalf-120SettlCurrency";
 
-    public Tag114EtLocateReqd(EnumBoolean dataValue) {
-        setFixType(FIX40.FIX114_ET_LOCATE_REQD);
+    public Tag120CtSettlCurrency(MyCurrencyType dataValue) {
+        setFixType(FIX40.FIX120_CT_SETTL_CURRENCY);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.getDataValue();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag114EtLocateReqd extends FIX40Abstract implements FixTagValuePair
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag114EtLocateReqd extends FIX40Abstract implements FixTagValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag114EtLocateReqd tagData;
+        Tag120CtSettlCurrency tagData;
 
-        tagData = new Tag114EtLocateReqd(TESTA_ET_LOCATE_REQD);
+        tagData = new Tag120CtSettlCurrency(new MyCurrencyType(TESTA_CT_SETTL_CURRENCY) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag114EtLocateReqd(TESTB_ET_LOCATE_REQD);
+        tagData = new Tag120CtSettlCurrency(new MyCurrencyType(TESTB_CT_SETTL_CURRENCY) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

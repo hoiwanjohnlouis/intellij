@@ -16,24 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
+import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag139EtMiscFeeType extends TagTypeAbstract {
+public class Tag139EtMiscFeeType extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum139MiscFeeType dataValue;
 
     public final static Enum139MiscFeeType TESTA_ET_MISC_FEE_TYPE = Enum139MiscFeeType.REGULATORY; // fake data
     public final static Enum139MiscFeeType TESTB_ET_MISC_FEE_TYPE = Enum139MiscFeeType.TRANSFER_FEE;
 
     public Tag139EtMiscFeeType(Enum139MiscFeeType dataValue) {
-        setFixType(FIXType.FIX139_ET_MISC_FEE_TYPE);
-        setDataValue(dataValue.getID());
+        setFixType(FIX40.FIX139_ET_MISC_FEE_TYPE);
         this.dataValue = dataValue;
     }
 
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
     public static void main(String[] args) {
-        Tag139EtMiscFeeType tagData = new Tag139EtMiscFeeType(TESTA_ET_MISC_FEE_TYPE);
+        Tag139EtMiscFeeType tagData;
+
+        tagData = new Tag139EtMiscFeeType(TESTA_ET_MISC_FEE_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag139EtMiscFeeType(TESTB_ET_MISC_FEE_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
