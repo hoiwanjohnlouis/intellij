@@ -16,25 +16,56 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum54Side;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag54EtSide extends TagTypeAbstract {
+public class Tag54EtSide extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum54Side dataValue;
 
     public final static Enum54Side TESTA_ET_SIDE = Enum54Side.BUY; // fake data
     public final static Enum54Side TESTB_ET_SIDE = Enum54Side.SELL;
 
     public Tag54EtSide(Enum54Side dataValue) {
-        setFixType(FIXType.FIX54_ET_SIDE);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX54_ET_SIDE);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
         Tag54EtSide tagData = new Tag54EtSide(TESTA_ET_SIDE);

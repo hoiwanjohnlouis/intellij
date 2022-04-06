@@ -16,42 +16,68 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag4EtAdvSide extends TagTypeAbstract {
+public class Tag4EtAdvSide extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private Enum4AdvSide dataValue;
 
     public final static Enum4AdvSide TESTA_ET_ADV_SIDE = Enum4AdvSide.BUY;
     public final static Enum4AdvSide TESTB_ET_ADV_SIDE = Enum4AdvSide.SELL;
 
     public Tag4EtAdvSide(Enum4AdvSide dataValue) {
-        setFixType(FIXType.FIX4_ET_ADV_SIDE);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX4_ET_ADV_SIDE);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag4EtAdvSide tagDataBuy = new Tag4EtAdvSide(Enum4AdvSide.BUY);
-        Tag4EtAdvSide tagDataSell = new Tag4EtAdvSide(Enum4AdvSide.SELL);
-        Tag4EtAdvSide tagDataCross = new Tag4EtAdvSide(Enum4AdvSide.CROSS);
-        Tag4EtAdvSide tagDataTrade = new Tag4EtAdvSide(Enum4AdvSide.TRADE);
-        System.out.println(Enum4AdvSide.BUY);
-        System.out.println(Enum4AdvSide.SELL);
-        System.out.println(Enum4AdvSide.CROSS);
-        System.out.println(Enum4AdvSide.TRADE);
-        System.out.println(tagDataBuy);
-        System.out.println(tagDataSell);
-        System.out.println(tagDataCross);
-        System.out.println(tagDataTrade);
-        System.out.println(tagDataBuy.toFixTagValuePairString());
-        System.out.println(tagDataSell.toFixTagValuePairString());
-        System.out.println(tagDataCross.toFixTagValuePairString());
-        System.out.println(tagDataTrade.toFixTagValuePairString());
+        Tag4EtAdvSide tagData;
+
+        tagData = new Tag4EtAdvSide(TESTA_ET_ADV_SIDE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag4EtAdvSide(TESTB_ET_ADV_SIDE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

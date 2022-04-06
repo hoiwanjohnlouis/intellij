@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag10StCheckSum extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag10StCheckSum extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_CHECK_SUM = "789"; // fake data
     public final static String TESTB_ST_CHECK_SUM = "123";
 
-    public Tag10StCheckSum(StringType dataValue) {
-        setFixType(FIXType.FIX10_ST_CHECK_SUM);
+    public Tag10StCheckSum(MyStringType dataValue) {
+        setFixType(FIX27.FIX10_ST_CHECK_SUM);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag10StCheckSum extends FIXTypeAbstract implements FixTagValuePairS
      */
     public static void main(String[] args) {
         Tag10StCheckSum tagData;
-        tagData = new Tag10StCheckSum(new StringType(TESTA_ST_CHECK_SUM) );
+        tagData = new Tag10StCheckSum(new MyStringType(TESTA_ST_CHECK_SUM) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag10StCheckSum(new StringType(TESTB_ST_CHECK_SUM) );
+        tagData = new Tag10StCheckSum(new MyStringType(TESTB_ST_CHECK_SUM) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

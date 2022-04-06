@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag66StListID extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag66StListID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_LIST_ID = "BilboBaggins-66StListID"; // fake data
     public final static String TESTB_ST_LIST_ID = "Gandalf-66StListID";
 
-    public Tag66StListID(StringType dataValue) {
-        setFixType(FIXType.FIX66_ST_LIST_ID);
+    public Tag66StListID(MyStringType dataValue) {
+        setFixType(FIX27.FIX66_ST_LIST_ID);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag66StListID extends FIXTypeAbstract implements FixTagValuePairStr
      */
     public static void main(String[] args) {
         Tag66StListID tagData;
-        tagData= new Tag66StListID(new StringType(TESTA_ST_LIST_ID) );
+        tagData= new Tag66StListID(new MyStringType(TESTA_ST_LIST_ID) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag66StListID(new StringType(TESTB_ST_LIST_ID) );
+        tagData = new Tag66StListID(new MyStringType(TESTB_ST_LIST_ID) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -16,21 +16,21 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 @Deprecated
-public class Tag92StBrokerOfCredit extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag92StBrokerOfCredit extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_BROKER_OF_CREDIT = "BilboBaggins-92StBrokerOfCredit";
     public final static String TESTB_ST_BROKER_OF_CREDIT = "Gandalf-92StBrokerOfCredit";
 
-    public Tag92StBrokerOfCredit(StringType dataValue) {
-        setFixType(FIXType.FIX92_BROKER_OF_CREDIT);
+    public Tag92StBrokerOfCredit(MyStringType dataValue) {
+        setFixType(FIX27.FIX92_BROKER_OF_CREDIT);
         this.dataValue = dataValue;
     }
 
@@ -70,11 +70,11 @@ public class Tag92StBrokerOfCredit extends FIXTypeAbstract implements FixTagValu
      */
     public static void main(String[] args) {
         Tag92StBrokerOfCredit tagData;
-        tagData= new Tag92StBrokerOfCredit(new StringType(TESTA_ST_BROKER_OF_CREDIT) );
+        tagData= new Tag92StBrokerOfCredit(new MyStringType(TESTA_ST_BROKER_OF_CREDIT) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag92StBrokerOfCredit(new StringType(TESTB_ST_BROKER_OF_CREDIT) );
+        tagData = new Tag92StBrokerOfCredit(new MyStringType(TESTB_ST_BROKER_OF_CREDIT) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

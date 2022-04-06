@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.QtyType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag38QtOrderQty extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final QtyType dataValue;
+public class Tag38QtOrderQty extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyQtyType dataValue;
 
     public final static int TESTA_QT_ORDER_QTY = 3838;
     public final static int TESTB_QT_ORDER_QTY = 4545;
 
-    public Tag38QtOrderQty(QtyType dataValue) {
-        setFixType(FIXType.FIX38_QT_ORDER_QTY);
+    public Tag38QtOrderQty(MyQtyType dataValue) {
+        setFixType(FIX27.FIX38_QT_ORDER_QTY);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag38QtOrderQty extends FIXTypeAbstract implements FixTagValuePairS
      */
     public static void main(String[] args) {
         Tag38QtOrderQty tagData;
-        tagData = new Tag38QtOrderQty(new QtyType(TESTA_QT_ORDER_QTY) );
+        tagData = new Tag38QtOrderQty(new MyQtyType(TESTA_QT_ORDER_QTY) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag38QtOrderQty(new QtyType(TESTB_QT_ORDER_QTY) );
+        tagData = new Tag38QtOrderQty(new MyQtyType(TESTB_QT_ORDER_QTY) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

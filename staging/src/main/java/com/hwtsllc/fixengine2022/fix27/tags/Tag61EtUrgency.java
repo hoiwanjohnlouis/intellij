@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum61Urgency;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag61EtUrgency extends TagTypeAbstract {
+public class Tag61EtUrgency extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum61Urgency dataValue;
 
     public final static Enum61Urgency TESTA_ET_URGENCY = Enum61Urgency.NORMAL; // fake data
     public final static Enum61Urgency TESTB_ET_URGENCY = Enum61Urgency.BACKGROUND;
 
     public Tag61EtUrgency(Enum61Urgency dataValue) {
-        setFixType(FIXType.FIX61_ET_URGENCY);
-        setDataValue( dataValue.getID() );
+        setFixType(FIX27.FIX61_ET_URGENCY);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag61EtUrgency tagData = new Tag61EtUrgency(TESTA_ET_URGENCY);
+        Tag61EtUrgency tagData;
+
+        tagData = new Tag61EtUrgency(TESTA_ET_URGENCY);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag61EtUrgency(TESTB_ET_URGENCY);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

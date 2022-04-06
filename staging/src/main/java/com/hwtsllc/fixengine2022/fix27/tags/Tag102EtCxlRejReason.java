@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum102CxlRejReason;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag102EtCxlRejReason extends TagTypeAbstract {
+public class Tag102EtCxlRejReason extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private Enum102CxlRejReason dataValue;
 
     public final static Enum102CxlRejReason TESTA_ET_CXL_REJ_REASON = Enum102CxlRejReason.TOO_LATE_TO_CANCEL;
     public final static Enum102CxlRejReason TESTB_ET_CXL_REJ_REASON = Enum102CxlRejReason.OTHER;
 
     public Tag102EtCxlRejReason(Enum102CxlRejReason dataValue) {
-        setFixType(FIXType.FIX102_ET_CXL_REJ_REASON);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX102_ET_CXL_REJ_REASON);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag102EtCxlRejReason tagData = new Tag102EtCxlRejReason(TESTA_ET_CXL_REJ_REASON);
+        Tag102EtCxlRejReason tagData;
+
+        tagData = new Tag102EtCxlRejReason(TESTA_ET_CXL_REJ_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag102EtCxlRejReason(TESTB_ET_CXL_REJ_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

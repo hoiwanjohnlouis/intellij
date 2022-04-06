@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum25IOIQltyInd;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag25EtIOIQltyInd extends TagTypeAbstract {
+public class Tag25EtIOIQltyInd extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum25IOIQltyInd dataValue;
 
     public final static Enum25IOIQltyInd TESTA_ET_IOI_QLTY_IND = Enum25IOIQltyInd.LOW; // fake data
     public final static Enum25IOIQltyInd TESTB_ET_IOI_QLTY_IND = Enum25IOIQltyInd.HIGH;
 
     public Tag25EtIOIQltyInd(Enum25IOIQltyInd dataValue) {
-        setFixType(FIXType.FIX25_ET_IOI_QLTY_IND);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX25_ET_IOI_QLTY_IND);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag25EtIOIQltyInd tagData = new Tag25EtIOIQltyInd(TESTA_ET_IOI_QLTY_IND);
+        Tag25EtIOIQltyInd tagData;
+
+        tagData = new Tag25EtIOIQltyInd(TESTA_ET_IOI_QLTY_IND);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag25EtIOIQltyInd(TESTB_ET_IOI_QLTY_IND);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

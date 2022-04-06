@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag37StOrderID extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag37StOrderID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_ORDER_ID = "BilboBaggins-37StOrderID"; // fake data
     public final static String TESTB_ST_ORDER_ID = "Gandalf-37StOrderID";
 
-    public Tag37StOrderID(StringType dataValue) {
-        setFixType(FIXType.FIX37_ST_ORDER_ID);
+    public Tag37StOrderID(MyStringType dataValue) {
+        setFixType(FIX27.FIX37_ST_ORDER_ID);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag37StOrderID extends FIXTypeAbstract implements FixTagValuePairSt
      */
     public static void main(String[] args) {
         Tag37StOrderID tagData;
-        tagData= new Tag37StOrderID(new StringType(TESTA_ST_ORDER_ID) );
+        tagData= new Tag37StOrderID(new MyStringType(TESTA_ST_ORDER_ID) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag37StOrderID(new StringType(TESTB_ST_ORDER_ID) );
+        tagData = new Tag37StOrderID(new MyStringType(TESTB_ST_ORDER_ID) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

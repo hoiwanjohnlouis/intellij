@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum77PositionEffect;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag77EtPositionEffect extends TagTypeAbstract {
+public class Tag77EtPositionEffect extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum77PositionEffect dataValue;
 
     public final static Enum77PositionEffect TESTA_ET_POSITION_EFFECT = Enum77PositionEffect.OPEN;
     public final static Enum77PositionEffect TESTB_ET_POSITION_EFFECT = Enum77PositionEffect.FIFO;
 
     public Tag77EtPositionEffect(Enum77PositionEffect dataValue) {
-        setFixType(FIXType.FIX77_ET_POSITION_EFFECT);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX77_ET_POSITION_EFFECT);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag77EtPositionEffect tagData = new Tag77EtPositionEffect(TESTA_ET_POSITION_EFFECT);
+        Tag77EtPositionEffect tagData;
+
+        tagData = new Tag77EtPositionEffect(TESTA_ET_POSITION_EFFECT);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag77EtPositionEffect(TESTB_ET_POSITION_EFFECT);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

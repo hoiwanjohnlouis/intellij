@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag23StIOIID extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag23StIOIID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_IOI_ID = "BilboBaggins-23StIOIID"; // fake data
     public final static String TESTB_ST_IOI_ID = "Gandalf-23StIOIID";
 
-    public Tag23StIOIID(StringType dataValue) {
-        setFixType(FIXType.FIX23_ST_IOI_ID);
+    public Tag23StIOIID(MyStringType dataValue) {
+        setFixType(FIX27.FIX23_ST_IOI_ID);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag23StIOIID extends FIXTypeAbstract implements FixTagValuePairStri
      */
     public static void main(String[] args) {
         Tag23StIOIID tagData;
-        tagData= new Tag23StIOIID(new StringType(TESTA_ST_IOI_ID) );
+        tagData= new Tag23StIOIID(new MyStringType(TESTA_ST_IOI_ID) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag23StIOIID(new StringType(TESTB_ST_IOI_ID) );
+        tagData = new Tag23StIOIID(new MyStringType(TESTB_ST_IOI_ID) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

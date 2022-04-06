@@ -16,30 +16,68 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum103OrdRejReason;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag103EtOrdRejReason extends TagTypeAbstract {
+public class Tag103EtOrdRejReason extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private Enum103OrdRejReason dataValue;
 
     public final static Enum103OrdRejReason TESTA_ET_ORD_REJ_REASON = Enum103OrdRejReason.BROKER_OR_EXCHANGE;
     public final static Enum103OrdRejReason TESTB_ET_ORD_REJ_REASON = Enum103OrdRejReason.OTHER;
 
     public Tag103EtOrdRejReason(Enum103OrdRejReason dataValue) {
-        setFixType(FIXType.FIX103_ET_ORD_REJ_REASON);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX103_ET_ORD_REJ_REASON);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag103EtOrdRejReason tag103EtOrdRejReason = new Tag103EtOrdRejReason(TESTA_ET_ORD_REJ_REASON);
-        System.out.println(Enum103OrdRejReason.OTHER);
-        System.out.println(tag103EtOrdRejReason);
-        System.out.println(tag103EtOrdRejReason.toFixTagValuePairString());
+        Tag103EtOrdRejReason tagData;
+
+        tagData =  new Tag103EtOrdRejReason(TESTA_ET_ORD_REJ_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData =  new Tag103EtOrdRejReason(TESTB_ET_ORD_REJ_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

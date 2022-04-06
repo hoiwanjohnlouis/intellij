@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum87AllocStatus;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag87EtAllocStatus extends TagTypeAbstract {
+public class Tag87EtAllocStatus extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum87AllocStatus dataValue;
 
     public final static Enum87AllocStatus TESTA_ET_ALLOC_STATUS = Enum87AllocStatus.ACCEPTED;
     public final static Enum87AllocStatus TESTB_ET_ALLOC_STATUS = Enum87AllocStatus.ALLOCATION_PENDING;
 
     public Tag87EtAllocStatus(Enum87AllocStatus dataValue) {
-        setFixType(FIXType.FIX87_ET_ALLOC_STATUS);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX87_ET_ALLOC_STATUS);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag87EtAllocStatus tagData = new Tag87EtAllocStatus(TESTA_ET_ALLOC_STATUS);
+        Tag87EtAllocStatus tagData;
+
+        tagData = new Tag87EtAllocStatus(TESTA_ET_ALLOC_STATUS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag87EtAllocStatus(TESTB_ET_ALLOC_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

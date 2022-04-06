@@ -16,50 +16,68 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag13EtCommType extends TagTypeAbstract {
+public class Tag13EtCommType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private Enum13CommType dataValue;
 
     public final static Enum13CommType TESTA_ET_COMMISSION = Enum13CommType.PER_UNIT; // fake data
     public final static Enum13CommType TESTB_ET_COMMISSION = Enum13CommType.POINTS_PER_BOND;
 
     public Tag13EtCommType(Enum13CommType dataValue) {
-        setFixType(FIXType.FIX13_ET_COMM_TYPE);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX13_ET_COMM_TYPE);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag13EtCommType tag13EtCommType1 = new Tag13EtCommType(Enum13CommType.PER_UNIT);
-        Tag13EtCommType tag13EtCommType2 = new Tag13EtCommType(Enum13CommType.PERCENT);
-        Tag13EtCommType tag13EtCommType3 = new Tag13EtCommType(Enum13CommType.ABSOLUTE);
-        Tag13EtCommType tag13EtCommType4 = new Tag13EtCommType(Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT);
-        Tag13EtCommType tag13EtCommType5 = new Tag13EtCommType(Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS);
-        Tag13EtCommType tag13EtCommType6 = new Tag13EtCommType(Enum13CommType.POINTS_PER_BOND);
-        System.out.println(tag13EtCommType1);
-        System.out.println(tag13EtCommType1.toLogStringVerbose());
-        System.out.println(tag13EtCommType1.toFixTagValuePairString());
-        System.out.println(tag13EtCommType2);
-        System.out.println(tag13EtCommType2.toLogStringVerbose());
-        System.out.println(tag13EtCommType2.toFixTagValuePairString());
-        System.out.println(tag13EtCommType3);
-        System.out.println(tag13EtCommType3.toLogStringVerbose());
-        System.out.println(tag13EtCommType3.toFixTagValuePairString());
-        System.out.println(tag13EtCommType4);
-        System.out.println(tag13EtCommType4.toLogStringVerbose());
-        System.out.println(tag13EtCommType4.toFixTagValuePairString());
-        System.out.println(tag13EtCommType5);
-        System.out.println(tag13EtCommType5.toLogStringVerbose());
-        System.out.println(tag13EtCommType5.toFixTagValuePairString());
-        System.out.println(tag13EtCommType6);
-        System.out.println(tag13EtCommType6.toLogStringVerbose());
-        System.out.println(tag13EtCommType6.toFixTagValuePairString());
+        Tag13EtCommType tagData;
+
+        tagData = new Tag13EtCommType(TESTA_ET_COMMISSION);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag13EtCommType(TESTB_ET_COMMISSION);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
     }
 }

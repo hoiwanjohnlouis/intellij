@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag65StSymbolSfx extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag65StSymbolSfx extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_SYMBOL_SFX = "TESTA";
     public final static String TESTB_ST_SYMBOL_SFX = "TESTB";
 
-    public Tag65StSymbolSfx(StringType dataValue) {
-        setFixType(FIXType.FIX65_ST_SYMBOL_SFX);
+    public Tag65StSymbolSfx(MyStringType dataValue) {
+        setFixType(FIX27.FIX65_ST_SYMBOL_SFX);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag65StSymbolSfx extends FIXTypeAbstract implements FixTagValuePair
      */
     public static void main(String[] args) {
         Tag65StSymbolSfx tagData;
-        tagData= new Tag65StSymbolSfx(new StringType(TESTA_ST_SYMBOL_SFX) );
+        tagData= new Tag65StSymbolSfx(new MyStringType(TESTA_ST_SYMBOL_SFX) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag65StSymbolSfx(new StringType(TESTB_ST_SYMBOL_SFX) );
+        tagData = new Tag65StSymbolSfx(new MyStringType(TESTB_ST_SYMBOL_SFX) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

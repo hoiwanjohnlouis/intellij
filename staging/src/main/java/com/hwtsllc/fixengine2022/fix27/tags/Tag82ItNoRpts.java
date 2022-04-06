@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.QtyType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag84CxlQty extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final QtyType dataValue;
+public class Tag82ItNoRpts extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyIntType dataValue;
 
-    public final static int TESTA_QT_CXL_QTY = 84; // fake data
-    public final static int TESTB_QT_CXL_QTY = 48;
+    public final static int TESTA_IT_NO_RPTS = 1;
+    public final static int TESTB_IT_NO_RPTS = 2;
 
-    public Tag84CxlQty(QtyType dataValue) {
-        setFixType(FIXType.FIX84_QT_CXL_QTY);
+    public Tag82ItNoRpts(MyIntType dataValue) {
+        setFixType(FIX27.FIX82_IT_NO_RPTS);
         this.dataValue = dataValue;
     }
 
@@ -68,19 +68,16 @@ public class Tag84CxlQty extends FIXTypeAbstract implements FixTagValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag84CxlQty tagData;
-        tagData = new Tag84CxlQty(new QtyType(TESTA_QT_CXL_QTY) );
-        System.out.println("initial values A");
+        Tag82ItNoRpts tagData;
+
+        tagData = new Tag82ItNoRpts(new MyIntType(TESTA_IT_NO_RPTS) );
+        System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag84CxlQty(new QtyType(TESTB_QT_CXL_QTY) );
-        System.out.println("initial values B");
+
+        tagData = new Tag82ItNoRpts(new MyIntType(TESTB_IT_NO_RPTS) );
+        System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.getEnumName());
-        System.out.println("ID:" + tagData.getID());
-        System.out.println("Name:" + tagData.getName());
-        System.out.println("Description:" + tagData.getDescription());
     }
 }

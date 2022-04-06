@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum94EmailType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag94EtEmailType extends TagTypeAbstract {
+public class Tag94EtEmailType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum94EmailType dataValue;
 
     public final static Enum94EmailType TESTA_ET_EMAIL_TYPE = Enum94EmailType.NEW;
     public final static Enum94EmailType TESTB_ET_EMAIL_TYPE = Enum94EmailType.ADMIN_REPLY;
 
     public Tag94EtEmailType(Enum94EmailType dataValue) {
-        setFixType(FIXType.FIX94_ET_EMAIL_TYPE);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX94_ET_EMAIL_TYPE);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag94EtEmailType tagData = new Tag94EtEmailType(TESTA_ET_EMAIL_TYPE);
+        Tag94EtEmailType tagData;
+
+        tagData = new Tag94EtEmailType(TESTA_ET_EMAIL_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag94EtEmailType(TESTB_ET_EMAIL_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

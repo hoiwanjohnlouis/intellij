@@ -16,24 +16,24 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.QtyType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag53Quantity extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final QtyType dataValue;
+public class Tag100StExDestination extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
-    public final static int TESTA_QT_QUANTITY = 1000; // fake data
-    public final static int TESTB_QT_QUANTITY = 3300;
+    public final static String TESTA_EX_DESTINATION = "BilboBaggins-100ExDestination";
+    public final static String TESTB_EX_DESTINATION = "Gandalf-100ExDestination";
 
-    public Tag53Quantity(QtyType dataValue) {
-        setFixType(FIXType.FIX53_QT_QUANTITY);
+    public Tag100StExDestination(MyStringType dataValue) {
+        setFixType(FIX27.FIX100_ST_EX_DESTINATION);
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
+    public String getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -68,19 +68,16 @@ public class Tag53Quantity extends FIXTypeAbstract implements FixTagValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag53Quantity tagData;
-        tagData = new Tag53Quantity(new QtyType(TESTA_QT_QUANTITY) );
-        System.out.println("initial values A");
+        Tag100StExDestination tagData;
+
+        tagData = new Tag100StExDestination(new MyStringType(TESTA_EX_DESTINATION) );
+        System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag53Quantity(new QtyType(TESTB_QT_QUANTITY) );
-        System.out.println("initial values B");
+
+        tagData = new Tag100StExDestination(new MyStringType(TESTB_EX_DESTINATION) );
+        System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.getEnumName());
-        System.out.println("ID:" + tagData.getID());
-        System.out.println("Name:" + tagData.getName());
-        System.out.println("Description:" + tagData.getDescription());
     }
 }

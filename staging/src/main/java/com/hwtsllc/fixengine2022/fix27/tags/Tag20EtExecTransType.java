@@ -16,29 +16,67 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum20ExecTransType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 @Deprecated
-public class Tag20EtExecTransType extends TagTypeAbstract {
+public class Tag20EtExecTransType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum20ExecTransType dataValue;
 
     public final static Enum20ExecTransType TESTA_ET_EXEC_TRANS_TYPE = Enum20ExecTransType.NEW; // fake data
     public final static Enum20ExecTransType TESTB_ET_EXEC_TRANS_TYPE = Enum20ExecTransType.STATUS;
 
     public Tag20EtExecTransType(Enum20ExecTransType dataValue) {
-        setFixType(FIXType.FIX20_ET_EXEC_TRANS_TYPE);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX20_ET_EXEC_TRANS_TYPE);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag20EtExecTransType tagData = new Tag20EtExecTransType(TESTA_ET_EXEC_TRANS_TYPE);
+        Tag20EtExecTransType tagData;
+
+        tagData = new Tag20EtExecTransType(TESTA_ET_EXEC_TRANS_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag20EtExecTransType(TESTB_ET_EXEC_TRANS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

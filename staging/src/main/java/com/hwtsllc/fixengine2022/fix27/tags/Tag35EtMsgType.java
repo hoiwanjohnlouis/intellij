@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag35EtMsgType extends TagTypeAbstract {
+public class Tag35EtMsgType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum35MsgType dataValue;
 
     public final static Enum35MsgType TESTA_ET_MSG_TYPE = Enum35MsgType.HEARTBEAT; // fake data
     public final static Enum35MsgType TESTB_ET_MSG_TYPE = Enum35MsgType.LOGOUT;
 
     public Tag35EtMsgType(Enum35MsgType dataValue) {
-        setFixType(FIXType.FIX34_MSG_SEQ_NUM);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX35_ET_MSG_TYPE);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag35EtMsgType tagData = new Tag35EtMsgType(TESTA_ET_MSG_TYPE);
+        Tag35EtMsgType tagData;
+
+        tagData = new Tag35EtMsgType(TESTA_ET_MSG_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag35EtMsgType(TESTB_ET_MSG_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

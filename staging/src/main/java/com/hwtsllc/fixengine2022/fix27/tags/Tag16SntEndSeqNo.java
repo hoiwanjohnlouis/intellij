@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.SeqNumType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag16SntEndSeqNo extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final SeqNumType dataValue;
+public class Tag16SntEndSeqNo extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MySeqNumType dataValue;
 
     public final static int TESTA_SNT_END_SEQ_NO = 256;
     public final static int TESTB_SNT_END_SEQ_NO = 512;
 
-    public Tag16SntEndSeqNo(SeqNumType dataValue) {
-        setFixType(FIXType.FIX16_SNT_END_SEQ_NO);
+    public Tag16SntEndSeqNo(MySeqNumType dataValue) {
+        setFixType(FIX27.FIX16_SNT_END_SEQ_NO);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag16SntEndSeqNo extends FIXTypeAbstract implements FixTagValuePair
      */
     public static void main(String[] args) {
         Tag16SntEndSeqNo tagData;
-        tagData = new Tag16SntEndSeqNo(new SeqNumType(TESTA_SNT_END_SEQ_NO) );
+        tagData = new Tag16SntEndSeqNo(new MySeqNumType(TESTA_SNT_END_SEQ_NO) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag16SntEndSeqNo(new SeqNumType(TESTB_SNT_END_SEQ_NO) );
+        tagData = new Tag16SntEndSeqNo(new MySeqNumType(TESTB_SNT_END_SEQ_NO) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

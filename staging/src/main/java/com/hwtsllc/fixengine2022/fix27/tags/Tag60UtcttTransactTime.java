@@ -16,8 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  * 	UTCTimestamp:  Time/date combination represented in UTC (Universal Time Coordinated, also known as “GMT”) in either
@@ -36,24 +39,60 @@ import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
  *      During a leap second insertion, a UTCTimestamp field may read "19981231-23:59:59", "19981231-23:59:60", "19990101-00:00:00".
  *      (see http://tycho.usno.navy.mil/leapsec.html)
  */
-public class Tag60TransactTime extends TagTypeAbstract {
-    private final String dataValue;
+public class Tag60UtcttTransactTime extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_TRANSACT_TIME = "18991231-23:59:60";
-    public final static String TESTB_TRANSACT_TIME = "18991231-00:00:00";
+    public final static String TESTA_UTCTT_TRANSACT_TIME = "18991231-23:59:60";
+    public final static String TESTB_UTCTT_TRANSACT_TIME = "18991231-00:00:00";
 
-    public Tag60TransactTime(String dataValue) {
-        setFixType(FIXType.FIX60_TRANSACT_TIME);
-        setDataValue(dataValue);
+    public Tag60UtcttTransactTime(MyUTCTimestampType dataValue) {
+        setFixType(FIX27.FIX60_UTCTT_TRANSACT_TIME);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getDataValue();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(dataValue.toString());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag60TransactTime tagData = new Tag60TransactTime("JohnWick-453");
+        Tag60UtcttTransactTime tagData;
+
+        tagData = new Tag60UtcttTransactTime(new MyUTCTimestampType(TESTA_UTCTT_TRANSACT_TIME) );
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag60UtcttTransactTime(new MyUTCTimestampType(TESTB_UTCTT_TRANSACT_TIME) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

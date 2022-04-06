@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag96StRawData extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag96StRawData extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_RAW_DATA = "BilboBaggins-96StRawData";
     public final static String TESTB_ST_RAW_DATA = "Gandalf-96StRawData";
 
-    public Tag96StRawData(StringType dataValue) {
-        setFixType(FIXType.FIX96_ST_RAW_DATA);
+    public Tag96StRawData(MyStringType dataValue) {
+        setFixType(FIX27.FIX96_ST_RAW_DATA);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag96StRawData extends FIXTypeAbstract implements FixTagValuePairSt
      */
     public static void main(String[] args) {
         Tag96StRawData tagData;
-        tagData= new Tag96StRawData(new StringType(TESTA_ST_RAW_DATA) );
+        tagData= new Tag96StRawData(new MyStringType(TESTA_ST_RAW_DATA) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag96StRawData(new StringType(TESTB_ST_RAW_DATA) );
+        tagData = new Tag96StRawData(new MyStringType(TESTB_ST_RAW_DATA) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag41StOrigClOrdID extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag41StOrigClOrdID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_ORIG_CL_ORD_ID = "BilboBaggins-41StOrigClOrdID"; // fake data
     public final static String TESTB_ST_ORIG_CL_ORD_ID = "Gandalf-41StOrigClOrdID";
 
-    public Tag41StOrigClOrdID(StringType dataValue) {
-        setFixType(FIXType.FIX41_ST_ORIG_CL_ORD_ID);
+    public Tag41StOrigClOrdID(MyStringType dataValue) {
+        setFixType(FIX27.FIX41_ST_ORIG_CL_ORD_ID);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag41StOrigClOrdID extends FIXTypeAbstract implements FixTagValuePa
      */
     public static void main(String[] args) {
         Tag41StOrigClOrdID tagData;
-        tagData= new Tag41StOrigClOrdID(new StringType(TESTA_ST_ORIG_CL_ORD_ID) );
+        tagData= new Tag41StOrigClOrdID(new MyStringType(TESTA_ST_ORIG_CL_ORD_ID) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag41StOrigClOrdID(new StringType(TESTB_ST_ORIG_CL_ORD_ID) );
+        tagData = new Tag41StOrigClOrdID(new MyStringType(TESTB_ST_ORIG_CL_ORD_ID) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

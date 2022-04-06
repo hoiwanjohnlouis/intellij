@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag79StAllocAccount extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag79StAllocAccount extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_ALLOC_ACCOUNT = "BilboBaggins-79StAllocAccount";
     public final static String TESTB_ST_ALLOC_ACCOUNT = "Gandalf-79StAllocAccount";
 
-    public Tag79StAllocAccount(StringType dataValue) {
-        setFixType(FIXType.FIX79_ST_ALLOC_ACCOUNT);
+    public Tag79StAllocAccount(MyStringType dataValue) {
+        setFixType(FIX27.FIX79_ST_ALLOC_ACCOUNT);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,18 @@ public class Tag79StAllocAccount extends FIXTypeAbstract implements FixTagValueP
      */
     public static void main(String[] args) {
         Tag79StAllocAccount tagData;
-        tagData= new Tag79StAllocAccount(new StringType(TESTA_ST_ALLOC_ACCOUNT) );
+
+        tagData= new Tag79StAllocAccount(new MyStringType(TESTA_ST_ALLOC_ACCOUNT) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag79StAllocAccount(new StringType(TESTA_ST_ALLOC_ACCOUNT) );
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+
+        tagData = new Tag79StAllocAccount(new MyStringType(TESTA_ST_ALLOC_ACCOUNT) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

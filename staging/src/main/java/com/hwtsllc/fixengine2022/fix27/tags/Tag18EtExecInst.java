@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum18ExecInst;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag18EtExecInst extends TagTypeAbstract {
+public class Tag18EtExecInst extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum18ExecInst dataValue;
 
     public final static Enum18ExecInst TESTA_ET_EXEC_INST = Enum18ExecInst.STAY_ON_OFFER_SIDE; // fake data
     public final static Enum18ExecInst TESTB_ET_EXEC_INST = Enum18ExecInst.STAY_ON_BID_SIDE;
 
     public Tag18EtExecInst(Enum18ExecInst dataValue) {
-        setFixType(FIXType.FIX18_ET_EXEC_INST);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX18_ET_EXEC_INST);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag18EtExecInst tagData = new Tag18EtExecInst(TESTA_ET_EXEC_INST);
+        Tag18EtExecInst tagData;
+
+        tagData = new Tag18EtExecInst(TESTA_ET_EXEC_INST);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag18EtExecInst(TESTB_ET_EXEC_INST);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

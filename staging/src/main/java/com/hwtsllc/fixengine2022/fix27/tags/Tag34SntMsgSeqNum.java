@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.SeqNumType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag34SntMsgSeqNum extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final SeqNumType dataValue;
+public class Tag34SntMsgSeqNum extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MySeqNumType dataValue;
 
     public final static int TESTA_SNT_MSG_SEQ_NO = 567;
     public final static int TESTB_SNT_MSG_SEQ_NO = 1482;
 
-    public Tag34SntMsgSeqNum(SeqNumType dataValue) {
-        setFixType(FIXType.FIX34_MSG_SEQ_NUM);
+    public Tag34SntMsgSeqNum(MySeqNumType dataValue) {
+        setFixType(FIX27.FIX34_SNT_MSG_SEQ_NUM);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag34SntMsgSeqNum extends FIXTypeAbstract implements FixTagValuePai
      */
     public static void main(String[] args) {
         Tag34SntMsgSeqNum tagData;
-        tagData = new Tag34SntMsgSeqNum(new SeqNumType(TESTA_SNT_MSG_SEQ_NO) );
+        tagData = new Tag34SntMsgSeqNum(new MySeqNumType(TESTA_SNT_MSG_SEQ_NO) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag34SntMsgSeqNum(new SeqNumType(TESTA_SNT_MSG_SEQ_NO) );
+        tagData = new Tag34SntMsgSeqNum(new MySeqNumType(TESTA_SNT_MSG_SEQ_NO) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

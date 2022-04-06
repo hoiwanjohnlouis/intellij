@@ -16,31 +16,68 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag5EtAdvTransType extends TagTypeAbstract {
+public class Tag5EtAdvTransType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private Enum5AdvTransType dataValue;
 
     public final static Enum5AdvTransType TESTA_ET_ADV_TRANS_TYPE = Enum5AdvTransType.NEW;
     public final static Enum5AdvTransType TESTB_ET_ADV_TRANS_TYPE = Enum5AdvTransType.REPLACE;
 
     public Tag5EtAdvTransType(Enum5AdvTransType dataValue) {
-        setFixType(FIXType.FIX5_ET_ADV_TRANS_TYPE);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX5_ET_ADV_TRANS_TYPE);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Enum5AdvTransType enumData = TESTA_ET_ADV_TRANS_TYPE;
-        Tag5EtAdvTransType tagData = new Tag5EtAdvTransType(enumData);
-        System.out.println(enumData);
+        Tag5EtAdvTransType tagData;
+
+        tagData = new Tag5EtAdvTransType(TESTA_ET_ADV_TRANS_TYPE);
         System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag5EtAdvTransType(TESTB_ET_ADV_TRANS_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
     }
 }

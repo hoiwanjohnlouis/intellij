@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag58StText extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag58StText extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_TEXT = "BilboBaggins-58StText"; // fake data
     public final static String TESTB_ST_TEXT = "Gandalf-58StText";
 
-    public Tag58StText(StringType dataValue) {
-        setFixType(FIXType.FIX58_ST_TEXT);
+    public Tag58StText(MyStringType dataValue) {
+        setFixType(FIX27.FIX58_ST_TEXT);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag58StText extends FIXTypeAbstract implements FixTagValuePairStrin
      */
     public static void main(String[] args) {
         Tag58StText tagData;
-        tagData= new Tag58StText(new StringType(TESTA_ST_TEXT) );
+        tagData= new Tag58StText(new MyStringType(TESTA_ST_TEXT) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag58StText(new StringType(TESTA_ST_TEXT) );
+        tagData = new Tag58StText(new MyStringType(TESTA_ST_TEXT) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

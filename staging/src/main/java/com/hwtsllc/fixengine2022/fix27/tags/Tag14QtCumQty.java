@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.QtyType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag14QtCumQty extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private QtyType dataValue;
+public class Tag14QtCumQty extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private MyQtyType dataValue;
 
     public final static int TESTA_QT_CUM_QTY = 1234; // fake data
     public final static int TESTB_QT_CUM_QTY = 7890;
 
-    public Tag14QtCumQty(QtyType dataValue) {
-        setFixType(FIXType.FIX14_QT_CUM_QTY);
+    public Tag14QtCumQty(MyQtyType dataValue) {
+        setFixType(FIX27.FIX14_QT_CUM_QTY);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag14QtCumQty extends FIXTypeAbstract implements FixTagValuePairStr
      */
     public static void main(String[] args) {
         Tag14QtCumQty tagData;
-        tagData = new Tag14QtCumQty(new QtyType(TESTA_QT_CUM_QTY) );
+        tagData = new Tag14QtCumQty(new MyQtyType(TESTA_QT_CUM_QTY) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag14QtCumQty(new QtyType(TESTB_QT_CUM_QTY) );
+        tagData = new Tag14QtCumQty(new MyQtyType(TESTB_QT_CUM_QTY) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

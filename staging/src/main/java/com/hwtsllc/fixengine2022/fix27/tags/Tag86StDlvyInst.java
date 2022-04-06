@@ -16,21 +16,21 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 @Deprecated
-public class Tag86StDlvyInst extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final StringType dataValue;
+public class Tag86StDlvyInst extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
     public final static String TESTA_ST_DLVY_INST = "BilboBaggins-86StDlvyInst"; // fake data
     public final static String TESTB_ST_DLVY_INST = "Gandalf-86StDlvyInst";
 
-    public Tag86StDlvyInst(StringType dataValue) {
-        setFixType(FIXType.FIX86_ST_DLVY_INST);
+    public Tag86StDlvyInst(MyStringType dataValue) {
+        setFixType(FIX27.FIX86_ST_DLVY_INST);
         this.dataValue = dataValue;
     }
 
@@ -70,11 +70,17 @@ public class Tag86StDlvyInst extends FIXTypeAbstract implements FixTagValuePairS
      */
     public static void main(String[] args) {
         Tag86StDlvyInst tagData;
-        tagData= new Tag86StDlvyInst(new StringType(TESTA_ST_DLVY_INST) );
+        tagData= new Tag86StDlvyInst(new MyStringType(TESTA_ST_DLVY_INST) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag86StDlvyInst(new StringType(TESTB_ST_DLVY_INST) );
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+
+        tagData = new Tag86StDlvyInst(new MyStringType(TESTB_ST_DLVY_INST) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

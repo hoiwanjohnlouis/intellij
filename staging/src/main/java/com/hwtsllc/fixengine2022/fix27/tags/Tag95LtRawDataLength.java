@@ -16,20 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
-import com.hwtsllc.fixengine2022.datatypes.LengthType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag95LtRawDataLength extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
-    private final LengthType dataValue;
+public class Tag95LtRawDataLength extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyLengthType dataValue;
 
     public final static int TESTA_LT_RAW_DATA_LENGTH = 22;
     public final static int TESTB_LT_RAW_DATA_LENGTH = 17;
 
-    public Tag95LtRawDataLength(LengthType dataValue) {
-        setFixType(FIXType.FIX95_RAW_DATA_LENGTH);
+    public Tag95LtRawDataLength(MyLengthType dataValue) {
+        setFixType(FIX27.FIX95_RAW_DATA_LENGTH);
         this.dataValue = dataValue;
     }
 
@@ -69,11 +69,11 @@ public class Tag95LtRawDataLength extends FIXTypeAbstract implements FixTagValue
      */
     public static void main(String[] args) {
         Tag95LtRawDataLength tagData;
-        tagData = new Tag95LtRawDataLength(new LengthType(TESTA_LT_RAW_DATA_LENGTH) );
+        tagData = new Tag95LtRawDataLength(new MyLengthType(TESTA_LT_RAW_DATA_LENGTH) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        tagData = new Tag95LtRawDataLength(new LengthType(TESTB_LT_RAW_DATA_LENGTH) );
+        tagData = new Tag95LtRawDataLength(new MyLengthType(TESTB_LT_RAW_DATA_LENGTH) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

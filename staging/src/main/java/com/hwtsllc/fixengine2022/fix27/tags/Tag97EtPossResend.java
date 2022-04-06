@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag97EtPossResend extends TagTypeAbstract {
+public class Tag97EtPossResend extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final EnumBoolean dataValue;
 
     public final static EnumBoolean TESTA_ET_POSS_RESEND = EnumBoolean.NO; // fake data
     public final static EnumBoolean TESTB_ET_POSS_RESEND = EnumBoolean.YES;
 
     public Tag97EtPossResend(EnumBoolean dataValue) {
-        setFixType(FIXType.FIX97_ET_POSS_RESEND);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX97_ET_POSS_RESEND);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag97EtPossResend tagData = new Tag97EtPossResend(TESTA_ET_POSS_RESEND);
+        Tag97EtPossResend tagData;
+
+        tagData = new Tag97EtPossResend(TESTA_ET_POSS_RESEND);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag97EtPossResend(TESTB_ET_POSS_RESEND);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum88AllocRejCode;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag88EtAllocRejCode extends TagTypeAbstract {
+public class Tag88EtAllocRejCode extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum88AllocRejCode dataValue;
 
     public final static Enum88AllocRejCode TESTA_ET_ALLOC_STATUS = Enum88AllocRejCode.UNKNOWN_ACCOUNT;
     public final static Enum88AllocRejCode TESTB_ET_ALLOC_STATUS = Enum88AllocRejCode.CALCULATION_DIFFERENCE;
 
     public Tag88EtAllocRejCode(Enum88AllocRejCode dataValue) {
-        setFixType(FIXType.FIX88_ET_ALLOC_REJ_CODE);
-        setDataValue(dataValue.getID());
+        setFixType(FIX27.FIX88_ET_ALLOC_REJ_CODE);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag88EtAllocRejCode tagData = new Tag88EtAllocRejCode(TESTA_ET_ALLOC_STATUS);
+        Tag88EtAllocRejCode tagData;
+
+        tagData = new Tag88EtAllocRejCode(TESTA_ET_ALLOC_STATUS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag88EtAllocRejCode(TESTB_ET_ALLOC_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
