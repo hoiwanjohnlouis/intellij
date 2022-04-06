@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag128DeliverToCompIDTest {
+class Tag136NigtNoMiscFeesTest {
 
     @Test
-    void FIX0128Test() {
-        FIXType fixData = FIXType.FIX128_DELIVER_TO_COMP_ID;
-        assertEquals( "DELIVER_TO_COMP_ID", fixData.getName());
-        assertEquals( "128", fixData.getID());
-        assertEquals( "DeliverToCompID", fixData.getDescription());
+    void FIX0136Test() {
+        FIX40 fixData = FIX40.FIX136_NIGT_NO_MISC_FEES;
+        assertEquals( "NO_MISC_FEES", fixData.getName());
+        assertEquals( "136", fixData.getID());
+        assertEquals( "NoMiscFees", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0128Test() {
-        Tag128DeliverToCompID tagData;
+    void Tag0136Test() {
+        Tag136NigtNoMiscFees tagData;
 
-        tagData = new Tag128DeliverToCompID("SongJiHyo-128DeliverToCompID");
-        assertEquals( "SongJiHyo-128DeliverToCompID", tagData.getDataValue());
+        tagData = new Tag136NigtNoMiscFees(new MyNumInGroupType(3) );
+        assertEquals( 3, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

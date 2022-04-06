@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag135OfferSizeTest {
+class Tag124NigtNoExecsTest {
 
     @Test
-    void FIX0135Test() {
-        FIXType fixData = FIXType.FIX135_OFFER_SIZE;
-        assertEquals( "OFFER_SIZE", fixData.getName());
-        assertEquals( "135", fixData.getID());
-        assertEquals( "OfferSize", fixData.getDescription());
+    void FIX0124Test() {
+        FIX40 fixData = FIX40.FIX124_NIGT_NO_EXECS;
+        assertEquals( "NO_EXECS", fixData.getName());
+        assertEquals( "124", fixData.getID());
+        assertEquals( "NoExecs", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0135Test() {
-        Tag135OfferSize tagData;
+    void Tag0124Test() {
+        Tag124NigtNoExecs tagData;
 
-        tagData = new Tag135OfferSize("LimSungMin-135OfferSize");
-        assertEquals( "LimSungMin-135OfferSize", tagData.getDataValue());
+        tagData = new Tag124NigtNoExecs(new MyNumInGroupType(100) );
+        assertEquals( 100, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

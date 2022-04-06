@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum127DKReason;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag127EtDKReasonTest {
 
     @Test
     void FIX0127Test() {
-        FIXType fixData = FIXType.FIX127_ET_DK_REASON;
+        FIX40 fixData = FIX40.FIX127_ET_DK_REASON;
         assertEquals( fixData.getName(), "DK_REASON");
         assertEquals( fixData.getID(), "127");
         assertEquals( fixData.getDescription(), "DKReason");

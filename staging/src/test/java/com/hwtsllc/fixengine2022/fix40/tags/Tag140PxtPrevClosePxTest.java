@@ -16,31 +16,35 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag129DeliverToSubIDTest {
+class Tag140PxtPrevClosePxTest {
 
     @Test
-    void FIX0129Test() {
-        FIXType fixData = FIXType.FIX129_DELIVER_TO_SUB_ID;
-        assertEquals( "DELIVER_TO_SUB_ID", fixData.getName());
-        assertEquals( "129", fixData.getID());
-        assertEquals( "DeliverToSubID", fixData.getDescription());
+    void FIX0140Test() {
+        FIX40 fixData = FIX40.FIX140_PXT_PREV_CLOSE_PX;
+        assertEquals( "PREV_CLOSE_PX", fixData.getName() );
+        assertEquals( "140", fixData.getID() );
+        assertEquals( "PrevClosePx", fixData.getDescription() );
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0129Test() {
-        Tag129DeliverToSubID tagData;
+    void Tag0140Test() {
+        Tag140PxtPrevClosePx tagData;
 
-        tagData = new Tag129DeliverToSubID("HanHyoJoo-129DeliverToSubID");
-        assertEquals( "HanHyoJoo-129DeliverToSubID", tagData.getDataValue());
+        // assertEquals(10.23D, tagData.);
+
+        tagData = new Tag140PxtPrevClosePx(new MyPriceType("12.34") );
+        assertEquals( "12.34", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag134BidSizeTest {
+class Tag135QtOfferSizeTest {
 
     @Test
-    void FIX0134Test() {
-        FIXType fixData = FIXType.FIX134_BID_SIZE;
-        assertEquals( "BID_SIZE", fixData.getName());
-        assertEquals( "134", fixData.getID());
-        assertEquals( "BidSize", fixData.getDescription());
+    void FIX0135Test() {
+        FIX40 fixData = FIX40.FIX135_QT_OFFER_SIZE;
+        assertEquals( "OFFER_SIZE", fixData.getName());
+        assertEquals( "135", fixData.getID());
+        assertEquals( "OfferSize", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0134Test() {
-        Tag134BidSize tagData;
+    void Tag0135Test() {
+        Tag135QtOfferSize tagData;
 
-        tagData = new Tag134BidSize("KimYooJung-134BidSize");
-        assertEquals( "KimYooJung-134BidSize", tagData.getDataValue());
+        tagData = new Tag135QtOfferSize(new MyQtyType(200) );
+        assertEquals( 200, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

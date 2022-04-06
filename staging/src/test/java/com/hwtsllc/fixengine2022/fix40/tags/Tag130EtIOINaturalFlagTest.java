@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag130EtIOINaturalFlagTest {
 
     @Test
     void FIX0130Test() {
-        FIXType fixData = FIXType.FIX130_ET_IOI_NATURAL_FLAG;
+        FIX40 fixData = FIX40.FIX130_ET_IOI_NATURAL_FLAG;
         assertEquals( "IOI_NATURAL_FLAG", fixData.getName());
         assertEquals( "130", fixData.getID());
         assertEquals( "IOINaturalFlag", fixData.getDescription());

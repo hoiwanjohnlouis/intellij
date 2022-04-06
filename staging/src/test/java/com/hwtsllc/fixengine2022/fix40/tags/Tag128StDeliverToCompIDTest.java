@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag115OnBehalfOfCompIDTest {
+class Tag128StDeliverToCompIDTest {
 
     @Test
-    void FIX0115Test() {
-        FIXType fixData = FIXType.FIX115_ON_BEHALF_OF_COMP_ID;
-        assertEquals( "ON_BEHALF_OF_COMP_ID", fixData.getName());
-        assertEquals( "115", fixData.getID());
-        assertEquals( "OnBehalfOfCompID", fixData.getDescription());
+    void FIX0128Test() {
+        FIX40 fixData = FIX40.FIX128_ST_DELIVER_TO_COMP_ID;
+        assertEquals( "DELIVER_TO_COMP_ID", fixData.getName());
+        assertEquals( "128", fixData.getID());
+        assertEquals( "DeliverToCompID", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0115Test() {
-        Tag115OnBehalfOfCompID tagData;
+    void Tag0128Test() {
+        Tag128StDeliverToCompID tagData;
 
-        tagData = new Tag115OnBehalfOfCompID("Legolas-115OnBehalfOfCompID");
-        assertEquals( "Legolas-115OnBehalfOfCompID", tagData.getDataValue());
+        tagData = new Tag128StDeliverToCompID(new MyStringType("SongJiHyo-128DeliverToCompID") );
+        assertEquals( "SongJiHyo-128DeliverToCompID", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

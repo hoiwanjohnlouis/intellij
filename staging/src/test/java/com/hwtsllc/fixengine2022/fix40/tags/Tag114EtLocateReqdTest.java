@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag114EtLocateReqdTest {
 
     @Test
     void FIX0114Test() {
-        FIXType fixData = FIXType.FIX114_ET_LOCATE_REQD;
+        FIX40 fixData = FIX40.FIX114_ET_LOCATE_REQD;
         assertEquals( "LOCATE_REQD", fixData.getName());
         assertEquals( "114", fixData.getID());
         assertEquals( "LocateReqd", fixData.getDescription());

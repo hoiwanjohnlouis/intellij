@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag118NetMoneyTest {
+class Tag134QtBidSizeTest {
 
     @Test
-    void FIX0118Test() {
-        FIXType fixData = FIXType.FIX118_NET_MONEY;
-        assertEquals( "NET_MONEY", fixData.getName());
-        assertEquals( "118", fixData.getID());
-        assertEquals( "NetMoney", fixData.getDescription());
+    void FIX0134Test() {
+        FIX40 fixData = FIX40.FIX134_QT_BID_SIZE;
+        assertEquals( "BID_SIZE", fixData.getName());
+        assertEquals( "134", fixData.getID());
+        assertEquals( "BidSize", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0118Test() {
-        Tag118NetMoney tagData;
+    void Tag0134Test() {
+        Tag134QtBidSize tagData;
 
-        tagData = new Tag118NetMoney("Celeborn-118NetMoney");
-        assertEquals( "Celeborn-118NetMoney", tagData.getDataValue());
+        tagData = new Tag134QtBidSize(new MyQtyType(100) );
+        assertEquals( 100, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

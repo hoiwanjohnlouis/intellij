@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag117QuoteIDTest {
+class Tag118AtNetMoneyTest {
 
     @Test
-    void FIX0117Test() {
-        FIXType fixData = FIXType.FIX117_QUOTE_ID;
-        assertEquals( "QUOTE_ID", fixData.getName());
-        assertEquals( "117", fixData.getID());
-        assertEquals( "QuoteID", fixData.getDescription());
+    void FIX0118Test() {
+        FIX40 fixData = FIX40.FIX118_AT_NET_MONEY;
+        assertEquals( "NET_MONEY", fixData.getName());
+        assertEquals( "118", fixData.getID());
+        assertEquals( "NetMoney", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0117Test() {
-        Tag117QuoteID tagData;
+    void Tag0118Test() {
+        Tag118AtNetMoney tagData;
 
-        tagData = new Tag117QuoteID("Galadriel-117QuoteID");
-        assertEquals( "Galadriel-117QuoteID", tagData.getDataValue());
+        tagData = new Tag118AtNetMoney(new MyAmtType("Celeborn-118NetMoney") );
+        assertEquals( "Celeborn-118NetMoney", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

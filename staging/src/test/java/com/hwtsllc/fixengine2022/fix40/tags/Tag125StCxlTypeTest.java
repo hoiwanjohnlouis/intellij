@@ -16,31 +16,34 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag138MiscFeeCurrTest {
+@Deprecated
+class Tag125StCxlTypeTest {
 
     @Test
-    void FIX0138Test() {
-        FIXType fixData = FIXType.FIX138_MISC_FEE_CURR;
-        assertEquals( "MISC_FEE_CURR", fixData.getName());
-        assertEquals( "138", fixData.getID());
-        assertEquals( "MiscFeeCurr", fixData.getDescription());
+    void FIX0125Test() {
+        FIX40 fixData = FIX40.FIX125_ST_CXL_TYPE;
+        assertEquals( "CXL_TYPE", fixData.getName());
+        assertEquals( "125", fixData.getID());
+        assertEquals( "CxlType (no longer used)", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0138Test() {
-        Tag138MiscFeeCurr tagData;
+    void Tag0125Test() {
+        Tag125StCxlType tagData;
 
-        tagData = new Tag138MiscFeeCurr("SungHyunAh-138MiscFeeCurr");
-        assertEquals( "SungHyunAh-138MiscFeeCurr", tagData.getDataValue());
+        tagData = new Tag125StCxlType(new MyStringType("KimHaNeul-125CxlType") );
+        assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

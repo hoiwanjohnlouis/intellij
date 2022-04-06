@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag139EtMiscFeeTypeTest {
 
     @Test
     void FIX0139Test() {
-        FIXType fixData = FIXType.FIX139_ET_MISC_FEE_TYPE;
+        FIX40 fixData = FIX40.FIX139_ET_MISC_FEE_TYPE;
         assertEquals( "MISC_FEE_TYPE", fixData.getName());
         assertEquals( "139", fixData.getID());
         assertEquals( "MiscFeeType", fixData.getDescription());

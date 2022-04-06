@@ -16,32 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag125CxlTypeTest {
+class Tag119AtSettlCurrAmtTest {
 
     @Test
-    void FIX0125Test() {
-        FIXType fixData = FIXType.FIX125_CXL_TYPE;
-        assertEquals( "CXL_TYPE", fixData.getName());
-        assertEquals( "125", fixData.getID());
-        assertEquals( "CxlType (no longer used)", fixData.getDescription());
+    void FIX0119Test() {
+        FIX40 fixData = FIX40.FIX119_AT_SETTL_CURR_AMT;
+        assertEquals( "SETTL_CURR_AMT", fixData.getName());
+        assertEquals( "119", fixData.getID());
+        assertEquals( "SettlCurrAmt", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0125Test() {
-        Tag125CxlType tagData;
+    void Tag0119Test() {
+        Tag119AtSettlCurrAmt tagData;
 
-        tagData = new Tag125CxlType("KimHaNeul-125CxlType");
-        assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
+        tagData = new Tag119AtSettlCurrAmt(new MyAmtType("JohnWick-119SettlCurrAmt") );
+        assertEquals( "JohnWick-119SettlCurrAmt", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

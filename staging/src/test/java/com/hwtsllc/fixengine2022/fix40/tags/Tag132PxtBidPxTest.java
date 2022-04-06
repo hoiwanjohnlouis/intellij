@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag122OrigSendingTimeTest {
+class Tag132PxtBidPxTest {
 
     @Test
-    void FIX0122Test() {
-        FIXType fixData = FIXType.FIX122_ORIG_SENDING_TIME;
-        assertEquals( "ORIG_SENDING_TIME", fixData.getName());
-        assertEquals( "122", fixData.getID());
-        assertEquals( "OrigSendingTime", fixData.getDescription());
+    void FIX0132Test() {
+        FIX40 fixData = FIX40.FIX132_PXT_BID_PX;
+        assertEquals( "BID_PX", fixData.getName());
+        assertEquals( "132", fixData.getID());
+        assertEquals( "BidPx", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0122Test() {
-        Tag122OrigSendingTime tagData;
+    void Tag0132Test() {
+        Tag132PxtBidPx tagData;
 
-        tagData = new Tag122OrigSendingTime("KimSoYeon-122OrigSendingTime");
-        assertEquals( "KimSoYeon-122OrigSendingTime", tagData.getDataValue());
+        tagData = new Tag132PxtBidPx(new MyPriceType("ParkHaSun-132BidPx") );
+        assertEquals( "ParkHaSun-132BidPx", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }
