@@ -18,23 +18,24 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
-import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag104EtIOIQualifier extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum104IOIQualifier dataValue;
+@Deprecated
+public class Tag105StWaveNo extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
-    public final static Enum104IOIQualifier TESTA_ET_IOI_QUALIFIER = Enum104IOIQualifier.ALL_OR_NONE; // fake data
-    public final static Enum104IOIQualifier TESTB_ET_IOI_QUALIFIER = Enum104IOIQualifier.PRE_OPEN;
+    public final static String TESTA_ST_WAVE_NO = "BilboBaggins-105WaveNo"; // fake data
+    public final static String TESTB_ST_WAVE_NO = "Gandalf-105WaveNo";
 
-    public Tag104EtIOIQualifier(Enum104IOIQualifier dataValue) {
-        setFixType(FIX30.FIX104_ET_IOI_QUALIFIER);
+    public Tag105StWaveNo(MyStringType dataValue) {
+        setFixType(FIX30.FIX105_ST_WAVE_NO);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.getDataValue();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +44,7 @@ public class Tag104EtIOIQualifier extends FIX30Abstract implements FixTagValuePa
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +69,14 @@ public class Tag104EtIOIQualifier extends FIX30Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag104EtIOIQualifier tagData;
+        Tag105StWaveNo tagData;
 
-        tagData = new Tag104EtIOIQualifier(TESTA_ET_IOI_QUALIFIER);
+        tagData = new Tag105StWaveNo(new MyStringType(TESTA_ST_WAVE_NO) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag104EtIOIQualifier(TESTB_ET_IOI_QUALIFIER);
+        tagData = new Tag105StWaveNo(new MyStringType(TESTB_ST_WAVE_NO) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

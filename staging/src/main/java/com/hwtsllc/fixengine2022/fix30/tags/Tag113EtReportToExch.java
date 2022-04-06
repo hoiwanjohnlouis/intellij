@@ -16,28 +16,66 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.TagTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX30;
+import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag113EtReportToExch extends TagTypeAbstract {
+public class Tag113EtReportToExch extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final EnumBoolean dataValue;
 
     public final static EnumBoolean TESTA_ET_REPORT_TO_EXCH = EnumBoolean.NO; // fake data
     public final static EnumBoolean TESTB_ET_REPORT_TO_EXCH = EnumBoolean.YES;
 
     public Tag113EtReportToExch(EnumBoolean dataValue) {
-        setFixType(FIXType.FIX113_ET_REPORT_TO_EXCH);
-        setDataValue(dataValue.getID());
+        setFixType(FIX30.FIX113_ET_REPORT_TO_EXCH);
         this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
     }
 
     /**
      *
-     * @param args      Not used.
+     * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag113EtReportToExch tagData = new Tag113EtReportToExch(TESTA_ET_REPORT_TO_EXCH);
+        Tag113EtReportToExch tagData;
+
+        tagData = new Tag113EtReportToExch(TESTA_ET_REPORT_TO_EXCH);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag113EtReportToExch(TESTB_ET_REPORT_TO_EXCH);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
