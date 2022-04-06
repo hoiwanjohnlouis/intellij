@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum39OrdStatus;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag39EtOrdStatusTest {
 
     @Test
     void FIX0039Test() {
-        FIXType fixData = FIXType.FIX39_ET_ORD_STATUS;
+        FIX27 fixData = FIX27.FIX39_ET_ORD_STATUS;
         assertEquals( "ORD_STATUS", fixData.getName());
         assertEquals( "39", fixData.getID());
         assertEquals( "OrdStatus", fixData.getDescription());

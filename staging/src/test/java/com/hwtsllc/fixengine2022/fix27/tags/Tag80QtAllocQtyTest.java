@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.QtyType;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag80QtAllocQtyTest {
 
     @Test
     void FIX0080Test() {
-        FIXType fixData = FIXType.FIX80_QT_ALLOC_SHARES;
+        FIX27 fixData = FIX27.FIX80_QT_ALLOC_SHARES;
         assertEquals( "ALLOC_SHARES", fixData.getName());
         assertEquals( "80", fixData.getID());
         assertEquals( "AllocShares", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag80QtAllocQtyTest {
     void Tag0080Test() {
         Tag80QtAllocQty tagData;
 
-        tagData = new Tag80QtAllocQty(new QtyType(80));
+        tagData = new Tag80QtAllocQty(new MyQtyType(80));
         assertEquals( 80, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_QT_DATA_VALUE, tagData.getDataValue());
     }

@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag31LastPxTest {
+class Tag69StListExecInstTest {
 
     @Test
-    void FIX0031Test() {
-        FIXType fixData = FIXType.FIX31_LAST_PX;
-        assertEquals( "LAST_PX", fixData.getName());
-        assertEquals( "31", fixData.getID());
-        assertEquals( "LastPx", fixData.getDescription());
+    void FIX0069Test() {
+        FIX27 fixData = FIX27.FIX69_LIST_EXEC_INST;
+        assertEquals( "LIST_EXEC_INST", fixData.getName());
+        assertEquals( "69", fixData.getID());
+        assertEquals( "ListExecInst", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0031Test() {
-        Tag31LastPx tagData;
+    void Tag0069Test() {
+        Tag69StListExecInst tagData;
 
-        tagData = new Tag31LastPx("98.23");
-        assertEquals( "98.23", tagData.getDataValue());
+        tagData = new Tag69StListExecInst(new MyStringType("FrodoBaggins-69ListExecInst") );
+        assertEquals( "FrodoBaggins-69ListExecInst", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

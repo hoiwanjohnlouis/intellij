@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag41StOrigClOrdIDTest {
 
     @Test
     void FIX0041Test() {
-        FIXType fixData = FIXType.FIX41_ST_ORIG_CL_ORD_ID;
+        FIX27 fixData = FIX27.FIX41_ST_ORIG_CL_ORD_ID;
         assertEquals( "ORIG_CL_ORD_ID", fixData.getName());
         assertEquals( "41", fixData.getID());
         assertEquals( "OrigClOrdID", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag41StOrigClOrdIDTest {
     void Tag0041Test() {
         Tag41StOrigClOrdID tagData;
 
-        tagData = new Tag41StOrigClOrdID(new StringType("ORD-12345") );
+        tagData = new Tag41StOrigClOrdID(new MyStringType("ORD-12345") );
         assertEquals( "ORD-12345", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }

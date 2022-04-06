@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.LengthType;
+import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag9LtBodyLengthTest {
 
     @Test
     void FIX0009Test() {
-        FIXType fixData = FIXType.FIX9_LT_BODY_LENGTH;
+        FIX27 fixData = FIX27.FIX9_LT_BODY_LENGTH;
         assertEquals( "BODY_LENGTH", fixData.getName());
         assertEquals( "9", fixData.getID());
         assertEquals( "BodyLength", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag9LtBodyLengthTest {
     void Tag0009Test() {
         Tag9LtBodyLength tagData;
 
-        tagData = new Tag9LtBodyLength(new LengthType(120) );
+        tagData = new Tag9LtBodyLength(new MyLengthType(120) );
         assertEquals( 120, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_LT_DATA_VALUE, tagData.getDataValue());
     }

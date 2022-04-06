@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag97EtPossResendTest {
 
     @Test
     void FIX0097Test() {
-        FIXType fixData = FIXType.FIX97_ET_POSS_RESEND;
+        FIX27 fixData = FIX27.FIX97_ET_POSS_RESEND;
         assertEquals( "POSS_RESEND", fixData.getName());
         assertEquals( "97", fixData.getID());
         assertEquals( "PossResend", fixData.getDescription());

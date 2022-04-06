@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum54Side;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag54EtSideTest {
 
     @Test
     void FIX0054Test() {
-        FIXType fixData = FIXType.FIX54_ET_SIDE;
+        FIX27 fixData = FIX27.FIX54_ET_SIDE;
         assertEquals( "SIDE", fixData.getName());
         assertEquals( "54", fixData.getID());
         assertEquals( "Side", fixData.getDescription());

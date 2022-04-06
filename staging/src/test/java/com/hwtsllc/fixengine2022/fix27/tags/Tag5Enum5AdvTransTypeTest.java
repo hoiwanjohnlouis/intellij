@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag5Enum5AdvTransTypeTest {
 
     @Test
     void FIX0005Test() {
-        FIXType fixData = FIXType.FIX5_ET_ADV_TRANS_TYPE;
+        FIX27 fixData = FIX27.FIX5_ET_ADV_TRANS_TYPE;
         assertEquals( "ADV_TRANS_TYPE", fixData.getName());
         assertEquals( "5", fixData.getID());
         assertEquals( "Enum5AdvTransType", fixData.getDescription());

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum87AllocStatus;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag87EtAllocStatusTest {
 
     @Test
     void FIX0087Test() {
-        FIXType fixData = FIXType.FIX87_ET_ALLOC_STATUS;
+        FIX27 fixData = FIX27.FIX87_ET_ALLOC_STATUS;
         assertEquals( "ALLOC_STATUS", fixData.getName());
         assertEquals( "87", fixData.getID());
         assertEquals( "AllocStatus", fixData.getDescription());

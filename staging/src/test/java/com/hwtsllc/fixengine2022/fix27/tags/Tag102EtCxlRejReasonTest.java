@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum102CxlRejReason;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag102EtCxlRejReasonTest {
 
     @Test
     void FIX0102Test() {
-        FIXType fixData = FIXType.FIX102_ET_CXL_REJ_REASON;
+        FIX27 fixData = FIX27.FIX102_ET_CXL_REJ_REASON;
         assertEquals( fixData.getName(), "CXL_REJ_REASON");
         assertEquals( fixData.getID(), "102");
         assertEquals( fixData.getDescription(), "CxlRejReason");

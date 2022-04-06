@@ -16,32 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag24IOIOthSvcTest {
+class Tag15CtCurrencyTest {
 
     @Test
-    void FIX0024Test() {
-        FIXType fixData = FIXType.FIX24_IOI_OTH_SVC;
-        assertEquals( "IOI_OTH_SVC", fixData.getName());
-        assertEquals( "24", fixData.getID());
-        assertEquals( "IOIOthSvc (no longer used)", fixData.getDescription());
+    void FIX0015Test() {
+        FIX27 fixData = FIX27.FIX15_CT_CURRENCY;
+        assertEquals( "CURRENCY", fixData.getName());
+        assertEquals( "15", fixData.getID());
+        assertEquals( "Currency", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0024Test() {
-        Tag24IOIOthSvc tagData;
+    void Tag0015Test() {
+        Tag15CtCurrency tagData;
 
-        tagData = new Tag24IOIOthSvc("A");
-        assertEquals( "A", tagData.getDataValue());
+        tagData = new Tag15CtCurrency(new MyCurrencyType("USD") );
+        assertEquals( "USD", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

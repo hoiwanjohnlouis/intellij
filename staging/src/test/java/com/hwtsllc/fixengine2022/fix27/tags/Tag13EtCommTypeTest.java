@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag13EtCommTypeTest {
 
     @Test
     void FIX0013Test() {
-        FIXType fixData = FIXType.FIX13_ET_COMM_TYPE;
+        FIX27 fixData = FIX27.FIX13_ET_COMM_TYPE;
         assertEquals( "COMM_TYPE", fixData.getName());
         assertEquals( "13", fixData.getID());
         assertEquals( "CommType", fixData.getDescription());

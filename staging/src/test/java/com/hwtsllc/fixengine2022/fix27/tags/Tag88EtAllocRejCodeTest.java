@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum88AllocRejCode;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag88EtAllocRejCodeTest {
 
     @Test
     void FIX0088Test() {
-        FIXType fixData = FIXType.FIX88_ET_ALLOC_REJ_CODE;
+        FIX27 fixData = FIX27.FIX88_ET_ALLOC_REJ_CODE;
         assertEquals( "ALLOC_REJ_CODE", fixData.getName());
         assertEquals( "88", fixData.getID());
         assertEquals( "AllocRejCode", fixData.getDescription());

@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag6AvgPxTest {
+class Tag83StRptSeqTest {
 
     @Test
-    void FIX0006Test() {
-        FIXType fixData = FIXType.FIX6_AVG_PX;
-        assertEquals( "AVG_PX", fixData.getName());
-        assertEquals( "6", fixData.getID());
-        assertEquals( "AvgPx", fixData.getDescription());
+    void FIX0083Test() {
+        FIX27 fixData = FIX27.FIX83_ST_RPT_SEQ;
+        assertEquals( "RPT_SEQ", fixData.getName());
+        assertEquals( "83", fixData.getID());
+        assertEquals( "RptSeq", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0006Test() {
-        Tag6AvgPx tagData;
+    void Tag0083Test() {
+        Tag83StRptSeq tagData;
 
-        tagData = new Tag6AvgPx("123.45");
-        assertEquals( "123.45", tagData.getDataValue());
+        tagData = new Tag83StRptSeq(new MyStringType("Legolas-83RptSeq") );
+        assertEquals( "Legolas-83RptSeq", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

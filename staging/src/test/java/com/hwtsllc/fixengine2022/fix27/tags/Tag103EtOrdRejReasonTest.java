@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum103OrdRejReason;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag103EtOrdRejReasonTest {
 
     @Test
     void FIX0103Test() {
-        FIXType fixData = FIXType.FIX103_ET_ORD_REJ_REASON;
+        FIX27 fixData = FIX27.FIX103_ET_ORD_REJ_REASON;
         assertEquals( "ORD_REJ_REASON", fixData.getName());
         assertEquals( "103", fixData.getID());
         assertEquals( "OrdRejReason",  fixData.getDescription());

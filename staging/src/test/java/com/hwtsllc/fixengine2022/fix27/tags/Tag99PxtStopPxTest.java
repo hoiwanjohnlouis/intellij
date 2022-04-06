@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag100ExDestinationTest {
+class Tag99PxtStopPxTest {
 
     @Test
-    void FIX0100Test() {
-        FIXType fixData = FIXType.FIX100_EX_DESTINATION;
-        assertEquals( "EX_DESTINATION", fixData.getName());
-        assertEquals( "100", fixData.getID());
-        assertEquals( "ExDestination", fixData.getDescription());
+    void FIX0099Test() {
+        FIX27 fixData = FIX27.FIX99_PXT_STOP_PX;
+        assertEquals( "STOP_PX", fixData.getName());
+        assertEquals( "99", fixData.getID());
+        assertEquals( "StopPx", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0100Test() {
-        Tag100ExDestination tagData;
+    void Tag0099Test() {
+        Tag99PxtStopPx tagData;
 
-        tagData = new Tag100ExDestination("JPMC");
-        assertEquals( "JPMC", tagData.getDataValue());
+        tagData = new Tag99PxtStopPx(new MyPriceType("12.222") );
+        assertEquals( "12.222", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

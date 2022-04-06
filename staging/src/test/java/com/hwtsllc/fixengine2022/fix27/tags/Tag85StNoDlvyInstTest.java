@@ -16,31 +16,34 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag30LastMktTest {
+@Deprecated
+class Tag85StNoDlvyInstTest {
 
     @Test
-    void FIX0030Test() {
-        FIXType fixData = FIXType.FIX30_LAST_MKT;
-        assertEquals( "LAST_MKT", fixData.getName());
-        assertEquals( "30", fixData.getID());
-        assertEquals( "LastMkt", fixData.getDescription());
+    void FIX0085Test() {
+        FIX27 fixData = FIX27.FIX85_ST_NO_DLVY_INST;
+        assertEquals( "NO_DLVY_INST", fixData.getName());
+        assertEquals( "85", fixData.getID());
+        assertEquals( "NoDlvyInst (no longer used)", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0030Test() {
-        Tag30LastMkt tagData;
+    void Tag0085Test() {
+        Tag85StNoDlvyInst tagData;
 
-        tagData = new Tag30LastMkt("NYSE");
-        assertEquals( "NYSE", tagData.getDataValue());
+        tagData = new Tag85StNoDlvyInst(new MyStringType("Elrond-85NoDlvyInst") );
+        assertEquals( "Elrond-85NoDlvyInst", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum20ExecTransType;
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,7 @@ class Tag20EtExecTransTypeTest {
 
     @Test
     void FIX0020Test() {
-        FIXType fixData = FIXType.FIX20_ET_EXEC_TRANS_TYPE;
+        FIX27 fixData = FIX27.FIX20_ET_EXEC_TRANS_TYPE;
         assertEquals( "EXEC_TRANS_TYPE", fixData.getName());
         assertEquals( "20", fixData.getID());
         assertEquals( "ExecTransType (replaced)", fixData.getDescription());

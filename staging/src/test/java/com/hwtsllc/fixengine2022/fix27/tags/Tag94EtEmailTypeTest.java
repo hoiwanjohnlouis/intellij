@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum94EmailType;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag94EtEmailTypeTest {
 
     @Test
     void FIX0094Test() {
-        FIXType fixData = FIXType.FIX94_ET_EMAIL_TYPE;
+        FIX27 fixData = FIX27.FIX94_ET_EMAIL_TYPE;
         assertEquals( "EMAIL_TYPE", fixData.getName());
         assertEquals( "94", fixData.getID());
         assertEquals( "EmailType", fixData.getDescription());

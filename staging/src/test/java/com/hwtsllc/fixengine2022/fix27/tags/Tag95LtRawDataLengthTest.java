@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.LengthType;
+import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag95LtRawDataLengthTest {
 
     @Test
     void FIX0095Test() {
-        FIXType fixData = FIXType.FIX95_RAW_DATA_LENGTH;
+        FIX27 fixData = FIX27.FIX95_RAW_DATA_LENGTH;
         assertEquals( "RAW_DATA_LENGTH", fixData.getName());
         assertEquals( "95", fixData.getID());
         assertEquals( "RawDataLength", fixData.getDescription());
@@ -42,7 +43,7 @@ class Tag95LtRawDataLengthTest {
         Tag95LtRawDataLength tagData;
 
         dataLength = "FrodoBaggins-95RawData".length();
-        tagData = new Tag95LtRawDataLength(new LengthType(dataLength) );
+        tagData = new Tag95LtRawDataLength(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_LT_DATA_VALUE, tagData.getDataValue());
     }

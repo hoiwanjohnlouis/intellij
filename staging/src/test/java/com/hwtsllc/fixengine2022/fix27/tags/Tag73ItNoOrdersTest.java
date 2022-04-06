@@ -16,17 +16,19 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag73NoOrdersTest {
+class Tag73ItNoOrdersTest {
 
     @Test
     void FIX0073Test() {
-        FIXType fixData = FIXType.FIX73_NO_ORDERS;
+        FIX27 fixData = FIX27.FIX73_IT_NO_ORDERS;
         assertEquals( "NO_ORDERS", fixData.getName());
         assertEquals( "73", fixData.getID());
         assertEquals( "NoOrders", fixData.getDescription());
@@ -37,10 +39,10 @@ class Tag73NoOrdersTest {
     }
     @Test
     void Tag0073Test() {
-        Tag73NoOrders tagData;
+        Tag73ItNoOrders tagData;
 
-        tagData = new Tag73NoOrders("Smeagol-73NoOrders");
-        assertEquals( "Smeagol-73NoOrders", tagData.getDataValue());
+        tagData = new Tag73ItNoOrders(new MyIntType(24601));
+        assertEquals( 24601, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

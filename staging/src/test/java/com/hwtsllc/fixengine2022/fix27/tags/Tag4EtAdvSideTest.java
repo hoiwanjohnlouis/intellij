@@ -16,22 +16,22 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag4EtAdvSideTest {
     private static final Logger logger = LogManager.getRootLogger();
 
     @Test
     void FIX0004Test() {
-        FIXType fixData = FIXType.FIX4_ET_ADV_SIDE;
+        FIX27 fixData = FIX27.FIX4_ET_ADV_SIDE;
         assertEquals( "ADV_SIDE", fixData.getName());
         assertEquals( "4", fixData.getID());
         assertEquals( "AdvSide", fixData.getDescription());

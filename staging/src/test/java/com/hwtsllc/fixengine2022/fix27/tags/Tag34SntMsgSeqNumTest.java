@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.SeqNumType;
+import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag34SntMsgSeqNumTest {
 
     @Test
     void FIX0034Test() {
-        FIXType fixData = FIXType.FIX34_MSG_SEQ_NUM;
+        FIX27 fixData = FIX27.FIX34_SNT_MSG_SEQ_NUM;
         assertEquals( "MSG_SEQ_NUM", fixData.getName());
         assertEquals( "34", fixData.getID());
         assertEquals( "MsgSeqNum", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag34SntMsgSeqNumTest {
     void Tag0034Test() {
         Tag34SntMsgSeqNum tagData;
 
-        tagData = new Tag34SntMsgSeqNum(new SeqNumType(12345) );
+        tagData = new Tag34SntMsgSeqNum(new MySeqNumType(12345) );
         assertEquals( 12345, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_SNT_DATA_VALUE, tagData.getDataValue());
     }

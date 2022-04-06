@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag12CommissionTest {
+class Tag60UtcttTransactTimeTest {
 
     @Test
-    void FIX0012Test() {
-        FIXType fixData = FIXType.FIX12_COMMISSION;
-        assertEquals( "COMMISSION", fixData.getName());
-        assertEquals( "12", fixData.getID());
-        assertEquals( "Commission", fixData.getDescription());
+    void FIX0060Test() {
+        FIX27 fixData = FIX27.FIX60_UTCTT_TRANSACT_TIME;
+        assertEquals( "TRANSACT_TIME", fixData.getName());
+        assertEquals( "60", fixData.getID());
+        assertEquals( "TransactTime", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0012Test() {
-        Tag12Commission tagData;
+    void Tag0060Test() {
+        Tag60UtcttTransactTime tagData;
 
-        tagData = new Tag12Commission("10");
-        assertEquals( "10", tagData.getDataValue());
+        tagData = new Tag60UtcttTransactTime(new MyUTCTimestampType("20220401 000000") );
+        assertEquals( "20220401 000000", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

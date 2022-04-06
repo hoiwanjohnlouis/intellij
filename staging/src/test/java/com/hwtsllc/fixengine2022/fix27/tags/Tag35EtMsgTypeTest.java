@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag35EtMsgTypeTest {
 
     @Test
     void FIX0035Test() {
-        FIXType fixData = FIXType.FIX35_ET_MSG_TYPE;
+        FIX27 fixData = FIX27.FIX35_ET_MSG_TYPE;
         assertEquals( "MSG_TYPE", fixData.getName());
         assertEquals( "35", fixData.getID());
         assertEquals( "MsgType", fixData.getDescription());

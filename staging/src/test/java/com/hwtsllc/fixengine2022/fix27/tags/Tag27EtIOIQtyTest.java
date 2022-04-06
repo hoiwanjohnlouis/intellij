@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum27IOIQty;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag27EtIOIQtyTest {
 
     @Test
     void FIX0027Test() {
-        FIXType fixData = FIXType.FIX27_ET_IOI_SHARES;
+        FIX27 fixData = FIX27.FIX27_ET_IOI_SHARES;
         assertEquals( "IOI_SHARES", fixData.getName());
         assertEquals( "27", fixData.getID());
         assertEquals( "IOIShares", fixData.getDescription());

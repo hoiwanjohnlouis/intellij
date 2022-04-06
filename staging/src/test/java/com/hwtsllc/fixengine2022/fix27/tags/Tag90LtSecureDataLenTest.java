@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.LengthType;
+import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag90LtSecureDataLenTest {
 
     @Test
     void FIX0090Test() {
-        FIXType fixData = FIXType.FIX90_LT_SECURE_DATA_LEN;
+        FIX27 fixData = FIX27.FIX90_LT_SECURE_DATA_LEN;
         assertEquals( "SECURE_DATA_LEN", fixData.getName());
         assertEquals( "90", fixData.getID());
         assertEquals( "SecureDataLen", fixData.getDescription());
@@ -42,7 +43,7 @@ class Tag90LtSecureDataLenTest {
         Tag90LtSecureDataLen tagData;
 
         dataLength = "MeriadocBrandybuck-90LtSecureData".length();
-        tagData = new Tag90LtSecureDataLen(new LengthType(dataLength) );
+        tagData = new Tag90LtSecureDataLen(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_LT_DATA_VALUE, tagData.getDataValue());
     }

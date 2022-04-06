@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag43EtPossDupFlagTest {
 
     @Test
     void FIX0043Test() {
-        FIXType fixData = FIXType.FIX43_ET_POSS_DUP_FLAG;
+        FIX27 fixData = FIX27.FIX43_ET_POSS_DUP_FLAG;
         assertEquals( "POSS_DUP_FLAG", fixData.getName());
         assertEquals( "43", fixData.getID());
         assertEquals( "PossDupFlag", fixData.getDescription());

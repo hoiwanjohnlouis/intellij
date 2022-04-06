@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum28IOITransType;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag28EtIOITransTypeTest {
 
     @Test
     void FIX0028Test() {
-        FIXType fixData = FIXType.FIX28_ET_IOI_TRANS_TYPE;
+        FIX27 fixData = FIX27.FIX28_ET_IOI_TRANS_TYPE;
         assertEquals( "IOI_TRANS_TYPE", fixData.getName());
         assertEquals( "28", fixData.getID());
         assertEquals( "IOITransType", fixData.getDescription());

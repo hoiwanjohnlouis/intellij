@@ -23,6 +23,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum54SideTest {
+    /**
+     *  Information is the same for TAGS 54, 624
+     */
     @Test
     void Enum0054Test() {
         Enum54Side enumType;
@@ -102,6 +105,7 @@ class Enum54SideTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * A-G msg types

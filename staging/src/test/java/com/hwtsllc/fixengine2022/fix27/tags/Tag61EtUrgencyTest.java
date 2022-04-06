@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum61Urgency;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag61EtUrgencyTest {
 
     @Test
     void FIX0061Test() {
-        FIXType fixData = FIXType.FIX61_ET_URGENCY;
+        FIX27 fixData = FIX27.FIX61_ET_URGENCY;
         assertEquals( "URGENCY", fixData.getName());
         assertEquals( "61", fixData.getID());
         assertEquals( "Urgency", fixData.getDescription());

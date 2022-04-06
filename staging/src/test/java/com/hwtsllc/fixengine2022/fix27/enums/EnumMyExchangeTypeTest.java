@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class EnumExchangeTypeTest {
+class EnumMyExchangeTypeTest {
     @Test
     void Enum0000Test() {
         EnumExchangeType enumType;

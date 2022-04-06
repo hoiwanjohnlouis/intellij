@@ -113,6 +113,7 @@ class Enum35MsgTypeTest {
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
+
         /*
          * A-Z msg types
          */
@@ -299,6 +300,7 @@ class Enum35MsgTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * a-z msg types
@@ -511,6 +513,7 @@ class Enum35MsgTypeTest {
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
 
+
         /*
          * AA-AZ msg types
          */
@@ -721,6 +724,7 @@ class Enum35MsgTypeTest {
         assertNotEquals( FIXType.JUNK_ID, enumType.getID());
         assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         /*
          * BA-BP msg types

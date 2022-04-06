@@ -16,32 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag76ExecBrokerTest {
+class Tag53QtQuantityTest {
 
     @Test
-    void FIX0076Test() {
-        FIXType fixData = FIXType.FIX76_EXEC_BROKER;
-        assertEquals( "EXEC_BROKER", fixData.getName());
-        assertEquals( "76", fixData.getID());
-        assertEquals( "ExecBroker (replaced)", fixData.getDescription());
+    void FIX0053Test() {
+        FIX27 fixData = FIX27.FIX53_QT_QUANTITY;
+        assertEquals( "QUANTITY", fixData.getName());
+        assertEquals( "53", fixData.getID());
+        assertEquals( "Quantity (formerly Shares)", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0076Test() {
-        Tag76ExecBroker tagData;
+    void Tag0053Test() {
+        Tag53QtQuantity tagData;
 
-        tagData = new Tag76ExecBroker("Denethor-76ExecBroker");
-        assertEquals( "Denethor-76ExecBroker", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag53QtQuantity(new MyQtyType(400) );
+        assertEquals( 400, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_QT_DATA_VALUE, tagData.getDataValue());
     }
 }

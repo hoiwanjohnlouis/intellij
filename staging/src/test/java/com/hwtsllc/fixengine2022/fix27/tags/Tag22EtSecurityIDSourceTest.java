@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum22SecurityIDSource;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag22EtSecurityIDSourceTest {
 
     @Test
     void FIX0022Test() {
-        FIXType fixData = FIXType.FIX22_ET_SECURITY_ID_SOURCE;
+        FIX27 fixData = FIX27.FIX22_ET_SECURITY_ID_SOURCE;
         assertEquals( "SECURITY_ID_SOURCE", fixData.getName());
         assertEquals( "22", fixData.getID());
         assertEquals( "SecurityIDSource", fixData.getDescription());

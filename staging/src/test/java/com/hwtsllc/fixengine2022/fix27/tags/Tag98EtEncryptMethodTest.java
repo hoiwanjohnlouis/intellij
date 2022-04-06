@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum98EncryptMethod;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag98EtEncryptMethodTest {
 
     @Test
     void FIX0098Test() {
-        FIXType fixData = FIXType.FIX98_ET_ENCRYPT_METHOD;
+        FIX27 fixData = FIX27.FIX98_ET_ENCRYPT_METHOD;
         assertEquals( "ENCRYPT_METHOD", fixData.getName());
         assertEquals( "98", fixData.getID());
         assertEquals( "EncryptMethod", fixData.getDescription());

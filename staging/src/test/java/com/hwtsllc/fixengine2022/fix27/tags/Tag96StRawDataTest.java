@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag96StRawDataTest {
 
     @Test
     void FIX0096Test() {
-        FIXType fixData = FIXType.FIX96_ST_RAW_DATA;
+        FIX27 fixData = FIX27.FIX96_ST_RAW_DATA;
         assertEquals( "RAW_DATA", fixData.getName());
         assertEquals( "96", fixData.getID());
         assertEquals( "RawData", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag96StRawDataTest {
     void Tag0096Test() {
         Tag96StRawData tagData;
 
-        tagData = new Tag96StRawData(new StringType("FrodoBaggins-96StRawData") );
+        tagData = new Tag96StRawData(new MyStringType("FrodoBaggins-96StRawData") );
         assertEquals( "FrodoBaggins-96StRawData", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }

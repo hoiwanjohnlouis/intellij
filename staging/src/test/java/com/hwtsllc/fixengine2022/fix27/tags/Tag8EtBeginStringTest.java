@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum8BeginString;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag8EtBeginStringTest {
 
     @Test
     void FIX0008Test() {
-        FIXType fixData = FIXType.FIX8_ET_BEGIN_STRING;
+        FIX27 fixData = FIX27.FIX8_ET_BEGIN_STRING;
         assertEquals( "BEGIN_STRING", fixData.getName());
         assertEquals( "8", fixData.getID());
         assertEquals( "BeginString", fixData.getDescription());

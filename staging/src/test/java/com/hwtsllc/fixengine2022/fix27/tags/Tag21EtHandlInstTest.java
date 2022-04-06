@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum21HandlInst;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag21EtHandlInstTest {
 
     @Test
     void FIX0021Test() {
-        FIXType fixData = FIXType.FIX21_ET_HANDL_INST;
+        FIX27 fixData = FIX27.FIX21_ET_HANDL_INST;
         assertEquals( "HANDL_INST", fixData.getName());
         assertEquals( "21", fixData.getID());
         assertEquals( "HandlInst", fixData.getDescription());

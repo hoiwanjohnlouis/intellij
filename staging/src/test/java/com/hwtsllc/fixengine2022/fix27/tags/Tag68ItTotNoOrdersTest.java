@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag63SettlmntTypTest {
+class Tag68ItTotNoOrdersTest {
 
     @Test
-    void FIX0063Test() {
-        FIXType fixData = FIXType.FIX63_SETTLMNT_TYP;
-        assertEquals( "SETTLMNT_TYP", fixData.getName());
-        assertEquals( "63", fixData.getID());
-        assertEquals( "SettlmntTyp", fixData.getDescription());
+    void FIX0068Test() {
+        FIX27 fixData = FIX27.FIX68_IT_TOT_NO_ORDERS;
+        assertEquals( "TOT_NO_ORDERS", fixData.getName());
+        assertEquals( "68", fixData.getID());
+        assertEquals( "TotNoOrders (formerly named: ListNoOrds)", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0063Test() {
-        Tag63SettlmntTyp tagData;
+    void Tag0068Test() {
+        Tag68ItTotNoOrders tagData;
 
-        tagData = new Tag63SettlmntTyp("SamwiseGamgee-63SettlmntTyp");
-        assertEquals( "SamwiseGamgee-63SettlmntTyp", tagData.getDataValue());
+        tagData = new Tag68ItTotNoOrders(new MyIntType(123));
+        assertEquals( 123, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

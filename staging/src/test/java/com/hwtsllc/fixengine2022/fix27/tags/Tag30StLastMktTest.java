@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag64SettlDateTest {
+class Tag30StLastMktTest {
 
     @Test
-    void FIX0064Test() {
-        FIXType fixData = FIXType.FIX64_SETTL_DATE;
-        assertEquals( "SETTL_DATE", fixData.getName());
-        assertEquals( "64", fixData.getID());
-        assertEquals( "SettlDate", fixData.getDescription());
+    void FIX0030Test() {
+        FIX27 fixData = FIX27.FIX30_ST_LAST_MKT;
+        assertEquals( "LAST_MKT", fixData.getName());
+        assertEquals( "30", fixData.getID());
+        assertEquals( "LastMkt", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0064Test() {
-        Tag64SettlDate tagData;
+    void Tag0030Test() {
+        Tag30StLastMkt tagData;
 
-        tagData = new Tag64SettlDate("MeriadocBrandybuck-64SettlDate");
-        assertEquals( "MeriadocBrandybuck-64SettlDate", tagData.getDataValue());
+        tagData = new Tag30StLastMkt(new MyStringType("NYSE") );
+        assertEquals( "NYSE", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

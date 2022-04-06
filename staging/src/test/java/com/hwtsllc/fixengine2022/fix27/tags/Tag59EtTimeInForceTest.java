@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum59TimeInForce;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag59EtTimeInForceTest {
 
     @Test
     void FIX0059Test() {
-        FIXType fixData = FIXType.FIX59_ET_TIME_IN_FORCE;
+        FIX27 fixData = FIX27.FIX59_ET_TIME_IN_FORCE;
         assertEquals( "TIME_IN_FORCE", fixData.getName());
         assertEquals( "59", fixData.getID());
         assertEquals( "TimeInForce", fixData.getDescription());

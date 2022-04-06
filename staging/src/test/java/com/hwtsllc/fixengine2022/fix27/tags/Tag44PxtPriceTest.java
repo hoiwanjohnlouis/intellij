@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag68TotNoOrdersTest {
+class Tag44PxtPriceTest {
 
     @Test
-    void FIX0068Test() {
-        FIXType fixData = FIXType.FIX68_TOT_NO_ORDERS;
-        assertEquals( "TOT_NO_ORDERS", fixData.getName());
-        assertEquals( "68", fixData.getID());
-        assertEquals( "TotNoOrders (formerly named: ListNoOrds)", fixData.getDescription());
+    void FIX0044Test() {
+        FIX27 fixData = FIX27.FIX44_PXT_PRICE;
+        assertEquals( "PRICE", fixData.getName());
+        assertEquals( "44", fixData.getID());
+        assertEquals( "Price", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0068Test() {
-        Tag68TotNoOrders tagData;
+    void Tag0044Test() {
+        Tag44PxtPrice tagData;
 
-        tagData = new Tag68TotNoOrders("ARWEN-68TotNoOrders");
-        assertEquals( "ARWEN-68TotNoOrders", tagData.getDataValue());
+        tagData = new Tag44PxtPrice(new MyPriceType("10.43") );
+        assertEquals( "10.43", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

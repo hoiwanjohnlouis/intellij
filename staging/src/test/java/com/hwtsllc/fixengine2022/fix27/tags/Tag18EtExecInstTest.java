@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum18ExecInst;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag18EtExecInstTest {
 
     @Test
     void FIX0018Test() {
-        FIXType fixData = FIXType.FIX18_ET_EXEC_INST;
+        FIX27 fixData = FIX27.FIX18_ET_EXEC_INST;
         assertEquals( "EXEC_INST", fixData.getName());
         assertEquals( "18", fixData.getID());
         assertEquals( "ExecInst", fixData.getDescription());

@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag15CurrencyTest {
+class Tag82ItNoRptsTest {
 
     @Test
-    void FIX0015Test() {
-        FIXType fixData = FIXType.FIX15_CURRENCY;
-        assertEquals( "CURRENCY", fixData.getName());
-        assertEquals( "15", fixData.getID());
-        assertEquals( "Currency", fixData.getDescription());
+    void FIX0082Test() {
+        FIX27 fixData = FIX27.FIX82_IT_NO_RPTS;
+        assertEquals( "NO_RPTS", fixData.getName());
+        assertEquals( "82", fixData.getID());
+        assertEquals( "NoRpts", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0015Test() {
-        Tag15Currency tagData;
+    void Tag0082Test() {
+        Tag82ItNoRpts tagData;
 
-        tagData = new Tag15Currency("USD");
-        assertEquals( "USD", tagData.getDataValue());
+        tagData = new Tag82ItNoRpts(new MyIntType(23) );
+        assertEquals( 23, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

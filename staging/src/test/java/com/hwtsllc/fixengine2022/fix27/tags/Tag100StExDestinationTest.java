@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag82NoRptsTest {
+class Tag100StExDestinationTest {
 
     @Test
-    void FIX0082Test() {
-        FIXType fixData = FIXType.FIX82_NO_RPTS;
-        assertEquals( "NO_RPTS", fixData.getName());
-        assertEquals( "82", fixData.getID());
-        assertEquals( "NoRpts", fixData.getDescription());
+    void FIX0100Test() {
+        FIX27 fixData = FIX27.FIX100_ST_EX_DESTINATION;
+        assertEquals( "EX_DESTINATION", fixData.getName());
+        assertEquals( "100", fixData.getID());
+        assertEquals( "ExDestination", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0082Test() {
-        Tag82NoRpts tagData;
+    void Tag0100Test() {
+        Tag100StExDestination tagData;
 
-        tagData = new Tag82NoRpts("Gimli-82NoRpts");
-        assertEquals( "Gimli-82NoRpts", tagData.getDataValue());
+        tagData = new Tag100StExDestination(new MyStringType("JPMC"));
+        assertEquals( "JPMC", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

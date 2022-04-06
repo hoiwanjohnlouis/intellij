@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag78NoAllocsTest {
+class Tag64StSettlDateTest {
 
     @Test
-    void FIX0078Test() {
-        FIXType fixData = FIXType.FIX78_NO_ALLOCS;
-        assertEquals( "NO_ALLOCS", fixData.getName());
-        assertEquals( "78", fixData.getID());
-        assertEquals( "NoAllocs", fixData.getDescription());
+    void FIX0064Test() {
+        FIX27 fixData = FIX27.FIX64_ST_SETTL_DATE;
+        assertEquals( "SETTL_DATE", fixData.getName());
+        assertEquals( "64", fixData.getID());
+        assertEquals( "SettlDate", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0078Test() {
-        Tag78NoAllocs tagData;
+    void Tag0064Test() {
+        Tag64StSettlDate tagData;
 
-        tagData = new Tag78NoAllocs("Lestrade-78NoAllocs");
-        assertEquals( "Lestrade-78NoAllocs", tagData.getDataValue());
+        tagData = new Tag64StSettlDate(new MyStringType("MeriadocBrandybuck-64SettlDate") );
+        assertEquals( "MeriadocBrandybuck-64SettlDate", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

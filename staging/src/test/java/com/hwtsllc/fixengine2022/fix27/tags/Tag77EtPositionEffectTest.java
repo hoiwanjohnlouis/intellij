@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum77PositionEffect;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag77EtPositionEffectTest {
 
     @Test
     void FIX0077Test() {
-        FIXType fixData = FIXType.FIX77_ET_POSITION_EFFECT;
+        FIX27 fixData = FIX27.FIX77_ET_POSITION_EFFECT;
         assertEquals( "POSITION_EFFECT", fixData.getName());
         assertEquals( "77", fixData.getID());
         assertEquals( "PositionEffect", fixData.getDescription());

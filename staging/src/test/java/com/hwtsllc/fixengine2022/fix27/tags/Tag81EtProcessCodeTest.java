@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum81ProcessCode;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag81EtProcessCodeTest {
 
     @Test
     void FIX0081Test() {
-        FIXType fixData = FIXType.FIX81_ET_PROCESS_CODE;
+        FIX27 fixData = FIX27.FIX81_ET_PROCESS_CODE;
         assertEquals( "PROCESS_CODE", fixData.getName());
         assertEquals( "81", fixData.getID());
         assertEquals( "ProcessCode", fixData.getDescription());

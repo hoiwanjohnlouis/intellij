@@ -16,32 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag85NoDlvyInstTest {
+class Tag6PxtAvgPxTest {
 
     @Test
-    void FIX0085Test() {
-        FIXType fixData = FIXType.FIX85_NO_DLVY_INST;
-        assertEquals( "NO_DLVY_INST", fixData.getName());
-        assertEquals( "85", fixData.getID());
-        assertEquals( "NoDlvyInst (no longer used)", fixData.getDescription());
+    void FIX0006Test() {
+        FIX27 fixData = FIX27.FIX6_PXT_AVG_PX;
+        assertEquals( "AVG_PX", fixData.getName());
+        assertEquals( "6", fixData.getID());
+        assertEquals( "AvgPx", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0085Test() {
-        Tag85NoDlvyInst tagData;
+    void Tag0006Test() {
+        Tag6PxtAvgPx tagData;
 
-        tagData = new Tag85NoDlvyInst("Elrond-85NoDlvyInst");
-        assertEquals( "Elrond-85NoDlvyInst", tagData.getDataValue());
+        tagData = new Tag6PxtAvgPx(new MyPriceType("123.45") );
+        assertEquals( "123.45", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

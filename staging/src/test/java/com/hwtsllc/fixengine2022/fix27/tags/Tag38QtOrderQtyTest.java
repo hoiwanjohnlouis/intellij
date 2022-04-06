@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.QtyType;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag38QtOrderQtyTest {
 
     @Test
     void FIX0038Test() {
-        FIXType fixData = FIXType.FIX38_QT_ORDER_QTY;
+        FIX27 fixData = FIX27.FIX38_QT_ORDER_QTY;
         assertEquals( "ORDER_QTY", fixData.getName());
         assertEquals( "38", fixData.getID());
         assertEquals( "OrderQty", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag38QtOrderQtyTest {
     void Tag0038Test() {
         Tag38QtOrderQty tagData;
 
-        tagData = new Tag38QtOrderQty(new QtyType(100) );
+        tagData = new Tag38QtOrderQty(new MyQtyType(100) );
         assertEquals( 100, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_QT_DATA_VALUE, tagData.getDataValue());
     }

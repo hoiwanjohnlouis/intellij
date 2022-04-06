@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag55StSymbolTest {
 
     @Test
     void FIX0055Test() {
-        FIXType fixData = FIXType.FIX55_ST_SYMBOL;
+        FIX27 fixData = FIX27.FIX55_ST_SYMBOL;
         assertEquals( "SYMBOL", fixData.getName());
         assertEquals( "55", fixData.getID());
         assertEquals( "Symbol", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag55StSymbolTest {
     void Tag0055Test() {
         Tag55StSymbol tagData;
 
-        tagData = new Tag55StSymbol(new StringType("INTC") );
+        tagData = new Tag55StSymbol(new MyStringType("INTC") );
         assertEquals( "INTC", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }

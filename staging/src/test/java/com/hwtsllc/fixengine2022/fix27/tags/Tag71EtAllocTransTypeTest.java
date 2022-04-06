@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum71AllocTransType;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag71EtAllocTransTypeTest {
 
     @Test
     void FIX0071Test() {
-        FIXType fixData = FIXType.FIX71_ET_ALLOC_TRANS_TYPE;
+        FIX27 fixData = FIX27.FIX71_ET_ALLOC_TRANS_TYPE;
         assertEquals( "ALLOC_TRANS_TYPE", fixData.getName());
         assertEquals( "71", fixData.getID());
         assertEquals( "AllocTransType", fixData.getDescription());

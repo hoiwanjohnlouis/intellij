@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag10StCheckSumTest {
 
     @Test
     void FIX0010Test() {
-        FIXType fixData = FIXType.FIX10_ST_CHECK_SUM;
+        FIX27 fixData = FIX27.FIX10_ST_CHECK_SUM;
         assertEquals( "CHECK_SUM", fixData.getName());
         assertEquals( "10", fixData.getID());
         assertEquals( "CheckSum", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag10StCheckSumTest {
     void Tag0010Test() {
         Tag10StCheckSum tagData;
 
-        tagData = new Tag10StCheckSum(new StringType("ABC") );
+        tagData = new Tag10StCheckSum(new MyStringType("ABC") );
         assertEquals( "ABC", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }

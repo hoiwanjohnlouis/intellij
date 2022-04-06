@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum29LastCapacity;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag29EtLastCapacityTest {
 
     @Test
     void FIX0029Test() {
-        FIXType fixData = FIXType.FIX29_ET_LAST_CAPACITY;
+        FIX27 fixData = FIX27.FIX29_ET_LAST_CAPACITY;
         assertEquals( "LAST_CAPACITY", fixData.getName());
         assertEquals( "29", fixData.getID());
         assertEquals( "LastCapacity", fixData.getDescription());

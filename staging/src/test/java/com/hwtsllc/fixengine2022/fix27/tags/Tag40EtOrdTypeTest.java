@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum40OrdType;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag40EtOrdTypeTest {
 
     @Test
     void FIX0040Test() {
-        FIXType fixData = FIXType.FIX40_ET_ORD_TYPE;
+        FIX27 fixData = FIX27.FIX40_ET_ORD_TYPE;
         assertEquals( "ORD_TYPE", fixData.getName());
         assertEquals( "40", fixData.getID());
         assertEquals( "OrdType", fixData.getDescription());

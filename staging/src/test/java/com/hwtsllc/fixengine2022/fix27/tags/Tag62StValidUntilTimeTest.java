@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag67ListSeqNoTest {
+class Tag62StValidUntilTimeTest {
 
     @Test
-    void FIX0067Test() {
-        FIXType fixData = FIXType.FIX67_LIST_SEQ_NO;
-        assertEquals( "LIST_SEQ_NO", fixData.getName());
-        assertEquals( "67", fixData.getID());
-        assertEquals( "ListSeqNo", fixData.getDescription());
+    void FIX0062Test() {
+        FIX27 fixData = FIX27.FIX62_ST_VALID_UNTIL_TIME;
+        assertEquals( "VALID_UNTIL_TIME", fixData.getName());
+        assertEquals( "62", fixData.getID());
+        assertEquals( "ValidUntilTime", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0067Test() {
-        Tag67ListSeqNo tagData;
+    void Tag0062Test() {
+        Tag62StValidUntilTime tagData;
 
-        tagData = new Tag67ListSeqNo("EOWYN-67ListSeqNo");
-        assertEquals( "EOWYN-67ListSeqNo", tagData.getDataValue());
+        tagData = new Tag62StValidUntilTime(new MyStringType("20220401 000001"));
+        assertEquals( "20220401 000001", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

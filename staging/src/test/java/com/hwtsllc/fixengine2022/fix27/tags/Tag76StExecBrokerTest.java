@@ -16,31 +16,34 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag69ListExecInstTest {
+@Deprecated
+class Tag76StExecBrokerTest {
 
     @Test
-    void FIX0069Test() {
-        FIXType fixData = FIXType.FIX69_LIST_EXEC_INST;
-        assertEquals( "LIST_EXEC_INST", fixData.getName());
-        assertEquals( "69", fixData.getID());
-        assertEquals( "ListExecInst", fixData.getDescription());
+    void FIX0076Test() {
+        FIX27 fixData = FIX27.FIX76_ST_EXEC_BROKER;
+        assertEquals( "EXEC_BROKER", fixData.getName());
+        assertEquals( "76", fixData.getID());
+        assertEquals( "ExecBroker (replaced)", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0069Test() {
-        Tag69ListExecInst tagData;
+    void Tag0076Test() {
+        Tag76StExecBroker tagData;
 
-        tagData = new Tag69ListExecInst("FrodoBaggins-69ListExecInst");
-        assertEquals( "FrodoBaggins-69ListExecInst", tagData.getDataValue());
+        tagData = new Tag76StExecBroker(new MyStringType("Denethor-76ExecBroker") );
+        assertEquals( "Denethor-76ExecBroker", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum47Rule80A;
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,7 @@ class Tag47EtRule80ATest {
 
     @Test
     void FIX0047Test() {
-        FIXType fixData = FIXType.FIX47_ET_RULE_80_A;
+        FIX27 fixData = FIX27.FIX47_ET_RULE_80_A;
         assertEquals( "RULE_80_A", fixData.getName());
         assertEquals( "47", fixData.getID());
         assertEquals( "Rule80A (no longer used)", fixData.getDescription());

@@ -16,32 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.QtyType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag53QuantityTest {
+class Tag78ItNoAllocsTest {
 
     @Test
-    void FIX0053Test() {
-        FIXType fixData = FIXType.FIX53_QT_QUANTITY;
-        assertEquals( "QUANTITY", fixData.getName());
-        assertEquals( "53", fixData.getID());
-        assertEquals( "Quantity (formerly Shares)", fixData.getDescription());
+    void FIX0078Test() {
+        FIX27 fixData = FIX27.FIX78_NO_ALLOCS;
+        assertEquals( "NO_ALLOCS", fixData.getName());
+        assertEquals( "78", fixData.getID());
+        assertEquals( "NoAllocs", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0053Test() {
-        Tag53Quantity tagData;
+    void Tag0078Test() {
+        Tag78ItNoAllocs tagData;
 
-        tagData = new Tag53Quantity(new QtyType(400) );
-        assertEquals( 400, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_QT_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag78ItNoAllocs(new MyIntType(321));
+        assertEquals( 321, tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.NumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,7 @@ class Tag33NigtNoLinesOfTextTest {
 
     @Test
     void FIX0033Test() {
-        FIXType fixData = FIXType.FIX33_NIGT_NO_LINES_OF_TEXT;
+        FIX27 fixData = FIX27.FIX33_NIGT_NO_LINES_OF_TEXT;
         assertEquals( "NO_LINES_OF_TEXT", fixData.getName());
         assertEquals( "33", fixData.getID());
         assertEquals( "NoLinesOfText", fixData.getDescription());
@@ -40,7 +41,7 @@ class Tag33NigtNoLinesOfTextTest {
     void Tag0033Test() {
         Tag33NigtNoLinesOfText tagData;
 
-        tagData = new Tag33NigtNoLinesOfText(new NumInGroupType(5));
+        tagData = new Tag33NigtNoLinesOfText(new MyNumInGroupType(5));
         assertEquals( 5, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_NIGT_DATA_VALUE, tagData.getDataValue());
     }

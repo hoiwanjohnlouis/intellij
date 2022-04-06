@@ -16,8 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,7 +44,7 @@ class Tag1StAccountTest {
 
     @Test
     void FIX0001Test() {
-        FIXType fixData = FIXType.FIX1_ST_ACCOUNT;
+        FIX27 fixData = FIX27.FIX1_ST_ACCOUNT;
         assertEquals( "FIX1_ST_ACCOUNT", fixData.getEnumName());
         assertEquals( "1", fixData.getID());
         assertEquals( "ACCOUNT", fixData.getName());
@@ -57,7 +58,7 @@ class Tag1StAccountTest {
     void Tag0001Test() {
         Tag1StAccount tagData;
 
-        tagData = new Tag1StAccount(new StringType("ABC987654321XYZ"));
+        tagData = new Tag1StAccount(new MyStringType("ABC987654321XYZ"));
         assertEquals( "ABC987654321XYZ", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
