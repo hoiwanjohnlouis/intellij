@@ -14,13 +14,14 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix40;
+package com.hwtsllc.fixengine2022;
 
 import com.hwtsllc.fixengine2022.datatypes.FieldType;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+@Deprecated
 public class OpeningPrice {
 
     // for logging purposes

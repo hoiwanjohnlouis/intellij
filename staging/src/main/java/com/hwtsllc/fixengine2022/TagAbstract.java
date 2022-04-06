@@ -20,6 +20,7 @@ import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+@Deprecated
 public abstract class TagAbstract <T1> implements LogStringVerbose, FixTagValuePairString {
     private FIXType fixType;
     protected T1 dataValue;
