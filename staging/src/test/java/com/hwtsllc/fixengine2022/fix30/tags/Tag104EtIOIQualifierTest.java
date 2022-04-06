@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag104EtIOIQualifierTest {
 
     @Test
     void FIX0104Test() {
-        FIXType fixData = FIXType.FIX104_ET_IOI_QUALIFIER;
+        FIX30 fixData = FIX30.FIX104_ET_IOI_QUALIFIER;
         assertEquals("IOI_QUALIFIER", fixData.getName());
         assertEquals("104", fixData.getID());
         assertEquals("IOIQualifier", fixData.getDescription());

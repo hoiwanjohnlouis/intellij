@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag108HeartBtIntTest {
+class Tag111ItMaxFloorTest {
 
     @Test
-    void FIX0108Test() {
-        FIXType fixData = FIXType.FIX108_HEART_BT_INT;
-        assertEquals( "HEART_BT_INT", fixData.getName());
-        assertEquals( "108", fixData.getID());
-        assertEquals( "HeartBtInt", fixData.getDescription());
+    void FIX0111Test() {
+        FIX30 fixData = FIX30.FIX111_IT_MAX_FLOOR;
+        assertEquals( "MAX_FLOOR", fixData.getName());
+        assertEquals( "111", fixData.getID());
+        assertEquals( "MaxFloor", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0108Test() {
-        Tag108HeartBtInt tagData;
+    void Tag0111Test() {
+        Tag111ItMaxFloor tagData;
 
-        tagData = new Tag108HeartBtInt("60");
-        assertEquals("60", tagData.getDataValue() );
+        tagData = new Tag111ItMaxFloor(new MyIntType(200) );
+        assertEquals( 200, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

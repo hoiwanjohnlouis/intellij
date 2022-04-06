@@ -16,17 +16,19 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag106IssuerTest {
+class Tag106StIssuerTest {
 
     @Test
     void FIX0106Test() {
-        FIXType fixData = FIXType.FIX106_ISSUER;
+        FIX30 fixData = FIX30.FIX106_ST_ISSUER;
         assertEquals( "ISSUER", fixData.getName());
         assertEquals( "106", fixData.getID());
         assertEquals( "Issuer", fixData.getDescription());
@@ -37,9 +39,9 @@ class Tag106IssuerTest {
     }
     @Test
     void Tag0106Test() {
-        Tag106Issuer tagData;
+        Tag106StIssuer tagData;
 
-        tagData = new Tag106Issuer("show me the money");
+        tagData = new Tag106StIssuer(new MyStringType("show me the money") );
         assertEquals("show me the money", tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }

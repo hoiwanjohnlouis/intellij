@@ -16,31 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag112TestReqIDTest {
+class Tag108ItHeartBtIntTest {
 
     @Test
-    void FIX0112Test() {
-        FIXType fixData = FIXType.FIX112_TEST_REQ_ID;
-        assertEquals( "TEST_REQ_ID", fixData.getName());
-        assertEquals( "112", fixData.getID());
-        assertEquals( "TestReqID", fixData.getDescription());
+    void FIX0108Test() {
+        FIX30 fixData = FIX30.FIX108_IT_HEART_BT_INT;
+        assertEquals( "HEART_BT_INT", fixData.getName());
+        assertEquals( "108", fixData.getID());
+        assertEquals( "HeartBtInt", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0112Test() {
-        Tag112TestReqID tagData;
+    void Tag0108Test() {
+        Tag108ItHeartBtInt tagData;
 
-        tagData = new Tag112TestReqID("30");
-        assertEquals( "30", tagData.getDataValue());
+        tagData = new Tag108ItHeartBtInt(new MyIntType(60) );
+        assertEquals(60, tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,7 @@ class Tag113EtReportToExchTest {
 
     @Test
     void FIX0113Test() {
-        FIXType fixData = FIXType.FIX113_ET_REPORT_TO_EXCH;
+        FIX30 fixData = FIX30.FIX113_ET_REPORT_TO_EXCH;
         assertEquals( "REPORT_TO_EXCH", fixData.getName());
         assertEquals( "113", fixData.getID());
         assertEquals( "ReportToExch", fixData.getDescription());

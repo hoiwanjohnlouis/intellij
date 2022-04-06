@@ -16,18 +16,20 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
-class Tag109ClientIDTest {
+class Tag109StClientIDTest {
 
     @Test
     void FIX0109Test() {
-        FIXType fixData = FIXType.FIX109_CLIENT_ID;
+        FIX30 fixData = FIX30.FIX109_ST_CLIENT_ID;
         assertEquals( "CLIENT_ID", fixData.getName());
         assertEquals( "109", fixData.getID());
         assertEquals( "ClientID (replaced)", fixData.getDescription());
@@ -38,9 +40,9 @@ class Tag109ClientIDTest {
     }
     @Test
     void Tag0109Test() {
-        Tag109ClientID tagData;
+        Tag109StClientID tagData;
 
-        tagData = new Tag109ClientID("SOME-ACCT-NUMBER");
+        tagData = new Tag109StClientID(new MyStringType("SOME-ACCT-NUMBER") );
         assertEquals("SOME-ACCT-NUMBER", tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }

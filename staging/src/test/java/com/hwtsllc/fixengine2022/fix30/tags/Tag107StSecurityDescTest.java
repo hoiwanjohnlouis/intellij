@@ -16,32 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix30.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag105WaveNoTest {
+class Tag107StSecurityDescTest {
 
     @Test
-    void FIX0105Test() {
-        FIXType fixData = FIXType.FIX105_WAVE_NO;
-        assertEquals( "WAVE_NO", fixData.getName());
-        assertEquals( "105", fixData.getID());
-        assertEquals( "WaveNo", fixData.getDescription());
+    void FIX0107Test() {
+        FIX30 fixData = FIX30.FIX107_ST_SECURITY_DESC;
+        assertEquals( "SECURITY_DESC", fixData.getName());
+        assertEquals( "107", fixData.getID());
+        assertEquals( "SecurityDesc", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0105Test() {
-        Tag105WaveNo tagData;
+    void Tag0107Test() {
+        Tag107StSecurityDesc tagData;
 
-        tagData = new Tag105WaveNo("interested in Mahlers 4th Symphony");
-        assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
+        tagData = new Tag107StSecurityDesc(new MyStringType("International Widgets, Inc.") );
+        assertEquals("International Widgets, Inc.", tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }
