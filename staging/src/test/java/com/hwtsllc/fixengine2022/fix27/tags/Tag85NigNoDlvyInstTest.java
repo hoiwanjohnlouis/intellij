@@ -18,37 +18,32 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag5Enum5AdvTransTypeTest {
+@Deprecated
+class Tag85NigNoDlvyInstTest {
 
     @Test
-    void FIX0005Test() {
-        FIX27 fixData = FIX27.FIX5_ENU_ADV_TRANS_TYPE;
-        assertEquals( "ADV_TRANS_TYPE", fixData.getName());
-        assertEquals( "5", fixData.getID());
-        assertEquals( "Enum5AdvTransType", fixData.getDescription());
+    void FIX0085Test() {
+        FIX27 fixData = FIX27.FIX85_NIG_NO_DLVY_INST;
+        assertEquals( "NO_DLVY_INST", fixData.getName());
+        assertEquals( "85", fixData.getID());
+        assertEquals( "NoDlvyInst (no longer used)", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0005Test() {
-        Tag5EnuAdvTransType tagData;
+    void Tag0085Test() {
+        Tag85NigNoDlvyInst tagData;
 
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.NEW);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.CANCEL);
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.REPLACE);
-        assertEquals( "R", tagData.getDataValue());
+        tagData = new Tag85NigNoDlvyInst(new MyNumInGroupType(42) );
+        assertEquals( 42, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -18,37 +18,31 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag5Enum5AdvTransTypeTest {
+class Tag64StrSettlDateTest {
 
     @Test
-    void FIX0005Test() {
-        FIX27 fixData = FIX27.FIX5_ENU_ADV_TRANS_TYPE;
-        assertEquals( "ADV_TRANS_TYPE", fixData.getName());
-        assertEquals( "5", fixData.getID());
-        assertEquals( "Enum5AdvTransType", fixData.getDescription());
+    void FIX0064Test() {
+        FIX27 fixData = FIX27.FIX64_STR_SETTL_DATE;
+        assertEquals( "SETTL_DATE", fixData.getName());
+        assertEquals( "64", fixData.getID());
+        assertEquals( "SettlDate", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0005Test() {
-        Tag5EnuAdvTransType tagData;
+    void Tag0064Test() {
+        Tag64StrSettlDate tagData;
 
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.NEW);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.CANCEL);
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.REPLACE);
-        assertEquals( "R", tagData.getDataValue());
+        tagData = new Tag64StrSettlDate(new MyStringType("MeriadocBrandybuck-64SettlDate") );
+        assertEquals( "MeriadocBrandybuck-64SettlDate", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

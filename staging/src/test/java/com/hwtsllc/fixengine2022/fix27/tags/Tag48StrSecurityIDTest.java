@@ -18,37 +18,31 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag5Enum5AdvTransTypeTest {
+class Tag48StrSecurityIDTest {
 
     @Test
-    void FIX0005Test() {
-        FIX27 fixData = FIX27.FIX5_ENU_ADV_TRANS_TYPE;
-        assertEquals( "ADV_TRANS_TYPE", fixData.getName());
-        assertEquals( "5", fixData.getID());
-        assertEquals( "Enum5AdvTransType", fixData.getDescription());
+    void FIX0048Test() {
+        FIX27 fixData = FIX27.FIX48_STR_SECURITY_ID;
+        assertEquals( "SECURITY_ID", fixData.getName());
+        assertEquals( "48", fixData.getID());
+        assertEquals( "SecurityID", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0005Test() {
-        Tag5EnuAdvTransType tagData;
+    void Tag0048Test() {
+        Tag48StrSecurityID tagData;
 
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.NEW);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.CANCEL);
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.REPLACE);
-        assertEquals( "R", tagData.getDataValue());
+        tagData = new Tag48StrSecurityID(new MyStringType("TESTA") );
+        assertEquals( "TESTA", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }
