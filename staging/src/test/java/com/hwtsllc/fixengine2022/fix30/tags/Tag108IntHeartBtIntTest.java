@@ -18,32 +18,31 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag109StClientIDTest {
+class Tag108IntHeartBtIntTest {
 
     @Test
-    void FIX0109Test() {
-        FIX30 fixData = FIX30.FIX109_ST_CLIENT_ID;
-        assertEquals( "CLIENT_ID", fixData.getName());
-        assertEquals( "109", fixData.getID());
-        assertEquals( "ClientID (replaced)", fixData.getDescription());
+    void FIX0108Test() {
+        FIX30 fixData = FIX30.FIX108_INT_HEART_BT_INT;
+        assertEquals( "HEART_BT_INT", fixData.getName());
+        assertEquals( "108", fixData.getID());
+        assertEquals( "HeartBtInt", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0109Test() {
-        Tag109StClientID tagData;
+    void Tag0108Test() {
+        Tag108IntHeartBtInt tagData;
 
-        tagData = new Tag109StClientID(new MyStringType("SOME-ACCT-NUMBER") );
-        assertEquals("SOME-ACCT-NUMBER", tagData.getDataValue() );
+        tagData = new Tag108IntHeartBtInt(new MyIntType(60) );
+        assertEquals(60, tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

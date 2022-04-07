@@ -18,31 +18,32 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyIntType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag110ItMinQtyTest {
+@Deprecated
+class Tag105StrWaveNoTest {
 
     @Test
-    void FIX0110Test() {
-        FIX30 fixData = FIX30.FIX110_IT_MIN_QTY;
-        assertEquals( "MIN_QTY", fixData.getName());
-        assertEquals( "110", fixData.getID());
-        assertEquals( "MinQty", fixData.getDescription());
+    void FIX0105Test() {
+        FIX30 fixData = FIX30.FIX105_STR_WAVE_NO;
+        assertEquals( "WAVE_NO", fixData.getName());
+        assertEquals( "105", fixData.getID());
+        assertEquals( "WaveNo", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0110Test() {
-        Tag110ItMinQty tagData;
+    void Tag0105Test() {
+        Tag105StrWaveNo tagData;
 
-        tagData = new Tag110ItMinQty(new MyIntType(11) );
-        assertEquals( 11, tagData.getDataValue());
+        tagData = new Tag105StrWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
+        assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

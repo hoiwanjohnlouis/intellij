@@ -18,34 +18,31 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag113EtReportToExchTest {
+class Tag107StrSecurityDescTest {
 
     @Test
-    void FIX0113Test() {
-        FIX30 fixData = FIX30.FIX113_ET_REPORT_TO_EXCH;
-        assertEquals( "REPORT_TO_EXCH", fixData.getName());
-        assertEquals( "113", fixData.getID());
-        assertEquals( "ReportToExch", fixData.getDescription());
+    void FIX0107Test() {
+        FIX30 fixData = FIX30.FIX107_STR_SECURITY_DESC;
+        assertEquals( "SECURITY_DESC", fixData.getName());
+        assertEquals( "107", fixData.getID());
+        assertEquals( "SecurityDesc", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0113Test() {
-        Tag113EtReportToExch tagData;
+    void Tag0107Test() {
+        Tag107StrSecurityDesc tagData;
 
-        tagData = new Tag113EtReportToExch(EnumBoolean.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag113EtReportToExch(EnumBoolean.YES);
-        assertEquals( "Y", tagData.getDataValue());
+        tagData = new Tag107StrSecurityDesc(new MyStringType("International Widgets, Inc.") );
+        assertEquals("International Widgets, Inc.", tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

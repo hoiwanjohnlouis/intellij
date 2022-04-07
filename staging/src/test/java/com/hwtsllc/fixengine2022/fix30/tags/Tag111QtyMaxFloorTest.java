@@ -18,31 +18,31 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag106StIssuerTest {
+class Tag111QtyMaxFloorTest {
 
     @Test
-    void FIX0106Test() {
-        FIX30 fixData = FIX30.FIX106_ST_ISSUER;
-        assertEquals( "ISSUER", fixData.getName());
-        assertEquals( "106", fixData.getID());
-        assertEquals( "Issuer", fixData.getDescription());
+    void FIX0111Test() {
+        FIX30 fixData = FIX30.FIX111_QTY_MAX_FLOOR;
+        assertEquals( "MAX_FLOOR", fixData.getName());
+        assertEquals( "111", fixData.getID());
+        assertEquals( "MaxFloor", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0106Test() {
-        Tag106StIssuer tagData;
+    void Tag0111Test() {
+        Tag111QtyMaxFloor tagData;
 
-        tagData = new Tag106StIssuer(new MyStringType("show me the money") );
-        assertEquals("show me the money", tagData.getDataValue() );
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(200) );
+        assertEquals( 200, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

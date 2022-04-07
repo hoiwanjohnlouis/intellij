@@ -28,7 +28,7 @@ class Tag112TestReqIDStTest {
 
     @Test
     void FIX0112Test() {
-        FIX30 fixData = FIX30.FIX112_ST_TEST_REQ_ID;
+        FIX30 fixData = FIX30.FIX112_STR_TEST_REQ_ID;
         assertEquals( "TEST_REQ_ID", fixData.getName());
         assertEquals( "112", fixData.getID());
         assertEquals( "TestReqID", fixData.getDescription());
@@ -39,9 +39,9 @@ class Tag112TestReqIDStTest {
     }
     @Test
     void Tag0112Test() {
-        Tag112StTestReqID tagData;
+        Tag112StrTestReqID tagData;
 
-        tagData = new Tag112StTestReqID(new MyStringType("30"));
+        tagData = new Tag112StrTestReqID(new MyStringType("30"));
         assertEquals( "30", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }

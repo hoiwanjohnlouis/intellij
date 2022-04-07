@@ -24,25 +24,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag107StSecurityDescTest {
+@Deprecated
+class Tag109StrClientIDTest {
 
     @Test
-    void FIX0107Test() {
-        FIX30 fixData = FIX30.FIX107_ST_SECURITY_DESC;
-        assertEquals( "SECURITY_DESC", fixData.getName());
-        assertEquals( "107", fixData.getID());
-        assertEquals( "SecurityDesc", fixData.getDescription());
+    void FIX0109Test() {
+        FIX30 fixData = FIX30.FIX109_STR_CLIENT_ID;
+        assertEquals( "CLIENT_ID", fixData.getName());
+        assertEquals( "109", fixData.getID());
+        assertEquals( "ClientID (replaced)", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0107Test() {
-        Tag107StSecurityDesc tagData;
+    void Tag0109Test() {
+        Tag109StrClientID tagData;
 
-        tagData = new Tag107StSecurityDesc(new MyStringType("International Widgets, Inc.") );
-        assertEquals("International Widgets, Inc.", tagData.getDataValue() );
+        tagData = new Tag109StrClientID(new MyStringType("SOME-ACCT-NUMBER") );
+        assertEquals("SOME-ACCT-NUMBER", tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

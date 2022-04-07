@@ -24,26 +24,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag105StWaveNoTest {
+class Tag106StrIssuerTest {
 
     @Test
-    void FIX0105Test() {
-        FIX30 fixData = FIX30.FIX105_ST_WAVE_NO;
-        assertEquals( "WAVE_NO", fixData.getName());
-        assertEquals( "105", fixData.getID());
-        assertEquals( "WaveNo", fixData.getDescription());
+    void FIX0106Test() {
+        FIX30 fixData = FIX30.FIX106_STR_ISSUER;
+        assertEquals( "ISSUER", fixData.getName());
+        assertEquals( "106", fixData.getID());
+        assertEquals( "Issuer", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0105Test() {
-        Tag105StWaveNo tagData;
+    void Tag0106Test() {
+        Tag106StrIssuer tagData;
 
-        tagData = new Tag105StWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
-        assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
+        tagData = new Tag106StrIssuer(new MyStringType("show me the money") );
+        assertEquals("show me the money", tagData.getDataValue() );
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

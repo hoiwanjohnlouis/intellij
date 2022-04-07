@@ -18,31 +18,34 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyIntType;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag108ItHeartBtIntTest {
+class Tag113EnuReportToExchTest {
 
     @Test
-    void FIX0108Test() {
-        FIX30 fixData = FIX30.FIX108_IT_HEART_BT_INT;
-        assertEquals( "HEART_BT_INT", fixData.getName());
-        assertEquals( "108", fixData.getID());
-        assertEquals( "HeartBtInt", fixData.getDescription());
+    void FIX0113Test() {
+        FIX30 fixData = FIX30.FIX113_ENU_REPORT_TO_EXCH;
+        assertEquals( "REPORT_TO_EXCH", fixData.getName());
+        assertEquals( "113", fixData.getID());
+        assertEquals( "ReportToExch", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0108Test() {
-        Tag108ItHeartBtInt tagData;
+    void Tag0113Test() {
+        Tag113EnuReportToExch tagData;
 
-        tagData = new Tag108ItHeartBtInt(new MyIntType(60) );
-        assertEquals(60, tagData.getDataValue() );
+        tagData = new Tag113EnuReportToExch(EnumBoolean.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag113EnuReportToExch(EnumBoolean.YES);
+        assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }
