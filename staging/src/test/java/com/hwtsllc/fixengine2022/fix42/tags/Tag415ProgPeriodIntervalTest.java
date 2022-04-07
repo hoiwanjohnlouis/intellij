@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag415ProgPeriodIntervalTest {
     @Test
     void FIX0415Test() {
-        FIXType fixData = FIXType.FIX415_PROG_PERIOD_INTERVAL;
+        FIX42 fixData = FIX42.FIX415_PROG_PERIOD_INTERVAL;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
@@ -32,5 +33,7 @@ class Tag415ProgPeriodIntervalTest {
     }
     @Test
     void Tag0415Test() {
+        Tag415ProgPeriodInterval tagData;
+
     }
 }

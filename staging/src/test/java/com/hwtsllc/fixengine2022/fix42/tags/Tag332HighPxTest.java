@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag332HighPxTest {
     @Test
     void FIX0332Test() {
-        FIXType fixData = FIXType.FIX332_HIGH_PX;
+        FIX42 fixData = FIX42.FIX332_HIGH_PX;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
@@ -32,5 +33,7 @@ class Tag332HighPxTest {
     }
     @Test
     void Tag0332Test() {
+        Tag332HighPx tagData;
+
     }
 }

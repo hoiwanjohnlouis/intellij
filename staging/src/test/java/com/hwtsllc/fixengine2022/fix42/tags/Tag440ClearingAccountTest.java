@@ -16,15 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+@Deprecated
 class Tag440ClearingAccountTest {
     @Test
     void FIX0440Test() {
-        FIXType fixData = FIXType.FIX440_CLEARING_ACCOUNT;
+        FIX42 fixData = FIX42.FIX440_CLEARING_ACCOUNT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
@@ -32,5 +34,7 @@ class Tag440ClearingAccountTest {
     }
     @Test
     void Tag0440Test() {
+        Tag440ClearingAccount tagData;
+
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag367QuoteSetValidUntilTimeTest {
     @Test
     void FIX0367Test() {
-        FIXType fixData = FIXType.FIX367_QUOTE_SET_VALID_UNTIL_TIME;
+        FIX42 fixData = FIX42.FIX367_QUOTE_SET_VALID_UNTIL_TIME;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
@@ -32,5 +33,7 @@ class Tag367QuoteSetValidUntilTimeTest {
     }
     @Test
     void Tag0367Test() {
+        Tag367QuoteSetValidUntilTime tagData;
+
     }
 }

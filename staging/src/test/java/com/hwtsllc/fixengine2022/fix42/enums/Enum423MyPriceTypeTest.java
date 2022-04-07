@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Enum423PriceTypeTest {
+class Enum423MyPriceTypeTest {
     @Test
     void Enum0423Test() {
         Enum423PriceType enumType;

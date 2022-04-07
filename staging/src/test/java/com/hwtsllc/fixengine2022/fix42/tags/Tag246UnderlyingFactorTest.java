@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag246UnderlyingFactorTest {
     @Test
     void FIX0246Test() {
-        FIXType fixData = FIXType.FIX246_UNDERLYING_FACTOR;
+        FIX42 fixData = FIX42.FIX246_UNDERLYING_FACTOR;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
@@ -32,5 +33,7 @@ class Tag246UnderlyingFactorTest {
     }
     @Test
     void Tag0246Test() {
+        Tag246UnderlyingFactor tagData;
+
     }
 }

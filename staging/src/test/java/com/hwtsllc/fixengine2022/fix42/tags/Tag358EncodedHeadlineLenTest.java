@@ -16,15 +16,24 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag358EncodedHeadlineLenTest {
     @Test
     void FIX0358Test() {
-        FIXType fixData = FIXType.FIX358_ENCODED_HEADLINE_LEN;
+        FIX42 fixData = FIX42.FIX358_ENCODED_HEADLINE_LEN;
+        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
+        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0358Test() {
+        Tag358EncodedHeadlineLen tagData;
+
     }
 }

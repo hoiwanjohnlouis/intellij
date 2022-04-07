@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag258TradedFlatSwitchTest {
     @Test
     void FIX0258Test() {
-        FIXType fixData = FIXType.FIX258_TRADED_FLAT_SWITCH;
+        FIX42 fixData = FIX42.FIX258_TRADED_FLAT_SWITCH;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
@@ -32,5 +33,7 @@ class Tag258TradedFlatSwitchTest {
     }
     @Test
     void Tag0258Test() {
+        Tag258TradedFlatSwitch tagData;
+
     }
 }
