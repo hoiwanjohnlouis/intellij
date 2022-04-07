@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag138CtMiscFeeCurr extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyCurrencyType dataValue;
+public class Tag119AmtSettlCurrAmt extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyAmtType dataValue;
 
-    public final static String TESTA_CT_MISC_FEE_CURR = "BilboBaggins-138MiscFeeCurr"; // fake data
-    public final static String TESTB_CT_MISC_FEE_CURR = "Gandalf-138MiscFeeCurr";
+    public final static String TESTA_AMT_SETTL_CURR_AMT = "BilboBaggins-119SettlCurrAmt"; // fake data
+    public final static String TESTB_AMT_SETTL_CURR_AMT = "Gandalf-119SettlCurrAmt";
 
-    public Tag138CtMiscFeeCurr(MyCurrencyType dataValue) {
-        setFixType(FIX40.FIX138_CT_MISC_FEE_CURR);
+    public Tag119AmtSettlCurrAmt(MyAmtType dataValue) {
+        setFixType(FIX40.FIX119_AMT_SETTL_CURR_AMT);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag138CtMiscFeeCurr extends FIX40Abstract implements FixTagValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag138CtMiscFeeCurr tagData;
+        Tag119AmtSettlCurrAmt tagData;
 
-        tagData = new Tag138CtMiscFeeCurr(new MyCurrencyType(TESTA_CT_MISC_FEE_CURR) );
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(TESTA_AMT_SETTL_CURR_AMT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag138CtMiscFeeCurr(new MyCurrencyType(TESTB_CT_MISC_FEE_CURR) );
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(TESTB_AMT_SETTL_CURR_AMT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

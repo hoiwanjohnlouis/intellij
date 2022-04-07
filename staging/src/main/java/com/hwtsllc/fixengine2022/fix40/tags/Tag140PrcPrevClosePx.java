@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag115StOnBehalfOfCompID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag140PrcPrevClosePx extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyPriceType dataValue;
 
-    public final static String TESTA_ST_ON_BEHALF_OF_COMP_ID = "BilboBaggins-115OnBehalfOfCompID"; // fake data
-    public final static String TESTB_ST_ON_BEHALF_OF_COMP_ID = "Gandalf-115OnBehalfOfCompID";
+    public final static String TESTA_PRC_PREV_CLOSE_PX = "BilboBaggins-140PrevClosePx"; // fake data
+    public final static String TESTB_PRC_PREV_CLOSE_PX = "Gandalf-140PrevClosePx";
 
-    public Tag115StOnBehalfOfCompID(MyStringType dataValue) {
-        setFixType(FIX40.FIX115_ST_ON_BEHALF_OF_COMP_ID);
+    public Tag140PrcPrevClosePx(MyPriceType dataValue) {
+        setFixType(FIX40.FIX140_PRC_PREV_CLOSE_PX);
         this.dataValue = dataValue;
     }
 
@@ -68,16 +68,17 @@ public class Tag115StOnBehalfOfCompID extends FIX40Abstract implements FixTagVal
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag115StOnBehalfOfCompID tagData;
+        Tag140PrcPrevClosePx tagData;
 
-        tagData = new Tag115StOnBehalfOfCompID(new MyStringType(TESTA_ST_ON_BEHALF_OF_COMP_ID) );
+        tagData = new Tag140PrcPrevClosePx(new MyPriceType(TESTA_PRC_PREV_CLOSE_PX) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag115StOnBehalfOfCompID(new MyStringType(TESTB_ST_ON_BEHALF_OF_COMP_ID) );
+        tagData = new Tag140PrcPrevClosePx(new MyPriceType(TESTB_PRC_PREV_CLOSE_PX) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
     }
 }
+

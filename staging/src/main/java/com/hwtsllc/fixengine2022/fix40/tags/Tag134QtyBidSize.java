@@ -18,23 +18,22 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
-public class Tag125StCxlType extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag134QtyBidSize extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyQtyType dataValue;
 
-    public final static String TESTA_ST_CXL_TYPE = "BilboBaggins-125CxlType"; // fake data
-    public final static String TESTB_ST_CXL_TYPE = "Gandalf-125CxlType";
+    public final static int TESTA_QTY_BID_SIZE = 134; // fake data
+    public final static int TESTB_QTY_BID_SIZE = 431;
 
-    public Tag125StCxlType(MyStringType dataValue) {
-        setFixType(FIX40.FIX125_ST_CXL_TYPE);
+    public Tag134QtyBidSize(MyQtyType dataValue) {
+        setFixType(FIX40.FIX134_QTY_BID_SIZE);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public int getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -69,14 +68,14 @@ public class Tag125StCxlType extends FIX40Abstract implements FixTagValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag125StCxlType tagData;
+        Tag134QtyBidSize tagData;
 
-        tagData = new Tag125StCxlType(new MyStringType(TESTA_ST_CXL_TYPE) );
+        tagData = new Tag134QtyBidSize(new MyQtyType(TESTA_QTY_BID_SIZE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag125StCxlType(new MyStringType(TESTB_ST_CXL_TYPE) );
+        tagData = new Tag134QtyBidSize(new MyQtyType(TESTB_QTY_BID_SIZE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

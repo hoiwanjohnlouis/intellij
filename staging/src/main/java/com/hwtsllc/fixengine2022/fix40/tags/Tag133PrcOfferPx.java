@@ -18,22 +18,22 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag136NigtNoMiscFees extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyNumInGroupType dataValue;
+public class Tag133PrcOfferPx extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyPriceType dataValue;
 
-    public final static int TESTA_NIGT_NO_MISC_FEES = 1; // fake data
-    public final static int TESTB_NIGT_NO_MISC_FEES = 2;
+    public final static String TESTA_PRC_OFFER_PX = "BilboBaggins-133OfferPx"; // fake data
+    public final static String TESTB_PRC_OFFER_PX = "Gandalf-133OfferPx";
 
-    public Tag136NigtNoMiscFees(MyNumInGroupType dataValue) {
-        setFixType(FIX40.FIX136_NIGT_NO_MISC_FEES);
+    public Tag133PrcOfferPx(MyPriceType dataValue) {
+        setFixType(FIX40.FIX133_PRC_OFFER_PX);
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
+    public String getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -68,14 +68,14 @@ public class Tag136NigtNoMiscFees extends FIX40Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag136NigtNoMiscFees tagData;
+        Tag133PrcOfferPx tagData;
 
-        tagData = new Tag136NigtNoMiscFees(new MyNumInGroupType(TESTA_NIGT_NO_MISC_FEES) );
+        tagData = new Tag133PrcOfferPx(new MyPriceType(TESTA_PRC_OFFER_PX) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag136NigtNoMiscFees(new MyNumInGroupType(TESTB_NIGT_NO_MISC_FEES) );
+        tagData = new Tag133PrcOfferPx(new MyPriceType(TESTB_PRC_OFFER_PX) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

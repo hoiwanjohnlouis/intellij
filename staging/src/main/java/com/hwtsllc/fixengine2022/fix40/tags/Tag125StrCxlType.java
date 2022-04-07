@@ -18,23 +18,24 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag130EtIOINaturalFlag extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+@Deprecated
+public class Tag125StrCxlType extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
-    public final static EnumBoolean TESTA_ET_IOI_NATURAL_FLAG = EnumBoolean.NO ; // fake data
-    public final static EnumBoolean TESTB_ET_IOI_NATURAL_FLAG = EnumBoolean.YES;
+    public final static String TESTA_STR_CXL_TYPE = "BilboBaggins-125CxlType"; // fake data
+    public final static String TESTB_STR_CXL_TYPE = "Gandalf-125CxlType";
 
-    public Tag130EtIOINaturalFlag(EnumBoolean dataValue) {
-        setFixType(FIX40.FIX130_ET_IOI_NATURAL_FLAG);
+    public Tag125StrCxlType(MyStringType dataValue) {
+        setFixType(FIX40.FIX125_STR_CXL_TYPE);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.getDataValue();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +44,7 @@ public class Tag130EtIOINaturalFlag extends FIX40Abstract implements FixTagValue
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +69,14 @@ public class Tag130EtIOINaturalFlag extends FIX40Abstract implements FixTagValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag130EtIOINaturalFlag tagData;
+        Tag125StrCxlType tagData;
 
-        tagData = new Tag130EtIOINaturalFlag(TESTA_ET_IOI_NATURAL_FLAG);
+        tagData = new Tag125StrCxlType(new MyStringType(TESTA_STR_CXL_TYPE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag130EtIOINaturalFlag(TESTB_ET_IOI_NATURAL_FLAG);
+        tagData = new Tag125StrCxlType(new MyStringType(TESTB_STR_CXL_TYPE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

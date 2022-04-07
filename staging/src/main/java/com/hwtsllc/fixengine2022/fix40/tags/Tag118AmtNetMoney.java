@@ -18,22 +18,22 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag134QtBidSize extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyQtyType dataValue;
+public class Tag118AmtNetMoney extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyAmtType dataValue;
 
-    public final static int TESTA_QT_BID_SIZE = 134; // fake data
-    public final static int TESTB_QT_BID_SIZE = 431;
+    public final static String TESTA_AMT_NET_MONEY = "BilboBaggins-118NetMoney"; // fake data
+    public final static String TESTB_AMT_NET_MONEY = "Gandalf-118NetMoney";
 
-    public Tag134QtBidSize(MyQtyType dataValue) {
-        setFixType(FIX40.FIX134_QT_BID_SIZE);
+    public Tag118AmtNetMoney(MyAmtType dataValue) {
+        setFixType(FIX40.FIX118_AMT_NET_MONEY);
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
+    public String getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -68,14 +68,14 @@ public class Tag134QtBidSize extends FIX40Abstract implements FixTagValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag134QtBidSize tagData;
+        Tag118AmtNetMoney tagData;
 
-        tagData = new Tag134QtBidSize(new MyQtyType(TESTA_QT_BID_SIZE) );
+        tagData = new Tag118AmtNetMoney(new MyAmtType(TESTA_AMT_NET_MONEY) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag134QtBidSize(new MyQtyType(TESTB_QT_BID_SIZE) );
+        tagData = new Tag118AmtNetMoney(new MyAmtType(TESTB_AMT_NET_MONEY) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

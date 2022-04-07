@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag135QtOfferSize extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag135QtyOfferSize extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QT_OFFER_SIZE = 135; // fake data
-    public final static int TESTB_QT_OFFER_SIZE = 531;
+    public final static int TESTA_QTY_OFFER_SIZE = 135; // fake data
+    public final static int TESTB_QTY_OFFER_SIZE = 531;
 
-    public Tag135QtOfferSize(MyQtyType dataValue) {
-        setFixType(FIX40.FIX135_QT_OFFER_SIZE);
+    public Tag135QtyOfferSize(MyQtyType dataValue) {
+        setFixType(FIX40.FIX135_QTY_OFFER_SIZE);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag135QtOfferSize extends FIX40Abstract implements FixTagValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag135QtOfferSize tagData;
+        Tag135QtyOfferSize tagData;
 
-        tagData = new Tag135QtOfferSize(new MyQtyType(TESTA_QT_OFFER_SIZE) );
+        tagData = new Tag135QtyOfferSize(new MyQtyType(TESTA_QTY_OFFER_SIZE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag135QtOfferSize(new MyQtyType(TESTB_QT_OFFER_SIZE) );
+        tagData = new Tag135QtyOfferSize(new MyQtyType(TESTB_QTY_OFFER_SIZE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

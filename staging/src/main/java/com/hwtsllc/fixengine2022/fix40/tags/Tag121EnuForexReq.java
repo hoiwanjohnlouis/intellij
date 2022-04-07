@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag128StDeliverToCompID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag121EnuForexReq extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final EnumBoolean dataValue;
 
-    public final static String TESTA_ST_DELIVER_TO_COMP_ID = "BilboBaggins-128DeliverToCompID"; // fake data
-    public final static String TESTB_ST_DELIVER_TO_COMP_ID = "Gandalf-128DeliverToCompID";
+    public final static EnumBoolean TESTA_ENU_FOREX_REQ = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_ENU_FOREX_REQ = EnumBoolean.YES;
 
-    public Tag128StDeliverToCompID(MyStringType dataValue) {
-        setFixType(FIX40.FIX128_ST_DELIVER_TO_COMP_ID);
+    public Tag121EnuForexReq(EnumBoolean dataValue) {
+        setFixType(FIX40.FIX121_ENU_FOREX_REQ);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getDataValue();
+        return this.dataValue.getID();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag128StDeliverToCompID extends FIX40Abstract implements FixTagValu
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(getDataValue());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag128StDeliverToCompID extends FIX40Abstract implements FixTagValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag128StDeliverToCompID tagData;
+        Tag121EnuForexReq tagData;
 
-        tagData = new Tag128StDeliverToCompID(new MyStringType(TESTA_ST_DELIVER_TO_COMP_ID) );
+        tagData = new Tag121EnuForexReq(TESTA_ENU_FOREX_REQ);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag128StDeliverToCompID(new MyStringType(TESTB_ST_DELIVER_TO_COMP_ID) );
+        tagData = new Tag121EnuForexReq(TESTB_ENU_FOREX_REQ);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

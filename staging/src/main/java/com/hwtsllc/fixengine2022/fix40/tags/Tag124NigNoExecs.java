@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag139EtMiscFeeType extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum139MiscFeeType dataValue;
+public class Tag124NigNoExecs extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyNumInGroupType dataValue;
 
-    public final static Enum139MiscFeeType TESTA_ET_MISC_FEE_TYPE = Enum139MiscFeeType.REGULATORY; // fake data
-    public final static Enum139MiscFeeType TESTB_ET_MISC_FEE_TYPE = Enum139MiscFeeType.TRANSFER_FEE;
+    public final static int TESTA_NIG_NO_EXECS = 124; // fake data
+    public final static int TESTB_NIG_NO_EXECS = 421;
 
-    public Tag139EtMiscFeeType(Enum139MiscFeeType dataValue) {
-        setFixType(FIX40.FIX139_ET_MISC_FEE_TYPE);
+    public Tag124NigNoExecs(MyNumInGroupType dataValue) {
+        setFixType(FIX40.FIX124_NIG_NO_EXECS);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.getID();
+    public int getDataValue() {
+        return this.dataValue.getDataValue();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag139EtMiscFeeType extends FIX40Abstract implements FixTagValuePai
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag139EtMiscFeeType extends FIX40Abstract implements FixTagValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag139EtMiscFeeType tagData;
+        Tag124NigNoExecs tagData;
 
-        tagData = new Tag139EtMiscFeeType(TESTA_ET_MISC_FEE_TYPE);
+        tagData = new Tag124NigNoExecs(new MyNumInGroupType(TESTA_NIG_NO_EXECS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag139EtMiscFeeType(TESTB_ET_MISC_FEE_TYPE);
+        tagData = new Tag124NigNoExecs(new MyNumInGroupType(TESTB_NIG_NO_EXECS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

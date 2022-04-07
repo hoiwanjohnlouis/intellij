@@ -18,22 +18,22 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag118AtNetMoney extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyAmtType dataValue;
+public class Tag136NigNoMiscFees extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyNumInGroupType dataValue;
 
-    public final static String TESTA_AT_NET_MONEY = "BilboBaggins-118NetMoney"; // fake data
-    public final static String TESTB_AT_NET_MONEY = "Gandalf-118NetMoney";
+    public final static int TESTA_NIG_NO_MISC_FEES = 1; // fake data
+    public final static int TESTB_NIG_NO_MISC_FEES = 2;
 
-    public Tag118AtNetMoney(MyAmtType dataValue) {
-        setFixType(FIX40.FIX118_AT_NET_MONEY);
+    public Tag136NigNoMiscFees(MyNumInGroupType dataValue) {
+        setFixType(FIX40.FIX136_NIG_NO_MISC_FEES);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public int getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -68,14 +68,14 @@ public class Tag118AtNetMoney extends FIX40Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag118AtNetMoney tagData;
+        Tag136NigNoMiscFees tagData;
 
-        tagData = new Tag118AtNetMoney(new MyAmtType(TESTA_AT_NET_MONEY) );
+        tagData = new Tag136NigNoMiscFees(new MyNumInGroupType(TESTA_NIG_NO_MISC_FEES) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag118AtNetMoney(new MyAmtType(TESTB_AT_NET_MONEY) );
+        tagData = new Tag136NigNoMiscFees(new MyNumInGroupType(TESTB_NIG_NO_MISC_FEES) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

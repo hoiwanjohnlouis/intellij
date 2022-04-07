@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag121EtForexReq extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+public class Tag126UtcExpireTime extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyUTCTimestampType dataValue;
 
-    public final static EnumBoolean TESTA_ET_FOREX_REQ = EnumBoolean.NO; // fake data
-    public final static EnumBoolean TESTB_ET_FOREX_REQ = EnumBoolean.YES;
+    public final static String TESTA_UTC_EXPIRE_TIME = "BilboBaggins-126ExpireTime"; // fake data
+    public final static String TESTB_UTC_EXPIRE_TIME = "Gandalf-126ExpireTime";
 
-    public Tag121EtForexReq(EnumBoolean dataValue) {
-        setFixType(FIX40.FIX121_ET_FOREX_REQ);
+    public Tag126UtcExpireTime(MyUTCTimestampType dataValue) {
+        setFixType(FIX40.FIX126_UTC_EXPIRE_TIME);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.getDataValue();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag121EtForexReq extends FIX40Abstract implements FixTagValuePairSt
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag121EtForexReq extends FIX40Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag121EtForexReq tagData;
+        Tag126UtcExpireTime tagData;
 
-        tagData = new Tag121EtForexReq(TESTA_ET_FOREX_REQ);
+        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(TESTA_UTC_EXPIRE_TIME) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag121EtForexReq(TESTB_ET_FOREX_REQ);
+        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(TESTB_UTC_EXPIRE_TIME) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag120CtSettlCurrency extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyCurrencyType dataValue;
+public class Tag137AmtMiscFeeAmt extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyAmtType dataValue;
 
-    public final static String TESTA_CT_SETTL_CURRENCY = "BilboBaggins-120SettlCurrency"; // fake data
-    public final static String TESTB_CT_SETTL_CURRENCY = "Gandalf-120SettlCurrency";
+    public final static String TESTA_AMT_MISC_FEE_AMT = "BilboBaggins-137MiscFeeAmt"; // fake data
+    public final static String TESTB_AMT_MISC_FEE_AMT = "Gandalf-137MiscFeeAmt";
 
-    public Tag120CtSettlCurrency(MyCurrencyType dataValue) {
-        setFixType(FIX40.FIX120_CT_SETTL_CURRENCY);
+    public Tag137AmtMiscFeeAmt(MyAmtType dataValue) {
+        setFixType(FIX40.FIX137_AMT_MISC_FEE_AMT);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag120CtSettlCurrency extends FIX40Abstract implements FixTagValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag120CtSettlCurrency tagData;
+        Tag137AmtMiscFeeAmt tagData;
 
-        tagData = new Tag120CtSettlCurrency(new MyCurrencyType(TESTA_CT_SETTL_CURRENCY) );
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(TESTA_AMT_MISC_FEE_AMT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag120CtSettlCurrency(new MyCurrencyType(TESTB_CT_SETTL_CURRENCY) );
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(TESTB_AMT_MISC_FEE_AMT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

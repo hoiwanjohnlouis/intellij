@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag117StQuoteID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag138CcyMiscFeeCurr extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyCurrencyType dataValue;
 
-    public final static String TESTA_ST_QUOTE_ID = "BilboBaggins-117QuoteID"; // fake data
-    public final static String TESTB_ST_QUOTE_ID = "Gandalf-117QuoteID";
+    public final static String TESTA_CCY_MISC_FEE_CURR = "BilboBaggins-138MiscFeeCurr"; // fake data
+    public final static String TESTB_CCY_MISC_FEE_CURR = "Gandalf-138MiscFeeCurr";
 
-    public Tag117StQuoteID(MyStringType dataValue) {
-        setFixType(FIX40.FIX117_ST_QUOTE_ID);
+    public Tag138CcyMiscFeeCurr(MyCurrencyType dataValue) {
+        setFixType(FIX40.FIX138_CCY_MISC_FEE_CURR);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag117StQuoteID extends FIX40Abstract implements FixTagValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag117StQuoteID tagData;
+        Tag138CcyMiscFeeCurr tagData;
 
-        tagData = new Tag117StQuoteID(new MyStringType(TESTA_ST_QUOTE_ID) );
+        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(TESTA_CCY_MISC_FEE_CURR) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag117StQuoteID(new MyStringType(TESTB_ST_QUOTE_ID) );
+        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(TESTB_CCY_MISC_FEE_CURR) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

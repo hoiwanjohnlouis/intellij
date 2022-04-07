@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag131StQuoteReqID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag123EnuGapFillFlag extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final EnumBoolean dataValue;
 
-    public final static String TESTA_ST_QUOTE_REQ_ID = "BilboBaggins-131QuoteReqID"; // fake data
-    public final static String TESTB_ST_QUOTE_REQ_ID = "Gandalf-131QuoteReqID";
+    public final static EnumBoolean TESTA_ENU_GAP_FILL_FLAG = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_ENU_GAP_FILL_FLAG = EnumBoolean.YES;
 
-    public Tag131StQuoteReqID(MyStringType dataValue) {
-        setFixType(FIX40.FIX131_ST_QUOTE_REQ_ID);
+    public Tag123EnuGapFillFlag(EnumBoolean dataValue) {
+        setFixType(FIX40.FIX123_ENU_GAP_FILL_FLAG);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getDataValue();
+        return this.dataValue.getID();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag131StQuoteReqID extends FIX40Abstract implements FixTagValuePair
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(getDataValue());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag131StQuoteReqID extends FIX40Abstract implements FixTagValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag131StQuoteReqID tagData;
+        Tag123EnuGapFillFlag tagData;
 
-        tagData = new Tag131StQuoteReqID(new MyStringType(TESTA_ST_QUOTE_REQ_ID) );
+        tagData = new Tag123EnuGapFillFlag(TESTA_ENU_GAP_FILL_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag131StQuoteReqID(new MyStringType(TESTB_ST_QUOTE_REQ_ID) );
+        tagData = new Tag123EnuGapFillFlag(TESTB_ENU_GAP_FILL_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag133PxtOfferPx extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyPriceType dataValue;
+public class Tag117StrQuoteID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
-    public final static String TESTA_PXT_OFFER_PX = "BilboBaggins-133OfferPx"; // fake data
-    public final static String TESTB_PXT_OFFER_PX = "Gandalf-133OfferPx";
+    public final static String TESTA_STR_QUOTE_ID = "BilboBaggins-117QuoteID"; // fake data
+    public final static String TESTB_STR_QUOTE_ID = "Gandalf-117QuoteID";
 
-    public Tag133PxtOfferPx(MyPriceType dataValue) {
-        setFixType(FIX40.FIX133_PXT_OFFER_PX);
+    public Tag117StrQuoteID(MyStringType dataValue) {
+        setFixType(FIX40.FIX117_STR_QUOTE_ID);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag133PxtOfferPx extends FIX40Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag133PxtOfferPx tagData;
+        Tag117StrQuoteID tagData;
 
-        tagData = new Tag133PxtOfferPx(new MyPriceType(TESTA_PXT_OFFER_PX) );
+        tagData = new Tag117StrQuoteID(new MyStringType(TESTA_STR_QUOTE_ID) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag133PxtOfferPx(new MyPriceType(TESTB_PXT_OFFER_PX) );
+        tagData = new Tag117StrQuoteID(new MyStringType(TESTB_STR_QUOTE_ID) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

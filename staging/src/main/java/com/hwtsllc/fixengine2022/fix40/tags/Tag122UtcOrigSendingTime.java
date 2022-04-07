@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag126UtcttExpireTime extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag122UtcOrigSendingTime extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTCTT_EXPIRE_TIME = "BilboBaggins-126ExpireTime"; // fake data
-    public final static String TESTB_UTCTT_EXPIRE_TIME = "Gandalf-126ExpireTime";
+    public final static String TESTA_UTC_ORIG_SENDING_TIME = "BilboBaggins-122OrigSendingTime"; // fake data
+    public final static String TESTB_UTC_ORIG_SENDING_TIME = "Gandalf-122OrigSendingTime";
 
-    public Tag126UtcttExpireTime(MyUTCTimestampType dataValue) {
-        setFixType(FIX40.FIX126_UTCTT_EXPIRE_TIME);
+    public Tag122UtcOrigSendingTime(MyUTCTimestampType dataValue) {
+        setFixType(FIX40.FIX122_UTC_ORIG_SENDING_TIME);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag126UtcttExpireTime extends FIX40Abstract implements FixTagValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag126UtcttExpireTime tagData;
+        Tag122UtcOrigSendingTime tagData;
 
-        tagData = new Tag126UtcttExpireTime(new MyUTCTimestampType(TESTA_UTCTT_EXPIRE_TIME) );
+        tagData = new Tag122UtcOrigSendingTime(new MyUTCTimestampType(TESTA_UTC_ORIG_SENDING_TIME) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag126UtcttExpireTime(new MyUTCTimestampType(TESTB_UTCTT_EXPIRE_TIME) );
+        tagData = new Tag122UtcOrigSendingTime(new MyUTCTimestampType(TESTB_UTC_ORIG_SENDING_TIME) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

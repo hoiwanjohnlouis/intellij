@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag122UtcttOrigSendingTime extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyUTCTimestampType dataValue;
+public class Tag131StrQuoteReqID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
-    public final static String TESTA_UTCTT_ORIG_SENDING_TIME = "BilboBaggins-122OrigSendingTime"; // fake data
-    public final static String TESTB_UTCTT_ORIG_SENDING_TIME = "Gandalf-122OrigSendingTime";
+    public final static String TESTA_STR_QUOTE_REQ_ID = "BilboBaggins-131QuoteReqID"; // fake data
+    public final static String TESTB_STR_QUOTE_REQ_ID = "Gandalf-131QuoteReqID";
 
-    public Tag122UtcttOrigSendingTime(MyUTCTimestampType dataValue) {
-        setFixType(FIX40.FIX122_UTCTT_ORIG_SENDING_TIME);
+    public Tag131StrQuoteReqID(MyStringType dataValue) {
+        setFixType(FIX40.FIX131_STR_QUOTE_REQ_ID);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag122UtcttOrigSendingTime extends FIX40Abstract implements FixTagV
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag122UtcttOrigSendingTime tagData;
+        Tag131StrQuoteReqID tagData;
 
-        tagData = new Tag122UtcttOrigSendingTime(new MyUTCTimestampType(TESTA_UTCTT_ORIG_SENDING_TIME) );
+        tagData = new Tag131StrQuoteReqID(new MyStringType(TESTA_STR_QUOTE_REQ_ID) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag122UtcttOrigSendingTime(new MyUTCTimestampType(TESTB_UTCTT_ORIG_SENDING_TIME) );
+        tagData = new Tag131StrQuoteReqID(new MyStringType(TESTB_STR_QUOTE_REQ_ID) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

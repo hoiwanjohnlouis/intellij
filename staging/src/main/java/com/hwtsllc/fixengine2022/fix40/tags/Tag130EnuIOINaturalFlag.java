@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag114EtLocateReqd extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag130EnuIOINaturalFlag extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final EnumBoolean dataValue;
 
-    public final static EnumBoolean TESTA_ET_LOCATE_REQD = EnumBoolean.NO; // fake data
-    public final static EnumBoolean TESTB_ET_LOCATE_REQD = EnumBoolean.YES;
+    public final static EnumBoolean TESTA_ENU_IOI_NATURAL_FLAG = EnumBoolean.NO ; // fake data
+    public final static EnumBoolean TESTB_ENU_IOI_NATURAL_FLAG = EnumBoolean.YES;
 
-    public Tag114EtLocateReqd(EnumBoolean dataValue) {
-        setFixType(FIX40.FIX114_ET_LOCATE_REQD);
+    public Tag130EnuIOINaturalFlag(EnumBoolean dataValue) {
+        setFixType(FIX40.FIX130_ENU_IOI_NATURAL_FLAG);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag114EtLocateReqd extends FIX40Abstract implements FixTagValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag114EtLocateReqd tagData;
+        Tag130EnuIOINaturalFlag tagData;
 
-        tagData = new Tag114EtLocateReqd(TESTA_ET_LOCATE_REQD);
+        tagData = new Tag130EnuIOINaturalFlag(TESTA_ENU_IOI_NATURAL_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag114EtLocateReqd(TESTB_ET_LOCATE_REQD);
+        tagData = new Tag130EnuIOINaturalFlag(TESTB_ENU_IOI_NATURAL_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag116StOnBehalfOfSubID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag132PrcBidPx extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyPriceType dataValue;
 
-    public final static String TESTA_ST_ON_BEHALF_OF_SUB_ID = "BilboBaggins-116OnBehalfOfSubID"; // fake data
-    public final static String TESTB_ST_ON_BEHALF_OF_SUB_ID = "Gandalf-116OnBehalfOfSubID";
+    public final static String TESTA_PRC_BID_PX = "BilboBaggins-132BidPx"; // fake data
+    public final static String TESTB_PRC_BID_PX = "Gandalf-132BidPx";
 
-    public Tag116StOnBehalfOfSubID(MyStringType dataValue) {
-        setFixType(FIX40.FIX116_ST_ON_BEHALF_OF_SUB_ID);
+    public Tag132PrcBidPx(MyPriceType dataValue) {
+        setFixType(FIX40.FIX132_PRC_BID_PX);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag116StOnBehalfOfSubID extends FIX40Abstract implements FixTagValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag116StOnBehalfOfSubID tagData;
+        Tag132PrcBidPx tagData;
 
-        tagData = new Tag116StOnBehalfOfSubID(new MyStringType(TESTA_ST_ON_BEHALF_OF_SUB_ID) );
+        tagData = new Tag132PrcBidPx(new MyPriceType(TESTA_PRC_BID_PX) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag116StOnBehalfOfSubID(new MyStringType(TESTB_ST_ON_BEHALF_OF_SUB_ID) );
+        tagData = new Tag132PrcBidPx(new MyPriceType(TESTB_PRC_BID_PX) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

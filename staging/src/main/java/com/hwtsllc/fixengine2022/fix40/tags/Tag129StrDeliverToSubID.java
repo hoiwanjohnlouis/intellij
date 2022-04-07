@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag140PxtPrevClosePx extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyPriceType dataValue;
+public class Tag129StrDeliverToSubID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
 
-    public final static String TESTA_PXT_PREV_CLOSE_PX = "BilboBaggins-140PrevClosePx"; // fake data
-    public final static String TESTB_PXT_PREV_CLOSE_PX = "Gandalf-140PrevClosePx";
+    public final static String TESTA_STR_DELIVER_TO_SUB_ID = "BilboBaggins-129DeliverToSubID"; // fake data
+    public final static String TESTB_STR_DELIVER_TO_SUB_ID = "Gandalf-129DeliverToSubID";
 
-    public Tag140PxtPrevClosePx(MyPriceType dataValue) {
-        setFixType(FIX40.FIX140_PXT_PREV_CLOSE_PX);
+    public Tag129StrDeliverToSubID(MyStringType dataValue) {
+        setFixType(FIX40.FIX129_STR_DELIVER_TO_SUB_ID);
         this.dataValue = dataValue;
     }
 
@@ -68,17 +68,16 @@ public class Tag140PxtPrevClosePx extends FIX40Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag140PxtPrevClosePx tagData;
+        Tag129StrDeliverToSubID tagData;
 
-        tagData = new Tag140PxtPrevClosePx(new MyPriceType(TESTA_PXT_PREV_CLOSE_PX) );
+        tagData = new Tag129StrDeliverToSubID(new MyStringType(TESTA_STR_DELIVER_TO_SUB_ID) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag140PxtPrevClosePx(new MyPriceType(TESTB_PXT_PREV_CLOSE_PX) );
+        tagData = new Tag129StrDeliverToSubID(new MyStringType(TESTB_STR_DELIVER_TO_SUB_ID) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
     }
 }
-

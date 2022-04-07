@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.fix40.enums.Enum127DKReason;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag124NigtNoExecs extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyNumInGroupType dataValue;
+public class Tag127EnuDKReason extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum127DKReason dataValue;
 
-    public final static int TESTA_NIGT_NO_EXECS = 124; // fake data
-    public final static int TESTB_NIGT_NO_EXECS = 421;
+    public final static Enum127DKReason TESTA_ENU_DK_REASON = Enum127DKReason.UNKNOWN_SYMBOL; // fake data
+    public final static Enum127DKReason TESTB_ENU_DK_REASON = Enum127DKReason.OTHER;
 
-    public Tag124NigtNoExecs(MyNumInGroupType dataValue) {
-        setFixType(FIX40.FIX124_NIGT_NO_EXECS);
+    public Tag127EnuDKReason(Enum127DKReason dataValue) {
+        setFixType(FIX40.FIX127_ENU_DK_REASON);
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
-        return this.dataValue.getDataValue();
+    public String getDataValue() {
+        return this.dataValue.getID();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag124NigtNoExecs extends FIX40Abstract implements FixTagValuePairS
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(getDataValue());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag124NigtNoExecs extends FIX40Abstract implements FixTagValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag124NigtNoExecs tagData;
+        Tag127EnuDKReason tagData;
 
-        tagData = new Tag124NigtNoExecs(new MyNumInGroupType(TESTA_NIGT_NO_EXECS) );
+        tagData = new Tag127EnuDKReason(TESTA_ENU_DK_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag124NigtNoExecs(new MyNumInGroupType(TESTB_NIGT_NO_EXECS) );
+        tagData = new Tag127EnuDKReason(TESTB_ENU_DK_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

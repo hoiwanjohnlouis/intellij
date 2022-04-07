@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag119AtSettlCurrAmt extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyAmtType dataValue;
+public class Tag114EnuLocateReqd extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final EnumBoolean dataValue;
 
-    public final static String TESTA_AT_SETTL_CURR_AMT = "BilboBaggins-119SettlCurrAmt"; // fake data
-    public final static String TESTB_AT_SETTL_CURR_AMT = "Gandalf-119SettlCurrAmt";
+    public final static EnumBoolean TESTA_ENU_LOCATE_REQD = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_ENU_LOCATE_REQD = EnumBoolean.YES;
 
-    public Tag119AtSettlCurrAmt(MyAmtType dataValue) {
-        setFixType(FIX40.FIX119_AT_SETTL_CURR_AMT);
+    public Tag114EnuLocateReqd(EnumBoolean dataValue) {
+        setFixType(FIX40.FIX114_ENU_LOCATE_REQD);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getDataValue();
+        return this.dataValue.getID();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag119AtSettlCurrAmt extends FIX40Abstract implements FixTagValuePa
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(getDataValue());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag119AtSettlCurrAmt extends FIX40Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag119AtSettlCurrAmt tagData;
+        Tag114EnuLocateReqd tagData;
 
-        tagData = new Tag119AtSettlCurrAmt(new MyAmtType(TESTA_AT_SETTL_CURR_AMT) );
+        tagData = new Tag114EnuLocateReqd(TESTA_ENU_LOCATE_REQD);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag119AtSettlCurrAmt(new MyAmtType(TESTB_AT_SETTL_CURR_AMT) );
+        tagData = new Tag114EnuLocateReqd(TESTB_ENU_LOCATE_REQD);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

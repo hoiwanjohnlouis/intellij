@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag129StDeliverToSubID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag139EnuMiscFeeType extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum139MiscFeeType dataValue;
 
-    public final static String TESTA_ST_DELIVER_TO_SUB_ID = "BilboBaggins-129DeliverToSubID"; // fake data
-    public final static String TESTB_ST_DELIVER_TO_SUB_ID = "Gandalf-129DeliverToSubID";
+    public final static Enum139MiscFeeType TESTA_ENU_MISC_FEE_TYPE = Enum139MiscFeeType.REGULATORY; // fake data
+    public final static Enum139MiscFeeType TESTB_ENU_MISC_FEE_TYPE = Enum139MiscFeeType.TRANSFER_FEE;
 
-    public Tag129StDeliverToSubID(MyStringType dataValue) {
-        setFixType(FIX40.FIX129_ST_DELIVER_TO_SUB_ID);
+    public Tag139EnuMiscFeeType(Enum139MiscFeeType dataValue) {
+        setFixType(FIX40.FIX139_ENU_MISC_FEE_TYPE);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getDataValue();
+        return this.dataValue.getID();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag129StDeliverToSubID extends FIX40Abstract implements FixTagValue
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(getDataValue());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag129StDeliverToSubID extends FIX40Abstract implements FixTagValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag129StDeliverToSubID tagData;
+        Tag139EnuMiscFeeType tagData;
 
-        tagData = new Tag129StDeliverToSubID(new MyStringType(TESTA_ST_DELIVER_TO_SUB_ID) );
+        tagData = new Tag139EnuMiscFeeType(TESTA_ENU_MISC_FEE_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag129StDeliverToSubID(new MyStringType(TESTB_ST_DELIVER_TO_SUB_ID) );
+        tagData = new Tag139EnuMiscFeeType(TESTB_ENU_MISC_FEE_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
