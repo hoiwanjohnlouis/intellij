@@ -24,25 +24,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag129StDeliverToSubIDTest {
+@Deprecated
+class Tag125StrCxlTypeTest {
 
     @Test
-    void FIX0129Test() {
-        FIX40 fixData = FIX40.FIX129_ST_DELIVER_TO_SUB_ID;
-        assertEquals( "DELIVER_TO_SUB_ID", fixData.getName());
-        assertEquals( "129", fixData.getID());
-        assertEquals( "DeliverToSubID", fixData.getDescription());
+    void FIX0125Test() {
+        FIX40 fixData = FIX40.FIX125_STR_CXL_TYPE;
+        assertEquals( "CXL_TYPE", fixData.getName());
+        assertEquals( "125", fixData.getID());
+        assertEquals( "CxlType (no longer used)", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0129Test() {
-        Tag129StDeliverToSubID tagData;
+    void Tag0125Test() {
+        Tag125StrCxlType tagData;
 
-        tagData = new Tag129StDeliverToSubID(new MyStringType("HanHyoJoo-129DeliverToSubID") );
-        assertEquals( "HanHyoJoo-129DeliverToSubID", tagData.getDataValue());
+        tagData = new Tag125StrCxlType(new MyStringType("KimHaNeul-125CxlType") );
+        assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

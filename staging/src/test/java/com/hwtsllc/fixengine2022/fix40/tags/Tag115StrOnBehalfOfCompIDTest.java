@@ -18,31 +18,31 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag118AtNetMoneyTest {
+class Tag115StrOnBehalfOfCompIDTest {
 
     @Test
-    void FIX0118Test() {
-        FIX40 fixData = FIX40.FIX118_AT_NET_MONEY;
-        assertEquals( "NET_MONEY", fixData.getName());
-        assertEquals( "118", fixData.getID());
-        assertEquals( "NetMoney", fixData.getDescription());
+    void FIX0115Test() {
+        FIX40 fixData = FIX40.FIX115_STR_ON_BEHALF_OF_COMP_ID;
+        assertEquals( "ON_BEHALF_OF_COMP_ID", fixData.getName());
+        assertEquals( "115", fixData.getID());
+        assertEquals( "OnBehalfOfCompID", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0118Test() {
-        Tag118AtNetMoney tagData;
+    void Tag0115Test() {
+        Tag115StrOnBehalfOfCompID tagData;
 
-        tagData = new Tag118AtNetMoney(new MyAmtType("Celeborn-118NetMoney") );
-        assertEquals( "Celeborn-118NetMoney", tagData.getDataValue());
+        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType("Legolas-115OnBehalfOfCompID") );
+        assertEquals( "Legolas-115OnBehalfOfCompID", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -18,32 +18,31 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag125StCxlTypeTest {
+class Tag120CcySettlCurrencyTest {
 
     @Test
-    void FIX0125Test() {
-        FIX40 fixData = FIX40.FIX125_ST_CXL_TYPE;
-        assertEquals( "CXL_TYPE", fixData.getName());
-        assertEquals( "125", fixData.getID());
-        assertEquals( "CxlType (no longer used)", fixData.getDescription());
+    void FIX0120Test() {
+        FIX40 fixData = FIX40.FIX120_CCY_SETTL_CURRENCY;
+        assertEquals( "SETTL_CURRENCY", fixData.getName());
+        assertEquals( "120", fixData.getID());
+        assertEquals( "SettlCurrency", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0125Test() {
-        Tag125StCxlType tagData;
+    void Tag0120Test() {
+        Tag120CcySettlCurrency tagData;
 
-        tagData = new Tag125StCxlType(new MyStringType("KimHaNeul-125CxlType") );
-        assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType("MoonChaeWon-120SettlCurrency") );
+        assertEquals( "MoonChaeWon-120SettlCurrency", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

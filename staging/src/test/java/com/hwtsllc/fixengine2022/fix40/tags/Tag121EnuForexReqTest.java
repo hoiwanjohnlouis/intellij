@@ -18,31 +18,34 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag115StOnBehalfOfCompIDTest {
+class Tag121EnuForexReqTest {
 
     @Test
-    void FIX0115Test() {
-        FIX40 fixData = FIX40.FIX115_ST_ON_BEHALF_OF_COMP_ID;
-        assertEquals( "ON_BEHALF_OF_COMP_ID", fixData.getName());
-        assertEquals( "115", fixData.getID());
-        assertEquals( "OnBehalfOfCompID", fixData.getDescription());
+    void FIX0121Test() {
+        FIX40 fixData = FIX40.FIX121_ENU_FOREX_REQ;
+        assertEquals( "FOREX_REQ", fixData.getName());
+        assertEquals( "121", fixData.getID());
+        assertEquals( "ForexReq", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0115Test() {
-        Tag115StOnBehalfOfCompID tagData;
+    void Tag0121Test() {
+        Tag121EnuForexReq tagData;
 
-        tagData = new Tag115StOnBehalfOfCompID(new MyStringType("Legolas-115OnBehalfOfCompID") );
-        assertEquals( "Legolas-115OnBehalfOfCompID", tagData.getDataValue());
+        tagData = new Tag121EnuForexReq(EnumBoolean.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag121EnuForexReq(EnumBoolean.YES);
+        assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

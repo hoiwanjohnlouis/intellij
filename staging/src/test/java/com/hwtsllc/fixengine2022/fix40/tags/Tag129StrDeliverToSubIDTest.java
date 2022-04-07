@@ -24,25 +24,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag116StOnBehalfOfSubIDTest {
+class Tag129StrDeliverToSubIDTest {
 
     @Test
-    void FIX0116Test() {
-        FIX40 fixData = FIX40.FIX116_ST_ON_BEHALF_OF_SUB_ID;
-        assertEquals("ON_BEHALF_OF_SUB_ID", fixData.getName());
-        assertEquals("116", fixData.getID());
-        assertEquals("OnBehalfOfSubID", fixData.getDescription());
+    void FIX0129Test() {
+        FIX40 fixData = FIX40.FIX129_STR_DELIVER_TO_SUB_ID;
+        assertEquals( "DELIVER_TO_SUB_ID", fixData.getName());
+        assertEquals( "129", fixData.getID());
+        assertEquals( "DeliverToSubID", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0116Test() {
-        Tag116StOnBehalfOfSubID tagData;
+    void Tag0129Test() {
+        Tag129StrDeliverToSubID tagData;
 
-        tagData = new Tag116StOnBehalfOfSubID(new MyStringType("Gimli-116OnBehalfOfSubID") );
-        assertEquals( "Gimli-116OnBehalfOfSubID", tagData.getDataValue());
+        tagData = new Tag129StrDeliverToSubID(new MyStringType("HanHyoJoo-129DeliverToSubID") );
+        assertEquals( "HanHyoJoo-129DeliverToSubID", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

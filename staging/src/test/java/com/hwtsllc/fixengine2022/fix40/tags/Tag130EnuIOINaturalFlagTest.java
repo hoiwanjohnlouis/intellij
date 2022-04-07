@@ -18,31 +18,34 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag134QtBidSizeTest {
+class Tag130EnuIOINaturalFlagTest {
 
     @Test
-    void FIX0134Test() {
-        FIX40 fixData = FIX40.FIX134_QT_BID_SIZE;
-        assertEquals( "BID_SIZE", fixData.getName());
-        assertEquals( "134", fixData.getID());
-        assertEquals( "BidSize", fixData.getDescription());
+    void FIX0130Test() {
+        FIX40 fixData = FIX40.FIX130_ENU_IOI_NATURAL_FLAG;
+        assertEquals( "IOI_NATURAL_FLAG", fixData.getName());
+        assertEquals( "130", fixData.getID());
+        assertEquals( "IOINaturalFlag", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0134Test() {
-        Tag134QtBidSize tagData;
+    void Tag0130Test() {
+        Tag130EnuIOINaturalFlag tagData;
 
-        tagData = new Tag134QtBidSize(new MyQtyType(100) );
-        assertEquals( 100, tagData.getDataValue());
+        tagData = new Tag130EnuIOINaturalFlag(EnumBoolean.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag130EnuIOINaturalFlag(EnumBoolean.YES);
+        assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

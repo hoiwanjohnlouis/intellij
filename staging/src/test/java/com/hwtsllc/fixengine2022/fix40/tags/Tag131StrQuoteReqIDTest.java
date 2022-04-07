@@ -18,31 +18,31 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag124NigtNoExecsTest {
+class Tag131StrQuoteReqIDTest {
 
     @Test
-    void FIX0124Test() {
-        FIX40 fixData = FIX40.FIX124_NIGT_NO_EXECS;
-        assertEquals( "NO_EXECS", fixData.getName());
-        assertEquals( "124", fixData.getID());
-        assertEquals( "NoExecs", fixData.getDescription());
+    void FIX0131Test() {
+        FIX40 fixData = FIX40.FIX131_STR_QUOTE_REQ_ID;
+        assertEquals( "QUOTE_REQ_ID", fixData.getName());
+        assertEquals( "131", fixData.getID());
+        assertEquals( "QuoteReqID", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0124Test() {
-        Tag124NigtNoExecs tagData;
+    void Tag0131Test() {
+        Tag131StrQuoteReqID tagData;
 
-        tagData = new Tag124NigtNoExecs(new MyNumInGroupType(100) );
-        assertEquals( 100, tagData.getDataValue());
+        tagData = new Tag131StrQuoteReqID(new MyStringType("MoonJiIn-131QuoteReqID") );
+        assertEquals( "MoonJiIn-131QuoteReqID", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -24,27 +24,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag114EtLocateReqdTest {
+class Tag123EnuGapFillFlagTest {
 
     @Test
-    void FIX0114Test() {
-        FIX40 fixData = FIX40.FIX114_ET_LOCATE_REQD;
-        assertEquals( "LOCATE_REQD", fixData.getName());
-        assertEquals( "114", fixData.getID());
-        assertEquals( "LocateReqd", fixData.getDescription());
+    void FIX0123Test() {
+        FIX40 fixData = FIX40.FIX123_ENU_GAP_FILL_FLAG;
+        assertEquals( "GAP_FILL_FLAG", fixData.getName());
+        assertEquals( "123", fixData.getID());
+        assertEquals( "GapFillFlag", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0114Test() {
-        Tag114EtLocateReqd tagData;
+    void Tag0123Test() {
+        Tag123EnuGapFillFlag tagData;
 
-        tagData = new Tag114EtLocateReqd(EnumBoolean.NO);
+        tagData = new Tag123EnuGapFillFlag(EnumBoolean.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag114EtLocateReqd(EnumBoolean.YES);
+        tagData = new Tag123EnuGapFillFlag(EnumBoolean.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }

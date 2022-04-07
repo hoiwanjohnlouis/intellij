@@ -18,31 +18,31 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag122UtcttOrigSendingTimeTest {
+class Tag119AmtSettlCurrAmtTest {
 
     @Test
-    void FIX0122Test() {
-        FIX40 fixData = FIX40.FIX122_UTCTT_ORIG_SENDING_TIME;
-        assertEquals( "ORIG_SENDING_TIME", fixData.getName());
-        assertEquals( "122", fixData.getID());
-        assertEquals( "OrigSendingTime", fixData.getDescription());
+    void FIX0119Test() {
+        FIX40 fixData = FIX40.FIX119_AMT_SETTL_CURR_AMT;
+        assertEquals( "SETTL_CURR_AMT", fixData.getName());
+        assertEquals( "119", fixData.getID());
+        assertEquals( "SettlCurrAmt", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0122Test() {
-        Tag122UtcttOrigSendingTime tagData;
+    void Tag0119Test() {
+        Tag119AmtSettlCurrAmt tagData;
 
-        tagData = new Tag122UtcttOrigSendingTime(new MyUTCTimestampType("KimSoYeon-122OrigSendingTime") );
-        assertEquals( "KimSoYeon-122OrigSendingTime", tagData.getDataValue());
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType("JohnWick-119SettlCurrAmt") );
+        assertEquals( "JohnWick-119SettlCurrAmt", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

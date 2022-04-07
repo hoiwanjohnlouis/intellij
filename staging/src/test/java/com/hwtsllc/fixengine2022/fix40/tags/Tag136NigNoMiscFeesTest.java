@@ -18,31 +18,31 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag120CtSettlCurrencyTest {
+class Tag136NigNoMiscFeesTest {
 
     @Test
-    void FIX0120Test() {
-        FIX40 fixData = FIX40.FIX120_CT_SETTL_CURRENCY;
-        assertEquals( "SETTL_CURRENCY", fixData.getName());
-        assertEquals( "120", fixData.getID());
-        assertEquals( "SettlCurrency", fixData.getDescription());
+    void FIX0136Test() {
+        FIX40 fixData = FIX40.FIX136_NIG_NO_MISC_FEES;
+        assertEquals( "NO_MISC_FEES", fixData.getName());
+        assertEquals( "136", fixData.getID());
+        assertEquals( "NoMiscFees", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0120Test() {
-        Tag120CtSettlCurrency tagData;
+    void Tag0136Test() {
+        Tag136NigNoMiscFees tagData;
 
-        tagData = new Tag120CtSettlCurrency(new MyCurrencyType("MoonChaeWon-120SettlCurrency") );
-        assertEquals( "MoonChaeWon-120SettlCurrency", tagData.getDataValue());
+        tagData = new Tag136NigNoMiscFees(new MyNumInGroupType(3) );
+        assertEquals( 3, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

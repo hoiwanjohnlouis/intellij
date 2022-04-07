@@ -18,34 +18,31 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag123EtGapFillFlagTest {
+class Tag132PrcBidPxTest {
 
     @Test
-    void FIX0123Test() {
-        FIX40 fixData = FIX40.FIX123_ET_GAP_FILL_FLAG;
-        assertEquals( "GAP_FILL_FLAG", fixData.getName());
-        assertEquals( "123", fixData.getID());
-        assertEquals( "GapFillFlag", fixData.getDescription());
+    void FIX0132Test() {
+        FIX40 fixData = FIX40.FIX132_PRC_BID_PX;
+        assertEquals( "BID_PX", fixData.getName());
+        assertEquals( "132", fixData.getID());
+        assertEquals( "BidPx", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0123Test() {
-        Tag123EtGapFillFlag tagData;
+    void Tag0132Test() {
+        Tag132PrcBidPx tagData;
 
-        tagData = new Tag123EtGapFillFlag(EnumBoolean.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag123EtGapFillFlag(EnumBoolean.YES);
-        assertEquals( "Y", tagData.getDataValue());
+        tagData = new Tag132PrcBidPx(new MyPriceType("ParkHaSun-132BidPx") );
+        assertEquals( "ParkHaSun-132BidPx", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

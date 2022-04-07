@@ -18,31 +18,31 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag126UtcttExpireTimeTest {
+class Tag124NigNoExecsTest {
 
     @Test
-    void FIX0126Test() {
-        FIX40 fixData = FIX40.FIX126_UTCTT_EXPIRE_TIME;
-        assertEquals( "EXPIRE_TIME", fixData.getName());
-        assertEquals( "126", fixData.getID());
-        assertEquals( "ExpireTime", fixData.getDescription());
+    void FIX0124Test() {
+        FIX40 fixData = FIX40.FIX124_NIG_NO_EXECS;
+        assertEquals( "NO_EXECS", fixData.getName());
+        assertEquals( "124", fixData.getID());
+        assertEquals( "NoExecs", fixData.getDescription());
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0126Test() {
-        Tag126UtcttExpireTime tagData;
+    void Tag0124Test() {
+        Tag124NigNoExecs tagData;
 
-        tagData = new Tag126UtcttExpireTime(new MyUTCTimestampType("HaJiWon-126ExpireTime") );
-        assertEquals( "HaJiWon-126ExpireTime", tagData.getDataValue());
+        tagData = new Tag124NigNoExecs(new MyNumInGroupType(100) );
+        assertEquals( 100, tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

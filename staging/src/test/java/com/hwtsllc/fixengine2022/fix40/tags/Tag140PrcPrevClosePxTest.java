@@ -24,25 +24,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag133PxtOfferPxTest {
+class Tag140PrcPrevClosePxTest {
 
     @Test
-    void FIX0133Test() {
-        FIX40 fixData = FIX40.FIX133_PXT_OFFER_PX;
-        assertEquals( "OFFER_PX", fixData.getName());
-        assertEquals( "133", fixData.getID());
-        assertEquals( "OfferPx", fixData.getDescription());
+    void FIX0140Test() {
+        FIX40 fixData = FIX40.FIX140_PRC_PREV_CLOSE_PX;
+        assertEquals( "PREV_CLOSE_PX", fixData.getName() );
+        assertEquals( "140", fixData.getID() );
+        assertEquals( "PrevClosePx", fixData.getDescription() );
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0133Test() {
-        Tag133PxtOfferPx tagData;
+    void Tag0140Test() {
+        Tag140PrcPrevClosePx tagData;
 
-        tagData = new Tag133PxtOfferPx(new MyPriceType("OhYeonSeo-133OfferPx") );
-        assertEquals( "OhYeonSeo-133OfferPx", tagData.getDataValue());
+        // assertEquals(10.23D, tagData.);
+
+        tagData = new Tag140PrcPrevClosePx(new MyPriceType("12.34") );
+        assertEquals( "12.34", tagData.getDataValue());
         assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }
