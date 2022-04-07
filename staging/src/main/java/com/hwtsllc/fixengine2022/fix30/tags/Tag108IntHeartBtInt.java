@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag111ItMaxFloor extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag108IntHeartBtInt extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_IT_MAX_FLOOR = 111; // fake data
-    public final static int TESTB_IT_MAX_FLOOR = 222;
+    public final static int TESTA_INT_HEART_BT_INT = 60; // fake data
+    public final static int TESTB_INT_HEART_BT_INT = 30;
 
-    public Tag111ItMaxFloor(MyIntType dataValue) {
-        setFixType(FIX30.FIX111_IT_MAX_FLOOR);
+    public Tag108IntHeartBtInt(MyIntType dataValue) {
+        setFixType(FIX30.FIX108_INT_HEART_BT_INT);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag111ItMaxFloor extends FIX30Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag111ItMaxFloor tagData;
+        Tag108IntHeartBtInt tagData;
 
-        tagData = new Tag111ItMaxFloor(new MyIntType(TESTA_IT_MAX_FLOOR) );
+        tagData = new Tag108IntHeartBtInt(new MyIntType(TESTA_INT_HEART_BT_INT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag111ItMaxFloor(new MyIntType(TESTB_IT_MAX_FLOOR) );
+        tagData = new Tag108IntHeartBtInt(new MyIntType(TESTB_INT_HEART_BT_INT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

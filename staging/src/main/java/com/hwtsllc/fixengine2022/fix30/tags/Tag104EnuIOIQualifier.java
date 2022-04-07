@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyIntType;
+import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag110ItMinQty extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyIntType dataValue;
+public class Tag104EnuIOIQualifier extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum104IOIQualifier dataValue;
 
-    public final static int TESTA_IT_MIN_QTY = 11; // fake data
-    public final static int TESTB_IT_MIN_QTY = 22;
+    public final static Enum104IOIQualifier TESTA_ENU_IOI_QUALIFIER = Enum104IOIQualifier.ALL_OR_NONE; // fake data
+    public final static Enum104IOIQualifier TESTB_ENU_IOI_QUALIFIER = Enum104IOIQualifier.PRE_OPEN;
 
-    public Tag110ItMinQty(MyIntType dataValue) {
-        setFixType(FIX30.FIX110_IT_MIN_QTY);
+    public Tag104EnuIOIQualifier(Enum104IOIQualifier dataValue) {
+        setFixType(FIX30.FIX104_ENU_IOI_QUALIFIER);
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
-        return this.dataValue.getDataValue();
+    public String getDataValue() {
+        return this.dataValue.getID();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag110ItMinQty extends FIX30Abstract implements FixTagValuePairStri
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(getDataValue());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag110ItMinQty extends FIX30Abstract implements FixTagValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag110ItMinQty tagData;
+        Tag104EnuIOIQualifier tagData;
 
-        tagData = new Tag110ItMinQty(new MyIntType(TESTA_IT_MIN_QTY) );
+        tagData = new Tag104EnuIOIQualifier(TESTA_ENU_IOI_QUALIFIER);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag110ItMinQty(new MyIntType(TESTB_IT_MIN_QTY) );
+        tagData = new Tag104EnuIOIQualifier(TESTB_ENU_IOI_QUALIFIER);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

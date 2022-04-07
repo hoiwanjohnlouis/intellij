@@ -22,15 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
-public class Tag105StWaveNo extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag106StrIssuer extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 
-    public final static String TESTA_ST_WAVE_NO = "BilboBaggins-105WaveNo"; // fake data
-    public final static String TESTB_ST_WAVE_NO = "Gandalf-105WaveNo";
+    public final static String TESTA_STR_ISSUER = "BilboBaggins-106Issuer"; // fake data
+    public final static String TESTB_STR_ISSUER = "Gandalf-106Issuer";
 
-    public Tag105StWaveNo(MyStringType dataValue) {
-        setFixType(FIX30.FIX105_ST_WAVE_NO);
+    public Tag106StrIssuer(MyStringType dataValue) {
+        setFixType(FIX30.FIX106_STR_ISSUER);
         this.dataValue = dataValue;
     }
 
@@ -69,14 +68,14 @@ public class Tag105StWaveNo extends FIX30Abstract implements FixTagValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag105StWaveNo tagData;
+        Tag106StrIssuer tagData;
 
-        tagData = new Tag105StWaveNo(new MyStringType(TESTA_ST_WAVE_NO) );
+        tagData = new Tag106StrIssuer(new MyStringType(TESTA_STR_ISSUER) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag105StWaveNo(new MyStringType(TESTB_ST_WAVE_NO) );
+        tagData = new Tag106StrIssuer(new MyStringType(TESTB_STR_ISSUER) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

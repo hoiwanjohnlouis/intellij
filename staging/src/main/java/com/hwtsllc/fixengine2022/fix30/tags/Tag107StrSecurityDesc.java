@@ -22,15 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
-public class Tag109StClientID extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag107StrSecurityDesc extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 
-    public final static String TESTA_ST_CLIENT_ID = "BilboBaggins-109ClientID"; // fake data
-    public final static String TESTB_ST_CLIENT_ID = "Gandalf-109ClientID";
+    public final static String TESTA_STR_SECURITY_DESC = "BilboBaggins-107SecurityDesc"; // fake data
+    public final static String TESTB_STR_SECURITY_DESC = "Gandalf-107SecurityDesc";
 
-    public Tag109StClientID(MyStringType dataValue) {
-        setFixType(FIX30.FIX109_ST_CLIENT_ID);
+    public Tag107StrSecurityDesc(MyStringType dataValue) {
+        setFixType(FIX30.FIX107_STR_SECURITY_DESC);
         this.dataValue = dataValue;
     }
 
@@ -69,14 +68,14 @@ public class Tag109StClientID extends FIX30Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag109StClientID tagData;
+        Tag107StrSecurityDesc tagData;
 
-        tagData = new Tag109StClientID(new MyStringType(TESTA_ST_CLIENT_ID) );
+        tagData = new Tag107StrSecurityDesc(new MyStringType(TESTA_STR_SECURITY_DESC) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag109StClientID(new MyStringType(TESTB_ST_CLIENT_ID) );
+        tagData = new Tag107StrSecurityDesc(new MyStringType(TESTB_STR_SECURITY_DESC) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

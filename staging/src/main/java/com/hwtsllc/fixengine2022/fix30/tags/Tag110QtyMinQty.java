@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyIntType;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag108ItHeartBtInt extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyIntType dataValue;
+public class Tag110QtyMinQty extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyQtyType dataValue;
 
-    public final static int TESTA_IT_HEART_BT_INT = 60; // fake data
-    public final static int TESTB_IT_HEART_BT_INT = 30;
+    public final static int TESTA_QTY_MIN_QTY = 11; // fake data
+    public final static int TESTB_QTY_MIN_QTY = 22;
 
-    public Tag108ItHeartBtInt(MyIntType dataValue) {
-        setFixType(FIX30.FIX108_IT_HEART_BT_INT);
+    public Tag110QtyMinQty(MyQtyType dataValue) {
+        setFixType(FIX30.FIX110_QTY_MIN_QTY);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag108ItHeartBtInt extends FIX30Abstract implements FixTagValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag108ItHeartBtInt tagData;
+        Tag110QtyMinQty tagData;
 
-        tagData = new Tag108ItHeartBtInt(new MyIntType(TESTA_IT_HEART_BT_INT) );
+        tagData = new Tag110QtyMinQty(new MyQtyType(TESTA_QTY_MIN_QTY) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag108ItHeartBtInt(new MyIntType(TESTB_IT_HEART_BT_INT) );
+        tagData = new Tag110QtyMinQty(new MyQtyType(TESTB_QTY_MIN_QTY) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

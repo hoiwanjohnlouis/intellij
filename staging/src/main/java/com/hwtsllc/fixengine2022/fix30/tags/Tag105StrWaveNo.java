@@ -22,14 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag107StSecurityDesc extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+@Deprecated
+public class Tag105StrWaveNo extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 
-    public final static String TESTA_ST_SECURITY_DESC = "BilboBaggins-107SecurityDesc"; // fake data
-    public final static String TESTB_ST_SECURITY_DESC = "Gandalf-107SecurityDesc";
+    public final static String TESTA_STR_WAVE_NO = "BilboBaggins-105WaveNo"; // fake data
+    public final static String TESTB_STR_WAVE_NO = "Gandalf-105WaveNo";
 
-    public Tag107StSecurityDesc(MyStringType dataValue) {
-        setFixType(FIX30.FIX107_ST_SECURITY_DESC);
+    public Tag105StrWaveNo(MyStringType dataValue) {
+        setFixType(FIX30.FIX105_STR_WAVE_NO);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +69,14 @@ public class Tag107StSecurityDesc extends FIX30Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag107StSecurityDesc tagData;
+        Tag105StrWaveNo tagData;
 
-        tagData = new Tag107StSecurityDesc(new MyStringType(TESTA_ST_SECURITY_DESC) );
+        tagData = new Tag105StrWaveNo(new MyStringType(TESTA_STR_WAVE_NO) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag107StSecurityDesc(new MyStringType(TESTB_ST_SECURITY_DESC) );
+        tagData = new Tag105StrWaveNo(new MyStringType(TESTB_STR_WAVE_NO) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

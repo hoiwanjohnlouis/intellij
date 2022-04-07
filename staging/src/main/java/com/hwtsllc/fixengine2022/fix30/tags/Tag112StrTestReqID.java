@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag106StIssuer extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag112StrTestReqID extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 
-    public final static String TESTA_ST_ISSUER = "BilboBaggins-106Issuer"; // fake data
-    public final static String TESTB_ST_ISSUER = "Gandalf-106Issuer";
+    public final static String TESTA_STR_TEST_REQ_ID = "BilboBaggins-112TestReqID"; // fake data
+    public final static String TESTB_STR_TEST_REQ_ID = "Gandalf-112TestReqID";
 
-    public Tag106StIssuer(MyStringType dataValue) {
-        setFixType(FIX30.FIX106_ST_ISSUER);
+    public Tag112StrTestReqID(MyStringType dataValue) {
+        setFixType(FIX30.FIX112_STR_TEST_REQ_ID);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag106StIssuer extends FIX30Abstract implements FixTagValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag106StIssuer tagData;
+        Tag112StrTestReqID tagData;
 
-        tagData = new Tag106StIssuer(new MyStringType(TESTA_ST_ISSUER) );
+        tagData = new Tag112StrTestReqID(new MyStringType(TESTA_STR_TEST_REQ_ID) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag106StIssuer(new MyStringType(TESTB_ST_ISSUER) );
+        tagData = new Tag112StrTestReqID(new MyStringType(TESTB_STR_TEST_REQ_ID) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

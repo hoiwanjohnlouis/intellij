@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag113EtReportToExch extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag113EnuReportToExch extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final EnumBoolean dataValue;
 
-    public final static EnumBoolean TESTA_ET_REPORT_TO_EXCH = EnumBoolean.NO; // fake data
-    public final static EnumBoolean TESTB_ET_REPORT_TO_EXCH = EnumBoolean.YES;
+    public final static EnumBoolean TESTA_ENU_REPORT_TO_EXCH = EnumBoolean.NO; // fake data
+    public final static EnumBoolean TESTB_ENU_REPORT_TO_EXCH = EnumBoolean.YES;
 
-    public Tag113EtReportToExch(EnumBoolean dataValue) {
-        setFixType(FIX30.FIX113_ET_REPORT_TO_EXCH);
+    public Tag113EnuReportToExch(EnumBoolean dataValue) {
+        setFixType(FIX30.FIX113_ENU_REPORT_TO_EXCH);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag113EtReportToExch extends FIX30Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag113EtReportToExch tagData;
+        Tag113EnuReportToExch tagData;
 
-        tagData = new Tag113EtReportToExch(TESTA_ET_REPORT_TO_EXCH);
+        tagData = new Tag113EnuReportToExch(TESTA_ENU_REPORT_TO_EXCH);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag113EtReportToExch(TESTB_ET_REPORT_TO_EXCH);
+        tagData = new Tag113EnuReportToExch(TESTB_ENU_REPORT_TO_EXCH);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

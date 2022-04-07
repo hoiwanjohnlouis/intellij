@@ -18,23 +18,23 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
-import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag104EtIOIQualifier extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum104IOIQualifier dataValue;
+public class Tag111QtyMaxFloor extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyQtyType dataValue;
 
-    public final static Enum104IOIQualifier TESTA_ET_IOI_QUALIFIER = Enum104IOIQualifier.ALL_OR_NONE; // fake data
-    public final static Enum104IOIQualifier TESTB_ET_IOI_QUALIFIER = Enum104IOIQualifier.PRE_OPEN;
+    public final static int TESTA_QTY_MAX_FLOOR = 111; // fake data
+    public final static int TESTB_QTY_MAX_FLOOR = 222;
 
-    public Tag104EtIOIQualifier(Enum104IOIQualifier dataValue) {
-        setFixType(FIX30.FIX104_ET_IOI_QUALIFIER);
+    public Tag111QtyMaxFloor(MyQtyType dataValue) {
+        setFixType(FIX30.FIX111_QTY_MAX_FLOOR);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.getID();
+    public int getDataValue() {
+        return this.dataValue.getDataValue();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +43,7 @@ public class Tag104EtIOIQualifier extends FIX30Abstract implements FixTagValuePa
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -68,14 +68,14 @@ public class Tag104EtIOIQualifier extends FIX30Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag104EtIOIQualifier tagData;
+        Tag111QtyMaxFloor tagData;
 
-        tagData = new Tag104EtIOIQualifier(TESTA_ET_IOI_QUALIFIER);
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(TESTA_QTY_MAX_FLOOR) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag104EtIOIQualifier(TESTB_ET_IOI_QUALIFIER);
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(TESTB_QTY_MAX_FLOOR) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
