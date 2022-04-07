@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag972UnderlyingAllocationPercentTest {
     @Test
     void FIX0972Test() {
-        FIXType fixData = FIXType.FIX972_UNDERLYING_ALLOCATION_PERCENT;
+        FIX50 fixData = FIX50.FIX972_UNDERLYING_ALLOCATION_PERCENT;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
@@ -32,5 +33,7 @@ class Tag972UnderlyingAllocationPercentTest {
     }
     @Test
     void Tag0972Test() {
+        Tag972UnderlyingAllocationPercent tagData;
+
     }
 }

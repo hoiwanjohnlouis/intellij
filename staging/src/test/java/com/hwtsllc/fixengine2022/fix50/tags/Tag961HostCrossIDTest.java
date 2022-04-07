@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag961HostCrossIDTest {
     @Test
     void FIX0961Test() {
-        FIXType fixData = FIXType.FIX961_HOST_CROSS_ID;
+        FIX50 fixData = FIX50.FIX961_HOST_CROSS_ID;
         assertEquals( "961", fixData.getID());
         assertEquals( "HOST_CROSS_ID", fixData.getName());
         assertEquals( "HostCrossID", fixData.getDescription());
@@ -36,5 +37,7 @@ class Tag961HostCrossIDTest {
     }
     @Test
     void Tag0961Test() {
+        Tag961HostCrossID tagData;
+
     }
 }

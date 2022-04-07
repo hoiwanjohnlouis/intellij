@@ -16,16 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag1005SideTradeReportIDTest {
     @Test
     void FIX1005Test() {
-        FIXType fixData = FIXType.FIX1005_SIDE_TRADE_REPORT_ID;
+        FIX50 fixData = FIX50.FIX1005_SIDE_TRADE_REPORT_ID;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
@@ -33,5 +33,7 @@ class Tag1005SideTradeReportIDTest {
     }
     @Test
     void Tag1005Test() {
+        Tag1005SideTradeReportID tagData;
+
     }
 }

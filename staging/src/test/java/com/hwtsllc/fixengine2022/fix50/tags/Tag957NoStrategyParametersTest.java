@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag957NoStrategyParametersTest {
     @Test
     void FIX0957Test() {
-        FIXType fixData = FIXType.FIX957_NO_STRATEGY_PARAMETERS;
+        FIX50 fixData = FIX50.FIX957_NO_STRATEGY_PARAMETERS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
@@ -32,5 +33,7 @@ class Tag957NoStrategyParametersTest {
     }
     @Test
     void Tag0957Test() {
+        Tag957NoStrategyParameters tagData;
+
     }
 }

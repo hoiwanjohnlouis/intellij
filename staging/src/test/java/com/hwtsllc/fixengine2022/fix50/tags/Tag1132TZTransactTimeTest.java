@@ -16,15 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import org.junit.jupiter.api.Test;
 
 class Tag1132TZTransactTimeTest {
     @Test
     void FIX1132Test() {
-        FIXType fixData = FIXType.FIX1132_TZ_TRANSACT_TIME;
+        FIX50 fixData = FIX50.FIX1132_TZ_TRANSACT_TIME;
     }
     @Test
     void Tag1132Test() {
+        Tag1132TZTransactTime tagData;
+
     }
 }

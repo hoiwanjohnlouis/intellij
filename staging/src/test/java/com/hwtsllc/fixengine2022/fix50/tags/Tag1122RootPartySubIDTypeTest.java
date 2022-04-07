@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1122RootPartySubIDTypeTest {
     @Test
     void FIX1122Test() {
-        FIXType fixData = FIXType.FIX1122_ROOT_PARTY_SUB_ID_TYPE;
+        FIX50 fixData = FIX50.FIX1122_ROOT_PARTY_SUB_ID_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
@@ -32,5 +33,7 @@ class Tag1122RootPartySubIDTypeTest {
     }
     @Test
     void Tag1122Test() {
+        Tag1122RootPartySubIDType tagData;
+
     }
 }

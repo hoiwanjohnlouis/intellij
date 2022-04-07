@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1013SideTrdRegTimestampTypeTest {
     @Test
     void FIX1013Test() {
-        FIXType fixData = FIXType.FIX1013_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        FIX50 fixData = FIX50.FIX1013_SIDE_TRD_REG_TIMESTAMP_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
@@ -32,5 +33,7 @@ class Tag1013SideTrdRegTimestampTypeTest {
     }
     @Test
     void Tag1013Test() {
+        Tag1013SideTrdRegTimestampType tagData;
+
     }
 }

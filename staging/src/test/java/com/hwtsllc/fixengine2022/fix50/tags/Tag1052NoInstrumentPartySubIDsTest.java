@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1052NoInstrumentPartySubIDsTest {
     @Test
     void FIX1052Test() {
-        FIXType fixData = FIXType.FIX1052_NO_INSTRUMENT_PARTY_SUB_IDS;
+        FIX50 fixData = FIX50.FIX1052_NO_INSTRUMENT_PARTY_SUB_IDS;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
@@ -32,5 +33,7 @@ class Tag1052NoInstrumentPartySubIDsTest {
     }
     @Test
     void Tag1052Test() {
+        Tag1052NoInstrumentPartySubIDs tagData;
+
     }
 }

@@ -16,9 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -26,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1096PegSecurityIDSourceTest {
     @Test
     void FIX1096Test() {
-        FIXType fixData = FIXType.FIX1096_PEG_SECURITY_ID_SOURCE;
+        FIX50 fixData = FIX50.FIX1096_PEG_SECURITY_ID_SOURCE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
@@ -34,5 +33,7 @@ class Tag1096PegSecurityIDSourceTest {
     }
     @Test
     void Tag1096Test() {
+        Tag1096PegSecurityIDSource tagData;
+
     }
 }
