@@ -16,27 +16,15 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.fix27.tags.Tag58StrText;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class TagTypeAbstractTest {
+class MyPriceTypeTest {
     @Test
-    void FIX0058Test() {
-        FIX27 fix58Text = FIX27.FIX58_STR_TEXT;
-        assertEquals( "58", fix58Text.getID());
-        assertEquals( "TEXT", fix58Text.getName());
-        assertEquals( "Text", fix58Text.getDescription());
-        assertNotEquals( "100", fix58Text.getID());
-        assertNotEquals( "TEXT TEXT", fix58Text.getName());
-        assertNotEquals( "123 TEXT", fix58Text.getDescription());
-    }
-    @Test
-    void Tag0058Test() {
-        Tag58StrText tagData = new Tag58StrText(new MyStringType("hello from main routine") );
-        assertEquals( "hello from main routine", tagData.getDataValue());
+    void Test() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
     }
 }

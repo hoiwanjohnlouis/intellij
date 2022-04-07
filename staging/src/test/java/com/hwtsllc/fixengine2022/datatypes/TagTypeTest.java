@@ -16,29 +16,9 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TagTypeTest {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    @BeforeEach
-    void setUp() {
-    }
-    @AfterEach
-    void tearDown() {
-    }
-    @Test
-    void Test() {
-        logger.info(WHERE_AM_I + ":Successful Test()");
-    }
-
-
-
 
     /*
      * Start of FIX4.4 as defined by the FIX Protocol Specification 4.4
@@ -46,7 +26,6 @@ class TagTypeTest {
      */
 
     // todo: move the 700s series entries below into their individual Test routines.
-
 
     @Test
     void Tag0700Test() {

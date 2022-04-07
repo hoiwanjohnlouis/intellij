@@ -16,16 +16,8 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+class MyDataTypeTest {
 
-@Deprecated
-class FieldTypeTest {
-    @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
-    }
 }
