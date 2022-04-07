@@ -16,39 +16,48 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+
 /**
  *
- * PriceType is a wrapper class for the Price field
- * Initially it will be a double, later on it may become BigDecimal.
+ * MyLengthType is a wrapper class for any MyLengthType field
+ * Initially it will be an int.
  */
-public class PriceType {
-    private double dataValue;
+public class MyLengthType implements LogStringVerbose {
+    private int dataValue;
 
-    public PriceType(final double dataValue) {
+    public MyLengthType(final int dataValue) {
         this.dataValue = dataValue;
     }
 
-    public double getDataValue() {
+    public int getDataValue() {
         return dataValue;
     }
-    public void setDataValue(final double dataValue) {
-        this.dataValue = dataValue;
-    }
 
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return this.getClass().getSimpleName()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getDataValue());
-        return sb.toString();
+        return String.valueOf(getDataValue());
     }
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-        PriceType priceType = new PriceType(123.45d);
-        System.out.println(priceType);
-        priceType.setDataValue(67.89d);
-        System.out.println(priceType.getDataValue());
+        MyLengthType dataType = new MyLengthType(12345);
+        System.out.println(dataType);
+        System.out.println(dataType.toLogStringVerbose());
     }
 }

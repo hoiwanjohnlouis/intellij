@@ -16,32 +16,42 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-public class PercentageType {
-    private double dataValue;
+import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-    public PercentageType(final double dataValue) {
+public class MyStringType implements LogStringVerbose {
+    private String dataValue;
+
+    public MyStringType(final String dataValue) {
         this.dataValue = dataValue;
     }
 
-    public double getDataValue() {
+    public String getDataValue() {
         return dataValue;
     }
-    public void setDataValue(final double dataValue) {
-        this.dataValue = dataValue;
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return this.getClass().getSimpleName()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
     }
-
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return getDataValue();
     }
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-        AmtType amtType = new AmtType(123.45d);
-        System.out.println(amtType);
-        amtType.setDataValue(67.89d);
-        System.out.println(amtType.getDataValue());
+        MyStringType dataType = new MyStringType("12345");
+        System.out.println(dataType);
+        System.out.println(dataType.toLogStringVerbose());
     }
 }

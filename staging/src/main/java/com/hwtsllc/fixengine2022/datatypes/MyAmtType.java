@@ -18,10 +18,14 @@ package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class StringType implements LogStringVerbose {
+/**
+ * MyAmtType is a wrapper class for the Amt field
+ * Initially it will be a String, later on it will become BigDecimal or int depending on usage.
+ */
+public class MyAmtType implements LogStringVerbose {
     private String dataValue;
 
-    public StringType(final String dataValue) {
+    public MyAmtType(final String dataValue) {
         this.dataValue = dataValue;
     }
 
@@ -50,7 +54,7 @@ public class StringType implements LogStringVerbose {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        StringType dataType = new StringType("12345");
+        MyAmtType dataType = new MyAmtType("12345");
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

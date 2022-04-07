@@ -16,41 +16,29 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-/**
- *
- *
- */
-@Deprecated
-public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePairString {
-    private FIXType fixType;
-    private String dataValue;
+public abstract class FIX40Abstract implements LogStringVerbose {
+    private FIX40 fixValue;
 
-    public void setFixType(FIXType fixType) {
-        this.fixType = fixType;
+    public void setFixType(FIX40 fixType) {
+        this.fixValue = fixType;
     }
-    public void setDataValue(String dataValue) {
-        this.dataValue = dataValue;
-    }
-
     public String getEnumName() {
-        return fixType.getEnumName();
+        return fixValue.getEnumName();
     }
     public String getID() {
-        return fixType.getID();
+        return String.valueOf(fixValue.getID());
     }
     public String getName() {
-        return fixType.getName();
+        return fixValue.getName();
     }
     public String getDescription() {
-        return fixType.getDescription();
+        return fixValue.getDescription();
     }
-    public String getDataValue() {
-        return this.dataValue;
-    }
-
+    /**
+     * standard wrapper to format a detailed string describing this enum
+     */
     @Override
     public String toLogStringVerbose() {
         return this.getClass().getSimpleName()
@@ -58,23 +46,14 @@ public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePa
                 .concat(getEnumName())
                 .concat("]")
                 .concat("\n\tFIXNumber[")
-                .concat(getID())
+                .concat(String.valueOf(getID()))
                 .concat("]")
                 .concat("\n\tFIXName[")
                 .concat(getName())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
                 .concat(getDescription())
-                .concat("]")
-                .concat("\n\tDataValue[")
-                .concat(getDataValue())
                 .concat("]");
-    }
-    @Override
-    public String toFixTagValuePairString() {
-        return String.valueOf(getID())
-                .concat("=")
-                .concat(getDataValue());
     }
     @Override
     public String toString() {
@@ -82,13 +61,11 @@ public abstract class TagTypeAbstract implements LogStringVerbose, FixTagValuePa
                 .concat("=[")
                 .concat(getEnumName())
                 .concat(",")
-                .concat(getID())
+                .concat(String.valueOf(getID()))
                 .concat(",")
                 .concat(getName())
                 .concat(",")
                 .concat(getDescription())
-                .concat(",")
-                .concat(getDataValue())
                 .concat("]");
     }
 }

@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+@Deprecated
 public abstract class FIXTypeAbstract implements LogStringVerbose {
     private FIXType fixValue;
 

@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Prootocol document.
  *                      There may be a secondary prefix denoting the data type.
  *                      ET = EnumType field
- *                      ST = StringType field
- *                      NIGT = NumInGroupType field, saved as int
- *                      LT = LengthType field, saved as int
- *                      QT = QtyType field, saved as int
- *                      SNT = SeqNumType field, saved as int
+ *                      ST = MyStringType field
+ *                      NIGT = MyNumInGroupType field, saved as int
+ *                      LT = MyLengthType field, saved as int
+ *                      QT = MyQtyType field, saved as int
+ *                      SNT = MySeqNumType field, saved as int
  *                      others to follow
  * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
  *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String.
@@ -44,17 +44,17 @@ public enum FIX30 implements EnumAccessors, LogStringVerbose {
      * Start of FIX3.0 as defined by the FIX Protocol Specification 3.0
      *  Tags: 104-113
      */
-    FIX104_ET_IOI_QUALIFIER(104, "IOI_QUALIFIER", "IOIQualifier"),
-    FIX105_WAVE_NO(105, "WAVE_NO", "WaveNo"),
-    FIX106_ISSUER(106, "ISSUER", "Issuer"),
-    FIX107_SECURITY_DESC(107, "SECURITY_DESC", "SecurityDesc"),
-    FIX108_HEART_BT_INT(108, "HEART_BT_INT", "HeartBtInt"),
-    FIX109_CLIENT_ID(109, "CLIENT_ID", "ClientID (replaced)"),
-    FIX110_MIN_QTY(110, "MIN_QTY", "MinQty"),
+    FIX104_ENU_IOI_QUALIFIER(104, "IOI_QUALIFIER", "IOIQualifier"),
+    FIX105_STR_WAVE_NO(105, "WAVE_NO", "WaveNo"),
+    FIX106_STR_ISSUER(106, "ISSUER", "Issuer"),
+    FIX107_STR_SECURITY_DESC(107, "SECURITY_DESC", "SecurityDesc"),
+    FIX108_INT_HEART_BT_INT(108, "HEART_BT_INT", "HeartBtInt"),
+    FIX109_STR_CLIENT_ID(109, "CLIENT_ID", "ClientID (replaced)"),
+    FIX110_QTY_MIN_QTY(110, "MIN_QTY", "MinQty"),
 
-    FIX111_MAX_FLOOR(111, "MAX_FLOOR", "MaxFloor"),
-    FIX112_TEST_REQ_ID(112, "TEST_REQ_ID", "TestReqID"),
-    FIX113_ET_REPORT_TO_EXCH(113, "REPORT_TO_EXCH", "ReportToExch"),
+    FIX111_QTY_MAX_FLOOR(111, "MAX_FLOOR", "MaxFloor"),
+    FIX112_STR_TEST_REQ_ID(112, "TEST_REQ_ID", "TestReqID"),
+    FIX113_ENU_REPORT_TO_EXCH(113, "REPORT_TO_EXCH", "ReportToExch"),
     /*
      *
      * End of FIX3.0
@@ -75,19 +75,6 @@ public enum FIX30 implements EnumAccessors, LogStringVerbose {
     private final String id;
     private final String name;
     private final String description;
-
-    /*
-     * used in @Test routine.
-     */
-    public final static String JUNK_ENUM_NAME = "JunkEnumName";
-    public final static String JUNK_ID = "JunkID";
-    public final static String JUNK_NAME = "JunkName";
-    public final static String JUNK_DESCRIPTION = "JunkDescription";
-    public final static String JUNK_ST_DATA_VALUE = "JunkDataValue";
-    public final static int JUNK_LT_DATA_VALUE = -65535;
-    public final static int JUNK_NIGT_DATA_VALUE = -65535;
-    public final static int JUNK_QT_DATA_VALUE = -65535;
-    public final static int JUNK_SNT_DATA_VALUE = -65535;
 
     FIX30(final int id, final String name, final String description) {
         /*

@@ -16,8 +16,15 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.junit.jupiter.api.Test;
 
-public class LocalMktDateType {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+class MyAmtTypeTest {
+    @Test
+    void Test() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+    }
 }

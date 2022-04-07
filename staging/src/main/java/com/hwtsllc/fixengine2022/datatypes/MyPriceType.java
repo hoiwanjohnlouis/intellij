@@ -19,21 +19,19 @@ package com.hwtsllc.fixengine2022.datatypes;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *
- * LengthType is a wrapper class for any LengthType field
- * Initially it will be an int.
+ * MyPriceType is a wrapper class for the Price field
+ * Initially it will be a String, later on it will become BigDecimal.
  */
-public class LengthType implements LogStringVerbose {
-    private int dataValue;
+public class MyPriceType implements LogStringVerbose {
+    private String dataValue;
 
-    public LengthType(final int dataValue) {
+    public MyPriceType(final String dataValue) {
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
+    public String getDataValue() {
         return dataValue;
     }
-
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -49,14 +47,14 @@ public class LengthType implements LogStringVerbose {
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return getDataValue();
     }
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-        LengthType dataType = new LengthType(12345);
+        MyPriceType dataType = new MyPriceType("12345");
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

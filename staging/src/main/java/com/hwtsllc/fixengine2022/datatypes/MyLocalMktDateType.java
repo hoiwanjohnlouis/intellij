@@ -19,21 +19,19 @@ package com.hwtsllc.fixengine2022.datatypes;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *
- * SeqNumType is a wrapper class for any SeqNumType field
- * Initially it will be an int.
+ * MyLocalMktDateType is a wrapper class for the LocalMktDate field
+ * it will probably be a String.
  */
-public class SeqNumType implements LogStringVerbose {
-    private int dataValue;
+public class MyLocalMktDateType implements LogStringVerbose {
+    private String dataValue;
 
-    public SeqNumType(final int dataValue) {
+    public MyLocalMktDateType(final String dataValue) {
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
+    public String getDataValue() {
         return dataValue;
     }
-
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -49,14 +47,14 @@ public class SeqNumType implements LogStringVerbose {
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return getDataValue();
     }
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-        SeqNumType dataType = new SeqNumType(12345);
+        MyLocalMktDateType dataType = new MyLocalMktDateType("12345");
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

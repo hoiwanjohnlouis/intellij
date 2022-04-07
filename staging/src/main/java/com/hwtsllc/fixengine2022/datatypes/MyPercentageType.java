@@ -18,10 +18,14 @@ package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class UTCTimestampType implements LogStringVerbose {
+/**
+ * MyPercentageType is a wrapper class for the PCT field
+ * Initially it will be a String, later on it will become BigDecimal.
+ */
+public class MyPercentageType implements LogStringVerbose {
     private String dataValue;
 
-    public UTCTimestampType(final String dataValue) {
+    public MyPercentageType(final String dataValue) {
         this.dataValue = dataValue;
     }
 
@@ -50,7 +54,7 @@ public class UTCTimestampType implements LogStringVerbose {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        UTCTimestampType dataType = new UTCTimestampType("12345");
+        MyPercentageType dataType = new MyPercentageType("12345");
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

@@ -20,19 +20,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *
- * NumInGroupType is a wrapper class for any NumInGroupType field
+ * MyIntType is a wrapper class for any int primitive  field
  * Initially it will be an int.
  */
-public class NumInGroupType implements LogStringVerbose {
+public class MyIntType implements LogStringVerbose {
     private int dataValue;
 
-    public NumInGroupType(final int dataValue) {
+    public MyIntType(final int dataValue) {
         this.dataValue = dataValue;
     }
 
     public int getDataValue() {
         return dataValue;
     }
+
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -55,7 +56,9 @@ public class NumInGroupType implements LogStringVerbose {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        NumInGroupType dataType = new NumInGroupType(12345);
+        MyIntType dataType;
+
+        dataType = new MyIntType(12345);
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

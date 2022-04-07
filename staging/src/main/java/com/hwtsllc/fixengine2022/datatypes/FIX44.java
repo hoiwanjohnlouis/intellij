@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Prootocol document.
  *                      There may be a secondary prefix denoting the data type.
  *                      ET = EnumType field
- *                      ST = StringType field
- *                      NIGT = NumInGroupType field, saved as int
- *                      LT = LengthType field, saved as int
- *                      QT = QtyType field, saved as int
- *                      SNT = SeqNumType field, saved as int
+ *                      ST = MyStringType field
+ *                      NIGT = MyNumInGroupType field, saved as int
+ *                      LT = MyLengthType field, saved as int
+ *                      QT = MyQtyType field, saved as int
+ *                      SNT = MySeqNumType field, saved as int
  *                      others to follow
  * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
  *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String.
@@ -263,7 +263,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX851_LAST_LIQUIDITY_IND(851, "LAST_LIQUIDITY_IND", "LastLiquidityInd"),
     FIX852_PUBLISH_TRD_INDICATOR(852, "PUBLISH_TRD_INDICATOR", "PublishTrdIndicator"),
     FIX853_SHORT_SALE_REASON(853, "SHORT_SALE_REASON", "ShortSaleReason"),
-    FIX854_QTY_TYPE(854, "QTY_TYPE", "QtyType"),
+    FIX854_QTY_TYPE(854, "QTY_TYPE", "MyQtyType"),
     FIX855_SECONDARY_TRD_TYPE(855, "SECONDARY_TRD_TYPE", "SecondaryTrdType"),
     FIX856_TRADE_REPORT_TYPE(856, "TRADE_REPORT_TYPE", "TradeReportType"),
     FIX857_ALLOC_NO_ORDERS_TYPE(857, "ALLOC_NO_ORDERS_TYPE", "AllocNoOrdersType"),
@@ -399,19 +399,6 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     private final String id;
     private final String name;
     private final String description;
-
-    /*
-     * used in @Test routine.
-     */
-    public final static String JUNK_ENUM_NAME = "JunkEnumName";
-    public final static String JUNK_ID = "JunkID";
-    public final static String JUNK_NAME = "JunkName";
-    public final static String JUNK_DESCRIPTION = "JunkDescription";
-    public final static String JUNK_ST_DATA_VALUE = "JunkDataValue";
-    public final static int JUNK_LT_DATA_VALUE = -65535;
-    public final static int JUNK_NIGT_DATA_VALUE = -65535;
-    public final static int JUNK_QT_DATA_VALUE = -65535;
-    public final static int JUNK_SNT_DATA_VALUE = -65535;
 
     FIX44(final int id, final String name, final String description) {
         /*

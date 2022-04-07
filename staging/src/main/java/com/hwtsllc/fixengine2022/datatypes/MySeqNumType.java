@@ -18,16 +18,22 @@ package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class ExchangeType implements LogStringVerbose {
-    private String dataValue;
+/**
+ *
+ * MySeqNumType is a wrapper class for any MySeqNumType field
+ * Initially it will be an int.
+ */
+public class MySeqNumType implements LogStringVerbose {
+    private int dataValue;
 
-    public ExchangeType(final String dataValue) {
+    public MySeqNumType(final int dataValue) {
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public int getDataValue() {
         return dataValue;
     }
+
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -43,14 +49,14 @@ public class ExchangeType implements LogStringVerbose {
      */
     @Override
     public String toString() {
-        return getDataValue();
+        return String.valueOf(getDataValue());
     }
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-        ExchangeType dataType = new ExchangeType("12345");
+        MySeqNumType dataType = new MySeqNumType(12345);
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

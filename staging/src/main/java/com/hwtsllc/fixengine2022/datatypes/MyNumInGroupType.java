@@ -20,20 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *
- * QtyType is a wrapper class for any QtyType field
+ * MyNumInGroupType is a wrapper class for any MyNumInGroupType field
  * Initially it will be an int.
  */
-public class QtyType implements LogStringVerbose {
+public class MyNumInGroupType implements LogStringVerbose {
     private int dataValue;
 
-    public QtyType(final int dataValue) {
+    public MyNumInGroupType(final int dataValue) {
         this.dataValue = dataValue;
     }
 
     public int getDataValue() {
         return dataValue;
     }
-
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -56,9 +55,7 @@ public class QtyType implements LogStringVerbose {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        QtyType dataType;
-
-        dataType = new QtyType(12345);
+        MyNumInGroupType dataType = new MyNumInGroupType(12345);
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }
