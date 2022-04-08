@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag136NigNoMiscFees extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag124NumNoExecs extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NIG_NO_MISC_FEES = 1; // fake data
-    public final static int TESTB_NIG_NO_MISC_FEES = 2;
+    public final static int TESTA_NUM_NO_EXECS = 124; // fake data
+    public final static int TESTB_NUM_NO_EXECS = 421;
 
-    public Tag136NigNoMiscFees(MyNumInGroupType dataValue) {
-        setFixType(FIX40.FIX136_NIG_NO_MISC_FEES);
+    public Tag124NumNoExecs(MyNumInGroupType dataValue) {
+        setFixType(FIX40.FIX124_NUM_NO_EXECS);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag136NigNoMiscFees extends FIX40Abstract implements FixTagValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag136NigNoMiscFees tagData;
+        Tag124NumNoExecs tagData;
 
-        tagData = new Tag136NigNoMiscFees(new MyNumInGroupType(TESTA_NIG_NO_MISC_FEES) );
+        tagData = new Tag124NumNoExecs(new MyNumInGroupType(TESTA_NUM_NO_EXECS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag136NigNoMiscFees(new MyNumInGroupType(TESTB_NIG_NO_MISC_FEES) );
+        tagData = new Tag124NumNoExecs(new MyNumInGroupType(TESTB_NUM_NO_EXECS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
