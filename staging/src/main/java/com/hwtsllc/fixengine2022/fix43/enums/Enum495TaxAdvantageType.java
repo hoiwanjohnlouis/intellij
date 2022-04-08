@@ -27,6 +27,10 @@ public enum Enum495TaxAdvantageType implements EnumAccessors, LogStringVerbose {
     /*
      * 0-29, 999 types
      */
+
+    /*
+     * 0-29, types
+     */
     NONE("0", "NONE", "0 - None/Not Applicable (default)" ),
     MAXI_ISA("1", "MAXI_ISA", "1 - Maxi ISA (UK)" ),
     TESSA("2", "TESSA", "2 - TESSA (UK)" ),
@@ -59,6 +63,9 @@ public enum Enum495TaxAdvantageType implements EnumAccessors, LogStringVerbose {
     EDUCATION_IRA_NON_PROTOTYPE("29", "EDUCATION_IRA_NON_PROTOTYPE", "29 - Education IRA (Non-prototype) (US)" ),
 
 
+    /*
+     * 999, types
+     */
     OTHER("999", "OTHER", "999 - Other" ),
     ;
 
