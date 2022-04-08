@@ -18,22 +18,22 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag146NigNoRelatedSym extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyNumInGroupType dataValue;
+public class Tag158PctAccruedInterestRate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyPercentageType dataValue;
 
-    public final static int TESTA_NIG_NO_RELATED_SYM = 1; // fake data
-    public final static int TESTB_NIG_NO_RELATED_SYM = 2;
+    public final static String TESTA_PCT_ACCRUED_INTEREST_RATE = "BilboBaggins-Tag158PctAccruedInterestRate";
+    public final static String TESTB_PCT_ACCRUED_INTEREST_RATE = "Gandalf-Tag158PctAccruedInterestRate";
 
-    public Tag146NigNoRelatedSym(MyNumInGroupType dataValue) {
-        setFixType(FIX41.FIX146_NIG_NO_RELATED_SYM);
+    public Tag158PctAccruedInterestRate(MyPercentageType dataValue) {
+        setFixType(FIX41.FIX158_PCT_ACCRUED_INTEREST_RATE);
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
+    public String getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -68,14 +68,14 @@ public class Tag146NigNoRelatedSym extends FIX41Abstract implements FixTagValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag146NigNoRelatedSym tagData;
+        Tag158PctAccruedInterestRate tagData;
 
-        tagData = new Tag146NigNoRelatedSym(new MyNumInGroupType(TESTA_NIG_NO_RELATED_SYM) );
+        tagData = new Tag158PctAccruedInterestRate(new MyPercentageType(TESTA_PCT_ACCRUED_INTEREST_RATE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag146NigNoRelatedSym(new MyNumInGroupType(TESTB_NIG_NO_RELATED_SYM) );
+        tagData = new Tag158PctAccruedInterestRate(new MyPercentageType(TESTB_PCT_ACCRUED_INTEREST_RATE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

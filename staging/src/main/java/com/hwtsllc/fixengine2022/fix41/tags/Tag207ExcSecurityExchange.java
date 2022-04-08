@@ -18,22 +18,22 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag199NigNoIOIQualifiers extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyNumInGroupType dataValue;
+public class Tag207ExcSecurityExchange extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyExchangeType dataValue;
 
-    public final static int TESTA_NIG_NO_IOI_QUALIFIERS = 3; // fake data
-    public final static int TESTB_NIG_NO_IOI_QUALIFIERS = 4;
+    public final static String TESTA_EXC_SECURITY_EXCHANGE = "Frodo-Tag207ExcSecurityExchange";
+    public final static String TESTB_EXC_SECURITY_EXCHANGE = "Gandalf-Tag207ExcSecurityExchange";
 
-    public Tag199NigNoIOIQualifiers(MyNumInGroupType dataValue) {
-        setFixType(FIX41.FIX199_NIG_NO_IOI_QUALIFIERS);
+    public Tag207ExcSecurityExchange(MyExchangeType dataValue) {
+        setFixType(FIX41.FIX207_EXC_SECURITY_EXCHANGE);
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
+    public String getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -68,14 +68,14 @@ public class Tag199NigNoIOIQualifiers extends FIX41Abstract implements FixTagVal
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag199NigNoIOIQualifiers tagData;
+        Tag207ExcSecurityExchange tagData;
 
-        tagData = new Tag199NigNoIOIQualifiers(new MyNumInGroupType(TESTA_NIG_NO_IOI_QUALIFIERS) );
+        tagData = new Tag207ExcSecurityExchange(new MyExchangeType(TESTA_EXC_SECURITY_EXCHANGE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag199NigNoIOIQualifiers(new MyNumInGroupType(TESTB_NIG_NO_IOI_QUALIFIERS) );
+        tagData = new Tag207ExcSecurityExchange(new MyExchangeType(TESTB_EXC_SECURITY_EXCHANGE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
