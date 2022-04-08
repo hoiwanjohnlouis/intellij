@@ -17,33 +17,31 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag85NigNoDlvyInstTest {
+class Tag33NumNoLinesOfTextTest {
 
     @Test
-    void FIX0085Test() {
-        FIX27 fixData = FIX27.FIX85_NIG_NO_DLVY_INST;
-        assertEquals( "NO_DLVY_INST", fixData.getName());
-        assertEquals( "85", fixData.getID());
-        assertEquals( "NoDlvyInst (no longer used)", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+    void FIX0033Test() {
+        FIX27 fixData = FIX27.FIX33_NUM_NO_LINES_OF_TEXT;
+        assertEquals( "NO_LINES_OF_TEXT", fixData.getName());
+        assertEquals( "33", fixData.getID());
+        assertEquals( "NoLinesOfText", fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0085Test() {
-        Tag85NigNoDlvyInst tagData;
+    void Tag0033Test() {
+        Tag33NumNoLinesOfText tagData;
 
-        tagData = new Tag85NigNoDlvyInst(new MyNumInGroupType(42) );
-        assertEquals( 42, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(5));
+        assertEquals( 5, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_NIGT_DATA_VALUE, tagData.getDataValue());
     }
 }

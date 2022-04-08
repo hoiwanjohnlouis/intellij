@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum88AllocRejCode;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag88EnuAllocRejCodeTest {
         assertEquals( "ALLOC_REJ_CODE", fixData.getName());
         assertEquals( "88", fixData.getID());
         assertEquals( "AllocRejCode", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0088Test() {
@@ -46,45 +45,58 @@ class Tag88EnuAllocRejCodeTest {
          */
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.UNKNOWN_ACCOUNT);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.INCORRECT_QUANTITY);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.INCORRECT_AVERAGE_PRICE);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.UNKNOWN_EXECUTING_BROKER_MNEMONIC);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.COMMISSION_DIFFERENCE);
         assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.UNKNOWN_ORDERID);
         assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.UNKNOWN_LISTID);
         assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.OTHER);
         assertEquals( "7", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.INCORRECT_ALLOCATED_QUANTITY);
         assertEquals( "8", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.CALCULATION_DIFFERENCE);
         assertEquals( "9", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.UNKNOWN_OR_STALE_EXECID);
         assertEquals( "10", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.MISMATCHED_DATA);
         assertEquals( "11", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.UNKNOWN_CLORDID);
         assertEquals( "12", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag88EnuAllocRejCode(Enum88AllocRejCode.WAREHOUSE_REQUEST_REJECTED);
         assertEquals( "13", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

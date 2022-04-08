@@ -17,32 +17,31 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag12AtCommissionTest {
+class Tag78NumNoAllocsTest {
 
     @Test
-    void FIX0012Test() {
-        FIX27 fixData = FIX27.FIX12_PXT_COMMISSION;
-        assertEquals( "COMMISSION", fixData.getName());
-        assertEquals( "12", fixData.getID());
-        assertEquals( "Commission", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+    void FIX0078Test() {
+        FIX27 fixData = FIX27.FIX78_NUM_NO_ALLOCS;
+        assertEquals( "NO_ALLOCS", fixData.getName());
+        assertEquals( "78", fixData.getID());
+        assertEquals( "NoAllocs", fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0012Test() {
-        Tag12AtCommission tagData;
+    void Tag0078Test() {
+        Tag78NumNoAllocs tagData;
 
-        tagData = new Tag12AtCommission(new MyAmtType("10") );
-        assertEquals( "10", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(321));
+        assertEquals( 321, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

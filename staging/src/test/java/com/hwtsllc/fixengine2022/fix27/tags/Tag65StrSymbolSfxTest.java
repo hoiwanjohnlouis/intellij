@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
@@ -32,17 +31,17 @@ class Tag65StrSymbolSfxTest {
         assertEquals( "SYMBOL_SFX", fixData.getName());
         assertEquals( "65", fixData.getID());
         assertEquals( "SymbolSfx", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0065Test() {
         Tag65StrSymbolSfx tagData;
 
-        tagData = new Tag65StrSymbolSfx(new MyStringType("PerigrinTook-65SymbolSfx") );
-        assertEquals( "PerigrinTook-65SymbolSfx", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag65StrSymbolSfx(new MyStringType(Tag65StrSymbolSfx.TESTA_STR_SYMBOL_SFX) );
+        assertEquals( Tag65StrSymbolSfx.TESTA_STR_SYMBOL_SFX, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

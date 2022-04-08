@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag14QtyCumQtyTest {
         assertEquals( "CUM_QTY", fixData.getName());
         assertEquals( "14", fixData.getID());
         assertEquals( "CumQty", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0014Test() {
@@ -43,6 +42,6 @@ class Tag14QtyCumQtyTest {
 
         tagData = new Tag14QtyCumQty(new MyQtyType(12345) );
         assertEquals( 12345, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_QT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_QT_DATA_VALUE, tagData.getDataValue());
     }
 }

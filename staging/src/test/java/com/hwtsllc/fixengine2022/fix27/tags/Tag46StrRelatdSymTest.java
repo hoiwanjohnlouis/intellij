@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
@@ -33,10 +32,10 @@ class Tag46StrRelatdSymTest {
         assertEquals( "RELATD_SYM", fixData.getName());
         assertEquals( "46", fixData.getID());
         assertEquals( "RelatdSym (No longer used)", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0046Test() {
@@ -44,6 +43,6 @@ class Tag46StrRelatdSymTest {
 
         tagData = new Tag46StrRelatdSym(new MyStringType("IBM") );
         assertEquals( "IBM", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag89DatSignatureTest {
         assertEquals( "SIGNATURE", fixData.getName());
         assertEquals( "89", fixData.getID());
         assertEquals( "Signature", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0089Test() {
@@ -43,6 +42,6 @@ class Tag89DatSignatureTest {
 
         tagData = new Tag89DatSignature(new MyDataType("BarleymanButterBurr-89StSignature") );
         assertEquals( "BarleymanButterBurr-89StSignature", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

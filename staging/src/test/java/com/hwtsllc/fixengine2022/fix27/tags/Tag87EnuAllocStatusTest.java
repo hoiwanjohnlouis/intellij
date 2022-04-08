@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum87AllocStatus;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag87EnuAllocStatusTest {
         assertEquals( "ALLOC_STATUS", fixData.getName());
         assertEquals( "87", fixData.getID());
         assertEquals( "AllocStatus", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0087Test() {
@@ -46,27 +45,34 @@ class Tag87EnuAllocStatusTest {
          */
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.ACCEPTED);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.BLOCK_LEVEL_REJECT);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.ACCOUNT_LEVEL_REJECT);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.RECEIVED_NOT_PROCESSED);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.INCOMPLETE);
         assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.REJECTED_BY_INTERMEDIARY);
         assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.ALLOCATION_PENDING);
         assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.REVERSED);
         assertEquals( "7", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

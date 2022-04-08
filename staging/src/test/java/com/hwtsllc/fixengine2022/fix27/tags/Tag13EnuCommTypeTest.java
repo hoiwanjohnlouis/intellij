@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag13EnuCommTypeTest {
         assertEquals( "COMM_TYPE", fixData.getName());
         assertEquals( "13", fixData.getID());
         assertEquals( "CommType", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0013Test() {
@@ -46,21 +45,26 @@ class Tag13EnuCommTypeTest {
          */
         tagData = new Tag13EnuCommType(Enum13CommType.PER_UNIT);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag13EnuCommType(Enum13CommType.PERCENT);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag13EnuCommType(Enum13CommType.ABSOLUTE);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT);
         assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS);
         assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag13EnuCommType(Enum13CommType.POINTS_PER_BOND);
         assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

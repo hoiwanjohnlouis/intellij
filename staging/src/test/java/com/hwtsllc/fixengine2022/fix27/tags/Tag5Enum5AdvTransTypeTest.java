@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag5Enum5AdvTransTypeTest {
         assertEquals( "ADV_TRANS_TYPE", fixData.getName());
         assertEquals( "5", fixData.getID());
         assertEquals( "Enum5AdvTransType", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0005Test() {
@@ -43,12 +42,14 @@ class Tag5Enum5AdvTransTypeTest {
 
         tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.NEW);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.CANCEL);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.REPLACE);
         assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

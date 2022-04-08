@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
 
@@ -32,9 +31,10 @@ class Tag43EnuPossDupFlagTest {
         assertEquals( "POSS_DUP_FLAG", fixData.getName());
         assertEquals( "43", fixData.getID());
         assertEquals( "PossDupFlag", fixData.getDescription());
-        assertNotEquals( "JunkName", fixData.getName());
-        assertNotEquals( "JunkID", fixData.getID());
-        assertNotEquals( "JunkDescription", fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0043Test() {
@@ -42,6 +42,6 @@ class Tag43EnuPossDupFlagTest {
 
         tagData = new Tag43EnuPossDupFlag(EnumBoolean.NO);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

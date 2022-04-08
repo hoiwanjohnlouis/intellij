@@ -17,32 +17,31 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag33NigNoLinesOfTextTest {
+class Tag73NumNoOrdersTest {
 
     @Test
-    void FIX0033Test() {
-        FIX27 fixData = FIX27.FIX33_NIG_NO_LINES_OF_TEXT;
-        assertEquals( "NO_LINES_OF_TEXT", fixData.getName());
-        assertEquals( "33", fixData.getID());
-        assertEquals( "NoLinesOfText", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+    void FIX0073Test() {
+        FIX27 fixData = FIX27.FIX73_NUM_NO_ORDERS;
+        assertEquals( "NO_ORDERS", fixData.getName());
+        assertEquals( "73", fixData.getID());
+        assertEquals( "NoOrders", fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0033Test() {
-        Tag33NigNoLinesOfText tagData;
+    void Tag0073Test() {
+        Tag73NumNoOrders tagData;
 
-        tagData = new Tag33NigNoLinesOfText(new MyNumInGroupType(5));
-        assertEquals( 5, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_NIGT_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag73NumNoOrders(new MyNumInGroupType(24601));
+        assertEquals( 24601, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
@@ -32,9 +31,10 @@ class Tag42UtcOrigTimeTest {
         assertEquals( "ORIG_TIME", fixData.getName());
         assertEquals( "42", fixData.getID());
         assertEquals( "OrigTime", fixData.getDescription());
-        assertNotEquals( "JunkName", fixData.getName());
-        assertNotEquals( "JunkID", fixData.getID());
-        assertNotEquals( "JunkDescription", fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0042Test() {
@@ -42,6 +42,6 @@ class Tag42UtcOrigTimeTest {
 
         tagData = new Tag42UtcOrigTime(new MyUTCTimestampType("20220131") );
         assertEquals( "20220131", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }

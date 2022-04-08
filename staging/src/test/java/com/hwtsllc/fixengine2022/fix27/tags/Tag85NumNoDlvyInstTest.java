@@ -17,32 +17,32 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag73NigNoOrdersTest {
+@Deprecated
+class Tag85NumNoDlvyInstTest {
 
     @Test
-    void FIX0073Test() {
-        FIX27 fixData = FIX27.FIX73_NIG_NO_ORDERS;
-        assertEquals( "NO_ORDERS", fixData.getName());
-        assertEquals( "73", fixData.getID());
-        assertEquals( "NoOrders", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+    void FIX0085Test() {
+        FIX27 fixData = FIX27.FIX85_NUM_NO_DLVY_INST;
+        assertEquals( "NO_DLVY_INST", fixData.getName());
+        assertEquals( "85", fixData.getID());
+        assertEquals( "NoDlvyInst (no longer used)", fixData.getDescription());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0073Test() {
-        Tag73NigNoOrders tagData;
+    void Tag0085Test() {
+        Tag85NumNoDlvyInst tagData;
 
-        tagData = new Tag73NigNoOrders(new MyNumInGroupType(24601));
-        assertEquals( 24601, tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(42) );
+        assertEquals( 42, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
     }
 }
