@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -35,43 +35,48 @@ class Enum160SettlInstModeTest {
         assertEquals("0", enumType.getID());
         assertEquals("DEFAULT", enumType.getName());
         assertEquals("0 - Default (Replaced)", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum160SettlInstMode.STANDING_INSTRUCTIONS_PROVIDED;
         assertEquals("1", enumType.getID());
         assertEquals("STANDING_INSTRUCTIONS_PROVIDED", enumType.getName());
         assertEquals("1 - Standing Instructions Provided", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING;
         assertEquals("2", enumType.getID());
         assertEquals("SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING", enumType.getName());
         assertEquals("2 - Specific Allocation Account Overriding (Replaced)", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_STANDING;
         assertEquals("3", enumType.getID());
         assertEquals("SPECIFIC_ALLOCATION_ACCOUNT_STANDING", enumType.getName());
         assertEquals("3 - Specific Allocation Account Standing (Replaced)", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum160SettlInstMode.SPECIFIC_ORDER_SINGLE_ACCOUNT;
         assertEquals("4", enumType.getID());
         assertEquals("SPECIFIC_ORDER_SINGLE_ACCOUNT", enumType.getName());
         assertEquals("4 - Specific Order for a single account (for CIV)", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum160SettlInstMode.REQUEST_REJECT;
         assertEquals("5", enumType.getID());
         assertEquals("REQUEST_REJECT", enumType.getName());
         assertEquals("5 - Request reject", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }
