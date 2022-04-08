@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
-import com.hwtsllc.fixengine2022.fix50.enums.Enum1137DefaultApplVerID;
 import org.junit.jupiter.api.Test;
 
 class Enum954Nested3PartySubIDTypeTest {
