@@ -19,21 +19,24 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag205MaturityDateTest {
+class Tag141EnuResetSeqNumFlagTest {
     @Test
-    void FIX0205Test() {
-        FIX41 fixData = FIX41.FIX205_MATURITY_DAY;
+    void FIX0141Test() {
+        FIX41 fixData = FIX41.FIX141_ENU_RESET_SEQ_NUM_FLAG;
+        assertEquals( "RESET_SEQ_NUM_FLAG", fixData.getName());
+        assertEquals( "141", fixData.getID());
+        assertEquals( "ResetSeqNumFlag", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0205Test() {
-        Tag205MaturityDate tagData;
+    void Tag0141Test() {
+        Tag141EnuResetSeqNumFlag tagData;
 
     }
 }
