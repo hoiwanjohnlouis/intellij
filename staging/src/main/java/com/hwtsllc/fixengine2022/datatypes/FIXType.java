@@ -25,12 +25,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Prootocol document.
  *                      There may be a secondary prefix denoting the data type.
- *                      ET = EnumType field
- *                      ST = MyStringType field
- *                      NIGT = MyNumInGroupType field, saved as int
- *                      LT = MyLengthType field, saved as int
- *                      QT = MyQtyType field, saved as int
- *                      SNT = MySeqNumType field, saved as int
+ *                      ENU = EnumType field
+ *                      AMT = MyAmtType field
+ *                      EXC = MyExchangeType field, saved as String
+ *                      INT = MyIntType field, saved as int
+ *                      LEN = MyLengthType field, saved as int
+ *                      LMD = MyLocalMktDateType field, saved as String
+ *                      NUM = MyNumInGroupType field, saved as int
+ *                      PCT = MyPercentageType field, saved as String
+ *                      PRC = MyPriceType field, saved as String
+ *                      PXO = MyPriceOffsetType field, saved as String
+ *                      QTY = MyQtyType field, saved as int
+ *                      SEQ = MySeqNumType field, saved as int
+ *                      STR = MyStringType field, saved as String
+ *                      UTC = MyUTCTimestampType field, saved as String
  *                      others to follow
  * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
  *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String.

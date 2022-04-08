@@ -25,12 +25,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Prootocol document.
  *                      There may be a secondary prefix denoting the data type.
- *                      ET = EnumType field
- *                      ST = MyStringType field
- *                      NIGT = MyNumInGroupType field, saved as int
- *                      LT = MyLengthType field, saved as int
- *                      QT = MyQtyType field, saved as int
- *                      SNT = MySeqNumType field, saved as int
+ *                      ENU = EnumType field
+ *                      AMT = MyAmtType field
+ *                      EXC = MyExchangeType field, saved as String
+ *                      INT = MyIntType field, saved as int
+ *                      LEN = MyLengthType field, saved as int
+ *                      LMD = MyLocalMktDateType field, saved as String
+ *                      NUM = MyNumInGroupType field, saved as int
+ *                      PCT = MyPercentageType field, saved as String
+ *                      PRC = MyPriceType field, saved as String
+ *                      PXO = MyPriceOffsetType field, saved as String
+ *                      QTY = MyQtyType field, saved as int
+ *                      SEQ = MySeqNumType field, saved as int
+ *                      STR = MyStringType field, saved as String
+ *                      UTC = MyUTCTimestampType field, saved as String
  *                      others to follow
  * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
  *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String.
@@ -56,7 +64,7 @@ public enum FIX27 implements EnumAccessors, LogStringVerbose {
     FIX10_STR_CHECK_SUM(10, "CHECK_SUM", "CheckSum"),
 
     FIX11_STR_CL_ORD_ID(11, "CL_ORD_ID", "ClOrdID"),
-    FIX12_PXT_COMMISSION(12, "COMMISSION", "Commission"),
+    FIX12_AMT_COMMISSION(12, "COMMISSION", "Commission"),
     FIX13_ENU_COMM_TYPE(13, "COMM_TYPE", "CommType"),
     FIX14_QTY_CUM_QTY(14, "CUM_QTY", "CumQty"),
     FIX15_CCY_CURRENCY(15, "CURRENCY", "Currency"),
@@ -79,7 +87,7 @@ public enum FIX27 implements EnumAccessors, LogStringVerbose {
 
     FIX31_PRC_LAST_PX(31, "LAST_PX", "LastPx"),
     FIX32_QTY_LAST_QTY(32, "LAST_QTY", "LastQty"),
-    FIX33_NIG_NO_LINES_OF_TEXT(33, "NO_LINES_OF_TEXT", "NoLinesOfText"),
+    FIX33_NUM_NO_LINES_OF_TEXT(33, "NO_LINES_OF_TEXT", "NoLinesOfText"),
     FIX34_SEQ_MSG_SEQ_NUM(34, "MSG_SEQ_NUM", "MsgSeqNum"),
     FIX35_ENU_MSG_TYPE(35, "MSG_TYPE", "MsgType"),
     FIX36_SEQ_NEW_SEQ_NO(36, "NEW_SEQ_NO", "NewSeqNo"),
@@ -123,12 +131,12 @@ public enum FIX27 implements EnumAccessors, LogStringVerbose {
 
     FIX71_ENU_ALLOC_TRANS_TYPE(71, "ALLOC_TRANS_TYPE", "AllocTransType"),
     FIX72_STR_REF_ALLOC_ID(72, "REF_ALLOC_ID", "RefAllocID"),
-    FIX73_NIG_NO_ORDERS(73, "NO_ORDERS", "NoOrders"),
+    FIX73_NUM_NO_ORDERS(73, "NO_ORDERS", "NoOrders"),
     FIX74_STR_AVG_PX_PRECISION(74, "AVG_PX_PRECISION", "AvgPxPrecision"),
     FIX75_STR_TRADE_DATE(75, "TRADE_DATE", "TradeDate"),
     FIX76_STR_EXEC_BROKER(76, "EXEC_BROKER", "ExecBroker (replaced)"),
     FIX77_ENU_POSITION_EFFECT(77, "POSITION_EFFECT", "PositionEffect"),
-    FIX78_NO_ALLOCS(78, "NO_ALLOCS", "NoAllocs"),
+    FIX78_NUM_NO_ALLOCS(78, "NO_ALLOCS", "NoAllocs"),
     FIX79_STR_ALLOC_ACCOUNT(79, "ALLOC_ACCOUNT", "AllocAccount"),
     FIX80_QTY_ALLOC_SHARES(80, "ALLOC_SHARES", "AllocShares"),
 
@@ -136,7 +144,7 @@ public enum FIX27 implements EnumAccessors, LogStringVerbose {
     FIX82_INT_NO_RPTS(82, "NO_RPTS", "NoRpts"),
     FIX83_STR_RPT_SEQ(83, "RPT_SEQ", "RptSeq"),
     FIX84_QTY_CXL_QTY(84, "CXL_QTY", "CxlQty"),
-    FIX85_NIG_NO_DLVY_INST(85, "NO_DLVY_INST", "NoDlvyInst (no longer used)"),
+    FIX85_NUM_NO_DLVY_INST(85, "NO_DLVY_INST", "NoDlvyInst (no longer used)"),
     FIX86_STR_DLVY_INST(86, "DLVY_INST", "DlvyInst (no longer used)"),
     FIX87_ENU_ALLOC_STATUS(87, "ALLOC_STATUS", "AllocStatus"),
     FIX88_ENU_ALLOC_REJ_CODE(88, "ALLOC_REJ_CODE", "AllocRejCode"),
@@ -180,6 +188,19 @@ public enum FIX27 implements EnumAccessors, LogStringVerbose {
     private final String name;
     private final String description;
 
+    /*
+     * used in @Test routine.
+     */
+    public final static String JUNK_ENUM_NAME = "JunkEnumName";
+    public final static String JUNK_ID = "JunkID";
+    public final static String JUNK_NAME = "JunkName";
+    public final static String JUNK_DESCRIPTION = "JunkDescription";
+    public final static String JUNK_ST_DATA_VALUE = "JunkDataValue";
+    public final static int JUNK_LT_DATA_VALUE = -65535;
+    public final static int JUNK_NIGT_DATA_VALUE = -65535;
+    public final static int JUNK_QT_DATA_VALUE = -65535;
+    public final static int JUNK_SNT_DATA_VALUE = -65535;
+
     FIX27(final int id, final String name, final String description) {
         /*
          *  Even though fixNumber is an *int*, this app treats it as a String,
@@ -197,7 +218,6 @@ public enum FIX27 implements EnumAccessors, LogStringVerbose {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-
     public String getEnumName() {
         return this.name();
     }
