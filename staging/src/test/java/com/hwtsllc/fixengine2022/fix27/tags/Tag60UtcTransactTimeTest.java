@@ -42,6 +42,6 @@ class Tag60UtcTransactTimeTest {
 
         tagData = new Tag60UtcTransactTime(new MyUTCTimestampType("20220401 000000") );
         assertEquals( "20220401 000000", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
 }

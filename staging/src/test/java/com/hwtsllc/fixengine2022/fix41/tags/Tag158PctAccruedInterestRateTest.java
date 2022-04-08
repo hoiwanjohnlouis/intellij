@@ -21,18 +21,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag206OptAttributeTest {
+class Tag158PctAccruedInterestRateTest {
     @Test
-    void FIX0206Test() {
-        FIX41 fixData = FIX41.FIX206_OPT_ATTRIBUTE;
+    void FIX0158Test() {
+        FIX41 fixData = FIX41.FIX158_PCT_ACCRUED_INTEREST_RATE;
         assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0206Test() {
-        Tag206OptAttribute tagData;
+    void Tag0158Test() {
+        Tag158PctAccruedInterestRate tagData;
 
     }
 }

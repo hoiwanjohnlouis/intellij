@@ -45,30 +45,30 @@ class Tag81EnuProcessCodeTest {
          */
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.REGULAR);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.STEP_IN);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.STEP_OUT);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_IN);
         assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_OUT);
         assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.PLAN_SPONSOR);
         assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

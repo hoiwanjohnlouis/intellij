@@ -42,6 +42,6 @@ class Tag68IntTotNoOrdersTest {
 
         tagData = new Tag68IntTotNoOrders(new MyIntType(123));
         assertEquals( 123, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -21,18 +21,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag199NigNoIOIQualifiersTest {
+class Tag191PxoOfferForwardPointsTest {
     @Test
-    void FIX0199Test() {
-        FIX41 fixData = FIX41.FIX199_NIG_NO_IOI_QUALIFIERS;
+    void FIX0191Test() {
+        FIX41 fixData = FIX41.FIX191_PXO_OFFER_FORWARD_POINTS;
         assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0199Test() {
-        Tag199NigNoIOIQualifiers tagData;
+    void Tag0191Test() {
+        Tag191PxoOfferForwardPoints tagData;
 
     }
 }

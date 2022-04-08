@@ -42,6 +42,6 @@ class Tag75StrTradeDateTest {
 
         tagData = new Tag75StrTradeDate(new MyStringType("20220401 130000") );
         assertEquals( "20220401 130000", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

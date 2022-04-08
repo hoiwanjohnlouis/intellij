@@ -42,34 +42,34 @@ class Tag8EnuBeginStringTest {
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_2_7);
         assertEquals( "FIX.2.7", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_3_0);
         assertEquals( "FIX.3.0", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_0);
         assertEquals( "FIX.4.0", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_1);
         assertEquals( "FIX.4.1", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_2);
         assertEquals( "FIX.4.2", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_3);
         assertEquals( "FIX.4.3", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_4);
         assertEquals( "FIX.4.4", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_5_0);
         assertEquals( "FIXT.1.1", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

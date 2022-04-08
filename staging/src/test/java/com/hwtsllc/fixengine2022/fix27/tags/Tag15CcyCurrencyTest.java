@@ -42,6 +42,6 @@ class Tag15CcyCurrencyTest {
 
         tagData = new Tag15CcyCurrency(new MyCurrencyType("USD") );
         assertEquals( "USD", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

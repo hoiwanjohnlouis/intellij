@@ -41,18 +41,18 @@ class Tag4EnuAdvSideTest {
 
         tagData = new Tag4EnuAdvSide(Enum4AdvSide.BUY);
         assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag4EnuAdvSide(Enum4AdvSide.SELL);
         assertEquals( "S", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag4EnuAdvSide(Enum4AdvSide.CROSS);
         assertEquals( "X", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag4EnuAdvSide(Enum4AdvSide.TRADE);
         assertEquals( "T", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

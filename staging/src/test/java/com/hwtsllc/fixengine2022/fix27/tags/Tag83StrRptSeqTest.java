@@ -42,6 +42,6 @@ class Tag83StrRptSeqTest {
 
         tagData = new Tag83StrRptSeq(new MyStringType("Legolas-83RptSeq") );
         assertEquals( "Legolas-83RptSeq", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

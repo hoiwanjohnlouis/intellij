@@ -42,6 +42,6 @@ class Tag72StrRefAllocIDTest {
 
         tagData = new Tag72StrRefAllocID(new MyStringType(Tag72StrRefAllocID.TESTA_STR_REF_ALLOC_ID) );
         assertEquals( Tag72StrRefAllocID.TESTA_STR_REF_ALLOC_ID, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

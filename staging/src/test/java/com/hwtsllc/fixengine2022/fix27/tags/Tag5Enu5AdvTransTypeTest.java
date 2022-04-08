@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag5Enum5AdvTransTypeTest {
+class Tag5Enu5AdvTransTypeTest {
 
     @Test
     void FIX0005Test() {
@@ -42,14 +42,14 @@ class Tag5Enum5AdvTransTypeTest {
 
         tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.NEW);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.CANCEL);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.REPLACE);
         assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -45,14 +45,14 @@ class Tag61EnuUrgencyTest {
          */
         tagData = new Tag61EnuUrgency(Enum61Urgency.NORMAL);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag61EnuUrgency(Enum61Urgency.FLASH);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag61EnuUrgency(Enum61Urgency.BACKGROUND);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

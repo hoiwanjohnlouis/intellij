@@ -59,6 +59,6 @@ class Tag1StrAccountTest {
 
         tagData = new Tag1StrAccount(new MyStringType("ABC987654321XYZ"));
         assertEquals( "ABC987654321XYZ", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag140PrcPrevClosePxTest {
         assertEquals( "PREV_CLOSE_PX", fixData.getName() );
         assertEquals( "140", fixData.getID() );
         assertEquals( "PrevClosePx", fixData.getDescription() );
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX40.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX40.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX40.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0140Test() {
@@ -45,6 +44,6 @@ class Tag140PrcPrevClosePxTest {
 
         tagData = new Tag140PrcPrevClosePx(new MyPriceType("12.34") );
         assertEquals( "12.34", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

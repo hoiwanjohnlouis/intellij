@@ -42,6 +42,6 @@ class Tag45SeqRefSeqNumTest {
 
         tagData = new Tag45SeqRefSeqNum(new MySeqNumType(32523) );
         assertEquals( 32523, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_SNT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }
 }

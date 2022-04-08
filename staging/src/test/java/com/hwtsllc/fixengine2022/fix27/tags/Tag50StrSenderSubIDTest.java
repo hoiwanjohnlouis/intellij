@@ -42,6 +42,6 @@ class Tag50StrSenderSubIDTest {
 
         tagData = new Tag50StrSenderSubID(new MyStringType("BEST") );
         assertEquals( "BEST", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

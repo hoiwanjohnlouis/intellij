@@ -42,6 +42,6 @@ class Tag33NumNoLinesOfTextTest {
 
         tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(5));
         assertEquals( 5, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_NIGT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

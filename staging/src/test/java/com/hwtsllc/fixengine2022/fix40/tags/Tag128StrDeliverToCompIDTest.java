@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag128StrDeliverToCompIDTest {
         assertEquals( "DELIVER_TO_COMP_ID", fixData.getName());
         assertEquals( "128", fixData.getID());
         assertEquals( "DeliverToCompID", fixData.getDescription());
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX40.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX40.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX40.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0128Test() {
@@ -43,6 +42,6 @@ class Tag128StrDeliverToCompIDTest {
 
         tagData = new Tag128StrDeliverToCompID(new MyStringType("SongJiHyo-128DeliverToCompID") );
         assertEquals( "SongJiHyo-128DeliverToCompID", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

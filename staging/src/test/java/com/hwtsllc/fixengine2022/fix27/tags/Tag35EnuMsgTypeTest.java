@@ -42,6 +42,6 @@ class Tag35EnuMsgTypeTest {
 
         tagData = new Tag35EnuMsgType(Enum35MsgType.NEW_ORDER_SINGLE);
         assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

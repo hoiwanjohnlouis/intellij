@@ -42,6 +42,6 @@ class Tag6PrcAvgPxTest {
 
         tagData = new Tag6PrcAvgPx(new MyPriceType("123.45") );
         assertEquals( "123.45", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -45,57 +45,74 @@ class Tag104EnuIOIQualifierTest {
          */
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.ALL_OR_NONE);
         assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.MARKET_ON_CLOSE);
         assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.AT_THE_CLOSE);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.VWAP);
         assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.IN_TOUCH_WITH);
         assertEquals( "I", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.LIMIT);
         assertEquals( "L", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.MORE_BEHIND);
         assertEquals( "M", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.AT_THE_OPEN);
         assertEquals( "O", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.TAKING_A_POSITION);
         assertEquals( "P", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.AT_THE_MARKET);
         assertEquals( "Q", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.READY_TO_TRADE);
         assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.PORTFOLIO_SHOWN);
         assertEquals( "S", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.THROUGH_THE_DAY);
         assertEquals( "T", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.VERSUS);
         assertEquals( "V", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.INDICATION_WORKING_AWAY);
         assertEquals( "W", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.CROSSING_OPPORTUNITY);
         assertEquals( "X", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.AT_THE_MIDPOINT);
         assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag104EnuIOIQualifier(Enum104IOIQualifier.PRE_OPEN);
         assertEquals( "Z", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

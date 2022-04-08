@@ -42,6 +42,6 @@ class Tag52UtcSendingTimeTest {
 
         tagData = new Tag52UtcSendingTime(new MyUTCTimestampType("20220320 141400") );
         assertEquals( "20220320 141400", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
 }

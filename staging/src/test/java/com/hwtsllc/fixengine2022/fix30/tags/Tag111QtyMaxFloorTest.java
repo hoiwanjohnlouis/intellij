@@ -42,6 +42,6 @@ class Tag111QtyMaxFloorTest {
 
         tagData = new Tag111QtyMaxFloor(new MyQtyType(200) );
         assertEquals( 200, tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

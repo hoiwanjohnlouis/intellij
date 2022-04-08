@@ -44,6 +44,6 @@ class Tag90LenSecureDataLenTest {
         dataLength = "MeriadocBrandybuck-90LtSecureData".length();
         tagData = new Tag90LenSecureDataLen(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_LT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
 }

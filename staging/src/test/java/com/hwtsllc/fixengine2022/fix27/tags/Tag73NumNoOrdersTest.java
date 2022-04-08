@@ -42,6 +42,6 @@ class Tag73NumNoOrdersTest {
 
         tagData = new Tag73NumNoOrders(new MyNumInGroupType(24601));
         assertEquals( 24601, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

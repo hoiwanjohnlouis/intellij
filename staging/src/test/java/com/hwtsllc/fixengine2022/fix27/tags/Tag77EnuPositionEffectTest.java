@@ -45,15 +45,15 @@ class Tag77EnuPositionEffectTest {
          */
         tagData = new Tag77EnuPositionEffect(Enum77PositionEffect.OPEN);
         assertEquals( "O", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EnuPositionEffect(Enum77PositionEffect.FIFO);
         assertEquals( "F", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EnuPositionEffect(Enum77PositionEffect.CLOSE);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EnuPositionEffect(Enum77PositionEffect.ROLLED);
         assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

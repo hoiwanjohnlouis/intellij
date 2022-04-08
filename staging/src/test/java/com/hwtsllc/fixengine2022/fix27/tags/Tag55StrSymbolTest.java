@@ -42,6 +42,6 @@ class Tag55StrSymbolTest {
 
         tagData = new Tag55StrSymbol(new MyStringType("INTC") );
         assertEquals( "INTC", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

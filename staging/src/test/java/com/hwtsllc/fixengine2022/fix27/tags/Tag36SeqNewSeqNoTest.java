@@ -42,6 +42,6 @@ class Tag36SeqNewSeqNoTest {
 
         tagData = new Tag36SeqNewSeqNo(new MySeqNumType(23456) );
         assertEquals( 23456, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_SNT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }
 }

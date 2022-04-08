@@ -43,6 +43,6 @@ class Tag105StrWaveNoTest {
 
         tagData = new Tag105StrWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
         assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

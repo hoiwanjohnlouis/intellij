@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix40.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -35,56 +35,56 @@ class Enum127DKReasonTest {
         assertEquals("A", enumType.getID());
         assertEquals("UNKNOWN_SYMBOL", enumType.getName());
         assertEquals("A - Unknown Symbol", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX40.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX40.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum127DKReason.WRONG_SIDE;
         assertEquals("B", enumType.getID());
         assertEquals("WRONG_SIDE", enumType.getName());
         assertEquals("B - Wrong Side", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX40.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX40.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum127DKReason.QUANTITY_EXCEEDS_ORDER;
         assertEquals("C", enumType.getID());
         assertEquals("QUANTITY_EXCEEDS_ORDER", enumType.getName());
         assertEquals("C - Quantity Exceeds Order", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX40.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX40.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum127DKReason.NO_MATCHING_ORDER;
         assertEquals("D", enumType.getID());
         assertEquals("NO_MATCHING_ORDER", enumType.getName());
         assertEquals("D - No Matching Order", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX40.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX40.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum127DKReason.PRICE_EXCEEDS_LIMIT;
         assertEquals("E", enumType.getID());
         assertEquals("PRICE_EXCEEDS_LIMIT", enumType.getName());
         assertEquals("E - Price Exceeds Limit", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX40.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX40.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum127DKReason.CALCULATION_DIFFERENCE;
         assertEquals("F", enumType.getID());
         assertEquals("CALCULATION_DIFFERENCE", enumType.getName());
         assertEquals("F - Calculation Difference", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX40.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX40.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum127DKReason.OTHER;
         assertEquals("Z", enumType.getID());
         assertEquals("OTHER", enumType.getName());
         assertEquals("Z - Other", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX40.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX40.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

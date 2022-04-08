@@ -42,6 +42,6 @@ class Tag110QtyMinQtyTest {
 
         tagData = new Tag110QtyMinQty(new MyQtyType(11) );
         assertEquals( 11, tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

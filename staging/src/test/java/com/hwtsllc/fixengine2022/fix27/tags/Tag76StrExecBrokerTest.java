@@ -43,6 +43,6 @@ class Tag76StrExecBrokerTest {
 
         tagData = new Tag76StrExecBroker(new MyStringType("Denethor-76ExecBroker") );
         assertEquals( "Denethor-76ExecBroker", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

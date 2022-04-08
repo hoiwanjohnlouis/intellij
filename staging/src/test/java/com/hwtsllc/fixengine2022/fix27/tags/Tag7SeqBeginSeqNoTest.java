@@ -42,6 +42,6 @@ class Tag7SeqBeginSeqNoTest {
 
         tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTB_SEQ_BEGIN_SEQ_NO) );
         assertEquals( Tag7SeqBeginSeqNo.TESTB_SEQ_BEGIN_SEQ_NO, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_SNT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }
 }

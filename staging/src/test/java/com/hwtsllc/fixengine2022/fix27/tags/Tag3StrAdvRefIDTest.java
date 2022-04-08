@@ -41,6 +41,6 @@ class Tag3StrAdvRefIDTest {
 
         tagData = new Tag3StrAdvRefID(new MyStringType("hello from main routine") );
         assertEquals( "hello from main routine", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

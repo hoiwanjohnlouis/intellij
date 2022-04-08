@@ -44,6 +44,6 @@ class Tag95LenRawDataLengthTest {
         dataLength = "FrodoBaggins-95RawData".length();
         tagData = new Tag95LenRawDataLength(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_LT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
 }

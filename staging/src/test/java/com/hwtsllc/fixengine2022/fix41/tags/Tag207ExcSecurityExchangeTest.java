@@ -21,18 +21,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag146NigNoRelatedSymTest {
+class Tag207ExcSecurityExchangeTest {
     @Test
-    void FIX0146Test() {
-        FIX41 fixData = FIX41.FIX146_NIG_NO_RELATED_SYM;
+    void FIX0207Test() {
+        FIX41 fixData = FIX41.FIX207_EXC_SECURITY_EXCHANGE;
         assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0146Test() {
-        Tag146NigNoRelatedSym tagData;
+    void Tag0207Test() {
+        Tag207ExcSecurityExchange tagData;
 
     }
 }

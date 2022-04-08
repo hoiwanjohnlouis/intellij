@@ -42,6 +42,6 @@ class Tag107StrSecurityDescTest {
 
         tagData = new Tag107StrSecurityDesc(new MyStringType("International Widgets, Inc.") );
         assertEquals("International Widgets, Inc.", tagData.getDataValue() );
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -42,6 +42,6 @@ class Tag14QtyCumQtyTest {
 
         tagData = new Tag14QtyCumQty(new MyQtyType(12345) );
         assertEquals( 12345, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_QT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -43,6 +43,6 @@ class Tag85NumNoDlvyInstTest {
 
         tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(42) );
         assertEquals( 42, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

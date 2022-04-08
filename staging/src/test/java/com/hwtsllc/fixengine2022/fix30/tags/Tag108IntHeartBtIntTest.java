@@ -42,6 +42,6 @@ class Tag108IntHeartBtIntTest {
 
         tagData = new Tag108IntHeartBtInt(new MyIntType(60) );
         assertEquals(60, tagData.getDataValue() );
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

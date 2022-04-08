@@ -42,6 +42,6 @@ class Tag9LenBodyLengthTest {
 
         tagData = new Tag9LenBodyLength(new MyLengthType(120) );
         assertEquals( 120, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_LT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
 }

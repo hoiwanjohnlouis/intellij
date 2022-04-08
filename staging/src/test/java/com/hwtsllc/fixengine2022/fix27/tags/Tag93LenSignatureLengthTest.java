@@ -44,6 +44,6 @@ class Tag93LenSignatureLengthTest {
         dataLength = "BarleymanButterBurr-89Signature".length();
         tagData = new Tag93LenSignatureLength(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_LT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -45,55 +45,55 @@ class Tag54EnuSideTest {
          */
         tagData = new Tag54EnuSide(Enum54Side.BUY);
         assertEquals("1", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.SELL);
         assertEquals("2", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.BUY_MINUS);
         assertEquals("3", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.SELL_PLUS);
         assertEquals("4", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.SELL_SHORT);
         assertEquals("5", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.SELL_SHORT_EXEMPT);
         assertEquals("6", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.UNDISCLOSED);
         assertEquals("7", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.CROSS);
         assertEquals("8", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.CROSS_SHORT);
         assertEquals("9", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         /*
          * A-G msg types
          */
         tagData = new Tag54EnuSide(Enum54Side.CROSS_SHORT_EXEMPT);
         assertEquals("A", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.AS_DEFINED);
         assertEquals("B", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.OPPOSITE);
         assertEquals("C", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.SUBSCRIBE);
         assertEquals("D", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.REDEEM);
         assertEquals("E", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.LEND_FINANCING);
         assertEquals("F", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag54EnuSide(Enum54Side.BORROW_FINANCING);
         assertEquals("G", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

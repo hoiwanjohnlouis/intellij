@@ -42,9 +42,10 @@ class Tag113EnuReportToExchTest {
 
         tagData = new Tag113EnuReportToExch(EnumBoolean.NO);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag113EnuReportToExch(EnumBoolean.YES);
         assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

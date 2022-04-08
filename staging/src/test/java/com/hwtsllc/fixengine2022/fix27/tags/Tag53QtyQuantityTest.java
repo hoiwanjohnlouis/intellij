@@ -42,6 +42,6 @@ class Tag53QtyQuantityTest {
 
         tagData = new Tag53QtyQuantity(new MyQtyType(400) );
         assertEquals( 400, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_QT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

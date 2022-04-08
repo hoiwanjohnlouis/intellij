@@ -42,6 +42,6 @@ class Tag37StrOrderIDTest {
 
         tagData = new Tag37StrOrderID(new MyStringType("ORD-24601") );
         assertEquals( "ORD-24601", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

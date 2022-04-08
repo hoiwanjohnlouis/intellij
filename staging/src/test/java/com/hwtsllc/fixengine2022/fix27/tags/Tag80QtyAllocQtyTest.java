@@ -42,6 +42,6 @@ class Tag80QtyAllocQtyTest {
 
         tagData = new Tag80QtyAllocQty(new MyQtyType(80));
         assertEquals( 80, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_QT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

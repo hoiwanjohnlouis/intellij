@@ -43,6 +43,6 @@ class Tag109StrClientIDTest {
 
         tagData = new Tag109StrClientID(new MyStringType("SOME-ACCT-NUMBER") );
         assertEquals("SOME-ACCT-NUMBER", tagData.getDataValue() );
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -42,6 +42,6 @@ class Tag42UtcOrigTimeTest {
 
         tagData = new Tag42UtcOrigTime(new MyUTCTimestampType("20220131") );
         assertEquals( "20220131", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -42,6 +42,6 @@ class Tag89DatSignatureTest {
 
         tagData = new Tag89DatSignature(new MyDataType("BarleymanButterBurr-89StSignature") );
         assertEquals( "BarleymanButterBurr-89StSignature", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -42,6 +42,6 @@ class Tag38QtyOrderQtyTest {
 
         tagData = new Tag38QtyOrderQty(new MyQtyType(100) );
         assertEquals( 100, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_QT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

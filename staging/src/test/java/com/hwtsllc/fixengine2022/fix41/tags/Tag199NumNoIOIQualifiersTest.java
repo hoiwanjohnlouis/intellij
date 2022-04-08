@@ -21,18 +21,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag211PegOffsetValueTest {
+class Tag199NumNoIOIQualifiersTest {
     @Test
-    void FIX0211Test() {
-        FIX41 fixData = FIX41.FIX211_PEG_DIFFERENCE;
+    void FIX0199Test() {
+        FIX41 fixData = FIX41.FIX199_NUM_NO_IOI_QUALIFIERS;
         assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0211Test() {
-        Tag211PegOffsetValue tagData;
+    void Tag0199Test() {
+        Tag199NumNoIOIQualifiers tagData;
 
     }
 }

@@ -42,6 +42,6 @@ class Tag30StrLastMktTest {
 
         tagData = new Tag30StrLastMkt(new MyStringType("NYSE") );
         assertEquals( "NYSE", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

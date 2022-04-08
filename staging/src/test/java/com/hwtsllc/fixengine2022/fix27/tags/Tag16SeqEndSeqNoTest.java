@@ -42,6 +42,6 @@ class Tag16SeqEndSeqNoTest {
 
         tagData = new Tag16SeqEndSeqNo(new MySeqNumType(6789));
         assertEquals( 6789, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_SNT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }
 }

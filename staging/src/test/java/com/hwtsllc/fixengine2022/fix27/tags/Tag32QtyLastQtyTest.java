@@ -42,6 +42,6 @@ class Tag32QtyLastQtyTest {
 
         tagData = new Tag32QtyLastQty(new MyQtyType(200) );
         assertEquals( 200, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_QT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

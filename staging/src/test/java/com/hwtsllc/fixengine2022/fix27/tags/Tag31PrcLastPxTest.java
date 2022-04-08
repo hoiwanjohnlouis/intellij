@@ -42,6 +42,6 @@ class Tag31PrcLastPxTest {
 
         tagData = new Tag31PrcLastPx(new MyPriceType("98.23") );
         assertEquals( "98.23", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

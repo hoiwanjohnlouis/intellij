@@ -42,6 +42,6 @@ class Tag99PrcStopPxTest {
 
         tagData = new Tag99PrcStopPx(new MyPriceType("12.222") );
         assertEquals( "12.222", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

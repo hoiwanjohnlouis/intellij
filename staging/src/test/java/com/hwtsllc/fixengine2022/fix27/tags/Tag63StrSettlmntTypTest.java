@@ -42,6 +42,6 @@ class Tag63StrSettlmntTypTest {
 
         tagData = new Tag63StrSettlmntTyp(new MyStringType("SamwiseGamgee-63SettlmntTyp") );
         assertEquals( "SamwiseGamgee-63SettlmntTyp", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

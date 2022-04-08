@@ -42,6 +42,6 @@ class Tag106StrIssuerTest {
 
         tagData = new Tag106StrIssuer(new MyStringType("show me the money") );
         assertEquals("show me the money", tagData.getDataValue() );
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

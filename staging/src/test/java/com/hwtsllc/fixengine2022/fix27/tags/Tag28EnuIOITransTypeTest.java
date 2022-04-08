@@ -42,14 +42,14 @@ class Tag28EnuIOITransTypeTest {
 
         tagData = new Tag28EnuIOITransType(Enum28IOITransType.NEW);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag28EnuIOITransType(Enum28IOITransType.REPLACE);
         assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag28EnuIOITransType(Enum28IOITransType.CANCEL);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

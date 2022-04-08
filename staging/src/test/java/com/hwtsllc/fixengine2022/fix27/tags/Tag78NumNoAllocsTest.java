@@ -42,6 +42,6 @@ class Tag78NumNoAllocsTest {
 
         tagData = new Tag78NumNoAllocs(new MyNumInGroupType(321));
         assertEquals( 321, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

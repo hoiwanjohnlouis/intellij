@@ -42,6 +42,6 @@ class Tag79StrAllocAccountTest {
 
         tagData = new Tag79StrAllocAccount(new MyStringType(Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT) );
         assertEquals( Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -42,6 +42,6 @@ class Tag41StrOrigClOrdIDTest {
 
         tagData = new Tag41StrOrigClOrdID(new MyStringType("ORD-12345") );
         assertEquals( "ORD-12345", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

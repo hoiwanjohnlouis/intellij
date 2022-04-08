@@ -42,6 +42,6 @@ class Tag48StrSecurityIDTest {
 
         tagData = new Tag48StrSecurityID(new MyStringType("TESTA") );
         assertEquals( "TESTA", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

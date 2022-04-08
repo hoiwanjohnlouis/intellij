@@ -21,19 +21,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag193SettlDate2Test {
+class Tag200StrMaturityMonthYearTest {
     @Test
-    void FIX0193Test() {
-        FIX41 fixData = FIX41.FIX193_FUT_SETT_DATE_2;
+    void FIX0200Test() {
+        FIX41 fixData = FIX41.FIX200_STR_MATURITY_MONTH_YEAR;
         assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0193Test() {
-        Tag193SettlDate2 tagData;
+    void Tag0200Test() {
+        Tag200StrMaturityMonthYear tagData;
 
     }
 }

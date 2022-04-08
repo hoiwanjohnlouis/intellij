@@ -42,6 +42,6 @@ class Tag112TestReqIDStTest {
 
         tagData = new Tag112StrTestReqID(new MyStringType("30"));
         assertEquals( "30", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

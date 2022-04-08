@@ -42,6 +42,6 @@ class Tag82IntNoRptsTest {
 
         tagData = new Tag82IntNoRpts(new MyIntType(23) );
         assertEquals( 23, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

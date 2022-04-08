@@ -42,6 +42,6 @@ class Tag44PrcPriceTest {
 
         tagData = new Tag44PrcPrice(new MyPriceType("10.43") );
         assertEquals( "10.43", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

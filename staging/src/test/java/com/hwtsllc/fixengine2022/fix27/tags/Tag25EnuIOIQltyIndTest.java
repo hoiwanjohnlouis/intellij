@@ -42,14 +42,14 @@ class Tag25EnuIOIQltyIndTest {
 
         tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.HIGH);
         assertEquals( "H", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.MEDIUM);
         assertEquals( "M", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.LOW);
         assertEquals( "L", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

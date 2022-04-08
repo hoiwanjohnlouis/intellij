@@ -42,6 +42,6 @@ class Tag96DatRawDataTest {
 
         tagData = new Tag96DatRawData(new MyDataType("FrodoBaggins-96StRawData") );
         assertEquals( "FrodoBaggins-96StRawData", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

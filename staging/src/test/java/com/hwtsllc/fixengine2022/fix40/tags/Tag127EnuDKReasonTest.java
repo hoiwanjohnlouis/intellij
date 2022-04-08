@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum127DKReason;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +31,10 @@ class Tag127EnuDKReasonTest {
         assertEquals( fixData.getName(), "DK_REASON");
         assertEquals( fixData.getID(), "127");
         assertEquals( fixData.getDescription(), "DKReason");
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX40.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX40.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX40.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX40.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0127Test() {
@@ -46,25 +45,31 @@ class Tag127EnuDKReasonTest {
          */
         tagData = new Tag127EnuDKReason(Enum127DKReason.UNKNOWN_SYMBOL);
         assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag127EnuDKReason(Enum127DKReason.WRONG_SIDE);
         assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag127EnuDKReason(Enum127DKReason.QUANTITY_EXCEEDS_ORDER);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag127EnuDKReason(Enum127DKReason.NO_MATCHING_ORDER);
         assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag127EnuDKReason(Enum127DKReason.PRICE_EXCEEDS_LIMIT);
         assertEquals( "E", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Tag127EnuDKReason(Enum127DKReason.CALCULATION_DIFFERENCE);
         assertEquals( "F", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         tagData = new Tag127EnuDKReason(Enum127DKReason.OTHER);
         assertEquals( "Z", tagData.getDataValue());
-        assertNotEquals( FIXType.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX40.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

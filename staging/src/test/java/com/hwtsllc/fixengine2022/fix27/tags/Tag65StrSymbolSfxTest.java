@@ -42,6 +42,6 @@ class Tag65StrSymbolSfxTest {
 
         tagData = new Tag65StrSymbolSfx(new MyStringType(Tag65StrSymbolSfx.TESTA_STR_SYMBOL_SFX) );
         assertEquals( Tag65StrSymbolSfx.TESTA_STR_SYMBOL_SFX, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_ST_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }
