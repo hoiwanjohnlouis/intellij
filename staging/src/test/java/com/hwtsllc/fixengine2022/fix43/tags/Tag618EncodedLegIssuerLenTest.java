@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag618EncodedLegIssuerLenTest {
     @Test
     void FIX0618Test() {
-        FIXType fixData = FIXType.FIX618_ENCODED_LEG_ISSUER_LEN;
+        FIX43 fixData = FIX43.FIX618_ENCODED_LEG_ISSUER_LEN;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

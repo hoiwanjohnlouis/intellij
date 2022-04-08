@@ -16,15 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag598LegLocaleOfIssueTest {
     @Test
     void FIX0598Test() {
-        FIXType fixData = FIXType.FIX598_LEG_LOCALE_OF_ISSUE;
+        FIX43 fixData = FIX43.FIX598_LEG_LOCALE_OF_ISSUE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

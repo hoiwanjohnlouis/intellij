@@ -16,21 +16,22 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag519ContAmtTypeTest {
+class Tag484ExecMyPriceTypeTest {
     @Test
-    void FIX0519Test() {
-        FIXType fixData = FIXType.FIX519_CONT_AMT_TYPE;
+    void FIX0484Test() {
+        FIX43 fixData = FIX43.FIX484_EXEC_PRICE_TYPE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
         assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0519Test() {
+    void Tag0484Test() {
     }
 }

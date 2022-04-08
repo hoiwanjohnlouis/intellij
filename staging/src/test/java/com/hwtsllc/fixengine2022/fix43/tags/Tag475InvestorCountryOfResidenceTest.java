@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag475InvestorCountryOfResidenceTest {
     @Test
     void FIX0475Test() {
-        FIXType fixData = FIXType.FIX475_INVESTOR_COUNTRY_OF_RESIDENCE;
+        FIX43 fixData = FIX43.FIX475_INVESTOR_COUNTRY_OF_RESIDENCE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

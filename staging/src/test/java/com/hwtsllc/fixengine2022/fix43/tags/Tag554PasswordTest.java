@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag554PasswordTest {
     @Test
     void FIX0554Test() {
-        FIXType fixData = FIXType.FIX554_PASSWORD;
+        FIX43 fixData = FIX43.FIX554_PASSWORD;
         assertEquals( "FIX554_PASSWORD", fixData.getEnumName());
         assertEquals( "554", fixData.getID());
         assertEquals( "PASSWORD", fixData.getName());

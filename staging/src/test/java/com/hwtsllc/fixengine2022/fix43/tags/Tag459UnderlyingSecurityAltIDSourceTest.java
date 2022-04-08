@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag459UnderlyingSecurityAltIDSourceTest {
     @Test
     void FIX0459Test() {
-        FIXType fixData = FIXType.FIX459_UNDERLYING_SECURITY_ALT_ID_SOURCE;
+        FIX43 fixData = FIX43.FIX459_UNDERLYING_SECURITY_ALT_ID_SOURCE;
         assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
         assertNotEquals( FIXType.JUNK_ID, fixData.getID());
         assertNotEquals( FIXType.JUNK_NAME, fixData.getName());

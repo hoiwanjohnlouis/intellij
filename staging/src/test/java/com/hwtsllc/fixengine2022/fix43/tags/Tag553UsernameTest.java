@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import org.junit.jupiter.api.*;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag553UsernameTest {
     @Test
     void FIX0553Test() {
-        FIXType fixData = FIXType.FIX553_USERNAME;
+        FIX43 fixData = FIX43.FIX553_USERNAME;
         assertEquals( "FIX553_USERNAME", fixData.getEnumName());
         assertEquals( "553", fixData.getID());
         assertEquals( "USERNAME", fixData.getName());
