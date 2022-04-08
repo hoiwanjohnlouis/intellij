@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag73NigNoOrders extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag33NumNoLinesOfText extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NIG_NO_ORDERS = 1;
-    public final static int TESTB_NIG_NO_ORDERS = 3;
+    public final static int TESTA_NUM_NO_LINES_OF_TEXT = 1;
+    public final static int TESTB_NUM_NO_LINES_OF_TEXT = 3;
 
-    public Tag73NigNoOrders(MyNumInGroupType dataValue) {
-        setFixType(FIX27.FIX73_NIG_NO_ORDERS);
+    public Tag33NumNoLinesOfText(MyNumInGroupType dataValue) {
+        setFixType(FIX27.FIX33_NUM_NO_LINES_OF_TEXT);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag73NigNoOrders extends FIX27Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag73NigNoOrders tagData;
+        Tag33NumNoLinesOfText tagData;
 
-        tagData = new Tag73NigNoOrders(new MyNumInGroupType(TESTA_NIG_NO_ORDERS) );
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTA_NUM_NO_LINES_OF_TEXT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag73NigNoOrders(new MyNumInGroupType(TESTB_NIG_NO_ORDERS) );
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTB_NUM_NO_LINES_OF_TEXT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

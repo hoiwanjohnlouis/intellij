@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag12AtCommission extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag12AmtCommission extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 
-    public final static String TESTA_PXT_COMMISSION = "1.23"; // fake data
-    public final static String TESTB_PXT_COMMISSION = "4.56";
+    public final static String TESTA_AMT_COMMISSION = "1.23"; // fake data
+    public final static String TESTB_AMT_COMMISSION = "4.56";
 
-    public Tag12AtCommission(MyAmtType dataValue) {
-        setFixType(FIX27.FIX12_PXT_COMMISSION);
+    public Tag12AmtCommission(MyAmtType dataValue) {
+        setFixType(FIX27.FIX12_AMT_COMMISSION);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag12AtCommission extends FIX27Abstract implements FixTagValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag12AtCommission tagData;
+        Tag12AmtCommission tagData;
 
-        tagData = new Tag12AtCommission(new MyAmtType(TESTA_PXT_COMMISSION) );
+        tagData = new Tag12AmtCommission(new MyAmtType(TESTA_AMT_COMMISSION) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag12AtCommission(new MyAmtType(TESTB_PXT_COMMISSION) );
+        tagData = new Tag12AmtCommission(new MyAmtType(TESTB_AMT_COMMISSION) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

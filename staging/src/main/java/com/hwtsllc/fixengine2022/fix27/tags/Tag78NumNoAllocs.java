@@ -22,14 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag78NigNoAllocs extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag78NumNoAllocs extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_IT_NO_ALLOCS = 78; // fake data
-    public final static int TESTB_IT_NO_ALLOCS = 7878;
+    public final static int TESTA_NUM_NO_ALLOCS = 78; // fake data
+    public final static int TESTB_NUM_NO_ALLOCS = 7878;
 
-    public Tag78NigNoAllocs(MyNumInGroupType dataValue) {
-        setFixType(FIX27.FIX78_NO_ALLOCS);
+    public Tag78NumNoAllocs(MyNumInGroupType dataValue) {
+        setFixType(FIX27.FIX78_NUM_NO_ALLOCS);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag78NigNoAllocs extends FIX27Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag78NigNoAllocs tagData;
+        Tag78NumNoAllocs tagData;
 
-        tagData = new Tag78NigNoAllocs(new MyNumInGroupType(TESTA_IT_NO_ALLOCS) );
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(TESTA_NUM_NO_ALLOCS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag78NigNoAllocs(new MyNumInGroupType(TESTB_IT_NO_ALLOCS) );
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(TESTB_NUM_NO_ALLOCS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

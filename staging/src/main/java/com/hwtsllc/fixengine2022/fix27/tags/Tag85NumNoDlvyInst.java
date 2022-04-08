@@ -22,14 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag33NigNoLinesOfText extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+@Deprecated
+public class Tag85NumNoDlvyInst extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NIG_NO_LINES_OF_TEXT = 1;
-    public final static int TESTB_NIG_NO_LINES_OF_TEXT = 3;
+    public final static int TESTA_NUM_NO_DLVY_INST = 85; // fake data
+    public final static int TESTB_NUM_NO_DLVY_INST = 58;
 
-    public Tag33NigNoLinesOfText(MyNumInGroupType dataValue) {
-        setFixType(FIX27.FIX33_NIG_NO_LINES_OF_TEXT);
+    public Tag85NumNoDlvyInst(MyNumInGroupType dataValue) {
+        setFixType(FIX27.FIX85_NUM_NO_DLVY_INST);
         this.dataValue = dataValue;
     }
 
@@ -68,16 +69,26 @@ public class Tag33NigNoLinesOfText extends FIX27Abstract implements FixTagValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag33NigNoLinesOfText tagData;
+        Tag85NumNoDlvyInst tagData;
 
-        tagData = new Tag33NigNoLinesOfText(new MyNumInGroupType(TESTA_NIG_NO_LINES_OF_TEXT) );
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTA_NUM_NO_DLVY_INST) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
 
-        tagData = new Tag33NigNoLinesOfText(new MyNumInGroupType(TESTB_NIG_NO_LINES_OF_TEXT) );
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTB_NUM_NO_DLVY_INST) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
     }
 }

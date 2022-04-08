@@ -22,15 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
-public class Tag85NigNoDlvyInst extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag73NumNoOrders extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NIG_NO_DLVY_INST = 85; // fake data
-    public final static int TESTB_NIG_NO_DLVY_INST = 58;
+    public final static int TESTA_NUM_NO_ORDERS = 1;
+    public final static int TESTB_NUM_NO_ORDERS = 3;
 
-    public Tag85NigNoDlvyInst(MyNumInGroupType dataValue) {
-        setFixType(FIX27.FIX85_NIG_NO_DLVY_INST);
+    public Tag73NumNoOrders(MyNumInGroupType dataValue) {
+        setFixType(FIX27.FIX73_NUM_NO_ORDERS);
         this.dataValue = dataValue;
     }
 
@@ -69,26 +68,16 @@ public class Tag85NigNoDlvyInst extends FIX27Abstract implements FixTagValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag85NigNoDlvyInst tagData;
+        Tag73NumNoOrders tagData;
 
-        tagData = new Tag85NigNoDlvyInst(new MyNumInGroupType(TESTA_NIG_NO_DLVY_INST) );
+        tagData = new Tag73NumNoOrders(new MyNumInGroupType(TESTA_NUM_NO_ORDERS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.getEnumName());
-        System.out.println("ID:" + tagData.getID());
-        System.out.println("Name:" + tagData.getName());
-        System.out.println("Description:" + tagData.getDescription());
 
-        tagData = new Tag85NigNoDlvyInst(new MyNumInGroupType(TESTB_NIG_NO_DLVY_INST) );
+        tagData = new Tag73NumNoOrders(new MyNumInGroupType(TESTB_NUM_NO_ORDERS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.getEnumName());
-        System.out.println("ID:" + tagData.getID());
-        System.out.println("Name:" + tagData.getName());
-        System.out.println("Description:" + tagData.getDescription());
     }
 }
