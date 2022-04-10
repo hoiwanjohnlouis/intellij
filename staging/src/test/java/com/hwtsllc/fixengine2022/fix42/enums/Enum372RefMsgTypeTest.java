@@ -30,6 +30,18 @@ class Enum372RefMsgTypeTest {
     void Enum0372Test() {
         Enum372RefMsgType enumType;
 
+
+
+        /*
+         *  0-9, msg types
+         *  A-Z, msg types, skipping "I", and "O"
+         *  a-z, msg types
+         *  AA-AZ, msg types
+         *  BA-BP, msg types
+         */
+
+
+
         /*
          * 0-9 msg types
          */
@@ -125,7 +137,7 @@ class Enum372RefMsgTypeTest {
 
 
         /*
-         * A-Z msg types
+         *  A-Z, msg types, skipping "I", and "O"
          */
         enumType = Enum372RefMsgType.LOGON;
         assertEquals("A", enumType.getID());

@@ -32,6 +32,5 @@ class Tag731SettlMyPriceTypeTest {
         assertNotEquals( FIX44.JUNK_ID, fixData.getID());
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
-
     }
 }

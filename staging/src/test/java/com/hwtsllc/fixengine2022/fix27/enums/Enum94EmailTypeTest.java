@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,24 +34,24 @@ class Enum94EmailTypeTest {
         assertEquals("0", enumType.getID());
         assertEquals("NEW", enumType.getName());
         assertEquals("0 - New", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum94EmailType.REPLY;
         assertEquals("1", enumType.getID());
         assertEquals("REPLY", enumType.getName());
         assertEquals("1 - Reply", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum94EmailType.ADMIN_REPLY;
         assertEquals("2", enumType.getID());
         assertEquals("ADMIN_REPLY", enumType.getName());
         assertEquals("2 - Admin Reply", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

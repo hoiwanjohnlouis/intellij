@@ -16,18 +16,21 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag814ApplQueueResolutionTest {
     @Test
     void FIX0814Test() {
-        FIXType fixData = FIXType.FIX814_APPL_QUEUE_RESOLUTION;
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX814_APPL_QUEUE_RESOLUTION;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
 }

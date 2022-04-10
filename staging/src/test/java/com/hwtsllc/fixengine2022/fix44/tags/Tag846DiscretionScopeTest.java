@@ -16,18 +16,21 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag846DiscretionScopeTest {
     @Test
     void FIX0846Test() {
-        FIXType fixData = FIXType.FIX846_DISCRETION_SCOPE;
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX846_DISCRETION_SCOPE;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
 }

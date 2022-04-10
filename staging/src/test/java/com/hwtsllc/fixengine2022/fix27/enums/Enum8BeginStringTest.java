@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,48 +31,48 @@ class Enum8BeginStringTest {
         assertEquals("FIX.4.0", enumType.getID());
         assertEquals("BEGIN_STRING_4_0", enumType.getName());
         assertEquals("Begin String 4.0", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum8BeginString.BEGIN_STRING_4_1;
         assertEquals("FIX.4.1", enumType.getID());
         assertEquals("BEGIN_STRING_4_1", enumType.getName());
         assertEquals("Begin String 4.1", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum8BeginString.BEGIN_STRING_4_2;
         assertEquals("FIX.4.2", enumType.getID());
         assertEquals("BEGIN_STRING_4_2", enumType.getName());
         assertEquals("Begin String 4.2", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum8BeginString.BEGIN_STRING_4_3;
         assertEquals("FIX.4.3", enumType.getID());
         assertEquals("BEGIN_STRING_4_3", enumType.getName());
         assertEquals("Begin String 4.3", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum8BeginString.BEGIN_STRING_4_4;
         assertEquals("FIX.4.4", enumType.getID());
         assertEquals("BEGIN_STRING_4_4", enumType.getName());
         assertEquals("Begin String 4.4", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum8BeginString.BEGIN_STRING_5_0;
         assertEquals("FIXT.1.1", enumType.getID());
         assertEquals("BEGIN_STRING_5_0", enumType.getName());
         assertEquals("Begin String 5.0", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

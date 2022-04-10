@@ -24,6 +24,18 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
      *  Information is the same for TAGS 35, 372
      */
 
+
+
+    /*
+     *  0-9, msg types
+     *  A-Z, msg types, skipping "I", and "O"
+     *  a-z, msg types
+     *  AA-AZ, msg types
+     *  BA-BP, msg types
+     */
+
+
+
     /*
      * 0-9 msg types
      */
@@ -37,6 +49,8 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
     ADVERTISEMENT("7", "ADVERTISEMENT", "7 - Advertisement" ),
     EXECUTION_REPORT("8", "EXECUTION_REPORT", "8 - Execution Report" ),
     ORDER_CANCEL_REJECT("9", "ORDER_CANCEL_REJECT", "9 - Order Cancel Reject" ),
+
+
 
     /*
      * A-Z msg types, skipping "I", and "O"
@@ -66,6 +80,8 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
     MARKET_DATA_REQUEST_REJECT("Y", "MARKET_DATA_REQUEST_REJECT",
             "Y - Market Data Request Reject" ),
     QUOTE_CANCEL("Z", "QUOTE_CANCEL", "Z - Quote Cancel" ),
+
+
 
     /*
      * a-z msg types
@@ -123,6 +139,8 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
     DERIVATIVE_SECURITY_LIST_REQUEST("z", "DERIVATIVE_SECURITY_LIST_REQUEST",
             "z - Derivative Security List Request" ),
 
+
+
     /*
      * AA-AZ msg types
      */
@@ -178,6 +196,8 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
             "AY - Collateral Assignment" ),
     COLLATERAL_RESPONSE("AZ", "COLLATERAL_RESPONSE",
             "AZ - Collateral Response" ),
+
+
 
     /*
      * BA-BP msg types

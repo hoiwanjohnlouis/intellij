@@ -16,31 +16,15 @@
 
 package com.hwtsllc.fixengine2022;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MainTest {
-    private static final Logger logger = LogManager.getRootLogger();
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void Test() {
         assertEquals(1,1);
         assertNotEquals(2,1);
-        logger.info("Successful Test()");
     }
 }

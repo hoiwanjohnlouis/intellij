@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,32 +37,32 @@ class Enum77PositionEffectTest {
         assertEquals("C", enumType.getID());
         assertEquals("CLOSE", enumType.getName());
         assertEquals("C - Close", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum77PositionEffect.FIFO;
         assertEquals("F", enumType.getID());
         assertEquals("FIFO", enumType.getName());
         assertEquals("F - First In, First Out", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum77PositionEffect.OPEN;
         assertEquals("O", enumType.getID());
         assertEquals("OPEN", enumType.getName());
         assertEquals("O - Open", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum77PositionEffect.ROLLED;
         assertEquals("R", enumType.getID());
         assertEquals("ROLLED", enumType.getName());
         assertEquals("R - Rolled", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }
