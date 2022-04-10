@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,17 +34,19 @@ class Enum385MsgDirectionTest {
         assertEquals( "R", enumType.getID());
         assertEquals( "RECEIVE", enumType.getName());
         assertEquals( "R - Receive", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum385MsgDirection.SEND;
         assertEquals( "S", enumType.getID());
         assertEquals( "SEND", enumType.getName());
         assertEquals( "S - Send", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

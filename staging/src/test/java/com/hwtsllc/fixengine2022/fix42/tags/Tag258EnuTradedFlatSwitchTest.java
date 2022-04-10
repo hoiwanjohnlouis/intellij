@@ -17,23 +17,25 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag328InViewOfCommonTest {
+class Tag258EnuTradedFlatSwitchTest {
     @Test
-    void FIX0328Test() {
-        FIX42 fixData = FIX42.FIX328_IN_VIEW_OF_COMMON;
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+    void FIX0258Test() {
+        FIX42 fixData = FIX42.FIX258_ENU_TRADED_FLAT_SWITCH;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0328Test() {
-        Tag328InViewOfCommon tagData;
+    void Tag0258Test() {
+        Tag258EnuTradedFlatSwitch tagData;
 
     }
 }

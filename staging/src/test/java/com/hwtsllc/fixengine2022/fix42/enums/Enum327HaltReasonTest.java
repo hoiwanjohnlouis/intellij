@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,49 +34,55 @@ class Enum327HaltReasonTest {
         assertEquals( "D", enumType.getID());
         assertEquals( "NEWS_DISSEMINATION", enumType.getName());
         assertEquals( "D - News Dissemination", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.ORDER_INFLUX;
         assertEquals( "E", enumType.getID());
         assertEquals( "ORDER_INFLUX", enumType.getName());
         assertEquals( "E - Order Influx", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.ORDER_IMBALANCE;
         assertEquals( "I", enumType.getID());
         assertEquals( "ORDER_IMBALANCE", enumType.getName());
         assertEquals( "I - Order Imbalance", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.ADDITIONAL_INFORMATION;
         assertEquals( "M", enumType.getID());
         assertEquals( "ADDITIONAL_INFORMATION", enumType.getName());
         assertEquals( "M - Additional Information", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.NEW_PENDING;
         assertEquals( "P", enumType.getID());
         assertEquals( "NEW_PENDING", enumType.getName());
         assertEquals( "P - New Pending", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum327HaltReason.EQUIPMENT_CHANGE_OVER;
         assertEquals( "X", enumType.getID());
         assertEquals( "EQUIPMENT_CHANGE_OVER", enumType.getName());
         assertEquals( "X - Equipment Changeover", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

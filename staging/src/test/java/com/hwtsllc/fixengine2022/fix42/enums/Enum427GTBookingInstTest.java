@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,25 +34,28 @@ class Enum427GTBookingInstTest {
         assertEquals( "0", enumType.getID());
         assertEquals( "BOOK_OUT_ALL_TRADES", enumType.getName());
         assertEquals( "0 - Book out all trades on day of execution", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES;
         assertEquals( "1", enumType.getID());
         assertEquals( "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES", enumType.getName());
         assertEquals( "1 - Accumulate executions until order is filled or expires", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE;
         assertEquals( "2", enumType.getID());
         assertEquals( "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE", enumType.getName());
         assertEquals( "2 - Accumulate until verbally notified otherwise", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

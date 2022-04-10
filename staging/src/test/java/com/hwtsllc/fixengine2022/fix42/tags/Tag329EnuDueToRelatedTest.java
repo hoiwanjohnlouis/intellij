@@ -17,23 +17,25 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag329DueToRelatedTest {
+class Tag329EnuDueToRelatedTest {
     @Test
     void FIX0329Test() {
-        FIX42 fixData = FIX42.FIX329_DUE_TO_RELATED;
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX42 fixData = FIX42.FIX329_ENU_DUE_TO_RELATED;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0329Test() {
-        Tag329DueToRelated tagData;
+        Tag329EnuDueToRelated tagData;
 
     }
 }
