@@ -18,23 +18,14 @@ package com.hwtsllc.fixengine2022.factories;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class FIXBodyTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
 
     @Test
     void Test() {
@@ -46,7 +37,6 @@ class FIXBodyTest {
     void TestFIXBody1() {
         FIXBody record =
                 new FIXBody.Builder()
-                        .buildOpeningPrice(12.34D)
                         .buildPreviousDaysClosingPrice(56.78D)
                         .build();
 

@@ -17,22 +17,41 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.fix41.enums.Enum163SettlInstTransType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag163EnuSettlInstTransTypeTest {
     @Test
     void FIX0163Test() {
         FIX41 fixData = FIX41.FIX163_ENU_SETTL_INST_TRANS_TYPE;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0163Test() {
         Tag163EnuSettlInstTransType tagData;
 
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
+        assertEquals( Enum163SettlInstTransType.NEW.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.CANCEL);
+        assertEquals( Enum163SettlInstTransType.CANCEL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.REPLACE);
+        assertEquals( Enum163SettlInstTransType.REPLACE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.RESTATE);
+        assertEquals( Enum163SettlInstTransType.RESTATE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

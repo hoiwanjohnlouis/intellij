@@ -17,16 +17,15 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-class Tag148StrHeadlineTest {
+class Tag155FloSettlCurrFxRateTest {
     @Test
-    void FIX0148Test() {
-        FIX41 fixData = FIX41.FIX148_STR_HEADLINE;
+    void FIX0155Test() {
+        FIX41 fixData = FIX41.FIX155_FLO_SETTL_CURR_FX_RATE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,15 +34,15 @@ class Tag148StrHeadlineTest {
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0148Test() {
-        Tag148StrHeadline tagData;
+    void Tag0155Test() {
+        Tag155FloSettlCurrFxRate tagData;
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTA_STR_HEADLINE));
-        assertEquals( Tag148StrHeadline.TESTA_STR_HEADLINE, tagData.getDataValue());
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
-        assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

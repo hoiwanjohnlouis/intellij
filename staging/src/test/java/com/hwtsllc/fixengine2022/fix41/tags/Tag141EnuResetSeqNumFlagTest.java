@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -29,14 +30,20 @@ class Tag141EnuResetSeqNumFlagTest {
         assertEquals( "RESET_SEQ_NUM_FLAG", fixData.getName());
         assertEquals( "141", fixData.getID());
         assertEquals( "ResetSeqNumFlag", fixData.getDescription());
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0141Test() {
         Tag141EnuResetSeqNumFlag tagData;
 
+        tagData = new Tag141EnuResetSeqNumFlag(EnumBoolean.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag141EnuResetSeqNumFlag(EnumBoolean.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

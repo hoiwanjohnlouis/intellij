@@ -17,22 +17,33 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag161StrAllocTextTest {
     @Test
     void FIX0161Test() {
         FIX41 fixData = FIX41.FIX161_STR_ALLOC_TEXT;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0161Test() {
         Tag161StrAllocText tagData;
 
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTA_STR_ALLOC_TEXT));
+        assertEquals( Tag161StrAllocText.TESTA_STR_ALLOC_TEXT, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_ALLOC_TEXT));
+        assertEquals( Tag161StrAllocText.TESTB_STR_ALLOC_TEXT, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,22 +17,35 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag207ExcSecurityExchangeTest {
     @Test
     void FIX0207Test() {
         FIX41 fixData = FIX41.FIX207_EXC_SECURITY_EXCHANGE;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0207Test() {
         Tag207ExcSecurityExchange tagData;
 
+        tagData = new Tag207ExcSecurityExchange(
+                new MyExchangeType(Tag207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE));
+        assertEquals( Tag207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag207ExcSecurityExchange(
+                new MyExchangeType(Tag207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE));
+        assertEquals( Tag207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

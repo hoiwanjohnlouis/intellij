@@ -17,22 +17,35 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag199NumNoIOIQualifiersTest {
     @Test
     void FIX0199Test() {
         FIX41 fixData = FIX41.FIX199_NUM_NO_IOI_QUALIFIERS;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0199Test() {
         Tag199NumNoIOIQualifiers tagData;
 
+        tagData = new Tag199NumNoIOIQualifiers(
+                new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag199NumNoIOIQualifiers(
+                new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

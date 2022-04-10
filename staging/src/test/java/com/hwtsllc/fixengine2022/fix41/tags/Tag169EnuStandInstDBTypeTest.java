@@ -17,22 +17,45 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.fix41.enums.Enum169StandInstDbType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag169EnuStandInstDBTypeTest {
     @Test
     void FIX0169Test() {
         FIX41 fixData = FIX41.FIX169_STAND_INST_DB_TYPE;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0169Test() {
         Tag169EnuStandInstDBType tagData;
 
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
+        assertEquals( Enum169StandInstDbType.OTHER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
+        assertEquals( Enum169StandInstDbType.DTC_SID.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
+        assertEquals( Enum169StandInstDbType.THOMPSON_ALERT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
+        assertEquals( Enum169StandInstDbType.GLOBAL_CUSTODIAN.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
+        assertEquals( Enum169StandInstDbType.ACCOUNT_NET.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

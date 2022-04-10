@@ -17,8 +17,10 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag211FloPegOffsetValueTest {
@@ -34,5 +36,12 @@ class Tag211FloPegOffsetValueTest {
     void Tag0211Test() {
         Tag211FloPegOffsetValue tagData;
 
+        tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE));
+        assertEquals( Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
+        assertEquals( Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

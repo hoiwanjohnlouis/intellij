@@ -17,23 +17,33 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @Deprecated
 class Tag175StrSettlInstCodeTest {
     @Test
     void FIX0175Test() {
         FIX41 fixData = FIX41.FIX175_STR_SETTL_INST_CODE;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0175Test() {
-        Tag175StrSettlInstCodeTest tagData;
+        Tag175StrSettlInstCode tagData;
 
+        tagData = new Tag175StrSettlInstCode(new MyStringType(Tag175StrSettlInstCode.TESTA_STR_SETTL_INST_CODE));
+        assertEquals( Tag175StrSettlInstCode.TESTA_STR_SETTL_INST_CODE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag175StrSettlInstCode(new MyStringType(Tag175StrSettlInstCode.TESTB_STR_SETTL_INST_CODE));
+        assertEquals( Tag175StrSettlInstCode.TESTB_STR_SETTL_INST_CODE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,44 +16,26 @@
 
 package com.hwtsllc.fixengine2022.factories;
 
-import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrevClosePx;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrcPrevClosePx;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class FIXBody implements LogStringVerbose {
-    private static final Logger logger = LogManager.getRootLogger();
-
-    private final OpeningPrice openingPrice;
-    private final Tag140PrevClosePx tag140PrevClosePx;
+    private final Tag140PrcPrevClosePx tag140PrcPrevClosePx;
 
     //
     private FIXBody(FIXBody.Builder builder) {
-        this.openingPrice = builder.openingPrice;
-        this.tag140PrevClosePx = builder.tag140PrevClosePx;
+        this.tag140PrcPrevClosePx = builder.tag140PrcPrevClosePx;
     }
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-
-        // clean up the buffer before using.
-        stringBuilder
-            .append(openingPrice.getPrice());
-        return stringBuilder.toString();
+        return super.toString()
+                .concat(tag140PrcPrevClosePx.toString());
     }
     @Override
     public String toLogStringVerbose() {
-        StringBuilder stringBuilder = new StringBuilder();
-
-        // clean up the buffer before using.
-        stringBuilder
-            .append(openingPrice)
-            .append("\n\t")
-            .append(tag140PrevClosePx);
-
-        return stringBuilder.toString();
+        return tag140PrcPrevClosePx.toLogStringVerbose();
     }
 
 //    public int compareTo(Object o) {
@@ -62,20 +44,14 @@ public class FIXBody implements LogStringVerbose {
 
     // static builder helper class
     public static class Builder {
-        private OpeningPrice openingPrice;              // 3
-        private Tag140PrevClosePx tag140PrevClosePx;    // 4
+        private Tag140PrcPrevClosePx tag140PrcPrevClosePx;    // 4
 
         // helper class to build object
         public Builder() {
         }
 
-        public Builder buildOpeningPrice(double openingPrice) {
-            this.openingPrice = new OpeningPrice(openingPrice);
-            return this;
-        }
-
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.tag140PrevClosePx = new Tag140PrevClosePx(String.valueOf(previousDaysClosingPrice));
+            this.tag140PrcPrevClosePx = new Tag140PrcPrevClosePx(new MyPriceType("12.34") );
             return this;
         }
 
@@ -91,11 +67,8 @@ public class FIXBody implements LogStringVerbose {
     public static void main(String[] args) {
         FIXBody record =
                 new FIXBody.Builder()
-                        .buildOpeningPrice(12.34D)
                         .buildPreviousDaysClosingPrice(56.78D)
                         .build();
-        logger.trace(record);
-        logger.trace(record.toLogStringVerbose());
         System.out.println(record);
         System.out.println(record.toLogStringVerbose());
     }

@@ -17,22 +17,33 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag202PrcStrikePriceTest {
     @Test
     void FIX0202Test() {
         FIX41 fixData = FIX41.FIX202_PRC_STRIKE_PRICE;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0202Test() {
         Tag202PrcStrikePrice tagData;
 
+        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTA_PRC_STRIKE_PRICE));
+        assertEquals( Tag202PrcStrikePrice.TESTA_PRC_STRIKE_PRICE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE));
+        assertEquals( Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,22 +17,33 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag152QtyCashOrderQtyTest {
     @Test
     void FIX0152Test() {
         FIX41 fixData = FIX41.FIX152_QTY_CASH_ORDER_QTY;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0152Test() {
         Tag152QtyCashOrderQty tagData;
 
+        tagData = new Tag152QtyCashOrderQty(new MyQtyType(Tag152QtyCashOrderQty.TESTA_QTY_CASH_ORDER_QTY));
+        assertEquals( Tag152QtyCashOrderQty.TESTA_QTY_CASH_ORDER_QTY, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag152QtyCashOrderQty(new MyQtyType(Tag152QtyCashOrderQty.TESTB_QTY_CASH_ORDER_QTY));
+        assertEquals( Tag152QtyCashOrderQty.TESTB_QTY_CASH_ORDER_QTY, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

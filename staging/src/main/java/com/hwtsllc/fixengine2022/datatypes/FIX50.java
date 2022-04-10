@@ -28,6 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
  *                      EXC = MyExchangeType field, saved as String
+ *                      FLO = MyFloatType field, saved as String
  *                      INT = MyIntType field, saved as int
  *                      LEN = MyLengthType field, saved as int
  *                      LMD = MyLocalMktDateType field, saved as String
@@ -40,10 +41,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      STR = MyStringType field, saved as String
  *                      UTC = MyUTCTimestampType field, saved as String
  *                      others to follow
- * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
+ * String  id           The identifier of the field as defined by the FIX protocol document, no duplicates.
  *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String.
- * String  name         short NAME of the field as defined by the FIX protocol document, no duplicates
- * String  description  a short blurb which describes what information the field contains
+ * String  name         The short NAME of the field as defined by the FIX protocol document, no duplicates
+ * String  description  A short blurb which describes what information the field contains
  */
 public enum FIX50 implements EnumAccessors, LogStringVerbose {
 
@@ -281,11 +282,17 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     public final static String JUNK_ID = "JunkID";
     public final static String JUNK_NAME = "JunkName";
     public final static String JUNK_DESCRIPTION = "JunkDescription";
-    public final static String JUNK_ST_DATA_VALUE = "JunkDataValue";
-    public final static int JUNK_LT_DATA_VALUE = -65535;
-    public final static int JUNK_NIGT_DATA_VALUE = -65535;
-    public final static int JUNK_QT_DATA_VALUE = -65535;
-    public final static int JUNK_SNT_DATA_VALUE = -65535;
+    public final static String JUNK_AMT_DATA_VALUE = "JunkAmtDataValue";
+    public final static int JUNK_INT_DATA_VALUE = -65535;
+    public final static int JUNK_LEN_DATA_VALUE = -65535;
+    public final static String JUNK_LMD_DATA_VALUE = "JunkLocalMktDateDataValue";
+    public final static int JUNK_NUM_DATA_VALUE = -65535;
+    public final static String JUNK_PXO_DATA_VALUE = "JunkPriceOffsetDataValue";
+    public final static String JUNK_PRC_DATA_VALUE = "JunkPriceDataValue";
+    public final static int JUNK_QTY_DATA_VALUE = -65535;
+    public final static int JUNK_SEQ_DATA_VALUE = -65535;
+    public final static String JUNK_STR_DATA_VALUE = "JunkStringDataValue";
+    public final static String JUNK_UTC_DATA_VALUE = "18991231_235959";
 
     FIX50(final int id, final String name, final String description) {
         /*

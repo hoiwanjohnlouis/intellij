@@ -17,22 +17,33 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag206StrOptAttributeTest {
     @Test
     void FIX0206Test() {
         FIX41 fixData = FIX41.FIX206_STR_OPT_ATTRIBUTE;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0206Test() {
         Tag206StrOptAttribute tagData;
 
+        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE));
+        assertEquals( Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
+        assertEquals( Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

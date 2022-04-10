@@ -28,6 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
  *                      EXC = MyExchangeType field, saved as String
+ *                      FLO = MyFloatType field, saved as String
  *                      INT = MyIntType field, saved as int
  *                      LEN = MyLengthType field, saved as int
  *                      LMD = MyLocalMktDateType field, saved as String
@@ -40,10 +41,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      STR = MyStringType field, saved as String
  *                      UTC = MyUTCTimestampType field, saved as String
  *                      others to follow
- * String  id           this is the identifier of the field as defined by the FIX protocol document, no duplicates.
+ * String  id           The identifier of the field as defined by the FIX protocol document, no duplicates.
  *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String.
- * String  name         short NAME of the field as defined by the FIX protocol document, no duplicates
- * String  description  a short blurb which describes what information the field contains
+ * String  name         The short NAME of the field as defined by the FIX protocol document, no duplicates
+ * String  description  A short blurb which describes what information the field contains
  */
 public enum FIX42 implements EnumAccessors, LogStringVerbose {
 
@@ -102,7 +103,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX255_CREDIT_RATING(255, "CREDIT_RATING", "CreditRating"),
     FIX256_UNDERLYING_CREDIT_RATING(256, "UNDERLYING_CREDIT_RATING", "UnderlyingCreditRating"),
     FIX257_LEG_CREDIT_RATING(257, "LEG_CREDIT_RATING", "LegCreditRating"),
-    FIX258_TRADED_FLAT_SWITCH(258, "TRADED_FLAT_SWITCH", "TradedFlatSwitch"),
+    FIX258_ENU_TRADED_FLAT_SWITCH(258, "TRADED_FLAT_SWITCH", "TradedFlatSwitch"),
     FIX259_BASIS_FEATURE_DATE(259, "BASIS_FEATURE_DATE", "BasisFeatureDate"),
     FIX260_BASIS_FEATURE_PRICE(260, "BASIS_FEATURE_PRICE", "BasisFeaturePrice"),
 
@@ -110,7 +111,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX263_SUBSCRIPTION_REQUEST_TYPE(263, "SUBSCRIPTION_REQUEST_TYPE", "SubscriptionRequestType"),
     FIX264_MARKET_DEPTH(264, "MARKET_DEPTH", "MarketDepth"),
     FIX265_MD_UPDATE_TYPE(265, "MD_UPDATE_TYPE", "MDUpdateType"),
-    FIX266_AGGREGATED_BOOK(266, "AGGREGATED_BOOK", "AggregatedBook"),
+    FIX266_ENU_AGGREGATED_BOOK(266, "AGGREGATED_BOOK", "AggregatedBook"),
     FIX267_NO_MD_ENTRY_TYPES(267, "NO_MD_ENTRY_TYPES", "NoMDEntryTypes"),
     FIX268_NO_MD_ENTRIES(268, "NO_MD_ENTRIES", "NoMDEntries"),
     FIX269_MD_ENTRY_TYPE(269, "MD_ENTRY_TYPE", "MDEntryType"),
@@ -178,11 +179,11 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX322_SECURITY_RESPONSE_ID(322, "SECURITY_RESPONSE_ID", "SecurityResponseID"),
     FIX323_SECURITY_RESPONSE_TYPE(323, "SECURITY_RESPONSE_TYPE", "SecurityResponseType"),
     FIX324_SECURITY_STATUS_REQ_ID(324, "SECURITY_STATUS_REQ_ID", "SecurityStatusReqID"),
-    FIX325_UNSOLICITED_INDICATOR(325, "UNSOLICITED_INDICATOR", "UnsolicitedIndicator"),
+    FIX325_ENU_UNSOLICITED_INDICATOR(325, "UNSOLICITED_INDICATOR", "UnsolicitedIndicator"),
     FIX326_SECURITY_TRADING_STATUS(326, "SECURITY_TRADING_STATUS", "SecurityTradingStatus"),
     FIX327_HALT_REASON(327, "HALT_REASON", "HaltReason"),
-    FIX328_IN_VIEW_OF_COMMON(328, "IN_VIEW_OF_COMMON", "InViewOfCommon"),
-    FIX329_DUE_TO_RELATED(329, "DUE_TO_RELATED", "DueToRelated"),
+    FIX328_ENU_IN_VIEW_OF_COMMON(328, "IN_VIEW_OF_COMMON", "InViewOfCommon"),
+    FIX329_ENU_DUE_TO_RELATED(329, "DUE_TO_RELATED", "DueToRelated"),
     FIX330_BUY_VOLUME(330, "BUY_VOLUME", "BuyVolume"),
 
     FIX331_SELL_VOLUME(331, "SELL_VOLUME", "SellVolume"),
@@ -235,7 +236,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX374_BID_REQUEST_TRANS_TYPE(374, "BID_REQUEST_TRANS_TYPE", "BidRequestTransType"),
     FIX375_CONTRA_BROKER(375, "CONTRA_BROKER", "ContraBroker"),
     FIX376_COMPLIANCE_ID(376, "COMPLIANCE_ID", "ComplianceID"),
-    FIX377_SOLICITED_FLAG(377, "SOLICITED_FLAG", "SolicitedFlag"),
+    FIX377_ENU_SOLICITED_FLAG(377, "SOLICITED_FLAG", "SolicitedFlag"),
     FIX378_EXEC_RESTATEMENT_REASON(378, "EXEC_RESTATEMENT_REASON", "ExecRestatementReason"),
     FIX379_BUSINESS_REJECT_REF_ID(379, "BUSINESS_REJECT_REF_ID", "BusinessRejectRefID"),
     FIX380_BUSINESS_REJECT_REASON(380, "BUSINESS_REJECT_REASON", "BusinessRejectReason"),
@@ -276,7 +277,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX409_LIQUIDITY_IND_TYPE(409, "LIQUIDITY_IND_TYPE", "LiquidityIndType"),
     FIX410_WT_AVERAGE_LIQUIDITY(410, "WT_AVERAGE_LIQUIDITY", "WtAverageLiquidity"),
 
-    FIX411_EXCHANGE_FOR_PHYSICAL(411, "EXCHANGE_FOR_PHYSICAL", "ExchangeForPhysical"),
+    FIX411_ENU_EXCHANGE_FOR_PHYSICAL(411, "EXCHANGE_FOR_PHYSICAL", "ExchangeForPhysical"),
     FIX412_OUT_MAIN_CNTRY_U_INDEX(412, "OUT_MAIN_CNTRY_U_INDEX", "OutMainCntryUIndex"),
     FIX413_CROSS_PERCENT(413, "CROSS_PERCENT", "CrossPercent"),
     FIX414_PROG_RPT_REQS(414, "PROG_RPT_REQS", "ProgRptReqs"),
@@ -343,11 +344,17 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     public final static String JUNK_ID = "JunkID";
     public final static String JUNK_NAME = "JunkName";
     public final static String JUNK_DESCRIPTION = "JunkDescription";
-    public final static String JUNK_ST_DATA_VALUE = "JunkDataValue";
-    public final static int JUNK_LT_DATA_VALUE = -65535;
-    public final static int JUNK_NIGT_DATA_VALUE = -65535;
-    public final static int JUNK_QT_DATA_VALUE = -65535;
-    public final static int JUNK_SNT_DATA_VALUE = -65535;
+    public final static String JUNK_AMT_DATA_VALUE = "JunkAmtDataValue";
+    public final static int JUNK_INT_DATA_VALUE = -65535;
+    public final static int JUNK_LEN_DATA_VALUE = -65535;
+    public final static String JUNK_LMD_DATA_VALUE = "JunkLocalMktDateDataValue";
+    public final static int JUNK_NUM_DATA_VALUE = -65535;
+    public final static String JUNK_PXO_DATA_VALUE = "JunkPriceOffsetDataValue";
+    public final static String JUNK_PRC_DATA_VALUE = "JunkPriceDataValue";
+    public final static int JUNK_QTY_DATA_VALUE = -65535;
+    public final static int JUNK_SEQ_DATA_VALUE = -65535;
+    public final static String JUNK_STR_DATA_VALUE = "JunkStringDataValue";
+    public final static String JUNK_UTC_DATA_VALUE = "18991231_235959";
 
     FIX42(final int id, final String name, final String description) {
         /*

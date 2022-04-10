@@ -17,22 +17,33 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag208EnuNotifyBrokerOfCreditTest {
     @Test
     void FIX0208Test() {
         FIX41 fixData = FIX41.FIX208_ENU_NOTIFY_BROKER_OF_CREDIT;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0208Test() {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
+        tagData = new Tag208EnuNotifyBrokerOfCredit(EnumBoolean.NO);
+        assertEquals( EnumBoolean.NO.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag208EnuNotifyBrokerOfCredit(EnumBoolean.YES);
+        assertEquals( EnumBoolean.YES.getID(), tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }
