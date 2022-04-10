@@ -21,7 +21,6 @@ import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
 public class TagDataType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private DataSType dataValue;
 
