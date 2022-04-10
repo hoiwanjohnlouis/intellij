@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.datatypes.StringType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag55StSymbol;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag55StrSymbol;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -48,17 +48,17 @@ public class TestViews {
 
     public static void main (String[] args) {
 
-        Tag55StSymbol tag55StSymbol = new Tag55StSymbol(new StringType(Tag55StSymbol.TESTA_ST_SYMBOL) );
+        Tag55StrSymbol tag55StrSymbol = new Tag55StrSymbol(new MyStringType(Tag55StrSymbol.TESTA_STR_SYMBOL) );
         TradeView testView = null;
-//                new TradeView.TradeViewBuilder(Tag35EtMsgType.EXECUTION_REPORT).
-//                        buildTickerSymbol(tag55StSymbol).
+//                new TradeView.TradeViewBuilder(Tag35EnuMsgType.EXECUTION_REPORT).
+//                        buildTickerSymbol(tag55StrSymbol).
 //                        build();
         System.out.println(testView);
         logger.info(testView);
 
         PriceView priceView = null;
-//                new PriceView.Builder(Tag35EtMsgType.EXECUTION_REPORT).
-//                        buildTickerSymbol(tag55StSymbol).
+//                new PriceView.Builder(Tag35EnuMsgType.EXECUTION_REPORT).
+//                        buildTickerSymbol(tag55StrSymbol).
 //                        build();
         System.out.println(priceView);
     }

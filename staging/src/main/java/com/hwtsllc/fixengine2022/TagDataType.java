@@ -16,16 +16,16 @@
 
 package com.hwtsllc.fixengine2022;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class TagDataType extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
+public class TagDataType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private DataSType dataValue;
 
     public TagDataType(DataSType dataValue) {
-        setFixType(FIXType.FIX58_ST_TEXT);
+        setFixType(FIX27.FIX58_STR_TEXT);
         this.dataValue = dataValue;
     }
 
@@ -67,12 +67,15 @@ public class TagDataType extends FIXTypeAbstract implements FixTagValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        TagST tagData = new TagST(new DataSType("3123") );
+        TagST tagData;
+
+        tagData = new TagST(new DataSType("3123") );
         System.out.println("t1.1:"+ tagData);
         System.out.println("t1.2:"+ tagData.toLogStringVerbose());
         System.out.println("t1.7.DataValue:"+ tagData.getDataValue());
         System.out.println("t1.8.FixString:"+ tagData.toFixTagValuePairString());
         System.out.println("after updating dataValue");
+
         tagData.setDataValue("987654321");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.getDataValue());

@@ -16,27 +16,27 @@
 
 package com.hwtsllc.fixengine2022.msgs.application;
 
-import com.hwtsllc.fixengine2022.datatypes.StringType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag55StSymbol;
-import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag55StrSymbol;
 
 public class ExecutionReport {
     private final Enum35MsgType tag35MsgType;
-    private final Tag55StSymbol tag55StSymbol;
-    private final OpeningPrice openingPrice;
+    private final Tag55StrSymbol tag55StrSymbol;
 
     //
     private ExecutionReport(ExecutionReport.Builder builder) {
         this.tag35MsgType = builder.tag35MsgType;
-        this.tag55StSymbol = builder.tag55StSymbol;
-        this.openingPrice = builder.openingPrice;
+        this.tag55StrSymbol = builder.tag55StrSymbol;
     }
 
-    // If any EnemyShip object is printed to screen this shows up
     @Override
     public String toString() {
-        return String.valueOf(openingPrice.getPrice());
+        return "Message is:"
+                .concat(tag35MsgType.toString())
+                .concat(" ")
+                .concat(tag55StrSymbol.toString())
+                .concat(".");
     }
 
     public int compareTo(Object o) {
@@ -48,8 +48,7 @@ public class ExecutionReport {
         private StringBuilder stringBuilder = new StringBuilder();
 
         private Enum35MsgType tag35MsgType;
-        private Tag55StSymbol tag55StSymbol;              // 2
-        private OpeningPrice openingPrice;              // 3
+        private Tag55StrSymbol tag55StrSymbol;              // 2
 
         // helper class to build object
         public Builder(Enum35MsgType tag35MsgType) {
@@ -57,11 +56,7 @@ public class ExecutionReport {
         }
 
         public Builder buildTickerSymbol(String tickerSymbol) {
-            this.tag55StSymbol = new Tag55StSymbol(new StringType(tickerSymbol) );
-            return this;
-        }
-        public Builder buildOpeningPrice(double openingPrice) {
-            this.openingPrice = new OpeningPrice(openingPrice);
+            this.tag55StrSymbol = new Tag55StrSymbol(new MyStringType(tickerSymbol) );
             return this;
         }
         public ExecutionReport build() {
@@ -76,8 +71,7 @@ public class ExecutionReport {
     public static void main(String[] args) {
         ExecutionReport record =
                 new ExecutionReport.Builder(Enum35MsgType.EXECUTION_REPORT)
-                        .buildTickerSymbol(Tag55StSymbol.TESTA_ST_SYMBOL)
-                        .buildOpeningPrice(12.34D)
+                        .buildTickerSymbol(Tag55StrSymbol.TESTA_STR_SYMBOL)
                         .build();
         System.out.println(record);
     }

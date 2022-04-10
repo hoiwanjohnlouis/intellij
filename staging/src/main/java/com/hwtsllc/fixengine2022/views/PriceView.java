@@ -16,52 +16,37 @@
 
 package com.hwtsllc.fixengine2022.views;
 
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag35EtMsgType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag60TransactTime;
-import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag35EnuMsgType;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag60UtcTransactTime;
 
 public class PriceView {
-    private final OpeningPrice lastTradeOpeningPrice;
-    private final Tag60TransactTime tag60TransactTime;
+    private final Tag60UtcTransactTime tag60UtcTransactTime;
 
     //
     private PriceView(Builder builder) {
-        this.lastTradeOpeningPrice = builder.lastTradeOpeningPrice;
-        this.tag60TransactTime = builder.tag60TransactTime;
+        this.tag60UtcTransactTime = builder.tag60UtcTransactTime;
     }
 
-    public OpeningPrice getLastTradePrice() {
-        return lastTradeOpeningPrice;
-    }
-
-    public Tag60TransactTime getLastTradeTimeStamp() {
-        return tag60TransactTime;
+    public Tag60UtcTransactTime getLastTradeTimeStamp() {
+        return tag60UtcTransactTime;
     }
 
     //
     public String toString(){
-        return String.valueOf(lastTradeOpeningPrice)
-                .concat("\n")
-                .concat(String.valueOf(tag60TransactTime));
+        return String.valueOf(tag60UtcTransactTime);
     }
 
     public static class Builder {
-
-        private OpeningPrice lastTradeOpeningPrice;
-
-        private Tag60TransactTime tag60TransactTime;
+        private Tag60UtcTransactTime tag60UtcTransactTime;
 
         //
         public Builder(Enum35MsgType enum35MsgType) {
-            this.tag60TransactTime = new Tag60TransactTime("18991231235959");
+            this.tag60UtcTransactTime = new Tag60UtcTransactTime(new MyUTCTimestampType("18991231235959") );
         }
-        public Builder buildTradePrice(OpeningPrice lastTradeOpeningPrice) {
-            this.lastTradeOpeningPrice = lastTradeOpeningPrice;
-            return this;
-        }
-        public Builder buildTradeTimeStamp(Tag60TransactTime tag60TransactTime) {
-            this.tag60TransactTime = tag60TransactTime;
+        public Builder buildTradeTimeStamp(Tag60UtcTransactTime tag60UtcTransactTime) {
+            this.tag60UtcTransactTime = tag60UtcTransactTime;
             return this;
         }
         public PriceView build() {
@@ -74,9 +59,8 @@ public class PriceView {
      */
     public static void main(String[] args) {
         PriceView view =
-            new PriceView.Builder(Tag35EtMsgType.TESTA_ET_MSG_TYPE)
-                    .buildTradePrice(new OpeningPrice(10.2D))
-                    .buildTradeTimeStamp(new Tag60TransactTime("093000_000000"))
+            new PriceView.Builder(Tag35EnuMsgType.TESTA_ENU_MSG_TYPE)
+                    .buildTradeTimeStamp(new Tag60UtcTransactTime(new MyUTCTimestampType("093000_000000") ))
                     .build();
         System.out.println(view);
     }

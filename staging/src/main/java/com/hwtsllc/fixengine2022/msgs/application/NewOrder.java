@@ -16,48 +16,34 @@
 
 package com.hwtsllc.fixengine2022.msgs.application;
 
-import com.hwtsllc.fixengine2022.fix27.tags.Tag60TransactTime;
-import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrevClosePx;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag60UtcTransactTime;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrcPrevClosePx;
 
 public class NewOrder implements Comparable {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    private final OpeningPrice openingPrice;
-    private final Tag140PrevClosePx tag140PrevClosePx;
-    private final Tag60TransactTime tag60TransactTime;
+    private final Tag140PrcPrevClosePx tag140PrcPrevClosePx;
+    private final Tag60UtcTransactTime tag60UtcTransactTime;
 
     //
     private NewOrder(Builder builder) {
-        this.openingPrice = builder.openingPrice;
-        this.tag140PrevClosePx = builder.tag140PrevClosePx;
-        this.tag60TransactTime = builder.tag60TransactTime;
+        this.tag140PrcPrevClosePx = builder.tag140PrcPrevClosePx;
+        this.tag60UtcTransactTime = builder.tag60UtcTransactTime;
     }
 
-    public OpeningPrice getOpeningPrice() {
-        return openingPrice;
+    public Tag140PrcPrevClosePx getPreviousDaysClosingPrice() {
+        return tag140PrcPrevClosePx;
     }
-    public Tag140PrevClosePx getPreviousDaysClosingPrice() {
-        return tag140PrevClosePx;
-    }
-    public Tag60TransactTime getLastTradeTimeStamp() {
-        return tag60TransactTime;
+    public Tag60UtcTransactTime getLastTradeTimeStamp() {
+        return tag60UtcTransactTime;
     }
 
     // If any EnemyShip object is printed to screen this shows up
     @Override
     public String toString(){
-
-        StringBuilder stringBuilder = new StringBuilder();
-
-        // clean up the buffer before using.
-        stringBuilder.append(openingPrice.getPrice());
-        stringBuilder.append("\n");
-
-        return stringBuilder.toString();
+        return super.toString()
+                .concat(tag140PrcPrevClosePx.toString())
+                .concat(" ")
+                .concat(tag60UtcTransactTime.toString());
     }
 
     public int compareTo(Object o) {
@@ -66,27 +52,13 @@ public class NewOrder implements Comparable {
 
     // static builder helper class 
     public static class Builder {
-
-        private final String DEBUG_TAG = this.getClass().getSimpleName();
-        private final Logger logger = LogManager.getLogger(DEBUG_TAG);
-
         private StringBuilder stringBuilder = new StringBuilder();
 
-        private OpeningPrice openingPrice;              // 3
-        private Tag140PrevClosePx tag140PrevClosePx;    // 4
-        private Tag60TransactTime tag60TransactTime;  // 8
+        private Tag140PrcPrevClosePx tag140PrcPrevClosePx;    // 4
+        private Tag60UtcTransactTime tag60UtcTransactTime;  // 8
 
-        // helper class to build object
-        public Builder buildOpeningPrice(double openingPrice) {
-            this.openingPrice = new OpeningPrice(openingPrice);
-            return this;
-        }
-        public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.tag140PrevClosePx = new Tag140PrevClosePx(Tag140PrevClosePx.TESTA_PREV_CLOSE_PX);
-            return this;
-        }
         public Builder buildLastTradeTimeStamp(String lastTradeTimeStamp) {
-            this.tag60TransactTime = new Tag60TransactTime(lastTradeTimeStamp);
+            this.tag60UtcTransactTime = new Tag60UtcTransactTime(new MyUTCTimestampType(lastTradeTimeStamp) );
             return this;
         }
 
@@ -104,7 +76,7 @@ public class NewOrder implements Comparable {
      * @param args Not used
      */
     public static void main(String[] args) {
-        logger.trace("New Order");
+        System.out.println("New Order");
     }
 
 }

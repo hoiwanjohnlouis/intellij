@@ -16,16 +16,16 @@
 
 package com.hwtsllc.fixengine2022;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
-import com.hwtsllc.fixengine2022.datatypes.FIXTypeAbstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class TagST extends FIXTypeAbstract implements FixTagValuePairString, LogStringVerbose {
+public class TagST extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final DataSType dataValue;
 
     public TagST(DataSType dataValue) {
-        setFixType(FIXType.FIX58_ST_TEXT);
+        setFixType(FIX27.FIX58_STR_TEXT);
         this.dataValue = dataValue;
     }
 

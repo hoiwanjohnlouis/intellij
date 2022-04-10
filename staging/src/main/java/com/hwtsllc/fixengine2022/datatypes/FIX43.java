@@ -173,7 +173,7 @@ public enum FIX43 implements EnumAccessors, LogStringVerbose {
     FIX551_ORIG_CROSS_ID(551, "ORIG_CROSS_ID", "OrigCrossID"),
     FIX552_NO_SIDES(552, "NO_SIDES", "NoSides"),
     FIX553_STR_PASSWORD(553, "USERNAME", "Username"),
-    FIX554_PASSWORD(554, "PASSWORD", "Password"),
+    FIX554_STR_PASSWORD(554, "PASSWORD", "Password"),
     FIX555_NO_LEGS(555, "NO_LEGS", "NoLegs"),
     FIX556_LEG_CURRENCY(556, "LEG_CURRENCY", "LegCurrency"),
     FIX557_TOT_NO_SECURITY_TYPES(557, "TOT_NO_SECURITY_TYPES", "TotNoSecurityTypes"),

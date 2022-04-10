@@ -16,60 +16,26 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.fix27.tags.Tag35EtMsgType;
-import com.hwtsllc.fixengine2022.fix40.OpeningPrice;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag35EnuMsgType;
 
 public class TradeView {
-    private final String WHERE_AM_I = this.getClass().getSimpleName();
-    private static final Logger logger = LogManager.getRootLogger();
-
-    private final OpeningPrice openingPrice;
-    private final OpeningPrice previousDaysClosingPrice;
-    private final OpeningPrice lastTradeOpeningPrice;
     private final StringBuilder stringBuilder = new StringBuilder();
 
     private TradeView(TradeViewBuilder tradeViewBuilder) {
-        this.openingPrice = tradeViewBuilder.openingPrice;
-        this.previousDaysClosingPrice = tradeViewBuilder.previousDaysClosingPrice;
-        this.lastTradeOpeningPrice = tradeViewBuilder.lastTradeOpeningPrice;
+        stringBuilder.setLength(0);
     }
 
     @Override
     public String toString(){
-        stringBuilder.setLength(0);
-        stringBuilder.append(openingPrice);
-        stringBuilder.append("\n");
-        stringBuilder.append(previousDaysClosingPrice);
-        stringBuilder.append("\n");
-        stringBuilder.append(lastTradeOpeningPrice);
-
-        return stringBuilder.toString();
+        return "stringBuilder:"
+                .concat(stringBuilder.toString())
+                .concat(".");
     }
-
 
     // static helper class to build tradeview
     public static class TradeViewBuilder {
-        private OpeningPrice openingPrice;
-        private OpeningPrice previousDaysClosingPrice;
-        private OpeningPrice lastTradeOpeningPrice;
-
         // static helper class to build object
-        public TradeViewBuilder(Tag35EtMsgType tag35EtMsgType) {
-        }
-
-        public TradeViewBuilder buildOpeningPrice(OpeningPrice openingPrice) {
-            this.openingPrice = openingPrice;
-            return this;
-        }
-        public TradeViewBuilder buildPreviousDaysClosingPrice(OpeningPrice previousDaysClosingPrice) {
-            this.previousDaysClosingPrice = previousDaysClosingPrice;
-            return this;
-        }
-        public TradeViewBuilder buildTradePrice(OpeningPrice lastTradeOpeningPrice) {
-            this.lastTradeOpeningPrice = lastTradeOpeningPrice;
-            return this;
+        public TradeViewBuilder(Tag35EnuMsgType tag35EnuMsgType) {
         }
 
         /**
@@ -79,5 +45,14 @@ public class TradeView {
         public TradeView build() {
             return new TradeView(this);
         }
+    }
+
+
+    /**
+     *
+     * @param args      args not used at this time
+     */
+    public static void main(String[] args) {
+        System.out.println("TradeView routine.");
     }
 }
