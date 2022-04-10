@@ -19,10 +19,19 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Tag1132TZTransactTimeTest {
     @Test
     void FIX1132Test() {
         FIX50 fixData = FIX50.FIX1132_TZ_TRANSACT_TIME;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX50.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX50.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX50.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag1132Test() {

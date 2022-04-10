@@ -20,6 +20,7 @@ import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag1000UnderlyingTimeUnitTest {
     @Test
@@ -28,6 +29,10 @@ class Tag1000UnderlyingTimeUnitTest {
         assertEquals( "UNDERLYING_TIME_UNIT", fixData.getName());
         assertEquals( "1000", fixData.getID());
         assertEquals( "UnderlyingTimeUnit", fixData.getDescription());
+        assertNotEquals( FIX50.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( FIX50.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX50.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX50.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag1000Test() {

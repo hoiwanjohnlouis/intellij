@@ -17,19 +17,21 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag1035DeskOrderHandlingInstTest {
     @Test
     void FIX1035Test() {
         FIX50 fixData = FIX50.FIX1035_DESK_ORDER_HANDLING_INST;
-        assertNotEquals( FIXType.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIXType.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIXType.JUNK_ID, fixData.getID());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX50.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX50.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX50.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag1035Test() {
