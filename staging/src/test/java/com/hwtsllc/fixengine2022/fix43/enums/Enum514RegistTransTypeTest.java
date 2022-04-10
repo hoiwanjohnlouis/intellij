@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,27 +34,30 @@ class Enum514RegistTransTypeTest {
          * 0-2 types
          */
         enumType = Enum514RegistTransType.NEW;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,NEW,0 - New", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.getID());
+        assertEquals("NEW", enumType.getName());
+        assertEquals("0 - New", enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum514RegistTransType.CANCEL;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,CANCEL,2 - Cancel", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("CANCEL", enumType.getName());
+        assertEquals("1 - Cancel", enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum514RegistTransType.REPLACE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,REPLACE,1 - Replace", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("REPLACE", enumType.getName());
+        assertEquals("2 - Replace", enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

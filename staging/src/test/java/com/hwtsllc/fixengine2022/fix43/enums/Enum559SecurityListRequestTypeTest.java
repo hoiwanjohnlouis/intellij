@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,40 +37,45 @@ class Enum559SecurityListRequestTypeTest {
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("0,SYMBOL,0 - Symbol", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum559SecurityListRequestType.SECURITY_TYPE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("1,SECURITY_TYPE,1 - SecurityType and/or CFICode", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum559SecurityListRequestType.PRODUCT;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("2,PRODUCT,2 - Product", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum559SecurityListRequestType.TRADING_SESSION_ID;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("3,TRADING_SESSION_ID,3 - TradingSessionID", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum559SecurityListRequestType.ALL_SECURITIES;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("4,ALL_SECURITIES,4 - All Securities", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

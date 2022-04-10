@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,32 +37,36 @@ class Enum549CrossTypeTest {
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("1,CROSS_AON,1 - Cross AON - cross tade which is executed complete or not. This is equivalent to an All_Or_None", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum549CrossType.CROSS_IOC;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("2,CROSS_IOC,2 - Cross IOC - cross trade which is executed partially and the rest is cancelled. Note: CrossPrioritization (550) field may be used to indicate which side should fully execute in this scenario", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum549CrossType.CROSS_ONE_SIDE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("3,CROSS_ONE_SIDE,3 - Cross One Side - cross trade which is partially executed with the unfilled portions remaining active. One side of the cross is fully executed (as denoted by the CrossPrioritization (550) field)", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum549CrossType.CROSS_SAME_PRICE;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("4,CROSS_SAME_PRICE,4 - Cross Same Price - cross trade is executed with existing orders with the same price. The two sides potentially have different quantities", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

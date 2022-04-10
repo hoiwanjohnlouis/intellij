@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,35 +38,38 @@ class Enum517OwnershipTypeTest {
          *  J, type
          */
         enumType = Enum517OwnershipType.JOINT_INVESTORS;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("J,JOINT_INVESTORS,J - Joint Investors", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("J", enumType.getID());
+        assertEquals("JOINT_INVESTORS", enumType.getName());
+        assertEquals("J - Joint Investors", enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         /*
          *  T, type
          */
         enumType = Enum517OwnershipType.TENANTS_IN_COMMON;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("T,TENANTS_IN_COMMON,T - Tenants in Common", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("T", enumType.getID());
+        assertEquals("TENANTS_IN_COMMON", enumType.getName());
+        assertEquals("T - Tenants in Common", enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         /*
          *  2, type
          */
         enumType = Enum517OwnershipType.JOINT_TRUSTEES;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,JOINT_TRUSTEES,2 - Joint Trustees", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("JOINT_TRUSTEES", enumType.getName());
+        assertEquals("2 - Joint Trustees", enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIXType;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,32 +37,36 @@ class Enum537QuoteTypeTest {
         assertEquals("0", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("0,INDICATIVE,0 - Indicative", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum537QuoteType.TRADEABLE;
         assertEquals("1", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("1,TRADEABLE,1 - Tradeable", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum537QuoteType.RESTRICTED_TRADEABLE;
         assertEquals("2", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("2,RESTRICTED_TRADEABLE,2 - Restricted Tradeable", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum537QuoteType.COUNTER;
         assertEquals("3", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("3,COUNTER,3 - Counter (tradeable)", enumType.getDescription());
-        assertNotEquals( FIXType.JUNK_ID, enumType.getID());
-        assertNotEquals( FIXType.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIXType.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

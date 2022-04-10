@@ -17,27 +17,28 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag554PasswordTest {
+class Tag554StrPasswordTest {
     @Test
     void FIX0554Test() {
-        FIX43 fixData = FIX43.FIX554_PASSWORD;
-        assertEquals( "FIX554_PASSWORD", fixData.getEnumName());
+        FIX43 fixData = FIX43.FIX554_STR_PASSWORD;
         assertEquals( "554", fixData.getID());
         assertEquals( "PASSWORD", fixData.getName());
         assertEquals( "Password", fixData.getDescription());
-        assertNotEquals( "Not My FIX554_PASSWORD", fixData.getEnumName());
-        assertNotEquals( "9999", fixData.getID());
-        assertNotEquals( "Not My PASSWORD", fixData.getName());
-        assertNotEquals( "Not My Password", fixData.getDescription());
+        assertNotEquals( FIX43.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX43.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0554Test() {
-        Tag554Password tagData = new Tag554Password("JohnWick");
+        Tag554StrPassword tagData;
+
+        tagData = new Tag554StrPassword(new MyStringType("JohnWick") );
         assertEquals( "JohnWick", tagData.getDataValue());
         assertNotEquals( "goodbye JohnWick", tagData.getDataValue());
     }
