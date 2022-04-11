@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag233EnuStipulationTypeTest {
     @Test
     void FIX0233Test() {
-        FIX42 fixData = FIX42.FIX233_STIPULATION_TYPE;
+        FIX42 fixData = FIX42.FIX233_ENU_STIPULATION_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

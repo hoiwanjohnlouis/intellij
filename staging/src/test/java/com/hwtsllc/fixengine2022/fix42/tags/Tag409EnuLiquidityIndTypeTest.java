@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag409EnuLiquidityIndTypeTest {
     @Test
     void FIX0409Test() {
-        FIX42 fixData = FIX42.FIX409_LIQUIDITY_IND_TYPE;
+        FIX42 fixData = FIX42.FIX409_ENU_LIQUIDITY_IND_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

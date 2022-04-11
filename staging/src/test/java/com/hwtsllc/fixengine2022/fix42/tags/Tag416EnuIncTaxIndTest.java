@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag416EnuIncTaxIndTest {
     @Test
     void FIX0416Test() {
-        FIX42 fixData = FIX42.FIX416_INC_TAX_IND;
+        FIX42 fixData = FIX42.FIX416_ENU_INC_TAX_IND;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

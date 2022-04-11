@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag279EnuMDUpdateActionTest {
     @Test
     void FIX0279Test() {
-        FIX42 fixData = FIX42.FIX279_MD_UPDATE_ACTION;
+        FIX42 fixData = FIX42.FIX279_ENU_MD_UPDATE_ACTION;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

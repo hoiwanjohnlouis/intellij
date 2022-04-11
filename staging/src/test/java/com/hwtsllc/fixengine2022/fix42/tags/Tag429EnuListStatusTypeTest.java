@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag429EnuListStatusTypeTest {
     @Test
     void FIX0429Test() {
-        FIX42 fixData = FIX42.FIX429_LIST_STATUS_TYPE;
+        FIX42 fixData = FIX42.FIX429_ENU_LIST_STATUS_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

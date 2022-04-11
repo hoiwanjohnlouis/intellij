@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag372EnuRefMsgTypeTest {
     @Test
     void FIX0372Test() {
-        FIX42 fixData = FIX42.FIX372_REF_MSG_TYPE;
+        FIX42 fixData = FIX42.FIX372_ENU_REF_MSG_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

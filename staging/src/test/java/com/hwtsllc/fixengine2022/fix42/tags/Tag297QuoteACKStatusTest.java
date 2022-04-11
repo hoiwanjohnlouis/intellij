@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag297QuoteACKStatusTest {
     @Test
     void FIX0297Test() {
-        FIX42 fixData = FIX42.FIX297_QUOTE_ACK_STATUS;
+        FIX42 fixData = FIX42.FIX297_ENU_QUOTE_ACK_STATUS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

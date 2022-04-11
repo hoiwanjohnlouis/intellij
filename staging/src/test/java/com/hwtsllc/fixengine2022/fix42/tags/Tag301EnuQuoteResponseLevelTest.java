@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag301EnuQuoteResponseLevelTest {
     @Test
     void FIX0301Test() {
-        FIX42 fixData = FIX42.FIX301_QUOTE_RESPONSE_LEVEL;
+        FIX42 fixData = FIX42.FIX301_ENU_QUOTE_RESPONSE_LEVEL;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

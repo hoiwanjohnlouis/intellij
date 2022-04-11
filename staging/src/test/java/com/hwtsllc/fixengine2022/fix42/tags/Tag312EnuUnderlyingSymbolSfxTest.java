@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag312EnuUnderlyingSymbolSfxTest {
     @Test
     void FIX0312Test() {
-        FIX42 fixData = FIX42.FIX312_UNDERLYING_SYMBOL_SFX;
+        FIX42 fixData = FIX42.FIX312_ENU_UNDERLYING_SYMBOL_SFX;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag298EnuQuoteCancelTypeTest {
     @Test
     void FIX0298Test() {
-        FIX42 fixData = FIX42.FIX298_QUOTE_CANCEL_TYPE;
+        FIX42 fixData = FIX42.FIX298_ENU_QUOTE_CANCEL_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

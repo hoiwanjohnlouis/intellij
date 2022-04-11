@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag274EnuTickDirectionTest {
     @Test
     void FIX0274Test() {
-        FIX42 fixData = FIX42.FIX274_TICK_DIRECTION;
+        FIX42 fixData = FIX42.FIX274_ENU_TICK_DIRECTION;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

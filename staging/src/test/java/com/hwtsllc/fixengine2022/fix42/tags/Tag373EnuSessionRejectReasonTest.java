@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag373EnuSessionRejectReasonTest {
     @Test
     void FIX0373Test() {
-        FIX42 fixData = FIX42.FIX373_SESSION_REJECT_REASON;
+        FIX42 fixData = FIX42.FIX373_ENU_SESSION_REJECT_REASON;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

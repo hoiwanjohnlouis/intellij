@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag394EnuBidTypeTest {
     @Test
     void FIX0394Test() {
-        FIX42 fixData = FIX42.FIX394_BID_TYPE;
+        FIX42 fixData = FIX42.FIX394_ENU_BID_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

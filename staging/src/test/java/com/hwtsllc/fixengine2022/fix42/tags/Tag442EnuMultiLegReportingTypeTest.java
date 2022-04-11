@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag442EnuMultiLegReportingTypeTest {
     @Test
     void FIX0442Test() {
-        FIX42 fixData = FIX42.FIX442_MULTI_LEG_REPORTING_TYPE;
+        FIX42 fixData = FIX42.FIX442_ENU_MULTI_LEG_REPORTING_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

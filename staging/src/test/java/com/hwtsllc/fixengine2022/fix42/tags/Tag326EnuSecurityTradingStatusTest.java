@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag326EnuSecurityTradingStatusTest {
     @Test
     void FIX0326Test() {
-        FIX42 fixData = FIX42.FIX326_SECURITY_TRADING_STATUS;
+        FIX42 fixData = FIX42.FIX326_ENU_SECURITY_TRADING_STATUS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

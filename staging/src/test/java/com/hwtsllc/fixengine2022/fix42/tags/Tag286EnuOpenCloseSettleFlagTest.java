@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag286EnuOpenCloseSettleFlagTest {
     @Test
     void FIX0286Test() {
-        FIX42 fixData = FIX42.FIX286_OPEN_CLOSE_SETTLE_FLAG;
+        FIX42 fixData = FIX42.FIX286_ENU_OPEN_CLOSE_SETTLE_FLAG;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag276EnuQuoteConditionTest {
     @Test
     void FIX0276Test() {
-        FIX42 fixData = FIX42.FIX276_QUOTE_CONDITION;
+        FIX42 fixData = FIX42.FIX276_ENU_QUOTE_CONDITION;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

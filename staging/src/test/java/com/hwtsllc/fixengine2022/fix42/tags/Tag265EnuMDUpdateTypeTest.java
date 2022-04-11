@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag265EnuMDUpdateTypeTest {
     @Test
     void FIX0265Test() {
-        FIX42 fixData = FIX42.FIX265_MD_UPDATE_TYPE;
+        FIX42 fixData = FIX42.FIX265_ENU_MD_UPDATE_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

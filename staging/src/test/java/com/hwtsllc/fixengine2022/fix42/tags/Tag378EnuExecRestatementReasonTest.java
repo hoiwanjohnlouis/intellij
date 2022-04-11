@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag378EnuExecRestatementReasonTest {
     @Test
     void FIX0378Test() {
-        FIX42 fixData = FIX42.FIX378_EXEC_RESTATEMENT_REASON;
+        FIX42 fixData = FIX42.FIX378_ENU_EXEC_RESTATEMENT_REASON;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

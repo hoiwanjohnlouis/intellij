@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag430EnuNetGrossIndTest {
     @Test
     void FIX0430Test() {
-        FIX42 fixData = FIX42.FIX430_NET_GROSS_IND;
+        FIX42 fixData = FIX42.FIX430_ENU_NET_GROSS_IND;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag221EnuBenchmarkCurveNameTest {
     @Test
     void FIX0221Test() {
-        FIX42 fixData = FIX42.FIX221_BENCHMARK_CURVE_NAME;
+        FIX42 fixData = FIX42.FIX221_ENU_BENCHMARK_CURVE_NAME;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

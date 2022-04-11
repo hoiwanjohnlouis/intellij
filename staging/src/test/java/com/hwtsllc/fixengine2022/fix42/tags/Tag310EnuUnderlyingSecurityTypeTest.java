@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag310EnuUnderlyingSecurityTypeTest {
     @Test
     void FIX0310Test() {
-        FIX42 fixData = FIX42.FIX310_UNDERLYING_SECURITY_TYPE;
+        FIX42 fixData = FIX42.FIX310_ENU_UNDERLYING_SECURITY_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag235EnuYieldTypeTest {
     @Test
     void FIX0235Test() {
-        FIX42 fixData = FIX42.FIX235_YIELD_TYPE;
+        FIX42 fixData = FIX42.FIX235_ENU_YIELD_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

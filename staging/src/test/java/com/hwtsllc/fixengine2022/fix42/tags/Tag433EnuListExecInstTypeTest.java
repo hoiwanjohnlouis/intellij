@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag433EnuListExecInstTypeTest {
     @Test
     void FIX0433Test() {
-        FIX42 fixData = FIX42.FIX433_LIST_EXEC_INST_TYPE;
+        FIX42 fixData = FIX42.FIX433_ENU_LIST_EXEC_INST_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

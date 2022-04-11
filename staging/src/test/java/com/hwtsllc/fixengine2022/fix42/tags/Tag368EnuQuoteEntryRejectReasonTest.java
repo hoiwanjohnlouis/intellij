@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag368EnuQuoteEntryRejectReasonTest {
     @Test
     void FIX0368Test() {
-        FIX42 fixData = FIX42.FIX368_QUOTE_ENTRY_REJECT_REASON;
+        FIX42 fixData = FIX42.FIX368_ENU_QUOTE_ENTRY_REJECT_REASON;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

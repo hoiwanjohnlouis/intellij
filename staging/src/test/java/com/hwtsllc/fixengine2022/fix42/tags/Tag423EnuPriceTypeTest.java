@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag423EnuPriceTypeTest {
     @Test
     void FIX0423Test() {
-        FIX42 fixData = FIX42.FIX423_PRICE_TYPE;
+        FIX42 fixData = FIX42.FIX423_ENU_PRICE_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

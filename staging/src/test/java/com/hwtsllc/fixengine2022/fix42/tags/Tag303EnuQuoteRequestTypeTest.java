@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag303EnuQuoteRequestTypeTest {
     @Test
     void FIX0303Test() {
-        FIX42 fixData = FIX42.FIX303_QUOTE_REQUEST_TYPE;
+        FIX42 fixData = FIX42.FIX303_ENU_QUOTE_REQUEST_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

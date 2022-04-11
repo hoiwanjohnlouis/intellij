@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag263EnuSubscriptionRequestTypeTest {
     @Test
     void FIX0263Test() {
-        FIX42 fixData = FIX42.FIX263_SUBSCRIPTION_REQUEST_TYPE;
+        FIX42 fixData = FIX42.FIX263_ENU_SUBSCRIPTION_REQUEST_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

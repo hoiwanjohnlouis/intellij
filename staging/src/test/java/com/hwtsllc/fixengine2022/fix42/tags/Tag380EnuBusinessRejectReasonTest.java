@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag380EnuBusinessRejectReasonTest {
     @Test
     void FIX0380Test() {
-        FIX42 fixData = FIX42.FIX380_BUSINESS_REJECT_REASON;
+        FIX42 fixData = FIX42.FIX380_ENU_BUSINESS_REJECT_REASON;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

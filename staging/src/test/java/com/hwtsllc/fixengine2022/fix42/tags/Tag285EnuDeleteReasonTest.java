@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag285EnuDeleteReasonTest {
     @Test
     void FIX0285Test() {
-        FIX42 fixData = FIX42.FIX285_DELETE_REASON;
+        FIX42 fixData = FIX42.FIX285_ENU_DELETE_REASON;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag401EnuSideValueIndTest {
     @Test
     void FIX0401Test() {
-        FIX42 fixData = FIX42.FIX401_SIDE_VALUE_IND;
+        FIX42 fixData = FIX42.FIX401_ENU_SIDE_VALUE_IND;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

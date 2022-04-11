@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag321EnuSecurityRequestTypeTest {
     @Test
     void FIX0321Test() {
-        FIX42 fixData = FIX42.FIX321_SECURITY_REQUEST_TYPE;
+        FIX42 fixData = FIX42.FIX321_ENU_SECURITY_REQUEST_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

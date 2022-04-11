@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag340EnuTradSesStatusTest {
     @Test
     void FIX0340Test() {
-        FIX42 fixData = FIX42.FIX340_TRAD_SES_STATUS;
+        FIX42 fixData = FIX42.FIX340_ENU_TRAD_SES_STATUS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

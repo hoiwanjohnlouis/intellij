@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag434EnuCxlRejResponseToTest {
     @Test
     void FIX0434Test() {
-        FIX42 fixData = FIX42.FIX434_CXL_REJ_RESPONSE_TO;
+        FIX42 fixData = FIX42.FIX434_ENU_CXL_REJ_RESPONSE_TO;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

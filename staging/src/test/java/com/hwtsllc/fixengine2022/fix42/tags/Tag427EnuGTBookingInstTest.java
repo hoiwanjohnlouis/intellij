@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag427EnuGTBookingInstTest {
     @Test
     void FIX0427Test() {
-        FIX42 fixData = FIX42.FIX427_GT_BOOKING_INST;
+        FIX42 fixData = FIX42.FIX427_ENU_GT_BOOKING_INST;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

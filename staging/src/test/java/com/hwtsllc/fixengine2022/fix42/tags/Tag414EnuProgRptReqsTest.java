@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag414EnuProgRptReqsTest {
     @Test
     void FIX0414Test() {
-        FIX42 fixData = FIX42.FIX414_PROG_RPT_REQS;
+        FIX42 fixData = FIX42.FIX414_ENU_PROG_RPT_REQS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag419EnuBasisPxTypeTest {
     @Test
     void FIX0419Test() {
-        FIX42 fixData = FIX42.FIX419_BASIS_PX_TYPE;
+        FIX42 fixData = FIX42.FIX419_ENU_BASIS_PX_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

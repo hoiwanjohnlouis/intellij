@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag281EnuMDReqRejReasonTest {
     @Test
     void FIX0281Test() {
-        FIX42 fixData = FIX42.FIX281_MD_REQ_REJ_REASON;
+        FIX42 fixData = FIX42.FIX281_ENU_MD_REQ_REJ_REASON;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

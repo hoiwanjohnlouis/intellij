@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag388EnuDiscretionInstTest {
     @Test
     void FIX0388Test() {
-        FIX42 fixData = FIX42.FIX388_DISCRETION_INST;
+        FIX42 fixData = FIX42.FIX388_ENU_DISCRETION_INST;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag334EnuAdjustmentTest {
     @Test
     void FIX0334Test() {
-        FIX42 fixData = FIX42.FIX334_ADJUSTMENT;
+        FIX42 fixData = FIX42.FIX334_ENU_ADJUSTMENT;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

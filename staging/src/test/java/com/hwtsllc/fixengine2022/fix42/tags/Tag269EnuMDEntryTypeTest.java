@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag269EnuMDEntryTypeTest {
     @Test
     void FIX0269Test() {
-        FIX42 fixData = FIX42.FIX269_MD_ENTRY_TYPE;
+        FIX42 fixData = FIX42.FIX269_ENU_MD_ENTRY_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
