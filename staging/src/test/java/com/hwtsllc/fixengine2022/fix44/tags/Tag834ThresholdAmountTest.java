@@ -33,4 +33,7 @@ class Tag834ThresholdAmountTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    @Test
+    void Tag0834Test() {
+    }
 }

@@ -33,4 +33,7 @@ class Tag830TransferReasonTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    @Test
+    void Tag0830Test() {
+    }
 }

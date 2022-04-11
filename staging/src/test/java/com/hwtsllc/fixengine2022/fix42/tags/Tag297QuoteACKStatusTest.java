@@ -35,7 +35,7 @@ class Tag297QuoteACKStatusTest {
     }
     @Test
     void Tag0297Test() {
-        Tag297QuoteAckStatus tagData;
+        Tag297EnuQuoteAckStatus tagData;
 
     }
 }
