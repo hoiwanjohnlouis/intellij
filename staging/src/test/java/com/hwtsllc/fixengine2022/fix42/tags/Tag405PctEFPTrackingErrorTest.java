@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag407OutsideIndexPctTest {
+class Tag405PctEFPTrackingErrorTest {
     @Test
-    void FIX0407Test() {
-        FIX42 fixData = FIX42.FIX407_OUTSIDE_INDEX_PCT;
+    void FIX0405Test() {
+        FIX42 fixData = FIX42.FIX405_PCT_EFP_TRACKING_ERROR;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag407OutsideIndexPctTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0407Test() {
-        Tag407OutsideIndexPct tagData;
+    void Tag0405Test() {
+        Tag405PctEFPTrackingError tagData;
 
     }
 }

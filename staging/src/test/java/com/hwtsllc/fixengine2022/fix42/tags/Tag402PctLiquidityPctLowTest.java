@@ -22,11 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag227RepurchaseRateTest {
+class Tag402PctLiquidityPctLowTest {
     @Test
-    void FIX0227Test() {
-        FIX42 fixData = FIX42.FIX227_REPURCHASE_RATE;
+    void FIX0402Test() {
+        FIX42 fixData = FIX42.FIX402_PCT_LIQUIDITY_PCT_LOW;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,8 +34,8 @@ class Tag227RepurchaseRateTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0227Test() {
-        Tag227RepurchaseRateTest tagData;
+    void Tag0402Test() {
+        Tag402PctLiquidityPctLow tagData;
 
     }
 }

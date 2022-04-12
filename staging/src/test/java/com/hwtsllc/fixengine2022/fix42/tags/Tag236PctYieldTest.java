@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag405EFPTrackingErrorTest {
+class Tag236PctYieldTest {
     @Test
-    void FIX0405Test() {
-        FIX42 fixData = FIX42.FIX405_EFP_TRACKING_ERROR;
+    void FIX0236Test() {
+        FIX42 fixData = FIX42.FIX236_PCT_YIELD;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag405EFPTrackingErrorTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0405Test() {
-        Tag405EFPTrackingError tagData;
+    void Tag0236Test() {
+        Tag236PctYield tagData;
 
     }
 }

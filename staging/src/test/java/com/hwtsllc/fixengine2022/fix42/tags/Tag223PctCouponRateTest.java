@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag413CrossPercentTest {
+class Tag223PctCouponRateTest {
     @Test
-    void FIX0413Test() {
-        FIX42 fixData = FIX42.FIX413_CROSS_PERCENT;
+    void FIX0223Test() {
+        FIX42 fixData = FIX42.FIX223_PCT_COUPON_RATE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag413CrossPercentTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0413Test() {
-        Tag413CrossPercent tagData;
+    void Tag0223Test() {
+        Tag223PctCouponRate tagData;
 
     }
 }

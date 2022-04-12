@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag410WtAverageLiquidityTest {
+class Tag410PctWtAverageLiquidityTest {
     @Test
     void FIX0410Test() {
-        FIX42 fixData = FIX42.FIX410_WT_AVERAGE_LIQUIDITY;
+        FIX42 fixData = FIX42.FIX410_PCT_WT_AVERAGE_LIQUIDITY;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag410WtAverageLiquidityTest {
     }
     @Test
     void Tag0410Test() {
-        Tag410WtAverageLiquidity tagData;
+        Tag410PctWtAverageLiquidity tagData;
 
     }
 }
