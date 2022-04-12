@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag357EncodedSubjectTest {
+class Tag361DatEncodedAllocTextTest {
     @Test
-    void FIX0357Test() {
-        FIX42 fixData = FIX42.FIX357_ENCODED_SUBJECT;
+    void FIX0361Test() {
+        FIX42 fixData = FIX42.FIX361_DAT_ENCODED_ALLOC_TEXT;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag357EncodedSubjectTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0357Test() {
-        Tag357EncodedSubject tagData;
+    void Tag0361Test() {
+        Tag361DatEncodedAllocText tagData;
 
     }
 }

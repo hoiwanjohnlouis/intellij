@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag359EncodedHeadlineTest {
+class Tag446DatListStatusEncodedTextTest {
     @Test
-    void FIX0359Test() {
-        FIX42 fixData = FIX42.FIX359_ENCODED_HEADLINE;
+    void FIX0446Test() {
+        FIX42 fixData = FIX42.FIX446_DAT_LIST_STATUS_ENCODED_TEXT;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag359EncodedHeadlineTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0359Test() {
-        Tag359EncodedHeadline tagData;
+    void Tag0446Test() {
+        Tag446DatListStatusEncodedText tagData;
 
     }
 }
