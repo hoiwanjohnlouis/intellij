@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag382NoContraBrokersTest {
+class Tag382NumNoContraBrokersTest {
     @Test
     void FIX0382Test() {
-        FIX42 fixData = FIX42.FIX382_NO_CONTRA_BROKERS;
+        FIX42 fixData = FIX42.FIX382_NUM_NO_CONTRA_BROKERS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag382NoContraBrokersTest {
     }
     @Test
     void Tag0382Test() {
-        Tag382NoContraBrokers tagData;
+        Tag382NumNoContraBrokers tagData;
 
     }
 }

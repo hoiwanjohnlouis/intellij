@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag296NoQuoteSetsTest {
+class Tag268NumNoMDEntriesTest {
     @Test
-    void FIX0296Test() {
-        FIX42 fixData = FIX42.FIX296_NO_QUOTE_SETS;
+    void FIX0268Test() {
+        FIX42 fixData = FIX42.FIX268_NUM_NO_MD_ENTRIES;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag296NoQuoteSetsTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0296Test() {
-        Tag296NoQuoteSets tagData;
+    void Tag0268Test() {
+        Tag268NumNoMDEntries tagData;
 
     }
 }
