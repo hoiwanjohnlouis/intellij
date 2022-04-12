@@ -14,23 +14,23 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.tags;
+package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 @Deprecated
-public class Tag193LmdSettlDate2 extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag254LmdLegRedemptionDate extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_SETTL_DATE_2 = "Frodo-Tag193LmdSettlDate2";
-    public final static String TESTB_LMD_SETTL_DATE_2 = "Gandalf-Tag193LmdSettlDate2";
+    public final static String TESTA_LMD_LEG_REDEMPTION_DATE = "Frodo-Tag254LmdLegRedemptionDate";
+    public final static String TESTB_LMD_LEG_REDEMPTION_DATE = "Gandalf-Tag254LmdLegRedemptionDate";
 
-    public Tag193LmdSettlDate2(MyLocalMktDateType dataValue) {
-        setFixType(FIX41.FIX193_LMD_SETTL_DATE_2);
+    public Tag254LmdLegRedemptionDate(MyLocalMktDateType dataValue) {
+        setFixType(FIX42.FIX254_LMD_LEG_REDEMPTION_DATE);
         this.dataValue = dataValue;
     }
 
@@ -69,14 +69,14 @@ public class Tag193LmdSettlDate2 extends FIX41Abstract implements FixTagValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag193LmdSettlDate2 tagData;
+        Tag254LmdLegRedemptionDate tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(TESTA_LMD_SETTL_DATE_2) );
+        tagData = new Tag254LmdLegRedemptionDate(new MyLocalMktDateType(TESTA_LMD_LEG_REDEMPTION_DATE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(TESTB_LMD_SETTL_DATE_2) );
+        tagData = new Tag254LmdLegRedemptionDate(new MyLocalMktDateType(TESTB_LMD_LEG_REDEMPTION_DATE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

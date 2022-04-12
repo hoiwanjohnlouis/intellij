@@ -14,19 +14,28 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.datatypes;
+package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-public class FIXTypeTest {
+class Tag432LmdExpireDateTest {
     @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+    void FIX0432Test() {
+        FIX42 fixData = FIX42.FIX432_LMD_EXPIRE_DATE;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    @Test
+    void Tag0432Test() {
+        Tag432LmdExpireDate tagData;
 
+    }
 }

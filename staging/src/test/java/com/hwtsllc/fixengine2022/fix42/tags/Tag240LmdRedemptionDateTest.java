@@ -22,10 +22,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag242UnderlyingIssueDateTest {
+@Deprecated
+class Tag240LmdRedemptionDateTest {
     @Test
-    void FIX0242Test() {
-        FIX42 fixData = FIX42.FIX242_UNDERLYING_ISSUE_DATE;
+    void FIX0240Test() {
+        FIX42 fixData = FIX42.FIX240_LMD_REDEMPTION_DATE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +35,8 @@ class Tag242UnderlyingIssueDateTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0242Test() {
-        Tag242UnderlyingIssueDate tagData;
+    void Tag0240Test() {
+        Tag240LmdRedemptionDate tagData;
 
     }
 }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
+import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -39,11 +39,11 @@ class Tag193LmdSettlDate2Test {
     void Tag0193Test() {
         Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyExchangeType(Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2));
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2));
         assertEquals( Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2, tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_LMD_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag193LmdSettlDate2(new MyExchangeType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
         assertEquals( Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2, tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_LMD_DATA_VALUE, tagData.getDataValue());
     }
