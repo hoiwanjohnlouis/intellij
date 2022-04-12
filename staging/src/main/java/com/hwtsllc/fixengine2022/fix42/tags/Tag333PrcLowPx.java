@@ -14,22 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.tags;
+package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag188PrcBidSpotRate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag333PrcLowPx extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_BID_SPOT_RATE = 1.88D;
-    public final static double TESTB_PRC_BID_SPOT_RATE = 8.81D;
+    public final static double TESTA_PRC_LOW_PX = 3.33D;
+    public final static double TESTB_PRC_LOW_PX = 3.33D;
 
-    public Tag188PrcBidSpotRate(MyPriceType dataValue) {
-        setFixType(FIX41.FIX188_PRC_BID_SPOT_RATE);
+    public Tag333PrcLowPx(MyPriceType dataValue) {
+        setFixType(FIX42.FIX333_PRC_LOW_PX);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag188PrcBidSpotRate extends FIX41Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag188PrcBidSpotRate tagData;
+        Tag333PrcLowPx tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(TESTA_PRC_BID_SPOT_RATE) );
+        tagData = new Tag333PrcLowPx(new MyPriceType(TESTA_PRC_LOW_PX) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(TESTB_PRC_BID_SPOT_RATE) );
+        tagData = new Tag333PrcLowPx(new MyPriceType(TESTB_PRC_LOW_PX) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

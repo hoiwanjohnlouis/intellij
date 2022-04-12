@@ -40,8 +40,8 @@ class Tag133PrcOfferPxTest {
     void Tag0133Test() {
         Tag133PrcOfferPx tagData;
 
-        tagData = new Tag133PrcOfferPx(new MyPriceType("OhYeonSeo-133OfferPx") );
-        assertEquals( "OhYeonSeo-133OfferPx", tagData.getDataValue());
+        tagData = new Tag133PrcOfferPx(new MyPriceType(133D) );
+        assertEquals( 133D, tagData.getDataValue());
         assertNotEquals( FIX40.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

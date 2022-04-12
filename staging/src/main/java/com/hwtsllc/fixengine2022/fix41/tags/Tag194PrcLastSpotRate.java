@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag194PrcLastSpotRate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 
-    public final static String TESTA_PRC_LAST_SPOT_RATE = "BilboBaggins-Tag194PrcLastSpotRate";
-    public final static String TESTB_PRC_LAST_SPOT_RATE = "Gandalf-Tag194PrcLastSpotRate";
+    public final static double TESTA_PRC_LAST_SPOT_RATE = 1.94D;
+    public final static double TESTB_PRC_LAST_SPOT_RATE = 4.91D;
 
     public Tag194PrcLastSpotRate(MyPriceType dataValue) {
         setFixType(FIX41.FIX194_PRC_LAST_SPOT_RATE);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

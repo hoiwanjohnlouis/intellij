@@ -40,8 +40,8 @@ class Tag31PrcLastPxTest {
     void Tag0031Test() {
         Tag31PrcLastPx tagData;
 
-        tagData = new Tag31PrcLastPx(new MyPriceType("98.23") );
-        assertEquals( "98.23", tagData.getDataValue());
+        tagData = new Tag31PrcLastPx(new MyPriceType(98.23D) );
+        assertEquals( 98.23D, tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

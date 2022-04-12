@@ -51,7 +51,7 @@ public class FIXBody implements LogStringVerbose {
         }
 
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.tag140PrcPrevClosePx = new Tag140PrcPrevClosePx(new MyPriceType("12.34") );
+            this.tag140PrcPrevClosePx = new Tag140PrcPrevClosePx(new MyPriceType(12.34D) );
             return this;
         }
 

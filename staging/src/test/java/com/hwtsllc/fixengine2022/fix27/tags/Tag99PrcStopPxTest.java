@@ -40,8 +40,8 @@ class Tag99PrcStopPxTest {
     void Tag0099Test() {
         Tag99PrcStopPx tagData;
 
-        tagData = new Tag99PrcStopPx(new MyPriceType("12.222") );
-        assertEquals( "12.222", tagData.getDataValue());
+        tagData = new Tag99PrcStopPx(new MyPriceType(12.222D) );
+        assertEquals( 12.222D, tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

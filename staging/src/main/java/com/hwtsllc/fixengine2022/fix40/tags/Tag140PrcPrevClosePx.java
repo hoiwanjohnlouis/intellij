@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag140PrcPrevClosePx extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 
-    public final static String TESTA_PRC_PREV_CLOSE_PX = "BilboBaggins-140PrevClosePx"; // fake data
-    public final static String TESTB_PRC_PREV_CLOSE_PX = "Gandalf-140PrevClosePx";
+    public final static double TESTA_PRC_PREV_CLOSE_PX = 1.40D;
+    public final static double TESTB_PRC_PREV_CLOSE_PX = 4.1D;
 
     public Tag140PrcPrevClosePx(MyPriceType dataValue) {
         setFixType(FIX40.FIX140_PRC_PREV_CLOSE_PX);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

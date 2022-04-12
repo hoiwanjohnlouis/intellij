@@ -168,8 +168,9 @@ public enum FIX41 implements EnumAccessors, LogStringVerbose {
     public final static int JUNK_LEN_DATA_VALUE = -65535;
     public final static String JUNK_LMD_DATA_VALUE = "JunkLocalMktDateDataValue";
     public final static int JUNK_NUM_DATA_VALUE = -65535;
-    public final static String JUNK_PXO_DATA_VALUE = "JunkPriceOffsetDataValue";
-    public final static String JUNK_PRC_DATA_VALUE = "JunkPriceDataValue";
+    public final static double JUNK_PCT_DATA_VALUE = -0.05D;
+    public final static double JUNK_PXO_DATA_VALUE = -0.032D;
+    public final static double JUNK_PRC_DATA_VALUE = -65535D;
     public final static int JUNK_QTY_DATA_VALUE = -65535;
     public final static int JUNK_SEQ_DATA_VALUE = -65535;
     public final static String JUNK_STR_DATA_VALUE = "JunkStringDataValue";

@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag6PrcAvgPx extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 
-    public final static String TESTA_PRC_AVG_PX = "12.345";
-    public final static String TESTB_PRC_AVG_PX = "67.89";
+    public final static double TESTA_PRC_AVG_PX = 12.345D;
+    public final static double TESTB_PRC_AVG_PX = 67.89D;
 
     public Tag6PrcAvgPx(MyPriceType dataValue) {
         setFixType(FIX27.FIX6_PRC_AVG_PX);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

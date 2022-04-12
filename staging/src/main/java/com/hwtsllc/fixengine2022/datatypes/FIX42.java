@@ -116,7 +116,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX267_NUM_NO_MD_ENTRY_TYPES(267, "NO_MD_ENTRY_TYPES", "NoMDEntryTypes"),
     FIX268_NUM_NO_MD_ENTRIES(268, "NO_MD_ENTRIES", "NoMDEntries"),
     FIX269_ENU_MD_ENTRY_TYPE(269, "MD_ENTRY_TYPE", "MDEntryType"),
-    FIX270_MD_ENTRY_PX(270, "MD_ENTRY_PX", "MDEntryPx"),
+    FIX270_PRC_MD_ENTRY_PX(270, "MD_ENTRY_PX", "MDEntryPx"),
 
     FIX271_MD_ENTRY_SIZE(271, "MD_ENTRY_SIZE", "MDEntrySize"),
     FIX272_MD_ENTRY_DATE(272, "MD_ENTRY_DATE", "MDEntryDate"),
@@ -170,7 +170,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX313_UNDERLYING_MATURITY_MONTH_YEAR(313, "UNDERLYING_MATURITY_MONTH_YEAR", "UnderlyingMaturityMonthYear"),
     FIX314_UNDERLYING_MATURITY_DAY(314, "UNDERLYING_MATURITY_DAY", "UnderlyingMaturityDay (replaced)"),
     FIX315_UNDERLYING_PUT_OR_CALL(315, "UNDERLYING_PUT_OR_CALL", "UnderlyingPutOrCall (replaced)"),
-    FIX316_UNDERLYING_STRIKE_PRICE(316, "UNDERLYING_STRIKE_PRICE", "UnderlyingStrikePrice"),
+    FIX316_PRC_UNDERLYING_STRIKE_PRICE(316, "UNDERLYING_STRIKE_PRICE", "UnderlyingStrikePrice"),
     FIX317_UNDERLYING_OPT_ATTRIBUTE(317, "UNDERLYING_OPT_ATTRIBUTE", "UnderlyingOptAttribute"),
     FIX318_CCY_UNDERLYING_CURRENCY(318, "UNDERLYING_CURRENCY", "UnderlyingCurrency"),
     FIX319_RATIO_QTY(319, "RATIO_QTY", "RatioQty (unused)"),
@@ -188,8 +188,8 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX330_BUY_VOLUME(330, "BUY_VOLUME", "BuyVolume"),
 
     FIX331_SELL_VOLUME(331, "SELL_VOLUME", "SellVolume"),
-    FIX332_HIGH_PX(332, "HIGH_PX", "HighPx"),
-    FIX333_LOW_PX(333, "LOW_PX", "LowPx"),
+    FIX332_PRC_HIGH_PX(332, "HIGH_PX", "HighPx"),
+    FIX333_PRC_LOW_PX(333, "LOW_PX", "LowPx"),
     FIX334_ENU_ADJUSTMENT(334, "ADJUSTMENT", "Adjustment"),
     FIX335_STR_TRAD_SES_REQ_ID(335, "TRAD_SES_REQ_ID", "TradSesReqID"),
     FIX336_TRADING_SESSION_ID(336, "TRADING_SESSION_ID", "TradingSessionID"),
@@ -225,7 +225,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX363_DAT_ENCODED_UNDERLYING_ISSUER(363, "ENCODED_UNDERLYING_ISSUER", "EncodedUnderlyingIssuer"),
     FIX364_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN(364, "ENCODED_UNDERLYING_SECURITY_DESC_LEN", "EncodedUnderlyingSecurityDescLen"),
     FIX365_DAT_ENCODED_UNDERLYING_SECURITY_DESC(365, "ENCODED_UNDERLYING_SECURITY_DESC", "EncodedUnderlyingSecurityDesc"),
-    FIX366_ALLOC_PRICE(366, "ALLOC_PRICE", "AllocPrice"),
+    FIX366_PRC_ALLOC_PRICE(366, "ALLOC_PRICE", "AllocPrice"),
     FIX367_QUOTE_SET_VALID_UNTIL_TIME(367, "QUOTE_SET_VALID_UNTIL_TIME", "QuoteSetValidUntilTime"),
     FIX368_ENU_QUOTE_ENTRY_REJECT_REASON(368, "QUOTE_ENTRY_REJECT_REASON", "QuoteEntryRejectReason"),
     FIX369_LAST_MSG_SEQ_NUM_PROCESSED(369, "LAST_MSG_SEQ_NUM_PROCESSED", "LastMsgSeqNumProcessed"),
@@ -294,7 +294,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX423_ENU_PRICE_TYPE(423, "PRICE_TYPE", "MyPriceType"),
     FIX424_DAY_ORDER_QTY(424, "DAY_ORDER_QTY", "DayOrderQty"),
     FIX425_DAY_CUM_QTY(425, "DAY_CUM_QTY", "DayCumQty"),
-    FIX426_DAY_AVG_PX(426, "DAY_AVG_PX", "DayAvgPx"),
+    FIX426_PRC_DAY_AVG_PX(426, "DAY_AVG_PX", "DayAvgPx"),
     FIX427_ENU_GT_BOOKING_INST(427, "GT_BOOKING_INST", "GTBookingInst"),
     FIX428_NUM_NO_STRIKES(428, "NO_STRIKES", "NoStrikes"),
     FIX429_ENU_LIST_STATUS_TYPE(429, "LIST_STATUS_TYPE", "ListStatusType"),
@@ -350,8 +350,9 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     public final static int JUNK_LEN_DATA_VALUE = -65535;
     public final static String JUNK_LMD_DATA_VALUE = "JunkLocalMktDateDataValue";
     public final static int JUNK_NUM_DATA_VALUE = -65535;
-    public final static String JUNK_PXO_DATA_VALUE = "JunkPriceOffsetDataValue";
-    public final static String JUNK_PRC_DATA_VALUE = "JunkPriceDataValue";
+    public final static double JUNK_PCT_DATA_VALUE = -0.05D;
+    public final static double JUNK_PXO_DATA_VALUE = -0.032D;
+    public final static double JUNK_PRC_DATA_VALUE = -65535D;
     public final static int JUNK_QTY_DATA_VALUE = -65535;
     public final static int JUNK_SEQ_DATA_VALUE = -65535;
     public final static String JUNK_STR_DATA_VALUE = "JunkStringDataValue";

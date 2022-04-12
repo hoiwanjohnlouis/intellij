@@ -42,8 +42,8 @@ class Tag140PrcPrevClosePxTest {
 
         // assertEquals(10.23D, tagData.);
 
-        tagData = new Tag140PrcPrevClosePx(new MyPriceType("12.34") );
-        assertEquals( "12.34", tagData.getDataValue());
+        tagData = new Tag140PrcPrevClosePx(new MyPriceType(12.34D) );
+        assertEquals( 12.34D, tagData.getDataValue());
         assertNotEquals( FIX40.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

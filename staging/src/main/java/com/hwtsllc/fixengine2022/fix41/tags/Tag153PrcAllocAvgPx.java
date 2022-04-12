@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag153PrcAllocAvgPx extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 
-    public final static String TESTA_PRC_ALLOC_AVG_PX = "BilboBaggins-Tag153PrcAllocAvgPx"; // fake data
-    public final static String TESTB_PRC_ALLOC_AVG_PX = "Gandalf-Tag153PrcAllocAvgPx";
+    public final static double TESTA_PRC_ALLOC_AVG_PX = 1.53D;
+    public final static double TESTB_PRC_ALLOC_AVG_PX = 3.51D;
 
     public Tag153PrcAllocAvgPx(MyPriceType dataValue) {
         setFixType(FIX41.FIX153_PRC_ALLOC_AVG_PX);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
