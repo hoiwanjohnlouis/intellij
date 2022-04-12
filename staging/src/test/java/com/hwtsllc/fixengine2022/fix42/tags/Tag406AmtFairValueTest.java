@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag397SideValue2Test {
+class Tag406AmtFairValueTest {
     @Test
-    void FIX0397Test() {
-        FIX42 fixData = FIX42.FIX397_SIDE_VALUE2;
+    void FIX0406Test() {
+        FIX42 fixData = FIX42.FIX406_AMT_FAIR_VALUE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag397SideValue2Test {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0397Test() {
-        Tag397SideValue2 tagData;
+    void Tag0406Test() {
+        Tag406AmtFairValue tagData;
 
     }
 }

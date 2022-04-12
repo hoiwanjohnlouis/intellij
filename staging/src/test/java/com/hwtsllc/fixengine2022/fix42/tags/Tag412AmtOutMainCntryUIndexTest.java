@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag238ConcessionTest {
+class Tag412AmtOutMainCntryUIndexTest {
     @Test
-    void FIX0238Test() {
-        FIX42 fixData = FIX42.FIX238_CONCESSION;
+    void FIX0412Test() {
+        FIX42 fixData = FIX42.FIX412_AMT_OUT_MAIN_CNTRY_U_INDEX;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag238ConcessionTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0238Test() {
-        Tag238Concession tagData;
+    void Tag0412Test() {
+        Tag412AmtOutMainCntryUIndex tagData;
 
     }
 }

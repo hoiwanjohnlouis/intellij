@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag412OutMainCntryUIndexTest {
+class Tag237AmtTotalTakedownTest {
     @Test
-    void FIX0412Test() {
-        FIX42 fixData = FIX42.FIX412_OUT_MAIN_CNTRY_U_INDEX;
+    void FIX0237Test() {
+        FIX42 fixData = FIX42.FIX237_AMT_TOTAL_TAKEDOWN;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag412OutMainCntryUIndexTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0412Test() {
-        Tag412OutMainCntryUIndex tagData;
+    void Tag0237Test() {
+        Tag237AmtTotalTakedown tagData;
 
     }
 }
