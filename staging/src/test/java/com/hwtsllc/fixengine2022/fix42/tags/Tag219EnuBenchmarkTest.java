@@ -26,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag219EnuBenchmarkTest {
     @Test
     void FIX0219Test() {
-        FIX42 fixData = FIX42.FIX327_ENU_HALT_REASON;
+        FIX42 fixData = FIX42.FIX219_ENU_BENCHMARK;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

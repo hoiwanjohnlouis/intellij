@@ -18,24 +18,23 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum219Benchmark;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
-public class Tag219EnuBenchmark extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum219Benchmark dataValue;
+public class Tag218PxoSpread extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyPriceOffsetType dataValue;
 
-    public final static Enum219Benchmark TESTA_ENU_BENCHMARK = Enum219Benchmark.CURVE;
-    public final static Enum219Benchmark TESTB_ENU_BENCHMARK = Enum219Benchmark.SIX_MONTH;
+    public final static String TESTA_PXO_SPREAD = "BilboBaggins-Tag218PxoSpread";
+    public final static String TESTB_PXO_SPREAD = "Gandalf-Tag218PxoSpread";
 
-    public Tag219EnuBenchmark(Enum219Benchmark dataValue) {
-        setFixType(FIX42.FIX219_ENU_BENCHMARK);
+    public Tag218PxoSpread(MyPriceOffsetType dataValue) {
+        setFixType(FIX42.FIX218_PXO_SPREAD);
         this.dataValue = dataValue;
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.getDataValue();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -44,7 +43,7 @@ public class Tag219EnuBenchmark extends FIX42Abstract implements FixTagValuePair
     public String toFixTagValuePairString() {
         return getID()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -69,14 +68,14 @@ public class Tag219EnuBenchmark extends FIX42Abstract implements FixTagValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag219EnuBenchmark tagData;
+        Tag218PxoSpread tagData;
 
-        tagData = new Tag219EnuBenchmark(TESTA_ENU_BENCHMARK);
+        tagData = new Tag218PxoSpread(new MyPriceOffsetType(TESTA_PXO_SPREAD) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag219EnuBenchmark(TESTB_ENU_BENCHMARK);
+        tagData = new Tag218PxoSpread(new MyPriceOffsetType(TESTB_PXO_SPREAD) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

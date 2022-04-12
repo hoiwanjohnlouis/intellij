@@ -23,10 +23,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
-class Tag318UnderlyingCurrencyTest {
+class Tag318CcyUnderlyingCurrencyTest {
     @Test
     void FIX0318Test() {
-        FIX42 fixData = FIX42.FIX318_UNDERLYING_CURRENCY;
+        FIX42 fixData = FIX42.FIX318_CCY_UNDERLYING_CURRENCY;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -36,7 +36,7 @@ class Tag318UnderlyingCurrencyTest {
     }
     @Test
     void Tag0318Test() {
-        Tag318UnderlyingCurrencyTest tagData;
+        Tag318CcyUnderlyingCurrencyTest tagData;
 
     }
 }

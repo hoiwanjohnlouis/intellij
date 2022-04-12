@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag218SpreadTest {
+class Tag218PxoSpreadTest {
     @Test
     void FIX0218Test() {
-        FIX42 fixData = FIX42.FIX218_SPREAD_TO_BENCHMARK;
+        FIX42 fixData = FIX42.FIX218_PXO_SPREAD;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag218SpreadTest {
     }
     @Test
     void Tag0218Test() {
-        Tag218Spread tagData;
+        Tag218PxoSpread tagData;
 
     }
 }

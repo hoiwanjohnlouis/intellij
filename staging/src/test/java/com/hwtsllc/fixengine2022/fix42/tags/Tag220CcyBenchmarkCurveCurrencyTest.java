@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag220BenchmarkCurveCurrencyTest {
+class Tag220CcyBenchmarkCurveCurrencyTest {
     @Test
     void FIX0220Test() {
-        FIX42 fixData = FIX42.FIX220_BENCHMARK_CURVE_CURRENCY;
+        FIX42 fixData = FIX42.FIX220_CCY_BENCHMARK_CURVE_CURRENCY;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag220BenchmarkCurveCurrencyTest {
     }
     @Test
     void Tag0220Test() {
-        Tag220BenchmarkCurveCurrency tagData;
+        Tag220CcyBenchmarkCurveCurrency tagData;
 
     }
 }
