@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag212XmlDataLenTest {
+class Tag212LenXmlDataLenTest {
     @Test
     void FIX0212Test() {
-        FIX42 fixData = FIX42.FIX212_XML_DATA_LEN;
+        FIX42 fixData = FIX42.FIX212_LEN_XML_DATA_LEN;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag212XmlDataLenTest {
     }
     @Test
     void Tag0212Test() {
-        Tag212XmlDataLen tagData;
+        Tag212LenXmlDataLen tagData;
 
     }
 }

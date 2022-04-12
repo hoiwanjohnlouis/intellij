@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag445ListStatusEncodedTextLenTest {
+class Tag360LenEncodedAllocTextLenTest {
     @Test
-    void FIX0445Test() {
-        FIX42 fixData = FIX42.FIX445_LIST_STATUS_ENCODED_TEXT_LEN;
+    void FIX0360Test() {
+        FIX42 fixData = FIX42.FIX360_LEN_ENCODED_ALLOC_TEXT_LEN;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag445ListStatusEncodedTextLenTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0445Test() {
-        Tag445ListStatusEncodedTextLen tagData;
+    void Tag0360Test() {
+        Tag360LenEncodedAllocTextLen tagData;
 
     }
 }

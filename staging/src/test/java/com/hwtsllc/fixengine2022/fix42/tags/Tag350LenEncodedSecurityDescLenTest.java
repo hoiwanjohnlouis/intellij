@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag348EncodedIssuerLenTest {
+class Tag350LenEncodedSecurityDescLenTest {
     @Test
-    void FIX0348Test() {
-        FIX42 fixData = FIX42.FIX348_ENCODED_ISSUER_LEN;
+    void FIX0350Test() {
+        FIX42 fixData = FIX42.FIX350_LEN_ENCODED_SECURITY_DESC_LEN;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag348EncodedIssuerLenTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0348Test() {
-        Tag348EncodedIssuerLen tagData;
+    void Tag0350Test() {
+        Tag350LenEncodedSecurityDescLen tagData;
 
     }
 }
