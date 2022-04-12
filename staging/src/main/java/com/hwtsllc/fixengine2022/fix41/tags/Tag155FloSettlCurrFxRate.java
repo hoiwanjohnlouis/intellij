@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag155FloSettlCurrFxRate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyFloatType dataValue;
 
-    public final static String TESTA_FLO_SETTL_CURR_FX_RATE = "Frodo-Tag155FloSettlCurrFxRate";
-    public final static String TESTB_FLO_SETTL_CURR_FX_RATE = "Gandalf-Tag155FloSettlCurrFxRate";
+    public final static float TESTA_FLO_SETTL_CURR_FX_RATE = 1.55F;
+    public final static float TESTB_FLO_SETTL_CURR_FX_RATE = 5.51F;
 
     public Tag155FloSettlCurrFxRate(MyFloatType dataValue) {
         setFixType(FIX41.FIX155_FLO_SETTL_CURR_FX_RATE);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public float getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

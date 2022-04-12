@@ -93,6 +93,7 @@ public enum FIX30 implements EnumAccessors, LogStringVerbose {
     public final static String JUNK_NAME = "JunkName";
     public final static String JUNK_DESCRIPTION = "JunkDescription";
     public final static String JUNK_AMT_DATA_VALUE = "JunkAmtDataValue";
+    public final static float JUNK_FLO_DATA_VALUE = -65535F;
     public final static int JUNK_INT_DATA_VALUE = -65535;
     public final static int JUNK_LEN_DATA_VALUE = -65535;
     public final static String JUNK_LMD_DATA_VALUE = "JunkLocalMktDateDataValue";

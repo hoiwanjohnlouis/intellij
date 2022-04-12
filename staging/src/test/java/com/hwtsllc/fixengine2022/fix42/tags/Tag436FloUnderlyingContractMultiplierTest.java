@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag246UnderlyingFactorTest {
+class Tag436FloUnderlyingContractMultiplierTest {
     @Test
-    void FIX0246Test() {
-        FIX42 fixData = FIX42.FIX246_UNDERLYING_FACTOR;
+    void FIX0436Test() {
+        FIX42 fixData = FIX42.FIX436_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag246UnderlyingFactorTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0246Test() {
-        Tag246UnderlyingFactor tagData;
+    void Tag0436Test() {
+        Tag436FloUnderlyingContractMultiplier tagData;
 
     }
 }

@@ -38,10 +38,10 @@ class Tag211FloPegOffsetValueTest {
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE));
         assertEquals( Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
         assertEquals( Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
 }

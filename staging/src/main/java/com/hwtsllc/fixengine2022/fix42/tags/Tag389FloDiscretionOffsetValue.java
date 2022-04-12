@@ -14,22 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.tags;
+package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag211FloPegOffsetValue extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag389FloDiscretionOffsetValue extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_PEG_DIFFERENCE = 2.11F;
-    public final static float TESTB_FLO_PEG_DIFFERENCE = 1.12F;
+    public final static float TESTA_FLO_DISCRETION_OFFSET_VALUE = 3.89F;
+    public final static float TESTB_FLO_DISCRETION_OFFSET_VALUE = 9.83F;
 
-    public Tag211FloPegOffsetValue(MyFloatType dataValue) {
-        setFixType(FIX41.FIX211_FLO_PEG_DIFFERENCE);
+    public Tag389FloDiscretionOffsetValue(MyFloatType dataValue) {
+        setFixType(FIX42.FIX389_FLO_DISCRETION_OFFSET_VALUE);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag211FloPegOffsetValue extends FIX41Abstract implements FixTagValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag211FloPegOffsetValue tagData;
+        Tag389FloDiscretionOffsetValue tagData;
 
-        tagData = new Tag211FloPegOffsetValue(new MyFloatType(TESTA_FLO_PEG_DIFFERENCE) );
+        tagData = new Tag389FloDiscretionOffsetValue(new MyFloatType(TESTA_FLO_DISCRETION_OFFSET_VALUE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag211FloPegOffsetValue(new MyFloatType(TESTB_FLO_PEG_DIFFERENCE) );
+        tagData = new Tag389FloDiscretionOffsetValue(new MyFloatType(TESTB_FLO_DISCRETION_OFFSET_VALUE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag253LegFactorTest {
+class Tag389FloDiscretionOffsetValueTest {
     @Test
-    void FIX0253Test() {
-        FIX42 fixData = FIX42.FIX253_LEG_FACTOR;
+    void FIX0389Test() {
+        FIX42 fixData = FIX42.FIX389_FLO_DISCRETION_OFFSET_VALUE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag253LegFactorTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0253Test() {
-        Tag253LegFactor tagData;
+    void Tag0389Test() {
+        Tag389FloDiscretionOffsetValue tagData;
 
     }
 }

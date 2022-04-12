@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag389DiscretionOffsetTest {
+class Tag231FloContractMultiplierTest {
     @Test
-    void FIX0389Test() {
-        FIX42 fixData = FIX42.FIX389_DISCRETION_OFFSET;
+    void FIX0231Test() {
+        FIX42 fixData = FIX42.FIX231_FLO_CONTRACT_MULTIPLIER;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag389DiscretionOffsetTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0389Test() {
-        Tag389DiscretionOffset tagData;
+    void Tag0231Test() {
+        Tag231FloContractMultiplier tagData;
 
     }
 }

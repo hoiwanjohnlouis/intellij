@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag228FactorTest {
+class Tag228FloFactorTest {
     @Test
     void FIX0228Test() {
-        FIX42 fixData = FIX42.FIX228_FACTOR;
+        FIX42 fixData = FIX42.FIX228_FLO_FACTOR;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag228FactorTest {
     }
     @Test
     void Tag0228Test() {
-        Tag228Factor tagData;
+        Tag228FloFactor tagData;
 
     }
 }
