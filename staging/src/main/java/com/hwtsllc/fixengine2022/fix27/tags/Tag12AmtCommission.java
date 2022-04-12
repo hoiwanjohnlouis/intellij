@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag12AmtCommission extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 
-    public final static String TESTA_AMT_COMMISSION = "1.23"; // fake data
-    public final static String TESTB_AMT_COMMISSION = "4.56";
+    public final static double TESTA_AMT_COMMISSION = 1.2D;
+    public final static double TESTB_AMT_COMMISSION = 2.1D;
 
     public Tag12AmtCommission(MyAmtType dataValue) {
         setFixType(FIX27.FIX12_AMT_COMMISSION);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

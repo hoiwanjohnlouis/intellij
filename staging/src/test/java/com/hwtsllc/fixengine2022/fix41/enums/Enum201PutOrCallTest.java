@@ -23,7 +23,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum201PutOrCallTest {
-
     @Test
     void Enum0201Test() {
         Enum201PutOrCall enumType;

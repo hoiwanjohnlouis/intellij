@@ -40,8 +40,8 @@ class Tag118AmtNetMoneyTest {
     void Tag0118Test() {
         Tag118AmtNetMoney tagData;
 
-        tagData = new Tag118AmtNetMoney(new MyAmtType("Celeborn-118NetMoney") );
-        assertEquals( "Celeborn-118NetMoney", tagData.getDataValue());
+        tagData = new Tag118AmtNetMoney(new MyAmtType(118D) );
+        assertEquals( 118D, tagData.getDataValue());
         assertNotEquals( FIX40.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

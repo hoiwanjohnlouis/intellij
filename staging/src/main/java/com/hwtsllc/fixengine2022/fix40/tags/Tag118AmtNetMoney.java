@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag118AmtNetMoney extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 
-    public final static String TESTA_AMT_NET_MONEY = "BilboBaggins-118NetMoney"; // fake data
-    public final static String TESTB_AMT_NET_MONEY = "Gandalf-118NetMoney";
+    public final static double TESTA_AMT_NET_MONEY = 1.18D;
+    public final static double TESTB_AMT_NET_MONEY = 8.11D;
 
     public Tag118AmtNetMoney(MyAmtType dataValue) {
         setFixType(FIX40.FIX118_AMT_NET_MONEY);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag159AmtAccruedInterestAmt extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 
-    public final static String TESTA_AMT_ACCRUED_INTEREST_AMT = "BilboBaggins-Tag159AmtAccruedInterestAmt";
-    public final static String TESTB_AMT_ACCRUED_INTEREST_AMT = "Gandalf-Tag159AmtAccruedInterestAmt";
+    public final static double TESTA_AMT_ACCRUED_INTEREST_AMT = 1.59D;
+    public final static double TESTB_AMT_ACCRUED_INTEREST_AMT = 9.51D;
 
     public Tag159AmtAccruedInterestAmt(MyAmtType dataValue) {
         setFixType(FIX41.FIX159_AMT_ACCRUED_INTEREST_AMT);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

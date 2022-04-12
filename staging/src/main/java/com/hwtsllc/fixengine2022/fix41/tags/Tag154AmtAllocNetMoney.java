@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag154AmtAllocNetMoney extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 
-    public final static String TESTA_AMT_ALLOC_NET_MONEY = "BilboBaggins-Tag154AmtAllocNetMoney";
-    public final static String TESTB_AMT_ALLOC_NET_MONEY = "Gandalf-Tag154AmtAllocNetMoney";
+    public final static double TESTA_AMT_ALLOC_NET_MONEY = 1.54D;
+    public final static double TESTB_AMT_ALLOC_NET_MONEY = 4.51D;
 
     public Tag154AmtAllocNetMoney(MyAmtType dataValue) {
         setFixType(FIX41.FIX154_AMT_ALLOC_NET_MONEY);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

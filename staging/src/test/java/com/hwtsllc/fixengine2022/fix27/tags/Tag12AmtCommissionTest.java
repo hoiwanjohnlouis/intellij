@@ -40,8 +40,8 @@ class Tag12AmtCommissionTest {
     void Tag0012Test() {
         Tag12AmtCommission tagData;
 
-        tagData = new Tag12AmtCommission(new MyAmtType("10") );
-        assertEquals( "10", tagData.getDataValue());
+        tagData = new Tag12AmtCommission(new MyAmtType(10D) );
+        assertEquals( 10D, tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

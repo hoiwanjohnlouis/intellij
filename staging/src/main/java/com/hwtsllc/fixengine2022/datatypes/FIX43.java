@@ -320,7 +320,8 @@ public enum FIX43 implements EnumAccessors, LogStringVerbose {
     public final static String JUNK_ID = "JunkID";
     public final static String JUNK_NAME = "JunkName";
     public final static String JUNK_DESCRIPTION = "JunkDescription";
-    public final static String JUNK_AMT_DATA_VALUE = "JunkAmtDataValue";
+    public final static double JUNK_AMT_DATA_VALUE = -65535D;
+    public final static String JUNK_EXC_DATA_VALUE = "JunkExchange";
     public final static float JUNK_FLO_DATA_VALUE = -65535F;
     public final static int JUNK_INT_DATA_VALUE = -65535;
     public final static int JUNK_LEN_DATA_VALUE = -65535;

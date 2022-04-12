@@ -40,8 +40,8 @@ class Tag119AmtSettlCurrAmtTest {
     void Tag0119Test() {
         Tag119AmtSettlCurrAmt tagData;
 
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType("JohnWick-119SettlCurrAmt") );
-        assertEquals( "JohnWick-119SettlCurrAmt", tagData.getDataValue());
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(119D) );
+        assertEquals( 119D, tagData.getDataValue());
         assertNotEquals( FIX40.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -40,8 +40,8 @@ class Tag137AmtMiscFeeAmtTest {
     void Tag0137Test() {
         Tag137AmtMiscFeeAmt tagData;
 
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType("HanJiMin-137MiscFeeAmt") );
-        assertEquals( "HanJiMin-137MiscFeeAmt", tagData.getDataValue());
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(137D ) );
+        assertEquals( 137D, tagData.getDataValue());
         assertNotEquals( FIX40.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }
