@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag234StipulationValueTest {
+class Tag308ExcUnderlyingSecurityExchangeTest {
     @Test
-    void FIX0234Test() {
-        FIX42 fixData = FIX42.FIX234_STIPULATION_VALUE;
+    void FIX0308Test() {
+        FIX42 fixData = FIX42.FIX308_EXC_UNDERLYING_SECURITY_EXCHANGE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag234StipulationValueTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0234Test() {
-        Tag234StipulationValue tagData;
+    void Tag0308Test() {
+        Tag308ExcUnderlyingSecurityExchange tagData;
 
     }
 }
