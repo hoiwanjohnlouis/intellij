@@ -22,10 +22,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag387TotalVolumeTradedTest {
+@Deprecated
+class Tag319QtyRatioQtyTest {
     @Test
-    void FIX0387Test() {
-        FIX42 fixData = FIX42.FIX387_TOTAL_VOLUME_TRADED;
+    void FIX0319Test() {
+        FIX42 fixData = FIX42.FIX319_QTY_RATIO_QTY;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +35,8 @@ class Tag387TotalVolumeTradedTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0387Test() {
-        Tag387TotalVolumeTraded tagData;
+    void Tag0319Test() {
+        Tag319QtyRatioQtyTest tagData;
 
     }
 }

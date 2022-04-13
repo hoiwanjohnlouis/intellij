@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag294DefOfferSizeTest {
+class Tag294QtyDefOfferSizeTest {
     @Test
     void FIX0294Test() {
-        FIX42 fixData = FIX42.FIX294_DEF_OFFER_SIZE;
+        FIX42 fixData = FIX42.FIX294_QTY_DEF_OFFER_SIZE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag294DefOfferSizeTest {
     }
     @Test
     void Tag0294Test() {
-        Tag294DefOfferSize tagData;
+        Tag294QtyDefOfferSize tagData;
 
     }
 }

@@ -22,11 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag319RatioQtyTest {
+class Tag425QtyDayCumQtyTest {
     @Test
-    void FIX0319Test() {
-        FIX42 fixData = FIX42.FIX319_RATIO_QTY;
+    void FIX0425Test() {
+        FIX42 fixData = FIX42.FIX425_QTY_DAY_CUM_QTY;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,8 +34,8 @@ class Tag319RatioQtyTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0319Test() {
-        Tag319RatioQtyTest tagData;
+    void Tag0425Test() {
+        Tag425QtyDayCumQty tagData;
 
     }
 }

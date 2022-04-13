@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag330BuyVolumeTest {
+class Tag387QtyTotalVolumeTradedTest {
     @Test
-    void FIX0330Test() {
-        FIX42 fixData = FIX42.FIX330_BUY_VOLUME;
+    void FIX0387Test() {
+        FIX42 fixData = FIX42.FIX387_QTY_TOTAL_VOLUME_TRADED;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag330BuyVolumeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0330Test() {
-        Tag330BuyVolume tagData;
+    void Tag0387Test() {
+        Tag387QtyTotalVolumeTraded tagData;
 
     }
 }
