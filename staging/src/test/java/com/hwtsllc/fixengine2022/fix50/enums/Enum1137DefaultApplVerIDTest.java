@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 
 class Enum1137DefaultApplVerIDTest {
     @Test
-    void Enum1137Test() {
+    void EnumTest() {
         Enum1137DefaultApplVerID enumType;
 
     }

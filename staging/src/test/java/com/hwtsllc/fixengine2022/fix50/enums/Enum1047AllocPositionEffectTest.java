@@ -18,10 +18,10 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 
 import org.junit.jupiter.api.Test;
 
-class Enum959StrategyParameterTypeTest {
+class Enum1047AllocPositionEffectTest {
     @Test
     void EnumTest() {
-        Enum959StrategyParameterType enumType;
+        Enum1047AllocPositionEffect enumType;
 
     }
 }

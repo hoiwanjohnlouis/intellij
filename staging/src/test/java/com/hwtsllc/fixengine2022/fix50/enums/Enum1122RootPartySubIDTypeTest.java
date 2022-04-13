@@ -18,10 +18,10 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 
 import org.junit.jupiter.api.Test;
 
-class Enum959StrategyParameterTypeTest {
+class Enum1122RootPartySubIDTypeTest {
     @Test
     void EnumTest() {
-        Enum959StrategyParameterType enumType;
+        Enum1122RootPartySubIDType enumType;
 
     }
 }

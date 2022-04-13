@@ -18,10 +18,10 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 
 import org.junit.jupiter.api.Test;
 
-class Enum959StrategyParameterTypeTest {
+class Enum998UnderlyingUnitofMeasureTest {
     @Test
     void EnumTest() {
-        Enum959StrategyParameterType enumType;
+        Enum998UnderlyingUnitofMeasure enumType;
 
     }
 }

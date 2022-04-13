@@ -18,10 +18,10 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 
 import org.junit.jupiter.api.Test;
 
-class Enum959StrategyParameterTypeTest {
+class Enum1084DisplayMethodTest {
     @Test
     void EnumTest() {
-        Enum959StrategyParameterType enumType;
+        Enum1084DisplayMethod enumType;
 
     }
 }
