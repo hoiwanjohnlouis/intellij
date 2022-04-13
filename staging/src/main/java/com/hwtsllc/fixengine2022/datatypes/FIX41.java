@@ -126,7 +126,7 @@ public enum FIX41 implements EnumAccessors, LogStringVerbose {
     FIX202_PRC_STRIKE_PRICE(202, "STRIKE_PRICE", "StrikePrice"),
     FIX203_ENU_COVERED_OR_UNCOVERED(203, "COVERED_OR_UNCOVERED", "CoveredOrUncovered"),
     FIX204_ENU_CUSTOMER_OR_FIRM(204, "CUSTOMER_OR_FIRM", "CustomerOrFirm (replaced)"),
-    FIX205_STR_MATURITY_DAY(205, "MATURITY_DAY", "MaturityDay (replaced)"),
+    FIX205_INT_MATURITY_DAY(205, "MATURITY_DAY", "MaturityDay (replaced)"),
     FIX206_STR_OPT_ATTRIBUTE(206, "OPT_ATTRIBUTE", "OptAttribute"),
     FIX207_EXC_SECURITY_EXCHANGE(207, "SECURITY_EXCHANGE", "SecurityExchange"),
     FIX208_ENU_NOTIFY_BROKER_OF_CREDIT(208, "NOTIFY_BROKER_OF_CREDIT", "NotifyBrokerOfCredit"),

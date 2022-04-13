@@ -22,10 +22,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag347MessageEncodingTest {
+@Deprecated
+class Tag314IntUnderlyingMaturityDayTest {
     @Test
-    void FIX0347Test() {
-        FIX42 fixData = FIX42.FIX347_MESSAGE_ENCODING;
+    void FIX0314Test() {
+        FIX42 fixData = FIX42.FIX314_INT_UNDERLYING_MATURITY_DAY;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +35,8 @@ class Tag347MessageEncodingTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0347Test() {
-        Tag347MessageEncoding tagData;
+    void Tag0314Test() {
+        Tag314IntUnderlyingMaturityDayTest tagData;
 
     }
 }

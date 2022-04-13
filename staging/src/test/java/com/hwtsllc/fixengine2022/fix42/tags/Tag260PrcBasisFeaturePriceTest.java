@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag421CountryTest {
+class Tag260PrcBasisFeaturePriceTest {
     @Test
-    void FIX0421Test() {
-        FIX42 fixData = FIX42.FIX421_COUNTRY;
+    void FIX0260Test() {
+        FIX42 fixData = FIX42.FIX260_PRC_BASIS_FEATURE_PRICE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag421CountryTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0421Test() {
-        Tag421Country tagData;
+    void Tag0260Test() {
+        Tag260PrcBasisFeaturePrice tagData;
 
     }
 }

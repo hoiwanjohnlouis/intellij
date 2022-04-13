@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag317UnderlyingOptAttributeTest {
+class Tag347StrMessageEncodingTest {
     @Test
-    void FIX0317Test() {
-        FIX42 fixData = FIX42.FIX317_UNDERLYING_OPT_ATTRIBUTE;
+    void FIX0347Test() {
+        FIX42 fixData = FIX42.FIX347_STR_MESSAGE_ENCODING;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag317UnderlyingOptAttributeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0317Test() {
-        Tag317UnderlyingOptAttribute tagData;
+    void Tag0347Test() {
+        Tag347StrMessageEncoding tagData;
 
     }
 }

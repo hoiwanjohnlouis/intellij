@@ -23,10 +23,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
-class Tag314UnderlyingMaturityDateTest {
+class Tag315EnuUnderlyingPutOrCallTest {
     @Test
-    void FIX0314Test() {
-        FIX42 fixData = FIX42.FIX314_UNDERLYING_MATURITY_DAY;
+    void FIX0315Test() {
+        FIX42 fixData = FIX42.FIX315_ENU_UNDERLYING_PUT_OR_CALL;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,8 +35,8 @@ class Tag314UnderlyingMaturityDateTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0314Test() {
-        Tag314UnderlyingMaturityDateTest tagData;
+    void Tag0315Test() {
+        Tag315EnuUnderlyingPutOrCall tagData;
 
     }
 }

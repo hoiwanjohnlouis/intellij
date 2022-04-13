@@ -14,27 +14,26 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.tags;
+package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
-public class Tag205StrMaturityDate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag260PrcBasisFeaturePrice extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyPriceType dataValue;
 
-    public final static String TESTA_STR_MATURITY_DAY = "Frodo-Tag205StrMaturityDate";
-    public final static String TESTB_STR_MATURITY_DAY = "Gandalf-Tag205StrMaturityDate";
+    public final static double TESTA_PRC_BASIS_FEATURE_PRICE = 2.60D;
+    public final static double TESTB_PRC_BASIS_FEATURE_PRICE = 6.2D;
 
-    public Tag205StrMaturityDate(MyStringType dataValue) {
-        setFixType(FIX41.FIX205_STR_MATURITY_DAY);
+    public Tag260PrcBasisFeaturePrice(MyPriceType dataValue) {
+        setFixType(FIX42.FIX260_PRC_BASIS_FEATURE_PRICE);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -69,14 +68,14 @@ public class Tag205StrMaturityDate extends FIX41Abstract implements FixTagValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag205StrMaturityDate tagData;
+        Tag260PrcBasisFeaturePrice tagData;
 
-        tagData = new Tag205StrMaturityDate(new MyStringType(TESTA_STR_MATURITY_DAY) );
+        tagData = new Tag260PrcBasisFeaturePrice(new MyPriceType(TESTA_PRC_BASIS_FEATURE_PRICE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag205StrMaturityDate(new MyStringType(TESTB_STR_MATURITY_DAY) );
+        tagData = new Tag260PrcBasisFeaturePrice(new MyPriceType(TESTB_PRC_BASIS_FEATURE_PRICE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -22,11 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
-class Tag315UnderlyingPutOrCallTest {
+class Tag383LenMaxMessageSizeTest {
     @Test
-    void FIX0315Test() {
-        FIX42 fixData = FIX42.FIX315_UNDERLYING_PUT_OR_CALL;
+    void FIX0383Test() {
+        FIX42 fixData = FIX42.FIX383_LEN_MAX_MESSAGE_SIZE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,8 +34,8 @@ class Tag315UnderlyingPutOrCallTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0315Test() {
-        Tag315UnderlyingPutOrCall tagData;
+    void Tag0383Test() {
+        Tag383LenMaxMessageSize tagData;
 
     }
 }

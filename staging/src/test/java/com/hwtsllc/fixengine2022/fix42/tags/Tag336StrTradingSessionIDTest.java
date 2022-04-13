@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag383MaxMessageSizeTest {
+class Tag336StrTradingSessionIDTest {
     @Test
-    void FIX0383Test() {
-        FIX42 fixData = FIX42.FIX383_MAX_MESSAGE_SIZE;
+    void FIX0336Test() {
+        FIX42 fixData = FIX42.FIX336_STR_TRADING_SESSION_ID;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag383MaxMessageSizeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0383Test() {
-        Tag383MaxMessageSize tagData;
+    void Tag0336Test() {
+        Tag336StrTradingSessionID tagData;
 
     }
 }
