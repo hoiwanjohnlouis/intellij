@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag370OnBehalfOfSendingTimeTest {
+class Tag341UtcTradSesStartTimeTest {
     @Test
-    void FIX0370Test() {
-        FIX42 fixData = FIX42.FIX370_ON_BEHALF_OF_SENDING_TIME;
+    void FIX0341Test() {
+        FIX42 fixData = FIX42.FIX341_UTC_TRAD_SES_START_TIME;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag370OnBehalfOfSendingTimeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0370Test() {
-        Tag370OnBehalfOfSendingTime tagData;
+    void Tag0341Test() {
+        Tag341UtcTradSesStartTime tagData;
 
     }
 }

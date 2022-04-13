@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag344TradSesCloseTimeTest {
+class Tag367UtcQuoteSetValidUntilTimeTest {
     @Test
-    void FIX0344Test() {
-        FIX42 fixData = FIX42.FIX344_TRAD_SES_CLOSE_TIME;
+    void FIX0367Test() {
+        FIX42 fixData = FIX42.FIX367_UTC_QUOTE_SET_VALID_UNTIL_TIME;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag344TradSesCloseTimeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0344Test() {
-        Tag344TradSesCloseTime tagData;
+    void Tag0367Test() {
+        Tag367UtcQuoteSetValidUntilTime tagData;
 
     }
 }

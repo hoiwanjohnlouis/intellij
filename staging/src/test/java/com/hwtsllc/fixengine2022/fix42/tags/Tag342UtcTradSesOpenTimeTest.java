@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag273MDEntryTimeTest {
+class Tag342UtcTradSesOpenTimeTest {
     @Test
-    void FIX0273Test() {
-        FIX42 fixData = FIX42.FIX273_MD_ENTRY_TIME;
+    void FIX0342Test() {
+        FIX42 fixData = FIX42.FIX342_UTC_TRAD_SES_OPEN_TIME;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag273MDEntryTimeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0273Test() {
-        Tag273MDEntryTime tagData;
+    void Tag0342Test() {
+        Tag342UtcTradSesOpenTime tagData;
 
     }
 }

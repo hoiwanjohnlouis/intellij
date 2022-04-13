@@ -19,12 +19,12 @@ package com.hwtsllc.fixengine2022.datatypes;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  MyUTCTimestampType contains complete DATE and TIME
+ *  MyUTCDateType contains only the DATE portion of UTC.
  */
-public class MyUTCTimestampType implements LogStringVerbose {
+public class MyUTCDateType implements LogStringVerbose {
     private String dataValue;
 
-    public MyUTCTimestampType(final String dataValue) {
+    public MyUTCDateType(final String dataValue) {
         this.dataValue = dataValue;
     }
 
@@ -53,9 +53,9 @@ public class MyUTCTimestampType implements LogStringVerbose {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyUTCTimestampType dataType;
+        MyUTCDateType dataType;
 
-        dataType = new MyUTCTimestampType("18991231 235959");
+        dataType = new MyUTCDateType("18991231");
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }
