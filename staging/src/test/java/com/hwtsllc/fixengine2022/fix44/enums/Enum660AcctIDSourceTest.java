@@ -16,16 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum660AcctIDSourceTest {
     @Test
-    void Enum0660Test() {
+    void EnumTest() {
         Enum660AcctIDSource enumType;
 
     }

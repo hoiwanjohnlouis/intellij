@@ -18,10 +18,10 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 
 import org.junit.jupiter.api.Test;
 
-class Enum954Nested3PartySubIDTypeTest {
+class Enum814ApplQueueResolutionTest {
     @Test
     void EnumTest() {
-        Enum954Nested3PartySubIDType enumType;
+        Enum814ApplQueueResolution enumType;
 
     }
 }
