@@ -35,5 +35,7 @@ class Tag935NetworkRequestTypeTest {
     }
     @Test
     void Tag0935Test() {
+        Tag935NetworkRequestType tagData;
+
     }
 }

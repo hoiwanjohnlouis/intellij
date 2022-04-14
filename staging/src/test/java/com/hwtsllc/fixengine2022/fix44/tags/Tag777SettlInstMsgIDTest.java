@@ -35,5 +35,7 @@ class Tag777SettlInstMsgIDTest {
     }
     @Test
     void Tag0777Test() {
+        Tag777SettlInstMsgID tagData;
+
     }
 }

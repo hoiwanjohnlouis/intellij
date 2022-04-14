@@ -35,5 +35,7 @@ class Tag692QuoteMyPriceTypeTest {
     }
     @Test
     void Tag0692Test() {
+        Tag692QuotePriceType tagData;
+
     }
 }

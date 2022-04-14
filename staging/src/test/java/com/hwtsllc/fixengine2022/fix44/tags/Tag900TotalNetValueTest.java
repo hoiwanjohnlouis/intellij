@@ -35,5 +35,7 @@ class Tag900TotalNetValueTest {
     }
     @Test
     void Tag0900Test() {
+        Tag900TotalNetValue tagData;
+
     }
 }

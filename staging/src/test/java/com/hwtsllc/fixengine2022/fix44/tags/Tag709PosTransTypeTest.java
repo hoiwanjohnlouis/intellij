@@ -35,5 +35,7 @@ class Tag709PosTransTypeTest {
     }
     @Test
     void Tag0709Test() {
+        Tag709PosTransType tagData;
+
     }
 }

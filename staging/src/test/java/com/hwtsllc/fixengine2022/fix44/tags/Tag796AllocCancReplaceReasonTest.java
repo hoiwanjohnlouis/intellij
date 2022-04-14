@@ -35,5 +35,7 @@ class Tag796AllocCancReplaceReasonTest {
     }
     @Test
     void Tag0796Test() {
+        Tag796AllocCancReplaceReason tagData;
+
     }
 }

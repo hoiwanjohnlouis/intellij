@@ -35,5 +35,7 @@ class Tag841DiscretionMoveTypeTest {
     }
     @Test
     void Tag0841Test() {
+        Tag841DiscretionMoveType tagData;
+
     }
 }

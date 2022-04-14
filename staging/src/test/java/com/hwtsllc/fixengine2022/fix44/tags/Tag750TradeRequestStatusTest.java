@@ -35,5 +35,7 @@ class Tag750TradeRequestStatusTest {
     }
     @Test
     void Tag0750Test() {
+        Tag750TradeRequestStatus tagData;
+
     }
 }

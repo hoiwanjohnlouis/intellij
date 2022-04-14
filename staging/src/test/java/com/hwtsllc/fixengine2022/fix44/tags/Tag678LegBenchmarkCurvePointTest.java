@@ -35,5 +35,7 @@ class Tag678LegBenchmarkCurvePointTest {
     }
     @Test
     void Tag0678Test() {
+        Tag678LegBenchmarkCurvePoint tagData;
+
     }
 }

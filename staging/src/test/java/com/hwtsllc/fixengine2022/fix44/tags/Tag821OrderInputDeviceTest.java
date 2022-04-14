@@ -35,5 +35,7 @@ class Tag821OrderInputDeviceTest {
     }
     @Test
     void Tag0821Test() {
+        Tag821OrderInputDevice tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag912LastRptRequestedTest {
     }
     @Test
     void Tag0912Test() {
+        Tag912LastRptRequested tagData;
+
     }
 }

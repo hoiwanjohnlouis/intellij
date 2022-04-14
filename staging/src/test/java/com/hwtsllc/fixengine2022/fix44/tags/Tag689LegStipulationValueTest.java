@@ -35,5 +35,7 @@ class Tag689LegStipulationValueTest {
     }
     @Test
     void Tag0689Test() {
+        Tag689LegStipulationValue tagData;
+
     }
 }

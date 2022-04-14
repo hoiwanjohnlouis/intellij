@@ -35,5 +35,7 @@ class Tag903CollAsgnTransTypeTest {
     }
     @Test
     void Tag0903Test() {
+        Tag903CollAsgnTransType tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag759Nested2PartyRoleTest {
     }
     @Test
     void Tag0759Test() {
+        Tag759Nested2PartyRole tagData;
+
     }
 }

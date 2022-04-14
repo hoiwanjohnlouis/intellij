@@ -35,5 +35,7 @@ class Tag701YieldCalcDateTest {
     }
     @Test
     void Tag0701Test() {
+        Tag701YieldCalcDate tagData;
+
     }
 }

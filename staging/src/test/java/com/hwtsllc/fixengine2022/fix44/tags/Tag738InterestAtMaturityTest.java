@@ -35,5 +35,7 @@ class Tag738InterestAtMaturityTest {
     }
     @Test
     void Tag0738Test() {
+        Tag738InterestAtMaturity tagData;
+
     }
 }

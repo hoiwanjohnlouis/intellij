@@ -35,5 +35,7 @@ class Tag934LastNetworkResponseIDTest {
     }
     @Test
     void Tag0934Test() {
+        Tag934LastNetworkResponseID tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag766AllowableOneSidednessValueTest {
     }
     @Test
     void Tag0766Test() {
+        Tag766AllowableOneSidednessValue tagData;
+
     }
 }

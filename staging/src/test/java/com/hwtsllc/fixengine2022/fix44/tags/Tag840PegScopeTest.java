@@ -35,5 +35,7 @@ class Tag840PegScopeTest {
     }
     @Test
     void Tag0840Test() {
+        Tag840PegScope tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag846DiscretionScopeTest {
     }
     @Test
     void Tag0846Test() {
+        Tag846DiscretionScope tagData;
+
     }
 }

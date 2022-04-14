@@ -35,5 +35,7 @@ class Tag868EventTextTest {
     }
     @Test
     void Tag0868Test() {
+        Tag868EventText tagData;
+
     }
 }

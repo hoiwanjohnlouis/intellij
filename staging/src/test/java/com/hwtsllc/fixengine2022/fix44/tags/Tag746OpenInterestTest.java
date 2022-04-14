@@ -35,5 +35,7 @@ class Tag746OpenInterestTest {
     }
     @Test
     void Tag0746Test() {
+        Tag746OpenInterest tagData;
+
     }
 }

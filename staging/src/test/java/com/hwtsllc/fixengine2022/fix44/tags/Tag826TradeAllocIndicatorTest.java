@@ -35,5 +35,7 @@ class Tag826TradeAllocIndicatorTest {
     }
     @Test
     void Tag0826Test() {
+        Tag826TradeAllocIndicator tagData;
+
     }
 }

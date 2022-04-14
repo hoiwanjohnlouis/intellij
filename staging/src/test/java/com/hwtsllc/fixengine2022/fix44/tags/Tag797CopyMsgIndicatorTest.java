@@ -35,5 +35,7 @@ class Tag797CopyMsgIndicatorTest {
     }
     @Test
     void Tag0797Test() {
+        Tag797CopyMsgIndicator tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag724PosReqTypeTest {
     }
     @Test
     void Tag0724Test() {
+        Tag724PosReqType tagData;
+
     }
 }

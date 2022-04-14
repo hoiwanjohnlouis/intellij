@@ -35,5 +35,7 @@ class Tag748TotNumTradeReportsTest {
     }
     @Test
     void Tag0748Test() {
+        Tag748TotNumTradeReports tagData;
+
     }
 }

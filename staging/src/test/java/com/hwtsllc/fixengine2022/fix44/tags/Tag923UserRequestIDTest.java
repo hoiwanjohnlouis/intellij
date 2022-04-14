@@ -35,5 +35,7 @@ class Tag923UserRequestIDTest {
     }
     @Test
     void Tag0923Test() {
+        Tag923UserRequestID tagData;
+
     }
 }

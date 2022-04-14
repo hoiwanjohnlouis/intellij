@@ -35,5 +35,7 @@ class Tag880TrdMatchIDTest {
     }
     @Test
     void Tag0880Test() {
+        Tag880TrdMatchID tagData;
+
     }
 }

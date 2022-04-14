@@ -35,5 +35,7 @@ class Tag853ShortSaleReasonTest {
     }
     @Test
     void Tag0853Test() {
+        Tag853ShortSaleReason tagData;
+
     }
 }

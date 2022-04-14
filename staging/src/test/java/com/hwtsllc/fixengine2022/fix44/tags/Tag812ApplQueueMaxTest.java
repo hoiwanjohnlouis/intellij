@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class tag812ApplQueueMaxTest {
+class Tag812ApplQueueMaxTest {
     @Test
     void FIX0812Test() {
         FIX44 fixData = FIX44.FIX812_APPL_QUEUE_MAX;
@@ -35,5 +35,7 @@ class tag812ApplQueueMaxTest {
     }
     @Test
     void Tag0812Test() {
+        Tag812ApplQueueMax tagData;
+
     }
 }

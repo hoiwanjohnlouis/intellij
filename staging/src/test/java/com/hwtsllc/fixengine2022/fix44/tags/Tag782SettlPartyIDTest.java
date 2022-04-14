@@ -35,5 +35,7 @@ class Tag782SettlPartyIDTest {
     }
     @Test
     void Tag0782Test() {
+        Tag782SettlPartyID tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag807Nested2PartySubIDTypeTest {
     }
     @Test
     void Tag0807Test() {
+        Tag807Nested2PartySubIDType tagData;
+
     }
 }

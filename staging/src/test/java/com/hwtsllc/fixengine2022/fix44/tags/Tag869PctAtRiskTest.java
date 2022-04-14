@@ -35,5 +35,7 @@ class Tag869PctAtRiskTest {
     }
     @Test
     void Tag0869Test() {
+        Tag869PctAtRisk tagData;
+
     }
 }

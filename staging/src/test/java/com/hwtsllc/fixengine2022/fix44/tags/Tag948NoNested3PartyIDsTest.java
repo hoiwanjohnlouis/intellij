@@ -35,5 +35,7 @@ class Tag948NoNested3PartyIDsTest {
     }
     @Test
     void Tag0948Test() {
+        Tag948NoNested3PartyIDs tagData;
+
     }
 }

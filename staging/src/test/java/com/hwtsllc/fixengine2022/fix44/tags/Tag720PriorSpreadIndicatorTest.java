@@ -35,5 +35,7 @@ class Tag720PriorSpreadIndicatorTest {
     }
     @Test
     void Tag0720Test() {
+        Tag720PriorSpreadIndicator tagData;
+
     }
 }

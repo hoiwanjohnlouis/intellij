@@ -35,5 +35,7 @@ class Tag839PeggedPriceTest {
     }
     @Test
     void Tag0839Test() {
+        Tag839PeggedPrice tagData;
+
     }
 }

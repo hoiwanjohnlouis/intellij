@@ -35,5 +35,7 @@ class Tag670NoLegAllocsTest {
     }
     @Test
     void Tag0670Test() {
+        Tag670NoLegAllocs tagData;
+
     }
 }

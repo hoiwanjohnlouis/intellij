@@ -35,5 +35,7 @@ class Tag828TrdTypeTest {
     }
     @Test
     void Tag0828Test() {
+        Tag828TrdType tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag879UnderlyingQtyTest {
     }
     @Test
     void Tag0879Test() {
+        Tag879UnderlyingQty tagData;
+
     }
 }

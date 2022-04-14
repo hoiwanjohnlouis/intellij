@@ -35,5 +35,7 @@ class Tag942LegStrikeCurrencyTest {
     }
     @Test
     void Tag0942Test() {
+        Tag942LegStrikeCurrency tagData;
+
     }
 }

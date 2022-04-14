@@ -35,5 +35,7 @@ class Tag876CPRegTypeTest {
     }
     @Test
     void Tag0876Test() {
+        Tag876CPRegType tagData;
+
     }
 }

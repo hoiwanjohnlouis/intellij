@@ -35,5 +35,7 @@ class Tag847TargetStrategyTest {
     }
     @Test
     void Tag0847Test() {
+        Tag847TargetStrategy tagData;
+
     }
 }

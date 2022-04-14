@@ -35,5 +35,7 @@ class Tag890MaturityNetMoneyTest {
     }
     @Test
     void Tag0890Test() {
+        Tag890MaturityNetMoney tagData;
+
     }
 }

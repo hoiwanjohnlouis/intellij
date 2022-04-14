@@ -35,5 +35,7 @@ class Tag789NextExpectedMsgSeqNumTest {
     }
     @Test
     void Tag0789Test() {
+        Tag789NextExpectedMsgSeqNum tagData;
+
     }
 }

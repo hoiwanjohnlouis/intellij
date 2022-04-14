@@ -35,5 +35,7 @@ class Tag813ApplQueueDepthTest {
     }
     @Test
     void Tag0813Test() {
+        Tag813ApplQueueDepth tagData;
+
     }
 }

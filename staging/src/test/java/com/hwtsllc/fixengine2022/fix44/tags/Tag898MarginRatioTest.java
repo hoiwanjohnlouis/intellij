@@ -35,5 +35,7 @@ class Tag898MarginRatioTest {
     }
     @Test
     void Tag0898Test() {
+        Tag898MarginRatio tagData;
+
     }
 }

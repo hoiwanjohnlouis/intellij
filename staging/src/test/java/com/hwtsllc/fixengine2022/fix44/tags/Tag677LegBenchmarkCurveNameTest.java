@@ -35,5 +35,7 @@ class Tag677LegBenchmarkCurveNameTest {
     }
     @Test
     void Tag0677Test() {
+        Tag677LegBenchmarkCurveName tagData;
+
     }
 }

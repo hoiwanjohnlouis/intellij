@@ -35,5 +35,7 @@ class Tag698YieldRedemptionMyPriceTypeTest {
     }
     @Test
     void Tag0698Test() {
+        Tag698YieldRedemptionPriceType tagData;
+
     }
 }

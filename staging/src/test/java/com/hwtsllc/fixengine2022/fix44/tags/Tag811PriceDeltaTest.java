@@ -35,5 +35,7 @@ class Tag811PriceDeltaTest {
     }
     @Test
     void Tag0811Test() {
+        Tag811PriceDelta tagData;
+
     }
 }

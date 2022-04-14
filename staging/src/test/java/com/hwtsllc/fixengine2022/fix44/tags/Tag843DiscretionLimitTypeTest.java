@@ -35,5 +35,7 @@ class Tag843DiscretionLimitTypeTest {
     }
     @Test
     void Tag0843Test() {
+        Tag843DiscretionLimitType tagData;
+
     }
 }

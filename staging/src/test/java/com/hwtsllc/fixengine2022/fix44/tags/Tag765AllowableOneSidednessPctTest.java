@@ -35,5 +35,7 @@ class Tag765AllowableOneSidednessPctTest {
     }
     @Test
     void Tag0765Test() {
+        Tag765AllowableOneSidednessPct tagData;
+
     }
 }

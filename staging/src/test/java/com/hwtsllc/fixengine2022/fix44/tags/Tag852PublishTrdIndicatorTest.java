@@ -35,5 +35,7 @@ class Tag852PublishTrdIndicatorTest {
     }
     @Test
     void Tag0852Test() {
+        Tag852PublishTrdIndicator tagData;
+
     }
 }

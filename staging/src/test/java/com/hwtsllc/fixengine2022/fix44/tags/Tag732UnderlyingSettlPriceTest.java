@@ -35,5 +35,7 @@ class Tag732UnderlyingSettlPriceTest {
     }
     @Test
     void Tag0732Test() {
+        Tag732UnderlyingSettlPrice tagData;
+
     }
 }

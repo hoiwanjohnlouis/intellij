@@ -35,5 +35,7 @@ class Tag908CollRptIDTest {
     }
     @Test
     void Tag0908Test() {
+        Tag908CollRptID tagData;
+
     }
 }

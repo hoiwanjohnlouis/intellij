@@ -35,5 +35,7 @@ class Tag726ResponseDestinationTest {
     }
     @Test
     void Tag0726Test() {
+        Tag726ResponseDestination tagData;
+
     }
 }

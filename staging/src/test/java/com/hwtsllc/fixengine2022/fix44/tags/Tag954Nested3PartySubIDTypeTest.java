@@ -35,5 +35,7 @@ class Tag954Nested3PartySubIDTypeTest {
     }
     @Test
     void Tag0954Test() {
+        Tag954Nested3PartySubIDType tagData;
+
     }
 }

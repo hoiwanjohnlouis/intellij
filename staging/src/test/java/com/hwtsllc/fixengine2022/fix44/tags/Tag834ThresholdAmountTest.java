@@ -35,5 +35,7 @@ class Tag834ThresholdAmountTest {
     }
     @Test
     void Tag0834Test() {
+        Tag834ThresholdAmount tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag897NoTradesTest {
     }
     @Test
     void Tag0897Test() {
+        Tag897NoTrades tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag723PosMaintResultTest {
     }
     @Test
     void Tag0723Test() {
+        Tag723PosMaintResult tagData;
+
     }
 }

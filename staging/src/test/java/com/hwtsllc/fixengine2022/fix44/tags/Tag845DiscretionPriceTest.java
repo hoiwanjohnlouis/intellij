@@ -35,5 +35,7 @@ class Tag845DiscretionPriceTest {
     }
     @Test
     void Tag0845Test() {
+        Tag845DiscretionPrice tagData;
+
     }
 }

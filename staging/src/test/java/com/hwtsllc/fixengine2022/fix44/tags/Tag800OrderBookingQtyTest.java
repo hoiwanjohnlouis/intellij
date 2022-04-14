@@ -35,5 +35,7 @@ class Tag800OrderBookingQtyTest {
     }
     @Test
     void Tag0800Test() {
+        Tag800OrderBookingQty tagData;
+
     }
 }

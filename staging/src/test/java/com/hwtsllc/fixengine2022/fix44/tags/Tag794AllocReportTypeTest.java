@@ -35,5 +35,7 @@ class Tag794AllocReportTypeTest {
     }
     @Test
     void Tag0794Test() {
+        Tag794AllocReportType tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag831AsgnReqIDTest {
     }
     @Test
     void Tag0831Test() {
+        Tag831AsgnReqID tagData;
+
     }
 }

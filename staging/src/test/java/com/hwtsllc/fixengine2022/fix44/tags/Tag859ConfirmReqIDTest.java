@@ -35,5 +35,7 @@ class Tag859ConfirmReqIDTest {
     }
     @Test
     void Tag0859Test() {
+        Tag859ConfirmReqID tagData;
+
     }
 }

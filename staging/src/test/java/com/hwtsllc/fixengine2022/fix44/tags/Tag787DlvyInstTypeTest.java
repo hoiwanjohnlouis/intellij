@@ -35,5 +35,7 @@ class Tag787DlvyInstTypeTest {
     }
     @Test
     void Tag0787Test() {
+        Tag787DlvyInstType tagData;
+
     }
 }

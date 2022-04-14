@@ -35,5 +35,7 @@ class Tag816NoAltMDSourceTest {
     }
     @Test
     void Tag0816Test() {
+        Tag816NoAltMDSource tagData;
+
     }
 }

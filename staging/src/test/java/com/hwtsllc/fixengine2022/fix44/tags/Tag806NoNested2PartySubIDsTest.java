@@ -35,5 +35,7 @@ class Tag806NoNested2PartySubIDsTest {
     }
     @Test
     void Tag0806Test() {
+        Tag806NoNested2PartySubIDs tagData;
+
     }
 }

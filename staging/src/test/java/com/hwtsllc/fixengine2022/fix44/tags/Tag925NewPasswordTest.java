@@ -35,5 +35,7 @@ class Tag925NewPasswordTest {
     }
     @Test
     void Tag0925Test() {
+        Tag925NewPassword tagData;
+
     }
 }

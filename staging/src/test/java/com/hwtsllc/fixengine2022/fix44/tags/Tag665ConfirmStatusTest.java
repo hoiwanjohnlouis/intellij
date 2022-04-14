@@ -35,5 +35,7 @@ class Tag665ConfirmStatusTest {
     }
     @Test
     void Tag0665Test() {
+        Tag665ConfirmStatus tagData;
+
     }
 }

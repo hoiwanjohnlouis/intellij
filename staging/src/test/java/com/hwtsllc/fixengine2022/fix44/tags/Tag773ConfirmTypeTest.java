@@ -35,5 +35,7 @@ class Tag773ConfirmTypeTest {
     }
     @Test
     void Tag0773Test() {
+        Tag773ConfirmType tagData;
+
     }
 }

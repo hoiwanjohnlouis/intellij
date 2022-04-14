@@ -35,5 +35,7 @@ class Tag784SettlPartyRoleTest {
     }
     @Test
     void Tag0784Test() {
+        Tag784SettlPartyRole tagData;
+
     }
 }

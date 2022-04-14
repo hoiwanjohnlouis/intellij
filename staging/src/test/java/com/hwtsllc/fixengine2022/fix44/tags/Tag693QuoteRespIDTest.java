@@ -35,5 +35,7 @@ class Tag693QuoteRespIDTest {
     }
     @Test
     void Tag0693Test() {
+        Tag693QuoteRespID tagData;
+
     }
 }

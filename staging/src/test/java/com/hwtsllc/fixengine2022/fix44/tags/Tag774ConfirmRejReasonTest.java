@@ -35,5 +35,7 @@ class Tag774ConfirmRejReasonTest {
     }
     @Test
     void Tag0774Test() {
+        Tag774ConfirmRejReason tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag885UnderlyingCurrentValueTest {
     }
     @Test
     void Tag0885Test() {
+        Tag885UnderlyingCurrentValue tagData;
+
     }
 }

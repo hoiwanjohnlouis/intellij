@@ -35,5 +35,7 @@ class Tag778NoSettlInstTest {
     }
     @Test
     void Tag0778Test() {
+        Tag778NoSettlInst tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag687LegQtyTest {
     }
     @Test
     void Tag0687Test() {
+        Tag687LegQty tagData;
+
     }
 }

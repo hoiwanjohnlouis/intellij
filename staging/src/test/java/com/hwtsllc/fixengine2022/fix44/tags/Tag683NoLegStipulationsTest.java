@@ -35,5 +35,7 @@ class Tag683NoLegStipulationsTest {
     }
     @Test
     void Tag0683Test() {
+        Tag683NoLegStipulations tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag791SettlInstReqIDTest {
     }
     @Test
     void Tag0791Test() {
+        Tag791SettlInstReqID tagData;
+
     }
 }

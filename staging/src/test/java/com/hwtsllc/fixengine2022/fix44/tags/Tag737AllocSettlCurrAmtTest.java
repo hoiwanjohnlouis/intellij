@@ -35,5 +35,7 @@ class Tag737AllocSettlCurrAmtTest {
     }
     @Test
     void Tag0737Test() {
+        Tag737AllocSettlCurrAmt tagData;
+
     }
 }

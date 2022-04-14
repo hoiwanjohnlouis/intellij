@@ -35,5 +35,7 @@ class Tag703PosTypeTest {
     }
     @Test
     void Tag0703Test() {
+        Tag703PosType tagData;
+
     }
 }

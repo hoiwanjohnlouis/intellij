@@ -35,5 +35,7 @@ class Tag820TradeLinkIDTest {
     }
     @Test
     void Tag0820Test() {
+        Tag820TradeLinkID tagData;
+
     }
 }

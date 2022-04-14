@@ -35,5 +35,7 @@ class Tag668DeliveryFormTest {
     }
     @Test
     void Tag0668Test() {
+        Tag668DeliveryForm tagData;
+
     }
 }

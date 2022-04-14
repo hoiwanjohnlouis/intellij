@@ -35,5 +35,7 @@ class Tag867EventPxTest {
     }
     @Test
     void Tag0867Test() {
+        Tag867EventPx tagData;
+
     }
 }

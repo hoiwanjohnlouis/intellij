@@ -35,5 +35,7 @@ class Tag810UnderlyingPxTest {
     }
     @Test
     void Tag0810Test() {
+        Tag810UnderlyingPx tagData;
+
     }
 }

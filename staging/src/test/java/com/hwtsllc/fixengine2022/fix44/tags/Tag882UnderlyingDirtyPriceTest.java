@@ -35,5 +35,7 @@ class Tag882UnderlyingDirtyPriceTest {
     }
     @Test
     void Tag0882Test() {
+        Tag882UnderlyingDirtyPrice tagData;
+
     }
 }

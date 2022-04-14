@@ -35,5 +35,7 @@ class Tag716SettlSessIDTest {
     }
     @Test
     void Tag0716Test() {
+        Tag716SettlSessID tagData;
+
     }
 }

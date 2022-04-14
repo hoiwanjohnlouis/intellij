@@ -35,5 +35,7 @@ class Tag835PegMoveTypeTest {
     }
     @Test
     void Tag0835Test() {
+        Tag835PegMoveType tagData;
+
     }
 }

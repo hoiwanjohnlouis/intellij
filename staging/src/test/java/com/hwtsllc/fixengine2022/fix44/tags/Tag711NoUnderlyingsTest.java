@@ -35,5 +35,7 @@ class Tag711NoUnderlyingsTest {
     }
     @Test
     void Tag0711Test() {
+        Tag711NoUnderlyings tagData;
+
     }
 }

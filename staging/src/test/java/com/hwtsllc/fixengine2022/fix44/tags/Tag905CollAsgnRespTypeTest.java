@@ -35,5 +35,7 @@ class Tag905CollAsgnRespTypeTest {
     }
     @Test
     void Tag0905Test() {
+        Tag905CollAsgnRespType tagData;
+
     }
 }

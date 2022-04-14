@@ -35,5 +35,7 @@ class Tag933NetworkRequestIDTest {
     }
     @Test
     void Tag0933Test() {
+        Tag933NetworkRequestID tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag837PegLimitTypeTest {
     }
     @Test
     void Tag0837Test() {
+        Tag837PegLimitType tagData;
+
     }
 }

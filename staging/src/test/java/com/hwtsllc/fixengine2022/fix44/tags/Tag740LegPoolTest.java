@@ -35,5 +35,7 @@ class Tag740LegPoolTest {
     }
     @Test
     void Tag0740Test() {
+        Tag740LegPool tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag744AssignmentMethodTest {
     }
     @Test
     void Tag0744Test() {
+        Tag744AssignmentMethod tagData;
+
     }
 }

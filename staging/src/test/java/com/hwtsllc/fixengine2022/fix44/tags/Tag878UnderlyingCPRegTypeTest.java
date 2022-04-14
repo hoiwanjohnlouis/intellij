@@ -35,5 +35,7 @@ class Tag878UnderlyingCPRegTypeTest {
     }
     @Test
     void Tag0878Test() {
+        Tag878UnderlyingCPRegType tagData;
+
     }
 }

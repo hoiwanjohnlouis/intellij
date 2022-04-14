@@ -35,5 +35,7 @@ class Tag694QuoteRespTypeTest {
     }
     @Test
     void Tag0694Test() {
+        Tag694QuoteRespType tagData;
+
     }
 }

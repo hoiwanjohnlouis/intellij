@@ -35,5 +35,7 @@ class Tag895CollAsgnReasonTest {
     }
     @Test
     void Tag0895Test() {
+        Tag895CollAsgnReason tagData;
+
     }
 }

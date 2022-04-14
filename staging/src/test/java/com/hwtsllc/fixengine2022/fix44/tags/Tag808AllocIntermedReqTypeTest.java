@@ -35,5 +35,7 @@ class Tag808AllocIntermedReqTypeTest {
     }
     @Test
     void Tag0808Test() {
+        Tag808AllocIntermedReqType tagData;
+
     }
 }

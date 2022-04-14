@@ -35,5 +35,7 @@ class Tag830TransferReasonTest {
     }
     @Test
     void Tag0830Test() {
+        Tag830TransferReason tagData;
+
     }
 }

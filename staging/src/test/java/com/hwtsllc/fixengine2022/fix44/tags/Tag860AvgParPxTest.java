@@ -35,5 +35,7 @@ class Tag860AvgParPxTest {
     }
     @Test
     void Tag0860Test() {
+        Tag860AvgParPx tagData;
+
     }
 }

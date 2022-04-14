@@ -35,5 +35,7 @@ class Tag844DiscretionRoundDirectionTest {
     }
     @Test
     void Tag0844Test() {
+        Tag844DiscretionRoundDirection tagData;
+
     }
 }

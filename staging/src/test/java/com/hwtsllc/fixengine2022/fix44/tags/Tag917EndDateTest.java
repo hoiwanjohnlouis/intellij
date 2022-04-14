@@ -35,5 +35,7 @@ class Tag917EndDateTest {
     }
     @Test
     void Tag0917Test() {
+        Tag917EndDate tagData;
+
     }
 }

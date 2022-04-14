@@ -35,5 +35,7 @@ class Tag855SecondaryTrdTypeTest {
     }
     @Test
     void Tag0855Test() {
+        Tag855SecondaryTrdType tagData;
+
     }
 }

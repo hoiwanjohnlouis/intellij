@@ -35,5 +35,7 @@ class Tag696YieldRedemptionDateTest {
     }
     @Test
     void Tag0696Test() {
+        Tag696YieldRedemptionDate tagData;
+
     }
 }

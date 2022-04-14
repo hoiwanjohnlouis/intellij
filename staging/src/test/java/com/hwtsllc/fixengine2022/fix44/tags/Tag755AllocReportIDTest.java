@@ -35,5 +35,7 @@ class Tag755AllocReportIDTest {
     }
     @Test
     void Tag0755Test() {
+        Tag755AllocReportID tagData;
+
     }
 }

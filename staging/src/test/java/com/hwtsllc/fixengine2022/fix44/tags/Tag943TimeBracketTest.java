@@ -35,5 +35,7 @@ class Tag943TimeBracketTest {
     }
     @Test
     void Tag0943Test() {
+        Tag943TimeBracket tagData;
+
     }
 }

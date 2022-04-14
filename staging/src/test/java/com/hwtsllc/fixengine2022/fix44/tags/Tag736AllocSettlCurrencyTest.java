@@ -35,5 +35,7 @@ class Tag736AllocSettlCurrencyTest {
     }
     @Test
     void Tag0736Test() {
+        Tag736AllocSettlCurrency tagData;
+
     }
 }

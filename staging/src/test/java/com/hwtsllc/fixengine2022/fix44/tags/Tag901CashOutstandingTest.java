@@ -35,5 +35,7 @@ class Tag901CashOutstandingTest {
     }
     @Test
     void Tag0901Test() {
+        Tag901CashOutstanding tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag823UnderlyingTradingSessionSubIDTest {
     }
     @Test
     void Tag0823Test() {
+        Tag823UnderlyingTradingSessionSubID tagData;
+
     }
 }

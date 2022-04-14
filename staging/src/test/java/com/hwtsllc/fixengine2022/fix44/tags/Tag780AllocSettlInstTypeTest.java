@@ -35,5 +35,7 @@ class Tag780AllocSettlInstTypeTest {
     }
     @Test
     void Tag0780Test() {
+        Tag780AllocSettlInstType tagData;
+
     }
 }

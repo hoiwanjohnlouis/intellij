@@ -35,5 +35,7 @@ class Tag675LegSettlCurrencyTest {
     }
     @Test
     void Tag0675Test() {
+        Tag675LegSettlCurrency tagData;
+
     }
 }

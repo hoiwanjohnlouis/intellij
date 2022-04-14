@@ -35,5 +35,7 @@ class Tag825ExchangeRuleTest {
     }
     @Test
     void Tag0825Test() {
+        Tag825ExchangeRule tagData;
+
     }
 }

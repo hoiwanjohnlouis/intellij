@@ -35,5 +35,7 @@ class Tag705ShortQtyTest {
     }
     @Test
     void Tag0705Test() {
+        Tag705ShortQty tagData;
+
     }
 }

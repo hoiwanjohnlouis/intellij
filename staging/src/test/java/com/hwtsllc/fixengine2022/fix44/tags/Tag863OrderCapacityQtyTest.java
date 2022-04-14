@@ -35,5 +35,7 @@ class Tag863OrderCapacityQtyTest {
     }
     @Test
     void Tag0863Test() {
+        Tag863OrderCapacityQty tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag927UserStatusTextTest {
     }
     @Test
     void Tag0927Test() {
+        Tag927UserStatusText tagData;
+
     }
 }

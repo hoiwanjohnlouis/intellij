@@ -35,5 +35,7 @@ class Tag719ContraryInstructionIndicatorTest {
     }
     @Test
     void Tag0719Test() {
+        Tag719ContraryInstructionIndicator tagData;
+
     }
 }

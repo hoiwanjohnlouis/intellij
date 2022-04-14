@@ -35,5 +35,7 @@ class Tag827ExpirationCycleTest {
     }
     @Test
     void Tag0827Test() {
+        Tag827ExpirationCycle tagData;
+
     }
 }

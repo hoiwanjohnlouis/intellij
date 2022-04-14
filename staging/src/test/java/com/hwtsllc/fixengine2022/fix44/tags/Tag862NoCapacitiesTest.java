@@ -35,5 +35,7 @@ class Tag862NoCapacitiesTest {
     }
     @Test
     void Tag0862Test() {
+        Tag862NoCapacities tagData;
+
     }
 }

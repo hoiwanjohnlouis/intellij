@@ -35,5 +35,7 @@ class Tag690LegSwapTypeTest {
     }
     @Test
     void Tag0690Test() {
+        Tag690LegSwapType tagData;
+
     }
 }

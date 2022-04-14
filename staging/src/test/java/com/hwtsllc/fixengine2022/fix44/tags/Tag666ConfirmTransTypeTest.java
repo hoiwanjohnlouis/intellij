@@ -35,5 +35,7 @@ class Tag666ConfirmTransTypeTest {
     }
     @Test
     void Tag0666Test() {
+        Tag666ConfirmTransType tagData;
+
     }
 }

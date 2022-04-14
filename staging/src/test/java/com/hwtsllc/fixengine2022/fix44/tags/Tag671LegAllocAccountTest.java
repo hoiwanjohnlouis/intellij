@@ -35,5 +35,7 @@ class Tag671LegAllocAccountTest {
     }
     @Test
     void Tag0671Test() {
+        Tag671LegAllocAccount tagData;
+
     }
 }

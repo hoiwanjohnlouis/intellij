@@ -35,5 +35,7 @@ class Tag769TrdRegTimestampTest {
     }
     @Test
     void Tag0769Test() {
+        Tag769TrdRegTimestamp tagData;
+
     }
 }

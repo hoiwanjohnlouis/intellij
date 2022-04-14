@@ -35,5 +35,7 @@ class Tag945CollInquiryStatusTest {
     }
     @Test
     void Tag0945Test() {
+        Tag945CollInquiryStatus tagData;
+
     }
 }

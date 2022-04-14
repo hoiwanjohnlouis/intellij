@@ -35,5 +35,7 @@ class Tag861ReportedPxTest {
     }
     @Test
     void Tag0861Test() {
+        Tag861ReportedPx tagData;
+
     }
 }

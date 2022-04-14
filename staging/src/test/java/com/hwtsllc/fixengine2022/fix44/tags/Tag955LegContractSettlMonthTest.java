@@ -35,5 +35,7 @@ class Tag955LegContractSettlMonthTest {
     }
     @Test
     void Tag0955Test() {
+        Tag955LegContractSettlMonth tagData;
+
     }
 }

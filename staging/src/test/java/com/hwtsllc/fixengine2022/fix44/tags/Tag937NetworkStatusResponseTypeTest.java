@@ -35,5 +35,7 @@ class Tag937NetworkStatusResponseTypeTest {
     }
     @Test
     void Tag0937Test() {
+        Tag937NetworkStatusResponseType tagData;
+
     }
 }

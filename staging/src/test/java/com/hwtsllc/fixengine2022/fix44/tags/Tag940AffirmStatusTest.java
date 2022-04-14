@@ -35,5 +35,7 @@ class Tag940AffirmStatusTest {
     }
     @Test
     void Tag0940Test() {
+        Tag940AffirmStatus tagData;
+
     }
 }

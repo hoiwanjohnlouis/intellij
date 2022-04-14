@@ -35,5 +35,7 @@ class Tag761BenchmarkSecurityIDSourceTest {
     }
     @Test
     void Tag0761Test() {
+        Tag761BenchmarkSecurityIDSource tagData;
+
     }
 }

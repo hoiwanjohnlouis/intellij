@@ -35,5 +35,7 @@ class Tag793SecondaryAllocIDTest {
     }
     @Test
     void Tag0793Test() {
+        Tag793SecondaryAllocID tagData;
+
     }
 }

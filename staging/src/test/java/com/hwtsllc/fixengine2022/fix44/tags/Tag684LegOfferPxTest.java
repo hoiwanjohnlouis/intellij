@@ -35,5 +35,7 @@ class Tag684LegOfferPxTest {
     }
     @Test
     void Tag0684Test() {
+        Tag684LegOfferPx tagData;
+
     }
 }

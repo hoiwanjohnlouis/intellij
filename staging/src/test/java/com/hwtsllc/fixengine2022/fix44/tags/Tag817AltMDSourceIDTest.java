@@ -35,5 +35,7 @@ class Tag817AltMDSourceIDTest {
     }
     @Test
     void Tag0817Test() {
+        Tag817AltMDSourceID tagData;
+
     }
 }

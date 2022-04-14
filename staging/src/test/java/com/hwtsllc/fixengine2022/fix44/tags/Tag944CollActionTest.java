@@ -35,5 +35,7 @@ class Tag944CollActionTest {
     }
     @Test
     void Tag0944Test() {
+        Tag944CollAction tagData;
+
     }
 }

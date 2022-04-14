@@ -35,5 +35,7 @@ class Tag904CollRespIDTest {
     }
     @Test
     void Tag0904Test() {
+        Tag904CollRespID tagData;
+
     }
 }

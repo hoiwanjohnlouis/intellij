@@ -35,5 +35,7 @@ class Tag875CPProgramTest {
     }
     @Test
     void Tag0875Test() {
+        Tag875CPProgram tagData;
+
     }
 }

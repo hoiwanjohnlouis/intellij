@@ -35,5 +35,7 @@ class Tag763UnderlyingSecuritySubTypeTest {
     }
     @Test
     void Tag0763Test() {
+        Tag763UnderlyingSecuritySubType tagData;
+
     }
 }

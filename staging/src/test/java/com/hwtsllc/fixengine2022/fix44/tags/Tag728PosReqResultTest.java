@@ -35,5 +35,7 @@ class Tag728PosReqResultTest {
     }
     @Test
     void Tag0728Test() {
+        Tag728PosReqResult tagData;
+
     }
 }

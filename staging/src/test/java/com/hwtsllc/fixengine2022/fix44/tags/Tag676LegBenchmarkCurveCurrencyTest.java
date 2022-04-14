@@ -35,5 +35,7 @@ class Tag676LegBenchmarkCurveCurrencyTest {
     }
     @Test
     void Tag0676Test() {
+        Tag676LegBenchmarkCurveCurrency tagData;
+
     }
 }

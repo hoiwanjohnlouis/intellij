@@ -35,5 +35,7 @@ class Tag886UnderlyingEndValueTest {
     }
     @Test
     void Tag0886Test() {
+        Tag886UnderlyingEndValue tagData;
+
     }
 }

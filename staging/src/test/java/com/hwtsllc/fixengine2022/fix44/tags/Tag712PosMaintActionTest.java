@@ -35,5 +35,7 @@ class Tag712PosMaintActionTest {
     }
     @Test
     void Tag0712Test() {
+        Tag712PosMaintAction tagData;
+
     }
 }

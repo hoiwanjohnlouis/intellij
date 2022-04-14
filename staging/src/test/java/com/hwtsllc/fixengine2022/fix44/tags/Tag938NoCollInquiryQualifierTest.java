@@ -35,5 +35,7 @@ class Tag938NoCollInquiryQualifierTest {
     }
     @Test
     void Tag0938Test() {
+        Tag938NoCollInquiryQualifier tagData;
+
     }
 }

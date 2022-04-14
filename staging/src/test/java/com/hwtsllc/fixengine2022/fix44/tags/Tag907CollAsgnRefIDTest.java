@@ -35,5 +35,7 @@ class Tag907CollAsgnRefIDTest {
     }
     @Test
     void Tag0907Test() {
+        Tag907CollAsgnRefID tagData;
+
     }
 }

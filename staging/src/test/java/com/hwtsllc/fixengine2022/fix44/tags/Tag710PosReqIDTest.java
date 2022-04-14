@@ -35,5 +35,7 @@ class Tag710PosReqIDTest {
     }
     @Test
     void Tag0710Test() {
+        Tag710PosReqID tagData;
+
     }
 }

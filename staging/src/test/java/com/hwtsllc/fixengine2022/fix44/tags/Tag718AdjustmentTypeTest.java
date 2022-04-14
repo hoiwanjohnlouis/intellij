@@ -35,5 +35,7 @@ class Tag718AdjustmentTypeTest {
     }
     @Test
     void Tag0718Test() {
+        Tag718AdjustmentType tagData;
+
     }
 }

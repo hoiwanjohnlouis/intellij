@@ -35,5 +35,7 @@ class Tag896CollInquiryQualifierTest {
     }
     @Test
     void Tag0896Test() {
+        Tag896CollInquiryQualifier tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag887NoUnderlyingStipsTest {
     }
     @Test
     void Tag0887Test() {
+        Tag887NoUnderlyingStips tagData;
+
     }
 }

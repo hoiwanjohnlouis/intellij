@@ -35,5 +35,7 @@ class Tag706PosQtyStatusTest {
     }
     @Test
     void Tag0706Test() {
+        Tag706PosQtyStatus tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag704LongQtyTest {
     }
     @Test
     void Tag0704Test() {
+        Tag704LongQty tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag872InstrAttribValueTest {
     }
     @Test
     void Tag0872Test() {
+        Tag872InstrAttribValue tagData;
+
     }
 }

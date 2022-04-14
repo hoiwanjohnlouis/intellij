@@ -35,5 +35,7 @@ class Tag936NoCompIDsTest {
     }
     @Test
     void Tag0936Test() {
+        Tag936NoCompIDs tagData;
+
     }
 }

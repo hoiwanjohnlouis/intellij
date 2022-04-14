@@ -35,5 +35,7 @@ class Tag920EndAccruedInterestAmtTest {
     }
     @Test
     void Tag0920Test() {
+        Tag920EndAccruedInterestAmt tagData;
+
     }
 }

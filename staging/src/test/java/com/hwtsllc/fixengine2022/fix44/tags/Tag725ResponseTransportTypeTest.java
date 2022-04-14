@@ -35,5 +35,7 @@ class Tag725ResponseTransportTypeTest {
     }
     @Test
     void Tag0725Test() {
+        Tag725ResponseTransportType tagData;
+
     }
 }

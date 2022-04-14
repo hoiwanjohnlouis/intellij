@@ -35,5 +35,7 @@ class Tag815ApplQueueActionTest {
     }
     @Test
     void Tag0815Test() {
+        Tag815ApplQueueAction tagData;
+
     }
 }

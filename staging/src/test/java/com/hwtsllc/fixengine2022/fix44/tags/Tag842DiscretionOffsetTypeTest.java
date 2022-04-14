@@ -35,5 +35,7 @@ class Tag842DiscretionOffsetTypeTest {
     }
     @Test
     void Tag0842Test() {
+        Tag842DiscretionOffsetType tagData;
+
     }
 }

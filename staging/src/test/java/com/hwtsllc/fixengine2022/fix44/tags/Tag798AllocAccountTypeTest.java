@@ -35,5 +35,7 @@ class Tag798AllocAccountTypeTest {
     }
     @Test
     void Tag0798Test() {
+        Tag798AllocAccountType tagData;
+
     }
 }

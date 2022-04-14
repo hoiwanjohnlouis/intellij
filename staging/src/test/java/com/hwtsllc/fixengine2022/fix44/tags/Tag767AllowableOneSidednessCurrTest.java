@@ -35,5 +35,7 @@ class Tag767AllowableOneSidednessCurrTest {
     }
     @Test
     void Tag0767Test() {
+        Tag767AllowableOneSidednessCurr tagData;
+
     }
 }

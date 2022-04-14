@@ -35,5 +35,7 @@ class Tag691PoolTest {
     }
     @Test
     void Tag0691Test() {
+        Tag691Pool tagData;
+
     }
 }

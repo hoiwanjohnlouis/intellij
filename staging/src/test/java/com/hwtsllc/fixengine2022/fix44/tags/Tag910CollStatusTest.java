@@ -35,5 +35,7 @@ class Tag910CollStatusTest {
     }
     @Test
     void Tag0910Test() {
+        Tag910CollStatus tagData;
+
     }
 }

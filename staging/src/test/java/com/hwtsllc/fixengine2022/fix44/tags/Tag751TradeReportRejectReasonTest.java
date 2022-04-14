@@ -35,5 +35,7 @@ class Tag751TradeReportRejectReasonTest {
     }
     @Test
     void Tag0751Test() {
+        Tag751TradeReportRejectReason tagData;
+
     }
 }

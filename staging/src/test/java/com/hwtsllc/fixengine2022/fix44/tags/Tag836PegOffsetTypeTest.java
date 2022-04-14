@@ -35,5 +35,7 @@ class Tag836PegOffsetTypeTest {
     }
     @Test
     void Tag0836Test() {
+        Tag836PegOffsetType tagData;
+
     }
 }

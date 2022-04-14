@@ -35,5 +35,7 @@ class Tag788TerminationTypeTest {
     }
     @Test
     void Tag0788Test() {
+        Tag788TerminationType tagData;
+
     }
 }

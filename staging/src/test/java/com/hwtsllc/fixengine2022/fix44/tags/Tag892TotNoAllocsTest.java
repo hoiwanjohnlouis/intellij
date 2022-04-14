@@ -35,5 +35,7 @@ class Tag892TotNoAllocsTest {
     }
     @Test
     void Tag0892Test() {
+        Tag892TotNoAllocs tagData;
+
     }
 }

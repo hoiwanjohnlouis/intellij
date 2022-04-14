@@ -35,5 +35,7 @@ class Tag819AvgPxIndicatorTest {
     }
     @Test
     void Tag0819Test() {
+        Tag819AvgPxIndicator tagData;
+
     }
 }

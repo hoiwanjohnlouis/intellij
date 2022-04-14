@@ -35,5 +35,7 @@ class Tag775BookingTypeTest {
     }
     @Test
     void Tag0775Test() {
+        Tag775BookingType tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag669LastParPxTest {
     }
     @Test
     void Tag0669Test() {
+        Tag669LastParPx tagData;
+
     }
 }

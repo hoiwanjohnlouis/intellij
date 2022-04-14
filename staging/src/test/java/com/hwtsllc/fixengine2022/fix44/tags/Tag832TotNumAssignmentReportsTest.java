@@ -35,5 +35,7 @@ class Tag832TotNumAssignmentReportsTest {
     }
     @Test
     void Tag0832Test() {
+        Tag832TotNumAssignmentReports tagData;
+
     }
 }

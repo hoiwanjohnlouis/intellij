@@ -35,5 +35,7 @@ class Tag930RefCompIDTest {
     }
     @Test
     void Tag0930Test() {
+        Tag930RefCompID tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag747ExerciseMethodTest {
     }
     @Test
     void Tag0747Test() {
+        Tag747ExerciseMethod tagData;
+
     }
 }

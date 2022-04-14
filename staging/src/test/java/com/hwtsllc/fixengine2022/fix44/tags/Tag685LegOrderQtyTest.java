@@ -35,5 +35,7 @@ class Tag685LegOrderQtyTest {
     }
     @Test
     void Tag0685Test() {
+        Tag685LegOrderQty tagData;
+
     }
 }

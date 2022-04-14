@@ -35,5 +35,7 @@ class Tag707PosMyAmtTypeTest {
     }
     @Test
     void Tag0707Test() {
+        Tag707PosAmtType tagData;
+
     }
 }

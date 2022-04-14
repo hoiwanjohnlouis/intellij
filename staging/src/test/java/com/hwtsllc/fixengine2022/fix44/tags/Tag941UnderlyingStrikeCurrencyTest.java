@@ -35,5 +35,7 @@ class Tag941UnderlyingStrikeCurrencyTest {
     }
     @Test
     void Tag0941Test() {
+        Tag941UnderlyingStrikeCurrency tagData;
+
     }
 }

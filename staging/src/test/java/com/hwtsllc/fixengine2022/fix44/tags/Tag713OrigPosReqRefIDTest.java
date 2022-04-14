@@ -35,5 +35,7 @@ class Tag713OrigPosReqRefIDTest {
     }
     @Test
     void Tag0713Test() {
+        Tag713OrigPosReqRefID tagData;
+
     }
 }

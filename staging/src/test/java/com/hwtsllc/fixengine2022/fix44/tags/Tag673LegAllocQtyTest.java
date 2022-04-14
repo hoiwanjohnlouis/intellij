@@ -35,5 +35,7 @@ class Tag673LegAllocQtyTest {
     }
     @Test
     void Tag0673Test() {
+        Tag673LegAllocQty tagData;
+
     }
 }

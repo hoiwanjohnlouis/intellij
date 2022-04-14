@@ -35,5 +35,7 @@ class Tag922EndCashTest {
     }
     @Test
     void Tag0922Test() {
+        Tag922EndCash tagData;
+
     }
 }

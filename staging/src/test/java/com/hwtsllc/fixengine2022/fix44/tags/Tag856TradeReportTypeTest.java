@@ -35,5 +35,7 @@ class Tag856TradeReportTypeTest {
     }
     @Test
     void Tag0856Test() {
+        Tag856TradeReportType tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag921StartCashTest {
     }
     @Test
     void Tag0921Test() {
+        Tag921StartCash tagData;
+
     }
 }

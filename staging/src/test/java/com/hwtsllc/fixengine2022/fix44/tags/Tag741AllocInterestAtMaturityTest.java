@@ -35,5 +35,7 @@ class Tag741AllocInterestAtMaturityTest {
     }
     @Test
     void Tag0741Test() {
+        Tag741AllocInterestAtMaturity tagData;
+
     }
 }

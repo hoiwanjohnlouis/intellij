@@ -35,5 +35,7 @@ class Tag891MiscFeeBasisTest {
     }
     @Test
     void Tag0891Test() {
+        Tag891MiscFeeBasis tagData;
+
     }
 }

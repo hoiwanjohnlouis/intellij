@@ -35,5 +35,7 @@ class Tag889UnderlyingStipValueTest {
     }
     @Test
     void Tag0889Test() {
+        Tag889UnderlyingStipValue tagData;
+
     }
 }

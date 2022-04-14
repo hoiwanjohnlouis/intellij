@@ -35,5 +35,7 @@ class Tag858SharedCommissionTest {
     }
     @Test
     void Tag0858Test() {
+        Tag858SharedCommission tagData;
+
     }
 }

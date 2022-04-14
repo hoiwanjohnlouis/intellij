@@ -35,5 +35,7 @@ class Tag877UnderlyingCPProgramTest {
     }
     @Test
     void Tag0877Test() {
+        Tag877UnderlyingCPProgram tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag894CollReqIDTest {
     }
     @Test
     void Tag0894Test() {
+        Tag894CollReqID tagData;
+
     }
 }

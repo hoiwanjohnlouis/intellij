@@ -35,5 +35,7 @@ class Tag870NoInstrAttribTest {
     }
     @Test
     void Tag0870Test() {
+        Tag870NoInstrAttrib tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag866EventDateTest {
     }
     @Test
     void Tag0866Test() {
+        Tag866EventDate tagData;
+
     }
 }

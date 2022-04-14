@@ -35,5 +35,7 @@ class Tag722PosMaintStatusTest {
     }
     @Test
     void Tag0722Test() {
+        Tag722PosMaintStatus tagData;
+
     }
 }

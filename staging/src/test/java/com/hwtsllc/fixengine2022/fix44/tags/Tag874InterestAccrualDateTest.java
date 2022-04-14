@@ -35,5 +35,7 @@ class Tag874InterestAccrualDateTest {
     }
     @Test
     void Tag0874Test() {
+        Tag874InterestAccrualDate tagData;
+
     }
 }

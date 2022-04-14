@@ -35,5 +35,7 @@ class Tag893LastFragmentTest {
     }
     @Test
     void Tag0893Test() {
+        Tag893LastFragment tagData;
+
     }
 }

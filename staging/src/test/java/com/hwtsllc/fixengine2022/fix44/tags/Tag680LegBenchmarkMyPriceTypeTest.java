@@ -35,5 +35,7 @@ class Tag680LegBenchmarkMyPriceTypeTest {
     }
     @Test
     void Tag0680Test() {
+        Tag680LegBenchmarkPriceType tagData;
+
     }
 }

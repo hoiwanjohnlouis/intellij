@@ -35,5 +35,7 @@ class Tag776IndividualAllocRejCodeTest {
     }
     @Test
     void Tag0776Test() {
+        Tag776IndividualAllocRejCode tagData;
+
     }
 }

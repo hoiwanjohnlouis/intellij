@@ -35,5 +35,7 @@ class Tag849ParticipationRateTest {
     }
     @Test
     void Tag0849Test() {
+        Tag849ParticipationRate tagData;
+
     }
 }

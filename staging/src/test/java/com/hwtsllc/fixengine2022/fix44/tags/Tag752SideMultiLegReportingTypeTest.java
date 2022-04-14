@@ -35,5 +35,7 @@ class Tag752SideMultiLegReportingTypeTest {
     }
     @Test
     void Tag0752Test() {
+        Tag752SideMultiLegReportingType tagData;
+
     }
 }

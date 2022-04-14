@@ -35,5 +35,7 @@ class Tag884UnderlyingStartValueTest {
     }
     @Test
     void Tag0884Test() {
+        Tag884UnderlyingStartValue tagData;
+
     }
 }

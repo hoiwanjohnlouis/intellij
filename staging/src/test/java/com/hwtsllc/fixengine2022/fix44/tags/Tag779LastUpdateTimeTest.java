@@ -35,5 +35,7 @@ class Tag779LastUpdateTimeTest {
     }
     @Test
     void Tag0779Test() {
+        Tag779LastUpdateTime tagData;
+
     }
 }

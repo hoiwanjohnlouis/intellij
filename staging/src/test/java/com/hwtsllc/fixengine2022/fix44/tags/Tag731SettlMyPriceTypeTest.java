@@ -35,5 +35,7 @@ class Tag731SettlMyPriceTypeTest {
     }
     @Test
     void Tag0731Test() {
+        Tag731SettlPriceType tagData;
+
     }
 }

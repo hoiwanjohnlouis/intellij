@@ -35,5 +35,7 @@ class Tag702NoPositionsTest {
     }
     @Test
     void Tag0702Test() {
+        Tag702NoPositions tagData;
+
     }
 }

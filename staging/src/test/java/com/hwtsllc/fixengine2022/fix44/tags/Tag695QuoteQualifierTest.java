@@ -35,5 +35,7 @@ class Tag695QuoteQualifierTest {
     }
     @Test
     void Tag0695Test() {
+        Tag695QuoteQualifier tagData;
+
     }
 }

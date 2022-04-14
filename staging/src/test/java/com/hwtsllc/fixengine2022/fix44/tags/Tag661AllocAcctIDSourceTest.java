@@ -35,5 +35,7 @@ class Tag661AllocAcctIDSourceTest {
     }
     @Test
     void Tag0661Test() {
+        Tag661AllocAcctIDSource tagData;
+
     }
 }

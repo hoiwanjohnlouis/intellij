@@ -35,5 +35,7 @@ class Tag906CollAsgnRejectReasonTest {
     }
     @Test
     void Tag0906Test() {
+        Tag906CollAsgnRejectReason tagData;
+
     }
 }

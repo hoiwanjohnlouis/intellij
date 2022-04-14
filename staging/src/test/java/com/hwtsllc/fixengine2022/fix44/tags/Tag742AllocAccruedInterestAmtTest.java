@@ -35,5 +35,7 @@ class Tag742AllocAccruedInterestAmtTest {
     }
     @Test
     void Tag0742Test() {
+        Tag742AllocAccruedInterestAmt tagData;
+
     }
 }

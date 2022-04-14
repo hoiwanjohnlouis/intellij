@@ -35,5 +35,7 @@ class Tag918AgreementCurrencyTest {
     }
     @Test
     void Tag0918Test() {
+        Tag918AgreementCurrency tagData;
+
     }
 }

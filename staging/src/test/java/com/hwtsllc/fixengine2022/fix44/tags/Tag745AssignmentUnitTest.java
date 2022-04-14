@@ -35,5 +35,7 @@ class Tag745AssignmentUnitTest {
     }
     @Test
     void Tag0745Test() {
+        Tag745AssignmentUnit tagData;
+
     }
 }

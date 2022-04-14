@@ -35,5 +35,7 @@ class Tag883UnderlyingEndPriceTest {
     }
     @Test
     void Tag0883Test() {
+        Tag883UnderlyingEndPrice tagData;
+
     }
 }

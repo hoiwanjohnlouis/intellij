@@ -35,5 +35,7 @@ class Tag700ReversalIndicatorTest {
     }
     @Test
     void Tag0700Test() {
+        Tag700ReversalIndicator tagData;
+
     }
 }

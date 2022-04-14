@@ -35,5 +35,7 @@ class Tag795AllocReportRefIDTest {
     }
     @Test
     void Tag0795Test() {
+        Tag795AllocReportRefID tagData;
+
     }
 }

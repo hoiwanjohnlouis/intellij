@@ -35,5 +35,7 @@ class Tag753NoPosAmtTest {
     }
     @Test
     void Tag0753Test() {
+        Tag753NoPosAmt tagData;
+
     }
 }

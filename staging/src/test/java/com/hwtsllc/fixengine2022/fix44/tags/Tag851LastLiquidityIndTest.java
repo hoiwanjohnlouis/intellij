@@ -35,5 +35,7 @@ class Tag851LastLiquidityIndTest {
     }
     @Test
     void Tag0851Test() {
+        Tag851LastLiquidityInd tagData;
+
     }
 }

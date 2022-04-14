@@ -35,5 +35,7 @@ class Tag721PosMaintRptIDTest {
     }
     @Test
     void Tag0721Test() {
+        Tag721PosMaintRptID tagData;
+
     }
 }

@@ -16,5 +16,5 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-public class tag812ApplQueueMax {
+public class Tag812ApplQueueMax {
 }

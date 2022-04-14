@@ -35,5 +35,7 @@ class Tag814ApplQueueResolutionTest {
     }
     @Test
     void Tag0814Test() {
+        Tag814ApplQueueResolution tagData;
+
     }
 }

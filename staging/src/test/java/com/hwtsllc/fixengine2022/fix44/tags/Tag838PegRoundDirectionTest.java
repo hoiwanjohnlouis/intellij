@@ -35,5 +35,7 @@ class Tag838PegRoundDirectionTest {
     }
     @Test
     void Tag0838Test() {
+        Tag838PegRoundDirection tagData;
+
     }
 }

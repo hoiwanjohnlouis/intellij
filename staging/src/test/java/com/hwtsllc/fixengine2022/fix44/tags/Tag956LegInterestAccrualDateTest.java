@@ -35,5 +35,7 @@ class Tag956LegInterestAccrualDateTest {
     }
     @Test
     void Tag0956Test() {
+        Tag956LegInterestAccrualDate tagData;
+
     }
 }

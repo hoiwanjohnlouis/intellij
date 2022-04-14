@@ -35,5 +35,7 @@ class Tag864NoEventsTest {
     }
     @Test
     void Tag0864Test() {
+        Tag864NoEvents tagData;
+
     }
 }

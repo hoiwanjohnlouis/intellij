@@ -35,5 +35,7 @@ class Tag699BenchmarkSecurityIDTest {
     }
     @Test
     void Tag0699Test() {
+        Tag699BenchmarkSecurityID tagData;
+
     }
 }

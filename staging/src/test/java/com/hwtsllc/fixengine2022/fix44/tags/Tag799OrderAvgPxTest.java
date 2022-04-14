@@ -35,5 +35,7 @@ class Tag799OrderAvgPxTest {
     }
     @Test
     void Tag0799Test() {
+        Tag799OrderAvgPx tagData;
+
     }
 }

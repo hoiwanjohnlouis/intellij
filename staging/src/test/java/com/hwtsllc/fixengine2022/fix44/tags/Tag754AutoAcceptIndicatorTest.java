@@ -35,5 +35,7 @@ class Tag754AutoAcceptIndicatorTest {
     }
     @Test
     void Tag0754Test() {
+        Tag754AutoAcceptIndicator tagData;
+
     }
 }

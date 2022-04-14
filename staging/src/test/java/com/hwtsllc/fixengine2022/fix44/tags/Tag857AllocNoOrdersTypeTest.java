@@ -35,5 +35,7 @@ class Tag857AllocNoOrdersTypeTest {
     }
     @Test
     void Tag0857Test() {
+        Tag857AllocNoOrdersType tagData;
+
     }
 }

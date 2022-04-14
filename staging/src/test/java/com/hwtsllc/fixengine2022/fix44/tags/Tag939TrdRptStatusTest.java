@@ -35,5 +35,7 @@ class Tag939TrdRptStatusTest {
     }
     @Test
     void Tag0939Test() {
+        Tag939TrdRptStatus tagData;
+
     }
 }

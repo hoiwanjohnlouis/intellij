@@ -35,5 +35,7 @@ class Tag919DeliveryTypeTest {
     }
     @Test
     void Tag0919Test() {
+        Tag919DeliveryType tagData;
+
     }
 }

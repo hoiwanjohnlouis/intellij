@@ -35,5 +35,7 @@ class Tag911TotNumReportsTest {
     }
     @Test
     void Tag0911Test() {
+        Tag911TotNumReports tagData;
+
     }
 }

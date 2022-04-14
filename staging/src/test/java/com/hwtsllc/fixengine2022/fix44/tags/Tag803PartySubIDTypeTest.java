@@ -35,5 +35,7 @@ class Tag803PartySubIDTypeTest {
     }
     @Test
     void Tag0803Test() {
+        Tag803PartySubIDType tagData;
+
     }
 }

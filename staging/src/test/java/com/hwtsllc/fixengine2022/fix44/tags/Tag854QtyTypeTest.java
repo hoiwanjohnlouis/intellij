@@ -35,5 +35,7 @@ class Tag854QtyTypeTest {
     }
     @Test
     void Tag0854Test() {
+        Tag854QtyType tagData;
+
     }
 }
