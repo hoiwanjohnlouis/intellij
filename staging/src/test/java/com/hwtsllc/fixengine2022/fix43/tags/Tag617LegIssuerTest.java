@@ -35,5 +35,7 @@ class Tag617LegIssuerTest {
     }
     @Test
     void Tag0617Test() {
+        Tag617LegIssuer tagData;
+
     }
 }

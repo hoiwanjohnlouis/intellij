@@ -35,5 +35,7 @@ class Tag485ExecPriceAdjustmentTest {
     }
     @Test
     void Tag0485Test() {
+        Tag485ExecPriceAdjustment tagData;
+
     }
 }

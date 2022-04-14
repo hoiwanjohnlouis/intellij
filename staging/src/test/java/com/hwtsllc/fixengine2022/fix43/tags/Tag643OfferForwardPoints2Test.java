@@ -35,5 +35,7 @@ class Tag643OfferForwardPoints2Test {
     }
     @Test
     void Tag0643Test() {
+        Tag643OfferForwardPoints2 tagData;
+
     }
 }

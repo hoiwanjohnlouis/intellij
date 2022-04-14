@@ -35,5 +35,7 @@ class Tag512DistribPercentageTest {
     }
     @Test
     void Tag0512Test() {
+        Tag512DistribPercentage tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag589DayBookingInstTest {
     }
     @Test
     void Tag0589Test() {
+        Tag589DayBookingInst tagData;
+
     }
 }

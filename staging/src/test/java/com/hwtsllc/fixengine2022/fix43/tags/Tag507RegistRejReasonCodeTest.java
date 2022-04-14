@@ -35,5 +35,7 @@ class Tag507RegistRejReasonCodeTest {
     }
     @Test
     void Tag0507Test() {
+        Tag507RegistRejReasonCode tagData;
+
     }
 }

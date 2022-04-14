@@ -35,5 +35,7 @@ class Tag598LegLocaleOfIssueTest {
     }
     @Test
     void Tag0598Test() {
+        Tag598LegLocaleOfIssue tagData;
+
     }
 }

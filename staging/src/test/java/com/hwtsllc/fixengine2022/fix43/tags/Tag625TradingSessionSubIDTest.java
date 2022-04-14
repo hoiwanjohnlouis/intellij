@@ -35,5 +35,7 @@ class Tag625TradingSessionSubIDTest {
     }
     @Test
     void Tag0625Test() {
+        Tag625TradingSessionSubID tagData;
+
     }
 }

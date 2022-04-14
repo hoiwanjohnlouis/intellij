@@ -35,5 +35,7 @@ class Tag639PriceImprovementTest {
     }
     @Test
     void Tag0639Test() {
+        Tag639PriceImprovement tagData;
+
     }
 }

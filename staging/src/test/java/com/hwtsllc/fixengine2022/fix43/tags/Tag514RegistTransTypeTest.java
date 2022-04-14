@@ -35,5 +35,7 @@ class Tag514RegistTransTypeTest {
     }
     @Test
     void Tag0514Test() {
+        Tag514RegistTransType tagData;
+
     }
 }

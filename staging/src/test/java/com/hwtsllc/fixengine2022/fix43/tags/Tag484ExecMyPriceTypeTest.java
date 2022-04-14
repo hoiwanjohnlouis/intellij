@@ -35,5 +35,7 @@ class Tag484ExecMyPriceTypeTest {
     }
     @Test
     void Tag0484Test() {
+        Tag484ExecPriceType tagData;
+
     }
 }

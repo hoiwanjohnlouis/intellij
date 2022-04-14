@@ -35,5 +35,7 @@ class Tag634OfferYieldTest {
     }
     @Test
     void Tag0634Test() {
+        Tag634OfferYield tagData;
+
     }
 }

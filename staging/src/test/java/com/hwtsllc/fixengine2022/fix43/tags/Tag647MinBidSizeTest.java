@@ -35,5 +35,7 @@ class Tag647MinBidSizeTest {
     }
     @Test
     void Tag0647Test() {
+        Tag647MinBidSize tagData;
+
     }
 }

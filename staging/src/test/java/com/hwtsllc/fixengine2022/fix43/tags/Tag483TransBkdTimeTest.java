@@ -35,5 +35,7 @@ class Tag483TransBkdTimeTest {
     }
     @Test
     void Tag0483Test() {
+        Tag483TransBkdTime tagData;
+
     }
 }

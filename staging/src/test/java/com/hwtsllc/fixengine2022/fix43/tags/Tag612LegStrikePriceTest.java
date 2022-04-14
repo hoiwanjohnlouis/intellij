@@ -35,5 +35,7 @@ class Tag612LegStrikePriceTest {
     }
     @Test
     void Tag0612Test() {
+        Tag612LegStrikePrice tagData;
+
     }
 }

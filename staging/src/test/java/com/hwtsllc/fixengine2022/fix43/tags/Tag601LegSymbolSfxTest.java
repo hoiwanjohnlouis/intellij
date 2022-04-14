@@ -35,5 +35,7 @@ class Tag601LegSymbolSfxTest {
     }
     @Test
     void Tag0601Test() {
+        Tag601LegSymbolSfx tagData;
+
     }
 }

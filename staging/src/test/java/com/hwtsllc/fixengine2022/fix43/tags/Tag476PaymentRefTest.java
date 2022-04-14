@@ -35,5 +35,7 @@ class Tag476PaymentRefTest {
     }
     @Test
     void Tag0476Test() {
+        Tag476PaymentRef tagData;
+
     }
 }

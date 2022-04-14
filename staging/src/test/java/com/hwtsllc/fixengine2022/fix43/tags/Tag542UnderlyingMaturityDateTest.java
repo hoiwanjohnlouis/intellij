@@ -35,5 +35,7 @@ class Tag542UnderlyingMaturityDateTest {
     }
     @Test
     void Tag0542Test() {
+        Tag542UnderlyingMaturityDate tagData;
+
     }
 }

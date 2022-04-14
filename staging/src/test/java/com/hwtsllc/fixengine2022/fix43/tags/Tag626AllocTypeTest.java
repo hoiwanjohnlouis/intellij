@@ -35,5 +35,7 @@ class Tag626AllocTypeTest {
     }
     @Test
     void Tag0626Test() {
+        Tag626AllocType tagData;
+
     }
 }

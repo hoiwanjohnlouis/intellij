@@ -35,5 +35,7 @@ class Tag495TaxAdvantageTypeTest {
     }
     @Test
     void Tag0495Test() {
+        Tag495TaxAdvantageType tagData;
+
     }
 }

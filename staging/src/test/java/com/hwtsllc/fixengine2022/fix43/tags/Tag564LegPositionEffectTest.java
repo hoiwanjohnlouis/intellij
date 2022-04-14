@@ -35,5 +35,7 @@ class Tag564LegPositionEffectTest {
     }
     @Test
     void Tag0564Test() {
+        Tag564LegPositionEffect tagData;
+
     }
 }

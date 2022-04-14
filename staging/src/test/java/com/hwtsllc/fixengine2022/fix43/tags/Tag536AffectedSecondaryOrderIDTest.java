@@ -35,5 +35,7 @@ class Tag536AffectedSecondaryOrderIDTest {
     }
     @Test
     void Tag0536Test() {
+        Tag536AffectedSecondaryOrderID tagData;
+
     }
 }

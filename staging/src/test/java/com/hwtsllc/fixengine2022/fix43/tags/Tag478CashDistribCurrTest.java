@@ -35,5 +35,7 @@ class Tag478CashDistribCurrTest {
     }
     @Test
     void Tag0478Test() {
+        Tag478CashDistribCurr tagData;
+
     }
 }

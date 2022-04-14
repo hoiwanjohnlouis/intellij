@@ -35,5 +35,7 @@ class Tag519ContMyAmtTypeTest {
     }
     @Test
     void Tag0519Test() {
+        Tag519ContAmtType tagData;
+
     }
 }

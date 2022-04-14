@@ -35,5 +35,7 @@ class Tag559SecurityListRequestTypeTest {
     }
     @Test
     void Tag0559Test() {
+        Tag559SecurityListRequestType tagData;
+
     }
 }

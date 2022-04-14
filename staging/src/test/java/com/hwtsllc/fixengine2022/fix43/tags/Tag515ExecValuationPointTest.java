@@ -35,5 +35,7 @@ class Tag515ExecValuationPointTest {
     }
     @Test
     void Tag0515Test() {
+        Tag515ExecValuationPoint tagData;
+
     }
 }

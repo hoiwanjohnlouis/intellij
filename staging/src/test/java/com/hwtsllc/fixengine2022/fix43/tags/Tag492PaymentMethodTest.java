@@ -35,5 +35,7 @@ class Tag492PaymentMethodTest {
     }
     @Test
     void Tag0492Test() {
+        Tag492PaymentMethod tagData;
+
     }
 }

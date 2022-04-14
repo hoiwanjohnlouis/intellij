@@ -35,5 +35,7 @@ class Tag658QuoteRequestRejectReasonTest {
     }
     @Test
     void Tag0658Test() {
+        Tag658QuoteRequestRejectReason tagData;
+
     }
 }

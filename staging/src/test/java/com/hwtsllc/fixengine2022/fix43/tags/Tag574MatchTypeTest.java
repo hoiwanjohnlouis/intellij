@@ -35,5 +35,7 @@ class Tag574MatchTypeTest {
     }
     @Test
     void Tag0574Test() {
+        Tag574MatchType tagData;
+
     }
 }

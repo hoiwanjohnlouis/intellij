@@ -35,5 +35,7 @@ class Tag623LegRatioQtyTest {
     }
     @Test
     void Tag0623Test() {
+        Tag623LegRatioQty tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag509RegistDtlsTest {
     }
     @Test
     void Tag0509Test() {
+        Tag509RegistDtls tagData;
+
     }
 }

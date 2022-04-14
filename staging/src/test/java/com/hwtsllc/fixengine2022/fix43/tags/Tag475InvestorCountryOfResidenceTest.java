@@ -35,5 +35,7 @@ class Tag475InvestorCountryOfResidenceTest {
     }
     @Test
     void Tag0475Test() {
+        Tag475InvestorCountryOfResidence tagData;
+
     }
 }

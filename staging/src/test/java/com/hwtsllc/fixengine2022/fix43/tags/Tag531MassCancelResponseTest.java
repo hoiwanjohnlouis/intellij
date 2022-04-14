@@ -35,5 +35,7 @@ class Tag531MassCancelResponseTest {
     }
     @Test
     void Tag0531Test() {
+        Tag531MassCancelResponse tagData;
+
     }
 }

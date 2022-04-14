@@ -35,5 +35,7 @@ class Tag577ClearingInstructionTest {
     }
     @Test
     void Tag0577Test() {
+        Tag577ClearingInstruction tagData;
+
     }
 }

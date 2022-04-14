@@ -35,5 +35,7 @@ class Tag508RegistRefIDTest {
     }
     @Test
     void Tag0508Test() {
+        Tag508RegistRefID tagData;
+
     }
 }

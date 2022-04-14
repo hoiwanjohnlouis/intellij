@@ -35,5 +35,7 @@ class Tag503CardStartDateTest {
     }
     @Test
     void Tag0503Test() {
+        Tag503CardStartDate tagData;
+
     }
 }

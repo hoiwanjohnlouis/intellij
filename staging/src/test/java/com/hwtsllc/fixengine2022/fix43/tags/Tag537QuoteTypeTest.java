@@ -35,5 +35,7 @@ class Tag537QuoteTypeTest {
     }
     @Test
     void Tag0537Test() {
+        Tag537QuoteType tagData;
+
     }
 }

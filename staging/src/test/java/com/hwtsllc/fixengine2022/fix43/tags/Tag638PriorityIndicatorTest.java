@@ -35,5 +35,7 @@ class Tag638PriorityIndicatorTest {
     }
     @Test
     void Tag0638Test() {
+        Tag638PriorityIndicator tagData;
+
     }
 }

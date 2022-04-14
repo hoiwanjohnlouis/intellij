@@ -35,5 +35,7 @@ class Tag593UnderlyingStateOrProvinceOfIssueTest {
     }
     @Test
     void Tag0593Test() {
+        Tag593UnderlyingStateOrProvinceOfIssue tagData;
+
     }
 }

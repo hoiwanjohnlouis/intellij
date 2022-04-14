@@ -35,5 +35,7 @@ class Tag659SideComplianceIDTest {
     }
     @Test
     void Tag0659Test() {
+        Tag659SideComplianceID tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag546ScopeTest {
     }
     @Test
     void Tag0546Test() {
+        Tag546Scope tagData;
+
     }
 }

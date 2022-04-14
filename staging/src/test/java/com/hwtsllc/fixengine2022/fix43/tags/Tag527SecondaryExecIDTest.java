@@ -35,5 +35,7 @@ class Tag527SecondaryExecIDTest {
     }
     @Test
     void Tag0527Test() {
+        Tag527SecondaryExecID tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag651UnderlyingLastPxTest {
     }
     @Test
     void Tag0651Test() {
+        Tag651UnderlyingLastPx tagData;
+
     }
 }

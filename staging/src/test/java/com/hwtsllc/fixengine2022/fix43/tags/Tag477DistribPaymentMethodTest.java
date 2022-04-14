@@ -35,5 +35,7 @@ class Tag477DistribPaymentMethodTest {
     }
     @Test
     void Tag0477Test() {
+        Tag477DistribPaymentMethod tagData;
+
     }
 }

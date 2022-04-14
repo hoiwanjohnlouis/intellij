@@ -35,5 +35,7 @@ class Tag521ContAmtCurrTest {
     }
     @Test
     void Tag0521Test() {
+        Tag521ContAmtCurr tagData;
+
     }
 }

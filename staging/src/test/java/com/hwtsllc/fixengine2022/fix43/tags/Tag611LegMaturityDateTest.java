@@ -35,5 +35,7 @@ class Tag611LegMaturityDateTest {
     }
     @Test
     void Tag0611Test() {
+        Tag611LegMaturityDate tagData;
+
     }
 }

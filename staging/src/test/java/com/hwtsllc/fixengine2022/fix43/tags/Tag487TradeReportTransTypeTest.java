@@ -35,5 +35,7 @@ class Tag487TradeReportTransTypeTest {
     }
     @Test
     void Tag0487Test() {
+        Tag487TradeReportTransType tagData;
+
     }
 }

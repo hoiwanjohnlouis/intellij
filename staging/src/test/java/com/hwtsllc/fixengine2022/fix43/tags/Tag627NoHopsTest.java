@@ -35,5 +35,7 @@ class Tag627NoHopsTest {
     }
     @Test
     void Tag0627Test() {
+        Tag627NoHops tagData;
+
     }
 }

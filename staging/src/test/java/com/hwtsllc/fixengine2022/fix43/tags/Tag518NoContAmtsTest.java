@@ -35,5 +35,7 @@ class Tag518NoContAmtsTest {
     }
     @Test
     void Tag0518Test() {
+        Tag518NoContAmts tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag587LegSettlTypeTest {
     }
     @Test
     void Tag0587Test() {
+        Tag587LegSettlType tagData;
+
     }
 }

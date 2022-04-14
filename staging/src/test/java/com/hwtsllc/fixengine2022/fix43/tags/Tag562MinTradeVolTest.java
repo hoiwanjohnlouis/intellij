@@ -35,5 +35,7 @@ class Tag562MinTradeVolTest {
     }
     @Test
     void Tag0562Test() {
+        Tag562MinTradeVol tagData;
+
     }
 }

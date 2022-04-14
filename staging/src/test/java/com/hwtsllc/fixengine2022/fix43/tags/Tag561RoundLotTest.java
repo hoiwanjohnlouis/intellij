@@ -35,5 +35,7 @@ class Tag561RoundLotTest {
     }
     @Test
     void Tag0561Test() {
+        Tag561RoundLot tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag556LegCurrencyTest {
     }
     @Test
     void Tag0556Test() {
+        Tag556LegCurrency tagData;
+
     }
 }

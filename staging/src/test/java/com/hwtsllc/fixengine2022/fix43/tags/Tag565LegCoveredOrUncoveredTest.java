@@ -35,5 +35,7 @@ class Tag565LegCoveredOrUncoveredTest {
     }
     @Test
     void Tag0565Test() {
+        Tag565LegCoveredOrUncovered tagData;
+
     }
 }

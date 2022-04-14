@@ -35,5 +35,7 @@ class Tag656SettlCurrBidFxRateTest {
     }
     @Test
     void Tag0656Test() {
+        Tag656SettlCurrBidFxRate tagData;
+
     }
 }

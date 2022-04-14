@@ -35,5 +35,7 @@ class Tag578TradeInputSourceTest {
     }
     @Test
     void Tag0578Test() {
+        Tag578TradeInputSource tagData;
+
     }
 }

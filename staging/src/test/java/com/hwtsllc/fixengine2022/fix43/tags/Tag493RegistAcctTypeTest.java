@@ -35,5 +35,7 @@ class Tag493RegistAcctTypeTest {
     }
     @Test
     void Tag0493Test() {
+        Tag493RegistAcctType tagData;
+
     }
 }

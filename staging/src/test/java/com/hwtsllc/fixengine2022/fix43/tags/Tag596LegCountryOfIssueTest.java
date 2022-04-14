@@ -35,5 +35,7 @@ class Tag596LegCountryOfIssueTest {
     }
     @Test
     void Tag0596Test() {
+        Tag596LegCountryOfIssue tagData;
+
     }
 }

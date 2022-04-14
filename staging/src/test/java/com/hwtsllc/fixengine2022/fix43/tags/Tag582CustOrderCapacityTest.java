@@ -35,5 +35,7 @@ class Tag582CustOrderCapacityTest {
     }
     @Test
     void Tag0582Test() {
+        Tag582CustOrderCapacity tagData;
+
     }
 }

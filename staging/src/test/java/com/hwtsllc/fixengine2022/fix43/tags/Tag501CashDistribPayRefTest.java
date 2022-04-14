@@ -35,5 +35,7 @@ class Tag501CashDistribPayRefTest {
     }
     @Test
     void Tag0501Test() {
+        Tag501CashDistribPayRef tagData;
+
     }
 }

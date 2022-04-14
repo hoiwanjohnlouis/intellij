@@ -35,5 +35,7 @@ class Tag552NoSidesTest {
     }
     @Test
     void Tag0552Test() {
+        Tag552NoSides tagData;
+
     }
 }

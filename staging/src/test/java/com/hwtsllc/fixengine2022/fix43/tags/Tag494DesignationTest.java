@@ -35,5 +35,7 @@ class Tag494DesignationTest {
     }
     @Test
     void Tag0494Test() {
+        Tag494Designation tagData;
+
     }
 }

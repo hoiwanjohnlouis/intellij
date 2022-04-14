@@ -35,5 +35,7 @@ class Tag488CardHolderNameTest {
     }
     @Test
     void Tag0488Test() {
+        Tag488CardHolderName tagData;
+
     }
 }

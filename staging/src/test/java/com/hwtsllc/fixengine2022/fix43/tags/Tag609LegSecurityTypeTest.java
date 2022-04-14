@@ -35,5 +35,7 @@ class Tag609LegSecurityTypeTest {
     }
     @Test
     void Tag0609Test() {
+        Tag609LegSecurityType tagData;
+
     }
 }

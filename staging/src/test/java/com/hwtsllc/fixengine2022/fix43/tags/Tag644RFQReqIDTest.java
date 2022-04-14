@@ -35,5 +35,7 @@ class Tag644RFQReqIDTest {
     }
     @Test
     void Tag0644Test() {
+        Tag644RFQReqID tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag524NestedPartyIDTest {
     }
     @Test
     void Tag0524Test() {
+        Tag524NestedPartyID tagData;
+
     }
 }

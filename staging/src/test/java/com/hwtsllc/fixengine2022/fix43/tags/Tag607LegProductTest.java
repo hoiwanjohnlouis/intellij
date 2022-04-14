@@ -35,5 +35,7 @@ class Tag607LegProductTest {
     }
     @Test
     void Tag0607Test() {
+        Tag607LegProduct tagData;
+
     }
 }

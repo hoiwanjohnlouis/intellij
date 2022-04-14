@@ -35,5 +35,7 @@ class Tag549CrossTypeTest {
     }
     @Test
     void Tag0549Test() {
+        Tag549CrossType tagData;
+
     }
 }

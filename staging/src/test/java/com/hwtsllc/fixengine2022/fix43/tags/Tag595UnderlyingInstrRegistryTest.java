@@ -35,5 +35,7 @@ class Tag595UnderlyingInstrRegistryTest {
     }
     @Test
     void Tag0595Test() {
+        Tag595UnderlyingInstrRegistry tagData;
+
     }
 }

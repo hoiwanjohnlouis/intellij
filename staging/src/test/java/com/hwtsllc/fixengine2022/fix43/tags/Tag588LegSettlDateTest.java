@@ -35,5 +35,7 @@ class Tag588LegSettlDateTest {
     }
     @Test
     void Tag0588Test() {
+        Tag588LegSettlDate tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag511RegistEmailTest {
     }
     @Test
     void Tag0511Test() {
+        Tag511RegistEmail tagData;
+
     }
 }

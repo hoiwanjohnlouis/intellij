@@ -35,5 +35,7 @@ class Tag622EncodedLegSecurityDescTest {
     }
     @Test
     void Tag0622Test() {
+        Tag622EncodedLegSecurityDesc tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag583ClOrdLinkIDTest {
     }
     @Test
     void Tag0583Test() {
+        Tag583ClOrdLinkID tagData;
+
     }
 }

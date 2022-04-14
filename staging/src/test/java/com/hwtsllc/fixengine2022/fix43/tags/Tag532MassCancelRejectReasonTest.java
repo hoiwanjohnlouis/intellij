@@ -35,5 +35,7 @@ class Tag532MassCancelRejectReasonTest {
     }
     @Test
     void Tag0532Test() {
+        Tag532MassCancelRejectReason tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag631MidPxTest {
     }
     @Test
     void Tag0631Test() {
+        Tag631MidPx tagData;
+
     }
 }

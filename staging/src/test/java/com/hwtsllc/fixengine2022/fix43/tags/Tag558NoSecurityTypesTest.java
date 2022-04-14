@@ -35,5 +35,7 @@ class Tag558NoSecurityTypesTest {
     }
     @Test
     void Tag0558Test() {
+        Tag558NoSecurityTypes tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag591PreallocMethodTest {
     }
     @Test
     void Tag0591Test() {
+        Tag591PreallocMethod tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag594UnderlyingLocaleOfIssueTest {
     }
     @Test
     void Tag0594Test() {
+        Tag594UnderlyingLocaleOfIssue tagData;
+
     }
 }

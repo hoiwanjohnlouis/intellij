@@ -35,5 +35,7 @@ class Tag613LegOptAttributeTest {
     }
     @Test
     void Tag0613Test() {
+        Tag613LegOptAttribute tagData;
+
     }
 }

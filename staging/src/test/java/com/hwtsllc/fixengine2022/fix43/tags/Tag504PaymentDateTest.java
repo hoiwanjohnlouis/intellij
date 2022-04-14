@@ -35,5 +35,7 @@ class Tag504PaymentDateTest {
     }
     @Test
     void Tag0504Test() {
+        Tag504PaymentDate tagData;
+
     }
 }

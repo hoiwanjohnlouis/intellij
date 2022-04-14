@@ -35,5 +35,7 @@ class Tag528OrderCapacityTest {
     }
     @Test
     void Tag0528Test() {
+        Tag528OrderCapacity tagData;
+
     }
 }

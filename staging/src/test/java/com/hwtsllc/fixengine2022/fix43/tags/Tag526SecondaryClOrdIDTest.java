@@ -35,5 +35,7 @@ class Tag526SecondaryClOrdIDTest {
     }
     @Test
     void Tag0526Test() {
+        Tag526SecondaryClOrdID tagData;
+
     }
 }

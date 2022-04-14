@@ -35,5 +35,7 @@ class Tag573MatchStatusTest {
     }
     @Test
     void Tag0573Test() {
+        Tag573MatchStatus tagData;
+
     }
 }

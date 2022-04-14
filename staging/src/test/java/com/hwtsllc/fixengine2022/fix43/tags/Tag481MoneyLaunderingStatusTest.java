@@ -35,5 +35,7 @@ class Tag481MoneyLaunderingStatusTest {
     }
     @Test
     void Tag0481Test() {
+        Tag481MoneyLaunderingStatus tagData;
+
     }
 }

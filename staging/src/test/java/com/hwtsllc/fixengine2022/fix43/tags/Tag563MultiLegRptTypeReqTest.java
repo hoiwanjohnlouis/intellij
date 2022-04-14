@@ -35,5 +35,7 @@ class Tag563MultiLegRptTypeReqTest {
     }
     @Test
     void Tag0563Test() {
+        Tag563MultiLegRptTypeReq tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag567TradSesStatusRejReasonTest {
     }
     @Test
     void Tag0567Test() {
+        Tag567TradSesStatusRejReason tagData;
+
     }
 }

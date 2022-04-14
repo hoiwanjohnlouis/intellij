@@ -35,5 +35,7 @@ class Tag628HopCompIDTest {
     }
     @Test
     void Tag0628Test() {
+        Tag628HopCompID tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag629HopSendingTimeTest {
     }
     @Test
     void Tag0629Test() {
+        Tag629HopSendingTime tagData;
+
     }
 }

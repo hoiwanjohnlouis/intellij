@@ -36,5 +36,7 @@ class Tag653SecDefStatusTest {
     }
     @Test
     void Tag0653Test() {
+        Tag653SecDefStatusTest tagData;
+
     }
 }

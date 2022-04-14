@@ -35,5 +35,7 @@ class Tag496RegistRejReasonTextTest {
     }
     @Test
     void Tag0496Test() {
+        Tag496RegistRejReasonText tagData;
+
     }
 }

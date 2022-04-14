@@ -35,5 +35,7 @@ class Tag649QuoteStatusReqIDTest {
     }
     @Test
     void Tag0649Test() {
+        Tag649QuoteStatusReqID tagData;
+
     }
 }

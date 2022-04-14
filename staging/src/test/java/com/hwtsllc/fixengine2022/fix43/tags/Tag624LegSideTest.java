@@ -35,5 +35,7 @@ class Tag624LegSideTest {
     }
     @Test
     void Tag0624Test() {
+        Tag624LegSide tagData;
+
     }
 }

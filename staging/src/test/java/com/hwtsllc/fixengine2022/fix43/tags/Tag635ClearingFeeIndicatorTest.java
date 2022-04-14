@@ -35,5 +35,7 @@ class Tag635ClearingFeeIndicatorTest {
     }
     @Test
     void Tag0635Test() {
+        Tag635ClearingFeeIndicator tagData;
+
     }
 }

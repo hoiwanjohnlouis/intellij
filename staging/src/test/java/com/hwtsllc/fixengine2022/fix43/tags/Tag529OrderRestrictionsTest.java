@@ -35,5 +35,7 @@ class Tag529OrderRestrictionsTest {
     }
     @Test
     void Tag0529Test() {
+        Tag529OrderRestrictions tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag533TotalAffectedOrdersTest {
     }
     @Test
     void Tag0533Test() {
+        Tag533TotalAffectedOrders tagData;
+
     }
 }

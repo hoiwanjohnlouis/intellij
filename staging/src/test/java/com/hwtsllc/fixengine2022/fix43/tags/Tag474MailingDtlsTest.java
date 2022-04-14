@@ -35,5 +35,7 @@ class Tag474MailingDtlsTest {
     }
     @Test
     void Tag0474Test() {
+        Tag474MailingDtls tagData;
+
     }
 }

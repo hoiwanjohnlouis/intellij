@@ -35,5 +35,7 @@ class Tag499CashDistribAgentCodeTest {
     }
     @Test
     void Tag0499Test() {
+        Tag499CashDistribAgentCode tagData;
+
     }
 }

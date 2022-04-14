@@ -35,5 +35,7 @@ class Tag615LegCouponRateTest {
     }
     @Test
     void Tag0615Test() {
+        Tag615LegCouponRate tagData;
+
     }
 }

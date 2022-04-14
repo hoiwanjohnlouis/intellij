@@ -35,5 +35,7 @@ class Tag482MailingInstTest {
     }
     @Test
     void Tag0482Test() {
+        Tag482MailingInst tagData;
+
     }
 }

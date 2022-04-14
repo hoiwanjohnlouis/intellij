@@ -35,5 +35,7 @@ class Tag516OrderPercentTest {
     }
     @Test
     void Tag0516Test() {
+        Tag516OrderPercent tagData;
+
     }
 }

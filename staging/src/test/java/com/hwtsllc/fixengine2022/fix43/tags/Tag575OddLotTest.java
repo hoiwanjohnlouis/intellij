@@ -35,5 +35,7 @@ class Tag575OddLotTest {
     }
     @Test
     void Tag0575Test() {
+        Tag575OddLot tagData;
+
     }
 }

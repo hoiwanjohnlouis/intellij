@@ -35,5 +35,7 @@ class Tag642BidForwardPoints2Test {
     }
     @Test
     void Tag0642Test() {
+        Tag642BidForwardPoints2 tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag581AccountTypeTest {
     }
     @Test
     void Tag0581Test() {
+        Tag581AccountType tagData;
+
     }
 }

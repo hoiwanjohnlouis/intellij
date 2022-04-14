@@ -35,5 +35,7 @@ class Tag544CashMarginTest {
     }
     @Test
     void Tag0544Test() {
+        Tag544CashMargin tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag648MinOfferSizeTest {
     }
     @Test
     void Tag0648Test() {
+        Tag648MinOfferSize tagData;
+
     }
 }

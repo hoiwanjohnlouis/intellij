@@ -35,5 +35,7 @@ class Tag633MidYieldTest {
     }
     @Test
     void Tag0633Test() {
+        Tag633MidYield tagData;
+
     }
 }

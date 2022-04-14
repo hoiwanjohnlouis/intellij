@@ -35,5 +35,7 @@ class Tag605LegSecurityAltIDTest {
     }
     @Test
     void Tag0605Test() {
+        Tag605LegSecurityAltID tagData;
+
     }
 }

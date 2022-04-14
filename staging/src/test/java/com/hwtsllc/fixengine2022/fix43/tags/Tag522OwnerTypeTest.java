@@ -35,5 +35,7 @@ class Tag522OwnerTypeTest {
     }
     @Test
     void Tag0522Test() {
+        Tag522OwnerType tagData;
+
     }
 }

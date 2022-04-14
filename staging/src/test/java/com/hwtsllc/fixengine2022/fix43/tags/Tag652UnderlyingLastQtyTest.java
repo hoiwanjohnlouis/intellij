@@ -35,5 +35,7 @@ class Tag652UnderlyingLastQtyTest {
     }
     @Test
     void Tag0652Test() {
+        Tag652UnderlyingLastQty tagData;
+
     }
 }

@@ -35,5 +35,7 @@ class Tag636WorkingIndicatorTest {
     }
     @Test
     void Tag0636Test() {
+        Tag636WorkingIndicator tagData;
+
     }
 }
