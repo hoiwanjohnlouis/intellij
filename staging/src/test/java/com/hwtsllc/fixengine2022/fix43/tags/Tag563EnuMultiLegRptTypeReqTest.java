@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag519ContMyAmtTypeTest {
+class Tag563EnuMultiLegRptTypeReqTest {
     @Test
-    void FIX0519Test() {
-        FIX43 fixData = FIX43.FIX519_ENU_CONT_AMT_TYPE;
+    void FIX0563Test() {
+        FIX43 fixData = FIX43.FIX563_ENU_MULTI_LEG_RPT_TYPE_REQ;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag519ContMyAmtTypeTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0519Test() {
-        Tag519EnuContAmtType tagData;
+    void Tag0563Test() {
+        Tag563EnuMultiLegRptTypeReq tagData;
 
     }
 }

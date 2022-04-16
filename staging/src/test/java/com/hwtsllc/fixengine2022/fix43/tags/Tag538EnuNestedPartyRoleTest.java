@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag519ContMyAmtTypeTest {
+class Tag538EnuNestedPartyRoleTest {
     @Test
-    void FIX0519Test() {
-        FIX43 fixData = FIX43.FIX519_ENU_CONT_AMT_TYPE;
+    void FIX0538Test() {
+        FIX43 fixData = FIX43.FIX538_ENU_NESTED_PARTY_ROLE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag519ContMyAmtTypeTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0519Test() {
-        Tag519EnuContAmtType tagData;
+    void Tag0538Test() {
+        Tag538EnuNestedPartyRole tagData;
 
     }
 }

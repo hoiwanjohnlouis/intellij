@@ -14,28 +14,28 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag519ContMyAmtTypeTest {
+class Tag369SeqLastMsgSeqNumProcessedTest {
     @Test
-    void FIX0519Test() {
-        FIX43 fixData = FIX43.FIX519_ENU_CONT_AMT_TYPE;
+    void FIX0369Test() {
+        FIX42 fixData = FIX42.FIX369_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX43.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX43.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0519Test() {
-        Tag519EnuContAmtType tagData;
+    void Tag0369Test() {
+        Tag369SeqLastMsgSeqNumProcessed tagData;
 
     }
 }
