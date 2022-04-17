@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag473NoRegistDtlsTest {
+class Tag580NumNoDatesTest {
     @Test
-    void FIX0473Test() {
-        FIX43 fixData = FIX43.FIX473_NO_REGIST_DTLS;
+    void FIX0580Test() {
+        FIX43 fixData = FIX43.FIX580_NUM_NO_DATES;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag473NoRegistDtlsTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0473Test() {
-        Tag473NoRegistDtls tagData;
+    void Tag0580Test() {
+        Tag580NumNoDates tagData;
 
     }
 }

@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag510NoDistribInstsTest {
+class Tag539NumNoNestedPartyIDsTest {
     @Test
-    void FIX0510Test() {
-        FIX43 fixData = FIX43.FIX510_NO_DISTRIB_INSTS;
+    void FIX0539Test() {
+        FIX43 fixData = FIX43.FIX539_NUM_NO_NESTED_PARTY_IDS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag510NoDistribInstsTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0510Test() {
-        Tag510NoDistribInsts tagData;
+    void Tag0539Test() {
+        Tag539NumNoNestedPartyIDs tagData;
 
     }
 }

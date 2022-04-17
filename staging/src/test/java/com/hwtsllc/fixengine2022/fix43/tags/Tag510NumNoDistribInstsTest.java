@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag534NoAffectedOrdersTest {
+class Tag510NumNoDistribInstsTest {
     @Test
-    void FIX0534Test() {
-        FIX43 fixData = FIX43.FIX534_NO_AFFECTED_ORDERS;
+    void FIX0510Test() {
+        FIX43 fixData = FIX43.FIX510_NUM_NO_DISTRIB_INSTS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag534NoAffectedOrdersTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0534Test() {
-        Tag534NoAffectedOrders tagData;
+    void Tag0510Test() {
+        Tag510NumNoDistribInsts tagData;
 
     }
 }

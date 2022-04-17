@@ -19,7 +19,6 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
 public enum Enum166SettlLocation implements EnumAccessors, LogStringVerbose {
     CEDEL( "CED",
             "CEDEL",

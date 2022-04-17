@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag555NoLegsTest {
+class Tag552NumNoSidesTest {
     @Test
-    void FIX0555Test() {
-        FIX43 fixData = FIX43.FIX555_NO_LEGS;
+    void FIX0552Test() {
+        FIX43 fixData = FIX43.FIX552_NUM_NO_SIDES;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag555NoLegsTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0555Test() {
-        Tag555NoLegs tagData;
+    void Tag0552Test() {
+        Tag552NumNoSides tagData;
 
     }
 }
