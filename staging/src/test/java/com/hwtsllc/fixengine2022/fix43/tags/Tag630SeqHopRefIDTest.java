@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag630HopRefIDTest {
+class Tag630SeqHopRefIDTest {
     @Test
     void FIX0630Test() {
-        FIX43 fixData = FIX43.FIX630_HOP_REF_ID;
+        FIX43 fixData = FIX43.FIX630_SEQ_HOP_REF_ID;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag630HopRefIDTest {
     }
     @Test
     void Tag0630Test() {
-        Tag630HopRefID tagData;
+        Tag630SeqHopRefID tagData;
 
     }
 }

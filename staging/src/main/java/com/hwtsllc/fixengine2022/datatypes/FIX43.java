@@ -260,7 +260,7 @@ public enum FIX43 implements EnumAccessors, LogStringVerbose {
     FIX627_NUM_NO_HOPS(627, "NO_HOPS", "NoHops"),
     FIX628_STR_HOP_COMP_ID(628, "HOP_COMP_ID", "HopCompID"),
     FIX629_UTC_HOP_SENDING_TIME(629, "HOP_SENDING_TIME", "HopSendingTime"),
-    FIX630_HOP_REF_ID(630, "HOP_REF_ID", "HopRefID"),
+    FIX630_SEQ_HOP_REF_ID(630, "HOP_REF_ID", "HopRefID"),
 
     FIX631_MID_PX(631, "MID_PX", "MidPx"),
     FIX632_PCT_BID_YIELD(632, "BID_YIELD", "BidYield"),

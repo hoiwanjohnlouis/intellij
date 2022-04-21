@@ -14,22 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag369SeqLastMsgSeqNumProcessed extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag630SeqHopRefID extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private MySeqNumType dataValue;
 
-    public final static int TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED = 369;
-    public final static int TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED = 963;
+    public final static int TESTA_SEQ_HOP_REF_ID = 630;
+    public final static int TESTB_SEQ_HOP_REF_ID = 36;
 
-    public Tag369SeqLastMsgSeqNumProcessed(final MySeqNumType dataValue) {
-        setFixType(FIX42.FIX369_SEQ_LAST_MSG_SEQ_NUM_PROCESSED);
+    public Tag630SeqHopRefID(final MySeqNumType dataValue) {
+        setFixType(FIX43.FIX630_SEQ_HOP_REF_ID);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag369SeqLastMsgSeqNumProcessed extends FIX42Abstract implements Fi
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag369SeqLastMsgSeqNumProcessed tagData;
+        Tag630SeqHopRefID tagData;
 
-        tagData = new Tag369SeqLastMsgSeqNumProcessed(new MySeqNumType(TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
+        tagData = new Tag630SeqHopRefID(new MySeqNumType(TESTA_SEQ_HOP_REF_ID) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag369SeqLastMsgSeqNumProcessed(new MySeqNumType(TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
+        tagData = new Tag630SeqHopRefID(new MySeqNumType(TESTB_SEQ_HOP_REF_ID) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
