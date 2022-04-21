@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag561RoundLotTest {
+class Tag648QtyMinOfferSizeTest {
     @Test
-    void FIX0561Test() {
-        FIX43 fixData = FIX43.FIX561_ROUND_LOT;
+    void FIX0648Test() {
+        FIX43 fixData = FIX43.FIX648_QTY_MIN_OFFER_SIZE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag561RoundLotTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0561Test() {
-        Tag561RoundLot tagData;
+    void Tag0648Test() {
+        Tag648QtyMinOfferSize tagData;
 
     }
 }
