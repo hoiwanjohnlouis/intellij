@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag490CardExpDateTest {
+class Tag611LmdLegMaturityDateTest {
     @Test
-    void FIX0490Test() {
-        FIX43 fixData = FIX43.FIX490_CARD_EXP_DATE;
+    void FIX0611Test() {
+        FIX43 fixData = FIX43.FIX611_LMD_LEG_MATURITY_DATE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag490CardExpDateTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0490Test() {
-        Tag490CardExpDate tagData;
+    void Tag0611Test() {
+        Tag611LmdLegMaturityDate tagData;
 
     }
 }

@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag542UnderlyingMaturityDateTest {
+class Tag486LmdDateOfBirthTest {
     @Test
-    void FIX0542Test() {
-        FIX43 fixData = FIX43.FIX542_UNDERLYING_MATURITY_DATE;
+    void FIX0486Test() {
+        FIX43 fixData = FIX43.FIX486_LMD_DATE_OF_BIRTH;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag542UnderlyingMaturityDateTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0542Test() {
-        Tag542UnderlyingMaturityDate tagData;
+    void Tag0486Test() {
+        Tag486LmdDateOfBirth tagData;
 
     }
 }
