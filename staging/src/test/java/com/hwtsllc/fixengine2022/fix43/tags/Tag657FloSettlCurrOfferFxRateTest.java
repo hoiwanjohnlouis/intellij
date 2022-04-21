@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag614LegContractMultiplierTest {
+class Tag657FloSettlCurrOfferFxRateTest {
     @Test
-    void FIX0614Test() {
-        FIX43 fixData = FIX43.FIX614_LEG_CONTRACT_MULTIPLIER;
+    void FIX0657Test() {
+        FIX43 fixData = FIX43.FIX657_FLO_SETTL_CURR_OFFER_FX_RATE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag614LegContractMultiplierTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0614Test() {
-        Tag614LegContractMultiplier tagData;
+    void Tag0657Test() {
+        Tag657FloSettlCurrOfferFxRate tagData;
 
     }
 }

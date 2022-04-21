@@ -23,7 +23,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * Initially it will be a String, later on it will become BigDecimal or int depending on usage.
  */
 public class MyAmtType implements LogStringVerbose {
-    private double dataValue;
+    private final double dataValue;
 
     public MyAmtType(final double dataValue) {
         this.dataValue = dataValue;

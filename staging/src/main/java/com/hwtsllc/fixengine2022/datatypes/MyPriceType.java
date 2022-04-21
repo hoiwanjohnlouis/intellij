@@ -23,7 +23,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * Initially it will be a String, later on it will become BigDecimal.
  */
 public class MyPriceType implements LogStringVerbose {
-    private double dataValue;
+    private final double dataValue;
 
     public MyPriceType(final double dataValue) {
         this.dataValue = dataValue;

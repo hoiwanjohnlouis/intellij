@@ -24,7 +24,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * Initially it will be an int.
  */
 public class MyNumInGroupType implements LogStringVerbose {
-    private int dataValue;
+    private final int dataValue;
 
     public MyNumInGroupType(final int dataValue) {
         this.dataValue = dataValue;

@@ -23,7 +23,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * Initially it will be a String, later on it will become BigDecimal.
  */
 public class MyPercentageType implements LogStringVerbose {
-    private String dataValue;
+    private final String dataValue;
 
     public MyPercentageType(final String dataValue) {
         this.dataValue = dataValue;

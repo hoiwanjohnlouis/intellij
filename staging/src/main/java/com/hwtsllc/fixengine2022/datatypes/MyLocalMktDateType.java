@@ -23,7 +23,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * it will probably be a String.
  */
 public class MyLocalMktDateType implements LogStringVerbose {
-    private String dataValue;
+    private final String dataValue;
 
     public MyLocalMktDateType(final String dataValue) {
         this.dataValue = dataValue;

@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag469RoundingModulusTest {
+class Tag623FloLegRatioQtyTest {
     @Test
-    void FIX0469Test() {
-        FIX43 fixData = FIX43.FIX469_;
+    void FIX0623Test() {
+        FIX43 fixData = FIX43.FIX623_FLO_LEG_RATIO_QTY;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag469RoundingModulusTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0469Test() {
-        Tag469RoundingModulus tagData;
+    void Tag0623Test() {
+        Tag623FloLegRatioQty tagData;
 
     }
 }

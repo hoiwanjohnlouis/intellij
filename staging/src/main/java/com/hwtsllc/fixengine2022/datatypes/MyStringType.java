@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.datatypes;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class MyStringType implements LogStringVerbose {
-    private String dataValue;
+    private final String dataValue;
 
     public MyStringType(final String dataValue) {
         this.dataValue = dataValue;

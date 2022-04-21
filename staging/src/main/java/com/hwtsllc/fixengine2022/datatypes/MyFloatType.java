@@ -23,7 +23,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * Initially it will be a String, later on it may become BigDecimal.
  */
 public class MyFloatType implements LogStringVerbose {
-    private float dataValue;
+    private final float dataValue;
 
     public MyFloatType(final float dataValue) {
         this.dataValue = dataValue;

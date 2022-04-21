@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag623LegRatioQtyTest {
+class Tag656FloSettlCurrBidFxRateTest {
     @Test
-    void FIX0623Test() {
-        FIX43 fixData = FIX43.FIX623_LEG_RATIO_QTY;
+    void FIX0656Test() {
+        FIX43 fixData = FIX43.FIX656_FLO_SETTL_CURR_BID_FX_RATE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag623LegRatioQtyTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0623Test() {
-        Tag623LegRatioQty tagData;
+    void Tag0656Test() {
+        Tag656FloSettlCurrBidFxRate tagData;
 
     }
 }

@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  MyUTCTimeType contains only the TIME portion of UTC.
  */
 public class MyUTCTimeType implements LogStringVerbose {
-    private String dataValue;
+    private final String dataValue;
 
     public MyUTCTimeType(final String dataValue) {
         this.dataValue = dataValue;

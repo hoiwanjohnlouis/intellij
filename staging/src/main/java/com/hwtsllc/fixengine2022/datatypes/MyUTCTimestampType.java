@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      (see http://tycho.usno.navy.mil/leapsec.html)
  */
 public class MyUTCTimestampType implements LogStringVerbose {
-    private String dataValue;
+    private final String dataValue;
 
     public MyUTCTimestampType(final String dataValue) {
         this.dataValue = dataValue;

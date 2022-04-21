@@ -23,7 +23,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * It will be a String,
  */
 public class MyCurrencyType implements LogStringVerbose {
-    private String dataValue;
+    private final String dataValue;
 
     public MyCurrencyType(final String dataValue) {
         this.dataValue = dataValue;
