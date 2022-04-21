@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag290IntMDEntryPositionNo extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_MD_ENTRY_POSITION_NO = 290;
-    public final static int TESTB_INT_MD_ENTRY_POSITION_NO = 92;
+    public final static int TESTA_INT_MD_ENTRY_POSITION_NO = 60;
+    public final static int TESTB_INT_MD_ENTRY_POSITION_NO = 30;
 
     public Tag290IntMDEntryPositionNo(MyIntType dataValue) {
         setFixType(FIX42.FIX290_INT_MD_ENTRY_POSITION_NO);

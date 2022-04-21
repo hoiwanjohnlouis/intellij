@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag108IntHeartBtInt extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_HEART_BT_INT = 108;
-    public final static int TESTB_INT_HEART_BT_INT = 801;
+    public final static int TESTA_INT_HEART_BT_INT = 60;
+    public final static int TESTB_INT_HEART_BT_INT = 30;
 
     public Tag108IntHeartBtInt(MyIntType dataValue) {
         setFixType(FIX30.FIX108_INT_HEART_BT_INT);

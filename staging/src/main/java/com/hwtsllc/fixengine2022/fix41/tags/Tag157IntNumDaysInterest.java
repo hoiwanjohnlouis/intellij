@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag157IntNumDaysInterest extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NUM_DAYS_INTEREST = 157;
-    public final static int TESTB_INT_NUM_DAYS_INTEREST = 751;
+    public final static int TESTA_INT_NUM_DAYS_INTEREST = 60;
+    public final static int TESTB_INT_NUM_DAYS_INTEREST = 30;
 
     public Tag157IntNumDaysInterest(MyIntType dataValue) {
         setFixType(FIX41.FIX157_INT_NUM_DAYS_INTEREST);

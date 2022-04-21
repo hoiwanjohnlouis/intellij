@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag304IntTotQuoteEntries extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_TOT_QUOTE_ENTRIES = 304;
-    public final static int TESTB_INT_TOT_QUOTE_ENTRIES = 403;
+    public final static int TESTA_INT_TOT_QUOTE_ENTRIES = 60;
+    public final static int TESTB_INT_TOT_QUOTE_ENTRIES = 30;
 
     public Tag304IntTotQuoteEntries(MyIntType dataValue) {
         setFixType(FIX42.FIX304_INT_TOT_QUOTE_ENTRIES);

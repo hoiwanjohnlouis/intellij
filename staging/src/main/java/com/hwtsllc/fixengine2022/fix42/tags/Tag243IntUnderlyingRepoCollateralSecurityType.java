@@ -26,8 +26,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag243IntUnderlyingRepoCollateralSecurityType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE = 243;
-    public final static int TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE = 342;
+    public final static int TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE = 60;
+    public final static int TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE = 30;
 
     public Tag243IntUnderlyingRepoCollateralSecurityType(MyIntType dataValue) {
         setFixType(FIX42.FIX243_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE);

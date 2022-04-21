@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag264IntMarketDepth extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_MARKET_DEPTH = 264;
-    public final static int TESTB_INT_MARKET_DEPTH = 462;
+    public final static int TESTA_INT_MARKET_DEPTH = 60;
+    public final static int TESTB_INT_MARKET_DEPTH = 30;
 
     public Tag264IntMarketDepth(MyIntType dataValue) {
         setFixType(FIX42.FIX264_INT_MARKET_DEPTH);

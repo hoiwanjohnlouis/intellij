@@ -26,8 +26,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag251IntLegRepurchaseTerm extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_LEG_REPURCHASE_TERM = 251;
-    public final static int TESTB_INT_LEG_REPURCHASE_TERM = 152;
+    public final static int TESTA_INT_LEG_REPURCHASE_TERM = 60;
+    public final static int TESTB_INT_LEG_REPURCHASE_TERM = 30;
 
     public Tag251IntLegRepurchaseTerm(MyIntType dataValue) {
         setFixType(FIX42.FIX251_INT_LEG_REPURCHASE_TERM);
