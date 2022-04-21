@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag443UtcStrikeTime extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_STRIKE_TIME = "BilboBaggins-Tag443UtcStrikeTime";
-    public final static String TESTB_UTC_STRIKE_TIME = "Gandalf-Tag443UtcStrikeTime";
+    public final static String TESTA_UTC_STRIKE_TIME = "18991231-23:59:59.443";
+    public final static String TESTB_UTC_STRIKE_TIME = "19001231-23:59:59.443";
 
     public Tag443UtcStrikeTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX443_UTC_STRIKE_TIME);

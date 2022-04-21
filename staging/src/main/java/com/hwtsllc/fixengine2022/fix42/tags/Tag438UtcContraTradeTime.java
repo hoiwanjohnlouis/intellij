@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag438UtcContraTradeTime extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_CONTRA_TRADE_TIME = "BilboBaggins-Tag438UtcContraTradeTime";
-    public final static String TESTB_UTC_CONTRA_TRADE_TIME = "Gandalf-Tag438UtcContraTradeTime";
+    public final static String TESTA_UTC_CONTRA_TRADE_TIME = "18991231-23:59:59.999";
+    public final static String TESTB_UTC_CONTRA_TRADE_TIME = "19001231-23:59:59.999";
 
     public Tag438UtcContraTradeTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX438_UTC_CONTRA_TRADE_TIME);

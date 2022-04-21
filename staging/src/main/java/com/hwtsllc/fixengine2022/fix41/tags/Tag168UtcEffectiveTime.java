@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag168UtcEffectiveTime extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_EFFECTIVE_TIME = "BilboBaggins-Tag168UtcEffectiveTime";
-    public final static String TESTB_UTC_EFFECTIVE_TIME = "Gandalf-Tag168UtcEffectiveTime";
+    public final static String TESTA_UTC_EFFECTIVE_TIME = "18991231-23:59:59.168";
+    public final static String TESTB_UTC_EFFECTIVE_TIME = "19001231-23:59:59.168";
 
     public Tag168UtcEffectiveTime(MyUTCTimestampType dataValue) {
         setFixType(FIX41.FIX168_UTC_EFFECTIVE_TIME);

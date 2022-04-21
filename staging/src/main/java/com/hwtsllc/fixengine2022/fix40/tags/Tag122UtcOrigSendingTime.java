@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag122UtcOrigSendingTime extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_ORIG_SENDING_TIME = "BilboBaggins-122OrigSendingTime"; // fake data
-    public final static String TESTB_UTC_ORIG_SENDING_TIME = "Gandalf-122OrigSendingTime";
+    public final static String TESTA_UTC_ORIG_SENDING_TIME = "18991231-23:59:59.122";
+    public final static String TESTB_UTC_ORIG_SENDING_TIME = "19001231-23:59:59.122";
 
     public Tag122UtcOrigSendingTime(MyUTCTimestampType dataValue) {
         setFixType(FIX40.FIX122_UTC_ORIG_SENDING_TIME);

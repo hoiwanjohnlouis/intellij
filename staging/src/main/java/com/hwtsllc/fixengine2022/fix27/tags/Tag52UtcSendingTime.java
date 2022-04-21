@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag52UtcSendingTime extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_SENDING_TIME = "20220131 000000"; // fake data
-    public final static String TESTB_UTC_SENDING_TIME = "19001231 000000";
+    public final static String TESTA_UTC_SENDING_TIME = "18991231-23:59:59.052";
+    public final static String TESTB_UTC_SENDING_TIME = "19001231-23:59:59.052";
 
     public Tag52UtcSendingTime(MyUTCTimestampType dataValue) {
         setFixType(FIX27.FIX52_UTC_SENDING_TIME);

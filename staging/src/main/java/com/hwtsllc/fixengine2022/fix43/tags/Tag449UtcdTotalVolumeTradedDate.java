@@ -14,22 +14,23 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCDateType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag370UtcOnBehalfOfSendingTime extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyUTCTimestampType dataValue;
+@Deprecated
+public class Tag449UtcdTotalVolumeTradedDate extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyUTCDateType dataValue;
 
-    public final static String TESTA_UTC_ON_BEHALF_OF_SENDING_TIME = "18991231-23:59:59.370";
-    public final static String TESTB_UTC_ON_BEHALF_OF_SENDING_TIME = "19001231-23:59:59.370";
+    public final static String TESTA_UTCD_TOTAL_VOLUME_TRADED_DATE = "18991231";
+    public final static String TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE = "19001231";
 
-    public Tag370UtcOnBehalfOfSendingTime(MyUTCTimestampType dataValue) {
-        setFixType(FIX42.FIX370_UTC_ON_BEHALF_OF_SENDING_TIME);
+    public Tag449UtcdTotalVolumeTradedDate(MyUTCDateType dataValue) {
+        setFixType(FIX43.FIX449_UTCD_TOTAL_VOLUME_TRADED_DATE);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +69,14 @@ public class Tag370UtcOnBehalfOfSendingTime extends FIX42Abstract implements Fix
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag370UtcOnBehalfOfSendingTime tagData;
+        Tag449UtcdTotalVolumeTradedDate tagData;
 
-        tagData = new Tag370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(TESTA_UTC_ON_BEHALF_OF_SENDING_TIME) );
+        tagData = new Tag449UtcdTotalVolumeTradedDate(new MyUTCDateType(TESTA_UTCD_TOTAL_VOLUME_TRADED_DATE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(TESTB_UTC_ON_BEHALF_OF_SENDING_TIME) );
+        tagData = new Tag449UtcdTotalVolumeTradedDate(new MyUTCDateType(TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

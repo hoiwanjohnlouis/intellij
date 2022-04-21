@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag586OrigOrdModTimeTest {
+class Tag483UtcTransBkdTimeTest {
     @Test
-    void FIX0586Test() {
-        FIX43 fixData = FIX43.FIX586_ORIG_ORD_MOD_TIME;
+    void FIX0483Test() {
+        FIX43 fixData = FIX43.FIX483_UTC_TRANS_BKD_TIME;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag586OrigOrdModTimeTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0586Test() {
-        Tag586OrigOrdModTime tagData;
+    void Tag0483Test() {
+        Tag483UtcTransBkdTime tagData;
 
     }
 }

@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag344UtcTradSesCloseTime extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_TRAD_SES_CLOSE_TIME = "BilboBaggins-Tag344UtcTradSesCloseTime";
-    public final static String TESTB_UTC_TRAD_SES_CLOSE_TIME = "Gandalf-Tag344UtcTradSesCloseTime";
+    public final static String TESTA_UTC_TRAD_SES_CLOSE_TIME = "18991231-23:59:59.344";
+    public final static String TESTB_UTC_TRAD_SES_CLOSE_TIME = "19001231-23:59:59.344";
 
     public Tag344UtcTradSesCloseTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX344_UTC_TRAD_SES_CLOSE_TIME);

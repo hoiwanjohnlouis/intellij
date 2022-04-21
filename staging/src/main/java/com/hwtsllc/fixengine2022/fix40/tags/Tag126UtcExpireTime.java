@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag126UtcExpireTime extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_EXPIRE_TIME = "BilboBaggins-126ExpireTime"; // fake data
-    public final static String TESTB_UTC_EXPIRE_TIME = "Gandalf-126ExpireTime";
+    public final static String TESTA_UTC_EXPIRE_TIME = "18991231-23:59:59.126";
+    public final static String TESTB_UTC_EXPIRE_TIME = "19001231-23:59:59.126";
 
     public Tag126UtcExpireTime(MyUTCTimestampType dataValue) {
         setFixType(FIX40.FIX126_UTC_EXPIRE_TIME);

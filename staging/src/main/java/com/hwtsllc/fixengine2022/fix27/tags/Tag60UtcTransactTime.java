@@ -42,8 +42,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag60UtcTransactTime extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_TRANSACT_TIME = "18991231-23:59:60";
-    public final static String TESTB_UTC_TRANSACT_TIME = "18991231-00:00:00";
+    public final static String TESTA_UTC_TRANSACT_TIME = "18991231-23:59:59.060";
+    public final static String TESTB_UTC_TRANSACT_TIME = "19001231-23:59:59.060";
 
     public Tag60UtcTransactTime(MyUTCTimestampType dataValue) {
         setFixType(FIX27.FIX60_UTC_TRANSACT_TIME);

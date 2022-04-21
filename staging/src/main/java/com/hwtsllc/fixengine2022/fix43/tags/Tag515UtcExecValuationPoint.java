@@ -14,22 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag370UtcOnBehalfOfSendingTime extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag515UtcExecValuationPoint extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_ON_BEHALF_OF_SENDING_TIME = "18991231-23:59:59.370";
-    public final static String TESTB_UTC_ON_BEHALF_OF_SENDING_TIME = "19001231-23:59:59.370";
+    public final static String TESTA_UTC_EXEC_VALUATION_POINT = "18991231-23:59:59.999";
+    public final static String TESTB_UTC_EXEC_VALUATION_POINT = "19001231-23:59:59.999";
 
-    public Tag370UtcOnBehalfOfSendingTime(MyUTCTimestampType dataValue) {
-        setFixType(FIX42.FIX370_UTC_ON_BEHALF_OF_SENDING_TIME);
+    public Tag515UtcExecValuationPoint(MyUTCTimestampType dataValue) {
+        setFixType(FIX43.FIX515_UTC_EXEC_VALUATION_POINT);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag370UtcOnBehalfOfSendingTime extends FIX42Abstract implements Fix
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag370UtcOnBehalfOfSendingTime tagData;
+        Tag515UtcExecValuationPoint tagData;
 
-        tagData = new Tag370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(TESTA_UTC_ON_BEHALF_OF_SENDING_TIME) );
+        tagData = new Tag515UtcExecValuationPoint(new MyUTCTimestampType(TESTA_UTC_EXEC_VALUATION_POINT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(TESTB_UTC_ON_BEHALF_OF_SENDING_TIME) );
+        tagData = new Tag515UtcExecValuationPoint(new MyUTCTimestampType(TESTB_UTC_EXEC_VALUATION_POINT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag273UtctMDEntryTime extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimeType dataValue;
 
-    public final static String TESTA_UTCT_MD_ENTRY_TIME = "BilboBaggins-Tag273UtctMDEntryTime";
-    public final static String TESTB_UTCT_MD_ENTRY_TIME = "Gandalf-Tag273UtctMDEntryTime";
+    public final static String TESTA_UTCT_MD_ENTRY_TIME = "23:59:59.273";
+    public final static String TESTB_UTCT_MD_ENTRY_TIME = "23:59:59.273";
 
     public Tag273UtctMDEntryTime(MyUTCTimeType dataValue) {
         setFixType(FIX42.FIX273_UTCT_MD_ENTRY_TIME);

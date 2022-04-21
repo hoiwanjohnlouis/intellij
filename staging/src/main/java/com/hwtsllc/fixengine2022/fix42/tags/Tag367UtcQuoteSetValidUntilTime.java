@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag367UtcQuoteSetValidUntilTime extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME = "BilboBaggins-Tag367UtcQuoteSetValidUntilTime";
-    public final static String TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME = "Gandalf-Tag367UtcQuoteSetValidUntilTime";
+    public final static String TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME = "18991231-23:59:59.367";
+    public final static String TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME = "19001231-23:59:59.367";
 
     public Tag367UtcQuoteSetValidUntilTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX367_UTC_QUOTE_SET_VALID_UNTIL_TIME);

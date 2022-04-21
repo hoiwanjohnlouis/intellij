@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag515ExecValuationPointTest {
+class Tag629UtcHopSendingTimeTest {
     @Test
-    void FIX0515Test() {
-        FIX43 fixData = FIX43.FIX515_EXEC_VALUATION_POINT;
+    void FIX0629Test() {
+        FIX43 fixData = FIX43.FIX629_UTC_HOP_SENDING_TIME;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag515ExecValuationPointTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0515Test() {
-        Tag515ExecValuationPoint tagData;
+    void Tag0629Test() {
+        Tag629UtcHopSendingTime tagData;
 
     }
 }

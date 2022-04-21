@@ -22,10 +22,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag483TransBkdTimeTest {
+@Deprecated
+class Tag449UtcdTotalVolumeTradedDateTest {
     @Test
-    void FIX0483Test() {
-        FIX43 fixData = FIX43.FIX483_TRANS_BKD_TIME;
+    void FIX0449Test() {
+        FIX43 fixData = FIX43.FIX449_UTCD_TOTAL_VOLUME_TRADED_DATE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +35,8 @@ class Tag483TransBkdTimeTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0483Test() {
-        Tag483TransBkdTime tagData;
+    void Tag0449Test() {
+        Tag449UtcdTotalVolumeTradedDate tagData;
 
     }
 }
