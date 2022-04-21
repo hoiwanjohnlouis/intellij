@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag642BidForwardPoints2Test {
+class Tag451PxoNetChgPrevDayTest {
     @Test
-    void FIX0642Test() {
-        FIX43 fixData = FIX43.FIX642_BID_FORWARD_POINTS_2;
+    void FIX0451Test() {
+        FIX43 fixData = FIX43.FIX451_PXO_NET_CHG_PREV_DAY;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag642BidForwardPoints2Test {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0642Test() {
-        Tag642BidForwardPoints2 tagData;
+    void Tag0451Test() {
+        Tag451PxoNetChgPrevDay tagData;
 
     }
 }

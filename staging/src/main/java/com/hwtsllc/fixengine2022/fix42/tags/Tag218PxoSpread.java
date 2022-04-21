@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag218PxoSpread extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceOffsetType dataValue;
 
-    public final static String TESTA_PXO_SPREAD = "BilboBaggins-Tag218PxoSpread";
-    public final static String TESTB_PXO_SPREAD = "Gandalf-Tag218PxoSpread";
+    public final static double TESTA_PXO_SPREAD = 0.218D;
+    public final static double TESTB_PXO_SPREAD = 0.812D;
 
     public Tag218PxoSpread(MyPriceOffsetType dataValue) {
         setFixType(FIX42.FIX218_PXO_SPREAD);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

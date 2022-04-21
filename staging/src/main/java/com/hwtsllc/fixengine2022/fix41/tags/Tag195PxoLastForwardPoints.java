@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag195PxoLastForwardPoints extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceOffsetType dataValue;
 
-    public final static String TESTA_PXO_LAST_FORWARD_POINTS = "BilboBaggins-Tag195PxoLastForwardPoints";
-    public final static String TESTB_PXO_LAST_FORWARD_POINTS = "Gandalf-Tag195PxoLastForwardPoints";
+    public final static double TESTA_PXO_LAST_FORWARD_POINTS = 0.195D;
+    public final static double TESTB_PXO_LAST_FORWARD_POINTS = 0.591D;
 
     public Tag195PxoLastForwardPoints(MyPriceOffsetType dataValue) {
         setFixType(FIX41.FIX195_PXO_LAST_FORWARD_POINTS);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

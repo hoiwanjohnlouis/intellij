@@ -14,22 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.tags;
+package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag191PxoOfferForwardPoints extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag639PxoPriceImprovement extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceOffsetType dataValue;
 
-    public final static double TESTA_PXO_OFFER_FORWARD_POINTS = 0.191D;
-    public final static double TESTB_PXO_OFFER_FORWARD_POINTS = 0.191D;
+    public final static double TESTA_PXO_PRICE_IMPROVEMENT = 0.639D;
+    public final static double TESTB_PXO_PRICE_IMPROVEMENT = 0.936D;
 
-    public Tag191PxoOfferForwardPoints(MyPriceOffsetType dataValue) {
-        setFixType(FIX41.FIX191_PXO_OFFER_FORWARD_POINTS);
+    public Tag639PxoPriceImprovement(MyPriceOffsetType dataValue) {
+        setFixType(FIX43.FIX639_PXO_PRICE_IMPROVEMENT);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag191PxoOfferForwardPoints extends FIX41Abstract implements FixTag
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag191PxoOfferForwardPoints tagData;
+        Tag639PxoPriceImprovement tagData;
 
-        tagData = new Tag191PxoOfferForwardPoints(new MyPriceOffsetType(TESTA_PXO_OFFER_FORWARD_POINTS) );
+        tagData = new Tag639PxoPriceImprovement(new MyPriceOffsetType(TESTA_PXO_PRICE_IMPROVEMENT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag191PxoOfferForwardPoints(new MyPriceOffsetType(TESTB_PXO_OFFER_FORWARD_POINTS) );
+        tagData = new Tag639PxoPriceImprovement(new MyPriceOffsetType(TESTB_PXO_PRICE_IMPROVEMENT) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

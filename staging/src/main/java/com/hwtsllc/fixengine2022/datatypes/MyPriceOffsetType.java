@@ -23,13 +23,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * Initially it will be a String, later on it will become BigDecimal.
  */
 public class MyPriceOffsetType implements LogStringVerbose {
-    private String dataValue;
+    private final double dataValue;
 
-    public MyPriceOffsetType(final String dataValue) {
+    public MyPriceOffsetType(final double dataValue) {
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return dataValue;
     }
     /**
@@ -47,14 +47,14 @@ public class MyPriceOffsetType implements LogStringVerbose {
      */
     @Override
     public String toString() {
-        return getDataValue();
+        return String.valueOf(getDataValue() );
     }
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyPriceOffsetType dataType = new MyPriceOffsetType("12345");
+        MyPriceOffsetType dataType = new MyPriceOffsetType( 0.005D );
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

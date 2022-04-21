@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag643OfferForwardPoints2Test {
+class Tag641PxoLastForwardPoints2Test {
     @Test
-    void FIX0643Test() {
-        FIX43 fixData = FIX43.FIX643_OFFER_FORWARD_POINTS_2;
+    void FIX0641Test() {
+        FIX43 fixData = FIX43.FIX641_PXO_LAST_FORWARD_POINTS_2;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag643OfferForwardPoints2Test {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0643Test() {
-        Tag643OfferForwardPoints2 tagData;
+    void Tag0641Test() {
+        Tag641PxoLastForwardPoints2 tagData;
 
     }
 }
