@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag580NumNoDates extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyNumInGroupType dataValue;
+public class Tag580IntNoDates extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyIntType dataValue;
 
-    public final static int TESTA_NUM_NO_DATES = 580;
-    public final static int TESTB_NUM_NO_DATES = 85;
+    public final static int TESTA_INT_NO_DATES = 580;
+    public final static int TESTB_INT_NO_DATES = 85;
 
-    public Tag580NumNoDates(MyNumInGroupType dataValue) {
-        setFixType(FIX43.FIX580_NUM_NO_DATES);
+    public Tag580IntNoDates(MyIntType dataValue) {
+        setFixType(FIX43.FIX580_INT_NO_DATES);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag580NumNoDates extends FIX43Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag580NumNoDates tagData;
+        Tag580IntNoDates tagData;
 
-        tagData = new Tag580NumNoDates(new MyNumInGroupType(TESTA_NUM_NO_DATES) );
+        tagData = new Tag580IntNoDates(new MyIntType(TESTA_INT_NO_DATES) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag580NumNoDates(new MyNumInGroupType(TESTB_NUM_NO_DATES) );
+        tagData = new Tag580IntNoDates(new MyIntType(TESTB_INT_NO_DATES) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

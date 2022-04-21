@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag534NumNoAffectedOrders extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyNumInGroupType dataValue;
+public class Tag533IntTotalAffectedOrders extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyIntType dataValue;
 
-    public final static int TESTA_NUM_NO_AFFECTED_ORDERS = 534;
-    public final static int TESTB_NUM_NO_AFFECTED_ORDERS = 435;
+    public final static int TESTA_INT_TOTAL_AFFECTED_ORDERS = 533;
+    public final static int TESTB_INT_TOTAL_AFFECTED_ORDERS = 335;
 
-    public Tag534NumNoAffectedOrders(MyNumInGroupType dataValue) {
-        setFixType(FIX43.FIX534_NUM_NO_AFFECTED_ORDERS);
+    public Tag533IntTotalAffectedOrders(MyIntType dataValue) {
+        setFixType(FIX43.FIX533_INT_TOTAL_AFFECTED_ORDERS);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag534NumNoAffectedOrders extends FIX43Abstract implements FixTagVa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag534NumNoAffectedOrders tagData;
+        Tag533IntTotalAffectedOrders tagData;
 
-        tagData = new Tag534NumNoAffectedOrders(new MyNumInGroupType(TESTA_NUM_NO_AFFECTED_ORDERS) );
+        tagData = new Tag533IntTotalAffectedOrders(new MyIntType(TESTA_INT_TOTAL_AFFECTED_ORDERS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag534NumNoAffectedOrders(new MyNumInGroupType(TESTB_NUM_NO_AFFECTED_ORDERS) );
+        tagData = new Tag533IntTotalAffectedOrders(new MyIntType(TESTB_INT_TOTAL_AFFECTED_ORDERS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

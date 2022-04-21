@@ -26,8 +26,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag205IntMaturityDay extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_MATURITY_DAY = 1;
-    public final static int TESTB_INT_MATURITY_DAY = 28;
+    public final static int TESTA_INT_MATURITY_DAY = 205;
+    public final static int TESTB_INT_MATURITY_DAY = 502;
 
     public Tag205IntMaturityDay(MyIntType dataValue) {
         setFixType(FIX41.FIX205_INT_MATURITY_DAY);

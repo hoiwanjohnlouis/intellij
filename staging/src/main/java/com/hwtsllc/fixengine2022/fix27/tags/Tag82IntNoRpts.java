@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag82IntNoRpts extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NO_RPTS = 1;
-    public final static int TESTB_INT_NO_RPTS = 2;
+    public final static int TESTA_INT_NO_RPTS = 82;
+    public final static int TESTB_INT_NO_RPTS = 28;
 
     public Tag82IntNoRpts(MyIntType dataValue) {
         setFixType(FIX27.FIX82_INT_NO_RPTS);

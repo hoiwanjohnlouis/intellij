@@ -14,22 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag287IntSellerDays extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag534IntNoAffectedOrders extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_SELLER_DAYS = 287;
-    public final static int TESTB_INT_SELLER_DAYS = 782;
+    public final static int TESTA_INT_NO_AFFECTED_ORDERS = 534;
+    public final static int TESTB_INT_NO_AFFECTED_ORDERS = 435;
 
-    public Tag287IntSellerDays(MyIntType dataValue) {
-        setFixType(FIX42.FIX287_INT_SELLER_DAYS);
+    public Tag534IntNoAffectedOrders(MyIntType dataValue) {
+        setFixType(FIX43.FIX534_INT_NO_AFFECTED_ORDERS);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag287IntSellerDays extends FIX42Abstract implements FixTagValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag287IntSellerDays tagData;
+        Tag534IntNoAffectedOrders tagData;
 
-        tagData = new Tag287IntSellerDays(new MyIntType(TESTA_INT_SELLER_DAYS) );
+        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTA_INT_NO_AFFECTED_ORDERS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag287IntSellerDays(new MyIntType(TESTB_INT_SELLER_DAYS) );
+        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTB_INT_NO_AFFECTED_ORDERS) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

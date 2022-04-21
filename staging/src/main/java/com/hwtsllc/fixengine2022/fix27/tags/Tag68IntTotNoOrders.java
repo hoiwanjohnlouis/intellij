@@ -25,8 +25,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag68IntTotNoOrders extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_TOT_NO_ORDERS = 1;
-    public final static int TESTB_INT_TOT_NO_ORDERS = 3;
+    public final static int TESTA_INT_TOT_NO_ORDERS = 68;
+    public final static int TESTB_INT_TOT_NO_ORDERS = 86;
 
     public Tag68IntTotNoOrders(MyIntType dataValue) {
         setFixType(FIX27.FIX68_INT_TOT_NO_ORDERS);
