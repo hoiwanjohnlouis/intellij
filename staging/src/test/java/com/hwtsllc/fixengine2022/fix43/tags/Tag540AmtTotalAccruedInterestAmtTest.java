@@ -23,10 +23,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @Deprecated
-class Tag540TotalAccruedInterestAmtTest {
+class Tag540AmtTotalAccruedInterestAmtTest {
     @Test
     void FIX0540Test() {
-        FIX43 fixData = FIX43.FIX540_TOTAL_ACCRUED_INTEREST_AMT;
+        FIX43 fixData = FIX43.FIX540_AMT_TOTAL_ACCRUED_INTEREST_AMT;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -36,7 +36,7 @@ class Tag540TotalAccruedInterestAmtTest {
     }
     @Test
     void Tag0540Test() {
-        Tag540TotalAccruedInterestAmt tagData;
+        Tag540AmtTotalAccruedInterestAmt tagData;
 
     }
 }
