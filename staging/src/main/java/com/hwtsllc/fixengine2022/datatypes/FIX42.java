@@ -27,6 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      There may be a secondary prefix denoting the data type.
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
+ *                      COU = MyCountryType field
  *                      EXC = MyExchangeType field, saved as String
  *                      FLO = MyFloatType field, saved as String
  *                      INT = MyIntType field, saved as int
@@ -289,7 +290,7 @@ public enum FIX42 implements EnumAccessors, LogStringVerbose {
     FIX419_ENU_BASIS_PX_TYPE(419, "BASIS_PX_TYPE", "BasisPxType"),
     FIX420_NUM_NO_BID_COMPONENTS(420, "NO_BID_COMPONENTS", "NoBidComponents"),
 
-    FIX421_STR_COUNTRY(421, "COUNTRY", "Country"),
+    FIX421_COU_COUNTRY(421, "COUNTRY", "Country"),
     FIX422_INT_TOT_NO_STRIKES(422, "TOT_NO_STRIKES", "TotNoStrikes"),
     FIX423_ENU_PRICE_TYPE(423, "PRICE_TYPE", "MyPriceType"),
     FIX424_QTY_DAY_ORDER_QTY(424, "DAY_ORDER_QTY", "DayOrderQty"),

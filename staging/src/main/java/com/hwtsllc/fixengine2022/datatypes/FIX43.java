@@ -27,6 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      There may be a secondary prefix denoting the data type.
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
+ *                      COU = MyCountryType field
  *                      EXC = MyExchangeType field, saved as String
  *                      FLO = MyFloatType field, saved as String
  *                      INT = MyIntType field, saved as int
@@ -77,13 +78,13 @@ public enum FIX43 implements EnumAccessors, LogStringVerbose {
     FIX467_STR_INDIVIDUAL_ALLOC_ID(467, "INDIVIDUAL_ALLOC_ID", "IndividualAllocID"),
     FIX468_ENU_ROUNDING_DIRECTION(468, "ROUNDING_DIRECTION", "RoundingDirection"),
     FIX469_FLO_ROUNDING_MODULUS(469, "ROUNDING_MODULUS", "RoundingModulus"),
-    FIX470_COUNTRY_OF_ISSUE(470, "COUNTRY_OF_ISSUE", "CountryOfIssue"),
+    FIX470_COU_COUNTRY_OF_ISSUE(470, "COUNTRY_OF_ISSUE", "CountryOfIssue"),
 
     FIX471_STR_STATE_OR_PROVINCE_OF_ISSUE(471, "STATE_OR_PROVINCE_OF_ISSUE", "StateOrProvinceOfIssue"),
     FIX472_STR_LOCALE_OF_ISSUE(472, "LOCALE_OF_ISSUE", "LocaleOfIssue"),
     FIX473_NUM_NO_REGIST_DTLS(473, "NO_REGIST_DTLS", "NoRegistDtls"),
     FIX474_STR_MAILING_DTLS(474, "MAILING_DTLS", "MailingDtls"),
-    FIX475_INVESTOR_COUNTRY_OF_RESIDENCE(475, "INVESTOR_COUNTRY_OF_RESIDENCE", "InvestorCountryOfResidence"),
+    FIX475_COU_INVESTOR_COUNTRY_OF_RESIDENCE(475, "INVESTOR_COUNTRY_OF_RESIDENCE", "InvestorCountryOfResidence"),
     FIX476_STR_PAYMENT_REF(476, "PAYMENT_REF", "PaymentRef"),
     FIX477_ENU_DISTRIB_PAYMENT_METHOD(477, "", "DistribPaymentMethod"),
     FIX478_CASH_DISTRIB_CURR(478, "DISTRIB_PAYMENT_METHOD", "CashDistribCurr"),
@@ -215,11 +216,11 @@ public enum FIX43 implements EnumAccessors, LogStringVerbose {
     FIX590_ENU_BOOKING_UNIT(590, "BOOKING_UNIT", "BookingUnit"),
 
     FIX591_ENU_PREALLOC_METHOD(591, "PREALLOC_METHOD", "PreallocMethod"),
-    FIX592_UNDERLYING_COUNTRY_OF_ISSUE(592, "UNDERLYING_COUNTRY_OF_ISSUE", "UnderlyingCountryOfIssue"),
+    FIX592_COU_UNDERLYING_COUNTRY_OF_ISSUE(592, "UNDERLYING_COUNTRY_OF_ISSUE", "UnderlyingCountryOfIssue"),
     FIX593_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE(593, "UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE", "UnderlyingStateOrProvinceOfIssue"),
     FIX594_STR_UNDERLYING_LOCALE_OF_ISSUE(594, "UNDERLYING_LOCALE_OF_ISSUE", "UnderlyingLocaleOfIssue"),
     FIX595_STR_UNDERLYING_INSTR_REGISTRY(595, "UNDERLYING_INSTR_REGISTRY", "UnderlyingInstrRegistry"),
-    FIX596_LEG_COUNTRY_OF_ISSUE(596, "LEG_COUNTRY_OF_ISSUE", "LegCountryOfIssue"),
+    FIX596_COU_LEG_COUNTRY_OF_ISSUE(596, "LEG_COUNTRY_OF_ISSUE", "LegCountryOfIssue"),
     FIX597_STR_LEG_STATE_OR_PROVINCE_OF_ISSUE(597, "LEG_STATE_OR_PROVINCE_OF_ISSUE", "LegStateOrProvinceOfIssue"),
     FIX598_STR_LEG_LOCALE_OF_ISSUE(598, "LEG_LOCALE_OF_ISSUE", "LegLocaleOfIssue"),
     FIX599_STR_LEG_INSTR_REGISTRY(599, "LEG_INSTR_REGISTRY", "LegInstrRegistry"),

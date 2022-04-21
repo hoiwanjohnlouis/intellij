@@ -14,22 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag421StrCountry extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag470CouCountryOfIssue extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyCountryType dataValue;
 
-    public final static String TESTA_STR_COUNTRY = "BilboBaggins-Tag421StrCountry";
-    public final static String TESTB_STR_COUNTRY = "Gandalf-Tag421StrCountry";
+    public final static String TESTA_COU_COUNTRY = "BilboBaggins-Tag470CouCountryOfIssue";
+    public final static String TESTB_COU_COUNTRY = "Gandalf-Tag470CouCountryOfIssue";
 
-    public Tag421StrCountry(MyStringType dataValue) {
-        setFixType(FIX42.FIX421_STR_COUNTRY);
+    public Tag470CouCountryOfIssue(MyCountryType dataValue) {
+        setFixType(FIX43.FIX470_COU_COUNTRY_OF_ISSUE);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +68,14 @@ public class Tag421StrCountry extends FIX42Abstract implements FixTagValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag421StrCountry tagData;
+        Tag470CouCountryOfIssue tagData;
 
-        tagData = new Tag421StrCountry(new MyStringType(TESTA_STR_COUNTRY) );
+        tagData = new Tag470CouCountryOfIssue(new MyCountryType(TESTA_COU_COUNTRY) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag421StrCountry(new MyStringType(TESTB_STR_COUNTRY) );
+        tagData = new Tag470CouCountryOfIssue(new MyCountryType(TESTB_COU_COUNTRY) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
