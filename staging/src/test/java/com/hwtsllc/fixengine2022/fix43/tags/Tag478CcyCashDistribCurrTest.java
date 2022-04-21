@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag479CommCurrencyTest {
+class Tag478CcyCashDistribCurrTest {
     @Test
-    void FIX0479Test() {
-        FIX43 fixData = FIX43.FIX479_COMM_CURRENCY;
+    void FIX0478Test() {
+        FIX43 fixData = FIX43.FIX478_CCY_CASH_DISTRIB_CURR;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag479CommCurrencyTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0479Test() {
-        Tag479CommCurrency tagData;
+    void Tag0478Test() {
+        Tag478CcyCashDistribCurr tagData;
 
     }
 }
