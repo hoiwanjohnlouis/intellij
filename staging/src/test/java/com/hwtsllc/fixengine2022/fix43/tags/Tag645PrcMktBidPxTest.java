@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag652UnderlyingLastQtyTest {
+class Tag645PrcMktBidPxTest {
     @Test
-    void FIX0652Test() {
-        FIX43 fixData = FIX43.FIX652_UNDERLYING_LAST_QTY;
+    void FIX0645Test() {
+        FIX43 fixData = FIX43.FIX645_PRC_MKT_BID_PX;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag652UnderlyingLastQtyTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0652Test() {
-        Tag652UnderlyingLastQty tagData;
+    void Tag0645Test() {
+        Tag645PrcMktBidPx tagData;
 
     }
 }
