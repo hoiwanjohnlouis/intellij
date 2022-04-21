@@ -23,13 +23,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * Initially it will be a String, later on it will become BigDecimal.
  */
 public class MyPercentageType implements LogStringVerbose {
-    private final String dataValue;
+    private final double dataValue;
 
-    public MyPercentageType(final String dataValue) {
+    public final static double TESTA_PCT_PERCENTAGE_TYPE = 0.025D;
+    public final static double TESTB_PCT_PERCENTAGE_TYPE = 0.015D;
+
+    public MyPercentageType(final double dataValue) {
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return dataValue;
     }
     /**
@@ -47,14 +50,20 @@ public class MyPercentageType implements LogStringVerbose {
      */
     @Override
     public String toString() {
-        return getDataValue();
+        return String.valueOf(getDataValue() );
     }
     /**
      *
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyPercentageType dataType = new MyPercentageType("12345");
+        MyPercentageType dataType;
+
+        dataType = new MyPercentageType( TESTA_PCT_PERCENTAGE_TYPE );
+        System.out.println(dataType);
+        System.out.println(dataType.toLogStringVerbose());
+
+        dataType = new MyPercentageType( TESTB_PCT_PERCENTAGE_TYPE );
         System.out.println(dataType);
         System.out.println(dataType.toLogStringVerbose());
     }

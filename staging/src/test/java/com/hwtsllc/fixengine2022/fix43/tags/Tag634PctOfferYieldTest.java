@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag615LegCouponRateTest {
+class Tag634PctOfferYieldTest {
     @Test
-    void FIX0615Test() {
-        FIX43 fixData = FIX43.FIX615_LEG_COUPON_RATE;
+    void FIX0634Test() {
+        FIX43 fixData = FIX43.FIX634_PCT_OFFER_YIELD;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag615LegCouponRateTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0615Test() {
-        Tag615LegCouponRate tagData;
+    void Tag0634Test() {
+        Tag634PctOfferYield tagData;
 
     }
 }

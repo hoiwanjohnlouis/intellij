@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag402PctLiquidityPctLow extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_LIQUIDITY_PCT_LOW = "BilboBaggins-Tag402PctLiquidityPctLow";
-    public final static String TESTB_PCT_LIQUIDITY_PCT_LOW = "Gandalf-Tag402PctLiquidityPctLow";
+    public final static double TESTA_PCT_LIQUIDITY_PCT_LOW = 0.0402D;
+    public final static double TESTB_PCT_LIQUIDITY_PCT_LOW = 0.0204D;
 
     public Tag402PctLiquidityPctLow(MyPercentageType dataValue) {
         setFixType(FIX42.FIX402_PCT_LIQUIDITY_PCT_LOW);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag413PctCrossPercent extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_CROSS_PERCENT = "BilboBaggins-Tag413PctCrossPercent";
-    public final static String TESTB_PCT_CROSS_PERCENT = "Gandalf-Tag413PctCrossPercent";
+    public final static double TESTA_PCT_CROSS_PERCENT = 0.0413D;
+    public final static double TESTB_PCT_CROSS_PERCENT = 0.0314D;
 
     public Tag413PctCrossPercent(MyPercentageType dataValue) {
         setFixType(FIX42.FIX413_PCT_CROSS_PERCENT);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

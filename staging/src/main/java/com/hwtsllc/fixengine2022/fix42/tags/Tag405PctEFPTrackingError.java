@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag405PctEFPTrackingError extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_EFP_TRACKING_ERROR = "BilboBaggins-Tag405PctEFPTrackingError";
-    public final static String TESTB_PCT_EFP_TRACKING_ERROR = "Gandalf-Tag405PctEFPTrackingError";
+    public final static double TESTA_PCT_EFP_TRACKING_ERROR = 0.0405D;
+    public final static double TESTB_PCT_EFP_TRACKING_ERROR = 0.0504D;
 
     public Tag405PctEFPTrackingError(MyPercentageType dataValue) {
         setFixType(FIX42.FIX405_PCT_EFP_TRACKING_ERROR);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

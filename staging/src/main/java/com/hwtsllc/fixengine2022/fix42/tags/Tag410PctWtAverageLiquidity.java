@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag410PctWtAverageLiquidity extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_WT_AVERAGE_LIQUIDITY = "BilboBaggins-Tag410PctWtAverageLiquidity";
-    public final static String TESTB_PCT_WT_AVERAGE_LIQUIDITY = "Gandalf-Tag410PctWtAverageLiquidity";
+    public final static double TESTA_PCT_WT_AVERAGE_LIQUIDITY = 0.0410D;
+    public final static double TESTB_PCT_WT_AVERAGE_LIQUIDITY = 0.0014D;
 
     public Tag410PctWtAverageLiquidity(MyPercentageType dataValue) {
         setFixType(FIX42.FIX410_PCT_WT_AVERAGE_LIQUIDITY);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

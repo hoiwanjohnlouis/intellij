@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag236PctYield extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_YIELD = "BilboBaggins-Tag236PctYield";
-    public final static String TESTB_PCT_YIELD = "Gandalf-Tag236PctYield";
+    public final static double TESTA_PCT_YIELD = 0.0236D;
+    public final static double TESTB_PCT_YIELD = 0.0632D;
 
     public Tag236PctYield(MyPercentageType dataValue) {
         setFixType(FIX42.FIX236_PCT_YIELD);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

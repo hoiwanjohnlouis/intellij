@@ -14,23 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
-public class Tag227PctRepurchaseRate extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag633PctMidYield extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_REPURCHASE_RATE = 0.0227D;
-    public final static double TESTB_PCT_REPURCHASE_RATE = 0.0722D;
+    public final static double TESTA_PCT_MID_YIELD = 0.0633D;
+    public final static double TESTB_PCT_MID_YIELD = 0.0336D;
 
-    public Tag227PctRepurchaseRate(MyPercentageType dataValue) {
-        setFixType(FIX42.FIX227_PCT_REPURCHASE_RATE);
+    public Tag633PctMidYield(MyPercentageType dataValue) {
+        setFixType(FIX43.FIX633_PCT_MID_YIELD);
         this.dataValue = dataValue;
     }
 
@@ -69,14 +68,14 @@ public class Tag227PctRepurchaseRate extends FIX42Abstract implements FixTagValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag227PctRepurchaseRate tagData;
+        Tag633PctMidYield tagData;
 
-        tagData = new Tag227PctRepurchaseRate(new MyPercentageType(TESTA_PCT_REPURCHASE_RATE) );
+        tagData = new Tag633PctMidYield(new MyPercentageType(TESTA_PCT_MID_YIELD) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag227PctRepurchaseRate(new MyPercentageType(TESTB_PCT_REPURCHASE_RATE) );
+        tagData = new Tag633PctMidYield(new MyPercentageType(TESTB_PCT_MID_YIELD) );
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

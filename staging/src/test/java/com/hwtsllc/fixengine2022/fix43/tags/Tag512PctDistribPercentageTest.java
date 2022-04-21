@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag516OrderPercentTest {
+class Tag512PctDistribPercentageTest {
     @Test
-    void FIX0516Test() {
-        FIX43 fixData = FIX43.FIX516_ORDER_PERCENT;
+    void FIX0512Test() {
+        FIX43 fixData = FIX43.FIX512_PCT_DISTRIB_PERCENTAGE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag516OrderPercentTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0516Test() {
-        Tag516OrderPercent tagData;
+    void Tag0512Test() {
+        Tag512PctDistribPercentage tagData;
 
     }
 }

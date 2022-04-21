@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag632BidYieldTest {
+class Tag516PctOrderPercentTest {
     @Test
-    void FIX0632Test() {
-        FIX43 fixData = FIX43.FIX632_BID_YIELD;
+    void FIX0516Test() {
+        FIX43 fixData = FIX43.FIX516_PCT_ORDER_PERCENT;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag632BidYieldTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0632Test() {
-        Tag632BidYield tagData;
+    void Tag0516Test() {
+        Tag516PctOrderPercent tagData;
 
     }
 }

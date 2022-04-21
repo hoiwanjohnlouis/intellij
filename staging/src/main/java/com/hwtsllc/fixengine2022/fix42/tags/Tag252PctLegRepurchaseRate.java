@@ -26,15 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag252PctLegRepurchaseRate extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_LEG_REPURCHASE_RATE = "BilboBaggins-Tag252PctLegRepurchaseRate";
-    public final static String TESTB_PCT_LEG_REPURCHASE_RATE = "Gandalf-Tag252PctLegRepurchaseRate";
+    public final static double TESTA_PCT_LEG_REPURCHASE_RATE = 0.0252D;
+    public final static double TESTB_PCT_LEG_REPURCHASE_RATE = 0.0252D;
 
     public Tag252PctLegRepurchaseRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX252_PCT_LEG_REPURCHASE_RATE);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

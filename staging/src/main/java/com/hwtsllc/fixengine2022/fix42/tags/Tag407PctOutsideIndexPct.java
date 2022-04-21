@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag407PctOutsideIndexPct extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_OUTSIDE_INDEX_PCT = "BilboBaggins-Tag407PctOutsideIndexPct";
-    public final static String TESTB_PCT_OUTSIDE_INDEX_PCT = "Gandalf-Tag407PctOutsideIndexPct";
+    public final static double TESTA_PCT_OUTSIDE_INDEX_PCT = 0.0407D;
+    public final static double TESTB_PCT_OUTSIDE_INDEX_PCT = 0.0704D;
 
     public Tag407PctOutsideIndexPct(MyPercentageType dataValue) {
         setFixType(FIX42.FIX407_PCT_OUTSIDE_INDEX_PCT);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag435PctUnderlyingCouponRate extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_UNDERLYING_COUPON_RATE = "BilboBaggins-Tag435PctUnderlyingCouponRate";
-    public final static String TESTB_PCT_UNDERLYING_COUPON_RATE = "Gandalf-Tag435PctUnderlyingCouponRate";
+    public final static double TESTA_PCT_UNDERLYING_COUPON_RATE = 0.0435D;
+    public final static double TESTB_PCT_UNDERLYING_COUPON_RATE = 0.0534D;
 
     public Tag435PctUnderlyingCouponRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX435_PCT_UNDERLYING_COUPON_RATE);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

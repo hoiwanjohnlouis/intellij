@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag158PctAccruedInterestRate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_ACCRUED_INTEREST_RATE = "BilboBaggins-Tag158PctAccruedInterestRate";
-    public final static String TESTB_PCT_ACCRUED_INTEREST_RATE = "Gandalf-Tag158PctAccruedInterestRate";
+    public final static double TESTA_PCT_ACCRUED_INTEREST_RATE = 0.0158D;
+    public final static double TESTB_PCT_ACCRUED_INTEREST_RATE = 0.0851D;
 
     public Tag158PctAccruedInterestRate(MyPercentageType dataValue) {
         setFixType(FIX41.FIX158_PCT_ACCRUED_INTEREST_RATE);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**

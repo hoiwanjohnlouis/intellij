@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag512DistribPercentageTest {
+class Tag633PctMidYieldTest {
     @Test
-    void FIX0512Test() {
-        FIX43 fixData = FIX43.FIX512_DISTRIB_PERCENTAGE;
+    void FIX0633Test() {
+        FIX43 fixData = FIX43.FIX633_PCT_MID_YIELD;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag512DistribPercentageTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0512Test() {
-        Tag512DistribPercentage tagData;
+    void Tag0633Test() {
+        Tag633PctMidYield tagData;
 
     }
 }

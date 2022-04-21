@@ -25,15 +25,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 public class Tag223PctCouponRate extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPercentageType dataValue;
 
-    public final static String TESTA_PCT_COUPON_RATE = "BilboBaggins-Tag223PctCouponRate";
-    public final static String TESTB_PCT_COUPON_RATE = "Gandalf-Tag223PctCouponRate";
+    public final static double TESTA_PCT_COUPON_RATE = 0.0223D;
+    public final static double TESTB_PCT_COUPON_RATE = 0.0322D;
 
     public Tag223PctCouponRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX223_PCT_COUPON_RATE);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public double getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
