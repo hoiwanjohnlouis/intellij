@@ -55,7 +55,7 @@ public enum FIX40 implements EnumAccessors, LogStringVerbose {
      * Start of FIX4.0 as defined by the FIX Protocol Specification 4.0
      *  Tags: 114-140
      */
-    FIX114_ENU_LOCATE_REQD(114, "LOCATE_REQD", "LocateReqd"),
+    FIX114_BOOL_LOCATE_REQD(114, "LOCATE_REQD", "LocateReqd"),
     FIX115_STR_ON_BEHALF_OF_COMP_ID(115, "ON_BEHALF_OF_COMP_ID", "OnBehalfOfCompID"),
     FIX116_STR_ON_BEHALF_OF_SUB_ID(116, "ON_BEHALF_OF_SUB_ID", "OnBehalfOfSubID"),
     FIX117_STR_QUOTE_ID(117, "QUOTE_ID", "QuoteID"),
@@ -63,16 +63,16 @@ public enum FIX40 implements EnumAccessors, LogStringVerbose {
     FIX119_AMT_SETTL_CURR_AMT(119, "SETTL_CURR_AMT", "SettlCurrAmt"),
     FIX120_CCY_SETTL_CURRENCY(120, "SETTL_CURRENCY", "SettlCurrency"),
 
-    FIX121_ENU_FOREX_REQ(121, "FOREX_REQ", "ForexReq"),
+    FIX121_BOOL_FOREX_REQ(121, "FOREX_REQ", "ForexReq"),
     FIX122_UTC_ORIG_SENDING_TIME(122, "ORIG_SENDING_TIME", "OrigSendingTime"),
-    FIX123_ENU_GAP_FILL_FLAG(123, "GAP_FILL_FLAG", "GapFillFlag"),
+    FIX123_BOOL_GAP_FILL_FLAG(123, "GAP_FILL_FLAG", "GapFillFlag"),
     FIX124_NUM_NO_EXECS(124, "NO_EXECS", "NoExecs"),
     FIX125_STR_CXL_TYPE(125, "CXL_TYPE", "CxlType (no longer used)"),
     FIX126_UTC_EXPIRE_TIME(126, "EXPIRE_TIME", "ExpireTime"),
     FIX127_ENU_DK_REASON(127, "DK_REASON", "DKReason"),
     FIX128_STR_DELIVER_TO_COMP_ID(128, "DELIVER_TO_COMP_ID", "DeliverToCompID"),
     FIX129_STR_DELIVER_TO_SUB_ID(129, "DELIVER_TO_SUB_ID", "DeliverToSubID"),
-    FIX130_ENU_IOI_NATURAL_FLAG(130, "IOI_NATURAL_FLAG", "IOINaturalFlag"),
+    FIX130_BOOL_IOI_NATURAL_FLAG(130, "IOI_NATURAL_FLAG", "IOINaturalFlag"),
 
     FIX131_STR_QUOTE_REQ_ID(131, "QUOTE_REQ_ID", "QuoteReqID"),
     FIX132_PRC_BID_PX(132, "BID_PX", "BidPx"),

@@ -16,7 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag464TestMessageIndicatorEnuTest {
     @Test
     void FIX0464Test() {
-        FIX43 fixData = FIX43.FIX464_ENU_TEST_MESSAGE_INDICATOR;
+        FIX43 fixData = FIX43.FIX464_BOOL_TEST_MESSAGE_INDICATOR;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +37,14 @@ class Tag464TestMessageIndicatorEnuTest {
     }
     @Test
     void Tag0464Test() {
-        Tag464EnuTestMessageIndicator tagData;
+        Tag464BoolTestMessageIndicator tagData;
 
+        tagData = new Tag464BoolTestMessageIndicator(MyBooleanType.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag464BoolTestMessageIndicator(MyBooleanType.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

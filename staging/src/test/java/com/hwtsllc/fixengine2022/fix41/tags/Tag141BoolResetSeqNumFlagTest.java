@@ -14,37 +14,35 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix44.tags;
+package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag258BoolTradedFlatSwitch;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag893BoolLastFragmentTest {
+class Tag141BoolResetSeqNumFlagTest {
     @Test
-    void FIX0893Test() {
-        FIX44 fixData = FIX44.FIX893_BOOL_LAST_FRAGMENT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+    void FIX0141Test() {
+        FIX41 fixData = FIX41.FIX141_BOOL_RESET_SEQ_NUM_FLAG;
+        assertEquals( "RESET_SEQ_NUM_FLAG", fixData.getName());
+        assertEquals( "141", fixData.getID());
+        assertEquals( "ResetSeqNumFlag", fixData.getDescription());
+        assertNotEquals( FIX41.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0893Test() {
-        Tag893BoolLastFragment tagData;
+    void Tag0141Test() {
+        Tag141BoolResetSeqNumFlag tagData;
 
-        tagData = new Tag893BoolLastFragment(MyBooleanType.NO);
+        tagData = new Tag141BoolResetSeqNumFlag(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag893BoolLastFragment(MyBooleanType.YES);
+        tagData = new Tag141BoolResetSeqNumFlag(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

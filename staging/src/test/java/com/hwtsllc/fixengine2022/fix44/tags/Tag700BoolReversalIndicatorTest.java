@@ -16,7 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag258BoolTradedFlatSwitch;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,5 +40,12 @@ class Tag700BoolReversalIndicatorTest {
     void Tag0700Test() {
         Tag700BoolReversalIndicator tagData;
 
+        tagData = new Tag700BoolReversalIndicator(MyBooleanType.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag700BoolReversalIndicator(MyBooleanType.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }
