@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag557TotNoSecurityTypesTest {
+class Tag570EnuPreviouslyReportedTest {
     @Test
-    void FIX0557Test() {
-        FIX43 fixData = FIX43.FIX557_TOT_NO_SECURITY_TYPES;
+    void FIX0570Test() {
+        FIX43 fixData = FIX43.FIX570_PREVIOUSLY_REPORTED;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag557TotNoSecurityTypesTest {
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0557Test() {
-        Tag557TotNoSecurityTypes tagData;
+    void Tag0570Test() {
+        Tag570EnuPreviouslyReported tagData;
 
     }
 }

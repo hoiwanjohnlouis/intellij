@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag546ScopeTest {
+class Tag546EnuScopeTest {
     @Test
     void FIX0546Test() {
-        FIX43 fixData = FIX43.FIX546_SCOPE;
+        FIX43 fixData = FIX43.FIX546_ENU_SCOPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag546ScopeTest {
     }
     @Test
     void Tag0546Test() {
-        Tag546Scope tagData;
+        Tag546EnuScope tagData;
 
     }
 }
