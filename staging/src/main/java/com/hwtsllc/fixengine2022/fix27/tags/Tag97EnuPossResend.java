@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag97EnuPossResend extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_POSS_RESEND = EnumBoolean.NO; // fake data
-    public final static EnumBoolean TESTB_ENU_POSS_RESEND = EnumBoolean.YES;
+    public final static MyBooleanType TESTA_ENU_POSS_RESEND = MyBooleanType.NO; // fake data
+    public final static MyBooleanType TESTB_ENU_POSS_RESEND = MyBooleanType.YES;
 
-    public Tag97EnuPossResend(EnumBoolean dataValue) {
+    public Tag97EnuPossResend(MyBooleanType dataValue) {
         setFixType(FIX27.FIX97_ENU_POSS_RESEND);
         this.dataValue = dataValue;
     }

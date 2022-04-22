@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag258EnuTradedFlatSwitch extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_TRADED_FLAT_SWITCH = EnumBoolean.NO ; // N - Not Traded Flat
-    public final static EnumBoolean TESTB_ENU_TRADED_FLAT_SWITCH = EnumBoolean.YES; // Y - Traded Flat
+    public final static MyBooleanType TESTA_ENU_TRADED_FLAT_SWITCH = MyBooleanType.NO ; // N - Not Traded Flat
+    public final static MyBooleanType TESTB_ENU_TRADED_FLAT_SWITCH = MyBooleanType.YES; // Y - Traded Flat
 
-    public Tag258EnuTradedFlatSwitch(EnumBoolean dataValue) {
+    public Tag258EnuTradedFlatSwitch(MyBooleanType dataValue) {
         setFixType(FIX42.FIX258_ENU_TRADED_FLAT_SWITCH);
         this.dataValue = dataValue;
     }

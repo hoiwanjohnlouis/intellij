@@ -18,19 +18,19 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag329EnuDueToRelated extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_DUE_TO_RELATED = EnumBoolean.NO ;
+    public final static MyBooleanType TESTA_ENU_DUE_TO_RELATED = MyBooleanType.NO ;
                                     // N - Halt was not related to a halt of the related security
-    public final static EnumBoolean TESTB_ENU_DUE_TO_RELATED = EnumBoolean.YES;
+    public final static MyBooleanType TESTB_ENU_DUE_TO_RELATED = MyBooleanType.YES;
                                     // Y - Half was due to the related security being halted
 
-    public Tag329EnuDueToRelated(EnumBoolean dataValue) {
+    public Tag329EnuDueToRelated(MyBooleanType dataValue) {
         setFixType(FIX42.FIX329_ENU_DUE_TO_RELATED);
         this.dataValue = dataValue;
     }

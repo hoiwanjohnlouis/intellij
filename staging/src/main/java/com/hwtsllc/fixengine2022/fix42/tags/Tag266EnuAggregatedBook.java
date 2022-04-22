@@ -18,19 +18,19 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag266EnuAggregatedBook extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_AGGREGATED_BOOK = EnumBoolean.NO ;
+    public final static MyBooleanType TESTA_ENU_AGGREGATED_BOOK = MyBooleanType.NO ;
                                     // N - book entries should not be aggregated
-    public final static EnumBoolean TESTB_ENU_AGGREGATED_BOOK = EnumBoolean.YES;
+    public final static MyBooleanType TESTB_ENU_AGGREGATED_BOOK = MyBooleanType.YES;
                                     // Y - book entries to be aggregated
 
-    public Tag266EnuAggregatedBook(EnumBoolean dataValue) {
+    public Tag266EnuAggregatedBook(MyBooleanType dataValue) {
         setFixType(FIX42.FIX266_ENU_AGGREGATED_BOOK);
         this.dataValue = dataValue;
     }

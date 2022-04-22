@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,11 +38,11 @@ class Tag141EnuResetSeqNumFlagTest {
     void Tag0141Test() {
         Tag141EnuResetSeqNumFlag tagData;
 
-        tagData = new Tag141EnuResetSeqNumFlag(EnumBoolean.NO);
+        tagData = new Tag141EnuResetSeqNumFlag(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag141EnuResetSeqNumFlag(EnumBoolean.YES);
+        tagData = new Tag141EnuResetSeqNumFlag(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

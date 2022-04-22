@@ -14,22 +14,24 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix40.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag123EnuGapFillFlag extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag893BoolLastFragment extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 
-    public final static MyBooleanType TESTA_ENU_GAP_FILL_FLAG = MyBooleanType.NO; // fake data
-    public final static MyBooleanType TESTB_ENU_GAP_FILL_FLAG = MyBooleanType.YES;
+    public final static MyBooleanType TESTA_BOOL_LAST_FRAGMENT = MyBooleanType.NO ;
+    // N - Not Last Message
+    public final static MyBooleanType TESTB_BOOL_LAST_FRAGMENT = MyBooleanType.YES;
+    // Y - Last Message
 
-    public Tag123EnuGapFillFlag(MyBooleanType dataValue) {
-        setFixType(FIX40.FIX123_ENU_GAP_FILL_FLAG);
+    public Tag893BoolLastFragment(MyBooleanType dataValue) {
+        setFixType(FIX44.FIX893_BOOL_LAST_FRAGMENT);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +70,14 @@ public class Tag123EnuGapFillFlag extends FIX40Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag123EnuGapFillFlag tagData;
+        Tag893BoolLastFragment tagData;
 
-        tagData = new Tag123EnuGapFillFlag(TESTA_ENU_GAP_FILL_FLAG);
+        tagData = new Tag893BoolLastFragment(TESTA_BOOL_LAST_FRAGMENT);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag123EnuGapFillFlag(TESTB_ENU_GAP_FILL_FLAG);
+        tagData = new Tag893BoolLastFragment(TESTB_BOOL_LAST_FRAGMENT);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

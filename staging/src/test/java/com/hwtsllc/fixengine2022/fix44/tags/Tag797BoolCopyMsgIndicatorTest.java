@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag754AutoAcceptIndicatorTest {
+class Tag797BoolCopyMsgIndicatorTest {
     @Test
-    void FIX0754Test() {
-        FIX44 fixData = FIX44.FIX754_AUTO_ACCEPT_INDICATOR;
+    void FIX0797Test() {
+        FIX44 fixData = FIX44.FIX797_BOOL_COPY_MSG_INDICATOR;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag754AutoAcceptIndicatorTest {
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0754Test() {
-        Tag754AutoAcceptIndicator tagData;
+    void Tag0797Test() {
+        Tag797BoolCopyMsgIndicator tagData;
 
     }
 }

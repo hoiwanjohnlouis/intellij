@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag43EnuPossDupFlag extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_POSS_DUP_FLAG = EnumBoolean.NO; // fake data
-    public final static EnumBoolean TESTB_ENU_POSS_DUP_FLAG = EnumBoolean.YES;
+    public final static MyBooleanType TESTA_ENU_POSS_DUP_FLAG = MyBooleanType.NO; // fake data
+    public final static MyBooleanType TESTB_ENU_POSS_DUP_FLAG = MyBooleanType.YES;
 
-    public Tag43EnuPossDupFlag(EnumBoolean dataValue) {
+    public Tag43EnuPossDupFlag(MyBooleanType dataValue) {
         setFixType(FIX27.FIX43_ENU_POSS_DUP_FLAG);
         this.dataValue = dataValue;
     }

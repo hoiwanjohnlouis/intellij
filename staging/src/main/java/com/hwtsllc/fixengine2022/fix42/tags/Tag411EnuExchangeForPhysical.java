@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag411EnuExchangeForPhysical extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_EXCHANGE_FOR_PHYSICAL = EnumBoolean.NO;   // N - False
-    public final static EnumBoolean TESTB_ENU_EXCHANGE_FOR_PHYSICAL = EnumBoolean.YES;  // Y - True
+    public final static MyBooleanType TESTA_ENU_EXCHANGE_FOR_PHYSICAL = MyBooleanType.NO;   // N - False
+    public final static MyBooleanType TESTB_ENU_EXCHANGE_FOR_PHYSICAL = MyBooleanType.YES;  // Y - True
 
-    public Tag411EnuExchangeForPhysical(EnumBoolean dataValue) {
+    public Tag411EnuExchangeForPhysical(MyBooleanType dataValue) {
         setFixType(FIX42.FIX411_ENU_EXCHANGE_FOR_PHYSICAL);
         this.dataValue = dataValue;
     }

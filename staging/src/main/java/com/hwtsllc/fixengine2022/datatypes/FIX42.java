@@ -25,6 +25,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Prootocol document.
  *                      There may be a secondary prefix denoting the data type.
+ *                      BOOL = EnumType field
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
  *                      COU = MyCountryType field

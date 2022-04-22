@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag130EnuIOINaturalFlag extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_IOI_NATURAL_FLAG = EnumBoolean.NO ; // fake data
-    public final static EnumBoolean TESTB_ENU_IOI_NATURAL_FLAG = EnumBoolean.YES;
+    public final static MyBooleanType TESTA_ENU_IOI_NATURAL_FLAG = MyBooleanType.NO ; // fake data
+    public final static MyBooleanType TESTB_ENU_IOI_NATURAL_FLAG = MyBooleanType.YES;
 
-    public Tag130EnuIOINaturalFlag(EnumBoolean dataValue) {
+    public Tag130EnuIOINaturalFlag(MyBooleanType dataValue) {
         setFixType(FIX40.FIX130_ENU_IOI_NATURAL_FLAG);
         this.dataValue = dataValue;
     }

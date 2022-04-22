@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix27.enums;
+package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
@@ -25,7 +25,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * each tag uses the enum differently, review each tag independently
  *
  */
-public enum EnumBoolean implements EnumAccessors, LogStringVerbose {
+public enum MyBooleanType implements EnumAccessors, LogStringVerbose {
     NO ("N", "NO", "N - No"),
     YES ("Y", "YES", "Y - Yes"),
     ;
@@ -34,7 +34,7 @@ public enum EnumBoolean implements EnumAccessors, LogStringVerbose {
     private final String name;
     private final String description;
 
-    EnumBoolean(final String id, final String name, final String description) {
+    MyBooleanType(final String id, final String name, final String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -110,7 +110,7 @@ public enum EnumBoolean implements EnumAccessors, LogStringVerbose {
         /*
          * dump all the enum values
          */
-        for (EnumBoolean oneEnum : EnumBoolean.values()) {
+        for (MyBooleanType oneEnum : MyBooleanType.values()) {
             System.out.println(oneEnum);
         }
     }

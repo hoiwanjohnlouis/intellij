@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag141EnuResetSeqNumFlag extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_RESET_SEQ_NUM_FLAG = EnumBoolean.NO ; // N - No
-    public final static EnumBoolean TESTB_ENU_RESET_SEQ_NUM_FLAG = EnumBoolean.YES; // Y - Yes, reset sequence numbers
+    public final static MyBooleanType TESTA_ENU_RESET_SEQ_NUM_FLAG = MyBooleanType.NO ; // N - No
+    public final static MyBooleanType TESTB_ENU_RESET_SEQ_NUM_FLAG = MyBooleanType.YES; // Y - Yes, reset sequence numbers
 
-    public Tag141EnuResetSeqNumFlag(EnumBoolean dataValue) {
+    public Tag141EnuResetSeqNumFlag(MyBooleanType dataValue) {
         setFixType(FIX41.FIX141_ENU_RESET_SEQ_NUM_FLAG);
         this.dataValue = dataValue;
     }

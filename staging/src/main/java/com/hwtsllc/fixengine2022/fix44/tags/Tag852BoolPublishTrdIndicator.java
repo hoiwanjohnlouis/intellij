@@ -14,22 +14,24 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix40.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag123EnuGapFillFlag extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag852BoolPublishTrdIndicator extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 
-    public final static MyBooleanType TESTA_ENU_GAP_FILL_FLAG = MyBooleanType.NO; // fake data
-    public final static MyBooleanType TESTB_ENU_GAP_FILL_FLAG = MyBooleanType.YES;
+    public final static MyBooleanType TESTA_BOOL_REVERSAL_INDICATOR = MyBooleanType.NO ;
+    // N - Do Not Report Trade
+    public final static MyBooleanType TESTB_BOOL_REVERSAL_INDICATOR = MyBooleanType.YES;
+    // Y - Report Trade
 
-    public Tag123EnuGapFillFlag(MyBooleanType dataValue) {
-        setFixType(FIX40.FIX123_ENU_GAP_FILL_FLAG);
+    public Tag852BoolPublishTrdIndicator(MyBooleanType dataValue) {
+        setFixType(FIX44.FIX852_BOOL_PUBLISH_TRD_INDICATOR);
         this.dataValue = dataValue;
     }
 
@@ -68,14 +70,14 @@ public class Tag123EnuGapFillFlag extends FIX40Abstract implements FixTagValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag123EnuGapFillFlag tagData;
+        Tag852BoolPublishTrdIndicator tagData;
 
-        tagData = new Tag123EnuGapFillFlag(TESTA_ENU_GAP_FILL_FLAG);
+        tagData = new Tag852BoolPublishTrdIndicator(TESTA_BOOL_REVERSAL_INDICATOR);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag123EnuGapFillFlag(TESTB_ENU_GAP_FILL_FLAG);
+        tagData = new Tag852BoolPublishTrdIndicator(TESTB_BOOL_REVERSAL_INDICATOR);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

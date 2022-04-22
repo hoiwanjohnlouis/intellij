@@ -18,19 +18,19 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag208EnuNotifyBrokerOfCredit extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_NOTIFY_BROKER_OF_CREDIT = EnumBoolean.NO;
+    public final static MyBooleanType TESTA_ENU_NOTIFY_BROKER_OF_CREDIT = MyBooleanType.NO;
                                     // N - Details should not be communicated
-    public final static EnumBoolean TESTB_ENU_NOTIFY_BROKER_OF_CREDIT = EnumBoolean.YES;
+    public final static MyBooleanType TESTB_ENU_NOTIFY_BROKER_OF_CREDIT = MyBooleanType.YES;
                                     // Y - Details should be communicated
 
-    public Tag208EnuNotifyBrokerOfCredit(EnumBoolean dataValue) {
+    public Tag208EnuNotifyBrokerOfCredit(MyBooleanType dataValue) {
         setFixType(FIX41.FIX208_ENU_NOTIFY_BROKER_OF_CREDIT);
         this.dataValue = dataValue;
     }

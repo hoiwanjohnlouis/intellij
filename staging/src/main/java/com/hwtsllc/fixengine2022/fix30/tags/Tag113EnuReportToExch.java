@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag113EnuReportToExch extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_REPORT_TO_EXCH = EnumBoolean.NO; // fake data
-    public final static EnumBoolean TESTB_ENU_REPORT_TO_EXCH = EnumBoolean.YES;
+    public final static MyBooleanType TESTA_ENU_REPORT_TO_EXCH = MyBooleanType.NO; // fake data
+    public final static MyBooleanType TESTB_ENU_REPORT_TO_EXCH = MyBooleanType.YES;
 
-    public Tag113EnuReportToExch(EnumBoolean dataValue) {
+    public Tag113EnuReportToExch(MyBooleanType dataValue) {
         setFixType(FIX30.FIX113_ENU_REPORT_TO_EXCH);
         this.dataValue = dataValue;
     }

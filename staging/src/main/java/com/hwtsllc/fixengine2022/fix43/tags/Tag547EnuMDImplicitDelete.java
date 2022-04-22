@@ -18,19 +18,19 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag547EnuMDImplicitDelete extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_MD_IMPLICIT_DELETE = EnumBoolean.NO ;
+    public final static MyBooleanType TESTA_ENU_MD_IMPLICIT_DELETE = MyBooleanType.NO ;
     // N - Server must send an explicit delete for bids or offers falling outside the requested MarketDepth of the request
-    public final static EnumBoolean TESTB_ENU_MD_IMPLICIT_DELETE = EnumBoolean.YES;
+    public final static MyBooleanType TESTB_ENU_MD_IMPLICIT_DELETE = MyBooleanType.YES;
     // Y - Client has responsibility for implicitly deleting bids or offers falling outside the MarketDepth of the request
 
-    public Tag547EnuMDImplicitDelete(EnumBoolean dataValue) {
+    public Tag547EnuMDImplicitDelete(MyBooleanType dataValue) {
         setFixType(FIX43.FIX547_ENU_MD_IMPLICIT_DELETE);
         this.dataValue = dataValue;
     }

@@ -18,19 +18,19 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag570EnuPreviouslyReported extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_SCOPE = EnumBoolean.NO;
+    public final static MyBooleanType TESTA_ENU_SCOPE = MyBooleanType.NO;
     // N - Not reported to counterparty
-    public final static EnumBoolean TESTB_ENU_SCOPE = EnumBoolean.YES;
+    public final static MyBooleanType TESTB_ENU_SCOPE = MyBooleanType.YES;
     // Y - Previously reported to counterparty
 
-    public Tag570EnuPreviouslyReported(EnumBoolean dataValue) {
+    public Tag570EnuPreviouslyReported(MyBooleanType dataValue) {
         setFixType(FIX43.FIX546_ENU_SCOPE);
         this.dataValue = dataValue;
     }

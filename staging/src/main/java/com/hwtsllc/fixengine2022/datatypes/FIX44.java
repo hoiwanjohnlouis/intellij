@@ -25,6 +25,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Prootocol document.
  *                      There may be a secondary prefix denoting the data type.
+ *                      BOOL = EnumType field
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
  *                      COU = MyCountryType field
@@ -98,7 +99,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX697_YIELD_REDEMPTION_PRICE(697, "YIELD_REDEMPTION_PRICE", "YieldRedemptionPrice"),
     FIX698_YIELD_REDEMPTION_PRICE_TYPE(698, "YIELD_REDEMPTION_PRICE_TYPE", "YieldRedemptionPriceType"),
     FIX699_BENCHMARK_SECURITY_ID(699, "BENCHMARK_SECURITY_ID", "BenchmarkSecurityID"),
-    FIX700_REVERSAL_INDICATOR(700, "REVERSAL_INDICATOR", "ReversalIndicator"),
+    FIX700_BOOL_REVERSAL_INDICATOR(700, "REVERSAL_INDICATOR", "ReversalIndicator"),
 
 
     // 701-800
@@ -122,8 +123,8 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX716_SETTL_SESS_ID(716, "SETTL_SESS_ID", "SettlSessID"),
     FIX717_SETTL_SESS_SUB_ID(717, "SETTL_SESS_SUB_ID", "SettlSessSubID"),
     FIX718_ADJUSTMENT_TYPE(718, "ADJUSTMENT_TYPE", "AdjustmentType"),
-    FIX719_CONTRARY_INSTRUCTION_INDICATOR(719, "CONTRARY_INSTRUCTION_INDICATOR", "ContraryInstructionIndicator"),
-    FIX720_PRIOR_SPREAD_INDICATOR(720, "PRIOR_SPREAD_INDICATOR", "PriorSpreadIndicator"),
+    FIX719_BOOL_CONTRARY_INSTRUCTION_INDICATOR(719, "CONTRARY_INSTRUCTION_INDICATOR", "ContraryInstructionIndicator"),
+    FIX720_BOOL_PRIOR_SPREAD_INDICATOR(720, "PRIOR_SPREAD_INDICATOR", "PriorSpreadIndicator"),
 
     FIX721_POS_MAINT_RPT_ID(721, "POS_MAINT_RPT_ID", "PosMaintRptID"),
     FIX722_POS_MAINT_STATUS(722, "POS_MAINT_STATUS", "PosMaintStatus"),
@@ -161,7 +162,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX751_TRADE_REPORT_REJECT_REASON(751, "TRADE_REPORT_REJECT_REASON", "TradeReportRejectReason"),
     FIX752_SIDE_MULTI_LEG_REPORTING_TYPE(752, "SIDE_MULTI_LEG_REPORTING_TYPE", "SideMultiLegReportingType"),
     FIX753_NO_POS_AMT(753, "NO_POS_AMT", "NoPosAmt"),
-    FIX754_AUTO_ACCEPT_INDICATOR(754, "AUTO_ACCEPT_INDICATOR", "AutoAcceptIndicator"),
+    FIX754_BOOL_AUTO_ACCEPT_INDICATOR(754, "AUTO_ACCEPT_INDICATOR", "AutoAcceptIndicator"),
     FIX755_ALLOC_REPORT_ID(755, "ALLOC_REPORT_ID", "AllocReportID"),
     FIX756_NO_NESTED_2_PARTY_IDS(756, "NO_NESTED_2_PARTY_IDS", "NoNested2PartyIDs"),
     FIX757_NESTED_2_PARTY_ID(757, "NESTED_2_PARTY_ID", "Nested2PartyID"),
@@ -208,7 +209,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX794_ALLOC_REPORT_TYPE(794, "ALLOC_REPORT_TYPE", "AllocReportType"),
     FIX795_ALLOC_REPORT_REF_ID(795, "ALLOC_REPORT_REF_ID", "AllocReportRefID"),
     FIX796_ALLOC_CANC_REPLACE_REASON(796, "ALLOC_CANC_REPLACE_REASON", "AllocCancReplaceReason"),
-    FIX797_COPY_MSG_INDICATOR(797, "COPY_MSG_INDICATOR", "CopyMsgIndicator"),
+    FIX797_BOOL_COPY_MSG_INDICATOR(797, "COPY_MSG_INDICATOR", "CopyMsgIndicator"),
     FIX798_ALLOC_ACCOUNT_TYPE(798, "ALLOC_ACCOUNT_TYPE", "AllocAccountType"),
     FIX799_ORDER_AVG_PX(799, "ORDER_AVG_PX", "OrderAvgPx"),
     FIX800_ORDER_BOOKING_QTY(800, "ORDER_BOOKING_QTY", "OrderBookingQty"),
@@ -271,7 +272,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX850_TARGET_STRATEGY_PERFORMANCE(850, "TARGET_STRATEGY_PERFORMANCE", "TargetStrategyPerformance"),
 
     FIX851_LAST_LIQUIDITY_IND(851, "LAST_LIQUIDITY_IND", "LastLiquidityInd"),
-    FIX852_PUBLISH_TRD_INDICATOR(852, "PUBLISH_TRD_INDICATOR", "PublishTrdIndicator"),
+    FIX852_BOOL_PUBLISH_TRD_INDICATOR(852, "PUBLISH_TRD_INDICATOR", "PublishTrdIndicator"),
     FIX853_SHORT_SALE_REASON(853, "SHORT_SALE_REASON", "ShortSaleReason"),
     FIX854_QTY_TYPE(854, "QTY_TYPE", "MyQtyType"),
     FIX855_SECONDARY_TRD_TYPE(855, "SECONDARY_TRD_TYPE", "SecondaryTrdType"),
@@ -316,7 +317,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
 
     FIX891_MISC_FEE_BASIS(891, "MISC_FEE_BASIS", "MiscFeeBasis"),
     FIX892_TOT_NO_ALLOCS(892, "TOT_NO_ALLOCS", "TotNoAllocs"),
-    FIX893_LAST_FRAGMENT(893, "LAST_FRAGMENT", "LastFragment"),
+    FIX893_BOOL_LAST_FRAGMENT(893, "LAST_FRAGMENT", "LastFragment"),
     FIX894_COLL_REQ_ID(894, "COLL_REQ_ID", "CollReqID"),
     FIX895_COLL_ASGN_REASON(895, "COLL_ASGN_REASON", "CollAsgnReason"),
     FIX896_COLL_INQUIRY_QUALIFIER(896, "COLL_INQUIRY_QUALIFIER", "CollInquiryQualifier"),
@@ -340,7 +341,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX910_COLL_STATUS(910, "COLL_STATUS", "CollStatus"),
 
     FIX911_TOT_NUM_REPORTS(911, "TOT_NUM_REPORTS", "TotNumReports"),
-    FIX912_LAST_RPT_REQUESTED(912, "LAST_RPT_REQUESTED", "LastRptRequested"),
+    FIX912_BOOL_LAST_RPT_REQUESTED(912, "LAST_RPT_REQUESTED", "LastRptRequested"),
     FIX913_AGREEMENT_DESC(913, "AGREEMENT_DESC", "AgreementDesc"),
     FIX914_AGREEMENT_ID(914, "AGREEMENT_ID", "AgreementID"),
     FIX915_AGREEMENT_DATE(915, "AGREEMENT_DATE", "AgreementDate"),

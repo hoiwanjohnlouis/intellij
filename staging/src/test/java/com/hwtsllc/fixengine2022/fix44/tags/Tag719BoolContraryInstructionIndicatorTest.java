@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag797CopyMsgIndicatorTest {
+class Tag719BoolContraryInstructionIndicatorTest {
     @Test
-    void FIX0797Test() {
-        FIX44 fixData = FIX44.FIX797_COPY_MSG_INDICATOR;
+    void FIX0719Test() {
+        FIX44 fixData = FIX44.FIX719_BOOL_CONTRARY_INSTRUCTION_INDICATOR;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag797CopyMsgIndicatorTest {
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0797Test() {
-        Tag797CopyMsgIndicator tagData;
+    void Tag0719Test() {
+        Tag719BoolContraryInstructionIndicator tagData;
 
     }
 }

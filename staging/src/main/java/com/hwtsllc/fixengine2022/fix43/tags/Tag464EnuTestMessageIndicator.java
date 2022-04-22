@@ -18,19 +18,19 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag464EnuTestMessageIndicator extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_TEST_MESSAGE_INDICATOR = EnumBoolean.NO ;
+    public final static MyBooleanType TESTA_ENU_TEST_MESSAGE_INDICATOR = MyBooleanType.NO ;
     // N - False (Production)
-    public final static EnumBoolean TESTB_ENU_TEST_MESSAGE_INDICATOR = EnumBoolean.YES;
+    public final static MyBooleanType TESTB_ENU_TEST_MESSAGE_INDICATOR = MyBooleanType.YES;
     // Y - True (Test)
 
-    public Tag464EnuTestMessageIndicator(EnumBoolean dataValue) {
+    public Tag464EnuTestMessageIndicator(MyBooleanType dataValue) {
         setFixType(FIX43.FIX464_ENU_TEST_MESSAGE_INDICATOR);
         this.dataValue = dataValue;
     }

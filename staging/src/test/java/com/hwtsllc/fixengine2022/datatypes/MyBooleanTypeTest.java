@@ -14,24 +14,30 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix27.enums;
+package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class EnumMyExchangeTypeTest {
+class MyBooleanTypeTest {
     @Test
     void Enum0000Test() {
-        EnumExchangeType enumType;
+        MyBooleanType enumType;
 
-        enumType = EnumExchangeType.NO;
+        enumType = MyBooleanType.NO;
+        assertEquals("N",enumType.getID());
+        assertEquals("NO", enumType.getName());
+        assertEquals("N - No", enumType.getDescription());
         assertNotEquals( FIX27.JUNK_ID, enumType.getID());
         assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = EnumExchangeType.YES;
+        enumType = MyBooleanType.YES;
+        assertEquals("Y", enumType.getID());
+        assertEquals("YES", enumType.getName());
+        assertEquals("Y - Yes", enumType.getDescription());
         assertNotEquals( FIX27.JUNK_ID, enumType.getID());
         assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());

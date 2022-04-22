@@ -18,19 +18,19 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag325EnuUnsolicitedIndicator extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_UNSOLICITED_INDICATOR = EnumBoolean.NO ;
+    public final static MyBooleanType TESTA_ENU_UNSOLICITED_INDICATOR = MyBooleanType.NO ;
                                     // N - Msg is being sent as a result of a prior request
-    public final static EnumBoolean TESTB_ENU_UNSOLICITED_INDICATOR = EnumBoolean.YES;
+    public final static MyBooleanType TESTB_ENU_UNSOLICITED_INDICATOR = MyBooleanType.YES;
                                     // Y - Msg is being sent unsolicited
 
-    public Tag325EnuUnsolicitedIndicator(EnumBoolean dataValue) {
+    public Tag325EnuUnsolicitedIndicator(MyBooleanType dataValue) {
         setFixType(FIX42.FIX325_ENU_UNSOLICITED_INDICATOR);
         this.dataValue = dataValue;
     }

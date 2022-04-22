@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag852PublishTrdIndicatorTest {
+class Tag912BoolLastRptRequestedTest {
     @Test
-    void FIX0852Test() {
-        FIX44 fixData = FIX44.FIX852_PUBLISH_TRD_INDICATOR;
+    void FIX0912Test() {
+        FIX44 fixData = FIX44.FIX912_BOOL_LAST_RPT_REQUESTED;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag852PublishTrdIndicatorTest {
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0852Test() {
-        Tag852PublishTrdIndicator tagData;
+    void Tag0912Test() {
+        Tag912BoolLastRptRequested tagData;
 
     }
 }

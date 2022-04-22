@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag377EnuSolicitedFlag extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final EnumBoolean dataValue;
+    private final MyBooleanType dataValue;
 
-    public final static EnumBoolean TESTA_ENU_SOLICITED_FLAG = EnumBoolean.NO ;     // N - Was not solicited
-    public final static EnumBoolean TESTB_ENU_SOLICITED_FLAG = EnumBoolean.YES;     // Y - Was solicited
+    public final static MyBooleanType TESTA_ENU_SOLICITED_FLAG = MyBooleanType.NO ;     // N - Was not solicited
+    public final static MyBooleanType TESTB_ENU_SOLICITED_FLAG = MyBooleanType.YES;     // Y - Was solicited
 
-    public Tag377EnuSolicitedFlag(EnumBoolean dataValue) {
+    public Tag377EnuSolicitedFlag(MyBooleanType dataValue) {
         setFixType(FIX42.FIX377_ENU_SOLICITED_FLAG);
         this.dataValue = dataValue;
     }

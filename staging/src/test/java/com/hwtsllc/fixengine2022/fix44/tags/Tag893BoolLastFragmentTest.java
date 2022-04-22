@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag720PriorSpreadIndicatorTest {
+class Tag893BoolLastFragmentTest {
     @Test
-    void FIX0720Test() {
-        FIX44 fixData = FIX44.FIX720_PRIOR_SPREAD_INDICATOR;
+    void FIX0893Test() {
+        FIX44 fixData = FIX44.FIX893_BOOL_LAST_FRAGMENT;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -34,8 +34,8 @@ class Tag720PriorSpreadIndicatorTest {
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0720Test() {
-        Tag720PriorSpreadIndicator tagData;
+    void Tag0893Test() {
+        Tag893BoolLastFragment tagData;
 
     }
 }

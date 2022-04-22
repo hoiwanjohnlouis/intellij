@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.fix27.enums.EnumBoolean;
+import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,12 +38,12 @@ class Tag208EnuNotifyBrokerOfCreditTest {
     void Tag0208Test() {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
-        tagData = new Tag208EnuNotifyBrokerOfCredit(EnumBoolean.NO);
-        assertEquals( EnumBoolean.NO.getID(), tagData.getDataValue());
+        tagData = new Tag208EnuNotifyBrokerOfCredit(MyBooleanType.NO);
+        assertEquals( MyBooleanType.NO.getID(), tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag208EnuNotifyBrokerOfCredit(EnumBoolean.YES);
-        assertEquals( EnumBoolean.YES.getID(), tagData.getDataValue());
+        tagData = new Tag208EnuNotifyBrokerOfCredit(MyBooleanType.YES);
+        assertEquals( MyBooleanType.YES.getID(), tagData.getDataValue());
         assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }
