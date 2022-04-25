@@ -23,6 +23,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum27IOIQtyTest {
+    /**
+     *  27 (same as 27, 682)
+     *  LegIOIQty
+     *  Leg-specific IOI quantity.
+     *          See IOIQty (27) for description and valid values
+     *  Valid values:
+     *      0 - 1000000000
+     *      S - Small
+     *      M - Medium
+     *      L - Large
+     *      U - Undisclosed Quantity
+     */
     @Test
     void Enum0027Test() {
         Enum27IOIQty enumType;

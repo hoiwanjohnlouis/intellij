@@ -20,6 +20,70 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum686LegPriceType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  686 (same as 423, 663, 686, 698)
+     *  The price type of the LegBidPx (681) and/or LegOfferPx (684).
+     *        See PriceType (423) for description and valid values
+     *  LegPriceType
+     *  Valid values:
+     *      1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
+     *      2 - Per unit (i.e. per share or contract)
+     *      3 - Fixed amount (absolute value)
+     *      4 - Discount - percentage points below par
+     *      5 - Premium - percentage points over par
+     *      6 - Spread (basis points spread)
+     *      7 - TED Price
+     *      8 - TED Yield
+     *      9 - Yield
+     *      10 - Fixed cabinet trade price (primarily for listed futures and options)
+     *      11 - Variable cabinet trade price (primarily for listed futures and options)
+     *      13 - Product ticks in halfs
+     *      14 - Product ticks in fourths
+     *      15 - Product ticks in eights
+     *      16 - Product ticks in sixteenths
+     *      17 - Product ticks in thirty-seconds
+     *      18 - Product ticks in sixty-forths
+     *      19 - Product ticks in one-twenty-eights
+     */
+    /*
+     * 1-11, 13-19 msg types
+     */
+    PERCENTAGE( "1", "PERCENTAGE",
+            "1 - Percentage (i.e. percent of par) (often called *dollar price* for fixed income)" ),
+    PER_UNIT( "2", "PER_UNIT",
+            "2 - Per unit (i.e. per share or contract)" ),
+    FIXED_AMOUNT( "3", "FIXED_AMOUNT",
+            "3 - Fixed amount (absolute value)" ),
+    DISCOUNT( "4", "DISCOUNT",
+            "4 - Discount - percentage points below par" ),
+    PREMIUM( "5", "PREMIUM",
+            "5 - Premium - percentage points over par" ),
+    SPREAD( "6", "SPREAD",
+            "6 - Spread (basis points spread)" ),
+    TED_PRICE( "7", "TED_PRICE",
+            "7 - TED Price" ),
+    TED_YIELD( "8", "TED_YIELD",
+            "8 - TED Yield" ),
+    YIELD( "9", "YIELD",
+            "9 - Yield" ),
+    FIXED_TRADE_PRICE( "10", "FIXED_TRADE_PRICE",
+            "10 - Fixed cabinet trade price (primarily for listed futures and options)" ),
+    VARIABLE_TRADE_PRICE( "11", "VARIABLE_TRADE_PRICE",
+            "11 - Variable cabinet trade price (primarily for listed futures and options)" ),
+    TICKS_IN_HALFS( "13", "TICKS_IN_HALFS",
+            "13 - Product ticks in halfs" ),
+    TICKS_IN_FOURTHS( "14", "TICKS_IN_FOURTHS",
+            "14 - Product ticks in fourths" ),
+    TICKS_IN_EIGHTHS( "15", "TICKS_IN_EIGHTHS",
+            "15 - Product ticks in eighths" ),
+    TICKS_IN_SIXTEENTHS( "16", "TICKS_IN_SIXTEENTHS",
+            "16 - Product ticks in sixteenths" ),
+    TICKS_IN_THIRTY_SECONDS( "17", "TICKS_IN_THIRTY_SECONDS",
+            "17 - Product ticks in thirty-seconds" ),
+    TICKS_IN_SIXTY_FOURTHS( "18", "TICKS_IN_SIXTY_FOURTHS",
+            "18 - Product ticks in sixty-fourths" ),
+    TICKS_IN_ONE_TWENTY_EIGHTS( "19", "TICKS_IN_ONE_TWENTY_EIGHTS",
+            "19 - Product ticks in one-twenty-eights" ),
     ;
 
     private final String id;

@@ -20,6 +20,30 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum707PosAmtType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  707
+     *  PosAmtType
+     *  Type of Position amount
+     *  Valid values:
+     *      CASH - Cash Amount (Corporate Event)
+     *      CRES - Cash Residual Amount
+     *      FMTM - Final Mark-to-Market Amount
+     *      IMTM - Incremental Mark-to-Market Amount
+     *      PREM - Premium Amount
+     *      SMTM - Start-of-Day Mark-to-Market Amount
+     *      TVAR - Trade Variation Amount
+     *      VADJ - Value Adjusted Amount
+     *      SETL - Settlement Value
+     */
+    CASH_AMOUNT( "CASH", "CASH_AMOUNT", "CASH - Cash Amount (Corporate Event)" ),
+    CASH_RESIDUAL_AMOUNT( "CRES", "CASH_RESIDUAL_AMOUNT", "CRES - Cash Residual Amount" ),
+    FINAL_MARK_TO_MARKET_AMOUNT( "FMTM", "FINAL_MARK_TO_MARKET_AMOUNT", "FMTM - Final Mark-to-Market Amount" ),
+    INCREMENTAL_MARK_TO_MARKET_AMOUNT( "IMTM", "INCREMENTAL_MARK_TO_MARKET_AMOUNT", "IMTM - Incremental Mark-to-Market Amount" ),
+    PREMIUM_AMOUNT( "PREM", "PREMIUM_AMOUNT", "PREM - Premium Amount" ),
+    START_OF_DAY_MARK_TO_MARKET_AMOUNT( "SMTM", "START_OF_DAY_MARK_TO_MARKET_AMOUNT", "SMTM - Start-of-Day Mark-to-Market Amount" ),
+    TRADE_VARIATION_AMOUNT( "TVAR", "TRADE_VARIATION_AMOUNT", "TVAR - Trade Variation Amount" ),
+    VALUE_ADJUSTED_AMOUNT( "VADJ", "VALUE_ADJUSTED_AMOUNT", "VADJ - Value Adjusted Amount" ),
+    SETTLEMENT_VALUE( "SETL", "SETTLEMENT_VALUE", "SETL - Settlement Value" ),
     ;
 
     private final String id;

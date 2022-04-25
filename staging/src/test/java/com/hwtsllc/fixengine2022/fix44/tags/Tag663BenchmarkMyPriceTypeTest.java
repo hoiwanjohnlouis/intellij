@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag663BenchmarkMyPriceTypeTest {
     @Test
     void FIX0663Test() {
-        FIX44 fixData = FIX44.FIX663_BENCHMARK_PRICE_TYPE;
+        FIX44 fixData = FIX44.FIX663_ENU_BENCHMARK_PRICE_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag663BenchmarkMyPriceTypeTest {
     }
     @Test
     void Tag0663Test() {
-        Tag663BenchmarkPriceType tagData;
+        Tag663EnuBenchmarkPriceType tagData;
 
     }
 }

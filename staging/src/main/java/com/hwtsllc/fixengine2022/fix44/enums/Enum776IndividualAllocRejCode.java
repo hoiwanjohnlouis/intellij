@@ -20,6 +20,55 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum776IndividualAllocRejCode implements EnumAccessors, LogStringVerbose {
+    /**
+     *  776 (same as 88, 776)
+     *  IndividualAllocRejCode
+     *  Identified reason for rejecting an individual AllocAccount (79) detail.
+     *        Same values as  AllocRejCode (88)
+     *  Valid values:
+     *      0 - Unknown account(s)
+     *      1 - Incorrect quantity
+     *      2 - Incorrect averageg price
+     *      3 - Unknown executing broker mnemonic
+     *      4 - Commission difference
+     *      5 - Unknown OrderID (37)
+     *      6 - Unknown ListID (66)
+     *      7 - Other (further in Text (58))
+     *      8 - Incorrect allocated quantity
+     *      9 - Calculation difference
+     *      10 - Unknown or stale ExecID
+     *      11 - Mismatched data
+     *      12 - Unknown ClOrdID
+     *      13 - Warehouse request rejected
+     */
+    UNKNOWN_ACCOUNT("0", "UNKNOWN_ACCOUNT",
+            "0 - Unknown account(s)" ),
+    INCORRECT_QUANTITY("1", "INCORRECT_QUANTITY",
+            "1 - Incorrect quantity" ),
+    INCORRECT_AVERAGE_PRICE("2", "INCORRECT_AVERAGE_PRICE",
+            "2 - Incorrect average price" ),
+    UNKNOWN_EXECUTING_BROKER_MNEMONIC("3", "UNKNOWN_EXECUTING_BROKER_MNEMONIC",
+            "3 - Unknown executing broker mnemonic" ),
+    COMMISSION_DIFFERENCE("4", "COMMISSION_DIFFERENCE",
+            "4 - Commission difference" ),
+    UNKNOWN_ORDERID("5", "UNKNOWN_ORDERID",
+            "5 - Unknown OrderID (37)" ),
+    UNKNOWN_LISTID("6", "UNKNOWN_LISTID",
+            "6 - Unknown ListID (66)" ),
+    OTHER("7", "OTHER",
+            "7 - Other (further in Text (58))" ),
+    INCORRECT_ALLOCATED_QUANTITY("8", "INCORRECT_ALLOCATED_QUANTITY",
+            "8 - Incorrect allocated quantity" ),
+    CALCULATION_DIFFERENCE("9", "CALCULATION_DIFFERENCE",
+            "9 - Calculation difference" ),
+    UNKNOWN_OR_STALE_EXECID("10", "UNKNOWN_OR_STALE_EXECID",
+            "10 - Unknown or stale ExecID" ),
+    MISMATCHED_DATA("11", "MISMATCHED_DATA",
+            "11 - Mismatched data" ),
+    UNKNOWN_CLORDID("12", "UNKNOWN_CLORDID",
+            "12 - Unknown ClOrdID" ),
+    WAREHOUSE_REQUEST_REJECTED("13", "WAREHOUSE_REQUEST_REJECTED",
+            "13 - Warehouse request rejected" ),
     ;
 
     private final String id;

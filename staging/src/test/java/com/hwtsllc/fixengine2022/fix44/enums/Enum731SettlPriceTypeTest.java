@@ -16,12 +16,39 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum731SettlPriceTypeTest {
+    /**
+     *  731 (same as 731, 733)
+     *  SettlPriceType
+     *  Type of settlement price
+     *  Valid values:
+     *      1 - Final
+     *      2 - Theoretical
+     */
     @Test
     void EnumTest() {
         Enum731SettlPriceType enumType;
 
+        enumType = Enum731SettlPriceType.FINAL;
+        assertEquals( "1", enumType.getID());
+        assertEquals( "FINAL", enumType.getName());
+        assertEquals( "1 - Final", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum731SettlPriceType.THEORETICAL;
+        assertEquals( "2", enumType.getID());
+        assertEquals( "THEORETICAL", enumType.getName());
+        assertEquals( "2 - Theoretical", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

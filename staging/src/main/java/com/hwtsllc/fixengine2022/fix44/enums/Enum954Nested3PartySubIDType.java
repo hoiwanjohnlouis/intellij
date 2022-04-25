@@ -20,6 +20,38 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum954Nested3PartySubIDType implements EnumAccessors, LogStringVerbose {
+    FIRM( "1", "FIRM", "1 - Firm" ),
+    PERSON( "2", "PERSON", "2 - Person" ),
+    SYSTEM( "3", "SYSTEM", "3 - System" ),
+    APPLICATION( "4", "APPLICATION", "4 - Application" ),
+    FULL_LEGAL_NAME_OF_FIRM( "5", "FULL_LEGAL_NAME_OF_FIRM", "5 - Full legal name of firm" ),
+    POSTAL_ADDRESS( "6", "POSTAL_ADDRESS", "6 - Postal address" ),
+    PHONE_NUMBER( "7", "PHONE_NUMBER", "7 - Phone number" ),
+    EMAIL_ADDRESS( "8", "EMAIL_ADDRESS", "8 - Email address" ),
+    CONTACT_NAME( "9", "CONTACT_NAME", "9 - Contact name" ),
+    SECURITIES_ACCOUNT_NUMBER( "10", "SECURITIES_ACCOUNT_NUMBER", "10 - Securities account number (for settlement instructions)" ),
+    REGISTRATION_NUMBER( "11", "REGISTRATION_NUMBER", "11 - Registration number (for settlement instructions and confirmations)" ),
+    REGISTERED_ADDRESS_FOR_CONFIRM( "12", "REGISTERED_ADDRESS_FOR_CONFIRM", "12 - Registered address (for confirmation purposes)" ),
+    REGULATORY_STATUS( "13", "REGULATORY_STATUS", "13 - Regulatory status (for confirmation purposes)" ),
+    REGISTRATION_NAME( "14", "REGISTRATION_NAME", "14 - Registration name (for settlement instructions)" ),
+    CASH_ACCOUNT_NUMBER( "15", "CASH_ACCOUNT_NUMBER", "15 - Cash account number (for settlement instructions)" ),
+    BIC( "16", "BIC", "16 - BIC" ),
+    CSD( "17", "CSD", "17 - CSD participant member code" ),
+    REGISTERED_ADDRESS( "18", "REGISTERED_ADDRESS", "18 - Registered address" ),
+    FUND_ACCOUNT_NAME( "19", "FUND_ACCOUNT_NAME", "19 - Fund account name" ),
+    TELEX_NUMBER( "20", "TELEX_NUMBER", "20 - Telex number" ),
+    FAX_NUMBER( "21", "FAX_NUMBER", "21 - Fax number" ),
+    SECURITIES_ACCOUNT_NAME( "22", "SECURITIES_ACCOUNT_NAME", "22 - Securities account name" ),
+    CASH_ACCOUNT_NAME( "23", "CASH_ACCOUNT_NAME", "23 - Cash account name" ),
+    DEPARTMENT( "24", "DEPARTMENT", "24 - Department" ),
+    LOCATION_DESK( "25", "LOCATION_DESK", "25 - Location desk" ),
+    POSITION_ACCOUNT_TYPE( "26", "POSITION_ACCOUNT_TYPE", "26 - Position account type" ),
+    SECURITY_LOCATE_ID( "27", "SECURITY_LOCATE_ID", "27 - Security locate ID" ),
+    MARKET_MAKER( "28", "MARKET_MAKER", "28 - Market maker" ),
+    ELIGIBLE_COUNTERPARTY( "29", "ELIGIBLE_COUNTERPARTY", "29 - Eligible counterparty" ),
+    PROFESSIONAL_CLIENT( "30", "PROFESSIONAL_CLIENT", "30 - Professional client" ),
+    LOCATION( "31", "LOCATION", "31 - Location" ),
+    EXECUTION_VENUE( "32", "EXECUTION_VENUE", "32 - Execution venue" ),
     ;
 
     private final String id;

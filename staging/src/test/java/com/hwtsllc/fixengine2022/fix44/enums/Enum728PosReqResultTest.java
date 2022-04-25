@@ -16,12 +16,44 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum728PosReqResultTest {
+    /**
+     *  728
+     *  PosReqResult
+     *  Result of Request for Position
+     *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+     *  Valid values:
+     *      0 - Valid request
+     *      1 - Invalid or unsupported request
+     *      2 - No positions found that match criteria
+     *      3 - Not authorized to request positions
+     *      4 - Request for position not supported
+     *      99 - Other (use Text (58) in conjunction with this code for an explaination)
+     *
+     *      or any value conforming to the data type Reserved100Plus
+     */
     @Test
     void EnumTest() {
         Enum728PosReqResult enumType;
 
+        enumType = Enum728PosReqResult.VALID_REQUEST;
+        enumType = Enum728PosReqResult.UNSUPPORTED_REQUEST;
+        enumType = Enum728PosReqResult.NO_POSITIONS_FOUND;
+        enumType = Enum728PosReqResult.NOT_AUTHORIZED;
+        enumType = Enum728PosReqResult.REQUEST_NOT_SUPPORTED;
+
+        enumType = Enum728PosReqResult.OTHER;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

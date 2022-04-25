@@ -16,12 +16,51 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum723PosMaintResultTest {
+    /**
+     *  723
+     *  PosMaintResult
+     *  Result of Position Maintenance Request.
+     *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+     *  Valid values:
+     *      0 - Successful Completion - no warnings or errors
+     *      1 - Rejected
+     *      99 - Other
+     *
+     *      or any value conforming to the data type Reserved100Plus
+     */
     @Test
     void EnumTest() {
         Enum723PosMaintResult enumType;
 
+        enumType = Enum723PosMaintResult.SUCCESSFUL;
+        assertEquals( "0", enumType.getID());
+        assertEquals( "SUCCESSFUL", enumType.getName());
+        assertEquals( "0 - Successful Completion - no warnings or errors", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum723PosMaintResult.REJECTED;
+        assertEquals( "1", enumType.getID());
+        assertEquals( "REJECTED", enumType.getName());
+        assertEquals( "1 - Rejected", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum723PosMaintResult.OTHER;
+        assertEquals( "99", enumType.getID());
+        assertEquals( "OTHER", enumType.getName());
+        assertEquals( "99 - Other", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

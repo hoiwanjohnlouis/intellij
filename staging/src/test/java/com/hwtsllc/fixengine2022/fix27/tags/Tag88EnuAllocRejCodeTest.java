@@ -24,7 +24,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag88EnuAllocRejCodeTest {
-
     @Test
     void FIX0088Test() {
         FIX27 fixData = FIX27.FIX88_ENU_ALLOC_REJ_CODE;

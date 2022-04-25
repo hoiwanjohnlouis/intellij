@@ -16,12 +16,35 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum729PosReqStatusTest {
+    /**
+     *  729
+     *  PosReqStatus
+     *  Status of Request for Positions
+     *  Valid values:
+     *      0 - Completed
+     *      1 - Completed With Warnings
+     *      2 - Rejected
+     */
     @Test
     void EnumTest() {
         Enum729PosReqStatus enumType;
 
+        enumType = Enum729PosReqStatus.COMPLETED;
+        enumType = Enum729PosReqStatus.COMPLETED_WITH_WARNINGS;
+
+        enumType = Enum729PosReqStatus.REJECTED;
+        assertEquals( "", enumType.getID());
+        assertEquals( "", enumType.getName());
+        assertEquals( "", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

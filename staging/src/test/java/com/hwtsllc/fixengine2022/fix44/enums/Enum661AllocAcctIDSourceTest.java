@@ -16,12 +16,76 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum661AllocAcctIDSourceTest {
+    /**
+     *  661 (same as 660, 601)
+     *  Used to identify the source of the Account (1) code.
+     *  This is especially useful if the account is a new account that the Respondent may not have setup yet in their system.
+     *  AcctIDSource
+     *  Valid values:
+     *      1 - BIC
+     *     	2 - SID Code
+     *      3 - TFM (GSPTA)
+     *     	4 - OMGEO (Alert ID)
+     *     	5 - DTCC Code
+     *     	99 - Other (custom or proprietary)
+     */
     @Test
     void EnumTest() {
         Enum661AllocAcctIDSource enumType;
 
+        enumType = Enum661AllocAcctIDSource.BIC;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum661AllocAcctIDSource.SID;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum661AllocAcctIDSource.TFM;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum661AllocAcctIDSource.OMGEO;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum661AllocAcctIDSource.DTCC;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum661AllocAcctIDSource.OTHER;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

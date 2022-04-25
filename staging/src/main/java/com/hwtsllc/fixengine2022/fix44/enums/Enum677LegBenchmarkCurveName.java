@@ -20,6 +20,40 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum677LegBenchmarkCurveName implements EnumAccessors, LogStringVerbose {
+    /**
+     *  677 (same as 221, 677)
+     *  LegBenchmarkCurveName
+     *  Name of the Leg Benchmark Curve.
+     *          See BenchmarkCurveName (221) for description and valid values.
+     *  Valid values:
+     *      EONIA - EONIA
+     *      EUREPO - EUREPO
+     *      Euribor - Euribor
+     *      FutureSWAP - FutureSWAP
+     *      LIBID - LIBID
+     *      LIBOR - LIBOR (London Inter-Bank Offer)
+     *      MuniAAA - MuniAAA
+     *      OTHER - OTHER
+     *      Pfandbriefe - Pfandbriefe
+     *      SONIA - SONIA
+     *      SWAP - SWAP
+     *      Treasury - Treasury
+     */
+    /*
+     * various msg types
+     */
+    EONIA( "EONIA", "EONIA", "EONIA - EONIA" ),
+    EUREPO( "EUREPO", "EUREPO", "EUREPO - EUREPO" ),
+    EURIBOR( "Euribor", "EURIBOR", "Euribor - Euribor" ),
+    FUTURESWAP( "FutureSWAP", "FUTURESWAP", "FutureSWAP - FutureSWAP" ),
+    LIBID( "LIBID", "LIBID", "LIBID - LIBID" ),
+    LIBOR( "LIBOR", "LIBOR", "LIBOR - LIBOR (London Inter-Bank Offer)" ),
+    MUNIAAA( "MuniAAA", "MUNIAAA", "MuniAAA - MuniAAA" ),
+    OTHER( "OTHER", "OTHER", "OTHER - OTHER" ),
+    PFANDBRIEFE( "Pfandbriefe", "PFANDBRIEFE", "Pfandbriefe - Pfandbriefe" ),
+    SONIA( "SONIA", "SONIA", "SONIA - SONIA" ),
+    SWAP( "SWAP", "SWAP", "SWAP - SWAP" ),
+    TREASURY( "Treasury", "TREASURY", "Treasury - Treasury" ),
     ;
 
     private final String id;

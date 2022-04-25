@@ -16,12 +16,48 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum666ConfirmTransTypeTest {
+    /**
+     *  666
+     *  ConfirmTransType
+     *  Identifies the Confirmation transaction type.
+     *  Valid values:
+     *      0 - New
+     *      1 - Replace
+     *      2 - Cancel
+     */
     @Test
     void EnumTest() {
         Enum666ConfirmTransType enumType;
 
+        enumType = Enum666ConfirmTransType.NEW;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum666ConfirmTransType.REPLACE;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum666ConfirmTransType.CANCEL;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -16,12 +16,75 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum724PosReqTypeTest {
+    /**
+     *  724
+     *  PosReqType
+     *  Used to specify the type of position request being made.
+     *  Valid values:
+     *      0 - Positions
+     *      1 - Trades
+     *      2 - Exercises
+     *      3 - Assignments
+     *      4 - Settlement Activity
+     *      5 - Backout Message
+     */
     @Test
     void EnumTest() {
         Enum724PosReqType enumType;
 
+        enumType = Enum724PosReqType.POSITIONS;
+        assertEquals( "0", enumType.getID());
+        assertEquals( "POSITIONS", enumType.getName());
+        assertEquals( "0 - Positions", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum724PosReqType.TRADES;
+        assertEquals( "1", enumType.getID());
+        assertEquals( "TRADES", enumType.getName());
+        assertEquals( "1 - Trades", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum724PosReqType.EXERCISES;
+        assertEquals( "2", enumType.getID());
+        assertEquals( "EXERCISES", enumType.getName());
+        assertEquals( "2 - Exercises", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum724PosReqType.ASSIGNMENTS;
+        assertEquals( "3", enumType.getID());
+        assertEquals( "ASSIGNMENTS", enumType.getName());
+        assertEquals( "3 - Assignments", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum724PosReqType.SETTLEMENT_ACTIVITY;
+        assertEquals( "4", enumType.getID());
+        assertEquals( "SETTLEMENT_ACTIVITY", enumType.getName());
+        assertEquals( "4 - Settlement Activity", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum724PosReqType.BACKOUT_MESSAGE;
+        assertEquals( "5", enumType.getID());
+        assertEquals( "BACKOUT_MESSAGE", enumType.getName());
+        assertEquals( "5 - Backout Message", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

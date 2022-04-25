@@ -20,6 +20,38 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum798AllocAccountType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  798 (same as 581, 798)
+     *  AllocAccountType
+     *  Type of account associated with a confirmation or other trade-level message
+     *  Valid values:
+     *      1 - Account is carried on customer side of books
+     *      2 - Account is carried on non-customer side of books
+     *      3 - House trader
+     *      4 - Floor trader
+     *      6 - Account is carried on non-customer side of books and is cross margined
+     *      7 - Account is house trader and is cross margined
+     *      8 - Joint back office account (JBO)
+     */
+
+
+    /*
+     *  1-4, types
+     */
+    CUSTOMER_BOOK( "1", "CUSTOMER_BOOK", "1 - Account is carried on customer side of the books" ),
+    NON_CUSTOMER_BOOK( "2", "NON_CUSTOMER_BOOK", "2 - Account is carried on non-customer side of books" ),
+    HOUSE_TRADER( "3", "HOUSE_TRADER", "3 - House Trader" ),
+    FLOOR_TRADER( "4", "FLOOR_TRADER", "4 - Floor Trader" ),
+
+
+    /*
+     *  6-8 types
+     */
+    NON_CUSTOMER_CROSSED_MARGIN_BOOK( "6", "NON_CUSTOMER_CROSSED_MARGIN_BOOK",
+            "6 - Account is carried on non-customer side of books and is cross margined" ),
+    HOUSE_TRADER_CROSSED_MARGIN_BOOK( "7", "HOUSE_TRADER_CROSSED_MARGIN_BOOK",
+            "7 - Account is house trader and is cross margined" ),
+    JOINT_BACK_OFFICE( "8", "JOINT_BACK_OFFICE", "8 - Joint back office account (JBO)" ),
     ;
 
     private final String id;

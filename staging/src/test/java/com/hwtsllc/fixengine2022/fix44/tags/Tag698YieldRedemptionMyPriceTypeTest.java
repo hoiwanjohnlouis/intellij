@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag698YieldRedemptionMyPriceTypeTest {
     @Test
     void FIX0698Test() {
-        FIX44 fixData = FIX44.FIX698_YIELD_REDEMPTION_PRICE_TYPE;
+        FIX44 fixData = FIX44.FIX698_ENU_YIELD_REDEMPTION_PRICE_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -35,7 +35,7 @@ class Tag698YieldRedemptionMyPriceTypeTest {
     }
     @Test
     void Tag0698Test() {
-        Tag698YieldRedemptionPriceType tagData;
+        Tag698EnuYieldRedemptionPriceType tagData;
 
     }
 }

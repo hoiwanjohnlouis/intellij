@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum668DeliveryForm implements EnumAccessors, LogStringVerbose {
+    /**
+     *  668
+     *  DeliveryForm
+     *  Identifies the form of delivery.
+     *  Valid values:
+     *      1 - Book Entry (default)
+     *      2 - Bearer
+     */
+    BOOK_ENTRY( "1", "BOOK_ENTRY", "1 - Book Entry (default)" ),
+    BEARER( "2", "BEARER", "2 - Bearer" ),
     ;
 
     private final String id;

@@ -20,6 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum666ConfirmTransType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  666
+     *  ConfirmTransType
+     *  Identifies the Confirmation transaction type.
+     *  Valid values:
+     *      0 - New
+     *      1 - Replace
+     *      2 - Cancel
+     */
+    NEW( "0", "NEW", "0 - New" ),
+    REPLACE( "1", "REPLACE", "1 - Replace" ),
+    CANCEL( "2", "CANCEL", "2 - Cancel" ),
     ;
 
     private final String id;

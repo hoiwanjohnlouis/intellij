@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum731SettlPriceType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  731 (same as 731, 733)
+     *  SettlPriceType
+     *  Type of settlement price
+     *  Valid values:
+     *      1 - Final
+     *      2 - Theoretical
+     */
+    FINAL( "1", "FINAL", "1 - Final" ),
+    THEORETICAL( "2", "THEORETICAL", "2 - Theoretical" ),
     ;
 
     private final String id;

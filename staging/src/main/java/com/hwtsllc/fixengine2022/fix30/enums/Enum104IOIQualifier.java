@@ -20,6 +20,31 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum104IOIQualifier implements EnumAccessors, LogStringVerbose {
+    /**
+     *  104 (same as 104, 695)
+     *  QuoteQualifier
+     *  Code to qualify Quote use
+     *          See IOIQualifier (104) for description and valid values.
+     *  Valid values:
+     *      A - All or None (AON)
+     *      B - Market On Close (MOC) (held to close)
+     *      C - At the close (around/not held to close)
+     *      D - VWAP (Volume Weighted Average Price)
+     *      I - In touch with
+     *      L - Limit
+     *      M - More Behind
+     *      O - At the Open
+     *      P - Taking a Position
+     *      Q - At the Market (previously called Current Quote)
+     *      R - Ready to Trade
+     *      S - Portfolio Shown
+     *      T - Through the Day
+     *      V - Versus
+     *      W - Indidcation -  Working Away
+     *      X - Crossing Opportunity
+     *      Y - At the Midpoint
+     *      Z - Pre-open
+     */
     ALL_OR_NONE("A", "ALL_OR_NONE", "A - All or None (AON)"),
     MARKET_ON_CLOSE("B", "MARKET_ON_CLOSE", "B - Market On Close (MOC) (held to close)"),
     AT_THE_CLOSE("C", "AT_THE_CLOSE", "C - At the close (around/not held to close)"),

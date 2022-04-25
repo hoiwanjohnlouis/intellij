@@ -20,6 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum27IOIQty implements EnumAccessors, LogStringVerbose {
+    /**
+     *  27 (same as 27, 682)
+     *  LegIOIQty
+     *  Leg-specific IOI quantity.
+     *          See IOIQty (27) for description and valid values
+     *  Valid values:
+     *      0 - 1000000000
+     *      S - Small
+     *      M - Medium
+     *      L - Large
+     *      U - Undisclosed Quantity
+     */
     ONE_BILLION("0", "ONE_BILLION", "0 - 1,000,000,000" ),
     SMALL("S", "SMALL", "S - Small" ),
     MEDIUM("M", "MEDIUM", "M - Medium" ),

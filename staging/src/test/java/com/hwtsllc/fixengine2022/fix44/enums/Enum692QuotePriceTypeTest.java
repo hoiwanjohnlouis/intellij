@@ -16,12 +16,112 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum692QuotePriceTypeTest {
+    /**
+     *  692
+     *  QuotePriceType
+     *  Code to represent price type requested in Quote.
+     *      If the Quote Request is for a Swap values 1-8 apply to all legs.
+     *  Valid values:
+     *      1 - Percent (percent of par)
+     *      2 - Per Share (e.g. cents per share)
+     *      3 - Fixed Amount (absolute value)
+     *      4 - Discount - percentage points below par
+     *      5 - Premium - percentage points over par
+     *      6 - Spread - basis points relative to benchmark
+     *      7 - TED Price
+     *      8 - TED Yield
+     *      9 - Yield Spread (swaps)
+     *      10 - Yield
+     */
     @Test
     void EnumTest() {
         Enum692QuotePriceType enumType;
 
+        enumType = Enum692QuotePriceType.PERCENT;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.PER_SHARE;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.FIXED_AMOUNT;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.DISCOUNT;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.PREMIUM;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.SPREAD;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.TED_PRICE;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.TED_YIELD;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.YIELD_SPREAD;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum692QuotePriceType.YIELD;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

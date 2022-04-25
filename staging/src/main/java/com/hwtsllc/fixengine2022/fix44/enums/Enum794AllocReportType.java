@@ -20,6 +20,32 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum794AllocReportType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  794
+     *  AllocReportType
+     *  Describes the specific type or purpose of an Allocation Report message
+     *  Valid values:
+     *      2 - Preliminary Request to Intermediary
+     *      3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
+     *      4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)
+     *      5 - Warehouse Recap
+     *      8 - Request to Intermediary
+     *      9 - Accept
+     *      10 - Reject
+     *      11 - Accept Pending
+     *      12 - Complete
+     *      14 - Reverse Pending
+     */
+    PRELIMINARY_REQUEST( "2", "PRELIMINARY_REQUEST", "2 - Preliminary Request to Intermediary" ),
+    SELLSIDE_USING_PRELIMINARY( "3", "SELLSIDE_USING_PRELIMINARY", "3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)" ),
+    SELLSIDE_WITHOUT_PRELIMINARY( "4", "SELLSIDE_WITHOUT_PRELIMINARY", "4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)" ),
+    WAREHOUSE_RECAP( "5", "WAREHOUSE_RECAP", "5 - Warehouse Recap" ),
+    REQUEST_TO_INTERMEDIARY( "8", "REQUEST_TO_INTERMEDIARY", "8 - Request to Intermediary" ),
+    ACCEPT( "9", "ACCEPT", "9 - Accept" ),
+    REJECT( "10", "REJECT", "10 - Reject" ),
+    ACCEPT_PENDING( "11", "ACCEPT_PENDING", "11 - Accept Pending" ),
+    COMPLETE( "12", "COMPLETE", "12 - Complete" ),
+    REVERSE_PENDING( "14", "REVERSE_PENDING", "14 - Reverse Pending" ),
     ;
 
     private final String id;

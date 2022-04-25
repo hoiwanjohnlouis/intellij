@@ -16,12 +16,39 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum668DeliveryFormTest {
+    /**
+     *  668
+     *  DeliveryForm
+     *  Identifies the form of delivery.
+     *  Valid values:
+     *      1 - Book Entry (default)
+     *      2 - Bearer
+     */
     @Test
     void EnumTest() {
         Enum668DeliveryForm enumType;
 
+        enumType = Enum668DeliveryForm.BOOK_ENTRY;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum668DeliveryForm.BEARER;
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertEquals("", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

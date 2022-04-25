@@ -24,7 +24,26 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum477DistribPaymentMethodTest {
     /**
-     *  Information is the same for TAGS 477
+     *  477 (same as 477,)
+     *  DistribPaymentMethod
+     *  A code identifying the payment method for a (fractional) distribution.
+     *          13 through 998 are reserved for future use
+     Values above 1000 are available for use by private agreement among counterparties
+     *  Valid values:
+     *      1 - CREST
+     *      2 - NSCC
+     *      3 - Euroclear
+     *      4 - Clearstream
+     *      5 - Cheque
+     *      6 - Telegraphic Transfer
+     *      7 - Fed Wire
+     *      8 - Direct Credit (BECS,BACS)
+     *      9 - ACH Debit
+     *      10 - BPAY
+     *      11 - High Value Clearing System HVACS
+     *      12 - Reinvest In Fund
+     *
+     *      or any value conforming to the data type Reserved1000Plus
      */
     @Test
     void Enum0477Test() {
@@ -34,109 +53,97 @@ class Enum477DistribPaymentMethodTest {
          * 1-12 types
          */
         enumType = Enum477DistribPaymentMethod.CREST;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,CREST,1 - CREST", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("1", enumType.getID());
+        assertEquals("CREST", enumType.getName());
+        assertEquals("1 - CREST", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.NSCC;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,NSCC,2 - NSCC", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("2", enumType.getID());
+        assertEquals("NSCC", enumType.getName());
+        assertEquals("2 - NSCC", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.EUROCLEAR;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("3,EUROCLEAR,3 - Euroclear", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("3", enumType.getID());
+        assertEquals("EUROCLEAR", enumType.getName());
+        assertEquals("3 - Euroclear", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.CLEARSTREAM;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("4,CLEARSTREAM,4 - Clearstream", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("4", enumType.getID());
+        assertEquals("CLEARSTREAM", enumType.getName());
+        assertEquals("4 - Clearstream", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.CHEQUE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("5,CHEQUE,5 - Cheque", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("5", enumType.getID());
+        assertEquals("CHEQUE", enumType.getName());
+        assertEquals("5 - Cheque", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.TELEGRAPHIC_TRANSFER;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("6,TELEGRAPHIC_TRANSFER,6 - Telegraphic Transfer", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("6", enumType.getID());
+        assertEquals("TELEGRAPHIC_TRANSFER", enumType.getName());
+        assertEquals("6 - Telegraphic Transfer", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.FED_WIRE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("7,FED_WIRE,7 - Fed Wire", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("7", enumType.getID());
+        assertEquals("FED_WIRE", enumType.getName());
+        assertEquals("7 - Fed Wire", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.DIRECT_CREDIT;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("8,DIRECT_CREDIT,8 - Direct Credit (BECS, BACS)", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("8", enumType.getID());
+        assertEquals("DIRECT_CREDIT", enumType.getName());
+        assertEquals("8 - Direct Credit (BECS, BACS)", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.ACH_CREDIT;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("9,ACH_CREDIT,9 - ACH Credit", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("9", enumType.getID());
+        assertEquals("ACH_CREDIT", enumType.getName());
+        assertEquals("9 - ACH Credit", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.BPAY;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("10,BPAY,10 - BPAY", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("10", enumType.getID());
+        assertEquals("BPAY", enumType.getName());
+        assertEquals("10 - BPAY", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.HIGH_VALUE_CLEARING_SYSTEM;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("11,HVACS,11 - High Value Clearing System HVACS", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("11", enumType.getID());
+        assertEquals("HVACS", enumType.getName());
+        assertEquals("11 - High Value Clearing System HVACS", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum477DistribPaymentMethod.REINVEST_IN_FUND;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("12,REINVEST_IN_FUND,12 - Reinvest In Fund", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertEquals("12", enumType.getID());
+        assertEquals("REINVEST_IN_FUND", enumType.getName());
+        assertEquals("12 - Reinvest In Fund", enumType.getDescription());
         assertNotEquals( FIX43.JUNK_ID, enumType.getID());
         assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());

@@ -21,7 +21,42 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum525NestedPartyIDSource implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same for TAGS 447, 525
+     *  525 (same as 447, 525, 758, 783, 950, 1050, 1060, 1118)
+     *  NestedPartyIDSource
+     *  PartyIDSource value within a nested repeating group.
+     *              Same values as  PartyIDSource (447)
+     *  Valid values:
+     *  For all PartyRoles
+     *      B - BIC (Bank Identification Code - SWIFT managed) code
+     *              (ISO9362 - See "Appendix 6-B")
+     *      C - Generally accepted market participant identifier
+     *              (e.g. NASD mnemonic)
+     *      D - Proprietary / Custom code
+     *      E - ISO Country Code
+     *      F - Settlement Entity Location
+     *              (note if Local Market Settlement use "E=ISO Country Code")
+     *              (see "Appendix 6-G" for valid values)
+     *      G - MIC (ISO 10383 - Market Identificer Code) (See "Appendix 6-C")
+     *      H - CSD participant/member code
+     *              (e.g.. Euroclear, DTC, CREST or Kassenverein number)
+     *
+     *  For PartyRole = "InvestorID" and for CIV
+     *      6 - UK National Insurance or Pension Number
+     *      7 - US Social Security Number
+     *      8 - US Employer or Tax ID Number
+     *      9 - Australian Business Number
+     *      A - Australian Tax File Number
+     *
+     *  For PartyRole = "InvestorID" and for Equities
+     *      1 - Korean Investor ID
+     *      2 - Taiwanese Qualified Foreign Investor ID QFII/FID
+     *      3 - Taiwanese Trading Acct
+     *      4 - Malaysian Central Depository (MCD) number
+     *      5 - Chinese Investor ID
+     *
+     *  For PartyRole="Broker of Credit"
+     *      I - Directed broker three character acronym as defined in
+     *              ISITC "ETC Best Practice" guidelines document
      */
 
     /*

@@ -20,6 +20,20 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum718AdjustmentType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  718
+     *  AdjustmentType
+     *  Type of adjustment to be applied, used for PCS and PAJ
+     *  Valid values:
+     *      0 - Process Request As Margin Disposition
+     *      1 - Delta Plus
+     *      2 - Delta Minus
+     *      3 - Final
+     */
+    MARGIN_DISPOSITION( "0", "MARGIN_DISPOSITION", "0 - Process Request As Margin Disposition" ),
+    DELTA_PLUS( "1", "DELTA_PLUS", "1 - Delta Plus" ),
+    DELTA_MINUS( "2", "DELTA_MINUS", "2 - Delta Minus" ),
+    FINAL( "3", "FINAL", "3 - Final" ),
     ;
 
     private final String id;

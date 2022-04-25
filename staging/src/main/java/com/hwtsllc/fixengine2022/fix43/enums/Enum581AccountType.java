@@ -21,8 +21,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum581AccountType implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same for TAGS 581
+     *  581 (same as 581, 798)
+     *  Type of account associated with an order
+     *  Valid values:
+     *      1 - Account is carried on customer side of books
+     *      2 - Account is carried on non-customer side of books
+     *      3 - House trader
+     *      4 - Floor trader
+     *      6 - Account is carried on non-customer side of books and is cross margined
+     *      7 - Account is house trader and is cross margined
+     *      8 - Joint back office account (JBO)
      */
+
 
     /*
      *  1-4, types

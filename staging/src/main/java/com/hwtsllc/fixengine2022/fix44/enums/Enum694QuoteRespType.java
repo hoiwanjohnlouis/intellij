@@ -20,6 +20,24 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum694QuoteRespType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  694
+     *  QuoteRespType
+     *  Identifies the type of Quote Response.
+     *  Valid values:
+     *      1 - Hit/Lift
+     *      2 - Counter
+     *      3 - Expired
+     *      4 - Cover
+     *      5 - Done Away
+     *      6 - Pass
+     */
+    HIT_OR_LIFT( "1", "", "1 - Hit/Lift" ),
+    COUNTER( "2", "", "2 - Counter" ),
+    EXPIRED( "3", "", "3 - Expired" ),
+    COVER( "4", "", "4 - Cover" ),
+    DONE_AWAY( "5", "", "5 - Done Away" ),
+    PASS( "6", "", "6 - Pass" ),
     ;
 
     private final String id;

@@ -23,6 +23,78 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum233StipulationTypeTest {
+    /**
+     *  233 (same as 233, 688)
+     *  LegStipulationType
+     *  For Fixed Income, type of Stipulation for this leg.
+     *      See StipulationType (233) for description and valid values
+     *  Valid values:
+     *      AMT - Alternative Minimum Tax (Y/N)
+     *      AUTOREINV - Auto Reinvestment at <rate> or better
+     *      BANKQUAL - Bank qualified (Y/N)
+     *      BGNCON - Bargain conditions (see StipulationValue (234) for values)
+     *      COUPON - Coupon range
+     *      CURRENCY - ISO Currency Code
+     *      CUSTOMDATE - Custom start/end date
+     *      GEOG - Geographics and % range (ex. 234=CA 0-80 [minimum of 80% California assets])
+     *      HAIRCUT - Valuation Discount
+     *      INSURED - Insured (Y/N)
+     *      ISSUE - Year Or Year/Month of Issue (ex. 234=2002/09)
+     *      ISSUER - Issuer's ticker
+     *      ISSUESIZE - issue size range
+     *      LOOKBACK - Lookback Days
+     *      LOT - Explicit lot identifier
+     *      LOTVAR - Lot Variance (value in percent maximum over- or under-allocation allowed)
+     *      MAT - Maturity Year And Month
+     *      MATURITY - Maturity range
+     *      MAXSUBS - Maximum substitutions (Repo)
+     *      MINDNOM - Minimum denomination
+     *      MININCR - Minimum increment
+     *      MINQTY - Minimum quantity
+     *      PAYFREQ - Payment frequency, calendar
+     *      PIECES - Number Of Pieces
+     *      PMAX - Pools Maximum
+     *      PPL - Pools per Lot
+     *      PPM - Pools per Million
+     *      PPT - Pools per Trade
+     *      PRICE - Price Range
+     *      PRICEFREQ - Pricing frequency
+     *      PROD - Production Year
+     *      PROTECT - Call protection
+     *      PURPOSE - Purpose
+     *      PXSOURCE - Benchmark price source
+     *      RATING - Rating source and range
+     *      REDEMPTION - Type Of Redemption - values are:
+     *              NonCallable, Prefunded, EscrowedToMaturity, Putable, Convertible
+     *      RESTRICTED - Restricted (Y/N)
+     *      SECTOR - Market Sector
+     *      SECTYPE - Security Type included or excluded
+     *      STRUCT - Structure
+     *      SUBSFREQ - Substitutions frequency (Repo)
+     *      SUBSLEFT - Substitutions left (Repo)
+     *      TEXT - Freeform Text
+     *      TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
+     *      WAC - Weighted Average Coupon - value in percent (exact or range)
+     *              plus "Gross" or "Net" of servicing spread (the default)
+     *              (ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])
+     *      WAL - Weighted Average Life Coupon - value in percent (exact or range)
+     *      WALA - Weighted Average Loan Age - value in months (exact or range)
+     *      WAM - Weighted Average Maturity - value in months (exact or range)
+     *      WHOLE - Whole Pool (Y/N)
+     *      YIELD - Yield Range
+     *
+     *      Prepayment Speeds
+     *      ABS - Absolute Prepayment Speed
+     *      CPP - Constant Prepayment Penalty
+     *      CPR - Constant Prepayment Rate
+     *      CPY - Constant Prepayment Yield
+     *      HEP - final CPR of Home Equity Prepayment Curve
+     *      MHP - Percent of Manufactured Housing Prepayment Curve
+     *      MPR - Monthly Prepayment Rate
+     *      PPC - Percent of Prospectus Prepayment Curve
+     *      PSA - Percent of BMA Prepayment Curve
+     *      SMM - Single Monthly Mortality
+     */
     @Test
     void Enum0233Test() {
         Enum233StipulationType enumType;

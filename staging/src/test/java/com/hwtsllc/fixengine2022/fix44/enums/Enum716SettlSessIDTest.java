@@ -16,12 +16,57 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum716SettlSessIDTest {
+    /**
+     *  716
+     *  SettlSessID
+     *  Identifies a specific settlement session
+     *  Valid values:
+     *      ITD - Intraday
+     *      RTH - Regular Trading Hours
+     *      ETH - Electronic Trading Hours
+     *      EOD - End Of Day
+     */
     @Test
     void EnumTest() {
         Enum716SettlSessID enumType;
 
+        enumType = Enum716SettlSessID.INTRADAY;
+        assertEquals( "ITD", enumType.getID());
+        assertEquals( "INTRADAY", enumType.getName());
+        assertEquals( "ITD - Intraday", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum716SettlSessID.REGULAR_TRADING_HOURS;
+        assertEquals( "RTH", enumType.getID());
+        assertEquals( "REGULAR_TRADING_HOURS", enumType.getName());
+        assertEquals( "RTH - Regular Trading Hours", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum716SettlSessID.ELECTRONIC_TRADING_HOURS;
+        assertEquals( "ETH", enumType.getID());
+        assertEquals( "ELECTRONIC_TRADING_HOURS", enumType.getName());
+        assertEquals( "ETH - Electronic Trading Hours", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum716SettlSessID.END_OF_DAY;
+        assertEquals( "EOD", enumType.getID());
+        assertEquals( "END_OF_DAY", enumType.getName());
+        assertEquals( "EOD - End Of Day", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

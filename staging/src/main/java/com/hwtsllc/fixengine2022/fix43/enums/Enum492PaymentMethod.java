@@ -21,8 +21,30 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum492PaymentMethod implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same for TAGS 492
+     *  492 (same as 492,)
+     *  PaymentMethod
+     *  A code identifying the Settlement payment method. 16 through 998 are reserved for future use
+     *              Values above 1000 are available for use by private agreement among counterparties
+     *  Valid values:
+     *      1 - CREST
+     *      2 - NSCC
+     *      3 - Euroclear
+     *      4 - Clearstream
+     *      5 - Cheque
+     *      6 - Telegraphic Transfer
+     *      7 - Fed Wire
+     *      8 - Debit Card
+     *      9 - Direct Debit (BECS)
+     *      10 - Direct Credit (BECS)
+     *      11 - Credit Card
+     *      12 - ACH Debit
+     *      13 - ACH Credit
+     *      14 - BPAY
+     *      15 - High Value Clearing System (HVACS)
+     *
+     *      or any value conforming to the data type Reserved1000Plus
      */
+
 
     /*
      * 1-15 types

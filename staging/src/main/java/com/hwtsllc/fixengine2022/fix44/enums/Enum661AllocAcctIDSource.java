@@ -20,6 +20,25 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum661AllocAcctIDSource implements EnumAccessors, LogStringVerbose {
+    /**
+     *  661 (same as 660, 601)
+     *  Used to identify the source of the Account (1) code.
+     *  This is especially useful if the account is a new account that the Respondent may not have setup yet in their system.
+     *  AcctIDSource
+     *  Valid values:
+     *      1 - BIC
+     *     	2 - SID Code
+     *      3 - TFM (GSPTA)
+     *     	4 - OMGEO (Alert ID)
+     *     	5 - DTCC Code
+     *     	99 - Other (custom or proprietary)
+     */
+    BIC( "1", "BIC", "1 - BIC" ),
+    SID( "2", "SID", "2 - SID Code" ),
+    TFM( "3", "TFM", "3 - TFM (GSPTA)" ),
+    OMGEO( "4", "OMGEO", "4 - OMGEO (Alert ID)" ),
+    DTCC( "5", "DTCC", "5 - DTCC Code" ),
+    OTHER( "99", "OTHER", "99 - Other (custom or proprietary)" ),
     ;
 
     private final String id;

@@ -20,6 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum729PosReqStatus implements EnumAccessors, LogStringVerbose {
+    /**
+     *  729
+     *  PosReqStatus
+     *  Status of Request for Positions
+     *  Valid values:
+     *      0 - Completed
+     *      1 - Completed With Warnings
+     *      2 - Rejected
+     */
+    COMPLETED( "0", "COMPLETED", "0 - Completed" ),
+    COMPLETED_WITH_WARNINGS( "1", "COMPLETED_WITH_WARNINGS", "1 - Completed With Warnings" ),
+    REJECTED( "2", "REJECTED", "2 - Rejected" ),
     ;
 
     private final String id;

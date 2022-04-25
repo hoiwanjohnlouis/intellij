@@ -20,6 +20,22 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum722PosMaintStatus implements EnumAccessors, LogStringVerbose {
+    /**
+     *  722
+     *  PosMaintStatus
+     *  Status of Position Maintenance Request
+     *  Valid values:
+     *      0 - Accepted
+     *      1 - Accepted With Warnings
+     *      2 - Rejected
+     *      3 - Completed
+     *      4 - Completed With Warnings
+     */
+    ACCEPTED( "0", "ACCEPTED", "0 - Accepted" ),
+    ACCEPTED_WITH_WARNINGS( "1", "ACCEPTED_WITH_WARNINGS", "1 - Accepted With Warnings" ),
+    REJECTED( "2", "REJECTED", "2 - Rejected" ),
+    COMPLETED( "3", "COMPLETED", "3 - Completed" ),
+    COMPLETED_WITH_WARNINGS( "4", "COMPLETED_WITH_WARNINGS", "4 - Completed With Warnings" ),
     ;
 
     private final String id;

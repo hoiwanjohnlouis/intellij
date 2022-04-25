@@ -20,6 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum706PosQtyStatus implements EnumAccessors, LogStringVerbose {
+    /**
+     *  706
+     *  PosQtyStatus
+     *  Status of this position.
+     *  Valid values:
+     *  0 - Submitted
+     *  1 - Accepted
+     *  2 - Rejected
+     */
+    SUBMITTED( "0", "SUBMITTED", "0 - Submitted" ),
+    ACCEPTED( "1", "ACCEPTED", "1 - Accepted" ),
+    REJECTED( "2", "REJECTED", "2 - Rejected" ),
     ;
 
     private final String id;

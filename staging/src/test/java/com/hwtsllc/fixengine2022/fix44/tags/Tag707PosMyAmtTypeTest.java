@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum707PosAmtType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,17 +26,52 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag707PosMyAmtTypeTest {
     @Test
     void FIX0707Test() {
-        FIX44 fixData = FIX44.FIX707_POS_AMT_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX44 fixData = FIX44.FIX707_ENU_POS_AMT_TYPE;
+        assertEquals( "707", fixData.getID());
+        assertEquals( "POS_AMT_TYPE", fixData.getName());
+        assertEquals( "PosAmtType", fixData.getDescription());
         assertNotEquals( FIX44.JUNK_ID, fixData.getID());
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0707Test() {
-        Tag707PosAmtType tagData;
+        Tag707EnuPosAmtType tagData;
 
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.CASH_AMOUNT);
+        assertEquals( Enum707PosAmtType.CASH_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.CASH_RESIDUAL_AMOUNT);
+        assertEquals( Enum707PosAmtType.CASH_RESIDUAL_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.FINAL_MARK_TO_MARKET_AMOUNT);
+        assertEquals( Enum707PosAmtType.FINAL_MARK_TO_MARKET_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.INCREMENTAL_MARK_TO_MARKET_AMOUNT);
+        assertEquals( Enum707PosAmtType.INCREMENTAL_MARK_TO_MARKET_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.PREMIUM_AMOUNT);
+        assertEquals( Enum707PosAmtType.PREMIUM_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.SETTLEMENT_VALUE);
+        assertEquals( Enum707PosAmtType.SETTLEMENT_VALUE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.START_OF_DAY_MARK_TO_MARKET_AMOUNT);
+        assertEquals( Enum707PosAmtType.START_OF_DAY_MARK_TO_MARKET_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.TRADE_VARIATION_AMOUNT);
+        assertEquals( Enum707PosAmtType.TRADE_VARIATION_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.VALUE_ADJUSTED_AMOUNT);
+        assertEquals( Enum707PosAmtType.VALUE_ADJUSTED_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

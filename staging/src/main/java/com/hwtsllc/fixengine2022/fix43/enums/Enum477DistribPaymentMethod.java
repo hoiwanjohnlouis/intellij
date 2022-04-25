@@ -21,7 +21,26 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum477DistribPaymentMethod implements EnumAccessors, LogStringVerbose {
     /**
-     *  Information is the same for TAGS 477
+     *  477 (same as 477,)
+     *  DistribPaymentMethod
+     *  A code identifying the payment method for a (fractional) distribution.
+     *          13 through 998 are reserved for future use
+     Values above 1000 are available for use by private agreement among counterparties
+     *  Valid values:
+     *      1 - CREST
+     *      2 - NSCC
+     *      3 - Euroclear
+     *      4 - Clearstream
+     *      5 - Cheque
+     *      6 - Telegraphic Transfer
+     *      7 - Fed Wire
+     *      8 - Direct Credit (BECS,BACS)
+     *      9 - ACH Debit
+     *      10 - BPAY
+     *      11 - High Value Clearing System HVACS
+     *      12 - Reinvest In Fund
+     *
+     *      or any value conforming to the data type Reserved1000Plus
      */
 
     /*

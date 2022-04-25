@@ -23,7 +23,31 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum104IOIQualifierTest {
-
+    /**
+     *  104 (same as 104, 695)
+     *  QuoteQualifier
+     *  Code to qualify Quote use
+     *          See IOIQualifier (104) for description and valid values.
+     *  Valid values:
+     *      A - All or None (AON)
+     *      B - Market On Close (MOC) (held to close)
+     *      C - At the close (around/not held to close)
+     *      D - VWAP (Volume Weighted Average Price)
+     *      I - In touch with
+     *      L - Limit
+     *      M - More Behind
+     *      O - At the Open
+     *      P - Taking a Position
+     *      Q - At the Market (previously called Current Quote)
+     *      R - Ready to Trade
+     *      S - Portfolio Shown
+     *      T - Through the Day
+     *      V - Versus
+     *      W - Indidcation -  Working Away
+     *      X - Crossing Opportunity
+     *      Y - At the Midpoint
+     *      Z - Pre-open
+     */
     @Test
     void Enum0104Test() {
         Enum104IOIQualifier enumType;

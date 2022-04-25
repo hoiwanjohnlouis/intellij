@@ -16,12 +16,44 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum725ResponseTransportTypeTest {
+    /**
+     *  725
+     *  ResponseTransportType
+     *  Identifies how the response to the request should be transmitted.
+     *              Details specified via ResponseDestination (726).
+     *  Valid values:
+     *      0 - Inband - transport the request was sent over (default)
+     *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
+     *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
+     */
     @Test
     void EnumTest() {
         Enum725ResponseTransportType enumType;
 
+        enumType = Enum725ResponseTransportType.INBAND;
+        assertEquals( "0", enumType.getID());
+        assertEquals( "INBAND", enumType.getName());
+        assertEquals( "0 - Inband - transport the request was sent over (default)",
+                enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum725ResponseTransportType.OUT_OF_BAND;
+        assertEquals( "1", enumType.getID());
+        assertEquals( "OUT_OF_BAND", enumType.getName());
+        assertEquals( "1 - Out of Band - pre-arranged out-of-band delivery mechanism " +
+                        "(i.e. FTP, HTTP, NDM, etc.) between counterparties",
+                enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

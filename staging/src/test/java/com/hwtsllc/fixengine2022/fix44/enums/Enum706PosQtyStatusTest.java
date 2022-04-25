@@ -16,12 +16,48 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum706PosQtyStatusTest {
+    /**
+     *  706
+     *  PosQtyStatus
+     *  Status of this position.
+     *  Valid values:
+     *  0 - Submitted
+     *  1 - Accepted
+     *  2 - Rejected
+     */
     @Test
     void EnumTest() {
         Enum706PosQtyStatus enumType;
 
+        enumType = Enum706PosQtyStatus.SUBMITTED;
+        assertEquals( "0", enumType.getID());
+        assertEquals( "SUBMITTED", enumType.getName());
+        assertEquals( "0 - Submitted", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum706PosQtyStatus.ACCEPTED;
+        assertEquals( "1", enumType.getID());
+        assertEquals( "ACCEPTED", enumType.getName());
+        assertEquals( "1 - Accepted", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum706PosQtyStatus.REJECTED;
+        assertEquals( "2", enumType.getID());
+        assertEquals( "REJECTED", enumType.getName());
+        assertEquals( "2 - Rejected", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }
