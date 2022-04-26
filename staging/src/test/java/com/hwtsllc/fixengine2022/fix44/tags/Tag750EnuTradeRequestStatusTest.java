@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum750TradeRequestStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag750EnuTradeRequestStatusTest {
     @Test
     void FIX0750Test() {
-        FIX44 fixData = FIX44.FIX750_TRADE_REQUEST_STATUS;
+        FIX44 fixData = FIX44.FIX750_ENU_TRADE_REQUEST_STATUS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,9 +34,21 @@ class Tag750EnuTradeRequestStatusTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  750
+     *  TradeRequestStatus
+     *  Status of Trade Request.
+     *  Valid values:
+     *      0 - Accepted
+     *      1 - Completed
+     *      2 - Rejected
+     */
     @Test
     void Tag0750Test() {
         Tag750EnuTradeRequestStatus tagData;
 
+        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.ACCEPTED);
+        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.COMPLETED);
+        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.REJECTED);
     }
 }

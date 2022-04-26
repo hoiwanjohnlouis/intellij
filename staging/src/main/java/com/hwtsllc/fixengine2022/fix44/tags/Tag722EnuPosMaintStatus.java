@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum722PosMaintStatus;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  722
+ *  PosMaintStatus
+ *  Status of Position Maintenance Request
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Accepted With Warnings
+ *      2 - Rejected
+ *      3 - Completed
+ *      4 - Completed With Warnings
+ */
 public class Tag722EnuPosMaintStatus extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum722PosMaintStatus dataValue;
 

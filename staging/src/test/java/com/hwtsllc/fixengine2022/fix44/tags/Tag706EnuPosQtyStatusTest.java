@@ -33,6 +33,15 @@ class Tag706EnuPosQtyStatusTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  706
+     *  PosQtyStatus
+     *  Status of this position.
+     *  Valid values:
+     *  0 - Submitted
+     *  1 - Accepted
+     *  2 - Rejected
+     */
     @Test
     void Tag0706Test() {
         Tag706EnuPosQtyStatus tagData;

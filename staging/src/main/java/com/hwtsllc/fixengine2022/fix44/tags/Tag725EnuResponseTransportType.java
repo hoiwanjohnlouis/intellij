@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum725ResponseTransportType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  725
+ *  ResponseTransportType
+ *  Identifies how the response to the request should be transmitted.
+ *              Details specified via ResponseDestination (726).
+ *  Valid values:
+ *      0 - Inband - transport the request was sent over (default)
+ *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
+ *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
+ */
 public class Tag725EnuResponseTransportType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum725ResponseTransportType dataValue;
 

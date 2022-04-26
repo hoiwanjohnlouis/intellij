@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum718AdjustmentType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  718
+ *  AdjustmentType
+ *  Type of adjustment to be applied, used for PCS and PAJ
+ *  Valid values:
+ *      0 - Process Request As Margin Disposition
+ *      1 - Delta Plus
+ *      2 - Delta Minus
+ *      3 - Final
+ */
 public class Tag718EnuAdjustmentType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum718AdjustmentType dataValue;
 

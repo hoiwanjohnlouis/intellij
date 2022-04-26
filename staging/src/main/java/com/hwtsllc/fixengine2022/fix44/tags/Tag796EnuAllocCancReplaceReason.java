@@ -16,9 +16,81 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum796AllocCancReplaceReason;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  796
+ *  AllocCancReplaceReason
+ *  Reason for cancelling or replacing an Allocation Instruction or Allocation Report message
+ *  Valid values:
+ *      1 - Original details incomplete or incorrect
+ *      2 - Change in underlying order details
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public class Tag796EnuAllocCancReplaceReason extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum796AllocCancReplaceReason dataValue;
+
+    public final static Enum796AllocCancReplaceReason TESTA_ENU_ALLOC_CANC_REPLACE_REASON
+            = Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER;
+    public final static Enum796AllocCancReplaceReason TESTB_ENU_ALLOC_CANC_REPLACE_REASON
+            = Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE;
+
+    public Tag796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason dataValue) {
+        setFixType(FIX44.FIX796_ENU_ALLOC_CANC_REPLACE_REASON);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag796EnuAllocCancReplaceReason tagData;
+
+        tagData = new Tag796EnuAllocCancReplaceReason(TESTA_ENU_ALLOC_CANC_REPLACE_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag796EnuAllocCancReplaceReason(TESTB_ENU_ALLOC_CANC_REPLACE_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

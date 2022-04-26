@@ -16,8 +16,83 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum692QuotePriceType;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Tag692EnuQuotePriceTypeTest {
+    @Test
+    void FIX0692Test() {
+        FIX44 fixData = FIX44.FIX692_ENU_QUOTE_PRICE_TYPE;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+    }
+    /**
+     *  692
+     *  QuotePriceType
+     *  Code to represent price type requested in Quote.
+     *      If the Quote Request is for a Swap values 1-8 apply to all legs.
+     *  Valid values:
+     *      1 - Percent (percent of par)
+     *      2 - Per Share (e.g. cents per share)
+     *      3 - Fixed Amount (absolute value)
+     *      4 - Discount - percentage points below par
+     *      5 - Premium - percentage points over par
+     *      6 - Spread - basis points relative to benchmark
+     *      7 - TED Price
+     *      8 - TED Yield
+     *      9 - Yield Spread (swaps)
+     *      10 - Yield
+     */
+    @Test
+    void Tag0692Test() {
+        Tag692EnuQuotePriceType tagData;
 
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.PERCENT);
+        assertEquals( Enum692QuotePriceType.PERCENT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.PER_SHARE);
+        assertEquals( Enum692QuotePriceType.PER_SHARE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.FIXED_AMOUNT);
+        assertEquals( Enum692QuotePriceType.FIXED_AMOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.DISCOUNT);
+        assertEquals( Enum692QuotePriceType.DISCOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.PREMIUM);
+        assertEquals( Enum692QuotePriceType.PREMIUM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.SPREAD);
+        assertEquals( Enum692QuotePriceType.SPREAD.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.TED_PRICE);
+        assertEquals( Enum692QuotePriceType.TED_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.TED_YIELD);
+        assertEquals( Enum692QuotePriceType.TED_YIELD.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.YIELD_SPREAD);
+        assertEquals( Enum692QuotePriceType.YIELD_SPREAD.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.YIELD);
+        assertEquals( Enum692QuotePriceType.YIELD.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
 }

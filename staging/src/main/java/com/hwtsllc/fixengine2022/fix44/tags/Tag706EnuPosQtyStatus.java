@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum706PosQtyStatus;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  706
+ *  PosQtyStatus
+ *  Status of this position.
+ *  Valid values:
+ *  0 - Submitted
+ *  1 - Accepted
+ *  2 - Rejected
+ */
 public class Tag706EnuPosQtyStatus extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum706PosQtyStatus dataValue;
 

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag712EnuPosMaintActionTest {
     @Test
     void FIX0712Test() {
-        FIX44 fixData = FIX44.FIX712_POS_MAINT_ACTION;
+        FIX44 fixData = FIX44.FIX712_ENU_POS_MAINT_ACTION;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,6 +33,19 @@ class Tag712EnuPosMaintActionTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  712
+     *  PosMaintAction
+     *  Maintenance Action to be performed.
+     *  Valid values:
+     *      1 - New - used to increment the overall transaction quantity
+     *      2 - Replace - used to override the overall transaction quantity
+     *                      or specifically add messages based on the reference ID
+     *      3 - Cancel - used to remove the overall transaction or specific
+     *                      add messages based on reference ID
+     *      4 - Reverse - used to completely back-out the transaction
+     *                      such that the transaction never existed
+     */
     @Test
     void Tag0712Test() {
         Tag712EnuPosMaintAction tagData;

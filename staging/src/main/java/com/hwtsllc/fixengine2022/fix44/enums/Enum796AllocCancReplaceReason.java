@@ -20,6 +20,20 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum796AllocCancReplaceReason implements EnumAccessors, LogStringVerbose {
+    /**
+     *  796
+     *  AllocCancReplaceReason
+     *  Reason for cancelling or replacing an Allocation Instruction or Allocation Report message
+     *  Valid values:
+     *      1 - Original details incomplete or incorrect
+     *      2 - Change in underlying order details
+     *      99 - Other
+     *
+     *      or any value conforming to the data type Reserved100Plus
+     */
+    ORIGINAL_DETAILS_INCOMPLETE( "1", "ORIGINAL_DETAILS_INCOMPLETE", "1 - Original details incomplete or incorrect" ),
+    CHANGE_IN_UNDERLYING_ORDER( "2", "CHANGE_IN_UNDERLYING_ORDER", "2 - Change in underlying order details" ),
+    OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
     private final String id;

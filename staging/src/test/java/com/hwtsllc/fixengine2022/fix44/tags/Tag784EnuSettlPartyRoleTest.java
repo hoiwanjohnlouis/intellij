@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag784EnuSettlPartyRoleTest {
     @Test
     void FIX0784Test() {
-        FIX44 fixData = FIX44.FIX784_SETTL_PARTY_ROLE;
+        FIX44 fixData = FIX44.FIX784_ENU_SETTL_PARTY_ROLE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

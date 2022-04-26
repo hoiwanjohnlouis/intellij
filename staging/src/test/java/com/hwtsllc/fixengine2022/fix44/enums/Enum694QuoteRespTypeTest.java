@@ -40,49 +40,49 @@ class Enum694QuoteRespTypeTest {
         Enum694QuoteRespType enumType;
 
         enumType = Enum694QuoteRespType.HIT_OR_LIFT;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("HIT_OR_LIFT", enumType.getName());
+        assertEquals("1 - Hit/Lift", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum694QuoteRespType.COUNTER;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("COUNTER", enumType.getName());
+        assertEquals("2 - Counter", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum694QuoteRespType.EXPIRED;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("3", enumType.getID());
+        assertEquals("EXPIRED", enumType.getName());
+        assertEquals("3 - Expired", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum694QuoteRespType.COVER;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("4", enumType.getID());
+        assertEquals("COVER", enumType.getName());
+        assertEquals("4 - Cover", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum694QuoteRespType.DONE_AWAY;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("5", enumType.getID());
+        assertEquals("DONE_AWAY", enumType.getName());
+        assertEquals("5 - Done Away", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum694QuoteRespType.PASS;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("6", enumType.getID());
+        assertEquals("PASS", enumType.getName());
+        assertEquals("6 - Pass", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());

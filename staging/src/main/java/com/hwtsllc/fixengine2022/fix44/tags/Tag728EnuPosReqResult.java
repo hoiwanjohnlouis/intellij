@@ -22,6 +22,21 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum728PosReqResult;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  728
+ *  PosReqResult
+ *  Result of Request for Position
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  Valid values:
+ *      0 - Valid request
+ *      1 - Invalid or unsupported request
+ *      2 - No positions found that match criteria
+ *      3 - Not authorized to request positions
+ *      4 - Request for position not supported
+ *      99 - Other (use Text (58) in conjunction with this code for an explanation)
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public class Tag728EnuPosReqResult extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum728PosReqResult dataValue;
 

@@ -16,9 +16,79 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum744AssignmentMethod;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  744
+ *  AssignmentMethod
+ *  Method by which short positions are assigned to an exercise
+ *  notice during exercise and assignment processing
+ *  Valid values:
+ *      P - Pro-rata
+ *      R - Random
+ */
 public class Tag744EnuAssignmentMethod extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum744AssignmentMethod dataValue;
+
+    public final static Enum744AssignmentMethod TESTA_ENU_ASSIGNMENT_METHOD
+            = Enum744AssignmentMethod.PRO_RATA;
+    public final static Enum744AssignmentMethod TESTB_ENU_ASSIGNMENT_METHOD
+            = Enum744AssignmentMethod.RANDOM;
+
+    public Tag744EnuAssignmentMethod(Enum744AssignmentMethod dataValue) {
+        setFixType(FIX44.FIX744_ENU_ASSIGNMENT_METHOD);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag744EnuAssignmentMethod tagData;
+
+        tagData = new Tag744EnuAssignmentMethod(TESTA_ENU_ASSIGNMENT_METHOD);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag744EnuAssignmentMethod(TESTB_ENU_ASSIGNMENT_METHOD);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

@@ -40,33 +40,33 @@ class Enum690LegSwapTypeTest {
         Enum690LegSwapType enumType;
 
         enumType = Enum690LegSwapType.PAR_FOR_PAR;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("PAR_FOR_PAR", enumType.getName());
+        assertEquals("1 - Par For Par", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum690LegSwapType.MODIFIED_DURATION;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("MODIFIED_DURATION", enumType.getName());
+        assertEquals("2 - Modified Duration", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum690LegSwapType.RISK;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("4", enumType.getID());
+        assertEquals("RISK", enumType.getName());
+        assertEquals("4 - Risk", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum690LegSwapType.PROCEEDS;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("5", enumType.getID());
+        assertEquals("PROCEEDS", enumType.getName());
+        assertEquals("5 - Proceeds", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());

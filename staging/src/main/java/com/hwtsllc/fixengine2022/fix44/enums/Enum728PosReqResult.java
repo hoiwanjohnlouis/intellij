@@ -31,7 +31,7 @@ public enum Enum728PosReqResult implements EnumAccessors, LogStringVerbose {
      *      2 - No positions found that match criteria
      *      3 - Not authorized to request positions
      *      4 - Request for position not supported
-     *      99 - Other (use Text (58) in conjunction with this code for an explaination)
+     *      99 - Other (use Text (58) in conjunction with this code for an explanation)
      *
      *      or any value conforming to the data type Reserved100Plus
      */
@@ -40,7 +40,7 @@ public enum Enum728PosReqResult implements EnumAccessors, LogStringVerbose {
     NO_POSITIONS_FOUND( "2", "NO_POSITIONS_FOUND", "2 - No positions found that match criteria" ),
     NOT_AUTHORIZED( "3", "NOT_AUTHORIZED", "3 - Not authorized to request positions" ),
     REQUEST_NOT_SUPPORTED( "4", "REQUEST_NOT_SUPPORTED", "4 - Request for position not supported" ),
-    OTHER( "99", "OTHER", "99 - Other (use Text (58) in conjunction with this code for an explaination)" ),
+    OTHER( "99", "OTHER", "99 - Other (use Text (58) in conjunction with this code for an explanation)" ),
     ;
 
     private final String id;

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum775BookingType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag775EnuBookingTypeTest {
     @Test
     void FIX0775Test() {
-        FIX44 fixData = FIX44.FIX775_BOOKING_TYPE;
+        FIX44 fixData = FIX44.FIX775_ENU_BOOKING_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,9 +34,23 @@ class Tag775EnuBookingTypeTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  775
+     *  BookingType
+     *  Method for booking out this order.
+     *      Used when notifying a broker that an order to be settled by that broker
+     *      is to be booked out as an OTC derivative (e.g. CFD or similar).
+     *  Valid values:
+     *      0 - Regular booking
+     *      1 - CFD (Contract for difference)
+     *      2 - Total Return Swap
+     */
     @Test
     void Tag0775Test() {
         Tag775EnuBookingType tagData;
 
+        tagData = new Tag775EnuBookingType(Enum775BookingType.REGULAR_BOOKING);
+        tagData = new Tag775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
+        tagData = new Tag775EnuBookingType(Enum775BookingType.TOTAL_RETURN_SWAP);
     }
 }

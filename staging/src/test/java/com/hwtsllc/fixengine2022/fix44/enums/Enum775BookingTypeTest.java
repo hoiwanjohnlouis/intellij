@@ -16,12 +16,37 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum775BookingTypeTest {
+    /**
+     *  775
+     *  BookingType
+     *  Method for booking out this order.
+     *      Used when notifying a broker that an order to be settled by that broker
+     *      is to be booked out as an OTC derivative (e.g. CFD or similar).
+     *  Valid values:
+     *      0 - Regular booking
+     *      1 - CFD (Contract for difference)
+     *      2 - Total Return Swap
+     */
     @Test
     void EnumTest() {
         Enum775BookingType enumType;
 
+        enumType = Enum775BookingType.REGULAR_BOOKING;
+        enumType = Enum775BookingType.CONTRACT_FOR_DIFFERENCE;
+        enumType = Enum775BookingType.TOTAL_RETURN_SWAP;
+        assertEquals("", enumType.getDescription());
+
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

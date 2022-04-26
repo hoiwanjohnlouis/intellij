@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum729PosReqStatus;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  729
+ *  PosReqStatus
+ *  Status of Request for Positions
+ *  Valid values:
+ *      0 - Completed
+ *      1 - Completed With Warnings
+ *      2 - Rejected
+ */
 public class Tag729EnuPosReqStatus extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum729PosReqStatus dataValue;
 

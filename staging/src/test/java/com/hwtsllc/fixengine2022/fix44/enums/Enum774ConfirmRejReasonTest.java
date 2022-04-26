@@ -16,12 +16,37 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum774ConfirmRejReasonTest {
+    /**
+     *  774
+     *  ConfirmRejReason
+     *  Identifies the reason for rejecting a Confirmation.
+     *  Valid values:
+     *      1 - Mismatched account
+     *      2 - Missing settlement instructions
+     *      99 - Other
+     *
+     *      or any value conforming to the data type Reserved100Plus
+     */
     @Test
     void EnumTest() {
         Enum774ConfirmRejReason enumType;
 
+        enumType = Enum774ConfirmRejReason.MISMATCHED_ACCOUNT;
+        enumType = Enum774ConfirmRejReason.MISSING_INSTRUCTIONS;
+        enumType = Enum774ConfirmRejReason.OTHER;
+        assertEquals("", enumType.getDescription());
+
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

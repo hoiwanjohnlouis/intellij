@@ -16,12 +16,49 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum752SideMultiLegReportingTypeTest {
+    /**
+     *  752
+     *  SideMultiLegReportingType
+     *  Used to indicate if the side being reported on Trade Capture Report
+     *  represents a leg of a multileg instrument or a single security.
+     *  Valid values:
+     *      1 - Single Security (default if not specified)
+     *      2 - Individual leg of a multileg security
+     *      3 - Multileg Security
+     */
     @Test
     void EnumTest() {
         Enum752SideMultiLegReportingType enumType;
 
+        enumType = Enum752SideMultiLegReportingType.SINGLE_SECURITY;
+        assertEquals( "1", enumType.getID());
+        assertEquals( "SINGLE_SECURITY", enumType.getName());
+        assertEquals( "1 - Single Security (default if not specified)", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum752SideMultiLegReportingType.INDIVIDUAL_LEG;
+        assertEquals( "2", enumType.getID());
+        assertEquals( "INDIVIDUAL_LEG", enumType.getName());
+        assertEquals( "2 - Individual leg of a multileg security", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum752SideMultiLegReportingType.MULTILEG_SECURITY;
+        assertEquals( "3", enumType.getID());
+        assertEquals( "MULTILEG_SECURITY", enumType.getName());
+        assertEquals( "3 - Multileg Security", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

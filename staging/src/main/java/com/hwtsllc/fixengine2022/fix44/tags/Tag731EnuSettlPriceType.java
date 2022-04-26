@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum731SettlPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  731 (same as 731, 733)
+ *  SettlPriceType
+ *  Type of settlement price
+ *  Valid values:
+ *      1 - Final
+ *      2 - Theoretical
+ */
 public class Tag731EnuSettlPriceType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum731SettlPriceType dataValue;
 

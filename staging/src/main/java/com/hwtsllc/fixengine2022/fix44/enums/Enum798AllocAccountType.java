@@ -34,7 +34,6 @@ public enum Enum798AllocAccountType implements EnumAccessors, LogStringVerbose {
      *      8 - Joint back office account (JBO)
      */
 
-
     /*
      *  1-4, types
      */
@@ -42,7 +41,6 @@ public enum Enum798AllocAccountType implements EnumAccessors, LogStringVerbose {
     NON_CUSTOMER_BOOK( "2", "NON_CUSTOMER_BOOK", "2 - Account is carried on non-customer side of books" ),
     HOUSE_TRADER( "3", "HOUSE_TRADER", "3 - House Trader" ),
     FLOOR_TRADER( "4", "FLOOR_TRADER", "4 - Floor Trader" ),
-
 
     /*
      *  6-8 types

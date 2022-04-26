@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,9 +34,39 @@ class Tag665EnuConfirmStatusTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  665
+     *  Identifies the status of the Confirmation.
+     *  ConfirmStatus
+     *  Valid values:
+     *      1 - Received
+     *      2 - Mismatched Account
+     *      3 - Missing Settlement Instructions
+     *      4 - Confirmed
+     *      5 - Request Rejected
+     */
     @Test
     void Tag0665Test() {
         Tag665EnuConfirmStatus tagData;
 
+        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.RECEIVED);
+        assertEquals( Enum665ConfirmStatus.RECEIVED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.MISMATCHED_ACCOUNT);
+        assertEquals( Enum665ConfirmStatus.MISMATCHED_ACCOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.MISSING_INSTRUCTIONS);
+        assertEquals( Enum665ConfirmStatus.MISSING_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.CONFIRMED);
+        assertEquals( Enum665ConfirmStatus.CONFIRMED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.REJECTED);
+        assertEquals( Enum665ConfirmStatus.REJECTED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

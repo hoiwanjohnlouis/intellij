@@ -45,7 +45,7 @@ class Tag728EnuPosReqResultTest {
      *      2 - No positions found that match criteria
      *      3 - Not authorized to request positions
      *      4 - Request for position not supported
-     *      99 - Other (use Text (58) in conjunction with this code for an explaination)
+     *      99 - Other (use Text (58) in conjunction with this code for an explanation)
      *
      *      or any value conforming to the data type Reserved100Plus
      */

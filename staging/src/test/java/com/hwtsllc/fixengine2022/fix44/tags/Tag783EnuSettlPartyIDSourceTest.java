@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag783EnuSettlPartyIDSourceTest {
     @Test
     void FIX0783Test() {
-        FIX44 fixData = FIX44.FIX783_SETTL_PARTY_ID_SOURCE;
+        FIX44 fixData = FIX44.FIX783_ENU_SETTL_PARTY_ID_SOURCE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());

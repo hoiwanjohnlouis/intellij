@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum744AssignmentMethod;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag744EnuAssignmentMethodTest {
     @Test
     void FIX0744Test() {
-        FIX44 fixData = FIX44.FIX744_ASSIGNMENT_METHOD;
+        FIX44 fixData = FIX44.FIX744_ENU_ASSIGNMENT_METHOD;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,9 +34,20 @@ class Tag744EnuAssignmentMethodTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  744
+     *  AssignmentMethod
+     *  Method by which short positions are assigned to an exercise
+     *  notice during exercise and assignment processing
+     *  Valid values:
+     *      P - Pro-rata
+     *      R - Random
+     */
     @Test
     void Tag0744Test() {
         Tag744EnuAssignmentMethod tagData;
 
+        tagData = new Tag744EnuAssignmentMethod(Enum744AssignmentMethod.PRO_RATA);
+        tagData = new Tag744EnuAssignmentMethod(Enum744AssignmentMethod.RANDOM);
     }
 }

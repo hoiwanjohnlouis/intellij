@@ -16,9 +16,81 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum774ConfirmRejReason;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  774
+ *  ConfirmRejReason
+ *  Identifies the reason for rejecting a Confirmation.
+ *  Valid values:
+ *      1 - Mismatched account
+ *      2 - Missing settlement instructions
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public class Tag774EnuConfirmRejReason extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum774ConfirmRejReason dataValue;
+
+    public final static Enum774ConfirmRejReason TESTA_ENU_CONFIRM_REJ_REASON
+            = Enum774ConfirmRejReason.MISMATCHED_ACCOUNT;
+    public final static Enum774ConfirmRejReason TESTB_ENU_CONFIRM_REJ_REASON
+            = Enum774ConfirmRejReason.OTHER;
+
+    public Tag774EnuConfirmRejReason(Enum774ConfirmRejReason dataValue) {
+        setFixType(FIX44.FIX774_ENU_CONFIRM_REJ_REASON);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag774EnuConfirmRejReason tagData;
+
+        tagData = new Tag774EnuConfirmRejReason(TESTA_ENU_CONFIRM_REJ_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag774EnuConfirmRejReason(TESTB_ENU_CONFIRM_REJ_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

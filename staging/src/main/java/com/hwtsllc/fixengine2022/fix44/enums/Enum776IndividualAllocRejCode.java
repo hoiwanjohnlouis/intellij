@@ -28,7 +28,7 @@ public enum Enum776IndividualAllocRejCode implements EnumAccessors, LogStringVer
      *  Valid values:
      *      0 - Unknown account(s)
      *      1 - Incorrect quantity
-     *      2 - Incorrect averageg price
+     *      2 - Incorrect average price
      *      3 - Unknown executing broker mnemonic
      *      4 - Commission difference
      *      5 - Unknown OrderID (37)

@@ -20,6 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum787DlvyInstType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  787
+     *  DlvyInstType
+     *  Used to indicate whether a delivery instruction is used for securities or cash settlement.
+     *  Valid values:
+     *      C - Cash
+     *      S - Securities
+     */
+    CASH( "C", "CASH", "C - Cash" ),
+    SECURITIES( "S", "SECURITIES", "S - Securities" ),
     ;
 
     private final String id;

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum747ExerciseMethod;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag747EnuExerciseMethodTest {
     @Test
     void FIX0747Test() {
-        FIX44 fixData = FIX44.FIX747_EXERCISE_METHOD;
+        FIX44 fixData = FIX44.FIX747_ENU_EXERCISE_METHOD;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,9 +34,19 @@ class Tag747EnuExerciseMethodTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  747
+     *  ExerciseMethod
+     *  Exercise Method used to in performing assignment.
+     *  Valid values:
+     *      A - Automatic
+     *      M - Manual
+     */
     @Test
     void Tag0747Test() {
         Tag747EnuExerciseMethod tagData;
 
+        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.AUTOMATIC);
+        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
     }
 }

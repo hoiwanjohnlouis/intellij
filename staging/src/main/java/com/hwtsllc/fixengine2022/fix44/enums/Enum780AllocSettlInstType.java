@@ -20,6 +20,23 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum780AllocSettlInstType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  780
+     *  AllocSettlInstType
+     *  Used to indicate whether settlement instructions are provided on an
+     *  allocation instruction message, and if not, how they are to be derived.
+     *  Valid values:
+     *      0 - Use default instructions
+     *      1 - Derive from parameters provided
+     *      2 - Full details provided
+     *      3 - SSI DB IDs provided
+     *      4 - Phone for instructions
+     */
+    USE_DEFAULTS( "0", "USE_DEFAULTS", "0 - Use default instructions" ),
+    DERIVE_FROM_PARAMETERS( "1", "DERIVE_FROM_PARAMETERS", "1 - Derive from parameters provided" ),
+    FULL_DETAILS( "2", "FULL_DETAILS", "2 - Full details provided" ),
+    SSI_DB_ID_PROVIDED( "3", "SSI_DB_ID_PROVIDED", "3 - SSI DB IDs provided" ),
+    PHONE_FOR_INSTRUCTIONS( "4", "PHONE_FOR_INSTRUCTIONS", "4 - Phone for instructions" ),
     ;
 
     private final String id;

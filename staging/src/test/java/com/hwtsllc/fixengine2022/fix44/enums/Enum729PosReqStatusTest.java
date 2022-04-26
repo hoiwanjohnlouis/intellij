@@ -37,12 +37,25 @@ class Enum729PosReqStatusTest {
         Enum729PosReqStatus enumType;
 
         enumType = Enum729PosReqStatus.COMPLETED;
+        assertEquals( "0", enumType.getID());
+        assertEquals( "COMPLETED", enumType.getName());
+        assertEquals( "0 - Completed", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = Enum729PosReqStatus.COMPLETED_WITH_WARNINGS;
+        assertEquals( "1", enumType.getID());
+        assertEquals( "COMPLETED_WITH_WARNINGS", enumType.getName());
+        assertEquals( "1 - Completed With Warnings", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum729PosReqStatus.REJECTED;
-        assertEquals( "", enumType.getID());
-        assertEquals( "", enumType.getName());
-        assertEquals( "", enumType.getDescription());
+        assertEquals( "2", enumType.getID());
+        assertEquals( "REJECTED", enumType.getName());
+        assertEquals( "2 - Rejected", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());

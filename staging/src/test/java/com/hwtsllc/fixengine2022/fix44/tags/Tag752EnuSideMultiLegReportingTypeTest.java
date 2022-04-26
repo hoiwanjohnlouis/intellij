@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag752EnuSideMultiLegReportingTypeTest {
     @Test
     void FIX0752Test() {
-        FIX44 fixData = FIX44.FIX752_SIDE_MULTI_LEG_REPORTING_TYPE;
+        FIX44 fixData = FIX44.FIX752_ENU_SIDE_MULTI_LEG_REPORTING_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,9 +34,22 @@ class Tag752EnuSideMultiLegReportingTypeTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  752
+     *  SideMultiLegReportingType
+     *  Used to indicate if the side being reported on Trade Capture Report
+     *  represents a leg of a multileg instrument or a single security.
+     *  Valid values:
+     *      1 - Single Security (default if not specified)
+     *      2 - Individual leg of a multileg security
+     *      3 - Multileg Security
+     */
     @Test
     void Tag0752Test() {
         Tag752EnuSideMultiLegReportingType tagData;
 
+        tagData = new Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.SINGLE_SECURITY);
+        tagData = new Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.INDIVIDUAL_LEG);
+        tagData = new Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.MULTILEG_SECURITY);
     }
 }

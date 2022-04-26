@@ -20,6 +20,28 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum770TrdRegTimestampType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  770
+     *  TrdRegTimestampType
+     *  Traded / Regulatory timestamp type.
+     *  Note of Applicability:
+     *      values are required in US futures markets by the CFTC to
+     *      support computerized trade reconstruction.
+     *      (see Volume : "Glossary" for value definitions)
+     *  Valid values:
+     *      1 - Execution Time
+     *      2 - Time In
+     *      3 - Time Out
+     *      4 - Broker Receipt
+     *      5 - Broker Execution
+     *      6 - Desk Receipt
+     */
+    EXECUTION_TIME( "1", "EXECUTION_TIME", "1 - Execution Time" ),
+    TIME_IN( "2", "TIME_IN", "2 - Time In" ),
+    TIME_OUT( "3", "TIME_OUT", "3 - Time Out" ),
+    BROKER_RECEIPT( "4", "BROKER_RECEIPT", "4 - Broker Receipt" ),
+    BROKER_EXECUTION( "5", "BROKER_EXECUTION", "5 - Broker Execution" ),
+    DESK_RECEIPT( "6", "DESK_RECEIPT", "6 - Desk Receipt" ),
     ;
 
     private final String id;

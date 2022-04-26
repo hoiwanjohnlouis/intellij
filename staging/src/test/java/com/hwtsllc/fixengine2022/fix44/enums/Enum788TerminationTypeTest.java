@@ -16,12 +16,57 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum788TerminationTypeTest {
+    /**
+     *  788
+     *  TerminationType
+     *  Type of financing termination.
+     *  Valid values:
+     *      1 - Overnight
+     *      2 - Term
+     *      3 - Flexible
+     *      4 - Open
+     */
     @Test
     void EnumTest() {
         Enum788TerminationType enumType;
 
+        enumType = Enum788TerminationType.OVERNIGHT;
+        assertEquals("1", enumType.getID());
+        assertEquals("OVERNIGHT", enumType.getName());
+        assertEquals("1 - Overnight", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum788TerminationType.TERM;
+        assertEquals("2", enumType.getID());
+        assertEquals("TERM", enumType.getName());
+        assertEquals("2 - Term", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum788TerminationType.FLEXIBLE;
+        assertEquals("3", enumType.getID());
+        assertEquals("FLEXIBLE", enumType.getName());
+        assertEquals("3 - Flexible", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum788TerminationType.OPEN;
+        assertEquals("4", enumType.getID());
+        assertEquals("OPEN", enumType.getName());
+        assertEquals("4 - Open", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -22,6 +22,27 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum776IndividualAllocRejCode;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  776 (same as 88, 776)
+ *  IndividualAllocRejCode
+ *  Identified reason for rejecting an individual AllocAccount (79) detail.
+ *        Same values as  AllocRejCode (88)
+ *  Valid values:
+ *      0 - Unknown account(s)
+ *      1 - Incorrect quantity
+ *      2 - Incorrect average price
+ *      3 - Unknown executing broker mnemonic
+ *      4 - Commission difference
+ *      5 - Unknown OrderID (37)
+ *      6 - Unknown ListID (66)
+ *      7 - Other (further in Text (58))
+ *      8 - Incorrect allocated quantity
+ *      9 - Calculation difference
+ *      10 - Unknown or stale ExecID
+ *      11 - Mismatched data
+ *      12 - Unknown ClOrdID
+ *      13 - Warehouse request rejected
+ */
 public class Tag776EnuIndividualAllocRejCode extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum776IndividualAllocRejCode dataValue;
 

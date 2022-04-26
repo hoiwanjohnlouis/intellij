@@ -16,9 +16,80 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  752
+ *  SideMultiLegReportingType
+ *  Used to indicate if the side being reported on Trade Capture Report
+ *  represents a leg of a multileg instrument or a single security.
+ *  Valid values:
+ *      1 - Single Security (default if not specified)
+ *      2 - Individual leg of a multileg security
+ *      3 - Multileg Security
+ */
 public class Tag752EnuSideMultiLegReportingType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum752SideMultiLegReportingType dataValue;
+
+    public final static Enum752SideMultiLegReportingType TESTA_ENU_SIDE_MULTI_LEG_REPORTING_TYPE
+            = Enum752SideMultiLegReportingType.SINGLE_SECURITY;
+    public final static Enum752SideMultiLegReportingType TESTB_ENU_SIDE_MULTI_LEG_REPORTING_TYPE
+            = Enum752SideMultiLegReportingType.MULTILEG_SECURITY;
+
+    public Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType dataValue) {
+        setFixType(FIX44.FIX752_ENU_SIDE_MULTI_LEG_REPORTING_TYPE);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag752EnuSideMultiLegReportingType tagData;
+
+        tagData = new Tag752EnuSideMultiLegReportingType(TESTA_ENU_SIDE_MULTI_LEG_REPORTING_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag752EnuSideMultiLegReportingType(TESTB_ENU_SIDE_MULTI_LEG_REPORTING_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

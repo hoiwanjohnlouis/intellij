@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum716SettlSessID;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  716
+ *  SettlSessID
+ *  Identifies a specific settlement session
+ *  Valid values:
+ *      ITD - Intraday
+ *      RTH - Regular Trading Hours
+ *      ETH - Electronic Trading Hours
+ *      EOD - End Of Day
+ */
 public class Tag716EnuSettlSessID extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum716SettlSessID dataValue;
 

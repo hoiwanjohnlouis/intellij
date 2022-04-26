@@ -16,12 +16,39 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum747ExerciseMethodTest {
+    /**
+     *  747
+     *  ExerciseMethod
+     *  Exercise Method used to in performing assignment.
+     *  Valid values:
+     *      A - Automatic
+     *      M - Manual
+     */
     @Test
     void EnumTest() {
         Enum747ExerciseMethod enumType;
 
+        enumType = Enum747ExerciseMethod.AUTOMATIC;
+        assertEquals( "A", enumType.getID());
+        assertEquals( "AUTOMATIC", enumType.getName());
+        assertEquals( "A - Automatic", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum747ExerciseMethod.MANUAL;
+        assertEquals( "M", enumType.getID());
+        assertEquals( "MANUAL", enumType.getName());
+        assertEquals( "M - Manual", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

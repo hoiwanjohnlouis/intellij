@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag759EnuNested2PartyRoleTest {
     @Test
     void FIX0759Test() {
-        FIX44 fixData = FIX44.FIX759_NESTED_2_PARTY_ROLE;
+        FIX44 fixData = FIX44.FIX759_ENU_NESTED_2_PARTY_ROLE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,6 +33,96 @@ class Tag759EnuNested2PartyRoleTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  759 (same as 452, 538, 759, 784, 951, 1051, 1061, 1119)
+     *  Nested2PartyRole
+     *  PartyRole value within a "second instance" Nested repeating group.
+     *              Same values as  PartyRole (452)
+     *  Valid values:
+     *      1 - Executing Firm (formerly FIX 4.2 ExecBroker)
+     *      2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)
+     *      3 - Client ID (formerly FIX 4.2 ClientID)
+     *      4 - Clearing Firm (formerly FIX 4.2 ClearingFirm)
+     *      5 - Investor ID
+     *      6 - Introducing Firm
+     *      7 - Entering Firm
+     *      8 - Locate / Lending Firm (for short-sales)
+     *      9 - Fund Manager Client ID (for CIV)
+     *      10 - Settlement Location (formerly FIX 4.2 SettlLocation)
+     *      11 - Order Origination Trader
+     *              (associated with Order Origination Firm
+     *                  - i.e. trader who initiates/submits the order)
+     *      12 - Executing Trader
+     *              (associated with Executing Firm - actually executes)
+     *      13 - Order Origination Firm (e.g. buy-side firm)
+     *      14 - Giveup Clearing Firm (firm to which trade is given up)
+     *      15 - Correspondant Clearing Firm
+     *      16 - Executing System
+     *      17 - Contra Firm
+     *      18 - Contra Clearing Firm
+     *      19 - Sponsoring Firm
+     *      20 - Underlying Contra Firm
+     *      21 - Clearing Organization
+     *      22 - Exchange
+     *      24 - Customer Account
+     *      25 - Correspondent Clearing Organization
+     *      26 - Correspondent Broker
+     *      27 - Buyer/Seller (Receiver/Deliverer)
+     *      28 - Custodian
+     *      29 - Intermediary
+     *      30 - Agent
+     *      31 - Sub-custodian
+     *      32 - Beneficiary
+     *      33 - Interested party
+     *      34 - Regulatory body
+     *      35 - Liquidity provider
+     *      36 - Entering trader
+     *      37 - Contra trader
+     *      38 - Position account
+     *      39 - Contra Investor ID
+     *      40 - Transfer to Firm
+     *      41 - Contra Position Account
+     *      42 - Contra Exchange
+     *      43 - Internal Carry Account
+     *      44 - Order Entry Operator ID
+     *      45 - Secondary Account Number
+     *      46 - Foreign Firm
+     *      47 - Third Party Allocation Firm
+     *      48 - Claiming Account
+     *      49 - Asset Manager
+     *      50 - Pledgor Account
+     *      51 - Pledgee Account
+     *      52 - Large Trader Reportable Account
+     *      53 - Trader mnemonic
+     *      54 - Sender Location
+     *      55 - Session ID
+     *      56 - Acceptable Counterparty
+     *      57 - Unacceptable Counterparty
+     *      58 - Entering Unit
+     *      59 - Executing Unit
+     *      60 - Introducing Broker
+     *      61 - Quote originator
+     *      62 - Report originator
+     *      63 - Systematic internaliser (SI)
+     *      64 - Multilateral Trading Facility (MTF)
+     *      65 - Regulated Market (RM)
+     *      66 - Market Maker
+     *      67 - Investment Firm
+     *      68 - Host Competent Authority (Host CA)
+     *      69 - Home Competent Authority (Home CA)
+     *      70 - Competent Authority of the most relevant market in terms of liquidity
+     *              (CAL)
+     *      71 - Competent Authority of the Transaction (Execution) Venue
+     *              (CATV)
+     *      72 - Reporting intermediary
+     *              (medium/vendor via which report has been published)
+     *      73 - Execution Venue
+     *      74 - Market data entry originator
+     *      75 - Location ID
+     *      76 - Desk ID
+     *      77 - Market data market
+     *      78 - Allocation Entity
+     */
     @Test
     void Tag0759Test() {
         Tag759EnuNested2PartyRole tagData;

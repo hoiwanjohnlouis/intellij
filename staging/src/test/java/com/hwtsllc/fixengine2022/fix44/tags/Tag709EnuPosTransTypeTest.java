@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag709EnuPosTransTypeTest {
     @Test
     void FIX0709Test() {
-        FIX44 fixData = FIX44.FIX709_POS_TRANS_TYPE;
+        FIX44 fixData = FIX44.FIX709_ENU_POS_TRANS_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,9 +33,22 @@ class Tag709EnuPosTransTypeTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  709
+     *  PosTransType
+     *  Identifies the type of position transaction
+     *  Valid values:
+     *      1 - Exercise
+     *      2 - Do Not Exercise
+     *      3 - Position Adjustment
+     *      4 - Position Change Submission or Margin Disposition
+     *      5 - Pledge
+     *      6 - Large Trader Submission
+     */
     @Test
     void Tag0709Test() {
         Tag709EnuPosTransType tagData;
+
 
     }
 }

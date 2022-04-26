@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum660AcctIDSource;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,9 +34,45 @@ class Tag660EnuAcctIDSourceTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  660 (same as 660, 661)
+     *  Used to identify the source of the Account (1) code.
+     *  This is especially useful if the account is a new account that the Respondent may not have setup yet in their system.
+     *  AcctIDSource
+     *  Valid values:
+     *      1 - BIC
+     *     	2 - SID Code
+     *      3 - TFM (GSPTA)
+     *     	4 - OMGEO (Alert ID)
+     *     	5 - DTCC Code
+     *     	99 - Other (custom or proprietary)
+     */
     @Test
     void Tag0660Test() {
         Tag660EnuAcctIDSource tagData;
 
+        tagData = new Tag660EnuAcctIDSource(Enum660AcctIDSource.BIC);
+        assertEquals( Enum660AcctIDSource.BIC.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag660EnuAcctIDSource(Enum660AcctIDSource.SID);
+        assertEquals( Enum660AcctIDSource.SID.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag660EnuAcctIDSource(Enum660AcctIDSource.TFM);
+        assertEquals( Enum660AcctIDSource.TFM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag660EnuAcctIDSource(Enum660AcctIDSource.OMGEO);
+        assertEquals( Enum660AcctIDSource.OMGEO.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag660EnuAcctIDSource(Enum660AcctIDSource.DTCC);
+        assertEquals( Enum660AcctIDSource.DTCC.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag660EnuAcctIDSource(Enum660AcctIDSource.OTHER);
+        assertEquals( Enum660AcctIDSource.OTHER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

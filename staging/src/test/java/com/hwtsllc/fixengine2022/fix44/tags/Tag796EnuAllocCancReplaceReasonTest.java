@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag796EnuAllocCancReplaceReasonTest {
     @Test
     void FIX0796Test() {
-        FIX44 fixData = FIX44.FIX796_ALLOC_CANC_REPLACE_REASON;
+        FIX44 fixData = FIX44.FIX796_ENU_ALLOC_CANC_REPLACE_REASON;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,6 +33,17 @@ class Tag796EnuAllocCancReplaceReasonTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  796
+     *  AllocCancReplaceReason
+     *  Reason for cancelling or replacing an Allocation Instruction or Allocation Report message
+     *  Valid values:
+     *      1 - Original details incomplete or incorrect
+     *      2 - Change in underlying order details
+     *      99 - Other
+     *
+     *      or any value conforming to the data type Reserved100Plus
+     */
     @Test
     void Tag0796Test() {
         Tag796EnuAllocCancReplaceReason tagData;

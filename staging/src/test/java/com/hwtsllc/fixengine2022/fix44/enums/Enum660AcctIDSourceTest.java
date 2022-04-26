@@ -41,49 +41,49 @@ class Enum660AcctIDSourceTest {
         Enum660AcctIDSource enumType;
 
         enumType = Enum660AcctIDSource.BIC;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("BIC", enumType.getName());
+        assertEquals("1 - BIC", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum660AcctIDSource.SID;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("SID", enumType.getName());
+        assertEquals("2 - SID Code", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum660AcctIDSource.TFM;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("3", enumType.getID());
+        assertEquals("TFM", enumType.getName());
+        assertEquals("3 - TFM (GSPTA)", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum660AcctIDSource.OMGEO;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("4", enumType.getID());
+        assertEquals("OMGEO", enumType.getName());
+        assertEquals("4 - OMGEO (Alert ID)", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum660AcctIDSource.DTCC;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("5", enumType.getID());
+        assertEquals("DTCC", enumType.getName());
+        assertEquals("5 - DTCC Code", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum660AcctIDSource.OTHER;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("", enumType.getDescription());
+        assertEquals("99", enumType.getID());
+        assertEquals("OTHER", enumType.getName());
+        assertEquals("99 - Other (custom or proprietary)", enumType.getDescription());
         assertNotEquals( FIX44.JUNK_ID, enumType.getID());
         assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());

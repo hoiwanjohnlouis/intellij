@@ -16,12 +16,37 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum773ConfirmTypeTest {
+    /**
+     *  773
+     *  ConfirmType
+     *  Identifies the type of Confirmation message being sent.
+     *  Valid values:
+     *      1 - Status
+     *      2 - Confirmation
+     *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+     */
     @Test
     void EnumTest() {
         Enum773ConfirmType enumType;
 
+        enumType = Enum773ConfirmType.STATUS;
+        assertEquals("", enumType.getDescription());
+        enumType = Enum773ConfirmType.CONFIRMATION;
+        assertEquals("", enumType.getDescription());
+        enumType = Enum773ConfirmType.CONFIRMATION_REJECTED;
+        assertEquals("", enumType.getDescription());
+
+        assertEquals("", enumType.getID());
+        assertEquals("", enumType.getName());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -16,12 +16,39 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum787DlvyInstTypeTest {
+    /**
+     *  787
+     *  DlvyInstType
+     *  Used to indicate whether a delivery instruction is used for securities or cash settlement.
+     *  Valid values:
+     *      C - Cash
+     *      S - Securities
+     */
     @Test
     void EnumTest() {
         Enum787DlvyInstType enumType;
 
+        enumType = Enum787DlvyInstType.CASH;
+        assertEquals("C", enumType.getID());
+        assertEquals("CASH", enumType.getName());
+        assertEquals("C - Cash", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum787DlvyInstType.SECURITIES;
+        assertEquals("S", enumType.getID());
+        assertEquals("SECURITIES", enumType.getName());
+        assertEquals("S - Securities", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

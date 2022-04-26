@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum694QuoteRespType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,9 +34,44 @@ class Tag694EnuQuoteRespTypeTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  694
+     *  QuoteRespType
+     *  Identifies the type of Quote Response.
+     *  Valid values:
+     *      1 - Hit/Lift
+     *      2 - Counter
+     *      3 - Expired
+     *      4 - Cover
+     *      5 - Done Away
+     *      6 - Pass
+     */
     @Test
     void Tag0694Test() {
         Tag694EnuQuoteRespType tagData;
 
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.HIT_OR_LIFT);
+        assertEquals( Enum694QuoteRespType.HIT_OR_LIFT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COUNTER);
+        assertEquals( Enum694QuoteRespType.COUNTER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.EXPIRED);
+        assertEquals( Enum694QuoteRespType.EXPIRED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COVER);
+        assertEquals( Enum694QuoteRespType.COVER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.DONE_AWAY);
+        assertEquals( Enum694QuoteRespType.DONE_AWAY.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.PASS);
+        assertEquals( Enum694QuoteRespType.PASS.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

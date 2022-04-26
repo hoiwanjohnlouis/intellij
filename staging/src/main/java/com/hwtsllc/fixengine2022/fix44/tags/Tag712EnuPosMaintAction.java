@@ -16,9 +16,83 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum712PosMaintAction;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  712
+ *  PosMaintAction
+ *  Maintenance Action to be performed.
+ *  Valid values:
+ *      1 - New - used to increment the overall transaction quantity
+ *      2 - Replace - used to override the overall transaction quantity
+ *                      or specifically add messages based on the reference ID
+ *      3 - Cancel - used to remove the overall transaction or specific
+ *                      add messages based on reference ID
+ *      4 - Reverse - used to completely back-out the transaction
+ *                      such that the transaction never existed
+ */
 public class Tag712EnuPosMaintAction extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum712PosMaintAction dataValue;
+
+    public final static Enum712PosMaintAction TESTA_ENU_POS_MAINT_ACTION
+            = Enum712PosMaintAction.CANCEL;
+    public final static Enum712PosMaintAction TESTB_ENU_POS_MAINT_ACTION
+            = Enum712PosMaintAction.REVERSE;
+
+    public Tag712EnuPosMaintAction(Enum712PosMaintAction dataValue) {
+        setFixType(FIX44.FIX712_ENU_POS_MAINT_ACTION);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag712EnuPosMaintAction tagData;
+
+        tagData = new Tag712EnuPosMaintAction(TESTA_ENU_POS_MAINT_ACTION);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag712EnuPosMaintAction(TESTB_ENU_POS_MAINT_ACTION);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

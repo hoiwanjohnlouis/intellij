@@ -22,6 +22,21 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum707PosAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  707
+ *  PosAmtType
+ *  Type of Position amount
+ *  Valid values:
+ *      CASH - Cash Amount (Corporate Event)
+ *      CRES - Cash Residual Amount
+ *      FMTM - Final Mark-to-Market Amount
+ *      IMTM - Incremental Mark-to-Market Amount
+ *      PREM - Premium Amount
+ *      SMTM - Start-of-Day Mark-to-Market Amount
+ *      TVAR - Trade Variation Amount
+ *      VADJ - Value Adjusted Amount
+ *      SETL - Settlement Value
+ */
 public class Tag707EnuPosAmtType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum707PosAmtType dataValue;
 

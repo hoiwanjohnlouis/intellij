@@ -20,6 +20,20 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum788TerminationType implements EnumAccessors, LogStringVerbose {
+    /**
+     *  788
+     *  TerminationType
+     *  Type of financing termination.
+     *  Valid values:
+     *      1 - Overnight
+     *      2 - Term
+     *      3 - Flexible
+     *      4 - Open
+     */
+    OVERNIGHT( "1", "OVERNIGHT", "1 - Overnight" ),
+    TERM( "2", "TERM", "2 - Term" ),
+    FLEXIBLE( "3", "FLEXIBLE", "3 - Flexible" ),
+    OPEN( "4", "OPEN", "4 - Open" ),
     ;
 
     private final String id;

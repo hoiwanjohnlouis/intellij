@@ -16,9 +16,85 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum751TradeReportRejectReason;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  751
+ *  TradeReportRejectReason
+ *  Reason Trade Capture Request was rejected.
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  Valid values:
+ *      0 - Successful (default)
+ *      1 - Invalid party information
+ *      2 - Unknown instrument
+ *      3 - Unauthorized to report trades
+ *      4 - Invalid trade type
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public class Tag751EnuTradeReportRejectReason extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum751TradeReportRejectReason dataValue;
+
+    public final static Enum751TradeReportRejectReason TESTA_ENU_TRADE_REPORT_REJECT_REASON
+            = Enum751TradeReportRejectReason.INVALID_TRADE_TYPE;
+    public final static Enum751TradeReportRejectReason TESTB_ENU_TRADE_REPORT_REJECT_REASON
+            = Enum751TradeReportRejectReason.SUCCESSFUL;
+
+    public Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason dataValue) {
+        setFixType(FIX44.FIX751_ENU_TRADE_REPORT_REJECT_REASON);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag751EnuTradeReportRejectReason tagData;
+
+        tagData = new Tag751EnuTradeReportRejectReason(TESTA_ENU_TRADE_REPORT_REJECT_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag751EnuTradeReportRejectReason(TESTB_ENU_TRADE_REPORT_REJECT_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

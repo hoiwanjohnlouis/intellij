@@ -20,6 +20,21 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum723PosMaintResult implements EnumAccessors, LogStringVerbose {
+    /**
+     * 723
+     * PosMaintResult
+     * Result of Position Maintenance Request.
+     * 4000+ Reserved and available for bi-laterally agreed upon user-defined values
+     * Valid values:
+     * 0 - Successful Completion - no warnings or errors
+     * 1 - Rejected
+     * 99 - Other
+     * <p>
+     * or any value conforming to the data type Reserved100Plus
+     */
+    SUCCESSFUL("0", "SUCCESSFUL", "0 - Successful Completion - no warnings or errors"),
+    REJECTED("1", "REJECTED", "1 - Rejected"),
+    OTHER("99", "OTHER", "99 - Other"),
     ;
 
     private final String id;
@@ -39,6 +54,7 @@ public enum Enum723PosMaintResult implements EnumAccessors, LogStringVerbose {
     public String getEnumName() {
         return this.name();
     }
+
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
@@ -46,6 +62,7 @@ public enum Enum723PosMaintResult implements EnumAccessors, LogStringVerbose {
     public String getID() {
         return id;
     }
+
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
@@ -53,6 +70,7 @@ public enum Enum723PosMaintResult implements EnumAccessors, LogStringVerbose {
     public String getName() {
         return name;
     }
+
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
@@ -60,6 +78,7 @@ public enum Enum723PosMaintResult implements EnumAccessors, LogStringVerbose {
     public String getDescription() {
         return description;
     }
+
     /**
      * standard wrapper to format a detailed string describing this enum
      */
@@ -79,6 +98,7 @@ public enum Enum723PosMaintResult implements EnumAccessors, LogStringVerbose {
                 .concat(getDescription())
                 .concat("]");
     }
+
     /**
      * standard wrapper to format a simple string describing this enum
      */

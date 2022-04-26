@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum780AllocSettlInstType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag780EnuAllocSettlInstTypeTest {
     @Test
     void FIX0780Test() {
-        FIX44 fixData = FIX44.FIX780_ALLOC_SETTL_INST_TYPE;
+        FIX44 fixData = FIX44.FIX780_ENU_ALLOC_SETTL_INST_TYPE;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,9 +34,26 @@ class Tag780EnuAllocSettlInstTypeTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  780
+     *  AllocSettlInstType
+     *  Used to indicate whether settlement instructions are provided on an
+     *  allocation instruction message, and if not, how they are to be derived.
+     *  Valid values:
+     *      0 - Use default instructions
+     *      1 - Derive from parameters provided
+     *      2 - Full details provided
+     *      3 - SSI DB IDs provided
+     *      4 - Phone for instructions
+     */
     @Test
     void Tag0780Test() {
         Tag780EnuAllocSettlInstType tagData;
 
+        tagData = Enum780AllocSettlInstType.USE_DEFAULTS;
+        tagData = Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS;
+        tagData = Enum780AllocSettlInstType.FULL_DETAILS;
+        tagData = Enum780AllocSettlInstType.SSI_DB_ID_PROVIDED;
+        tagData = Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS;
     }
 }

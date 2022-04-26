@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum751TradeReportRejectReason;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag751EnuTradeReportRejectReasonTest {
     @Test
     void FIX0751Test() {
-        FIX44 fixData = FIX44.FIX751_TRADE_REPORT_REJECT_REASON;
+        FIX44 fixData = FIX44.FIX751_ENU_TRADE_REPORT_REJECT_REASON;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
@@ -33,9 +34,30 @@ class Tag751EnuTradeReportRejectReasonTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  751
+     *  TradeReportRejectReason
+     *  Reason Trade Capture Request was rejected.
+     *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+     *  Valid values:
+     *      0 - Successful (default)
+     *      1 - Invalid party information
+     *      2 - Unknown instrument
+     *      3 - Unauthorized to report trades
+     *      4 - Invalid trade type
+     *      99 - Other
+     *
+     *      or any value conforming to the data type Reserved100Plus
+     */
     @Test
     void Tag0751Test() {
         Tag751EnuTradeReportRejectReason tagData;
 
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.SUCCESSFUL);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_TRADE_TYPE);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.OTHER);
     }
 }

@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum724PosReqType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  724
+ *  PosReqType
+ *  Used to specify the type of position request being made.
+ *  Valid values:
+ *      0 - Positions
+ *      1 - Trades
+ *      2 - Exercises
+ *      3 - Assignments
+ *      4 - Settlement Activity
+ *      5 - Backout Message
+ */
 public class Tag724EnuPosReqType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum724PosReqType dataValue;
 

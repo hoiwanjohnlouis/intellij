@@ -40,7 +40,7 @@ public enum Enum104IOIQualifier implements EnumAccessors, LogStringVerbose {
      *      S - Portfolio Shown
      *      T - Through the Day
      *      V - Versus
-     *      W - Indidcation -  Working Away
+     *      W - Indication -  Working Away
      *      X - Crossing Opportunity
      *      Y - At the Midpoint
      *      Z - Pre-open

@@ -16,12 +16,40 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 class Enum744AssignmentMethodTest {
+    /**
+     *  744
+     *  AssignmentMethod
+     *  Method by which short positions are assigned to an exercise
+     *  notice during exercise and assignment processing
+     *  Valid values:
+     *      P - Pro-rata
+     *      R - Random
+     */
     @Test
     void EnumTest() {
         Enum744AssignmentMethod enumType;
 
+        enumType = Enum744AssignmentMethod.PRO_RATA;
+        assertEquals( "P", enumType.getID());
+        assertEquals( "PRO_RATA", enumType.getName());
+        assertEquals( "P - Pro-rat", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum744AssignmentMethod.RANDOM;
+        assertEquals( "R", enumType.getID());
+        assertEquals( "RANDOM", enumType.getName());
+        assertEquals( "R - Random", enumType.getDescription());
+        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
+        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
+        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

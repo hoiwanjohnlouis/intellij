@@ -20,6 +20,17 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum744AssignmentMethod implements EnumAccessors, LogStringVerbose {
+    /**
+     *  744
+     *  AssignmentMethod
+     *  Method by which short positions are assigned to an exercise
+     *  notice during exercise and assignment processing
+     *  Valid values:
+     *      P - Pro-rata
+     *      R - Random
+     */
+    PRO_RATA( "P", "PRO_RATA", "P - Pro-rata" ),
+    RANDOM( "R", "RANDOM", "R - Random" ),
     ;
 
     private final String id;

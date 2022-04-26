@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum723PosMaintResult;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ * 723
+ * PosMaintResult
+ * Result of Position Maintenance Request.
+ * 4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ * Valid values:
+ * 0 - Successful Completion - no warnings or errors
+ * 1 - Rejected
+ * 99 - Other
+ * <p>
+ * or any value conforming to the data type Reserved100Plus
+ */
 public class Tag723EnuPosMaintResult extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum723PosMaintResult dataValue;
 

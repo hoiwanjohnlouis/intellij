@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum682LegIOIQty;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,9 +34,40 @@ class Tag682EnuLegIOIQtyTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  682 (same as 27, 682)
+     *  LegIOIQty
+     *  Leg-specific IOI quantity.
+     *          See IOIQty (27) for description and valid values
+     *  Valid values:
+     *      0 - 1000000000
+     *      S - Small
+     *      M - Medium
+     *      L - Large
+     *      U - Undisclosed Quantity
+     */
     @Test
     void Tag0682Test() {
         Tag682EnuLegIOIQty tagData;
 
+        tagData = new Tag682EnuLegIOIQty(Enum682LegIOIQty.ONE_BILLION);
+        assertEquals( Enum682LegIOIQty.ONE_BILLION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag682EnuLegIOIQty(Enum682LegIOIQty.SMALL);
+        assertEquals( Enum682LegIOIQty.SMALL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag682EnuLegIOIQty(Enum682LegIOIQty.MEDIUM);
+        assertEquals( Enum682LegIOIQty.MEDIUM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag682EnuLegIOIQty(Enum682LegIOIQty.LARGE);
+        assertEquals( Enum682LegIOIQty.LARGE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag682EnuLegIOIQty(Enum682LegIOIQty.UNDISCLOSED_QUANTITY);
+        assertEquals( Enum682LegIOIQty.UNDISCLOSED_QUANTITY.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

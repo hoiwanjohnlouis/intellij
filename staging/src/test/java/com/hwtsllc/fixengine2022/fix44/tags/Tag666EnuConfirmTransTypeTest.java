@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum666ConfirmTransType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,9 +34,29 @@ class Tag666EnuConfirmTransTypeTest {
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  666
+     *  ConfirmTransType
+     *  Identifies the Confirmation transaction type.
+     *  Valid values:
+     *      0 - New
+     *      1 - Replace
+     *      2 - Cancel
+     */
     @Test
     void Tag0666Test() {
         Tag666EnuConfirmTransType tagData;
 
+        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.NEW);
+        assertEquals( Enum666ConfirmTransType.NEW.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.REPLACE);
+        assertEquals( Enum666ConfirmTransType.REPLACE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.CANCEL);
+        assertEquals( Enum666ConfirmTransType.CANCEL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }
