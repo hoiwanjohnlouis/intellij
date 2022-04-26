@@ -27,9 +27,9 @@ class Tag159AmtAccruedInterestAmtTest {
     @Test
     void FIX0159Test() {
         FIX41 fixData = FIX41.FIX159_AMT_ACCRUED_INTEREST_AMT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "159", fixData.getID());
+        assertEquals( "ACCRUED_INTEREST_AMT", fixData.getName());
+        assertEquals( "AccruedInterestAmt", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

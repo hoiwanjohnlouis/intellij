@@ -27,9 +27,9 @@ class Tag206StrOptAttributeTest {
     @Test
     void FIX0206Test() {
         FIX41 fixData = FIX41.FIX206_STR_OPT_ATTRIBUTE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "206", fixData.getID());
+        assertEquals( "OPT_ATTRIBUTE", fixData.getName());
+        assertEquals( "OptAttribute", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

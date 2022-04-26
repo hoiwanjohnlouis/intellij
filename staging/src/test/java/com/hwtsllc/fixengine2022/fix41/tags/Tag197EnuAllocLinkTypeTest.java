@@ -26,10 +26,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag197EnuAllocLinkTypeTest {
     @Test
     void FIX0197Test() {
-        FIX41 fixData = FIX41.FIX197_ALLOC_LINK_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX41 fixData = FIX41.FIX197_ENU_ALLOC_LINK_TYPE;
+        assertEquals( "197", fixData.getID());
+        assertEquals( "ALLOC_LINK_TYPE", fixData.getName());
+        assertEquals( "AllocLinkType", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,9 +27,9 @@ class Tag152QtyCashOrderQtyTest {
     @Test
     void FIX0152Test() {
         FIX41 fixData = FIX41.FIX152_QTY_CASH_ORDER_QTY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "152", fixData.getID());
+        assertEquals( "CASH_ORDER_QTY", fixData.getName());
+        assertEquals( "CashOrderQty", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

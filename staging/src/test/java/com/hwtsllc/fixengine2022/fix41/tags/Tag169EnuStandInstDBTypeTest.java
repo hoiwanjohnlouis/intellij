@@ -26,10 +26,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag169EnuStandInstDBTypeTest {
     @Test
     void FIX0169Test() {
-        FIX41 fixData = FIX41.FIX169_STAND_INST_DB_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX41 fixData = FIX41.FIX169_ENU_STAND_INST_DB_TYPE;
+        assertEquals( "169", fixData.getID());
+        assertEquals( "STAND_INST_DB_TYPE", fixData.getName());
+        assertEquals( "StandInstDbType", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

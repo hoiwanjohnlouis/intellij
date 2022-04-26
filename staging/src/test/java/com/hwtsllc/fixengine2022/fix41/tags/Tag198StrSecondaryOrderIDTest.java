@@ -27,9 +27,9 @@ class Tag198StrSecondaryOrderIDTest {
     @Test
     void FIX0198Test() {
         FIX41 fixData = FIX41.FIX198_STR_SECONDARY_ORDER_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "198", fixData.getID());
+        assertEquals( "SECONDARY_ORDER_ID", fixData.getName());
+        assertEquals( "SecondaryOrderId", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

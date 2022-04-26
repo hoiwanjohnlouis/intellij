@@ -27,9 +27,9 @@ class Tag203EnuCoveredOrUncoveredTest {
     @Test
     void FIX0203Test() {
         FIX41 fixData = FIX41.FIX203_ENU_COVERED_OR_UNCOVERED;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "203", fixData.getID());
+        assertEquals( "COVERED_OR_UNCOVERED", fixData.getName());
+        assertEquals( "CoveredOrUncovered", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

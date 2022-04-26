@@ -27,9 +27,9 @@ class Tag170StrStandInstDBNameTest {
     @Test
     void FIX0170Test() {
         FIX41 fixData = FIX41.FIX170_STR_STAND_INST_DB_NAME;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "170", fixData.getID());
+        assertEquals( "STAND_INST_DB_NAME", fixData.getName());
+        assertEquals( "StandInstDbName", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

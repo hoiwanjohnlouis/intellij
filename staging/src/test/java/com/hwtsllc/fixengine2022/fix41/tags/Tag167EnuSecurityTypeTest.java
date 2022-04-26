@@ -27,9 +27,9 @@ class Tag167EnuSecurityTypeTest {
     @Test
     void FIX0167Test() {
         FIX41 fixData = FIX41.FIX167_ENU_SECURITY_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "167", fixData.getID());
+        assertEquals( "SECURITY_TYPE", fixData.getName());
+        assertEquals( "SecurityType", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

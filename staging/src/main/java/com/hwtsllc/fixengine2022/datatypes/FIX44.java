@@ -29,6 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
  *                      COU = MyCountryType field
+ *                      DAT = MyDataType field
  *                      EXC = MyExchangeType field, saved as String
  *                      FLO = MyFloatType field, saved as String
  *                      INT = MyIntType field, saved as int
@@ -165,10 +166,10 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX754_BOOL_AUTO_ACCEPT_INDICATOR(754, "AUTO_ACCEPT_INDICATOR", "AutoAcceptIndicator"),
     FIX755_ALLOC_REPORT_ID(755, "ALLOC_REPORT_ID", "AllocReportID"),
     FIX756_NO_NESTED_2_PARTY_IDS(756, "NO_NESTED_2_PARTY_IDS", "NoNested2PartyIDs"),
-    FIX757_NESTED_2_PARTY_ID(757, "NESTED_2_PARTY_ID", "Nested2PartyID"),
+    FIX757_STR_NESTED_2_PARTY_ID(757, "NESTED_2_PARTY_ID", "Nested2PartyID"),
     FIX758_ENU_NESTED_2_PARTY_ID_SOURCE(758, "NESTED_2_PARTY_ID_SOURCE", "Nested2PartyIDSource"),
     FIX759_ENU_NESTED_2_PARTY_ROLE(759, "NESTED_2_PARTY_ROLE", "Nested2PartyRole"),
-    FIX760_NESTED_2_PARTY_SUB_ID(760, "NESTED_2_PARTY_SUB_ID", "Nested2PartySubID"),
+    FIX760_STR_NESTED_2_PARTY_SUB_ID(760, "NESTED_2_PARTY_SUB_ID", "Nested2PartySubID"),
 
     FIX761_ENU_BENCHMARK_SECURITY_ID_SOURCE(761, "BENCHMARK_SECURITY_ID_SOURCE", "BenchmarkSecurityIDSource"),
     FIX762_SECURITY_SUB_TYPE(762, "SECURITY_SUB_TYPE", "SecuritySubType"),
@@ -193,10 +194,10 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     FIX780_ENU_ALLOC_SETTL_INST_TYPE(780, "ALLOC_SETTL_INST_TYPE", "AllocSettlInstType"),
 
     FIX781_NO_SETTL_PARTY_IDS(781, "NO_SETTL_PARTY_IDS", "NoSettlPartyIDs"),
-    FIX782_SETTL_PARTY_ID(782, "SETTL_PARTY_ID", "SettlPartyID"),
+    FIX782_STR_SETTL_PARTY_ID(782, "SETTL_PARTY_ID", "SettlPartyID"),
     FIX783_ENU_SETTL_PARTY_ID_SOURCE(783, "SETTL_PARTY_ID_SOURCE", "SettlPartyIDSource"),
     FIX784_ENU_SETTL_PARTY_ROLE(784, "SETTL_PARTY_ROLE", "SettlPartyRole"),
-    FIX785_SETTL_PARTY_SUB_ID(785, "SETTL_PARTY_SUB_ID", "SettlPartySubID"),
+    FIX785_STR_SETTL_PARTY_SUB_ID(785, "SETTL_PARTY_SUB_ID", "SettlPartySubID"),
     FIX786_ENU_SETTL_PARTY_SUB_ID_TYPE(786, "SETTL_PARTY_SUB_ID_TYPE", "SettlPartySubIDType"),
     FIX787_ENU_DLVY_INST_TYPE(787, "DLVY_INST_TYPE", "DlvyInstType"),
     FIX788_ENU_TERMINATION_TYPE(788, "TERMINATION_TYPE", "TerminationType"),
@@ -419,6 +420,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
     public final static String JUNK_NAME = "JunkName";
     public final static String JUNK_DESCRIPTION = "JunkDescription";
     public final static double JUNK_AMT_DATA_VALUE = -65535D;
+    public final static String JUNK_DAT_DATA_VALUE = "JunkData";
     public final static String JUNK_EXC_DATA_VALUE = "JunkExchange";
     public final static float JUNK_FLO_DATA_VALUE = -65535F;
     public final static int JUNK_INT_DATA_VALUE = -65535;

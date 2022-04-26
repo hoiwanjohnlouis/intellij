@@ -27,9 +27,9 @@ class Tag165EnuSettlInstSourceTest {
     @Test
     void FIX0165Test() {
         FIX41 fixData = FIX41.FIX165_ENU_SETTL_INST_SOURCE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "165", fixData.getID());
+        assertEquals( "SETTL_INST_SOURCE", fixData.getName());
+        assertEquals( "SettlInstSource", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,9 +27,9 @@ class Tag153PrcAllocAvgPxTest {
     @Test
     void FIX0153Test() {
         FIX41 fixData = FIX41.FIX153_PRC_ALLOC_AVG_PX;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "153", fixData.getID());
+        assertEquals( "ALLOC_AVG_PX", fixData.getName());
+        assertEquals( "AllocAvgPx", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

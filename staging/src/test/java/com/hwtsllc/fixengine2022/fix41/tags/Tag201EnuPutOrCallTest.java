@@ -26,10 +26,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag201EnuPutOrCallTest {
     @Test
     void FIX0201Test() {
-        FIX41 fixData = FIX41.FIX201_PUT_OR_CALL;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX41 fixData = FIX41.FIX201_ENU_PUT_OR_CALL;
+        assertEquals( "201", fixData.getID());
+        assertEquals( "PUT_OR_CALL", fixData.getName());
+        assertEquals( "PutOrCall", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

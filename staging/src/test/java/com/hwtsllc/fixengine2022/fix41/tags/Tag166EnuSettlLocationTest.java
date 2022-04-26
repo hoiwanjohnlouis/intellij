@@ -27,10 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag166EnuSettlLocationTest {
     @Test
     void FIX0166Test() {
-        FIX41 fixData = FIX41.FIX166_SETTL_LOCATION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX41 fixData = FIX41.FIX166_ENU_SETTL_LOCATION;
+        assertEquals( "166", fixData.getID());
+        assertEquals( "SETTL_LOCATION", fixData.getName());
+        assertEquals( "SettlLocation", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

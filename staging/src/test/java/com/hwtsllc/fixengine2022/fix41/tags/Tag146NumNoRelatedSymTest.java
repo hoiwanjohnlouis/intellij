@@ -27,9 +27,9 @@ class Tag146NumNoRelatedSymTest {
     @Test
     void FIX0146Test() {
         FIX41 fixData = FIX41.FIX146_NUM_NO_RELATED_SYM;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "146", fixData.getID());
+        assertEquals( "NO_RELATED_SYM", fixData.getName());
+        assertEquals( "NoRelatedSym", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

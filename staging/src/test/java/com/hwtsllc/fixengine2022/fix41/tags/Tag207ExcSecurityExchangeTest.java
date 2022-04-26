@@ -27,9 +27,9 @@ class Tag207ExcSecurityExchangeTest {
     @Test
     void FIX0207Test() {
         FIX41 fixData = FIX41.FIX207_EXC_SECURITY_EXCHANGE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "207", fixData.getID());
+        assertEquals( "SECURITY_EXCHANGE", fixData.getName());
+        assertEquals( "SecurityExchange", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

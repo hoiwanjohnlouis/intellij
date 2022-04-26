@@ -29,6 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
  *                      COU = MyCountryType field
+ *                      DAT = MyDataType field
  *                      EXC = MyExchangeType field, saved as String
  *                      FLO = MyFloatType field, saved as String
  *                      INT = MyIntType field, saved as int
@@ -64,7 +65,7 @@ public enum FIX41 implements EnumAccessors, LogStringVerbose {
     FIX147_STR_SUBJECT(147, "SUBJECT", "Subject"),
     FIX148_STR_HEADLINE(148, "HEADLINE", "Headline"),
     FIX149_STR_URL_LINK(149, "URL_LINK", "URLLink"),
-    FIX150_EXEC_TYPE(150, "EXEC_TYPE", "ExecType"),
+    FIX150_ENU_EXEC_TYPE(150, "EXEC_TYPE", "ExecType"),
 
     FIX151_QTY_LEAVES_QTY(151, "LEAVES_QTY", "LeavesQty"),
     FIX152_QTY_CASH_ORDER_QTY(152, "CASH_ORDER_QTY", "CashOrderQty"),
@@ -75,17 +76,17 @@ public enum FIX41 implements EnumAccessors, LogStringVerbose {
     FIX157_INT_NUM_DAYS_INTEREST(157, "NUM_DAYS_INTEREST", "NumDaysInterest"),
     FIX158_PCT_ACCRUED_INTEREST_RATE(158, "ACCRUED_INTEREST_RATE", "AccruedInterestRate"),
     FIX159_AMT_ACCRUED_INTEREST_AMT(159, "ACCRUED_INTEREST_AMT", "AccruedInterestAmt"),
-    FIX160_SETTL_INST_MODE(160, "SETTL_INST_MODE", "SettlInstMode"),
+    FIX160_ENU_SETTL_INST_MODE(160, "SETTL_INST_MODE", "SettlInstMode"),
 
     FIX161_STR_ALLOC_TEXT(161, "ALLOC_TEXT", "AllocText"),
     FIX162_STR_SETTL_INST_ID(162, "SETTL_INST_ID", "SettlInstID"),
     FIX163_ENU_SETTL_INST_TRANS_TYPE(163, "SETTL_INST_TRANS_TYPE", "SettlInstTransType"),
     FIX164_STR_EMAIL_THREAD_ID(164, "EMAIL_THREAD_ID", "EmailThreadID"),
     FIX165_ENU_SETTL_INST_SOURCE(165, "SETTL_INST_SOURCE", "SettlInstSource"),
-    FIX166_SETTL_LOCATION(166, "SETTL_LOCATION", "SettlLocation (replaced)"),
+    FIX166_ENU_SETTL_LOCATION(166, "SETTL_LOCATION", "SettlLocation (replaced)"),
     FIX167_ENU_SECURITY_TYPE(167, "SECURITY_TYPE", "SecurityType"),
     FIX168_UTC_EFFECTIVE_TIME(168, "EFFECTIVE_TIME", "EffectiveTime"),
-    FIX169_STAND_INST_DB_TYPE(169, "STAND_INST_DB_TYPE", "StandInstDbType"),
+    FIX169_ENU_STAND_INST_DB_TYPE(169, "STAND_INST_DB_TYPE", "StandInstDbType"),
     FIX170_STR_STAND_INST_DB_NAME(170, "STAND_INST_DB_NAME", "StandInstDbName"),
 
     FIX171_STR_STAND_INST_DB_ID(171, "STAND_INST_DB_ID", "StandInstDbID"),
@@ -116,7 +117,7 @@ public enum FIX41 implements EnumAccessors, LogStringVerbose {
     FIX194_PRC_LAST_SPOT_RATE(194, "LAST_SPOT_RATE", "LastSpotRate"),
     FIX195_PXO_LAST_FORWARD_POINTS(195, "LAST_FORWARD_POINTS", "LastForwardPoints"),
     FIX196_STR_ALLOC_LINK_ID(196, "ALLOC_LINK_ID", "AllocLinkID"),
-    FIX197_ALLOC_LINK_TYPE(197, "ALLOC_LINK_TYPE", "AllocLinkType"),
+    FIX197_ENU_ALLOC_LINK_TYPE(197, "ALLOC_LINK_TYPE", "AllocLinkType"),
     FIX198_STR_SECONDARY_ORDER_ID(198, "SECONDARY_ORDER_ID", "SecondaryOrderID"),
     FIX199_NUM_NO_IOI_QUALIFIERS(199, "NO_IOI_QUALIFIERS", "NoIOIQualifiers"),
     FIX200_STR_MATURITY_MONTH_YEAR(200, "MATURITY_MONTH_YEAR", "MaturityMonthYear"),
@@ -124,7 +125,7 @@ public enum FIX41 implements EnumAccessors, LogStringVerbose {
 
     // 201-300
 
-    FIX201_PUT_OR_CALL(201, "PUT_OR_CALL", "PutOrCall (replaced)"),
+    FIX201_ENU_PUT_OR_CALL(201, "PUT_OR_CALL", "PutOrCall (replaced)"),
     FIX202_PRC_STRIKE_PRICE(202, "STRIKE_PRICE", "StrikePrice"),
     FIX203_ENU_COVERED_OR_UNCOVERED(203, "COVERED_OR_UNCOVERED", "CoveredOrUncovered"),
     FIX204_ENU_CUSTOMER_OR_FIRM(204, "CUSTOMER_OR_FIRM", "CustomerOrFirm (replaced)"),
@@ -165,6 +166,7 @@ public enum FIX41 implements EnumAccessors, LogStringVerbose {
     public final static String JUNK_NAME = "JunkName";
     public final static String JUNK_DESCRIPTION = "JunkDescription";
     public final static double JUNK_AMT_DATA_VALUE = -65535D;
+    public final static String JUNK_DAT_DATA_VALUE = "JunkData";
     public final static String JUNK_EXC_DATA_VALUE = "JunkExchange";
     public final static float JUNK_FLO_DATA_VALUE = -65535F;
     public final static int JUNK_INT_DATA_VALUE = -65535;

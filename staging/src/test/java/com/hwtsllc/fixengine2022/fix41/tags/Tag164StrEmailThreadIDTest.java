@@ -27,9 +27,9 @@ class Tag164StrEmailThreadIDTest {
     @Test
     void FIX0164Test() {
         FIX41 fixData = FIX41.FIX164_STR_EMAIL_THREAD_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "164", fixData.getID());
+        assertEquals( "EMAIL_THREAD_ID", fixData.getName());
+        assertEquals( "EmailThreadId", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

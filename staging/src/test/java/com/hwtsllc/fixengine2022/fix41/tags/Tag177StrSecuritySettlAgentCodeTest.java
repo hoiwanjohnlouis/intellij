@@ -27,9 +27,9 @@ class Tag177StrSecuritySettlAgentCodeTest {
     @Test
     void FIX0177Test() {
         FIX41 fixData = FIX41.FIX177_STR_SECURITY_SETTL_AGENT_CODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "177", fixData.getID());
+        assertEquals( "SECURITY_SETTL_AGENT_CODE", fixData.getName());
+        assertEquals( "SecuritySettlAgentCode", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

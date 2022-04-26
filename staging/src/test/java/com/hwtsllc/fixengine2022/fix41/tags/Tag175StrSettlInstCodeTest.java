@@ -27,9 +27,9 @@ class Tag175StrSettlInstCodeTest {
     @Test
     void FIX0175Test() {
         FIX41 fixData = FIX41.FIX175_STR_SETTL_INST_CODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "175", fixData.getID());
+        assertEquals( "SETTL_INST_CODE", fixData.getName());
+        assertEquals( "SettlInstCode", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

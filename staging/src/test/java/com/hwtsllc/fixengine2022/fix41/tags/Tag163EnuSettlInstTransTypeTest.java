@@ -27,9 +27,9 @@ class Tag163EnuSettlInstTransTypeTest {
     @Test
     void FIX0163Test() {
         FIX41 fixData = FIX41.FIX163_ENU_SETTL_INST_TRANS_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "163", fixData.getID());
+        assertEquals( "SETTL_INST_TRANS_TYPE", fixData.getName());
+        assertEquals( "SettlInstTransType", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

@@ -26,10 +26,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag160EnuSettlInstModeTest {
     @Test
     void FIX0160Test() {
-        FIX41 fixData = FIX41.FIX160_SETTL_INST_MODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX41 fixData = FIX41.FIX160_ENU_SETTL_INST_MODE;
+        assertEquals( "160", fixData.getID());
+        assertEquals( "SETTL_INST_MODE", fixData.getName());
+        assertEquals( "SettlInstMode", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

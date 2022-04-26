@@ -28,9 +28,9 @@ class Tag205IntMaturityDayTest {
     @Test
     void FIX0205Test() {
         FIX41 fixData = FIX41.FIX205_INT_MATURITY_DAY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "205", fixData.getID());
+        assertEquals( "MATURITY_DAY", fixData.getName());
+        assertEquals( "MaturityDay", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,9 +27,9 @@ class Tag158PctAccruedInterestRateTest {
     @Test
     void FIX0158Test() {
         FIX41 fixData = FIX41.FIX158_PCT_ACCRUED_INTEREST_RATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "158", fixData.getID());
+        assertEquals( "ACCRUED_INTEREST_RATE", fixData.getName());
+        assertEquals( "AccruedInterestRate", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

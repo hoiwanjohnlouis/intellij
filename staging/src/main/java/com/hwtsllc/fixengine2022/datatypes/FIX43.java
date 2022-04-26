@@ -29,6 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
  *                      COU = MyCountryType field
+ *                      DAT = MyDataType field
  *                      EXC = MyExchangeType field, saved as String
  *                      FLO = MyFloatType field, saved as String
  *                      INT = MyIntType field, saved as int
@@ -323,6 +324,7 @@ public enum FIX43 implements EnumAccessors, LogStringVerbose {
     public final static String JUNK_NAME = "JunkName";
     public final static String JUNK_DESCRIPTION = "JunkDescription";
     public final static double JUNK_AMT_DATA_VALUE = -65535D;
+    public final static String JUNK_DAT_DATA_VALUE = "JunkData";
     public final static String JUNK_EXC_DATA_VALUE = "JunkExchange";
     public final static float JUNK_FLO_DATA_VALUE = -65535F;
     public final static int JUNK_INT_DATA_VALUE = -65535;

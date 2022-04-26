@@ -28,9 +28,9 @@ class Tag204EnuCustomerOrFirmTest {
     @Test
     void FIX0204Test() {
         FIX41 fixData = FIX41.FIX204_ENU_CUSTOMER_OR_FIRM;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "204", fixData.getID());
+        assertEquals( "CUSTOMER_OR_FIRM", fixData.getName());
+        assertEquals( "CustomerOrFirm", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

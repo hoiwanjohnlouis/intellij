@@ -27,9 +27,9 @@ class Tag209EnuAllocHandlInstTest {
     @Test
     void FIX0209Test() {
         FIX41 fixData = FIX41.FIX209_ENU_ALLOC_HANDL_INST;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "209", fixData.getID());
+        assertEquals( "ALLOC_HANDL_INST", fixData.getName());
+        assertEquals( "AllocHandlInst", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,9 +27,9 @@ class Tag208BoolNotifyBrokerOfCreditTest {
     @Test
     void FIX0208Test() {
         FIX41 fixData = FIX41.FIX208_BOOL_NOTIFY_BROKER_OF_CREDIT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "208", fixData.getID());
+        assertEquals( "NOTIFY_BROKER_OF_CREDIT", fixData.getName());
+        assertEquals( "NotifyBrokerOfCredit", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

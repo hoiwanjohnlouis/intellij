@@ -27,9 +27,9 @@ class Tag154AmtAllocNetMoneyTest {
     @Test
     void FIX0154Test() {
         FIX41 fixData = FIX41.FIX154_AMT_ALLOC_NET_MONEY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "154", fixData.getID());
+        assertEquals( "ALLOC_NET_MONEY", fixData.getName());
+        assertEquals( "AllocNetMoney", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

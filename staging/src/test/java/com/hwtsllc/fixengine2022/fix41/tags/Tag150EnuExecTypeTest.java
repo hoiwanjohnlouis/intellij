@@ -26,10 +26,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag150EnuExecTypeTest {
     @Test
     void FIX0150Test() {
-        FIX41 fixData = FIX41.FIX150_EXEC_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX41 fixData = FIX41.FIX150_ENU_EXEC_TYPE;
+        assertEquals( "150", fixData.getID());
+        assertEquals( "EXEC_TYPE", fixData.getName());
+        assertEquals( "ExecType", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

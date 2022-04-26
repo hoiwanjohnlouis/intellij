@@ -27,9 +27,9 @@ class Tag148StrHeadlineTest {
     @Test
     void FIX0148Test() {
         FIX41 fixData = FIX41.FIX148_STR_HEADLINE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "148", fixData.getID());
+        assertEquals( "HEADLINE", fixData.getName());
+        assertEquals( "Headline", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

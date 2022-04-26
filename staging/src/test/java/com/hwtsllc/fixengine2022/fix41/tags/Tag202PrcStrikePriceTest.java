@@ -27,9 +27,9 @@ class Tag202PrcStrikePriceTest {
     @Test
     void FIX0202Test() {
         FIX41 fixData = FIX41.FIX202_PRC_STRIKE_PRICE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "202", fixData.getID());
+        assertEquals( "STRIKE_PRICE", fixData.getName());
+        assertEquals( "StrikePrice", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

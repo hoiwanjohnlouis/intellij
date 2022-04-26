@@ -27,9 +27,9 @@ class Tag161StrAllocTextTest {
     @Test
     void FIX0161Test() {
         FIX41 fixData = FIX41.FIX161_STR_ALLOC_TEXT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "161", fixData.getID());
+        assertEquals( "ALLOC_TEXT", fixData.getName());
+        assertEquals( "AllocText", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,7 +27,9 @@ class Tag211FloPegOffsetValueTest {
     @Test
     void FIX0211Test() {
         FIX41 fixData = FIX41.FIX211_FLO_PEG_DIFFERENCE;
-        assertNotEquals( FIX41.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertEquals( "211", fixData.getID());
+        assertEquals( "PEG_DIFFERENCE", fixData.getName());
+        assertEquals( "PegDifference", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());

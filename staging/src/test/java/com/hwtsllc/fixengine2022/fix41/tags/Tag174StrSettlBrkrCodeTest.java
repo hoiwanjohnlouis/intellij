@@ -27,9 +27,9 @@ class Tag174StrSettlBrkrCodeTest {
     @Test
     void FIX0174Test() {
         FIX41 fixData = FIX41.FIX174_STR_SETTL_BRKR_CODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "174", fixData.getID());
+        assertEquals( "SETTL_BRKR_CODE", fixData.getName());
+        assertEquals( "SettlBrkrCode", fixData.getDescription());
         assertNotEquals( FIX41.JUNK_ID, fixData.getID());
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
