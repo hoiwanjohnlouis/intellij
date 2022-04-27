@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag415IntProgPeriodIntervalTest {
     @Test
     void FIX0415Test() {
         FIX42 fixData = FIX42.FIX415_INT_PROG_PERIOD_INTERVAL;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "415", fixData.getID());
+        assertEquals( "PROG_PERIOD_INTERVAL", fixData.getName());
+        assertEquals( "ProgPeriodInterval", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag415IntProgPeriodIntervalTest {
     void Tag0415Test() {
         Tag415IntProgPeriodInterval tagData;
 
+        tagData = new Tag415IntProgPeriodInterval(new MyIntType(
+                Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL));
+        assertEquals( Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag415IntProgPeriodInterval(new MyIntType(
+                Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL));
+        assertEquals( Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

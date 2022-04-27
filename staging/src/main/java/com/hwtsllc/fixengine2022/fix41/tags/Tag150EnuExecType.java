@@ -29,7 +29,7 @@ public class Tag150EnuExecType extends FIX41Abstract implements FixTagValuePairS
     public final static Enum150ExecType TESTB_ENU_EXEC_TYPE = Enum150ExecType.DONE_FOR_DAY;
 
     public Tag150EnuExecType(Enum150ExecType dataValue) {
-        setFixType(FIX41.FIX150_EXEC_TYPE);
+        setFixType(FIX41.FIX150_ENU_EXEC_TYPE);
         this.dataValue = dataValue;
     }
 

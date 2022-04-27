@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,9 +28,9 @@ class Tag250IntLegRepoCollateralSecurityTypeTest {
     @Test
     void FIX0250Test() {
         FIX42 fixData = FIX42.FIX250_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "250", fixData.getID());
+        assertEquals( "LEG_REPO_COLLATERAL_SECURITY_TYPE", fixData.getName());
+        assertEquals( "LegRepoCollateralSecurityType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -38,5 +39,16 @@ class Tag250IntLegRepoCollateralSecurityTypeTest {
     void Tag0250Test() {
         Tag250IntLegRepoCollateralSecurityType tagData;
 
+        tagData = new Tag250IntLegRepoCollateralSecurityType(new MyIntType(
+                Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag250IntLegRepoCollateralSecurityType(new MyIntType(
+                Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

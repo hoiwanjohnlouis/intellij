@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag391StrClientBidIDTest {
     @Test
     void FIX0391Test() {
         FIX42 fixData = FIX42.FIX391_STR_CLIENT_BID_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "391", fixData.getID());
+        assertEquals( "CLIENT_BID_ID", fixData.getName());
+        assertEquals( "ClientBidId", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag391StrClientBidIDTest {
     void Tag0391Test() {
         Tag391StrClientBidID tagData;
 
+        tagData = new Tag391StrClientBidID(new MyStringType(
+                Tag391StrClientBidID.TESTA_STR_CLIENT_BID_ID));
+        assertEquals( Tag391StrClientBidID.TESTA_STR_CLIENT_BID_ID,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag391StrClientBidID(new MyStringType(
+                Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID));
+        assertEquals( Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

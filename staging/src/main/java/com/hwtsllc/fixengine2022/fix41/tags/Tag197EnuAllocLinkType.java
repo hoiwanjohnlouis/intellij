@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag139EnuMiscFeeType;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum197AllocLinkType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
@@ -30,7 +29,7 @@ public class Tag197EnuAllocLinkType extends FIX41Abstract implements FixTagValue
     public final static Enum197AllocLinkType TESTB_ENU_ALLOC_LINK_TYPE = Enum197AllocLinkType.FX_SWAP;
 
     public Tag197EnuAllocLinkType(Enum197AllocLinkType dataValue) {
-        setFixType(FIX41.FIX197_ALLOC_LINK_TYPE);
+        setFixType(FIX41.FIX197_ENU_ALLOC_LINK_TYPE);
         this.dataValue = dataValue;
     }
 

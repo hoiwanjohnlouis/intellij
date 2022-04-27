@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag249LmdLegIssueDateTest {
     @Test
     void FIX0249Test() {
         FIX42 fixData = FIX42.FIX249_LMD_LEG_ISSUE_DATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "249", fixData.getID());
+        assertEquals( "LEG_ISSUE_DATE", fixData.getName());
+        assertEquals( "LegIssueDate", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag249LmdLegIssueDateTest {
     void Tag0249Test() {
         Tag249LmdLegIssueDate tagData;
 
+        tagData = new Tag249LmdLegIssueDate(new MyLocalMktDateType(
+                Tag249LmdLegIssueDate.TESTA_LMD_LEG_ISSUE_DATE));
+        assertEquals( Tag249LmdLegIssueDate.TESTA_LMD_LEG_ISSUE_DATE,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag249LmdLegIssueDate(new MyLocalMktDateType(
+                Tag249LmdLegIssueDate.TESTB_LMD_LEG_ISSUE_DATE));
+        assertEquals( Tag249LmdLegIssueDate.TESTB_LMD_LEG_ISSUE_DATE,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }
 }

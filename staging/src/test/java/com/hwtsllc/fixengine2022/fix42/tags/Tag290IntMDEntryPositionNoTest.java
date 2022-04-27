@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag290IntMDEntryPositionNoTest {
     @Test
     void FIX0290Test() {
         FIX42 fixData = FIX42.FIX290_INT_MD_ENTRY_POSITION_NO;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "290", fixData.getID());
+        assertEquals( "MD_ENTRY_POSITION_NO", fixData.getName());
+        assertEquals( "MDEntryPositionNo", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag290IntMDEntryPositionNoTest {
     void Tag0290Test() {
         Tag290IntMDEntryPositionNo tagData;
 
+        tagData = new Tag290IntMDEntryPositionNo(new MyIntType(
+                Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO));
+        assertEquals( Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag290IntMDEntryPositionNo(new MyIntType(
+                Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO));
+        assertEquals( Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,9 +28,9 @@ class Tag244IntUnderlyingRepurchaseTermTest {
     @Test
     void FIX0244Test() {
         FIX42 fixData = FIX42.FIX244_INT_UNDERLYING_REPURCHASE_TERM;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "244", fixData.getID());
+        assertEquals( "UNDERLYING_REPURCHASE_TERM", fixData.getName());
+        assertEquals( "UnderlyingRepurchaseTerm", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -38,5 +39,16 @@ class Tag244IntUnderlyingRepurchaseTermTest {
     void Tag0244Test() {
         Tag244IntUnderlyingRepurchaseTerm tagData;
 
+        tagData = new Tag244IntUnderlyingRepurchaseTerm(new MyIntType(
+                Tag244IntUnderlyingRepurchaseTerm.TESTA_INT_UNDERLYING_REPURCHASE_TERM));
+        assertEquals( Tag244IntUnderlyingRepurchaseTerm.TESTA_INT_UNDERLYING_REPURCHASE_TERM,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag244IntUnderlyingRepurchaseTerm(new MyIntType(
+                Tag244IntUnderlyingRepurchaseTerm.TESTB_INT_UNDERLYING_REPURCHASE_TERM));
+        assertEquals( Tag244IntUnderlyingRepurchaseTerm.TESTB_INT_UNDERLYING_REPURCHASE_TERM,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

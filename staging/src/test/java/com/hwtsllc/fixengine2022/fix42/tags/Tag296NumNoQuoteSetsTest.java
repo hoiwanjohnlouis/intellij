@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag296NumNoQuoteSetsTest {
     @Test
     void FIX0296Test() {
         FIX42 fixData = FIX42.FIX296_NUM_NO_QUOTE_SETS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "296", fixData.getID());
+        assertEquals( "NO_QUOTE_SETS", fixData.getName());
+        assertEquals( "NoQuoteSets", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag296NumNoQuoteSetsTest {
     void Tag0296Test() {
         Tag296NumNoQuoteSets tagData;
 
+        tagData = new Tag296NumNoQuoteSets(new MyNumInGroupType(
+                Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS));
+        assertEquals( Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag296NumNoQuoteSets(new MyNumInGroupType(
+                Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS));
+        assertEquals( Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

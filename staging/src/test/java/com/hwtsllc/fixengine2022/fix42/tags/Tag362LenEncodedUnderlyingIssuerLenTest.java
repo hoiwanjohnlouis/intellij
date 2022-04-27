@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag362LenEncodedUnderlyingIssuerLenTest {
     @Test
     void FIX0362Test() {
         FIX42 fixData = FIX42.FIX362_LEN_ENCODED_UNDERLYING_ISSUER_LEN;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "362", fixData.getID());
+        assertEquals( "ENCODED_UNDERLYING_ISSUER_LEN", fixData.getName());
+        assertEquals( "EncodedUnderlyingIssuerLen", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,8 @@ class Tag362LenEncodedUnderlyingIssuerLenTest {
     void Tag0362Test() {
         Tag362LenEncodedUnderlyingIssuerLen tagData;
 
+        tagData = new Tag362LenEncodedUnderlyingIssuerLen( new MyLengthType(23) );
+        assertEquals( 23, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }
 }

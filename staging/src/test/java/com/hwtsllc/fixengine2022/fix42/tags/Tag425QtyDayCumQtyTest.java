@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag425QtyDayCumQtyTest {
     @Test
     void FIX0425Test() {
         FIX42 fixData = FIX42.FIX425_QTY_DAY_CUM_QTY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "425", fixData.getID());
+        assertEquals( "DAY_CUM_QTY", fixData.getName());
+        assertEquals( "DayCumQty", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag425QtyDayCumQtyTest {
     void Tag0425Test() {
         Tag425QtyDayCumQty tagData;
 
+        tagData = new Tag425QtyDayCumQty(new MyQtyType(
+                Tag425QtyDayCumQty.TESTA_QTY_DAY_CUM_QTY));
+        assertEquals( Tag425QtyDayCumQty.TESTA_QTY_DAY_CUM_QTY,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag425QtyDayCumQty(new MyQtyType(
+                Tag425QtyDayCumQty.TESTB_QTY_DAY_CUM_QTY));
+        assertEquals( Tag425QtyDayCumQty.TESTB_QTY_DAY_CUM_QTY,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -28,9 +28,9 @@ class Tag328BoolInViewOfCommonTest {
     @Test
     void FIX0328Test() {
         FIX42 fixData = FIX42.FIX328_BOOL_IN_VIEW_OF_COMMON;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "328", fixData.getID());
+        assertEquals( "IN_VIEW_OF_COMMON", fixData.getName());
+        assertEquals( "InViewOfCommon", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());

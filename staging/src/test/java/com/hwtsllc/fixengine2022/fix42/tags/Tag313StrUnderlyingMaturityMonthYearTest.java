@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag313StrUnderlyingMaturityMonthYearTest {
     @Test
     void FIX0313Test() {
         FIX42 fixData = FIX42.FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR", fixData.getID());
+        assertEquals( "FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR", fixData.getName());
+        assertEquals( "FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag313StrUnderlyingMaturityMonthYearTest {
     void Tag0313Test() {
         Tag313StrUnderlyingMaturityMonthYear tagData;
 
+        tagData = new Tag313StrUnderlyingMaturityMonthYear(new MyStringType(
+                Tag313StrUnderlyingMaturityMonthYear.TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR));
+        assertEquals( Tag313StrUnderlyingMaturityMonthYear.TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag313StrUnderlyingMaturityMonthYear(new MyStringType(
+                Tag313StrUnderlyingMaturityMonthYear.TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR));
+        assertEquals( Tag313StrUnderlyingMaturityMonthYear.TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

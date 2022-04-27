@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag387QtyTotalVolumeTradedTest {
     @Test
     void FIX0387Test() {
         FIX42 fixData = FIX42.FIX387_QTY_TOTAL_VOLUME_TRADED;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "387", fixData.getID());
+        assertEquals( "TOTAL_VOLUME_TRADED", fixData.getName());
+        assertEquals( "TotalVolumeTraded", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag387QtyTotalVolumeTradedTest {
     void Tag0387Test() {
         Tag387QtyTotalVolumeTraded tagData;
 
+        tagData = new Tag387QtyTotalVolumeTraded(new MyQtyType(
+                Tag387QtyTotalVolumeTraded.TESTA_QTY_TOTAL_VOLUME_TRADED));
+        assertEquals( Tag387QtyTotalVolumeTraded.TESTA_QTY_TOTAL_VOLUME_TRADED,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag387QtyTotalVolumeTraded(new MyQtyType(
+                Tag387QtyTotalVolumeTraded.TESTB_QTY_TOTAL_VOLUME_TRADED));
+        assertEquals( Tag387QtyTotalVolumeTraded.TESTB_QTY_TOTAL_VOLUME_TRADED,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

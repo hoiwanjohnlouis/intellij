@@ -39,10 +39,10 @@ class Tag155FloSettlCurrFxRateTest {
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
         assertEquals( Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
         assertEquals( Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( FIX41.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
 }

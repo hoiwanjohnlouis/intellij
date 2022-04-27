@@ -28,6 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      BOOL = EnumType field
  *                      ENU = EnumType field
  *                      AMT = MyAmtType field
+ *                      CCY = MyCurrencyType field
  *                      COU = MyCountryType field
  *                      DAT = MyDataType field
  *                      EXC = MyExchangeType field, saved as String

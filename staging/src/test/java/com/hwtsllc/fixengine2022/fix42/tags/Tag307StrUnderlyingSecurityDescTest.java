@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag307StrUnderlyingSecurityDescTest {
     @Test
     void FIX0307Test() {
         FIX42 fixData = FIX42.FIX307_STR_UNDERLYING_SECURITY_DESC;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "307", fixData.getID());
+        assertEquals( "UNDERLYING_SECURITY_DESC", fixData.getName());
+        assertEquals( "UnderlyingSecurityDesc", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,14 @@ class Tag307StrUnderlyingSecurityDescTest {
     void Tag0307Test() {
         Tag307StrUnderlyingSecurityDesc tagData;
 
+        tagData = new Tag307StrUnderlyingSecurityDesc(
+                new MyStringType(Tag307StrUnderlyingSecurityDesc.TESTA_STR_UNDERLYING_SECURITY_DESC));
+        assertEquals( Tag307StrUnderlyingSecurityDesc.TESTA_STR_UNDERLYING_SECURITY_DESC, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag307StrUnderlyingSecurityDesc(
+                new MyStringType(Tag307StrUnderlyingSecurityDesc.TESTB_STR_UNDERLYING_SECURITY_DESC));
+        assertEquals( Tag307StrUnderlyingSecurityDesc.TESTB_STR_UNDERLYING_SECURITY_DESC, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

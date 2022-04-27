@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag443UtcStrikeTimeTest {
     @Test
     void FIX0443Test() {
         FIX42 fixData = FIX42.FIX443_UTC_STRIKE_TIME;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "443", fixData.getID());
+        assertEquals( "STRIKE_TIME", fixData.getName());
+        assertEquals( "StrikeTime", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag443UtcStrikeTimeTest {
     void Tag0443Test() {
         Tag443UtcStrikeTime tagData;
 
+        tagData = new Tag443UtcStrikeTime(new MyUTCTimestampType(
+                Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME));
+        assertEquals( Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag443UtcStrikeTime(new MyUTCTimestampType(
+                Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME));
+        assertEquals( Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag395IntNumTicketsTest {
     @Test
     void FIX0395Test() {
         FIX42 fixData = FIX42.FIX395_INT_NUM_TICKETS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "395", fixData.getID());
+        assertEquals( "NUM_TICKETS", fixData.getName());
+        assertEquals( "NumTickets", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag395IntNumTicketsTest {
     void Tag0395Test() {
         Tag395IntNumTickets tagData;
 
+        tagData = new Tag395IntNumTickets(new MyIntType(
+                Tag395IntNumTickets.TESTA_INT_NUM_TICKETS));
+        assertEquals( Tag395IntNumTickets.TESTA_INT_NUM_TICKETS,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag395IntNumTickets(new MyIntType(
+                Tag395IntNumTickets.TESTB_INT_NUM_TICKETS));
+        assertEquals( Tag395IntNumTickets.TESTB_INT_NUM_TICKETS,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -28,9 +28,9 @@ class Tag266BoolAggregatedBookTest {
     @Test
     void FIX0266Test() {
         FIX42 fixData = FIX42.FIX266_BOOL_AGGREGATED_BOOK;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "266", fixData.getID());
+        assertEquals( "AGGREGATED_BOOK", fixData.getName());
+        assertEquals( "AggregatedBook", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());

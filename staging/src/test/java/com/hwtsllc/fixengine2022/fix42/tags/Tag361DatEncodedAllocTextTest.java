@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag361DatEncodedAllocTextTest {
     @Test
     void FIX0361Test() {
         FIX42 fixData = FIX42.FIX361_DAT_ENCODED_ALLOC_TEXT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "361", fixData.getID());
+        assertEquals( "ENCODED_ALLOC_TEXT", fixData.getName());
+        assertEquals( "EncodedAllocText", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,14 @@ class Tag361DatEncodedAllocTextTest {
     void Tag0361Test() {
         Tag361DatEncodedAllocText tagData;
 
+        tagData = new Tag361DatEncodedAllocText(
+                new MyDataType(Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT));
+        assertEquals( Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag361DatEncodedAllocText(
+                new MyDataType(Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT));
+        assertEquals( Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

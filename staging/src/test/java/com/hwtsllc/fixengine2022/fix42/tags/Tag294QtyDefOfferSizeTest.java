@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag294QtyDefOfferSizeTest {
     @Test
     void FIX0294Test() {
         FIX42 fixData = FIX42.FIX294_QTY_DEF_OFFER_SIZE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "294", fixData.getID());
+        assertEquals( "DEF_OFFER_SIZE", fixData.getName());
+        assertEquals( "DefOfferSize", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag294QtyDefOfferSizeTest {
     void Tag0294Test() {
         Tag294QtyDefOfferSize tagData;
 
+        tagData = new Tag294QtyDefOfferSize(new MyQtyType(
+                Tag294QtyDefOfferSize.TESTA_QTY_DEF_OFFER_SIZE));
+        assertEquals( Tag294QtyDefOfferSize.TESTA_QTY_DEF_OFFER_SIZE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag294QtyDefOfferSize(new MyQtyType(
+                Tag294QtyDefOfferSize.TESTB_QTY_DEF_OFFER_SIZE));
+        assertEquals( Tag294QtyDefOfferSize.TESTB_QTY_DEF_OFFER_SIZE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

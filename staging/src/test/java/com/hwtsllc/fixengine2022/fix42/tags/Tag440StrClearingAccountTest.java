@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,9 +28,9 @@ class Tag440StrClearingAccountTest {
     @Test
     void FIX0440Test() {
         FIX42 fixData = FIX42.FIX440_STR_CLEARING_ACCOUNT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "440", fixData.getID());
+        assertEquals( "CLEARING_ACCOUNT", fixData.getName());
+        assertEquals( "ClearingAccount", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -38,5 +39,16 @@ class Tag440StrClearingAccountTest {
     void Tag0440Test() {
         Tag440StrClearingAccount tagData;
 
+        tagData = new Tag440StrClearingAccount(new MyStringType(
+                Tag440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT));
+        assertEquals( Tag440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag440StrClearingAccount(new MyStringType(
+                Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT));
+        assertEquals( Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

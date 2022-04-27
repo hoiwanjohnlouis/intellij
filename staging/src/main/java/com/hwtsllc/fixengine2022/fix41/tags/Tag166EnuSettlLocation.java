@@ -30,7 +30,7 @@ public class Tag166EnuSettlLocation extends FIX41Abstract implements FixTagValue
     public final static Enum166SettlLocation TESTB_ENU_SETTL_LOCATION = Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION;
 
     public Tag166EnuSettlLocation(Enum166SettlLocation dataValue) {
-        setFixType(FIX41.FIX166_SETTL_LOCATION);
+        setFixType(FIX41.FIX166_ENU_SETTL_LOCATION);
         this.dataValue = dataValue;
     }
 

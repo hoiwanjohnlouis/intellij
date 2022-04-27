@@ -28,9 +28,9 @@ class Tag258BoolTradedFlatSwitchTest {
     @Test
     void FIX0258Test() {
         FIX42 fixData = FIX42.FIX258_BOOL_TRADED_FLAT_SWITCH;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "258", fixData.getID());
+        assertEquals( "TRADED_FLAT_SWITCH", fixData.getName());
+        assertEquals( "TradedFlatSwitch", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag308ExcUnderlyingSecurityExchangeTest {
     @Test
     void FIX0308Test() {
         FIX42 fixData = FIX42.FIX308_EXC_UNDERLYING_SECURITY_EXCHANGE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "308", fixData.getID());
+        assertEquals( "UNDERLYING_SECURITY_EXCHANGE", fixData.getName());
+        assertEquals( "UnderlyingSecurityExchange", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag308ExcUnderlyingSecurityExchangeTest {
     void Tag0308Test() {
         Tag308ExcUnderlyingSecurityExchange tagData;
 
+        tagData = new Tag308ExcUnderlyingSecurityExchange(new MyExchangeType(
+                Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE));
+        assertEquals( Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag308ExcUnderlyingSecurityExchange(new MyExchangeType(
+                Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE));
+        assertEquals( Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
     }
 }

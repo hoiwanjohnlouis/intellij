@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag357DatEncodedSubjectTest {
     @Test
     void FIX0357Test() {
         FIX42 fixData = FIX42.FIX357_DAT_ENCODED_SUBJECT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "357", fixData.getID());
+        assertEquals( "ENCODED_SUBJECT", fixData.getName());
+        assertEquals( "EncodedSubject", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,14 @@ class Tag357DatEncodedSubjectTest {
     void Tag0357Test() {
         Tag357DatEncodedSubject tagData;
 
+        tagData = new Tag357DatEncodedSubject(
+                new MyDataType(Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT));
+        assertEquals( Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag357DatEncodedSubject(
+                new MyDataType(Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT));
+        assertEquals( Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag444StrListStatusTextTest {
     @Test
     void FIX0444Test() {
         FIX42 fixData = FIX42.FIX444_STR_LIST_STATUS_TEXT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "444", fixData.getID());
+        assertEquals( "LIST_STATUS_TEXT", fixData.getName());
+        assertEquals( "ListStatusText", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag444StrListStatusTextTest {
     void Tag0444Test() {
         Tag444StrListStatusText tagData;
 
+        tagData = new Tag444StrListStatusText(new MyStringType(
+                Tag444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT));
+        assertEquals( Tag444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag444StrListStatusText(new MyStringType(
+                Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT));
+        assertEquals( Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

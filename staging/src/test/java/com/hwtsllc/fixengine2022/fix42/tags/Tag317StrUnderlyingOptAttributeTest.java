@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag317StrUnderlyingOptAttributeTest {
     @Test
     void FIX0317Test() {
         FIX42 fixData = FIX42.FIX317_STR_UNDERLYING_OPT_ATTRIBUTE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "317", fixData.getID());
+        assertEquals( "UNDERLYING_OPT_ATTRIBUTE", fixData.getName());
+        assertEquals( "UnderlyingOptAttribute", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag317StrUnderlyingOptAttributeTest {
     void Tag0317Test() {
         Tag317StrUnderlyingOptAttribute tagData;
 
+        tagData = new Tag317StrUnderlyingOptAttribute(new MyStringType(
+                Tag317StrUnderlyingOptAttribute.TESTA_STR_UNDERLYING_OPT_ATTRIBUTE));
+        assertEquals( Tag317StrUnderlyingOptAttribute.TESTA_STR_UNDERLYING_OPT_ATTRIBUTE,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag317StrUnderlyingOptAttribute(new MyStringType(
+                Tag317StrUnderlyingOptAttribute.TESTB_STR_UNDERLYING_OPT_ATTRIBUTE));
+        assertEquals( Tag317StrUnderlyingOptAttribute.TESTB_STR_UNDERLYING_OPT_ATTRIBUTE,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

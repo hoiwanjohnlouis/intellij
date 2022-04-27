@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag333PrcLowPxTest {
     @Test
     void FIX0333Test() {
         FIX42 fixData = FIX42.FIX333_PRC_LOW_PX;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "333", fixData.getID());
+        assertEquals( "LOW_PX", fixData.getName());
+        assertEquals( "LowPx", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag333PrcLowPxTest {
     void Tag0333Test() {
         Tag333PrcLowPx tagData;
 
+        tagData = new Tag333PrcLowPx(new MyPriceType(
+                Tag333PrcLowPx.TESTA_PRC_LOW_PX));
+        assertEquals( Tag333PrcLowPx.TESTA_PRC_LOW_PX,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag333PrcLowPx(new MyPriceType(
+                Tag333PrcLowPx.TESTB_PRC_LOW_PX));
+        assertEquals( Tag333PrcLowPx.TESTB_PRC_LOW_PX,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -29,7 +29,7 @@ public class Tag160EnuSettlInstMode extends FIX41Abstract implements FixTagValue
     public final static Enum160SettlInstMode TESTB_ENU_SETTL_INST_MODE = Enum160SettlInstMode.REQUEST_REJECT;
 
     public Tag160EnuSettlInstMode(Enum160SettlInstMode dataValue) {
-        setFixType(FIX41.FIX160_SETTL_INST_MODE);
+        setFixType(FIX41.FIX160_ENU_SETTL_INST_MODE);
         this.dataValue = dataValue;
     }
 

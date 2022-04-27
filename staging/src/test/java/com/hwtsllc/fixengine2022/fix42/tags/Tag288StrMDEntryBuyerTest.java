@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag288StrMDEntryBuyerTest {
     @Test
     void FIX0288Test() {
         FIX42 fixData = FIX42.FIX288_STR_MD_ENTRY_BUYER;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "288", fixData.getID());
+        assertEquals( "MD_ENTRY_BUYER", fixData.getName());
+        assertEquals( "MDEntryBuyer", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,14 @@ class Tag288StrMDEntryBuyerTest {
     void Tag0288Test() {
         Tag288StrMDEntryBuyer tagData;
 
+        tagData = new Tag288StrMDEntryBuyer(
+                new MyStringType(Tag288StrMDEntryBuyer.TESTA_STR_MD_ENTRY_BUYER));
+        assertEquals( Tag288StrMDEntryBuyer.TESTA_STR_MD_ENTRY_BUYER, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag288StrMDEntryBuyer(
+                new MyStringType(Tag288StrMDEntryBuyer.TESTB_STR_MD_ENTRY_BUYER));
+        assertEquals( Tag288StrMDEntryBuyer.TESTB_STR_MD_ENTRY_BUYER, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

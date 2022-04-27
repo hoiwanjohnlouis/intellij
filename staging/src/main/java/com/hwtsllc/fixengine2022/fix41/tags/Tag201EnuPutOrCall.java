@@ -30,7 +30,7 @@ public class Tag201EnuPutOrCall extends FIX41Abstract implements FixTagValuePair
     public final static Enum201PutOrCall TESTB_ENU_PUT_OR_CALL = Enum201PutOrCall.PUT;
 
     public Tag201EnuPutOrCall(Enum201PutOrCall dataValue) {
-        setFixType(FIX41.FIX201_PUT_OR_CALL);
+        setFixType(FIX41.FIX201_ENU_PUT_OR_CALL);
         this.dataValue = dataValue;
     }
 

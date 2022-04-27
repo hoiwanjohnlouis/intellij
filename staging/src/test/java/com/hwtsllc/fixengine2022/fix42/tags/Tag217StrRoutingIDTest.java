@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag217StrRoutingIDTest {
     @Test
     void FIX0217Test() {
         FIX42 fixData = FIX42.FIX217_STR_ROUTING_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "217", fixData.getID());
+        assertEquals( "ROUTING_ID", fixData.getName());
+        assertEquals( "RoutingId", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,14 @@ class Tag217StrRoutingIDTest {
     void Tag0217Test() {
         Tag217StrRoutingID tagData;
 
+        tagData = new Tag217StrRoutingID(
+                new MyStringType(Tag217StrRoutingID.TESTA_STR_ROUTING_ID));
+        assertEquals( Tag217StrRoutingID.TESTA_STR_ROUTING_ID, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag217StrRoutingID(
+                new MyStringType(Tag217StrRoutingID.TESTB_STR_ROUTING_ID));
+        assertEquals( Tag217StrRoutingID.TESTB_STR_ROUTING_ID, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

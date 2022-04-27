@@ -29,7 +29,7 @@ public class Tag169EnuStandInstDBType extends FIX41Abstract implements FixTagVal
     public final static Enum169StandInstDbType TESTB_ENU_STAND_INST_DB_TYPE = Enum169StandInstDbType.ACCOUNT_NET;
 
     public Tag169EnuStandInstDBType(Enum169StandInstDbType dataValue) {
-        setFixType(FIX41.FIX169_STAND_INST_DB_TYPE);
+        setFixType(FIX41.FIX169_ENU_STAND_INST_DB_TYPE);
         this.dataValue = dataValue;
     }
 

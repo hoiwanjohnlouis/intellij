@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag287IntSellerDaysTest {
     @Test
     void FIX0287Test() {
         FIX42 fixData = FIX42.FIX287_INT_SELLER_DAYS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "287", fixData.getID());
+        assertEquals( "SELLER_DAYS", fixData.getName());
+        assertEquals( "SellerDays", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag287IntSellerDaysTest {
     void Tag0287Test() {
         Tag287IntSellerDays tagData;
 
+        tagData = new Tag287IntSellerDays(new MyIntType(
+                Tag287IntSellerDays.TESTA_INT_SELLER_DAYS));
+        assertEquals( Tag287IntSellerDays.TESTA_INT_SELLER_DAYS,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag287IntSellerDays(new MyIntType(
+                Tag287IntSellerDays.TESTB_INT_SELLER_DAYS));
+        assertEquals( Tag287IntSellerDays.TESTB_INT_SELLER_DAYS,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

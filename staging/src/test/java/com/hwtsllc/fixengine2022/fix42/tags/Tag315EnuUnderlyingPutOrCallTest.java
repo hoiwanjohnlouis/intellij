@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,5 +39,9 @@ class Tag315EnuUnderlyingPutOrCallTest {
     void Tag0315Test() {
         Tag315EnuUnderlyingPutOrCall tagData;
 
+        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
+        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

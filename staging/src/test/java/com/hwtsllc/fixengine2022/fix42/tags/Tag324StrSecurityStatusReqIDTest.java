@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag324StrSecurityStatusReqIDTest {
     @Test
     void FIX0324Test() {
         FIX42 fixData = FIX42.FIX324_STR_SECURITY_STATUS_REQ_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "324", fixData.getID());
+        assertEquals( "SECURITY_STATUS_REQ_ID", fixData.getName());
+        assertEquals( "SecurityStatusReqId", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag324StrSecurityStatusReqIDTest {
     void Tag0324Test() {
         Tag324StrSecurityStatusReqID tagData;
 
+        tagData = new Tag324StrSecurityStatusReqID(new MyStringType(
+                Tag324StrSecurityStatusReqID.TESTA_STR_SECURITY_STATUS_REQ_ID));
+        assertEquals( Tag324StrSecurityStatusReqID.TESTA_STR_SECURITY_STATUS_REQ_ID,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag324StrSecurityStatusReqID(new MyStringType(
+                Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID));
+        assertEquals( Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

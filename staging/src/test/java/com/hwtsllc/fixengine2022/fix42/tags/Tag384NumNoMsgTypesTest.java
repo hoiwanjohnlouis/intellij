@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag384NumNoMsgTypesTest {
     @Test
     void FIX0384Test() {
         FIX42 fixData = FIX42.FIX384_NUM_NO_MSG_TYPES;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "384", fixData.getID());
+        assertEquals( "NO_MSG_TYPES", fixData.getName());
+        assertEquals( "NoMsgTypes", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag384NumNoMsgTypesTest {
     void Tag0384Test() {
         Tag384NumNoMsgTypes tagData;
 
+        tagData = new Tag384NumNoMsgTypes(new MyNumInGroupType(
+                Tag384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES));
+        assertEquals( Tag384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag384NumNoMsgTypes(new MyNumInGroupType(
+                Tag384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES));
+        assertEquals( Tag384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

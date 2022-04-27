@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag213DatXmlDataTest {
     @Test
     void FIX0213Test() {
         FIX42 fixData = FIX42.FIX213_DAT_XML_DATA;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "213", fixData.getID());
+        assertEquals( "XML_DATA", fixData.getName());
+        assertEquals( "XmlData", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,12 @@ class Tag213DatXmlDataTest {
     void Tag0213Test() {
         Tag213DatXmlData tagData;
 
+        tagData = new Tag213DatXmlData(new MyDataType(Tag213DatXmlData.TESTA_DAT_XML_DATA));
+        assertEquals( Tag213DatXmlData.TESTA_DAT_XML_DATA, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag213DatXmlData(new MyDataType(Tag213DatXmlData.TESTB_DAT_XML_DATA));
+        assertEquals( Tag213DatXmlData.TESTB_DAT_XML_DATA, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

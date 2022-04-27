@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag236PctYieldTest {
     @Test
     void FIX0236Test() {
         FIX42 fixData = FIX42.FIX236_PCT_YIELD;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "236", fixData.getID());
+        assertEquals( "YIELD", fixData.getName());
+        assertEquals( "Yield", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag236PctYieldTest {
     void Tag0236Test() {
         Tag236PctYield tagData;
 
+        tagData = new Tag236PctYield(new MyPercentageType(
+                Tag236PctYield.TESTA_PCT_YIELD));
+        assertEquals( Tag236PctYield.TESTA_PCT_YIELD,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag236PctYield(new MyPercentageType(
+                Tag236PctYield.TESTB_PCT_YIELD));
+        assertEquals( Tag236PctYield.TESTB_PCT_YIELD,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }
 }

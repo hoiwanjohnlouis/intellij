@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag264IntMarketDepthTest {
     @Test
     void FIX0264Test() {
         FIX42 fixData = FIX42.FIX264_INT_MARKET_DEPTH;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "264", fixData.getID());
+        assertEquals( "MARKET_DEPTH", fixData.getName());
+        assertEquals( "MarketDepth", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag264IntMarketDepthTest {
     void Tag0264Test() {
         Tag264IntMarketDepth tagData;
 
+        tagData = new Tag264IntMarketDepth(new MyIntType(
+                Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH));
+        assertEquals( Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag264IntMarketDepth(new MyIntType(
+                Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH));
+        assertEquals( Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

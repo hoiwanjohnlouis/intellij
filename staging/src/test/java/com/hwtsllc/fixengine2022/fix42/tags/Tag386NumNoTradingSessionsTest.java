@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag386NumNoTradingSessionsTest {
     @Test
     void FIX0386Test() {
         FIX42 fixData = FIX42.FIX386_NUM_NO_TRADING_SESSIONS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "386", fixData.getID());
+        assertEquals( "NO_TRADING_SESSIONS", fixData.getName());
+        assertEquals( "NoTradingSessions", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag386NumNoTradingSessionsTest {
     void Tag0386Test() {
         Tag386NumNoTradingSessions tagData;
 
+        tagData = new Tag386NumNoTradingSessions(new MyNumInGroupType(
+                Tag386NumNoTradingSessions.TESTA_NUM_NO_TRADING_SESSIONS));
+        assertEquals( Tag386NumNoTradingSessions.TESTA_NUM_NO_TRADING_SESSIONS,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag386NumNoTradingSessions(new MyNumInGroupType(
+                Tag386NumNoTradingSessions.TESTB_NUM_NO_TRADING_SESSIONS));
+        assertEquals( Tag386NumNoTradingSessions.TESTB_NUM_NO_TRADING_SESSIONS,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

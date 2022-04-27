@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag406AmtFairValueTest {
     @Test
     void FIX0406Test() {
         FIX42 fixData = FIX42.FIX406_AMT_FAIR_VALUE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "406", fixData.getID());
+        assertEquals( "FAIR_VALUE", fixData.getName());
+        assertEquals( "FairValue", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag406AmtFairValueTest {
     void Tag0406Test() {
         Tag406AmtFairValue tagData;
 
+        tagData = new Tag406AmtFairValue(new MyAmtType(
+                Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE));
+        assertEquals( Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag406AmtFairValue(new MyAmtType(
+                Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE));
+        assertEquals( Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

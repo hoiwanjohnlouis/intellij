@@ -28,9 +28,9 @@ class Tag377BoolSolicitedFlagTest {
     @Test
     void FIX0377Test() {
         FIX42 fixData = FIX42.FIX377_BOOL_SOLICITED_FLAG;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "377", fixData.getID());
+        assertEquals( "SOLICITED_FLAG", fixData.getName());
+        assertEquals( "SolicitedFlag", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());

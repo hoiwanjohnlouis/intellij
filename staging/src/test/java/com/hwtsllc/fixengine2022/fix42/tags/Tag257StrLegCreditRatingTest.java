@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag257StrLegCreditRatingTest {
     @Test
     void FIX0257Test() {
         FIX42 fixData = FIX42.FIX257_STR_LEG_CREDIT_RATING;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "257", fixData.getID());
+        assertEquals( "LEG_CREDIT_RATING", fixData.getName());
+        assertEquals( "LegCreditRating", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,14 @@ class Tag257StrLegCreditRatingTest {
     void Tag0257Test() {
         Tag257StrLegCreditRating tagData;
 
+        tagData = new Tag257StrLegCreditRating(
+                new MyStringType(Tag257StrLegCreditRating.TESTA_STR_LEG_CREDIT_RATING));
+        assertEquals( Tag257StrLegCreditRating.TESTA_STR_LEG_CREDIT_RATING, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag257StrLegCreditRating(
+                new MyStringType(Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING));
+        assertEquals( Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

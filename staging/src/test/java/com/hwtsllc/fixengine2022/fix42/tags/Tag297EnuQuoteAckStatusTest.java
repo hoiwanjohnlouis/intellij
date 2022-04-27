@@ -16,8 +16,25 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag297EnuQuoteAckStatusTest {
+    @Test
+    void FIX0297Test() {
+        FIX42 fixData = FIX42.FIX297_ENU_QUOTE_ACK_STATUS;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
+        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
+        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+    }
+    @Test
+    void Tag0297Test() {
+        Tag297EnuQuoteAckStatus tagData;
 
+    }
 }

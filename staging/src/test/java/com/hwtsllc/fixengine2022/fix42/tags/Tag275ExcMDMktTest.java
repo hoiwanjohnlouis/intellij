@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
+import com.hwtsllc.fixengine2022.fix41.tags.Tag207ExcSecurityExchange;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +28,9 @@ class Tag275ExcMDMktTest {
     @Test
     void FIX0275Test() {
         FIX42 fixData = FIX42.FIX275_EXC_MD_MKT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "275", fixData.getID());
+        assertEquals( "MD_MKT", fixData.getName());
+        assertEquals( "MDMkt", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +39,16 @@ class Tag275ExcMDMktTest {
     void Tag0275Test() {
         Tag275ExcMDMkt tagData;
 
+        tagData = new Tag275ExcMDMkt(new MyExchangeType(
+                Tag275ExcMDMkt.TESTA_EXC_MD_MKT));
+        assertEquals( Tag275ExcMDMkt.TESTA_EXC_MD_MKT,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag275ExcMDMkt(new MyExchangeType(
+                Tag275ExcMDMkt.TESTB_EXC_MD_MKT));
+        assertEquals( Tag275ExcMDMkt.TESTB_EXC_MD_MKT,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
     }
 }

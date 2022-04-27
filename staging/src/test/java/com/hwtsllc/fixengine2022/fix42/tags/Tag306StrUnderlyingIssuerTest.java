@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag306StrUnderlyingIssuerTest {
     @Test
     void FIX0306Test() {
         FIX42 fixData = FIX42.FIX306_STR_UNDERLYING_ISSUER;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "306", fixData.getID());
+        assertEquals( "UNDERLYING_ISSUER", fixData.getName());
+        assertEquals( "UnderlyingIssuer", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,14 @@ class Tag306StrUnderlyingIssuerTest {
     void Tag0306Test() {
         Tag306StrUnderlyingIssuer tagData;
 
+        tagData = new Tag306StrUnderlyingIssuer(
+                new MyStringType(Tag306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER));
+        assertEquals( Tag306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag306StrUnderlyingIssuer(
+                new MyStringType(Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER));
+        assertEquals( Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER, tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

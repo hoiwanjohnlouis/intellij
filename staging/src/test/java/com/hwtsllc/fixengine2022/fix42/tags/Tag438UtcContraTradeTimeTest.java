@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag438UtcContraTradeTimeTest {
     @Test
     void FIX0438Test() {
         FIX42 fixData = FIX42.FIX438_UTC_CONTRA_TRADE_TIME;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "438", fixData.getID());
+        assertEquals( "CONTRA_TRADE_TIME", fixData.getName());
+        assertEquals( "ContraTradeTime", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag438UtcContraTradeTimeTest {
     void Tag0438Test() {
         Tag438UtcContraTradeTime tagData;
 
+        tagData = new Tag438UtcContraTradeTime(new MyUTCTimestampType(
+                Tag438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME));
+        assertEquals( Tag438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag438UtcContraTradeTime(new MyUTCTimestampType(
+                Tag438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME));
+        assertEquals( Tag438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag337StrContraTraderTest {
     @Test
     void FIX0337Test() {
         FIX42 fixData = FIX42.FIX337_STR_CONTRA_TRADER;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "337", fixData.getID());
+        assertEquals( "CONTRA_TRADER", fixData.getName());
+        assertEquals( "ContraTrader", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag337StrContraTraderTest {
     void Tag0337Test() {
         Tag337StrContraTrader tagData;
 
+        tagData = new Tag337StrContraTrader(new MyStringType(
+                Tag337StrContraTrader.TESTA_STR_CONTRA_TRADER));
+        assertEquals( Tag337StrContraTrader.TESTA_STR_CONTRA_TRADER,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag337StrContraTrader(new MyStringType(
+                Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER));
+        assertEquals( Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

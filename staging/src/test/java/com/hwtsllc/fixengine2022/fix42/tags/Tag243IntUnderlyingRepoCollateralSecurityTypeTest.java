@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,9 +28,9 @@ class Tag243IntUnderlyingRepoCollateralSecurityTypeTest {
     @Test
     void FIX0243Test() {
         FIX42 fixData = FIX42.FIX243_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "243", fixData.getID());
+        assertEquals( "UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", fixData.getName());
+        assertEquals( "UnderlyingRepoCollateralSecurityType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -38,5 +39,16 @@ class Tag243IntUnderlyingRepoCollateralSecurityTypeTest {
     void Tag0243Test() {
         Tag243IntUnderlyingRepoCollateralSecurityType tagData;
 
+        tagData = new Tag243IntUnderlyingRepoCollateralSecurityType(new MyIntType(
+                Tag243IntUnderlyingRepoCollateralSecurityType.TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag243IntUnderlyingRepoCollateralSecurityType.TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag243IntUnderlyingRepoCollateralSecurityType(new MyIntType(
+                Tag243IntUnderlyingRepoCollateralSecurityType.TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag243IntUnderlyingRepoCollateralSecurityType.TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

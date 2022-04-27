@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag408AmtValueOfFuturesTest {
     @Test
     void FIX0408Test() {
         FIX42 fixData = FIX42.FIX408_AMT_VALUE_OF_FUTURES;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "408", fixData.getID());
+        assertEquals( "VALUE_OF_FUTURES", fixData.getName());
+        assertEquals( "ValueOfFutures", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag408AmtValueOfFuturesTest {
     void Tag0408Test() {
         Tag408AmtValueOfFutures tagData;
 
+        tagData = new Tag408AmtValueOfFutures(new MyAmtType(
+                Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES));
+        assertEquals( Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag408AmtValueOfFutures(new MyAmtType(
+                Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES));
+        assertEquals( Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES,
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

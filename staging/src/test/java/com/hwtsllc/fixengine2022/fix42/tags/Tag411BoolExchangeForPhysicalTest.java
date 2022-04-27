@@ -28,9 +28,9 @@ class Tag411BoolExchangeForPhysicalTest {
     @Test
     void FIX0411Test() {
         FIX42 fixData = FIX42.FIX411_BOOL_EXCHANGE_FOR_PHYSICAL;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "411", fixData.getID());
+        assertEquals( "EXCHANGE_FOR_PHYSICAL", fixData.getName());
+        assertEquals( "ExchangeForPhysical", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());

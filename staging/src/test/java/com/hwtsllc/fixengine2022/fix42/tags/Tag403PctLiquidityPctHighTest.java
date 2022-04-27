@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,9 @@ class Tag403PctLiquidityPctHighTest {
     @Test
     void FIX0403Test() {
         FIX42 fixData = FIX42.FIX403_PCT_LIQUIDITY_PCT_HIGH;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "403", fixData.getID());
+        assertEquals( "LIQUIDITY_PCT_HIGH", fixData.getName());
+        assertEquals( "LiquidityPctHigh", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,16 @@ class Tag403PctLiquidityPctHighTest {
     void Tag0403Test() {
         Tag403PctLiquidityPctHigh tagData;
 
+        tagData = new Tag403PctLiquidityPctHigh(new MyPercentageType(
+                Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH));
+        assertEquals( Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag403PctLiquidityPctHigh(new MyPercentageType(
+                Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH));
+        assertEquals( Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH,
+                tagData.getDataValue() );
+        assertNotEquals( FIX42.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }
 }
