@@ -34,6 +34,15 @@ class Tag263EnuSubscriptionRequestTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 0-2 msg types
+     */
+    SNAPSHOT( "0", "SNAPSHOT",
+                      "0 - Snapshot" ),
+    SUBSCRIBE_SNAPSHOT( "1", "SUBSCRIBE_SNAPSHOT",
+                                "1 - Snapshot + Updates (Subscribe)" ),
+    UNSUBSCRIBE_SNAPSHOT( "2", "UNSUBSCRIBE_SNAPSHOT",
+                                  "2 - Disable previous Snapshot + Update Request (Unsubscribe)" ),
     @Test
     void Tag0263Test() {
         Tag263EnuSubscriptionRequestType tagData;

@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum285DeleteReason implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-1 msg types
      */
     CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),

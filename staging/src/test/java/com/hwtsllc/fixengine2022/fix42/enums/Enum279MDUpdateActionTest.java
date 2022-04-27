@@ -27,7 +27,7 @@ class Enum279MDUpdateActionTest {
     void Enum0279Test() {
         Enum279MDUpdateAction enumType;
 
-        /*
+        /**
          * 0-4 msg types
          */
         enumType = Enum279MDUpdateAction.NEW;

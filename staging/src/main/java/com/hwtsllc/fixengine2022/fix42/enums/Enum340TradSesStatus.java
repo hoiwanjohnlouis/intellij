@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum340TradSesStatus implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-6 msg types
      */
     UNKNOWN( "0", "UNKNOWN", "0 - Unknown" ),

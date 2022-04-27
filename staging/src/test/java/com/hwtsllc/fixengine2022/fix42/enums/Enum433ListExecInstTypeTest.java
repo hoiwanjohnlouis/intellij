@@ -27,7 +27,7 @@ class Enum433ListExecInstTypeTest {
     void Enum0433Test() {
         Enum433ListExecInstType enumType;
 
-        /*
+        /**
          * 1-5 msg types
          */
         enumType = Enum433ListExecInstType.IMMEDIATE;

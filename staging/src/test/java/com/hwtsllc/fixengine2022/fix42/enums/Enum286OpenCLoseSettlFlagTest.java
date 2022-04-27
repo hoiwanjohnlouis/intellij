@@ -27,7 +27,7 @@ class Enum286OpenCLoseSettlFlagTest {
     void Enum0286Test() {
         Enum286OpenCLoseSettlFlag enumType;
 
-        /*
+        /**
          * 0-5 msg types
          */
         enumType = Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT;

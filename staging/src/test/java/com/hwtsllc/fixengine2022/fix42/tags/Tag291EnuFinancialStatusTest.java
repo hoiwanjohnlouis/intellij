@@ -34,6 +34,12 @@ class Tag291EnuFinancialStatusTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-3 msg types
+     */
+    BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
+    PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
+    RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
     @Test
     void Tag0291Test() {
         Tag291EnuFinancialStatus tagData;

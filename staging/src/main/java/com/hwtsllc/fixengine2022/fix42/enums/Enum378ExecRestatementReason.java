@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum378ExecRestatementReason implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-11, 99 msg types
      */
     GT_CORPORATE_ACTION( "0", "GT_CORPORATE_ACTION",

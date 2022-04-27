@@ -27,13 +27,13 @@ class Enum373SessionRejectReasonTest {
     void Enum0373Test() {
         Enum373SessionRejectReason enumType;
 
-        /*
+        /**
          *  0-17, 99, msg types
          */
 
 
-        /*
-         *  99, msg types
+        /**
+         *  0-17, msg types
          */
         enumType = Enum373SessionRejectReason.INVALID_TAG_NUMBER;
         assertEquals( "0", enumType.getID());
@@ -200,7 +200,7 @@ class Enum373SessionRejectReasonTest {
 
 
 
-        /*
+        /**
          *  99, msg types
          */
         enumType = Enum373SessionRejectReason.OTHER;

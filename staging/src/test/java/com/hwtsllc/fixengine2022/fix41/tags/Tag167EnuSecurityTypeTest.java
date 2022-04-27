@@ -34,6 +34,9 @@ class Tag167EnuSecurityTypeTest {
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  Information is the same as TAGS 167, 310, 609
+     */
     @Test
     void Tag0167Test() {
         Tag167EnuSecurityType tagData;

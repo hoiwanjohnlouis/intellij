@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum374BidRequestTransType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * C, and N msg types
      */
     CANCEL( "C", "CANCEL", "C - Cancel" ),

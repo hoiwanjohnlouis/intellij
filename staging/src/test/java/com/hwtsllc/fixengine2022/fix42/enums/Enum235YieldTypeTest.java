@@ -27,7 +27,7 @@ class Enum235YieldTypeTest {
     void Enum0235Test() {
         Enum235YieldType enumType;
 
-        /*
+        /**
          * various yield types
          */
         enumType = Enum235YieldType.AFTERTAX;

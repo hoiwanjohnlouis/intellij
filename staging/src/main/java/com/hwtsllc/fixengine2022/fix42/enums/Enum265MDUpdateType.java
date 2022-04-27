@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum265MDUpdateType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-1 msg types
      */
     FULL_REFRESH( "0", "FULL_REFRESH", "0 - Full refresh" ),

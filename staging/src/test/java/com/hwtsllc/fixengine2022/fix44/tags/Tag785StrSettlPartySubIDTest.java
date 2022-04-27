@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,10 +26,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag785StrSettlPartySubIDTest {
     @Test
     void FIX0785Test() {
-        FIX44 fixData = FIX44.FIX785_SETTL_PARTY_SUB_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX44 fixData = FIX44.FIX785_STR_SETTL_PARTY_SUB_ID;
+        assertEquals( "785", fixData.getID());
+        assertEquals( "SETTL_PARTY_SUB_ID", fixData.getName());
+        assertEquals( "SettlPartySubId", fixData.getDescription());
         assertNotEquals( FIX44.JUNK_ID, fixData.getID());
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,12 @@ class Tag785StrSettlPartySubIDTest {
     void Tag0785Test() {
         Tag785StrSettlPartySubID tagData;
 
+        tagData = new Tag785StrSettlPartySubID(new MyStringType(Tag785StrSettlPartySubID.TESTA_STR_SETTL_PARTY_SUB_ID));
+        assertEquals( Tag785StrSettlPartySubID.TESTA_STR_SETTL_PARTY_SUB_ID, tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag785StrSettlPartySubID(new MyStringType(Tag785StrSettlPartySubID.TESTB_STR_SETTL_PARTY_SUB_ID));
+        assertEquals( Tag785StrSettlPartySubID.TESTB_STR_SETTL_PARTY_SUB_ID, tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

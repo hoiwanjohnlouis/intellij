@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum321SecurityRequestType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-3 msg types
      */
     REQUEST_SECURITY_IDENTITY( "0", "REQUEST_SECURITY_IDENTITY",

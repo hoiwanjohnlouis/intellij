@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum427GTBookingInst implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-2 msg types
      */
     BOOK_OUT_ALL_TRADES( "0", "BOOK_OUT_ALL_TRADES",

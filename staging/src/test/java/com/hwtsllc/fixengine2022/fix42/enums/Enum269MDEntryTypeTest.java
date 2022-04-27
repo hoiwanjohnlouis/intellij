@@ -27,11 +27,11 @@ class Enum269MDEntryTypeTest {
     void Enum0269Test() {
         Enum269MDEntryType enumType;
 
-        /*
+        /**
          *  0-9, A-Q,
          */
 
-        /*
+        /**
          *  0-9
          */
         enumType = Enum269MDEntryType.BID;
@@ -124,7 +124,7 @@ class Enum269MDEntryTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
-        /*
+        /**
          * A-Q
          */
         enumType = Enum269MDEntryType.IMBALANCE;

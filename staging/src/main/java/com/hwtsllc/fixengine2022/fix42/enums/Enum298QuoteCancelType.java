@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum298QuoteCancelType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-5 msg types
      */
     CANCEL_FOR_SYMBOL( "1", "CANCEL_FOR_SYMBOL",

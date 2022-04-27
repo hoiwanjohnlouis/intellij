@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum418BidTradeType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * A, G, J, and R msg types
      */
     AGENCY( "A", "AGENCY", "A - Agency" ),

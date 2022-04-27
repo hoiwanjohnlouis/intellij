@@ -34,6 +34,11 @@ class Tag401EnuSideValueIndTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-2 msg types
+     */
+    SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
+    SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
     @Test
     void Tag0401Test() {
         Tag401EnuSideValueInd tagData;

@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum323SecurityResponseType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-6 msg types
      */
     ACCEPT_SECURITY_AS_IS( "1", "ACCEPT_SECURITY_AS_IS",

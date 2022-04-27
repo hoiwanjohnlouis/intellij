@@ -34,6 +34,14 @@ class Tag279EnuMDUpdateActionTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 0-4 msg types
+     */
+    NEW( "0", "NEW", "0 - New" ),
+    CHANGE( "1", "CHANGE", "1 - Change" ),
+    DELETE( "2", "DELETE", "2 - Delete" ),
+    DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
+    DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
     @Test
     void Tag0279Test() {
         Tag279EnuMDUpdateAction tagData;

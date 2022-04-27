@@ -27,7 +27,7 @@ class Enum414ProgRptReqsTest {
     void Enum0414Test() {
         Enum414ProgRptReqs enumType;
 
-        /*
+        /**
          * 1-3 msg types
          */
         enumType = Enum414ProgRptReqs.BUY_SIDE_STATUS;

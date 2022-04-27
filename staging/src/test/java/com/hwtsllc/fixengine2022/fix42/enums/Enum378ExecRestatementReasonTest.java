@@ -27,12 +27,12 @@ class Enum378ExecRestatementReasonTest {
     void Enum0378Test() {
         Enum378ExecRestatementReason enumType;
 
-        /*
+        /**
          *  0-11, 99, msg types
          */
 
 
-        /*
+        /**
          *  0-11, msg types
          */
         enumType = Enum378ExecRestatementReason.GT_CORPORATE_ACTION;
@@ -144,7 +144,7 @@ class Enum378ExecRestatementReasonTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          *  99, msg types
          */
         enumType = Enum378ExecRestatementReason.OTHER;

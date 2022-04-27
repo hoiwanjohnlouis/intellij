@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum442MultiLegReportingType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-3 msg types
      */
     SINGLE_SECURITY( "1", "SINGLE_SECURITY",

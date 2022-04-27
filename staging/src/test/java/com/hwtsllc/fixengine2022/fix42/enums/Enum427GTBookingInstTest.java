@@ -27,7 +27,7 @@ class Enum427GTBookingInstTest {
     void Enum0427Test() {
         Enum427GTBookingInst enumType;
 
-        /*
+        /**
          * 0-2 msg types
          */
         enumType = Enum427GTBookingInst.BOOK_OUT_ALL_TRADES;

@@ -27,7 +27,7 @@ class Enum416IncTaxIndTest {
     void Enum0416Test() {
         Enum416IncTaxInd enumType;
 
-        /*
+        /**
          * 1-2 msg types
          */
         enumType = Enum416IncTaxInd.NET;

@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum339TrdSesMode implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-3 msg types
      */
     TESTING( "1", "TESTING", "1 - Testing" ),

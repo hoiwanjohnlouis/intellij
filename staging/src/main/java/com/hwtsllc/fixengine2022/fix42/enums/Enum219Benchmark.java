@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum219Benchmark implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-9 msg types
      */
     CURVE( "1", "CURVE", "1 - CURVE" ),

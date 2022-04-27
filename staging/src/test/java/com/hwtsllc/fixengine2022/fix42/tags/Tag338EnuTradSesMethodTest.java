@@ -34,6 +34,12 @@ class Tag338EnuTradSesMethodTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-3 msg types
+     */
+    ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
+    OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
+    TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
     @Test
     void Tag0338Test() {
         Tag338EnuTradSesMethod tagData;

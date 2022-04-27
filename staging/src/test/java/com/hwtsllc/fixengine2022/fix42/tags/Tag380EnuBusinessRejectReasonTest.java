@@ -34,6 +34,27 @@ class Tag380EnuBusinessRejectReasonTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 0-7, 18 msg types
+     */
+    OTHER( "0", "OTHER",
+                   "0 - Other" ),
+    UNKNOWN_ID( "1", "UNKNOWN_ID",
+                        "1 - Unknown ID" ),
+    UNKNOWN_SECURITY( "2", "UNKNOWN_SECURITY",
+                              "2 - Unknown Security" ),
+    UNKNOWN_MESSAGE_TYPE( "3", "UNKNOWN_MESSAGE_TYPE",
+                                  "3 - Unknown Message Type" ),
+    APPLICATION_NOT_AVAILABLE( "4", "APPLICATION_NOT_AVAILABLE",
+                                       "4 - Application not available" ),
+    REQUIRED_FIELD_MISSING( "5", "REQUIRED_FIELD_MISSING",
+                                    "5 - Conditionally required field missing" ),
+    NOT_AUTHORIZED( "6", "NOT_AUTHORIZED",
+                            "6 - Not Authorized" ),
+    DELIVERTO_FIRM_NOT_AVAILABLE( "7", "DELIVERTO_FIRM_NOT_AVAILABLE",
+                                          "7 - DeliverTo firm not available at this time" ),
+    INVALID_PRICE_INCREMENT( "18", "INVALID_PRICE_INCREMENT",
+                                     "18 - Invalid price increment" ),
     @Test
     void Tag0380Test() {
         Tag380EnuBusinessRejectReason tagData;

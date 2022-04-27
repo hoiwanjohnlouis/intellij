@@ -46,7 +46,7 @@ class Enum221BenchmarkCurveNameTest {
     void Enum0221Test() {
         Enum221BenchmarkCurveName enumType;
 
-        /*
+        /**
          * EONIA, EUREPO, EURIBOR, FUTURESWAP, LIBID, LIBOR, MUNIAAA,
          * OTHER, PFANDBRIEFE, SONIA, SWAP, and TREASURY types
          */

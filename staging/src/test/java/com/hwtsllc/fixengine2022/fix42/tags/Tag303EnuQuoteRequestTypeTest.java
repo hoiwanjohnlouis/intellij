@@ -34,6 +34,11 @@ class Tag303EnuQuoteRequestTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-2 msg types
+     */
+    MANUAL( "1", "MANUAL", "1 - Manual" ),
+    AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
     @Test
     void Tag0303Test() {
         Tag303EnuQuoteRequestType tagData;

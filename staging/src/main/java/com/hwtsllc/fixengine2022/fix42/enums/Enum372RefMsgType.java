@@ -26,7 +26,7 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
 
 
 
-    /*
+    /**
      *  0-9, msg types
      *  A-Z, msg types, skipping "I", and "O"
      *  a-z, msg types
@@ -36,7 +36,7 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
 
 
 
-    /*
+    /**
      * 0-9 msg types
      */
     HEARTBEAT("0", "HEARTBEAT", "0 - Heartbeat" ),
@@ -52,7 +52,7 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
 
 
 
-    /*
+    /**
      * A-Z msg types, skipping "I", and "O"
      */
     LOGON("A", "LOGON", "A - Logon" ),
@@ -83,7 +83,7 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
 
 
 
-    /*
+    /**
      * a-z msg types
      */
     QUOTE_STATUS_REQUEST("a", "QUOTE_STATUS_REQUEST",
@@ -141,7 +141,7 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
 
 
 
-    /*
+    /**
      * AA-AZ msg types
      */
     DERIVATIVE_SECURITY_LIST("AA", "DERIVATIVE_SECURITY_LIST",
@@ -199,7 +199,7 @@ public enum Enum372RefMsgType implements EnumAccessors, LogStringVerbose {
 
 
 
-    /*
+    /**
      * BA-BP msg types
      */
     COLLATERAL_REPORT("BA", "COLLATERAL_REPORT",

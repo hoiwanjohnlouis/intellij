@@ -27,7 +27,7 @@ class Enum327HaltReasonTest {
     void Enum0327Test() {
         Enum327HaltReason enumType;
 
-        /*
+        /**
          * D, E, I, M, P, and X msg types
          */
         enumType = Enum327HaltReason.NEWS_DISSEMINATION;

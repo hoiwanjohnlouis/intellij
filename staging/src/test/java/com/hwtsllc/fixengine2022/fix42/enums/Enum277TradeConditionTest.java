@@ -27,7 +27,7 @@ class Enum277TradeConditionTest {
     void Enum0277Test() {
         Enum277TradeCondition enumType;
 
-        /*
+        /**
          * 0 msg types
          */
         enumType = Enum277TradeCondition.CANCEL;
@@ -40,7 +40,7 @@ class Enum277TradeConditionTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * A-N, msg types
          */
         enumType = Enum277TradeCondition.CASH_MARKET;
@@ -170,7 +170,7 @@ class Enum277TradeConditionTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * P-Z msg types
          */
         enumType = Enum277TradeCondition.IMBALANCE_MORE_BUYERS;
@@ -273,7 +273,7 @@ class Enum277TradeConditionTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * a-z msg types
          */
         enumType = Enum277TradeCondition.VOLUME_ONLY;
@@ -511,7 +511,7 @@ class Enum277TradeConditionTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * AA-AT msg types
          */
         enumType = Enum277TradeCondition.SPREAD;

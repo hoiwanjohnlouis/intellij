@@ -34,6 +34,12 @@ class Tag301EnuQuoteResponseLevelTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 0-2 msg types
+     */
+    NO_ACKNOWLEDGEMENT( "0", "NO_ACKNOWLEDGEMENT", "0 - No Acknowledgement (default)" ),
+    ACKNOWLEDGE_NEGATIVE_OR_ERRORS( "1", "ACKNOWLEDGE_NEGATIVE_OR_ERRORS", "1 - Acknowledge only negative or erroneous quotes" ),
+    ACKNOWLEDGE_EACH_QUOTE( "2", "ACKNOWLEDGE_EACH_QUOTE", "2 - Acknowledge each quote messages" ),
     @Test
     void Tag0301Test() {
         Tag301EnuQuoteResponseLevel tagData;

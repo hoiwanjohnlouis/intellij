@@ -27,7 +27,7 @@ class Enum274TickDirectionTest {
     void Enum0274Test() {
         Enum274TickDirection enumType;
 
-        /*
+        /**
          * 0-3
          */
         enumType = Enum274TickDirection.PLUS_TICK;

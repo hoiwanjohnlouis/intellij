@@ -34,6 +34,11 @@ class Tag385EnuMsgDirectionTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * R, and S msg types
+     */
+    RECEIVE( "R", "RECEIVE", "R - Receive" ),
+    SEND( "S", "SEND", "S - Send" ),
     @Test
     void Tag0385Test() {
         Tag385EnuMsgDirection tagData;

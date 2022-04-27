@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum399BidDescriptorType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-3 msg types
      */
     SECTOR( "1", "SECTOR", "1 - Sector" ),

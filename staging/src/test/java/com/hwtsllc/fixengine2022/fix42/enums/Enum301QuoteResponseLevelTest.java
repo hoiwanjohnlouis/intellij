@@ -27,7 +27,7 @@ class Enum301QuoteResponseLevelTest {
     void Enum0301Test() {
         Enum301QuoteResponseLevel enumType;
 
-        /*
+        /**
          * 0-2 msg types
          */
         enumType = Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT;

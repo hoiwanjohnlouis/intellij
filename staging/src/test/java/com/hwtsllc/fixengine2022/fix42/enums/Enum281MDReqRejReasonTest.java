@@ -27,12 +27,12 @@ class Enum281MDReqRejReasonTest {
     void Enum0281Test() {
         Enum281MDReqRejReason enumType;
 
-        /*
+        /**
          *  0-9, A-D msg types
          */
 
 
-        /*
+        /**
          *  0-9 msg types
          */
         enumType = Enum281MDReqRejReason.UNKNOWN_SYMBOL;
@@ -126,7 +126,7 @@ class Enum281MDReqRejReasonTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          *  A-D, msg types
          */
         enumType = Enum281MDReqRejReason.UNSUPPORTED_SCOPE;

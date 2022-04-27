@@ -27,7 +27,7 @@ class Enum291FinancialStatusTest {
     void Enum0291Test() {
         Enum291FinancialStatus enumType;
 
-        /*
+        /**
          * 1-3 msg types
          */
         enumType = Enum291FinancialStatus.BANKRUPT;

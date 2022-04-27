@@ -27,7 +27,7 @@ class Enum434CxlRejResponseToTest {
     void Enum0434Test() {
         Enum434CxlRejResponseTo enumType;
 
-        /*
+        /**
          * 1-2 msg types
          */
         enumType = Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST;

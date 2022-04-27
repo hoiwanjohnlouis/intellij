@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum221BenchmarkCurveName implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * various msg types
      */
     EONIA( "EONIA", "EONIA", "EONIA - EONIA" ),

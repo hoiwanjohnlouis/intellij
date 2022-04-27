@@ -34,6 +34,11 @@ class Tag416EnuIncTaxIndTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-2 msg types
+     */
+    NET( "1", "NET", "1 - Net" ),
+    GROSS( "2", "GROSS", "2 - Gross" ),
     @Test
     void Tag0416Test() {
         Tag416EnuIncTaxInd tagData;

@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum216RoutingType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-4 msg types
      */
     TARGET_FIRM( "1", "TARGET_FIRM", "1 - Target Firm" ),

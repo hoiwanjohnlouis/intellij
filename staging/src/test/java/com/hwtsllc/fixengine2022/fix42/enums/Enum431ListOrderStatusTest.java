@@ -27,7 +27,7 @@ class Enum431ListOrderStatusTest {
     void Enum0431Test() {
         Enum431ListOrderStatus enumType;
 
-        /*
+        /**
          * 1-7 msg types
          */
         enumType = Enum431ListOrderStatus.IN_BIDDING_PROCESS;

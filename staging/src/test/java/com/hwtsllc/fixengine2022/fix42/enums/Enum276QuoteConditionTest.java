@@ -27,7 +27,7 @@ class Enum276QuoteConditionTest {
     void Enum0276Test() {
         Enum276QuoteCondition enumType;
 
-        /*
+        /**
          * A-Z
          */
         enumType = Enum276QuoteCondition.OPEN_ACTIVE;
@@ -265,7 +265,7 @@ class Enum276QuoteConditionTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * a-z
          */
         enumType = Enum276QuoteCondition.EQUIPMENT_CHANGEOVER;
@@ -503,7 +503,7 @@ class Enum276QuoteConditionTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * 0-2
          */
         enumType = Enum276QuoteCondition.RESERVED_SAM;

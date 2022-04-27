@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum385MsgDirection implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * R, and S msg types
      */
     RECEIVE( "R", "RECEIVE", "R - Receive" ),

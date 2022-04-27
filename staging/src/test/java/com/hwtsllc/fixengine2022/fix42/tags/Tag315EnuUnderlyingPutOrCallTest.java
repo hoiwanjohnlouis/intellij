@@ -39,7 +39,11 @@ class Tag315EnuUnderlyingPutOrCallTest {
     void Tag0315Test() {
         Tag315EnuUnderlyingPutOrCall tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
+        PUT( "0", "PUT", "0 - Put" ),
+                CALL( "1", "CALL", "1 - Call" ),
+
+
+                tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
         assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
                 tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());

@@ -32,7 +32,7 @@ class Enum372RefMsgTypeTest {
 
 
 
-        /*
+        /**
          *  0-9, msg types
          *  A-Z, msg types, skipping "I", and "O"
          *  a-z, msg types
@@ -42,7 +42,7 @@ class Enum372RefMsgTypeTest {
 
 
 
-        /*
+        /**
          * 0-9 msg types
          */
         enumType = Enum372RefMsgType.HEARTBEAT;
@@ -136,7 +136,7 @@ class Enum372RefMsgTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          *  A-Z, msg types, skipping "I", and "O"
          */
         enumType = Enum372RefMsgType.LOGON;
@@ -347,7 +347,7 @@ class Enum372RefMsgTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * a-z msg types
          */
         enumType = Enum372RefMsgType.QUOTE_STATUS_REQUEST;
@@ -585,7 +585,7 @@ class Enum372RefMsgTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * AA-AZ msg types
          */
         enumType = Enum372RefMsgType.DERIVATIVE_SECURITY_LIST;
@@ -823,7 +823,7 @@ class Enum372RefMsgTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * BA-BP msg types
          */
         enumType = Enum372RefMsgType.COLLATERAL_REPORT;

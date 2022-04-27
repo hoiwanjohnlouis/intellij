@@ -27,13 +27,16 @@ class Tag216EnuRoutingTypeTest {
     @Test
     void FIX0216Test() {
         FIX42 fixData = FIX42.FIX216_ENU_ROUTING_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "216", fixData.getID());
+        assertEquals( "ROUTING_TYPE", fixData.getName());
+        assertEquals( "RoutingType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-4 msg types
+     */
     @Test
     void Tag0216Test() {
         Tag216EnuRoutingType tagData;

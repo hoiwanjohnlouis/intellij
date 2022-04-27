@@ -24,7 +24,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
      *  Information is the same as TAGS 167, 310, 609
      */
 
-    /*
+    /**
      * Deprecated, 4
      */
     DEPRECATED_FUTURE( "FUT", "DEPRECATED_FUTURE",
@@ -36,7 +36,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     DEPRECATED_US_TREASURY_BILL( "USTB", "DEPRECATED_US_TREASURY_BILL",
             "USTB - US Treasury Bill (Deprecated Value Use TBILL)" ),
 
-    /*
+    /**
      * Agency, 5
      */
     EURO_SUPRANATIONAL_COUPON( "EUSUPRA", "EURO_SUPRANATIONAL_COUPON",
@@ -50,7 +50,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     USD_SUPRANATIONAL_COUPON( "SUPRA", "USD_SUPRANATIONAL_COUPON",
             "SUPRA - USD Supranational Coupons (Agency)" ),
 
-    /*
+    /**
      * Corporate, 8
      */
     CORPORATE_BOND( "CORP", "CORPORATE_BOND",
@@ -70,13 +70,13 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     YANKEE_CORPORATE_BOND( "YANK", "YANKEE_CORPORATE_BOND",
             "YANK - Yankee Corporate Bond" ),
 
-    /*
+    /**
      * Currency, 1
      */
     FOREIGN_EXCHANGE_CONTRACT( "FOR", "FOREIGN_EXCHANGE_CONTRACT",
             "FOR - Foreign Exchange Contract (Currency)" ),
 
-    /*
+    /**
      * Equity, 2
      */
     COMMON_STOCK( "CS", "COMMON_STOCK",
@@ -84,7 +84,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     PREFERRED_STOCK( "PS", "PREFERRED_STOCK",
             "PS - Preferred Stock (Equity)" ),
 
-    /*
+    /**
      * Finance, 5
      */
     REPURCHASE( "REPO", "REPURCHASE",
@@ -98,7 +98,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     SECURITIES_PLEDGE( "SECPLEDGE", "SECURITIES_PLEDGE",
             "SECPLEDGE - Securities Pledge (Financing)" ),
 
-    /*
+    /**
      * Government, 9
      */
     BRADY_BOND( "BRADY", "BRADY_BOND",
@@ -120,7 +120,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     US_TREASURY_BILL( "TBILL", "US_TREASURY_BILL",
             "TBILL - US Treasury Bill (Government)" ),
 
-    /*
+    /**
      * Loan, 13
      */
     TERM_LOAN( "TERM", "TERM_LOAN",
@@ -150,7 +150,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     RETIRED_LOAN( "RETIRED", "RETIRED_LOAN",
             "RETIRED - Retired" ),
 
-    /*
+    /**
      * Money Market, 18
      */
     BANKERS_ACCEPTANCE( "BA", "BANKERS_ACCEPTANCE",
@@ -190,7 +190,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     YANKEE_CERTIFICATE_OF_DEPOSIT( "YCD", "YANKEE_CERTIFICATE_OF_DEPOSIT",
             "YCD - Yankee Certificate Of Deposit" ),
 
-    /*
+    /**
      * Mortgage, 11
      */
     ASSET_BACKED_SECURITIES( "ABS", "ASSET_BACKED_SECURITIES",
@@ -216,7 +216,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     TO_BE_ANNOUNCED( "TBA", "TO_BE_ANNOUNCED",
             "TBA - To Be Announced" ),
 
-    /*
+    /**
      * Municipal, 16
      */
     OTHER_ANTICIPATION_NOTES( "AN", "OTHER_ANTICIPATION_NOTES",
@@ -252,7 +252,7 @@ public enum Enum310UnderlyingSecurityType implements EnumAccessors, LogStringVer
     WARRANT( "WAR", "WARRANT",
             "WAR - Warrant" ),
 
-    /*
+    /**
      * Other, 7
      */
     MUTUAL_FUND( "MF", "MUTUAL_FUND",

@@ -56,12 +56,12 @@ class Enum305UnderlyingSecurityIDSourceTest {
     void Enum0305Test() {
         Enum305UnderlyingSecurityIDSource enumType;
 
-        /*
+        /**
          *  1-9, A-L, msg types
          */
 
 
-        /*
+        /**
          *  1-9, msg types
          */
         enumType = Enum305UnderlyingSecurityIDSource.CUSIP;
@@ -148,7 +148,7 @@ class Enum305UnderlyingSecurityIDSourceTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          *  A-L, msg types
          */
         enumType = Enum305UnderlyingSecurityIDSource.BLOOMBERG;

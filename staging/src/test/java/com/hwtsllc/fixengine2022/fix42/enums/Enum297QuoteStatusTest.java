@@ -27,7 +27,7 @@ class Enum297QuoteStatusTest {
     void Enum0297Test() {
         Enum297QuoteStatus enumType;
 
-        /*
+        /**
          * 0-15 msg types
          */
         enumType = Enum297QuoteStatus.ACCEPTED;

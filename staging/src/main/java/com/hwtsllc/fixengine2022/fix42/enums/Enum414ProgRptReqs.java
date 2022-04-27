@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum414ProgRptReqs implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-3 msg types
      */
     BUY_SIDE_STATUS( "1", "BUY_SIDE_STATUS",

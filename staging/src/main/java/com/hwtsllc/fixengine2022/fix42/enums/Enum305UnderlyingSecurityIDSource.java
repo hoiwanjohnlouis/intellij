@@ -51,7 +51,7 @@ public enum Enum305UnderlyingSecurityIDSource implements EnumAccessors, LogStrin
      */
 
 
-    /*
+    /**
      * 0-9 msg types
      */
     CUSIP("1", "CUSIP", "1 - CUSIP - Committee on Uniform Securities Identification Procedures" ),
@@ -65,7 +65,7 @@ public enum Enum305UnderlyingSecurityIDSource implements EnumAccessors, LogStrin
     CTA("9", "CTA",
             "9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)" ),
 
-    /*
+    /**
      * A-L msg types
      */
     BLOOMBERG("A", "BLOOMBERG", "A - Bloomberg Symbol" ),

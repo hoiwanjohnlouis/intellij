@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum327HaltReason implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * D, E, I, M, P, and X msg types
      */
     NEWS_DISSEMINATION( "D", "NEWS_DISSEMINATION", "D - News Dissemination" ),

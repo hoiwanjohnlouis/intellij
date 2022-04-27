@@ -27,7 +27,7 @@ class Enum303QuoteRequestTypeTest {
     void Enum0303Test() {
         Enum303QuoteRequestType enumType;
 
-        /*
+        /**
          * 1-2 msg types
          */
         enumType = Enum303QuoteRequestType.MANUAL;

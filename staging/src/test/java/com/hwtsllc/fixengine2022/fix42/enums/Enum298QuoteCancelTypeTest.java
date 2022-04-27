@@ -27,7 +27,7 @@ class Enum298QuoteCancelTypeTest {
     void Enum0298Test() {
         Enum298QuoteCancelType enumType;
 
-        /*
+        /**
          * 1-5 msg types
          */
         enumType = Enum298QuoteCancelType.CANCEL_FOR_SYMBOL;

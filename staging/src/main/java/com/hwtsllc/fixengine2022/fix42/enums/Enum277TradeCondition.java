@@ -20,12 +20,12 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum277TradeCondition implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0
      */
     CANCEL( "0", "CANCEL", "0 - Cancel" ),
 
-    /*
+    /**
      * A-Z
      */
     CASH_MARKET( "A", "CASH_MARKET",
@@ -79,7 +79,7 @@ public enum Enum277TradeCondition implements EnumAccessors, LogStringVerbose {
     TRADES_FROM_INTERMARKET_SWEEP( "Z", "TRADES_FROM_INTERMARKET_SWEEP",
             "Z - Trades resulting from intermarket sweep" ),
 
-    /*
+    /**
      * a-z
      */
     VOLUME_ONLY( "a", "VOLUME_ONLY", "a - Volume Only" ),
@@ -109,7 +109,7 @@ public enum Enum277TradeCondition implements EnumAccessors, LogStringVerbose {
     ADJUSTED( "y", "ADJUSTED", "y - Adjusted" ),
     ADJUSTED_ETH( "z", "ADJUSTED_ETH", "z - Adjusted ETH" ),
 
-    /*
+    /**
      * AA-AT
      */
     SPREAD( "AA", "SPREAD", "AA - Spread" ),

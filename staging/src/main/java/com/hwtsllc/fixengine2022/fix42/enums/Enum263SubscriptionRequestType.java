@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum263SubscriptionRequestType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-2 msg types
      */
     SNAPSHOT( "0", "SNAPSHOT",

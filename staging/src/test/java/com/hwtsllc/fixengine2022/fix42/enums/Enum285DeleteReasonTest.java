@@ -27,7 +27,7 @@ class Enum285DeleteReasonTest {
     void Enum0285Test() {
         Enum285DeleteReason enumType;
 
-        /*
+        /**
          * 0-1 msg types
          */
         enumType = Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST;

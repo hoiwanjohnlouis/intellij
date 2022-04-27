@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum433ListExecInstType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-5 msg types
      */
     IMMEDIATE( "1", "IMMEDIATE",

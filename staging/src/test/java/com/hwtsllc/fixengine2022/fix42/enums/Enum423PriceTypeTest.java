@@ -52,11 +52,11 @@ class Enum423PriceTypeTest {
     void Enum0423Test() {
         Enum423PriceType enumType;
 
-        /*
+        /**
          * 1-11, 13-19 msg types
          */
 
-        /*
+        /**
          * 1-11 msg types
          */
         enumType = Enum423PriceType.PERCENTAGE;
@@ -162,7 +162,7 @@ class Enum423PriceTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          * 13-19 msg types
          */
         enumType = Enum423PriceType.TICKS_IN_HALFS;

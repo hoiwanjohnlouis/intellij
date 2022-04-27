@@ -45,7 +45,7 @@ public enum Enum423PriceType implements EnumAccessors, LogStringVerbose {
      *      18 - Product ticks in sixty-forths
      *      19 - Product ticks in one-twenty-eights
      */
-    /*
+    /**
      * 1-11, 13-19 msg types
      */
     PERCENTAGE( "1", "PERCENTAGE",

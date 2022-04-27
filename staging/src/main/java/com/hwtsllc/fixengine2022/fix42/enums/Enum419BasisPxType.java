@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum419BasisPxType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 2-9, A-D, Z msg types
      */
     CLOSING_PRICE_MORNING( "2", "CLOSING_PRICE_MORNING",

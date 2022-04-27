@@ -34,6 +34,13 @@ class Tag434EnuCxlRejResponseToTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-2 msg types
+     */
+    ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST",
+                                  "1 - Order cancel request" ),
+    ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST",
+                                        "2 - Order cancel/replace request" ),
     @Test
     void Tag0434Test() {
         Tag434EnuCxlRejResponseTo tagData;

@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum274TickDirection implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-3 msg types
      */
     PLUS_TICK( "0", "PLUS_TICK", "0 - Plus Tick" ),

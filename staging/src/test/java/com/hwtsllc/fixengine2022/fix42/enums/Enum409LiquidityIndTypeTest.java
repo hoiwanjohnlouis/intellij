@@ -27,7 +27,7 @@ class Enum409LiquidityIndTypeTest {
     void Enum0409Test() {
         Enum409LiquidityIndType enumType;
 
-        /*
+        /**
          * 1-4 msg types
          */
         enumType = Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE;

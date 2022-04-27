@@ -27,7 +27,7 @@ class Enum263SubscriptionRequestTypeTest {
     void Enum0263Test() {
         Enum263SubscriptionRequestType enumType;
 
-        /*
+        /**
          * 0-2 msg types
          */
         enumType = Enum263SubscriptionRequestType.SNAPSHOT;

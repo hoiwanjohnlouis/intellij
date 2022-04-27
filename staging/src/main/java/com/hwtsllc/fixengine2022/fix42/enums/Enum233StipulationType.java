@@ -92,7 +92,7 @@ public enum Enum233StipulationType implements EnumAccessors, LogStringVerbose {
      *      PSA - Percent of BMA Prepayment Curve
      *      SMM - Single Monthly Mortality
      */
-    /*
+    /**
      *  233 StipulationType
      */
     ALTERNATIVE_MINIMUM_TAX( "AMT", "ALTERNATIVE_MINIMUM_TAX",
@@ -202,7 +202,7 @@ public enum Enum233StipulationType implements EnumAccessors, LogStringVerbose {
     YIELD_RANGE( "YIELD", "YIELD_RANGE",
             "YIELD - Yield Range" ),
 
-    /*
+    /**
      *  Prepayment Speeds
      */
     ABSOLUTE_PREPAYMENT_SPEED( "ABS", "ABSOLUTE_PREPAYMENT_SPEED",

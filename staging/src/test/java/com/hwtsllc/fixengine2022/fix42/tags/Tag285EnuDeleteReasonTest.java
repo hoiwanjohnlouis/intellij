@@ -34,6 +34,11 @@ class Tag285EnuDeleteReasonTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 0-1 msg types
+     */
+    CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
+    ERROR( "1", "ERROR", "1 - Error" ),
     @Test
     void Tag0285Test() {
         Tag285EnuDeleteReason tagData;

@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum380BusinessRejectReason implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-7, 18 msg types
      */
     OTHER( "0", "OTHER",

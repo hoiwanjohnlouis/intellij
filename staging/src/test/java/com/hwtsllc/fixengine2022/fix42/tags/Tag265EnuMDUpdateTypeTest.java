@@ -34,6 +34,11 @@ class Tag265EnuMDUpdateTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 0-1 msg types
+     */
+    FULL_REFRESH( "0", "FULL_REFRESH", "0 - Full refresh" ),
+    INCREMENTAL_REFRESH( "1", "INCREMENTAL_REFRESH", "1 - Incremental refresh" ),
     @Test
     void Tag0265Test() {
         Tag265EnuMDUpdateType tagData;

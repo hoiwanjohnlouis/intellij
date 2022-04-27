@@ -27,7 +27,7 @@ class Enum321SecurityRequestTypeTest {
     void Enum0321Test() {
         Enum321SecurityRequestType enumType;
 
-        /*
+        /**
          * 0-3 msg types
          */
         enumType = Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY;

@@ -27,7 +27,7 @@ class Enum265MDUpdateTypeTest {
     void Enum0265Test() {
         Enum265MDUpdateType enumType;
 
-        /*
+        /**
          * 0-1 msg types
          */
         enumType = Enum265MDUpdateType.FULL_REFRESH;

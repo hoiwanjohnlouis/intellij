@@ -27,11 +27,11 @@ class Enum326SecurityTradingStatusTest {
     void Enum0326Test() {
         Enum326SecurityTradingStatus enumType;
 
-        /*
+        /**
          *  1-10, 12-23, msg types. skipped 11.
          */
 
-        /*
+        /**
          *  1-10, msg types
          */
         enumType = Enum326SecurityTradingStatus.OPENING_DELAY;
@@ -125,7 +125,7 @@ class Enum326SecurityTradingStatusTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          *  12-23, msg types
          */
         enumType = Enum326SecurityTradingStatus.NO_MARKET_IMBALANCE;

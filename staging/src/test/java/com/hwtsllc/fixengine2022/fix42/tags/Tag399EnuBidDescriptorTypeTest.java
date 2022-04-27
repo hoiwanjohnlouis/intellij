@@ -34,6 +34,12 @@ class Tag399EnuBidDescriptorTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-3 msg types
+     */
+    SECTOR( "1", "SECTOR", "1 - Sector" ),
+    COUNTRY( "2", "COUNTRY", "2 - Country" ),
+    INDEX( "3", "INDEX", "3 - Index" ),
     @Test
     void Tag0399Test() {
         Tag399EnuBidDescriptorType tagData;

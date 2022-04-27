@@ -34,6 +34,13 @@ class Tag409EnuLiquidityIndTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-4 msg types
+     */
+    FIVE_DAY_MOVING_AVERAGE( "1", "FIVE_DAY_MOVING_AVERAGE", "1 - 5-Day Moving Average" ),
+    TWENTY_DAY_MOVING_AVERAGE( "2", "TWENTY_DAY_MOVING_AVERAGE", "2 - 20-Day Moving Average" ),
+    NORMAL_MARKET_SIZE( "3", "NORMAL_MARKET_SIZE", "3 - Normal Market Size" ),
+    OTHER( "4", "OTHER", "4 - Other" ),
     @Test
     void Tag0409Test() {
         Tag409EnuLiquidityIndType tagData;

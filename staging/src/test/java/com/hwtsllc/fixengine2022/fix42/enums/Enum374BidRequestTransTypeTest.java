@@ -27,7 +27,7 @@ class Enum374BidRequestTransTypeTest {
     void Enum0374Test() {
         Enum374BidRequestTransType enumType;
 
-        /*
+        /**
          * C, and N msg types
          */
         enumType = Enum374BidRequestTransType.CANCEL;

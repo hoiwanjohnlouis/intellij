@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum276QuoteCondition implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * A-Z
      */
     OPEN_ACTIVE( "A", "OPEN_ACTIVE", "A - Open/Active" ),
@@ -50,7 +50,7 @@ public enum Enum276QuoteCondition implements EnumAccessors, LogStringVerbose {
     VOLUME_ALERT( "Y", "VOLUME_ALERT", "Y - Volume Alert" ),
     ORDER_IMBALANCE( "Z", "ORDER_IMBALANCE", "Z - Order Imbalance" ),
 
-    /*
+    /**
      * a-z
      */
     EQUIPMENT_CHANGEOVER( "a", "EQUIPMENT_CHANGEOVER", "a - Equipment Changeover" ),
@@ -80,7 +80,7 @@ public enum Enum276QuoteCondition implements EnumAccessors, LogStringVerbose {
     SURVEILLANCE_SAM( "y", "SURVEILLANCE_SAM", "y - Surveillance SAM" ),
     SUSPENDED_SAM( "z", "SUSPENDED_SAM", "z - Suspended SAM" ),
 
-    /*
+    /**
      * 0-2
      */
     RESERVED_SAM( "0", "RESERVED_SAM", "0 - Reserved SAM" ),

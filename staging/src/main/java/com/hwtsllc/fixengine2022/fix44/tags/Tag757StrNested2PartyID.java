@@ -16,9 +16,68 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag757StrNested2PartyID extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyStringType dataValue;
+
+    public final static String TESTA_STR_NESTED_2_PARTY_ID = "BilboBaggins-Tag757StrNested2PartyID";
+    public final static String TESTB_STR_NESTED_2_PARTY_ID = "Gandalf-Tag757StrNested2PartyID";
+
+    public Tag757StrNested2PartyID(MyStringType dataValue) {
+        setFixType(FIX44.FIX757_STR_NESTED_2_PARTY_ID);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getDataValue();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(dataValue.toString());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag757StrNested2PartyID tagData;
+
+        tagData = new Tag757StrNested2PartyID(new MyStringType(TESTA_STR_NESTED_2_PARTY_ID) );
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag757StrNested2PartyID(new MyStringType(TESTB_STR_NESTED_2_PARTY_ID) );
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

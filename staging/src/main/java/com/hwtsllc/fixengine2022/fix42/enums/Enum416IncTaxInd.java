@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum416IncTaxInd implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-2 msg types
      */
     NET( "1", "NET", "1 - Net" ),

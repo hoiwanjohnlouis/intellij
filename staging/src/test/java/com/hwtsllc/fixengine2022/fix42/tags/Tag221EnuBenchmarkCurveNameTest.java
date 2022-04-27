@@ -34,6 +34,21 @@ class Tag221EnuBenchmarkCurveNameTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * various msg types
+     */
+    EONIA( "EONIA", "EONIA", "EONIA - EONIA" ),
+    EUREPO( "EUREPO", "EUREPO", "EUREPO - EUREPO" ),
+    EURIBOR( "Euribor", "EURIBOR", "Euribor - Euribor" ),
+    FUTURESWAP( "FutureSWAP", "FUTURESWAP", "FutureSWAP - FutureSWAP" ),
+    LIBID( "LIBID", "LIBID", "LIBID - LIBID" ),
+    LIBOR( "LIBOR", "LIBOR", "LIBOR - LIBOR (London Inter-Bank Offer)" ),
+    MUNIAAA( "MuniAAA", "MUNIAAA", "MuniAAA - MuniAAA" ),
+    OTHER( "OTHER", "OTHER", "OTHER - OTHER" ),
+    PFANDBRIEFE( "Pfandbriefe", "PFANDBRIEFE", "Pfandbriefe - Pfandbriefe" ),
+    SONIA( "SONIA", "SONIA", "SONIA - SONIA" ),
+    SWAP( "SWAP", "SWAP", "SWAP - SWAP" ),
+    TREASURY( "Treasury", "TREASURY", "Treasury - Treasury" ),
     @Test
     void Tag0221Test() {
         Tag221EnuBenchmarkCurveName tagData;

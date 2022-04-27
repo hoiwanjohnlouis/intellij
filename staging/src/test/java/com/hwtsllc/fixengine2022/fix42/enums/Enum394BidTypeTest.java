@@ -27,7 +27,7 @@ class Enum394BidTypeTest {
     void Enum0394Test() {
         Enum394BidType enumType;
 
-        /*
+        /**
          * 1-3 msg types
          */
         enumType = Enum394BidType.NON_DISCLOSED;

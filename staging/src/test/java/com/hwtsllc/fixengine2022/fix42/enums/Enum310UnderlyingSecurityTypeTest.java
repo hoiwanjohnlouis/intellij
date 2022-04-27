@@ -30,7 +30,7 @@ class Enum310UnderlyingSecurityTypeTest {
     void Enum0310Test() {
         Enum310UnderlyingSecurityType enumType;
 
-        /*
+        /**
          * Deprecated msg types
          */
         enumType = Enum310UnderlyingSecurityType.DEPRECATED_FUTURE;
@@ -71,7 +71,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Agency msg types
          */
         enumType = Enum310UnderlyingSecurityType.EURO_SUPRANATIONAL_COUPON;
@@ -121,7 +121,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Corporate msg types
          */
         enumType = Enum310UnderlyingSecurityType.CORPORATE_BOND;
@@ -198,7 +198,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Currency msg types
          */
         enumType = Enum310UnderlyingSecurityType.FOREIGN_EXCHANGE_CONTRACT;
@@ -212,7 +212,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Equity msg types
          */
         enumType = Enum310UnderlyingSecurityType.COMMON_STOCK;
@@ -235,7 +235,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Finance msg types
          */
         enumType = Enum310UnderlyingSecurityType.REPURCHASE;
@@ -285,7 +285,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Government msg types
          */
         enumType = Enum310UnderlyingSecurityType.BRADY_BOND;
@@ -375,7 +375,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Loan msg types
          */
         enumType = Enum310UnderlyingSecurityType.TERM_LOAN;
@@ -497,7 +497,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Money Market msg types
          */
         enumType = Enum310UnderlyingSecurityType.BANKERS_ACCEPTANCE;
@@ -664,7 +664,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Mortgage msg types
          */
         enumType = Enum310UnderlyingSecurityType.ASSET_BACKED_SECURITIES;
@@ -768,7 +768,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Municipal msg types
          */
         enumType = Enum310UnderlyingSecurityType.OTHER_ANTICIPATION_NOTES;
@@ -917,7 +917,7 @@ class Enum310UnderlyingSecurityTypeTest {
 
 
 
-        /*
+        /**
          * Other msg types
          */
         enumType = Enum310UnderlyingSecurityType.MUTUAL_FUND;

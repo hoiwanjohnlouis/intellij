@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum292CorporateAction implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * A-V msg types
      */
     EX_DIVIDEND( "A", "EX_DIVIDEND", "A - Ex-Dividend" ),

@@ -99,7 +99,7 @@ class Enum233StipulationTypeTest {
     void Enum0233Test() {
         Enum233StipulationType enumType;
 
-        /*
+        /**
          *  233 StipulationType
          */
         enumType = Enum233StipulationType.ALTERNATIVE_MINIMUM_TAX;
@@ -562,7 +562,7 @@ class Enum233StipulationTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          *  Prepayment Speeds
          */
         enumType = Enum233StipulationType.ABSOLUTE_PREPAYMENT_SPEED;

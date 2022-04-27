@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum279MDUpdateAction implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-4 msg types
      */
     NEW( "0", "NEW", "0 - New" ),

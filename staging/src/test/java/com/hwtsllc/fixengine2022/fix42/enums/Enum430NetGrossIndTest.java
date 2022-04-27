@@ -27,7 +27,7 @@ class Enum430NetGrossIndTest {
     void Enum0430Test() {
         Enum430NetGrossInd enumType;
 
-        /*
+        /**
          * 1-2 msg types
          */
         enumType = Enum430NetGrossInd.NET;

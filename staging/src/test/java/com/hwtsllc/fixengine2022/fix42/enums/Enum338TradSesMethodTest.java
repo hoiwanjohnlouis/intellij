@@ -27,7 +27,7 @@ class Enum338TradSesMethodTest {
     void Enum0338Test() {
         Enum338TradSesMethod enumType;
 
-        /*
+        /**
          * 1-3 msg types
          */
         enumType = Enum338TradSesMethod.ELECTRONIC;

@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum281MDReqRejReason implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-9 msg types
      */
     UNKNOWN_SYMBOL( "0", "UNKNOWN_SYMBOL",
@@ -44,7 +44,7 @@ public enum Enum281MDReqRejReason implements EnumAccessors, LogStringVerbose {
     UNSUPPORTED_TRADINGSESSIONID( "9", "UNSUPPORTED_TRADINGSESSIONID",
             "9 - Unsupported TradingSessionID" ),
 
-    /*
+    /**
      * A-D msg types
      */
     UNSUPPORTED_SCOPE( "A", "UNSUPPORTED_SCOPE",

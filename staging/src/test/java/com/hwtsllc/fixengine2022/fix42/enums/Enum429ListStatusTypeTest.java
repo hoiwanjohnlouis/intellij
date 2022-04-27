@@ -27,7 +27,7 @@ class Enum429ListStatusTypeTest {
     void Enum0429Test() {
         Enum429ListStatusType enumType;
 
-        /*
+        /**
          * 1-6 msg types
          */
         enumType = Enum429ListStatusType.ACK;

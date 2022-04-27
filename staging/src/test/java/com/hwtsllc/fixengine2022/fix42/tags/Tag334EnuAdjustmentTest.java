@@ -34,6 +34,12 @@ class Tag334EnuAdjustmentTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-3 msg types
+     */
+    CANCEL( "1", "CANCEL", "1 - Cancel" ),
+    ERROR( "2", "ERROR", "2 - Error" ),
+    CORRECTION( "3", "CORRECTION", "3 - Correction" ),
     @Test
     void Tag0334Test() {
         Tag334EnuAdjustment tagData;

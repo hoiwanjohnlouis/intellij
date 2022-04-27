@@ -22,6 +22,9 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum167SecurityType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same as TAGS 167, 310, 609
+ */
 public class Tag167EnuSecurityType extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum167SecurityType dataValue;
 

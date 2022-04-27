@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum312UnderlyingSymbolSfx implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * CD, and WI msg types for Fixed Income
      */
     LUMP_SUM_INTEREST( "CD", "LUMP_SUM_INTEREST", "CD - EUCP with lump-sum interest rather than discount price" ),

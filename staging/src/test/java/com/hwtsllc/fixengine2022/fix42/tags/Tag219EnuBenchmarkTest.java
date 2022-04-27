@@ -35,6 +35,18 @@ class Tag219EnuBenchmarkTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-9 msg types
+     */
+    CURVE( "1", "CURVE", "1 - CURVE" ),
+    FIVE_YEAR( "2", "5YR", "2 - 5YR" ),
+    OLD_FIVE_YEAR( "3", "OLD5", "3 - OLD5" ),
+    TEN_YEAR( "4", "10YR", "4 - 10YR" ),
+    OLD_TEN_YEAR( "5", "OLD10", "5 - OLD10" ),
+    THIRTY_YEAR( "6", "30YR", "6 - 30YR" ),
+    OLD_THIRTY_YEAR( "7", "OLD30", "7 - OLD30" ),
+    THREE_MONTH( "8", "3MOLIBOR", "8 - 3MOLIBOR" ),
+    SIX_MONTH( "9", "6MOLIBOR", "9 - 6MOLIBOR" ),
     @Test
     void Tag0219Test() {
         Tag219EnuBenchmarkTest tagData;

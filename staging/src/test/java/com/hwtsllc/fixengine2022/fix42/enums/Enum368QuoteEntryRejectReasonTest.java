@@ -27,12 +27,12 @@ class Enum368QuoteEntryRejectReasonTest {
     void Enum0368Test() {
         Enum368QuoteEntryRejectReason enumType;
 
-        /*
+        /**
          *  1-9, 99, msg types
          */
 
 
-        /*
+        /**
          *  1-9, msg types
          */
         enumType = Enum368QuoteEntryRejectReason.UNKNOWN_SYMBOL;
@@ -118,7 +118,7 @@ class Enum368QuoteEntryRejectReasonTest {
 
 
 
-        /*
+        /**
          *  99, msg types
          */
         enumType = Enum368QuoteEntryRejectReason.OTHER;

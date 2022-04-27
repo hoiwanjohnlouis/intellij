@@ -34,6 +34,19 @@ class Tag321EnuSecurityRequestTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 0-3 msg types
+     */
+    REQUEST_SECURITY_IDENTITY( "0", "REQUEST_SECURITY_IDENTITY",
+                                       "0 - Request Security identity and specifications" ),
+    REQUEST_SPECIFIED_SECURITY( "1", "REQUEST_SPECIFIED_SECURITY",
+                                        "1 - Request Security identity for the specifications provided " +
+                                        "(name of the security is not supplied)" ),
+    REQUEST_LIST_SECURITY_TYPES( "2", "REQUEST_LIST_SECURITY_TYPES",
+                                         "2 - Request List Security Types" ),
+    REQUEST_LIST_SECURITIES( "3", "REQUEST_LIST_SECURITIES",
+                                     "3 - Request List Securities (can be qualified with Symbol, SecurityType, TradingSessionID, " +
+                                     "SecurityExchange. If provided, then only list Securities for the specific type.)" ),
     @Test
     void Tag0321Test() {
         Tag321EnuSecurityRequestType tagData;

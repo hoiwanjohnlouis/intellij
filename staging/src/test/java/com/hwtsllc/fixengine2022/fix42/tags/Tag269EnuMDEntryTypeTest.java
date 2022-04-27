@@ -34,6 +34,39 @@ class Tag269EnuMDEntryTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 0-9 msg types
+     */
+    BID( "0", "BID", "0 - Bid" ),
+    OFFER( "1", "OFFER", "1 - Offer" ),
+    TRADE( "2", "TRADE", "2 - Trade" ),
+    INDEX_VALUE( "3", "INDEX_VALUE", "3 - Index Value" ),
+    OPENING_PRICE( "4", "OPENING_PRICE", "4 - Opening Price" ),
+    CLOSING_PRICE( "5", "CLOSING_PRICE", "5 - Closing Price" ),
+    SETTLEMENT_PRICE( "6", "SETTLEMENT_PRICE", "6 - Settlement Price" ),
+    TRADING_SESSION_HIGH_PRICE( "7", "TRADING_SESSION_HIGH_PRICE", "7 - Trading Session High Price" ),
+    TRADING_SESSION_LOW_PRICE( "8", "TRADING_SESSION_LOW_PRICE", "8 - Trading Session Low Price" ),
+    TRADING_SESSION_VWAP_PRICE( "9", "TRADING_SESSION_VWAP_PRICE", "9 - Trading Session VWAP Price" ),
+
+    /**
+     * A-Q msg types
+     */
+    IMBALANCE( "A", "IMBALANCE", "A - Imbalance" ),
+    TRADE_VOLUME( "B", "TRADE_VOLUME", "B - Trade Volume" ),
+    OPEN_INTEREST( "C", "OPEN_INTEREST", "C - Open Interest" ),
+    COMPOSITE_UNDERLYING_PRICE( "D", "COMPOSITE_UNDERLYING_PRICE", "D - Composite Underlying Price" ),
+    SIMULATED_SELL_PRICE( "E", "SIMULATED_SELL_PRICE", "E - Simulated Sell Price" ),
+    SIMULATED_BUY_PRICE( "F", "SIMULATED_BUY_PRICE", "F - Simulated Buy Price" ),
+    MARGIN_RATE( "G", "MARGIN_RATE", "G - Margin Rate" ),
+    MID_PRICE( "H", "MID_PRICE", "H - Mid Price" ),
+    EMPTY_BOOK( "J", "EMPTY_BOOK", "J - Empty Book" ),
+    SETTLE_HIGH_PRICE( "K", "SETTLE_HIGH_PRICE", "K - Settle High Price" ),
+    SETTLE_LOW_PRICE( "L", "SETTLE_LOW_PRICE", "L - Settle Low Price" ),
+    PRIOR_SETTLE_PRICE( "M", "PRIOR_SETTLE_PRICE", "M - Prior Settle Price" ),
+    SESSION_HIGH_BID( "N", "SESSION_HIGH_BID", "N - Session High Bid" ),
+    SESSION_LOW_OFFER( "O", "SESSION_LOW_OFFER", "O - Session Low Offer" ),
+    EARLY_PRICES( "P", "EARLY_PRICES", "P - Early Prices" ),
+    AUCTION_CLEARING_PRICE( "Q", "AUCTION_CLEARING_PRICE", "Q - Auction Clearing Price" ),
     @Test
     void Tag0269Test() {
         Tag269EnuMDEntryType tagData;

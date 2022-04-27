@@ -27,7 +27,7 @@ class Enum323SecurityResponseTypeTest {
     void Enum0323Test() {
         Enum323SecurityResponseType enumType;
 
-        /*
+        /**
          * 1-6 msg types
          */
         enumType = Enum323SecurityResponseType.ACCEPT_SECURITY_AS_IS;

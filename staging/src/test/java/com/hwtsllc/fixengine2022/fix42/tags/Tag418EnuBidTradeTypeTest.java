@@ -34,6 +34,13 @@ class Tag418EnuBidTradeTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * A, G, J, and R msg types
+     */
+    AGENCY( "A", "AGENCY", "A - Agency" ),
+    VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
+    GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
+    RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
     @Test
     void Tag0418Test() {
         Tag418EnuBidTradeType tagData;

@@ -27,7 +27,7 @@ class Enum399BidDescriptorTypeTest {
     void Enum0399Test() {
         Enum399BidDescriptorType enumType;
 
-        /*
+        /**
          * 1-3 msg types
          */
         enumType = Enum399BidDescriptorType.SECTOR;

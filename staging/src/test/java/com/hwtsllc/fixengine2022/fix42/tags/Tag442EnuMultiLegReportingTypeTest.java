@@ -34,6 +34,15 @@ class Tag442EnuMultiLegReportingTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-3 msg types
+     */
+    SINGLE_SECURITY( "1", "SINGLE_SECURITY",
+                             "1 - Single security (default if not specified)" ),
+    INDIVIDUAL_LEG_SECURITY( "2", "INDIVIDUAL_LEG_SECURITY",
+                                     "2 - Individual leg of a multi=leg security" ),
+    MULTI_LEG_SECURITY( "3", "MULTI_LEG_SECURITY",
+                                "3 - Multi-leg security" ),
     @Test
     void Tag0442Test() {
         Tag442EnuMultiLegReportingType tagData;

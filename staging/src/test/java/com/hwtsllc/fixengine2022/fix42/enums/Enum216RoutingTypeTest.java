@@ -27,7 +27,7 @@ class Enum216RoutingTypeTest {
     void Enum0216Test() {
         Enum216RoutingType enumType;
 
-        /*
+        /**
          * 1-4 msg types
          */
         enumType = Enum216RoutingType.TARGET_FIRM;

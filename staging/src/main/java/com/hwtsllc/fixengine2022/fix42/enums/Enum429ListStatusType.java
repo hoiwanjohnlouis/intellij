@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum429ListStatusType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-6 msg types
      */
     ACK( "1", "ACK", "1 - Ack" ),

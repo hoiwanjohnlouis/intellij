@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum303QuoteRequestType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-2 msg types
      */
     MANUAL( "1", "MANUAL", "1 - Manual" ),

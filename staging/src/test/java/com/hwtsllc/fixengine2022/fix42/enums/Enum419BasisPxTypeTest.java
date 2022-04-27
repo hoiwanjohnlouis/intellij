@@ -27,11 +27,11 @@ class Enum419BasisPxTypeTest {
     void Enum0419Test() {
         Enum419BasisPxType enumType;
 
-        /*
+        /**
          *  2-9, A-D, Z msg types
          */
 
-        /*
+        /**
          *  2-9, msg types
          */
         enumType = Enum419BasisPxType.CLOSING_PRICE_MORNING;
@@ -107,7 +107,7 @@ class Enum419BasisPxTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          *  A-D, msg types
          */
         enumType = Enum419BasisPxType.VWAP_MORNING_EXCEPT_YORI;
@@ -149,7 +149,7 @@ class Enum419BasisPxTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /*
+        /**
          *  Z, msg types
          */
         enumType = Enum419BasisPxType.OTHER;

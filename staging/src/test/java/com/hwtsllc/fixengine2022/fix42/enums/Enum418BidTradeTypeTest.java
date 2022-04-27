@@ -27,7 +27,7 @@ class Enum418BidTradeTypeTest {
     void Enum0418Test() {
         Enum418BidTradeType enumType;
 
-        /*
+        /**
          * A, G, J, and R msg types
          */
         enumType = Enum418BidTradeType.AGENCY;

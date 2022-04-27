@@ -27,7 +27,7 @@ class Enum388DiscretionInstTest {
     void Enum0388Test() {
         Enum388DiscretionInst enumType;
 
-        /*
+        /**
          * 0-7 msg types
          */
         enumType = Enum388DiscretionInst.RELATED_TO_DISPLAYED_PRICE;

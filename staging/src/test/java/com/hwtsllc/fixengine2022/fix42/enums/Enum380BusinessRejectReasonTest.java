@@ -27,12 +27,12 @@ class Enum380BusinessRejectReasonTest {
     void Enum0380Test() {
         Enum380BusinessRejectReason enumType;
 
-        /*
+        /**
          *  0-6, 18, msg types
          */
 
 
-        /*
+        /**
          *  0-6, msg types
          */
         enumType = Enum380BusinessRejectReason.OTHER;
@@ -109,7 +109,7 @@ class Enum380BusinessRejectReasonTest {
 
 
 
-        /*
+        /**
          *  18, msg types
          */
         enumType = Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT;

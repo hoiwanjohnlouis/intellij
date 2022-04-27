@@ -27,7 +27,7 @@ class Enum401SideValueIndTest {
     void Enum0401Test() {
         Enum401SideValueInd enumType;
 
-        /*
+        /**
          * 1-2 msg types
          */
         enumType = Enum401SideValueInd.SIDE_VALUE_1;

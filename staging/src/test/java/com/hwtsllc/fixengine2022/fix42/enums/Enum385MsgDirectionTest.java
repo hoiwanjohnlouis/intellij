@@ -27,7 +27,7 @@ class Enum385MsgDirectionTest {
     void Enum0385Test() {
         Enum385MsgDirection enumType;
 
-        /*
+        /**
          * R, and S msg types
          */
         enumType = Enum385MsgDirection.RECEIVE;

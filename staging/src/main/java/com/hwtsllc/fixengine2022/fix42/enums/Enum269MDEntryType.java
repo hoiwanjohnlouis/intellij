@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum269MDEntryType implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-9 msg types
      */
     BID( "0", "BID", "0 - Bid" ),
@@ -34,7 +34,7 @@ public enum Enum269MDEntryType implements EnumAccessors, LogStringVerbose {
     TRADING_SESSION_LOW_PRICE( "8", "TRADING_SESSION_LOW_PRICE", "8 - Trading Session Low Price" ),
     TRADING_SESSION_VWAP_PRICE( "9", "TRADING_SESSION_VWAP_PRICE", "9 - Trading Session VWAP Price" ),
 
-    /*
+    /**
      * A-Q msg types
      */
     IMBALANCE( "A", "IMBALANCE", "A - Imbalance" ),

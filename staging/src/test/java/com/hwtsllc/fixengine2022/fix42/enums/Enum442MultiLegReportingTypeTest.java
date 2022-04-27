@@ -27,7 +27,7 @@ class Enum442MultiLegReportingTypeTest {
     void Enum0442Test() {
         Enum442MultiLegReportingType enumType;
 
-        /*
+        /**
          * 1-3 msg types
          */
         enumType = Enum442MultiLegReportingType.SINGLE_SECURITY;

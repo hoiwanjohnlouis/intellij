@@ -34,6 +34,12 @@ class Tag339EnuTradSesModeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-3 msg types
+     */
+    TESTING( "1", "TESTING", "1 - Testing" ),
+    SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
+    PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
     @Test
     void Tag0339Test() {
         Tag339EnuTradSesMode tagData;

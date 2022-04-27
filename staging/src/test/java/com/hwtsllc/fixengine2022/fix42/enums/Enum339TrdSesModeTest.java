@@ -27,7 +27,7 @@ class Enum339TrdSesModeTest {
     void Enum0339Test() {
         Enum339TrdSesMode enumType;
 
-        /*
+        /**
          * 1-3 msg types
          */
         enumType = Enum339TrdSesMode.TESTING;

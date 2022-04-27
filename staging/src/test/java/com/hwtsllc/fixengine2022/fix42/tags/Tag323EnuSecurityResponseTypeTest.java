@@ -34,6 +34,21 @@ class Tag323EnuSecurityResponseTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-6 msg types
+     */
+    ACCEPT_SECURITY_AS_IS( "1", "ACCEPT_SECURITY_AS_IS",
+                                   "1 - Accept security proposal as-is" ),
+    ACCEPT_SECURITY_REVISIONS( "2", "ACCEPT_SECURITY_REVISIONS",
+                                       "2 - Accept security proposal with revisions as indicated in the message" ),
+    LIST_OF_SECURITY_TYPES_RETURNED( "3", "LIST_OF_SECURITY_TYPES_RETURNED",
+                                             "3 - List of security types returned per request" ),
+    LIST_OF_SECURITIES_RETURNED_PER_REQUEST( "4", "LIST_OF_SECURITIES_RETURNED_PER_REQUEST",
+                                                     "4 - List of securities returned per request" ),
+    REJECT_SECURITY_PROPOSAL( "5", "REJECT_SECURITY_PROPOSAL",
+                                      "5 - Reject security proposal" ),
+    CANNOT_MATCH_SELECTION( "6", "CANNOT_MATCH_SELECTION",
+                                    "6 - Cannot match selection criteria" ),
     @Test
     void Tag0323Test() {
         Tag323EnuSecurityResponseType tagData;

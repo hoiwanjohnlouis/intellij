@@ -27,7 +27,7 @@ class Enum334AdjustmentTest {
     void Enum0334Test() {
         Enum334Adjustment enumType;
 
-        /*
+        /**
          * 1-3 msg types
          */
         enumType = Enum334Adjustment.CANCEL;

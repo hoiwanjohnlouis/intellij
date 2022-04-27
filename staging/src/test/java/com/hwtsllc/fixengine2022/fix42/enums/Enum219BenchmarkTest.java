@@ -27,7 +27,7 @@ class Enum219BenchmarkTest {
     void Enum0219Test() {
         Enum219Benchmark enumType;
 
-        /*
+        /**
          * 1-9 msg types
          */
         enumType = Enum219Benchmark.CURVE;

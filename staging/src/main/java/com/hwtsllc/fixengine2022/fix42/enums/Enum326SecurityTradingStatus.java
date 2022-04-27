@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum326SecurityTradingStatus implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-10, 12-23 msg types. skipped 11.
      */
     OPENING_DELAY( "1", "OPENING_DELAY", "1 - Opening delay" ),

@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum300QuoteRejectReason implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-9, 99 msg types
      */
     UNKNOWN_SYMBOL( "1", "UNKNOWN_SYMBOL",

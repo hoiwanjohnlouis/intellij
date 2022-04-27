@@ -27,7 +27,7 @@ class Enum340TradSesStatusTest {
     void Enum0340Test() {
         Enum340TradSesStatus enumType;
 
-        /*
+        /**
          * 0-6 msg types
          */
         enumType = Enum340TradSesStatus.UNKNOWN;

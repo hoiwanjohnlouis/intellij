@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum297QuoteStatus implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 0-15 msg types
      */
     ACCEPTED( "0", "ACCEPTED",

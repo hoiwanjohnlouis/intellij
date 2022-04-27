@@ -27,7 +27,7 @@ class Enum312UnderlyingSymbolSfxTest {
     void Enum0312Test() {
         Enum312UnderlyingSymbolSfx enumType;
 
-        /*
+        /**
          * CD, and WI msg types for Fixed Income
          */
         enumType = Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST;

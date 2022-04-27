@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,10 +26,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag757StrNested2PartyIDTest {
     @Test
     void FIX0757Test() {
-        FIX44 fixData = FIX44.FIX757_NESTED_2_PARTY_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX44 fixData = FIX44.FIX757_STR_NESTED_2_PARTY_ID;
+        assertEquals( "757", fixData.getID());
+        assertEquals( "NESTED_2_PARTY_ID", fixData.getName());
+        assertEquals( "Nested 2 Party Id", fixData.getDescription());
         assertNotEquals( FIX44.JUNK_ID, fixData.getID());
         assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
@@ -37,5 +38,12 @@ class Tag757StrNested2PartyIDTest {
     void Tag0757Test() {
         Tag757StrNested2PartyID tagData;
 
+        tagData = new Tag757StrNested2PartyID(new MyStringType(Tag757StrNested2PartyID.TESTA_STR_NESTED_2_PARTY_ID));
+        assertEquals( Tag757StrNested2PartyID.TESTA_STR_NESTED_2_PARTY_ID, tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag757StrNested2PartyID(new MyStringType(Tag757StrNested2PartyID.TESTB_STR_NESTED_2_PARTY_ID));
+        assertEquals( Tag757StrNested2PartyID.TESTB_STR_NESTED_2_PARTY_ID, tagData.getDataValue());
+        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

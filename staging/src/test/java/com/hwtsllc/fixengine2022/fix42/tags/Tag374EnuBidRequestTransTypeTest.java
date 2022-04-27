@@ -34,6 +34,11 @@ class Tag374EnuBidRequestTransTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * C, and N msg types
+     */
+    CANCEL( "C", "CANCEL", "C - Cancel" ),
+    NEW( "N", "NEW", "N - New" ),
     @Test
     void Tag0374Test() {
         Tag374EnuBidRequestTransType tagData;

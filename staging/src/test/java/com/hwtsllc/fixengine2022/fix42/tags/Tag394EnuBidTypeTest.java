@@ -34,6 +34,12 @@ class Tag394EnuBidTypeTest {
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     * 1-3 msg types
+     */
+    NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
+    DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
+    NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
     @Test
     void Tag0394Test() {
         Tag394EnuBidType tagData;

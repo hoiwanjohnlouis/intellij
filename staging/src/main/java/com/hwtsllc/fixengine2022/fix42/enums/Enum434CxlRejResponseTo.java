@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public enum Enum434CxlRejResponseTo implements EnumAccessors, LogStringVerbose {
-    /*
+    /**
      * 1-2 msg types
      */
     ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST",

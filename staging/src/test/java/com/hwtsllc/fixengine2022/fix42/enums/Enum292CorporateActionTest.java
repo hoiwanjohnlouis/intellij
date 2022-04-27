@@ -27,7 +27,7 @@ class Enum292CorporateActionTest {
     void Enum0292Test() {
         Enum292CorporateAction enumType;
 
-        /*
+        /**
          * A-V msg types
          */
         enumType = Enum292CorporateAction.EX_DIVIDEND;
