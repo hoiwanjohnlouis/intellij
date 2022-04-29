@@ -19,6 +19,15 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag401
+ *  Enu
+ *  SideValueInd
+ *
+ *      1-2 msg types
+ *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
+ *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
+ */
 public enum Enum401SideValueInd implements EnumAccessors, LogStringVerbose {
     /**
      * 1-2 msg types

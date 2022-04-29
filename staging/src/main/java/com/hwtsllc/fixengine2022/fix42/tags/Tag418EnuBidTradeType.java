@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum418BidTradeType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag418
+ *  Enu
+ *  BidTradeType
+ *
+ *      A, G, J, and R msg types
+ *      AGENCY( "A", "AGENCY", "A - Agency" ),
+ *      VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
+ *      GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
+ *      RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
+ */
 public class Tag418EnuBidTradeType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum418BidTradeType dataValue;
 

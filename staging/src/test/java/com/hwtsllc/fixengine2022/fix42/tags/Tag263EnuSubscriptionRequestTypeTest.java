@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum263SubscriptionRequestType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,29 +27,37 @@ class Tag263EnuSubscriptionRequestTypeTest {
     @Test
     void FIX0263Test() {
         FIX42 fixData = FIX42.FIX263_ENU_SUBSCRIPTION_REQUEST_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "263", fixData.getID());
+        assertEquals( "SUBSCRIPTION_REQUEST_TYPE", fixData.getName());
+        assertEquals( "SubscriptionRequestType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 0-2 msg types
+     *  263
+     *  SubscriptionRequestType
+     *      "0 - Snapshot"
+     *      "1 - Snapshot + Updates (Subscribe)"
+     *      "2 - Disable previous Snapshot + Update Request (Unsubscribe)"
      */
-    SNAPSHOT( "0", "SNAPSHOT",
-                      "0 - Snapshot" ),
-    SUBSCRIBE_SNAPSHOT( "1", "SUBSCRIBE_SNAPSHOT",
-                                "1 - Snapshot + Updates (Subscribe)" ),
-    UNSUBSCRIBE_SNAPSHOT( "2", "UNSUBSCRIBE_SNAPSHOT",
-                                  "2 - Disable previous Snapshot + Update Request (Unsubscribe)" ),
     @Test
     void Tag0263Test() {
         Tag263EnuSubscriptionRequestType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 0-2 msg types
+         */
+        tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SNAPSHOT);
+        assertEquals( Enum263SubscriptionRequestType.SNAPSHOT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT);
+        assertEquals( Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT);
+        assertEquals( Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

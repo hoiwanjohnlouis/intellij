@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag339
+ *  Enu
+ *  TradSesMode
+ *
+ *      1-3 msg types
+ *      TESTING( "1", "TESTING", "1 - Testing" ),
+ *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
+ *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
+ */
 public enum Enum339TrdSesMode implements EnumAccessors, LogStringVerbose {
     /**
      * 1-3 msg types

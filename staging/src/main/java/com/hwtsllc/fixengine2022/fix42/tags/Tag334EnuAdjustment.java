@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum334Adjustment;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag334
+ *  Enu
+ *  Adjustment
+ *
+ *      1-3 msg types
+ *      CANCEL( "1", "CANCEL", "1 - Cancel" ),
+ *      ERROR( "2", "ERROR", "2 - Error" ),
+ *      CORRECTION( "3", "CORRECTION", "3 - Correction" ),
+ */
 public class Tag334EnuAdjustment extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum334Adjustment dataValue;
 

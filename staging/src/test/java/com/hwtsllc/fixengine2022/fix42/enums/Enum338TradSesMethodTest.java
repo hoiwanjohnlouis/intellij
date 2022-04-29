@@ -23,6 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum338TradSesMethodTest {
+    /**
+     *  Tag338
+     *  Enu
+     *  TradSesMethod
+     *
+     *      1-3 msg types
+     *      ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
+     *      OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
+     *      TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
+     */
     @Test
     void Enum0338Test() {
         Enum338TradSesMethod enumType;

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum385MsgDirection;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag385
+ *  Enu
+ *  MsgDirection
+ *
+ *      R, and S msg types
+ *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
+ *      SEND( "S", "SEND", "S - Send" ),
+ */
 public class Tag385EnuMsgDirection extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum385MsgDirection dataValue;
 

@@ -19,6 +19,20 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  219
+ *  EnuBenchmarkTest
+ *      1-9 msg types
+ *      "1 - CURVE"
+ *      "2 - 5YR"
+ *      "3 - OLD5"
+ *      "4 - 10YR"
+ *      "5 - OLD10"
+ *      "6 - 30YR"
+ *      "7 - OLD30"
+ *      "8 - 3MOLIBOR"
+ *      "9 - 6MOLIBOR"
+ */
 public enum Enum219Benchmark implements EnumAccessors, LogStringVerbose {
     /**
      * 1-9 msg types

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum334Adjustment;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,26 +27,40 @@ class Tag334EnuAdjustmentTest {
     @Test
     void FIX0334Test() {
         FIX42 fixData = FIX42.FIX334_ENU_ADJUSTMENT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "334", fixData.getID());
+        assertEquals( "ADJUSTMENT", fixData.getName());
+        assertEquals( "Adjustment", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-3 msg types
+     *  Tag334
+     *  Enu
+     *  Adjustment
+     *
+     *      1-3 msg types
+     *      CANCEL( "1", "CANCEL", "1 - Cancel" ),
+     *      ERROR( "2", "ERROR", "2 - Error" ),
+     *      CORRECTION( "3", "CORRECTION", "3 - Correction" ),
      */
-    CANCEL( "1", "CANCEL", "1 - Cancel" ),
-    ERROR( "2", "ERROR", "2 - Error" ),
-    CORRECTION( "3", "CORRECTION", "3 - Correction" ),
     @Test
     void Tag0334Test() {
         Tag334EnuAdjustment tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-3 msg types
+         */
+        tagData = new Tag334EnuAdjustment(Enum334Adjustment.CANCEL);
+        assertEquals( Enum334Adjustment.CANCEL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag334EnuAdjustment(Enum334Adjustment.ERROR);
+        assertEquals( Enum334Adjustment.ERROR.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag334EnuAdjustment(Enum334Adjustment.CORRECTION);
+        assertEquals( Enum334Adjustment.CORRECTION.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

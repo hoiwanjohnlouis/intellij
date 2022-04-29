@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum285DeleteReason;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  285
+ *  DeleteReason
+ *
+ *      0-1 msg types
+ *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
+ *      ERROR( "1", "ERROR", "1 - Error" ),
+ */
 public class Tag285EnuDeleteReason extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum285DeleteReason dataValue;
 

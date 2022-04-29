@@ -23,6 +23,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum418BidTradeTypeTest {
+    /**
+     *  Tag418
+     *  Enu
+     *  BidTradeType
+     *
+     *      A, G, J, and R msg types
+     *      AGENCY( "A", "AGENCY", "A - Agency" ),
+     *      VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
+     *      GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
+     *      RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
+     */
     @Test
     void Enum0418Test() {
         Enum418BidTradeType enumType;

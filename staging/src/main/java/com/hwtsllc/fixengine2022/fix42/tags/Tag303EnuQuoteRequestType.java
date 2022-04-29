@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum303QuoteRequestType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  303
+ *  QuoteRequestType
+ *
+ *      1-2 msg types
+ *      MANUAL( "1", "MANUAL", "1 - Manual" ),
+ *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
+ */
 public class Tag303EnuQuoteRequestType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum303QuoteRequestType dataValue;
 

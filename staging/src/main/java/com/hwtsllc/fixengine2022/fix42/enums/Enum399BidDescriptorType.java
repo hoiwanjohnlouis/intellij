@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag399
+ *  Enu
+ *  BidDescriptorType
+ *
+ *      1-3 msg types
+ *      SECTOR( "1", "SECTOR", "1 - Sector" ),
+ *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
+ *      INDEX( "3", "INDEX", "3 - Index" ),
+ */
 public enum Enum399BidDescriptorType implements EnumAccessors, LogStringVerbose {
     /**
      * 1-3 msg types

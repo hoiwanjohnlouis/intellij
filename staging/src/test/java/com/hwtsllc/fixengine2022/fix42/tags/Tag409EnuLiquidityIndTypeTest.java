@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum409LiquidityIndType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,27 +27,45 @@ class Tag409EnuLiquidityIndTypeTest {
     @Test
     void FIX0409Test() {
         FIX42 fixData = FIX42.FIX409_ENU_LIQUIDITY_IND_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "409", fixData.getID());
+        assertEquals( "LIQUIDITY_IND_TYPE", fixData.getName());
+        assertEquals( "LiquidityIndType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-4 msg types
+     *  Tag409
+     *  Enu
+     *  LiquidityIndType
+     *
+     *      1-4 msg types
+     *      FIVE_DAY_MOVING_AVERAGE( "1", "FIVE_DAY_MOVING_AVERAGE", "1 - 5-Day Moving Average" ),
+     *      TWENTY_DAY_MOVING_AVERAGE( "2", "TWENTY_DAY_MOVING_AVERAGE", "2 - 20-Day Moving Average" ),
+     *      NORMAL_MARKET_SIZE( "3", "NORMAL_MARKET_SIZE", "3 - Normal Market Size" ),
+     *      OTHER( "4", "OTHER", "4 - Other" ),
      */
-    FIVE_DAY_MOVING_AVERAGE( "1", "FIVE_DAY_MOVING_AVERAGE", "1 - 5-Day Moving Average" ),
-    TWENTY_DAY_MOVING_AVERAGE( "2", "TWENTY_DAY_MOVING_AVERAGE", "2 - 20-Day Moving Average" ),
-    NORMAL_MARKET_SIZE( "3", "NORMAL_MARKET_SIZE", "3 - Normal Market Size" ),
-    OTHER( "4", "OTHER", "4 - Other" ),
     @Test
     void Tag0409Test() {
         Tag409EnuLiquidityIndType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-4 msg types
+         */
+        tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE);
+        assertEquals( Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE);
+        assertEquals( Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.NORMAL_MARKET_SIZE);
+        assertEquals( Enum409LiquidityIndType.NORMAL_MARKET_SIZE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.OTHER);
+        assertEquals( Enum409LiquidityIndType.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum298QuoteCancelType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  298
+ *  QuoteCancelType
+ *
+ *      1-5 msg types
+ *      CANCEL_FOR_SYMBOL( "1", "CANCEL_FOR_SYMBOL", "1 - Cancel for Symbol(s)" ),
+ *      CANCEL_FOR_SECURITY_TYPE( "2", "CANCEL_FOR_SECURITY_TYPE", "2 - Cancel for Security Type(s)" ),
+ *      CANCEL_FOR_UNDERLYING_SYMBOL( "3", "CANCEL_FOR_UNDERLYING_SYMBOL", "3 - Cancel for Underlying Symbol" ),
+ *      CANCEL_ALL_QUOTES( "4", "CANCEL_ALL_QUOTES", "4 - Cancel All Quotes" ),
+ *      CANCEL_QUOTEID_QUOTE("5", "CANCEL_QUOTEID_QUOTE", "5 - Cancel quote specified in QuoteID" ),
+ */
 public class Tag298EnuQuoteCancelType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum298QuoteCancelType dataValue;
 

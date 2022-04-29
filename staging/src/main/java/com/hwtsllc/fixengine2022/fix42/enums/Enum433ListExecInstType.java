@@ -19,6 +19,24 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag433
+ *  Enu
+ *  ListExecInstType
+ *
+ *      1-5 msg types
+ *      IMMEDIATE( "1", "IMMEDIATE", "1 - Immediate" ),
+ *      WAIT_FOR_EXECUTION_INSTRUCTION( "2", "WAIT_FOR_EXECUTION_INSTRUCTION",
+ *                          "2 - Wait for Execution Instruction (i.e. a List Execution message or " +
+ *                          "phone call before proceeding with execution of the list)" ),
+ *      SELL_DRIVEN( "3", "SELL_DRIVEN", "3 - Exchange/switch CIV order - Sell driven" ),
+ *      BUY_DRIVEN_CASH_TOP_UP( "4", "BUY_DRIVEN_CASH_TOP_UP",
+ *                          "4 - Exchange/switch CIV order - Buy driven, cash top-up " +
+ *                          "(i.e. additional cash will be provided to fulfill the order)" ),
+ *      BUY_DRIVEN_CASH_WITHDRAW( "5", "BUY_DRIVEN_CASH_WITHDRAW",
+ *                          "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
+ *                          "(i.e. additional cash will not be provided to fulfill the order)" ),
+ */
 public enum Enum433ListExecInstType implements EnumAccessors, LogStringVerbose {
     /**
      * 1-5 msg types

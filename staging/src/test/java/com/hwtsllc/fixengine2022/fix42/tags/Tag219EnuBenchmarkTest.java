@@ -17,42 +17,87 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum219Benchmark;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
+// @Deprecated
 class Tag219EnuBenchmarkTest {
     @Test
     void FIX0219Test() {
         FIX42 fixData = FIX42.FIX219_ENU_BENCHMARK;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "219", fixData.getID());
+        assertEquals( "BENCHMARK", fixData.getName());
+        assertEquals( "Benchmark", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-9 msg types
+     *  219
+     *  EnuBenchmarkTest
+     *      1-9 msg types
+     *      "1 - CURVE"
+     *      "2 - 5YR"
+     *      "3 - OLD5"
+     *      "4 - 10YR"
+     *      "5 - OLD10"
+     *      "6 - 30YR"
+     *      "7 - OLD30"
+     *      "8 - 3MOLIBOR"
+     *      "9 - 6MOLIBOR"
      */
-    CURVE( "1", "CURVE", "1 - CURVE" ),
-    FIVE_YEAR( "2", "5YR", "2 - 5YR" ),
-    OLD_FIVE_YEAR( "3", "OLD5", "3 - OLD5" ),
-    TEN_YEAR( "4", "10YR", "4 - 10YR" ),
-    OLD_TEN_YEAR( "5", "OLD10", "5 - OLD10" ),
-    THIRTY_YEAR( "6", "30YR", "6 - 30YR" ),
-    OLD_THIRTY_YEAR( "7", "OLD30", "7 - OLD30" ),
-    THREE_MONTH( "8", "3MOLIBOR", "8 - 3MOLIBOR" ),
-    SIX_MONTH( "9", "6MOLIBOR", "9 - 6MOLIBOR" ),
     @Test
     void Tag0219Test() {
-        Tag219EnuBenchmarkTest tagData;
+        Tag219EnuBenchmark tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
+        /**
+         * 1-9 msg types
+         */
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.CURVE);
+        assertEquals( Enum219Benchmark.CURVE.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.FIVE_YEAR);
+        assertEquals( Enum219Benchmark.FIVE_YEAR.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_FIVE_YEAR);
+        assertEquals( Enum219Benchmark.OLD_FIVE_YEAR.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.TEN_YEAR);
+        assertEquals( Enum219Benchmark.TEN_YEAR.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_TEN_YEAR);
+        assertEquals( Enum219Benchmark.OLD_TEN_YEAR.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.THIRTY_YEAR);
+        assertEquals( Enum219Benchmark.THIRTY_YEAR.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_THIRTY_YEAR);
+        assertEquals( Enum219Benchmark.OLD_THIRTY_YEAR.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.THREE_MONTH);
+        assertEquals( Enum219Benchmark.THREE_MONTH.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.SIX_MONTH);
+        assertEquals( Enum219Benchmark.SIX_MONTH.getID(),
                 tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -22,6 +22,29 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum419BasisPxType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag419
+ *  Enu
+ *  BasisPxType
+ *
+ *      2-9, A-D, Z msg types
+ *      CLOSING_PRICE_MORNING( "2", "CLOSING_PRICE_MORNING", "2 - Closing price at morning session" ),
+ *      CLOSING_PRICE( "3", "CLOSING_PRICE", "3 - Closing price" ),
+ *      CURRENT_PRICE( "4", "CURRENT_PRICE", "4 - Current price" ),
+ *      SQ( "5", "SQ", "5 - SQ" ),
+ *      VWAP_DAY( "6", "VWAP_DAY", "6 - VWAP through a day" ),
+ *      VWAP_MORNING( "7", "VWAP_MORNING", "7 - VWAP through a morning session" ),
+ *      VWAP_AFTERNOON( "8", "VWAP_AFTERNOON", "8 - VWAP through an afternoon session" ),
+ *      VWAP_DAY_EXCEPT_YORI( "9", "VWAP_DAY_EXCEPT_YORI",
+ *                          "9 - VWAP through a day except YORI (an opening auction)" ),
+ *      VWAP_MORNING_EXCEPT_YORI( "A", "VWAP_MORNING_EXCEPT_YORI",
+ *                          "A - VWAP through a morning session except YORI (an opening auction)" ),
+ *      VWAP_AFTERNOON_EXCEPT_YORI( "B", "VWAP_AFTERNOON_EXCEPT_YORI",
+ *                          "B - VWAP through an afternoon session except YORI (an opening auction)" ),
+ *      STRIKE( "C", "STRIKE", "C - Strike" ),
+ *      OPEN( "D", "OPEN", "D - Open" ),
+ *      OTHER( "Z", "OTHER", "Z - Others" ),
+ */
 public class Tag419EnuBasisPxType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum419BasisPxType dataValue;
 

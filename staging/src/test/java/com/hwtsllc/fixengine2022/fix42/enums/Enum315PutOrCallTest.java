@@ -19,40 +19,36 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-class Enum416IncTaxIndTest {
-    /**
-     *  Tag416
-     *  Enu
-     *  IncTaxInd
-     *
-     *      1-2 msg types
-     *      NET( "1", "NET", "1 - Net" ),
-     *      GROSS( "2", "GROSS", "2 - Gross" ),
-     */
+/**
+ *  315 (same as 201, 315)
+ *  UnderlyingPutOrCall
+ *
+ *      PUT( "0", "PUT", "0 - Put" ),
+ *      CALL( "1", "CALL", "1 - Call" ),
+ */
+class Enum315PutOrCallTest {
     @Test
-    void Enum0416Test() {
-        Enum416IncTaxInd enumType;
+    void Enum0315Test() {
+        Enum315PutOrCall enumType;
 
         /**
-         * 1-2 msg types
+         *  PUT( "0", "PUT", "0 - Put" ),
+         *  CALL( "1", "CALL", "1 - Call" ),
          */
-        enumType = Enum416IncTaxInd.NET;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "NET", enumType.getName());
-        assertEquals( "1 - Net", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        enumType = Enum315PutOrCall.PUT;
+        assertEquals( "0", enumType.getID());
+        assertEquals( "PUT", enumType.getName());
+        assertEquals( "0 - Put", enumType.getDescription());
         assertNotEquals( FIX42.JUNK_ID, enumType.getID());
         assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum416IncTaxInd.GROSS;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "GROSS", enumType.getName());
-        assertEquals( "2 - Gross", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
+        enumType = Enum315PutOrCall.CALL;
+        assertEquals( "1", enumType.getID());
+        assertEquals( "CALL", enumType.getName());
+        assertEquals( "1 - Call", enumType.getDescription());
         assertNotEquals( FIX42.JUNK_ID, enumType.getID());
         assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());

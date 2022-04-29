@@ -23,6 +23,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum430NetGrossIndTest {
+    /**
+     *  Tag430
+     *  Enu
+     *  NetGrossInd
+     *
+     *      1-2 msg types
+     *      NET( "1", "NET", "1 - Net" ),
+     *      GROSS( "2", "GROSS", "2 - Gross" ),
+     */
     @Test
     void Enum0430Test() {
         Enum430NetGrossInd enumType;

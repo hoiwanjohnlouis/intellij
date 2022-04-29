@@ -19,6 +19,14 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  216
+ *  RoutingType
+ *      1 - Target Firm
+ *      2 - Target List
+ *      3 - Block Firm
+ *      4 - Block List
+ */
 public enum Enum216RoutingType implements EnumAccessors, LogStringVerbose {
     /**
      * 1-4 msg types

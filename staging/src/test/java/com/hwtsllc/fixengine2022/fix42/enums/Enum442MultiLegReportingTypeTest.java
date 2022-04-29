@@ -23,6 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum442MultiLegReportingTypeTest {
+    /**
+     *  Tag442
+     *  Enu
+     *  MultiLegReportingType
+     *
+     *      1-3 msg types
+     *      SINGLE_SECURITY( "1", "SINGLE_SECURITY", "1 - Single security (default if not specified)" ),
+     *      INDIVIDUAL_LEG_SECURITY( "2", "INDIVIDUAL_LEG_SECURITY", "2 - Individual leg of a multi=leg security" ),
+     *      MULTI_LEG_SECURITY( "3", "MULTI_LEG_SECURITY", "3 - Multi-leg security" ),
+     */
     @Test
     void Enum0442Test() {
         Enum442MultiLegReportingType enumType;

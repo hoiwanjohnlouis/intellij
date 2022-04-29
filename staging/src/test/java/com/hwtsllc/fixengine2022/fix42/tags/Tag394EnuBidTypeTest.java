@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum394BidType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,26 +27,40 @@ class Tag394EnuBidTypeTest {
     @Test
     void FIX0394Test() {
         FIX42 fixData = FIX42.FIX394_ENU_BID_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "394", fixData.getID());
+        assertEquals( "BID_TYPE", fixData.getName());
+        assertEquals( "BidType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-3 msg types
+     *  Tag394
+     *  Enu
+     *  BidType
+     *
+     *      1-3 msg types
+     *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
+     *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
+     *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
      */
-    NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
-    DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
-    NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
     @Test
     void Tag0394Test() {
         Tag394EnuBidType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-3 msg types
+         */
+        tagData = new Tag394EnuBidType(Enum394BidType.NON_DISCLOSED);
+        assertEquals( Enum394BidType.NON_DISCLOSED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag394EnuBidType(Enum394BidType.DISCLOSED);
+        assertEquals( Enum394BidType.DISCLOSED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag394EnuBidType(Enum394BidType.NO_BIDDING);
+        assertEquals( Enum394BidType.NO_BIDDING.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -19,6 +19,15 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  291
+ *  FinancialStatus
+ *
+ *      1-3 msg types
+ *      BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
+ *      PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
+ *      RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
+ */
 public enum Enum291FinancialStatus implements EnumAccessors, LogStringVerbose {
     /**
      * 1-3 msg types

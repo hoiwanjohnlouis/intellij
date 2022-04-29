@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum339TrdSesMode;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag339
+ *  Enu
+ *  TradSesMode
+ *
+ *      1-3 msg types
+ *      TESTING( "1", "TESTING", "1 - Testing" ),
+ *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
+ *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
+ */
 public class Tag339EnuTradSesMode extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum339TrdSesMode dataValue;
 

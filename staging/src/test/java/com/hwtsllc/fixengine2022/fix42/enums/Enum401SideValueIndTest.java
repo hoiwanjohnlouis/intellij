@@ -23,6 +23,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum401SideValueIndTest {
+    /**
+     *  Tag401
+     *  Enu
+     *  SideValueInd
+     *
+     *      1-2 msg types
+     *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
+     *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
+     */
     @Test
     void Enum0401Test() {
         Enum401SideValueInd enumType;

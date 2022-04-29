@@ -35,12 +35,20 @@ class Tag216EnuRoutingTypeTest {
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-4 msg types
+     *  216
+     *  RoutingType
+     *      1 - Target Firm
+     *      2 - Target List
+     *      3 - Block Firm
+     *      4 - Block List
      */
     @Test
     void Tag0216Test() {
         Tag216EnuRoutingType tagData;
 
+        /**
+         * 1-4 msg types
+         */
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
         assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
                 tagData.getDataValue());

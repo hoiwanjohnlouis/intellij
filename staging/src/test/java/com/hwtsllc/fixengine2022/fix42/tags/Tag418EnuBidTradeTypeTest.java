@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum418BidTradeType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,27 +27,45 @@ class Tag418EnuBidTradeTypeTest {
     @Test
     void FIX0418Test() {
         FIX42 fixData = FIX42.FIX418_ENU_BID_TRADE_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "418", fixData.getID());
+        assertEquals( "BID_TRADE_TYPE", fixData.getName());
+        assertEquals( "BidTradeType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * A, G, J, and R msg types
+     *  Tag418
+     *  Enu
+     *  BidTradeType
+     *
+     *      A, G, J, and R msg types
+     *      AGENCY( "A", "AGENCY", "A - Agency" ),
+     *      VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
+     *      GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
+     *      RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
      */
-    AGENCY( "A", "AGENCY", "A - Agency" ),
-    VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
-    GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
-    RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
     @Test
     void Tag0418Test() {
         Tag418EnuBidTradeType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * A, G, J, and R msg types
+         */
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.AGENCY);
+        assertEquals( Enum418BidTradeType.AGENCY.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
+        assertEquals( Enum418BidTradeType.VWAP_GUARANTEE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
+        assertEquals( Enum418BidTradeType.GUARANTEED_CLOSE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
+        assertEquals( Enum418BidTradeType.RISK_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

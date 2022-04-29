@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag318CcyUnderlyingCurrency extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyCurrencyType dataValue;
 

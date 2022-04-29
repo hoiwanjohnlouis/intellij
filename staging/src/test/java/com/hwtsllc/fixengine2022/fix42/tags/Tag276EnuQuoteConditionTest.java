@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum276QuoteCondition;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,86 +27,311 @@ class Tag276EnuQuoteConditionTest {
     @Test
     void FIX0276Test() {
         FIX42 fixData = FIX42.FIX276_ENU_QUOTE_CONDITION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "276", fixData.getID());
+        assertEquals( "QUOTE_CONDITION", fixData.getName());
+        assertEquals( "QuoteCondition", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * A-Z
+     *  276
+     *  QuoteCondition
+     *
+     *      A-Z
+     *      "A - Open/Active"
+     *      "B - Closed/Inactive"
+     *      "C - Exchange Best"
+     *      "D - Consolidated Best"
+     *      "E - Locked"
+     *      "F - Crossed"
+     *      "G - Depth"
+     *      "H - Fast Trading"
+     *      "I - Non-Firm"
+     *      "J - Outright Price"
+     *      "K - Implied Price"
+     *      "L - Manual/Slow Quote"
+     *      "M - Depth on Offer"
+     *      "N - Depth on Bid"
+     *      "O - Closing"
+     *      "P - News Dissemination"
+     *      "Q - Trading Range"
+     *      "R - Order Influx"
+     *      "S - Due to Related"
+     *      "T - News Pending"
+     *      "U - Additional Info"
+     *      "V - Additional Info due to related"
+     *      "W - Resume"
+     *      "X - View of Common"
+     *      "Y - Volume Alert"
+     *      "Z - Order Imbalance"
+     *
+     *      a-z
+     *      "a - Equipment Changeover"
+     *      "b - No Open / No Resume"
+     *      "c - Regular ETH"
+     *      "d - Automatic Execution"
+     *      "e - Automatic Execution ETH"
+     *      "f - Fast Market ETH"
+     *      "g - Inactive ETH"
+     *      "h - Rotation"
+     *      "i - Rotation ETH"
+     *      "j - Halt"
+     *      "k - Halt ETH"
+     *      "l - Due to News Dissemination"
+     *      "m - Due to News Pending"
+     *      "n - Trading Resume"
+     *      "o - Out of Sequence"
+     *      "p - Bid Specialist"
+     *      "q - Offer Specialist"
+     *      "r - Bid Offer Specialist"
+     *      "s - End of Day SAM"
+     *      "t - Forbidden SAM"
+     *      "u - Frozen SAM"
+     *      "v - PreOpening SAM"
+     *      "w - Opening SAM"
+     *      "x - Open SAM"
+     *      "y - Surveillance SAM"
+     *      "z - Suspended SAM"
+     *
+     *      0-2
+     *      "0 - Reserved SAM"
+     *      "1 - No Active SAM"
+     *      "2 - Restricted"
      */
-    OPEN_ACTIVE( "A", "OPEN_ACTIVE", "A - Open/Active" ),
-    CLOSED_INACTIVE( "B", "CLOSED_INACTIVE", "B - Closed/Inactive" ),
-    EXCHANGE_BEST( "C", "EXCHANGE_BEST", "C - Exchange Best" ),
-    CONSOLIDATED_BEST( "D", "CONSOLIDATED_BEST", "D - Consolidated Best" ),
-    LOCKED( "E", "LOCKED", "E - Locked" ),
-    CROSSED( "F", "CROSSED", "F - Crossed" ),
-    DEPTH( "G", "DEPTH", "G - Depth" ),
-    FAST_TRADING( "H", "FAST_TRADING", "H - Fast Trading" ),
-    NON_FIRM( "I", "NON_FIRM", "I - Non-Firm" ),
-    OUTRIGHT_PRICE( "J", "OUTRIGHT_PRICE", "J - Outright Price" ),
-    IMPLIED_PRICE( "K", "IMPLIED_PRICE", "K - Implied Price" ),
-    MANUAL_SLOW_QUOTE( "L", "MANUAL_SLOW_QUOTE", "L - Manual/Slow Quote" ),
-    DEPTH_ON_OFFER( "M", "DEPTH_ON_OFFER", "M - Depth on Offer" ),
-    DEPTH_ON_BID( "N", "DEPTH_ON_BID", "N - Depth on Bid" ),
-    CLOSING( "O", "CLOSING", "O - Closing" ),
-    NEWS_DISSEMINATION( "P", "NEWS_DISSEMINATION", "P - News Dissemination" ),
-    TRADING_RANGE( "Q", "TRADING_RANGE", "Q - Trading Range" ),
-    ORDER_INFLUX( "R", "ORDER_INFLUX", "R - Order Influx" ),
-    DUE_TO_RELATED( "S", "DUE_TO_RELATED", "S - Due to Related" ),
-    NEWS_PENDING( "T", "NEWS_PENDING", "T - News Pending" ),
-    ADDITIONAL_INFO( "U", "ADDITIONAL_INFO", "U - Additional Info" ),
-    ADDITIONAL_INFO_RELATED( "V", "ADDITIONAL_INFO_RELATED", "V - Additional Info due to related" ),
-    RESUME( "W", "RESUME", "W - Resume" ),
-    VIEW_OF_COMMON( "X", "VIEW_OF_COMMON", "X - View of Common" ),
-    VOLUME_ALERT( "Y", "VOLUME_ALERT", "Y - Volume Alert" ),
-    ORDER_IMBALANCE( "Z", "ORDER_IMBALANCE", "Z - Order Imbalance" ),
-
-    /**
-     * a-z
-     */
-    EQUIPMENT_CHANGEOVER( "a", "EQUIPMENT_CHANGEOVER", "a - Equipment Changeover" ),
-    NO_OPEN_NO_RESUME( "b", "NO_OPEN_NO_RESUME", "b - No Open / No Resume" ),
-    REGULAR_ETH( "c", "REGULAR_ETH", "c - Regular ETH" ),
-    AUTOMATIC_EXECUTION( "d", "AUTOMATIC_EXECUTION", "d - Automatic Execution" ),
-    AUTOMATIC_EXECUTION_ETH( "e", "AUTOMATIC_EXECUTION_ETH", "e - Automatic Execution ETH" ),
-    FAST_MARKET_ETH( "f", "FAST_MARKET_ETH", "f - Fast Market ETH" ),
-    INACTIVE_ETH( "g", "INACTIVE_ETH", "g - Inactive ETH" ),
-    ROTATION( "h", "ROTATION", "h - Rotation" ),
-    ROTATION_ETH( "i", "ROTATION_ETH", "i - Rotation ETH" ),
-    HALT( "j", "HALT", "j - Halt" ),
-    HALT_ETH( "k", "HALT_ETH", "k - Halt ETH" ),
-    DUE_TO_NEWS_DISSEMINATION( "l", "DUE_TO_NEWS_DISSEMINATION", "l - Due to News Dissemination" ),
-    DUE_TO_NEWS_PENDING( "m", "DUE_TO_NEWS_PENDING", "m - Due to News Pending" ),
-    TRADING_RESUME( "n", "TRADING_RESUME", "n - Trading Resume" ),
-    OUT_OF_SEQUENCE( "o", "OUT_OF_SEQUENCE", "o - Out of Sequence" ),
-    BID_SPECIALIST( "p", "BID_SPECIALIST", "p - Bid Specialist" ),
-    OFFER_SPECIALIST( "q", "OFFER_SPECIALIST", "q - Offer Specialist" ),
-    BID_OFFER_SPECIALIST( "r", "BID_OFFER_SPECIALIST", "r - Bid Offer Specialist" ),
-    END_OF_DAY_SAM( "s", "END_OF_DAY_SAM", "s - End of Day SAM" ),
-    FORBIDDEN_SAM( "t", "FORBIDDEN_SAM", "t - Forbidden SAM" ),
-    FROZEN_SAM( "u", "FROZEN_SAM", "u - Frozen SAM" ),
-    PREOPENING_SAM( "v", "PREOPENING_SAM", "v - PreOpening SAM" ),
-    OPENING_SAM( "w", "OPENING_SAM", "w - Opening SAM" ),
-    OPEN_SAM( "x", "OPEN_SAM", "x - Open SAM" ),
-    SURVEILLANCE_SAM( "y", "SURVEILLANCE_SAM", "y - Surveillance SAM" ),
-    SUSPENDED_SAM( "z", "SUSPENDED_SAM", "z - Suspended SAM" ),
-
-    /**
-     * 0-2
-     */
-    RESERVED_SAM( "0", "RESERVED_SAM", "0 - Reserved SAM" ),
-    NO_ACTIVE_SAM( "1", "NO_ACTIVE_SAM", "1 - No Active SAM" ),
-    RESTRICTED( "2", "RESTRICTED", "2 - Restricted" ),
     @Test
     void Tag0276Test() {
         Tag276EnuQuoteCondition tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * A-Z
+         */
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.OPEN_ACTIVE);
+        assertEquals( Enum276QuoteCondition.OPEN_ACTIVE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.CLOSED_INACTIVE);
+        assertEquals( Enum276QuoteCondition.CLOSED_INACTIVE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.EXCHANGE_BEST);
+        assertEquals( Enum276QuoteCondition.EXCHANGE_BEST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.CONSOLIDATED_BEST);
+        assertEquals( Enum276QuoteCondition.CONSOLIDATED_BEST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.LOCKED);
+        assertEquals( Enum276QuoteCondition.LOCKED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.CROSSED);
+        assertEquals( Enum276QuoteCondition.CROSSED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.DEPTH);
+        assertEquals( Enum276QuoteCondition.DEPTH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.FAST_TRADING);
+        assertEquals( Enum276QuoteCondition.FAST_TRADING.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.NON_FIRM);
+        assertEquals( Enum276QuoteCondition.NON_FIRM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.OUTRIGHT_PRICE);
+        assertEquals( Enum276QuoteCondition.OUTRIGHT_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.IMPLIED_PRICE);
+        assertEquals( Enum276QuoteCondition.IMPLIED_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.MANUAL_SLOW_QUOTE);
+        assertEquals( Enum276QuoteCondition.MANUAL_SLOW_QUOTE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.DEPTH_ON_OFFER);
+        assertEquals( Enum276QuoteCondition.DEPTH_ON_OFFER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.DEPTH_ON_BID);
+        assertEquals( Enum276QuoteCondition.DEPTH_ON_BID.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.CLOSING);
+        assertEquals( Enum276QuoteCondition.CLOSING.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.NEWS_DISSEMINATION);
+        assertEquals( Enum276QuoteCondition.NEWS_DISSEMINATION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.TRADING_RANGE);
+        assertEquals( Enum276QuoteCondition.TRADING_RANGE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.ORDER_INFLUX);
+        assertEquals( Enum276QuoteCondition.ORDER_INFLUX.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.DUE_TO_RELATED);
+        assertEquals( Enum276QuoteCondition.DUE_TO_RELATED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.NEWS_PENDING);
+        assertEquals( Enum276QuoteCondition.NEWS_PENDING.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.ADDITIONAL_INFO);
+        assertEquals( Enum276QuoteCondition.ADDITIONAL_INFO.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.ADDITIONAL_INFO_RELATED);
+        assertEquals( Enum276QuoteCondition.ADDITIONAL_INFO_RELATED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.RESUME);
+        assertEquals( Enum276QuoteCondition.RESUME.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.VIEW_OF_COMMON);
+        assertEquals( Enum276QuoteCondition.VIEW_OF_COMMON.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.VOLUME_ALERT);
+        assertEquals( Enum276QuoteCondition.VOLUME_ALERT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.ORDER_IMBALANCE);
+        assertEquals( Enum276QuoteCondition.ORDER_IMBALANCE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        /**
+         * a-z
+         */
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.EQUIPMENT_CHANGEOVER);
+        assertEquals( Enum276QuoteCondition.EQUIPMENT_CHANGEOVER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.NO_OPEN_NO_RESUME);
+        assertEquals( Enum276QuoteCondition.NO_OPEN_NO_RESUME.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.REGULAR_ETH);
+        assertEquals( Enum276QuoteCondition.REGULAR_ETH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.AUTOMATIC_EXECUTION);
+        assertEquals( Enum276QuoteCondition.AUTOMATIC_EXECUTION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.AUTOMATIC_EXECUTION_ETH);
+        assertEquals( Enum276QuoteCondition.AUTOMATIC_EXECUTION_ETH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.FAST_MARKET_ETH);
+        assertEquals( Enum276QuoteCondition.FAST_MARKET_ETH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.INACTIVE_ETH);
+        assertEquals( Enum276QuoteCondition.INACTIVE_ETH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.ROTATION);
+        assertEquals( Enum276QuoteCondition.ROTATION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.ROTATION_ETH);
+        assertEquals( Enum276QuoteCondition.ROTATION_ETH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.HALT);
+        assertEquals( Enum276QuoteCondition.HALT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.HALT_ETH);
+        assertEquals( Enum276QuoteCondition.HALT_ETH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.DUE_TO_NEWS_DISSEMINATION);
+        assertEquals( Enum276QuoteCondition.DUE_TO_NEWS_DISSEMINATION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.DUE_TO_NEWS_PENDING);
+        assertEquals( Enum276QuoteCondition.DUE_TO_NEWS_PENDING.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.TRADING_RESUME);
+        assertEquals( Enum276QuoteCondition.TRADING_RESUME.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.OUT_OF_SEQUENCE);
+        assertEquals( Enum276QuoteCondition.OUT_OF_SEQUENCE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.BID_SPECIALIST);
+        assertEquals( Enum276QuoteCondition.BID_SPECIALIST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.OFFER_SPECIALIST);
+        assertEquals( Enum276QuoteCondition.OFFER_SPECIALIST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.BID_OFFER_SPECIALIST);
+        assertEquals( Enum276QuoteCondition.BID_OFFER_SPECIALIST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.END_OF_DAY_SAM);
+        assertEquals( Enum276QuoteCondition.END_OF_DAY_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.FORBIDDEN_SAM);
+        assertEquals( Enum276QuoteCondition.FORBIDDEN_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.FROZEN_SAM);
+        assertEquals( Enum276QuoteCondition.FROZEN_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.PREOPENING_SAM);
+        assertEquals( Enum276QuoteCondition.PREOPENING_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.OPENING_SAM);
+        assertEquals( Enum276QuoteCondition.OPENING_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.OPEN_SAM);
+        assertEquals( Enum276QuoteCondition.OPEN_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.SURVEILLANCE_SAM);
+        assertEquals( Enum276QuoteCondition.SURVEILLANCE_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.SUSPENDED_SAM);
+        assertEquals( Enum276QuoteCondition.SUSPENDED_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        /**
+         * 0-2
+         */
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.RESERVED_SAM);
+        assertEquals( Enum276QuoteCondition.RESERVED_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.NO_ACTIVE_SAM);
+        assertEquals( Enum276QuoteCondition.NO_ACTIVE_SAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag276EnuQuoteCondition(Enum276QuoteCondition.RESTRICTED);
+        assertEquals( Enum276QuoteCondition.RESTRICTED.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
+// @Deprecated
 class Tag318CcyUnderlyingCurrencyTest {
     @Test
     void FIX0318Test() {

@@ -19,10 +19,46 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  235
+ *  YieldType
+ *  various msg types
+ *      "AFTERTAX - After Tax Yield (Municipals)"
+ *      "ANNUAL - Annual Yield"
+ *      "ATISSUE - Yield At Issue (Municipals)"
+ *      "AVGMATURITY - Yield To Avg Maturity"
+ *      "BOOK - Book Yield"
+ *      "CALL - Yield to Next Call"
+ *      "CHANGE - Yield Change Since Close"
+ *      "CLOSE - Closing Yield"
+ *      "COMPOUND - Compound Yield"
+ *      "CURRENT - Current Yield"
+ *      "GOVTEQUIV - Gvnt Equivalent Yield"
+ *      "GROSS - True Gross Yield"
+ *      "INFLATION - Yield with Inflation Assumption"
+ *      "INVERSEFLOATER - Inverse Floater Bond Yield"
+ *      "LASTCLOSE - Most Recent Closing Yield"
+ *      "LASTMONTH - Closing Yield Most Recent Month"
+ *      "LASTQUARTER - Closing Yield Most Recent Quarter"
+ *      "LASTYEAR - Closing Yield Most Recent Year"
+ *      "LONGAVGLIFE - Yield to Longest Average Life"
+ *      "MARK - Mark to Market Yield"
+ *      "MATURITY - Yield to Maturity"
+ *      "NEXTREFUND - Yield to Next Refund (Sinking Fund Bonds)"
+ *      "OPENAVG - Open Average Yield"
+ *      "PREVCLOSE - Previous Close Yield"
+ *      "PROCEEDS - Proceeds Yield"
+ *      "PUT - Yield to Next Put"
+ *      "SEMIANNUAL - Semi-annual Yield"
+ *      "SHORTAVGLIFE - Yield to Shortest Average Life"
+ *      "SIMPLE - Simple Yield"
+ *      "TAXEQUIV - Tax Equivalent Yield"
+ *      "TENDER - Yield to Tender Date"
+ *      "TRUE - True Yield"
+ *      "VALUE1_32 - Yield Value Of 1/32"
+ *      "WORST - Yield To Worst"
+ */
 public enum Enum235YieldType implements EnumAccessors, LogStringVerbose {
-    /**
-     * various msg types
-     */
     AFTERTAX( "AFTERTAX", "AFTERTAX", "AFTERTAX - After Tax Yield (Municipals)" ),
     ANNUAL( "ANNUAL", "ANNUAL", "ANNUAL - Annual Yield" ),
     ATISSUE( "ATISSUE", "ATISSUE", "ATISSUE - Yield At Issue (Municipals)" ),

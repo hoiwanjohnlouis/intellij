@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum399BidDescriptorType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,26 +27,40 @@ class Tag399EnuBidDescriptorTypeTest {
     @Test
     void FIX0399Test() {
         FIX42 fixData = FIX42.FIX399_ENU_BID_DESCRIPTOR_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "399", fixData.getID());
+        assertEquals( "BID_DESCRIPTOR_TYPE", fixData.getName());
+        assertEquals( "BidDescriptorType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-3 msg types
+     *  Tag399
+     *  Enu
+     *  BidDescriptorType
+     *
+     *      1-3 msg types
+     *      SECTOR( "1", "SECTOR", "1 - Sector" ),
+     *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
+     *      INDEX( "3", "INDEX", "3 - Index" ),
      */
-    SECTOR( "1", "SECTOR", "1 - Sector" ),
-    COUNTRY( "2", "COUNTRY", "2 - Country" ),
-    INDEX( "3", "INDEX", "3 - Index" ),
     @Test
     void Tag0399Test() {
         Tag399EnuBidDescriptorType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-3 msg types
+         */
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
+        assertEquals( Enum399BidDescriptorType.SECTOR.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
+        assertEquals( Enum399BidDescriptorType.COUNTRY.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
+        assertEquals( Enum399BidDescriptorType.INDEX.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
+// @Deprecated
 class Tag439StrClearingFirmTest {
     @Test
     void FIX0439Test() {

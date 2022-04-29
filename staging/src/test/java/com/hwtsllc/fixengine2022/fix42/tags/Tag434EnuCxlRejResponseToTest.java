@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum434CxlRejResponseTo;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,27 +27,35 @@ class Tag434EnuCxlRejResponseToTest {
     @Test
     void FIX0434Test() {
         FIX42 fixData = FIX42.FIX434_ENU_CXL_REJ_RESPONSE_TO;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "434", fixData.getID());
+        assertEquals( "CXL_REJ_RESPONSE_TO", fixData.getName());
+        assertEquals( "CxlRejResponseTo", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-2 msg types
+     *  Tag434
+     *  Enu
+     *  CxlRejResponseTo
+     *
+     *      1-2 msg types
+     *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
+     *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
      */
-    ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST",
-                                  "1 - Order cancel request" ),
-    ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST",
-                                        "2 - Order cancel/replace request" ),
     @Test
     void Tag0434Test() {
         Tag434EnuCxlRejResponseTo tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-2 msg types
+         */
+        tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST);
+        assertEquals( Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST);
+        assertEquals( Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

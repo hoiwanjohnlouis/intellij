@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum274TickDirection;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,27 +27,43 @@ class Tag274EnuTickDirectionTest {
     @Test
     void FIX0274Test() {
         FIX42 fixData = FIX42.FIX274_ENU_TICK_DIRECTION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "274", fixData.getID());
+        assertEquals( "TICK_DIRECTION", fixData.getName());
+        assertEquals( "TickDirection", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 0-3 msg types
+     *  274
+     *  TickDirection
+     *      0-3 msg types
+     *      "0 - Plus Tick"
+     *      "1 - Zero-Plus Tick"
+     *      "2 - Minus Tick"
+     *      "3 - Zero-Minus Tick"
      */
-    PLUS_TICK( "0", "PLUS_TICK", "0 - Plus Tick" ),
-    ZERO_PLUS_TICK( "1", "ZERO_PLUS_TICK", "1 - Zero-Plus Tick" ),
-    MINUS_TICK( "2", "MINUS_TICK", "2 - Minus Tick" ),
-    ZERO_MINUS_TICK( "3", "ZERO_MINUS_TICK", "3 - Zero-Minus Tick" ),
     @Test
     void Tag0274Test() {
         Tag274EnuTickDirection tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 0-3 msg types
+         */
+        tagData = new Tag274EnuTickDirection(Enum274TickDirection.PLUS_TICK);
+        assertEquals( Enum274TickDirection.PLUS_TICK.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag274EnuTickDirection(Enum274TickDirection.ZERO_PLUS_TICK);
+        assertEquals( Enum274TickDirection.ZERO_PLUS_TICK.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag274EnuTickDirection(Enum274TickDirection.MINUS_TICK);
+        assertEquals( Enum274TickDirection.MINUS_TICK.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag274EnuTickDirection(Enum274TickDirection.ZERO_MINUS_TICK);
+        assertEquals( Enum274TickDirection.ZERO_MINUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

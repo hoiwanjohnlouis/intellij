@@ -23,6 +23,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum409LiquidityIndTypeTest {
+    /**
+     *  Tag409
+     *  Enu
+     *  LiquidityIndType
+     *
+     *      1-4 msg types
+     *      FIVE_DAY_MOVING_AVERAGE( "1", "FIVE_DAY_MOVING_AVERAGE", "1 - 5-Day Moving Average" ),
+     *      TWENTY_DAY_MOVING_AVERAGE( "2", "TWENTY_DAY_MOVING_AVERAGE", "2 - 20-Day Moving Average" ),
+     *      NORMAL_MARKET_SIZE( "3", "NORMAL_MARKET_SIZE", "3 - Normal Market Size" ),
+     *      OTHER( "4", "OTHER", "4 - Other" ),
+     */
     @Test
     void Enum0409Test() {
         Enum409LiquidityIndType enumType;

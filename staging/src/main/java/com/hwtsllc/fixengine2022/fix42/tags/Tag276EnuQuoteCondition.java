@@ -22,6 +22,71 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum276QuoteCondition;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  276
+ *  QuoteCondition
+ *
+ *      A-Z
+ *      "A - Open/Active"
+ *      "B - Closed/Inactive"
+ *      "C - Exchange Best"
+ *      "D - Consolidated Best"
+ *      "E - Locked"
+ *      "F - Crossed"
+ *      "G - Depth"
+ *      "H - Fast Trading"
+ *      "I - Non-Firm"
+ *      "J - Outright Price"
+ *      "K - Implied Price"
+ *      "L - Manual/Slow Quote"
+ *      "M - Depth on Offer"
+ *      "N - Depth on Bid"
+ *      "O - Closing"
+ *      "P - News Dissemination"
+ *      "Q - Trading Range"
+ *      "R - Order Influx"
+ *      "S - Due to Related"
+ *      "T - News Pending"
+ *      "U - Additional Info"
+ *      "V - Additional Info due to related"
+ *      "W - Resume"
+ *      "X - View of Common"
+ *      "Y - Volume Alert"
+ *      "Z - Order Imbalance"
+ *
+ *      a-z
+ *      "a - Equipment Changeover"
+ *      "b - No Open / No Resume"
+ *      "c - Regular ETH"
+ *      "d - Automatic Execution"
+ *      "e - Automatic Execution ETH"
+ *      "f - Fast Market ETH"
+ *      "g - Inactive ETH"
+ *      "h - Rotation"
+ *      "i - Rotation ETH"
+ *      "j - Halt"
+ *      "k - Halt ETH"
+ *      "l - Due to News Dissemination"
+ *      "m - Due to News Pending"
+ *      "n - Trading Resume"
+ *      "o - Out of Sequence"
+ *      "p - Bid Specialist"
+ *      "q - Offer Specialist"
+ *      "r - Bid Offer Specialist"
+ *      "s - End of Day SAM"
+ *      "t - Forbidden SAM"
+ *      "u - Frozen SAM"
+ *      "v - PreOpening SAM"
+ *      "w - Opening SAM"
+ *      "x - Open SAM"
+ *      "y - Surveillance SAM"
+ *      "z - Suspended SAM"
+ *
+ *      0-2
+ *      "0 - Reserved SAM"
+ *      "1 - No Active SAM"
+ *      "2 - Restricted"
+ */
 public class Tag276EnuQuoteCondition extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum276QuoteCondition dataValue;
 

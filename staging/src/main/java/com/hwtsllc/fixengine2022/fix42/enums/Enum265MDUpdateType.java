@@ -19,6 +19,13 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  265
+ *  MDUpdateType
+ *  0-1 msg types
+ *      "0 - Full refresh"
+ *      "1 - Incremental refresh"
+ */
 public enum Enum265MDUpdateType implements EnumAccessors, LogStringVerbose {
     /**
      * 0-1 msg types

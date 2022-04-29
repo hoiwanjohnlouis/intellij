@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum265MDUpdateType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  265
+ *  MDUpdateType
+ *  0-1 msg types
+ *      "0 - Full refresh"
+ *      "1 - Incremental refresh"
+ */
 public class Tag265EnuMDUpdateType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum265MDUpdateType dataValue;
 

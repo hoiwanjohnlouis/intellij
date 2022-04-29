@@ -23,6 +23,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum281MDReqRejReasonTest {
+    /**
+     *  281
+     *  MDReqRejReason
+     *
+     *      0-9 msg types
+     *      "0 - Unknown Symbol"
+     *      "1 - Duplicate MDReqID"
+     *      "2 - Insufficient Bandwidth"
+     *      "3 - Insufficient Permissions"
+     *      "4 - Unsupported SubscriptionRequestType"
+     *      "5 - Unsupported MarketDepth"
+     *      "6 - Unsupported MDUpdateType"
+     *      "7 - Unsupported AggregatedBook"
+     *      "8 - Unsupported MDEntryType";
+     *      "9 - Unsupported TradingSessionID";
+     *
+     *      A-D msg types
+     *      "A - Unsupported Scope";
+     *      "B - Unsupported OpenCloseSettleFlag";
+     *      "C - Unsupported MDImplicitDelete"
+     *      "D - Insufficient credit";
+     */
     @Test
     void Enum0281Test() {
         Enum281MDReqRejReason enumType;

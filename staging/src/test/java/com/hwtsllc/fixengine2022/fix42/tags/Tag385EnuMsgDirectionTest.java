@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum385MsgDirection;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,35 @@ class Tag385EnuMsgDirectionTest {
     @Test
     void FIX0385Test() {
         FIX42 fixData = FIX42.FIX385_ENU_MSG_DIRECTION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "385", fixData.getID());
+        assertEquals( "MSG_DIRECTION", fixData.getName());
+        assertEquals( "MsgDirection", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * R, and S msg types
+     *  Tag385
+     *  Enu
+     *  MsgDirection
+     *
+     *      R, and S msg types
+     *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
+     *      SEND( "S", "SEND", "S - Send" ),
      */
-    RECEIVE( "R", "RECEIVE", "R - Receive" ),
-    SEND( "S", "SEND", "S - Send" ),
     @Test
     void Tag0385Test() {
         Tag385EnuMsgDirection tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * R, and S msg types
+         */
+        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
+        assertEquals( Enum385MsgDirection.RECEIVE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.SEND);
+        assertEquals( Enum385MsgDirection.SEND.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

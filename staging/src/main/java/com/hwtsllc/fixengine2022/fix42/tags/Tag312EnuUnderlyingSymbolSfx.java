@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum312UnderlyingSymbolSfx;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  312
+ *  UnderlyingSymbolSfx
+ *
+ *      CD, and WI msg types for Fixed Income
+ *      LUMP_SUM_INTEREST( "CD", "LUMP_SUM_INTEREST",
+ *                          "CD - EUCP with lump-sum interest rather than discount price" ),
+ *      WHEN_ISSUED( "WI", "WHEN_ISSUED",
+ *                          "WI - When Issued for a security to be reissued under an old CUSIP or ISIN" ),
+ */
 public class Tag312EnuUnderlyingSymbolSfx extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum312UnderlyingSymbolSfx dataValue;
 

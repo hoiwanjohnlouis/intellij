@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum340TradSesStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,30 +27,60 @@ class Tag340EnuTradSesStatusTest {
     @Test
     void FIX0340Test() {
         FIX42 fixData = FIX42.FIX340_ENU_TRAD_SES_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "340", fixData.getID());
+        assertEquals( "TRAD_SES_STATUS", fixData.getName());
+        assertEquals( "TradSesStatus", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 0-6 msg types
+     *  Tag340
+     *  Enu
+     *  TradSesStatus
+     *
+     *      0-6 msg types
+     *      UNKNOWN( "0", "UNKNOWN", "0 - Unknown" ),
+     *      HALTED( "1", "HALTED", "1 - Halted" ),
+     *      OPEN( "2", "OPEN", "2 - Open" ),
+     *      CLOSED( "3", "CLOSED", "3 - Closed" ),
+     *      PRE_OPEN( "4", "PRE_OPEN", "4 - Pre-Open" ),
+     *      PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
+     *      REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
      */
-    UNKNOWN( "0", "UNKNOWN", "0 - Unknown" ),
-    HALTED( "1", "HALTED", "1 - Halted" ),
-    OPEN( "2", "OPEN", "2 - Open" ),
-    CLOSED( "3", "CLOSED", "3 - Closed" ),
-    PRE_OPEN( "4", "PRE_OPEN", "4 - Pre-Open" ),
-    PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
-    REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
     @Test
     void Tag0340Test() {
         Tag340EnuTradSesStatus tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 0-6 msg types
+         */
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.UNKNOWN);
+        assertEquals( Enum340TradSesStatus.UNKNOWN.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.HALTED);
+        assertEquals( Enum340TradSesStatus.HALTED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.OPEN);
+        assertEquals( Enum340TradSesStatus.OPEN.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
+        assertEquals( Enum340TradSesStatus.CLOSED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.PRE_CLOSE);
+        assertEquals( Enum340TradSesStatus.PRE_CLOSE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.REQUEST_REJECTED);
+        assertEquals( Enum340TradSesStatus.REQUEST_REJECTED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
+        assertEquals( Enum340TradSesStatus.CLOSED.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

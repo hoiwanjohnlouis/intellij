@@ -19,6 +19,19 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag427
+ *  Enu
+ *  GTBookingInst
+ *
+ *      0-2 msg types
+ *      BOOK_OUT_ALL_TRADES( "0", "BOOK_OUT_ALL_TRADES",
+ *                          "0 - Book out all trades on day of execution" ),
+ *      ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES( "1", "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES",
+ *                          "1 - Accumulate executions until order is filled or expires" ),
+ *      ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE( "2", "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE",
+ *                          "2 - Accumulate until verbally notified otherwise" ),
+ */
 public enum Enum427GTBookingInst implements EnumAccessors, LogStringVerbose {
     /**
      * 0-2 msg types

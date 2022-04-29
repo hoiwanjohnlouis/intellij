@@ -23,6 +23,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum279MDUpdateActionTest {
+    /**
+     *  279
+     *  MDUpdateAction
+     *
+     *      0-4 msg types
+     *      NEW( "0", "NEW", "0 - New" ),
+     *      CHANGE( "1", "CHANGE", "1 - Change" ),
+     *      DELETE( "2", "DELETE", "2 - Delete" ),
+     *      DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
+     *      DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
+     */
     @Test
     void Enum0279Test() {
         Enum279MDUpdateAction enumType;

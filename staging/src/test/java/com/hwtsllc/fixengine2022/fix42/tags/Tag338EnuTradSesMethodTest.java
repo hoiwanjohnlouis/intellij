@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum338TradSesMethod;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,26 +27,40 @@ class Tag338EnuTradSesMethodTest {
     @Test
     void FIX0338Test() {
         FIX42 fixData = FIX42.FIX338_ENU_TRAD_SES_METHOD;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "338", fixData.getID());
+        assertEquals( "TRAD_SES_METHOD", fixData.getName());
+        assertEquals( "TradSesMethod", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-3 msg types
+     *  Tag338
+     *  Enu
+     *  TradSesMethod
+     *
+     *      1-3 msg types
+     *      ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
+     *      OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
+     *      TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
      */
-    ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
-    OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
-    TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
     @Test
     void Tag0338Test() {
         Tag338EnuTradSesMethod tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-3 msg types
+         */
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.ELECTRONIC);
+        assertEquals( Enum338TradSesMethod.ELECTRONIC.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.OPEN_OUTCRY);
+        assertEquals( Enum338TradSesMethod.OPEN_OUTCRY.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.TWO_PARTY);
+        assertEquals( Enum338TradSesMethod.TWO_PARTY.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

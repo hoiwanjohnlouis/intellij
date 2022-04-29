@@ -23,6 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum334AdjustmentTest {
+    /**
+     *  Tag334
+     *  Enu
+     *  Adjustment
+     *
+     *      1-3 msg types
+     *      CANCEL( "1", "CANCEL", "1 - Cancel" ),
+     *      ERROR( "2", "ERROR", "2 - Error" ),
+     *      CORRECTION( "3", "CORRECTION", "3 - Correction" ),
+     */
     @Test
     void Enum0334Test() {
         Enum334Adjustment enumType;

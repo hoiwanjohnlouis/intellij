@@ -18,18 +18,25 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix41.enums.Enum201PutOrCall;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum315PutOrCall;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
+/**
+ *  315 (same as 201, 315)
+ *  UnderlyingPutOrCall
+ *
+ *      PUT( "0", "PUT", "0 - Put" ),
+ *      CALL( "1", "CALL", "1 - Call" ),
+ */
 public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum201PutOrCall dataValue;
+    private final Enum315PutOrCall dataValue;
 
-    public final static Enum201PutOrCall TESTA_ENU_UNDERLYING_PUT_OR_CALL = Enum201PutOrCall.CALL;
-    public final static Enum201PutOrCall TESTB_ENU_UNDERLYING_PUT_OR_CALL = Enum201PutOrCall.PUT;
+    public final static Enum315PutOrCall TESTA_ENU_UNDERLYING_PUT_OR_CALL = Enum315PutOrCall.CALL;
+    public final static Enum315PutOrCall TESTB_ENU_UNDERLYING_PUT_OR_CALL = Enum315PutOrCall.PUT;
 
-    public Tag315EnuUnderlyingPutOrCall(Enum201PutOrCall dataValue) {
+    public Tag315EnuUnderlyingPutOrCall(Enum315PutOrCall dataValue) {
         setFixType(FIX42.FIX315_ENU_UNDERLYING_PUT_OR_CALL);
         this.dataValue = dataValue;
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum433ListExecInstType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,36 +27,56 @@ class Tag433EnuListExecInstTypeTest {
     @Test
     void FIX0433Test() {
         FIX42 fixData = FIX42.FIX433_ENU_LIST_EXEC_INST_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "433", fixData.getID());
+        assertEquals( "LIST_EXEC_INST_TYPE", fixData.getName());
+        assertEquals( "ListExecInstType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-5 msg types
+     *  Tag433
+     *  Enu
+     *  ListExecInstType
+     *
+     *      1-5 msg types
+     *      IMMEDIATE( "1", "IMMEDIATE", "1 - Immediate" ),
+     *      WAIT_FOR_EXECUTION_INSTRUCTION( "2", "WAIT_FOR_EXECUTION_INSTRUCTION",
+     *                          "2 - Wait for Execution Instruction (i.e. a List Execution message or " +
+     *                          "phone call before proceeding with execution of the list)" ),
+     *      SELL_DRIVEN( "3", "SELL_DRIVEN", "3 - Exchange/switch CIV order - Sell driven" ),
+     *      BUY_DRIVEN_CASH_TOP_UP( "4", "BUY_DRIVEN_CASH_TOP_UP",
+     *                          "4 - Exchange/switch CIV order - Buy driven, cash top-up " +
+     *                          "(i.e. additional cash will be provided to fulfill the order)" ),
+     *      BUY_DRIVEN_CASH_WITHDRAW( "5", "BUY_DRIVEN_CASH_WITHDRAW",
+     *                          "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
+     *                          "(i.e. additional cash will not be provided to fulfill the order)" ),
      */
-    IMMEDIATE( "1", "IMMEDIATE",
-                       "1 - Immediate" ),
-    WAIT_FOR_EXECUTION_INSTRUCTION( "2", "WAIT_FOR_EXECUTION_INSTRUCTION",
-                                            "2 - Wait for Execution Instruction (i.e. a List Execution message or " +
-                                            "phone call before proceeding with execution of the list)" ),
-    SELL_DRIVEN( "3", "SELL_DRIVEN",
-                         "3 - Exchange/switch CIV order - Sell driven" ),
-    BUY_DRIVEN_CASH_TOP_UP( "4", "BUY_DRIVEN_CASH_TOP_UP",
-                                    "4 - Exchange/switch CIV order - Buy driven, cash top-up " +
-                                    "(i.e. additional cash will be provided to fulfill the order)" ),
-    BUY_DRIVEN_CASH_WITHDRAW( "5", "BUY_DRIVEN_CASH_WITHDRAW",
-                                      "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
-                                      "(i.e. additional cash will not be provided to fulfill the order)" ),
     @Test
     void Tag0433Test() {
         Tag433EnuListExecInstType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-5 msg types
+         */
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.IMMEDIATE);
+        assertEquals( Enum433ListExecInstType.IMMEDIATE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION);
+        assertEquals( Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.SELL_DRIVEN);
+        assertEquals( Enum433ListExecInstType.SELL_DRIVEN.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP);
+        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW);
+        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

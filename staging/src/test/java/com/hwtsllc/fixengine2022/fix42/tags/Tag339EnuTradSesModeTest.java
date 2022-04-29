@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum339TrdSesMode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,26 +27,40 @@ class Tag339EnuTradSesModeTest {
     @Test
     void FIX0339Test() {
         FIX42 fixData = FIX42.FIX339_ENU_TRAD_SES_MODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "339", fixData.getID());
+        assertEquals( "TRAD_SES_MODE", fixData.getName());
+        assertEquals( "TradSesMode", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-3 msg types
+     *  Tag339
+     *  Enu
+     *  TradSesMode
+     *
+     *      1-3 msg types
+     *      TESTING( "1", "TESTING", "1 - Testing" ),
+     *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
+     *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
      */
-    TESTING( "1", "TESTING", "1 - Testing" ),
-    SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
-    PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
     @Test
     void Tag0339Test() {
         Tag339EnuTradSesMode tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-3 msg types
+         */
+        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.TESTING);
+        assertEquals( Enum339TrdSesMode.TESTING.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.SIMULATED);
+        assertEquals( Enum339TrdSesMode.SIMULATED.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.PRODUCTION);
+        assertEquals( Enum339TrdSesMode.PRODUCTION.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

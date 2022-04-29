@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum303QuoteRequestType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,34 @@ class Tag303EnuQuoteRequestTypeTest {
     @Test
     void FIX0303Test() {
         FIX42 fixData = FIX42.FIX303_ENU_QUOTE_REQUEST_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "303", fixData.getID());
+        assertEquals( "QUOTE_REQUEST_TYPE", fixData.getName());
+        assertEquals( "QuoteRequestType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-2 msg types
+     *  303
+     *  QuoteRequestType
+     *
+     *      1-2 msg types
+     *      MANUAL( "1", "MANUAL", "1 - Manual" ),
+     *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
      */
-    MANUAL( "1", "MANUAL", "1 - Manual" ),
-    AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
     @Test
     void Tag0303Test() {
         Tag303EnuQuoteRequestType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-2 msg types
+         */
+        tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.MANUAL);
+        assertEquals( Enum303QuoteRequestType.MANUAL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.AUTOMATIC);
+        assertEquals( Enum303QuoteRequestType.AUTOMATIC.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

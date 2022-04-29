@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum265MDUpdateType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,33 @@ class Tag265EnuMDUpdateTypeTest {
     @Test
     void FIX0265Test() {
         FIX42 fixData = FIX42.FIX265_ENU_MD_UPDATE_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "265", fixData.getID());
+        assertEquals( "MD_UPDATE_TYPE", fixData.getName());
+        assertEquals( "MDUpdateType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 0-1 msg types
+     *  265
+     *  MDUpdateType
+     *  0-1 msg types
+     *      "0 - Full refresh"
+     *      "1 - Incremental refresh"
      */
-    FULL_REFRESH( "0", "FULL_REFRESH", "0 - Full refresh" ),
-    INCREMENTAL_REFRESH( "1", "INCREMENTAL_REFRESH", "1 - Incremental refresh" ),
     @Test
     void Tag0265Test() {
         Tag265EnuMDUpdateType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 0-1 msg types
+         */
+        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.FULL_REFRESH);
+        assertEquals( Enum265MDUpdateType.FULL_REFRESH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.INCREMENTAL_REFRESH);
+        assertEquals( Enum265MDUpdateType.INCREMENTAL_REFRESH.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

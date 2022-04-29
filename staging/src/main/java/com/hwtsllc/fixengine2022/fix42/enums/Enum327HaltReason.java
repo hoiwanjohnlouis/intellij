@@ -19,6 +19,19 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag327
+ *  Enu
+ *  HaltReason
+ *
+ *      D, E, I, M, P, and X msg types
+ *      NEWS_DISSEMINATION( "D", "NEWS_DISSEMINATION", "D - News Dissemination" ),
+ *      ORDER_INFLUX( "E", "ORDER_INFLUX", "E - Order Influx" ),
+ *      ORDER_IMBALANCE( "I", "ORDER_IMBALANCE", "I - Order Imbalance" ),
+ *      ADDITIONAL_INFORMATION( "M", "ADDITIONAL_INFORMATION", "M - Additional Information" ),
+ *      NEW_PENDING( "P", "NEW_PENDING", "P - New Pending" ),
+ *      EQUIPMENT_CHANGE_OVER( "X", "EQUIPMENT_CHANGE_OVER", "X - Equipment Changeover" ),
+ */
 public enum Enum327HaltReason implements EnumAccessors, LogStringVerbose {
     /**
      * D, E, I, M, P, and X msg types

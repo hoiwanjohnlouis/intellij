@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum434CxlRejResponseTo;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag434
+ *  Enu
+ *  CxlRejResponseTo
+ *
+ *      1-2 msg types
+ *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
+ *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
+ */
 public class Tag434EnuCxlRejResponseTo extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum434CxlRejResponseTo dataValue;
 

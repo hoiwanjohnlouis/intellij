@@ -19,6 +19,15 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag374
+ *  Enu
+ *  BidRequestTransType
+ *
+ *      C, and N msg types
+ *      CANCEL( "C", "CANCEL", "C - Cancel" ),
+ *      NEW( "N", "NEW", "N - New" ),
+ */
 public enum Enum374BidRequestTransType implements EnumAccessors, LogStringVerbose {
     /**
      * C, and N msg types

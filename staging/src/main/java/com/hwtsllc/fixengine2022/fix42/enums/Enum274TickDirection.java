@@ -19,6 +19,15 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  274
+ *  TickDirection
+ *      0-3 msg types
+ *      "0 - Plus Tick"
+ *      "1 - Zero-Plus Tick"
+ *      "2 - Minus Tick"
+ *      "3 - Zero-Minus Tick"
+ */
 public enum Enum274TickDirection implements EnumAccessors, LogStringVerbose {
     /**
      * 0-3 msg types

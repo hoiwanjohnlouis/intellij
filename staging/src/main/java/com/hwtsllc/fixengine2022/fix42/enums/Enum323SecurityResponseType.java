@@ -19,6 +19,25 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  323
+ *  Enu
+ *  SecurityResponseType
+ *
+ *      1-6 msg types
+ *      ACCEPT_SECURITY_AS_IS( "1", "ACCEPT_SECURITY_AS_IS",
+ *                          "1 - Accept security proposal as-is" ),
+ *      ACCEPT_SECURITY_REVISIONS( "2", "ACCEPT_SECURITY_REVISIONS",
+ *                          "2 - Accept security proposal with revisions as indicated in the message" ),
+ *      LIST_OF_SECURITY_TYPES_RETURNED( "3", "LIST_OF_SECURITY_TYPES_RETURNED",
+ *                          "3 - List of security types returned per request" ),
+ *      LIST_OF_SECURITIES_RETURNED_PER_REQUEST( "4", "LIST_OF_SECURITIES_RETURNED_PER_REQUEST",
+ *                          "4 - List of securities returned per request" ),
+ *      REJECT_SECURITY_PROPOSAL( "5", "REJECT_SECURITY_PROPOSAL",
+ *                          "5 - Reject security proposal" ),
+ *      CANNOT_MATCH_SELECTION( "6", "CANNOT_MATCH_SELECTION",
+ *                          "6 - Cannot match selection criteria" ),
+ */
 public enum Enum323SecurityResponseType implements EnumAccessors, LogStringVerbose {
     /**
      * 1-6 msg types

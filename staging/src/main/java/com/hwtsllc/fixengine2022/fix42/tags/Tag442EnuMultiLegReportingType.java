@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum442MultiLegReportingType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag442
+ *  Enu
+ *  MultiLegReportingType
+ *
+ *      1-3 msg types
+ *      SINGLE_SECURITY( "1", "SINGLE_SECURITY", "1 - Single security (default if not specified)" ),
+ *      INDIVIDUAL_LEG_SECURITY( "2", "INDIVIDUAL_LEG_SECURITY", "2 - Individual leg of a multi=leg security" ),
+ *      MULTI_LEG_SECURITY( "3", "MULTI_LEG_SECURITY", "3 - Multi-leg security" ),
+ */
 public class Tag442EnuMultiLegReportingType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum442MultiLegReportingType dataValue;
 

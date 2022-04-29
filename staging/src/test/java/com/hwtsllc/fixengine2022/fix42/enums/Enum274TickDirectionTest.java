@@ -23,6 +23,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum274TickDirectionTest {
+    /**
+     *  274
+     *  TickDirection
+     *      0-3 msg types
+     *      "0 - Plus Tick"
+     *      "1 - Zero-Plus Tick"
+     *      "2 - Minus Tick"
+     *      "3 - Zero-Minus Tick"
+     */
     @Test
     void Enum0274Test() {
         Enum274TickDirection enumType;

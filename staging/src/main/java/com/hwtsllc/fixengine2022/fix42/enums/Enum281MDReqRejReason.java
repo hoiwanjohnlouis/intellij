@@ -19,6 +19,28 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  281
+ *  MDReqRejReason
+ *
+ *      0-9 msg types
+ *      "0 - Unknown Symbol"
+ *      "1 - Duplicate MDReqID"
+ *      "2 - Insufficient Bandwidth"
+ *      "3 - Insufficient Permissions"
+ *      "4 - Unsupported SubscriptionRequestType"
+ *      "5 - Unsupported MarketDepth"
+ *      "6 - Unsupported MDUpdateType"
+ *      "7 - Unsupported AggregatedBook"
+ *      "8 - Unsupported MDEntryType";
+ *      "9 - Unsupported TradingSessionID";
+ *
+ *      A-D msg types
+ *      "A - Unsupported Scope";
+ *      "B - Unsupported OpenCloseSettleFlag";
+ *      "C - Unsupported MDImplicitDelete"
+ *      "D - Insufficient credit";
+ */
 public enum Enum281MDReqRejReason implements EnumAccessors, LogStringVerbose {
     /**
      * 0-9 msg types

@@ -19,6 +19,15 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag434
+ *  Enu
+ *  CxlRejResponseTo
+ *
+ *      1-2 msg types
+ *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
+ *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
+ */
 public enum Enum434CxlRejResponseTo implements EnumAccessors, LogStringVerbose {
     /**
      * 1-2 msg types

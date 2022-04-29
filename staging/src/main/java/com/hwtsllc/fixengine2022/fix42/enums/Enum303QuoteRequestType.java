@@ -19,6 +19,14 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  303
+ *  QuoteRequestType
+ *
+ *      1-2 msg types
+ *      MANUAL( "1", "MANUAL", "1 - Manual" ),
+ *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
+ */
 public enum Enum303QuoteRequestType implements EnumAccessors, LogStringVerbose {
     /**
      * 1-2 msg types

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum401SideValueInd;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag401
+ *  Enu
+ *  SideValueInd
+ *
+ *      1-2 msg types
+ *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
+ *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
+ */
 public class Tag401EnuSideValueInd extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum401SideValueInd dataValue;
 

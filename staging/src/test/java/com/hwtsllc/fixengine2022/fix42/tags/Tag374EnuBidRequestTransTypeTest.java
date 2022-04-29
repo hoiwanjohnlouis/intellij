@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum374BidRequestTransType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,36 @@ class Tag374EnuBidRequestTransTypeTest {
     @Test
     void FIX0374Test() {
         FIX42 fixData = FIX42.FIX374_ENU_BID_REQUEST_TRANS_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "374", fixData.getID());
+        assertEquals( "BID_REQUEST_TRANS_TYPE", fixData.getName());
+        assertEquals( "BidRequestTransType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * C, and N msg types
+     *  Tag374
+     *  Enu
+     *  BidRequestTransType
+     *
+     *      C, and N msg types
+     *      CANCEL( "C", "CANCEL", "C - Cancel" ),
+     *      NEW( "N", "NEW", "N - New" ),
      */
-    CANCEL( "C", "CANCEL", "C - Cancel" ),
-    NEW( "N", "NEW", "N - New" ),
     @Test
     void Tag0374Test() {
         Tag374EnuBidRequestTransType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+
+        /**
+         * C, and N msg types
+         */
+        tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.CANCEL);
+        assertEquals( Enum374BidRequestTransType.CANCEL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.NEW);
+        assertEquals( Enum374BidRequestTransType.NEW.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

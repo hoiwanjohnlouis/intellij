@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum394BidType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag394
+ *  Enu
+ *  BidType
+ *
+ *      1-3 msg types
+ *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
+ *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
+ *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
+ */
 public class Tag394EnuBidType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum394BidType dataValue;
 

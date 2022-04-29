@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum416IncTaxInd;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,35 @@ class Tag416EnuIncTaxIndTest {
     @Test
     void FIX0416Test() {
         FIX42 fixData = FIX42.FIX416_ENU_INC_TAX_IND;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "416", fixData.getID());
+        assertEquals( "INC_TAX_IND", fixData.getName());
+        assertEquals( "IncTaxInd", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-2 msg types
+     *  Tag416
+     *  Enu
+     *  IncTaxInd
+     *
+     *      1-2 msg types
+     *      NET( "1", "NET", "1 - Net" ),
+     *      GROSS( "2", "GROSS", "2 - Gross" ),
      */
-    NET( "1", "NET", "1 - Net" ),
-    GROSS( "2", "GROSS", "2 - Gross" ),
     @Test
     void Tag0416Test() {
         Tag416EnuIncTaxInd tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-2 msg types
+         */
+        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.NET);
+        assertEquals( Enum416IncTaxInd.NET.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
+        assertEquals( Enum416IncTaxInd.GROSS.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

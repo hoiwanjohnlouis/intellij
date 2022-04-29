@@ -23,6 +23,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum434CxlRejResponseToTest {
+    /**
+     *  Tag434
+     *  Enu
+     *  CxlRejResponseTo
+     *
+     *      1-2 msg types
+     *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
+     *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
+     */
     @Test
     void Enum0434Test() {
         Enum434CxlRejResponseTo enumType;

@@ -22,6 +22,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  216
+ *  RoutingType
+ *      1 - Target Firm
+ *      2 - Target List
+ *      3 - Block Firm
+ *      4 - Block List
+ */
 class Enum216RoutingTypeTest {
     @Test
     void Enum0216Test() {

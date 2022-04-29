@@ -23,6 +23,40 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum269MDEntryTypeTest {
+    /**
+     *  269
+     *  MDEntryType
+     *
+     *  0-9 msg types
+     *      "0 - Bid"
+     *      "1 - Offer"
+     *      "2 - Trade"
+     *      "3 - Index Value"
+     *      "4 - Opening Price"
+     *      "5 - Closing Price"
+     *      "6 - Settlement Price"
+     *      "7 - Trading Session High Price"
+     *      "8 - Trading Session Low Price"
+     *      "9 - Trading Session VWAP Price"
+     *
+     *  A-Q msg types
+     *      "A - Imbalance"
+     *      "B - Trade Volume"
+     *      "C - Open Interest"
+     *      "D - Composite Underlying Price"
+     *      "E - Simulated Sell Price"
+     *      "F - Simulated Buy Price"
+     *      "G - Margin Rate"
+     *      "H - Mid Price"
+     *      "J - Empty Book"
+     *      "K - Settle High Price"
+     *      "L - Settle Low Price"
+     *      "M - Prior Settle Price"
+     *      "N - Session High Bid"
+     *      "O - Session Low Offer"
+     *      "P - Early Prices"
+     *      "Q - Auction Clearing Price"
+     */
     @Test
     void Enum0269Test() {
         Enum269MDEntryType enumType;

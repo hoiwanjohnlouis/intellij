@@ -22,6 +22,22 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum414ProgRptReqs;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag414
+ *  Enu
+ *  ProgRptReqs
+ *
+ *      1-3 msg types
+ *      BUY_SIDE_STATUS( "1", "BUY_SIDE_STATUS",
+ *                          "1 - Buy-side explicitly requests status using Statue Request (default), " +
+ *                          "the sell-side firm can, however, send a DONE status List STatus Response " +
+ *                          "in an unsolicited fashion" ),
+ *      SELL_SIDE_STATUS( "2", "SELL_SIDE_STATUS",
+ *                          "2 - Sell-side periodically sends status using List Status. " +
+ *                          "Period optionally specified in ProgressPeriod" ),
+ *      REAL_TIME_EXECUTION_REPORTS( "3", "REAL_TIME_EXECUTION_REPORTS",
+ *                          "3 - Real-time execution reports (to be discourage)" ),
+ */
 public class Tag414EnuProgRptReqs extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum414ProgRptReqs dataValue;
 

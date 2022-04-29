@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum399BidDescriptorType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag399
+ *  Enu
+ *  BidDescriptorType
+ *
+ *      1-3 msg types
+ *      SECTOR( "1", "SECTOR", "1 - Sector" ),
+ *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
+ *      INDEX( "3", "INDEX", "3 - Index" ),
+ */
 public class Tag399EnuBidDescriptorType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum399BidDescriptorType dataValue;
 

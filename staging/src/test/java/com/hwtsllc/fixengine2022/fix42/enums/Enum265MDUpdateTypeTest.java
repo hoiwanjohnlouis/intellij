@@ -23,6 +23,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum265MDUpdateTypeTest {
+    /**
+     *  265
+     *  MDUpdateType
+     *  0-1 msg types
+     *      "0 - Full refresh"
+     *      "1 - Incremental refresh"
+     */
     @Test
     void Enum0265Test() {
         Enum265MDUpdateType enumType;

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum430NetGrossInd;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag430
+ *  Enu
+ *  NetGrossInd
+ *
+ *      1-2 msg types
+ *      NET( "1", "NET", "1 - Net" ),
+ *      GROSS( "2", "GROSS", "2 - Gross" ),
+ */
 public class Tag430EnuNetGrossInd extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum430NetGrossInd dataValue;
 

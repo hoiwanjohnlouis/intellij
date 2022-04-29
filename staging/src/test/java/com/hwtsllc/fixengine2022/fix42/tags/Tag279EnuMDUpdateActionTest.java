@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum279MDUpdateAction;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,28 +27,49 @@ class Tag279EnuMDUpdateActionTest {
     @Test
     void FIX0279Test() {
         FIX42 fixData = FIX42.FIX279_ENU_MD_UPDATE_ACTION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "279", fixData.getID());
+        assertEquals( "MD_UPDATE_ACTION", fixData.getName());
+        assertEquals( "MDUpdateAction", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 0-4 msg types
+     *  279
+     *  MDUpdateAction
+     *
+     *      0-4 msg types
+     *      NEW( "0", "NEW", "0 - New" ),
+     *      CHANGE( "1", "CHANGE", "1 - Change" ),
+     *      DELETE( "2", "DELETE", "2 - Delete" ),
+     *      DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
+     *      DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
      */
-    NEW( "0", "NEW", "0 - New" ),
-    CHANGE( "1", "CHANGE", "1 - Change" ),
-    DELETE( "2", "DELETE", "2 - Delete" ),
-    DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
-    DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
     @Test
     void Tag0279Test() {
         Tag279EnuMDUpdateAction tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 0-4 msg types
+         */
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.NEW);
+        assertEquals( Enum279MDUpdateAction.NEW.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.CHANGE);
+        assertEquals( Enum279MDUpdateAction.CHANGE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE);
+        assertEquals( Enum279MDUpdateAction.DELETE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE_THRU);
+        assertEquals( Enum279MDUpdateAction.DELETE_THRU.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE_FROM);
+        assertEquals( Enum279MDUpdateAction.DELETE_FROM.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

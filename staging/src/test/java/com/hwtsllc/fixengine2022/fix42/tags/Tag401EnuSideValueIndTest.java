@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum401SideValueInd;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,35 @@ class Tag401EnuSideValueIndTest {
     @Test
     void FIX0401Test() {
         FIX42 fixData = FIX42.FIX401_ENU_SIDE_VALUE_IND;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "401", fixData.getID());
+        assertEquals( "SIDE_VALUE_IND", fixData.getName());
+        assertEquals( "SideValueInd", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-2 msg types
+     *  Tag401
+     *  Enu
+     *  SideValueInd
+     *
+     *      1-2 msg types
+     *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
+     *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
      */
-    SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
-    SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
     @Test
     void Tag0401Test() {
         Tag401EnuSideValueInd tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-2 msg types
+         */
+        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
+        assertEquals( Enum401SideValueInd.SIDE_VALUE_1.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
+        assertEquals( Enum401SideValueInd.SIDE_VALUE_2.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

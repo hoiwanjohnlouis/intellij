@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum312UnderlyingSymbolSfx;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,36 @@ class Tag312EnuUnderlyingSymbolSfxTest {
     @Test
     void FIX0312Test() {
         FIX42 fixData = FIX42.FIX312_ENU_UNDERLYING_SYMBOL_SFX;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "312", fixData.getID());
+        assertEquals( "UNDERLYING_SYMBOL_SFX", fixData.getName());
+        assertEquals( "UnderlyingSymbolSfx", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * CD, and WI msg types for Fixed Income
+     *  312
+     *  UnderlyingSymbolSfx
+     *
+     *      CD, and WI msg types for Fixed Income
+     *      LUMP_SUM_INTEREST( "CD", "LUMP_SUM_INTEREST",
+     *                          "CD - EUCP with lump-sum interest rather than discount price" ),
+     *      WHEN_ISSUED( "WI", "WHEN_ISSUED",
+     *                          "WI - When Issued for a security to be reissued under an old CUSIP or ISIN" ),
      */
-    LUMP_SUM_INTEREST( "CD", "LUMP_SUM_INTEREST", "CD - EUCP with lump-sum interest rather than discount price" ),
-    WHEN_ISSUED( "WI", "WHEN_ISSUED", "WI - When Issued for a security to be reissued under an old CUSIP or ISIN" ),
     @Test
     void Tag0312Test() {
         Tag312EnuUnderlyingSymbolSfx tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * CD, and WI msg types for Fixed Income
+         */
+        tagData = new Tag312EnuUnderlyingSymbolSfx(Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST);
+        assertEquals( Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag312EnuUnderlyingSymbolSfx(Enum312UnderlyingSymbolSfx.WHEN_ISSUED);
+        assertEquals( Enum312UnderlyingSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

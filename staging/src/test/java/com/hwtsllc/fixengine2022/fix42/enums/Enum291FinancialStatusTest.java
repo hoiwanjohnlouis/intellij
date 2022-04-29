@@ -23,6 +23,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum291FinancialStatusTest {
+    /**
+     *  291
+     *  FinancialStatus
+     *
+     *      1-3 msg types
+     *      BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
+     *      PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
+     *      RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
+     */
     @Test
     void Enum0291Test() {
         Enum291FinancialStatus enumType;

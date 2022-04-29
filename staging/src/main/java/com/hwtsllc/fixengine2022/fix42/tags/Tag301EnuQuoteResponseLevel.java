@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum301QuoteResponseLevel;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  301
+ *  QuoteResponseLevel
+ *
+ *      0-2 msg types
+ *      NO_ACKNOWLEDGEMENT( "0", "NO_ACKNOWLEDGEMENT", "0 - No Acknowledgement (default)" ),
+ *      ACKNOWLEDGE_NEGATIVE_OR_ERRORS( "1", "ACKNOWLEDGE_NEGATIVE_OR_ERRORS",
+ *                      "1 - Acknowledge only negative or erroneous quotes" ),
+ *      ACKNOWLEDGE_EACH_QUOTE( "2", "ACKNOWLEDGE_EACH_QUOTE", "2 - Acknowledge each quote messages" ),
+ */
 public class Tag301EnuQuoteResponseLevel extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum301QuoteResponseLevel dataValue;
 

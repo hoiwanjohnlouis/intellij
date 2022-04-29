@@ -19,6 +19,15 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag416
+ *  Enu
+ *  IncTaxInd
+ *
+ *      1-2 msg types
+ *      NET( "1", "NET", "1 - Net" ),
+ *      GROSS( "2", "GROSS", "2 - Gross" ),
+ */
 public enum Enum416IncTaxInd implements EnumAccessors, LogStringVerbose {
     /**
      * 1-2 msg types

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum291FinancialStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,26 +27,39 @@ class Tag291EnuFinancialStatusTest {
     @Test
     void FIX0291Test() {
         FIX42 fixData = FIX42.FIX291_ENU_FINANCIAL_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "291", fixData.getID());
+        assertEquals( "FINANCIAL_STATUS", fixData.getName());
+        assertEquals( "FinancialStatus", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-3 msg types
+     *  291
+     *  FinancialStatus
+     *
+     *      1-3 msg types
+     *      BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
+     *      PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
+     *      RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
      */
-    BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
-    PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
-    RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
     @Test
     void Tag0291Test() {
         Tag291EnuFinancialStatus tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-3 msg types
+         */
+        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.BANKRUPT);
+        assertEquals( Enum291FinancialStatus.BANKRUPT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.PENDING_DELISTING);
+        assertEquals( Enum291FinancialStatus.PENDING_DELISTING.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.RESTRICTED);
+        assertEquals( Enum291FinancialStatus.RESTRICTED.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

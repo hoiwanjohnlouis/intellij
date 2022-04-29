@@ -23,6 +23,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum385MsgDirectionTest {
+    /**
+     *  Tag385
+     *  Enu
+     *  MsgDirection
+     *
+     *      R, and S msg types
+     *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
+     *      SEND( "S", "SEND", "S - Send" ),
+     */
     @Test
     void Enum0385Test() {
         Enum385MsgDirection enumType;

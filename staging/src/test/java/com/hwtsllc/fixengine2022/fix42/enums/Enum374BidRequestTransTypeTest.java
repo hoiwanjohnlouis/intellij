@@ -23,6 +23,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum374BidRequestTransTypeTest {
+    /**
+     *  Tag374
+     *  Enu
+     *  BidRequestTransType
+     *
+     *      C, and N msg types
+     *      CANCEL( "C", "CANCEL", "C - Cancel" ),
+     *      NEW( "N", "NEW", "N - New" ),
+     */
     @Test
     void Enum0374Test() {
         Enum374BidRequestTransType enumType;

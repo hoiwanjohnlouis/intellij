@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  216
+ *  RoutingType
+ *      1 - Target Firm
+ *      2 - Target List
+ *      3 - Block Firm
+ *      4 - Block List
+ */
 public class Tag216EnuRoutingType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum216RoutingType dataValue;
 

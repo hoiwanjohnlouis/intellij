@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag254LmdLegRedemptionDate extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyLocalMktDateType dataValue;
 

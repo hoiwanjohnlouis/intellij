@@ -16,10 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.fix41.enums.Enum201PutOrCall;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  315 (same as 201, 315)
+ *  UnderlyingPutOrCall
+ *
+ *      PUT( "0", "PUT", "0 - Put" ),
+ *      CALL( "1", "CALL", "1 - Call" ),
+ */
 public enum Enum315PutOrCall implements EnumAccessors, LogStringVerbose {
     PUT( "0", "PUT", "0 - Put" ),
     CALL( "1", "CALL", "1 - Call" ),

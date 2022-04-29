@@ -27,15 +27,15 @@ class Tag423EnuPriceTypeTest {
     @Test
     void FIX0423Test() {
         FIX42 fixData = FIX42.FIX423_ENU_PRICE_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "423", fixData.getID());
+        assertEquals( "PRICE_TYPE", fixData.getName());
+        assertEquals( "PriceType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     *  663 (same as 423, 663, 686, 698)
+     *  423 (same as 423, 663, 686, 698)
      *  Identifies type of BenchmarkPrice (662).
      *        See PriceType (423) for valid values.
      *  BenchmarkPriceType
@@ -63,11 +63,11 @@ class Tag423EnuPriceTypeTest {
     void Tag0423Test() {
         Tag423EnuPriceType tagData;
 
-        /*
+        /**
          * 1-11, 13-19 msg types
          */
 
-        /*
+        /**
          * 1-11 msg types
          */
         tagData = new Tag423EnuPriceType(Enum423PriceType.PERCENTAGE);
@@ -116,7 +116,7 @@ class Tag423EnuPriceTypeTest {
 
 
 
-        /*
+        /**
          * 13-19 msg types
          */
         tagData = new Tag423EnuPriceType(Enum423PriceType.TICKS_IN_HALFS);

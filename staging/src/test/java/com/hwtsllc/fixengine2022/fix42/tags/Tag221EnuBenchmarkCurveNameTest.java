@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum221BenchmarkCurveName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,34 +27,93 @@ class Tag221EnuBenchmarkCurveNameTest {
     @Test
     void FIX0221Test() {
         FIX42 fixData = FIX42.FIX221_ENU_BENCHMARK_CURVE_NAME;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "221", fixData.getID());
+        assertEquals( "BENCHMARK_CURVE_NAME", fixData.getName());
+        assertEquals( "BenchmarkCurveName", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      * various msg types
+     *      EONIA - EONIA
+     *      EUREPO - EUREPO
+     *      Euribor - Euribor
+     *      FutureSWAP - FutureSWAP
+     *      LIBID - LIBID
+     *      LIBOR - LIBOR (London Inter-Bank Offer)
+     *      MuniAAA - MuniAAA
+     *      OTHER - OTHER
+     *      Pfandbriefe - Pfandbriefe
+     *      SONIA - SONIA
+     *      SWAP - SWAP
+     *      Treasury - Treasury
      */
-    EONIA( "EONIA", "EONIA", "EONIA - EONIA" ),
-    EUREPO( "EUREPO", "EUREPO", "EUREPO - EUREPO" ),
-    EURIBOR( "Euribor", "EURIBOR", "Euribor - Euribor" ),
-    FUTURESWAP( "FutureSWAP", "FUTURESWAP", "FutureSWAP - FutureSWAP" ),
-    LIBID( "LIBID", "LIBID", "LIBID - LIBID" ),
-    LIBOR( "LIBOR", "LIBOR", "LIBOR - LIBOR (London Inter-Bank Offer)" ),
-    MUNIAAA( "MuniAAA", "MUNIAAA", "MuniAAA - MuniAAA" ),
-    OTHER( "OTHER", "OTHER", "OTHER - OTHER" ),
-    PFANDBRIEFE( "Pfandbriefe", "PFANDBRIEFE", "Pfandbriefe - Pfandbriefe" ),
-    SONIA( "SONIA", "SONIA", "SONIA - SONIA" ),
-    SWAP( "SWAP", "SWAP", "SWAP - SWAP" ),
-    TREASURY( "Treasury", "TREASURY", "Treasury - Treasury" ),
     @Test
     void Tag0221Test() {
         Tag221EnuBenchmarkCurveName tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
+        /**
+         * various msg types
+         */
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.EONIA);
+        assertEquals( Enum221BenchmarkCurveName.EONIA.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.EUREPO);
+        assertEquals( Enum221BenchmarkCurveName.EUREPO.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.EURIBOR);
+        assertEquals( Enum221BenchmarkCurveName.EURIBOR.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.FUTURESWAP);
+        assertEquals( Enum221BenchmarkCurveName.FUTURESWAP.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.LIBID);
+        assertEquals( Enum221BenchmarkCurveName.LIBID.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.LIBOR);
+        assertEquals( Enum221BenchmarkCurveName.LIBOR.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.MUNIAAA);
+        assertEquals( Enum221BenchmarkCurveName.MUNIAAA.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.OTHER);
+        assertEquals( Enum221BenchmarkCurveName.OTHER.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.PFANDBRIEFE);
+        assertEquals( Enum221BenchmarkCurveName.PFANDBRIEFE.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.SONIA);
+        assertEquals( Enum221BenchmarkCurveName.SONIA.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.SWAP);
+        assertEquals( Enum221BenchmarkCurveName.SWAP.getID(),
+                tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName.TREASURY);
+        assertEquals( Enum221BenchmarkCurveName.TREASURY.getID(),
                 tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

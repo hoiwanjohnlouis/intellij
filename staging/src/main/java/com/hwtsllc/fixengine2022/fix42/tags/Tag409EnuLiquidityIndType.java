@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum409LiquidityIndType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag409
+ *  Enu
+ *  LiquidityIndType
+ *
+ *      1-4 msg types
+ *      FIVE_DAY_MOVING_AVERAGE( "1", "FIVE_DAY_MOVING_AVERAGE", "1 - 5-Day Moving Average" ),
+ *      TWENTY_DAY_MOVING_AVERAGE( "2", "TWENTY_DAY_MOVING_AVERAGE", "2 - 20-Day Moving Average" ),
+ *      NORMAL_MARKET_SIZE( "3", "NORMAL_MARKET_SIZE", "3 - Normal Market Size" ),
+ *      OTHER( "4", "OTHER", "4 - Other" ),
+ */
 public class Tag409EnuLiquidityIndType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum409LiquidityIndType dataValue;
 

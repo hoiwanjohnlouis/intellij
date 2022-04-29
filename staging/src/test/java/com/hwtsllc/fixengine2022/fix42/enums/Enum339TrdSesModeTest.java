@@ -23,6 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum339TrdSesModeTest {
+    /**
+     *  Tag339
+     *  Enu
+     *  TradSesMode
+     *
+     *      1-3 msg types
+     *      TESTING( "1", "TESTING", "1 - Testing" ),
+     *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
+     *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
+     */
     @Test
     void Enum0339Test() {
         Enum339TrdSesMode enumType;

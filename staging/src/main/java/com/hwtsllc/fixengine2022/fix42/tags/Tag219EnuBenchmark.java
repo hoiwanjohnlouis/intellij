@@ -22,7 +22,21 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum219Benchmark;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
+/**
+ *  219
+ *  EnuBenchmarkTest
+ *      1-9 msg types
+ *      "1 - CURVE"
+ *      "2 - 5YR"
+ *      "3 - OLD5"
+ *      "4 - 10YR"
+ *      "5 - OLD10"
+ *      "6 - 30YR"
+ *      "7 - OLD30"
+ *      "8 - 3MOLIBOR"
+ *      "9 - 6MOLIBOR"
+ */
 public class Tag219EnuBenchmark extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum219Benchmark dataValue;
 

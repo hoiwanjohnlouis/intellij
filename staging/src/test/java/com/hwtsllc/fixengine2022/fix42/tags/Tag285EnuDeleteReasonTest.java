@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum285DeleteReason;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,34 @@ class Tag285EnuDeleteReasonTest {
     @Test
     void FIX0285Test() {
         FIX42 fixData = FIX42.FIX285_ENU_DELETE_REASON;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "285", fixData.getID());
+        assertEquals( "DELETE_REASON", fixData.getName());
+        assertEquals( "DeleteReason", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 0-1 msg types
+     *  285
+     *  DeleteReason
+     *
+     *      0-1 msg types
+     *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
+     *      ERROR( "1", "ERROR", "1 - Error" ),
      */
-    CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
-    ERROR( "1", "ERROR", "1 - Error" ),
     @Test
     void Tag0285Test() {
         Tag285EnuDeleteReason tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 0-1 msg types
+         */
+        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
+        assertEquals( Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.ERROR);
+        assertEquals( Enum285DeleteReason.ERROR.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

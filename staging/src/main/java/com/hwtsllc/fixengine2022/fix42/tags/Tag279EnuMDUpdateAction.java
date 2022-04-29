@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum279MDUpdateAction;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  279
+ *  MDUpdateAction
+ *
+ *      0-4 msg types
+ *      NEW( "0", "NEW", "0 - New" ),
+ *      CHANGE( "1", "CHANGE", "1 - Change" ),
+ *      DELETE( "2", "DELETE", "2 - Delete" ),
+ *      DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
+ *      DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
+ */
 public class Tag279EnuMDUpdateAction extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum279MDUpdateAction dataValue;
 

@@ -23,6 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum394BidTypeTest {
+    /**
+     *  Tag394
+     *  Enu
+     *  BidType
+     *
+     *      1-3 msg types
+     *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
+     *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
+     *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
+     */
     @Test
     void Enum0394Test() {
         Enum394BidType enumType;

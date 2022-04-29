@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  312
+ *  UnderlyingSymbolSfx
+ *
+ *      CD, and WI msg types for Fixed Income
+ *      LUMP_SUM_INTEREST( "CD", "LUMP_SUM_INTEREST",
+ *                          "CD - EUCP with lump-sum interest rather than discount price" ),
+ *      WHEN_ISSUED( "WI", "WHEN_ISSUED",
+ *                          "WI - When Issued for a security to be reissued under an old CUSIP or ISIN" ),
+ */
 public enum Enum312UnderlyingSymbolSfx implements EnumAccessors, LogStringVerbose {
     /**
      * CD, and WI msg types for Fixed Income

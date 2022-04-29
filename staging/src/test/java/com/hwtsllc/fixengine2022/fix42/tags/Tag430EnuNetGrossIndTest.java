@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum430NetGrossInd;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,25 +27,35 @@ class Tag430EnuNetGrossIndTest {
     @Test
     void FIX0430Test() {
         FIX42 fixData = FIX42.FIX430_ENU_NET_GROSS_IND;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "430", fixData.getID());
+        assertEquals( "NET_GROSS_IND", fixData.getName());
+        assertEquals( "NetGrossInd", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-2 msg types
+     *  Tag430
+     *  Enu
+     *  NetGrossInd
+     *
+     *      1-2 msg types
+     *      NET( "1", "NET", "1 - Net" ),
+     *      GROSS( "2", "GROSS", "2 - Gross" ),
      */
-    NET( "1", "NET", "1 - Net" ),
-    GROSS( "2", "GROSS", "2 - Gross" ),
     @Test
     void Tag0430Test() {
         Tag430EnuNetGrossInd tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-2 msg types
+         */
+        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.NET);
+        assertEquals( Enum430NetGrossInd.NET.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
+        assertEquals( Enum430NetGrossInd.GROSS.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

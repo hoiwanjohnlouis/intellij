@@ -17,35 +17,42 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum315PutOrCall;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
+// @Deprecated
 class Tag315EnuUnderlyingPutOrCallTest {
     @Test
     void FIX0315Test() {
         FIX42 fixData = FIX42.FIX315_ENU_UNDERLYING_PUT_OR_CALL;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "315", fixData.getID());
+        assertEquals( "UNDERLYING_PUT_OR_CALL", fixData.getName());
+        assertEquals( "UnderlyingPutOrCall", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
+
+    /**
+     *  315 (same as 201, 315)
+     *  UnderlyingPutOrCall
+     *
+     *      PUT( "0", "PUT", "0 - Put" ),
+     *      CALL( "1", "CALL", "1 - Call" ),
+     */
     @Test
     void Tag0315Test() {
         Tag315EnuUnderlyingPutOrCall tagData;
 
-        PUT( "0", "PUT", "0 - Put" ),
-                CALL( "1", "CALL", "1 - Call" ),
+        tagData = new Tag315EnuUnderlyingPutOrCall(Enum315PutOrCall.CALL);
+        assertEquals( Enum315PutOrCall.CALL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
-                tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        tagData = new Tag315EnuUnderlyingPutOrCall(Enum315PutOrCall.PUT);
+        assertEquals( Enum315PutOrCall.PUT.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

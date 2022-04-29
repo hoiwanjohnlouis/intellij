@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum269MDEntryType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,53 +27,160 @@ class Tag269EnuMDEntryTypeTest {
     @Test
     void FIX0269Test() {
         FIX42 fixData = FIX42.FIX269_ENU_MD_ENTRY_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "269", fixData.getID());
+        assertEquals( "MD_ENTRY_TYPE", fixData.getName());
+        assertEquals( "MDEntryType", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 0-9 msg types
+     *  269
+     *  MDEntryType
+     *
+     *  0-9 msg types
+     *      "0 - Bid"
+     *      "1 - Offer"
+     *      "2 - Trade"
+     *      "3 - Index Value"
+     *      "4 - Opening Price"
+     *      "5 - Closing Price"
+     *      "6 - Settlement Price"
+     *      "7 - Trading Session High Price"
+     *      "8 - Trading Session Low Price"
+     *      "9 - Trading Session VWAP Price"
+     *
+     *  A-Q msg types
+     *      "A - Imbalance"
+     *      "B - Trade Volume"
+     *      "C - Open Interest"
+     *      "D - Composite Underlying Price"
+     *      "E - Simulated Sell Price"
+     *      "F - Simulated Buy Price"
+     *      "G - Margin Rate"
+     *      "H - Mid Price"
+     *      "J - Empty Book"
+     *      "K - Settle High Price"
+     *      "L - Settle Low Price"
+     *      "M - Prior Settle Price"
+     *      "N - Session High Bid"
+     *      "O - Session Low Offer"
+     *      "P - Early Prices"
+     *      "Q - Auction Clearing Price"
      */
-    BID( "0", "BID", "0 - Bid" ),
-    OFFER( "1", "OFFER", "1 - Offer" ),
-    TRADE( "2", "TRADE", "2 - Trade" ),
-    INDEX_VALUE( "3", "INDEX_VALUE", "3 - Index Value" ),
-    OPENING_PRICE( "4", "OPENING_PRICE", "4 - Opening Price" ),
-    CLOSING_PRICE( "5", "CLOSING_PRICE", "5 - Closing Price" ),
-    SETTLEMENT_PRICE( "6", "SETTLEMENT_PRICE", "6 - Settlement Price" ),
-    TRADING_SESSION_HIGH_PRICE( "7", "TRADING_SESSION_HIGH_PRICE", "7 - Trading Session High Price" ),
-    TRADING_SESSION_LOW_PRICE( "8", "TRADING_SESSION_LOW_PRICE", "8 - Trading Session Low Price" ),
-    TRADING_SESSION_VWAP_PRICE( "9", "TRADING_SESSION_VWAP_PRICE", "9 - Trading Session VWAP Price" ),
-
-    /**
-     * A-Q msg types
-     */
-    IMBALANCE( "A", "IMBALANCE", "A - Imbalance" ),
-    TRADE_VOLUME( "B", "TRADE_VOLUME", "B - Trade Volume" ),
-    OPEN_INTEREST( "C", "OPEN_INTEREST", "C - Open Interest" ),
-    COMPOSITE_UNDERLYING_PRICE( "D", "COMPOSITE_UNDERLYING_PRICE", "D - Composite Underlying Price" ),
-    SIMULATED_SELL_PRICE( "E", "SIMULATED_SELL_PRICE", "E - Simulated Sell Price" ),
-    SIMULATED_BUY_PRICE( "F", "SIMULATED_BUY_PRICE", "F - Simulated Buy Price" ),
-    MARGIN_RATE( "G", "MARGIN_RATE", "G - Margin Rate" ),
-    MID_PRICE( "H", "MID_PRICE", "H - Mid Price" ),
-    EMPTY_BOOK( "J", "EMPTY_BOOK", "J - Empty Book" ),
-    SETTLE_HIGH_PRICE( "K", "SETTLE_HIGH_PRICE", "K - Settle High Price" ),
-    SETTLE_LOW_PRICE( "L", "SETTLE_LOW_PRICE", "L - Settle Low Price" ),
-    PRIOR_SETTLE_PRICE( "M", "PRIOR_SETTLE_PRICE", "M - Prior Settle Price" ),
-    SESSION_HIGH_BID( "N", "SESSION_HIGH_BID", "N - Session High Bid" ),
-    SESSION_LOW_OFFER( "O", "SESSION_LOW_OFFER", "O - Session Low Offer" ),
-    EARLY_PRICES( "P", "EARLY_PRICES", "P - Early Prices" ),
-    AUCTION_CLEARING_PRICE( "Q", "AUCTION_CLEARING_PRICE", "Q - Auction Clearing Price" ),
     @Test
     void Tag0269Test() {
         Tag269EnuMDEntryType tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 0-9 msg types
+         */
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.BID);
+        assertEquals( Enum269MDEntryType.BID.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.OFFER);
+        assertEquals( Enum269MDEntryType.OFFER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.TRADE);
+        assertEquals( Enum269MDEntryType.TRADE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.INDEX_VALUE);
+        assertEquals( Enum269MDEntryType.INDEX_VALUE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.OPENING_PRICE);
+        assertEquals( Enum269MDEntryType.OPENING_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.CLOSING_PRICE);
+        assertEquals( Enum269MDEntryType.CLOSING_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.SETTLEMENT_PRICE);
+        assertEquals( Enum269MDEntryType.SETTLEMENT_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.TRADING_SESSION_HIGH_PRICE);
+        assertEquals( Enum269MDEntryType.TRADING_SESSION_HIGH_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.TRADING_SESSION_LOW_PRICE);
+        assertEquals( Enum269MDEntryType.TRADING_SESSION_LOW_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.TRADING_SESSION_VWAP_PRICE);
+        assertEquals( Enum269MDEntryType.TRADING_SESSION_VWAP_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        /**
+         * A-Q msg types
+         */
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.IMBALANCE);
+        assertEquals( Enum269MDEntryType.IMBALANCE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.TRADE_VOLUME);
+        assertEquals( Enum269MDEntryType.TRADE_VOLUME.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.OPEN_INTEREST);
+        assertEquals( Enum269MDEntryType.OPEN_INTEREST.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.COMPOSITE_UNDERLYING_PRICE);
+        assertEquals( Enum269MDEntryType.COMPOSITE_UNDERLYING_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.SIMULATED_SELL_PRICE);
+        assertEquals( Enum269MDEntryType.SIMULATED_SELL_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.SIMULATED_BUY_PRICE);
+        assertEquals( Enum269MDEntryType.SIMULATED_BUY_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.MARGIN_RATE);
+        assertEquals( Enum269MDEntryType.MARGIN_RATE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.MID_PRICE);
+        assertEquals( Enum269MDEntryType.MID_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.EMPTY_BOOK);
+        assertEquals( Enum269MDEntryType.EMPTY_BOOK.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.SETTLE_HIGH_PRICE);
+        assertEquals( Enum269MDEntryType.SETTLE_HIGH_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.SETTLE_LOW_PRICE);
+        assertEquals( Enum269MDEntryType.SETTLE_LOW_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.PRIOR_SETTLE_PRICE);
+        assertEquals( Enum269MDEntryType.PRIOR_SETTLE_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.SESSION_HIGH_BID);
+        assertEquals( Enum269MDEntryType.SESSION_HIGH_BID.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.SESSION_LOW_OFFER);
+        assertEquals( Enum269MDEntryType.SESSION_LOW_OFFER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.EARLY_PRICES);
+        assertEquals( Enum269MDEntryType.EARLY_PRICES.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag269EnuMDEntryType(Enum269MDEntryType.AUCTION_CLEARING_PRICE);
+        assertEquals( Enum269MDEntryType.AUCTION_CLEARING_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+   }
 }

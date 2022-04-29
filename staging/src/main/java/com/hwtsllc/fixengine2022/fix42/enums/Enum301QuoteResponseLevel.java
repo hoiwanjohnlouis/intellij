@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  301
+ *  QuoteResponseLevel
+ *
+ *      0-2 msg types
+ *      NO_ACKNOWLEDGEMENT( "0", "NO_ACKNOWLEDGEMENT", "0 - No Acknowledgement (default)" ),
+ *      ACKNOWLEDGE_NEGATIVE_OR_ERRORS( "1", "ACKNOWLEDGE_NEGATIVE_OR_ERRORS",
+ *                      "1 - Acknowledge only negative or erroneous quotes" ),
+ *      ACKNOWLEDGE_EACH_QUOTE( "2", "ACKNOWLEDGE_EACH_QUOTE", "2 - Acknowledge each quote messages" ),
+ */
 public enum Enum301QuoteResponseLevel implements EnumAccessors, LogStringVerbose {
     /**
      * 0-2 msg types

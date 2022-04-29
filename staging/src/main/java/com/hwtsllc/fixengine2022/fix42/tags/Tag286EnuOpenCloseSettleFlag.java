@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum286OpenCLoseSettlFlag;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  286
+ *  OpenCloseSettleFlag
+ *
+ *      0-5 msg types
+ *      DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT( "0", "DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT",
+ *                  "0 - Daily Open / Close / Settlement entry" ),
+ *      SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT( "1", "SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT",
+ *                  "1 - Session Open / Close / Settlement entry" ),
+ *      DELIVERY_SETTLEMENT( "2", "DELIVERY_SETTLEMENT", "2 - Delivery Settlement entry" ),
+ *      EXPECTED( "3", "EXPECTED", "3 - Expected entry" ),
+ *      PREVIOUS_BUSINESS_DAY( "4", "PREVIOUS_BUSINESS_DAY", "4 - Entry from previous business day" ),
+ *      THEORETICAL_PRICE_VALUE( "5", "THEORETICAL_PRICE_VALUE", "5 - Theoretical Price value" ),
+ */
 public class Tag286EnuOpenCloseSettleFlag extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum286OpenCLoseSettlFlag dataValue;
 

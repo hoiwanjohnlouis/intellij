@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum431ListOrderStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,30 +27,60 @@ class Tag431EnuListOrderStatusTest {
     @Test
     void FIX0431Test() {
         FIX42 fixData = FIX42.FIX431_ENU_LIST_ORDER_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "431", fixData.getID());
+        assertEquals( "LIST_ORDER_STATUS", fixData.getName());
+        assertEquals( "ListOrderStatus", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
-     * 1-7 msg types
+     *  Tag431
+     *  Enu
+     *  ListOrderStatus
+     *
+     *      1-7 msg types
+     *      IN_BIDDING_PROCESS( "1", "IN_BIDDING_PROCESS", "1 - In Bidding Process" ),
+     *      RECEIVED_FOR_EXECUTION( "2", "RECEIVED_FOR_EXECUTION", "2 - Received For Execution" ),
+     *      EXECUTING( "3", "EXECUTING", "3 - Executing" ),
+     *      CANCELLING( "4", "CANCELLING", "4 - Cancelling" ),
+     *      ALERT( "5", "ALERT", "5 - Alert" ),
+     *      ALL_DONE( "6", "ALL_DONE", "6 - All Done" ),
+     *      REJECT( "7", "REJECT", "7 - Reject" ),
      */
-    IN_BIDDING_PROCESS( "1", "IN_BIDDING_PROCESS", "1 - In Bidding Process" ),
-    RECEIVED_FOR_EXECUTION( "2", "RECEIVED_FOR_EXECUTION", "2 - Received For Execution" ),
-    EXECUTING( "3", "EXECUTING", "3 - Executing" ),
-    CANCELLING( "4", "CANCELLING", "4 - Cancelling" ),
-    ALERT( "5", "ALERT", "5 - Alert" ),
-    ALL_DONE( "6", "ALL_DONE", "6 - All Done" ),
-    REJECT( "7", "REJECT", "7 - Reject" ),
     @Test
     void Tag0431Test() {
         Tag431EnuListOrderStatus tagData;
 
-        tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        /**
+         * 1-7 msg types
+         */
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.IN_BIDDING_PROCESS);
+        assertEquals( Enum431ListOrderStatus.IN_BIDDING_PROCESS.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION);
+        assertEquals( Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.EXECUTING);
+        assertEquals( Enum431ListOrderStatus.EXECUTING.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.CANCELLING);
+        assertEquals( Enum431ListOrderStatus.CANCELLING.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALERT);
+        assertEquals( Enum431ListOrderStatus.ALERT.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALL_DONE);
+        assertEquals( Enum431ListOrderStatus.ALL_DONE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.REJECT);
+        assertEquals( Enum431ListOrderStatus.REJECT.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

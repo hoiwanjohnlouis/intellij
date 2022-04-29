@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag338
+ *  Enu
+ *  TradSesMethod
+ *
+ *      1-3 msg types
+ *      ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
+ *      OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
+ *      TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
+ */
 public enum Enum338TradSesMethod implements EnumAccessors, LogStringVerbose {
     /**
      * 1-3 msg types

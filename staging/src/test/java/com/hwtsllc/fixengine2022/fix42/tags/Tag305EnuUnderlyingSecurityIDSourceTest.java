@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum305UnderlyingSecurityIDSource;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,9 +27,9 @@ class Tag305EnuUnderlyingSecurityIDSourceTest {
     @Test
     void FIX0305Test() {
         FIX42 fixData = FIX42.FIX305_ENU_UNDERLYING_SECURITY_ID_SOURCE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "305", fixData.getID());
+        assertEquals( "UNDERLYING_SECURITY_ID_SOURCE", fixData.getName());
+        assertEquals( "UnderlyingSecurityIdSource", fixData.getDescription());
         assertNotEquals( FIX42.JUNK_ID, fixData.getID());
         assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
@@ -67,46 +67,95 @@ class Tag305EnuUnderlyingSecurityIDSourceTest {
     void Tag0305Test() {
         Tag305EnuUnderlyingSecurityIDSource tagData;
 
+        /**
+         * 1-9 Securiy ID Source
+         */
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.CUSIP);
+        assertEquals( Enum305UnderlyingSecurityIDSource.CUSIP.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.SEDOL);
+        assertEquals( Enum305UnderlyingSecurityIDSource.SEDOL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.QUIK);
+        assertEquals( Enum305UnderlyingSecurityIDSource.QUIK.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.ISIN);
+        assertEquals( Enum305UnderlyingSecurityIDSource.ISIN.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.RIC);
+        assertEquals( Enum305UnderlyingSecurityIDSource.RIC.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.ISO_CURRENCY_CODE);
+        assertEquals( Enum305UnderlyingSecurityIDSource.ISO_CURRENCY_CODE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.ISO_COUNTRY_CODE);
+        assertEquals( Enum305UnderlyingSecurityIDSource.ISO_COUNTRY_CODE.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.EXCHANGE_SYMBOL);
+        assertEquals( Enum305UnderlyingSecurityIDSource.EXCHANGE_SYMBOL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.CTA);
+        assertEquals( Enum305UnderlyingSecurityIDSource.CTA.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         /**
-         * 0-9 msg types
+         * A-L Securiy ID Source
          */
-        CUSIP("1", "CUSIP", "1 - CUSIP - Committee on Uniform Securities Identification Procedures" ),
-                SEDOL("2", "SEDOL", "2 - SEDOL - Stock Exchange Daily Official List" ),
-                QUIK("3", "QUIK", "3 - QUIK" ),
-                ISIN("4", "ISIN", "4 - ISIN - The International Securities Identification Number" ),
-                RIC("5", "RIC", "5 - RIC - Reuters Instrument Code" ),
-                ISO_CURRENCY_CODE("6", "ISO_CURRENCY_CODE", "6 - ISO Currency Code" ),
-                ISO_COUNTRY_CODE("7", "ISO_COUNTRY_CODE", "7 - ISO Country Code" ),
-                EXCHANGE_SYMBOL("8", "EXCHANGE_SYMBOL", "8 - Exchange Symbol" ),
-                CTA("9", "CTA",
-                        "9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)" ),
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.BLOOMBERG);
+        assertEquals( Enum305UnderlyingSecurityIDSource.BLOOMBERG.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-                /**
-                 * A-L msg types
-                 */
-                BLOOMBERG("A", "BLOOMBERG", "A - Bloomberg Symbol" ),
-                WERTPAPIER("B", "WERTPAPIER", "B - Wertpapier" ),
-                DUTCH("C", "DUTCH", "C - Dutch" ),
-                VALOREN("D", "VALOREN", "D - Valoren" ),
-                SICOVAM("E", "SICOVAM", "E - Sicovam" ),
-                BELGIAN("F", "BELGIAN", "F - Belgian" ),
-                COMMON("G", "COMMON", "G - Common (Clearstream and Euroclear)" ),
-                CLEARING_HOUSE_OR_ORGANIZATION("H", "CLEARING_HOUSE_OR_ORGANIZATION",
-                        "H - Clearing House or Clearing Organization" ),
-                ISDA_PRODUCT_SPECIFICATION("I", "ISDA_PRODUCT_SPECIFICATION",
-                        "I - ISDA/FpML Product Specification (XML in EncodedSecurityDesc)" ),
-                OPTION_PRICE_REPORTING_AUTHORITY("J", "OPTION_PRICE_REPORTING_AUTHORITY",
-                        "J - Option Price Reporting Authority" ),
-                ISDA_PRODUCT_URL("K", "ISDA_PRODUCT_URL", "K - ISDA/FpML Product URL (URL in SecurityID)" ),
-                LETTER_OF_CREDIT("L", "LETTER_OF_CREDIT", "L - Letter of Credit" ),
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.WERTPAPIER);
+        assertEquals( Enum305UnderlyingSecurityIDSource.WERTPAPIER.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.DUTCH);
+        assertEquals( Enum305UnderlyingSecurityIDSource.DUTCH.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-                tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
-                tagData.getDataValue());
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.VALOREN);
+        assertEquals( Enum305UnderlyingSecurityIDSource.VALOREN.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.SICOVAM);
+        assertEquals( Enum305UnderlyingSecurityIDSource.BELGIAN.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.BELGIAN);
+        assertEquals( Enum305UnderlyingSecurityIDSource.SICOVAM.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.COMMON);
+        assertEquals( Enum305UnderlyingSecurityIDSource.COMMON.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION);
+        assertEquals( Enum305UnderlyingSecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.ISDA_PRODUCT_SPECIFICATION);
+        assertEquals( Enum305UnderlyingSecurityIDSource.ISDA_PRODUCT_SPECIFICATION.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.OPTION_PRICE_REPORTING_AUTHORITY);
+        assertEquals( Enum305UnderlyingSecurityIDSource.OPTION_PRICE_REPORTING_AUTHORITY.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.ISDA_PRODUCT_URL);
+        assertEquals( Enum305UnderlyingSecurityIDSource.ISDA_PRODUCT_URL.getID(), tagData.getDataValue());
+        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource.LETTER_OF_CREDIT);
+        assertEquals( Enum305UnderlyingSecurityIDSource.LETTER_OF_CREDIT.getID(), tagData.getDataValue());
         assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

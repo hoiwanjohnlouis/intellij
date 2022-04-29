@@ -19,6 +19,15 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag385
+ *  Enu
+ *  MsgDirection
+ *
+ *      R, and S msg types
+ *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
+ *      SEND( "S", "SEND", "S - Send" ),
+ */
 public enum Enum385MsgDirection implements EnumAccessors, LogStringVerbose {
     /**
      * R, and S msg types

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.fix42.enums.Enum374BidRequestTransType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Tag374
+ *  Enu
+ *  BidRequestTransType
+ *
+ *      C, and N msg types
+ *      CANCEL( "C", "CANCEL", "C - Cancel" ),
+ *      NEW( "N", "NEW", "N - New" ),
+ */
 public class Tag374EnuBidRequestTransType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum374BidRequestTransType dataValue;
 
