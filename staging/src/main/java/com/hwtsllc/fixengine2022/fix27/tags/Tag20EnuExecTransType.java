@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum20ExecTransType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag20EnuExecTransType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum20ExecTransType dataValue;
 

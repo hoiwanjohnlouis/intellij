@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum47Rule80A;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag47EnuRule80A extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum47Rule80A dataValue;
 

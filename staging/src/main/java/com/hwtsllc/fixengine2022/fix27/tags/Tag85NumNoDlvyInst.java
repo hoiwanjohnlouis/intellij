@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag85NumNoDlvyInst extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 
