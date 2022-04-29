@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag205IntMaturityDay extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 

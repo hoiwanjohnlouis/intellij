@@ -23,6 +23,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class Enum201PutOrCallTest {
+    /**
+     *  201 (same as 201, 315)
+     *  UnderlyingPutOrCall
+     *
+     *      PUT( "0", "PUT", "0 - Put" ),
+     *      CALL( "1", "CALL", "1 - Call" ),
+     */
     @Test
     void Enum0201Test() {
         Enum201PutOrCall enumType;

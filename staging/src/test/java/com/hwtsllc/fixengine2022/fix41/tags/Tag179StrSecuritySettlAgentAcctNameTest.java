@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
+// @Deprecated
 class Tag179StrSecuritySettlAgentAcctNameTest {
     @Test
     void FIX0179Test() {

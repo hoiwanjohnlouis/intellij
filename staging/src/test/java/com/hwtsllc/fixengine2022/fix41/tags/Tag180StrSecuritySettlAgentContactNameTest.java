@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Deprecated
+// @Deprecated
 class Tag180StrSecuritySettlAgentContactNameTest {
     @Test
     void FIX0180Test() {

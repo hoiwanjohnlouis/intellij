@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum166SettlLocation;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag166EnuSettlLocation extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum166SettlLocation dataValue;
 

@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-@Deprecated
+// @Deprecated
 class Tag184StrCashSettlAgentAcctNumTest {
     @Test
     void FIX0184Test() {

@@ -34,6 +34,13 @@ class Tag201EnuPutOrCallTest {
         assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  201 (same as 201, 315)
+     *  UnderlyingPutOrCall
+     *
+     *      PUT( "0", "PUT", "0 - Put" ),
+     *      CALL( "1", "CALL", "1 - Call" ),
+     */
     @Test
     void Tag0201Test() {
         Tag201EnuPutOrCall tagData;

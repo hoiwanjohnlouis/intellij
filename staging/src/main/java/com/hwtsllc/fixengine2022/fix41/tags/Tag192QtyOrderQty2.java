@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag192QtyOrderQty2 extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 

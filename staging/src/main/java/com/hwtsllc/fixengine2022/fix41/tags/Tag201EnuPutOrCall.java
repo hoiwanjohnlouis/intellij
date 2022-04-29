@@ -22,7 +22,14 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum201PutOrCall;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
+/**
+ *  201 (same as 201, 315)
+ *  UnderlyingPutOrCall
+ *
+ *      PUT( "0", "PUT", "0 - Put" ),
+ *      CALL( "1", "CALL", "1 - Call" ),
+ */
 public class Tag201EnuPutOrCall extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum201PutOrCall dataValue;
 
