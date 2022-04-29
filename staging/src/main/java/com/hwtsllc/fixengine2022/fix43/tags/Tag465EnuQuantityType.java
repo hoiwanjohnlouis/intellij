@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.fix43.enums.Enum465QuantityType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag465EnuQuantityType extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum465QuantityType dataValue;
 

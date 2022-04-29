@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.fix43.enums.Enum653SecDefStatus;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag653EnuSecDefStatus extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum653SecDefStatus dataValue;
 

@@ -22,6 +22,35 @@ import com.hwtsllc.fixengine2022.fix43.enums.Enum603LegSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  603 (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
+ *  Multileg instrument's individual  security’s SecurityIDSource.
+ *              Same values as the SecurityIDSource (22) field
+ *  Valid values:
+ *      1 - CUSIP
+ *      2 - SEDOL
+ *      3 - QUIK
+ *      4 - ISIN number
+ *      5 - RIC code
+ *      6 - ISO Currency Code
+ *      7 - ISO Country Code
+ *      8 - Exchange Symbol
+ *      9 - Consolidated Tape Association (CTA) Symbol
+ *              (SIAC CTS/CQS line format)
+ *      A - Bloomberg Symbol
+ *      B - Wertpapier
+ *      C - Dutch
+ *      D - Valoren
+ *      E - Sicovam
+ *      F - Belgian
+ *      G - "Common" (Clearstream and Euroclear)
+ *      H - Clearing House / Clearing Organization
+ *      I - ISDA/FpML Product Specification
+ *              (XML in EncodedSecurityDesc)
+ *      J - Option Price Reporting Authority
+ *      K - ISDA/FpML Product URL (URL in SecurityID)
+ *      L - Letter of Credit
+ */
 public class Tag603EnuLegSecurityIDSource extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum603LegSecurityIDSource dataValue;
 

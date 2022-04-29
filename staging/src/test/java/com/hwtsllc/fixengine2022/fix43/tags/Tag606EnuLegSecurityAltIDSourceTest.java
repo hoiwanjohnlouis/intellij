@@ -33,6 +33,36 @@ class Tag606EnuLegSecurityAltIDSourceTest {
         assertNotEquals( FIX43.JUNK_NAME, fixData.getName());
         assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  606 (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
+     *  Multileg instrument's individual  security’s SecurityAltIDSource.
+     *  See SecurityAltIDSource (456) field for description.
+     *              Same values as the SecurityIDSource (22) field
+     *  Valid values:
+     *      1 - CUSIP
+     *      2 - SEDOL
+     *      3 - QUIK
+     *      4 - ISIN number
+     *      5 - RIC code
+     *      6 - ISO Currency Code
+     *      7 - ISO Country Code
+     *      8 - Exchange Symbol
+     *      9 - Consolidated Tape Association (CTA) Symbol
+     *              (SIAC CTS/CQS line format)
+     *      A - Bloomberg Symbol
+     *      B - Wertpapier
+     *      C - Dutch
+     *      D - Valoren
+     *      E - Sicovam
+     *      F - Belgian
+     *      G - "Common" (Clearstream and Euroclear)
+     *      H - Clearing House / Clearing Organization
+     *      I - ISDA/FpML Product Specification
+     *              (XML in EncodedSecurityDesc)
+     *      J - Option Price Reporting Authority
+     *      K - ISDA/FpML Product URL (URL in SecurityID)
+     *      L - Letter of Credit
+     */
     @Test
     void Tag0606Test() {
         Tag606EnuLegSecurityAltIDSource tagData;

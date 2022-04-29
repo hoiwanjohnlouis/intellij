@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCDateType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-@Deprecated
+// @Deprecated
 public class Tag449UtcdTotalVolumeTradedDate extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCDateType dataValue;
 
