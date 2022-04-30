@@ -19,19 +19,19 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  792
+ *  SettlInstReqRejCode
+ *  Identifies reason for rejection (of a settlement instruction request message).
+ *  Valid values:
+ *      0 - Unable to process request
+ *      1 - Unknown account
+ *      2 - No matching settlement instructions found
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum792SettlInstReqRejCode implements EnumAccessors, LogStringVerbose {
-    /**
-     *  792
-     *  SettlInstReqRejCode
-     *  Identifies reason for rejection (of a settlement instruction request message).
-     *  Valid values:
-     *      0 - Unable to process request
-     *      1 - Unknown account
-     *      2 - No matching settlement instructions found
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     UNABLE_TO_PROCESS_REQUEST( "0", "UNABLE_TO_PROCESS_REQUEST", "0 - Unable to process request" ),
     UNKNOWN_ACCOUNT( "1", "UNKNOWN_ACCOUNT", "1 - Unknown account" ),
     NO_MATCHING_INSTRUCTIONS( "2", "NO_MATCHING_INSTRUCTIONS", "2 - No matching settlement instructions found" ),

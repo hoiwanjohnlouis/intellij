@@ -19,16 +19,16 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  773
+ *  ConfirmType
+ *  Identifies the type of Confirmation message being sent.
+ *  Valid values:
+ *      1 - Status
+ *      2 - Confirmation
+ *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+ */
 public enum Enum773ConfirmType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  773
-     *  ConfirmType
-     *  Identifies the type of Confirmation message being sent.
-     *  Valid values:
-     *      1 - Status
-     *      2 - Confirmation
-     *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
-     */
     STATUS( "1", "STATUS", "1 - Status" ),
     CONFIRMATION( "2", "CONFIRMATION", "2 - Confirmation" ),
     CONFIRMATION_REJECTED( "3", "CONFIRMATION_REJECTED", "3 - Confirmation Request Rejected (reason can be stated in Text (58) field)" ),

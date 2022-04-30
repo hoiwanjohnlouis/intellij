@@ -19,18 +19,18 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  665
+ *  Identifies the status of the Confirmation.
+ *  ConfirmStatus
+ *  Valid values:
+ *      1 - Received
+ *      2 - Mismatched Account
+ *      3 - Missing Settlement Instructions
+ *      4 - Confirmed
+ *      5 - Request Rejected
+ */
 public enum Enum665ConfirmStatus implements EnumAccessors, LogStringVerbose {
-    /**
-     *  665
-     *  Identifies the status of the Confirmation.
-     *  ConfirmStatus
-     *  Valid values:
-     *      1 - Received
-     *      2 - Mismatched Account
-     *      3 - Missing Settlement Instructions
-     *      4 - Confirmed
-     *      5 - Request Rejected
-     */
     RECEIVED( "1", "RECEIVED", "1 - Received" ),
     MISMATCHED_ACCOUNT( "2", "MISMATCHED_ACCOUNT", "2 - Mismatched Account" ),
     MISSING_INSTRUCTIONS( "3", "MISSING_INSTRUCTIONS", "3 - Missing Settlement Instructions" ),

@@ -19,17 +19,17 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  752
+ *  SideMultiLegReportingType
+ *  Used to indicate if the side being reported on Trade Capture Report
+ *  represents a leg of a multileg instrument or a single security.
+ *  Valid values:
+ *      1 - Single Security (default if not specified)
+ *      2 - Individual leg of a multileg security
+ *      3 - Multileg Security
+ */
 public enum Enum752SideMultiLegReportingType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  752
-     *  SideMultiLegReportingType
-     *  Used to indicate if the side being reported on Trade Capture Report
-     *  represents a leg of a multileg instrument or a single security.
-     *  Valid values:
-     *      1 - Single Security (default if not specified)
-     *      2 - Individual leg of a multileg security
-     *      3 - Multileg Security
-     */
     SINGLE_SECURITY( "1", "SINGLE_SECURITY", "1 - Single Security (default if not specified)" ),
     INDIVIDUAL_LEG( "2", "INDIVIDUAL_LEG", "2 - Individual leg of a multileg security" ),
     MULTILEG_SECURITY( "3", "MULTILEG_SECURITY", "3 - Multileg Security" ),

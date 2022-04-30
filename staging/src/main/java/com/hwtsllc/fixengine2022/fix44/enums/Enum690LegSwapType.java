@@ -19,19 +19,19 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  690
+ *  LegSwapType
+ *  For Fixed Income, used instead of LegQty (687) or LegOrderQty (685)
+ *      to requests the respondent to calculate the quantity based on the
+ *      quantity on the opposite side of the swap.
+ *  Valid values:
+ *      1 - Par For Par
+ *      2 - Modified Duration
+ *      4 - Risk
+ *      5 - Proceeds
+ */
 public enum Enum690LegSwapType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  690
-     *  LegSwapType
-     *  For Fixed Income, used instead of LegQty (687) or LegOrderQty (685)
-     *      to requests the respondent to calculate the quantity based on the
-     *      quantity on the opposite side of the swap.
-     *  Valid values:
-     *      1 - Par For Par
-     *      2 - Modified Duration
-     *      4 - Risk
-     *      5 - Proceeds
-     */
     PAR_FOR_PAR( "1", "PAR_FOR_PAR", "1 - Par For Par" ),
     MODIFIED_DURATION( "2", "MODIFIED_DURATION", "2 - Modified Duration" ),
     RISK( "4", "RISK", "4 - Risk" ),

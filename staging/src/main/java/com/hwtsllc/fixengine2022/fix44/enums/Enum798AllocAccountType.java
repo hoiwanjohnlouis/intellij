@@ -19,21 +19,20 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  798 (same as 581, 798)
+ *  AllocAccountType
+ *  Type of account associated with a confirmation or other trade-level message
+ *  Valid values:
+ *      1 - Account is carried on customer side of books
+ *      2 - Account is carried on non-customer side of books
+ *      3 - House trader
+ *      4 - Floor trader
+ *      6 - Account is carried on non-customer side of books and is cross margined
+ *      7 - Account is house trader and is cross margined
+ *      8 - Joint back office account (JBO)
+ */
 public enum Enum798AllocAccountType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  798 (same as 581, 798)
-     *  AllocAccountType
-     *  Type of account associated with a confirmation or other trade-level message
-     *  Valid values:
-     *      1 - Account is carried on customer side of books
-     *      2 - Account is carried on non-customer side of books
-     *      3 - House trader
-     *      4 - Floor trader
-     *      6 - Account is carried on non-customer side of books and is cross margined
-     *      7 - Account is house trader and is cross margined
-     *      8 - Joint back office account (JBO)
-     */
-
     /*
      *  1-4, types
      */

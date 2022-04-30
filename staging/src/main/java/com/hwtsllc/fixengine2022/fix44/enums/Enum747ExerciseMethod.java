@@ -19,15 +19,15 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  747
+ *  ExerciseMethod
+ *  Exercise Method used to in performing assignment.
+ *  Valid values:
+ *      A - Automatic
+ *      M - Manual
+ */
 public enum Enum747ExerciseMethod implements EnumAccessors, LogStringVerbose {
-    /**
-     *  747
-     *  ExerciseMethod
-     *  Exercise Method used to in performing assignment.
-     *  Valid values:
-     *      A - Automatic
-     *      M - Manual
-     */
     AUTOMATIC( "A", "AUTOMATIC", "A - Automatic" ),
     MANUAL( "M", "MANUAL", "M - Manual" ),
     ;

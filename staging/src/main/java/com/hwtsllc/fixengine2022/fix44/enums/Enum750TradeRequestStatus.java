@@ -19,16 +19,16 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  750
+ *  TradeRequestStatus
+ *  Status of Trade Request.
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Completed
+ *      2 - Rejected
+ */
 public enum Enum750TradeRequestStatus implements EnumAccessors, LogStringVerbose {
-    /**
-     *  750
-     *  TradeRequestStatus
-     *  Status of Trade Request.
-     *  Valid values:
-     *      0 - Accepted
-     *      1 - Completed
-     *      2 - Rejected
-     */
     ACCEPTED( "0", "ACCEPTED", "0 - Accepted" ),
     COMPLETED( "1", "COMPLETED", "1 - Completed" ),
     REJECTED( "2", "REJECTED", "2 - Rejected" ),

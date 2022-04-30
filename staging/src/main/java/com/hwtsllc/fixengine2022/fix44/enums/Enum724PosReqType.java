@@ -19,19 +19,19 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  724
+ *  PosReqType
+ *  Used to specify the type of position request being made.
+ *  Valid values:
+ *      0 - Positions
+ *      1 - Trades
+ *      2 - Exercises
+ *      3 - Assignments
+ *      4 - Settlement Activity
+ *      5 - Backout Message
+ */
 public enum Enum724PosReqType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  724
-     *  PosReqType
-     *  Used to specify the type of position request being made.
-     *  Valid values:
-     *      0 - Positions
-     *      1 - Trades
-     *      2 - Exercises
-     *      3 - Assignments
-     *      4 - Settlement Activity
-     *      5 - Backout Message
-     */
     POSITIONS( "0", "POSITIONS", "0 - Positions" ),
     TRADES( "1", "TRADES", "1 - Trades" ),
     EXERCISES( "2", "EXERCISES", "2 - Exercises" ),

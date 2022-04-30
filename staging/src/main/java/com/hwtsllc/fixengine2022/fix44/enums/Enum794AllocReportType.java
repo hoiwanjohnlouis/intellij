@@ -19,23 +19,23 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  794
+ *  AllocReportType
+ *  Describes the specific type or purpose of an Allocation Report message
+ *  Valid values:
+ *      2 - Preliminary Request to Intermediary
+ *      3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
+ *      4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)
+ *      5 - Warehouse Recap
+ *      8 - Request to Intermediary
+ *      9 - Accept
+ *      10 - Reject
+ *      11 - Accept Pending
+ *      12 - Complete
+ *      14 - Reverse Pending
+ */
 public enum Enum794AllocReportType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  794
-     *  AllocReportType
-     *  Describes the specific type or purpose of an Allocation Report message
-     *  Valid values:
-     *      2 - Preliminary Request to Intermediary
-     *      3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
-     *      4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)
-     *      5 - Warehouse Recap
-     *      8 - Request to Intermediary
-     *      9 - Accept
-     *      10 - Reject
-     *      11 - Accept Pending
-     *      12 - Complete
-     *      14 - Reverse Pending
-     */
     PRELIMINARY_REQUEST( "2", "PRELIMINARY_REQUEST", "2 - Preliminary Request to Intermediary" ),
     SELLSIDE_USING_PRELIMINARY( "3", "SELLSIDE_USING_PRELIMINARY", "3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)" ),
     SELLSIDE_WITHOUT_PRELIMINARY( "4", "SELLSIDE_WITHOUT_PRELIMINARY", "4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)" ),

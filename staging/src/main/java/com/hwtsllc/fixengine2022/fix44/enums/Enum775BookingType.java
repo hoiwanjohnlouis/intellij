@@ -19,18 +19,18 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  775
+ *  BookingType
+ *  Method for booking out this order.
+ *      Used when notifying a broker that an order to be settled by that broker
+ *      is to be booked out as an OTC derivative (e.g. CFD or similar).
+ *  Valid values:
+ *      0 - Regular booking
+ *      1 - CFD (Contract for difference)
+ *      2 - Total Return Swap
+ */
 public enum Enum775BookingType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  775
-     *  BookingType
-     *  Method for booking out this order.
-     *      Used when notifying a broker that an order to be settled by that broker
-     *      is to be booked out as an OTC derivative (e.g. CFD or similar).
-     *  Valid values:
-     *      0 - Regular booking
-     *      1 - CFD (Contract for difference)
-     *      2 - Total Return Swap
-     */
     REGULAR_BOOKING( "0", "REGULAR_BOOKING", "0 - Regular booking" ),
     CONTRACT_FOR_DIFFERENCE( "1", "CONTRACT_FOR_DIFFERENCE", "1 - CFD (Contract for difference)" ),
     TOTAL_RETURN_SWAP( "2", "TOTAL_RETURN_SWAP", "2 - Total Return Swap" ),

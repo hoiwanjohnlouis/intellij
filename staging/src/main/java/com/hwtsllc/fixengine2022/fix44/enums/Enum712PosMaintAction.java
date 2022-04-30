@@ -19,20 +19,20 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  712
+ *  PosMaintAction
+ *  Maintenance Action to be performed.
+ *  Valid values:
+ *      1 - New - used to increment the overall transaction quantity
+ *      2 - Replace - used to override the overall transaction quantity
+ *                      or specifically add messages based on the reference ID
+ *      3 - Cancel - used to remove the overall transaction or specific
+ *                      add messages based on reference ID
+ *      4 - Reverse - used to completely back-out the transaction
+ *                      such that the transaction never existed
+ */
 public enum Enum712PosMaintAction implements EnumAccessors, LogStringVerbose {
-    /**
-     *  712
-     *  PosMaintAction
-     *  Maintenance Action to be performed.
-     *  Valid values:
-     *      1 - New - used to increment the overall transaction quantity
-     *      2 - Replace - used to override the overall transaction quantity
-     *                      or specifically add messages based on the reference ID
-     *      3 - Cancel - used to remove the overall transaction or specific
-     *                      add messages based on reference ID
-     *      4 - Reverse - used to completely back-out the transaction
-     *                      such that the transaction never existed
-     */
     NEW( "1", "NEW",
             "1 - New - used to increment the overall transaction quantity" ),
     REPLACE( "2", "REPLACE",

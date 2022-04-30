@@ -19,19 +19,19 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ * 723
+ * PosMaintResult
+ * Result of Position Maintenance Request.
+ * 4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ * Valid values:
+ * 0 - Successful Completion - no warnings or errors
+ * 1 - Rejected
+ * 99 - Other
+ * <p>
+ * or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum723PosMaintResult implements EnumAccessors, LogStringVerbose {
-    /**
-     * 723
-     * PosMaintResult
-     * Result of Position Maintenance Request.
-     * 4000+ Reserved and available for bi-laterally agreed upon user-defined values
-     * Valid values:
-     * 0 - Successful Completion - no warnings or errors
-     * 1 - Rejected
-     * 99 - Other
-     * <p>
-     * or any value conforming to the data type Reserved100Plus
-     */
     SUCCESSFUL("0", "SUCCESSFUL", "0 - Successful Completion - no warnings or errors"),
     REJECTED("1", "REJECTED", "1 - Rejected"),
     OTHER("99", "OTHER", "99 - Other"),

@@ -19,39 +19,38 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  761 (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
+ *  BenchmarkSecurityIDSource
+ *  Identifies class or source of the BenchmarkSecurityID (699) value.
+ *  Required if BenchmarkSecurityID is specified.
+ *              Same values as the SecurityIDSource (22) field
+ *  Valid values:
+ *      1 - CUSIP
+ *      2 - SEDOL
+ *      3 - QUIK
+ *      4 - ISIN number
+ *      5 - RIC code
+ *      6 - ISO Currency Code
+ *      7 - ISO Country Code
+ *      8 - Exchange Symbol
+ *      9 - Consolidated Tape Association (CTA) Symbol
+ *              (SIAC CTS/CQS line format)
+ *      A - Bloomberg Symbol
+ *      B - Wertpapier
+ *      C - Dutch
+ *      D - Valoren
+ *      E - Sicovam
+ *      F - Belgian
+ *      G - "Common" (Clearstream and Euroclear)
+ *      H - Clearing House / Clearing Organization
+ *      I - ISDA/FpML Product Specification
+ *              (XML in EncodedSecurityDesc)
+ *      J - Option Price Reporting Authority
+ *      K - ISDA/FpML Product URL (URL in SecurityID)
+ *      L - Letter of Credit
+ */
 public enum Enum761BenchmarkSecurityIDSource implements EnumAccessors, LogStringVerbose {
-    /**
-     *  761 (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
-     *  BenchmarkSecurityIDSource
-     *  Identifies class or source of the BenchmarkSecurityID (699) value.
-     *  Required if BenchmarkSecurityID is specified.
-     *              Same values as the SecurityIDSource (22) field
-     *  Valid values:
-     *      1 - CUSIP
-     *      2 - SEDOL
-     *      3 - QUIK
-     *      4 - ISIN number
-     *      5 - RIC code
-     *      6 - ISO Currency Code
-     *      7 - ISO Country Code
-     *      8 - Exchange Symbol
-     *      9 - Consolidated Tape Association (CTA) Symbol
-     *              (SIAC CTS/CQS line format)
-     *      A - Bloomberg Symbol
-     *      B - Wertpapier
-     *      C - Dutch
-     *      D - Valoren
-     *      E - Sicovam
-     *      F - Belgian
-     *      G - "Common" (Clearstream and Euroclear)
-     *      H - Clearing House / Clearing Organization
-     *      I - ISDA/FpML Product Specification
-     *              (XML in EncodedSecurityDesc)
-     *      J - Option Price Reporting Authority
-     *      K - ISDA/FpML Product URL (URL in SecurityID)
-     *      L - Letter of Credit
-     */
-
 
     /*
      * 0-9 msg types

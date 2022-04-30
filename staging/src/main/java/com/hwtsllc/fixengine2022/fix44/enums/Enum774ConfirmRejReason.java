@@ -19,18 +19,18 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  774
+ *  ConfirmRejReason
+ *  Identifies the reason for rejecting a Confirmation.
+ *  Valid values:
+ *      1 - Mismatched account
+ *      2 - Missing settlement instructions
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum774ConfirmRejReason implements EnumAccessors, LogStringVerbose {
-    /**
-     *  774
-     *  ConfirmRejReason
-     *  Identifies the reason for rejecting a Confirmation.
-     *  Valid values:
-     *      1 - Mismatched account
-     *      2 - Missing settlement instructions
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     MISMATCHED_ACCOUNT( "1", "MISMATCHED_ACCOUNT", "1 - Mismatched account" ),
     MISSING_INSTRUCTIONS( "2", "MISSING_INSTRUCTIONS", "2 - Missing settlement instructions" ),
     OTHER( "99", "OTHER", "99 - Other" ),

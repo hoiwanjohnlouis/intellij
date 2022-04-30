@@ -19,22 +19,22 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  751
+ *  TradeReportRejectReason
+ *  Reason Trade Capture Request was rejected.
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  Valid values:
+ *      0 - Successful (default)
+ *      1 - Invalid party information
+ *      2 - Unknown instrument
+ *      3 - Unauthorized to report trades
+ *      4 - Invalid trade type
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum751TradeReportRejectReason implements EnumAccessors, LogStringVerbose {
-    /**
-     *  751
-     *  TradeReportRejectReason
-     *  Reason Trade Capture Request was rejected.
-     *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
-     *  Valid values:
-     *      0 - Successful (default)
-     *      1 - Invalid party information
-     *      2 - Unknown instrument
-     *      3 - Unauthorized to report trades
-     *      4 - Invalid trade type
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     SUCCESSFUL( "0", "SUCCESSFUL", "0 - Successful (default)" ),
     INVALID_PARTY_INFORMATION( "1", "INVALID_PARTY_INFORMATION", "1 - Invalid party information" ),
     UNKNOWN_INSTRUMENT( "2", "UNKNOWN_INSTRUMENT", "2 - Unknown instrument" ),

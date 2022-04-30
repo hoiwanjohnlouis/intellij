@@ -19,15 +19,15 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  731 (same as 731, 733)
+ *  SettlPriceType
+ *  Type of settlement price
+ *  Valid values:
+ *      1 - Final
+ *      2 - Theoretical
+ */
 public enum Enum731SettlPriceType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  731 (same as 731, 733)
-     *  SettlPriceType
-     *  Type of settlement price
-     *  Valid values:
-     *      1 - Final
-     *      2 - Theoretical
-     */
     FINAL( "1", "FINAL", "1 - Final" ),
     THEORETICAL( "2", "THEORETICAL", "2 - Theoretical" ),
     ;

@@ -19,25 +19,25 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  749
+ *  TradeRequestResult
+ *  Result of Trade Request
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  Valid values:
+ *      0 - Successful (default)
+ *      1 - Invalid or unknown instrument
+ *      2 - Invalid type of trade requested
+ *      3 - Invalid parties
+ *      4 - Invalid transport type requested
+ *      5 - Invalid destination requested
+ *      8 - TradeRequestType not supported
+ *      9 - Unauthorized for Trade Capture Report Request
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum749TradeRequestResult implements EnumAccessors, LogStringVerbose {
-    /**
-     *  749
-     *  TradeRequestResult
-     *  Result of Trade Request
-     *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
-     *  Valid values:
-     *      0 - Successful (default)
-     *      1 - Invalid or unknown instrument
-     *      2 - Invalid type of trade requested
-     *      3 - Invalid parties
-     *      4 - Invalid transport type requested
-     *      5 - Invalid destination requested
-     *      8 - TradeRequestType not supported
-     *      9 - Unauthorized for Trade Capture Report Request
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     SUCCESSFUL( "0", "SUCCESSFUL", "0 - Successful (default)" ),
     UNKNOWN_INSTRUMENT( "1", "UNKNOWN_INSTRUMENT", "1 - Invalid or unknown instrument" ),
     INVALID_TRADE_TYPE( "2", "INVALID_TRADE_TYPE", "2 - Invalid type of trade requested" ),

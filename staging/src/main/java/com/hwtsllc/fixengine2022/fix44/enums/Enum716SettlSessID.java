@@ -19,17 +19,17 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  716
+ *  SettlSessID
+ *  Identifies a specific settlement session
+ *  Valid values:
+ *      ITD - Intraday
+ *      RTH - Regular Trading Hours
+ *      ETH - Electronic Trading Hours
+ *      EOD - End Of Day
+ */
 public enum Enum716SettlSessID implements EnumAccessors, LogStringVerbose {
-    /**
-     *  716
-     *  SettlSessID
-     *  Identifies a specific settlement session
-     *  Valid values:
-     *      ITD - Intraday
-     *      RTH - Regular Trading Hours
-     *      ETH - Electronic Trading Hours
-     *      EOD - End Of Day
-     */
     INTRADAY( "ITD", "INTRADAY", "ITD - Intraday" ),
     REGULAR_TRADING_HOURS( "RTH", "REGULAR_TRADING_HOURS", "RTH - Regular Trading Hours" ),
     ELECTRONIC_TRADING_HOURS( "ETH", "ELECTRONIC_TRADING_HOURS", "ETH - Electronic Trading Hours" ),

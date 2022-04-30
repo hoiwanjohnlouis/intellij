@@ -19,36 +19,36 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  703
+ *  PosType
+ *  Used to identify the type of quantity that is being returned.
+ *  Valid values:
+ *      ALC - Allocation Trade Qty
+ *      AS - Option Assignment
+ *      ASF - As-of Trade Qty
+ *      DLV - Delivery Qty
+ *      ETR - Electronic Trade Qty
+ *      EX - Option Exercise Qty
+ *      FIN - End-of-Day Qty
+ *      IAS - Intra-spread Qty
+ *      IES - Inter-spread Qty
+ *      PA - Adjustment Qty
+ *      PIT - Pit Trade Qty
+ *      SOD - Start-of-Day Qty
+ *      SPL - Integral Split
+ *      TA - Transaction from Assignment
+ *      TOT - Total Transaction Qty
+ *      TQ - Transaction Quantity
+ *      TRF - Transfer Trade Qty
+ *      TX - Transaction from Exercise
+ *      XM - Cross Margin Qty
+ *      RCV - Receive Quantity
+ *      CAA - Corporate Action Adjustment
+ *      DN - Delivery Notice Qty
+ *      EP - Exchange for Physical Qty
+ */
 public enum Enum703PosType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  703
-     *  PosType
-     *  Used to identify the type of quantity that is being returned.
-     *  Valid values:
-     *      ALC - Allocation Trade Qty
-     *      AS - Option Assignment
-     *      ASF - As-of Trade Qty
-     *      DLV - Delivery Qty
-     *      ETR - Electronic Trade Qty
-     *      EX - Option Exercise Qty
-     *      FIN - End-of-Day Qty
-     *      IAS - Intra-spread Qty
-     *      IES - Inter-spread Qty
-     *      PA - Adjustment Qty
-     *      PIT - Pit Trade Qty
-     *      SOD - Start-of-Day Qty
-     *      SPL - Integral Split
-     *      TA - Transaction from Assignment
-     *      TOT - Total Transaction Qty
-     *      TQ - Transaction Quantity
-     *      TRF - Transfer Trade Qty
-     *      TX - Transaction from Exercise
-     *      XM - Cross Margin Qty
-     *      RCV - Receive Quantity
-     *      CAA - Corporate Action Adjustment
-     *      DN - Delivery Notice Qty
-     *      EP - Exchange for Physical Qty
-     */
     ALLOCATION_TRADE_QTY( "ALC", "ALLOCATION_TRADE_QTY", "ALC - Allocation Trade Qty" ),
     OPTION_ASSIGNMENT( "AS", "OPTION_ASSIGNMENT", "AS - Option Assignment" ),
     AS_OF_TRADE_QTY( "ASF", "AS_OF_TRADE_QTY", "ASF - As-of Trade Qty" ),

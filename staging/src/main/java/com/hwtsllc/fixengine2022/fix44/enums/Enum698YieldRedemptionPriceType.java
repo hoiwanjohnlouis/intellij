@@ -19,32 +19,32 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  698 (same as 423, 663, 686, 698)
+ *  The price type of the YieldRedemptionPrice (697)
+ *        See PriceType (423) for description and valid values
+ *  YieldRedemptionPriceType
+ *  Valid values:
+ *      1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
+ *      2 - Per unit (i.e. per share or contract)
+ *      3 - Fixed amount (absolute value)
+ *      4 - Discount - percentage points below par
+ *      5 - Premium - percentage points over par
+ *      6 - Spread (basis points spread)
+ *      7 - TED Price
+ *      8 - TED Yield
+ *      9 - Yield
+ *      10 - Fixed cabinet trade price (primarily for listed futures and options)
+ *      11 - Variable cabinet trade price (primarily for listed futures and options)
+ *      13 - Product ticks in halfs
+ *      14 - Product ticks in fourths
+ *      15 - Product ticks in eights
+ *      16 - Product ticks in sixteenths
+ *      17 - Product ticks in thirty-seconds
+ *      18 - Product ticks in sixty-forths
+ *      19 - Product ticks in one-twenty-eights
+ */
 public enum Enum698YieldRedemptionPriceType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  698 (same as 423, 663, 686, 698)
-     *  The price type of the YieldRedemptionPrice (697)
-     *        See PriceType (423) for description and valid values
-     *  YieldRedemptionPriceType
-     *  Valid values:
-     *      1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
-     *      2 - Per unit (i.e. per share or contract)
-     *      3 - Fixed amount (absolute value)
-     *      4 - Discount - percentage points below par
-     *      5 - Premium - percentage points over par
-     *      6 - Spread (basis points spread)
-     *      7 - TED Price
-     *      8 - TED Yield
-     *      9 - Yield
-     *      10 - Fixed cabinet trade price (primarily for listed futures and options)
-     *      11 - Variable cabinet trade price (primarily for listed futures and options)
-     *      13 - Product ticks in halfs
-     *      14 - Product ticks in fourths
-     *      15 - Product ticks in eights
-     *      16 - Product ticks in sixteenths
-     *      17 - Product ticks in thirty-seconds
-     *      18 - Product ticks in sixty-forths
-     *      19 - Product ticks in one-twenty-eights
-     */
     /*
      * 1-11, 13-19 msg types
      */

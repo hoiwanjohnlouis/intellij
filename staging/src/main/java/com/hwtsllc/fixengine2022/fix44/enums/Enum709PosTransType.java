@@ -19,19 +19,19 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  709
+ *  PosTransType
+ *  Identifies the type of position transaction
+ *  Valid values:
+ *      1 - Exercise
+ *      2 - Do Not Exercise
+ *      3 - Position Adjustment
+ *      4 - Position Change Submission or Margin Disposition
+ *      5 - Pledge
+ *      6 - Large Trader Submission
+ */
 public enum Enum709PosTransType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  709
-     *  PosTransType
-     *  Identifies the type of position transaction
-     *  Valid values:
-     *      1 - Exercise
-     *      2 - Do Not Exercise
-     *      3 - Position Adjustment
-     *      4 - Position Change Submission or Margin Disposition
-     *      5 - Pledge
-     *      6 - Large Trader Submission
-     */
     EXERCISE( "1", "EXERCISE", "1 - Exercise" ),
     DO_NOT_EXERCISE( "2", "DO_NOT_EXERCISE", "2 - Do Not Exercise" ),
     POSITION_ADJUSTMENT( "3", "POSITION_ADJUSTMENT", "3 - Position Adjustment" ),

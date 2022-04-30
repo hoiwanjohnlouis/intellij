@@ -19,17 +19,17 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  725
+ *  ResponseTransportType
+ *  Identifies how the response to the request should be transmitted.
+ *              Details specified via ResponseDestination (726).
+ *  Valid values:
+ *      0 - Inband - transport the request was sent over (default)
+ *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
+ *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
+ */
 public enum Enum725ResponseTransportType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  725
-     *  ResponseTransportType
-     *  Identifies how the response to the request should be transmitted.
-     *              Details specified via ResponseDestination (726).
-     *  Valid values:
-     *      0 - Inband - transport the request was sent over (default)
-     *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
-     *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
-     */
     INBAND( "0", "INBAND",
             "0 - Inband - transport the request was sent over (default)" ),
     OUT_OF_BAND( "1", "OUT_OF_BAND",

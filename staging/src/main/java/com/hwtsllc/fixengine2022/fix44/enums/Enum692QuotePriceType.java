@@ -19,24 +19,24 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  692
+ *  QuotePriceType
+ *  Code to represent price type requested in Quote.
+ *      If the Quote Request is for a Swap values 1-8 apply to all legs.
+ *  Valid values:
+ *      1 - Percent (percent of par)
+ *      2 - Per Share (e.g. cents per share)
+ *      3 - Fixed Amount (absolute value)
+ *      4 - Discount - percentage points below par
+ *      5 - Premium - percentage points over par
+ *      6 - Spread - basis points relative to benchmark
+ *      7 - TED Price
+ *      8 - TED Yield
+ *      9 - Yield Spread (swaps)
+ *      10 - Yield
+ */
 public enum Enum692QuotePriceType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  692
-     *  QuotePriceType
-     *  Code to represent price type requested in Quote.
-     *      If the Quote Request is for a Swap values 1-8 apply to all legs.
-     *  Valid values:
-     *      1 - Percent (percent of par)
-     *      2 - Per Share (e.g. cents per share)
-     *      3 - Fixed Amount (absolute value)
-     *      4 - Discount - percentage points below par
-     *      5 - Premium - percentage points over par
-     *      6 - Spread - basis points relative to benchmark
-     *      7 - TED Price
-     *      8 - TED Yield
-     *      9 - Yield Spread (swaps)
-     *      10 - Yield
-     */
     PERCENT( "1", "PERCENT", "1 - Percent (percent of par)" ),
     PER_SHARE( "2", "PER_SHARE", "2 - Per Share (e.g. cents per share)" ),
     FIXED_AMOUNT( "3", "FIXED_AMOUNT", "3 - Fixed Amount (absolute value)" ),
