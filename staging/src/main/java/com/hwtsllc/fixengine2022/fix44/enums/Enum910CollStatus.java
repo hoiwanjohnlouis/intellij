@@ -19,7 +19,24 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  910
+ *  CollStatus
+ *  int
+ *  Collateral Status
+ *  Valid values:
+ *      0 - Unassigned
+ *      1 - Partially Assigned
+ *      2 - Assignment Proposed
+ *      3 - Assigned (Accepted)
+ *      4 - Challenged
+ */
 public enum Enum910CollStatus implements EnumAccessors, LogStringVerbose {
+    UNASSIGNED( "0", "UNASSIGNED", "0 - Unassigned" ),
+    PARTIALLY_ASSIGNED( "1", "PARTIALLY_ASSIGNED", "1 - Partially Assigned" ),
+    ASSIGNMENT_PROPOSED( "2", "ASSIGNMENT_PROPOSED", "2 - Assignment Proposed" ),
+    ASSIGNED( "3", "ASSIGNED", "3 - Assigned (Accepted)" ),
+    CHALLENGED( "4", "CHALLENGED", "4 - Challenged" ),
     ;
 
     private final String id;

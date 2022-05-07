@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum783SettlPartyIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -61,14 +61,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *              ISITC "ETC Best Practice" guidelines document
  */
 public class Tag783EnuSettlPartyIDSource extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum783SettlPartyIDSource dataValue;
+    private final MyEnumPartyIDSource dataValue;
 
-    public final static Enum783SettlPartyIDSource TESTA_ENU_SETTL_PARTY_ID_SOURCE
-            = Enum783SettlPartyIDSource.KOREAN_INVESTOR_ID;
-    public final static Enum783SettlPartyIDSource TESTB_ENU_SETTL_PARTY_ID_SOURCE
-            = Enum783SettlPartyIDSource.BANK_IDENTIFICATION_CODE;
+    public final static MyEnumPartyIDSource TESTA_ENU_SETTL_PARTY_ID_SOURCE
+            = MyEnumPartyIDSource.KOREAN_INVESTOR_ID;
+    public final static MyEnumPartyIDSource TESTB_ENU_SETTL_PARTY_ID_SOURCE
+            = MyEnumPartyIDSource.BANK_IDENTIFICATION_CODE;
 
-    public Tag783EnuSettlPartyIDSource(Enum783SettlPartyIDSource dataValue) {
+    public Tag783EnuSettlPartyIDSource(MyEnumPartyIDSource dataValue) {
         setFixType(FIX44.FIX783_ENU_SETTL_PARTY_ID_SOURCE);
         this.dataValue = dataValue;
     }

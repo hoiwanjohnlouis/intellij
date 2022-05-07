@@ -19,7 +19,31 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  906
+ *  CollAsgnRejectReason
+ *  int
+ *  Collateral Assignment Reject Reason
+ *  Valid values:
+ *      0 - Unknown deal (order or trade)
+ *      1 - Unknown or invalid instrument
+ *      2 - Unauthorized transaction
+ *      3 - Insufficient collateral
+ *      4 - Invalid type of collateral
+ *      5 - Excessive substitution
+ *      99 - Other
+ *
+ *  or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum906CollAsgnRejectReason implements EnumAccessors, LogStringVerbose {
+    UNKNOWN_DEAL( "0", "UNKNOWN_DEAL", "0 - Unknown deal (order or trade)" ),
+    INVALID_INSTRUMENT( "1", "INVALID_INSTRUMENT", "1 - Unknown or invalid instrument" ),
+    UNAUTHORIZED_TRANSACTION( "2", "UNAUTHORIZED_TRANSACTION", "2 - Unauthorized transaction" ),
+    INSUFFICIENT_COLLATERAL( "3", "INSUFFICIENT_COLLATERAL", "3 - Insufficient collateral" ),
+    INVALID_COLLATERAL( "4", "INVALID_COLLATERAL", "4 - Invalid type of collateral" ),
+
+    EXCESSIVE_SUBSTITUTION( "5", "EXCESSIVE_SUBSTITUTION", "5 - Excessive substitution" ),
+    OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
     private final String id;

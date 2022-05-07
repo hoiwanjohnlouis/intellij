@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum661AllocAcctIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAcctIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -36,14 +36,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *     	99 - Other (custom or proprietary)
  */
 public class Tag661EnuAllocAcctIDSource extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum661AllocAcctIDSource dataValue;
+    private final MyEnumAcctIDSource dataValue;
 
-    public final static Enum661AllocAcctIDSource TESTA_ENU_ALLOC_ACCT_ID_SOURCE
-            = Enum661AllocAcctIDSource.DTCC;
-    public final static Enum661AllocAcctIDSource TESTB_ENU_ALLOC_ACCT_ID_SOURCE
-            = Enum661AllocAcctIDSource.SID;
+    public final static MyEnumAcctIDSource TESTA_ENU_ALLOC_ACCT_ID_SOURCE
+            = MyEnumAcctIDSource.DTCC;
+    public final static MyEnumAcctIDSource TESTB_ENU_ALLOC_ACCT_ID_SOURCE
+            = MyEnumAcctIDSource.SID;
 
-    public Tag661EnuAllocAcctIDSource(Enum661AllocAcctIDSource dataValue) {
+    public Tag661EnuAllocAcctIDSource(MyEnumAcctIDSource dataValue) {
         setFixType(FIX44.FIX661_ENU_ALLOC_ACCT_ID_SOURCE);
         this.dataValue = dataValue;
     }

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  754
+ *  AutoAcceptIndicator
+ *  Boolean
+ *  Identifies whether or not an allocation has been automatically
+ *  accepted on behalf of the Carry Firm by the Clearing House.
+ */
 public class Tag754BoolAutoAcceptIndicator extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

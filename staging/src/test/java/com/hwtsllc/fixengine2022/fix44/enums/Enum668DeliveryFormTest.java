@@ -39,16 +39,16 @@ class Enum668DeliveryFormTest {
         assertEquals("1", enumType.getID());
         assertEquals("BOOK_ENTRY", enumType.getName());
         assertEquals("1 - Book Entry (default)", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum668DeliveryForm.BEARER;
         assertEquals("2", enumType.getID());
         assertEquals("BEARER", enumType.getName());
         assertEquals("2 - Bearer", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

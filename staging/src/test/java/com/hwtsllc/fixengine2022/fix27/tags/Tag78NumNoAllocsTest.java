@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,10 +32,10 @@ class Tag78NumNoAllocsTest {
         assertEquals( "NO_ALLOCS", fixData.getName());
         assertEquals( "78", fixData.getID());
         assertEquals( "NoAllocs", fixData.getDescription());
-        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0078Test() {
@@ -42,6 +43,6 @@ class Tag78NumNoAllocsTest {
 
         tagData = new Tag78NumNoAllocs(new MyNumInGroupType(321));
         assertEquals( 321, tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

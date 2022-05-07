@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  863
+ *  OrderCapacityQty
+ *  Qty
+ *  Quantity executed under a specific OrderCapacity
+ *  (e.g. quantity executed as agent, quantity executed as principal)
+ */
 public class Tag863OrderCapacityQty {
 }

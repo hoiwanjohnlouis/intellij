@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,19 +38,19 @@ class Enum601LegSymbolSfxTest {
         assertEquals("EUCP", enumType.getName());
         assertEquals("CD - EUCP with lump-sum interest rather than discount price",
                 enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum601LegSymbolSfx.WHEN_ISSUED;
         assertEquals("WI", enumType.getID());
         assertEquals("WHEN_ISSUED", enumType.getName());
         assertEquals("WI - (When Issued) for a security to be reissued under an old CUSIP or ISIN",
                 enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

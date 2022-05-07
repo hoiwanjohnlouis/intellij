@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  941
+ *  UnderlyingStrikeCurrency
+ *  Currency
+ *  Currency in which the strike price of an underlying instrument is denominated
+ */
 public class Tag941UnderlyingStrikeCurrency {
 }

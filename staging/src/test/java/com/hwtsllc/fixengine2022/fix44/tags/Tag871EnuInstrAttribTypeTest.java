@@ -17,25 +17,155 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum871InstrAttribType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  871
+ *  InstrAttribType
+ *  int
+ *  Code to represent the type of instrument attribute
+ *  Valid values:
+ *      1 - Flat (securities pay interest on a current basis but are traded without interest)
+ *      2 - Zero coupon
+ *      3 - Interest bearing (for Euro commercial paper when not issued at discount)
+ *      4 - No periodic payments
+ *      5 - Variable rate
+ *      6 - Less fee for put
+ *      7 - Stepped coupon
+ *      8 - Coupon period (if not semi-annual). Supply redemption date in the InstrAttribValue (872) field.
+ *      9 - When [and if] issued
+ *      10 - Original issue discount
+ *      11 - Callable, puttable
+ *      12 - Escrowed to Maturity
+ *      13 - Escrowed to redemption date - callable. Supply redemption date in the InstrAttribValue (872) field
+ *      14 - Pre-refunded
+ *      15 - In default
+ *      16 - Unrated
+ *      17 - Taxable
+ *      18 - Indexed
+ *      19 - Subject To Alternative Minimum Tax
+ *      20 - Original issue discount price. Supply price in the InstrAttribValue (872) field
+ *      21 - Callable below maturity value
+ *      22 - Callable without notice by mail to holder unless registered
+ *      99 - Text. Supply the text of the attribute or disclaimer in the InstrAttribValue (872) field.
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Tag871EnuInstrAttribTypeTest {
     @Test
     void FIX0871Test() {
-        FIX44 fixData = FIX44.FIX871_INSTR_ATTRIB_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX871_ENU_INSTR_ATTRIB_TYPE;
+        assertEquals( "871", fixData.getID());
+        assertEquals( "INSTR_ATTRIB_TYPE", fixData.getName());
+        assertEquals( "InstrAttribType", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0871Test() {
         Tag871EnuInstrAttribType tagData;
 
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.FLAT);
+        assertEquals( Enum871InstrAttribType.FLAT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ZERO_COUPON);
+        assertEquals( Enum871InstrAttribType.ZERO_COUPON.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.INTEREST_BEARING);
+        assertEquals( Enum871InstrAttribType.INTEREST_BEARING.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.NO_PERIODIC_PAYMENTS);
+        assertEquals( Enum871InstrAttribType.NO_PERIODIC_PAYMENTS.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.VARIABLE_RATE);
+        assertEquals( Enum871InstrAttribType.VARIABLE_RATE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.LESS_FEE_FOR_PUT);
+        assertEquals( Enum871InstrAttribType.LESS_FEE_FOR_PUT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.STEPPED_COUPON);
+        assertEquals( Enum871InstrAttribType.STEPPED_COUPON.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.COUPON_PERIOD);
+        assertEquals( Enum871InstrAttribType.COUPON_PERIOD.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.WHEN_ISSUED);
+        assertEquals( Enum871InstrAttribType.WHEN_ISSUED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ORIGINAL_ISSUE_DISCOUNT);
+        assertEquals( Enum871InstrAttribType.ORIGINAL_ISSUE_DISCOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.CALLABLE_PUTTABLE);
+        assertEquals( Enum871InstrAttribType.CALLABLE_PUTTABLE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ESCROWED_TO_MATURITY);
+        assertEquals( Enum871InstrAttribType.ESCROWED_TO_MATURITY.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ESCROWED_TO_REDEMPTION_DATE);
+        assertEquals( Enum871InstrAttribType.ESCROWED_TO_REDEMPTION_DATE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.PRE_REFUNDED);
+        assertEquals( Enum871InstrAttribType.PRE_REFUNDED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.IN_DEFAULT);
+        assertEquals( Enum871InstrAttribType.IN_DEFAULT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.UNRATED);
+        assertEquals( Enum871InstrAttribType.UNRATED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.TAXABLE);
+        assertEquals( Enum871InstrAttribType.TAXABLE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.INDEXED);
+        assertEquals( Enum871InstrAttribType.INDEXED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.SUBJECT_TO_AMT);
+        assertEquals( Enum871InstrAttribType.SUBJECT_TO_AMT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ORIGINAL_DISCOUNT_PRICE);
+        assertEquals( Enum871InstrAttribType.ORIGINAL_DISCOUNT_PRICE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.CALLABLE_BELOW_MATURITY_VALUE);
+        assertEquals( Enum871InstrAttribType.CALLABLE_BELOW_MATURITY_VALUE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.CALLABLE_WITHOUT_NOTICE);
+        assertEquals( Enum871InstrAttribType.CALLABLE_WITHOUT_NOTICE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.TEXT);
+        assertEquals( Enum871InstrAttribType.TEXT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

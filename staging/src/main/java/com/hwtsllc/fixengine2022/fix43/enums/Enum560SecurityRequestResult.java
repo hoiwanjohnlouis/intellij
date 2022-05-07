@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 560
+ */
 public enum Enum560SecurityRequestResult implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 560
-     */
-
     /*
      *  0-5 types
      */
@@ -37,6 +36,7 @@ public enum Enum560SecurityRequestResult implements EnumAccessors, LogStringVerb
             "3 - Not authorized to retrieve instrument data" ),
     INSTRUMENT_DATA_UNAVAILABLE( "4", "INSTRUMENT_DATA_UNAVAILABLE",
             "4 - Instrument data temporarily unavailable" ),
+
     REQUEST_NOT_SUPPORTED( "5", "REQUEST_NOT_SUPPORTED",
             "5 - Request for instrument data not supported" ),
     ;

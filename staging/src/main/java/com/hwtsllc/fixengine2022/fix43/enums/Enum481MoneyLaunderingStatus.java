@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 481
+ */
 public enum Enum481MoneyLaunderingStatus implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 481
-     */
-
     /*
      * Y, N, 1, 2, and 3 types
      */

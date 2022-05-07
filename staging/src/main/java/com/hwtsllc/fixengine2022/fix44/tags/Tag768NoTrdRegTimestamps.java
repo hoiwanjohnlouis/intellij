@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  768
+ *  NoTrdRegTimestamps
+ *  NumInGroup
+ *  Number of TrdRegTimestamp (769) entries
+ */
 public class Tag768NoTrdRegTimestamps {
 }

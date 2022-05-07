@@ -16,7 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -59,4 +61,63 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *              ISITC "ETC Best Practice" guidelines document
  */
 public class Tag950EnuNested3PartyIDSource extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyEnumPartyIDSource dataValue;
+
+    public final static MyEnumPartyIDSource TESTA_ENU_SETTL_PARTY_ID_SOURCE
+            = MyEnumPartyIDSource.KOREAN_INVESTOR_ID;
+    public final static MyEnumPartyIDSource TESTB_ENU_SETTL_PARTY_ID_SOURCE
+            = MyEnumPartyIDSource.BANK_IDENTIFICATION_CODE;
+
+    public Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource dataValue) {
+        setFixType(FIX44.FIX783_ENU_SETTL_PARTY_ID_SOURCE);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag950EnuNested3PartyIDSource tagData;
+
+        tagData = new Tag950EnuNested3PartyIDSource(TESTA_ENU_SETTL_PARTY_ID_SOURCE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag950EnuNested3PartyIDSource(TESTB_ENU_SETTL_PARTY_ID_SOURCE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

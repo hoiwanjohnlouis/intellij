@@ -19,7 +19,24 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  903
+ *  CollAsgnTransType
+ *  int
+ *  Collateral Assignment Transaction Type
+ *  Valid values:
+ *      0 - New
+ *      1 - Replace
+ *      2 - Cancel
+ *      3 - Release
+ *      4 - Reverse
+ */
 public enum Enum903CollAsgnTransType implements EnumAccessors, LogStringVerbose {
+    NEW( "0", "NEW", "0 - New" ),
+    REPLACE( "1", "REPLACE", "1 - Replace" ),
+    CANCEL( "2", "CANCEL", "2 - Cancel" ),
+    RELEASE( "3", "RELEASE", "3 - Release" ),
+    REVERSE( "4", "REVERSE", "4 - Reverse" ),
     ;
 
     private final String id;

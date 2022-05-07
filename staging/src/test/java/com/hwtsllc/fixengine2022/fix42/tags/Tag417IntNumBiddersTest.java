@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag417IntNumBiddersTest {
         assertEquals( "417", fixData.getID());
         assertEquals( "NUM_BIDDERS", fixData.getName());
         assertEquals( "NumBidders", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0417Test() {
@@ -42,12 +43,12 @@ class Tag417IntNumBiddersTest {
                 Tag417IntNumBidders.TESTA_INT_NUM_BIDDERS));
         assertEquals( Tag417IntNumBidders.TESTA_INT_NUM_BIDDERS,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag417IntNumBidders(new MyIntType(
                 Tag417IntNumBidders.TESTB_INT_NUM_BIDDERS));
         assertEquals( Tag417IntNumBidders.TESTB_INT_NUM_BIDDERS,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

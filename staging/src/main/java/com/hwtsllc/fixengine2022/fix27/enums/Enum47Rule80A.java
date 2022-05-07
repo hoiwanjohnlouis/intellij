@@ -30,6 +30,7 @@ public enum Enum47Rule80A implements EnumAccessors, LogStringVerbose {
             "D - Program order, index arb, for Member firm/org"),
     SHORT_EXEMPT_P("E", "SHORT_EXEMPT_P",
             "E - Short Exempt Transaction for Principal"),
+
     SHORT_EXEMPT_W("F", "SHORT_EXEMPT_W",
             "F - Short exempt transaction (refer to W type)"),
     SHORT_EXEMPT_I("H", "SHORT_EXEMPT_I",
@@ -40,6 +41,7 @@ public enum Enum47Rule80A implements EnumAccessors, LogStringVerbose {
             "J - Program Order, index arb, for individual customer"),
     PROGRAM_NON_INDEX_ARB_INDIVIDUAL("K", "PROGRAM_NON_INDEX_ARB_INDIVIDUAL",
             "K - Program Order, non-index arb, for individual customer"),
+
     SHORT_EXEMPT_MARKET_MAKER_P_O("L", "SHORT_EXEMPT_MARKET_MAKER_P_O",
             "L - Short exempt transaction for member competing market-maker affiliated " +
                             "with the firm clearing the trade (refer to P and O types)"),
@@ -52,6 +54,7 @@ public enum Enum47Rule80A implements EnumAccessors, LogStringVerbose {
                             "with the clearing member"),
     PRINCIPAL("P", "PRINCIPAL",
             "P - Principal"),
+
     NON_MEMBER_MARKET_MAKER("R", "NON_MEMBER_MARKET_MAKER",
             "R - Transactions for the account of a non-member competing market-maker"),
     SPECIALIST_TRADES("S", "SPECIALIST_TRADES",
@@ -62,6 +65,7 @@ public enum Enum47Rule80A implements EnumAccessors, LogStringVerbose {
             "U - Program Order, index arb, for other agency"),
     AGENT_FOR_OTHER_MEMBER("W", "AGENT_FOR_OTHER_MEMBER",
             "W - All other orders as agent for other member"),
+
     SHORT_EXEMPT_MARKET_MAKER_W_T("X", "SHORT_EXEMPT_MARKET_MAKER_W_T",
             "X - Short exempt transaction for member competing market-maker not affiliated with " +
                             "the firm clearing the trade (refer to W and T types)"),

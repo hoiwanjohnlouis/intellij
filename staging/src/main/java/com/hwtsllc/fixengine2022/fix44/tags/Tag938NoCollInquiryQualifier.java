@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  938
+ *  NoCollInquiryQualifier
+ *  NumInGroup
+ *  Number of CollInquiryQualifier entries in a repeating group.
+ */
 public class Tag938NoCollInquiryQualifier {
 }

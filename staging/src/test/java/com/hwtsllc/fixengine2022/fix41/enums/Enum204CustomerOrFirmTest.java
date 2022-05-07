@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,23 +28,23 @@ class Enum204CustomerOrFirmTest {
     void Enum0204Test() {
         Enum204CustomerOrFirm enumType;
 
-        /*
+        /**
          * 0-1 msg types
          */
         enumType = Enum204CustomerOrFirm.CUSTOMER;
         assertEquals("0", enumType.getID());
         assertEquals("CUSTOMER", enumType.getName());
         assertEquals("0 - Customer", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum204CustomerOrFirm.FIRM;
         assertEquals("1", enumType.getID());
         assertEquals("FIRM", enumType.getName());
         assertEquals("1 - Firm", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

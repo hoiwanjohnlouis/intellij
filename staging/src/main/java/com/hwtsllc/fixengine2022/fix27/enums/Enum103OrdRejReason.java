@@ -30,6 +30,7 @@ public enum Enum103OrdRejReason implements EnumAccessors, LogStringVerbose {
             "3 - Order exceeds limit"),
     TOO_LATE_TO_ENTER("4", "TOO_LATE_TO_ENTER",
             "4 - Too late to enter"),
+
     UNKNOWN_ORDER("5", "UNKNOWN_ORDER",
             "5 - Unknown order"),
     DUPLICATE_ORDER("6", "DUPLICATE_ORDER",
@@ -40,6 +41,7 @@ public enum Enum103OrdRejReason implements EnumAccessors, LogStringVerbose {
             "8 - Stale order"),
     TRADE_ALONG_REQUIRED("9", "TRADE_ALONG_REQUIRED",
             "9 - Trade along required"),
+
     INVALID_INVESTOR_ID("10", "INVALID_INVESTOR_ID",
             "10 - Invalid Investor ID"),
     UNSUPPORTED_ORDER_CHARACTERISTIC("11", "UNSUPPORTED_ORDER_CHARACTERISTIC",
@@ -50,6 +52,7 @@ public enum Enum103OrdRejReason implements EnumAccessors, LogStringVerbose {
             "13 - Incorrect quantity"),
     INCORRECT_ALLOCATED_QUANTITY("14", "INCORRECT_ALLOCATED_QUANTITY",
             "14 - Incorrect allocated quantity"),
+
     UNKNOWN_ACCOUNT("15", "UNKNOWN_ACCOUNT",
             "15 - Unknown account"),
     INVALID_PRICE_INCREMENT("18", "INVALID_PRICE_INCREMENT",

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  699
+ *  BenchmarkSecurityID
+ *  String
+ *  The identifier of the benchmark security, e.g. Treasury against Corporate bond.
+ *        See SecurityID (tag 48) for description and valid values.
+ */
 public class Tag699BenchmarkSecurityID {
 }

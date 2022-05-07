@@ -16,55 +16,151 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  603 (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
+ *  Multileg instrument's individual  security’s SecurityIDSource.
+ *              Same values as the SecurityIDSource (22) field
+ *  Valid values:
+ *      1 - CUSIP
+ *      2 - SEDOL
+ *      3 - QUIK
+ *      4 - ISIN number
+ *      5 - RIC code
+ *      6 - ISO Currency Code
+ *      7 - ISO Country Code
+ *      8 - Exchange Symbol
+ *      9 - Consolidated Tape Association (CTA) Symbol
+ *              (SIAC CTS/CQS line format)
+ *      A - Bloomberg Symbol
+ *      B - Wertpapier
+ *      C - Dutch
+ *      D - Valoren
+ *      E - Sicovam
+ *      F - Belgian
+ *      G - "Common" (Clearstream and Euroclear)
+ *      H - Clearing House / Clearing Organization
+ *      I - ISDA/FpML Product Specification
+ *              (XML in EncodedSecurityDesc)
+ *      J - Option Price Reporting Authority
+ *      K - ISDA/FpML Product URL (URL in SecurityID)
+ *      L - Letter of Credit
+ */
 class Tag603EnuLegSecurityIDSourceTest {
     @Test
     void FIX0603Test() {
         FIX43 fixData = FIX43.FIX603_ENU_LEG_SECURITY_ID_SOURCE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX43.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX43.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "603", fixData.getID());
+        assertEquals( "LEG_SECURITY_ID_SOURCE", fixData.getName());
+        assertEquals( "LegSecurityIdSource", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  603 (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
-     *  Multileg instrument's individual  security’s SecurityIDSource.
-     *              Same values as the SecurityIDSource (22) field
-     *  Valid values:
-     *      1 - CUSIP
-     *      2 - SEDOL
-     *      3 - QUIK
-     *      4 - ISIN number
-     *      5 - RIC code
-     *      6 - ISO Currency Code
-     *      7 - ISO Country Code
-     *      8 - Exchange Symbol
-     *      9 - Consolidated Tape Association (CTA) Symbol
-     *              (SIAC CTS/CQS line format)
-     *      A - Bloomberg Symbol
-     *      B - Wertpapier
-     *      C - Dutch
-     *      D - Valoren
-     *      E - Sicovam
-     *      F - Belgian
-     *      G - "Common" (Clearstream and Euroclear)
-     *      H - Clearing House / Clearing Organization
-     *      I - ISDA/FpML Product Specification
-     *              (XML in EncodedSecurityDesc)
-     *      J - Option Price Reporting Authority
-     *      K - ISDA/FpML Product URL (URL in SecurityID)
-     *      L - Letter of Credit
-     */
     @Test
     void Tag0603Test() {
         Tag603EnuLegSecurityIDSource tagData;
 
+        /**
+         * 1-9 Security ID Source
+         */
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.CUSIP);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.SEDOL);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.QUIK);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.ISIN);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.RIC);
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.ISO_CURRENCY_CODE);
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.ISO_COUNTRY_CODE);
+        assertEquals( "7", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.EXCHANGE_SYMBOL);
+        assertEquals( "8", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.CTA);
+        assertEquals( "9", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        /**
+         * A-L Security ID Source
+         */
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.BLOOMBERG);
+        assertEquals( "A", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.WERTPAPIER);
+        assertEquals( "B", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.DUTCH);
+        assertEquals( "C", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.VALOREN);
+        assertEquals( "D", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.SICOVAM);
+        assertEquals( "E", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.BELGIAN);
+        assertEquals( "F", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.COMMON);
+        assertEquals( "G", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION);
+        assertEquals( "H", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.ISDA_PRODUCT_SPECIFICATION);
+        assertEquals( "I", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.OPTION_PRICE_REPORTING_AUTHORITY);
+        assertEquals( "J", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.ISDA_PRODUCT_URL);
+        assertEquals( "K", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag603EnuLegSecurityIDSource(MyEnumSecurityIDSource.LETTER_OF_CREDIT);
+        assertEquals( "L", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

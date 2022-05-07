@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  947
+ *  StrikeCurrency
+ *  Currency
+ *  Currency in which the StrikePrice is denominated.
+ */
 public class Tag947StrikeCurrency {
 }

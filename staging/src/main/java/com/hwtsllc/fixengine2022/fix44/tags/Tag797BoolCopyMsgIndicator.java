@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  797
+ *  CopyMsgIndicator
+ *  Boolean
+ *  Indicates whether or not this message is a drop copy of another message.
+ */
 public class Tag797BoolCopyMsgIndicator extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

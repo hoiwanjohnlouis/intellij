@@ -16,41 +16,41 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  201 (same as 201, 315)
+ *  UnderlyingPutOrCall
+ *
+ *      PUT( "0", "PUT", "0 - Put" ),
+ *      CALL( "1", "CALL", "1 - Call" ),
+ */
 class Enum201PutOrCallTest {
-    /**
-     *  201 (same as 201, 315)
-     *  UnderlyingPutOrCall
-     *
-     *      PUT( "0", "PUT", "0 - Put" ),
-     *      CALL( "1", "CALL", "1 - Call" ),
-     */
     @Test
     void Enum0201Test() {
         Enum201PutOrCall enumType;
 
-        /*
+        /**
          * 0-1 msg types
          */
         enumType = Enum201PutOrCall.PUT;
         assertEquals("0", enumType.getID());
         assertEquals("PUT", enumType.getName());
         assertEquals("0 - Put", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum201PutOrCall.CALL;
         assertEquals("1", enumType.getID());
         assertEquals("CALL", enumType.getName());
         assertEquals("1 - Call", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  755
+ *  AllocReportID
+ *  String
+ *  Unique identifier for Allocation Report message.
+ */
 public class Tag755AllocReportID {
 }

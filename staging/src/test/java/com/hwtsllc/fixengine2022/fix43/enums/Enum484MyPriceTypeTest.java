@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -42,39 +42,39 @@ class Enum484MyPriceTypeTest {
         assertEquals("B", enumType.getID());
         assertEquals("BID_PRICE", enumType.getName());
         assertEquals("B - Bid price", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum484PriceType.CREATION_PRICE;
         assertEquals("C", enumType.getID());
         assertEquals("CREATION_PRICE", enumType.getName());
         assertEquals("C - Creation price", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum484PriceType.CREATION_PRICE_PLUS_PERCENT;
         assertEquals("D", enumType.getID());
         assertEquals("CREATION_PRICE_PLUS_PERCENT", enumType.getName());
         assertEquals("D - Creation price plus adjustment percent",
                 enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum484PriceType.CREATION_PRICE_PLUS_AMOUNT;
         assertEquals("E", enumType.getID());
         assertEquals("CREATION_PRICE_PLUS_AMOUNT", enumType.getName());
         assertEquals("E - Creation price plus adjustment amount",
                 enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         /*
@@ -84,30 +84,30 @@ class Enum484MyPriceTypeTest {
         assertEquals("O", enumType.getID());
         assertEquals("OFFER_PRICE", enumType.getName());
         assertEquals("O - Offer price", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum484PriceType.OFFER_PRICE_MINUS_PERCENT;
         assertEquals("P", enumType.getID());
         assertEquals("OFFER_PRICE_MINUS_PERCENT", enumType.getName());
         assertEquals("P - Offer price minus adjustment percent",
                 enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum484PriceType.OFFER_PRICE_MINUS_AMOUNT;
         assertEquals("Q", enumType.getID());
         assertEquals("OFFER_PRICE_MINUS_AMOUNT", enumType.getName());
         assertEquals("Q - Offer price minus adjustment amount",
                 enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
 
         /*
@@ -117,9 +117,9 @@ class Enum484MyPriceTypeTest {
         assertEquals("S", enumType.getID());
         assertEquals("SINGLE_PRICE", enumType.getName());
         assertEquals("S - Single price", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

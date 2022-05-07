@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 495
+ */
 public enum Enum495TaxAdvantageType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 495
-     */
-
     /*
      * 0-29, 999 types
      */
@@ -36,26 +35,31 @@ public enum Enum495TaxAdvantageType implements EnumAccessors, LogStringVerbose {
     TESSA("2", "TESSA", "2 - TESSA (UK)" ),
     MINI_CASH_ISA("3", "MINI_CASH_ISA", "3 - Mini Cash ISA (UK)" ),
     MINI_STOCKS_AND_SHARES_ISA("4", "MINI_STOCKS_AND_SHARES_ISA", "4 - Mini Stocks And Shares ISA (UK)" ),
+
     MINI_INSURANCE_ISA("5", "MINI_INSURANCE_ISA", "5 - Mini Insurance ISA (UK)" ),
     CURRENT_YEAR_PAYMENT("6", "CURRENT_YEAR_PAYMENT", "6 - Current Year Payment (US)" ),
     PRIOR_YEAR_PAYMENT("7", "PRIOR_YEAR_PAYMENT", "7 - Prior Year Payment (US)" ),
     ASSET_TRANSFER("8", "ASSET_TRANSFER", "8 - Asset Transfer (US)" ),
     EMPLOYEE_PRIOR_YEAR("9", "EMPLOYEE_PRIOR_YEAR", "9 - Employee - prior year (US)" ),
+
     EMPLOYEE_CURRENT_YEAR("10", "EMPLOYEE_CURRENT_YEAR", "10 - Employee - current year (US)" ),
     EMPLOYER_PRIOR_YEAR("11", "EMPLOYER_PRIOR_YEAR", "11 - Employer - prior year (US)" ),
     EMPLOYER_CURRENT_YEAR("12", "EMPLOYER_CURRENT_YEAR", "12 - Employer - current year (US)" ),
     NON_FUND_PROTOTYPE_IRA("13", "NON_FUND_PROTOTYPE_IRA", "13 - Non-fund prototype IRA (US)" ),
     NON_FUND_QUALIFIED_PLAN("14", "NON_FUND_QUALIFIED_PLAN", "14 - Non-fund qualified plan (US)" ),
+
     DEFINED_CONTRIBUTION_PLAN("15", "DEFINED_CONTRIBUTION_PLAN", "15 - Defined contribution plan (US)" ),
     INDIVIDUAL_RETIREMENT_ACCOUNT_REGULAR("16", "INDIVIDUAL_RETIREMENT_ACCOUNT_REGULAR", "16 - Individual Retirement Account (US)" ),
     INDIVIDUAL_RETIREMENT_ACCOUNT_ROLLOVER("17", "INDIVIDUAL_RETIREMENT_ACCOUNT_ROLLOVER", "17 - Individual Retirement Account - Rollover (US)" ),
     KEOGH("18", "KEOGH", "18 - KEOGH (US)" ),
     PROFIT_SHARING_PLAN("19", "PROFIT_SHARING_PLAN", "19 - Profit Sharing Plan (US)" ),
+
 	RETIREMENT_401K("20", "401K", "20 - 401(k) (US)" ),
     SELF_DIRECTED_IRA("21", "SELF_DIRECTED_IRA", "21 - Self-directed IRA (US)" ),
     RETIREMENT_403_B("22", "403_B", "22 - 403(b) (US)" ),
     RETIREMENT_457("23", "457", "23 - 457 (US)" ),
     ROTH_IRA_FUND_PROTOTYPE("24", "ROTH_IRA_FUND_PROTOTYPE", "24 - Roth IRA (Fund Prototype) (US)" ),
+
     ROTH_IRA_NON_PROTOTYPE("25", "ROTH_IRA_NON_PROTOTYPE", "25 - Roth IRA (Non-prototype) (US)" ),
     ROTH_CONVERSION_IRA_FUND_PROTOTYPE("26", "ROTH_CONVERSION_IRA_FUND_PROTOTYPE", "26 - Roth Conversion IRA (Fund Prototype) (US)" ),
     ROTH_CONVERSION_IRA_NON_PROTOTYPE("27", "ROTH_CONVERSION_IRA_NON_PROTOTYPE", "27 - Roth Conversion IRA (Non-prototype) (US)" ),

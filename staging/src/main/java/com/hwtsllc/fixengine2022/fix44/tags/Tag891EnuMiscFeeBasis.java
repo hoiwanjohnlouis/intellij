@@ -16,9 +16,80 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum891MiscFeeBasis;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  891
+ *  MiscFeeBasis
+ *  int
+ *  Defines the unit for a miscellaneous fee.
+ *  Valid values:
+ *      0 - Absolute
+ *      1 - Per Unit
+ *      2 - Percentage
+ */
 public class Tag891EnuMiscFeeBasis extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum891MiscFeeBasis dataValue;
+
+    public final static Enum891MiscFeeBasis TESTA_ENU_MISC_FEE_BASIS
+            = Enum891MiscFeeBasis.ABSOLUTE;
+    public final static Enum891MiscFeeBasis TESTB_ENU_MISC_FEE_BASIS
+            = Enum891MiscFeeBasis.PERCENTAGE;
+
+    public Tag891EnuMiscFeeBasis(Enum891MiscFeeBasis dataValue) {
+        setFixType(FIX44.FIX891_ENU_MISC_FEE_BASIS);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag891EnuMiscFeeBasis tagData;
+
+        tagData = new Tag891EnuMiscFeeBasis(TESTA_ENU_MISC_FEE_BASIS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag891EnuMiscFeeBasis(TESTB_ENU_MISC_FEE_BASIS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

@@ -16,23 +16,23 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag394
+ *  Enu
+ *  BidType
+ *
+ *      1-3 msg types
+ *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
+ *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
+ *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
+ */
 class Enum394BidTypeTest {
-    /**
-     *  Tag394
-     *  Enu
-     *  BidType
-     *
-     *      1-3 msg types
-     *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
-     *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
-     *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
-     */
     @Test
     void Enum0394Test() {
         Enum394BidType enumType;
@@ -44,28 +44,28 @@ class Enum394BidTypeTest {
         assertEquals( "1", enumType.getID());
         assertEquals( "NON_DISCLOSED", enumType.getName());
         assertEquals( "1 - Non Disclosed style (e.g. US/European)", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum394BidType.DISCLOSED;
         assertEquals( "2", enumType.getID());
         assertEquals( "DISCLOSED", enumType.getName());
         assertEquals( "2 - Disclosed style (e.g. Japanese)", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum394BidType.NO_BIDDING;
         assertEquals( "3", enumType.getID());
         assertEquals( "NO_BIDDING", enumType.getName());
         assertEquals( "3 - No bidding process", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

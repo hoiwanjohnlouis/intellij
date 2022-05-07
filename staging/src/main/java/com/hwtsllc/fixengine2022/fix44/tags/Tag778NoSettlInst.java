@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  778
+ *  NoSettlInst
+ *  NumInGroup
+ *  Number of settlement instructions within repeating group.
+ */
 public class Tag778NoSettlInst {
 }

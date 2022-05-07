@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  892
+ *  TotNoAllocs
+ *  int
+ *  Total number of NoAlloc entries across all messages.
+ *  Should be the sum of all NoAllocs in each message that has
+ *  repeating NoAlloc entries related to the same AllocID or AllocReportID.
+ *  Used to support fragmentation.
+ */
 public class Tag892TotNoAllocs {
 }

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum298QuoteCancelType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag298EnuQuoteCancelTypeTest {
         assertEquals( "298", fixData.getID());
         assertEquals( "QUOTE_CANCEL_TYPE", fixData.getName());
         assertEquals( "QuoteCancelType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  298
@@ -54,22 +55,22 @@ class Tag298EnuQuoteCancelTypeTest {
          */
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SYMBOL.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
         assertEquals( Enum298QuoteCancelType.CANCEL_ALL_QUOTES.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
         assertEquals( Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

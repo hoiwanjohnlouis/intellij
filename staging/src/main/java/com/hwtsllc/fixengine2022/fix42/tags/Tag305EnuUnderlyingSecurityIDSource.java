@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum305UnderlyingSecurityIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -52,14 +52,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      L - Letter of Credit
  */
 public class Tag305EnuUnderlyingSecurityIDSource extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum305UnderlyingSecurityIDSource dataValue;
+    private final MyEnumSecurityIDSource dataValue;
 
-    public final static Enum305UnderlyingSecurityIDSource TESTA_ENU_UNDERLYING_SECURITY_ID_SOURCE
-            = Enum305UnderlyingSecurityIDSource.BELGIAN;
-    public final static Enum305UnderlyingSecurityIDSource TESTB_ENU_UNDERLYING_SECURITY_ID_SOURCE
-            = Enum305UnderlyingSecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION;
+    public final static MyEnumSecurityIDSource TESTA_ENU_UNDERLYING_SECURITY_ID_SOURCE
+            = MyEnumSecurityIDSource.BELGIAN;
+    public final static MyEnumSecurityIDSource TESTB_ENU_UNDERLYING_SECURITY_ID_SOURCE
+            = MyEnumSecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION;
 
-    public Tag305EnuUnderlyingSecurityIDSource(Enum305UnderlyingSecurityIDSource dataValue) {
+    public Tag305EnuUnderlyingSecurityIDSource(MyEnumSecurityIDSource dataValue) {
         setFixType(FIX42.FIX305_ENU_UNDERLYING_SECURITY_ID_SOURCE);
         this.dataValue = dataValue;
     }

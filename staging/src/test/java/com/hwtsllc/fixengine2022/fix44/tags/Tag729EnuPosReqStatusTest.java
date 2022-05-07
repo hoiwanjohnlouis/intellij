@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  729
+ *  PosReqStatus
+ *  Status of Request for Positions
+ *  Valid values:
+ *      0 - Completed
+ *      1 - Completed With Warnings
+ *      2 - Rejected
+ */
 class Tag729EnuPosReqStatusTest {
     @Test
     void FIX0729Test() {
@@ -30,19 +39,10 @@ class Tag729EnuPosReqStatusTest {
         assertEquals( "729", fixData.getID());
         assertEquals( "POS_REQ_STATUS", fixData.getName());
         assertEquals( "PosReqStatus", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  729
-     *  PosReqStatus
-     *  Status of Request for Positions
-     *  Valid values:
-     *      0 - Completed
-     *      1 - Completed With Warnings
-     *      2 - Rejected
-     */
     @Test
     void Tag0729Test() {
         Tag729EnuPosReqStatus tagData;
@@ -52,6 +52,6 @@ class Tag729EnuPosReqStatusTest {
         tagData = new Tag729EnuPosReqStatus(Enum729PosReqStatus.REJECTED);
 
         assertEquals( "0", tagData.getDataValue() );
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

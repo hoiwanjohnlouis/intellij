@@ -40,24 +40,24 @@ class Enum666ConfirmTransTypeTest {
         assertEquals("0", enumType.getID());
         assertEquals("NEW", enumType.getName());
         assertEquals("0 - New", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum666ConfirmTransType.REPLACE;
         assertEquals("1", enumType.getID());
         assertEquals("REPLACE", enumType.getName());
         assertEquals("1 - Replace", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum666ConfirmTransType.CANCEL;
         assertEquals("2", enumType.getID());
         assertEquals("CANCEL", enumType.getName());
         assertEquals("2 - Cancel", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

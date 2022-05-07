@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  839
+ *  PeggedPrice
+ *  Price
+ *  The price the order is currently pegged at
+ */
 public class Tag839PeggedPrice {
 }

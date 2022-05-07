@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  942
+ *  LegStrikeCurrency
+ *  Currency
+ *  Currency in which the strike price of a instrument leg of a multileg instrument is denominated
+ */
 public class Tag942LegStrikeCurrency {
 }

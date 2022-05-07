@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum385MsgDirection;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag385EnuMsgDirectionTest {
         assertEquals( "385", fixData.getID());
         assertEquals( "MSG_DIRECTION", fixData.getName());
         assertEquals( "MsgDirection", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag385
@@ -52,10 +53,10 @@ class Tag385EnuMsgDirectionTest {
          */
         tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
         assertEquals( Enum385MsgDirection.RECEIVE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.SEND);
         assertEquals( Enum385MsgDirection.SEND.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

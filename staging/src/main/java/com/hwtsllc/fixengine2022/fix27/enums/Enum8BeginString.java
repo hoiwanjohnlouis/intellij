@@ -25,6 +25,7 @@ public enum Enum8BeginString implements EnumAccessors, LogStringVerbose {
     BEGIN_STRING_4_0( "FIX.4.0","BEGIN_STRING_4_0","Begin String 4.0"),
     BEGIN_STRING_4_1( "FIX.4.1","BEGIN_STRING_4_1","Begin String 4.1"),
     BEGIN_STRING_4_2( "FIX.4.2","BEGIN_STRING_4_2","Begin String 4.2"),
+
     BEGIN_STRING_4_3( "FIX.4.3","BEGIN_STRING_4_3","Begin String 4.3"),
     BEGIN_STRING_4_4( "FIX.4.4","BEGIN_STRING_4_4","Begin String 4.4"),
     BEGIN_STRING_5_0( "FIXT.1.1","BEGIN_STRING_5_0","Begin String 5.0"),

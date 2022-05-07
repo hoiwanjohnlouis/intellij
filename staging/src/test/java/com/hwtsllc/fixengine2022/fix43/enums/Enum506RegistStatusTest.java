@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,37 +37,37 @@ class Enum506RegistStatusTest {
         assertEquals("A", enumType.getID());
         assertEquals("ACCEPTED", enumType.getName());
         assertEquals("A - Accepted", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum506RegistStatus.REJECTED;
         assertEquals("R", enumType.getID());
         assertEquals("REJECTED", enumType.getName());
         assertEquals("R - Rejected", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum506RegistStatus.HELD;
         assertEquals("H", enumType.getID());
         assertEquals("HELD", enumType.getName());
         assertEquals("H - Held", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum506RegistStatus.REMINDER;
         assertEquals("N", enumType.getID());
         assertEquals("REMINDER", enumType.getName());
         assertEquals("N - Reminder - i.e. Registration Instructions are still outstanding",
                 enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

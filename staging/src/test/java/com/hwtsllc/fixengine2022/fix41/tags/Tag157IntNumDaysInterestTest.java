@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag157IntNumDaysInterestTest {
         assertEquals( "157", fixData.getID());
         assertEquals( "NUM_DAYS_INTEREST", fixData.getName());
         assertEquals( "Num_DaysInterest", fixData.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0157Test() {
@@ -40,10 +41,10 @@ class Tag157IntNumDaysInterestTest {
 
         tagData = new Tag157IntNumDaysInterest(new MyIntType(Tag157IntNumDaysInterest.TESTA_INT_NUM_DAYS_INTEREST));
         assertEquals( Tag157IntNumDaysInterest.TESTA_INT_NUM_DAYS_INTEREST, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag157IntNumDaysInterest(new MyIntType(Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST));
         assertEquals( Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

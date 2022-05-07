@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum418BidTradeType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag418EnuBidTradeTypeTest {
         assertEquals( "418", fixData.getID());
         assertEquals( "BID_TRADE_TYPE", fixData.getName());
         assertEquals( "BidTradeType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag418
@@ -54,18 +55,18 @@ class Tag418EnuBidTradeTypeTest {
          */
         tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.AGENCY);
         assertEquals( Enum418BidTradeType.AGENCY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
         assertEquals( Enum418BidTradeType.VWAP_GUARANTEE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
         assertEquals( Enum418BidTradeType.GUARANTEED_CLOSE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
         assertEquals( Enum418BidTradeType.RISK_TRADE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  732
+ *  UnderlyingSettlPrice
+ *  Price
+ *  Underlying security’s SettlPrice.
+ *          See SettlPrice (730) field for description
+ */
 public class Tag732UnderlyingSettlPrice {
 }

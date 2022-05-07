@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,10 +32,9 @@ class Tag124NumNoExecsTest {
         assertEquals( "NO_EXECS", fixData.getName());
         assertEquals( "124", fixData.getID());
         assertEquals( "NoExecs", fixData.getDescription());
-        assertNotEquals( FIX40.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX40.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX40.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX40.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0124Test() {
@@ -42,6 +42,6 @@ class Tag124NumNoExecsTest {
 
         tagData = new Tag124NumNoExecs(new MyNumInGroupType(100) );
         assertEquals( 100, tagData.getDataValue());
-        assertNotEquals( FIX40.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

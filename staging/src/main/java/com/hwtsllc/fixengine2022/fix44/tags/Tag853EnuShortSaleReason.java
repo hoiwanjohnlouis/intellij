@@ -16,9 +16,84 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum853ShortSaleReason;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  853
+ *  ShortSaleReason
+ *  int
+ *  Reason for short sale.
+ *  Valid values:
+ *      0 - Dealer Sold Short
+ *      1 - Dealer Sold Short Exempt
+ *      2 - Selling Customer Sold Short
+ *      3 - Selling Customer Sold Short Exempt
+ *      4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short
+ *
+ *      5 - QSR or AGU Contra Side Sold Short Exempt
+ */
 public class Tag853EnuShortSaleReason extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum853ShortSaleReason dataValue;
+
+    public final static Enum853ShortSaleReason TESTA_ENU_SHORT_SALE_REASON
+            = Enum853ShortSaleReason.CONTRA_SOLD_SHORT;
+    public final static Enum853ShortSaleReason TESTB_ENU_SHORT_SALE_REASON
+            = Enum853ShortSaleReason.CUSTOMER_SOLD_SHORT_EXEMPT;
+
+    public Tag853EnuShortSaleReason(Enum853ShortSaleReason dataValue) {
+        setFixType(FIX44.FIX853_ENU_SHORT_SALE_REASON);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag853EnuShortSaleReason tagData;
+
+        tagData = new Tag853EnuShortSaleReason(TESTA_ENU_SHORT_SALE_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag853EnuShortSaleReason(TESTB_ENU_SHORT_SALE_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

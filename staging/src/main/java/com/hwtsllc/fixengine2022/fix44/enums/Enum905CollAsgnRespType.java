@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  905
+ *  CollAsgnRespType
+ *  int
+ *  Collateral Assignment Response Type
+ *  Valid values:
+ *      0 - Received
+ *      1 - Accepted
+ *      2 - Declined
+ *      3 - Rejected
+ */
 public enum Enum905CollAsgnRespType implements EnumAccessors, LogStringVerbose {
+    RECEIVED( "0", "RECEIVED", "0 - Received" ),
+    ACCEPTED( "1", "ACCEPTED", "1 - Accepted" ),
+    DECLINED( "2", "DECLINED", "2 - Declined" ),
+    REJECTED( "3", "REJECTED", "3 - Rejected" ),
     ;
 
     private final String id;

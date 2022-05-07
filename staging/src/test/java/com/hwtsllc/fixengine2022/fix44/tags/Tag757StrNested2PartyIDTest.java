@@ -18,11 +18,19 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  757
+ *  Nested2PartyID
+ *  String
+ *  PartyID value within a "second instance" Nested repeating group.
+ *          Same values as  PartyID (448)
+ */
 class Tag757StrNested2PartyIDTest {
     @Test
     void FIX0757Test() {
@@ -30,9 +38,9 @@ class Tag757StrNested2PartyIDTest {
         assertEquals( "757", fixData.getID());
         assertEquals( "NESTED_2_PARTY_ID", fixData.getName());
         assertEquals( "Nested 2 Party Id", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0757Test() {
@@ -40,10 +48,10 @@ class Tag757StrNested2PartyIDTest {
 
         tagData = new Tag757StrNested2PartyID(new MyStringType(Tag757StrNested2PartyID.TESTA_STR_NESTED_2_PARTY_ID));
         assertEquals( Tag757StrNested2PartyID.TESTA_STR_NESTED_2_PARTY_ID, tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag757StrNested2PartyID(new MyStringType(Tag757StrNested2PartyID.TESTB_STR_NESTED_2_PARTY_ID));
         assertEquals( Tag757StrNested2PartyID.TESTB_STR_NESTED_2_PARTY_ID, tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  753
+ *  NoPosAmt
+ *  NumInGroup
+ *  Number of position amount entries.
+ */
 public class Tag753NoPosAmt {
 }

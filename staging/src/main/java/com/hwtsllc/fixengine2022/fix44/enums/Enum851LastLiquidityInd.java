@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  851
+ *  LastLiquidityInd
+ *  int
+ *  Indicator to identify whether this fill was a result of a liquidity provider providing
+ *  or liquidity taker taking the liquidity.
+ *  Applicable only for OrdStatus of Partial or Filled.
+ *  Valid values:
+ *      1 - Added Liquidity
+ *      2 - Removed Liquidity
+ *      3 - Liquidity Routed Out
+ */
 public enum Enum851LastLiquidityInd implements EnumAccessors, LogStringVerbose {
+    ADDED( "1", "ADDED", "1 - Added Liquidity" ),
+    REMOVED( "2", "REMOVED", "2 - Removed Liquidity" ),
+    ROUTED_OUT( "3", "ROUTED_OUT", "3 - Liquidity Routed Out" ),
     ;
 
     private final String id;

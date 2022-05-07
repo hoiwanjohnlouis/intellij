@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,47 +28,47 @@ class Enum169StandInstDbTypeTest {
     void Enum0169Test() {
         Enum169StandInstDbType enumType;
 
-        /*
+        /**
          * 0-4 msg types
          */
         enumType = Enum169StandInstDbType.OTHER;
         assertEquals("0", enumType.getID());
         assertEquals("OTHER", enumType.getName());
         assertEquals("0 - Other", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum169StandInstDbType.DTC_SID;
         assertEquals("1", enumType.getID());
         assertEquals("DTC_SID", enumType.getName());
         assertEquals("1 - DTC SID", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum169StandInstDbType.THOMPSON_ALERT;
         assertEquals("2", enumType.getID());
         assertEquals("THOMPSON_ALERT", enumType.getName());
         assertEquals("2 - Thomson ALERT", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum169StandInstDbType.GLOBAL_CUSTODIAN;
         assertEquals("3", enumType.getID());
         assertEquals("GLOBAL_CUSTODIAN", enumType.getName());
         assertEquals("3 - A Global Custodian (StandInstDBName (70) must be provided)", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum169StandInstDbType.ACCOUNT_NET;
         assertEquals("4", enumType.getID());
         assertEquals("ACCOUNT_NET", enumType.getName());
         assertEquals("4 - AccountNet", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  760
+ *  Nested2PartySubID
+ *  String
+ *  PartySubID value within a "second instance" Nested repeating group.
+ *          Same values as  PartySubID (523)
+ */
 public class Tag760StrNested2PartySubID extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  743
+ *  DeliveryDate
+ *  LocalMktDate
+ *  Date of delivery.
+ */
 public class Tag743DeliveryDate {
 }

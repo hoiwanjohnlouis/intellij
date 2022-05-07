@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag228FloFactorTest {
         assertEquals( "228", fixData.getID());
         assertEquals( "FACTOR", fixData.getName());
         assertEquals( "Factor", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0228Test() {
@@ -42,12 +43,12 @@ class Tag228FloFactorTest {
                 Tag228FloFactor.TESTA_FLO_FACTOR));
         assertEquals( Tag228FloFactor.TESTA_FLO_FACTOR,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag228FloFactor(new MyFloatType(
                 Tag228FloFactor.TESTB_FLO_FACTOR));
         assertEquals( Tag228FloFactor.TESTB_FLO_FACTOR,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
 }

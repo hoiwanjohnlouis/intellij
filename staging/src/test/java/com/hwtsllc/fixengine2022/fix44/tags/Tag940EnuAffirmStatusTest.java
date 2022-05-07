@@ -17,25 +17,48 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum940AffirmStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  940
+ *  AffirmStatus
+ *  int
+ *  Identifies the status of the ConfirmationAck.
+ *  Valid values:
+ *      1 - Received
+ *      2 - Confirm rejected, i.e. not affirmed
+ *      3 - Affirmed
+ */
 class Tag940EnuAffirmStatusTest {
     @Test
     void FIX0940Test() {
-        FIX44 fixData = FIX44.FIX940_AFFIRM_STATUS;
+        FIX44 fixData = FIX44.FIX940_ENU_AFFIRM_STATUS;
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0940Test() {
         Tag940EnuAffirmStatus tagData;
 
+        tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.RECEIVED );
+        assertEquals( Enum940AffirmStatus.RECEIVED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.REJECTED );
+        assertEquals( Enum940AffirmStatus.REJECTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.AFFIRMED );
+        assertEquals( Enum940AffirmStatus.AFFIRMED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

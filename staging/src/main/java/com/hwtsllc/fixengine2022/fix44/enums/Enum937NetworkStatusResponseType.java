@@ -19,7 +19,18 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  937
+ *  NetworkStatusResponseType
+ *  int
+ *  Indicates the type of Network Response Message.
+ *  Valid values:
+ *      1 - Full
+ *      2 - Incremental Update
+ */
 public enum Enum937NetworkStatusResponseType implements EnumAccessors, LogStringVerbose {
+    FULL( "1", "FULL", "1 - Full" ),
+    INCREMENTAL( "2", "INCREMENTAL", "2 - Incremental Update" ),
     ;
 
     private final String id;

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  889
+ *  UnderlyingStipValue
+ *  String
+ *  Value of stipulation.
+ *          Same values as StipulationValue (234)
+ */
 public class Tag889UnderlyingStipValue {
 }

@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,9 +32,9 @@ class Tag319QtyRatioQtyTest {
         assertEquals( "319", fixData.getID());
         assertEquals( "RATIO_QTY", fixData.getName());
         assertEquals( "RatioQty", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0319Test() {
@@ -43,12 +44,12 @@ class Tag319QtyRatioQtyTest {
                 Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY));
         assertEquals( Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag319QtyRatioQty(new MyQtyType(
                 Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY));
         assertEquals( Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

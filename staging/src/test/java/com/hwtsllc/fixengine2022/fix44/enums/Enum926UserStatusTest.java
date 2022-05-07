@@ -16,12 +16,77 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  926
+ *  UserStatus
+ *  int
+ *  Indicates the status of a user
+ *  Valid values:
+ *      1 - Logged In
+ *      2 - Not Logged In
+ *      3 - User Not Recognised
+ *      4 - Password Incorrect
+ *      5 - Password Changed
+ *      6 - Other
+ */
 class Enum926UserStatusTest {
     @Test
     void EnumTest() {
         Enum926UserStatus enumType;
 
+        enumType = Enum926UserStatus.LOGGED_IN;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "LOGGED_IN", enumType.getName() );
+        assertEquals( "1 - Logged In", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum926UserStatus.NOT_LOGGED_IN;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "NOT_LOGGED_IN", enumType.getName() );
+        assertEquals( "2 - Not Logged In", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum926UserStatus.USER_NOT_RECOGNISED;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "USER_NOT_RECOGNISED", enumType.getName() );
+        assertEquals( "3 - User Not Recognised", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum926UserStatus.PASSWORD_INCORRECT;
+        assertEquals( "4", enumType.getID() );
+        assertEquals( "PASSWORD_INCORRECT", enumType.getName() );
+        assertEquals( "4 - Password Incorrect", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum926UserStatus.PASSWORD_CHANGED;
+        assertEquals( "5", enumType.getID() );
+        assertEquals( "PASSWORD_CHANGED", enumType.getName() );
+        assertEquals( "5 - Password Changed", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+
+        enumType = Enum926UserStatus.OTHER;
+        assertEquals( "6", enumType.getID() );
+        assertEquals( "OTHER", enumType.getName() );
+        assertEquals( "6 - Other", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  944
+ *  CollAction
+ *  int
+ *  Action proposed for an Underlying Instrument instance.
+ *  Valid values:
+ *      0 - Retain
+ *      1 - Add
+ *      2 - Remove
+ */
 public enum Enum944CollAction implements EnumAccessors, LogStringVerbose {
+    RETAIN( "0", "RETAIN", "0 - Retain" ),
+    ADD( "1", "ADD", "1 - Add" ),
+    REMOVE( "2", "REMOVE", "2 - Remove" ),
     ;
 
     private final String id;

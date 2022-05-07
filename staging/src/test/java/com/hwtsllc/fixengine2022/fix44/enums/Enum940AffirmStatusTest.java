@@ -16,12 +16,49 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  940
+ *  AffirmStatus
+ *  int
+ *  Identifies the status of the ConfirmationAck.
+ *  Valid values:
+ *      1 - Received
+ *      2 - Confirm rejected, i.e. not affirmed
+ *      3 - Affirmed
+ */
 class Enum940AffirmStatusTest {
     @Test
     void EnumTest() {
         Enum940AffirmStatus enumType;
 
+        enumType = Enum940AffirmStatus.RECEIVED;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "RECEIVED", enumType.getName() );
+        assertEquals( "1 - Received", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum940AffirmStatus.REJECTED;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "REJECTED", enumType.getName() );
+        assertEquals( "2 - Confirm rejected, i.e. not affirmed", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum940AffirmStatus.AFFIRMED;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "AFFIRMED", enumType.getName() );
+        assertEquals( "3 - Affirmed", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

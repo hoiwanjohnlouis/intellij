@@ -16,25 +16,34 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag258BoolTradedFlatSwitch;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  893
+ *  LastFragment
+ *  Boolean
+ *  Indicates whether this message is the last in a sequence of messages for those messages that support
+ *  fragmentation, such as Allocation Instruction, Mass Quote, Security List, Derivative Security List
+ *  Valid values:
+ *      N - Not Last Message
+ *      Y - Last Message
+ */
 class Tag893BoolLastFragmentTest {
     @Test
     void FIX0893Test() {
         FIX44 fixData = FIX44.FIX893_BOOL_LAST_FRAGMENT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "893", fixData.getID());
+        assertEquals( "LAST_FRAGMENT", fixData.getName());
+        assertEquals( "LastFragment", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0893Test() {
@@ -42,10 +51,10 @@ class Tag893BoolLastFragmentTest {
 
         tagData = new Tag893BoolLastFragment(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag893BoolLastFragment(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  902
+ *  CollAsgnID
+ *  String
+ *  Collateral Assignment Identifier
+ */
 public class Tag902CollAsgnID {
 }

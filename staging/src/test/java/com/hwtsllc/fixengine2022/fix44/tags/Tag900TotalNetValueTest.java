@@ -17,11 +17,24 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  900
+ *  TotalNetValue
+ *  Amt
+ *  TotalNetValue is determined as follows:
+ *      At the initial collateral assignment TotalNetValue is the sum of
+ *      (UnderlyingStartValue * (1-haircut)).
+ *      In a collateral substitution TotalNetValue is the sum of
+ *      (UnderlyingCurrentValue * (1-haircut)).
+ *      For listed derivatives clearing margin management,
+ *      this is the collateral value which equals (Market value * haircut)
+ */
 class Tag900TotalNetValueTest {
     @Test
     void FIX0900Test() {
@@ -29,9 +42,9 @@ class Tag900TotalNetValueTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0900Test() {

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum22SecurityIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -54,12 +54,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      L - Letter of Credit
  */
 public class Tag22EnuSecurityIDSource extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum22SecurityIDSource dataValue;
+    private final MyEnumSecurityIDSource dataValue;
 
-    public final static Enum22SecurityIDSource TESTA_ENU_SECURITY_ID_SOURCE = Enum22SecurityIDSource.CUSIP; // fake data
-    public final static Enum22SecurityIDSource TESTB_ENU_SECURITY_ID_SOURCE = Enum22SecurityIDSource.RIC;
+    public final static MyEnumSecurityIDSource TESTA_ENU_SECURITY_ID_SOURCE = MyEnumSecurityIDSource.CUSIP; // fake data
+    public final static MyEnumSecurityIDSource TESTB_ENU_SECURITY_ID_SOURCE = MyEnumSecurityIDSource.RIC;
 
-    public Tag22EnuSecurityIDSource(Enum22SecurityIDSource dataValue) {
+    public Tag22EnuSecurityIDSource(MyEnumSecurityIDSource dataValue) {
         setFixType(FIX27.FIX22_ENU_SECURITY_ID_SOURCE);
         this.dataValue = dataValue;
     }

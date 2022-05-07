@@ -40,24 +40,24 @@ class Enum706PosQtyStatusTest {
         assertEquals( "0", enumType.getID());
         assertEquals( "SUBMITTED", enumType.getName());
         assertEquals( "0 - Submitted", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum706PosQtyStatus.ACCEPTED;
         assertEquals( "1", enumType.getID());
         assertEquals( "ACCEPTED", enumType.getName());
         assertEquals( "1 - Accepted", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum706PosQtyStatus.REJECTED;
         assertEquals( "2", enumType.getID());
         assertEquals( "REJECTED", enumType.getName());
         assertEquals( "2 - Rejected", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

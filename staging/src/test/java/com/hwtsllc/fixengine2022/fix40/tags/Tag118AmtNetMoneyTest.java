@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,10 +32,9 @@ class Tag118AmtNetMoneyTest {
         assertEquals( "NET_MONEY", fixData.getName());
         assertEquals( "118", fixData.getID());
         assertEquals( "NetMoney", fixData.getDescription());
-        assertNotEquals( FIX40.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX40.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX40.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX40.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0118Test() {
@@ -42,6 +42,6 @@ class Tag118AmtNetMoneyTest {
 
         tagData = new Tag118AmtNetMoney(new MyAmtType(118D) );
         assertEquals( 118D, tagData.getDataValue());
-        assertNotEquals( FIX40.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

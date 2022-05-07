@@ -25,6 +25,7 @@ public enum Enum98EncryptMethod implements EnumAccessors, LogStringVerbose {
     DES_ECB("2", "DES_ECB", "2 - DES (ECB Mode)"),
     PKCS_DES("3", "PKCS_DES", "3 - PKCS / DES (Proprietary)"),
     PGP_DES("4", "PGP_DES", "4 - PGP / DES (Defunct)"),
+
     PGP_DES_MD5("5", "PGP_DES_MD5", "5 - PGP / DES-MD5 (See app note on FIX web site)"),
     PEM_DES_MD5("6", "PEM_DES_MD5", "6 - PEM / DES-MD5 (see app note on FIX web site)"),
     ;

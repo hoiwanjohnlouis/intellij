@@ -16,31 +16,31 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  321
+ *  Enu
+ *  SecurityRequestType
+ *
+ *      0-3 msg types
+ *      REQUEST_SECURITY_IDENTITY( "0", "REQUEST_SECURITY_IDENTITY",
+ *                          "0 - Request Security identity and specifications" ),
+ *      REQUEST_SPECIFIED_SECURITY( "1", "REQUEST_SPECIFIED_SECURITY",
+ *                          "1 - Request Security identity for the specifications provided " +
+ *                          "(name of the security is not supplied)" ),
+ *      REQUEST_LIST_SECURITY_TYPES( "2", "REQUEST_LIST_SECURITY_TYPES",
+ *                          "2 - Request List Security Types" ),
+ *      REQUEST_LIST_SECURITIES( "3", "REQUEST_LIST_SECURITIES",
+ *                          "3 - Request List Securities (can be qualified with Symbol, SecurityType, " +
+ *                          "TradingSessionID, SecurityExchange. " +
+ *                          "If provided, then only list Securities for the specific type.)" ),
+ */
 class Enum321SecurityRequestTypeTest {
-    /**
-     *  321
-     *  Enu
-     *  SecurityRequestType
-     *
-     *      0-3 msg types
-     *      REQUEST_SECURITY_IDENTITY( "0", "REQUEST_SECURITY_IDENTITY",
-     *                          "0 - Request Security identity and specifications" ),
-     *      REQUEST_SPECIFIED_SECURITY( "1", "REQUEST_SPECIFIED_SECURITY",
-     *                          "1 - Request Security identity for the specifications provided " +
-     *                          "(name of the security is not supplied)" ),
-     *      REQUEST_LIST_SECURITY_TYPES( "2", "REQUEST_LIST_SECURITY_TYPES",
-     *                          "2 - Request List Security Types" ),
-     *      REQUEST_LIST_SECURITIES( "3", "REQUEST_LIST_SECURITIES",
-     *                          "3 - Request List Securities (can be qualified with Symbol, SecurityType, " +
-     *                          "TradingSessionID, SecurityExchange. " +
-     *                          "If provided, then only list Securities for the specific type.)" ),
-     */
     @Test
     void Enum0321Test() {
         Enum321SecurityRequestType enumType;
@@ -52,10 +52,10 @@ class Enum321SecurityRequestTypeTest {
         assertEquals( "0", enumType.getID());
         assertEquals( "REQUEST_SECURITY_IDENTITY", enumType.getName());
         assertEquals( "0 - Request Security identity and specifications", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY;
         assertEquals( "1", enumType.getID());
@@ -63,19 +63,19 @@ class Enum321SecurityRequestTypeTest {
         assertEquals( "1 - Request Security identity for the specifications provided " +
                         "(name of the security is not supplied)",
                 enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES;
         assertEquals( "2", enumType.getID());
         assertEquals( "REQUEST_LIST_SECURITY_TYPES", enumType.getName());
         assertEquals( "2 - Request List Security Types", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITIES;
         assertEquals( "3", enumType.getID());
@@ -84,10 +84,10 @@ class Enum321SecurityRequestTypeTest {
                         "(can be qualified with Symbol, SecurityType, TradingSessionID, SecurityExchange. " +
                         "If provided, then only list Securities for the specific type.)",
                 enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,10 +32,9 @@ class Tag112TestReqIDStTest {
         assertEquals( "TEST_REQ_ID", fixData.getName());
         assertEquals( "112", fixData.getID());
         assertEquals( "TestReqID", fixData.getDescription());
-        assertNotEquals( FIX30.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX30.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX30.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX30.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0112Test() {
@@ -42,6 +42,6 @@ class Tag112TestReqIDStTest {
 
         tagData = new Tag112StrTestReqID(new MyStringType("30"));
         assertEquals( "30", tagData.getDataValue());
-        assertNotEquals( FIX30.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

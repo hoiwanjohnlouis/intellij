@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,24 +34,24 @@ class Enum21HandlInstTest {
         assertEquals("1", enumType.getID());
         assertEquals("AUTOMATIC_EXECUTION_NO_BROKER", enumType.getName());
         assertEquals("1 - Automated execution order, private, no Broker intervention", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY;
         assertEquals("2", enumType.getID());
         assertEquals("AUTOMATIC_EXECUTION_BROKER_OKAY", enumType.getName());
         assertEquals("2 - Automated execution order, public, Broker intervention OK", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum21HandlInst.MANUAL_ORDER_BEST_EXECUTION;
         assertEquals("3", enumType.getID());
         assertEquals("MANUAL_ORDER_BEST_EXECUTION", enumType.getName());
         assertEquals("3 - Manual order, best execution", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

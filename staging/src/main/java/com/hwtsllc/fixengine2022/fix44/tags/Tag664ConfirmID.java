@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  664
+ *  ConfirmID
+ *  String
+ *  Message reference for Confirmation
+ */
 public class Tag664ConfirmID {
 }

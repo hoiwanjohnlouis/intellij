@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum312UnderlyingSymbolSfx;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag312EnuUnderlyingSymbolSfxTest {
         assertEquals( "312", fixData.getID());
         assertEquals( "UNDERLYING_SYMBOL_SFX", fixData.getName());
         assertEquals( "UnderlyingSymbolSfx", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  312
@@ -53,10 +54,10 @@ class Tag312EnuUnderlyingSymbolSfxTest {
          */
         tagData = new Tag312EnuUnderlyingSymbolSfx(Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST);
         assertEquals( Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag312EnuUnderlyingSymbolSfx(Enum312UnderlyingSymbolSfx.WHEN_ISSUED);
         assertEquals( Enum312UnderlyingSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

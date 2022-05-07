@@ -16,12 +16,40 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  937
+ *  NetworkStatusResponseType
+ *  int
+ *  Indicates the type of Network Response Message.
+ *  Valid values:
+ *      1 - Full
+ *      2 - Incremental Update
+ */
 class Enum937NetworkStatusResponseTypeTest {
     @Test
     void EnumTest() {
         Enum937NetworkStatusResponseType enumType;
 
+        enumType = Enum937NetworkStatusResponseType.FULL;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "FULL", enumType.getName() );
+        assertEquals( "1 - Full", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum937NetworkStatusResponseType.INCREMENTAL;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "INCREMENTAL", enumType.getName() );
+        assertEquals( "2 - Incremental Update", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

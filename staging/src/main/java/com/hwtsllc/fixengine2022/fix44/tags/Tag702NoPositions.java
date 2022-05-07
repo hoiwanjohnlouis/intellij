@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  702
+ *  NoPositions
+ *  NumInGroup
+ *  Number of position entries.
+ */
 public class Tag702NoPositions {
 }

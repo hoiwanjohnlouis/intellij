@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  862
+ *  NoCapacities
+ *  NumInGroup
+ *  Number of  repeating OrderCapacity entries.
+ */
 public class Tag862NoCapacities {
 }

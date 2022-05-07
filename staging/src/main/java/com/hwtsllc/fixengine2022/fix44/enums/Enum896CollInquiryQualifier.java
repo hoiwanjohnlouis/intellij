@@ -19,7 +19,31 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  896
+ *  CollInquiryQualifier
+ *  int
+ *  Collateral inquiry qualifiers:
+ *  Valid values:
+ *      0 - Trade Date
+ *      1 - GC Instrument
+ *      2 - Collateral Instrument
+ *      3 - Substitution Eligible
+ *      4 - Not Assigned
+ *      5 - Partially Assigned
+ *      6 - Fully Assigned
+ *      7 - Outstanding Trades (Today < end date)
+ */
 public enum Enum896CollInquiryQualifier implements EnumAccessors, LogStringVerbose {
+    TRADE_DATE( "0", "TRADE_DATE", "0 - Trade Date" ),
+    GC_INSTRUMENT( "1", "GC_INSTRUMENT", "1 - GC Instrument" ),
+    COLLATERAL_INSTRUMENT( "2", "COLLATERAL_INSTRUMENT", "2 - Collateral Instrument" ),
+    SUBSTITUTION_ELIGIBLE( "3", "SUBSTITUTION_ELIGIBLE", "3 - Substitution Eligible" ),
+    NOT_ASSIGNED( "4", "NOT_ASSIGNED", "4 - Not Assigned" ),
+
+    PARTIALLY_ASSIGNED( "5", "PARTIALLY_ASSIGNED", "5 - Partially Assigned" ),
+    FULLY_ASSIGNED( "6", "FULLY_ASSIGNED", "6 - Fully Assigned" ),
+    OUTSTANDING_TRADES( "7", "OUTSTANDING_TRADES", "7 - Outstanding Trades (Today < end date)" ),
     ;
 
     private final String id;

@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  735
+ *  NoQuoteQualifiers
+ *  NumInGroup
+ *  Number of repeating groups of QuoteQualifiers (695).
+ */
 public class Tag735NoQuoteQualifiers {
 }

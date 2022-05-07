@@ -16,12 +16,46 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+/**
+ *  891
+ *  MiscFeeBasis
+ *  int
+ *  Defines the unit for a miscellaneous fee.
+ *  Valid values:
+ *      0 - Absolute
+ *      1 - Per Unit
+ *      2 - Percentage
+ */
 class Enum891MiscFeeBasisTest {
     @Test
     void EnumTest() {
         Enum891MiscFeeBasis enumType;
 
+        enumType = Enum891MiscFeeBasis.ABSOLUTE;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "ABSOLUTE", enumType.getName() );
+        assertEquals( "0 - Absolute", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum891MiscFeeBasis.PER_UNIT;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "PER_UNIT", enumType.getName() );
+        assertEquals( "1 - Per Unit", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum891MiscFeeBasis.PERCENTAGE;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "PERCENTAGE", enumType.getName() );
+        assertEquals( "2 - Percentage", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum372RefMsgType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumMsgType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -166,12 +166,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                          "BP - Security Definition Update Report" ),
  */
 public class Tag372EnuRefMsgType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum372RefMsgType dataValue;
+    private final MyEnumMsgType dataValue;
 
-    public final static Enum372RefMsgType TESTA_ENU_REF_MSG_TYPE = Enum372RefMsgType.ADJUSTED_POSITION_REPORT;
-    public final static Enum372RefMsgType TESTB_ENU_REF_MSG_TYPE = Enum372RefMsgType.CROSS_ORDER_MODIFICATION_REQUEST;
+    public final static MyEnumMsgType TESTA_ENU_REF_MSG_TYPE
+            = MyEnumMsgType.ADJUSTED_POSITION_REPORT;
+    public final static MyEnumMsgType TESTB_ENU_REF_MSG_TYPE
+            = MyEnumMsgType.CROSS_ORDER_MODIFICATION_REQUEST;
 
-    public Tag372EnuRefMsgType(Enum372RefMsgType dataValue) {
+    public Tag372EnuRefMsgType(MyEnumMsgType dataValue) {
         setFixType(FIX42.FIX372_ENU_REF_MSG_TYPE);
         this.dataValue = dataValue;
     }

@@ -19,7 +19,19 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  857
+ *  AllocNoOrdersType
+ *  int
+ *  Indicates how the orders being booked and allocated by an Allocation Instruction or Allocation
+ *  Report message are identified, i.e. by explicit definition in the NoOrders group or not.
+ *  Valid values:
+ *      0 - Not Specified
+ *      1 - Explicit List Provided
+ */
 public enum Enum857AllocNoOrdersType implements EnumAccessors, LogStringVerbose {
+    NOT_SPECIFIED( "0", "NOT_SPECIFIED", "0 - Not Specified" ),
+    LIST_PROVIDED( "1", "LIST_PROVIDED", "1 - Explicit List Provided" ),
     ;
 
     private final String id;

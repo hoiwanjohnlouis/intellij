@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,27 +37,27 @@ class Enum550CrossPrioritizationTest {
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("0,NONE,0 - None", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum550CrossPrioritization.BUY_PRIORITY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("1,BUY_PRIORITY,1 - Buy side is prioritized", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum550CrossPrioritization.SELL_PRIORITY;
         assertEquals("", enumType.getID());
         assertEquals("", enumType.getName());
         assertEquals("2,SELL_PRIORITY,2 - Sell side is prioritized", enumType.getDescription());
-        assertNotEquals( FIX43.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX43.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX43.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

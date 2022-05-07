@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  877
+ *  UnderlyingCPProgram
+ *  String
+ *  The program under which the underlying commercial paper is issued
+ */
 public class Tag877UnderlyingCPProgram {
 }

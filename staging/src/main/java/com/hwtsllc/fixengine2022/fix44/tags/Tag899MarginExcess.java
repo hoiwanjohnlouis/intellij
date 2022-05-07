@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  899
+ *  MarginExcess
+ *  Amt
+ *  Excess margin amount (deficit if value is negative)
+ */
 public class Tag899MarginExcess {
 }

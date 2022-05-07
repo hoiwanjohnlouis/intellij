@@ -17,12 +17,22 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum750TradeRequestStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  750
+ *  TradeRequestStatus
+ *  Status of Trade Request.
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Completed
+ *      2 - Rejected
+ */
 class Tag750EnuTradeRequestStatusTest {
     @Test
     void FIX0750Test() {
@@ -30,19 +40,10 @@ class Tag750EnuTradeRequestStatusTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  750
-     *  TradeRequestStatus
-     *  Status of Trade Request.
-     *  Valid values:
-     *      0 - Accepted
-     *      1 - Completed
-     *      2 - Rejected
-     */
     @Test
     void Tag0750Test() {
         Tag750EnuTradeRequestStatus tagData;

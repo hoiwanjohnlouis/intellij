@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  822
+ *  UnderlyingTradingSessionID
+ *  String
+ *  Trading Session in which the underlying instrument trades
+ */
 public class Tag822UnderlyingTradingSessionID {
 }

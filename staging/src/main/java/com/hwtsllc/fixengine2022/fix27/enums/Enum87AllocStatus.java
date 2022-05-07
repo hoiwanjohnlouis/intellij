@@ -25,6 +25,7 @@ public enum Enum87AllocStatus implements EnumAccessors, LogStringVerbose {
     ACCOUNT_LEVEL_REJECT("2", "ACCOUNT_LEVEL_REJECT", "2 - account level reject" ),
     RECEIVED_NOT_PROCESSED("3", "RECEIVED_NOT_PROCESSED", "3 - received (received, not yet processed)" ),
     INCOMPLETE("4", "INCOMPLETE", "4 - incomplete" ),
+
     REJECTED_BY_INTERMEDIARY("5", "REJECTED_BY_INTERMEDIARY", "5 - rejected by intermediary" ),
     ALLOCATION_PENDING("6", "ALLOCATION_PENDING", "6 - allocation pending" ),
     REVERSED("7", "REVERSED", "7 - reversed" ),

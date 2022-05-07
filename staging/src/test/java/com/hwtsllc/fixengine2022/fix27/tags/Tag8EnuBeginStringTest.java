@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum8BeginString;
 import org.junit.jupiter.api.Test;
 
@@ -31,45 +32,45 @@ class Tag8EnuBeginStringTest {
         assertEquals( "BEGIN_STRING", fixData.getName());
         assertEquals( "8", fixData.getID());
         assertEquals( "BeginString", fixData.getDescription());
-        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0008Test() {
         Tag8EnuBeginString tagData;
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_2_7);
-        assertEquals( "FIX.2.7", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( Enum8BeginString.BEGIN_STRING_2_7.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_3_0);
-        assertEquals( "FIX.3.0", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( Enum8BeginString.BEGIN_STRING_3_0.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_0);
-        assertEquals( "FIX.4.0", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( Enum8BeginString.BEGIN_STRING_4_0.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_1);
-        assertEquals( "FIX.4.1", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( Enum8BeginString.BEGIN_STRING_4_1.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_2);
-        assertEquals( "FIX.4.2", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( Enum8BeginString.BEGIN_STRING_4_2.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_3);
-        assertEquals( "FIX.4.3", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( Enum8BeginString.BEGIN_STRING_4_3.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_4);
-        assertEquals( "FIX.4.4", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( Enum8BeginString.BEGIN_STRING_4_4.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_5_0);
-        assertEquals( "FIXT.1.1", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( Enum8BeginString.BEGIN_STRING_5_0.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

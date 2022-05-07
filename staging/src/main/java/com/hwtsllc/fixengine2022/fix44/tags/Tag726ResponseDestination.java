@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  726
+ *  ResponseDestination
+ *  String
+ *  URI (Uniform Resource Identifier) for details) or other pre-arranged value.
+ *  Used in conjunction with ResponseTransportType (725) value of Out-of-Band
+ *  to identify the out-of-band destination.
+ *          See "Appendix 6-B FIX Fields Based Upon Other Standards"
+ */
 public class Tag726ResponseDestination {
 }

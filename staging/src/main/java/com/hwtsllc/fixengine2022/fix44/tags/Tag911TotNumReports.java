@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  911
+ *  TotNumReports
+ *  int
+ *  Total number or reports returned in response to a request
+ */
 public class Tag911TotNumReports {
 }

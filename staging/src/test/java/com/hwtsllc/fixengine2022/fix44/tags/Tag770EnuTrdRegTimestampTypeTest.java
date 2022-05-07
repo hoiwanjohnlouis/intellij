@@ -17,12 +17,29 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum770TrdRegTimestampType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  770
+ *  TrdRegTimestampType
+ *  Traded / Regulatory timestamp type.
+ *  Note of Applicability:
+ *      values are required in US futures markets by the CFTC to
+ *      support computerized trade reconstruction.
+ *      (see Volume : "Glossary" for value definitions)
+ *  Valid values:
+ *      1 - Execution Time
+ *      2 - Time In
+ *      3 - Time Out
+ *      4 - Broker Receipt
+ *      5 - Broker Execution
+ *      6 - Desk Receipt
+ */
 class Tag770EnuTrdRegTimestampTypeTest {
     @Test
     void FIX0770Test() {
@@ -30,26 +47,10 @@ class Tag770EnuTrdRegTimestampTypeTest {
         assertEquals( "770", fixData.getID());
         assertEquals( "TRD_REG_TIMESTAMP_TYPE", fixData.getName());
         assertEquals( "TrdRegTimestampType", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  770
-     *  TrdRegTimestampType
-     *  Traded / Regulatory timestamp type.
-     *  Note of Applicability:
-     *      values are required in US futures markets by the CFTC to
-     *      support computerized trade reconstruction.
-     *      (see Volume : "Glossary" for value definitions)
-     *  Valid values:
-     *      1 - Execution Time
-     *      2 - Time In
-     *      3 - Time Out
-     *      4 - Broker Receipt
-     *      5 - Broker Execution
-     *      6 - Desk Receipt
-     */
     @Test
     void Tag0770Test() {
         Tag770EnuTrdRegTimestampType tagData;

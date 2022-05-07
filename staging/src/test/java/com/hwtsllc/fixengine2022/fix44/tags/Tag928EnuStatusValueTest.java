@@ -17,25 +17,53 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum928StatusValue;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  928
+ *  StatusValue
+ *  int
+ *  Indicates the status of a network connection
+ *  Valid values:
+ *      1 - Connected
+ *      2 - Not Connected - down expected up
+ *      3 - Not Connected - down expected down
+ *      4 - In Process
+ */
 class Tag928EnuStatusValueTest {
     @Test
     void FIX0928Test() {
-        FIX44 fixData = FIX44.FIX928_STATUS_VALUE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX928_ENU_STATUS_VALUE;
+        assertEquals( "928", fixData.getID());
+        assertEquals( "STATUS_VALUE", fixData.getName());
+        assertEquals( "StatusValue", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0928Test() {
         Tag928EnuStatusValue tagData;
 
+        tagData = new Tag928EnuStatusValue( Enum928StatusValue.CONNECTED );
+        assertEquals( Enum928StatusValue.CONNECTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag928EnuStatusValue( Enum928StatusValue.DOWN_EXPECTED_UP );
+        assertEquals( Enum928StatusValue.DOWN_EXPECTED_UP.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag928EnuStatusValue( Enum928StatusValue.DOWN_EXPECTED_DOWN );
+        assertEquals( Enum928StatusValue.DOWN_EXPECTED_DOWN.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag928EnuStatusValue( Enum928StatusValue.IN_PROCESS );
+        assertEquals( Enum928StatusValue.IN_PROCESS.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

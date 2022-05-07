@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  720
+ *  PriorSpreadIndicator
+ *  Boolean
+ *  Indicates if requesting a rollover of prior day’s spread submissions.
+ */
 public class Tag720BoolPriorSpreadIndicator extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

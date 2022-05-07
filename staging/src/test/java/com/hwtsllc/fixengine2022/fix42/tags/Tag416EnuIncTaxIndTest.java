@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum416IncTaxInd;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag416EnuIncTaxIndTest {
         assertEquals( "416", fixData.getID());
         assertEquals( "INC_TAX_IND", fixData.getName());
         assertEquals( "IncTaxInd", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag416
@@ -52,10 +53,10 @@ class Tag416EnuIncTaxIndTest {
          */
         tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.NET);
         assertEquals( Enum416IncTaxInd.NET.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
         assertEquals( Enum416IncTaxInd.GROSS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

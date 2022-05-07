@@ -17,12 +17,22 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum744AssignmentMethod;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  744
+ *  AssignmentMethod
+ *  Method by which short positions are assigned to an exercise
+ *  notice during exercise and assignment processing
+ *  Valid values:
+ *      P - Pro-rata
+ *      R - Random
+ */
 class Tag744EnuAssignmentMethodTest {
     @Test
     void FIX0744Test() {
@@ -30,19 +40,10 @@ class Tag744EnuAssignmentMethodTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  744
-     *  AssignmentMethod
-     *  Method by which short positions are assigned to an exercise
-     *  notice during exercise and assignment processing
-     *  Valid values:
-     *      P - Pro-rata
-     *      R - Random
-     */
     @Test
     void Tag0744Test() {
         Tag744EnuAssignmentMethod tagData;

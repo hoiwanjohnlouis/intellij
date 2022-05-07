@@ -16,12 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPartySubIDType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  805 (same as 786, 803, 805, 807, 954, 1054, 1064, 1122)
+ *  954 (same as 786, 803, 805, 807, 954, 1054, 1064, 1122)
  *  NestedPartySubIDType
  *  Type of NestedPartySubID (545) value.
  *          Same values as  PartySubIDType (803)
@@ -62,4 +64,63 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  or any value conforming to the data type Reserved4000Plus
  */
 public class Tag954EnuNested3PartySubIDType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyEnumPartySubIDType dataValue;
+
+    public final static MyEnumPartySubIDType TESTA_ENU_NESTED_3_PARTY_SUB_ID_TYPE
+            = MyEnumPartySubIDType.CASH_ACCOUNT_NAME;
+    public final static MyEnumPartySubIDType TESTB_ENU_NESTED_3_PARTY_SUB_ID_TYPE
+            = MyEnumPartySubIDType.POSTAL_ADDRESS;
+
+    public Tag954EnuNested3PartySubIDType(MyEnumPartySubIDType dataValue) {
+        setFixType(FIX44.FIX954_ENU_NESTED_3_PARTY_SUB_ID_TYPE);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag954EnuNested3PartySubIDType tagData;
+
+        tagData = new Tag954EnuNested3PartySubIDType(TESTA_ENU_NESTED_3_PARTY_SUB_ID_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag954EnuNested3PartySubIDType(TESTB_ENU_NESTED_3_PARTY_SUB_ID_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

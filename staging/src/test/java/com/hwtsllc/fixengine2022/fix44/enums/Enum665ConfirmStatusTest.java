@@ -42,40 +42,40 @@ class Enum665ConfirmStatusTest {
         assertEquals("1", enumType.getID());
         assertEquals("RECEIVED", enumType.getName());
         assertEquals("1 - Received", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum665ConfirmStatus.MISMATCHED_ACCOUNT;
         assertEquals("2", enumType.getID());
         assertEquals("MISMATCHED_ACCOUNT", enumType.getName());
         assertEquals("2 - Mismatched Account", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum665ConfirmStatus.MISSING_INSTRUCTIONS;
         assertEquals("3", enumType.getID());
         assertEquals("MISSING_INSTRUCTIONS", enumType.getName());
         assertEquals("3 - Missing Settlement Instructions", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum665ConfirmStatus.CONFIRMED;
         assertEquals("4", enumType.getID());
         assertEquals("CONFIRMED", enumType.getName());
         assertEquals("4 - Confirmed", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum665ConfirmStatus.REJECTED;
         assertEquals("5", enumType.getID());
         assertEquals("REJECTED", enumType.getName());
         assertEquals("5 - Request Rejected", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

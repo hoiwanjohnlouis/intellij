@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  875
+ *  CPProgram
+ *  int
+ *  The program under which a commercial paper is issued
+ *  Valid values:
+ *      1 - 3(a)(3)
+ *      2 - 4(2)
+ *      99 - Other
+ *
+ *  or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum875CPProgram implements EnumAccessors, LogStringVerbose {
+    THREE( "1", "THREE", "1 - 3(a)(3)" ),
+    FOUR( "2", "FOUR", "2 - 4(2)" ),
+    OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
     private final String id;

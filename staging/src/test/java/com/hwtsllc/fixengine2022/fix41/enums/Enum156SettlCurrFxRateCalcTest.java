@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,23 +28,23 @@ class Enum156SettlCurrFxRateCalcTest {
     void Enum0156Test() {
         Enum156SettlCurrFxRateCalc enumType;
 
-        /*
+        /**
          * M,D msg types
          */
         enumType = Enum156SettlCurrFxRateCalc.MULTIPLY;
         assertEquals("M", enumType.getID());
         assertEquals("MULTIPLY", enumType.getName());
         assertEquals("M - Multiply", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum156SettlCurrFxRateCalc.DIVIDE;
         assertEquals("D", enumType.getID());
         assertEquals("DIVIDE", enumType.getName());
         assertEquals("D - Divide", enumType.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX41.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

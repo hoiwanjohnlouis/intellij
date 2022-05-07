@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum394BidType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag394EnuBidTypeTest {
         assertEquals( "394", fixData.getID());
         assertEquals( "BID_TYPE", fixData.getName());
         assertEquals( "BidType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag394
@@ -53,14 +54,14 @@ class Tag394EnuBidTypeTest {
          */
         tagData = new Tag394EnuBidType(Enum394BidType.NON_DISCLOSED);
         assertEquals( Enum394BidType.NON_DISCLOSED.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag394EnuBidType(Enum394BidType.DISCLOSED);
         assertEquals( Enum394BidType.DISCLOSED.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag394EnuBidType(Enum394BidType.NO_BIDDING);
         assertEquals( Enum394BidType.NO_BIDDING.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

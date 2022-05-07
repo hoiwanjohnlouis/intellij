@@ -19,7 +19,30 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  808
+ *  AllocIntermedReqType
+ *  int
+ *  Response to allocation to be communicated to a counterparty through an intermediary,
+ *  i.e. clearing house.
+ *  Used in conjunction with AllocType = Request to Intermediary
+ *  and AllocReportType = Request to Intermediary
+ *  Valid values:
+ *      1 - Pending Accept
+ *      2 - Pending Release
+ *      3 - Pending Reversal
+ *      4 - Accept
+ *      5 - Block Level Reject
+ *      6 - Account Level Reject
+ */
 public enum Enum808AllocIntermedReqType implements EnumAccessors, LogStringVerbose {
+    PENDING_ACCEPT( "1", "PENDING_ACCEPT", "1 - Pending Accept" ),
+    PENDING_RELEASE( "2", "PENDING_RELEASE", "2 - Pending Release" ),
+    PENDING_REVERSAL( "3", "PENDING_REVERSAL", "3 - Pending Reversal" ),
+    ACCEPT( "4", "ACCEPT", "4 - Accept" ),
+    BLOCK_LEVEL_REJECT( "5", "BLOCK_LEVEL_REJECT", "5 - Block Level Reject" ),
+
+    ACCOUNT_LEVEL_REJECT( "6", "ACCOUNT_LEVEL_REJECT", "6 - Account Level Reject" ),
     ;
 
     private final String id;

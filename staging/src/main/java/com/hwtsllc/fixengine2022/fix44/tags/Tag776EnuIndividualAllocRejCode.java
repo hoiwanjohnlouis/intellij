@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum776IndividualAllocRejCode;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAllocRejCode;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -44,14 +44,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      13 - Warehouse request rejected
  */
 public class Tag776EnuIndividualAllocRejCode extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum776IndividualAllocRejCode dataValue;
+    private final MyEnumAllocRejCode dataValue;
 
-    public final static Enum776IndividualAllocRejCode TESTA_ENU_INDIVIDUAL_ALLOC_REJ_CODE
-            = Enum776IndividualAllocRejCode.CALCULATION_DIFFERENCE;
-    public final static Enum776IndividualAllocRejCode TESTB_ENU_INDIVIDUAL_ALLOC_REJ_CODE
-            = Enum776IndividualAllocRejCode.MISMATCHED_DATA;
+    public final static MyEnumAllocRejCode TESTA_ENU_INDIVIDUAL_ALLOC_REJ_CODE
+            = MyEnumAllocRejCode.CALCULATION_DIFFERENCE;
+    public final static MyEnumAllocRejCode TESTB_ENU_INDIVIDUAL_ALLOC_REJ_CODE
+            = MyEnumAllocRejCode.MISMATCHED_DATA;
 
-    public Tag776EnuIndividualAllocRejCode(Enum776IndividualAllocRejCode dataValue) {
+    public Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode dataValue) {
         setFixType(FIX44.FIX776_ENU_INDIVIDUAL_ALLOC_REJ_CODE);
         this.dataValue = dataValue;
     }

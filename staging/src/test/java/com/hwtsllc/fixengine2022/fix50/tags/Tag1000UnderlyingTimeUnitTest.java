@@ -29,10 +29,10 @@ class Tag1000UnderlyingTimeUnitTest {
         assertEquals( "UNDERLYING_TIME_UNIT", fixData.getName());
         assertEquals( "1000", fixData.getID());
         assertEquals( "UnderlyingTimeUnit", fixData.getDescription());
-        assertNotEquals( FIX50.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX50.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX50.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX50.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag1000Test() {

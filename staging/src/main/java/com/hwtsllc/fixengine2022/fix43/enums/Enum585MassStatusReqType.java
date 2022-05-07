@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 585
+ */
 public enum Enum585MassStatusReqType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 585
-     */
-
     /*
      *  1-8 types
      */
@@ -32,6 +31,7 @@ public enum Enum585MassStatusReqType implements EnumAccessors, LogStringVerbose 
     STATUS_ORDERS_FOR_PRODUCT( "3", "STATUS_ORDERS_FOR_PRODUCT", "3 - Status for orders for a Product" ),
     STATUS_ORDERS_FOR_CFICODE( "4", "STATUS_ORDERS_FOR_CFICODE", "4 - Status for orders for a CFICode" ),
     STATUS_ORDERS_FOR_SECURITYTYPE( "5", "STATUS_ORDERS_FOR_SECURITYTYPE", "5 - Status for orders for a SecurityType" ),
+
     STATUS_ORDERS_FOR_SESSION( "6", "STATUS_ORDERS_FOR_SESSION", "6 - Status for orders for a trading session" ),
     STATUS_ALL_ORDERS( "7", "STATUS_ALL_ORDERS", "7 - Status for all orders" ),
     STATUS_ORDERS_FOR_PARTYID( "8", "STATUS_ORDERS_FOR_PARTYID", "8 - Status for orders for a PartyID" ),

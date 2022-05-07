@@ -17,12 +17,25 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum792SettlInstReqRejCode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  792
+ *  SettlInstReqRejCode
+ *  Identifies reason for rejection (of a settlement instruction request message).
+ *  Valid values:
+ *      0 - Unable to process request
+ *      1 - Unknown account
+ *      2 - No matching settlement instructions found
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Tag792EnuSettlInstReqRejCodeTest {
     @Test
     void FIX0792Test() {
@@ -30,22 +43,10 @@ class Tag792EnuSettlInstReqRejCodeTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  792
-     *  SettlInstReqRejCode
-     *  Identifies reason for rejection (of a settlement instruction request message).
-     *  Valid values:
-     *      0 - Unable to process request
-     *      1 - Unknown account
-     *      2 - No matching settlement instructions found
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     @Test
     void Tag0792Test() {
         Tag792EnuSettlInstReqRejCode tagData;

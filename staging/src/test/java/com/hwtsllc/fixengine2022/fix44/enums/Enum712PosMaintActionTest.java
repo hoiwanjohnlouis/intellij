@@ -45,9 +45,9 @@ class Enum712PosMaintActionTest {
         assertEquals( "NEW", enumType.getName());
         assertEquals( "1 - New - used to increment the overall transaction quantity",
                 enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum712PosMaintAction.REPLACE;
         assertEquals( "2", enumType.getID());
@@ -55,9 +55,9 @@ class Enum712PosMaintActionTest {
         assertEquals( "2 - Replace - used to override the overall transaction quantity " +
                                 "or specifically add messages based on the reference ID",
                 enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum712PosMaintAction.CANCEL;
         assertEquals( "3", enumType.getID());
@@ -65,9 +65,9 @@ class Enum712PosMaintActionTest {
         assertEquals( "3 - Cancel - used to remove the overall transaction or specific " +
                                 "add messages based on reference ID",
                 enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum712PosMaintAction.REVERSE;
         assertEquals( "4", enumType.getID());
@@ -75,8 +75,8 @@ class Enum712PosMaintActionTest {
         assertEquals( "4 - Reverse - used to completely back-out the transaction " +
                                 "such that the transaction never existed",
                 enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  939
+ *  TrdRptStatus
+ *  int
+ *  Trade Report Status
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Rejected
+ *      3 - Accepted with errors
+ */
 public enum Enum939TrdRptStatus implements EnumAccessors, LogStringVerbose {
+    ACCEPTED( "0", "ACCEPTED", "0 - Accepted" ),
+    REJECTED( "1", "REJECTED", "1 - Rejected" ),
+    ACCEPTED_WITH_ERRORS( "3", "ACCEPTED_WITH_ERRORS", "3 - Accepted with errors" ),
     ;
 
     private final String id;

@@ -16,5 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  793
+ *  SecondaryAllocID
+ *  String
+ *  Secondary allocation identifier.
+ *  Unlike the AllocID (70), this can be shared across
+ *  a number of allocation instruction or allocation report messages,
+ *  thereby making it possible to pass an identifier for an
+ *  original allocation message on multiple messages
+ *  (e.g. from one party to a second to a third, across cancel and replace messages etc.).
+ */
 public class Tag793SecondaryAllocID {
 }

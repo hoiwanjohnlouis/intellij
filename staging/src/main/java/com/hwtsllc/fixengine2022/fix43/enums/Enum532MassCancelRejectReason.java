@@ -19,10 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 532
+ */
 public enum Enum532MassCancelRejectReason implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 532
-     */
 
     /*
      *  0-6, types
@@ -32,6 +32,7 @@ public enum Enum532MassCancelRejectReason implements EnumAccessors, LogStringVer
     UNKNOWN_UNDERLYING( "2", "UNKNOWN_UNDERLYING", "2 - Invalid or Unknown Underlying security" ),
     UNKNOWN_PRODUCT( "3", "UNKNOWN_PRODUCT", "3 - Invalid or Unknown Product" ),
     UNKNOWN_CFICODE( "4", "UNKNOWN_CFICODE", "4 - Invalid or Unknown CFICode" ),
+
     UNKNOWN_SECURITYTYPE( "5", "UNKNOWN_SECURITYTYPE", "5 - Invalid or Unknown SecurityType" ),
     UNKNOWN_SESSION( "6", "UNKNOWN_SESSION", "6 - Invalid or Unknown Trading Session" ),
 

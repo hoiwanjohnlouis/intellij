@@ -16,5 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  825
+ *  ExchangeRule
+ *  String
+ *  Used to report any exchange rules that apply to this trade.
+ *          Primarily intended for US futures markets.
+ *          Certain trading practices are permitted by the CFTC,
+ *          such as large lot trading, block trading, all or none trades.
+ *          If the rules are used, the exchanges are required to indicate these rules on the trade.
+ */
 public class Tag825ExchangeRule {
 }

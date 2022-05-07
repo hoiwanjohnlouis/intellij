@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum399BidDescriptorType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag399EnuBidDescriptorTypeTest {
         assertEquals( "399", fixData.getID());
         assertEquals( "BID_DESCRIPTOR_TYPE", fixData.getName());
         assertEquals( "BidDescriptorType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag399
@@ -53,14 +54,14 @@ class Tag399EnuBidDescriptorTypeTest {
          */
         tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
         assertEquals( Enum399BidDescriptorType.SECTOR.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
         assertEquals( Enum399BidDescriptorType.COUNTRY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
         assertEquals( Enum399BidDescriptorType.INDEX.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

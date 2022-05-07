@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum459UnderlyingSecurityAltIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -53,14 +53,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      L - Letter of Credit
  */
 public class Tag459EnuUnderlyingSecurityAltIDSource extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum459UnderlyingSecurityAltIDSource dataValue;
+    private final MyEnumSecurityIDSource dataValue;
 
-    public final static Enum459UnderlyingSecurityAltIDSource TESTA_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE
-            = Enum459UnderlyingSecurityAltIDSource.CUSIP;
-    public final static Enum459UnderlyingSecurityAltIDSource TESTB_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE
-            = Enum459UnderlyingSecurityAltIDSource.SEDOL;
+    public final static MyEnumSecurityIDSource TESTA_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE
+            = MyEnumSecurityIDSource.CUSIP;
+    public final static MyEnumSecurityIDSource TESTB_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE
+            = MyEnumSecurityIDSource.SEDOL;
 
-    public Tag459EnuUnderlyingSecurityAltIDSource(Enum459UnderlyingSecurityAltIDSource dataValue) {
+    public Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource dataValue) {
         setFixType(FIX43.FIX459_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE);
         this.dataValue = dataValue;
     }

@@ -17,25 +17,48 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum891MiscFeeBasis;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  891
+ *  MiscFeeBasis
+ *  int
+ *  Defines the unit for a miscellaneous fee.
+ *  Valid values:
+ *      0 - Absolute
+ *      1 - Per Unit
+ *      2 - Percentage
+ */
 class Tag891EnuMiscFeeBasisTest {
     @Test
     void FIX0891Test() {
-        FIX44 fixData = FIX44.FIX891_MISC_FEE_BASIS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX891_ENU_MISC_FEE_BASIS;
+        assertEquals( "891", fixData.getID());
+        assertEquals( "MISC_FEE_BASIS", fixData.getName());
+        assertEquals( "MiscFeeBasis", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0891Test() {
         Tag891EnuMiscFeeBasis tagData;
 
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.ABSOLUTE );
+        assertEquals( Enum891MiscFeeBasis.ABSOLUTE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PER_UNIT );
+        assertEquals( Enum891MiscFeeBasis.PER_UNIT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PERCENTAGE );
+        assertEquals( Enum891MiscFeeBasis.PERCENTAGE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  763
+ *  UnderlyingSecuritySubType
+ *  String
+ *  Underlying security’s SecuritySubType.
+ *          See SecuritySubType (762) field for description
+ */
 public class Tag763UnderlyingSecuritySubType {
 }

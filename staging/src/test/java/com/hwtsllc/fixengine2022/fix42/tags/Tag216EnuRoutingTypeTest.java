@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag216EnuRoutingTypeTest {
         assertEquals( "216", fixData.getID());
         assertEquals( "ROUTING_TYPE", fixData.getName());
         assertEquals( "RoutingType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  216
@@ -52,21 +53,21 @@ class Tag216EnuRoutingTypeTest {
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
         assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_LIST);
         assertEquals( Enum216RoutingType.TARGET_FIRM.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.BLOCK_FIRM);
         assertEquals( Enum216RoutingType.BLOCK_FIRM.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.BLOCK_LIST);
         assertEquals( Enum216RoutingType.BLOCK_LIST.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

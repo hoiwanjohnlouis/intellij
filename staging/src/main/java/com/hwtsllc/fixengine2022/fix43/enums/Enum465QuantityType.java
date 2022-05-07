@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 465
+ */
 public enum Enum465QuantityType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 465
-     */
-
     /*
      * 1-8 types
      */
@@ -32,6 +31,7 @@ public enum Enum465QuantityType implements EnumAccessors, LogStringVerbose {
     CURRENT_FACE("3", "CURRENTFACE", "3 - CURRENTFACE" ),
     ORIGINAL_FACE("4", "ORIGINALFACE", "4 - ORIGINALFACE" ),
     CURRENCY("5", "CURRENCY", "5 - CURRENCY" ),
+
     CONTRACTS("6", "CONTRACTS", "6 - CONTRACTS" ),
     OTHER("7", "OTHER", "7 - OTHER" ),
     PAR("8", "PAR", "8 - PAR" ),

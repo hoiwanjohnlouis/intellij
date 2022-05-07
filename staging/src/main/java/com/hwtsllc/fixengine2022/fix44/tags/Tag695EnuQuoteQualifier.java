@@ -18,11 +18,15 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum695QuoteQualifier;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumQualifier;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
+ *  104 (same as 104, 695)
+ *  QuoteQualifier
+ *  Code to qualify Quote use
+ *          See IOIQualifier (104) for description and valid values.
  *  695  (same as 104, 695)
  *  QuoteQualifier
  *  Code to qualify Quote use
@@ -48,14 +52,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      Z - Pre-open
  */
 public class Tag695EnuQuoteQualifier extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum695QuoteQualifier dataValue;
+    private final MyEnumQualifier dataValue;
 
-    public final static Enum695QuoteQualifier TESTA_ENU_QUOTE_QUALIFIER
-            = Enum695QuoteQualifier.ALL_OR_NONE;
-    public final static Enum695QuoteQualifier TESTB_ENU_QUOTE_QUALIFIER
-            = Enum695QuoteQualifier.AT_THE_MARKET;
+    public final static MyEnumQualifier TESTA_ENU_QUOTE_QUALIFIER
+            = MyEnumQualifier.ALL_OR_NONE;
+    public final static MyEnumQualifier TESTB_ENU_QUOTE_QUALIFIER
+            = MyEnumQualifier.AT_THE_MARKET;
 
-    public Tag695EnuQuoteQualifier(Enum695QuoteQualifier dataValue) {
+    public Tag695EnuQuoteQualifier(MyEnumQualifier dataValue) {
         setFixType(FIX44.FIX695_ENU_QUOTE_QUALIFIER);
         this.dataValue = dataValue;
     }

@@ -19,7 +19,31 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  865
+ *  EventType
+ *  int
+ *  Code to represent the type of event
+ *  Valid values:
+ *      1 - Put
+ *      2 - Call
+ *      3 - Tender
+ *      4 - Sinking Fund Call
+ *      5 - Activation
+ *
+ *      6 - Inactivation
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum865EventType implements EnumAccessors, LogStringVerbose {
+    PUT( "1", "PUT", "1 - Put" ),
+    CALL( "2", "CALL", "2 - Call" ),
+    TENDER( "3", "TENDER", "3 - Tender" ),
+    SINKING_FUND_CALL( "4", "SINKING_FUND_CALL", "4 - Sinking Fund Call" ),
+    ACTIVATION( "5", "ACTIVATION", "5 - Activation" ),
+    INACTIVATION( "6", "INACTIVATION", "6 - Inactivation" ),
+    OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
     private final String id;

@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  819
+ *  AvgPxIndicator
+ *  int
+ *  Average Pricing Indicator
+ *  Valid values:
+ *      0 - No Average Pricing
+ *      1 - Trade is part of an average price group identified by the TradeLinkID (820)
+ *      2 - Last trade is the average price group identified by the TradeLinkID (820)
+ */
 public enum Enum819AvgPxIndicator implements EnumAccessors, LogStringVerbose {
+    NO_PRICING( "0", "NO_PRICING", "0 - No Average Pricing" ),
+    PART_OF_APG( "1", "PART_OF_APG", "1 - Trade is part of an average price group identified by the TradeLinkID (820)" ),
+    LAST_TRADE( "2", "LAST_TRADE", "2 - Last trade is the average price group identified by the TradeLinkID (820)" ),
     ;
 
     private final String id;

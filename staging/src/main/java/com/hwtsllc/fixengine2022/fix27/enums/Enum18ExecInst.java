@@ -20,7 +20,6 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *
  * Used in FIX18_EXEC_INST
  */
 public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
@@ -29,11 +28,13 @@ public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
     WORK("2", "WORK", "2 - Work" ),
     GO_ALONG("3", "GO_ALONG", "3 - Go along" ),
     OVER_THE_DAY("4", "OVER_THE_DAY", "4 - Over the day" ),
+
     HELD("5", "HELD", "5 - Held" ),
     PARTICIPANT_DONT_INITIATE("6", "PARTICIPANT_DONT_INITIATE", "6 - Participant don't initiate" ),
     STRICT_SCALE("7", "STRICT_SCALE", "7 - Strict scale" ),
     TRY_TO_SCALE("8", "TRY_TO_SCALE", "8 - Try to scale" ),
     STAY_ON_BID_SIDE("9", "STAY_ON_BID_SIDE", "9 - Stay on bid side" ),
+
     NO_CROSS("A", "NO_CROSS", "A - No cross (cross is forbidden)" ),
     OKAY_TO_CROSS("B", "OKAY_TO_CROSS", "B - OK to cross" ),
     CALL_FIRST("C", "CALL_FIRST", "C - Call first" ),
@@ -41,6 +42,7 @@ public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
             "D - Percent of volume (indicates that the sender does not want to be all of the volume" +
                     " on the floor vs. a specific percentage)" ),
     DO_NOT_INCREASE("E", "DO_NOT_INCREASE", "E - Do not increase - DNI" ),
+
     DO_NOT_REDUCE("F", "DO_NOT_REDUCE", "F - Do not reduce - DNR" ),
     ALL_OR_NONE("G", "ALL_OR_NONE", "G - All or none - AON" ),
     REINSTATE_ON_SYSTEM_FAILURE("H", "REINSTATE_ON_SYSTEM_FAILURE",
@@ -48,12 +50,14 @@ public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
     INSTITUTION_ONLY("I", "INSTITUTION_ONLY", "I - Institutions only" ),
     REINSTATE_ON_TRADING_HALTED("J", "REINSTATE_ON_TRADING_HALTED",
             "J - Reinstate on Trading Halt (mutually exclusive with K)" ),
+
     CANCEL_ON_TRADING_HALTED("K", "CANCEL_ON_TRADING_HALTED",
             "K - Cancel on Trading Halt (mutually exclusive with J)" ),
     LAST_PEG("L", "LAST_PEG", "L - Last peg (last sale)" ),
     MID_PRICE_PEG("M", "MID_PRICE_PEG", "M - Mid-price peg (midprice of inside quote)" ),
     NON_NEGOTIABLE("N", "NON_NEGOTIABLE", "N - Non-negotiable" ),
     OPENING_PEG("O", "OPENING_PEG", "O - Opening peg" ),
+
     MARKET_PEG("P", "MARKET_PEG", "P - Market peg" ),
     CANCEL_ON_SYSTEM_FAILURE("Q", "CANCEL_ON_SYSTEM_FAILURE",
             "Q - Cancel on system failure (mutually exclusive with H)" ),
@@ -61,24 +65,28 @@ public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
     SUSPENDED("S", "SUSPENDED", "S - Suspended" ),
     FIXED_PEG_TO_LOCAL_BEST("T", "FIXED_PEG_TO_LOCAL_BEST",
             "T - Fixed Peg to Local best bid or offer at time of order" ),
+
     CUSTOMER_DISPLAY_INSTRUCTION("U", "CUSTOMER_DISPLAY_INSTRUCTION",
             "U - Customer Display Instruction (Rule 11Ac1-1/4)" ),
     NETTING("V", "NETTING", "V - Netting (for Forex)" ),
     PEG_TO_VWAP("W", "PEG_TO_VWAP", "W - Peg to VWAP" ),
     TRADE_ALONG("X", "TRADE_ALONG", "X - Trade Along" ),
     TRY_TO_STOP("Y", "TRY_TO_STOP", "Y - Try To Stop" ),
+
     CANCEL_IF_NOT_BEST("Z", "CANCEL_IF_NOT_BEST", "Z - Cancel if not best" ),
     TRAILING_STOP_PEG("a", "TRAILING_STOP_PEG", "a - Trailing Stop Peg" ),
     STRICT_LIMIT("b", "STRICT_LIMIT", "b - Strict Limit (No price improvement)" ),
     IGNORE_PRICE_VALIDITY_CHECKS("c", "IGNORE_PRICE_VALIDITY_CHECKS",
             "c - Ignore Price Validity Checks" ),
     PEG_TO_LIMIT_PRICE("d", "PEG_TO_LIMIT_PRICE", "d - Peg to Limit Price" ),
+
     WORK_TO_TARGET_STRATEGY("e", "WORK_TO_TARGET_STRATEGY", "e - Work to Target Strategy" ),
     INTERMARKET_SWEEP("f", "INTERMARKET_SWEEP", "f - Intermarket Sweep" ),
     EXTERNAL_ROUTING_ALLOWED("g", "EXTERNAL_ROUTING_ALLOWED", "g - External Routing Allowed" ),
     EXTERNAL_ROUTING_NOT_ALLOWED("h", "EXTERNAL_ROUTING_NOT_ALLOWED",
             "h - External Routing Not Allowed" ),
     IMBALANCE_ONLY("i", "IMBALANCE_ONLY", "i - Imbalance Only" ),
+
     SINGLE_EXECUTION_REQUESTED("j", "SINGLE_EXECUTION_REQUESTED",
             "j - Single execution requested for block trade" ),
     BEST_EXECUTION("k", "BEST_EXECUTION", "k - Best Execution" ),

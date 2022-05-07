@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  785
+ *  SettlPartySubID
+ *  String
+ *  PartySubID value within a settlement parties component.
+ *          Same values as  PartySubID (523)
+ */
 public class Tag785StrSettlPartySubID extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

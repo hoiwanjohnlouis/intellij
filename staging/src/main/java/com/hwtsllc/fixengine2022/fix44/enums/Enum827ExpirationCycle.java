@@ -19,7 +19,18 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  827
+ *  ExpirationCycle
+ *  int
+ *  Part of trading cycle when an instrument expires. Field is applicable for derivatives.
+ *  Valid values:
+ *      0 - Expire on trading session close (default)
+ *      1 - Expire on trading session open
+ */
 public enum Enum827ExpirationCycle implements EnumAccessors, LogStringVerbose {
+    EXPIRE_ON_CLOSE( "0", "EXPIRE_ON_CLOSE", "0 - Expire on trading session close (default)" ),
+    EXPIRE_ON_OPEN( "1", "EXPIRE_ON_OPEN", "1 - Expire on trading session open" ),
     ;
 
     private final String id;

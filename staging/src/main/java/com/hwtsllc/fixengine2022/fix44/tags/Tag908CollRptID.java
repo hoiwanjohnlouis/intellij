@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  908
+ *  CollRptID
+ *  String
+ *  Collateral Report Identifier
+ */
 public class Tag908CollRptID {
 }

@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 484
+ */
 public enum Enum484PriceType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 484
-     */
-
     /*
      * B, C, D, E, O, P, Q, and S types
      */
@@ -32,6 +31,7 @@ public enum Enum484PriceType implements EnumAccessors, LogStringVerbose {
     CREATION_PRICE_PLUS_PERCENT("D", "CREATION_PRICE_PLUS_PERCENT", "D - Creation price plus adjustment percent" ),
     CREATION_PRICE_PLUS_AMOUNT("E", "CREATION_PRICE_PLUS_AMOUNT", "E - Creation price plus adjustment amount" ),
     OFFER_PRICE("O", "OFFER_PRICE", "O - Offer price" ),
+
     OFFER_PRICE_MINUS_PERCENT("P", "OFFER_PRICE_MINUS_PERCENT", "P - Offer price minus adjustment percent" ),
     OFFER_PRICE_MINUS_AMOUNT("Q", "OFFER_PRICE_MINUS_AMOUNT", "Q - Offer price minus adjustment amount" ),
     SINGLE_PRICE("S", "SINGLE_PRICE", "S - Single price" ),

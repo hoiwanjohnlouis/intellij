@@ -20,7 +20,6 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *
  * Used in FIX20_EXEC_TRANS_TYPE
  */
 public enum Enum20ExecTransType implements EnumAccessors, LogStringVerbose {

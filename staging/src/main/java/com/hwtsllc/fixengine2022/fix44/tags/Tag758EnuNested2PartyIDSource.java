@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum758Nested2PartyIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -61,14 +61,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *              ISITC "ETC Best Practice" guidelines document
  */
 public class Tag758EnuNested2PartyIDSource extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum758Nested2PartyIDSource dataValue;
+    private final MyEnumPartyIDSource dataValue;
 
-    public final static Enum758Nested2PartyIDSource TESTA_ENU_NESTED_2_PARTY_ID_SOURCE
-            = Enum758Nested2PartyIDSource.CHINESE_INVESTOR_ID;
-    public final static Enum758Nested2PartyIDSource TESTB_ENU_NESTED_2_PARTY_ID_SOURCE
-            = Enum758Nested2PartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER;
+    public final static MyEnumPartyIDSource TESTA_ENU_NESTED_2_PARTY_ID_SOURCE
+            = MyEnumPartyIDSource.CHINESE_INVESTOR_ID;
+    public final static MyEnumPartyIDSource TESTB_ENU_NESTED_2_PARTY_ID_SOURCE
+            = MyEnumPartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER;
 
-    public Tag758EnuNested2PartyIDSource(Enum758Nested2PartyIDSource dataValue) {
+    public Tag758EnuNested2PartyIDSource(MyEnumPartyIDSource dataValue) {
         setFixType(FIX44.FIX758_ENU_NESTED_2_PARTY_ID_SOURCE);
         this.dataValue = dataValue;
     }

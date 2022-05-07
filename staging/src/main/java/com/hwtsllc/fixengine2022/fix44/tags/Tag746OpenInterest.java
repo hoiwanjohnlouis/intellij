@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  746
+ *  OpenInterest
+ *  Amt
+ *  Open interest that was eligible for assignment.
+ */
 public class Tag746OpenInterest {
 }

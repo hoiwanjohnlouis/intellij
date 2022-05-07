@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  775
+ *  BookingType
+ *  Method for booking out this order.
+ *      Used when notifying a broker that an order to be settled by that broker
+ *      is to be booked out as an OTC derivative (e.g. CFD or similar).
+ *  Valid values:
+ *      0 - Regular booking
+ *      1 - CFD (Contract for difference)
+ *      2 - Total Return Swap
+ */
 class Tag775EnuBookingTypeTest {
     @Test
     void FIX0775Test() {
@@ -30,21 +41,10 @@ class Tag775EnuBookingTypeTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  775
-     *  BookingType
-     *  Method for booking out this order.
-     *      Used when notifying a broker that an order to be settled by that broker
-     *      is to be booked out as an OTC derivative (e.g. CFD or similar).
-     *  Valid values:
-     *      0 - Regular booking
-     *      1 - CFD (Contract for difference)
-     *      2 - Total Return Swap
-     */
     @Test
     void Tag0775Test() {
         Tag775EnuBookingType tagData;

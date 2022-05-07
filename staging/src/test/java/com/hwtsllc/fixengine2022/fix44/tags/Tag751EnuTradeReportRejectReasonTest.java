@@ -23,6 +23,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  751
+ *  TradeReportRejectReason
+ *  Reason Trade Capture Request was rejected.
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  Valid values:
+ *      0 - Successful (default)
+ *      1 - Invalid party information
+ *      2 - Unknown instrument
+ *      3 - Unauthorized to report trades
+ *      4 - Invalid trade type
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Tag751EnuTradeReportRejectReasonTest {
     @Test
     void FIX0751Test() {
@@ -30,25 +45,10 @@ class Tag751EnuTradeReportRejectReasonTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  751
-     *  TradeReportRejectReason
-     *  Reason Trade Capture Request was rejected.
-     *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
-     *  Valid values:
-     *      0 - Successful (default)
-     *      1 - Invalid party information
-     *      2 - Unknown instrument
-     *      3 - Unauthorized to report trades
-     *      4 - Invalid trade type
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     @Test
     void Tag0751Test() {
         Tag751EnuTradeReportRejectReason tagData;

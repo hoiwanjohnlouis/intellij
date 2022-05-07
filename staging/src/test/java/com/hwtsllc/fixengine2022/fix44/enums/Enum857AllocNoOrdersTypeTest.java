@@ -16,12 +16,39 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAcctIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+/**
+ *  857
+ *  AllocNoOrdersType
+ *  int
+ *  Indicates how the orders being booked and allocated by an Allocation Instruction or Allocation
+ *  Report message are identified, i.e. by explicit definition in the NoOrders group or not.
+ *  Valid values:
+ *      0 - Not Specified
+ *      1 - Explicit List Provided
+ */
 class Enum857AllocNoOrdersTypeTest {
     @Test
     void EnumTest() {
         Enum857AllocNoOrdersType enumType;
 
+        enumType = Enum857AllocNoOrdersType.NOT_SPECIFIED;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "NOT_SPECIFIED", enumType.getName() );
+        assertEquals( "0 - Not Specified", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum857AllocNoOrdersType.LIST_PROVIDED;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "LIST_PROVIDED", enumType.getName() );
+        assertEquals( "1 - Explicit List Provided", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

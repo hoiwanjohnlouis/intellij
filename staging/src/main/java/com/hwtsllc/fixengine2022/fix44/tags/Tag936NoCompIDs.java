@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  936
+ *  NoCompIDs
+ *  NumInGroup
+ *  Number of CompID entries in a repeating group.
+ */
 public class Tag936NoCompIDs {
 }

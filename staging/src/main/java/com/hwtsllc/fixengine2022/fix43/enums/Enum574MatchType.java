@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 574
+ */
 public enum Enum574MatchType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 574
-     */
-
     /*
      *  General Purpose
      *  60-65 types
@@ -32,6 +31,7 @@ public enum Enum574MatchType implements EnumAccessors, LogStringVerbose {
     GP_TWO_PARTY_REPORT( "61", "GP_TWO_PARTY_REPORT", "61 - Two-Party Privately Negotiated Trade Report" ),
     GP_AUTO_MATCH( "62", "GP_AUTO_MATCH", "62 - Continuous Auto-match" ),
     GP_CROSS_AUCTION( "63", "GP_CROSS_AUCTION", "63 - Cross Auction" ),
+
     GP_COUNTER_ORDER_SELECTION( "64", "GP_COUNTER_ORDER_SELECTION", "64 - Counter-Order Selection" ),
     GP_CALL_AUCTION( "65", "GP_CALL_AUCTION", "65 - Call Auction" ),
 
@@ -103,6 +103,7 @@ public enum Enum574MatchType implements EnumAccessors, LogStringVerbose {
             "4 - Auto-match" ),
     OMX_CROSS_AUCTION( "5", "OMX_CROSS_AUCTION",
             "5 - Cross Auction" ),
+
     OMX_COUNTER_ORDER_SELECTION( "6", "OMX_COUNTER_ORDER_SELECTION",
             "6 - Counter-Order Selection" ),
     OMX_CALL_AUCTION( "7", "OMX_CALL_AUCTION",

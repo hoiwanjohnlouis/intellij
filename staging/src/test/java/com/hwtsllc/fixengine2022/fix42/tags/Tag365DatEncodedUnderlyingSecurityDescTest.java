@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag365DatEncodedUnderlyingSecurityDescTest {
         assertEquals( "365", fixData.getID());
         assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC", fixData.getName());
         assertEquals( "EncodedUnderlyingSecurityDesc", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0365Test() {
@@ -42,12 +43,12 @@ class Tag365DatEncodedUnderlyingSecurityDescTest {
                 new MyDataType(Tag365DatEncodedUnderlyingSecurityDesc.TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC));
         assertEquals( Tag365DatEncodedUnderlyingSecurityDesc.TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC,
                 tagData.getDataValue() );
-        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag365DatEncodedUnderlyingSecurityDesc(
                 new MyDataType(Tag365DatEncodedUnderlyingSecurityDesc.TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC));
         assertEquals( Tag365DatEncodedUnderlyingSecurityDesc.TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC,
                 tagData.getDataValue() );
-        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  897
+ *  NoTrades
+ *  NumInGroup
+ *  Number of trades in repeating group.
+ */
 public class Tag897NoTrades {
 }

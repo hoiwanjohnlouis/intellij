@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum682LegIOIQty;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumIOIQty;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -35,14 +35,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      U - Undisclosed Quantity
  */
 public class Tag682EnuLegIOIQty extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum682LegIOIQty dataValue;
+    private final MyEnumIOIQty dataValue;
 
-    public final static Enum682LegIOIQty TESTA_ENU_LEG_IOI_QTY
-            = Enum682LegIOIQty.LARGE;
-    public final static Enum682LegIOIQty TESTB_ENU_LEG_IOI_QTY
-            = Enum682LegIOIQty.ONE_BILLION;
+    public final static MyEnumIOIQty TESTA_ENU_LEG_IOI_QTY
+            = MyEnumIOIQty.SMALL;
+    public final static MyEnumIOIQty TESTB_ENU_LEG_IOI_QTY
+            = MyEnumIOIQty.UNDISCLOSED_QUANTITY;
 
-    public Tag682EnuLegIOIQty(Enum682LegIOIQty dataValue) {
+    public Tag682EnuLegIOIQty(MyEnumIOIQty dataValue) {
         setFixType(FIX44.FIX682_ENU_LEG_IOI_QTY);
         this.dataValue = dataValue;
     }

@@ -17,11 +17,11 @@
 package com.hwtsllc.fixengine2022.msgs.application;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumMsgType;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag55StrSymbol;
 
 public class ExecutionReport {
-    private final Enum35MsgType tag35MsgType;
+    private final MyEnumMsgType tag35MsgType;
     private final Tag55StrSymbol tag55StrSymbol;
 
     //
@@ -47,11 +47,11 @@ public class ExecutionReport {
     public static class Builder {
         private StringBuilder stringBuilder = new StringBuilder();
 
-        private Enum35MsgType tag35MsgType;
+        private MyEnumMsgType tag35MsgType;
         private Tag55StrSymbol tag55StrSymbol;              // 2
 
         // helper class to build object
-        public Builder(Enum35MsgType tag35MsgType) {
+        public Builder(MyEnumMsgType tag35MsgType) {
             this.tag35MsgType = tag35MsgType;
         }
 
@@ -70,7 +70,7 @@ public class ExecutionReport {
      */
     public static void main(String[] args) {
         ExecutionReport record =
-                new ExecutionReport.Builder(Enum35MsgType.EXECUTION_REPORT)
+                new ExecutionReport.Builder(MyEnumMsgType.EXECUTION_REPORT)
                         .buildTickerSymbol(Tag55StrSymbol.TESTA_STR_SYMBOL)
                         .build();
         System.out.println(record);

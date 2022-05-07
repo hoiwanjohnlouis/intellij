@@ -17,25 +17,58 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum910CollStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  910
+ *  CollStatus
+ *  int
+ *  Collateral Status
+ *  Valid values:
+ *      0 - Unassigned
+ *      1 - Partially Assigned
+ *      2 - Assignment Proposed
+ *      3 - Assigned (Accepted)
+ *      4 - Challenged
+ */
 class Tag910EnuCollStatusTest {
     @Test
     void FIX0910Test() {
-        FIX44 fixData = FIX44.FIX910_COLL_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX910_ENU_COLL_STATUS;
+        assertEquals( "910", fixData.getID());
+        assertEquals( "COLL_STATUS", fixData.getName());
+        assertEquals( "CollStatus", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0910Test() {
         Tag910EnuCollStatus tagData;
 
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.UNASSIGNED );
+        assertEquals( Enum910CollStatus.UNASSIGNED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.PARTIALLY_ASSIGNED );
+        assertEquals( Enum910CollStatus.PARTIALLY_ASSIGNED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNMENT_PROPOSED );
+        assertEquals( Enum910CollStatus.ASSIGNMENT_PROPOSED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNED );
+        assertEquals( Enum910CollStatus.ASSIGNED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.CHALLENGED );
+        assertEquals( Enum910CollStatus.CHALLENGED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

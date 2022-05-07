@@ -16,9 +16,82 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum935NetworkRequestType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  935
+ *  NetworkRequestType
+ *  int
+ *  Indicates the type and level of details required for a Network Status Request Message Boolean logic applies
+ *  e.g. If you want to subscribe for changes to certain id’s then UserRequestType = 0 (8+2), Snapshot for certain ID’s = 9 (8+1)
+ *  Valid values:
+ *      1 - Snapshot
+ *      2 - Subscribe
+ *      4 - Stop Subscribing
+ *      8 - Level of Detail, then NoCompID's becomes required
+ */
 public class Tag935EnuNetworkRequestType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum935NetworkRequestType dataValue;
+
+    public final static Enum935NetworkRequestType TESTA_ENU_NETWORK_REQUEST_TYPE
+            = Enum935NetworkRequestType.LEVEL_OF_DETAIL;
+    public final static Enum935NetworkRequestType TESTB_ENU_NETWORK_REQUEST_TYPE
+            = Enum935NetworkRequestType.SNAPSHOT;
+
+    public Tag935EnuNetworkRequestType(Enum935NetworkRequestType dataValue) {
+        setFixType(FIX44.FIX935_ENU_NETWORK_REQUEST_TYPE);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag935EnuNetworkRequestType tagData;
+
+        tagData = new Tag935EnuNetworkRequestType(TESTA_ENU_NETWORK_REQUEST_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag935EnuNetworkRequestType(TESTB_ENU_NETWORK_REQUEST_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

@@ -19,7 +19,31 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  895
+ *  CollAsgnReason
+ *  int
+ *  Reason for Collateral Assignment
+ *  Valid values:
+ *      0 - Initial
+ *      1 - Scheduled
+ *      2 - Time Warning
+ *      3 - Margin Deficiency
+ *      4 - Margin Excess
+ *      5 - Forward Collateral Demand
+ *      6 - Event of default
+ *      7 - Adverse tax event
+ */
 public enum Enum895CollAsgnReason implements EnumAccessors, LogStringVerbose {
+    INITIAL( "0", "INITIAL", "0 - Initial" ),
+    SCHEDULED( "1", "SCHEDULED", "1 - Scheduled" ),
+    TIME_WARNING( "2", "TIME_WARNING", "2 - Time Warning" ),
+    MARGIN_DEFICIENCY( "3", "MARGIN_DEFICIENCY", "3 - Margin Deficiency" ),
+    MARGIN_EXCESS( "4", "MARGIN_EXCESS", "4 - Margin Excess" ),
+
+    FORWARD_COLLATERAL_DEMAND( "5", "FORWARD_COLLATERAL_DEMAND", "5 - Forward Collateral Demand" ),
+    EVENT_OF_DEFAULT( "6", "EVENT_OF_DEFAULT", "6 - Event of default" ),
+    ADVERSE_TAX_EVENT( "7", "ADVERSE_TAX_EVENT", "7 - Adverse tax event" ),
     ;
 
     private final String id;

@@ -23,6 +23,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  723
+ *  PosMaintResult
+ *  Result of Position Maintenance Request.
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  Valid values:
+ *      0 - Successful Completion - no warnings or errors
+ *      1 - Rejected
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Tag723EnuPosMaintResultTest {
     @Test
     void FIX0723Test() {
@@ -30,36 +42,24 @@ class Tag723EnuPosMaintResultTest {
         assertEquals( "723", fixData.getID());
         assertEquals( "POS_MAINT_RESULT", fixData.getName());
         assertEquals( "PosMaintResult", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  723
-     *  PosMaintResult
-     *  Result of Position Maintenance Request.
-     *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
-     *  Valid values:
-     *      0 - Successful Completion - no warnings or errors
-     *      1 - Rejected
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     @Test
     void Tag0723Test() {
         Tag723EnuPosMaintResult tagData;
 
         tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.SUCCESSFUL);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.REJECTED);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.OTHER);
         assertEquals( "99", tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

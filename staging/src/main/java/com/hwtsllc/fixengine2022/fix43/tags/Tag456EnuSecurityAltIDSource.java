@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum456SecurityAltIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -53,14 +53,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      L - Letter of Credit
  */
 public class Tag456EnuSecurityAltIDSource extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum456SecurityAltIDSource dataValue;
+    private final MyEnumSecurityIDSource dataValue;
 
-    public final static Enum456SecurityAltIDSource TESTA_ENU_SECURITY_ALT_ID_SOURCE
-            = Enum456SecurityAltIDSource.BELGIAN;
-    public final static Enum456SecurityAltIDSource TESTB_ENU_SECURITY_ALT_ID_SOURCE
-            = Enum456SecurityAltIDSource.RIC;
+    public final static MyEnumSecurityIDSource TESTA_ENU_SECURITY_ALT_ID_SOURCE
+            = MyEnumSecurityIDSource.BELGIAN;
+    public final static MyEnumSecurityIDSource TESTB_ENU_SECURITY_ALT_ID_SOURCE
+            = MyEnumSecurityIDSource.RIC;
 
-    public Tag456EnuSecurityAltIDSource(Enum456SecurityAltIDSource dataValue) {
+    public Tag456EnuSecurityAltIDSource(MyEnumSecurityIDSource dataValue) {
         setFixType(FIX43.FIX456_ENU_SECURITY_ALT_ID_SOURCE);
         this.dataValue = dataValue;
     }

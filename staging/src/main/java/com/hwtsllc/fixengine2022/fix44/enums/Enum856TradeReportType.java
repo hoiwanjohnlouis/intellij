@@ -19,7 +19,49 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  856
+ *  TradeReportType
+ *  int
+ *  Type of Trade Report
+ *  Valid values:
+ *      0 - Submit
+ *      1 - Alleged
+ *      2 - Accept
+ *      3 - Decline
+ *      4 - Addendum
+ *      5 - No-Was
+ *      6 - Trade Report Cancel
+ *      7 - (Locked-In) Trade Break
+ *      8 - Defaulted
+ *      9 - Invalid CMTA
+ *      10 - Pended
+ *      11 - Alleged New
+ *      12 - Alleged Addendum
+ *      13 - Alleged No-Was
+ *      14 - Alleged Trade Report Cancel
+ *      15 - Alleged (Locked-In) Trade Break
+ */
 public enum Enum856TradeReportType implements EnumAccessors, LogStringVerbose {
+    SUBMIT( "0", "SUBMIT", "0 - Submit" ),
+    ALLEGED( "1", "ALLEGED", "1 - Alleged" ),
+    ACCEPT( "2", "ACCEPT", "2 - Accept" ),
+    DECLINE( "3", "DECLINE", "3 - Decline" ),
+    ADDENDUM( "4", "ADDENDUM", "4 - Addendum" ),
+
+    NO_WAS( "5", "NO_WAS", "5 - No-Was" ),
+    TRADE_REPORT_CANCEL( "6", "TRADE_REPORT_CANCEL", "6 - Trade Report Cancel" ),
+    LOCKED_IN_TRADE_BREAK( "7", "LOCKED_IN_TRADE_BREAK", "7 - (Locked-In) Trade Break" ),
+    DEFAULTED( "8", "DEFAULTED", "8 - Defaulted" ),
+    INVALID_CMTA( "9", "INVALID_CMTA", "9 - Invalid CMTA" ),
+
+    PENDED( "10", "PENDED", "10 - Pended" ),
+    ALLEGED_NEW( "11", "ALLEGED_NEW", "11 - Alleged New" ),
+    ALLEGED_ADDENDUM( "12", "ALLEGED_ADDENDUM", "12 - Alleged Addendum" ),
+    ALLEGED_NO_WAS( "13", "ALLEGED_NO_WAS", "13 - Alleged No-Was" ),
+    ALLEGED_TRADE_REPORT_CANCEL( "14", "ALLEGED_TRADE_REPORT_CANCEL", "14 - Alleged Trade Report Cancel" ),
+
+    ALLEGED_LOCKED_IN_TRADE_BREAK( "15", "ALLEGED_LOCKED_IN_TRADE_BREAK", "15 - Alleged (Locked-In) Trade Break" ),
     ;
 
     private final String id;

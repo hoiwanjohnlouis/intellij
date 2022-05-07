@@ -17,55 +17,76 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum798AllocAccountType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAccountType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  581 (same as 581, 798)
+ *  Type of account associated with an order
+ *  798 (same as 581, 798)
+ *  AllocAccountType
+ *  Type of account associated with a confirmation or other trade-level message
+ *  Valid values:
+ *      1 - Account is carried on customer side of books
+ *      2 - Account is carried on non-customer side of books
+ *      3 - House trader
+ *      4 - Floor trader
+ *      6 - Account is carried on non-customer side of books and is cross margined
+ *      7 - Account is house trader and is cross margined
+ *      8 - Joint back office account (JBO)
+ */
 class Tag798EnuAllocAccountTypeTest {
     @Test
     void FIX0798Test() {
         FIX44 fixData = FIX44.FIX798_ENU_ALLOC_ACCOUNT_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "798", fixData.getID());
+        assertEquals( "ALLOC_ACCOUNT_TYPE", fixData.getName());
+        assertEquals( "AllocAccountType", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  798 (same as 581, 798)
-     *  AllocAccountType
-     *  Type of account associated with a confirmation or other trade-level message
-     *  Valid values:
-     *      1 - Account is carried on customer side of books
-     *      2 - Account is carried on non-customer side of books
-     *      3 - House trader
-     *      4 - Floor trader
-     *      6 - Account is carried on non-customer side of books and is cross margined
-     *      7 - Account is house trader and is cross margined
-     *      8 - Joint back office account (JBO)
-     */
     @Test
     void Tag0798Test() {
         Tag798EnuAllocAccountType tagData;
 
-        /*
+        /**
          *  1-4, types
          */
-        tagData = Enum798AllocAccountType.CUSTOMER_BOOK;
-        tagData = Enum798AllocAccountType.NON_CUSTOMER_BOOK;
-        tagData = Enum798AllocAccountType.HOUSE_TRADER;
-        tagData = Enum798AllocAccountType.FLOOR_TRADER;
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.CUSTOMER_BOOK);
+        assertEquals( MyEnumAccountType.CUSTOMER_BOOK, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_BOOK);
+        assertEquals( MyEnumAccountType.NON_CUSTOMER_BOOK, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.HOUSE_TRADER);
+        assertEquals( MyEnumAccountType.HOUSE_TRADER, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.FLOOR_TRADER);
+        assertEquals( MyEnumAccountType.FLOOR_TRADER, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-
-        /*
+        /**
          *  6-8, types
          */
-        tagData = Enum798AllocAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK;
-        tagData = Enum798AllocAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK;
-        tagData = Enum798AllocAccountType.JOINT_BACK_OFFICE;
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK);
+        assertEquals( MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK);
+        assertEquals( MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.JOINT_BACK_OFFICE);
+        assertEquals( MyEnumAccountType.JOINT_BACK_OFFICE, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

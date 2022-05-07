@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,64 +34,65 @@ class Enum87AllocStatusTest {
         assertEquals("0", enumType.getID());
         assertEquals("ACCEPTED", enumType.getName());
         assertEquals("0 -accepted (successfully processed)", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum87AllocStatus.BLOCK_LEVEL_REJECT;
         assertEquals("1", enumType.getID());
         assertEquals("BLOCK_LEVEL_REJECT", enumType.getName());
         assertEquals("1 - block level reject", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum87AllocStatus.ACCOUNT_LEVEL_REJECT;
         assertEquals("2", enumType.getID());
         assertEquals("ACCOUNT_LEVEL_REJECT", enumType.getName());
         assertEquals("2 - account level reject", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum87AllocStatus.RECEIVED_NOT_PROCESSED;
         assertEquals("3", enumType.getID());
         assertEquals("RECEIVED_NOT_PROCESSED", enumType.getName());
         assertEquals("3 - received (received, not yet processed)", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum87AllocStatus.INCOMPLETE;
         assertEquals("4", enumType.getID());
         assertEquals("INCOMPLETE", enumType.getName());
         assertEquals("4 - incomplete", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
 
         enumType = Enum87AllocStatus.REJECTED_BY_INTERMEDIARY;
         assertEquals("5", enumType.getID());
         assertEquals("REJECTED_BY_INTERMEDIARY", enumType.getName());
         assertEquals("5 - rejected by intermediary", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum87AllocStatus.ALLOCATION_PENDING;
         assertEquals("6", enumType.getID());
         assertEquals("ALLOCATION_PENDING", enumType.getName());
         assertEquals("6 - allocation pending", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum87AllocStatus.REVERSED;
         assertEquals("7", enumType.getID());
         assertEquals("REVERSED", enumType.getName());
         assertEquals("7 - reversed", enumType.getDescription());
-        assertNotEquals( FIX27.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

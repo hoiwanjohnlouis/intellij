@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  928
+ *  StatusValue
+ *  int
+ *  Indicates the status of a network connection
+ *  Valid values:
+ *      1 - Connected
+ *      2 - Not Connected - down expected up
+ *      3 - Not Connected - down expected down
+ *      4 - In Process
+ */
 public enum Enum928StatusValue implements EnumAccessors, LogStringVerbose {
+    CONNECTED( "1", "CONNECTED", "1 - Connected" ),
+    DOWN_EXPECTED_UP( "2", "DOWN_EXPECTED_UP", "2 - Not Connected - down expected up" ),
+    DOWN_EXPECTED_DOWN( "3", "DOWN_EXPECTED_DOWN", "3 - Not Connected - down expected down" ),
+    IN_PROCESS( "4", "IN_PROCESS", "4 - In Process" ),
     ;
 
     private final String id;

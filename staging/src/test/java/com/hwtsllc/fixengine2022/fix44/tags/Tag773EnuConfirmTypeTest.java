@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  773
+ *  ConfirmType
+ *  Identifies the type of Confirmation message being sent.
+ *  Valid values:
+ *      1 - Status
+ *      2 - Confirmation
+ *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+ */
 class Tag773EnuConfirmTypeTest {
     @Test
     void FIX0773Test() {
@@ -30,19 +39,10 @@ class Tag773EnuConfirmTypeTest {
         assertEquals( "773", fixData.getID());
         assertEquals( "CONFIRM_TYPE", fixData.getName());
         assertEquals( "ConfirmType", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  773
-     *  ConfirmType
-     *  Identifies the type of Confirmation message being sent.
-     *  Valid values:
-     *      1 - Status
-     *      2 - Confirmation
-     *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
-     */
     @Test
     void Tag0773Test() {
         Tag773EnuConfirmType tagData;

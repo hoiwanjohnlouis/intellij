@@ -16,12 +16,55 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+/**
+ *  905
+ *  CollAsgnRespType
+ *  int
+ *  Collateral Assignment Response Type
+ *  Valid values:
+ *      0 - Received
+ *      1 - Accepted
+ *      2 - Declined
+ *      3 - Rejected
+ */
 class Enum905CollAsgnRespTypeTest {
     @Test
     void EnumTest() {
         Enum905CollAsgnRespType enumType;
 
+        enumType = Enum905CollAsgnRespType.RECEIVED;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "RECEIVED", enumType.getName() );
+        assertEquals( "0 - Received", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum905CollAsgnRespType.ACCEPTED;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "ACCEPTED", enumType.getName() );
+        assertEquals( "1 - Accepted", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum905CollAsgnRespType.DECLINED;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "DECLINED", enumType.getName() );
+        assertEquals( "2 - Declined", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum905CollAsgnRespType.REJECTED;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "REJECTED", enumType.getName() );
+        assertEquals( "3 - Rejected", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

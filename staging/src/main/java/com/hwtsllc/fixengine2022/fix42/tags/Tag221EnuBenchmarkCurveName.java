@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum221BenchmarkCurveName;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumBenchmarkCurveName;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag221EnuBenchmarkCurveName extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum221BenchmarkCurveName dataValue;
+    private final MyEnumBenchmarkCurveName dataValue;
 
-    public final static Enum221BenchmarkCurveName TESTA_ENU_BENCHMARK_CURVE_NAME = Enum221BenchmarkCurveName.EONIA;
-    public final static Enum221BenchmarkCurveName TESTB_ENU_BENCHMARK_CURVE_NAME = Enum221BenchmarkCurveName.TREASURY;
+    public final static MyEnumBenchmarkCurveName TESTA_ENU_BENCHMARK_CURVE_NAME = MyEnumBenchmarkCurveName.EONIA;
+    public final static MyEnumBenchmarkCurveName TESTB_ENU_BENCHMARK_CURVE_NAME = MyEnumBenchmarkCurveName.TREASURY;
 
-    public Tag221EnuBenchmarkCurveName(Enum221BenchmarkCurveName dataValue) {
+    public Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName dataValue) {
         setFixType(FIX42.FIX221_ENU_BENCHMARK_CURVE_NAME);
         this.dataValue = dataValue;
     }

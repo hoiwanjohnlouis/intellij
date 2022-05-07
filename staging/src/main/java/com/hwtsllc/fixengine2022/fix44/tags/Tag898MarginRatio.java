@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  898
+ *  MarginRatio
+ *  Percentage
+ *  The fraction of the cash consideration that must be collateralized, expressed as a percent.
+ *  A MarginRatio of 02% indicates that the value of the collateral
+ *  (after deducting for "haircut") must exceed the cash consideration by 2%.
+ */
 public class Tag898MarginRatio {
 }

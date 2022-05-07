@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumMsgType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -166,12 +166,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                          "BP - Security Definition Update Report" ),
  */
 public class Tag35EnuMsgType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum35MsgType dataValue;
+    private final MyEnumMsgType dataValue;
 
-    public final static Enum35MsgType TESTA_ENU_MSG_TYPE = Enum35MsgType.HEARTBEAT; // fake data
-    public final static Enum35MsgType TESTB_ENU_MSG_TYPE = Enum35MsgType.LOGOUT;
+    public final static MyEnumMsgType TESTA_ENU_MSG_TYPE = MyEnumMsgType.HEARTBEAT; // fake data
+    public final static MyEnumMsgType TESTB_ENU_MSG_TYPE = MyEnumMsgType.LOGOUT;
 
-    public Tag35EnuMsgType(Enum35MsgType dataValue) {
+    public Tag35EnuMsgType(MyEnumMsgType dataValue) {
         setFixType(FIX27.FIX35_ENU_MSG_TYPE);
         this.dataValue = dataValue;
     }

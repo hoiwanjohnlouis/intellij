@@ -19,7 +19,27 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  826
+ *  TradeAllocIndicator
+ *  int
+ *  Identifies how the trade is to be allocated
+ *  Valid values:
+ *      0 - Allocation not required
+ *      1 - Allocation required (give-up trade) allocation information not provided (incomplete)
+ *      2 - Use allocation provided with the trade
+ *      3 - Allocation give-up executor
+ *      4 - Allocation from executor
+ *      5 - Allocation to claim account
+ */
 public enum Enum826TradeAllocIndicator implements EnumAccessors, LogStringVerbose {
+    NOT_REQUIRED( "0", "NOT_REQUIRED", "0 - Allocation not required" ),
+    REQUIRED( "1", "REQUIRED", "1 - Allocation required (give-up trade) allocation information not provided (incomplete)" ),
+    USE_PROVIDED_INFO( "2", "USE_PROVIDED_INFO", "2 - Use allocation provided with the trade" ),
+    GIVE_UP_EXECUTOR( "3", "GIVE_UP_EXECUTOR", "3 - Allocation give-up executor" ),
+    FROM_EXECUTOR( "4", "FROM_EXECUTOR", "4 - Allocation from executor" ),
+
+    CLAIM_ACCOUNT( "5", "CLAIM_ACCOUNT", "5 - Allocation to claim account" ),
     ;
 
     private final String id;

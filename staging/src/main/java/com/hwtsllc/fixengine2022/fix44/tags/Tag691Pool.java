@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  691
+ *  Pool
+ *  String
+ *  For Fixed Income, identifies MBS - ABS pool.
+ */
 public class Tag691Pool {
 }

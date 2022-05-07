@@ -17,11 +17,23 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  793
+ *  SecondaryAllocID
+ *  String
+ *  Secondary allocation identifier.
+ *  Unlike the AllocID (70), this can be shared across
+ *  a number of allocation instruction or allocation report messages,
+ *  thereby making it possible to pass an identifier for an
+ *  original allocation message on multiple messages
+ *  (e.g. from one party to a second to a third, across cancel and replace messages etc.).
+ */
 class Tag793SecondaryAllocIDTest {
     @Test
     void FIX0793Test() {
@@ -29,9 +41,9 @@ class Tag793SecondaryAllocIDTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0793Test() {

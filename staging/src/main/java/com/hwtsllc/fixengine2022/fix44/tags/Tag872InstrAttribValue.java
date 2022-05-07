@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  872
+ *  InstrAttribValue
+ *  String
+ *  Attribute value appropriate to the  InstrAttribType (87) field.
+ */
 public class Tag872InstrAttribValue {
 }

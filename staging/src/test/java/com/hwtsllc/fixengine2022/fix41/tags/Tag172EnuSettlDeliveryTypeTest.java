@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum172SettlDeliveryType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag172EnuSettlDeliveryTypeTest {
         assertEquals( "172", fixData.getID());
         assertEquals( "SETTL_DELIVERY_TYPE", fixData.getName());
         assertEquals( "SettlDeliveryType", fixData.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0172Test() {
@@ -40,18 +41,18 @@ class Tag172EnuSettlDeliveryTypeTest {
 
         tagData = new Tag172EnuSettlDeliveryType(Enum172SettlDeliveryType.VERSUS);
         assertEquals( Enum172SettlDeliveryType.VERSUS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag172EnuSettlDeliveryType(Enum172SettlDeliveryType.FREE);
         assertEquals( Enum172SettlDeliveryType.FREE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag172EnuSettlDeliveryType(Enum172SettlDeliveryType.TRI_PARTY);
         assertEquals( Enum172SettlDeliveryType.TRI_PARTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag172EnuSettlDeliveryType(Enum172SettlDeliveryType.HOLD_IN_CUSTODY);
         assertEquals( Enum172SettlDeliveryType.HOLD_IN_CUSTODY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

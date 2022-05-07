@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,9 +32,9 @@ class Tag205IntMaturityDayTest {
         assertEquals( "205", fixData.getID());
         assertEquals( "MATURITY_DAY", fixData.getName());
         assertEquals( "MaturityDay", fixData.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0205Test() {
@@ -41,10 +42,10 @@ class Tag205IntMaturityDayTest {
 
         tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTA_INT_MATURITY_DAY));
         assertEquals( Tag205IntMaturityDay.TESTA_INT_MATURITY_DAY, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY));
         assertEquals( Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

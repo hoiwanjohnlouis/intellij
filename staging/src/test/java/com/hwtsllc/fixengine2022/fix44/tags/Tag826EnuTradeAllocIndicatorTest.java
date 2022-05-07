@@ -17,25 +17,64 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum826TradeAllocIndicator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  826
+ *  TradeAllocIndicator
+ *  int
+ *  Identifies how the trade is to be allocated
+ *  Valid values:
+ *      0 - Allocation not required
+ *      1 - Allocation required (give-up trade) allocation information not provided (incomplete)
+ *      2 - Use allocation provided with the trade
+ *      3 - Allocation give-up executor
+ *      4 - Allocation from executor
+ *      5 - Allocation to claim account
+ */
 class Tag826EnuTradeAllocIndicatorTest {
     @Test
     void FIX0826Test() {
-        FIX44 fixData = FIX44.FIX826_TRADE_ALLOC_INDICATOR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX826_ENU_TRADE_ALLOC_INDICATOR;
+        assertEquals( "826", fixData.getID());
+        assertEquals( "TRADE_ALLOC_INDICATOR", fixData.getName());
+        assertEquals( "TradeAllocIndicator", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0826Test() {
         Tag826EnuTradeAllocIndicator tagData;
 
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.NOT_REQUIRED );
+        assertEquals( Enum826TradeAllocIndicator.NOT_REQUIRED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.REQUIRED );
+        assertEquals( Enum826TradeAllocIndicator.REQUIRED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.USE_PROVIDED_INFO );
+        assertEquals( Enum826TradeAllocIndicator.USE_PROVIDED_INFO.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR );
+        assertEquals( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.FROM_EXECUTOR );
+        assertEquals( Enum826TradeAllocIndicator.FROM_EXECUTOR.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.CLAIM_ACCOUNT );
+        assertEquals( Enum826TradeAllocIndicator.CLAIM_ACCOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

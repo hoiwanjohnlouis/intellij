@@ -16,5 +16,10 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  771
+ *  TrdRegTimestampOrigin
+ *  String
+ */
 public class Tag771TrdRegTimestampOrigin {
 }

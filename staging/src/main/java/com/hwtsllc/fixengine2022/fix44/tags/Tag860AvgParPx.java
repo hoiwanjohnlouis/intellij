@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  860
+ *  AvgParPx
+ *  Price
+ *  Used to express average price as percent of par (used where AvgPx field is expressed in some other way)
+ */
 public class Tag860AvgParPx {
 }

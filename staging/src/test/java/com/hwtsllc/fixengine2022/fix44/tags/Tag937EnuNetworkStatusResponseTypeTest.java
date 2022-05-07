@@ -17,25 +17,43 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum937NetworkStatusResponseType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  937
+ *  NetworkStatusResponseType
+ *  int
+ *  Indicates the type of Network Response Message.
+ *  Valid values:
+ *      1 - Full
+ *      2 - Incremental Update
+ */
 class Tag937EnuNetworkStatusResponseTypeTest {
     @Test
     void FIX0937Test() {
-        FIX44 fixData = FIX44.FIX937_NETWORK_STATUS_RESPONSE_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX937_ENU_NETWORK_STATUS_RESPONSE_TYPE;
+        assertEquals( "937", fixData.getID());
+        assertEquals( "NETWORK_STATUS_RESPONSE_TYPE", fixData.getName());
+        assertEquals( "NetworkStatusResponseType", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0937Test() {
         Tag937EnuNetworkStatusResponseType tagData;
 
+        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
+        assertEquals( Enum937NetworkStatusResponseType.FULL.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
+        assertEquals( Enum937NetworkStatusResponseType.INCREMENTAL.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

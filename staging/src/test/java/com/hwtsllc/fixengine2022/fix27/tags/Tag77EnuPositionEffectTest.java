@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum77PositionEffect;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPositionEffect;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,6 +36,9 @@ class Tag77EnuPositionEffectTest {
         assertNotEquals( FIX27.JUNK_ID, fixData.getID());
         assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
+    /**
+     *  Information is the same for TAGS 77, 564
+     */
     @Test
     void Tag0077Test() {
         Tag77EnuPositionEffect tagData;
@@ -43,16 +46,16 @@ class Tag77EnuPositionEffectTest {
         /*
          * O, F, C, and R PositionEffect types
          */
-        tagData = new Tag77EnuPositionEffect(Enum77PositionEffect.OPEN);
+        tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.OPEN);
         assertEquals( "O", tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag77EnuPositionEffect(Enum77PositionEffect.FIFO);
+        tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.FIFO);
         assertEquals( "F", tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag77EnuPositionEffect(Enum77PositionEffect.CLOSE);
+        tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.CLOSE);
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag77EnuPositionEffect(Enum77PositionEffect.ROLLED);
+        tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.ROLLED);
         assertEquals( "R", tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

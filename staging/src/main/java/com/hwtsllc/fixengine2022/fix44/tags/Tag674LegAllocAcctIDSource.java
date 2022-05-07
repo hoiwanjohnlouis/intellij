@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  674
+ *  LegAllocAcctIDSource
+ *  String
+ *  The source of the LegAllocAccount (671)
+ *        See AllocAcctIDSource (661) for description and valid values.
+ */
 public class Tag674LegAllocAcctIDSource {
 }

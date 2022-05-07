@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  681
+ *  LegBidPx
+ *  Price
+ *  Bid price of this leg.
+ *        See BidPx (32) for description and valid values.
+ */
 public class Tag681LegBidPx {
 }

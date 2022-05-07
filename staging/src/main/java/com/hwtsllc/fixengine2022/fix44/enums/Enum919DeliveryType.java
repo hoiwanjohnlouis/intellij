@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  919
+ *  DeliveryType
+ *  int
+ *  Identifies type of settlement
+ *  Valid values:
+ *      0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment
+ *      1 - Free: Deliver (if sell) or Receive (if buy) Free
+ *      2 - Tri-Party
+ *      3 - Hold In Custody
+ */
 public enum Enum919DeliveryType implements EnumAccessors, LogStringVerbose {
+    VERSUS_PAYMENT( "0", "VERSUS_PAYMENT", "0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment" ),
+    FREE( "1", "FREE", "1 - Free: Deliver (if sell) or Receive (if buy) Free" ),
+    TRI_PARTY( "2", "TRI_PARTY", "2 - Tri-Party" ),
+    HOLD_IN_CUSTODY( "3", "HOLD_IN_CUSTODY", "3 - Hold In Custody" ),
     ;
 
     private final String id;

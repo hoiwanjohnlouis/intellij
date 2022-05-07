@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  918
+ *  AgreementCurrency
+ *  Currency
+ *  Contractual currency forming the basis of a financing agreement and associated transactions.
+ *  Usually, but not always, the same as the trade currency.
+ */
 public class Tag918AgreementCurrency {
 }

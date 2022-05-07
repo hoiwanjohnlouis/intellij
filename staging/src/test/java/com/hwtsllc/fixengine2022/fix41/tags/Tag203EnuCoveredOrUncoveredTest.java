@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum203CoveredOrUncovered;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag203EnuCoveredOrUncoveredTest {
         assertEquals( "203", fixData.getID());
         assertEquals( "COVERED_OR_UNCOVERED", fixData.getName());
         assertEquals( "CoveredOrUncovered", fixData.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0203Test() {
@@ -40,10 +41,10 @@ class Tag203EnuCoveredOrUncoveredTest {
 
         tagData = new Tag203EnuCoveredOrUncovered(Enum203CoveredOrUncovered.COVERED);
         assertEquals( Enum203CoveredOrUncovered.COVERED.getID(), tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag203EnuCoveredOrUncovered(Enum203CoveredOrUncovered.UNCOVERED);
         assertEquals( Enum203CoveredOrUncovered.UNCOVERED.getID(), tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

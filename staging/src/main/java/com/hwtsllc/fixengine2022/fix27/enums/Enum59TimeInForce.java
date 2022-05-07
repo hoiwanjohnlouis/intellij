@@ -25,6 +25,7 @@ public enum Enum59TimeInForce implements EnumAccessors, LogStringVerbose {
     AT_THE_OPENING("2", "AT_THE_OPENING", "2 - At the Opening (OPG)" ),
     IMMEDIATE_OR_CANCEL("3", "IMMEDIATE_OR_CANCEL", "3 - Immediate Or Cancel (IOC)" ),
     FILL_OR_KILL("4", "FILL_OR_KILL", "4 - Fill Or Kill (FOK)" ),
+
     GOOD_TILL_CROSSING("5", "GOOD_TILL_CROSSING", "5 - Good Till Crossing (GTX)" ),
     GOOD_TILL_DATE("6", "GOOD_TILL_DATE", "6 - Good Till Date (GTD)" ),
     AT_THE_CLOSE("7", "AT_THE_CLOSE", "7 - At the Close" ),

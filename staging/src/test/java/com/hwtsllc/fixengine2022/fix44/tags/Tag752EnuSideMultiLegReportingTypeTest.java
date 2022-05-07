@@ -23,6 +23,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  752
+ *  SideMultiLegReportingType
+ *  Used to indicate if the side being reported on Trade Capture Report
+ *  represents a leg of a multileg instrument or a single security.
+ *  Valid values:
+ *      1 - Single Security (default if not specified)
+ *      2 - Individual leg of a multileg security
+ *      3 - Multileg Security
+ */
 class Tag752EnuSideMultiLegReportingTypeTest {
     @Test
     void FIX0752Test() {
@@ -30,20 +40,10 @@ class Tag752EnuSideMultiLegReportingTypeTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  752
-     *  SideMultiLegReportingType
-     *  Used to indicate if the side being reported on Trade Capture Report
-     *  represents a leg of a multileg instrument or a single security.
-     *  Valid values:
-     *      1 - Single Security (default if not specified)
-     *      2 - Individual leg of a multileg security
-     *      3 - Multileg Security
-     */
     @Test
     void Tag0752Test() {
         Tag752EnuSideMultiLegReportingType tagData;

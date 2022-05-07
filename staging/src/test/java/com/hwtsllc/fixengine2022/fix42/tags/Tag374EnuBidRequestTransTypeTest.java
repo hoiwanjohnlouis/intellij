@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum374BidRequestTransType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag374EnuBidRequestTransTypeTest {
         assertEquals( "374", fixData.getID());
         assertEquals( "BID_REQUEST_TRANS_TYPE", fixData.getName());
         assertEquals( "BidRequestTransType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag374
@@ -53,10 +54,10 @@ class Tag374EnuBidRequestTransTypeTest {
          */
         tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.CANCEL);
         assertEquals( Enum374BidRequestTransType.CANCEL.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.NEW);
         assertEquals( Enum374BidRequestTransType.NEW.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

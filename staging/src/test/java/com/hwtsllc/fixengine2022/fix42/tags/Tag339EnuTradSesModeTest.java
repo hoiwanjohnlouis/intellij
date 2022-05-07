@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum339TrdSesMode;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag339EnuTradSesModeTest {
         assertEquals( "339", fixData.getID());
         assertEquals( "TRAD_SES_MODE", fixData.getName());
         assertEquals( "TradSesMode", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag339
@@ -53,14 +54,14 @@ class Tag339EnuTradSesModeTest {
          */
         tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.TESTING);
         assertEquals( Enum339TrdSesMode.TESTING.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.SIMULATED);
         assertEquals( Enum339TrdSesMode.SIMULATED.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.PRODUCTION);
         assertEquals( Enum339TrdSesMode.PRODUCTION.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

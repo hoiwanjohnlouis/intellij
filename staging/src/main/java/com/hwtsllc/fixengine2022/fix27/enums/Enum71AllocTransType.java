@@ -27,6 +27,7 @@ public enum Enum71AllocTransType implements EnumAccessors, LogStringVerbose {
             "3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)" ),
     CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY("4", "CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY",
             "4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)" ),
+
     CALCULATED_WITHOUT_PRELIMINARY("5", "CALCULATED_WITHOUT_PRELIMINARY",
             "5 - Calculated without Preliminary " +
                     "(sent unsolicited by broker, includes MiscFees and NetMoney) (Removed/Replaced)" ),

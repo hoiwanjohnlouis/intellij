@@ -17,25 +17,44 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum857AllocNoOrdersType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  857
+ *  AllocNoOrdersType
+ *  int
+ *  Indicates how the orders being booked and allocated by an Allocation Instruction or Allocation
+ *  Report message are identified, i.e. by explicit definition in the NoOrders group or not.
+ *  Valid values:
+ *      0 - Not Specified
+ *      1 - Explicit List Provided
+ */
 class Tag857EnuAllocNoOrdersTypeTest {
     @Test
     void FIX0857Test() {
-        FIX44 fixData = FIX44.FIX857_ALLOC_NO_ORDERS_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX857_ENU_ALLOC_NO_ORDERS_TYPE;
+        assertEquals( "857", fixData.getID());
+        assertEquals( "ALLOC_NO_ORDERS_TYPE", fixData.getName());
+        assertEquals( "AllocNoOrdersType", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0857Test() {
         Tag857EnuAllocNoOrdersType tagData;
 
+        tagData = new Tag857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.NOT_SPECIFIED );
+        assertEquals( Enum857AllocNoOrdersType.NOT_SPECIFIED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.LIST_PROVIDED );
+        assertEquals( Enum857AllocNoOrdersType.LIST_PROVIDED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

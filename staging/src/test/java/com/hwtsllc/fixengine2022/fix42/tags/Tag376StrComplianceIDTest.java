@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag376StrComplianceIDTest {
         assertEquals( "376", fixData.getID());
         assertEquals( "COMPLIANCE_ID", fixData.getName());
         assertEquals( "ComplianceId", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0376Test() {
@@ -42,12 +43,12 @@ class Tag376StrComplianceIDTest {
                 Tag376StrComplianceID.TESTA_STR_COMPLIANCE_ID));
         assertEquals( Tag376StrComplianceID.TESTA_STR_COMPLIANCE_ID,
                 tagData.getDataValue() );
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag376StrComplianceID(new MyStringType(
                 Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID));
         assertEquals( Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID,
                 tagData.getDataValue() );
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

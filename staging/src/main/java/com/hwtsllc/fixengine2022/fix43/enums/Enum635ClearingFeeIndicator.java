@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 635
+ */
 public enum Enum635ClearingFeeIndicator implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 635
-     */
-
     /*
      *  1-5, types
      */

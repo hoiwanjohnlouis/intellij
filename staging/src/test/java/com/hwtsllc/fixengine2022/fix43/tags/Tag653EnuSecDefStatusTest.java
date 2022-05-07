@@ -30,9 +30,9 @@ class Tag653EnuSecDefStatusTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX43.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX43.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0653Test() {

@@ -18,17 +18,29 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum27IOIQty;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumIOIQty;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  27 (same as 27, 682)
+ *  LegIOIQty
+ *  Leg-specific IOI quantity.
+ *          See IOIQty (27) for description and valid values
+ *  Valid values:
+ *      0 - 1000000000
+ *      S - Small
+ *      M - Medium
+ *      L - Large
+ *      U - Undisclosed Quantity
+ */
 public class Tag27EnuIOIQty extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum27IOIQty dataValue;
+    private final MyEnumIOIQty dataValue;
 
-    public final static Enum27IOIQty TESTA_ENU_IOI_QTY = Enum27IOIQty.ONE_BILLION; // fake data
-    public final static Enum27IOIQty TESTB_ENU_IOI_QTY = Enum27IOIQty.UNDISCLOSED_QUANTITY;
+    public final static MyEnumIOIQty TESTA_ENU_IOI_QTY = MyEnumIOIQty.ONE_BILLION; // fake data
+    public final static MyEnumIOIQty TESTB_ENU_IOI_QTY = MyEnumIOIQty.UNDISCLOSED_QUANTITY;
 
-    public Tag27EnuIOIQty(Enum27IOIQty dataValue) {
+    public Tag27EnuIOIQty(MyEnumIOIQty dataValue) {
         setFixType(FIX27.FIX27_ENU_IOI_SHARES);
         this.dataValue = dataValue;
     }

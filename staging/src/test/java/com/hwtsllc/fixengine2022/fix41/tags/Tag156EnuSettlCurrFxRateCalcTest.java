@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum156SettlCurrFxRateCalc;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag156EnuSettlCurrFxRateCalcTest {
         assertEquals( "156", fixData.getID());
         assertEquals( "CURR_FX_RATE_CALC", fixData.getName());
         assertEquals( "CurrFxRateCalc", fixData.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0156Test() {
@@ -40,10 +41,10 @@ class Tag156EnuSettlCurrFxRateCalcTest {
 
         tagData = new Tag156EnuSettlCurrFxRateCalc(Enum156SettlCurrFxRateCalc.MULTIPLY);
         assertEquals( Enum156SettlCurrFxRateCalc.MULTIPLY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag156EnuSettlCurrFxRateCalc(Enum156SettlCurrFxRateCalc.DIVIDE);
         assertEquals( Enum156SettlCurrFxRateCalc.DIVIDE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

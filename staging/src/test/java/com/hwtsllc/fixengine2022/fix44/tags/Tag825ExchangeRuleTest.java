@@ -17,11 +17,22 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  825
+ *  ExchangeRule
+ *  String
+ *  Used to report any exchange rules that apply to this trade.
+ *          Primarily intended for US futures markets.
+ *          Certain trading practices are permitted by the CFTC,
+ *          such as large lot trading, block trading, all or none trades.
+ *          If the rules are used, the exchanges are required to indicate these rules on the trade.
+ */
 class Tag825ExchangeRuleTest {
     @Test
     void FIX0825Test() {
@@ -29,9 +40,9 @@ class Tag825ExchangeRuleTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0825Test() {

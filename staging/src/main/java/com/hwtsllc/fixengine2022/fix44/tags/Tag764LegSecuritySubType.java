@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  764
+ *  LegSecuritySubType
+ *  String
+ *  SecuritySubType of the leg instrument.
+ *          See SecuritySubType (762) field for description
+ */
 public class Tag764LegSecuritySubType {
 }

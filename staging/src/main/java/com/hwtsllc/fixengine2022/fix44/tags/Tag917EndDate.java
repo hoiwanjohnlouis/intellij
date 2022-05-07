@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  917
+ *  EndDate
+ *  LocalMktDate
+ *  End date of a financing deal,
+ *  i.e. the date the seller reimburses the buyer and takes back control of the collateral
+ */
 public class Tag917EndDate {
 }

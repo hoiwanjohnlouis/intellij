@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  832
+ *  TotNumAssignmentReports
+ *  int
+ *  Total Number of Assignment Reports being returned to a firm
+ */
 public class Tag832TotNumAssignmentReports {
 }

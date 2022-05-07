@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 522
+ */
 public enum Enum522OwnerType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 522
-     */
-
     /*
      * 1-13 types
      */
@@ -32,11 +31,13 @@ public enum Enum522OwnerType implements EnumAccessors, LogStringVerbose {
     PRIVATE_COMPANY("3", "PRIVATE_COMPANY", "3 - Private Company" ),
     INDIVIDUAL_TRUSTEE("4", "INDIVIDUAL_TRUSTEE", "4 - Individual Trustee" ),
     COMPANY_TRUSTEE("5", "COMPANY_TRUSTEE", "5 - Company Trustee" ),
+
     PENSION_PLAN("6", "PENSION_PLAN", "6 - Pension Plan" ),
     CUSTODIAN_MINORS_ACT("7", "CUSTODIAN_MINORS_ACT", "7 - Custodian Under Gifts to Minors Act" ),
     TRUSTS("8", "TRUSTS", "8 - Trusts" ),
     FIDUCIARIES("9", "FIDUCIARIES", "9 - Fiduciaries" ),
     NETWORKING_SUB_ACCOUNT("10", "NETWORKING_SUB_ACCOUNT", "10 - Networking Sub-account" ),
+
     NON_PROFIT_ORGANIZATION("11", "NON_PROFIT_ORGANIZATION", "11 - Non-profit organization" ),
     CORPORATE_BODY("12", "CORPORATE_BODY", "12 - Corporate Body" ),
     NOMINEE("13", "NOMINEE", "13 - Nominee" ),

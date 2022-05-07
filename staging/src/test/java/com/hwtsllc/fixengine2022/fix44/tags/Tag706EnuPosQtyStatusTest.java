@@ -17,11 +17,21 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  706
+ *  PosQtyStatus
+ *  Status of this position.
+ *  Valid values:
+ *  0 - Submitted
+ *  1 - Accepted
+ *  2 - Rejected
+ */
 class Tag706EnuPosQtyStatusTest {
     @Test
     void FIX0706Test() {
@@ -29,19 +39,10 @@ class Tag706EnuPosQtyStatusTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  706
-     *  PosQtyStatus
-     *  Status of this position.
-     *  Valid values:
-     *  0 - Submitted
-     *  1 - Accepted
-     *  2 - Rejected
-     */
     @Test
     void Tag0706Test() {
         Tag706EnuPosQtyStatus tagData;

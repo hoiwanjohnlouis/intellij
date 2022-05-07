@@ -41,24 +41,24 @@ class Enum752SideMultiLegReportingTypeTest {
         assertEquals( "1", enumType.getID());
         assertEquals( "SINGLE_SECURITY", enumType.getName());
         assertEquals( "1 - Single Security (default if not specified)", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum752SideMultiLegReportingType.INDIVIDUAL_LEG;
         assertEquals( "2", enumType.getID());
         assertEquals( "INDIVIDUAL_LEG", enumType.getName());
         assertEquals( "2 - Individual leg of a multileg security", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum752SideMultiLegReportingType.MULTILEG_SECURITY;
         assertEquals( "3", enumType.getID());
         assertEquals( "MULTILEG_SECURITY", enumType.getName());
         assertEquals( "3 - Multileg Security", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

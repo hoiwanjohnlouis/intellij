@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag232NumNoStipulationsTest {
         assertEquals( "232", fixData.getID());
         assertEquals( "NO_STIPULATIONS", fixData.getName());
         assertEquals( "NoStipulations", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0232Test() {
@@ -42,12 +43,12 @@ class Tag232NumNoStipulationsTest {
                 Tag232NumNoStipulations.TESTA_NUM_NO_STIPULATIONS));
         assertEquals( Tag232NumNoStipulations.TESTA_NUM_NO_STIPULATIONS,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag232NumNoStipulations(new MyNumInGroupType(
                 Tag232NumNoStipulations.TESTB_NUM_NO_STIPULATIONS));
         assertEquals( Tag232NumNoStipulations.TESTB_NUM_NO_STIPULATIONS,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

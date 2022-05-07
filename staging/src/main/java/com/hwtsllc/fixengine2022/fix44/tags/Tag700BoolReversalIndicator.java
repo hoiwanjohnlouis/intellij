@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  700
+ *  ReversalIndicator
+ *  Boolean
+ *  Indicates a trade that reverses a previous trade.
+ */
 public class Tag700BoolReversalIndicator extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

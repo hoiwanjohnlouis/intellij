@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum338TradSesMethod;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag338EnuTradSesMethodTest {
         assertEquals( "338", fixData.getID());
         assertEquals( "TRAD_SES_METHOD", fixData.getName());
         assertEquals( "TradSesMethod", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag338
@@ -53,14 +54,14 @@ class Tag338EnuTradSesMethodTest {
          */
         tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.ELECTRONIC);
         assertEquals( Enum338TradSesMethod.ELECTRONIC.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.OPEN_OUTCRY);
         assertEquals( Enum338TradSesMethod.OPEN_OUTCRY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.TWO_PARTY);
         assertEquals( Enum338TradSesMethod.TWO_PARTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 638
+ */
 public enum Enum638PriorityIndicator implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 638
-     */
-
     /*
      *  0-1 types
      */

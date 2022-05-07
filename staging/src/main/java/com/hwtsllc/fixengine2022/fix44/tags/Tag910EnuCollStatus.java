@@ -16,9 +16,82 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum910CollStatus;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  910
+ *  CollStatus
+ *  int
+ *  Collateral Status
+ *  Valid values:
+ *      0 - Unassigned
+ *      1 - Partially Assigned
+ *      2 - Assignment Proposed
+ *      3 - Assigned (Accepted)
+ *      4 - Challenged
+ */
 public class Tag910EnuCollStatus extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum910CollStatus dataValue;
+
+    public final static Enum910CollStatus TESTA_ENU_COLL_STATUS
+            = Enum910CollStatus.ASSIGNMENT_PROPOSED;
+    public final static Enum910CollStatus TESTB_ENU_COLL_STATUS
+            = Enum910CollStatus.PARTIALLY_ASSIGNED;
+
+    public Tag910EnuCollStatus(Enum910CollStatus dataValue) {
+        setFixType(FIX44.FIX910_ENU_COLL_STATUS);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag910EnuCollStatus tagData;
+
+        tagData = new Tag910EnuCollStatus(TESTA_ENU_COLL_STATUS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag910EnuCollStatus(TESTB_ENU_COLL_STATUS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  854
+ *  QtyType
+ *  int
+ *  Type of quantity specified in a quantity field:
+ *  Valid values:
+ *      0 - Units (shares, par, currency)
+ *      1 - Contracts (if used - must specify ContractMultiplier (tag 231))
+ *      2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
+ */
 public enum Enum854QtyType implements EnumAccessors, LogStringVerbose {
+    UNITS( "0", "UNITS", "0 - Units (shares, par, currency)" ),
+    CONTRACTS( "1", "CONTRACTS", "1 - Contracts (if used - must specify ContractMultiplier (tag 231))" ),
+    MEASURE_PER_TIME( "2", "MEASURE_PER_TIME", "2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))" ),
     ;
 
     private final String id;

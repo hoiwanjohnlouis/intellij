@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  953
+ *  Nested3PartySubID
+ *  String
+ *  PartySubID value within a "third instance" Nested repeating group.
+ *          Same values as  PartySubID (523)
+ */
 public class Tag953Nested3PartySubID {
 }

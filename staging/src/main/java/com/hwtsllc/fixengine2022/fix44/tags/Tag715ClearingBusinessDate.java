@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  715
+ *  ClearingBusinessDate
+ *  LocalMktDate
+ *  The "Clearing Business Date" referred to by this maintenance request.
+ */
 public class Tag715ClearingBusinessDate {
 }

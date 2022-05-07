@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum784SettlPartyRole;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyRole;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -113,14 +113,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      78 - Allocation Entity
  */
 public class Tag784EnuSettlPartyRole extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum784SettlPartyRole dataValue;
+    private final MyEnumPartyRole dataValue;
 
-    public final static Enum784SettlPartyRole TESTA_ENU_SETTL_PARTY_ROLE
-            = Enum784SettlPartyRole.INTERESTED_PARTY;
-    public final static Enum784SettlPartyRole TESTB_ENU_SETTL_PARTY_ROLE
-            = Enum784SettlPartyRole.ASSET_MANAGER;
+    public final static MyEnumPartyRole TESTA_ENU_SETTL_PARTY_ROLE
+            = MyEnumPartyRole.INTERESTED_PARTY;
+    public final static MyEnumPartyRole TESTB_ENU_SETTL_PARTY_ROLE
+            = MyEnumPartyRole.ASSET_MANAGER;
 
-    public Tag784EnuSettlPartyRole(Enum784SettlPartyRole dataValue) {
+    public Tag784EnuSettlPartyRole(MyEnumPartyRole dataValue) {
         setFixType(FIX44.FIX784_ENU_SETTL_PARTY_ROLE);
         this.dataValue = dataValue;
     }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  858
+ *  SharedCommission
+ *  Amt
+ *  Commission to be shared with a third party,
+ *  e.g. as part of a directed brokerage commission sharing arrangement.
+ */
 public class Tag858SharedCommission {
 }

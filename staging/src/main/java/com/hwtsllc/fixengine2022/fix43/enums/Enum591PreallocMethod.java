@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 591
+ */
 public enum Enum591PreallocMethod implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 591
-     */
-
     /*
      *  0-1 types
      */

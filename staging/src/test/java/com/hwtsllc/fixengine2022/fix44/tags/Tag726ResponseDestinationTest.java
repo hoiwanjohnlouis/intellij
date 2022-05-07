@@ -17,11 +17,21 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  726
+ *  ResponseDestination
+ *  String
+ *  URI (Uniform Resource Identifier) for details) or other pre-arranged value.
+ *  Used in conjunction with ResponseTransportType (725) value of Out-of-Band
+ *  to identify the out-of-band destination.
+ *          See "Appendix 6-B FIX Fields Based Upon Other Standards"
+ */
 class Tag726ResponseDestinationTest {
     @Test
     void FIX0726Test() {
@@ -29,9 +39,9 @@ class Tag726ResponseDestinationTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0726Test() {

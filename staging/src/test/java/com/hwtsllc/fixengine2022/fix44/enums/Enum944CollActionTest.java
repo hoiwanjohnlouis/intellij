@@ -16,12 +16,49 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  944
+ *  CollAction
+ *  int
+ *  Action proposed for an Underlying Instrument instance.
+ *  Valid values:
+ *      0 - Retain
+ *      1 - Add
+ *      2 - Remove
+ */
 class Enum944CollActionTest {
     @Test
     void EnumTest() {
         Enum944CollAction enumType;
 
+        enumType = Enum944CollAction.RETAIN;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "RETAIN", enumType.getName() );
+        assertEquals( "0 - Retain", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum944CollAction.ADD;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "ADD", enumType.getName() );
+        assertEquals( "1 - Add", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum944CollAction.REMOVE;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "REMOVE", enumType.getName() );
+        assertEquals( "2 - Remove", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

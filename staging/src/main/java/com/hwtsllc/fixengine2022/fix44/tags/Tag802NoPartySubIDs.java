@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  802
+ *  NoPartySubIDs
+ *  NumInGroup
+ *  Number of PartySubID (523)and PartySubIDType (803) entries
+ */
 public class Tag802NoPartySubIDs {
 }

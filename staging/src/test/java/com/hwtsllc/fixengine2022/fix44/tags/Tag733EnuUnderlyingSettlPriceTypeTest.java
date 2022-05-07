@@ -17,12 +17,22 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum733UnderlyingSettlPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  733 (same as 731, 733)
+ *  UnderlyingSettlPriceType
+ *  Underlying security’s SettlPriceType.
+ *              See SettlPriceType (731) field for description
+ *  Valid values:
+ *      1 - Final
+ *      2 - Theoretical
+ */
 class Tag733EnuUnderlyingSettlPriceTypeTest {
     @Test
     void FIX0733Test() {
@@ -30,29 +40,20 @@ class Tag733EnuUnderlyingSettlPriceTypeTest {
         assertEquals( "733", fixData.getID());
         assertEquals( "UNDERLYING_SETTL_PRICE_TYPE", fixData.getName());
         assertEquals( "UnderlyingSettlPriceType", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  733 (same as 731, 733)
-     *  UnderlyingSettlPriceType
-     *  Underlying security’s SettlPriceType.
-     *              See SettlPriceType (731) field for description
-     *  Valid values:
-     *      1 - Final
-     *      2 - Theoretical
-     */
     @Test
     void Tag0733Test() {
         Tag733EnuUnderlyingSettlPriceType tagData;
 
         tagData = new Tag733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.FINAL);
         assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

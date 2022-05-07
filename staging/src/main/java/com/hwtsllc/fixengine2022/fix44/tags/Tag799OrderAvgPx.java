@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  799
+ *  OrderAvgPx
+ *  Price
+ *  Average price for a specific order
+ */
 public class Tag799OrderAvgPx {
 }

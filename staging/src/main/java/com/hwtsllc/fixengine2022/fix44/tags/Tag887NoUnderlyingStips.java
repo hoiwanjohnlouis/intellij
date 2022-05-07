@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  887
+ *  NoUnderlyingStips
+ *  NumInGroup
+ *  Number of underlying stipulation entries
+ */
 public class Tag887NoUnderlyingStips {
 }

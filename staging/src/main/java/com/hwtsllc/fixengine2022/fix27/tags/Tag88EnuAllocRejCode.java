@@ -18,17 +18,17 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum88AllocRejCode;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAllocRejCode;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 public class Tag88EnuAllocRejCode extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum88AllocRejCode dataValue;
+    private final MyEnumAllocRejCode dataValue;
 
-    public final static Enum88AllocRejCode TESTA_ENU_ALLOC_STATUS = Enum88AllocRejCode.UNKNOWN_ACCOUNT;
-    public final static Enum88AllocRejCode TESTB_ENU_ALLOC_STATUS = Enum88AllocRejCode.CALCULATION_DIFFERENCE;
+    public final static MyEnumAllocRejCode TESTA_ENU_ALLOC_STATUS = MyEnumAllocRejCode.UNKNOWN_ACCOUNT;
+    public final static MyEnumAllocRejCode TESTB_ENU_ALLOC_STATUS = MyEnumAllocRejCode.CALCULATION_DIFFERENCE;
 
-    public Tag88EnuAllocRejCode(Enum88AllocRejCode dataValue) {
+    public Tag88EnuAllocRejCode(MyEnumAllocRejCode dataValue) {
         setFixType(FIX27.FIX88_ENU_ALLOC_REJ_CODE);
         this.dataValue = dataValue;
     }

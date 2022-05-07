@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  813
+ *  ApplQueueDepth
+ *  int
+ *  Current number of application messages that were queued at the time
+ *  that the message was created by the counterparty.
+ */
 public class Tag813ApplQueueDepth {
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  740
+ *  LegPool
+ *  String
+ *  For Fixed Income, identifies MBS - ABS pool for a specific leg of a multi-leg instrument.
+ *          See Pool (691) for description and valid values.
+ */
 public class Tag740LegPool {
 }

@@ -17,25 +17,57 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumScope;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  840
+ *  PegScope
+ *  int
+ *  The scope of the peg
+ *  846
+ *  DiscretionScope
+ *  int
+ *  The scope of the discretion
+ *  Valid values:
+ *      1 - Local (Exchange, ECN, ATS)
+ *      2 - National
+ *      3 - Global
+ *      4 - National excluding local
+ */
 class Tag840EnuPegScopeTest {
     @Test
     void FIX0840Test() {
-        FIX44 fixData = FIX44.FIX840_PEG_SCOPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX840_ENU_PEG_SCOPE;
+        assertEquals( "840", fixData.getName());
+        assertEquals( "PEG_SCOPE", fixData.getID());
+        assertEquals( "PegScope", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0840Test() {
         Tag840EnuPegScope tagData;
 
+        tagData = new Tag840EnuPegScope(MyEnumScope.LOCAL);
+        assertEquals( MyEnumScope.LOCAL.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag840EnuPegScope(MyEnumScope.NATIONAL);
+        assertEquals( MyEnumScope.NATIONAL.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag840EnuPegScope(MyEnumScope.GLOBAL);
+        assertEquals( MyEnumScope.GLOBAL.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag840EnuPegScope(MyEnumScope.NATIONAL_EXCLUDING_LOCAL);
+        assertEquals( MyEnumScope.NATIONAL_EXCLUDING_LOCAL.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

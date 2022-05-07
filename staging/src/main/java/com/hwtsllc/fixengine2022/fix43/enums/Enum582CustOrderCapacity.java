@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 582
+ */
 public enum Enum582CustOrderCapacity implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 582
-     */
-
     /*
      *  1-4 types
      */

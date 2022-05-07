@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  870
+ *  NoInstrAttrib
+ *  NumInGroup
+ *  Number of repeating InstrAttribType entries.
+ */
 public class Tag870NoInstrAttrib {
 }

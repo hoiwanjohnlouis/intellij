@@ -18,11 +18,19 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  760
+ *  Nested2PartySubID
+ *  String
+ *  PartySubID value within a "second instance" Nested repeating group.
+ *          Same values as  PartySubID (523)
+ */
 class Tag760StrNested2PartySubIDTest {
     @Test
     void FIX0760Test() {
@@ -30,9 +38,9 @@ class Tag760StrNested2PartySubIDTest {
         assertEquals( "760", fixData.getID());
         assertEquals( "NESTED_2_PARTY_SUB_ID", fixData.getName());
         assertEquals( "Nested 2 Party Sub Id", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0760Test() {
@@ -41,11 +49,11 @@ class Tag760StrNested2PartySubIDTest {
         tagData =
                 new Tag760StrNested2PartySubID(new MyStringType(Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID));
         assertEquals( Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData =
                 new Tag760StrNested2PartySubID(new MyStringType(Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID));
         assertEquals( Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

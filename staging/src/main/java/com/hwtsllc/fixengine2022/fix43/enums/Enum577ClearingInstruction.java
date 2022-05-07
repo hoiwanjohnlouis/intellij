@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 577
+ */
 public enum Enum577ClearingInstruction implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 577
-     */
-
     /*
      *  0-13 types
      */
@@ -32,6 +31,7 @@ public enum Enum577ClearingInstruction implements EnumAccessors, LogStringVerbos
     BILATERAL_NETTING_ONLY( "2", "BILATERAL_NETTING_ONLY", "2 - Bilateral netting only" ),
     EX_CLEARING( "3", "EX_CLEARING", "3 - Ex clearing" ),
     SPECIAL_TRADE( "4", "SPECIAL_TRADE", "4 - Special trade" ),
+
     MULTILATERAL_NETTING( "5", "MULTILATERAL_NETTING", "5 - Multilateral netting" ),
     CLEAR_AGAINST_CENTRAL_COUNTERPARTY( "6", "CLEAR_AGAINST_CENTRAL_COUNTERPARTY",
             "6 - Clear against central counterparty" ),
@@ -40,6 +40,7 @@ public enum Enum577ClearingInstruction implements EnumAccessors, LogStringVerbos
     MANUAL( "8", "MANUAL", "8 - Manual mode (pre-posting and/or pre-giveup)" ),
     AUTOMATIC_POSTING( "9", "AUTOMATIC_POSTING",
             "9 - Automatic posting mode (trade posting to the position account number specified)" ),
+
     AUTOMATIC_GIVE_UP( "10", "AUTOMATIC_GIVE_UP",
             "10 - Automatic give-up mode (trade give-up to the give-up destination number specified)" ),
     QUALIFIED_SERVICE_REPRESENTATIVE( "11", "QUALIFIED_SERVICE_REPRESENTATIVE",

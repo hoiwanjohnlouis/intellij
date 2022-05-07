@@ -17,25 +17,53 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum919DeliveryType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  919
+ *  DeliveryType
+ *  int
+ *  Identifies type of settlement
+ *  Valid values:
+ *      0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment
+ *      1 - Free: Deliver (if sell) or Receive (if buy) Free
+ *      2 - Tri-Party
+ *      3 - Hold In Custody
+ */
 class Tag919EnuDeliveryTypeTest {
     @Test
     void FIX0919Test() {
-        FIX44 fixData = FIX44.FIX919_DELIVERY_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX919_ENU_DELIVERY_TYPE;
+        assertEquals( "919", fixData.getID());
+        assertEquals( "DELIVERY_TYPE", fixData.getName());
+        assertEquals( "DeliveryType", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0919Test() {
         Tag919EnuDeliveryType tagData;
 
+        tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.VERSUS_PAYMENT );
+        assertEquals( Enum919DeliveryType.VERSUS_PAYMENT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.FREE );
+        assertEquals( Enum919DeliveryType.FREE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.TRI_PARTY );
+        assertEquals( Enum919DeliveryType.TRI_PARTY.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.HOLD_IN_CUSTODY );
+        assertEquals( Enum919DeliveryType.HOLD_IN_CUSTODY.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

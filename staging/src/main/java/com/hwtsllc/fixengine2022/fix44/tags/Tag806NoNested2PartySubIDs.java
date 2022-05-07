@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  806
+ *  NoNested2PartySubIDs
+ *  NumInGroup
+ *  Number of Nested2PartySubID (760) and Nested2PartySubIDType (807) entries.
+ *  Second instance of <NestedParties>.
+ */
 public class Tag806NoNested2PartySubIDs {
 }

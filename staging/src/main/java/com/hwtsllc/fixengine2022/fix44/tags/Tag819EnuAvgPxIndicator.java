@@ -16,9 +16,80 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum819AvgPxIndicator;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  819
+ *  AvgPxIndicator
+ *  int
+ *  Average Pricing Indicator
+ *  Valid values:
+ *      0 - No Average Pricing
+ *      1 - Trade is part of an average price group identified by the TradeLinkID (820)
+ *      2 - Last trade is the average price group identified by the TradeLinkID (820)
+ */
 public class Tag819EnuAvgPxIndicator extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum819AvgPxIndicator dataValue;
+
+    public final static Enum819AvgPxIndicator TESTA_ENU_AVG_PX_INDICATOR
+            = Enum819AvgPxIndicator.LAST_TRADE;
+    public final static Enum819AvgPxIndicator TESTB_ENU_AVG_PX_INDICATOR
+            = Enum819AvgPxIndicator.PART_OF_APG;
+
+    public Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator dataValue) {
+        setFixType(FIX44.FIX819_ENU_AVG_PX_INDICATOR);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag819EnuAvgPxIndicator tagData;
+
+        tagData = new Tag819EnuAvgPxIndicator(TESTA_ENU_AVG_PX_INDICATOR);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag819EnuAvgPxIndicator(TESTB_ENU_AVG_PX_INDICATOR);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

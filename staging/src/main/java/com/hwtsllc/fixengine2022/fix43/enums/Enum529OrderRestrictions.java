@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 529
+ */
 public enum Enum529OrderRestrictions implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 529
-     */
-
     /*
      *  1-9, types
      */
@@ -37,6 +36,7 @@ public enum Enum529OrderRestrictions implements EnumAccessors, LogStringVerbose 
             "4 - Competing Market Maker" ),
     SPECIALIST_IN_SECURITY( "5", "SPECIALIST_IN_SECURITY",
             "5 - Acting as Market Maker or Specialist in the security" ),
+
     SPECIALIST_IN_UNDERLYING_SECURITY( "6", "SPECIALIST_IN_UNDERLYING_SECURITY",
             "6 - Acting as Market Maker of Specialist in the underlying security of a derivative security" ),
     FOREIGN_ENTITY( "7", "FOREIGN_ENTITY",

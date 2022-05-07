@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag397AmtSideValue2Test {
         assertEquals( "397", fixData.getID());
         assertEquals( "SIDE_VALUE2", fixData.getName());
         assertEquals( "SideValue2", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0397Test() {
@@ -42,12 +43,12 @@ class Tag397AmtSideValue2Test {
                 Tag397AmtSideValue2.TESTA_AMT_SIDE_VALUE2));
         assertEquals( Tag397AmtSideValue2.TESTA_AMT_SIDE_VALUE2,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag397AmtSideValue2(new MyAmtType(
                 Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2));
         assertEquals( Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2,
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

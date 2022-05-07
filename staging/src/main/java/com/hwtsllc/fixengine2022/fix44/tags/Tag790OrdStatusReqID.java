@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  790
+ *  OrdStatusReqID
+ *  String
+ *  Can be used to uniquely identify a specific Order Status Request message.
+ */
 public class Tag790OrdStatusReqID {
 }

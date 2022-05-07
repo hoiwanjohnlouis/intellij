@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  921
+ *  StartCash
+ *  Amt
+ *  Starting dirty cash consideration of a financing deal,
+ *  i.e. paid to the seller on the Start Date.
+ */
 public class Tag921StartCash {
 }

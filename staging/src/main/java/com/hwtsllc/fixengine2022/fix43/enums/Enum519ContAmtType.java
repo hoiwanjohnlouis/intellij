@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 519
+ */
 public enum Enum519ContAmtType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 519
-     */
-
     /*
      * 1-15 types
      */
@@ -32,11 +31,13 @@ public enum Enum519ContAmtType implements EnumAccessors, LogStringVerbose {
     INITIAL_CHARGE_AMOUNT("3", "INITIAL_CHARGE_AMOUNT", "3 - Initial Charge Amount" ),
     INITIAL_CHARGE_PERCENT("4", "INITIAL_CHARGE_PERCENT", "4 - Initial Charge Percent" ),
     DISCOUNT_AMOUNT("5", "DISCOUNT_AMOUNT", "5 - Discount Amount" ),
+
     DISCOUNT_PERCENT("6", "DISCOUNT_PERCENT", "6 - Discount Percent" ),
     DILUTION_LEVY_AMOUNT("7", "DILUTION_LEVY_AMOUNT", "7 - Dilution Levy Amount" ),
     DILUTION_LEVY_PERCENT("8", "DILUTION_LEVY_PERCENT", "8 - Dilution Levy Percent" ),
     EXIT_CHARGE_AMOUNT("9", "EXIT_CHARGE_AMOUNT", "9 - Exit Charge Amount" ),
     EXIT_CHARGE_PERCENT("10", "EXIT_CHARGE_PERCENT", "10 - Exit Charge Percent" ),
+
     RENEWAL_COMMISSION_PERCENT("11", "RENEWAL_COMMISSION_PERCENT", "11 - Fund-Based Renewal Commission Percent (a.k.a. Trail commission)" ),
     PROJECTED_FUND_VALUE("12", "PROJECTED_FUND_VALUE", "12 - Projected Fund Value (i.e. for investments intended to realise or exceed a specific future value)" ),
     RENEWAL_COMMISSION_ORDER_VALUE("13", "RENEWAL_COMMISSION_ORDER_VALUE", "13 - Fund-Based Renewal Commission Amount (based on Order value)" ),

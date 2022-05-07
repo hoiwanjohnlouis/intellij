@@ -17,25 +17,65 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum853ShortSaleReason;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  853
+ *  ShortSaleReason
+ *  int
+ *  Reason for short sale.
+ *  Valid values:
+ *      0 - Dealer Sold Short
+ *      1 - Dealer Sold Short Exempt
+ *      2 - Selling Customer Sold Short
+ *      3 - Selling Customer Sold Short Exempt
+ *      4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short
+ *
+ *      5 - QSR or AGU Contra Side Sold Short Exempt
+ */
 class Tag853EnuShortSaleReasonTest {
     @Test
     void FIX0853Test() {
-        FIX44 fixData = FIX44.FIX853_SHORT_SALE_REASON;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX853_ENU_SHORT_SALE_REASON;
+        assertEquals( "853", fixData.getID());
+        assertEquals( "SHORT_SALE_REASON", fixData.getName());
+        assertEquals( "ShortSaleReason", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0853Test() {
         Tag853EnuShortSaleReason tagData;
 
+        tagData = new Tag853EnuShortSaleReason( Enum853ShortSaleReason.DEALER_SOLD_SHORT );
+        assertEquals( Enum853ShortSaleReason.DEALER_SOLD_SHORT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag853EnuShortSaleReason( Enum853ShortSaleReason.DEALER_SOLD_SHORT_EXEMPT );
+        assertEquals( Enum853ShortSaleReason.DEALER_SOLD_SHORT_EXEMPT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag853EnuShortSaleReason( Enum853ShortSaleReason.CUSTOMER_SOLD_SHORT );
+        assertEquals( Enum853ShortSaleReason.CUSTOMER_SOLD_SHORT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag853EnuShortSaleReason( Enum853ShortSaleReason.CUSTOMER_SOLD_SHORT_EXEMPT );
+        assertEquals( Enum853ShortSaleReason.CUSTOMER_SOLD_SHORT_EXEMPT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag853EnuShortSaleReason( Enum853ShortSaleReason.CONTRA_SOLD_SHORT );
+        assertEquals( Enum853ShortSaleReason.CONTRA_SOLD_SHORT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag853EnuShortSaleReason( Enum853ShortSaleReason.CONTRA_SOLD_SHORT_EXEMPT );
+        assertEquals( Enum853ShortSaleReason.CONTRA_SOLD_SHORT_EXEMPT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

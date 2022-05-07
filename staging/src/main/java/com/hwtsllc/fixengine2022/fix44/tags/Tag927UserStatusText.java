@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  927
+ *  UserStatusText
+ *  String
+ *  A text description associated with a user status.
+ */
 public class Tag927UserStatusText {
 }

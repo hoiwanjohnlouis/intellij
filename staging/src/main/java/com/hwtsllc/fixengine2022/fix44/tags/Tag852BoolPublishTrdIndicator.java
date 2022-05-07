@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  852
+ *  PublishTrdIndicator
+ *  Boolean
+ *  Indicates if a trade should be reported via a market reporting service.
+ *  Valid values:
+ *      N - Do Not Report Trade
+ *      Y - Report Trade
+ */
 public class Tag852BoolPublishTrdIndicator extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

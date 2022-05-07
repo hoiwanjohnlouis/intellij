@@ -16,12 +16,55 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+/**
+ *  919
+ *  DeliveryType
+ *  int
+ *  Identifies type of settlement
+ *  Valid values:
+ *      0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment
+ *      1 - Free: Deliver (if sell) or Receive (if buy) Free
+ *      2 - Tri-Party
+ *      3 - Hold In Custody
+ */
 class Enum919DeliveryTypeTest {
     @Test
     void EnumTest() {
         Enum919DeliveryType enumType;
 
+        enumType = Enum919DeliveryType.VERSUS_PAYMENT;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "VERSUS_PAYMENT", enumType.getName() );
+        assertEquals( "0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum919DeliveryType.FREE;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "FREE", enumType.getName() );
+        assertEquals( "1 - Free: Deliver (if sell) or Receive (if buy) Free", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum919DeliveryType.TRI_PARTY;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "TRI_PARTY", enumType.getName() );
+        assertEquals( "2 - Tri-Party", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum919DeliveryType.HOLD_IN_CUSTODY;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "HOLD_IN_CUSTODY", enumType.getName() );
+        assertEquals( "3 - Hold In Custody", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

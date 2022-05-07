@@ -18,19 +18,22 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum564LegPositionEffect;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPositionEffect;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 77, 564
+ */
 public class Tag564EnuLegPositionEffect extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum564LegPositionEffect dataValue;
+    private final MyEnumPositionEffect dataValue;
 
-    public final static Enum564LegPositionEffect TESTA_ENU_LEG_POSITION_EFFECT
-            = Enum564LegPositionEffect.CLOSE;
-    public final static Enum564LegPositionEffect TESTB_ENU_LEG_POSITION_EFFECT
-            = Enum564LegPositionEffect.FIFO;
+    public final static MyEnumPositionEffect TESTA_ENU_LEG_POSITION_EFFECT
+            = MyEnumPositionEffect.CLOSE;
+    public final static MyEnumPositionEffect TESTB_ENU_LEG_POSITION_EFFECT
+            = MyEnumPositionEffect.FIFO;
 
-    public Tag564EnuLegPositionEffect(Enum564LegPositionEffect dataValue) {
+    public Tag564EnuLegPositionEffect(MyEnumPositionEffect dataValue) {
         setFixType(FIX43.FIX564_ENU_LEG_POSITION_EFFECT);
         this.dataValue = dataValue;
     }

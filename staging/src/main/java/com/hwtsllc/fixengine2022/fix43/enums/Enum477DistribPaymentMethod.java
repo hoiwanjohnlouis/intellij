@@ -19,30 +19,29 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  477 (same as 477,)
+ *  DistribPaymentMethod
+ *  A code identifying the payment method for a (fractional) distribution.
+ *          13 through 998 are reserved for future use
+ Values above 1000 are available for use by private agreement among counterparties
+ *  Valid values:
+ *      1 - CREST
+ *      2 - NSCC
+ *      3 - Euroclear
+ *      4 - Clearstream
+ *      5 - Cheque
+ *      6 - Telegraphic Transfer
+ *      7 - Fed Wire
+ *      8 - Direct Credit (BECS,BACS)
+ *      9 - ACH Debit
+ *      10 - BPAY
+ *      11 - High Value Clearing System HVACS
+ *      12 - Reinvest In Fund
+ *
+ *      or any value conforming to the data type Reserved1000Plus
+ */
 public enum Enum477DistribPaymentMethod implements EnumAccessors, LogStringVerbose {
-    /**
-     *  477 (same as 477,)
-     *  DistribPaymentMethod
-     *  A code identifying the payment method for a (fractional) distribution.
-     *          13 through 998 are reserved for future use
-     Values above 1000 are available for use by private agreement among counterparties
-     *  Valid values:
-     *      1 - CREST
-     *      2 - NSCC
-     *      3 - Euroclear
-     *      4 - Clearstream
-     *      5 - Cheque
-     *      6 - Telegraphic Transfer
-     *      7 - Fed Wire
-     *      8 - Direct Credit (BECS,BACS)
-     *      9 - ACH Debit
-     *      10 - BPAY
-     *      11 - High Value Clearing System HVACS
-     *      12 - Reinvest In Fund
-     *
-     *      or any value conforming to the data type Reserved1000Plus
-     */
-
     /*
      * 1-12 types
      */
@@ -51,11 +50,13 @@ public enum Enum477DistribPaymentMethod implements EnumAccessors, LogStringVerbo
     EUROCLEAR("3", "EUROCLEAR", "3 - Euroclear" ),
     CLEARSTREAM("4", "CLEARSTREAM", "4 - Clearstream" ),
     CHEQUE("5", "CHEQUE", "5 - Cheque" ),
+
     TELEGRAPHIC_TRANSFER("6", "TELEGRAPHIC_TRANSFER", "6 - Telegraphic Transfer" ),
     FED_WIRE("7", "FED_WIRE", "7 - Fed Wire" ),
     DIRECT_CREDIT("8", "DIRECT_CREDIT", "8 - Direct Credit (BECS, BACS)" ),
     ACH_CREDIT("9", "ACH_CREDIT", "9 - ACH Credit" ),
     BPAY("10", "BPAY", "10 - BPAY" ),
+
     HIGH_VALUE_CLEARING_SYSTEM("11", "HVACS", "11 - High Value Clearing System HVACS" ),
     REINVEST_IN_FUND("12", "REINVEST_IN_FUND", "12 - Reinvest In Fund" ),
     ;

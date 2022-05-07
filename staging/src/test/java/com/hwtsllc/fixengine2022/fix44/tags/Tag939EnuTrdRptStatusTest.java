@@ -17,25 +17,48 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum939TrdRptStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  939
+ *  TrdRptStatus
+ *  int
+ *  Trade Report Status
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Rejected
+ *      3 - Accepted with errors
+ */
 class Tag939EnuTrdRptStatusTest {
     @Test
     void FIX0939Test() {
-        FIX44 fixData = FIX44.FIX939_TRD_RPT_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX939_ENU_TRD_RPT_STATUS;
+        assertEquals( "939", fixData.getID());
+        assertEquals( "TRD_RPT_STATUS", fixData.getName());
+        assertEquals( "TrdRptStatus", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0939Test() {
         Tag939EnuTrdRptStatus tagData;
 
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED );
+        assertEquals( Enum939TrdRptStatus.ACCEPTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.REJECTED );
+        assertEquals( Enum939TrdRptStatus.REJECTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS );
+        assertEquals( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

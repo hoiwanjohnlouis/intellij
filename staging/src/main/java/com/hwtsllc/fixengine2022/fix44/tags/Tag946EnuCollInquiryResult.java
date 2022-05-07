@@ -16,9 +16,91 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum946CollInquiryResult;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  946
+ *  CollInquiryResult
+ *  int
+ *  Result returned in response to Collateral Inquiry
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  Valid values:
+ *      0 - Successful (default)
+ *      1 - Invalid or unknown instrument
+ *      2 - Invalid or unknown collateral type
+ *      3 - Invalid Parties
+ *      4 - Invalid Transport Type requested
+ *      5 - Invalid Destination requested
+ *      6 - No collateral found for the trade specified
+ *      7 - No collateral found for the order specified
+ *      8 - Collateral inquiry type not supported
+ *      9 - Unauthorized for collateral inquiry
+ *      99 - Other (further information in Text (58) field)
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public class Tag946EnuCollInquiryResult extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum946CollInquiryResult dataValue;
+
+    public final static Enum946CollInquiryResult TESTA_ENU_COLL_INQUIRY_RESULT
+            = Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED;
+    public final static Enum946CollInquiryResult TESTB_ENU_COLL_INQUIRY_RESULT
+            = Enum946CollInquiryResult.INVALID_DESTINATION;
+
+    public Tag946EnuCollInquiryResult(Enum946CollInquiryResult dataValue) {
+        setFixType(FIX44.FIX946_ENU_COLL_INQUIRY_RESULT);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag946EnuCollInquiryResult tagData;
+
+        tagData = new Tag946EnuCollInquiryResult(TESTA_ENU_COLL_INQUIRY_RESULT);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag946EnuCollInquiryResult(TESTB_ENU_COLL_INQUIRY_RESULT);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

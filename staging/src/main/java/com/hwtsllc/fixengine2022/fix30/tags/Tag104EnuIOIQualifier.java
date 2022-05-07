@@ -18,12 +18,16 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
-import com.hwtsllc.fixengine2022.fix30.enums.Enum104IOIQualifier;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumQualifier;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *  104 (same as 104, 695)
+ *  QuoteQualifier
+ *  Code to qualify Quote use
+ *          See IOIQualifier (104) for description and valid values.
+ *  695  (same as 104, 695)
  *  QuoteQualifier
  *  Code to qualify Quote use
  *          See IOIQualifier (104) for description and valid values.
@@ -48,12 +52,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      Z - Pre-open
  */
 public class Tag104EnuIOIQualifier extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum104IOIQualifier dataValue;
+    private final MyEnumQualifier dataValue;
 
-    public final static Enum104IOIQualifier TESTA_ENU_IOI_QUALIFIER = Enum104IOIQualifier.ALL_OR_NONE; // fake data
-    public final static Enum104IOIQualifier TESTB_ENU_IOI_QUALIFIER = Enum104IOIQualifier.PRE_OPEN;
+    public final static MyEnumQualifier TESTA_ENU_IOI_QUALIFIER = MyEnumQualifier.ALL_OR_NONE; // fake data
+    public final static MyEnumQualifier TESTB_ENU_IOI_QUALIFIER = MyEnumQualifier.PRE_OPEN;
 
-    public Tag104EnuIOIQualifier(Enum104IOIQualifier dataValue) {
+    public Tag104EnuIOIQualifier(MyEnumQualifier dataValue) {
         setFixType(FIX30.FIX104_ENU_IOI_QUALIFIER);
         this.dataValue = dataValue;
     }

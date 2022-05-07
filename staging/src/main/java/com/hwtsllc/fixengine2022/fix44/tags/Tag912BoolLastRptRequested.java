@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  912
+ *  LastRptRequested
+ *  Boolean
+ *  Indicates whether this message is that last report message in response
+ *  to a request, such as Order Mass Status Request.
+ *  Valid values:
+ *      N - Not last message
+ *      Y - Last message
+ */
 public class Tag912BoolLastRptRequested extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

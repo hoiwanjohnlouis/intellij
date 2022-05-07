@@ -25,17 +25,19 @@ public enum Enum40OrdType implements EnumAccessors, LogStringVerbose {
     STOP_OR_STOP_LOSS("3", "STOP_OR_STOP_LOSS", "3 - Stop or Stop Loss" ),
     STOP_LIMIT("4", "STOP_LIMIT", "4 - Stop Limit" ),
     MARKET_ON_CLOSE("5", "MARKET_ON_CLOSE", "5 - Market On Close (No longer used)" ),
+
     WITH_OR_WITHOUT("6", "WITH_OR_WITHOUT", "6 - With Or Without" ),
     LIMIT_OR_BETTER("7", "LIMIT_OR_BETTER", "7 - Limit Or Better" ),
     LIMIT_WITH_OR_WITHOUT("8", "LIMIT_WITH_OR_WITHOUT", "8 - Limit With Or Without" ),
     ON_BASIS("9", "ON_BASIS", "9 - On Basis" ),
-
     ON_CLOSE("A", "ON_CLOSE", "A - On Close (No longer used)" ),
+
     LIMIT_ON_CLOSE("B", "LIMIT_ON_CLOSE", "B - Limit On Close (No longer used)" ),
     FOREX_MARKET("C", "FOREX_MARKET", "C - Forex Market (No longer used)" ),
     PREVIOUSLY_QUOTED("D", "PREVIOUSLY_QUOTED", "D - Previously Quoted" ),
     PREVIOUSLY_INDICATED("E", "PREVIOUSLY_INDICATED", "E - Previously Indicated" ),
     FOREX_LIMIT("F", "FOREX_LIMIT", "F - Forex Limit (No longer used)" ),
+
     FOREX_SWAP("G", "FOREX_SWAP", "G - Forex Swap" ),
     FOREX_PREVIOUSLY_QUOTED("H", "FOREX_PREVIOUSLY_QUOTED", "H - Forex Previously Quoted (No longer used)" ),
     FUNARI("I", "FUNARI",
@@ -43,6 +45,7 @@ public enum Enum40OrdType implements EnumAccessors, LogStringVerbose {
     MARKET_IF_TOUCHED("J", "MARKET_IF_TOUCHED", "J - Market If Touched (MIT)" ),
     MARKET_WITH_LEFT_OVER_AS_LIMIT("K", "MARKET_WITH_LEFT_OVER_AS_LIMIT",
             "K - Market With Left Over as Limit (market order with unexecuted quantity becoming limit order at last price)" ),
+
     PREVIOUS_FUND_VALUATION_POINT("L", "PREVIOUS_FUND_VALUATION_POINT",
             "L - Previous Fund Valuation Point (Historic pricing;  for CIV)" ),
     NEXT_FUND_VALUATION_POINT("M", "NEXT_FUND_VALUATION_POINT",

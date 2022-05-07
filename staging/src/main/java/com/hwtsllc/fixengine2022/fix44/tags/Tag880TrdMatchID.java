@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  880
+ *  TrdMatchID
+ *  String
+ *  Identifier assigned to a trade by a matching system.
+ */
 public class Tag880TrdMatchID {
 }

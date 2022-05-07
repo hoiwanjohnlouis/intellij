@@ -19,7 +19,28 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  853
+ *  ShortSaleReason
+ *  int
+ *  Reason for short sale.
+ *  Valid values:
+ *      0 - Dealer Sold Short
+ *      1 - Dealer Sold Short Exempt
+ *      2 - Selling Customer Sold Short
+ *      3 - Selling Customer Sold Short Exempt
+ *      4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short
+ *
+ *      5 - QSR or AGU Contra Side Sold Short Exempt
+ */
 public enum Enum853ShortSaleReason implements EnumAccessors, LogStringVerbose {
+    DEALER_SOLD_SHORT( "0", "DEALER_SOLD_SHORT", "0 - Dealer Sold Short" ),
+    DEALER_SOLD_SHORT_EXEMPT( "1", "DEALER_SOLD_SHORT_EXEMPT", "1 - Dealer Sold Short Exempt" ),
+    CUSTOMER_SOLD_SHORT( "2", "CUSTOMER_SOLD_SHORT", "2 - Selling Customer Sold Short" ),
+    CUSTOMER_SOLD_SHORT_EXEMPT( "3", "CUSTOMER_SOLD_SHORT_EXEMPT", "3 - Selling Customer Sold Short Exempt" ),
+    CONTRA_SOLD_SHORT( "4", "CONTRA_SOLD_SHORT", "4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short" ),
+
+    CONTRA_SOLD_SHORT_EXEMPT( "5", "CONTRA_SOLD_SHORT_EXEMPT", "5 - QSR or AGU Contra Side Sold Short Exempt" ),
     ;
 
     private final String id;

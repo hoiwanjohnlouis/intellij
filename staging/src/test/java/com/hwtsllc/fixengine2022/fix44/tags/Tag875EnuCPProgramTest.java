@@ -17,25 +17,50 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum875CPProgram;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  875
+ *  CPProgram
+ *  int
+ *  The program under which a commercial paper is issued
+ *  Valid values:
+ *      1 - 3(a)(3)
+ *      2 - 4(2)
+ *      99 - Other
+ *
+ *  or any value conforming to the data type Reserved100Plus
+ */
 class Tag875EnuCPProgramTest {
     @Test
     void FIX0875Test() {
-        FIX44 fixData = FIX44.FIX875_CP_PROGRAM;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX875_ENU_CP_PROGRAM;
+        assertEquals( "875", fixData.getID());
+        assertEquals( "CP_PROGRAM", fixData.getName());
+        assertEquals( "CPProgram", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0875Test() {
         Tag875EnuCPProgram tagData;
 
+        tagData = new Tag875EnuCPProgram( Enum875CPProgram.THREE );
+        assertEquals( Enum875CPProgram.THREE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag875EnuCPProgram( Enum875CPProgram.FOUR );
+        assertEquals( Enum875CPProgram.FOUR.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag875EnuCPProgram( Enum875CPProgram.OTHER );
+        assertEquals( Enum875CPProgram.OTHER.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

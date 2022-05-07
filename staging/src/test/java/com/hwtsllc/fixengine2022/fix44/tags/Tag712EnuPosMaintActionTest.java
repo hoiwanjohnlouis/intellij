@@ -17,11 +17,25 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  712
+ *  PosMaintAction
+ *  Maintenance Action to be performed.
+ *  Valid values:
+ *      1 - New - used to increment the overall transaction quantity
+ *      2 - Replace - used to override the overall transaction quantity
+ *                      or specifically add messages based on the reference ID
+ *      3 - Cancel - used to remove the overall transaction or specific
+ *                      add messages based on reference ID
+ *      4 - Reverse - used to completely back-out the transaction
+ *                      such that the transaction never existed
+ */
 class Tag712EnuPosMaintActionTest {
     @Test
     void FIX0712Test() {
@@ -29,23 +43,10 @@ class Tag712EnuPosMaintActionTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  712
-     *  PosMaintAction
-     *  Maintenance Action to be performed.
-     *  Valid values:
-     *      1 - New - used to increment the overall transaction quantity
-     *      2 - Replace - used to override the overall transaction quantity
-     *                      or specifically add messages based on the reference ID
-     *      3 - Cancel - used to remove the overall transaction or specific
-     *                      add messages based on reference ID
-     *      4 - Reverse - used to completely back-out the transaction
-     *                      such that the transaction never existed
-     */
     @Test
     void Tag0712Test() {
         Tag712EnuPosMaintAction tagData;

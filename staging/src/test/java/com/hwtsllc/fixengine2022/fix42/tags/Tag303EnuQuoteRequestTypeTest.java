@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum303QuoteRequestType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag303EnuQuoteRequestTypeTest {
         assertEquals( "303", fixData.getID());
         assertEquals( "QUOTE_REQUEST_TYPE", fixData.getName());
         assertEquals( "QuoteRequestType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  303
@@ -51,10 +52,10 @@ class Tag303EnuQuoteRequestTypeTest {
          */
         tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.MANUAL);
         assertEquals( Enum303QuoteRequestType.MANUAL.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.AUTOMATIC);
         assertEquals( Enum303QuoteRequestType.AUTOMATIC.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

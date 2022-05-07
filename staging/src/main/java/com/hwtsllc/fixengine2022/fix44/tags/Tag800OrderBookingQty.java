@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  800
+ *  OrderBookingQty
+ *  Qty
+ *  Quantity of the order that is being booked out as part of
+ *  an Allocation Instruction or Allocation Report message
+ */
 public class Tag800OrderBookingQty {
 }

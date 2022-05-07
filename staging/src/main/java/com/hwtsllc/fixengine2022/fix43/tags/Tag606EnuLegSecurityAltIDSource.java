@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum606LegSecurityAltIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -53,14 +53,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      L - Letter of Credit
  */
 public class Tag606EnuLegSecurityAltIDSource extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum606LegSecurityAltIDSource dataValue;
+    private final MyEnumSecurityIDSource dataValue;
 
-    public final static Enum606LegSecurityAltIDSource TESTA_ENU_LEG_SECURITY_ALT_ID_SOURCE
-            = Enum606LegSecurityAltIDSource.EXCHANGE_SYMBOL;
-    public final static Enum606LegSecurityAltIDSource TESTB_ENU_LEG_SECURITY_ALT_ID_SOURCE
-            = Enum606LegSecurityAltIDSource.ISDA_PRODUCT_SPECIFICATION;
+    public final static MyEnumSecurityIDSource TESTA_ENU_LEG_SECURITY_ALT_ID_SOURCE
+            = MyEnumSecurityIDSource.EXCHANGE_SYMBOL;
+    public final static MyEnumSecurityIDSource TESTB_ENU_LEG_SECURITY_ALT_ID_SOURCE
+            = MyEnumSecurityIDSource.ISDA_PRODUCT_SPECIFICATION;
 
-    public Tag606EnuLegSecurityAltIDSource(Enum606LegSecurityAltIDSource dataValue) {
+    public Tag606EnuLegSecurityAltIDSource(MyEnumSecurityIDSource dataValue) {
         setFixType(FIX43.FIX606_ENU_LEG_SECURITY_ALT_ID_SOURCE);
         this.dataValue = dataValue;
     }

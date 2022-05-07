@@ -16,8 +16,26 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class Tag484EnuExecPriceTypeTest {
+    @Test
+    void FIX0484Test() {
+        FIX43 fixData = FIX43.FIX484_ENU_EXEC_PRICE_TYPE;
+        assertEquals( "", fixData.getID());
+        assertEquals( "", fixData.getName());
+        assertEquals( "", fixData.getDescription());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+    }
+    @Test
+    void Tag0484Test() {
+        Tag484EnuExecPriceType tagData;
 
+    }
 }

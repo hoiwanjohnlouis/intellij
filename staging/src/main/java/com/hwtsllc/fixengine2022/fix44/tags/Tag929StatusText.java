@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  929
+ *  StatusText
+ *  String
+ *  A text description associated with a network status.
+ */
 public class Tag929StatusText {
 }

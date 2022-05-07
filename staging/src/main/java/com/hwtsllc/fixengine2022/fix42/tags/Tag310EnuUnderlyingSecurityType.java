@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum310UnderlyingSecurityType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -169,14 +169,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      CASH( "CASH", "CASH", "CASH - Cash" ),
  */
 public class Tag310EnuUnderlyingSecurityType extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum310UnderlyingSecurityType dataValue;
+    private final MyEnumSecurityType dataValue;
 
-    public final static Enum310UnderlyingSecurityType TESTA_ENU_UNDERLYING_SECURITY_TYPE
-            = Enum310UnderlyingSecurityType.ASSET_BACKED_SECURITIES;
-    public final static Enum310UnderlyingSecurityType TESTB_ENU_UNDERLYING_SECURITY_TYPE
-            = Enum310UnderlyingSecurityType.COLLATERALIZED_MORTGAGE_OBLIGATION;
+    public final static MyEnumSecurityType TESTA_ENU_UNDERLYING_SECURITY_TYPE
+            = MyEnumSecurityType.ASSET_BACKED_SECURITIES;
+    public final static MyEnumSecurityType TESTB_ENU_UNDERLYING_SECURITY_TYPE
+            = MyEnumSecurityType.COLLATERALIZED_MORTGAGE_OBLIGATION;
 
-    public Tag310EnuUnderlyingSecurityType(Enum310UnderlyingSecurityType dataValue) {
+    public Tag310EnuUnderlyingSecurityType(MyEnumSecurityType dataValue) {
         setFixType(FIX42.FIX310_ENU_UNDERLYING_SECURITY_TYPE);
         this.dataValue = dataValue;
     }

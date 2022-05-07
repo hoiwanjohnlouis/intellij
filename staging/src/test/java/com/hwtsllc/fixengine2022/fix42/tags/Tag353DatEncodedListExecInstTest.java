@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag353DatEncodedListExecInstTest {
         assertEquals( "353", fixData.getID());
         assertEquals( "ENCODED_LIST_EXEC_INST", fixData.getName());
         assertEquals( "EncodedListExecInst", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0353Test() {
@@ -41,11 +42,11 @@ class Tag353DatEncodedListExecInstTest {
         tagData = new Tag353DatEncodedListExecInst(
                 new MyDataType(Tag353DatEncodedListExecInst.TESTA_DAT_ENCODED_LIST_EXEC_INST));
         assertEquals( Tag353DatEncodedListExecInst.TESTA_DAT_ENCODED_LIST_EXEC_INST, tagData.getDataValue() );
-        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag353DatEncodedListExecInst(
                 new MyDataType(Tag353DatEncodedListExecInst.TESTB_DAT_ENCODED_LIST_EXEC_INST));
         assertEquals( Tag353DatEncodedListExecInst.TESTB_DAT_ENCODED_LIST_EXEC_INST, tagData.getDataValue() );
-        assertNotEquals( FIX42.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  914
+ *  AgreementID
+ *  String
+ *  A common reference to the applicable standing agreement
+ *  between the counterparties to a financing transaction.
+ */
 public class Tag914AgreementID {
 }

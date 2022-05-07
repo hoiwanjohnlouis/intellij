@@ -42,9 +42,9 @@ class Enum725ResponseTransportTypeTest {
         assertEquals( "INBAND", enumType.getName());
         assertEquals( "0 - Inband - transport the request was sent over (default)",
                 enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum725ResponseTransportType.OUT_OF_BAND;
         assertEquals( "1", enumType.getID());
@@ -52,8 +52,8 @@ class Enum725ResponseTransportTypeTest {
         assertEquals( "1 - Out of Band - pre-arranged out-of-band delivery mechanism " +
                         "(i.e. FTP, HTTP, NDM, etc.) between counterparties",
                 enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

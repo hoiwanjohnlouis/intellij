@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum761BenchmarkSecurityIDSource;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -54,14 +54,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      L - Letter of Credit
  */
 public class Tag761EnuBenchmarkSecurityIDSource extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum761BenchmarkSecurityIDSource dataValue;
+    private final MyEnumSecurityIDSource dataValue;
 
-    public final static Enum761BenchmarkSecurityIDSource TESTA_ENU_BENCHMARK_SECURITY_ID_SOURCE
-            = Enum761BenchmarkSecurityIDSource.BELGIAN;
-    public final static Enum761BenchmarkSecurityIDSource TESTB_ENU_BENCHMARK_SECURITY_ID_SOURCE
-            = Enum761BenchmarkSecurityIDSource.ISDA_PRODUCT_SPECIFICATION;
+    public final static MyEnumSecurityIDSource TESTA_ENU_BENCHMARK_SECURITY_ID_SOURCE
+            = MyEnumSecurityIDSource.BELGIAN;
+    public final static MyEnumSecurityIDSource TESTB_ENU_BENCHMARK_SECURITY_ID_SOURCE
+            = MyEnumSecurityIDSource.ISDA_PRODUCT_SPECIFICATION;
 
-    public Tag761EnuBenchmarkSecurityIDSource(Enum761BenchmarkSecurityIDSource dataValue) {
+    public Tag761EnuBenchmarkSecurityIDSource(MyEnumSecurityIDSource dataValue) {
         setFixType(FIX44.FIX761_ENU_BENCHMARK_SECURITY_ID_SOURCE);
         this.dataValue = dataValue;
     }

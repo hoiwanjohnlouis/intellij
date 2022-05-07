@@ -17,25 +17,58 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum903CollAsgnTransType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  903
+ *  CollAsgnTransType
+ *  int
+ *  Collateral Assignment Transaction Type
+ *  Valid values:
+ *      0 - New
+ *      1 - Replace
+ *      2 - Cancel
+ *      3 - Release
+ *      4 - Reverse
+ */
 class Tag903EnuCollAsgnTransTypeTest {
     @Test
     void FIX0903Test() {
-        FIX44 fixData = FIX44.FIX903_COLL_ASGN_TRANS_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX903_ENU_COLL_ASGN_TRANS_TYPE;
+        assertEquals( "903", fixData.getID());
+        assertEquals( "COLL_ASGN_TRANS_TYPE", fixData.getName());
+        assertEquals( "CollAsgnTransType", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0903Test() {
         Tag903EnuCollAsgnTransType tagData;
 
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.NEW );
+        assertEquals( Enum903CollAsgnTransType.NEW.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REPLACE );
+        assertEquals( Enum903CollAsgnTransType.REPLACE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.CANCEL );
+        assertEquals( Enum903CollAsgnTransType.CANCEL.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.RELEASE );
+        assertEquals( Enum903CollAsgnTransType.RELEASE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REVERSE );
+        assertEquals( Enum903CollAsgnTransType.REVERSE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

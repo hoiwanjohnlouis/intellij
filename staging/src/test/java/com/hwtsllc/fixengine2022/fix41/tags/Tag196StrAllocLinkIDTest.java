@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag196StrAllocLinkIDTest {
         assertEquals( "196", fixData.getID());
         assertEquals( "ALLOC_LINK_ID", fixData.getName());
         assertEquals( "AllocLinkId", fixData.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0196Test() {
@@ -40,10 +41,10 @@ class Tag196StrAllocLinkIDTest {
 
         tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTA_STR_ALLOC_LINK_ID));
         assertEquals( Tag196StrAllocLinkID.TESTA_STR_ALLOC_LINK_ID, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID));
         assertEquals( Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

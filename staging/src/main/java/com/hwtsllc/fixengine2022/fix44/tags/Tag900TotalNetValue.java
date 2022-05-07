@@ -16,5 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  900
+ *  TotalNetValue
+ *  Amt
+ *  TotalNetValue is determined as follows:
+ *      At the initial collateral assignment TotalNetValue is the sum of
+ *      (UnderlyingStartValue * (1-haircut)).
+ *      In a collateral substitution TotalNetValue is the sum of
+ *      (UnderlyingCurrentValue * (1-haircut)).
+ *      For listed derivatives clearing margin management,
+ *      this is the collateral value which equals (Market value * haircut)
+ */
 public class Tag900TotalNetValue {
 }

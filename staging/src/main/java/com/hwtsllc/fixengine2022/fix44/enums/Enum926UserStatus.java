@@ -19,7 +19,26 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  926
+ *  UserStatus
+ *  int
+ *  Indicates the status of a user
+ *  Valid values:
+ *      1 - Logged In
+ *      2 - Not Logged In
+ *      3 - User Not Recognised
+ *      4 - Password Incorrect
+ *      5 - Password Changed
+ *      6 - Other
+ */
 public enum Enum926UserStatus implements EnumAccessors, LogStringVerbose {
+    LOGGED_IN( "1", "LOGGED_IN", "1 - Logged In" ),
+    NOT_LOGGED_IN( "2", "NOT_LOGGED_IN", "2 - Not Logged In" ),
+    USER_NOT_RECOGNISED( "3", "USER_NOT_RECOGNISED", "3 - User Not Recognised" ),
+    PASSWORD_INCORRECT( "4", "PASSWORD_INCORRECT", "4 - Password Incorrect" ),
+    PASSWORD_CHANGED( "5", "PASSWORD_CHANGED", "5 - Password Changed" ),
+    OTHER( "6", "OTHER", "6 - Other" ),
     ;
 
     private final String id;

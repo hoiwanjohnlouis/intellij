@@ -159,23 +159,23 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX1047_ALLOC_POSITION_EFFECT(1047, "ALLOC_POSITION_EFFECT", "AllocPositionEffect"),
     FIX1048_DEALING_CAPACITY(1048, "DEALING_CAPACITY", "DealingCapacity"),
     FIX1049_INSTRMT_ASSIGNMENT_METHOD(1049, "INSTRMT_ASSIGNMENT_METHOD", "InstrmtAssignmentMethod"),
-    FIX1050_INSTRUMENT_PARTY_ID_SOURCE(1050, "INSTRUMENT_PARTY_ID_SOURCE", "InstrumentPartyIDSource"),
+    FIX1050_ENU_INSTRUMENT_PARTY_ID_SOURCE(1050, "INSTRUMENT_PARTY_ID_SOURCE", "InstrumentPartyIDSource"),
 
-    FIX1051_INSTRUMENT_PARTY_ROLE(1051, "INSTRUMENT_PARTY_ROLE", "InstrumentPartyRole"),
+    FIX1051_ENU_INSTRUMENT_PARTY_ROLE(1051, "INSTRUMENT_PARTY_ROLE", "InstrumentPartyRole"),
     FIX1052_NO_INSTRUMENT_PARTY_SUB_IDS(1052, "NO_INSTRUMENT_PARTY_SUB_IDS", "NoInstrumentPartySubIDs"),
     FIX1053_INSTRUMENT_PARTY_SUB_ID(1053, "INSTRUMENT_PARTY_SUB_ID", "InstrumentPartySubID"),
-    FIX1054_INSTRUMENT_PARTY_SUB_ID_TYPE(1054, "INSTRUMENT_PARTY_SUB_ID_TYPE", "InstrumentPartySubIDType"),
+    FIX1054_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE(1054, "INSTRUMENT_PARTY_SUB_ID_TYPE", "InstrumentPartySubIDType"),
     FIX1055_POSITION_CURRENCY(1055, "POSITION_CURRENCY", "PositionCurrency"),
     FIX1056_CALCULATED_CCY_LAST_QTY(1056, "CALCULATED_CCY_LAST_QTY", "CalculatedCcyLastQty"),
     FIX1057_AGGRESSOR_INDICATOR(1057, "AGGRESSOR_INDICATOR", "AggressorIndicator"),
     FIX1058_NO_UNDLY_INSTRUMENT_PARTIES(1058, "NO_UNDLY_INSTRUMENT_PARTIES", "NoUndlyInstrumentParties"),
     FIX1059_UNDLY_INSTRUMENT_PARTY_ID(1059, "UNDLY_INSTRUMENT_PARTY_ID", "UndlyInstrumentPartyID"),
-    FIX1060_UNDLY_INSTRUMENT_PARTY_ID_SOURCE(1060, "UNDLY_INSTRUMENT_PARTY_ID_SOURCE", "UndlyInstrumentPartyIDSource"),
+    FIX1060_ENU_UNDLY_INSTRUMENT_PARTY_ID_SOURCE(1060, "UNDLY_INSTRUMENT_PARTY_ID_SOURCE", "UndlyInstrumentPartyIDSource"),
 
-    FIX1061_UNDLY_INSTRUMENT_PARTY_ROLE(1061, "UNDLY_INSTRUMENT_PARTY_ROLE", "UndlyInstrumentPartyRole"),
+    FIX1061_ENU_UNDLY_INSTRUMENT_PARTY_ROLE(1061, "UNDLY_INSTRUMENT_PARTY_ROLE", "UndlyInstrumentPartyRole"),
     FIX1062_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS(1062, "NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS", "NoUndlyInstrumentPartySubIDs"),
     FIX1063_UNDLY_INSTRUMENT_PARTY_SUB_ID(1063, "UNDLY_INSTRUMENT_PARTY_SUB_ID", "UndlyInstrumentPartySubID"),
-    FIX1064_UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE(1064, "UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE", "UndlyInstrumentPartySubIDType"),
+    FIX1064_ENU_UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE(1064, "UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE", "UndlyInstrumentPartySubIDType"),
     FIX1065_BID_SWAP_POINTS(1065, "BID_SWAP_POINTS", "BidSwapPoints"),
     FIX1066_OFFER_SWAP_POINTS(1066, "OFFER_SWAP_POINTS", "OfferSwapPoints"),
     FIX1067_LEG_BID_FORWARD_POINTS(1067, "LEG_BID_FORWARD_POINTS", "LegBidForwardPoints"),
@@ -207,7 +207,7 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX1093_LOT_TYPE(1093, "LOT_TYPE", "LotType"),
     FIX1094_PEG_PRICE_TYPE(1094, "PEG_PRICE_TYPE", "PegPriceType"),
     FIX1095_PEGGED_REF_PRICE(1095, "PEGGED_REF_PRICE", "PeggedRefPrice"),
-    FIX1096_PEG_SECURITY_ID_SOURCE(1096, "PEG_SECURITY_ID_SOURCE", "PegSecurityIDSource"),
+    FIX1096_ENU_PEG_SECURITY_ID_SOURCE(1096, "PEG_SECURITY_ID_SOURCE", "PegSecurityIDSource"),
     FIX1097_PEG_SECURITY_ID(1097, "PEG_SECURITY_ID", "PegSecurityID"),
     FIX1098_PEG_SYMBOL(1098, "PEG_SYMBOL", "PegSymbol"),
     FIX1099_PEG_SECURITY_DESC(1099, "PEG_SECURITY_DESC", "PegSecurityDesc"),
@@ -220,7 +220,7 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX1102_TRIGGER_PRICE(1102, "TRIGGER_PRICE", "TriggerPrice"),
     FIX1103_TRIGGER_SYMBOL(1103, "TRIGGER_SYMBOL", "TriggerSymbol"),
     FIX1104_TRIGGER_SECURITY_ID(1104, "TRIGGER_SECURITY_ID", "TriggerSecurityID"),
-    FIX1105_TRIGGER_SECURITY_ID_SOURCE(1105, "TRIGGER_SECURITY_ID_SOURCE", "TriggerSecurityIDSource"),
+    FIX1105_ENU_TRIGGER_SECURITY_ID_SOURCE(1105, "TRIGGER_SECURITY_ID_SOURCE", "TriggerSecurityIDSource"),
     FIX1106_TRIGGER_SECURITY_DESC(1106, "TRIGGER_SECURITY_DESC", "TriggerSecurityDesc"),
     FIX1107_TRIGGER_PRICE_TYPE(1107, "TRIGGER_PRICE_TYPE", "TriggerPriceType"),
     FIX1108_TRIGGER_PRICE_TYPE_SCOPE(1108, "TRIGGER_PRICE_TYPE_SCOPE", "TriggerPriceTypeScope"),
@@ -234,12 +234,12 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX1115_ORDER_CATEGORY(1115, "ORDER_CATEGORY", "OrderCategory"),
     FIX1116_NO_ROOT_PARTY_IDS(1116, "NO_ROOT_PARTY_IDS", "NoRootPartyIDs"),
     FIX1117_ROOT_PARTY_ID(1117, "ROOT_PARTY_ID", "RootPartyID"),
-    FIX1118_ROOT_PARTY_ID_SOURCE(1118, "ROOT_PARTY_ID_SOURCE", "RootPartyIDSource"),
-    FIX1119_ROOT_PARTY_ROLE(1119, "ROOT_PARTY_ROLE", "RootPartyRole"),
+    FIX1118_ENU_ROOT_PARTY_ID_SOURCE(1118, "ROOT_PARTY_ID_SOURCE", "RootPartyIDSource"),
+    FIX1119_ENU_ROOT_PARTY_ROLE(1119, "ROOT_PARTY_ROLE", "RootPartyRole"),
     FIX1120_NO_ROOT_PARTY_SUB_IDS(1120, "NO_ROOT_PARTY_SUB_IDS", "NoRootPartySubIDs"),
 
     FIX1121_ROOT_PARTY_SUB_ID(1121, "ROOT_PARTY_SUB_ID", "RootPartySubID"),
-    FIX1122_ROOT_PARTY_SUB_ID_TYPE(1122, "ROOT_PARTY_SUB_ID_TYPE", "RootPartySubIDType"),
+    FIX1122_ENU_ROOT_PARTY_SUB_ID_TYPE(1122, "ROOT_PARTY_SUB_ID_TYPE", "RootPartySubIDType"),
     FIX1123_TRADE_HANDLING_INSTR(1123, "TRADE_HANDLING_INSTR", "TradeHandlingInstr"),
     FIX1124_ORIG_TRADE_HANDLING_INSTR(1124, "ORIG_TRADE_HANDLING_INSTR", "OrigTradeHandlingInstr"),
     FIX1125_ORIG_TRADE_DATE(1125, "ORIG_TRADE_DATE", "OrigTradeDate"),
@@ -278,29 +278,6 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     private final String id;
     private final String name;
     private final String description;
-
-    /*
-     * used in @Test routine.
-     */
-    public final static String JUNK_ENUM_NAME = "JunkEnumName";
-    public final static String JUNK_ID = "JunkID";
-    public final static String JUNK_NAME = "JunkName";
-    public final static String JUNK_DESCRIPTION = "JunkDescription";
-    public final static double JUNK_AMT_DATA_VALUE = -65535D;
-    public final static String JUNK_DAT_DATA_VALUE = "JunkData";
-    public final static String JUNK_EXC_DATA_VALUE = "JunkExchange";
-    public final static float JUNK_FLO_DATA_VALUE = -65535F;
-    public final static int JUNK_INT_DATA_VALUE = -65535;
-    public final static int JUNK_LEN_DATA_VALUE = -65535;
-    public final static String JUNK_LMD_DATA_VALUE = "JunkLocalMktDateDataValue";
-    public final static int JUNK_NUM_DATA_VALUE = -65535;
-    public final static double JUNK_PCT_DATA_VALUE = -0.05D;
-    public final static double JUNK_PXO_DATA_VALUE = -0.032D;
-    public final static double JUNK_PRC_DATA_VALUE = -65535D;
-    public final static int JUNK_QTY_DATA_VALUE = -65535;
-    public final static int JUNK_SEQ_DATA_VALUE = -65535;
-    public final static String JUNK_STR_DATA_VALUE = "JunkStringDataValue";
-    public final static String JUNK_UTC_DATA_VALUE = "18991231_235959";
 
     FIX50(final int id, final String name, final String description) {
         /*

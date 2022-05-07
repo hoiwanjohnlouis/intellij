@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  930
+ *  RefCompID
+ *  String
+ *  Assigned value used to identify a firm.
+ */
 public class Tag930RefCompID {
 }

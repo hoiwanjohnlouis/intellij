@@ -16,9 +16,80 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum939TrdRptStatus;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  939
+ *  TrdRptStatus
+ *  int
+ *  Trade Report Status
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Rejected
+ *      3 - Accepted with errors
+ */
 public class Tag939EnuTrdRptStatus extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum939TrdRptStatus dataValue;
+
+    public final static Enum939TrdRptStatus TESTA_ENU_TRD_RPT_STATUS
+            = Enum939TrdRptStatus.ACCEPTED;
+    public final static Enum939TrdRptStatus TESTB_ENU_TRD_RPT_STATUS
+            = Enum939TrdRptStatus.REJECTED;
+
+    public Tag939EnuTrdRptStatus(Enum939TrdRptStatus dataValue) {
+        setFixType(FIX44.FIX939_ENU_TRD_RPT_STATUS);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag939EnuTrdRptStatus tagData;
+
+        tagData = new Tag939EnuTrdRptStatus(TESTA_ENU_TRD_RPT_STATUS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag939EnuTrdRptStatus(TESTB_ENU_TRD_RPT_STATUS);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

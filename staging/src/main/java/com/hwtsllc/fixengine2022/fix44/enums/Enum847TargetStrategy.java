@@ -19,7 +19,23 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  847
+ *  TargetStrategy
+ *  int
+ *  The target strategy of the order
+ *  1000+  = Reserved and available for bi-laterally agreed upon user defined values
+ *  Valid values:
+ *      1 - VWAP
+ *      2 - Participate (i.e. aim to be x percent of the market volume)
+ *      3 - Minimize market impact
+ *
+ *  or any value conforming to the data type Reserved1000Plus
+ */
 public enum Enum847TargetStrategy implements EnumAccessors, LogStringVerbose {
+    VWAP( "1", "VWAP", "1 - VWAP" ),
+    PARTICIPATE( "2", "PARTICIPATE", "2 - Participate (i.e. aim to be x percent of the market volume)" ),
+    MINIMIZE_MARKET_IMPACT( "3", "MINIMIZE_MARKET_IMPACT", "3 - Minimize market impact" ),
     ;
 
     private final String id;

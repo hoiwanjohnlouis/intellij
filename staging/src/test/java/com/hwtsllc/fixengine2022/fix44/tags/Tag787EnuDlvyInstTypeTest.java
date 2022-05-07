@@ -17,12 +17,21 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum787DlvyInstType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  787
+ *  DlvyInstType
+ *  Used to indicate whether a delivery instruction is used for securities or cash settlement.
+ *  Valid values:
+ *      C - Cash
+ *      S - Securities
+ */
 class Tag787EnuDlvyInstTypeTest {
     @Test
     void FIX0787Test() {
@@ -30,18 +39,10 @@ class Tag787EnuDlvyInstTypeTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  787
-     *  DlvyInstType
-     *  Used to indicate whether a delivery instruction is used for securities or cash settlement.
-     *  Valid values:
-     *      C - Cash
-     *      S - Securities
-     */
     @Test
     void Tag0787Test() {
         Tag787EnuDlvyInstType tagData;

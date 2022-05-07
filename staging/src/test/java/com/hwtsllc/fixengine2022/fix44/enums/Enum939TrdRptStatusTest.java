@@ -16,12 +16,49 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  939
+ *  TrdRptStatus
+ *  int
+ *  Trade Report Status
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Rejected
+ *      3 - Accepted with errors
+ */
 class Enum939TrdRptStatusTest {
     @Test
     void EnumTest() {
         Enum939TrdRptStatus enumType;
 
+        enumType = Enum939TrdRptStatus.ACCEPTED;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "ACCEPTED", enumType.getName() );
+        assertEquals( "0 - Accepted", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum939TrdRptStatus.REJECTED;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "REJECTED", enumType.getName() );
+        assertEquals( "1 - Rejected", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "ACCEPTED_WITH_ERRORS", enumType.getName() );
+        assertEquals( "3 - Accepted with errors", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

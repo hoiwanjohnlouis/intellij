@@ -17,25 +17,74 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum896CollInquiryQualifier;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  896
+ *  CollInquiryQualifier
+ *  int
+ *  Collateral inquiry qualifiers:
+ *  Valid values:
+ *      0 - Trade Date
+ *      1 - GC Instrument
+ *      2 - Collateral Instrument
+ *      3 - Substitution Eligible
+ *      4 - Not Assigned
+ *      5 - Partially Assigned
+ *      6 - Fully Assigned
+ *      7 - Outstanding Trades (Today < end date)
+ */
 class Tag896EnuCollInquiryQualifierTest {
     @Test
     void FIX0896Test() {
-        FIX44 fixData = FIX44.FIX896_COLL_INQUIRY_QUALIFIER;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX896_ENU_COLL_INQUIRY_QUALIFIER;
+        assertEquals( "896", fixData.getID());
+        assertEquals( "COLL_INQUIRY_QUALIFIER", fixData.getName());
+        assertEquals( "CollInquiryQualifier", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0896Test() {
         Tag896EnuCollInquiryQualifier tagData;
 
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.TRADE_DATE );
+        assertEquals( Enum896CollInquiryQualifier.TRADE_DATE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.GC_INSTRUMENT );
+        assertEquals( Enum896CollInquiryQualifier.GC_INSTRUMENT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.COLLATERAL_INSTRUMENT );
+        assertEquals( Enum896CollInquiryQualifier.COLLATERAL_INSTRUMENT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.SUBSTITUTION_ELIGIBLE );
+        assertEquals( Enum896CollInquiryQualifier.SUBSTITUTION_ELIGIBLE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.NOT_ASSIGNED );
+        assertEquals( Enum896CollInquiryQualifier.NOT_ASSIGNED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.PARTIALLY_ASSIGNED );
+        assertEquals( Enum896CollInquiryQualifier.PARTIALLY_ASSIGNED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.FULLY_ASSIGNED );
+        assertEquals( Enum896CollInquiryQualifier.FULLY_ASSIGNED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.OUTSTANDING_TRADES );
+        assertEquals( Enum896CollInquiryQualifier.OUTSTANDING_TRADES.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

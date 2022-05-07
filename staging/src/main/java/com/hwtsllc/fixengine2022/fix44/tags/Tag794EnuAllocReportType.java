@@ -22,6 +22,22 @@ import com.hwtsllc.fixengine2022.fix44.enums.Enum794AllocReportType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  794
+ *  AllocReportType
+ *  Describes the specific type or purpose of an Allocation Report message
+ *  Valid values:
+ *      2 - Preliminary Request to Intermediary
+ *      3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
+ *      4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)
+ *      5 - Warehouse Recap
+ *      8 - Request to Intermediary
+ *      9 - Accept
+ *      10 - Reject
+ *      11 - Accept Pending
+ *      12 - Complete
+ *      14 - Reverse Pending
+ */
 public class Tag794EnuAllocReportType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum794AllocReportType dataValue;
 

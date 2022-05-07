@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum677LegBenchmarkCurveName;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumBenchmarkCurveName;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -42,14 +42,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      Treasury - Treasury
  */
 public class Tag677EnuLegBenchmarkCurveName extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum677LegBenchmarkCurveName dataValue;
+    private final MyEnumBenchmarkCurveName dataValue;
 
-    public final static Enum677LegBenchmarkCurveName TESTA_ENU_LEG_BENCHMARK_CURVE_NAME
-            = Enum677LegBenchmarkCurveName.EONIA;
-    public final static Enum677LegBenchmarkCurveName TESTB_ENU_LEG_BENCHMARK_CURVE_NAME
-            = Enum677LegBenchmarkCurveName.LIBID;
+    public final static MyEnumBenchmarkCurveName TESTA_ENU_LEG_BENCHMARK_CURVE_NAME
+            = MyEnumBenchmarkCurveName.EONIA;
+    public final static MyEnumBenchmarkCurveName TESTB_ENU_LEG_BENCHMARK_CURVE_NAME
+            = MyEnumBenchmarkCurveName.LIBID;
 
-    public Tag677EnuLegBenchmarkCurveName(Enum677LegBenchmarkCurveName dataValue) {
+    public Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName dataValue) {
         setFixType(FIX44.FIX677_ENU_LEG_BENCHMARK_CURVE_NAME);
         this.dataValue = dataValue;
     }

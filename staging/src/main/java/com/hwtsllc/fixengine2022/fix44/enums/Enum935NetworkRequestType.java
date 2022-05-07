@@ -19,7 +19,23 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  935
+ *  NetworkRequestType
+ *  int
+ *  Indicates the type and level of details required for a Network Status Request Message Boolean logic applies
+ *  e.g. If you want to subscribe for changes to certain id’s then UserRequestType = 0 (8+2), Snapshot for certain ID’s = 9 (8+1)
+ *  Valid values:
+ *      1 - Snapshot
+ *      2 - Subscribe
+ *      4 - Stop Subscribing
+ *      8 - Level of Detail, then NoCompID's becomes required
+ */
 public enum Enum935NetworkRequestType implements EnumAccessors, LogStringVerbose {
+    SNAPSHOT( "1", "SNAPSHOT", "1 - Snapshot" ),
+    SUBSCRIBE( "2", "SUBSCRIBE", "2 - Subscribe" ),
+    STOP_SUBSCRIBING( "4", "STOP_SUBSCRIBING", "4 - Stop Subscribing" ),
+    LEVEL_OF_DETAIL( "8", "LEVEL_OF_DETAIL", "8 - Level of Detail, then NoCompID's becomes required" ),
     ;
 
     private final String id;

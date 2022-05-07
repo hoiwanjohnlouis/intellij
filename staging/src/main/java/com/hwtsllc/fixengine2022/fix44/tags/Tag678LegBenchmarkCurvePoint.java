@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  678
+ *  LegBenchmarkCurvePoint
+ *  String
+ *  Identifies the point on the Leg Benchmark Curve.
+ *        See BenchmarkCurvePoint (222) for description and valid values.
+ */
 public class Tag678LegBenchmarkCurvePoint {
 }

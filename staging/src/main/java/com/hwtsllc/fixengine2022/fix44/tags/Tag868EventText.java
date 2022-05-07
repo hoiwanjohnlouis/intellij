@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  868
+ *  EventText
+ *  String
+ *  Comments related to the event.
+ */
 public class Tag868EventText {
 }

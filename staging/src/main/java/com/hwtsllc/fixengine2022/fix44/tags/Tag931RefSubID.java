@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  931
+ *  RefSubID
+ *  String
+ *  Assigned value used to identify specific elements within a firm.
+ */
 public class Tag931RefSubID {
 }

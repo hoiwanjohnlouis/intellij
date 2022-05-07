@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 569
+ */
 public enum Enum569TradeRequestType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 569
-     */
-
     /*
      *  0-4 types
      */

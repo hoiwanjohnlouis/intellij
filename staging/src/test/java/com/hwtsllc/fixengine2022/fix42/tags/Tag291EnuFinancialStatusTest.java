@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum291FinancialStatus;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag291EnuFinancialStatusTest {
         assertEquals( "291", fixData.getID());
         assertEquals( "FINANCIAL_STATUS", fixData.getName());
         assertEquals( "FinancialStatus", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  291
@@ -52,14 +53,14 @@ class Tag291EnuFinancialStatusTest {
          */
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.BANKRUPT);
         assertEquals( Enum291FinancialStatus.BANKRUPT.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.PENDING_DELISTING);
         assertEquals( Enum291FinancialStatus.PENDING_DELISTING.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.RESTRICTED);
         assertEquals( Enum291FinancialStatus.RESTRICTED.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,12 +17,24 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum774ConfirmRejReason;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  774
+ *  ConfirmRejReason
+ *  Identifies the reason for rejecting a Confirmation.
+ *  Valid values:
+ *      1 - Mismatched account
+ *      2 - Missing settlement instructions
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Tag774EnuConfirmRejReasonTest {
     @Test
     void FIX0774Test() {
@@ -30,21 +42,10 @@ class Tag774EnuConfirmRejReasonTest {
         assertEquals( "774", fixData.getID());
         assertEquals( "CONFIRM_REJ_REASON", fixData.getName());
         assertEquals( "ConfirmRejReason", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  774
-     *  ConfirmRejReason
-     *  Identifies the reason for rejecting a Confirmation.
-     *  Valid values:
-     *      1 - Mismatched account
-     *      2 - Missing settlement instructions
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     @Test
     void Tag0774Test() {
         Tag774EnuConfirmRejReason tagData;

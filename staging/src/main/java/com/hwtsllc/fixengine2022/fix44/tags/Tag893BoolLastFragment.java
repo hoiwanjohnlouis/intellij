@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  893
+ *  LastFragment
+ *  Boolean
+ *  Indicates whether this message is the last in a sequence of messages for those messages that support
+ *  fragmentation, such as Allocation Instruction, Mass Quote, Security List, Derivative Security List
+ *  Valid values:
+ *      N - Not Last Message
+ *      Y - Last Message
+ */
 public class Tag893BoolLastFragment extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

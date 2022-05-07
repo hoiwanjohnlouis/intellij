@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  687
+ *  LegQty
+ *  Qty
+ *  Quantity of this leg, e.g. in Quote dialog.
+ *        See Quantity (53) for description and valid values
+ */
 public class Tag687LegQty {
 }

@@ -16,9 +16,85 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  836
+ *  PegOffsetType
+ *  int
+ *  Type of Peg Offset value
+ *  842
+ *  DiscretionOffsetType
+ *  int
+ *  Type of Discretion Offset value
+ *  Valid values:
+ *      0 - Price (default)
+ *      1 - Basis Points
+ *      2 - Ticks
+ *      3 - Price Tier or Level
+ */
 public class Tag836EnuPegOffsetType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyEnumOffsetType dataValue;
+
+    public final static MyEnumOffsetType TESTA_ENU_PEG_OFFSET_TYPE
+            = MyEnumOffsetType.BASIS;
+    public final static MyEnumOffsetType TESTB_ENU_PEG_OFFSET_TYPE
+            = MyEnumOffsetType.TICKS;
+
+    public Tag836EnuPegOffsetType(MyEnumOffsetType dataValue) {
+        setFixType(FIX44.FIX836_ENU_PEG_OFFSET_TYPE);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag836EnuPegOffsetType tagData;
+
+        tagData = new Tag836EnuPegOffsetType(TESTA_ENU_PEG_OFFSET_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag836EnuPegOffsetType(TESTB_ENU_PEG_OFFSET_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

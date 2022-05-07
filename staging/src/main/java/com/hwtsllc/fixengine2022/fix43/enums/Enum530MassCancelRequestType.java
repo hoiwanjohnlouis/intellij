@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 530
+ */
 public enum Enum530MassCancelRequestType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 530
-     */
-
     /*
      *  1-7 types
      */
@@ -37,6 +36,7 @@ public enum Enum530MassCancelRequestType implements EnumAccessors, LogStringVerb
             "4 - Cancel orders for a CFICode" ),
     CANCEL_ORDERS_FOR_SECURITYTYPE( "5", "CANCEL_ORDERS_FOR_SECURITYTYPE",
             "5 - Cancel orders for a SecurityType" ),
+
     CANCEL_ORDERS_FOR_SESSION( "6", "CANCEL_ORDERS_FOR_SESSION",
             "6 - Cancel orders for a trading session" ),
     CANCEL_ALL_ORDERS( "7", "CANCEL_ALL_ORDERS",

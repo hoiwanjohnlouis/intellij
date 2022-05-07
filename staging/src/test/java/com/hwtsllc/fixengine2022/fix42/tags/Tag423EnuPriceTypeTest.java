@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum423PriceType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag423EnuPriceTypeTest {
         assertEquals( "423", fixData.getID());
         assertEquals( "PRICE_TYPE", fixData.getName());
         assertEquals( "PriceType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  423 (same as 423, 663, 686, 698)
@@ -72,47 +73,47 @@ class Tag423EnuPriceTypeTest {
          */
         tagData = new Tag423EnuPriceType(Enum423PriceType.PERCENTAGE);
         assertEquals( Enum423PriceType.PERCENTAGE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.PER_UNIT);
         assertEquals( Enum423PriceType.PER_UNIT.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.FIXED_AMOUNT);
         assertEquals( Enum423PriceType.FIXED_AMOUNT.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.DISCOUNT);
         assertEquals( Enum423PriceType.DISCOUNT.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.PREMIUM);
         assertEquals( Enum423PriceType.PREMIUM.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.SPREAD);
         assertEquals( Enum423PriceType.SPREAD.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.TED_PRICE);
         assertEquals( Enum423PriceType.TED_PRICE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.TED_YIELD);
         assertEquals( Enum423PriceType.TED_YIELD.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.YIELD);
         assertEquals( Enum423PriceType.YIELD.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.FIXED_TRADE_PRICE);
         assertEquals( Enum423PriceType.FIXED_TRADE_PRICE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.VARIABLE_TRADE_PRICE);
         assertEquals( Enum423PriceType.VARIABLE_TRADE_PRICE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
 
@@ -121,31 +122,31 @@ class Tag423EnuPriceTypeTest {
          */
         tagData = new Tag423EnuPriceType(Enum423PriceType.TICKS_IN_HALFS);
         assertEquals( Enum423PriceType.TICKS_IN_HALFS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.TICKS_IN_FOURTHS);
         assertEquals( Enum423PriceType.TICKS_IN_FOURTHS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.TICKS_IN_EIGHTHS);
         assertEquals( Enum423PriceType.TICKS_IN_EIGHTHS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.TICKS_IN_SIXTEENTHS);
         assertEquals( Enum423PriceType.TICKS_IN_SIXTEENTHS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.TICKS_IN_THIRTY_SECONDS);
         assertEquals( Enum423PriceType.TICKS_IN_THIRTY_SECONDS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.TICKS_IN_SIXTY_FOURTHS);
         assertEquals( Enum423PriceType.TICKS_IN_SIXTY_FOURTHS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(Enum423PriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
         assertEquals( Enum423PriceType.TICKS_IN_ONE_TWENTY_EIGHTS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     /**
      *

@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  811
+ *  PriceDelta
+ *  float
+ *  Delta calculated from theoretical price
+ */
 public class Tag811PriceDelta {
 }

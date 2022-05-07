@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  671
+ *  LegAllocAccount
+ *  String
+ *  Allocation Account for the leg
+ *        See AllocAccount (79) for description and valid values.
+ */
 public class Tag671LegAllocAccount {
 }

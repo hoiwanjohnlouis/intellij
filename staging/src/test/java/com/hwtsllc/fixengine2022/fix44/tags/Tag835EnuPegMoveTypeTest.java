@@ -17,25 +17,47 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumMoveType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  835
+ *  PegMoveType
+ *  int
+ *  Describes whether peg is static or floats
+ *  841
+ *  DiscretionMoveType
+ *  int
+ *  Describes whether discretionary price is static or floats
+ *  Valid values:
+ *      0 - Floating (default)
+ *      1 - Fixed
+ */
 class Tag835EnuPegMoveTypeTest {
     @Test
     void FIX0835Test() {
-        FIX44 fixData = FIX44.FIX835_PEG_MOVE_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX835_ENU_PEG_MOVE_TYPE;
+        assertEquals( "835", fixData.getID());
+        assertEquals( "PEG_MOVE_TYPE", fixData.getName());
+        assertEquals( "PegMoveType", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0835Test() {
         Tag835EnuPegMoveType tagData;
 
+        tagData = new Tag835EnuPegMoveType(MyEnumMoveType.FLOATING);
+        assertEquals( MyEnumMoveType.FLOATING.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag835EnuPegMoveType(MyEnumMoveType.FIXED);
+        assertEquals( MyEnumMoveType.FIXED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

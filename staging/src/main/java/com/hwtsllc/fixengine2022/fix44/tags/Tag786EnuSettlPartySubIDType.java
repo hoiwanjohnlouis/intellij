@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum786SettlPartySubIDType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPartySubIDType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -64,14 +64,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  or any value conforming to the data type Reserved4000Plus
  */
 public class Tag786EnuSettlPartySubIDType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum786SettlPartySubIDType dataValue;
+    private final MyEnumPartySubIDType dataValue;
 
-    public final static Enum786SettlPartySubIDType TESTA_ENU_SETTL_PARTY_SUB_ID_TYPE
-            = Enum786SettlPartySubIDType.POSITION_ACCOUNT_TYPE;
-    public final static Enum786SettlPartySubIDType TESTB_ENU_SETTL_PARTY_SUB_ID_TYPE
-            = Enum786SettlPartySubIDType.ELIGIBLE_COUNTERPARTY;
+    public final static MyEnumPartySubIDType TESTA_ENU_SETTL_PARTY_SUB_ID_TYPE
+            = MyEnumPartySubIDType.POSITION_ACCOUNT_TYPE;
+    public final static MyEnumPartySubIDType TESTB_ENU_SETTL_PARTY_SUB_ID_TYPE
+            = MyEnumPartySubIDType.ELIGIBLE_COUNTERPARTY;
 
-    public Tag786EnuSettlPartySubIDType(Enum786SettlPartySubIDType dataValue) {
+    public Tag786EnuSettlPartySubIDType(MyEnumPartySubIDType dataValue) {
         setFixType(FIX44.FIX786_ENU_SETTL_PARTY_SUB_ID_TYPE);
         this.dataValue = dataValue;
     }

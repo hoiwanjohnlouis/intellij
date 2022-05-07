@@ -25,6 +25,7 @@ public enum Enum81ProcessCode implements EnumAccessors, LogStringVerbose {
     STEP_IN("2", "STEP_IN", "2 - Step In" ),
     STEP_OUT("3", "STEP_OUT", "3 - Step Out" ),
     SOFT_DOLLAR_STEP_IN("4", "SOFT_DOLLAR_STEP_IN", "4 - Soft Dollar, Step In" ),
+
     SOFT_DOLLAR_STEP_OUT("5", "SOFT_DOLLAR_STEP_OUT", "5 - Soft Dollar, Step Out" ),
     PLAN_SPONSOR("6", "PLAN_SPONSOR", "6 - Plan Sponsor" ),
     ;

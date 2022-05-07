@@ -18,12 +18,12 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum688LegStipulationType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumStipulationType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  688 (same as 233, 688)
+ *  688 (same as 233, 688, 888)
  *  LegStipulationType
  *  For Fixed Income, type of Stipulation for this leg.
  *      See StipulationType (233) for description and valid values
@@ -95,14 +95,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      SMM - Single Monthly Mortality
  */
 public class Tag688EnuLegStipulationType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum688LegStipulationType dataValue;
+    private final MyEnumStipulationType dataValue;
 
-    public final static Enum688LegStipulationType TESTA_ENU_LEG_STIPULATION_TYPE
-            = Enum688LegStipulationType.SECURITY_TYPE;
-    public final static Enum688LegStipulationType TESTB_ENU_LEG_STIPULATION_TYPE
-            = Enum688LegStipulationType.BANK_QUALIFIED;
+    public final static MyEnumStipulationType TESTA_ENU_LEG_STIPULATION_TYPE
+            = MyEnumStipulationType.SECURITY_TYPE;
+    public final static MyEnumStipulationType TESTB_ENU_LEG_STIPULATION_TYPE
+            = MyEnumStipulationType.BANK_QUALIFIED;
 
-    public Tag688EnuLegStipulationType(Enum688LegStipulationType dataValue) {
+    public Tag688EnuLegStipulationType(MyEnumStipulationType dataValue) {
         setFixType(FIX44.FIX688_ENU_LEG_STIPULATION_TYPE);
         this.dataValue = dataValue;
     }

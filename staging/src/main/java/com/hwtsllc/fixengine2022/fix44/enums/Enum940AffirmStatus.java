@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  940
+ *  AffirmStatus
+ *  int
+ *  Identifies the status of the ConfirmationAck.
+ *  Valid values:
+ *      1 - Received
+ *      2 - Confirm rejected, i.e. not affirmed
+ *      3 - Affirmed
+ */
 public enum Enum940AffirmStatus implements EnumAccessors, LogStringVerbose {
+    RECEIVED( "1", "RECEIVED", "1 - Received" ),
+    REJECTED( "2", "REJECTED", "2 - Confirm rejected, i.e. not affirmed" ),
+    AFFIRMED( "3", "AFFIRMED", "3 - Affirmed" ),
     ;
 
     private final String id;

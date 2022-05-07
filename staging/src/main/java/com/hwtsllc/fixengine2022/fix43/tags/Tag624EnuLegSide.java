@@ -18,19 +18,42 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum624LegSide;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSide;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  624 (same as 54, 624,)
+ *  LegSide
+ *  char
+ *  The side of this individual leg (multileg security).
+ *  Valid values:
+ *      1 - Buy
+ *      2 - Sell
+ *      3 - Buy minus
+ *      4 - Sell plus
+ *      5 - Sell short
+ *      6 - Sell short exempt
+ *      7 - Undisclosed (valid for IOI and List Order messages only)
+ *      8 - Cross (orders where counterparty is an exchange, valid for all messages except IOIs)
+ *      9 - Cross short
+ *      A - Cross short exxmpt
+ *      B - "As Defined" (for use with multileg instruments)
+ *      C - "Opposite" (for use with multileg instruments)
+ *      D - Subscribe (e.g. CIV)
+ *      E - Redeem (e.g. CIV)
+ *      F - Lend (FINANCING - identifies direction of collateral)
+ *      G - Borrow (FINANCING - identifies direction of collateral)
+ */
 public class Tag624EnuLegSide extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum624LegSide dataValue;
+    private final MyEnumSide dataValue;
 
-    public final static Enum624LegSide TESTA_ENU_LEG_SIDE
-            = Enum624LegSide.BORROW_FINANCING;
-    public final static Enum624LegSide TESTB_ENU_LEG_SIDE
-            = Enum624LegSide.SELL_PLUS;
+    public final static MyEnumSide TESTA_ENU_LEG_SIDE
+            = MyEnumSide.BORROW_FINANCING;
+    public final static MyEnumSide TESTB_ENU_LEG_SIDE
+            = MyEnumSide.SELL_PLUS;
 
-    public Tag624EnuLegSide(Enum624LegSide dataValue) {
+    public Tag624EnuLegSide(MyEnumSide dataValue) {
         setFixType(FIX43.FIX624_ENU_LEG_SIDE);
         this.dataValue = dataValue;
     }

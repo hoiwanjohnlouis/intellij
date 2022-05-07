@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag311StrUnderlyingSymbolTest {
         assertEquals( "311", fixData.getID());
         assertEquals( "UNDERLYING_SYMBOL", fixData.getName());
         assertEquals( "UnderlyingSymbol", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0311Test() {
@@ -41,11 +42,11 @@ class Tag311StrUnderlyingSymbolTest {
         tagData = new Tag311StrUnderlyingSymbol(
                 new MyStringType(Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL));
         assertEquals( Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag311StrUnderlyingSymbol(
                 new MyStringType(Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL));
         assertEquals( Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

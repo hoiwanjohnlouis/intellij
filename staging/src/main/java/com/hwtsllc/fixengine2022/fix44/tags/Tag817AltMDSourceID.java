@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  817
+ *  AltMDSourceID
+ *  String
+ *  Session layer source for market data
+ *  (For the standard FIX session layer,
+ *  this would be the TargetCompID (56) where market data can be obtained).
+ */
 public class Tag817AltMDSourceID {
 }

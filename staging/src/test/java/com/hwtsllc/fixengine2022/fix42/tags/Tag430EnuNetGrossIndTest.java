@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum430NetGrossInd;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag430EnuNetGrossIndTest {
         assertEquals( "430", fixData.getID());
         assertEquals( "NET_GROSS_IND", fixData.getName());
         assertEquals( "NetGrossInd", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  Tag430
@@ -52,10 +53,10 @@ class Tag430EnuNetGrossIndTest {
          */
         tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.NET);
         assertEquals( Enum430NetGrossInd.NET.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
         assertEquals( Enum430NetGrossInd.GROSS.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 626
+ */
 public enum Enum626AllocType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 626
-     */
-
     /*
      *  1-14 types
      */
@@ -38,6 +37,7 @@ public enum Enum626AllocType implements EnumAccessors, LogStringVerbose {
                     "includes MiscFees and NetMoney) (Replaced)" ),
     READY_TO_BOOK_SINGLE_ORDER( "5", "READY_TO_BOOK_SINGLE_ORDER",
             "5 - Ready-To-Book - Single Order" ),
+
     BUYSIDE_READY_TO_BOOK( "6", "BUYSIDE_READY_TO_BOOK",
             "6 - Buyside Ready-To-Book - Combined Set of Orders (Replaced)" ),
     WAREHOUSE_INSTRUCTION( "7", "WAREHOUSE_INSTRUCTION",
@@ -46,6 +46,7 @@ public enum Enum626AllocType implements EnumAccessors, LogStringVerbose {
             "8 - Request to Intermediary" ),
     ACCEPT( "9", "ACCEPT", "9 - Accept" ),
     REJECT( "10", "REJECT", "10 - Reject" ),
+
     ACCEPT_PENDING( "11", "ACCEPT_PENDING", "11 - Accept Pending" ),
     INCOMPLETE_GROUP( "12", "INCOMPLETE_GROUP", "12 - Incomplete Group" ),
     COMPLETE_GROUP( "13", "COMPLETE_GROUP", "13 - Complete Group" ),

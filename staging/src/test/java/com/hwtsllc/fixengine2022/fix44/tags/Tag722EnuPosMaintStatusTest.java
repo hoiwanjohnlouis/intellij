@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  722
+ *  PosMaintStatus
+ *  Status of Position Maintenance Request
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Accepted With Warnings
+ *      2 - Rejected
+ *      3 - Completed
+ *      4 - Completed With Warnings
+ */
 class Tag722EnuPosMaintStatusTest {
     @Test
     void FIX0722Test() {
@@ -30,43 +41,32 @@ class Tag722EnuPosMaintStatusTest {
         assertEquals( "722", fixData.getID());
         assertEquals( "POS_MAINT_STATUS", fixData.getName());
         assertEquals( "PosMaintStatus", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  722
-     *  PosMaintStatus
-     *  Status of Position Maintenance Request
-     *  Valid values:
-     *      0 - Accepted
-     *      1 - Accepted With Warnings
-     *      2 - Rejected
-     *      3 - Completed
-     *      4 - Completed With Warnings
-     */
     @Test
     void Tag0722Test() {
         Tag722EnuPosMaintStatus tagData;
 
         tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED);
         assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED_WITH_WARNINGS);
         assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.REJECTED);
         assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED);
         assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED_WITH_WARNINGS);
         assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

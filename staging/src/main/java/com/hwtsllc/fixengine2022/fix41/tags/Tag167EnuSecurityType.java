@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.fix41.enums.Enum167SecurityType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -169,12 +169,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      CASH( "CASH", "CASH", "CASH - Cash" ),
  */
 public class Tag167EnuSecurityType extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum167SecurityType dataValue;
+    private final MyEnumSecurityType dataValue;
 
-    public final static Enum167SecurityType TESTA_ENU_SECURITY_TYPE = Enum167SecurityType.NO_SECURITY_TYPE;
-    public final static Enum167SecurityType TESTB_ENU_SECURITY_TYPE = Enum167SecurityType.CASH;
+    public final static MyEnumSecurityType TESTA_ENU_SECURITY_TYPE = MyEnumSecurityType.NO_SECURITY_TYPE;
+    public final static MyEnumSecurityType TESTB_ENU_SECURITY_TYPE = MyEnumSecurityType.CASH;
 
-    public Tag167EnuSecurityType(Enum167SecurityType dataValue) {
+    public Tag167EnuSecurityType(MyEnumSecurityType dataValue) {
         setFixType(FIX41.FIX167_ENU_SECURITY_TYPE);
         this.dataValue = dataValue;
     }

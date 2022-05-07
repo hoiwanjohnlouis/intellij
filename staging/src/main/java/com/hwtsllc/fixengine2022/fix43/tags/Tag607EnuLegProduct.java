@@ -18,19 +18,22 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum607LegProduct;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumProduct;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 460, 462, 607
+ */
 public class Tag607EnuLegProduct extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum607LegProduct dataValue;
+    private final MyEnumProduct dataValue;
 
-    public final static Enum607LegProduct TESTA_ENU_LEG_PRODUCT
-            = Enum607LegProduct.COMMODITY;
-    public final static Enum607LegProduct TESTB_ENU_LEG_PRODUCT
-            = Enum607LegProduct.GOVERNMENT;
+    public final static MyEnumProduct TESTA_ENU_LEG_PRODUCT
+            = MyEnumProduct.COMMODITY;
+    public final static MyEnumProduct TESTB_ENU_LEG_PRODUCT
+            = MyEnumProduct.GOVERNMENT;
 
-    public Tag607EnuLegProduct(Enum607LegProduct dataValue) {
+    public Tag607EnuLegProduct(MyEnumProduct dataValue) {
         setFixType(FIX43.FIX607_ENU_LEG_PRODUCT);
         this.dataValue = dataValue;
     }

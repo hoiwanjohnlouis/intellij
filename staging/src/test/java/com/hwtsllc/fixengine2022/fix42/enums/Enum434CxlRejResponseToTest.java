@@ -16,22 +16,22 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag434
+ *  Enu
+ *  CxlRejResponseTo
+ *
+ *      1-2 msg types
+ *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
+ *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
+ */
 class Enum434CxlRejResponseToTest {
-    /**
-     *  Tag434
-     *  Enu
-     *  CxlRejResponseTo
-     *
-     *      1-2 msg types
-     *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
-     *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
-     */
     @Test
     void Enum0434Test() {
         Enum434CxlRejResponseTo enumType;
@@ -43,19 +43,19 @@ class Enum434CxlRejResponseToTest {
         assertEquals("1", enumType.getID());
         assertEquals("ORDER_CANCEL_REQUEST", enumType.getName());
         assertEquals("1 - Order cancel request", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST;
         assertEquals("2", enumType.getID());
         assertEquals("ORDER_MODIFICATION_REQUEST", enumType.getName());
         assertEquals("2 - Order cancel/replace request", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

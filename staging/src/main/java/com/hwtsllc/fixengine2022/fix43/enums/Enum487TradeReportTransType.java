@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 487
+ */
 public enum Enum487TradeReportTransType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 487
-     */
-
     /*
      * 0-5 types
      */
@@ -32,6 +31,7 @@ public enum Enum487TradeReportTransType implements EnumAccessors, LogStringVerbo
     REPLACE("2", "REPLACE", "2 - Replace" ),
     RELEASE("3", "RELEASE", "3 - Release" ),
     REVERSE("4", "REVERSE", "4 - Reverse" ),
+
     CANCEL_BACK_OUT_TRADE("5", "CANCEL_BACK_OUT_TRADE", "5 - Cancel Due To Back Out of Trade" ),
     ;
 

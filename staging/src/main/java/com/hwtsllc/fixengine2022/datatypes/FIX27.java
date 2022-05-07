@@ -50,7 +50,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * String  name         The short NAME of the field as defined by the FIX protocol document, no duplicates
  * String  description  A short blurb which describes what information the field contains
  */
-public enum FIX27 implements EnumAccessors, LogStringVerbose {
+public enum FIX27 implements EnumAccessors, LogStringVerbose, MyTestValues {
 
 
     /*
@@ -192,29 +192,6 @@ public enum FIX27 implements EnumAccessors, LogStringVerbose {
     private final String id;
     private final String name;
     private final String description;
-
-    /*
-     * used in @Test routine.
-     */
-    public final static String JUNK_ENUM_NAME = "JunkEnumName";
-    public final static String JUNK_ID = "JunkID";
-    public final static String JUNK_NAME = "JunkName";
-    public final static String JUNK_DESCRIPTION = "JunkDescription";
-    public final static double JUNK_AMT_DATA_VALUE = -65535D;
-    public final static String JUNK_DAT_DATA_VALUE = "JunkData";
-    public final static String JUNK_EXC_DATA_VALUE = "JunkExchange";
-    public final static float JUNK_FLO_DATA_VALUE = -65535F;
-    public final static int JUNK_INT_DATA_VALUE = -65535;
-    public final static int JUNK_LEN_DATA_VALUE = -65535;
-    public final static String JUNK_LMD_DATA_VALUE = "JunkLocalMktDateDataValue";
-    public final static int JUNK_NUM_DATA_VALUE = -65535;
-    public final static double JUNK_PCT_DATA_VALUE = -0.05D;
-    public final static double JUNK_PXO_DATA_VALUE = -0.032D;
-    public final static double JUNK_PRC_DATA_VALUE = -65535D;
-    public final static int JUNK_QTY_DATA_VALUE = -65535;
-    public final static int JUNK_SEQ_DATA_VALUE = -65535;
-    public final static String JUNK_STR_DATA_VALUE = "JunkStringDataValue";
-    public final static String JUNK_UTC_DATA_VALUE = "18991231_235959";
 
     FIX27(final int id, final String name, final String description) {
         /*

@@ -30,6 +30,7 @@ public enum Enum13CommType implements EnumAccessors, LogStringVerbose {
             "4 - Percentage waived - cash discount (for CIV buy orders)"),
     PERCENTAGE_WAIVED_ENHANCED_UNITS ("5", "PERCENTAGE_WAIVED_ENHANCED_UNITS",
             "5 - Percentage waived - enhanced units (for CIV buy orders)"),
+
     POINTS_PER_BOND ("6", "POINTS_PER_BOND",
             "6 - Points per bond or contract"),
     ;

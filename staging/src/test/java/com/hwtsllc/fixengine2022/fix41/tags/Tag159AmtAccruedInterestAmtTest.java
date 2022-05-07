@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +31,9 @@ class Tag159AmtAccruedInterestAmtTest {
         assertEquals( "159", fixData.getID());
         assertEquals( "ACCRUED_INTEREST_AMT", fixData.getName());
         assertEquals( "AccruedInterestAmt", fixData.getDescription());
-        assertNotEquals( FIX41.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX41.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX41.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0159Test() {
@@ -41,11 +42,11 @@ class Tag159AmtAccruedInterestAmtTest {
         tagData = new Tag159AmtAccruedInterestAmt(
                 new MyAmtType(Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT));
         assertEquals( Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag159AmtAccruedInterestAmt(
                 new MyAmtType(Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
         assertEquals( Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

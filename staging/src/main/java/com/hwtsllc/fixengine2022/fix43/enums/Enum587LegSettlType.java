@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 587
+ */
 public enum Enum587LegSettlType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 587
-     */
-
     /*
      *  0-9, types
      */
@@ -32,6 +31,7 @@ public enum Enum587LegSettlType implements EnumAccessors, LogStringVerbose {
     NEXT_DAY( "2", "NEXT_DAY", "2 - Next Day (TOM / T+1)" ),
     T_PLUS_2( "3", "T_PLUS_2", "3 - T+2" ),
     T_PLUS_3( "4", "T_PLUS_3", "4 - T+3" ),
+
     T_PLUS_4( "5", "T_PLUS_4", "5 - T+4" ),
     FUTURE( "6", "FUTURE", "6 - Future" ),
     WHEN_ISSUED( "7", "WHEN_ISSUED", "7 - When And If Issued" ),

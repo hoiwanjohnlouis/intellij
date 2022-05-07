@@ -18,19 +18,34 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum581AccountType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAccountType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  581 (same as 581, 798)
+ *  Type of account associated with an order
+ *  798 (same as 581, 798)
+ *  AllocAccountType
+ *  Type of account associated with a confirmation or other trade-level message
+ *  Valid values:
+ *      1 - Account is carried on customer side of books
+ *      2 - Account is carried on non-customer side of books
+ *      3 - House trader
+ *      4 - Floor trader
+ *      6 - Account is carried on non-customer side of books and is cross margined
+ *      7 - Account is house trader and is cross margined
+ *      8 - Joint back office account (JBO)
+ */
 public class Tag581EnuAccountType extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum581AccountType dataValue;
+    private final MyEnumAccountType dataValue;
 
-    public final static Enum581AccountType TESTA_ENU_ACCOUNT_TYPE
-            = Enum581AccountType.CUSTOMER_BOOK;
-    public final static Enum581AccountType TESTB_ENU_ACCOUNT_TYPE
-            = Enum581AccountType.JOINT_BACK_OFFICE;
+    public final static MyEnumAccountType TESTA_ENU_ACCOUNT_TYPE
+            = MyEnumAccountType.CUSTOMER_BOOK;
+    public final static MyEnumAccountType TESTB_ENU_ACCOUNT_TYPE
+            = MyEnumAccountType.JOINT_BACK_OFFICE;
 
-    public Tag581EnuAccountType(Enum581AccountType dataValue) {
+    public Tag581EnuAccountType(MyEnumAccountType dataValue) {
         setFixType(FIX43.FIX581_ENU_ACCOUNT_TYPE);
         this.dataValue = dataValue;
     }

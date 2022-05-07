@@ -17,25 +17,58 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum945CollInquiryStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  945
+ *  CollInquiryStatus
+ *  int
+ *  Status of Collateral Inquiry
+ *  Valid values:
+ *      0 - Accepted
+ *      1 - Accepted With Warnings
+ *      2 - Completed
+ *      3 - Completed With Warnings
+ *      4 - Rejected
+ */
 class Tag945EnuCollInquiryStatusTest {
     @Test
     void FIX0945Test() {
-        FIX44 fixData = FIX44.FIX945_COLL_INQUIRY_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX945_ENU_COLL_INQUIRY_STATUS;
+        assertEquals( "945", fixData.getID());
+        assertEquals( "COLL_INQUIRY_STATUS", fixData.getName());
+        assertEquals( "CollInquiryStatus", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0945Test() {
         Tag945EnuCollInquiryStatus tagData;
 
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED );
+        assertEquals( Enum945CollInquiryStatus.ACCEPTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS );
+        assertEquals( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED );
+        assertEquals( Enum945CollInquiryStatus.COMPLETED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS );
+        assertEquals( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.REJECTED );
+        assertEquals( Enum945CollInquiryStatus.REJECTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

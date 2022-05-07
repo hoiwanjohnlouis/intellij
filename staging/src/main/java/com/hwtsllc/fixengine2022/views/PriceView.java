@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.views;
 
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum35MsgType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumMsgType;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag35EnuMsgType;
 import com.hwtsllc.fixengine2022.fix27.tags.Tag60UtcTransactTime;
 
@@ -42,7 +42,7 @@ public class PriceView {
         private Tag60UtcTransactTime tag60UtcTransactTime;
 
         //
-        public Builder(Enum35MsgType enum35MsgType) {
+        public Builder(MyEnumMsgType myEnumMsgType) {
             this.tag60UtcTransactTime = new Tag60UtcTransactTime(new MyUTCTimestampType("18991231235959") );
         }
         public Builder buildTradeTimeStamp(Tag60UtcTransactTime tag60UtcTransactTime) {

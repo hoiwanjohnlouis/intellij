@@ -17,25 +17,54 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumLimitType;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  837
+ *  PegLimitType
+ *  int
+ *  Type of Peg Limit
+ *  843
+ *  DiscretionLimitType
+ *  int
+ *  Type of Discretion Limit
+ *  Valid values:
+ *      0 - Or better (default) - price improvement allowed
+ *      1 - Strict - limit is a strict limit
+ *      2 - Or worse - for a buy the peg limit is a minimum
+ *                  and for a sell the peg limit is a maximum
+ *                  (for use for orders which have a price range)
+ */
 class Tag843EnuDiscretionLimitTypeTest {
     @Test
     void FIX0843Test() {
-        FIX44 fixData = FIX44.FIX843_DISCRETION_LIMIT_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX843_ENU_DISCRETION_LIMIT_TYPE;
+        assertEquals( "843", fixData.getID());
+        assertEquals( "DISCRETION_LIMIT_TYPE", fixData.getName());
+        assertEquals( "DiscretionLimitType", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0843Test() {
         Tag843EnuDiscretionLimitType tagData;
 
+        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.OR_BETTER);
+        assertEquals( MyEnumLimitType.OR_BETTER.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.STRICT);
+        assertEquals( MyEnumLimitType.STRICT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.OR_WORSE);
+        assertEquals( MyEnumLimitType.OR_WORSE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum609LegSecurityType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -169,14 +169,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      CASH( "CASH", "CASH", "CASH - Cash" ),
  */
 public class Tag609EnuLegSecurityType extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum609LegSecurityType dataValue;
+    private final MyEnumSecurityType dataValue;
 
-    public final static Enum609LegSecurityType TESTA_ENU_LEG_SECURITY_TYPE
-            = Enum609LegSecurityType.AMENDED_AND_RESTATED;
-    public final static Enum609LegSecurityType TESTB_ENU_LEG_SECURITY_TYPE
-            = Enum609LegSecurityType.COLLATERALIZED_MORTGAGE_OBLIGATION;
+    public final static MyEnumSecurityType TESTA_ENU_LEG_SECURITY_TYPE
+            = MyEnumSecurityType.AMENDED_AND_RESTATED;
+    public final static MyEnumSecurityType TESTB_ENU_LEG_SECURITY_TYPE
+            = MyEnumSecurityType.COLLATERALIZED_MORTGAGE_OBLIGATION;
 
-    public Tag609EnuLegSecurityType(Enum609LegSecurityType dataValue) {
+    public Tag609EnuLegSecurityType(MyEnumSecurityType dataValue) {
         setFixType(FIX43.FIX609_ENU_LEG_SECURITY_TYPE);
         this.dataValue = dataValue;
     }

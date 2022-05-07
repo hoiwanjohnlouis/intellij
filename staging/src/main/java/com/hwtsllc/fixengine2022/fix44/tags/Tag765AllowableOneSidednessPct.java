@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  765
+ *  AllowableOneSidednessPct
+ *  Percentage
+ *  The maximum percentage that execution of one side of a program trade
+ *  can exceed execution of the other.
+ */
 public class Tag765AllowableOneSidednessPct {
 }

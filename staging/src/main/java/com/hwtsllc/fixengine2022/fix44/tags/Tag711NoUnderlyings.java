@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  711
+ *  NoUnderlyings
+ *  NumInGroup
+ *  Number of underlying legs that make up the security.
+ */
 public class Tag711NoUnderlyings {
 }

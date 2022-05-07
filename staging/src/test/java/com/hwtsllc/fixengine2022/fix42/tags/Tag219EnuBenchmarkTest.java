@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum219Benchmark;
 import org.junit.jupiter.api.Test;
 
@@ -31,9 +32,9 @@ class Tag219EnuBenchmarkTest {
         assertEquals( "219", fixData.getID());
         assertEquals( "BENCHMARK", fixData.getName());
         assertEquals( "Benchmark", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  219
@@ -59,46 +60,46 @@ class Tag219EnuBenchmarkTest {
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.CURVE);
         assertEquals( Enum219Benchmark.CURVE.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.FIVE_YEAR);
         assertEquals( Enum219Benchmark.FIVE_YEAR.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_FIVE_YEAR);
         assertEquals( Enum219Benchmark.OLD_FIVE_YEAR.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.TEN_YEAR);
         assertEquals( Enum219Benchmark.TEN_YEAR.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_TEN_YEAR);
         assertEquals( Enum219Benchmark.OLD_TEN_YEAR.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.THIRTY_YEAR);
         assertEquals( Enum219Benchmark.THIRTY_YEAR.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_THIRTY_YEAR);
         assertEquals( Enum219Benchmark.OLD_THIRTY_YEAR.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.THREE_MONTH);
         assertEquals( Enum219Benchmark.THREE_MONTH.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.SIX_MONTH);
         assertEquals( Enum219Benchmark.SIX_MONTH.getID(),
                 tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

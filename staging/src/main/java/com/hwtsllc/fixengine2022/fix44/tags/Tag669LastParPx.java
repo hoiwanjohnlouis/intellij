@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  669
+ *  LastParPx
+ *  Price
+ *  Last price expressed in percent-of-par.
+ *  Conditionally required for Fixed Income trades when
+ *  LastPx (31) is expressed in Yield, Spread, Discount or any other type.
+ *  Usage: Execution Report and Allocation Report repeating executions block (from sellside).
+ */
 public class Tag669LastParPx {
 }

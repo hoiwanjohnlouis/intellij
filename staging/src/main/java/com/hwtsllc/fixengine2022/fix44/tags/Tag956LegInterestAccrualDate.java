@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  956
+ *  LegInterestAccrualDate
+ *  LocalMktDate
+ *  The start date used for calculating accrued interest on debt instruments
+ *  which are being sold between interest payment dates.  Often but not always
+ *  the same as the Issue Date and the Dated Date
+ */
 public class Tag956LegInterestAccrualDate {
 }

@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  727
+ *  TotalNumPosReports
+ *  int
+ *  Total number of Position Reports being returned.
+ */
 public class Tag727TotalNumPosReports {
 }

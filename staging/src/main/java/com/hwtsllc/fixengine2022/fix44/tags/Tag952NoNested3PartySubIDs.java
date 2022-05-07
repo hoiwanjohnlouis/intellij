@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  952
+ *  NoNested3PartySubIDs
+ *  NumInGroup
+ *  Number of Nested3PartySubIDs (953) entries
+ */
 public class Tag952NoNested3PartySubIDs {
 }

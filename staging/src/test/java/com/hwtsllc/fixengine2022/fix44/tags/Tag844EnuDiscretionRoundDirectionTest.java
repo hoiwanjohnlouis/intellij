@@ -17,25 +17,51 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumRoundDirection;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  838
+ *  PegRoundDirection
+ *  int
+ *  If the calculated peg price is not a valid tick price, specifies
+ *  whether to round the price to be more or less aggressive
+ *  844
+ *  DiscretionRoundDirection
+ *  int
+ *  If the calculated discretionary price is not a valid tick price,
+ *  specifies whether to round the price to be more or less aggressive
+ *  Valid values:
+ *      1 - More aggressive - on a buy order round the price up to the nearest tick;
+ *                  on a sell order round down to the nearest tick
+ *      2 - More passive - on a buy order round down to the nearest tick;
+ *                  on a sell order round up to the nearest tick
+ */
 class Tag844EnuDiscretionRoundDirectionTest {
     @Test
     void FIX0844Test() {
-        FIX44 fixData = FIX44.FIX844_DISCRETION_ROUND_DIRECTION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        FIX44 fixData = FIX44.FIX844_ENU_DISCRETION_ROUND_DIRECTION;
+        assertEquals( "844", fixData.getID());
+        assertEquals( "DISCRETION_ROUND_DIRECTION", fixData.getName());
+        assertEquals( "DiscretionRoundDirection", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0844Test() {
         Tag844EnuDiscretionRoundDirection tagData;
 
+        tagData = new Tag844EnuDiscretionRoundDirection(MyEnumRoundDirection.AGGRESSIVE);
+        assertEquals( MyEnumRoundDirection.AGGRESSIVE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag844EnuDiscretionRoundDirection(MyEnumRoundDirection.PASSIVE);
+        assertEquals( MyEnumRoundDirection.PASSIVE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

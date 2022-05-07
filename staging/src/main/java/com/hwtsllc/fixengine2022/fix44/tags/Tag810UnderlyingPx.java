@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  810
+ *  UnderlyingPx
+ *  Price
+ *  Underlying price associate with a derivative instrument.
+ */
 public class Tag810UnderlyingPx {
 }

@@ -16,25 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag258BoolTradedFlatSwitch;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  852
+ *  PublishTrdIndicator
+ *  Boolean
+ *  Indicates if a trade should be reported via a market reporting service.
+ *  Valid values:
+ *      N - Do Not Report Trade
+ *      Y - Report Trade
+ */
 class Tag852BoolPublishTrdIndicatorTest {
     @Test
     void FIX0852Test() {
         FIX44 fixData = FIX44.FIX852_BOOL_PUBLISH_TRD_INDICATOR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "852", fixData.getID());
+        assertEquals( "PUBLISH_TRD_INDICATOR", fixData.getName());
+        assertEquals( "PublishTrdIndicator", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0852Test() {
@@ -42,10 +50,10 @@ class Tag852BoolPublishTrdIndicatorTest {
 
         tagData = new Tag852BoolPublishTrdIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag852BoolPublishTrdIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

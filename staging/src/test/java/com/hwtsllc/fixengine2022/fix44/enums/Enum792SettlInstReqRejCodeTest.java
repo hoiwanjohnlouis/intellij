@@ -16,25 +16,25 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  792
+ *  SettlInstReqRejCode
+ *  Identifies reason for rejection (of a settlement instruction request message).
+ *  Valid values:
+ *      0 - Unable to process request
+ *      1 - Unknown account
+ *      2 - No matching settlement instructions found
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Enum792SettlInstReqRejCodeTest {
-    /**
-     *  792
-     *  SettlInstReqRejCode
-     *  Identifies reason for rejection (of a settlement instruction request message).
-     *  Valid values:
-     *      0 - Unable to process request
-     *      1 - Unknown account
-     *      2 - No matching settlement instructions found
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     @Test
     void EnumTest() {
         Enum792SettlInstReqRejCode enumType;
@@ -43,32 +43,32 @@ class Enum792SettlInstReqRejCodeTest {
         assertEquals("0", enumType.getID());
         assertEquals("UNABLE_TO_PROCESS_REQUEST", enumType.getName());
         assertEquals("0 - Unable to process request", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT;
         assertEquals("1", enumType.getID());
         assertEquals("UNKNOWN_ACCOUNT", enumType.getName());
         assertEquals("1 - Unknown account", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum792SettlInstReqRejCode.NO_MATCHING_INSTRUCTIONS;
         assertEquals("2", enumType.getID());
         assertEquals("NO_MATCHING_INSTRUCTIONS", enumType.getName());
         assertEquals("2 - No matching settlement instructions found", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum792SettlInstReqRejCode.OTHER;
         assertEquals("99", enumType.getID());
         assertEquals("OTHER", enumType.getName());
         assertEquals("99 - Other", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

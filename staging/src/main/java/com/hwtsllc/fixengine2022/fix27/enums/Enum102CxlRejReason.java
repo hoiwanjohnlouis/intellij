@@ -30,6 +30,7 @@ public enum Enum102CxlRejReason implements EnumAccessors, LogStringVerbose {
             "3 - Pending status"),
     UNABLE_TO_PROCESS_MASS_CANCEL_REQUEST("4", "UNABLE_TO_PROCESS_MASS_CANCEL_REQUEST",
             "4 - Unable to process Order Mass Cancel Request"),
+
     UNMATCHED_ORIG_ORD_MOD_TIME("5", "UNMATCHED_ORIG_ORD_MOD_TIME",
             "5 - OrigOrdModTime (586) did not match last TransactTime (60) of order"),
     DUPLICATE_CLORDID("6", "DUPLICATE_CLORDID",

@@ -23,6 +23,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  731 (same as 731, 733)
+ *  SettlPriceType
+ *  Type of settlement price
+ *  Valid values:
+ *      1 - Final
+ *      2 - Theoretical
+ */
 class Tag731EnuSettlPriceTypeTest {
     @Test
     void FIX0731Test() {
@@ -30,28 +38,20 @@ class Tag731EnuSettlPriceTypeTest {
         assertEquals( "731", fixData.getID());
         assertEquals( "SETTL_PRICE_TYPE", fixData.getName());
         assertEquals( "SettlPriceType", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  731 (same as 731, 733)
-     *  SettlPriceType
-     *  Type of settlement price
-     *  Valid values:
-     *      1 - Final
-     *      2 - Theoretical
-     */
     @Test
     void Tag0731Test() {
         Tag731EnuSettlPriceType tagData;
 
         tagData = new Tag731EnuSettlPriceType(Enum731SettlPriceType.FINAL);
         assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag731EnuSettlPriceType(Enum731SettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

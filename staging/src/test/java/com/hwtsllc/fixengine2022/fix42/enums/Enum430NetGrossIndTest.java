@@ -16,22 +16,22 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag430
+ *  Enu
+ *  NetGrossInd
+ *
+ *      1-2 msg types
+ *      NET( "1", "NET", "1 - Net" ),
+ *      GROSS( "2", "GROSS", "2 - Gross" ),
+ */
 class Enum430NetGrossIndTest {
-    /**
-     *  Tag430
-     *  Enu
-     *  NetGrossInd
-     *
-     *      1-2 msg types
-     *      NET( "1", "NET", "1 - Net" ),
-     *      GROSS( "2", "GROSS", "2 - Gross" ),
-     */
     @Test
     void Enum0430Test() {
         Enum430NetGrossInd enumType;
@@ -43,19 +43,19 @@ class Enum430NetGrossIndTest {
         assertEquals( "1", enumType.getID());
         assertEquals( "NET", enumType.getName());
         assertEquals( "1 - Net", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum430NetGrossInd.GROSS;
         assertEquals( "2", enumType.getID());
         assertEquals( "GROSS", enumType.getName());
         assertEquals( "2 - Gross", enumType.getDescription());
-        assertNotEquals( FIX42.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( FIX42.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX42.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
     /**
      *

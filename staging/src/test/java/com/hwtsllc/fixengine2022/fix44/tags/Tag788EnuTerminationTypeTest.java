@@ -17,12 +17,23 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum788TerminationType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  788
+ *  TerminationType
+ *  Type of financing termination.
+ *  Valid values:
+ *      1 - Overnight
+ *      2 - Term
+ *      3 - Flexible
+ *      4 - Open
+ */
 class Tag788EnuTerminationTypeTest {
     @Test
     void FIX0788Test() {
@@ -30,20 +41,10 @@ class Tag788EnuTerminationTypeTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  788
-     *  TerminationType
-     *  Type of financing termination.
-     *  Valid values:
-     *      1 - Overnight
-     *      2 - Term
-     *      3 - Flexible
-     *      4 - Open
-     */
     @Test
     void Tag0788Test() {
         Tag788EnuTerminationType tagData;

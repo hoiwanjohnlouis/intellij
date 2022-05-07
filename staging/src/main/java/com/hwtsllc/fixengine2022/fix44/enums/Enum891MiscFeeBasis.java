@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  891
+ *  MiscFeeBasis
+ *  int
+ *  Defines the unit for a miscellaneous fee.
+ *  Valid values:
+ *      0 - Absolute
+ *      1 - Per Unit
+ *      2 - Percentage
+ */
 public enum Enum891MiscFeeBasis implements EnumAccessors, LogStringVerbose {
+    ABSOLUTE( "0", "ABSOLUTE", "0 - Absolute" ),
+    PER_UNIT( "1", "PER_UNIT", "1 - Per Unit" ),
+    PERCENTAGE( "2", "PERCENTAGE", "2 - Percentage" ),
     ;
 
     private final String id;

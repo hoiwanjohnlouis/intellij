@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  924
+ *  UserRequestType
+ *  int
+ *  Indicates the action required by a User Request Message
+ *  Valid values:
+ *      1 - Log On User
+ *      2 - Log Off User
+ *      3 - Change Password For User
+ *      4 - Request Individual User Status
+ */
 public enum Enum924UserRequestType implements EnumAccessors, LogStringVerbose {
+    LOG_ON( "1", "LOG_ON", "1 - Log On User" ),
+    LOG_OFF( "2", "LOG_OFF", "2 - Log Off User" ),
+    CHANGE_PASSWORD( "3", "CHANGE_PASSWORD", "3 - Change Password For User" ),
+    REQUEST_STATUS( "4", "REQUEST_STATUS", "4 - Request Individual User Status" ),
     ;
 
     private final String id;

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  737
+ *  AllocSettlCurrAmt
+ *  Amt
+ *  Total amount due expressed in settlement currency
+ *  (includes the effect of the forex transaction) for a specific AllocAccount (79).
+ */
 public class Tag737AllocSettlCurrAmt {
 }

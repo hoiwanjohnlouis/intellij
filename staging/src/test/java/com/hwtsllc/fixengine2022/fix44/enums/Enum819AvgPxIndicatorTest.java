@@ -16,12 +16,51 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  819
+ *  AvgPxIndicator
+ *  int
+ *  Average Pricing Indicator
+ *  Valid values:
+ *      0 - No Average Pricing
+ *      1 - Trade is part of an average price group identified by the TradeLinkID (820)
+ *      2 - Last trade is the average price group identified by the TradeLinkID (820)
+ */
 class Enum819AvgPxIndicatorTest {
     @Test
     void EnumTest() {
         Enum819AvgPxIndicator enumType;
 
+        enumType = Enum819AvgPxIndicator.NO_PRICING;
+        assertEquals("0", enumType.getID());
+        assertEquals("NO_PRICING", enumType.getName());
+        assertEquals("0 - No Average Pricing", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum819AvgPxIndicator.PART_OF_APG;
+        assertEquals("1", enumType.getID());
+        assertEquals("PART_OF_APG", enumType.getName());
+        assertEquals("1 - Trade is part of an average price group identified by the TradeLinkID (820)",
+                enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum819AvgPxIndicator.LAST_TRADE;
+        assertEquals("2", enumType.getID());
+        assertEquals("LAST_TRADE", enumType.getName());
+        assertEquals("2 - Last trade is the average price group identified by the TradeLinkID (820)",
+                enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

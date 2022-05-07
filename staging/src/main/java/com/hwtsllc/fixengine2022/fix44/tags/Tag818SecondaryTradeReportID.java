@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  818
+ *  SecondaryTradeReportID
+ *  String
+ *  Deprecated in FIX.5.0 Secondary trade report identifier
+ *  - can be used to associate an additional identifier with a trade.
+ */
 public class Tag818SecondaryTradeReportID {
 }

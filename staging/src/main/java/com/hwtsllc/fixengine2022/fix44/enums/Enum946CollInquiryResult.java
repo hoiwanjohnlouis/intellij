@@ -19,7 +19,41 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  946
+ *  CollInquiryResult
+ *  int
+ *  Result returned in response to Collateral Inquiry
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  Valid values:
+ *      0 - Successful (default)
+ *      1 - Invalid or unknown instrument
+ *      2 - Invalid or unknown collateral type
+ *      3 - Invalid Parties
+ *      4 - Invalid Transport Type requested
+ *      5 - Invalid Destination requested
+ *      6 - No collateral found for the trade specified
+ *      7 - No collateral found for the order specified
+ *      8 - Collateral inquiry type not supported
+ *      9 - Unauthorized for collateral inquiry
+ *      99 - Other (further information in Text (58) field)
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum946CollInquiryResult implements EnumAccessors, LogStringVerbose {
+    SUCCESSFUL( "0", "SUCCESSFUL", "0 - Successful (default)" ),
+    INVALID_INSTRUMENT( "1", "INVALID_INSTRUMENT", "1 - Invalid or unknown instrument" ),
+    UNKNOWN_COLLATERAL_TYPE( "2", "UNKNOWN_COLLATERAL_TYPE", "2 - Invalid or unknown collateral type" ),
+    INVALID_PARTIES( "3", "INVALID_PARTIES", "3 - Invalid Parties" ),
+    INVALID_TRANSPORT_TYPE( "4", "INVALID_TRANSPORT_TYPE", "4 - Invalid Transport Type requested" ),
+
+    INVALID_DESTINATION( "5", "INVALID_DESTINATION", "5 - Invalid Destination requested" ),
+    NO_COLLATERAL_FOUND_FOR_TRADE( "6", "NO_COLLATERAL_FOUND_FOR_TRADE", "6 - No collateral found for the trade specified" ),
+    NO_COLLATERAL_FOUND_FOR_ORDER( "7", "NO_COLLATERAL_FOUND_FOR_ORDER", "7 - No collateral found for the order specified" ),
+    COLLATERAL_INQUIRY_NOT_SUPPORTED( "8", "COLLATERAL_INQUIRY_NOT_SUPPORTED", "8 - Collateral inquiry type not supported" ),
+    UNAUTHORIZED_COLLATERAL_INQUIRY( "9", "UNAUTHORIZED_COLLATERAL_INQUIRY", "9 - Unauthorized for collateral inquiry" ),
+
+    OTHER( "99", "OTHER", "99 - Other (further information in Text (58) field)" ),
     ;
 
     private final String id;

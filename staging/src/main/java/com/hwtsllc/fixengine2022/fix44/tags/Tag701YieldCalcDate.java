@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  701
+ *  YieldCalcDate
+ *  LocalMktDate
+ *  Include as needed to clarify yield irregularities associated with date,
+ *  e.g. when it falls on a non-business day.
+ */
 public class Tag701YieldCalcDate {
 }

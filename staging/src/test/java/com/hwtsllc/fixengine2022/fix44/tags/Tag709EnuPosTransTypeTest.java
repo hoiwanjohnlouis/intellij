@@ -17,11 +17,24 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  709
+ *  PosTransType
+ *  Identifies the type of position transaction
+ *  Valid values:
+ *      1 - Exercise
+ *      2 - Do Not Exercise
+ *      3 - Position Adjustment
+ *      4 - Position Change Submission or Margin Disposition
+ *      5 - Pledge
+ *      6 - Large Trader Submission
+ */
 class Tag709EnuPosTransTypeTest {
     @Test
     void FIX0709Test() {
@@ -29,22 +42,10 @@ class Tag709EnuPosTransTypeTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  709
-     *  PosTransType
-     *  Identifies the type of position transaction
-     *  Valid values:
-     *      1 - Exercise
-     *      2 - Do Not Exercise
-     *      3 - Position Adjustment
-     *      4 - Position Change Submission or Margin Disposition
-     *      5 - Pledge
-     *      6 - Large Trader Submission
-     */
     @Test
     void Tag0709Test() {
         Tag709EnuPosTransType tagData;

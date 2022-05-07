@@ -18,11 +18,13 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum798AllocAccountType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAccountType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
+ *  581 (same as 581, 798)
+ *  Type of account associated with an order
  *  798 (same as 581, 798)
  *  AllocAccountType
  *  Type of account associated with a confirmation or other trade-level message
@@ -36,14 +38,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      8 - Joint back office account (JBO)
  */
 public class Tag798EnuAllocAccountType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum798AllocAccountType dataValue;
+    private final MyEnumAccountType dataValue;
 
-    public final static Enum798AllocAccountType TESTA_ENU_ALLOC_ACCOUNT_TYPE
-            = Enum798AllocAccountType.CUSTOMER_BOOK;
-    public final static Enum798AllocAccountType TESTB_ENU_ALLOC_ACCOUNT_TYPE
-            = Enum798AllocAccountType.JOINT_BACK_OFFICE;
+    public final static MyEnumAccountType TESTA_ENU_ALLOC_ACCOUNT_TYPE
+            = MyEnumAccountType.CUSTOMER_BOOK;
+    public final static MyEnumAccountType TESTB_ENU_ALLOC_ACCOUNT_TYPE
+            = MyEnumAccountType.JOINT_BACK_OFFICE;
 
-    public Tag798EnuAllocAccountType(Enum798AllocAccountType dataValue) {
+    public Tag798EnuAllocAccountType(MyEnumAccountType dataValue) {
         setFixType(FIX44.FIX798_ENU_ALLOC_ACCOUNT_TYPE);
         this.dataValue = dataValue;
     }

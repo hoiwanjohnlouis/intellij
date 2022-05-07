@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  736
+ *  AllocSettlCurrency
+ *  Currency
+ *  Currency code of settlement denomination for a specific AllocAccount (79).
+ */
 public class Tag736AllocSettlCurrency {
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  916
+ *  StartDate
+ *  LocalMktDate
+ *  Start date of a financing deal,
+ *  i.e. the date the buyer pays the seller cash and takes control of the collateral
+ */
 public class Tag916StartDate {
 }

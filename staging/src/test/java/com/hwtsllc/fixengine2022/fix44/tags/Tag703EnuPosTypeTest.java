@@ -17,12 +17,42 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum703PosType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  703
+ *  PosType
+ *  Used to identify the type of quantity that is being returned.
+ *  Valid values:
+ *      ALC - Allocation Trade Qty
+ *      AS - Option Assignment
+ *      ASF - As-of Trade Qty
+ *      DLV - Delivery Qty
+ *      ETR - Electronic Trade Qty
+ *      EX - Option Exercise Qty
+ *      FIN - End-of-Day Qty
+ *      IAS - Intra-spread Qty
+ *      IES - Inter-spread Qty
+ *      PA - Adjustment Qty
+ *      PIT - Pit Trade Qty
+ *      SOD - Start-of-Day Qty
+ *      SPL - Integral Split
+ *      TA - Transaction from Assignment
+ *      TOT - Total Transaction Qty
+ *      TQ - Transaction Quantity
+ *      TRF - Transfer Trade Qty
+ *      TX - Transaction from Exercise
+ *      XM - Cross Margin Qty
+ *      RCV - Receive Quantity
+ *      CAA - Corporate Action Adjustment
+ *      DN - Delivery Notice Qty
+ *      EP - Exchange for Physical Qty
+ */
 class Tag703EnuPosTypeTest {
     @Test
     void FIX0703Test() {
@@ -30,133 +60,104 @@ class Tag703EnuPosTypeTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  703
-     *  PosType
-     *  Used to identify the type of quantity that is being returned.
-     *  Valid values:
-     *      ALC - Allocation Trade Qty
-     *      AS - Option Assignment
-     *      ASF - As-of Trade Qty
-     *      DLV - Delivery Qty
-     *      ETR - Electronic Trade Qty
-     *      EX - Option Exercise Qty
-     *      FIN - End-of-Day Qty
-     *      IAS - Intra-spread Qty
-     *      IES - Inter-spread Qty
-     *      PA - Adjustment Qty
-     *      PIT - Pit Trade Qty
-     *      SOD - Start-of-Day Qty
-     *      SPL - Integral Split
-     *      TA - Transaction from Assignment
-     *      TOT - Total Transaction Qty
-     *      TQ - Transaction Quantity
-     *      TRF - Transfer Trade Qty
-     *      TX - Transaction from Exercise
-     *      XM - Cross Margin Qty
-     *      RCV - Receive Quantity
-     *      CAA - Corporate Action Adjustment
-     *      DN - Delivery Notice Qty
-     *      EP - Exchange for Physical Qty
-     */
     @Test
     void Tag0703Test() {
         Tag703EnuPosType tagData;
 
         tagData = new Tag703EnuPosType(Enum703PosType.ALLOCATION_TRADE_QTY);
         assertEquals( Enum703PosType.ALLOCATION_TRADE_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.OPTION_ASSIGNMENT);
         assertEquals( Enum703PosType.OPTION_ASSIGNMENT.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.AS_OF_TRADE_QTY);
         assertEquals( Enum703PosType.AS_OF_TRADE_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.DELIVERY_QTY);
         assertEquals( Enum703PosType.DELIVERY_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.ELECTRONIC_TRADE_QTY);
         assertEquals( Enum703PosType.ELECTRONIC_TRADE_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.OPTION_EXERCISE_QTY);
         assertEquals( Enum703PosType.OPTION_EXERCISE_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.END_OF_DAY_QTY);
         assertEquals( Enum703PosType.END_OF_DAY_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.INTRA_SPREAD_QTY);
         assertEquals( Enum703PosType.INTRA_SPREAD_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.INTER_SPREAD_QTY);
         assertEquals( Enum703PosType.INTER_SPREAD_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.ADJUSTMENT_QTY);
         assertEquals( Enum703PosType.ADJUSTMENT_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.PIT_TRADE_QTY);
         assertEquals( Enum703PosType.PIT_TRADE_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.START_OF_DAY_QTY);
         assertEquals( Enum703PosType.START_OF_DAY_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.INTEGRAL_SPLIT);
         assertEquals( Enum703PosType.INTEGRAL_SPLIT.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TRANSACTION_FROM_ASSIGNMENT);
         assertEquals( Enum703PosType.TRANSACTION_FROM_ASSIGNMENT.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TOTAL_TRANSACTION_QTY);
         assertEquals( Enum703PosType.TOTAL_TRANSACTION_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TRANSACTION_QUANTITY);
         assertEquals( Enum703PosType.TRANSACTION_QUANTITY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TRANSFER_TRADE_QTY);
         assertEquals( Enum703PosType.TRANSFER_TRADE_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TRANSACTION_FROM_EXERCISE);
         assertEquals( Enum703PosType.TRANSACTION_FROM_EXERCISE.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.CROSS_MARGIN_QTY);
         assertEquals( Enum703PosType.CROSS_MARGIN_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.RECEIVE_QUANTITY);
         assertEquals( Enum703PosType.RECEIVE_QUANTITY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.CORPORATE_ACTION_ADJUSTMENT);
         assertEquals( Enum703PosType.CORPORATE_ACTION_ADJUSTMENT.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.DELIVERY_NOTICE_QTY);
         assertEquals( Enum703PosType.DELIVERY_NOTICE_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.EXCHANGE_FOR_PHYSICAL_QTY);
         assertEquals( Enum703PosType.EXCHANGE_FOR_PHYSICAL_QTY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

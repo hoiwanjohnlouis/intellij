@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+/**
+ *  697
+ *  YieldRedemptionPrice
+ *  Price
+ *  Price to which the yield has been calculated.
+ */
 public class Tag697YieldRedemptionPrice {
 }

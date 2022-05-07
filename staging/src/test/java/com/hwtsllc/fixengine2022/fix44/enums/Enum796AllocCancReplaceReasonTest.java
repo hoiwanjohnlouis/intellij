@@ -16,24 +16,24 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  796
+ *  AllocCancReplaceReason
+ *  Reason for cancelling or replacing an Allocation Instruction or Allocation Report message
+ *  Valid values:
+ *      1 - Original details incomplete or incorrect
+ *      2 - Change in underlying order details
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Enum796AllocCancReplaceReasonTest {
-    /**
-     *  796
-     *  AllocCancReplaceReason
-     *  Reason for cancelling or replacing an Allocation Instruction or Allocation Report message
-     *  Valid values:
-     *      1 - Original details incomplete or incorrect
-     *      2 - Change in underlying order details
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     @Test
     void EnumTest() {
         Enum796AllocCancReplaceReason enumType;
@@ -42,24 +42,24 @@ class Enum796AllocCancReplaceReasonTest {
         assertEquals("1", enumType.getID());
         assertEquals("ORIGINAL_DETAILS_INCOMPLETE", enumType.getName());
         assertEquals("1 - Original details incomplete or incorrect", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER;
         assertEquals("2", enumType.getID());
         assertEquals("CHANGE_IN_UNDERLYING_ORDER", enumType.getName());
         assertEquals("2 - Change in underlying order details", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum796AllocCancReplaceReason.OTHER;
         assertEquals("99", enumType.getID());
         assertEquals("OTHER", enumType.getName());
         assertEquals("99 - Other", enumType.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, enumType.getID());
-        assertNotEquals( FIX44.JUNK_NAME, enumType.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

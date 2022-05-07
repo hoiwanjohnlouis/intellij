@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum265MDUpdateType;
 import org.junit.jupiter.api.Test;
 
@@ -30,9 +31,9 @@ class Tag265EnuMDUpdateTypeTest {
         assertEquals( "265", fixData.getID());
         assertEquals( "MD_UPDATE_TYPE", fixData.getName());
         assertEquals( "MDUpdateType", fixData.getDescription());
-        assertNotEquals( FIX42.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX42.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX42.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     /**
      *  265
@@ -50,10 +51,10 @@ class Tag265EnuMDUpdateTypeTest {
          */
         tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.FULL_REFRESH);
         assertEquals( Enum265MDUpdateType.FULL_REFRESH.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.INCREMENTAL_REFRESH);
         assertEquals( Enum265MDUpdateType.INCREMENTAL_REFRESH.getID(), tagData.getDataValue());
-        assertNotEquals( FIX42.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -30,9 +30,9 @@ class Tag553StrUsernameTest {
         assertEquals( "553", fixData.getID());
         assertEquals( "USERNAME", fixData.getName());
         assertEquals( "Username", fixData.getDescription());
-        assertNotEquals( FIX43.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX43.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX43.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0553Test() {

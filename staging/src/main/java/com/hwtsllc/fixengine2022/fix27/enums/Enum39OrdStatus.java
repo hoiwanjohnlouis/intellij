@@ -25,12 +25,14 @@ public enum Enum39OrdStatus implements EnumAccessors, LogStringVerbose {
     FILLED("2", "FILLED", "2 - Filled" ),
     DONE_FOR_DAY("3", "DONE_FOR_DAY", "3 - Done for day" ),
     CANCELED("4", "CANCELED", "4 - Canceled" ),
+
     REPLACED("5", "REPLACED", "5 - Replaced (No longer used)" ),
     PENDING_CANCEL("6", "PENDING_CANCEL",
             "6 - Pending Cancel (i.e. result of Order Cancel Request)" ),
     STOPPED("7", "STOPPED", "7 - Stopped" ),
     REJECTED("8", "REJECTED", "8 - Rejected" ),
     SUSPENDED("9", "SUSPENDED", "9 - Suspended" ),
+
     PENDING_NEW("A", "PENDING_NEW", "A - Pending New" ),
     CALCULATED("B", "CALCULATED", "B - Calculated" ),
     EXPIRED("C", "EXPIRED", "C - Expired" ),

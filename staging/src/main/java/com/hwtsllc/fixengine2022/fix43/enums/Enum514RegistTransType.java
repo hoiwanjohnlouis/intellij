@@ -19,11 +19,10 @@ package com.hwtsllc.fixengine2022.fix43.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  Information is the same for TAGS 514
+ */
 public enum Enum514RegistTransType implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 514
-     */
-
     /*
      * 0-2 types
      */

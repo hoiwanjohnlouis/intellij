@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  719
+ *  ContraryInstructionIndicator
+ *  Boolean
+ *  Used to indicate when a contrary instruction for exercise or abandonment is being submitted
+ */
 public class Tag719BoolContraryInstructionIndicator extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

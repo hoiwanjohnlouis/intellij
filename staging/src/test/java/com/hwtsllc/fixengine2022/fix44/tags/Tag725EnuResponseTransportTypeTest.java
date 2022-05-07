@@ -23,6 +23,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  725
+ *  ResponseTransportType
+ *  Identifies how the response to the request should be transmitted.
+ *              Details specified via ResponseDestination (726).
+ *  Valid values:
+ *      0 - Inband - transport the request was sent over (default)
+ *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
+ *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
+ */
 class Tag725EnuResponseTransportTypeTest {
     @Test
     void FIX0725Test() {
@@ -30,30 +40,20 @@ class Tag725EnuResponseTransportTypeTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  725
-     *  ResponseTransportType
-     *  Identifies how the response to the request should be transmitted.
-     *              Details specified via ResponseDestination (726).
-     *  Valid values:
-     *      0 - Inband - transport the request was sent over (default)
-     *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
-     *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
-     */
     @Test
     void Tag0725Test() {
         Tag725EnuResponseTransportType tagData;
 
         tagData = new Tag725EnuResponseTransportType(Enum725ResponseTransportType.INBAND);
         assertEquals( "0", tagData.getDataValue() );
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag725EnuResponseTransportType(Enum725ResponseTransportType.OUT_OF_BAND);
         assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

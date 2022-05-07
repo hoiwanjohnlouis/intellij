@@ -17,41 +17,42 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum668DeliveryForm;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  668
+ *  DeliveryForm
+ *  Identifies the form of delivery.
+ *  Valid values:
+ *      1 - Book Entry (default)
+ *      2 - Bearer
+ */
 class Tag668EnuDeliveryFormTest {
     @Test
     void FIX0668Test() {
         FIX44 fixData = FIX44.FIX668_ENU_DELIVERY_FORM;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
-        assertNotEquals( FIX44.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX44.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX44.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "668", fixData.getID());
+        assertEquals( "DELIVERY_FORM", fixData.getName());
+        assertEquals( "DeliveryForm", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  668
-     *  DeliveryForm
-     *  Identifies the form of delivery.
-     *  Valid values:
-     *      1 - Book Entry (default)
-     *      2 - Bearer
-     */
     @Test
     void Tag0668Test() {
         Tag668EnuDeliveryForm tagData;
 
         tagData = new Tag668EnuDeliveryForm(Enum668DeliveryForm.BOOK_ENTRY);
         assertEquals( Enum668DeliveryForm.BOOK_ENTRY.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag668EnuDeliveryForm(Enum668DeliveryForm.BEARER);
         assertEquals( Enum668DeliveryForm.BEARER.getID(), tagData.getDataValue());
-        assertNotEquals( FIX44.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

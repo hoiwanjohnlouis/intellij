@@ -16,9 +16,87 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum865EventType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  865
+ *  EventType
+ *  int
+ *  Code to represent the type of event
+ *  Valid values:
+ *      1 - Put
+ *      2 - Call
+ *      3 - Tender
+ *      4 - Sinking Fund Call
+ *      5 - Activation
+ *
+ *      6 - Inactivation
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public class Tag865EnuEventType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum865EventType dataValue;
+
+    public final static Enum865EventType TESTA_ENU_EVENT_TYPE
+            = Enum865EventType.ACTIVATION;
+    public final static Enum865EventType TESTB_ENU_EVENT_TYPE
+            = Enum865EventType.SINKING_FUND_CALL;
+
+    public Tag865EnuEventType(Enum865EventType dataValue) {
+        setFixType(FIX44.FIX865_ENU_EVENT_TYPE);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toFixTagValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toLogStringVerbose() {
+        return super.toLogStringVerbose()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag865EnuEventType tagData;
+
+        tagData = new Tag865EnuEventType(TESTA_ENU_EVENT_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+
+        tagData = new Tag865EnuEventType(TESTB_ENU_EVENT_TYPE);
+        System.out.println(tagData);
+        System.out.println(tagData.toLogStringVerbose());
+        System.out.println(tagData.toFixTagValuePairString());
+    }
 }

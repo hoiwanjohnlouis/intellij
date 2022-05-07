@@ -16,12 +16,48 @@
 
 package com.hwtsllc.fixengine2022.fix44.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+/**
+ *  875
+ *  CPProgram
+ *  int
+ *  The program under which a commercial paper is issued
+ *  Valid values:
+ *      1 - 3(a)(3)
+ *      2 - 4(2)
+ *      99 - Other
+ *
+ *  or any value conforming to the data type Reserved100Plus
+ */
 class Enum875CPProgramTest {
     @Test
     void EnumTest() {
         Enum875CPProgram enumType;
 
+        enumType = Enum875CPProgram.THREE;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "THREE", enumType.getName() );
+        assertEquals( "1 - 3(a)(3)", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum875CPProgram.FOUR;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "FOUR", enumType.getName() );
+        assertEquals( "2 - 4(2)", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum875CPProgram.OTHER;
+        assertEquals( "99", enumType.getID() );
+        assertEquals( "OTHER", enumType.getName() );
+        assertEquals( "99 - Other", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }
