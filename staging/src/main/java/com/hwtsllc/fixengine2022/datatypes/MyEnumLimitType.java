@@ -20,18 +20,22 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  837
+ *  837 (same as 837, 843,)
  *  PegLimitType
  *  int
+ *  <p>
  *  Type of Peg Limit
- *  843
+ *  <p></p>
+ *  843 (same as 837, 843,)
  *  DiscretionLimitType
  *  int
+ *  <p>
  *  Type of Discretion Limit
+ *  <p></p>
  *  Valid values:
- *      0 - Or better (default) - price improvement allowed
- *      1 - Strict - limit is a strict limit
- *      2 - Or worse - for a buy the peg limit is a minimum
+ *  <p>    0 - Or better (default) - price improvement allowed
+ *  <p>    1 - Strict - limit is a strict limit
+ *  <p>    2 - Or worse - for a buy the peg limit is a minimum
  *                  and for a sell the peg limit is a maximum
  *                  (for use for orders which have a price range)
  */

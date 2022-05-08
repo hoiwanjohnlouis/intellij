@@ -24,78 +24,110 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
  *  SecurityIDSource
  *  String
+ *  <p>
  *  Identifies class or source of the SecurityID (48) value.  Required if SecurityID is specified.
- *                  100+ are reserved for private security identifications
+ *  <p>
+ *  100+ are reserved for private security identifications
+ *  <p></p>
  *  305
  *  UnderlyingSecurityIDSource
  *  String
+ *  <p>
  *  Underlying security’s SecurityIDSource.
- *                  Valid values:   See SecurityIDSource (22) field
+ *  <p>
+ *  Valid values:   See SecurityIDSource (22) field
+ *  <p></p>
  *  456
  *  SecurityAltIDSource
  *  String
+ *  <p>
  *  Identifies class or source of the SecurityAltID (455) value.  Required if SecurityAltID is specified.
- *                  Valid values:   Same valid values as the SecurityIDSource (22) field
+ *  <p>
+ *  Valid values:   Same valid values as the SecurityIDSource (22) field
+ *  <p></p>
  *  459
  *  UnderlyingSecurityAltIDSource
  *  String
+ *  <p>
  *  Identifies class or source of the UnderlyingSecurityAltID (458) value.  Required if UnderlyingSecurityAltID is specified.
- *                  Valid values:   Same valid values as the SecurityIDSource (22) field
+ *  <p>
+ *  Valid values:   Same valid values as the SecurityIDSource (22) field
+ *  <p></p>
  *  603
  *  LegSecurityIDSource
  *  String
+ *  <p>
  *  Multileg instrument's individual  security’s SecurityIDSource.
- *                  Valid values:   See SecurityIDSource (22) field for description
+ *  <p>
+ *  Valid values:   See SecurityIDSource (22) field for description
+ *  <p></p>
  *  606
  *  LegSecurityAltIDSource
  *  String
+ *  <p>
  *  Multileg instrument's individual  security’s SecurityAltIDSource.
- *                  Valid values:   See SecurityAltIDSource (456) field for description
+ *  <p>
+ *  Valid values:   See SecurityAltIDSource (456) field for description
+ *  <p></p>
  *  761
  *  BenchmarkSecurityIDSource
+ *  String
+ *  <p>
  *  Identifies class or source of the BenchmarkSecurityID (699) value.
+ *  <p>
  *  Required if BenchmarkSecurityID is specified.
- *              Same values as the SecurityIDSource (22) field
+ *  <p>
+ *  Same values as the SecurityIDSource (22) field
+ *  <p></p>
  *  1096
  *  PegSecurityIDSource
  *  String
+ *  <p>
  *  Defines the identity of the security off whose prices the order will peg.
- *                  Valid values:   See SecurityIDSource (22) field for description
+ *  <p>
+ *  Valid values:   See SecurityIDSource (22) field for description
+ *  <p></p>
  *  1105
  *  TriggerSecurityIDSource
  *  String
+ *  <p>
  *  Defines the identity of the security whose prices will be tracked by the trigger logic.
- *                  Valid values:   See SecurityIDSource (22) field for description
- *
+ *  <p>
+ *  Valid values:   See SecurityIDSource (22) field for description
+ *  <p></p>
  *  Valid values:
- *      1 - CUSIP
- *      2 - SEDOL
- *      3 - QUIK
- *      4 - ISIN number
- *      5 - RIC code
- *      6 - ISO Currency Code
- *      7 - ISO Country Code
- *      8 - Exchange Symbol
- *      9 - Consolidated Tape Association (CTA) Symbol
+ *  <p>    1 - CUSIP
+ *  <p>    2 - SEDOL
+ *  <p>    3 - QUIK
+ *  <p>    4 - ISIN number
+ *  <p>    5 - RIC code
+ *  <p></p>
+ *  <p>    6 - ISO Currency Code
+ *  <p>    7 - ISO Country Code
+ *  <p>    8 - Exchange Symbol
+ *  <p>    9 - Consolidated Tape Association (CTA) Symbol
  *              (SIAC CTS/CQS line format)
- *      A - Bloomberg Symbol
- *      B - Wertpapier
- *      C - Dutch
- *      D - Valoren
- *      E - Sicovam
- *      F - Belgian
- *      G - "Common" (Clearstream and Euroclear)
- *      H - Clearing House / Clearing Organization
- *      I - ISDA/FpML Product Specification
+ *  <p></p>
+ *  <p>    A - Bloomberg Symbol
+ *  <p>    B - Wertpapier
+ *  <p>    C - Dutch
+ *  <p>    D - Valoren
+ *  <p>    E - Sicovam
+ *  <p></p>
+ *  <p>    F - Belgian
+ *  <p>    G - "Common" (Clearstream and Euroclear)
+ *  <p>    H - Clearing House / Clearing Organization
+ *  <p>    I - ISDA/FpML Product Specification
  *              (XML in EncodedSecurityDesc)
- *      J - Option Price Reporting Authority
- *      K - ISDA/FpML Product URL (URL in SecurityID)
- *      L - Letter of Credit
+ *  <p>    J - Option Price Reporting Authority
+ *  <p></p>
+ *  <p>    K - ISDA/FpML Product URL (URL in SecurityID)
+ *  <p>    L - Letter of Credit
  */
 public enum MyEnumSecurityIDSource implements EnumAccessors, LogStringVerbose {
 
 
-    /**
+    /*
      * 0-9 msg types
      */
     CUSIP("1", "CUSIP", "1 - CUSIP - Committee on Uniform Securities Identification Procedures" ),
@@ -103,13 +135,14 @@ public enum MyEnumSecurityIDSource implements EnumAccessors, LogStringVerbose {
     QUIK("3", "QUIK", "3 - QUIK" ),
     ISIN("4", "ISIN", "4 - ISIN - The International Securities Identification Number" ),
     RIC("5", "RIC", "5 - RIC - Reuters Instrument Code" ),
+
     ISO_CURRENCY_CODE("6", "ISO_CURRENCY_CODE", "6 - ISO Currency Code" ),
     ISO_COUNTRY_CODE("7", "ISO_COUNTRY_CODE", "7 - ISO Country Code" ),
     EXCHANGE_SYMBOL("8", "EXCHANGE_SYMBOL", "8 - Exchange Symbol" ),
     CTA("9", "CTA",
             "9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)" ),
 
-    /**
+    /*
      * A-L msg types
      */
     BLOOMBERG("A", "BLOOMBERG", "A - Bloomberg Symbol" ),
@@ -117,6 +150,7 @@ public enum MyEnumSecurityIDSource implements EnumAccessors, LogStringVerbose {
     DUTCH("C", "DUTCH", "C - Dutch" ),
     VALOREN("D", "VALOREN", "D - Valoren" ),
     SICOVAM("E", "SICOVAM", "E - Sicovam" ),
+
     BELGIAN("F", "BELGIAN", "F - Belgian" ),
     COMMON("G", "COMMON", "G - Common (Clearstream and Euroclear)" ),
     CLEARING_HOUSE_OR_ORGANIZATION("H", "CLEARING_HOUSE_OR_ORGANIZATION",
@@ -125,6 +159,7 @@ public enum MyEnumSecurityIDSource implements EnumAccessors, LogStringVerbose {
             "I - ISDA/FpML Product Specification (XML in EncodedSecurityDesc)" ),
     OPTION_PRICE_REPORTING_AUTHORITY("J", "OPTION_PRICE_REPORTING_AUTHORITY",
             "J - Option Price Reporting Authority" ),
+
     ISDA_PRODUCT_URL("K", "ISDA_PRODUCT_URL", "K - ISDA/FpML Product URL (URL in SecurityID)" ),
     LETTER_OF_CREDIT("L", "LETTER_OF_CREDIT", "L - Letter of Credit" ),
     ;

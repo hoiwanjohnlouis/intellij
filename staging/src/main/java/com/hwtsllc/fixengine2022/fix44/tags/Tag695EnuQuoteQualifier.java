@@ -26,31 +26,41 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  104 (same as 104, 695)
  *  IOIQualifier
  *  char
- *  Code to qualify IOI use.  (see Volume : "Glossary" for value definitions)
+ *  <p>
+ *  Code to qualify IOI use.
+ *  <p>
+ *  (see Volume : "Glossary" for value definitions)
+ *  <p></p>
  *  695  (same as 104, 695)
  *  QuoteQualifier
  *  char
+ *  <p>
  *  Code to qualify Quote use
- *          See IOIQualifier (104) for description and valid values.
+ *  <p>
+ *  See IOIQualifier (104) for description and valid values.
+ *  <p></p>
  *  Valid values:
- *      A - All or None (AON)
- *      B - Market On Close (MOC) (held to close)
- *      C - At the close (around/not held to close)
- *      D - VWAP (Volume Weighted Average Price)
- *      I - In touch with
- *      L - Limit
- *      M - More Behind
- *      O - At the Open
- *      P - Taking a Position
- *      Q - At the Market (previously called Current Quote)
- *      R - Ready to Trade
- *      S - Portfolio Shown
- *      T - Through the Day
- *      V - Versus
- *      W - Indication -  Working Away
- *      X - Crossing Opportunity
- *      Y - At the Midpoint
- *      Z - Pre-open
+ *  <p>    A - All or None (AON)
+ *  <p>    B - Market On Close (MOC) (held to close)
+ *  <p>    C - At the close (around/not held to close)
+ *  <p>    D - VWAP (Volume Weighted Average Price)
+ *  <p>    I - In touch with
+ *  <p></p>
+ *  <p>    L - Limit
+ *  <p>    M - More Behind
+ *  <p>    O - At the Open
+ *  <p>    P - Taking a Position
+ *  <p>    Q - At the Market (previously called Current Quote)
+ *  <p></p>
+ *  <p>    R - Ready to Trade
+ *  <p>    S - Portfolio Shown
+ *  <p>    T - Through the Day
+ *  <p>    V - Versus
+ *  <p>    W - Indication -  Working Away
+ *  <p></p>
+ *  <p>    X - Crossing Opportunity
+ *  <p>    Y - At the Midpoint
+ *  <p>    Z - Pre-open
  */
 public class Tag695EnuQuoteQualifier extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyEnumQualifier dataValue;

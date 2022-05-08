@@ -22,6 +22,37 @@ import com.hwtsllc.fixengine2022.datatypes.MyEnumBenchmarkCurveName;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  221 (same as 221, 677)
+ *  BenchmarkCurveName
+ *  String
+ *  <p>
+ *  Name of the Benchmark Curve.
+ *  <p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  677 (same as 221, 677)
+ *  LegBenchmarkCurveName
+ *  String
+ *  <p>
+ *  Name of the Leg Benchmark Curve.
+ *  <p>
+ *  See BenchmarkCurveName (221) for description and valid values.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    EONIA - EONIA
+ *  <p>    EUREPO - EUREPO
+ *  <p>    Euribor - Euribor
+ *  <p>    FutureSWAP - FutureSWAP
+ *  <p>    LIBID - LIBID
+ *  <p>    LIBOR - LIBOR (London Inter-Bank Offer)
+ *  <p>    MuniAAA - MuniAAA
+ *  <p>    OTHER - OTHER
+ *  <p>    Pfandbriefe - Pfandbriefe
+ *  <p>    SONIA - SONIA
+ *  <p>    SWAP - SWAP
+ *  <p>    Treasury - Treasury
+ */
 public class Tag221EnuBenchmarkCurveName extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyEnumBenchmarkCurveName dataValue;
 

@@ -22,17 +22,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  835
+ *  835 (same as 835, 841,)
  *  PegMoveType
  *  int
+ *  <p>
  *  Describes whether peg is static or floats
+ *  <p></p>
  *  841
  *  DiscretionMoveType
  *  int
+ *  <p>
  *  Describes whether discretionary price is static or floats
+ *  <p></p>
  *  Valid values:
- *      0 - Floating (default)
- *      1 - Fixed
+ *  <p>    0 - Floating (default)
+ *  <p>    1 - Fixed
  */
 class MyEnumMoveTypeTest {
     @Test

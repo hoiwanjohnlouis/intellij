@@ -25,45 +25,111 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1122 (same as 786, 803, 805, 807, 954, 1054, 1064, 1122)
+ *  786 (same as 786, 803, 805, 807, 954, 1054, 1064, 1122)
+ *  SettlPartySubIDType
+ *  int
+ *  <p>
+ *  Type of SettlPartySubID (785) value.
+ *  <p>
+ *  Same values as  PartySubIDType (803)
+ *  <p></p>
+ *  803
+ *  PartySubIDType
+ *  int
+ *  <p>
+ *  Type of PartySubID (523) value
+ *  <p>
+ *  4000+  = Reserved and available for bi-laterally agreed upon user defined values
+ *  <p></p>
+ *  805
+ *  NestedPartySubIDType
+ *  int
+ *  <p>
+ *  Type of NestedPartySubID (545) value.
+ *  <p>
+ *  Same values as  PartySubIDType (803)
+ *  <p></p>
+ *  807
+ *  Nested2PartySubIDType
+ *  int
+ *  <p>
+ *  Type of Nested2PartySubID (760) value. Second instance of <NestedParties>.
+ *  <p>
+ *  Same values as  PartySubIDType (803)
+ *  <p></p>
+ *  954
+ *  Nested3PartySubIDType
+ *  int
+ *  <p>
+ *  PartySubIDType value within a "third instance" Nested repeating group.
+ *  <p>
+ *  Same values as  PartySubIDType (803)
+ *  <p></p>
+ *  1054
+ *  InstrumentPartySubIDType
+ *  int
+ *  <p>
+ *  Type of InstrumentPartySubID (1053) value.
+ *  <p>
+ *  Same values as  PartySubIDType (803)
+ *  <p></p>
+ *  1064
+ *  UndlyInstrumentPartySubIDType
+ *  int
+ *  <p>
+ *  Type of underlying InstrumentPartySubID (1053) value.
+ *  <p>
+ *  Same values as  PartySubIDType (803)
+ *  <p></p>
+ *  1122
  *  RootPartySubIDType
+ *  int
+ *  <p>
  *  Type of RootPartySubID (1121) value.
- *          Same values as  PartySubIDType (803)
+ *  <p>
+ *  Same values as PartySubIDType (803)
+ *  <p></p>
  *  Valid values:
- *      1 - Firm
- *      2 - Person
- *      3 - System
- *      4 - Application
- *      5 - Full legal name of firm
- *      6 - Postal address
- *      7 - Phone number
- *      8 - Email address
- *      9 - Contact name
- *      10 - Securities account number (for settlement instructions)
- *      11 - Registration number (for settlement instructions and confirmations)
- *      12 - Registered address (for confirmation purposes)
- *      13 - Regulatory status (for confirmation purposes)
- *      14 - Registration name (for settlement instructions)
- *      15 - Cash account number (for settlement instructions)
- *      16 - BIC
- *      17 - CSD participant member code
- *      18 - Registered address
- *      19 - Fund account name
- *      20 - Telex number
- *      21 - Fax number
- *      22 - Securities account name
- *      23 - Cash account name
- *      24 - Department
- *      25 - Location desk
- *      26 - Position account type
- *      27 - Security locate ID
- *      28 - Market maker
- *      29 - Eligible counterparty
- *      30 - Professional client
- *      31 - Location
- *      32 - Execution venue
- *
- *  or any value conforming to the data type Reserved4000Plus
+ *  <p>    1 - Firm
+ *  <p>    2 - Person
+ *  <p>    3 - System
+ *  <p>    4 - Application
+ *  <p>    5 - Full legal name of firm
+ *  <p></p>
+ *  <p>    6 - Postal address
+ *  <p>    7 - Phone number
+ *  <p>    8 - Email address
+ *  <p>    9 - Contact name
+ *  <p>    10 - Securities account number (for settlement instructions)
+ *  <p></p>
+ *  <p>    11 - Registration number (for settlement instructions and confirmations)
+ *  <p>    12 - Registered address (for confirmation purposes)
+ *  <p>    13 - Regulatory status (for confirmation purposes)
+ *  <p>    14 - Registration name (for settlement instructions)
+ *  <p>    15 - Cash account number (for settlement instructions)
+ *  <p></p>
+ *  <p>    16 - BIC
+ *  <p>    17 - CSD participant member code
+ *  <p>    18 - Registered address
+ *  <p>    19 - Fund account name
+ *  <p>    20 - Telex number
+ *  <p></p>
+ *  <p>    21 - Fax number
+ *  <p>    22 - Securities account name
+ *  <p>    23 - Cash account name
+ *  <p>    24 - Department
+ *  <p>    25 - Location desk
+ *  <p></p>
+ *  <p>    26 - Position account type
+ *  <p>    27 - Security locate ID
+ *  <p>    28 - Market maker
+ *  <p>    29 - Eligible counterparty
+ *  <p>    30 - Professional client
+ *  <p></p>
+ *  <p>    31 - Location
+ *  <p>    32 - Execution venue
+ *  <p>
+ *  <p>    or any value conforming to the data type Reserved4000Plus
  */
 class Tag1122EnuRootPartySubIDTypeTest {
     @Test

@@ -23,15 +23,24 @@ import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  815
+ *  814 (same as 814, 815)
+ *  ApplQueueResolution
+ *  int
+ *  <p>
+ *  Resolution taken when ApplQueueDepth (813) exceeds ApplQueueMax (812)
+ *  or system specified maximum queue size.
+ *  <p></p>
+ *  815 (same as 814, 815)
  *  ApplQueueAction
  *  int
+ *  <p>
  *  Action to take to resolve an application message queue (backlog).
+ *  <p></p>
  *  Valid values:
- *      0 - No Action Taken
- *      1 - Queue Flushed
- *      2 - Overlay Last
- *      3 - End Session
+ *  <p>    0 - No Action Taken
+ *  <p>    1 - Queue Flushed
+ *  <p>    2 - Overlay Last
+ *  <p>    3 - End Session
  */
 public class Tag815EnuApplQueueAction extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyEnumApplQueue dataValue;

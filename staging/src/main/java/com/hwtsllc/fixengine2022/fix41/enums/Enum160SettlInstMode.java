@@ -30,6 +30,7 @@ public enum Enum160SettlInstMode implements EnumAccessors, LogStringVerbose {
             "3 - Specific Allocation Account Standing (Replaced)" ),
     SPECIFIC_ORDER_SINGLE_ACCOUNT( "4", "SPECIFIC_ORDER_SINGLE_ACCOUNT",
             "4 - Specific Order for a single account (for CIV)" ),
+
     REQUEST_REJECT( "5", "REQUEST_REJECT",
             "5 - Request reject" ),
     ;

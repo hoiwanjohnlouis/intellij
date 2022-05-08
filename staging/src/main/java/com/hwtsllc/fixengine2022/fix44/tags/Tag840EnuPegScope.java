@@ -23,19 +23,23 @@ import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  840
+ *  840 (same as 840, 846,)
  *  PegScope
  *  int
+ *  <p>
  *  The scope of the peg
+ *  <p></p>
  *  846
  *  DiscretionScope
  *  int
+ *  <p>
  *  The scope of the discretion
+ *  <p></p>
  *  Valid values:
- *      1 - Local (Exchange, ECN, ATS)
- *      2 - National
- *      3 - Global
- *      4 - National excluding local
+ *  <p>    1 - Local (Exchange, ECN, ATS)
+ *  <p>    2 - National
+ *  <p>    3 - Global
+ *  <p>    4 - National excluding local
  */
 public class Tag840EnuPegScope extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyEnumScope dataValue;

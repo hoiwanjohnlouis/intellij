@@ -21,34 +21,112 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  22
+ *  (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
+ *  SecurityIDSource
+ *  String
+ *  <p>
+ *  Identifies class or source of the SecurityID (48) value.  Required if SecurityID is specified.
+ *  <p>
+ *  100+ are reserved for private security identifications
+ *  <p></p>
+ *  305
+ *  UnderlyingSecurityIDSource
+ *  String
+ *  <p>
+ *  Underlying security’s SecurityIDSource.
+ *  <p>
+ *  Valid values:   See SecurityIDSource (22) field
+ *  <p></p>
+ *  456
+ *  SecurityAltIDSource
+ *  String
+ *  <p>
+ *  Identifies class or source of the SecurityAltID (455) value.  Required if SecurityAltID is specified.
+ *  <p>
+ *  Valid values:   Same valid values as the SecurityIDSource (22) field
+ *  <p></p>
+ *  459
+ *  UnderlyingSecurityAltIDSource
+ *  String
+ *  <p>
+ *  Identifies class or source of the UnderlyingSecurityAltID (458) value.  Required if UnderlyingSecurityAltID is specified.
+ *  <p>
+ *  Valid values:   Same valid values as the SecurityIDSource (22) field
+ *  <p></p>
+ *  603
+ *  LegSecurityIDSource
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s SecurityIDSource.
+ *  <p>
+ *  Valid values:   See SecurityIDSource (22) field for description
+ *  <p></p>
+ *  606
+ *  LegSecurityAltIDSource
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s SecurityAltIDSource.
+ *  <p>
+ *  Valid values:   See SecurityAltIDSource (456) field for description
+ *  <p></p>
+ *  761
+ *  BenchmarkSecurityIDSource
+ *  String
+ *  <p>
+ *  Identifies class or source of the BenchmarkSecurityID (699) value.
+ *  <p>
+ *  Required if BenchmarkSecurityID is specified.
+ *  <p>
+ *  Same values as the SecurityIDSource (22) field
+ *  <p></p>
+ *  1096
+ *  PegSecurityIDSource
+ *  String
+ *  <p>
+ *  Defines the identity of the security off whose prices the order will peg.
+ *  <p>
+ *  Valid values:   See SecurityIDSource (22) field for description
+ *  <p></p>
+ *  1105
+ *  TriggerSecurityIDSource
+ *  String
+ *  <p>
+ *  Defines the identity of the security whose prices will be tracked by the trigger logic.
+ *  <p>
+ *  Valid values:   See SecurityIDSource (22) field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - CUSIP
+ *  <p>    2 - SEDOL
+ *  <p>    3 - QUIK
+ *  <p>    4 - ISIN number
+ *  <p>    5 - RIC code
+ *  <p></p>
+ *  <p>    6 - ISO Currency Code
+ *  <p>    7 - ISO Country Code
+ *  <p>    8 - Exchange Symbol
+ *  <p>    9 - Consolidated Tape Association (CTA) Symbol
+ *              (SIAC CTS/CQS line format)
+ *  <p></p>
+ *  <p>    A - Bloomberg Symbol
+ *  <p>    B - Wertpapier
+ *  <p>    C - Dutch
+ *  <p>    D - Valoren
+ *  <p>    E - Sicovam
+ *  <p></p>
+ *  <p>    F - Belgian
+ *  <p>    G - "Common" (Clearstream and Euroclear)
+ *  <p>    H - Clearing House / Clearing Organization
+ *  <p>    I - ISDA/FpML Product Specification
+ *              (XML in EncodedSecurityDesc)
+ *  <p>    J - Option Price Reporting Authority
+ *  <p></p>
+ *  <p>    K - ISDA/FpML Product URL (URL in SecurityID)
+ *  <p>    L - Letter of Credit
+ */
 class MyEnumSecurityIDSourceTest {
-    /**
-     *  22 (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
-     *  Valid values:
-     *      1 - CUSIP
-     *      2 - SEDOL
-     *      3 - QUIK
-     *      4 - ISIN number
-     *      5 - RIC code
-     *      6 - ISO Currency Code
-     *      7 - ISO Country Code
-     *      8 - Exchange Symbol
-     *      9 - Consolidated Tape Association (CTA) Symbol
-     *              (SIAC CTS/CQS line format)
-     *      A - Bloomberg Symbol
-     *      B - Wertpapier
-     *      C - Dutch
-     *      D - Valoren
-     *      E - Sicovam
-     *      F - Belgian
-     *      G - "Common" (Clearstream and Euroclear)
-     *      H - Clearing House / Clearing Organization
-     *      I - ISDA/FpML Product Specification
-     *              (XML in EncodedSecurityDesc)
-     *      J - Option Price Reporting Authority
-     *      K - ISDA/FpML Product URL (URL in SecurityID)
-     *      L - Letter of Credit
-     */
     @Test
     void Enum0022Test() {
         MyEnumSecurityIDSource enumType;

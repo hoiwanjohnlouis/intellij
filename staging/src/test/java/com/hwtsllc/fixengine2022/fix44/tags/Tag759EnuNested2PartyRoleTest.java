@@ -25,94 +25,171 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  759 (same as 452, 538, 759, 784, 951, 1051, 1061, 1119)
+ *  452 (same as 452, 538, 759, 784, 951, 1051, 1061, 1119)
+ *  PartyRole
+ *  int
+ *  <p>
+ *  Identifies the type or role of the PartyID (448) specified.
+ *  <p>
+ *  See "Appendix 6-G – Use of <Parties> Component Block"
+ *  (see Volume : "Glossary" for value definitions)
+ *  <p></p>
+ *  538
+ *  NestedPartyRole
+ *  int
+ *  <p>
+ *  PartyRole value within a nested repeating group.
+ *  <p>
+ *  Same values as  PartyRole (452)
+ *  <p></p>
+ *  759
  *  Nested2PartyRole
+ *  int
+ *  <p>
  *  PartyRole value within a "second instance" Nested repeating group.
- *              Same values as  PartyRole (452)
+ *  <p>
+ *  Same values as  PartyRole (452)
+ *  <p></p>
+ *  784
+ *  SettlPartyRole
+ *  int
+ *  <p>
+ *  PartyRole value within a settlement parties component.
+ *  <p>
+ *  Same values as  PartyRole (452)
+ *  <p></p>
+ *  951
+ *  Nested3PartyRole
+ *  int
+ *  <p>
+ *  PartyRole value within a "third instance" Nested repeating group.
+ *  <p>
+ *  Same values as  PartyRole (452)
+ *  <p></p>
+ *  1051
+ *  InstrumentPartyRole
+ *  int
+ *  <p>
+ *  PartyRole value within an instrument party repeating group.
+ *  <p>
+ *  Same values as  PartyRole (452)
+ *  <p></p>
+ *  1061
+ *  UndlyInstrumentPartyRole
+ *  int
+ *  <p>
+ *  PartyRole value within an underlying instrument party repeating group.
+ *  <p>
+ *  Same values as  PartyRole (452)
+ *  <p></p>
+ *  1119
+ *  RootPartyRole
+ *  int
+ *  <p>
+ *  PartyRole value within a root parties component.
+ *  <p>
+ *  Same values as PartyRole (452)
+ *  <p></p>
  *  Valid values:
- *      1 - Executing Firm (formerly FIX 4.2 ExecBroker)
- *      2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)
- *      3 - Client ID (formerly FIX 4.2 ClientID)
- *      4 - Clearing Firm (formerly FIX 4.2 ClearingFirm)
- *      5 - Investor ID
- *      6 - Introducing Firm
- *      7 - Entering Firm
- *      8 - Locate / Lending Firm (for short-sales)
- *      9 - Fund Manager Client ID (for CIV)
- *      10 - Settlement Location (formerly FIX 4.2 SettlLocation)
- *      11 - Order Origination Trader
+ *  <p></p>
+ *  <p>    1 - Executing Firm (formerly FIX 4.2 ExecBroker)
+ *  <p>    2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)
+ *  <p>    3 - Client ID (formerly FIX 4.2 ClientID)
+ *  <p>    4 - Clearing Firm (formerly FIX 4.2 ClearingFirm)
+ *  <p>    5 - Investor ID
+ *  <p></p>
+ *  <p>    6 - Introducing Firm
+ *  <p>    7 - Entering Firm
+ *  <p>    8 - Locate / Lending Firm (for short-sales)
+ *  <p>    9 - Fund Manager Client ID (for CIV)
+ *  <p>    10 - Settlement Location (formerly FIX 4.2 SettlLocation)
+ *  <p></p>
+ *  <p>    11 - Order Origination Trader
  *              (associated with Order Origination Firm
  *                  - i.e. trader who initiates/submits the order)
- *      12 - Executing Trader
+ *  <p>    12 - Executing Trader
  *              (associated with Executing Firm - actually executes)
- *      13 - Order Origination Firm (e.g. buy-side firm)
- *      14 - Giveup Clearing Firm (firm to which trade is given up)
- *      15 - Correspondant Clearing Firm
- *      16 - Executing System
- *      17 - Contra Firm
- *      18 - Contra Clearing Firm
- *      19 - Sponsoring Firm
- *      20 - Underlying Contra Firm
- *      21 - Clearing Organization
- *      22 - Exchange
- *      24 - Customer Account
- *      25 - Correspondent Clearing Organization
- *      26 - Correspondent Broker
- *      27 - Buyer/Seller (Receiver/Deliverer)
- *      28 - Custodian
- *      29 - Intermediary
- *      30 - Agent
- *      31 - Sub-custodian
- *      32 - Beneficiary
- *      33 - Interested party
- *      34 - Regulatory body
- *      35 - Liquidity provider
- *      36 - Entering trader
- *      37 - Contra trader
- *      38 - Position account
- *      39 - Contra Investor ID
- *      40 - Transfer to Firm
- *      41 - Contra Position Account
- *      42 - Contra Exchange
- *      43 - Internal Carry Account
- *      44 - Order Entry Operator ID
- *      45 - Secondary Account Number
- *      46 - Foreign Firm
- *      47 - Third Party Allocation Firm
- *      48 - Claiming Account
- *      49 - Asset Manager
- *      50 - Pledgor Account
- *      51 - Pledgee Account
- *      52 - Large Trader Reportable Account
- *      53 - Trader mnemonic
- *      54 - Sender Location
- *      55 - Session ID
- *      56 - Acceptable Counterparty
- *      57 - Unacceptable Counterparty
- *      58 - Entering Unit
- *      59 - Executing Unit
- *      60 - Introducing Broker
- *      61 - Quote originator
- *      62 - Report originator
- *      63 - Systematic internaliser (SI)
- *      64 - Multilateral Trading Facility (MTF)
- *      65 - Regulated Market (RM)
- *      66 - Market Maker
- *      67 - Investment Firm
- *      68 - Host Competent Authority (Host CA)
- *      69 - Home Competent Authority (Home CA)
- *      70 - Competent Authority of the most relevant market in terms of liquidity
+ *  <p>    13 - Order Origination Firm (e.g. buy-side firm)
+ *  <p>    14 - Giveup Clearing Firm (firm to which trade is given up)
+ *  <p>    15 - Correspondant Clearing Firm
+ *  <p></p>
+ *  <p>    16 - Executing System
+ *  <p>    17 - Contra Firm
+ *  <p>    18 - Contra Clearing Firm
+ *  <p>    19 - Sponsoring Firm
+ *  <p>    20 - Underlying Contra Firm
+ *  <p></p>
+ *  <p>    21 - Clearing Organization
+ *  <p>    22 - Exchange
+ *  <p>    24 - Customer Account
+ *  <p>    25 - Correspondent Clearing Organization
+ *  <p>    26 - Correspondent Broker
+ *  <p></p>
+ *  <p>    27 - Buyer/Seller (Receiver/Deliverer)
+ *  <p>    28 - Custodian
+ *  <p>    29 - Intermediary
+ *  <p>    30 - Agent
+ *  <p>    31 - Sub-custodian
+ *  <p></p>
+ *  <p>    32 - Beneficiary
+ *  <p>    33 - Interested party
+ *  <p>    34 - Regulatory body
+ *  <p>    35 - Liquidity provider
+ *  <p>    36 - Entering trader
+ *  <p></p>
+ *  <p>    37 - Contra trader
+ *  <p>    38 - Position account
+ *  <p>    39 - Contra Investor ID
+ *  <p>    40 - Transfer to Firm
+ *  <p>    41 - Contra Position Account
+ *  <p></p>
+ *  <p>    42 - Contra Exchange
+ *  <p>    43 - Internal Carry Account
+ *  <p>    44 - Order Entry Operator ID
+ *  <p>    45 - Secondary Account Number
+ *  <p>    46 - Foreign Firm
+ *  <p></p>
+ *  <p>    47 - Third Party Allocation Firm
+ *  <p>    48 - Claiming Account
+ *  <p>    49 - Asset Manager
+ *  <p>    50 - Pledgor Account
+ *  <p>    51 - Pledgee Account
+ *  <p></p>
+ *  <p>    52 - Large Trader Reportable Account
+ *  <p>    53 - Trader mnemonic
+ *  <p>    54 - Sender Location
+ *  <p>    55 - Session ID
+ *  <p>    56 - Acceptable Counterparty
+ *  <p></p>
+ *  <p>    57 - Unacceptable Counterparty
+ *  <p>    58 - Entering Unit
+ *  <p>    59 - Executing Unit
+ *  <p>    60 - Introducing Broker
+ *  <p>    61 - Quote originator
+ *  <p></p>
+ *  <p>    62 - Report originator
+ *  <p>    63 - Systematic internaliser (SI)
+ *  <p>    64 - Multilateral Trading Facility (MTF)
+ *  <p>    65 - Regulated Market (RM)
+ *  <p>    66 - Market Maker
+ *  <p></p>
+ *  <p>    67 - Investment Firm
+ *  <p>    68 - Host Competent Authority (Host CA)
+ *  <p>    69 - Home Competent Authority (Home CA)
+ *  <p>    70 - Competent Authority of the most relevant market in terms of liquidity
  *              (CAL)
- *      71 - Competent Authority of the Transaction (Execution) Venue
+ *  <p>    71 - Competent Authority of the Transaction (Execution) Venue
  *              (CATV)
- *      72 - Reporting intermediary
+ *  <p></p>
+ *  <p>    72 - Reporting intermediary
  *              (medium/vendor via which report has been published)
- *      73 - Execution Venue
- *      74 - Market data entry originator
- *      75 - Location ID
- *      76 - Desk ID
- *      77 - Market data market
- *      78 - Allocation Entity
+ *  <p>    73 - Execution Venue
+ *  <p>    74 - Market data entry originator
+ *  <p>    75 - Location ID
+ *  <p>    76 - Desk ID
+ *  <p></p>
+ *  <p>    77 - Market data market
+ *  <p>    78 - Allocation Entity
  */
 class Tag759EnuNested2PartyRoleTest {
     @Test

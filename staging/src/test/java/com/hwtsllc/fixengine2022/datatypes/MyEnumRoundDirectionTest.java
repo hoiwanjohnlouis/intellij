@@ -22,20 +22,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  838
+ *  838 (same as 838, 844,)
  *  PegRoundDirection
  *  int
+ *  <p>
  *  If the calculated peg price is not a valid tick price, specifies
  *  whether to round the price to be more or less aggressive
+ *  <p></p>
  *  844
  *  DiscretionRoundDirection
  *  int
+ *  <p>
  *  If the calculated discretionary price is not a valid tick price,
  *  specifies whether to round the price to be more or less aggressive
+ *  <p></p>
  *  Valid values:
- *      1 - More aggressive - on a buy order round the price up to the nearest tick;
+ *  <p>    1 - More aggressive - on a buy order round the price up to the nearest tick;
  *                  on a sell order round down to the nearest tick
- *      2 - More passive - on a buy order round down to the nearest tick;
+ *  <p>    2 - More passive - on a buy order round down to the nearest tick;
  *                  on a sell order round up to the nearest tick
  */
 class MyEnumRoundDirectionTest {

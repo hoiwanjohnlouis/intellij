@@ -25,19 +25,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  840
+ *  840 (same as 840, 846,)
  *  PegScope
  *  int
+ *  <p>
  *  The scope of the peg
+ *  <p></p>
  *  846
  *  DiscretionScope
  *  int
+ *  <p>
  *  The scope of the discretion
+ *  <p></p>
  *  Valid values:
- *      1 - Local (Exchange, ECN, ATS)
- *      2 - National
- *      3 - Global
- *      4 - National excluding local
+ *  <p>    1 - Local (Exchange, ECN, ATS)
+ *  <p>    2 - National
+ *  <p>    3 - Global
+ *  <p>    4 - National excluding local
  */
 class Tag840EnuPegScopeTest {
     @Test

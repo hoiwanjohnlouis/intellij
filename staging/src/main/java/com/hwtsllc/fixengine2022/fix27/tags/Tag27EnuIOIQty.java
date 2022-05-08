@@ -26,17 +26,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  27 (same as 27, 682)
  *  IOIQty
  *  String
+ *  <p>
  *  Quantity (e.g. number of shares) in numeric form or relative size.
+ *  <p></p>
  *  682 (same as 27, 682)
  *  LegIOIQty
+ *  String
+ *  <p>
  *  Leg-specific IOI quantity.
- *          See IOIQty (27) for description and valid values
+ *  <p>
+ *  See IOIQty (27) for description and valid values
+ *  <p></p>
  *  Valid values:
- *      0 - 1000000000
- *      S - Small
- *      M - Medium
- *      L - Large
- *      U - Undisclosed Quantity
+ *  <p>    0 - 1000000000
+ *  <p>    S - Small
+ *  <p>    M - Medium
+ *  <p>    L - Large
+ *  <p>    U - Undisclosed Quantity
  */
 public class Tag27EnuIOIQty extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyEnumIOIQty dataValue;

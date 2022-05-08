@@ -28,28 +28,35 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  54 (same as 54, 624,)
  *  Side
  *  char
+ *  <p>
  *  Side of order (see Volume : "Glossary" for value definitions)
+ *  <p></p>
  *  624 (same as 54, 624,)
  *  LegSide
  *  char
+ *  <p>
  *  The side of this individual leg (multileg security).
+ *  <p></p>
  *  Valid values:
- *      1 - Buy
- *      2 - Sell
- *      3 - Buy minus
- *      4 - Sell plus
- *      5 - Sell short
- *      6 - Sell short exempt
- *      7 - Undisclosed (valid for IOI and List Order messages only)
- *      8 - Cross (orders where counterparty is an exchange, valid for all messages except IOIs)
- *      9 - Cross short
- *      A - Cross short exxmpt
- *      B - "As Defined" (for use with multileg instruments)
- *      C - "Opposite" (for use with multileg instruments)
- *      D - Subscribe (e.g. CIV)
- *      E - Redeem (e.g. CIV)
- *      F - Lend (FINANCING - identifies direction of collateral)
- *      G - Borrow (FINANCING - identifies direction of collateral)
+ *  <p>    1 - Buy
+ *  <p>    2 - Sell
+ *  <p>    3 - Buy minus
+ *  <p>    4 - Sell plus
+ *  <p>    5 - Sell short
+ *  <p></p>
+ *  <p>    6 - Sell short exempt
+ *  <p>    7 - Undisclosed (valid for IOI and List Order messages only)
+ *  <p>    8 - Cross (orders where counterparty is an exchange, valid for all messages except IOIs)
+ *  <p>    9 - Cross short
+ *  <p></p>
+ *  <p>    A - Cross short exxmpt
+ *  <p>    B - "As Defined" (for use with multileg instruments)
+ *  <p>    C - "Opposite" (for use with multileg instruments)
+ *  <p>    D - Subscribe (e.g. CIV)
+ *  <p>    E - Redeem (e.g. CIV)
+ *  <p></p>
+ *  <p>    F - Lend (FINANCING - identifies direction of collateral)
+ *  <p>    G - Borrow (FINANCING - identifies direction of collateral)
  */
 class Tag624EnuLegSideTest {
     @Test

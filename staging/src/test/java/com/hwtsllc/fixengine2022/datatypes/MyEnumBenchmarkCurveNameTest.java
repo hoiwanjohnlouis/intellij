@@ -24,24 +24,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  221 (same as 221, 677)
  *  BenchmarkCurveName
+ *  String
+ *  <p>
  *  Name of the Benchmark Curve.
+ *  <p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
  *  677 (same as 221, 677)
  *  LegBenchmarkCurveName
+ *  String
+ *  <p>
  *  Name of the Leg Benchmark Curve.
- *          See BenchmarkCurveName (221) for description and valid values.
+ *  <p>
+ *  See BenchmarkCurveName (221) for description and valid values.
+ *  <p></p>
  *  Valid values:
- *      EONIA - EONIA
- *      EUREPO - EUREPO
- *      Euribor - Euribor
- *      FutureSWAP - FutureSWAP
- *      LIBID - LIBID
- *      LIBOR - LIBOR (London Inter-Bank Offer)
- *      MuniAAA - MuniAAA
- *      OTHER - OTHER
- *      Pfandbriefe - Pfandbriefe
- *      SONIA - SONIA
- *      SWAP - SWAP
- *      Treasury - Treasury
+ *  <p>    EONIA - EONIA
+ *  <p>    EUREPO - EUREPO
+ *  <p>    Euribor - Euribor
+ *  <p>    FutureSWAP - FutureSWAP
+ *  <p>    LIBID - LIBID
+ *  <p>    LIBOR - LIBOR (London Inter-Bank Offer)
+ *  <p>    MuniAAA - MuniAAA
+ *  <p>    OTHER - OTHER
+ *  <p>    Pfandbriefe - Pfandbriefe
+ *  <p>    SONIA - SONIA
+ *  <p>    SWAP - SWAP
+ *  <p>    Treasury - Treasury
  */
 class MyEnumBenchmarkCurveNameTest {
     @Test

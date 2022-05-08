@@ -21,24 +21,31 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  660 (same as 660, 661)
+ *  AcctIDSource
+ *  int
+ *  <p>
+ *  Used to identify the source of the Account (1) code.
+ *  This is especially useful if the account is a new account
+ *  that the Respondent may not have set up yet in their system.
+ *  <p></p>
+ *  661 (same as 660, 601)
+ *  AllocAcctIDSource
+ *  int
+ *  <p>
+ *  Used to identify the source of the AllocAccount (79) code.
+ *      See AcctIDSource (660) for valid values.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - BIC
+ *  <p>    2 - SID Code
+ *  <p>    3 - TFM (GSPTA)
+ *  <p>    4 - OMGEO (Alert ID)
+ *  <p>    5 - DTCC Code
+ *  <p>    99 - Other (custom or proprietary)
+ */
 class MyEnumAcctIDSourceTest {
-    /**
-     *  660 (same as 660, 661)
-     *  Used to identify the source of the Account (1) code.
-     *  This is especially useful if the account is a new account that the Respondent may not have setup yet in their system.
-     *  AcctIDSource
-     *  661 (same as 660, 601)
-     *  Used to identify the source of the Account (1) code.
-     *  This is especially useful if the account is a new account that the Respondent may not have setup yet in their system.
-     *  AcctIDSource
-     *  Valid values:
-     *      1 - BIC
-     *     	2 - SID Code
-     *      3 - TFM (GSPTA)
-     *     	4 - OMGEO (Alert ID)
-     *     	5 - DTCC Code
-     *     	99 - Other (custom or proprietary)
-     */
     @Test
     void EnumTest() {
         MyEnumAcctIDSource enumType;

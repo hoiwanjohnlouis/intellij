@@ -21,20 +21,27 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *  660 (same as 660, 661)
- *  Used to identify the source of the Account (1) code.
- *  This is especially useful if the account is a new account that the Respondent may not have setup yet in their system.
  *  AcctIDSource
+ *  int
+ *  <p>
+ *  Used to identify the source of the Account (1) code.
+ *  This is especially useful if the account is a new account
+ *  that the Respondent may not have set up yet in their system.
+ *  <p></p>
  *  661 (same as 660, 601)
- *  Used to identify the source of the Account (1) code.
- *  This is especially useful if the account is a new account that the Respondent may not have setup yet in their system.
- *  AcctIDSource
+ *  AllocAcctIDSource
+ *  int
+ *  <p>
+ *  Used to identify the source of the AllocAccount (79) code.
+ *      See AcctIDSource (660) for valid values.
+ *  <p></p>
  *  Valid values:
- *      1 - BIC
- *     	2 - SID Code
- *      3 - TFM (GSPTA)
- *     	4 - OMGEO (Alert ID)
- *     	5 - DTCC Code
- *     	99 - Other (custom or proprietary)
+ *  <p>    1 - BIC
+ *  <p>    2 - SID Code
+ *  <p>    3 - TFM (GSPTA)
+ *  <p>    4 - OMGEO (Alert ID)
+ *  <p>    5 - DTCC Code
+ *  <p>    99 - Other (custom or proprietary)
  */
 public enum MyEnumAcctIDSource implements EnumAccessors, LogStringVerbose {
     BIC( "1", "BIC", "1 - BIC" ),
@@ -42,6 +49,7 @@ public enum MyEnumAcctIDSource implements EnumAccessors, LogStringVerbose {
     TFM( "3", "TFM", "3 - TFM (GSPTA)" ),
     OMGEO( "4", "OMGEO", "4 - OMGEO (Alert ID)" ),
     DTCC( "5", "DTCC", "5 - DTCC Code" ),
+
     OTHER( "99", "OTHER", "99 - Other (custom or proprietary)" ),
     ;
 

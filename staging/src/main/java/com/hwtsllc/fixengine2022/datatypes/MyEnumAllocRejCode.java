@@ -23,26 +23,32 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  88 (same as 88, 776)
  *  AllocRejCode
  *  int
+ *  <p>
  *  Identifies reason for rejection.
+ *  <p></p>
  *  776 (same as 88, 776)
  *  IndividualAllocRejCode
+ *  int
+ *  <p>
  *  Identified reason for rejecting an individual AllocAccount (79) detail.
- *        Same values as  AllocRejCode (88)
+ *  <p>
+ *  Same values as  AllocRejCode (88)
+ *  <p></p>
  *  Valid values:
- *      0 - Unknown account(s)
- *      1 - Incorrect quantity
- *      2 - Incorrect averageg price
- *      3 - Unknown executing broker mnemonic
- *      4 - Commission difference
- *      5 - Unknown OrderID (37)
- *      6 - Unknown ListID (66)
- *      7 - Other (further in Text (58))
- *      8 - Incorrect allocated quantity
- *      9 - Calculation difference
- *      10 - Unknown or stale ExecID
- *      11 - Mismatched data
- *      12 - Unknown ClOrdID
- *      13 - Warehouse request rejected
+ *  <p>    0 - Unknown account(s)
+ *  <p>    1 - Incorrect quantity
+ *  <p>    2 - Incorrect averageg price
+ *  <p>    3 - Unknown executing broker mnemonic
+ *  <p>    4 - Commission difference
+ *  <p>    5 - Unknown OrderID (37)
+ *  <p>    6 - Unknown ListID (66)
+ *  <p>    7 - Other (further in Text (58))
+ *  <p>    8 - Incorrect allocated quantity
+ *  <p>    9 - Calculation difference
+ *  <p>    10 - Unknown or stale ExecID
+ *  <p>    11 - Mismatched data
+ *  <p>    12 - Unknown ClOrdID
+ *  <p>    13 - Warehouse request rejected
  */
 public enum MyEnumAllocRejCode implements EnumAccessors, LogStringVerbose {
     UNKNOWN_ACCOUNT("0", "UNKNOWN_ACCOUNT",
@@ -55,6 +61,7 @@ public enum MyEnumAllocRejCode implements EnumAccessors, LogStringVerbose {
             "3 - Unknown executing broker mnemonic" ),
     COMMISSION_DIFFERENCE("4", "COMMISSION_DIFFERENCE",
             "4 - Commission difference" ),
+
     UNKNOWN_ORDERID("5", "UNKNOWN_ORDERID",
             "5 - Unknown OrderID (37)" ),
     UNKNOWN_LISTID("6", "UNKNOWN_LISTID",
@@ -65,6 +72,7 @@ public enum MyEnumAllocRejCode implements EnumAccessors, LogStringVerbose {
             "8 - Incorrect allocated quantity" ),
     CALCULATION_DIFFERENCE("9", "CALCULATION_DIFFERENCE",
             "9 - Calculation difference" ),
+
     UNKNOWN_OR_STALE_EXECID("10", "UNKNOWN_OR_STALE_EXECID",
             "10 - Unknown or stale ExecID" ),
     MISMATCHED_DATA("11", "MISMATCHED_DATA",

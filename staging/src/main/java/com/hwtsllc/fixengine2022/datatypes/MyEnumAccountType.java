@@ -42,7 +42,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    8 - Joint back office account (JBO)
  */
 public enum MyEnumAccountType implements EnumAccessors, LogStringVerbose {
-    /**
+    /*
      *  1-4, types
      */
     CUSTOMER_BOOK( "1", "CUSTOMER_BOOK", "1 - Account is carried on customer side of the books" ),
@@ -51,7 +51,7 @@ public enum MyEnumAccountType implements EnumAccessors, LogStringVerbose {
     FLOOR_TRADER( "4", "FLOOR_TRADER", "4 - Floor Trader" ),
 
 
-    /**
+    /*
      *  6-8 types
      */
     NON_CUSTOMER_CROSSED_MARGIN_BOOK( "6", "NON_CUSTOMER_CROSSED_MARGIN_BOOK",

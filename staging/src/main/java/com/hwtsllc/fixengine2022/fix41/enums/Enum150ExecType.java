@@ -30,6 +30,7 @@ public enum Enum150ExecType implements EnumAccessors, LogStringVerbose {
             "5 - Replaced" ),
     PENDING_CANCEL( "6", "PENDING_CANCEL",
             "6 - Pending Cancel (e.g. result of Order Cancel Request)" ),
+
     STOPPED( "7", "STOPPED",
             "7 - Stopped" ),
     REJECTED( "8", "REJECTED",
@@ -40,6 +41,7 @@ public enum Enum150ExecType implements EnumAccessors, LogStringVerbose {
             "A - Pending New" ),
     CALCULATED( "B", "CALCULATED",
             "B - Calculated" ),
+
     EXPIRED( "C", "EXPIRED",
             "C - Expired" ),
     RESTATED( "D", "RESTATED",
@@ -51,6 +53,7 @@ public enum Enum150ExecType implements EnumAccessors, LogStringVerbose {
             "F - Trade (partial fill or fill)" ),
     TRADE_CORRECT( "G", "TRADE_CORRECT",
             "G - Trade Correct" ),
+
     TRADE_CANCEL( "H", "TRADE_CANCEL",
             "H - Trade Cancel" ),
     ORDER_STATUS( "I", "ORDER_STATUS",

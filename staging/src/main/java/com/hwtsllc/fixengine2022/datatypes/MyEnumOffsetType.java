@@ -20,19 +20,23 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  836
+ *  836 (same as 836, 842,)
  *  PegOffsetType
  *  int
+ *  <p>
  *  Type of Peg Offset value
+ *  <p></p>
  *  842
  *  DiscretionOffsetType
  *  int
+ *  <p>
  *  Type of Discretion Offset value
+ *  <p></p>
  *  Valid values:
- *      0 - Price (default)
- *      1 - Basis Points
- *      2 - Ticks
- *      3 - Price Tier or Level
+ *  <p>    0 - Price (default)
+ *  <p>    1 - Basis Points
+ *  <p>    2 - Ticks
+ *  <p>    3 - Price Tier or Level
  */
 public enum MyEnumOffsetType implements EnumAccessors, LogStringVerbose {
     PRICE( "0", "PRICE", "0 - Price (default)" ),
