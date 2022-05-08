@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  110
+ *  MinQty
+ *  Qty
+ *  Minimum quantity of an order to be executed.
+ *              (Prior to FIX 4.2 this field was of type int)
+ */
 public class Tag110QtyMinQty extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 

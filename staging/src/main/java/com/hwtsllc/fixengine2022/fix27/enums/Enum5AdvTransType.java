@@ -27,6 +27,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * String advTransTypeName         short name of transaction for as defined by the FIX document, no duplicates
  * String advTransTypeDescription  describes what the action entails
  */
+/**
+ *  5
+ *  AdvTransType
+ *  String
+ *  Identifies advertisement message transaction type
+ *  Valid values:
+ *      N - New
+ *      C - Cancel
+ *      R - Replace
+ */
 public enum Enum5AdvTransType implements EnumAccessors, LogStringVerbose {
     NEW ("N", "NEW", "N - New"),
     CANCEL ("C", "CANCEL", "C - Cancel"),

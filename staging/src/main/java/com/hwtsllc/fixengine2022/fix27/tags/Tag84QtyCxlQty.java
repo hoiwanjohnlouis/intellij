@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  84
+ *  CxlQty
+ *  Qty
+ *  <p>
+ *  Total quantity canceled for this order.
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 public class Tag84QtyCxlQty extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 

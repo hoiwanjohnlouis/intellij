@@ -19,6 +19,24 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  71
+ *  AllocTransType
+ *  char
+ *  Identifies allocation transaction type
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  *** See Replaced Features and Supported Approach ***
+ *  Valid values:
+ *      0 - New
+ *      1 - Replace
+ *      2 - Cancel
+ *      3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
+ *      4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
+ *      5 - Calculated without Preliminary
+ *          (sent unsolicited by broker, includes MiscFees and NetMoney)
+ *          (Removed-Replaced)
+ *      6 - Reversal
+ */
 public enum Enum71AllocTransType implements EnumAccessors, LogStringVerbose {
     NEW("0", "NEW", "0 - New" ),
     REPLACE("1", "REPLACE", "1 - Replace" ),

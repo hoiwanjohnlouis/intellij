@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  76
+ *  ExecBroker
+ *  String
+ *  <p>
+ *  Identifies executing or give-up broker.
+ *  Standard NASD market-maker mnemonic is preferred.
+ *  <p>
+ *  Deprecated in FIX.4.2
+ */
 // @Deprecated
 class Tag76StrExecBrokerTest {
 

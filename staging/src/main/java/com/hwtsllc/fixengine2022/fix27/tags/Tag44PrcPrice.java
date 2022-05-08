@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  44
+ *  Price
+ *  Price
+ *  Price per unit of quantity (e.g. per share)
+ */
 public class Tag44PrcPrice extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 

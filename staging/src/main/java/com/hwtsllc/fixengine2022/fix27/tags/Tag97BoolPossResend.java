@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  97
+ *  PossResend
+ *  Boolean
+ *  Indicates that message may contain information
+ *  that has been sent under another sequence number.
+ *  Valid values:
+ *      N - Original Transmission
+ *      Y - Possible Resend
+ */
 public class Tag97BoolPossResend extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  113
+ *  ReportToExch
+ *  Boolean
+ *  Identifies party of trade responsible for exchange reporting.
+ *  Valid values:
+ *      N - Indicates the party sending message will report trade
+ *      Y - Indicates the party receiving message must report trade
+ */
 public class Tag113BoolReportToExch extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

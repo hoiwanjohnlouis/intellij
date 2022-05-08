@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  119
+ *  SettlCurrAmt
+ *  Amt
+ *  Total amount due expressed in settlement currency
+ *  (includes the effect of the forex transaction)
+ */
 class Tag119AmtSettlCurrAmtTest {
-
     @Test
     void FIX0119Test() {
         FIX40 fixData = FIX40.FIX119_AMT_SETTL_CURR_AMT;

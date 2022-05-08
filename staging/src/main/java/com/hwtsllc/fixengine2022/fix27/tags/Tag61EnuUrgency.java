@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum61Urgency;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  61
+ *  Urgency
+ *  char
+ *  Urgency flag
+ *  Valid values:
+ *      0 - Normal
+ *      1 - Flash
+ *      2 - Background
+ */
 public class Tag61EnuUrgency extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum61Urgency dataValue;
 

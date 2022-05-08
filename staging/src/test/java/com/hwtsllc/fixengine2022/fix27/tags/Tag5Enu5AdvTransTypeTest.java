@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  5
+ *  AdvTransType
+ *  String
+ *  Identifies advertisement message transaction type
+ *  Valid values:
+ *      N - New
+ *      C - Cancel
+ *      R - Replace
+ */
 class Tag5Enu5AdvTransTypeTest {
-
     @Test
     void FIX0005Test() {
         FIX27 fixData = FIX27.FIX5_ENU_ADV_TRANS_TYPE;

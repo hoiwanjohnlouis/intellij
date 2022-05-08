@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  106
+ *  Issuer
+ *  String
+ *  Name of security issuer (e.g. International Business Machines, GNMA).
+ *              see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values"
+ */
 public class Tag106StrIssuer extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

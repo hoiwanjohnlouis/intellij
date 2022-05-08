@@ -24,20 +24,24 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1
+ *  Account
+ *  String
+ *  Account mnemonic as agreed between buy and sell sides,
+ *  e.g. broker and institution or investor or intermediary and fund manager.
+ */
 class Tag1StrAccountTest {
 
     @BeforeAll
     static void beforeAll() {
     }
-
     @AfterAll
     static void afterAll() {
     }
-
     @BeforeEach
     void setUp() {
     }
-
     @AfterEach
     void tearDown() {
     }

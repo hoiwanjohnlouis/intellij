@@ -22,6 +22,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  28
+ *  IOITransType
+ *  char
+ *  Identifies IOI message transaction type
+ *  Valid values:
+ *      N - New
+ *      C - Cancel
+ *      R - Replace
+ */
 class Enum28IOITransTypeTest {
     @Test
     void Enum0028Test() {

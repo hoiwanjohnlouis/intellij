@@ -19,6 +19,22 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  81
+ *  ProcessCode
+ *  char
+ *  Processing code for sub-account.
+ *  Absence of this field in AllocAccount (79), AllocPrice (366),
+ *  AllocQty (80), ProcessCode instance indicates regular trade.
+ *  Valid values:
+ *      0 - Regular
+ *      1 - Soft Dollar
+ *      2 - Step-In
+ *      3 - Step-Out
+ *      4 - Soft-dollar Step-In
+ *      5 - Soft-dollar Step-Out
+ *      6 - Plan Sponsor
+ */
 public enum Enum81ProcessCode implements EnumAccessors, LogStringVerbose {
     REGULAR("0", "REGULAR", "0 - Regular" ),
     SOFT_DOLLAR("1", "SOFT_DOLLAR", "1 - Soft Dollar" ),

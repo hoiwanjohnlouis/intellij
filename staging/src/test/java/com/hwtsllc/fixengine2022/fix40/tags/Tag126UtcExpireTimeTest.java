@@ -24,8 +24,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  126
+ *  ExpireTime
+ *  UTCTimestamp
+ *  Time/Date of order expiration
+ *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
+ *      The meaning of expiration is specific to the context where the field is used.
+ *      For orders,
+ *          this is the expiration time of a Good Til Date TimeInForce.
+ *      For Quotes,
+ *          this is the expiration of the quote.
+ *
+ *      Expiration time is provided across the quote message dialog
+ *      to control the length of time of the overall quoting process.
+ *
+ *      For collateral requests,
+ *          this is the time by which collateral must be assigned.
+ *      For collateral assignments,
+ *          this is the time by which a response to the assignment is expected.
+ */
 class Tag126UtcExpireTimeTest {
-
     @Test
     void FIX0126Test() {
         FIX40 fixData = FIX40.FIX126_UTC_EXPIRE_TIME;

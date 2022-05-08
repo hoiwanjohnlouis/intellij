@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  128
+ *  DeliverToCompID
+ *  String
+ *  Assigned value used to identify the firm targeted to receive
+ *  the message if the message is delivered by a third party
+ *  i.e.  the third party firm identifier would be delivered in the
+ *  TargetCompID (56) field and the ultimate receiver firm ID in this field.
+ */
 class Tag128StrDeliverToCompIDTest {
-
     @Test
     void FIX0128Test() {
         FIX40 fixData = FIX40.FIX128_STR_DELIVER_TO_COMP_ID;

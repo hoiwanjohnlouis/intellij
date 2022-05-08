@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  93
+ *  SignatureLength
+ *  Length
+ *  <p>
+ *  Number of bytes in signature field.
+ */
 public class Tag93LenSignatureLength extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyLengthType dataValue;
 

@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  28
+ *  IOITransType
+ *  char
+ *  Identifies IOI message transaction type
+ *  Valid values:
+ *      N - New
+ *      C - Cancel
+ *      R - Replace
+ */
 public enum Enum28IOITransType implements EnumAccessors, LogStringVerbose {
     NEW("N", "NEW", "N - New" ),
     CANCEL("C", "CANCEL", "C - Cancel" ),

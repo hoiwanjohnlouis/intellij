@@ -24,8 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  68
+ *  TotNoOrders
+ *  int
+ *  Total number of list order entries across all messages.
+ *
+ *  Should be the sum of all NoOrders (73) in each message that has
+ *  repeating list order entries related to the same ListID (66).
+ *  Used to support fragmentation.
+ *
+ *  (Prior to FIX 4.2 this field was named "ListNoOrds")
+ */
 class Tag68IntTotNoOrdersTest {
-
     @Test
     void FIX0068Test() {
         FIX27 fixData = FIX27.FIX68_INT_TOT_NO_ORDERS;

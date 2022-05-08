@@ -25,6 +25,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
+ *  54 (same as 54, 624,)
+ *  Side
+ *  char
+ *  Side of order (see Volume : "Glossary" for value definitions)
  *  624 (same as 54, 624,)
  *  LegSide
  *  char

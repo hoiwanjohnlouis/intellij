@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  96
+ *  RawData
+ *  data
+ *  <p>
+ *  Unformatted raw data, can include bitmaps, word processor documents, etc.
+ */
 class Tag96DatRawDataTest {
-
     @Test
     void FIX0096Test() {
         FIX27 fixData = FIX27.FIX96_DAT_RAW_DATA;

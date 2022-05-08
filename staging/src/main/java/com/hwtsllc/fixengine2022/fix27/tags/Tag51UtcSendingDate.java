@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  51
+ *  SendingDate  (no longer used)
+ *  LocalMktDate
+ *  Deprecated in FIX.4.3
+ */
 // @Deprecated
 public class Tag51UtcSendingDate extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;

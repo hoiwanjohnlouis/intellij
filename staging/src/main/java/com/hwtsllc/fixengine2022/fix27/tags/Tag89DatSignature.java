@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  89
+ *  Signature
+ *  data
+ *  <p>
+ *  Electronic signature
+ */
 public class Tag89DatSignature extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyDataType dataValue;
 

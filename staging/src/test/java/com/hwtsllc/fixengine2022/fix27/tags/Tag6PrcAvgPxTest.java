@@ -24,8 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  6
+ *  AvgPx
+ *  Price
+ *  Calculated average price of all fills on this order.
+ *
+ *  For Fixed Income trades AvgPx is always expressed as percent-of-par,
+ *  regardless of the PriceType (423) of LastPx (31).
+ *  i.e., AvgPx will contain an average of percent-of-par values
+ *  (see LastParPx (669)) for issues traded in Yield, Spread or Discount.
+ */
 class Tag6PrcAvgPxTest {
-
     @Test
     void FIX0006Test() {
         FIX27 fixData = FIX27.FIX6_PRC_AVG_PX;

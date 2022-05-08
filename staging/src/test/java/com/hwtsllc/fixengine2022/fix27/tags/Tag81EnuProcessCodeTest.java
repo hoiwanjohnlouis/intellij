@@ -24,6 +24,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  81
+ *  ProcessCode
+ *  char
+ *  Processing code for sub-account.
+ *  Absence of this field in AllocAccount (79), AllocPrice (366),
+ *  AllocQty (80), ProcessCode instance indicates regular trade.
+ *  Valid values:
+ *      0 - Regular
+ *      1 - Soft Dollar
+ *      2 - Step-In
+ *      3 - Step-Out
+ *      4 - Soft-dollar Step-In
+ *      5 - Soft-dollar Step-Out
+ *      6 - Plan Sponsor
+ */
 class Tag81EnuProcessCodeTest {
 
     @Test

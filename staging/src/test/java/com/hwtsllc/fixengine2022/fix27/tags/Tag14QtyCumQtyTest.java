@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  14
+ *  CumQty
+ *  Qty
+ *  Total quantity (e.g. number of shares) filled.
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag14QtyCumQtyTest {
-
     @Test
     void FIX0014Test() {
         FIX27 fixData = FIX27.FIX14_QTY_CUM_QTY;

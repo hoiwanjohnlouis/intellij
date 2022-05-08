@@ -19,6 +19,35 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  39
+ *  OrdStatus
+ *  char
+ *  Identifies current status of order.
+ *
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  *** See Replaced Features and Supported Approach ***
+ *      (see Volume : "Glossary" for value definitions)
+ *
+ *  Valid values:
+ *      0 - New
+ *      1 - Partially filled
+ *      2 - Filled
+ *      3 - Done for day
+ *      4 - Canceled
+ *
+ *      5 - Replaced (No longer used)
+ *      6 - Pending Cancel (i.e. result of Order Cancel Request)
+ *      7 - Stopped
+ *      8 - Rejected
+ *      9 - Suspended
+ *
+ *      A - Pending New
+ *      B - Calculated
+ *      C - Expired
+ *      D - Accepted for Bidding
+ *      E - Pending Replace (i.e. result of Order Cancel/Replace Request)
+ */
 public enum Enum39OrdStatus implements EnumAccessors, LogStringVerbose {
     NEW("0", "NEW", "0 - New" ),
     PARTIALLY_FILLED("1", "PARTIALLY_FILLED", "1 - Partially filled" ),

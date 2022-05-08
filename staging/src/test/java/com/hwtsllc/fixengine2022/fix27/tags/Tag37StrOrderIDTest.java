@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  37
+ *  OrderID
+ *  String
+ *  Unique identifier for Order as assigned by sell-side (broker, exchange, ECN).
+ *  Uniqueness must be guaranteed within a single trading day.
+ *  Firms which accept multi-day orders should consider
+ *  embedding a date within the OrderID field to assure uniqueness across days.
+ */
 class Tag37StrOrderIDTest {
-
     @Test
     void FIX0037Test() {
         FIX27 fixData = FIX27.FIX37_STR_ORDER_ID;

@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum20ExecTransType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  20
+ *  ExecTransType
+ *  char
+ *  Deprecated in FIX.4.2 Identifies transaction type
+ *  Valid values:
+ *      0 - New
+ *      1 - Cancel
+ *      2 - Correct
+ *      3 - Status
+ */
 // @Deprecated
 public class Tag20EnuExecTransType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum20ExecTransType dataValue;

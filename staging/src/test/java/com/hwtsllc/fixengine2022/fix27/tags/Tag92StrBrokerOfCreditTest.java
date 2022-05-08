@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  92
+ *  BrokerOfCredit
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.2 Broker to receive trade credit.
+ */
 // @Deprecated
 class Tag92StrBrokerOfCreditTest {
 

@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.fix40.enums.Enum127DKReason;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  127
+ *  DKReason
+ *  char
+ *  Reason for execution rejection.
+ *  Valid values:
+ *      A - Unknown Symbol
+ *      B - Wrong Side
+ *      C - Quantity Exceeds Order
+ *      D - No Matching Order
+ *      E - Price Exceeds Limit
+ *      F - Calculation Difference
+ *      Z - Other
+ */
 public class Tag127EnuDKReason extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum127DKReason dataValue;
 

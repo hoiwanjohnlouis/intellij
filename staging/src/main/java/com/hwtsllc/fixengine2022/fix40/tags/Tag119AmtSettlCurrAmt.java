@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  119
+ *  SettlCurrAmt
+ *  Amt
+ *  Total amount due expressed in settlement currency
+ *  (includes the effect of the forex transaction)
+ */
 public class Tag119AmtSettlCurrAmt extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 

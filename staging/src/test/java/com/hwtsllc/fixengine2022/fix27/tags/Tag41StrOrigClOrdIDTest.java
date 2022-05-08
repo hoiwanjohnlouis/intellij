@@ -24,8 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  41
+ *  OrigClOrdID
+ *  String
+ *  ClOrdID (11) of the previous order (NOT the initial order of the day)
+ *  as assigned by the institution, used to identify the previous order in
+ *  cancel and cancel/replace requests.
+ */
 class Tag41StrOrigClOrdIDTest {
-
     @Test
     void FIX0041Test() {
         FIX27 fixData = FIX27.FIX41_STR_ORIG_CL_ORD_ID;

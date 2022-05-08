@@ -24,9 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  51
+ *  SendingDate  (no longer used)
+ *  LocalMktDate
+ *  Deprecated in FIX.4.3
+ */
 // @Deprecated
 class Tag51UtcSendingDateTest {
-
     @Test
     void FIX0051Test() {
         FIX27 fixData = FIX27.FIX51_UTC_SENDING_DATE;

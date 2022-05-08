@@ -24,6 +24,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  108
+ *  HeartBtInt
+ *  int
+ *  Heartbeat interval (seconds)
+ */
 class Tag108IntHeartBtIntTest {
 
     @Test

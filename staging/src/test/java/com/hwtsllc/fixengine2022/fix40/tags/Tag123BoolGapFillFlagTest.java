@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  123
+ *  GapFillFlag
+ *  Boolean
+ *  Indicates that the Sequence Reset message is replacing administrative
+ *  or application messages which will not be resent.
+ *  Valid values:
+ *      N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
+ *      Y - Gap Fill Message, Msg Seq Num Field Valid
+ */
 class Tag123BoolGapFillFlagTest {
-
     @Test
     void FIX0123Test() {
         FIX40 fixData = FIX40.FIX123_BOOL_GAP_FILL_FLAG;

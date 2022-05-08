@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  45
+ *  RefSeqNum
+ *  SeqNum
+ *  Reference message sequence number
+ */
 class Tag45SeqRefSeqNumTest {
-
     @Test
     void FIX0045Test() {
         FIX27 fixData = FIX27.FIX45_SEQ_REF_SEQ_NUM;

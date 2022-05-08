@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  44
+ *  Price
+ *  Price
+ *  Price per unit of quantity (e.g. per share)
+ */
 class Tag44PrcPriceTest {
-
     @Test
     void FIX0044Test() {
         FIX27 fixData = FIX27.FIX44_PRC_PRICE;

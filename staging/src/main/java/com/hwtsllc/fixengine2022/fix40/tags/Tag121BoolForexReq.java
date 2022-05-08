@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  121
+ *  ForexReq
+ *  Boolean
+ *  Indicates request for forex accommodation trade
+ *  to be executed along with security transaction.
+ *  Valid values:
+ *      N - Do Not Execute Forex After Security Trade
+ *      Y - Execute Forex After Security Trade
+ */
 public class Tag121BoolForexReq extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

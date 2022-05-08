@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  20
+ *  ExecTransType
+ *  char
+ *  Deprecated in FIX.4.2 Identifies transaction type
+ *  Valid values:
+ *      0 - New
+ *      1 - Cancel
+ *      2 - Correct
+ *      3 - Status
+ */
 // @Deprecated
 class Tag20EnuExecTransTypeTest {
 

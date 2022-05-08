@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  135
+ *  OfferSize
+ *  Qty
+ *  Quantity of offer
+ *      (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag135QtyOfferSizeTest {
-
     @Test
     void FIX0135Test() {
         FIX40 fixData = FIX40.FIX135_QTY_OFFER_SIZE;

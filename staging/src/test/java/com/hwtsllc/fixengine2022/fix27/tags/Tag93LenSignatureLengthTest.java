@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  93
+ *  SignatureLength
+ *  Length
+ *  <p>
+ *  Number of bytes in signature field.
+ */
 class Tag93LenSignatureLengthTest {
-
     @Test
     void FIX0093Test() {
         FIX27 fixData = FIX27.FIX93_LEN_SIGNATURE_LENGTH;

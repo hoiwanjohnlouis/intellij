@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  68
+ *  TotNoOrders
+ *  int
+ *  Total number of list order entries across all messages.
+ *
+ *  Should be the sum of all NoOrders (73) in each message that has
+ *  repeating list order entries related to the same ListID (66).
+ *  Used to support fragmentation.
+ *
+ *  (Prior to FIX 4.2 this field was named "ListNoOrds")
+ */
 public class Tag68IntTotNoOrders extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 

@@ -24,9 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  85
+ *  NoDlvyInst
+ *  NumInGroup
+ *  <p>
+ *  Number of delivery instruction fields in repeating group.
+ *  <p>
+ *  Note this field was removed in FIX 4.1 and reinstated in FIX 4.4.
+ */
 // @Deprecated
 class Tag85NumNoDlvyInstTest {
-
     @Test
     void FIX0085Test() {
         FIX27 fixData = FIX27.FIX85_NUM_NO_DLVY_INST;

@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  15
+ *  Currency
+ *  Currency
+ *  Identifies currency used for price.
+ *
+ *  Absence of this field is interpreted as the default for the security.
+ *  It is recommended that systems provide the currency value whenever possible.
+ *  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
+ */
 class Tag15CcyCurrencyTest {
-
     @Test
     void FIX0015Test() {
         FIX27 fixData = FIX27.FIX15_CCY_CURRENCY;

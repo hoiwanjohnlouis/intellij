@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  95
+ *  RawDataLength
+ *  Length
+ *  <p>
+ *  Number of bytes in raw data field.
+ */
 public class Tag95LenRawDataLength extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyLengthType dataValue;
 

@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  55
+ *  Symbol
+ *  String
+ *  Ticker symbol.
+ *  Common, "human understood" representation of the security.
+ *  SecurityID (48) value can be specified if no symbol exists.
+ *  (e.g. non-exchange traded Collective Investment Vehicles)
+ *  Use "[N/A]" for products which do not have a symbol.
+ */
 public class Tag55StrSymbol extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

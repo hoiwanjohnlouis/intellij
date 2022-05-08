@@ -20,34 +20,38 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- * FIX42 enum defines all the Financial Exchange Protocol's (FIX) fields.
- * It consists of 3 fields.
- *
- *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Prootocol document.
+ *  FIX42 enum defines all the Financial Exchange Protocol's (FIX) fields.
+ *  It consists of 3 fields.
+ *  <p>
+ *         ENUMName     Enum Name has the FIXn prefix *n* is the tag number defined by FIX Protocol document.
  *                      There may be a secondary prefix denoting the data type.
- *                      BOOL = EnumType field
- *                      ENU = EnumType field
- *                      AMT = MyAmtType field
- *                      CCY = MyCurrencyType field
- *                      COU = MyCountryType field
- *                      DAT = MyDataType field
- *                      EXC = MyExchangeType field, saved as String
- *                      FLO = MyFloatType field, saved as String
- *                      INT = MyIntType field, saved as int
- *                      LEN = MyLengthType field, saved as int
- *                      LMD = MyLocalMktDateType field, saved as String
- *                      NUM = MyNumInGroupType field, saved as int
- *                      PCT = MyPercentageType field, saved as String
- *                      PRC = MyPriceType field, saved as String
- *                      PXO = MyPriceOffsetType field, saved as String
- *                      QTY = MyQtyType field, saved as int
- *                      SEQ = MySeqNumType field, saved as int
- *                      STR = MyStringType field, saved as String
- *                      UTC = MyUTCTimestampType field, saved as String
- *                      others to follow
+ *  <p>
+ *  <p>                 BOOL = EnumType field
+ *  <p>                 ENU = EnumType field
+ *  <p>                 AMT = MyAmtType field
+ *  <p>                 CCY = MyCurrencyType field
+ *  <p>                 COU = MyCountryType field
+ *  <p>                 DAT = MyDataType field
+ *  <p>                 EXC = MyExchangeType field, saved as String
+ *  <p>                 FLO = MyFloatType field, saved as String
+ *  <p>                 INT = MyIntType field, saved as int
+ *  <p>                 LEN = MyLengthType field, saved as int
+ *  <p>                 LMD = MyLocalMktDateType field, saved as String
+ *  <p>                 NUM = MyNumInGroupType field, saved as int
+ *  <p>                 PCT = MyPercentageType field, saved as String
+ *  <p>                 PRC = MyPriceType field, saved as String
+ *  <p>                 PXO = MyPriceOffsetType field, saved as String
+ *  <p>                 QTY = MyQtyType field, saved as int
+ *  <p>                 SEQ = MySeqNumType field, saved as int
+ *  <p>                 STR = MyStringType field, saved as String
+ *  <p>                 UTC = MyUTCTimestampType field, saved as String
+ *  <p>                 others to follow
+ *  <p>
  * String  id           The identifier of the field as defined by the FIX protocol document, no duplicates.
  *                      Even though *id* is really an *int*, this app treats it as a String. so save it as a String.
+ *  <p>
  * String  name         The short NAME of the field as defined by the FIX protocol document, no duplicates
+ *  <p>
  * String  description  A short blurb which describes what information the field contains
  */
 public enum FIX42 implements EnumAccessors, LogStringVerbose {

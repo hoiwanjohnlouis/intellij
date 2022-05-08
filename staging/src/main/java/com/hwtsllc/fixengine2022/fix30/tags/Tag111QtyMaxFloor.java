@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  111
+ *  MaxFloor
+ *  Qty
+ *  Deprecated in FIX.5.0
+ *  The quantity to be displayed. Required for reserve orders.
+ *  On orders specifies the qty to be displayed, on execution
+ *  reports the currently displayed quantity.
+ */
 public class Tag111QtyMaxFloor extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 

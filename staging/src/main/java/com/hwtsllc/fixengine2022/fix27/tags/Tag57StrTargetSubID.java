@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  57
+ *  TargetSubID
+ *  String
+ *  Assigned value used to identify specific individual or unit intended to receive message.
+ *  "ADMIN" reserved for administrative messages not intended for a specific user.
+ */
 public class Tag57StrTargetSubID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

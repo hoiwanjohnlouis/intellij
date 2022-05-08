@@ -24,8 +24,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  98
+ *  EncryptMethod
+ *  int
+ *  Method of encryption.
+ *  Valid values:
+ *      0 - None / Other
+ *      1 - PKCS (Proprietary)
+ *      2 - DES (ECB Mode)
+ *      3 - PKCS / DES (Proprietary)
+ *      4 - PGP / DES (Defunct)
+ *
+ *      5 - PGP / DES-MD5 (See app note on FIX web site)
+ *      6 - PEM / DES-MD5 (see app note on FIX web site)
+ */
 class Tag98EnuEncryptMethodTest {
-
     @Test
     void FIX0098Test() {
         FIX27 fixData = FIX27.FIX98_ENU_ENCRYPT_METHOD;

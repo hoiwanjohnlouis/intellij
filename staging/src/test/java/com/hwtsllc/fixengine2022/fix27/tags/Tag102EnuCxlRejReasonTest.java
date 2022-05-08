@@ -24,8 +24,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  102
+ *  CxlRejReason
+ *  int
+ *  Code to identify reason for cancel rejection.
+ *  Valid values:
+ *      0 - Too late to cancel
+ *      1 - Unknown order
+ *      2 - Broker - Exchange Option
+ *      3 - Order already in Pending Cancel or Pending Replace status
+ *      4 - Unable to process Order Mass Cancel Request
+ *      5 - OrigOrdModTime (586) did not match last TransactTime (60) of order
+ *      6 - Duplicate ClOrdID (11) received
+ *      18 - Invalid price increment
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Tag102EnuCxlRejReasonTest {
-
     @Test
     void FIX0102Test() {
         FIX27 fixData = FIX27.FIX102_ENU_CXL_REJ_REASON;

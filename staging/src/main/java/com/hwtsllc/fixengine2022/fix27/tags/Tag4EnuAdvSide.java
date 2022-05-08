@@ -22,8 +22,19 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  4
+ *  AdvSide
+ *  char
+ *  Broker's side of advertised trade
+ *  Valid values:
+ *      B - Buy
+ *      S - Sell
+ *      T - Trade
+ *      X - Cross
+ */
 public class Tag4EnuAdvSide extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private Enum4AdvSide dataValue;
+    private final Enum4AdvSide dataValue;
 
     public final static Enum4AdvSide TESTA_ENU_ADV_SIDE = Enum4AdvSide.BUY;
     public final static Enum4AdvSide TESTB_ENU_ADV_SIDE = Enum4AdvSide.SELL;

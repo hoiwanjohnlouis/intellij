@@ -1,0 +1,502 @@
+141
+ResetSeqNumFlag
+Boolean
+Indicates that the both sides of the FIX session should reset sequence numbers.
+Valid values:
+	N - No
+	Y - Yes, reset sequence numbers
+142
+SenderLocationID
+String
+Assigned value used to identify specific message originator’s location (i.e. geographic location and/or desk, trader)
+143
+TargetLocationID
+String
+Assigned value used to identify specific message destination’s location (i.e. geographic location and/or desk, trader)
+144
+OnBehalfOfLocationID
+String
+Assigned value used to identify specific message originator’s location (i.e. geographic location and/or desk, trader) if the message was delivered by a third party
+145
+DeliverToLocationID
+String
+Assigned value used to identify specific message recipient’s location (i.e. geographic location and/or desk, trader) if the message was delivered by a third party
+146
+NoRelatedSym
+NumInGroup
+Specifies the number of repeating symbols specified.
+147
+Subject
+String
+The subject of an Email message
+148
+Headline
+String
+The headline of a News message
+149
+URLLink
+String
+A URI (Uniform Resource Identifier) or URL (Uniform Resource Locator) link to additional information (i.e. http://www.XYZ.com/research.html)
+      See "Appendix 6-B FIX Fields Based Upon Other Standards"
+150
+ExecType
+char
+Describes the specific ExecutionRpt (i.e. Pending Cancel) while OrdStatus (39) will always identify the current order status (i.e. Partially Filled)  *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
+Valid values:
+	0 - New
+	3 - Done for day
+	4 - Canceled
+	5 - Replaced
+	6 - Pending Cancel (e.g. result of Order Cancel Request)
+	7 - Stopped
+	8 - Rejected
+	9 - Suspended
+	A - Pending New
+	B - Calculated
+	C - Expired
+	D - Restated (Execution Report sent unsolicited by sellside, with ExecRestatementReason (378) set)
+	E - Pending Replace (e.g. result of Order Cancel/Replace Request)
+	F - Trade (partial fill or fill)
+	G - Trade Correct
+	H - Trade Cancel
+	I - Order Status
+	J - Trade in a Clearing Hold
+	K - Trade has been released to Clearing
+	L - Triggered or Activated by System
+151
+LeavesQty
+Qty
+Quantity open for further execution. If the OrdStatus (39) is Canceled, DoneForTheDay, Expired, Calculated, or Rejected (in which case the order is no longer active) then LeavesQty could be 0, otherwise LeavesQty = OrderQty (38) – CumQty (14).
+      (Prior to FIX 4.2 this field was of type int)
+152
+CashOrderQty
+Qty
+Specifies the approximate order quantity desired in total monetary units vs. as tradeable units (e.g. number of shares).  The broker or fund manager (for CIV orders) would be responsible for converting and calculating a tradeable unit (e.g. share) quantity (OrderQty (38)) based upon this amount to be used for the actual order and subsequent messages.
+153
+AllocAvgPx
+Price
+AvgPx (6) for a specific AllocAccount (79)
+      For Fixed Income this is always expressed as "percent of par" price type.
+154
+AllocNetMoney
+Amt
+NetMoney (8) for a specific AllocAccount (79)
+155
+SettlCurrFxRate
+float
+Foreign exchange rate used to compute SettlCurrAmt (9) from Currency (5) to SettlCurrency (20)
+156
+SettlCurrFxRateCalc
+char
+Specifies whether or not SettlCurrFxRate (55) should be multiplied or divided.
+Valid values:
+	M - Multiply
+	D - Divide
+157
+NumDaysInterest
+int
+Number of Days of Interest for convertible bonds and fixed income. Note value may be negative.
+158
+AccruedInterestRate
+Percentage
+The amount the buyer compensates the seller for the portion of the next coupon interest payment the seller has earned but will not receive from the issuer because the issuer will send the next coupon payment to the buyer.  Accrued Interest Rate is the annualized Accrued Interest amount divided by the purchase price of the bond.
+159
+AccruedInterestAmt
+Amt
+Amount of Accrued Interest for convertible bonds and fixed income
+160
+SettlInstMode
+char
+Indicates mode used for Settlement Instructions message. *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
+Valid values:
+	0 - Default (Replaced)
+	1 - Standing Instructions Provided
+	2 - Specific Allocation Account Overriding (Replaced)
+	3 - Specific Allocation Account Standing (Replaced)
+	4 - Specific Order for a single account (for CIV)
+	5 - Request reject
+161
+AllocText
+String
+Free format text related to a specific AllocAccount (79).
+162
+SettlInstID
+String
+Unique identifier for Settlement Instruction.
+163
+SettlInstTransType
+char
+Settlement Instructions message transaction type
+Valid values:
+	N - New
+	C - Cancel
+	R - Replace
+	T - Restate
+164
+EmailThreadID
+String
+Unique identifier for an email thread (new and chain of replies)
+165
+SettlInstSource
+char
+Indicates source of Settlement Instructions
+Valid values:
+	1 - Broker's Instructions
+	2 - Institution's Instructions
+	3 - Investor (e.g. CIV use)
+166
+SettlLocation
+String
+Deprecated in FIX.4.2 Identifies Settlement Depository or Country Code, ISITC spec
+Valid values:
+	CED - CEDEL
+	DTC - Depository Trust Company
+	EUR - Euro clear
+	FED - Federal Book Entry
+	ISO_Country_Code - Local Market Settle Location
+	PNY - Physical
+	PTC - Participant Trust Company
+167
+SecurityType
+String
+Indicates type of security.  See also the Product (460) and CFICode (461) fields. It is recommended that CFICode be used instead of SecurityType for non-Fixed Income instruments.
+                Example values (grouped by Product field value)  (Note: additional values may be used by mutual agreement of the counterparties):
+                *   Identify the Issuer in the "Issuer" field(106)
+                *** REPLACED values - See "Replaced Features and Supported Approach" ***
+                NOTE: Additional values may be used by mutual agreement of the counterparties)
+Valid values:
+Deprecated values
+	FUT - Future
+	OPT - Option
+	UST - US Treasury Note (Deprecated Value Use TNOTE)
+	USTB - US Treasury Bill (Deprecated Value Use TBILL)
+Agency
+	EUSUPRA - Euro Supranational Coupons *
+	FAC - Federal Agency Coupon
+	FADN - Federal Agency Discount Note
+	PEF - Private Export Funding *
+	SUPRA - USD Supranational Coupons *
+Corporate
+	CORP - Corporate Bond
+	CPP - Corporate Private Placement
+	CB - Convertible Bond
+	DUAL - Dual Currency
+	EUCORP - Euro Corporate Bond
+	XLINKD - Indexed Linked
+	STRUCT - Structured Notes
+	YANK - Yankee Corporate Bond
+Currency
+	FOR - Foreign Exchange Contract
+Equity
+	CS - Common Stock
+	PS - Preferred Stock
+Financing
+	REPO - Repurchase
+	FORWARD - Forward
+	BUYSELL - Buy Sellback
+	SECLOAN - Securities Loan
+	SECPLEDGE - Securities Pledge
+Government
+	BRADY - Brady Bond
+	EUSOV - Euro Sovereigns *
+	TBOND - US Treasury Bond
+	TINT - Interest Strip From Any Bond Or Note
+	TIPS - Treasury Inflation Protected Securities
+	TCAL - Principal Strip Of A Callable Bond Or Note
+	TPRN - Principal Strip From A Non-Callable Bond Or Note
+	TNOTE - US Treasury Note
+	TBILL - US Treasury Bill
+Loan
+	TERM - Term Loan
+	RVLV - Revolver Loan
+	RVLVTRM - Revolver/Term Loan
+	BRIDGE - Bridge Loan
+	LOFC - Letter Of Credit
+	SWING - Swing Line Facility
+	DINP - Debtor In Possession
+	DEFLTED - Defaulted
+	WITHDRN - Withdrawn
+	REPLACD - Replaced
+	MATURED - Matured
+	AMENDED - Amended & Restated
+	RETIRED - Retired
+Money Market
+	BA - Bankers Acceptance
+	BN - Bank Notes
+	BOX - Bill Of Exchanges
+	CD - Certificate Of Deposit
+	CL - Call Loans
+	CP - Commercial Paper
+	DN - Deposit Notes
+	EUCD - Euro Certificate Of Deposit
+	EUCP - Euro Commercial Paper
+	LQN - Liquidity Note
+	MTN - Medium Term Notes
+	ONITE - Overnight
+	PN - Promissory Note
+	PZFJ - Plazos Fijos
+	STN - Short Term Loan Note
+	TD - Time Deposit
+	XCN - Extended Comm Note
+	YCD - Yankee Certificate Of Deposit
+Mortgage
+	ABS - Asset-backed Securities
+	CMBS - Corp. Mortgage-backed Securities
+	CMO - Collateralized Mortgage Obligation
+	IET - IOETTE Mortgage
+	MBS - Mortgage-backed Securities
+	MIO - Mortgage Interest Only
+	MPO - Mortgage Principal Only
+	MPP - Mortgage Private Placement
+	MPT - Miscellaneous Pass-through
+	PFAND - Pfandbriefe *
+	TBA - To Be Announced
+Municipal
+	AN - Other Anticipation Notes (BAN, GAN, etc.)
+	COFO - Certificate Of Obligation
+	COFP - Certificate Of Participation
+	GO - General Obligation Bonds
+	MT - Mandatory Tender
+	RAN - Revenue Anticipation Note
+	REV - Revenue Bonds
+	SPCLA - Special Assessment
+	SPCLO - Special Obligation
+	SPCLT - Special Tax
+	TAN - Tax Anticipation Note
+	TAXA - Tax Allocation
+	TECP - Tax Exempt Commercial Paper
+	TRAN - Tax Revenue Anticipation Note
+	VRDN - Variable Rate Demand Note
+	WAR - Warrant
+Other
+	MF - Mutual Fund
+	MLEG - Multileg Instrument
+	NONE - No Security Type
+	OOF - Options on Futures
+	OOP - Options on Physical
+	WLD - Wildcard Entry (was "?" in 4.4, used on Security Definition Request message)
+	CASH - Cash
+168
+EffectiveTime
+UTCTimestamp
+Time the details within the message should take effect (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
+169
+StandInstDbType
+int
+Identifies the Standing Instruction database used
+Valid values:
+	0 - Other
+	1 - DTC SID
+	2 - Thomson ALERT
+	3 - A Global Custodian (StandInstDBName (70) must be provided)
+	4 - AccountNet
+170
+StandInstDbName
+String
+Name of the Standing Instruction database represented with StandInstDbType (169) (i.e. the Global Custodian’s name).
+171
+StandInstDbID
+String
+Unique identifier used on the Standing Instructions database for the Standing Instructions to be referenced.
+172
+SettlDeliveryType
+int
+Identifies type of settlement
+Valid values:
+	0 - "Versus. Payment": Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment
+	1 - "Free": Deliver (if Sell) or Receive (if Buy) Free
+	2 - Tri-Party
+	3 - Hold In Custody
+173
+SettlDepositoryCode 
+String
+Deprecated in FIX.4.3 Brokers account code at the depository (i.e. CEDEL ID  for CEDEL, FINS for DTC, or Euroclear ID for Euroclear) if Settlement Location is a depository
+174
+SettlBrkrCode 
+String
+Deprecated in FIX.4.3 BIC (Bank Identification Code - Swift managed) code of  the broker involved (i.e. for multi-company brokerage firms)
+175
+SettlInstCode 
+String
+Deprecated in FIX.4.3 BIC (Bank Identification Code - Swift managed) code of  the institution involved (i.e. for multi-company institution firms)
+176
+SecuritySettlAgentName
+String
+Deprecated in FIX.4.3 Name of SettlInstSource's local agent bank if SettlLocation is not a depository
+177
+SecuritySettlAgentCode
+String
+Deprecated in FIX.4.3 BIC (Bank Identification Code--Swift managed) code of  the SettlInstSource's local agent bank if SettlLocation  is not a depository
+178
+SecuritySettlAgentAcctNum
+String
+Deprecated in FIX.4.3 SettlInstSource's account number at local agent bank if  SettlLocation is not a depository
+179
+SecuritySettlAgentAcctName
+String
+Deprecated in FIX.4.3 Name of SettlInstSource's account at local agent bank if  SettlLocation is not a depository
+180
+SecuritySettlAgentContactName
+String
+Deprecated in FIX.4.3 Name of contact at local agent bank for SettlInstSource's account if SettlLocation is not a depository
+181
+SecuritySettlAgentContactPhone
+String
+Deprecated in FIX.4.3 Phone number for contact at local agent bank if  SettlLocation is not a depository
+182
+CashSettlAgentName
+String
+Deprecated in FIX.4.3 Name of SettlInstSource's local agent bank if SettlDeliveryType=Free
+183
+CashSettlAgentCode
+String
+Deprecated in FIX.4.3 BIC (Bank Identification Code--Swift managed) code of  the SettlInstSource's local agent bank if SettlDeliveryType=Free
+184
+CashSettlAgentAcctNum
+String
+Deprecated in FIX.4.3 SettlInstSource's account number at local agent bank if SettlDeliveryType=Free
+185
+CashSettlAgentAcctName
+String
+Deprecated in FIX.4.3 Name of SettlInstSource's account at local agent bank if SettlDeliveryType=Free
+186
+CashSettlAgentContactName
+String
+Deprecated in FIX.4.3 Name of contact at local agent bank for SettlInstSource's account  if SettlDeliveryType=Free
+187
+CashSettlAgentContactPhone
+String
+Deprecated in FIX.4.3 Phone number for contact at local agent bank for SettlInstSource's account if SettlDeliveryType=Free
+188
+BidSpotRate
+Price
+Bid F/X spot rate.
+189
+BidForwardPoints
+PriceOffset
+Bid F/X forward points added to spot rate. May be a negative value.
+190
+OfferSpotRate
+Price
+Offer F/X spot rate.
+191
+OfferForwardPoints
+PriceOffset
+Offer F/X forward points added to spot rate. May be a negative value.
+192
+OrderQty2
+Qty
+Deprecated in FIX.5.0 OrderQty (38) of the future part of a F/X swap order.
+193
+SettlDate2
+LocalMktDate
+Deprecated in FIX.5.0 SettDate (64) of the future part of a F/X swap order.
+194
+LastSpotRate
+Price
+F/X spot rate.
+195
+LastForwardPoints
+PriceOffset
+F/X forward points added to LastSpotRate (94).  May be a negative value. Expressed in decimal form.  For example, 61.99 points is expressed and sent as 0.006199
+196
+AllocLinkID
+String
+Can be used to link two different Allocation messages (each with unique AllocID (70)) together, i.e. for F/X "Netting" or "Swaps".  Should be unique.
+197
+AllocLinkType
+int
+Identifies the type of Allocation linkage when AllocLinkID (96) is used.
+Valid values:
+	0 - FX Netting
+	1 - FX Swap
+198
+SecondaryOrderID
+String
+Assigned by the party which accepts the order.  Can be used to provide the OrderID (37) used by an exchange or executing system.
+199
+NoIOIQualifiers
+NumInGroup
+Number of repeating groups of IOIQualifiers (04).
+200
+MaturityMonthYear
+month-year
+Can be used with standardized derivatives vs. the MaturityDate (54) field.  Month and Year of the maturity (used for standardized futures and options).
+      Format:
+      YYYYMM      (i.e. 99903)
+      YYYYMMDD (20030323)
+      YYYYMMwN (200303w) for week
+      A specific date or can be appended to the MaturityMonthYear. For instance, if multiple standard products exist that mature in the same Year and Month, but actually mature at a different time, a value can be appended, such as "w" or "w2" to indicate week  as opposed to week 2 expiration. Likewise, the date (0-3) can be appended to indicate a specific expiration (maturity date).
+201
+PutOrCall
+int
+Deprecated in FIX.4.2 Indicates whether an Option is for a put or call
+Valid values:
+	0 - Put
+	1 - Call
+202
+StrikePrice
+Price
+Strike Price for an Option.
+203
+CoveredOrUncovered
+int
+Used for derivative products, such as options
+Valid values:
+	0 - Covered
+	1 - Uncovered
+204
+CustomerOrFirm
+int
+Deprecated in FIX.4.2 Used for options when delivering the order to an execution system or exchange to specify if the order is for a customer or the firm placing the order itself.
+Valid values:
+	0 - Customer
+	1 - Firm
+205
+MaturityDay
+day-of-month
+Deprecated in FIX.4.2 Day of month used in conjunction with MaturityMonthYear to specify the maturity date for SecurityType=FUT or SecurityType=OPT.
+206
+OptAttribute
+char
+Can be used for SecurityType (167) =OPT to identify a particular security.
+
+                Valid values vary by SecurityExchange:
+                *** REPLACED values - See "Replaced Features and Supported Approach" ***
+                For Exchange: MONEP (Paris)
+                L = Long (a.k.a. "American")
+                S = Short (a.k.a. "European")
+
+                For Exchanges: DTB (Frankfurt), HKSE (Hong Kong), and SOFFEX (Zurich)
+                0-9 = single digit "version" number assigned by exchange following capital adjustments (0=current, 1=prior, 2=prior to , etc).
+207
+SecurityExchange
+Exchange
+Market used to help identify a security.
+      Valid values:
+      See "Appendix 6-C"
+208
+NotifyBrokerOfCredit
+Boolean
+Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker).
+Valid values:
+	N - Details shoult not be communicated
+	Y - Details should be communicated
+209
+AllocHandlInst
+int
+Indicates how the receiver (i.e. third party) of Allocation message should handle/process the account details.
+Valid values:
+	1 - Match
+	2 - Forward
+	3 - Forward and Match
+210
+MaxShow
+Qty
+Deprecated in FIX.5.0 Maximum quantity (e.g. number of shares) within an order to be shown  to other customers (i.e. sent via an IOI).
+      (Prior to FIX 4.2 this field was of type int)
+211
+PegOffsetValue
+float
+Amount (signed) added to the peg for a pegged order in the context of the PegOffsetType (836)
+      (Prior to FIX 4.4 this field was of type PriceOffset)

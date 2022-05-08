@@ -24,8 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  130
+ *  IOINaturalFlag
+ *  Boolean
+ *  Indicates that IOI is the result of an existing agency order
+ *  or a facilitation position resulting from an agency order,
+ *  not from principal trading or order solicitation activity.
+ *  Valid values:
+ *      N - Not Natural
+ *      Y - Natural
+ */
 class Tag130BoolIOINaturalFlagTest {
-
     @Test
     void FIX0130Test() {
         FIX40 fixData = FIX40.FIX130_BOOL_IOI_NATURAL_FLAG;

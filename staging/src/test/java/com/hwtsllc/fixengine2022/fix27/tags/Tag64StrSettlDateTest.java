@@ -24,8 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  64
+ *  SettlDate
+ *  LocalMktDate
+ *  Specific date of trade settlement (SettlementDate) in YYYYMMDD format.
+ *
+ *  If present, this field overrides SettlType (63).
+ *  This field is required if the value of  SettlType (63) is 6 (Future) or 8 (Sellers Option).
+ *  This field must be omitted if the value of SettlType (63) is 7 (When and If Issued)
+ *  (expressed in local time at place of settlement)
+ */
 class Tag64StrSettlDateTest {
-
     @Test
     void FIX0064Test() {
         FIX27 fixData = FIX27.FIX64_STR_SETTL_DATE;

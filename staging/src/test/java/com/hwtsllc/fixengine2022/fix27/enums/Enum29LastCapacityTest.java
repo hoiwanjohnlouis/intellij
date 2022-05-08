@@ -22,6 +22,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  29
+ *  LastCapacity
+ *  char
+ *  Broker capacity in order execution
+ *  Valid values:
+ *      1 - Agent
+ *      2 - Cross as agent
+ *      3 - Cross as principal
+ *      4 - Principal
+ */
 class Enum29LastCapacityTest {
     @Test
     void Enum0029Test() {

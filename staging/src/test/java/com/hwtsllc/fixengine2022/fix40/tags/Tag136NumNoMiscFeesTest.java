@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  136
+ *  NoMiscFees
+ *  NumInGroup
+ *  Number of repeating groups of miscellaneous fees
+ */
 class Tag136NumNoMiscFeesTest {
-
     @Test
     void FIX0136Test() {
         FIX40 fixData = FIX40.FIX136_NUM_NO_MISC_FEES;

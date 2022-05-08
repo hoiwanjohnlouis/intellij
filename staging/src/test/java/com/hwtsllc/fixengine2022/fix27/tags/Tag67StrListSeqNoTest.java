@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  67
+ *  ListSeqNo
+ *  int
+ *  Sequence of individual order within list
+ *  (i.e. ListSeqNo of TotNoOrders (68), 2 of 25, 3 of 25,   . . . )
+ */
 class Tag67StrListSeqNoTest {
-
     @Test
     void FIX0067Test() {
         FIX27 fixData = FIX27.FIX67_STR_LIST_SEQ_NO;

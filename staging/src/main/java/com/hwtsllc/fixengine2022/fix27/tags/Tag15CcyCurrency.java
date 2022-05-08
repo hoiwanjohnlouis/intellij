@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  15
+ *  Currency
+ *  Currency
+ *  Identifies currency used for price.
+ *
+ *  Absence of this field is interpreted as the default for the security.
+ *  It is recommended that systems provide the currency value whenever possible.
+ *  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
+ */
 public class Tag15CcyCurrency extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyCurrencyType dataValue;
 

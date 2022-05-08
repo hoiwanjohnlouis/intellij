@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  91
+ *  SecureData
+ *  data
+ *  <p>
+ *  Actual encrypted data stream
+ */
 class Tag91DatSecureDataTest {
-
     @Test
     void FIX0091Test() {
         FIX27 fixData = FIX27.FIX91_DAT_SECURE_DATA;

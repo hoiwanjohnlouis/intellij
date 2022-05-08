@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  16
+ *  EndSeqNo
+ *  SeqNum
+ *  Message sequence number of last message in range to be resent.
+ *
+ *  If request is for a single message BeginSeqNo (7) = EndSeqNo.
+ *  If request is for all messages subsequent to a particular message,
+ *  EndSeqNo = "0" (representing infinity).
+ */
 class Tag16SeqEndSeqNoTest {
-
     @Test
     void FIX0016Test() {
         FIX27 fixData = FIX27.FIX16_SEQ_END_SEQ_NO;

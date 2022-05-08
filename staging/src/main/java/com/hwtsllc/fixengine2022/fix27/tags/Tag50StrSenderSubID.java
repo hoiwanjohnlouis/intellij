@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  50
+ *  SenderSubID
+ *  String
+ *  Assigned value used to identify specific message originator (desk, trader, etc.)
+ */
 public class Tag50StrSenderSubID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

@@ -19,6 +19,17 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  29
+ *  LastCapacity
+ *  char
+ *  Broker capacity in order execution
+ *  Valid values:
+ *      1 - Agent
+ *      2 - Cross as agent
+ *      3 - Cross as principal
+ *      4 - Principal
+ */
 public enum Enum29LastCapacity implements EnumAccessors, LogStringVerbose {
     AGENT("1", "AGENT", "1 - Agent" ),
     CROSS_AS_AGENT("2", "CROSS_AS_AGENT", "2 - Cross as agent" ),

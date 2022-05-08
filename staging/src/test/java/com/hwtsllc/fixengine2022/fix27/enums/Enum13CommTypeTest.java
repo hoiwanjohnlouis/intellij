@@ -22,6 +22,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  13
+ *  CommType
+ *  char
+ *  Commission type
+ *  Valid values:
+ *      1 - Per Unit (implying shares, par, currency, etc.)
+ *      2 - Percent
+ *      3 - Absolute (total monetary amount)
+ *      4 - Percentage waived - cash discount (for CIV buy orders)
+ *      5 - Percentage waived -= enhanced units (for CIV buy orders)
+ *      6 - Points per bond or contract
+ *          (supply ContractMultiplier (231) in the <Instrument> component block
+ *           if the object security is denominated in a size other than the
+ *           industry default - 1000 par for bonds)
+ */
 class Enum13CommTypeTest {
     @Test
     void Enum0013Test() {

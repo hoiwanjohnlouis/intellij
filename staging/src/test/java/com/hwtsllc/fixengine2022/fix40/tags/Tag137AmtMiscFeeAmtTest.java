@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  137
+ *  MiscFeeAmt
+ *  Amt
+ *  Miscellaneous fee value
+ */
 class Tag137AmtMiscFeeAmtTest {
-
     @Test
     void FIX0137Test() {
         FIX40 fixData = FIX40.FIX137_AMT_MISC_FEE_AMT;

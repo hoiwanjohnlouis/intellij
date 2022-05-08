@@ -24,9 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  24
+ *  IOIOthSvc  (no longer used)
+ *  char
+ *  Deprecated in FIX.4.1
+ */
 // @Deprecated
 class Tag24StrIOIOthSvcTest {
-
     @Test
     void FIX0024Test() {
         FIX27 fixData = FIX27.FIX24_STR_IOI_OTH_SVC;

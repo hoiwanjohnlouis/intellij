@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  64
+ *  SettlDate
+ *  LocalMktDate
+ *  Specific date of trade settlement (SettlementDate) in YYYYMMDD format.
+ *
+ *  If present, this field overrides SettlType (63).
+ *  This field is required if the value of  SettlType (63) is 6 (Future) or 8 (Sellers Option).
+ *  This field must be omitted if the value of SettlType (63) is 7 (When and If Issued)
+ *  (expressed in local time at place of settlement)
+ */
 public class Tag64StrSettlDate extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

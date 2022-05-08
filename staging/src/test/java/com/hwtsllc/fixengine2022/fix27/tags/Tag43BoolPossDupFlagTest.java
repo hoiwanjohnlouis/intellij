@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  43
+ *  PossDupFlag
+ *  Boolean
+ *  Indicates possible retransmission of message with this sequence number
+ *  Valid values:
+ *      N - Original transmission
+ *      Y - Possible duplicate
+ */
 class Tag43BoolPossDupFlagTest {
-
     @Test
     void FIX0043Test() {
         FIX27 fixData = FIX27.FIX43_BOOL_POSS_DUP_FLAG;

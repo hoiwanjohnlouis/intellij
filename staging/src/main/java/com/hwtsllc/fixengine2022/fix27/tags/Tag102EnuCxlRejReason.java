@@ -22,8 +22,26 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum102CxlRejReason;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  102
+ *  CxlRejReason
+ *  int
+ *  Code to identify reason for cancel rejection.
+ *  Valid values:
+ *      0 - Too late to cancel
+ *      1 - Unknown order
+ *      2 - Broker - Exchange Option
+ *      3 - Order already in Pending Cancel or Pending Replace status
+ *      4 - Unable to process Order Mass Cancel Request
+ *      5 - OrigOrdModTime (586) did not match last TransactTime (60) of order
+ *      6 - Duplicate ClOrdID (11) received
+ *      18 - Invalid price increment
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public class Tag102EnuCxlRejReason extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private Enum102CxlRejReason dataValue;
+    private final Enum102CxlRejReason dataValue;
 
     public final static Enum102CxlRejReason TESTA_ENU_CXL_REJ_REASON = Enum102CxlRejReason.TOO_LATE_TO_CANCEL;
     public final static Enum102CxlRejReason TESTB_ENU_CXL_REJ_REASON = Enum102CxlRejReason.OTHER;

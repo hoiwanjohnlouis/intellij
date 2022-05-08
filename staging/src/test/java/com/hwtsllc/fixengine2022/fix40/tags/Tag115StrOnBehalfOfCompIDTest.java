@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  115
+ *  OnBehalfOfCompID
+ *  String
+ *  Assigned value used to identify firm originating message
+ *  if the message was delivered by a third party
+ *  i.e. the third party firm identifier would be delivered
+ *  in the SenderCompID field and the firm originating the message in this field.
+ */
 class Tag115StrOnBehalfOfCompIDTest {
-
     @Test
     void FIX0115Test() {
         FIX40 fixData = FIX40.FIX115_STR_ON_BEHALF_OF_COMP_ID;

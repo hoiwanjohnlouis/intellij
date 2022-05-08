@@ -24,9 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  125
+ *  CxlType
+ *  char
+ *  Deprecated in FIX.4.2
+ */
 // @Deprecated
 class Tag125StrCxlTypeTest {
-
     @Test
     void FIX0125Test() {
         FIX40 fixData = FIX40.FIX125_STR_CXL_TYPE;

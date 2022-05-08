@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  131
+ *  QuoteReqID
+ *  String
+ *  Unique identifier for quote request
+ */
 class Tag131StrQuoteReqIDTest {
-
     @Test
     void FIX0131Test() {
         FIX40 fixData = FIX40.FIX131_STR_QUOTE_REQ_ID;

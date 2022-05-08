@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  36
+ *  NewSeqNo
+ *  SeqNum
+ *  New sequence number
+ */
 public class Tag36SeqNewSeqNo extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MySeqNumType dataValue;
 

@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  55
+ *  Symbol
+ *  String
+ *  Ticker symbol.
+ *  Common, "human understood" representation of the security.
+ *  SecurityID (48) value can be specified if no symbol exists.
+ *  (e.g. non-exchange traded Collective Investment Vehicles)
+ *  Use "[N/A]" for products which do not have a symbol.
+ */
 class Tag55StrSymbolTest {
-
     @Test
     void FIX0055Test() {
         FIX27 fixData = FIX27.FIX55_STR_SYMBOL;

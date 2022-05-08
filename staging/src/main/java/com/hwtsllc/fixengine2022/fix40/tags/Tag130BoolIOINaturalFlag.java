@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  130
+ *  IOINaturalFlag
+ *  Boolean
+ *  Indicates that IOI is the result of an existing agency order
+ *  or a facilitation position resulting from an agency order,
+ *  not from principal trading or order solicitation activity.
+ *  Valid values:
+ *      N - Not Natural
+ *      Y - Natural
+ */
 public class Tag130BoolIOINaturalFlag extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

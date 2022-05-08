@@ -22,6 +22,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  61
+ *  Urgency
+ *  char
+ *  Urgency flag
+ *  Valid values:
+ *      0 - Normal
+ *      1 - Flash
+ *      2 - Background
+ */
 class Enum61UrgencyTest {
     @Test
     void Enum0061Test() {

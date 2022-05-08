@@ -24,8 +24,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  11
+ *  ClOrdID
+ *  String
+ *  Unique identifier for Order as assigned by the buy-side
+ *  (institution, broker, intermediary  etc.)
+ *  (identified by SenderCompID (49) or OnBehalfOfCompID (5) as appropriate).
+ *
+ *  Uniqueness must be guaranteed within a single trading day.
+ *  Firms, particularly those  which electronically submit multi-day orders,
+ *  trade globally or throughout market close periods, should ensure uniqueness
+ *  across days, for example by embedding a date within the ClOrdID field.
+ */
 class Tag11StrClOrdIDTest {
-
     @Test
     void FIX0011Test() {
         FIX27 fixData = FIX27.FIX11_STR_CL_ORD_ID;

@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  60
+ *  TransactTime
+ *  UTCTimestamp
+ *  Time of execution/order creation
+ *  (expressed in UTC (Universal Time Coordinated), also known as "GMT")
+ */
 class Tag60UtcTransactTimeTest {
-
     @Test
     void FIX0060Test() {
         FIX27 fixData = FIX27.FIX60_UTC_TRANSACT_TIME;

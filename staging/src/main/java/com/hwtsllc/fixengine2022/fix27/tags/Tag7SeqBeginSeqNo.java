@@ -22,8 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  7
+ *  BeginSeqNo
+ *  SeqNum
+ *  Message sequence number of first message in range to be resent
+ */
 public class Tag7SeqBeginSeqNo extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private MySeqNumType dataValue;
+    private final MySeqNumType dataValue;
 
     public final static int TESTA_SEQ_BEGIN_SEQ_NO = 128;
     public final static int TESTB_SEQ_BEGIN_SEQ_NO = 256;

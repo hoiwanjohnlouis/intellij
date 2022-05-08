@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  7
+ *  BeginSeqNo
+ *  SeqNum
+ *  Message sequence number of first message in range to be resent
+ */
 class Tag7SeqBeginSeqNoTest {
-
     @Test
     void FIX0007Test() {
         FIX27 fixData = FIX27.FIX7_SEQ_BEGIN_SEQ_NO;

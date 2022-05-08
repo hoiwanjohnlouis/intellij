@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum28IOITransType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  28
+ *  IOITransType
+ *  char
+ *  Identifies IOI message transaction type
+ *  Valid values:
+ *      N - New
+ *      C - Cancel
+ *      R - Replace
+ */
 public class Tag28EnuIOITransType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum28IOITransType dataValue;
 

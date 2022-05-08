@@ -22,6 +22,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  8
+ *  BeginString
+ *  String
+ *  Identifies beginning of new message and protocol version.
+ *  ALWAYS FIRST FIELD IN MESSAGE.
+ *  ALWAYS UNENCRYPTED.
+ *  Valid values:
+ *
+ *      FIX.2.7
+ *      FIX.3.0
+ *      FIX.4.0
+ *      FIX.4.1
+ *      FIX.4.2
+ *
+ *      FIX.4.3
+ *      FIX.4.4
+ *      FIXT.1.1
+ */
 class Enum8BeginStringTest {
     @Test
     void Enum0008Test() {

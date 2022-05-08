@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  97
+ *  PossResend
+ *  Boolean
+ *  Indicates that message may contain information
+ *  that has been sent under another sequence number.
+ *  Valid values:
+ *      N - Original Transmission
+ *      Y - Possible Resend
+ */
 class Tag97BoolPossResendTest {
-
     @Test
     void FIX0097Test() {
         FIX27 fixData = FIX27.FIX97_BOOL_POSS_RESEND;

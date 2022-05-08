@@ -49,9 +49,20 @@ class Tag788EnuTerminationTypeTest {
     void Tag0788Test() {
         Tag788EnuTerminationType tagData;
 
-        tagData = Enum788TerminationType.OVERNIGHT;
-        tagData = Enum788TerminationType.TERM;
-        tagData = Enum788TerminationType.FLEXIBLE;
-        tagData = Enum788TerminationType.OPEN;
+        tagData = new Tag788EnuTerminationType( Enum788TerminationType.OVERNIGHT );
+        assertEquals( Enum788TerminationType.OVERNIGHT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag788EnuTerminationType( Enum788TerminationType.TERM );
+        assertEquals( Enum788TerminationType.TERM.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag788EnuTerminationType( Enum788TerminationType.FLEXIBLE );
+        assertEquals( Enum788TerminationType.FLEXIBLE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag788EnuTerminationType( Enum788TerminationType.OPEN );
+        assertEquals( Enum788TerminationType.OPEN.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

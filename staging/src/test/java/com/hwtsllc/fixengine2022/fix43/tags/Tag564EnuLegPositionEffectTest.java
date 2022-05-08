@@ -24,6 +24,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  77 (Same for TAGS 77, 564,)
+ *  PositionEffect
+ *  char
+ *  Indicates whether the resulting position after a trade
+ *  should be an opening position or closing position.
+ *  Used for omnibus accounting - where accounts are held
+ *  on a gross basis instead of being netted together.
+ *
+ *  564
+ *  LegPositionEffect
+ *  char
+ *  PositionEffect for leg of a multileg
+ *          See PositionEffect (77) field for description
+ *
+ *  Valid values:
+ *      C - Close
+ *      F - FIFO
+ *      O - Open
+ *      R - Rolled
+ */
 class Tag564EnuLegPositionEffectTest {
     @Test
     void FIX0564Test() {

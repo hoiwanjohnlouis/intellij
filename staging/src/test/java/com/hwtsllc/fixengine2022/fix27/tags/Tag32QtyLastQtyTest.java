@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  32
+ *  LastQty
+ *  Qty
+ *  Quantity (e.g. shares) bought/sold on this (last) fill.
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag32QtyLastQtyTest {
-
     @Test
     void FIX0032Test() {
         FIX27 fixData = FIX27.FIX32_QTY_LAST_QTY;

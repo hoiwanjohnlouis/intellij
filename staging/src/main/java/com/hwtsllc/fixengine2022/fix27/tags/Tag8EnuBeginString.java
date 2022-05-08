@@ -22,8 +22,27 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum8BeginString;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  8
+ *  BeginString
+ *  String
+ *  Identifies beginning of new message and protocol version.
+ *  ALWAYS FIRST FIELD IN MESSAGE.
+ *  ALWAYS UNENCRYPTED.
+ *  Valid values:
+ *
+ *      FIX.2.7
+ *      FIX.3.0
+ *      FIX.4.0
+ *      FIX.4.1
+ *      FIX.4.2
+ *
+ *      FIX.4.3
+ *      FIX.4.4
+ *      FIXT.1.1
+ */
 public class Tag8EnuBeginString extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private Enum8BeginString dataValue;
+    private final Enum8BeginString dataValue;
 
     public final static Enum8BeginString TESTA_ENU_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_2_7;
     public final static Enum8BeginString TESTB_ENU_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_4_0;

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  85
+ *  NoDlvyInst
+ *  NumInGroup
+ *  <p>
+ *  Number of delivery instruction fields in repeating group.
+ *  <p>
+ *  Note this field was removed in FIX 4.1 and reinstated in FIX 4.4.
+ */
 // @Deprecated
 public class Tag85NumNoDlvyInst extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;

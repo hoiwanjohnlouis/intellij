@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  52
+ *  SendingTime
+ *  UTCTimestamp
+ *  Time of message transmission
+ *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
+ */
 public class Tag52UtcSendingTime extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 

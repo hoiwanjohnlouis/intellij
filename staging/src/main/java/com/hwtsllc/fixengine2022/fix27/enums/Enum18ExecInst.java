@@ -20,7 +20,79 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- * Used in FIX18_EXEC_INST
+ *  18
+ *  ExecInst
+ *  MultipleCharValue
+ *  Instructions for order handling on exchange trading floor.
+ *
+ *  If more than one instruction is applicable to an order,
+ *  this field can contain multiple instructions separated by space.
+ *
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  *** See Replaced Features and Supported Approach ***
+ *
+ *  (see Volume : "Glossary" for value definitions)
+ *
+ *  Valid values:
+ *      0 - Stay on offer side
+ *      1 - Not held
+ *      2 - Work
+ *      3 - Go along
+ *      4 - Over the day
+ *
+ *      5 - Held
+ *      6 - Participant don't initiate
+ *      7 - Strict scale
+ *      8 - Try to scale
+ *      9 - Stay on bid side
+ *
+ *      A - No cross (cross is forbidden)
+ *      B - OK to cross
+ *      C - Call first
+ *      D - Percent of volume
+ *          (indicates that the sender does not want to be all of
+ *           the volume on the floor vs. a specific percentage)
+ *      E - Do not increase - DNI
+ *
+ *      F - Do not reduce - DNR
+ *      G - All or none - AON
+ *      H - Reinstate on system failue (mutually exclusive with Q)
+ *      I - Institutions only
+ *      J - Reinstate on Trading Halt (mutually exclusive with K)
+ *
+ *      K - Cancel on Trading Halt (mutually exclusive with J)
+ *      L - Last peg (last sale)
+ *      M - Mid-price peg (midprice of inside quote)
+ *      N - Non-negotiable
+ *      O - Opening peg
+ *
+ *      P - Market peg
+ *      Q - Cancel on system failure (mutually exclusive with H)
+ *      R - Primary peg (primary market - buy at bid/sell at offer)
+ *      S - Suspend
+ *      T - Fixed Peg to Local best bid or offer at time of order
+ *
+ *      U - Customer Display Instruction (Rule 11Ac1-1/4)
+ *      V - Netting (for Forex)
+ *      W - Peg to VWAP
+ *      X - Trade Along
+ *      Y - Try To Stop
+ *
+ *      Z - Cancel if not best
+ *
+ *      a - Trailing Stop Peg
+ *      b - Strict Limit (No price improvement)
+ *      c - Ignore Price Validity Checks
+ *      d - Peg to Limit Price
+ *      e - Work to Target Strategy
+ *
+ *      f - Intermarket Sweep
+ *      g - External Routing Allowed
+ *      h - External Routing Not Allowed
+ *      i - Imbalance Only
+ *      j - Single execution requested for block trade
+ *
+ *      k - Best Execution
  */
 public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
     STAY_ON_OFFER_SIDE("0", "STAY_ON_OFFER_SIDE", "0 - Stay on offer side" ),

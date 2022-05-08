@@ -14,27 +14,44 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
+import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum65SymbolSfx;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag445LenListStatusEncodedTextLen extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyLengthType dataValue;
+/**
+ *  65
+ *  SymbolSfx
+ *  String
+ *  Additional information about the security
+ *  (e.g. preferred, warrants, etc.).
+ *
+ *      Note also see SecurityType (167).
+ *
+ *      As defined in the NYSE Stock and bond Symbol Directory
+ *      and in the AMEX Fitch Directory.
+ *
+ *  Valid values:
+ *  For Fixed Income
+ *      CD - EUCP with lump-sum interest rather than discount price
+ *      WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
+ */
+public class Tag65EnuSymbolSfx extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final Enum65SymbolSfx dataValue;
 
-    public final static int TESTA_LEN_LIST_STATUS_ENCODED_TEXT_LEN = 445;
-    public final static int TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN = 544;
+    public final static Enum65SymbolSfx TESTA_STR_SYMBOL_SFX = Enum65SymbolSfx.EUCP;
+    public final static Enum65SymbolSfx TESTB_STR_SYMBOL_SFX = Enum65SymbolSfx.WHEN_ISSUED;
 
-    public Tag445LenListStatusEncodedTextLen(MyLengthType dataValue) {
-        setFixType(FIX42.FIX445_LEN_LIST_STATUS_ENCODED_TEXT_LEN);
+    public Tag65EnuSymbolSfx(Enum65SymbolSfx dataValue) {
+        setFixType(FIX27.FIX65_ENU_SYMBOL_SFX);
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
-        return this.dataValue.getDataValue();
+    public String getDataValue() {
+        return this.dataValue.getID();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -68,14 +85,14 @@ public class Tag445LenListStatusEncodedTextLen extends FIX42Abstract implements 
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag445LenListStatusEncodedTextLen tagData;
+        Tag65EnuSymbolSfx tagData;
 
-        tagData = new Tag445LenListStatusEncodedTextLen(new MyLengthType(TESTA_LEN_LIST_STATUS_ENCODED_TEXT_LEN) );
+        tagData= new Tag65EnuSymbolSfx( TESTA_STR_SYMBOL_SFX );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag445LenListStatusEncodedTextLen(new MyLengthType(TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN) );
+        tagData = new Tag65EnuSymbolSfx( TESTB_STR_SYMBOL_SFX );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

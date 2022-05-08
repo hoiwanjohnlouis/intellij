@@ -14,22 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix27.tags;
+package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag63StrSettlmntTyp extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyStringType dataValue;
+public class Tag446DatEncodedListStatusText extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyDataType dataValue;
 
-    public final static String TESTA_STR_SETTLMNT_TYP = "BilboBaggins-63SettlmntTyp"; // fake data
-    public final static String TESTB_STR_SETTLMNT_TYP = "Gandalf-63SettlmntTyp";
+    public final static String TESTA_DAT_LIST_STATUS_ENCODED_TEXT = "BilboBaggins-Tag446DatEncodedListStatusText";
+    public final static String TESTB_DAT_LIST_STATUS_ENCODED_TEXT = "Gandalf-Tag446DatEncodedListStatusText";
 
-    public Tag63StrSettlmntTyp(MyStringType dataValue) {
-        setFixType(FIX27.FIX63_STR_SETTLMNT_TYP);
+    public Tag446DatEncodedListStatusText(MyDataType dataValue) {
+        setFixType(FIX42.FIX446_DAT_LIST_STATUS_ENCODED_TEXT);
         this.dataValue = dataValue;
     }
 
@@ -68,16 +68,21 @@ public class Tag63StrSettlmntTyp extends FIX27Abstract implements FixTagValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag63StrSettlmntTyp tagData;
+        Tag446DatEncodedListStatusText tagData;
 
-        tagData = new Tag63StrSettlmntTyp(new MyStringType(TESTA_STR_SETTLMNT_TYP) );
-        System.out.println(tagData);
+        tagData= new Tag446DatEncodedListStatusText(new MyDataType(TESTA_DAT_LIST_STATUS_ENCODED_TEXT) );
+        System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag63StrSettlmntTyp(new MyStringType(TESTB_STR_SETTLMNT_TYP) );
-        System.out.println(tagData);
+        tagData = new Tag446DatEncodedListStatusText(new MyDataType(TESTB_DAT_LIST_STATUS_ENCODED_TEXT) );
+        System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
     }
 }

@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  140
+ *  PrevClosePx
+ *  Price
+ *  Previous closing price of security.
+ */
 class Tag140PrcPrevClosePxTest {
-
     @Test
     void FIX0140Test() {
         FIX40 fixData = FIX40.FIX140_PRC_PREV_CLOSE_PX;

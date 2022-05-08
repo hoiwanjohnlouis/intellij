@@ -22,6 +22,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  59
+ *  TimeInForce
+ *  char
+ *  Specifies how long the order remains in effect.
+ *
+ *  Absence of this field is interpreted as DAY.
+ *
+ *  NOTE not applicable to CIV Orders.
+ *  (see Volume : "Glossary" for value definitions)
+ *
+ *  Valid values:
+ *      0 - Day (or session)
+ *      1 - Good Till Cancel (GTC)
+ *      2 - At the Opening (OPG)
+ *      3 - Immediate Or Cancel (IOC)
+ *      4 - Fill Or Kill (FOK)
+ *      5 - Good Till Crossing (GTX)
+ *      6 - Good Till Date (GTD)
+ *      7 - At the Close
+ */
 class Enum59TimeInForceTest {
     @Test
     void Enum0059Test() {

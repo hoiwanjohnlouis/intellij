@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  72
+ *  RefAllocID
+ *  String
+ *  <p>
+ *  Reference identifier to be used with AllocTransType (71) = Replace or Cancel.
+ *  <p>
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 class Tag72StrRefAllocIDTest {
-
     @Test
     void FIX0072Test() {
         FIX27 fixData = FIX27.FIX72_STR_REF_ALLOC_ID;

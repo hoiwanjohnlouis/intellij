@@ -16,10 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag258BoolTradedFlatSwitch;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -42,10 +41,10 @@ class Tag570BoolPreviouslyReportedTest {
 
         tagData = new Tag570BoolPreviouslyReported(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag570BoolPreviouslyReported(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( FIX41.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

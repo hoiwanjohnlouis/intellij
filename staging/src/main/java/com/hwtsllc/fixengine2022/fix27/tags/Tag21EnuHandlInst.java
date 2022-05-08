@@ -22,8 +22,18 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum21HandlInst;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  21
+ *  HandlInst
+ *  char
+ *  Instructions for order handling on Broker trading floor
+ *  Valid values:
+ *      1 - Automated execution order, private, no Broker intervention
+ *      2 - Automated execution order, public, Broker intervention OK
+ *      3 - Manual order, best execution
+ */
 public class Tag21EnuHandlInst extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private Enum21HandlInst dataValue;
+    private final Enum21HandlInst dataValue;
 
     public final static Enum21HandlInst TESTA_ENU_HANDL_INST = Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER; // fake data
     public final static Enum21HandlInst TESTB_ENU_HANDL_INST = Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY;

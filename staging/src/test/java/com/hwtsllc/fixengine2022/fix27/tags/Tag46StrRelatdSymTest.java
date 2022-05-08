@@ -24,9 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  46
+ *  RelatdSym  (no longer used)
+ *  String
+ *  Deprecated in FIX.4.1
+ */
 // @Deprecated
 class Tag46StrRelatdSymTest {
-
     @Test
     void FIX0046Test() {
         FIX27 fixData = FIX27.FIX46_STR_RELATD_SYM;

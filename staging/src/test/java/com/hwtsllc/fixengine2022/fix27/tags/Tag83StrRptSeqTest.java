@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  83
+ *  RptSeq
+ *  int
+ *  <p>
+ *  Sequence number of message within report series.
+ *  <p>
+ *  Used to carry reporting sequence number of the fill as represented on the Trade Report Side.
+ */
 class Tag83StrRptSeqTest {
-
     @Test
     void FIX0083Test() {
         FIX27 fixData = FIX27.FIX83_STR_RPT_SEQ;

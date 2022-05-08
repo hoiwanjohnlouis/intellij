@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  23
+ *  IOIID
+ *  String
+ *  Unique identifier of IOI message.
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 class Tag23StrIOIIDTest {
-
     @Test
     void FIX0023Test() {
         FIX27 fixData = FIX27.FIX23_STR_IOI_ID;

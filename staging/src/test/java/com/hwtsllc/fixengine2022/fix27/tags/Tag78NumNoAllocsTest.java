@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  78
+ *  NoAllocs
+ *  NumInGroup
+ *  <p>
+ *  Number of  repeating AllocAccount (79) or AllocPrice (366) entries.
+ */
 class Tag78NumNoAllocsTest {
-
     @Test
     void FIX0078Test() {
         FIX27 fixData = FIX27.FIX78_NUM_NO_ALLOCS;

@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  73
+ *  NoOrders
+ *  NumInGroup
+ *  <p>
+ *  Indicates number of orders to be combined for average pricing and allocation.
+ */
 class Tag73NumNoOrdersTest {
-
     @Test
     void FIX0073Test() {
         FIX27 fixData = FIX27.FIX73_NUM_NO_ORDERS;

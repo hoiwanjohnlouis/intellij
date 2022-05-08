@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  31
+ *  LastPx
+ *  Price
+ *  Price of this (last) fill.
+ */
 public class Tag31PrcLastPx extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 

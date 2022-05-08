@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  37
+ *  OrderID
+ *  String
+ *  Unique identifier for Order as assigned by sell-side (broker, exchange, ECN).
+ *  Uniqueness must be guaranteed within a single trading day.
+ *  Firms which accept multi-day orders should consider
+ *  embedding a date within the OrderID field to assure uniqueness across days.
+ */
 public class Tag37StrOrderID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

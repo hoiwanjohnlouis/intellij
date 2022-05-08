@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  12
+ *  Commission
+ *  Amt
+ *  Commission.
+ *  Note if CommType (13) is percentage, Commission of 5% should be represented as .05.
+ */
 public class Tag12AmtCommission extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 

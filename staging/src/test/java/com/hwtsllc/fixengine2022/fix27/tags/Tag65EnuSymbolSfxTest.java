@@ -17,18 +17,34 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum65SymbolSfx;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag65StrSymbolSfxTest {
-
+/**
+ *  65
+ *  SymbolSfx
+ *  String
+ *  Additional information about the security
+ *  (e.g. preferred, warrants, etc.).
+ *
+ *      Note also see SecurityType (167).
+ *
+ *      As defined in the NYSE Stock and bond Symbol Directory
+ *      and in the AMEX Fitch Directory.
+ *
+ *  Valid values:
+ *  For Fixed Income
+ *      CD - EUCP with lump-sum interest rather than discount price
+ *      WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
+ */
+class Tag65EnuSymbolSfxTest {
     @Test
     void FIX0065Test() {
-        FIX27 fixData = FIX27.FIX65_STR_SYMBOL_SFX;
+        FIX27 fixData = FIX27.FIX65_ENU_SYMBOL_SFX;
         assertEquals( "SYMBOL_SFX", fixData.getName());
         assertEquals( "65", fixData.getID());
         assertEquals( "SymbolSfx", fixData.getDescription());
@@ -39,10 +55,14 @@ class Tag65StrSymbolSfxTest {
     }
     @Test
     void Tag0065Test() {
-        Tag65StrSymbolSfx tagData;
+        Tag65EnuSymbolSfx tagData;
 
-        tagData = new Tag65StrSymbolSfx(new MyStringType(Tag65StrSymbolSfx.TESTA_STR_SYMBOL_SFX) );
-        assertEquals( Tag65StrSymbolSfx.TESTA_STR_SYMBOL_SFX, tagData.getDataValue());
+        tagData = new Tag65EnuSymbolSfx(Enum65SymbolSfx.EUCP);
+        assertEquals( Enum65SymbolSfx.EUCP.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag65EnuSymbolSfx(Enum65SymbolSfx.WHEN_ISSUED);
+        assertEquals( Enum65SymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

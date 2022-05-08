@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  74
+ *  AvgPxPrecision
+ *  int
+ *  <p>
+ *  Indicates number of decimal places to be used for average pricing.
+ *  <p>
+ *  Absence of this field indicates that default precision arranged
+ *  by the broker or institution is to be used.
+ */
 class Tag74StrAvgPxPrecisionTest {
-
     @Test
     void FIX0074Test() {
         FIX27 fixData = FIX27.FIX74_STR_AVG_PX_PRECISION;

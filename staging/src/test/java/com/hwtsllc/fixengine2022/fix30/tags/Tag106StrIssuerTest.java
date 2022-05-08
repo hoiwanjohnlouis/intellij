@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  106
+ *  Issuer
+ *  String
+ *  Name of security issuer (e.g. International Business Machines, GNMA).
+ *              see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values"
+ */
 class Tag106StrIssuerTest {
 
     @Test

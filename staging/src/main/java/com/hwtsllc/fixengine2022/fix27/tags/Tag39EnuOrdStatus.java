@@ -22,6 +22,35 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum39OrdStatus;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  39
+ *  OrdStatus
+ *  char
+ *  Identifies current status of order.
+ *
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  *** See Replaced Features and Supported Approach ***
+ *      (see Volume : "Glossary" for value definitions)
+ *
+ *  Valid values:
+ *      0 - New
+ *      1 - Partially filled
+ *      2 - Filled
+ *      3 - Done for day
+ *      4 - Canceled
+ *
+ *      5 - Replaced (No longer used)
+ *      6 - Pending Cancel (i.e. result of Order Cancel Request)
+ *      7 - Stopped
+ *      8 - Rejected
+ *      9 - Suspended
+ *
+ *      A - Pending New
+ *      B - Calculated
+ *      C - Expired
+ *      D - Accepted for Bidding
+ *      E - Pending Replace (i.e. result of Order Cancel/Replace Request)
+ */
 public class Tag39EnuOrdStatus extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum39OrdStatus dataValue;
 

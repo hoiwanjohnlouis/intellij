@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  21
+ *  HandlInst
+ *  char
+ *  Instructions for order handling on Broker trading floor
+ *  Valid values:
+ *      1 - Automated execution order, private, no Broker intervention
+ *      2 - Automated execution order, public, Broker intervention OK
+ *      3 - Manual order, best execution
+ */
 public enum Enum21HandlInst implements EnumAccessors, LogStringVerbose {
     AUTOMATIC_EXECUTION_NO_BROKER("1", "AUTOMATIC_EXECUTION_NO_BROKER",
             "1 - Automated execution order, private, no Broker intervention" ),

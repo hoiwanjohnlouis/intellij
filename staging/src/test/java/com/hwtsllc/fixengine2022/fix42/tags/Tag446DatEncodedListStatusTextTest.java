@@ -24,7 +24,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag446DatListStatusEncodedTextTest {
+class Tag446DatEncodedListStatusTextTest {
     @Test
     void FIX0446Test() {
         FIX42 fixData = FIX42.FIX446_DAT_LIST_STATUS_ENCODED_TEXT;
@@ -37,16 +37,16 @@ class Tag446DatListStatusEncodedTextTest {
     }
     @Test
     void Tag0446Test() {
-        Tag446DatListStatusEncodedText tagData;
+        Tag446DatEncodedListStatusText tagData;
 
-        tagData = new Tag446DatListStatusEncodedText(
-                new MyDataType(Tag446DatListStatusEncodedText.TESTA_DAT_LIST_STATUS_ENCODED_TEXT));
-        assertEquals( Tag446DatListStatusEncodedText.TESTA_DAT_LIST_STATUS_ENCODED_TEXT, tagData.getDataValue() );
+        tagData = new Tag446DatEncodedListStatusText(
+                new MyDataType(Tag446DatEncodedListStatusText.TESTA_DAT_LIST_STATUS_ENCODED_TEXT));
+        assertEquals( Tag446DatEncodedListStatusText.TESTA_DAT_LIST_STATUS_ENCODED_TEXT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag446DatListStatusEncodedText(
-                new MyDataType(Tag446DatListStatusEncodedText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT));
-        assertEquals( Tag446DatListStatusEncodedText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT, tagData.getDataValue() );
+        tagData = new Tag446DatEncodedListStatusText(
+                new MyDataType(Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT));
+        assertEquals( Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

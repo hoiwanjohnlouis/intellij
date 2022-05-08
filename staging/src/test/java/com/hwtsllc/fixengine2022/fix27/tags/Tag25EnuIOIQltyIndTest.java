@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  25
+ *  IOIQltyInd
+ *  char
+ *  Relative quality of indication
+ *  Valid values:
+ *      H - High
+ *      L - Low
+ *      M - Medium
+ */
 class Tag25EnuIOIQltyIndTest {
-
     @Test
     void FIX0025Test() {
         FIX27 fixData = FIX27.FIX25_ENU_IOI_QLTY_IND;

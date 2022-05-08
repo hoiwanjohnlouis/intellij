@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1
+ *  Account
+ *  String
+ *  Account mnemonic as agreed between buy and sell sides,
+ *  e.g. broker and institution or investor or intermediary and fund manager.
+ */
 public class Tag1StrAccount extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

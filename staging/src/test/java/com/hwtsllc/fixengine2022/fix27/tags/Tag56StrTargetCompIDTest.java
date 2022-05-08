@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  56
+ *  TargetCompID
+ *  String
+ *  Assigned value used to identify receiving firm.
+ */
 class Tag56StrTargetCompIDTest {
-
     @Test
     void FIX0056Test() {
         FIX27 fixData = FIX27.FIX56_STR_TARGET_COMP_ID;

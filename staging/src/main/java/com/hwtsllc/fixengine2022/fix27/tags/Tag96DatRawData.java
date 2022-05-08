@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  96
+ *  RawData
+ *  data
+ *  <p>
+ *  Unformatted raw data, can include bitmaps, word processor documents, etc.
+ */
 public class Tag96DatRawData extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyDataType dataValue;
 

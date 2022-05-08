@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  120
+ *  SettlCurrency
+ *  Currency
+ *  Currency code of settlement denomination.
+ */
 class Tag120CcySettlCurrencyTest {
-
     @Test
     void FIX0120Test() {
         FIX40 fixData = FIX40.FIX120_CCY_SETTL_CURRENCY;

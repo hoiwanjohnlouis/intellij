@@ -1,0 +1,65 @@
+104
+IOIQualifier
+char
+Code to qualify IOI use.  (see Volume : "Glossary" for value definitions)
+Valid values:
+	A - All or None (AON)
+	B - Market On Close (MOC) (held to close)
+	C - At the close (around/not held to close)
+	D - VWAP (Volume Weighted Average Price)
+	I - In touch with
+	L - Limit
+	M - More Behind
+	O - At the Open
+	P - Taking a Position
+	Q - At the Market (previously called Current Quote)
+	R - Ready to Trade
+	S - Portfolio Shown
+	T - Through the Day
+	V - Versus
+	W - Indidcation -  Working Away
+	X - Crossing Opportunity
+	Y - At the Midpoint
+	Z - Pre-open
+105
+WaveNo
+String
+Deprecated in FIX.4.2 
+106
+Issuer
+String
+Name of security issuer (e.g. International Business Machines, GNMA).
+      see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values"
+107
+SecurityDesc
+String
+Security description.
+108
+HeartBtInt
+int
+Heartbeat interval (seconds)
+109
+ClientID
+String
+Deprecated in FIX.4.2 Firm identifier used in third party-transactions (should not be a substitute for OnBehalfOfCompID/DeliverToCompID).
+110
+MinQty
+Qty
+Minimum quantity of an order to be executed.
+
+      (Prior to FIX 4.2 this field was of type int)
+111
+MaxFloor
+Qty
+Deprecated in FIX.5.0 The quantity to be displayed . Required for reserve orders. On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
+112
+TestReqID
+String
+Identifier included in Test Request message to be returned in resulting Heartbeat
+113
+ReportToExch
+Boolean
+Identifies party of trade responsible for exchange reporting.
+Valid values:
+	N - Indicates the party sending message will report trade
+	Y - Indicates the party receiving message must report trade

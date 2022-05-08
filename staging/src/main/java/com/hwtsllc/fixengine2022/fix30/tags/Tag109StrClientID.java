@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  109
+ *  ClientID
+ *  String
+ *  Deprecated in FIX.4.2
+ *  Firm identifier used in third party-transactions
+ *  (should not be a substitute for OnBehalfOfCompID/DeliverToCompID).
+ */
 // @Deprecated
 public class Tag109StrClientID extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;

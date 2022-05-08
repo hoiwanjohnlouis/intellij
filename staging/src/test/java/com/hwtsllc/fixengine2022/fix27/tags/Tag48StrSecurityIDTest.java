@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  48
+ *  SecurityID
+ *  String
+ *  Security identifier value of SecurityIDSource (22) type
+ *  (e.g. CUSIP, SEDOL, ISIN, etc).  Requires SecurityIDSource.
+ */
 class Tag48StrSecurityIDTest {
-
     @Test
     void FIX0048Test() {
         FIX27 fixData = FIX27.FIX48_STR_SECURITY_ID;

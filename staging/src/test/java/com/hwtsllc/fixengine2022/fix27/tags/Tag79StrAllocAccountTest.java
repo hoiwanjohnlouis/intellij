@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  79
+ *  AllocAccount
+ *  String
+ *  <p>
+ *  Sub-account mnemonic
+ */
 class Tag79StrAllocAccountTest {
-
     @Test
     void FIX0079Test() {
         FIX27 fixData = FIX27.FIX79_STR_ALLOC_ACCOUNT;

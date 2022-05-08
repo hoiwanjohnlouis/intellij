@@ -22,6 +22,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  71
+ *  AllocTransType
+ *  char
+ *  Identifies allocation transaction type
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  *** See Replaced Features and Supported Approach ***
+ *  Valid values:
+ *      0 - New
+ *      1 - Replace
+ *      2 - Cancel
+ *      3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
+ *      4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
+ *      5 - Calculated without Preliminary
+ *          (sent unsolicited by broker, includes MiscFees and NetMoney)
+ *          (Removed-Replaced)
+ *      6 - Reversal
+ */
 class Enum71AllocTransTypeTest {
     @Test
     void Enum0071Test() {

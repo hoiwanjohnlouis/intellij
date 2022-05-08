@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  100
+ *  ExDestination
+ *  Exchange
+ *  <p>
+ *  Execution destination as defined by institution when order is entered.
+ *  <p>
+ *  Valid values:
+ *      See "Appendix 6-C"
+ */
 class Tag100StrExDestinationTest {
-
     @Test
     void FIX0100Test() {
         FIX27 fixData = FIX27.FIX100_STR_EX_DESTINATION;

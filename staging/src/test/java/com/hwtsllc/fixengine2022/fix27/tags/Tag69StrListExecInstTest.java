@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  69
+ *  ListExecInst
+ *  String
+ *  Free format text message containing list handling and execution instructions.
+ */
 class Tag69StrListExecInstTest {
-
     @Test
     void FIX0069Test() {
         FIX27 fixData = FIX27.FIX69_STR_LIST_EXEC_INST;

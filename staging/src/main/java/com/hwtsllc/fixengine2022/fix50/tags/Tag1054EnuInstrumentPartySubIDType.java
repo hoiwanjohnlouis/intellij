@@ -63,7 +63,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *  or any value conforming to the data type Reserved4000Plus
  */
-public class Tag1054InstrumentPartySubIDType extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1054EnuInstrumentPartySubIDType extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyEnumPartySubIDType dataValue;
 
     public final static MyEnumPartySubIDType TESTA_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE
@@ -71,7 +71,7 @@ public class Tag1054InstrumentPartySubIDType extends FIX50Abstract implements Fi
     public final static MyEnumPartySubIDType TESTB_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE
             = MyEnumPartySubIDType.ELIGIBLE_COUNTERPARTY;
 
-    public Tag1054InstrumentPartySubIDType(MyEnumPartySubIDType dataValue) {
+    public Tag1054EnuInstrumentPartySubIDType(MyEnumPartySubIDType dataValue) {
         setFixType(FIX50.FIX1054_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE);
         this.dataValue = dataValue;
     }
@@ -111,14 +111,14 @@ public class Tag1054InstrumentPartySubIDType extends FIX50Abstract implements Fi
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag1054InstrumentPartySubIDType tagData;
+        Tag1054EnuInstrumentPartySubIDType tagData;
 
-        tagData = new Tag1054InstrumentPartySubIDType(TESTA_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE);
+        tagData = new Tag1054EnuInstrumentPartySubIDType(TESTA_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag1054InstrumentPartySubIDType(TESTB_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE);
+        tagData = new Tag1054EnuInstrumentPartySubIDType(TESTB_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

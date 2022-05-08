@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  61
+ *  Urgency
+ *  char
+ *  Urgency flag
+ *  Valid values:
+ *      0 - Normal
+ *      1 - Flash
+ *      2 - Background
+ */
 public enum Enum61Urgency implements EnumAccessors, LogStringVerbose {
     NORMAL("0", "NORMAL", "0 - Normal" ),
     FLASH("1", "FLASH", "1 - Flash" ),

@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  86
+ *  DlvyInst
+ *  String
+ *  Deprecated in FIX.4.2 Free format text field to indicate delivery instructions
+ */
 // @Deprecated
 public class Tag86StrDlvyInst extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;

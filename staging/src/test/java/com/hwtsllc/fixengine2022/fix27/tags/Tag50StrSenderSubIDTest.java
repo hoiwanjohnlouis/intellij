@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  50
+ *  SenderSubID
+ *  String
+ *  Assigned value used to identify specific message originator (desk, trader, etc.)
+ */
 class Tag50StrSenderSubIDTest {
-
     @Test
     void FIX0050Test() {
         FIX27 fixData = FIX27.FIX50_STR_SENDER_SUB_ID;

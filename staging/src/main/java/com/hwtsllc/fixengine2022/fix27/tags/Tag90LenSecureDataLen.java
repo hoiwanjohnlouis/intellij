@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  90
+ *  SecureDataLen
+ *  Length
+ *  <p>
+ *  Length of encrypted message
+ */
 public class Tag90LenSecureDataLen extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyLengthType dataValue;
 

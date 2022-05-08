@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  94
+ *  EmailType
+ *  char
+ *  Email message type.
+ *  Valid values:
+ *      0 - New
+ *      1 - Reply
+ *      2 - Admin Reply
+ */
 public enum Enum94EmailType implements EnumAccessors, LogStringVerbose {
     NEW("0", "NEW", "0 - New" ),
     REPLY("1", "REPLY", "1 - Reply" ),

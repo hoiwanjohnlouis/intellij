@@ -19,6 +19,16 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  25
+ *  IOIQltyInd
+ *  char
+ *  Relative quality of indication
+ *  Valid values:
+ *      H - High
+ *      L - Low
+ *      M - Medium
+ */
 public enum Enum25IOIQltyInd implements EnumAccessors, LogStringVerbose {
     HIGH("H", "HIGH", "H - High" ),
     LOW("L", "LOW", "L - Low" ),

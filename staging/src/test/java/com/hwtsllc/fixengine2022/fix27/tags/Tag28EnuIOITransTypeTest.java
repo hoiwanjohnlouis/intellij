@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  28
+ *  IOITransType
+ *  char
+ *  Identifies IOI message transaction type
+ *  Valid values:
+ *      N - New
+ *      C - Cancel
+ *      R - Replace
+ */
 class Tag28EnuIOITransTypeTest {
-
     @Test
     void FIX0028Test() {
         FIX27 fixData = FIX27.FIX28_ENU_IOI_TRANS_TYPE;

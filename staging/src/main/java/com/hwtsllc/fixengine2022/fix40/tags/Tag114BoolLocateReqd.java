@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  114
+ *  LocateReqd
+ *  Boolean
+ *  Indicates whether the broker is to locate the stock in conjunction with a short sell order.
+ *  Valid values:
+ *      N - Indicates the broker is not required to locate
+ *      Y - Indicates the broker is responsible for locating the stock
+ */
 public class Tag114BoolLocateReqd extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

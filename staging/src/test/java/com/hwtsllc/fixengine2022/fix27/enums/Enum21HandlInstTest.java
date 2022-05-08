@@ -22,6 +22,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  21
+ *  HandlInst
+ *  char
+ *  Instructions for order handling on Broker trading floor
+ *  Valid values:
+ *      1 - Automated execution order, private, no Broker intervention
+ *      2 - Automated execution order, public, Broker intervention OK
+ *      3 - Manual order, best execution
+ */
 class Enum21HandlInstTest {
     @Test
     void Enum0021Test() {

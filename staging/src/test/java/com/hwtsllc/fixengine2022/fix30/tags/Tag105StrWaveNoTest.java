@@ -24,6 +24,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  105
+ *  WaveNo
+ *  String
+ *  Deprecated in FIX.4.2
+ */
 // @Deprecated
 class Tag105StrWaveNoTest {
 

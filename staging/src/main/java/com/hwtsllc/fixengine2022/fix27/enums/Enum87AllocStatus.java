@@ -19,6 +19,21 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  87
+ *  AllocStatus
+ *  int
+ *  Identifies status of allocation.
+ *  Valid values:
+ *      0 - accepted (successfully processed)
+ *      1 - block level reject
+ *      2 - account level reject
+ *      3 - received (received, not yet processed)
+ *      4 - incomplete
+ *      5 - rejected by intermediary
+ *      6 - allocation pending
+ *      7 - reversed
+ */
 public enum Enum87AllocStatus implements EnumAccessors, LogStringVerbose {
     ACCEPTED("0", "ACCEPTED", "0 -accepted (successfully processed)" ),
     BLOCK_LEVEL_REJECT("1", "BLOCK_LEVEL_REJECT", "1 - block level reject" ),

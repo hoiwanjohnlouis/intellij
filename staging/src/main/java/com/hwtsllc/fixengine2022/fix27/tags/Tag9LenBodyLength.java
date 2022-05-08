@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  9
+ *  BodyLength
+ *  Length
+ *  Message length, in bytes, forward to the CheckSum field.
+ *  ALWAYS SECOND FIELD IN MESSAGE.
+ *  (Always unencrypted)
+ */
 public class Tag9LenBodyLength extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyLengthType dataValue;
 

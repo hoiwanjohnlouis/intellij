@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum29LastCapacity;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  29
+ *  LastCapacity
+ *  char
+ *  Broker capacity in order execution
+ *  Valid values:
+ *      1 - Agent
+ *      2 - Cross as agent
+ *      3 - Cross as principal
+ *      4 - Principal
+ */
 public class Tag29EnuLastCapacity extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum29LastCapacity dataValue;
 

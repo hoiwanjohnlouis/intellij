@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  114
+ *  LocateReqd
+ *  Boolean
+ *  Indicates whether the broker is to locate the stock in conjunction with a short sell order.
+ *  Valid values:
+ *      N - Indicates the broker is not required to locate
+ *      Y - Indicates the broker is responsible for locating the stock
+ */
 class Tag114BoolLocateReqdTest {
-
     @Test
     void FIX0114Test() {
         FIX40 fixData = FIX40.FIX114_BOOL_LOCATE_REQD;

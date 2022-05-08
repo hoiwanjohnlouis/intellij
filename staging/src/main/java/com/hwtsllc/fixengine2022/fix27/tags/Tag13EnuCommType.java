@@ -22,8 +22,24 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  13
+ *  CommType
+ *  char
+ *  Commission type
+ *  Valid values:
+ *      1 - Per Unit (implying shares, par, currency, etc.)
+ *      2 - Percent
+ *      3 - Absolute (total monetary amount)
+ *      4 - Percentage waived - cash discount (for CIV buy orders)
+ *      5 - Percentage waived -= enhanced units (for CIV buy orders)
+ *      6 - Points per bond or contract
+ *          (supply ContractMultiplier (231) in the <Instrument> component block
+ *           if the object security is denominated in a size other than the
+ *           industry default - 1000 par for bonds)
+ */
 public class Tag13EnuCommType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private Enum13CommType dataValue;
+    private final Enum13CommType dataValue;
 
     public final static Enum13CommType TESTA_ENU_COMMISSION = Enum13CommType.PER_UNIT; // fake data
     public final static Enum13CommType TESTB_ENU_COMMISSION = Enum13CommType.POINTS_PER_BOND;

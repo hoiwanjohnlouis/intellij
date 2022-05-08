@@ -24,18 +24,25 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *  581 (same as 581, 798)
+ *  AccountType
+ *  int
+ *  <p>
  *  Type of account associated with an order
+ *  <p></p>
  *  798 (same as 581, 798)
  *  AllocAccountType
+ *  int
+ *  <p>
  *  Type of account associated with a confirmation or other trade-level message
+ *  <p></p>
  *  Valid values:
- *      1 - Account is carried on customer side of books
- *      2 - Account is carried on non-customer side of books
- *      3 - House trader
- *      4 - Floor trader
- *      6 - Account is carried on non-customer side of books and is cross margined
- *      7 - Account is house trader and is cross margined
- *      8 - Joint back office account (JBO)
+ *  <p>    1 - Account is carried on customer side of books
+ *  <p>    2 - Account is carried on non-customer side of books
+ *  <p>    3 - House trader
+ *  <p>    4 - Floor trader
+ *  <p>    6 - Account is carried on non-customer side of books and is cross margined
+ *  <p>    7 - Account is house trader and is cross margined
+ *  <p>    8 - Joint back office account (JBO)
  */
 public class Tag798EnuAllocAccountType extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyEnumAccountType dataValue;

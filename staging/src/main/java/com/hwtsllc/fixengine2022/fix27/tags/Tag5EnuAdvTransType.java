@@ -22,8 +22,18 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  5
+ *  AdvTransType
+ *  String
+ *  Identifies advertisement message transaction type
+ *  Valid values:
+ *      N - New
+ *      C - Cancel
+ *      R - Replace
+ */
 public class Tag5EnuAdvTransType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private Enum5AdvTransType dataValue;
+    private final Enum5AdvTransType dataValue;
 
     public final static Enum5AdvTransType TESTA_ENU_ADV_TRANS_TYPE = Enum5AdvTransType.NEW;
     public final static Enum5AdvTransType TESTB_ENU_ADV_TRANS_TYPE = Enum5AdvTransType.REPLACE;

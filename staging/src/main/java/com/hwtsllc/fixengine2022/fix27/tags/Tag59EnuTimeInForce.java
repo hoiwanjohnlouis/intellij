@@ -22,6 +22,27 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum59TimeInForce;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  59
+ *  TimeInForce
+ *  char
+ *  Specifies how long the order remains in effect.
+ *
+ *  Absence of this field is interpreted as DAY.
+ *
+ *  NOTE not applicable to CIV Orders.
+ *  (see Volume : "Glossary" for value definitions)
+ *
+ *  Valid values:
+ *      0 - Day (or session)
+ *      1 - Good Till Cancel (GTC)
+ *      2 - At the Opening (OPG)
+ *      3 - Immediate Or Cancel (IOC)
+ *      4 - Fill Or Kill (FOK)
+ *      5 - Good Till Crossing (GTX)
+ *      6 - Good Till Date (GTD)
+ *      7 - At the Close
+ */
 public class Tag59EnuTimeInForce extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum59TimeInForce dataValue;
 

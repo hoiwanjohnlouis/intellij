@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  66
+ *  ListID
+ *  String
+ *  Unique identifier for list as assigned by institution,
+ *  used to associate multiple individual orders.
+ *
+ *  Uniqueness must be guaranteed within a single trading day.
+ *  Firms which generate multi-day orders should consider embedding
+ *  a date within the ListID field to assure uniqueness across days.
+ */
 public class Tag66StrListID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

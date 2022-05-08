@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  137
+ *  MiscFeeAmt
+ *  Amt
+ *  Miscellaneous fee value
+ */
 public class Tag137AmtMiscFeeAmt extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 

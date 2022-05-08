@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum698YieldRedemptionPriceType;
 import org.junit.jupiter.api.Test;
 

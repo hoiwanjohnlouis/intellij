@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  123
+ *  GapFillFlag
+ *  Boolean
+ *  Indicates that the Sequence Reset message is replacing administrative
+ *  or application messages which will not be resent.
+ *  Valid values:
+ *      N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
+ *      Y - Gap Fill Message, Msg Seq Num Field Valid
+ */
 public class Tag123BoolGapFillFlag extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

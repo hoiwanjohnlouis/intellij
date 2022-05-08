@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  43
+ *  PossDupFlag
+ *  Boolean
+ *  Indicates possible retransmission of message with this sequence number
+ *  Valid values:
+ *      N - Original transmission
+ *      Y - Possible duplicate
+ */
 public class Tag43BoolPossDupFlag extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

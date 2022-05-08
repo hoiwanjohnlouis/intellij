@@ -1,0 +1,883 @@
+1
+Account
+String
+Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager.
+2
+AdvId
+String
+Unique identifier of advertisement message.
+      (Prior to FIX 4.1 this field was of type int)
+3
+AdvRefID
+String
+Reference identifier used with CANCEL and REPLACE transaction types.
+      (Prior to FIX 4.1 this field was of type int)
+4
+AdvSide
+char
+Broker's side of advertised trade
+Valid values:
+	B - Buy
+	S - Sell
+	T - Trade
+	X - Cross
+5
+AdvTransType
+String
+Identifies advertisement message transaction type
+Valid values:
+	N - New
+	C - Cancel
+	R - Replace
+6
+AvgPx
+Price
+Calculated average price of all fills on this order.
+
+      For Fixed Income trades AvgPx is always expressed as percent-of-par, regardless of the PriceType (423) of LastPx (31).  I.e., AvgPx will contain an average of percent-of-par values (see LastParPx (669)) for issues traded in Yield, Spread or Discount.
+7
+BeginSeqNo
+SeqNum
+Message sequence number of first message in range to be resent
+8
+BeginString
+String
+Identifies beginning of new message and protocol version.  ALWAYS FIRST FIELD IN MESSAGE. (Always unencrypted)
+Valid values:
+FIXT.1.1
+9
+BodyLength
+Length
+Message length, in bytes, forward to the CheckSum field.  ALWAYS SECOND FIELD IN MESSAGE. (Always unencrypted)
+10
+CheckSum
+String
+Three byte, simple checksum  (see Volume 2: "Checksum Calculation" for description).  ALWAYS LAST FIELD IN MESSAGE; i.e. serves, with the trailing <SOH>, as the end-of-message delimiter.  Always defined as three characters. (Always unencrypted)
+11
+ClOrdID
+String
+Unique identifier for Order as assigned by the buy-side (institution, broker, intermediary  etc.) (identified by SenderCompID (49) or OnBehalfOfCompID (5) as appropriate).  Uniqueness must be guaranteed within a single trading day.  Firms, particularly those  which electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClOrdID field.
+12
+Commission
+Amt
+Commission.  Note if CommType (13) is percentage, Commission of 5% should be represented as .05.
+13
+CommType
+char
+Commission type
+Valid values:
+	1 - Per Unit (implying shares, par, currency, etc.)
+	2 - Percent
+	3 - Absolute (total monetary amount)
+	4 - Percentage waived - cash discount (for CIV buy orders)
+	5 - Percentage waived -= enhanced units (for CIV buy orders)
+	6 - Points per bond or contract (supply ContractMultiplier (231) in the <Instrument> component block if the object security is denominated in a size other than the industry default - 1000 par for bonds)
+14
+CumQty
+Qty
+Total quantity (e.g. number of shares) filled.
+      (Prior to FIX 4.2 this field was of type int)
+15
+Currency
+Currency
+Identifies currency used for price. Absence of this field is interpreted as the default for the security.  It is recommended that systems provide the currency value whenever possible.  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
+16
+EndSeqNo
+SeqNum
+Message sequence number of last message in range to be resent.  If request is for a single message BeginSeqNo (7) = EndSeqNo.  If request is for all messages subsequent to a particular message, EndSeqNo = "0" (representing infinity).
+17
+ExecID
+String
+Unique identifier of execution message as assigned by sell-side (broker, exchange, ECN) (will be 0 (zero) for ExecType (50) =I (Order Status)).
+      Uniqueness must be guaranteed within a single trading day or the life of a multi-day order.  Firms which accept multi-day orders should consider embedding a date within the ExecID field to assure uniqueness across days.
+      (Prior to FIX 4.1 this field was of type int)
+18
+ExecInst
+MultipleCharValue
+Instructions for order handling on exchange trading floor.  If more than one instruction is applicable to an order, this field can contain multiple instructions separated by space. *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" *** (see Volume : "Glossary" for value definitions)
+Valid values:
+	0 - Stay on offer side
+	1 - Not held
+	2 - Work
+	3 - Go along
+	4 - Over the day
+	5 - Held
+	6 - Participant don't initiate
+	7 - Strict scale
+	8 - Try to scale
+	9 - Stay on bid side
+	A - No cross (cross is forbidden)
+	B - OK to cross
+	C - Call first
+	D - Percent of volume (indicates that the sender does not want to be all of the volume on the floor vs. a specific percentage)
+	E - Do not increase - DNI
+	F - Do not reduce - DNR
+	G - All or none - AON
+	H - Reinstate on system failue (mutually exclusive with Q)
+	I - Institutions only
+	J - Reinstate on Trading Halt (mutually exclusive with K)
+	K - Cancel on Trading Halt (mutually exclusive with J)
+	L - Last peg (last sale)
+	M - Mid-price peg (midprice of inside quote)
+	N - Non-negotiable
+	O - Opening peg
+	P - Market peg
+	Q - Cancel on system failure (mutually exclusive with H)
+	R - Primary peg (primary market - buy at bid/sell at offer)
+	S - Suspend
+	T - Fixed Peg to Local best bid or offer at time of order
+	U - Customer Display Instruction (Rule 11Ac1-1/4)
+	V - Netting (for Forex)
+	W - Peg to VWAP
+	X - Trade Along
+	Y - Try To Stop
+	Z - Cancel if not best
+	a - Trailing Stop Peg
+	b - Strict Limit (No price improvement)
+	c - Ignore Price Validity Checks
+	d - Peg to Limit Price
+	e - Work to Target Strategy
+	f - Intermarket Sweep
+	g - External Routing Allowed
+	h - External Routing Not Allowed
+	i - Imbalance Only
+	j - Single execution requested for block trade
+	k - Best Execution
+19
+ExecRefID
+String
+Reference identifier used with Trade Cancel and Trade Correct execution types.
+      (Prior to FIX 4.1 this field was of type int)
+20
+ExecTransType
+char
+Deprecated in FIX.4.2 Identifies transaction type
+Valid values:
+	0 - New
+	1 - Cancel
+	2 - Correct
+	3 - Status
+21
+HandlInst
+char
+Instructions for order handling on Broker trading floor
+Valid values:
+	1 - Automated execution order, private, no Broker intervention
+	2 - Automated execution order, public, Broker intervention OK
+	3 - Manual order, best execution
+22
+SecurityIDSource
+String
+Identifies class or source of the SecurityID (48) value.  Required if SecurityID is specified.
+                100+ are reserved for private security identifications
+Valid values:
+	1 - CUSIP
+	2 - SEDOL
+	3 - QUIK
+	4 - ISIN number
+	5 - RIC code
+	6 - ISO Currency Code
+	7 - ISO Country Code
+	8 - Exchange Symbol
+	9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)
+	A - Bloomberg Symbol
+	B - Wertpapier
+	C - Dutch
+	D - Valoren
+	E - Sicovam
+	F - Belgian
+	G - "Common" (Clearstream and Euroclear)
+	H - Clearing House / Clearing Organization
+	I - ISDA/FpML Product Specification (XML in EncodedSecurityDesc)
+	J - Option Price Reporting Authority
+	K - ISDA/FpML Product URL (URL in SecurityID)
+	L - Letter of Credit
+23
+IOIID
+String
+Unique identifier of IOI message.
+      (Prior to FIX 4.1 this field was of type int)
+24
+IOIOthSvc  (no longer used)
+char
+Deprecated in FIX.4.1 
+25
+IOIQltyInd
+char
+Relative quality of indication
+Valid values:
+	H - High
+	L - Low
+	M - Medium
+26
+IOIRefID
+String
+Reference identifier used with CANCEL and REPLACE, transaction types.
+      (Prior to FIX 4.1 this field was of type int)
+27
+IOIQty
+String
+Quantity (e.g. number of shares) in numeric form or relative size.
+Valid values:
+	0 - 1000000000
+	S - Small
+	M - Medium
+	L - Large
+	U - Undisclosed Quantity
+28
+IOITransType
+char
+Identifies IOI message transaction type
+Valid values:
+	N - New
+	C - Cancel
+	R - Replace
+29
+LastCapacity
+char
+Broker capacity in order execution
+Valid values:
+	1 - Agent
+	2 - Cross as agent
+	3 - Cross as principal
+	4 - Principal
+30
+LastMkt
+Exchange
+Market of execution for last fill, or an indication of the market where an order was routed
+      Valid values:
+      See "Appendix 6-C"
+31
+LastPx
+Price
+Price of this (last) fill.
+32
+LastQty
+Qty
+Quantity (e.g. shares) bought/sold on this (last) fill.
+      (Prior to FIX 4.2 this field was of type int)
+33
+NoLinesOfText
+NumInGroup
+Identifies number of lines of text body
+34
+MsgSeqNum
+SeqNum
+Integer message sequence number.
+35
+MsgType
+String
+Defines message type    ALWAYS THIRD FIELD IN MESSAGE. (Always unencrypted)
+Note: A "U" as the first character in the MsgType field (i.e. U, U2, etc) indicates that the  message format is privately defined between the sender and receiver.
+*** Note the use of lower case letters ***
+Valid values:
+	0 - Heartbeat
+	1 - Test Request
+	2 - Resend Request
+	3 - Reject
+	4 - Sequence Reset
+	5 - Logout
+	6 - Indication of Interest
+	7 - Advertisement
+	8 - Execution Report
+	9 - Order Cancel Reject
+	A - Logon
+	B - News
+	C - Email
+	D - New Order - Single
+	E - New Order - List
+	F - Order Cancel Request
+	G - Order Cancel/Replace Request (a.k.a. Order Modification Request)
+	H - Order Status Request
+	J - Allocation Instruction
+	K - List Cancel Request
+	L - List Execute
+	M - List Status Request
+	N - List Status
+	P - Allocation Instruction Ack
+	Q - Don't Know Trade (DK)
+	R - Quote Request
+	S - Quote
+	T - Settlement Instructions
+	V - Market Data Request
+	W - Market Data - Snapshot/Full Refresh
+	X - Market Data - Incremental Refresh
+	Y - Market Data Request Reject
+	Z - Quote Cancel
+	a - Quote Status Request
+	b - Mass Quote Acknowledgement
+	c - Security Definition Request
+	d - Security Definition
+	e - Security Status Request
+	f - Security Status
+	g - Trading Session Status Request
+	h - Trading Session Status
+	i - Mass Quote
+	j - Business Message Reject
+	k - Bid Request
+	l - Bid Response (lowercase L)
+	m - List Strike Price
+	n - XML message (e.g. non FIX Msg Type)
+	o - Registration Instructions
+	p - Registration Instructions Response
+	q - Order Mass Cancel Request
+	r - Order Mass Cancel Report
+	s - New Order - Cross
+	t - Cross Order Cancel/Replace Request (a.k.a. Cross Order Modification Request)
+	u - Cross Order Cancel Request
+	v - Security Type Request
+	w - Security Types
+	x - Security List Request
+	y - Security List
+	z - Derivative Security List Request
+	AA - Derivative Security List
+	AB - New Order - Multileg
+	AC - Multileg Order Cancel/Replace (a.k.a. Multileg Order Modification Request)
+	AD - Trade Capture Report Request
+	AE - Trade Capture Report
+	AF - Order Mass Status Request
+	AG - Quote Request Reject
+	AH - RFQ Request
+	AI - Quote Status Report
+	AJ - Quote Response
+	AK - Confirmation
+	AL - Position Maintenance Request
+	AM - Position Maintenance Report
+	AN - Request For Positions
+	AO - Request For Positions Ack
+	AP - Position Report
+	AQ - Trade Capture Report Request Ack
+	AR - Trade Capture Report Ack
+	AS - Allocation Report (a.k.a. Allocation Claim)
+	AT - Allocation Report Ack (a.k.a. Allocation Claim Ack)
+	AU - Confirmation Ack (a.k.a. Affirmation)
+	AV - Settlement Instruction Request
+	AW - Assignment Report
+	AX - Collateral Request
+	AY - Collateral Assignment
+	AZ - Collateral Response
+	BA - Collateral Report
+	BB - Collateral Inquiry
+	BC - Network Counterparty System Status Request
+	BD - Network Counterparty System Status Response
+	BE - User Request
+	BF - User Response
+	BG - Collateral Inquiry Ack
+	BH - Confirmation Request
+	BI - Trading Session List Request
+	BJ - Trading Session List
+	BK - Security List Update Report
+	BL - Adjusted Position Report
+	BM - Allocation Instruction Alert
+	BN - Execution Acknowledgement
+	BO - Contrary Intention Report
+	BP - Security Definition Update Report
+36
+NewSeqNo
+SeqNum
+New sequence number
+37
+OrderID
+String
+Unique identifier for Order as assigned by sell-side (broker, exchange, ECN).  Uniqueness must be guaranteed within a single trading day.  Firms which accept multi-day orders should consider embedding a date within the OrderID field to assure uniqueness across days.
+38
+OrderQty
+Qty
+Quantity ordered.  This represents the number of shares for equities or par, face or nominal value for FI instruments.
+      (Prior to FIX 4.2 this field was of type int)
+39
+OrdStatus
+char
+Identifies current status of order. *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" *** (see Volume : "Glossary" for value definitions)
+Valid values:
+	0 - New
+	1 - Partially filled
+	2 - Filled
+	3 - Done for day
+	4 - Canceled
+	5 - Replaced (No longer used)
+	6 - Pending Cancel (i.e. result of Order Cancel Request)
+	7 - Stopped
+	8 - Rejected
+	9 - Suspended
+	A - Pending New
+	B - Calculated
+	C - Expired
+	D - Accepted for Bidding
+	E - Pending Replace (i.e. result of Order Cancel/Replace Request)
+40
+OrdType
+char
+Order type. *** SOME VALUES ARE NO LONGER USED - See "Deprecated (Phased-out) Features and Supported Approach" *** (see Volume : "Glossary" for value definitions)
+Valid values:
+	1 - Market
+	2 - Limit
+	3 - Stop / Stop Loss
+	4 - Stop Limit
+	5 - Market On Close (No longer used)
+	6 - With Or Without
+	7 - Limit Or Better
+	8 - Limit With Or Without
+	9 - On Basis
+	A - On Close (No longer used)
+	B - Limit On Close (No longer used)
+	C - Forex Market (No longer used)
+	D - Previously Quoted
+	E - Previously Indicated
+	F - Forex Limit (No longer used)
+	G - Forex Swap
+	H - Forex Previously Quoted (No longer used)
+	I - Funari (Limit day order with unexecuted portion handles as Market On Close. E.g. Japan)
+	J - Market If Touched (MIT)
+	K - Market With Left Over as Limit (market order with unexecuted quantity becoming limit order at last price)
+	L - Previous Fund Valuation Point (Historic pricing;  for CIV)
+	M - Next Fund Valuation Point (Forward pricing;  for CIV)
+	P - Pegged
+	Q - Counter-order selection
+41
+OrigClOrdID
+String
+ClOrdID (11) of the previous order (NOT the initial order of the day) as assigned by the institution, used to identify the previous order in cancel and cancel/replace requests.
+42
+OrigTime
+UTCTimestamp
+Time of message origination (always expressed in UTC (Universal Time Coordinated, also known as "GMT"))
+43
+PossDupFlag
+Boolean
+Indicates possible retransmission of message with this sequence number
+Valid values:
+	N - Original transmission
+	Y - Possible duplicate
+44
+Price
+Price
+Price per unit of quantity (e.g. per share)
+45
+RefSeqNum
+SeqNum
+Reference message sequence number
+46
+RelatdSym  (no longer used)
+String
+Deprecated in FIX.4.1 
+47
+Rule80A(No Longer Used)
+char
+Deprecated in FIX.4.3 Note that the name of this field is changing to 'OrderCapacity' as Rule80A is a very US market-specific term. Other world markets need to convey similar information, however, often a subset of the US values. See the 'Rule80A (aka OrderCapacity) Usage by Market' appendix for market-specific usage of this field.
+Valid values:
+	A - Agency single order
+	B - Short exempt transaction (refer to A type)
+	C - Program order, non-index arb, for Member firm/org
+	D - Program order, index arb, for Member firm/org
+	E - Short Exempt Transaction for Principal (was incorrectly identified in the FIX spec as "Registered Equity Market Maker trades")
+	F - Short exempt transaction (refer to W type)
+	H - Short exempt transaction (refer to I type)
+	I - Individual Investor, single order
+	J - Program Order, index arb, for individual customer
+	K - Program Order, non-index arb, for individual customer
+	L - Short exempt transaction for member competing market-maker affliated with the firm clearing the trade (refer to P and O types)
+	M - Program Order, index arb, for other member
+	N - Program Order, non-index arb, for other member
+	O - Proprietary transactions for competing market-maker that is affiliated with the clearing member (was incorrectly identified in the FIX spec as "Competing dealer trades")
+	P - Principal
+	R - Transactions for the account of a non-member compting market-maker (was incorrectly identified in the FIX spec as "Competing dealer trades")
+	S - Specialist trades
+	T - Transactions for the account of an unaffiliated member's competing market-maker (was incorrectly identified in the FIX spec as "Competing dealer trades")
+	U - Program Order, index arb, for other agency
+	W - All other orders as agent for other member
+	X - Short exempt transaction for member competing market-maker not affiliated with the firm clearing the trade (refer to W and T types)
+	Y - Program Order, non-index arb, for other agency
+	Z - Short exempt transaction for non-member competing market-maker (refer to A and R types)
+48
+SecurityID
+String
+Security identifier value of SecurityIDSource (22) type (e.g. CUSIP, SEDOL, ISIN, etc).  Requires SecurityIDSource.
+49
+SenderCompID
+String
+Assigned value used to identify firm sending message.
+50
+SenderSubID
+String
+Assigned value used to identify specific message originator (desk, trader, etc.)
+51
+SendingDate  (no longer used)
+LocalMktDate
+Deprecated in FIX.4.3 
+52
+SendingTime
+UTCTimestamp
+Time of message transmission (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
+53
+Quantity
+Qty
+Overall/total quantity (e.g. number of shares)
+      (Prior to FIX 4.2 this field was of type int)
+54
+Side
+char
+Side of order (see Volume : "Glossary" for value definitions)
+Valid values:
+	1 - Buy
+	2 - Sell
+	3 - Buy minus
+	4 - Sell plus
+	5 - Sell short
+	6 - Sell short exempt
+	7 - Undisclosed (valid for IOI and List Order messages only)
+	8 - Cross (orders where counterparty is an exchange, valid for all messages except IOIs)
+	9 - Cross short
+	A - Cross short exxmpt
+	B - "As Defined" (for use with multileg instruments)
+	C - "Opposite" (for use with multileg instruments)
+	D - Subscribe (e.g. CIV)
+	E - Redeem (e.g. CIV)
+	F - Lend (FINANCING - identifies direction of collateral)
+	G - Borrow (FINANCING - identifies direction of collateral)
+55
+Symbol
+String
+Ticker symbol. Common, "human understood" representation of the security. SecurityID (48) value can be specified if no symbol exists (e.g. non-exchange traded Collective Investment Vehicles)
+      Use "[N/A]" for products which do not have a symbol.
+56
+TargetCompID
+String
+Assigned value used to identify receiving firm.
+57
+TargetSubID
+String
+Assigned value used to identify specific individual or unit intended to receive message.  "ADMIN" reserved for administrative messages not intended for a specific user.
+58
+Text
+String
+Free format text string
+      (Note: this field does not have a specified maximum length)
+59
+TimeInForce
+char
+Specifies how long the order remains in effect.  Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders. (see Volume : "Glossary" for value definitions)
+Valid values:
+	0 - Day (or session)
+	1 - Good Till Cancel (GTC)
+	2 - At the Opening (OPG)
+	3 - Immediate Or Cancel (IOC)
+	4 - Fill Or Kill (FOK)
+	5 - Good Till Crossing (GTX)
+	6 - Good Till Date (GTD)
+	7 - At the Close
+60
+TransactTime
+UTCTimestamp
+Time of execution/order creation (expressed in UTC (Universal Time Coordinated, also known as "GMT")
+61
+Urgency
+char
+Urgency flag
+Valid values:
+	0 - Normal
+	1 - Flash
+	2 - Background
+62
+ValidUntilTime
+UTCTimestamp
+Indicates expiration time of indication message (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
+63
+SettlType
+String
+Indicates order settlement period. If present, SettlDate (64) overrides this field.  If both SettlType (63) and SettDate (64) are omitted, the default for SettlType (63) is 0 (Regular)
+Regular is defined as the default settlement period for the particular security on the exchange of execution.
+In Fixed Income the contents of this field may influence the instrument definition if the SecurityID (48) is ambiguous.  In the US an active Treasury offering may be re-opened, and for a time one CUSIP will apply to both the current and "when-issued" securities.  Supplying a value of "7" clarifies the instrument description; any other value or the absence of this field should cause the respondent to default to the active issue.
+
+Additionally the following patterns may be uses as well as enum values
+
+Dx = FX tenor expression for "days", e.g. "D5", where "x" is any integer > 0
+Mx = FX tenor expression for "months", e.g. "M3", where "x" is any integer > 0
+Wx = FX tenor expression for "weeks", e.g. "W13", where "x" is any integer > 0
+Yx = FX tenor expression for "years", e.g. "Y1", where "x" is any integer > 0
+
+Noted that for FX the tenors expressed using Dx, Mx, Wx, and Yx values do not denote business days, but calendar days.
+Valid values:
+	0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)
+	1 - Cash (TOD / T+0)
+	2 - Next Day (TOM / T+1)
+	3 - T+2
+	4 - T+3
+	5 - T+4
+	6 - Future
+	7 - When And If Issued
+	8 - Sellers Option
+	9 - T+5
+	B - Broken date - for FX expressing non-standard tenor, SettlDate (64) must be specified
+	C - FX Spot Next settlement (Spot+1, aka next day)
+
+or any value conforming to the data type Tenor
+64
+SettlDate
+LocalMktDate
+Specific date of trade settlement (SettlementDate) in YYYYMMDD format.
+      If present, this field overrides SettlType (63). This field is required if the value of  SettlType (63) is 6 (Future) or 8 (Sellers Option). This field must be omitted if the value of SettlType (63) is 7 (When and If Issued)
+      (expressed in local time at place of settlement)
+65
+SymbolSfx
+String
+Additional information about the security (e.g. preferred, warrants, etc.).   Note also see SecurityType (167).
+                As defined in the NYSE Stock and bond Symbol Directory and in the AMEX Fitch Directory.
+Valid values:
+For Fixed Income
+	CD - EUCP with lump-sum interest rather than discount price
+	WI - "When Issued" for a security to be reissued under an old CUSIP or ISIN
+66
+ListID
+String
+Unique identifier for list as assigned by institution, used to associate multiple individual orders.  Uniqueness must be guaranteed within a single trading day.  Firms which generate multi-day orders should consider embedding a date within the ListID field to assure uniqueness across days.
+67
+ListSeqNo
+int
+Sequence of individual order within list (i.e. ListSeqNo of TotNoOrders (68), 2 of 25, 3 of 25,   . . . )
+68
+TotNoOrders
+int
+Total number of list order entries across all messages. Should be the sum of all NoOrders (73) in each message that has repeating list order entries related to the same ListID (66). Used to support fragmentation.
+      (Prior to FIX 4.2 this field was named "ListNoOrds")
+69
+ListExecInst
+String
+Free format text message containing list handling and execution instructions.
+70
+AllocID
+String
+Unique identifier for allocation message.
+      (Prior to FIX 4.1 this field was of type int)
+71
+AllocTransType
+char
+Identifies allocation transaction type *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
+Valid values:
+	0 - New
+	1 - Replace
+	2 - Cancel
+	3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
+	4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
+	5 - Calculated without Preliminary (sent unsolicited by broker, includes MiscFees and NetMoney) (Removed/Replaced)
+	6 - Reversal
+72
+RefAllocID
+String
+Reference identifier to be used with AllocTransType (71) = Replace or Cancel.
+      (Prior to FIX 4.1 this field was of type int)
+73
+NoOrders
+NumInGroup
+Indicates number of orders to be combined for average pricing and allocation.
+74
+AvgPxPrecision
+int
+Indicates number of decimal places to be used for average pricing.  Absence of this field indicates that default precision arranged by the broker/institution is to be used.
+75
+TradeDate
+LocalMktDate
+Indicates date of trade referenced in this message in YYYYMMDD format.  Absence of this field indicates current day (expressed in local time at place of trade).
+76
+ExecBroker
+String
+Deprecated in FIX.4.2 Identifies executing / give-up broker.  Standard NASD market-maker mnemonic is preferred.
+77
+PositionEffect
+char
+Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.
+Valid values:
+	C - Close
+	F - FIFO
+	O - Open
+	R - Rolled
+78
+NoAllocs
+NumInGroup
+Number of  repeating AllocAccount (79)/AllocPrice (366) entries.
+79
+AllocAccount
+String
+Sub-account mnemonic
+80
+AllocQty
+Qty
+Quantity  to be allocated to specific sub-account
+      (Prior to FIX 4.2 this field was of type int)
+81
+ProcessCode
+char
+Processing code for sub-account.  Absence of this field in AllocAccount (79) / AllocPrice (366) /AllocQty (80) / ProcessCode instance indicates regular trade.
+Valid values:
+	0 - Regular
+	1 - Soft Dollar
+	2 - Step-In
+	3 - Step-Out
+	4 - Soft-dollar Step-In
+	5 - Soft-dollar Step-Out
+	6 - Plan Sponsor
+82
+NoRpts
+int
+Total number of reports within series.
+83
+RptSeq
+int
+Sequence number of message within report series. Used to carry reporting sequence number of the fill as represented on the Trade Report Side.
+84
+CxlQty
+Qty
+Total quantity canceled for this order.
+      (Prior to FIX 4.2 this field was of type int)
+85
+NoDlvyInst
+NumInGroup
+Number of delivery instruction fields in repeating group.
+
+      Note this field was removed in FIX 4.1 and reinstated in FIX 4.4.
+86
+DlvyInst
+String
+Deprecated in FIX.4.2 Free format text field to indicate delivery instructions
+87
+AllocStatus
+int
+Identifies status of allocation.
+Valid values:
+	0 - accepted (successfully processed)
+	1 - block level reject
+	2 - account level reject
+	3 - received (received, not yet processed)
+	4 - incomplete
+	5 - rejected by intermediary
+	6 - allocation pending
+	7 - reversed
+88
+AllocRejCode
+int
+Identifies reason for rejection.
+Valid values:
+	0 - Unknown account(s)
+	1 - Incorrect quantity
+	2 - Incorrect averageg price
+	3 - Unknown executing broker mnemonic
+	4 - Commission difference
+	5 - Unknown OrderID (37)
+	6 - Unknown ListID (66)
+	7 - Other (further in Text (58))
+	8 - Incorrect allocated quantity
+	9 - Calculation difference
+	10 - Unknown or stale ExecID
+	11 - Mismatched data
+	12 - Unknown ClOrdID
+	13 - Warehouse request rejected
+89
+Signature
+data
+Electronic signature
+90
+SecureDataLen
+Length
+Length of encrypted message
+91
+SecureData
+data
+Actual encrypted data stream
+92
+BrokerOfCredit
+String
+Deprecated in FIX.4.2 Broker to receive trade credit.
+93
+SignatureLength
+Length
+Number of bytes in signature field.
+94
+EmailType
+char
+Email message type.
+Valid values:
+	0 - New
+	1 - Reply
+	2 - Admin Reply
+95
+RawDataLength
+Length
+Number of bytes in raw data field.
+96
+RawData
+data
+Unformatted raw data, can include bitmaps, word processor documents, etc.
+97
+PossResend
+Boolean
+Indicates that message may contain information that has been sent under another sequence number.
+Valid values:
+	N - Original Transmission
+	Y - Possible Resend
+98
+EncryptMethod
+int
+Method of encryption.
+Valid values:
+	0 - None / Other
+	1 - PKCS (Proprietary)
+	2 - DES (ECB Mode)
+	3 - PKCS / DES (Proprietary)
+	4 - PGP / DES (Defunct)
+	5 - PGP / DES-MD5 (See app note on FIX web site)
+	6 - PEM / DES-MD5 (see app note on FIX web site)
+99
+StopPx
+Price
+Price per unit of quantity (e.g. per share)
+100
+ExDestination
+Exchange
+Execution destination as defined by institution when order is entered.
+      Valid values:
+      See "Appendix 6-C"
+101
+(Not Defined)
+n/a
+This field has not been defined.
+102
+CxlRejReason
+int
+Code to identify reason for cancel rejection.
+Valid values:
+	0 - Too late to cancel
+	1 - Unknown order
+	2 - Broker / Exchange Option
+	3 - Order already in Pending Cancel or Pending Replace status
+	4 - Unable to process Order Mass Cancel Request
+	5 - OrigOrdModTime (586) did not match last TransactTime (60) of order
+	6 - Duplicate ClOrdID (11) received
+	18 - Invalid price increment
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+103
+OrdRejReason
+int
+Code to identify reason for order rejection. Note: Values 3, 4, and 5 will be used when rejecting an order due to pre-allocation information errors.
+Valid values:
+	0 - Broker / Exchange option
+	1 - Unknown symbol
+	2 - Exchange closed
+	3 - Order exceeds limit
+	4 - Too late to enter
+	5 - Unknown order
+	6 - Duplicate Order (e.g. dupe ClOrdID)
+	7 - Duplicate of a verbally communicated order
+	8 - Stale order
+	9 - Trade along required
+	10 - Invalid Investor ID
+	11 - Unsupported order characteristic
+	12 - Surveillence Option
+	13 - Incorrect quantity
+	14 - Incorrect allocated quantity
+	15 - Unknown account(s)
+	18 - Invalid price increment
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus

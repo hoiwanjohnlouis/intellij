@@ -1,0 +1,151 @@
+114
+LocateReqd
+Boolean
+Indicates whether the broker is to locate the stock in conjunction with a short sell order.
+Valid values:
+	N - Indicates the broker is not required to locate
+	Y - Indicates the broker is responsible for locating the stock
+115
+OnBehalfOfCompID
+String
+Assigned value used to identify firm originating message if the message was delivered by a third party  i.e.   the third party firm identifier would be delivered in the SenderCompID field and the firm originating the message in this field.
+116
+OnBehalfOfSubID
+String
+Assigned value used to identify specific message originator (i.e. trader) if the message was delivered by a third party
+117
+QuoteID
+String
+Unique identifier for quote
+118
+NetMoney
+Amt
+Total amount due as the result of the transaction (e.g. for Buy order - principal + commission + fees) reported in currency of execution.
+119
+SettlCurrAmt
+Amt
+Total amount due expressed in settlement currency (includes the effect of the forex transaction)
+120
+SettlCurrency
+Currency
+Currency code of settlement denomination.
+121
+ForexReq
+Boolean
+Indicates request for forex accommodation trade to be executed along with security transaction.
+Valid values:
+	N - Do Not Execute Forex After Security Trade
+	Y - Execute Forex After Security Trade
+122
+OrigSendingTime
+UTCTimestamp
+Original time of message transmission (always expressed in UTC (Universal Time Coordinated, also known as "GMT") when transmitting orders as the result of a resend request.
+123
+GapFillFlag
+Boolean
+Indicates that the Sequence Reset message is replacing administrative or application messages which will not be resent.
+Valid values:
+	N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
+	Y - Gap Fill Message, Msg Seq Num Field Valid
+124
+NoExecs
+NumInGroup
+No of execution repeating group entries to follow.
+125
+CxlType
+char
+Deprecated in FIX.4.2 
+126
+ExpireTime
+UTCTimestamp
+Time/Date of order expiration (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
+      The meaning of expiration is specific to the context where the field is used.
+      For orders, this is the expiration time of a Good Til Date TimeInForce.
+      For Quotes - this is the expiration of the quote.
+      Expiration time is provided across the quote message dialog to control the length of time of the overall quoting process.
+      For collateral requests, this is the time by which collateral must be assigned.
+      For collateral assignments, this is the time by which a response to the assignment is expected.
+127
+DKReason
+char
+Reason for execution rejection.
+Valid values:
+	A - Unknown Symbol
+	B - Wrong Side
+	C - Quantity Exceeds Order
+	D - No Matching Order
+	E - Price Exceeds Limit
+	F - Calculation Difference
+	Z - Other
+128
+DeliverToCompID
+String
+Assigned value used to identify the firm targeted to receive the message if the message is delivered by a third party   i.e.  the third party firm identifier would be delivered in the TargetCompID (56) field and the ultimate receiver firm ID in this field.
+129
+DeliverToSubID
+String
+Assigned value used to identify specific message recipient (i.e. trader) if the message is delivered by a third party
+130
+IOINaturalFlag
+Boolean
+Indicates that IOI is the result of an existing agency order or a facilitation position resulting from an agency order, not from principal trading or order solicitation activity.
+Valid values:
+	N - Not Natural
+	Y - Natural
+131
+QuoteReqID
+String
+Unique identifier for quote request
+132
+BidPx
+Price
+Bid price/rate
+133
+OfferPx
+Price
+Offer price/rate
+134
+BidSize
+Qty
+Quantity of bid
+      (Prior to FIX 4.2 this field was of type int)
+135
+OfferSize
+Qty
+Quantity of offer
+      (Prior to FIX 4.2 this field was of type int)
+136
+NoMiscFees
+NumInGroup
+Number of repeating groups of miscellaneous fees
+137
+MiscFeeAmt
+Amt
+Miscellaneous fee value
+138
+MiscFeeCurr
+Currency
+Currency of miscellaneous fee
+139
+MiscFeeType
+String
+Indicates type of miscellaneous fee.
+Valid values:
+	1 - Regulatory (e.g. SEC)
+	2 - Tax
+	3 - Local Commission
+	4 - Exchange Fees
+	5 - Stamp
+	6 - Levy
+	7 - Other
+	8 - Markup
+	9 - Consumption Tax
+	10 - Per transaction
+	11 - Conversion
+	12 - Agent
+	13 - Transfer Fee
+	14 - Security Lending
+140
+PrevClosePx
+Price
+Previous closing price of security.

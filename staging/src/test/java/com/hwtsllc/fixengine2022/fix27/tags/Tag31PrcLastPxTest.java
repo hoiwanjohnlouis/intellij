@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  31
+ *  LastPx
+ *  Price
+ *  Price of this (last) fill.
+ */
 class Tag31PrcLastPxTest {
-
     @Test
     void FIX0031Test() {
         FIX27 fixData = FIX27.FIX31_PRC_LAST_PX;

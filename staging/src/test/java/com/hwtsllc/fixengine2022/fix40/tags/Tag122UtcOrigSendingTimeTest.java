@@ -24,8 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  122
+ *  OrigSendingTime
+ *  UTCTimestamp
+ *  Original time of message transmission
+ *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
+ *  when transmitting orders as the result of a resend request.
+ */
 class Tag122UtcOrigSendingTimeTest {
-
     @Test
     void FIX0122Test() {
         FIX40 fixData = FIX40.FIX122_UTC_ORIG_SENDING_TIME;

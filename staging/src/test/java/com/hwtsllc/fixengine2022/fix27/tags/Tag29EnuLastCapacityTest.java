@@ -24,8 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  29
+ *  LastCapacity
+ *  char
+ *  Broker capacity in order execution
+ *  Valid values:
+ *      1 - Agent
+ *      2 - Cross as agent
+ *      3 - Cross as principal
+ *      4 - Principal
+ */
 class Tag29EnuLastCapacityTest {
-
     @Test
     void FIX0029Test() {
         FIX27 fixData = FIX27.FIX29_ENU_LAST_CAPACITY;

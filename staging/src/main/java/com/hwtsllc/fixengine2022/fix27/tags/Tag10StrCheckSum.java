@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  10
+ *  CheckSum
+ *  String
+ *  Three byte, simple checksum
+ *
+ *  i.e. serves, with the trailing <SOH>, as the end-of-message delimiter.
+ *
+ *  (see Volume 2: "Checksum Calculation" for description).
+ *  ALWAYS LAST FIELD IN MESSAGE;
+ *
+ *  Always defined as three characters.
+ *  (Always unencrypted)
+ */
 public class Tag10StrCheckSum extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

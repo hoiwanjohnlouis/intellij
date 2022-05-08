@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  138
+ *  MiscFeeCurr
+ *  Currency
+ *  Currency of miscellaneous fee
+ */
 public class Tag138CcyMiscFeeCurr extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyCurrencyType dataValue;
 

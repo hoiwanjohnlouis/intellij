@@ -22,6 +22,24 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum71AllocTransType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  71
+ *  AllocTransType
+ *  char
+ *  Identifies allocation transaction type
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  *** See Replaced Features and Supported Approach ***
+ *  Valid values:
+ *      0 - New
+ *      1 - Replace
+ *      2 - Cancel
+ *      3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
+ *      4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
+ *      5 - Calculated without Preliminary
+ *          (sent unsolicited by broker, includes MiscFees and NetMoney)
+ *          (Removed-Replaced)
+ *      6 - Reversal
+ */
 public class Tag71EnuAllocTransType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum71AllocTransType dataValue;
 

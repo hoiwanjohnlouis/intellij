@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  82
+ *  NoRpts
+ *  int
+ *  <p>
+ *  Total number of reports within series.
+ */
 public class Tag82IntNoRpts extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 

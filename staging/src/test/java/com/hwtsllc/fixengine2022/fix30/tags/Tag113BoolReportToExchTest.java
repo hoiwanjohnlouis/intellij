@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  113
+ *  ReportToExch
+ *  Boolean
+ *  Identifies party of trade responsible for exchange reporting.
+ *  Valid values:
+ *      N - Indicates the party sending message will report trade
+ *      Y - Indicates the party receiving message must report trade
+ */
 class Tag113BoolReportToExchTest {
-
     @Test
     void FIX0113Test() {
         FIX30 fixData = FIX30.FIX113_BOOL_REPORT_TO_EXCH;

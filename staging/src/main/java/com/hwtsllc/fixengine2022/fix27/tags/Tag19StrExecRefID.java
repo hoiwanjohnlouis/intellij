@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  19
+ *  ExecRefID
+ *  String
+ *  Reference identifier used with Trade Cancel and Trade Correct execution types.
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 public class Tag19StrExecRefID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  19
+ *  ExecRefID
+ *  String
+ *  Reference identifier used with Trade Cancel and Trade Correct execution types.
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 class Tag19StrExecRefIDTest {
-
     @Test
     void FIX0019Test() {
         FIX27 fixData = FIX27.FIX19_STR_EXEC_REF_ID;

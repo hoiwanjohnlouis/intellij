@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  124
+ *  NoExecs
+ *  NumInGroup
+ *  No of execution repeating group entries to follow.
+ */
 class Tag124NumNoExecsTest {
-
     @Test
     void FIX0124Test() {
         FIX40 fixData = FIX40.FIX124_NUM_NO_EXECS;

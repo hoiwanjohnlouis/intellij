@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  99
+ *  StopPx
+ *  Price
+ *  <p>
+ *  Price per unit of quantity (e.g. per share)
+ */
 public class Tag99PrcStopPx extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 

@@ -19,6 +19,35 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  103
+ *  OrdRejReason
+ *  int
+ *  Code to identify reason for order rejection.
+ *  Note: Values 3, 4, and 5 will be used when rejecting an
+ *        order due to pre-allocation information errors.
+ *  Valid values:
+ *      0 - Broker - Exchange option
+ *      1 - Unknown symbol
+ *      2 - Exchange closed
+ *      3 - Order exceeds limit
+ *      4 - Too late to enter
+ *      5 - Unknown order
+ *      6 - Duplicate Order (e.g. dupe ClOrdID)
+ *      7 - Duplicate of a verbally communicated order
+ *      8 - Stale order
+ *      9 - Trade along required
+ *      10 - Invalid Investor ID
+ *      11 - Unsupported order characteristic
+ *      12 - Surveillence Option
+ *      13 - Incorrect quantity
+ *      14 - Incorrect allocated quantity
+ *      15 - Unknown account(s)
+ *      18 - Invalid price increment
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 public enum Enum103OrdRejReason implements EnumAccessors, LogStringVerbose {
     BROKER_OR_EXCHANGE("0", "BROKER_OR_EXCHANGE",
             "0 - Broker or Exchange option"),

@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  82
+ *  NoRpts
+ *  int
+ *  <p>
+ *  Total number of reports within series.
+ */
 class Tag82IntNoRptsTest {
-
     @Test
     void FIX0082Test() {
         FIX27 fixData = FIX27.FIX82_INT_NO_RPTS;

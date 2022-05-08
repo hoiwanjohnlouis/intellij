@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  80
+ *  AllocQty
+ *  Qty
+ *  <p>
+ *  Quantity  to be allocated to specific sub-account
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 public class Tag80QtyAllocQty extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 

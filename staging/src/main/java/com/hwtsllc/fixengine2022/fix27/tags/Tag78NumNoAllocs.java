@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  78
+ *  NoAllocs
+ *  NumInGroup
+ *  <p>
+ *  Number of  repeating AllocAccount (79) or AllocPrice (366) entries.
+ */
 public class Tag78NumNoAllocs extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 

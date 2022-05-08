@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  125
+ *  CxlType
+ *  char
+ *  Deprecated in FIX.4.2
+ */
 // @Deprecated
 public class Tag125StrCxlType extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;

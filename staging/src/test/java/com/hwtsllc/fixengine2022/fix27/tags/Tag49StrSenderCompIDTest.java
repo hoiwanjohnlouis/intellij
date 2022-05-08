@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  49
+ *  SenderCompID
+ *  String
+ *  Assigned value used to identify firm sending message.
+ */
 class Tag49StrSenderCompIDTest {
-
     @Test
     void FIX0049Test() {
         FIX27 fixData = FIX27.FIX49_STR_SENDER_COMP_ID;

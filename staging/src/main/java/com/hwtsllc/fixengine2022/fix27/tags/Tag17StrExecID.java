@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  17
+ *  ExecID
+ *  String
+ *  Unique identifier of execution message as assigned by sell-side (broker, exchange, ECN)
+ *  (will be 0 (zero) for ExecType (50) =I (Order Status)).
+ *
+ *  Uniqueness must be guaranteed within a single trading day or the life of a multi-day order.
+ *  Firms which accept multi-day orders should consider embedding a date within
+ *  the ExecID field to assure uniqueness across days.
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 public class Tag17StrExecID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

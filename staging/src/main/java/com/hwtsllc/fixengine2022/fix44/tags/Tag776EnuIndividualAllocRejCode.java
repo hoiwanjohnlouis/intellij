@@ -23,6 +23,10 @@ import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
+ *  88 (same as 88, 776)
+ *  AllocRejCode
+ *  int
+ *  Identifies reason for rejection.
  *  776 (same as 88, 776)
  *  IndividualAllocRejCode
  *  Identified reason for rejecting an individual AllocAccount (79) detail.
@@ -30,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  Valid values:
  *      0 - Unknown account(s)
  *      1 - Incorrect quantity
- *      2 - Incorrect average price
+ *      2 - Incorrect averageg price
  *      3 - Unknown executing broker mnemonic
  *      4 - Commission difference
  *      5 - Unknown OrderID (37)

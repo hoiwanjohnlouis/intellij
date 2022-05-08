@@ -24,8 +24,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  10
+ *  CheckSum
+ *  String
+ *  Three byte, simple checksum
+ *
+ *  i.e. serves, with the trailing <SOH>, as the end-of-message delimiter.
+ *
+ *  (see Volume 2: "Checksum Calculation" for description).
+ *  ALWAYS LAST FIELD IN MESSAGE;
+ *
+ *  Always defined as three characters.
+ *  (Always unencrypted)
+ */
 class Tag10StrCheckSumTest {
-
     @Test
     void FIX0010Test() {
         FIX27 fixData = FIX27.FIX10_STR_CHECK_SUM;

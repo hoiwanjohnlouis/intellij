@@ -1,0 +1,2603 @@
+660
+AcctIDSource
+int
+Used to identify the source of the Account (1) code.  This is especially useful if the account is a new account that the Respondent may not have setup yet in their system.
+Valid values:
+	1 - BIC
+	2 - SID Code
+	3 - TFM (GSPTA)
+	4 - OMGEO (Alert ID)
+	5 - DTCC Code
+	99 - Other (custom or proprietary)
+
+or any value conforming to the data type Reserved100Plus
+661
+AllocAcctIDSource
+int
+Used to identify the source of the AllocAccount (79) code.
+      See AcctIDSource (660) for valid values.
+Valid values:
+	1 - BIC
+	2 - SID Code
+	3 - TFM (GSPTA)
+	4 - OMGEO (Alert ID)
+	5 - DTCC Code
+	99 - Other (custom or proprietary)
+662
+BenchmarkPrice
+Price
+Specifies the price of the benchmark.
+663
+BenchmarkPriceType
+int
+Identifies type of BenchmarkPrice (662).
+      See PriceType (423) for valid values.
+Valid values:
+	1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
+	2 - Per unit (i.e. per share or contract)
+	3 - Fixed amount (absolute value)
+	4 - Discount - percentage points below par
+	5 - Premium - percentage points over par
+	6 - Spread (basis points spread)
+	7 - TED Price
+	8 - TED Yield
+	9 - Yield
+	10 - Fixed cabinet trade price (primarily for listed futures and options)
+	11 - Variable cabinet trade price (primarily for listed futures and options)
+	13 - Product ticks in halfs
+	14 - Product ticks in fourths
+	15 - Product ticks in eights
+	16 - Product ticks in sixteenths
+	17 - Product ticks in thirty-seconds
+	18 - Product ticks in sixty-forths
+	19 - Product ticks in one-twenty-eights
+664
+ConfirmID
+String
+Message reference for Confirmation
+665
+ConfirmStatus
+int
+Identifies the status of the Confirmation.
+Valid values:
+	1 - Received
+	2 - Mismatched Account
+	3 - Missing Settlement Instructions
+	4 - Confirmed
+	5 - Request Rejected
+666
+ConfirmTransType
+int
+Identifies the Confirmation transaction type.
+Valid values:
+	0 - New
+	1 - Replace
+	2 - Cancel
+667
+ContractSettlMonth
+month-year
+Specifies when the contract (i.e. MBS/TBA) will settle.
+668
+DeliveryForm
+int
+Identifies the form of delivery.
+Valid values:
+	1 - Book Entry (default)
+	2 - Bearer
+669
+LastParPx
+Price
+Last price expressed in percent-of-par. Conditionally required for Fixed Income trades when LastPx (31) is expressed in Yield, Spread, Discount or any other type.
+      Usage: Execution Report and Allocation Report repeating executions block (from sellside).
+670
+NoLegAllocs
+NumInGroup
+Number of Allocations for the leg
+671
+LegAllocAccount
+String
+Allocation Account for the leg
+      See AllocAccount (79) for description and valid values.
+672
+LegIndividualAllocID
+String
+Reference for the individual allocation ticket
+      See IndividualAllocID (467) for description and valid values.
+673
+LegAllocQty
+Qty
+Leg allocation quantity.
+      See AllocQty (80) for description and valid values.
+674
+LegAllocAcctIDSource
+String
+The source of the LegAllocAccount (671)
+      See AllocAcctIDSource (661) for description and valid values.
+675
+LegSettlCurrency
+Currency
+Identifies settlement currency for the Leg.
+      See SettlCurrency (20) for description and valid values
+676
+LegBenchmarkCurveCurrency
+Currency
+LegBenchmarkPrice (679) currency
+      See BenchmarkCurveCurrency (220) for description and valid values.
+677
+LegBenchmarkCurveName
+String
+Name of the Leg Benchmark Curve.
+      See BenchmarkCurveName (22) for description and valid values.
+Valid values:
+	EONIA - EONIA
+	EUREPO - EUREPO
+	Euribor - Euribor
+	FutureSWAP - FutureSWAP
+	LIBID - LIBID
+	LIBOR - LIBOR (London Inter-Bank Offer)
+	MuniAAA - MuniAAA
+	OTHER - OTHER
+	Pfandbriefe - Pfandbriefe
+	SONIA - SONIA
+	SWAP - SWAP
+	Treasury - Treasury
+678
+LegBenchmarkCurvePoint
+String
+Identifies the point on the Leg Benchmark Curve.
+      See BenchmarkCurvePoint (222) for description and valid values.
+679
+LegBenchmarkPrice
+Price
+Used to identify the price of the benchmark security.
+      See BenchmarkPrice (662) for description and valid values.
+680
+LegBenchmarkPriceType
+int
+The price type of the LegBenchmarkPrice.
+      See BenchmarkPriceType (663) for description and valid values.
+681
+LegBidPx
+Price
+Bid price of this leg.
+      See BidPx (32) for description and valid values.
+682
+LegIOIQty
+String
+Leg-specific IOI quantity.
+      See IOIQty (27) for description and valid values
+Valid values:
+	0 - 1000000000
+	S - Small
+	M - Medium
+	L - Large
+	U - Undisclosed Quantity
+683
+NoLegStipulations
+NumInGroup
+Number of leg stipulation entries
+684
+LegOfferPx
+Price
+Offer price of this leg.
+      See OfferPx (133) for description and valid values
+685
+LegOrderQty
+Qty
+Quantity ordered of this leg.
+      See OrderQty (38) for description and valid values
+686
+LegPriceType
+int
+The price type of the LegBidPx (681) and/or LegOfferPx (684).
+      See PriceType (423) for description and valid values
+Valid values:
+	1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
+	2 - Per unit (i.e. per share or contract)
+	3 - Fixed amount (absolute value)
+	4 - Discount - percentage points below par
+	5 - Premium - percentage points over par
+	6 - Spread (basis points spread)
+	7 - TED Price
+	8 - TED Yield
+	9 - Yield
+	10 - Fixed cabinet trade price (primarily for listed futures and options)
+	11 - Variable cabinet trade price (primarily for listed futures and options)
+	13 - Product ticks in halfs
+	14 - Product ticks in fourths
+	15 - Product ticks in eights
+	16 - Product ticks in sixteenths
+	17 - Product ticks in thirty-seconds
+	18 - Product ticks in sixty-forths
+	19 - Product ticks in one-twenty-eights
+687
+LegQty
+Qty
+Quantity of this leg, e.g. in Quote dialog.
+      See Quantity (53) for description and valid values
+688
+LegStipulationType
+String
+For Fixed Income, type of Stipulation for this leg.
+      See StipulationType (233) for description and valid values
+Valid values:
+	AMT - Alternative Minimum Tax (Y/N)
+	AUTOREINV - Auto Reinvestment at <rate> or better
+	BANKQUAL - Bank qualified (Y/N)
+	BGNCON - Bargain conditions (see StipulationValue (234) for values)
+	COUPON - Coupon range
+	CURRENCY - ISO Currency Code
+	CUSTOMDATE - Custom start/end date
+	GEOG - Geographics and % range (ex. 234=CA 0-80 [minimum of 80% California assets])
+	HAIRCUT - Valuation Discount
+	INSURED - Insured (Y/N)
+	ISSUE - Year Or Year/Month of Issue (ex. 234=2002/09)
+	ISSUER - Issuer's ticker
+	ISSUESIZE - issue size range
+	LOOKBACK - Lookback Days
+	LOT - Explicit lot identifier
+	LOTVAR - Lot Variance (value in percent maximum over- or under-allocation allowed)
+	MAT - Maturity Year And Month
+	MATURITY - Maturity range
+	MAXSUBS - Maximum substitutions (Repo)
+	MINDNOM - Minimum denomination
+	MININCR - Minimum increment
+	MINQTY - Minimum quantity
+	PAYFREQ - Payment frequency, calendar
+	PIECES - Number Of Pieces
+	PMAX - Pools Maximum
+	PPL - Pools per Lot
+	PPM - Pools per Million
+	PPT - Pools per Trade
+	PRICE - Price Range
+	PRICEFREQ - Pricing frequency
+	PROD - Production Year
+	PROTECT - Call protection
+	PURPOSE - Purpose
+	PXSOURCE - Benchmark price source
+	RATING - Rating source and range
+	REDEMPTION - Type Of Redemption - values are: NonCallable, Prefunded, EscrowedToMaturity, Putable, Convertible
+	RESTRICTED - Restricted (Y/N)
+	SECTOR - Market Sector
+	SECTYPE - Security Type included or excluded
+	STRUCT - Structure
+	SUBSFREQ - Substitutions frequency (Repo)
+	SUBSLEFT - Substitutions left (Repo)
+	TEXT - Freeform Text
+	TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
+	WAC - Weighted Average Coupon - value in percent (exact or range) plus "Gross" or "Net" of servicing spread (the default) (ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])
+	WAL - Weighted Average Life Coupon - value in percent (exact or range)
+	WALA - Weighted Average Loan Age - value in months (exact or range)
+	WAM - Weighted Average Maturity - value in months (exact or range)
+	WHOLE - Whole Pool (Y/N)
+	YIELD - Yield Range
+Prepayment Speeds
+	ABS - Absolute Prepayment Speed
+	CPP - Constant Prepayment Penalty
+	CPR - Constant Prepayment Rate
+	CPY - Constant Prepayment Yield
+	HEP - final CPR of Home Equity Prepayment Curve
+	MHP - Percent of Manufactured Housing Prepayment Curve
+	MPR - Monthly Prepayment Rate
+	PPC - Percent of Prospectus Prepayment Curve
+	PSA - Percent of BMA Prepayment Curve
+	SMM - Single Monthly Mortality
+689
+LegStipulationValue
+String
+For Fixed Income, value of stipulation.
+      See StipulationValue (234) for description and valid values
+690
+LegSwapType
+int
+For Fixed Income, used instead of LegQty (687) or LegOrderQty (685) to requests the respondent to calculate the quantity based on the quantity on the opposite side of the swap.
+Valid values:
+	1 - Par For Par
+	2 - Modified Duration
+	4 - Risk
+	5 - Proceeds
+691
+Pool
+String
+For Fixed Income, identifies MBS / ABS pool.
+692
+QuotePriceType
+int
+Code to represent price type requested in Quote.
+                If the Quote Request is for a Swap values 1-8 apply to all legs.
+Valid values:
+	1 - Percent (percent of par)
+	2 - Per Share (e.g. cents per share)
+	3 - Fixed Amount (absolute value)
+	4 - Discount - percentage points below par
+	5 - Premium - percentage points over par
+	6 - Spread - basis points relative to benchmark
+	7 - TED Price
+	8 - TED Yield
+	9 - Yield Spread (swaps)
+	10 - Yield
+693
+QuoteRespID
+String
+Message reference for Quote Response
+694
+QuoteRespType
+int
+Identifies the type of Quote Response.
+Valid values:
+	1 - Hit/Lift
+	2 - Counter
+	3 - Expired
+	4 - Cover
+	5 - Done Away
+	6 - Pass
+695
+QuoteQualifier
+char
+Code to qualify Quote use
+                See IOIQualifier (104) for description and valid values.
+Valid values:
+	A - All or None (AON)
+	B - Market On Close (MOC) (held to close)
+	C - At the close (around/not held to close)
+	D - VWAP (Volume Weighted Average Price)
+	I - In touch with
+	L - Limit
+	M - More Behind
+	O - At the Open
+	P - Taking a Position
+	Q - At the Market (previously called Current Quote)
+	R - Ready to Trade
+	S - Portfolio Shown
+	T - Through the Day
+	V - Versus
+	W - Indidcation -  Working Away
+	X - Crossing Opportunity
+	Y - At the Midpoint
+	Z - Pre-open
+696
+YieldRedemptionDate
+LocalMktDate
+Date to which the yield has been calculated (i.e. maturity, par call or current call, pre-refunded date).
+697
+YieldRedemptionPrice
+Price
+Price to which the yield has been calculated.
+698
+YieldRedemptionPriceType
+int
+The price type of the YieldRedemptionPrice (697)
+      See PriceType (423) for description and valid values.
+Valid values:
+	1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
+	2 - Per unit (i.e. per share or contract)
+	3 - Fixed amount (absolute value)
+	4 - Discount - percentage points below par
+	5 - Premium - percentage points over par
+	6 - Spread (basis points spread)
+	7 - TED Price
+	8 - TED Yield
+	9 - Yield
+	10 - Fixed cabinet trade price (primarily for listed futures and options)
+	11 - Variable cabinet trade price (primarily for listed futures and options)
+	13 - Product ticks in halfs
+	14 - Product ticks in fourths
+	15 - Product ticks in eights
+	16 - Product ticks in sixteenths
+	17 - Product ticks in thirty-seconds
+	18 - Product ticks in sixty-forths
+	19 - Product ticks in one-twenty-eights
+699
+BenchmarkSecurityID
+String
+The identifier of the benchmark security, e.g. Treasury against Corporate bond.
+      See SecurityID (tag 48) for description and valid values.
+700
+ReversalIndicator
+Boolean
+Indicates a trade that reverses a previous trade.
+701
+YieldCalcDate
+LocalMktDate
+Include as needed to clarify yield irregularities associated with date, e.g. when it falls on a non-business day.
+702
+NoPositions
+NumInGroup
+Number of position entries.
+703
+PosType
+String
+Used to identify the type of quantity that is being returned.
+Valid values:
+	ALC - Allocation Trade Qty
+	AS - Option Assignment
+	ASF - As-of Trade Qty
+	DLV - Delivery Qty
+	ETR - Electronic Trade Qty
+	EX - Option Exercise Qty
+	FIN - End-of-Day Qty
+	IAS - Intra-spread Qty
+	IES - Inter-spread Qty
+	PA - Adjustment Qty
+	PIT - Pit Trade Qty
+	SOD - Start-of-Day Qty
+	SPL - Integral Split
+	TA - Transaction from Assignment
+	TOT - Total Transaction Qty
+	TQ - Transaction Quantity
+	TRF - Transfer Trade Qty
+	TX - Transaction from Exercise
+	XM - Cross Margin Qty
+	RCV - Receive Quantity
+	CAA - Corporate Action Adjustment
+	DN - Delivery Notice Qty
+	EP - Exchange for Physical Qty
+704
+LongQty
+Qty
+Long Quantity
+705
+ShortQty
+Qty
+Short Quantity
+706
+PosQtyStatus
+int
+Status of this position.
+Valid values:
+	0 - Submitted
+	1 - Accepted
+	2 - Rejected
+707
+PosAmtType
+String
+Type of Position amount
+Valid values:
+	CASH - Cash Amount (Corporate Event)
+	CRES - Cash Residual Amount
+	FMTM - Final Mark-to-Market Amount
+	IMTM - Incremental Mark-to-Market Amount
+	PREM - Premium Amount
+	SMTM - Start-of-Day Mark-to-Market Amount
+	TVAR - Trade Variation Amount
+	VADJ - Value Adjusted Amount
+	SETL - Settlement Value
+708
+PosAmt
+Amt
+Position amount
+709
+PosTransType
+int
+Identifies the type of position transaction
+Valid values:
+	1 - Exercise
+	2 - Do Not Exercise
+	3 - Position Adjustment
+	4 - Position Change Submission/Margin Disposition
+	5 - Pledge
+	6 - Large Trader Submission
+710
+PosReqID
+String
+Unique identifier for the position maintenance request as assigned by the submitter
+711
+NoUnderlyings
+NumInGroup
+Number of underlying legs that make up the security.
+712
+PosMaintAction
+int
+Maintenance Action to be performed.
+Valid values:
+	1 - New - used to increment the overall transaction quantity
+	2 - Replace - used to override the overall transaction quantity or specifi add messages based on the reference ID
+	3 - Cancel - used to remove the overall transaction or specific add messages based on reference ID
+	4 - Reverse - used to completelly back-out the transaction such that the transaction never existed
+713
+OrigPosReqRefID
+String
+Reference to the PosReqID (710) of a previous maintenance request that is being replaced or canceled.
+714
+PosMaintRptRefID
+String
+Reference to a PosMaintRptID (721) from a previous Position Maintenance Report that is being replaced or canceled.
+715
+ClearingBusinessDate
+LocalMktDate
+The "Clearing Business Date" referred to by this maintenance request.
+716
+SettlSessID
+String
+Identifies a specific settlement session
+Valid values:
+	ITD - Intraday
+	RTH - Regular Trading Hours
+	ETH - Electronic Trading Hours
+	EOD - End Of Day
+717
+SettlSessSubID
+String
+SubID value associated with SettlSessID (716)
+718
+AdjustmentType
+int
+Type of adjustment to be applied, used for PCS and PAJ
+Valid values:
+	0 - Process Request As Margin Disposition
+	1 - Delta Plus
+	2 - Delta Minus
+	3 - Final
+719
+ContraryInstructionIndicator
+Boolean
+Used to indicate when a contrary instruction for exercise or abandonment is being submitted
+720
+PriorSpreadIndicator
+Boolean
+Indicates if requesting a rollover of prior day’s spread submissions.
+721
+PosMaintRptID
+String
+Unique identifier for this position report
+722
+PosMaintStatus
+int
+Status of Position Maintenance Request
+Valid values:
+	0 - Accepted
+	1 - Accepted With Warnings
+	2 - Rejected
+	3 - Completed
+	4 - Completed With Warnings
+723
+PosMaintResult
+int
+Result of Position Maintenance Request.
+4000+ Reserved and available for bi-laterally agreed upon user-defined values
+Valid values:
+	0 - Successful Completion - no warnings or errors
+	1 - Rejected
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+724
+PosReqType
+int
+Used to specify the type of position request being made.
+Valid values:
+	0 - Positions
+	1 - Trades
+	2 - Exercises
+	3 - Assignments
+	4 - Settlement Activity
+	5 - Backout Message
+725
+ResponseTransportType
+int
+Identifies how the response to the request should be transmitted.
+Details specified via ResponseDestination (726).
+Valid values:
+	0 - Inband - transport the request was sent over (default)
+	1 - Out of Band - pre-arranged out-of-band delivery mechanizm (i.e. FTP, HTTP, NDM, etc.) between counterparties. Details specified via ResponseDestination (726).
+726
+ResponseDestination
+String
+URI (Uniform Resource Identifier) for details) or other pre-arranged value.  Used in conjunction with ResponseTransportType (725) value of Out-of-Band to identify the out-of-band destination.
+      See "Appendix 6-B FIX Fields Based Upon Other Standards"
+727
+TotalNumPosReports
+int
+Total number of Position Reports being returned.
+728
+PosReqResult
+int
+Result of Request for Position
+4000+ Reserved and available for bi-laterally agreed upon user-defined values
+Valid values:
+	0 - Valid request
+	1 - Invalid or unsupported request
+	2 - No positions found that match criteria
+	3 - Not authorized to request positions
+	4 - Request for position not supported
+	99 - Other (use Text (58) in conjunction with this code for an explaination)
+
+or any value conforming to the data type Reserved100Plus
+729
+PosReqStatus
+int
+Status of Request for Positions
+Valid values:
+	0 - Completed
+	1 - Completed With Warnings
+	2 - Rejected
+730
+SettlPrice
+Price
+Settlement price
+731
+SettlPriceType
+int
+Type of settlement price
+Valid values:
+	1 - Final
+	2 - Theoretical
+732
+UnderlyingSettlPrice
+Price
+Underlying security’s SettlPrice.
+      See SettlPrice (730) field for description
+733
+UnderlyingSettlPriceType
+int
+Underlying security’s SettlPriceType.
+                See SettlPriceType (731) field for description
+Valid values:
+	1 - Final
+	2 - Theoretical
+734
+PriorSettlPrice
+Price
+Previous settlement price
+735
+NoQuoteQualifiers
+NumInGroup
+Number of repeating groups of QuoteQualifiers (695).
+736
+AllocSettlCurrency
+Currency
+Currency code of settlement denomination for a specific AllocAccount (79).
+737
+AllocSettlCurrAmt
+Amt
+Total amount due expressed in settlement currency (includes the effect of the forex transaction) for a specific AllocAccount (79).
+738
+InterestAtMaturity
+Amt
+Amount of interest (i.e. lump-sum) at maturity.
+739
+LegDatedDate
+LocalMktDate
+The effective date of a new securities issue determined by its underwriters. Often but not always the same as the Issue Date and the Interest Accrual Date
+740
+LegPool
+String
+For Fixed Income, identifies MBS / ABS pool for a specific leg of a multi-leg instrument.
+                See Pool (691) for description and valid values.
+741
+AllocInterestAtMaturity
+Amt
+Amount of interest (i.e. lump-sum) at maturity at the account-level.
+742
+AllocAccruedInterestAmt
+Amt
+Amount of Accrued Interest for convertible bonds and fixed income at the allocation-level.
+743
+DeliveryDate
+LocalMktDate
+Date of delivery.
+744
+AssignmentMethod
+char
+Method by which short positions are assigned to an exercise notice during exercise and assignment processing
+Valid values:
+	P - Pro-rata
+	R - Random
+745
+AssignmentUnit
+Qty
+Quantity Increment used in performing assignment.
+746
+OpenInterest
+Amt
+Open interest that was eligible for assignment.
+747
+ExerciseMethod
+char
+Exercise Method used to in performing assignment.
+Valid values:
+	A - Automatic
+	M - Manual
+748
+TotNumTradeReports
+int
+Total number of trade reports returned.
+749
+TradeRequestResult
+int
+Result of Trade Request
+4000+ Reserved and available for bi-laterally agreed upon user-defined values
+Valid values:
+	0 - Successful (default)
+	1 - Invalid or unknown instrument
+	2 - Invalid type of trade requested
+	3 - Invalid parties
+	4 - Invalid transport type requested
+	5 - Invalid destination requested
+	8 - TradeRequestType not supported
+	9 - Unauthorized ror Trade Capture Report Request
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+750
+TradeRequestStatus
+int
+Status of Trade Request.
+Valid values:
+	0 - Accepted
+	1 - Completed
+	2 - Rejected
+751
+TradeReportRejectReason
+int
+Reason Trade Capture Request was rejected.
+4000+ Reserved and available for bi-laterally agreed upon user-defined values
+Valid values:
+	0 - Successful (default)
+	1 - Invalid party onformation
+	2 - Unknown instrument
+	3 - Unauthorized to report trades
+	4 - Invalid trade type
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+752
+SideMultiLegReportingType
+int
+Used to indicate if the side being reported on Trade Capture Report represents a leg of a multileg instrument or a single security.
+Valid values:
+	1 - Single Security (default if not specified)
+	2 - Individual leg of a multileg security
+	3 - Multileg Security
+753
+NoPosAmt
+NumInGroup
+Number of position amount entries.
+754
+AutoAcceptIndicator
+Boolean
+Identifies whether or not an allocation has been automatically accepted on behalf of the Carry Firm by the Clearing House.
+755
+AllocReportID
+String
+Unique identifier for Allocation Report message.
+756
+NoNested2PartyIDs
+NumInGroup
+Number of Nested2PartyID (757), Nested2PartyIDSource (758), and Nested2PartyRole (759) entries
+757
+Nested2PartyID
+String
+PartyID value within a "second instance" Nested repeating group.
+      Same values as  PartyID (448)
+758
+Nested2PartyIDSource
+char
+PartyIDSource value within a "second instance" Nested repeating group.
+      Same values as  PartyIDSource (447)
+Valid values:
+For all PartyRoles
+	B - BIC (Bank Identification Code - SWIFT managed) code (ISO9362 - See "Appendix 6-B")
+	C - Generally accepted market participant identifier (e.g. NASD mnemonic)
+	D - Proprietary / Custom code
+	E - ISO Country Code
+	F - Settlement Entity Location (note if Local Market Settlement use "E=ISO Country Code") (see "Appendix 6-G" for valid values)
+	G - MIC (ISO 10383 - Market Identificer Code) (See "Appendix 6-C")
+	H - CSD participant/member code (e.g.. Euroclear, DTC, CREST or Kassenverein number)
+For PartyRole = "InvestorID" and for CIV
+	6 - UK National Insurance or Pension Number
+	7 - US Social Security Number
+	8 - US Employer or Tax ID Number
+	9 - Australian Business Number
+	A - Australian Tax File Number
+For PartyRole = "InvestorID" and for Equities
+	1 - Korean Investor ID
+	2 - Taiwanese Qualified Foreign Investor ID QFII/FID
+	3 - Taiwanese Trading Acct
+	4 - Malaysian Central Depository (MCD) number
+	5 - Chinese Investor ID
+For PartyRole="Broker of Credit"
+	I - Directed broker three character acronym as defined in ISITC "ETC Best Practice" guidelines document
+759
+Nested2PartyRole
+int
+PartyRole value within a "second instance" Nested repeating group.
+      Same values as  PartyRole (452)
+Valid values:
+	1 - Executing Firm (formerly FIX 4.2 ExecBroker)
+	2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)
+	3 - Client ID (formerly FIX 4.2 ClientID)
+	4 - Clearing Firm (formerly FIX 4.2 ClearingFirm)
+	5 - Investor ID
+	6 - Introducing Firm
+	7 - Entering Firm
+	8 - Locate / Lending Firm (for short-sales)
+	9 - Fund Manager Client ID (for CIV)
+	10 - Settlement Location (formerly FIX 4.2 SettlLocation)
+	11 - Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order)
+	12 - Executing Trader (associated with Executing Firm - actually executes)
+	13 - Order Origination Firm (e.g. buy-side firm)
+	14 - Giveup Clearing Firm (firm to which trade is given up)
+	15 - Correspondant Clearing Firm
+	16 - Executing System
+	17 - Contra Firm
+	18 - Contra Clearing Firm
+	19 - Sponsoring Firm
+	20 - Underlying Contra Firm
+	21 - Clearing Organization
+	22 - Exchange
+	24 - Customer Account
+	25 - Correspondent Clearing Organization
+	26 - Correspondent Broker
+	27 - Buyer/Seller (Receiver/Deliverer)
+	28 - Custodian
+	29 - Intermediary
+	30 - Agent
+	31 - Sub-custodian
+	32 - Beneficiary
+	33 - Interested party
+	34 - Regulatory body
+	35 - Liquidity provider
+	36 - Entering trader
+	37 - Contra trader
+	38 - Position account
+	39 - Contra Investor ID
+	40 - Transfer to Firm
+	41 - Contra Position Account
+	42 - Contra Exchange
+	43 - Internal Carry Account
+	44 - Order Entry Operator ID
+	45 - Secondary Account Number
+	46 - Foriegn Firm
+	47 - Third Party Allocation Firm
+	48 - Claiming Account
+	49 - Asset Manager
+	50 - Pledgor Account
+	51 - Pledgee Account
+	52 - Large Trader Reportable Account
+	53 - Trader mnemonic
+	54 - Sender Location
+	55 - Session ID
+	56 - Acceptable Counterparty
+	57 - Unacceptable Counterparty
+	58 - Entering Unit
+	59 - Executing Unit
+	60 - Introducing Broker
+	61 - Quote originator
+	62 - Report originator
+	63 - Systematic internaliser (SI)
+	64 - Multilateral Trading Facility (MTF)
+	65 - Regulated Market (RM)
+	66 - Market Maker
+	67 - Investment Firm
+	68 - Host Competent Authority (Host CA)
+	69 - Home Competent Authority (Home CA)
+	70 - Competent Authority of the most relevant market in terms of liquidity (CAL)
+	71 - Competent Authority of the Transaction (Execution) Venue (CATV) 
+	72 - Reporting intermediary (medium/vendor via which report has been published)
+	73 - Execution Venue
+	74 - Market data entry originator
+	75 - Location ID
+	76 - Desk ID
+	77 - Market data market
+	78 - Allocation Entity
+760
+Nested2PartySubID
+String
+PartySubID value within a "second instance" Nested repeating group.
+      Same values as  PartySubID (523)
+761
+BenchmarkSecurityIDSource
+String
+Identifies class or source of the BenchmarkSecurityID (699) value.  Required if BenchmarkSecurityID is specified.
+      Same values as the SecurityIDSource (22) field
+Valid values:
+	1 - CUSIP
+	2 - SEDOL
+	3 - QUIK
+	4 - ISIN number
+	5 - RIC code
+	6 - ISO Currency Code
+	7 - ISO Country Code
+	8 - Exchange Symbol
+	9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)
+	A - Bloomberg Symbol
+	B - Wertpapier
+	C - Dutch
+	D - Valoren
+	E - Sicovam
+	F - Belgian
+	G - "Common" (Clearstream and Euroclear)
+	H - Clearing House / Clearing Organization
+	I - ISDA/FpML Product Specification (XML in EncodedSecurityDesc)
+	J - Option Price Reporting Authority
+	K - ISDA/FpML Product URL (URL in SecurityID)
+	L - Letter of Credit
+762
+SecuritySubType
+String
+Sub-type qualification/identification of the SecurityType (e.g. for SecurityType="REPO"), or the CFICode if SecurityType is not specified.  If specified, SecuirtyType or CFICode is required.
+                Example Values:
+                General = General Collateral (for SecurityType=REPO)
+
+                For SecurityType="MLEG" markets can provide the name of the option or futures strategy, such as Calendar, Vertical, Butterfly, etc.
+                NOTE: Additional values may be used by mutual agreement of the counterparties
+763
+UnderlyingSecuritySubType
+String
+Underlying security’s SecuritySubType.
+      See SecuritySubType (762) field for description
+764
+LegSecuritySubType
+String
+SecuritySubType of the leg instrument.
+      See SecuritySubType (762) field for description
+765
+AllowableOneSidednessPct
+Percentage
+The maximum percentage that execution of one side of a program trade can exceed execution of the other.
+766
+AllowableOneSidednessValue
+Amt
+The maximum amount that execution of one side of a program trade can exceed execution of the other.
+767
+AllowableOneSidednessCurr
+Currency
+The currency that AllowableOneSidednessValue (766) is expressed in if AllowableOneSidednessValue is used.
+768
+NoTrdRegTimestamps
+NumInGroup
+Number of TrdRegTimestamp (769) entries
+769
+TrdRegTimestamp
+UTCTimestamp
+Traded / Regulatory timestamp value. Use to store time information required by government regulators or self regulatory organizations (such as an exchange or clearing house).
+770
+TrdRegTimestampType
+int
+Traded / Regulatory timestamp type.
+Note of Applicability:  values are required in US futures markets by the CFTC to support computerized trade reconstruction.
+(see Volume : "Glossary" for value definitions)
+Valid values:
+	1 - Execution Time
+	2 - Time In
+	3 - Time Out
+	4 - Broker Receipt
+	5 - Broker Execution
+	6 - Desk Receipt
+771
+TrdRegTimestampOrigin
+String
+
+772
+ConfirmRefID
+String
+Reference identifier to be used with ConfirmTransType (666) = Replace or Cancel
+773
+ConfirmType
+int
+Identifies the type of Confirmation message being sent.
+Valid values:
+	1 - Status
+	2 - Confirmation
+	3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+774
+ConfirmRejReason
+int
+Identifies the reason for rejecting a Confirmation.
+Valid values:
+	1 - Mismatched account
+	2 - Missing settlement instructions
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+775
+BookingType
+int
+Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or similar).
+Valid values:
+	0 - Regular booking
+	1 - CFD (Contract for difference)
+	2 - Total Return Swap
+776
+IndividualAllocRejCode
+int
+Identified reason for rejecting an individual AllocAccount (79) detail.
+      Same values as  AllocRejCode (88)
+Valid values:
+	0 - Unknown account(s)
+	1 - Incorrect quantity
+	2 - Incorrect averageg price
+	3 - Unknown executing broker mnemonic
+	4 - Commission difference
+	5 - Unknown OrderID (37)
+	6 - Unknown ListID (66)
+	7 - Other (further in Text (58))
+	8 - Incorrect allocated quantity
+	9 - Calculation difference
+	10 - Unknown or stale ExecID
+	11 - Mismatched data
+	12 - Unknown ClOrdID
+	13 - Warehouse request rejected
+777
+SettlInstMsgID
+String
+Unique identifier for Settlement Instruction message.
+778
+NoSettlInst
+NumInGroup
+Number of settlement instructions within repeating group.
+779
+LastUpdateTime
+UTCTimestamp
+Timestamp of last update to data item (or creation if no updates made since creation).
+780
+AllocSettlInstType
+int
+Used to indicate whether settlement instructions are provided on an allocation instruction message, and if not, how they are to be derived.
+Valid values:
+	0 - Use default instructions
+	1 - Derive from parameters provided
+	2 - Full details provided
+	3 - SSI DB IDs provided
+	4 - Phone for instructions
+781
+NoSettlPartyIDs
+NumInGroup
+Number of SettlPartyID (782), SettlPartyIDSource (783), and SettlPartyRole (784) entries
+782
+SettlPartyID
+String
+PartyID value within a settlement parties component. Nested repeating group.
+      Same values as  PartyID (448)
+783
+SettlPartyIDSource
+char
+PartyIDSource value within a settlement parties component.
+      Same values as  PartyIDSource (447)
+Valid values:
+For all PartyRoles
+	B - BIC (Bank Identification Code - SWIFT managed) code (ISO9362 - See "Appendix 6-B")
+	C - Generally accepted market participant identifier (e.g. NASD mnemonic)
+	D - Proprietary / Custom code
+	E - ISO Country Code
+	F - Settlement Entity Location (note if Local Market Settlement use "E=ISO Country Code") (see "Appendix 6-G" for valid values)
+	G - MIC (ISO 10383 - Market Identificer Code) (See "Appendix 6-C")
+	H - CSD participant/member code (e.g.. Euroclear, DTC, CREST or Kassenverein number)
+For PartyRole = "InvestorID" and for CIV
+	6 - UK National Insurance or Pension Number
+	7 - US Social Security Number
+	8 - US Employer or Tax ID Number
+	9 - Australian Business Number
+	A - Australian Tax File Number
+For PartyRole = "InvestorID" and for Equities
+	1 - Korean Investor ID
+	2 - Taiwanese Qualified Foreign Investor ID QFII/FID
+	3 - Taiwanese Trading Acct
+	4 - Malaysian Central Depository (MCD) number
+	5 - Chinese Investor ID
+For PartyRole="Broker of Credit"
+	I - Directed broker three character acronym as defined in ISITC "ETC Best Practice" guidelines document
+784
+SettlPartyRole
+int
+PartyRole value within a settlement parties component.
+      Same values as  PartyRole (452)
+Valid values:
+	1 - Executing Firm (formerly FIX 4.2 ExecBroker)
+	2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)
+	3 - Client ID (formerly FIX 4.2 ClientID)
+	4 - Clearing Firm (formerly FIX 4.2 ClearingFirm)
+	5 - Investor ID
+	6 - Introducing Firm
+	7 - Entering Firm
+	8 - Locate / Lending Firm (for short-sales)
+	9 - Fund Manager Client ID (for CIV)
+	10 - Settlement Location (formerly FIX 4.2 SettlLocation)
+	11 - Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order)
+	12 - Executing Trader (associated with Executing Firm - actually executes)
+	13 - Order Origination Firm (e.g. buy-side firm)
+	14 - Giveup Clearing Firm (firm to which trade is given up)
+	15 - Correspondant Clearing Firm
+	16 - Executing System
+	17 - Contra Firm
+	18 - Contra Clearing Firm
+	19 - Sponsoring Firm
+	20 - Underlying Contra Firm
+	21 - Clearing Organization
+	22 - Exchange
+	24 - Customer Account
+	25 - Correspondent Clearing Organization
+	26 - Correspondent Broker
+	27 - Buyer/Seller (Receiver/Deliverer)
+	28 - Custodian
+	29 - Intermediary
+	30 - Agent
+	31 - Sub-custodian
+	32 - Beneficiary
+	33 - Interested party
+	34 - Regulatory body
+	35 - Liquidity provider
+	36 - Entering trader
+	37 - Contra trader
+	38 - Position account
+	39 - Contra Investor ID
+	40 - Transfer to Firm
+	41 - Contra Position Account
+	42 - Contra Exchange
+	43 - Internal Carry Account
+	44 - Order Entry Operator ID
+	45 - Secondary Account Number
+	46 - Foriegn Firm
+	47 - Third Party Allocation Firm
+	48 - Claiming Account
+	49 - Asset Manager
+	50 - Pledgor Account
+	51 - Pledgee Account
+	52 - Large Trader Reportable Account
+	53 - Trader mnemonic
+	54 - Sender Location
+	55 - Session ID
+	56 - Acceptable Counterparty
+	57 - Unacceptable Counterparty
+	58 - Entering Unit
+	59 - Executing Unit
+	60 - Introducing Broker
+	61 - Quote originator
+	62 - Report originator
+	63 - Systematic internaliser (SI)
+	64 - Multilateral Trading Facility (MTF)
+	65 - Regulated Market (RM)
+	66 - Market Maker
+	67 - Investment Firm
+	68 - Host Competent Authority (Host CA)
+	69 - Home Competent Authority (Home CA)
+	70 - Competent Authority of the most relevant market in terms of liquidity (CAL)
+	71 - Competent Authority of the Transaction (Execution) Venue (CATV) 
+	72 - Reporting intermediary (medium/vendor via which report has been published)
+	73 - Execution Venue
+	74 - Market data entry originator
+	75 - Location ID
+	76 - Desk ID
+	77 - Market data market
+	78 - Allocation Entity
+785
+SettlPartySubID
+String
+PartySubID value within a settlement parties component.
+      Same values as  PartySubID (523)
+786
+SettlPartySubIDType
+int
+Type of SettlPartySubID (785) value.
+      Same values as  PartySubIDType (803)
+Valid values:
+	1 - Firm
+	2 - Person
+	3 - System
+	4 - Application
+	5 - Full legal name of firm
+	6 - Postal address
+	7 - Phone number
+	8 - Email address
+	9 - Contact name
+	10 - Securities account number (for settlement instructions)
+	11 - Registration number (for settlement instructions and confirmations)
+	12 - Registered address (for confirmation purposes)
+	13 - Regulatory status (for confirmation purposes)
+	14 - Registration name (for settlement instructions)
+	15 - Cash account number (for settlement instructions)
+	16 - BIC
+	17 - CSD participant member code
+	18 - Registered address
+	19 - Fund account name
+	20 - Telex number
+	21 - Fax number
+	22 - Securities account name
+	23 - Cash account name
+	24 - Department
+	25 - Location desk
+	26 - Position account type
+	27 - Security locate ID
+	28 - Market maker
+	29 - Eligible counterparty
+	30 - Professional client
+	31 - Location
+	32 - Execution venue
+787
+DlvyInstType
+char
+Used to indicate whether a delivery instruction is used for securities or cash settlement.
+Valid values:
+	C - Cash
+	S - Securities
+788
+TerminationType
+int
+Type of financing termination.
+Valid values:
+	1 - Overnight
+	2 - Term
+	3 - Flexible
+	4 - Open
+789
+NextExpectedMsgSeqNum
+SeqNum
+Next expected MsgSeqNum value to be received.
+790
+OrdStatusReqID
+String
+Can be used to uniquely identify a specific Order Status Request message.
+791
+SettlInstReqID
+String
+Unique ID of settlement instruction request message
+792
+SettlInstReqRejCode
+int
+Identifies reason for rejection (of a settlement instruction request message).
+Valid values:
+	0 - Unable to process request
+	1 - Unknown account
+	2 - No matching settlement instructions found
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+793
+SecondaryAllocID
+String
+Secondary allocation identifier. Unlike the AllocID (70), this can be shared across a number of allocation instruction or allocation report messages, thereby making it possible to pass an identifier for an original allocation message on multiple messages (e.g. from one party to a second to a third, across cancel and replace messages etc.).
+794
+AllocReportType
+int
+Describes the specific type or purpose of an Allocation Report message
+Valid values:
+	2 - Preliminary Request to Intermediary
+	3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
+	4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)
+	5 - Warehouse Recap
+	8 - Request to Intermediary
+	9 - Accept
+	10 - Reject
+	11 - Accept Pending
+	12 - Complete
+	14 - Reverse Pending
+795
+AllocReportRefID
+String
+Reference identifier to be used with AllocTransType (7) = Replace or Cancel
+796
+AllocCancReplaceReason
+int
+Reason for cancelling or replacing an Allocation Instruction or Allocation Report message
+Valid values:
+	1 - Original details incomplete/incorrect
+	2 - Change in underlying order details
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+797
+CopyMsgIndicator
+Boolean
+Indicates whether or not this message is a drop copy of another message.
+798
+AllocAccountType
+int
+Type of account associated with a confirmation or other trade-level message
+Valid values:
+	1 - Account is carried pn customer side of books
+	2 - Account is carried on non-customer side of books
+	3 - House trader
+	4 - Floor trader
+	6 - Account is carried on non-customer side of books and is cross margined
+	7 - Account is house trader and is cross margined
+	8 - Joint back office account (JBO)
+799
+OrderAvgPx
+Price
+Average price for a specific order
+800
+OrderBookingQty
+Qty
+Quantity of the order that is being booked out as part of an Allocation Instruction or Allocation Report message
+801
+NoSettlPartySubIDs
+NumInGroup
+Number of SettlPartySubID (785) and SettlPartySubIDType (786) entries
+802
+NoPartySubIDs
+NumInGroup
+Number of PartySubID (523)and PartySubIDType (803) entries
+803
+PartySubIDType
+int
+Type of PartySubID (523) value
+      4000+  = Reserved and available for bi-laterally agreed upon user defined values
+Valid values:
+	1 - Firm
+	2 - Person
+	3 - System
+	4 - Application
+	5 - Full legal name of firm
+	6 - Postal address
+	7 - Phone number
+	8 - Email address
+	9 - Contact name
+	10 - Securities account number (for settlement instructions)
+	11 - Registration number (for settlement instructions and confirmations)
+	12 - Registered address (for confirmation purposes)
+	13 - Regulatory status (for confirmation purposes)
+	14 - Registration name (for settlement instructions)
+	15 - Cash account number (for settlement instructions)
+	16 - BIC
+	17 - CSD participant member code
+	18 - Registered address
+	19 - Fund account name
+	20 - Telex number
+	21 - Fax number
+	22 - Securities account name
+	23 - Cash account name
+	24 - Department
+	25 - Location desk
+	26 - Position account type
+	27 - Security locate ID
+	28 - Market maker
+	29 - Eligible counterparty
+	30 - Professional client
+	31 - Location
+	32 - Execution venue
+
+or any value conforming to the data type Reserved4000Plus
+804
+NoNestedPartySubIDs
+NumInGroup
+Number of NestedPartySubID (545) and NestedPartySubIDType (805) entries
+805
+NestedPartySubIDType
+int
+Type of NestedPartySubID (545) value.
+      Same values as  PartySubIDType (803)
+Valid values:
+	1 - Firm
+	2 - Person
+	3 - System
+	4 - Application
+	5 - Full legal name of firm
+	6 - Postal address
+	7 - Phone number
+	8 - Email address
+	9 - Contact name
+	10 - Securities account number (for settlement instructions)
+	11 - Registration number (for settlement instructions and confirmations)
+	12 - Registered address (for confirmation purposes)
+	13 - Regulatory status (for confirmation purposes)
+	14 - Registration name (for settlement instructions)
+	15 - Cash account number (for settlement instructions)
+	16 - BIC
+	17 - CSD participant member code
+	18 - Registered address
+	19 - Fund account name
+	20 - Telex number
+	21 - Fax number
+	22 - Securities account name
+	23 - Cash account name
+	24 - Department
+	25 - Location desk
+	26 - Position account type
+	27 - Security locate ID
+	28 - Market maker
+	29 - Eligible counterparty
+	30 - Professional client
+	31 - Location
+	32 - Execution venue
+806
+NoNested2PartySubIDs
+NumInGroup
+Number of Nested2PartySubID (760) and Nested2PartySubIDType (807) entries.  Second instance of <NestedParties>.
+807
+Nested2PartySubIDType
+int
+Type of Nested2PartySubID (760) value. Second instance of <NestedParties>.
+      Same values as  PartySubIDType (803)
+Valid values:
+	1 - Firm
+	2 - Person
+	3 - System
+	4 - Application
+	5 - Full legal name of firm
+	6 - Postal address
+	7 - Phone number
+	8 - Email address
+	9 - Contact name
+	10 - Securities account number (for settlement instructions)
+	11 - Registration number (for settlement instructions and confirmations)
+	12 - Registered address (for confirmation purposes)
+	13 - Regulatory status (for confirmation purposes)
+	14 - Registration name (for settlement instructions)
+	15 - Cash account number (for settlement instructions)
+	16 - BIC
+	17 - CSD participant member code
+	18 - Registered address
+	19 - Fund account name
+	20 - Telex number
+	21 - Fax number
+	22 - Securities account name
+	23 - Cash account name
+	24 - Department
+	25 - Location desk
+	26 - Position account type
+	27 - Security locate ID
+	28 - Market maker
+	29 - Eligible counterparty
+	30 - Professional client
+	31 - Location
+	32 - Execution venue
+808
+AllocIntermedReqType
+int
+Response to allocation to be communicated to a counterparty through an intermediary, i.e. clearing house.  Used in conjunction with AllocType = "Request to Intermediary" and AllocReportType = "Request to Intermediary"
+Valid values:
+	1 - Pending Accept
+	2 - Pending Release
+	3 - Pending Reversal
+	4 - Accept
+	5 - Block Level Reject
+	6 - Account Level Reject
+809
+(Not Defined)
+n/a
+This field has not been defined.
+810
+UnderlyingPx
+Price
+Underlying price associate with a derivative instrument.
+811
+PriceDelta
+float
+Delta calculated from theoretical price
+812
+ApplQueueMax
+int
+Used to specify the maximum number of application messages that can be queued bedore a corrective action needs to take place to resolve the queuing issue.
+813
+ApplQueueDepth
+int
+Current number of application messages that were queued at the time that the message was created by the counterparty.
+814
+ApplQueueResolution
+int
+Resolution taken when ApplQueueDepth (813) exceeds ApplQueueMax (812) or system specified maximum queue size.
+Valid values:
+	0 - No Action Taken
+	1 - Queue Flushed
+	2 - Overlay Last
+	3 - End Session
+815
+ApplQueueAction
+int
+Action to take to resolve an application message queue (backlog).
+Valid values:
+	0 - No Action Taken
+	1 - Queue Flushed
+	2 - Overlay Last
+	3 - End Session
+816
+NoAltMDSource
+NumInGroup
+Number of alternative market data sources
+817
+AltMDSourceID
+String
+Session layer source for market data
+      (For the standard FIX session layer, this would be the TargetCompID (56) where market data can be obtained).
+818
+SecondaryTradeReportID
+String
+Deprecated in FIX.5.0 Secondary trade report identifier - can be used to associate an additional identifier with a trade.
+819
+AvgPxIndicator
+int
+Average Pricing Indicator
+Valid values:
+	0 - No Average Pricing
+	1 - Trade is part of an average price group identified by the TradeLinkID (820)
+	2 - Last trade is the average price group identified by the TradeLinkID (820)
+820
+TradeLinkID
+String
+Used to link a group of trades together. Useful for linking a group of trades together for average price calculations.
+821
+OrderInputDevice
+String
+Specific device number, terminal number or station where order was entered
+822
+UnderlyingTradingSessionID
+String
+Trading Session in which the underlying instrument trades
+823
+UnderlyingTradingSessionSubID
+String
+Trading Session sub identifier in which the underlying instrument trades
+824
+TradeLegRefID
+String
+Reference to the leg of a multileg instrument to which this trade refers
+825
+ExchangeRule
+String
+Used to report any exchange rules that apply to this trade.
+      Primarily intended for US futures markets. Certain trading practices are permitted by the CFTC, such as large lot trading, block trading, all or none trades. If the rules are used, the exchanges are required to indicate these rules on the trade.
+826
+TradeAllocIndicator
+int
+Identifies how the trade is to be allocated
+Valid values:
+	0 - Allocation not required
+	1 - Allocation required (give-up trade) allocation information not provided (incomplete)
+	2 - Use allocation provided with the trade
+	3 - Allocation give-up executor
+	4 - Allocation from executor
+	5 - Allocation to claim account
+827
+ExpirationCycle
+int
+Part of trading cycle when an instrument expires. Field is applicable for derivatives.
+Valid values:
+	0 - Expire on trading session close (default)
+	1 - Expire on trading session open
+828
+TrdType
+int
+Type of Trade:
+Valid values:
+	0 - Regular Trade
+	1 - Block Trade
+	2 - EFP (Exchange for physical)
+	3 - Transfer
+	4 - Late Trade
+	5 - T Trade
+	6 - Weighted Average Price Trade
+	7 - Bunched Trade
+	8 - Late Bunched Trade
+	9 - Prior Reference Price Trade
+	10 - After Hours Trade
+	11 - Exchange for Risk (EFR)
+	12 - Exchange for Swap (EFS )
+	13 - Exchange of Futures for (in Market) Futures (EFM ) (e,g, full sized for mini)
+	14 - Exchange of Options for Options (EOO)
+	15 - Trading at Settlement
+	16 - All or None
+	17 - Futures Large Order Execution
+	18 - Exchange of Futures for Futures (external market) (EFF)
+	19 - Option Interim Trade
+	20 - Option Cabinet Trade
+	22 - Privately Negotiated Trades
+	23 - Substitution of Futures for Forwards
+MiFID Values
+	24 - Error trade
+	25 - Special cum dividend (CD)
+	26 - Special ex dividend (XD)
+	27 - Special cum coupon (CC)
+	28 - Special ex coupon (XC)
+	29 - Cash settlement (CS)
+	30 - Special price (usually net- or all-in price) (SP)
+	31 - Guaranteed delivery (GD)
+	32 - Special cum rights (CR)
+	33 - Special ex rights (XR)
+	34 - Special cum capital repayments (CP)
+	35 - Special ex capital repayments (XP)
+	36 - Special cum bonus (CB)
+	37 - Special ex bonus (XB)
+	38 - Block trade (same as large trade)
+	39 - Worked principal trade (UK-specific)
+	40 - Block Trades - after market
+	41 - Name change
+	42 - Portfolio transfer
+	43 - Prorogation buy - Euronext Paris only. Is used to defer settlement under French SRD (deferred settlement system) . Trades must be reported as crosses at zero price
+	44 - Prorogation sell  - see prorogation buy
+	45 - Option exercise
+	46 - Delta neutral transaction
+	47 - Financing transaction (includes repo and stock lending)
+829
+TrdSubType
+int
+Further qualification to the trade type
+Valid values:
+	0 - CMTA
+	1 - Internal transfer or adjustment
+	2 - External transfer or transfer of account
+	3 - Reject for submitting side
+	4 - Advisory for contra side
+	5 - Offset due to an allocation
+	6 - Onset dut to an allocation
+	7 - Differential spread
+	8 - Implied spread leg executed against an outright
+	9 - Transaction from exercise
+	10 - Transaction from assignment
+	11 - ACATS
+MiFID Values
+	14 - AI (Automated input facility disabled in response to an exchange request.)
+	15 - B (Transaction between two member firms where neither member firm is registered as a market maker in the security in question and neither is a designated fund manager. Also used by broker dealers when dealing with another broker which is not a member firm. Non-order book securities only.)
+	16 - K (Transaction using block trade facility.)
+	17 - LC (Correction submitted more than three days after publication of the original trade report.)
+	18 - M (Transaction, other than a transaction resulting from a stock swap or stock switch, between two market makers registered in that security including IDB or a public display system trades. Non-order book securities only.)
+	19 - N (Non-protected portfolio transaction or a fully disclosed portfolio transaction)
+	20 - NM ( i) transaction where Exchange has granted permission for non-publication
+ii)IDB is reporting as seller
+iii) submitting a transaction report to the Exchange, where the transaction report is not also a trade report.)
+	21 - NR (Non-risk transaction in a SEATS security other than an AIM security)
+	22 - P (Protected portfolio transaction or a worked principal agreement to effect a portfolio transaction which includes order book securities)
+	23 - PA (Protected transaction notification)
+	24 - PC (Contra trade for transaction which took place on a previous day and which was automatically executed on the Exchange trading system)
+	25 - PN (Worked principal notification for a portfolio transaction which includes order book securities)
+	26 - R ( (i) riskless principal transaction between non-members where the buying and selling transactions are executed at different prices or on different terms (requires a trade report with trade type indicator R for each transaction)
+(ii) market maker is reporting all the legs of a riskless principal transaction where the buying and selling transactions are executed at different prices (requires a trade report with trade type indicator R for each transaction)or
+(iii) market maker is reporting the onward leg of a riskless principal transaction where the legs are executed at different prices, and another market maker has submitted a trade report using trade type indicator M for the first leg (this requires a single trade report with trade type indicator R).)
+	27 - RO (Transaction which resulted from the exercise of a traditional option or a stock-settled covered warrant)
+	28 - RT (Risk transaction in a SEATS security, (excluding AIM security) reported by a market maker registered in that security)
+	29 - SW (Transactions resulting from stock swap or a stock switch (one report is required for each line of stock))
+	30 - T (If reporting a single protected transaction)
+	31 - WN (Worked principal notification for a single order book security)
+	32 - WT (Worked principal transaction (other than a portfolio transaction))
+830
+TransferReason
+String
+Reason trade is being transferred
+831
+AsgnReqID
+String
+Unique identifier for the Assignment Report Request
+832
+TotNumAssignmentReports
+int
+Total Number of Assignment Reports being returned to a firm
+833
+AsgnRptID
+String
+Unique identifier for the Assignment Report
+834
+ThresholdAmount
+PriceOffset
+Amount that a position has to be in the money before it is exercised.
+835
+PegMoveType
+int
+Describes whether peg is static or floats
+Valid values:
+	0 - Floating (default)
+	1 - Fixed
+836
+PegOffsetType
+int
+Type of Peg Offset value
+Valid values:
+	0 - Price (default)
+	1 - Basis Points
+	2 - Ticks
+	3 - Price Tier / Level
+837
+PegLimitType
+int
+Type of Peg Limit
+Valid values:
+	0 - Or better (default) - price improvement allowed
+	1 - Strict - limit is a strict limit
+	2 - Or worse - for a buy the peg limit is a minimum and for a sell the peg limit is a maximum (for use for orders which have a price range)
+838
+PegRoundDirection
+int
+If the calculated peg price is not a valid tick price, specifies whether to round the price to be more or less aggressive
+Valid values:
+	1 - More aggressive - on a buy order round the price up to the nearest tick; on a sell order round down to the nearest tick
+	2 - More passive - on a buy order round down to the nearest tick; on a sell order round up to the nearest tick
+839
+PeggedPrice
+Price
+The price the order is currently pegged at
+840
+PegScope
+int
+The scope of the peg
+Valid values:
+	1 - Local (Exchange, ECN, ATS)
+	2 - National
+	3 - Global
+	4 - National xxcluding local
+841
+DiscretionMoveType
+int
+Describes whether discretionay price is static or floats
+Valid values:
+	0 - Floating (default)
+	1 - Fixed
+842
+DiscretionOffsetType
+int
+Type of Discretion Offset value
+Valid values:
+	0 - Price (default)
+	1 - Basis Points
+	2 - Ticks
+	3 - Price Tier / Level
+843
+DiscretionLimitType
+int
+Type of Discretion Limit
+Valid values:
+	0 - Or better (default) - price improvement allowed
+	1 - Strict - limit is a strict limit
+	2 - Or worse - for a buy the discretion price is a minimum and for a sell the discretion price is a maximum (for use for orders which have a price range)
+844
+DiscretionRoundDirection
+int
+If the calculated discretionary price is not a valid tick price, specifies whether to round the price to be more or less aggressive
+Valid values:
+	1 - More aggressive - on a buy order round the price up to the nearest tick; on a sell round down to the nearest tick
+	2 - More passive - on a buy order round down to the nearest tick; on a sell order round up to the nearest tick
+845
+DiscretionPrice
+Price
+The current discretionary price of the order
+846
+DiscretionScope
+int
+The scope of the discretion
+Valid values:
+	1 - Local (Exchange, ECN, ATS)
+	2 - National
+	3 - Global
+	4 - National excluding local
+847
+TargetStrategy
+int
+The target strategy of the order
+      1000+  = Reserved and available for bi-laterally agreed upon user defined values
+Valid values:
+	1 - VWAP
+	2 - Participate (i.e. aim to be x percent of the market volume)
+	3 - Mininize market impact
+
+or any value conforming to the data type Reserved1000Plus
+848
+TargetStrategyParameters
+String
+Deprecated in FIX.5.0 Field to allow further specification of the TargetStrategy - usage to be agreed between counterparties
+849
+ParticipationRate
+Percentage
+Deprecated in FIX.5.0 For a TargetStrategy=Participate order specifies the target particpation rate. For other order types this is a volume limit (i.e. do not be more than this percent of the market volume)
+850
+TargetStrategyPerformance
+float
+For communication of the performance of the order versus the target strategy
+851
+LastLiquidityInd
+int
+Indicator to identify whether this fill was a result of a liquidity provider providing or liquidity taker taking the liquidity.  Applicable only for OrdStatus of Partial or Filled.
+Valid values:
+	1 - Added Liquidity
+	2 - Removed Liquidity
+	3 - Liquidity Routed Out
+852
+PublishTrdIndicator
+Boolean
+Indicates if a trade should be reported via a market reporting service.
+Valid values:
+	N - Do Not Report Trade
+	Y - Report Trade
+853
+ShortSaleReason
+int
+Reason for short sale.
+Valid values:
+	0 - Dealer Sold Short
+	1 - Dealer Sold Short Exempt
+	2 - Selling Customer Sold Short
+	3 - Selling Customer Sold Short Exempt
+	4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short
+	5 - QSR or AGU Contra Side Sold Short Exempt
+854
+QtyType
+int
+Type of quantity specified in a quantity field:
+Valid values:
+	0 - Units (shares, par, currency)
+	1 - Contracts (if used - must specify ContractMultiplier (tag 231))
+	2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
+855
+SecondaryTrdType
+int
+Additional TrdType (see tag 828) assigned to a trade by trade match system.
+856
+TradeReportType
+int
+Type of Trade Report
+Valid values:
+	0 - Submit
+	1 - Alleged
+	2 - Accept
+	3 - Decline
+	4 - Addendum
+	5 - No/Was
+	6 - Trade Report Cancel
+	7 - (Locked-In) Trade Break
+	8 - Defaulted
+	9 - Invalid CMTA
+	10 - Pended
+	11 - Alleged New
+	12 - Alleged Addendum
+	13 - Alleged No/Was
+	14 - Alleged Trade Report Cancel
+	15 - Alleged (Locked-In) Trade Break
+857
+AllocNoOrdersType
+int
+Indicates how the orders being booked and allocated by an Allocation Instruction or Allocation Report message are identified, i.e. by explicit definition in the NoOrders group or not.
+Valid values:
+	0 - Not Specified
+	1 - Explicit List Provided
+858
+SharedCommission
+Amt
+Commission to be shared with a third party, e.g. as part of a directed brokerage commission sharing arrangement.
+859
+ConfirmReqID
+String
+Unique identifier for a Confirmation Request message
+860
+AvgParPx
+Price
+Used to express average price as percent of par (used where AvgPx field is expressed in some other way)
+861
+ReportedPx
+Price
+Reported price (used to differentiate from AvgPx on a confirmation of a marked-up or marked-down principal trade)
+862
+NoCapacities
+NumInGroup
+Number of  repeating OrderCapacity entries.
+863
+OrderCapacityQty
+Qty
+Quantity executed under a specific OrderCapacity (e.g. quantity executed as agent, quantity executed as principal)
+864
+NoEvents
+NumInGroup
+Number of  repeating EventType entries.
+865
+EventType
+int
+Code to represent the type of event
+Valid values:
+	1 - Put
+	2 - Call
+	3 - Tender
+	4 - Sinking Fund Call
+	5 - Activation
+	6 - Inactiviation
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+866
+EventDate
+LocalMktDate
+Date of event
+867
+EventPx
+Price
+Predetermined price of issue at event, if applicable
+868
+EventText
+String
+Comments related to the event.
+869
+PctAtRisk
+Percentage
+Percent at risk due to lowest possible call.
+870
+NoInstrAttrib
+NumInGroup
+Number of repeating InstrAttribType entries.
+871
+InstrAttribType
+int
+Code to represent the type of instrument attribute
+Valid values:
+	1 - Flat (securities pay interest on a current basis but are traded without interest)
+	2 - Zero coupon
+	3 - Interest bearing (for Euro commercial paper when not issued at discount)
+	4 - No periodic payments
+	5 - Variable rate
+	6 - Less fee for put
+	7 - Stepped coupon
+	8 - Coupon period (if not semi-annual). Supply redemption date in the InstrAttribValue (872) field.
+	9 - When [and if] issued
+	10 - Original issue discount
+	11 - Callable, puttable
+	12 - Escrowed to Maturity
+	13 - Escrowed to redemption date - callable. Supply redemption date in the InstrAttribValue (872) field
+	14 - Pre-refunded
+	15 - In default
+	16 - Unrated
+	17 - Taxable
+	18 - Indexed
+	19 - Subject To Alternative Minimum Tax
+	20 - Original issue discount price. Supply price in the InstrAttribValue (872) field
+	21 - Callable below maturity value
+	22 - Callable without notice by mail to holder unless registered
+	99 - Text. Supply the text of the attribute or disclaimer in the InstrAttribValue (872) field.
+
+or any value conforming to the data type Reserved100Plus
+872
+InstrAttribValue
+String
+Attribute value appropriate to the  InstrAttribType (87) field.
+873
+DatedDate
+LocalMktDate
+The effective date of a new securities issue determined by its underwriters.  Often but not always the same as the Issue Date and the Interest Accrual Date
+874
+InterestAccrualDate
+LocalMktDate
+The start date used for calculating accrued interest on debt instruments which are being sold between interest payment dates.  Often but not always the same as the Issue Date and the Dated Date
+875
+CPProgram
+int
+The program under which a commercial paper is issued
+Valid values:
+	1 - 3(a)(3)
+	2 - 4(2)
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+876
+CPRegType
+String
+The registration type of a commercial paper issuance
+877
+UnderlyingCPProgram
+String
+The program under which the underlying commercial paper is issued
+878
+UnderlyingCPRegType
+String
+The registration type of the underlying commercial paper issuance
+879
+UnderlyingQty
+Qty
+Unit amount of the underlying security (par, shares, currency, etc.)
+880
+TrdMatchID
+String
+Identifier assigned to a trade by a matching system.
+881
+SecondaryTradeReportRefID
+String
+Deprecated in FIX.5.0 Used to refer to a previous SecondaryTradeReportRefID when amending the transaction (cancel, replace, release, or reversal).
+882
+UnderlyingDirtyPrice
+Price
+Price (percent-of-par or per unit) of the underlying security or basket.  "Dirty" means it includes accrued interest
+883
+UnderlyingEndPrice
+Price
+Price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement.
+884
+UnderlyingStartValue
+Amt
+Currency value attributed to this collateral at the start of the agreement
+885
+UnderlyingCurrentValue
+Amt
+Currency value currently attributed to this collateral
+886
+UnderlyingEndValue
+Amt
+Currency value attributed to this collateral at the end of the agreement
+887
+NoUnderlyingStips
+NumInGroup
+Number of underlying stipulation entries
+888
+UnderlyingStipType
+String
+Type of stipulation.
+      Same values as StipulationType (233)
+Valid values:
+	AMT - Alternative Minimum Tax (Y/N)
+	AUTOREINV - Auto Reinvestment at <rate> or better
+	BANKQUAL - Bank qualified (Y/N)
+	BGNCON - Bargain conditions (see StipulationValue (234) for values)
+	COUPON - Coupon range
+	CURRENCY - ISO Currency Code
+	CUSTOMDATE - Custom start/end date
+	GEOG - Geographics and % range (ex. 234=CA 0-80 [minimum of 80% California assets])
+	HAIRCUT - Valuation Discount
+	INSURED - Insured (Y/N)
+	ISSUE - Year Or Year/Month of Issue (ex. 234=2002/09)
+	ISSUER - Issuer's ticker
+	ISSUESIZE - issue size range
+	LOOKBACK - Lookback Days
+	LOT - Explicit lot identifier
+	LOTVAR - Lot Variance (value in percent maximum over- or under-allocation allowed)
+	MAT - Maturity Year And Month
+	MATURITY - Maturity range
+	MAXSUBS - Maximum substitutions (Repo)
+	MINDNOM - Minimum denomination
+	MININCR - Minimum increment
+	MINQTY - Minimum quantity
+	PAYFREQ - Payment frequency, calendar
+	PIECES - Number Of Pieces
+	PMAX - Pools Maximum
+	PPL - Pools per Lot
+	PPM - Pools per Million
+	PPT - Pools per Trade
+	PRICE - Price Range
+	PRICEFREQ - Pricing frequency
+	PROD - Production Year
+	PROTECT - Call protection
+	PURPOSE - Purpose
+	PXSOURCE - Benchmark price source
+	RATING - Rating source and range
+	REDEMPTION - Type Of Redemption - values are: NonCallable, Prefunded, EscrowedToMaturity, Putable, Convertible
+	RESTRICTED - Restricted (Y/N)
+	SECTOR - Market Sector
+	SECTYPE - Security Type included or excluded
+	STRUCT - Structure
+	SUBSFREQ - Substitutions frequency (Repo)
+	SUBSLEFT - Substitutions left (Repo)
+	TEXT - Freeform Text
+	TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
+	WAC - Weighted Average Coupon - value in percent (exact or range) plus "Gross" or "Net" of servicing spread (the default) (ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])
+	WAL - Weighted Average Life Coupon - value in percent (exact or range)
+	WALA - Weighted Average Loan Age - value in months (exact or range)
+	WAM - Weighted Average Maturity - value in months (exact or range)
+	WHOLE - Whole Pool (Y/N)
+	YIELD - Yield Range
+Prepayment Speeds
+	ABS - Absolute Prepayment Speed
+	CPP - Constant Prepayment Penalty
+	CPR - Constant Prepayment Rate
+	CPY - Constant Prepayment Yield
+	HEP - final CPR of Home Equity Prepayment Curve
+	MHP - Percent of Manufactured Housing Prepayment Curve
+	MPR - Monthly Prepayment Rate
+	PPC - Percent of Prospectus Prepayment Curve
+	PSA - Percent of BMA Prepayment Curve
+	SMM - Single Monthly Mortality
+889
+UnderlyingStipValue
+String
+Value of stipulation.
+      Same values as StipulationValue (234)
+890
+MaturityNetMoney
+Amt
+Net Money at maturity if Zero Coupon and maturity value is different from par value
+891
+MiscFeeBasis
+int
+Defines the unit for a miscellaneous fee.
+Valid values:
+	0 - Absolute
+	1 - Per Unit
+	2 - Percentage
+892
+TotNoAllocs
+int
+Total number of NoAlloc entries across all messages. Should be the sum of all NoAllocs in each message that has repeating NoAlloc entries related to the same AllocID or AllocReportID. Used to support fragmentation.
+893
+LastFragment
+Boolean
+Indicates whether this message is the last in a sequence of messages for those messages that support fragmentation, such as Allocation Instruction, Mass Quote, Security List, Derivative Security List
+Valid values:
+	N - Not Last Message
+	Y - Last Message
+894
+CollReqID
+String
+Collateral Request Identifier
+895
+CollAsgnReason
+int
+Reason for Collateral Assignment
+Valid values:
+	0 - Initial
+	1 - Scheduled
+	2 - Time Warning
+	3 - Margin Deficiency
+	4 - Margin Excess
+	5 - Forward Collateral Demand
+	6 - Event of default
+	7 - Adverse tax event
+896
+CollInquiryQualifier
+int
+Collateral inquiry qualifiers:
+Valid values:
+	0 - Trade Date
+	1 - GC Instrument
+	2 - Collateral Instrument
+	3 - Substitution Eligible
+	4 - Not Assigned
+	5 - Partially Assigned
+	6 - Fully Assigned
+	7 - Outstanding Trades (Today < end date)
+897
+NoTrades
+NumInGroup
+Number of trades in repeating group.
+898
+MarginRatio
+Percentage
+The fraction of the cash consideration that must be collateralized, expressed as a percent.  A MarginRatio of 02% indicates that the value of the collateral (after deducting for "haircut") must exceed the cash consideration by 2%.
+899
+MarginExcess
+Amt
+Excess margin amount (deficit if value is negative)
+900
+TotalNetValue
+Amt
+TotalNetValue is determined as follows:
+      At the initial collateral assignment TotalNetValue is the sum of (UnderlyingStartValue * (1-haircut)).
+      In a collateral substitution TotalNetValue is the sum of (UnderlyingCurrentValue * (1-haircut)).
+
+      For listed derivatives clearing margin management, this is the collateral value which equals (Market value * haircut)
+901
+CashOutstanding
+Amt
+Starting consideration less repayments
+902
+CollAsgnID
+String
+Collateral Assignment Identifier
+903
+CollAsgnTransType
+int
+Collateral Assignment Transaction Type
+Valid values:
+	0 - New
+	1 - Replace
+	2 - Cancel
+	3 - Release
+	4 - Reverse
+904
+CollRespID
+String
+Collateral Response Identifier
+905
+CollAsgnRespType
+int
+Collateral Assignment Response Type
+Valid values:
+	0 - Received
+	1 - Accepted
+	2 - Declined
+	3 - Rejected
+906
+CollAsgnRejectReason
+int
+Collateral Assignment Reject Reason
+Valid values:
+	0 - Unknown deal (order / trade)
+	1 - Unknown or invalid instrument
+	2 - Unauthorized transaction
+	3 - Insufficient collateral
+	4 - Invalid type of collateral
+	5 - Excessive substitution
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+907
+CollAsgnRefID
+String
+Collateral Assignment Identifier to which a transaction refers
+908
+CollRptID
+String
+Collateral Report Identifier
+909
+CollInquiryID
+String
+Collateral Inquiry Identifier
+910
+CollStatus
+int
+Collateral Status
+Valid values:
+	0 - Unassigned
+	1 - Partially Assigned
+	2 - Assignment Proposed
+	3 - Assigned (Accepted)
+	4 - Challenged
+911
+TotNumReports
+int
+Total number or reports returned in response to a request
+912
+LastRptRequested
+Boolean
+Indicates whether this message is that last report message in response to a request, such as Order Mass Status Request.
+Valid values:
+	N - Not last message
+	Y - Last message
+913
+AgreementDesc
+String
+The full name of the base standard agreement, annexes and amendments in place between the principals applicable to a financing transaction.
+914
+AgreementID
+String
+A common reference to the applicable standing agreement between the counterparties to a financing transaction.
+915
+AgreementDate
+LocalMktDate
+A reference to the date the underlying agreement specified by AgreementID and  AgreementDesc was executed.
+916
+StartDate
+LocalMktDate
+Start date of a financing deal, i.e. the date the buyer pays the seller cash and takes control of the collateral
+917
+EndDate
+LocalMktDate
+End date of a financing deal, i.e. the date the seller reimburses the buyer and takes back control of the collateral
+918
+AgreementCurrency
+Currency
+Contractual currency forming the basis of a financing agreement and associated transactions.  Usually, but not always, the same as the trade currency.
+919
+DeliveryType
+int
+Identifies type of settlement
+Valid values:
+	0 - "Versus Payment": Deliver (if sell) or Receive (if buy) vs. (against) Payment
+	1 - "Free": Deliver (if sell) or Receive (if buy) Free
+	2 - Tri-Party
+	3 - Hold In Custody
+920
+EndAccruedInterestAmt
+Amt
+Accrued Interest Amount applicable to a financing transaction on the End Date.
+921
+StartCash
+Amt
+Starting dirty cash consideration of a financing deal, i.e. paid to the seller on the Start Date.
+922
+EndCash
+Amt
+Ending dirty cash consideration of a financing deal. i.e. reimbursed to the buyer on the End Date.
+923
+UserRequestID
+String
+Unique identifier for a User Request.
+924
+UserRequestType
+int
+Indicates the action required by a User Request Message
+Valid values:
+	1 - Log On User
+	2 - Log Off User
+	3 - Change Password For User
+	4 - Request Individual User Status
+925
+NewPassword
+String
+New Password or passphrase
+926
+UserStatus
+int
+Indicates the status of a user
+Valid values:
+	1 - Logged In
+	2 - Not Logged In
+	3 - User Not Recognised
+	4 - Password Incorrect
+	5 - Password Changed
+	6 - Other
+927
+UserStatusText
+String
+A text description associated with a user status.
+928
+StatusValue
+int
+Indicates the status of a network connection
+Valid values:
+	1 - Connected
+	2 - Not Connected - down expected up
+	3 - Not Connected - down expected down
+	4 - In Process
+929
+StatusText
+String
+A text description associated with a network status.
+930
+RefCompID
+String
+Assigned value used to identify a firm.
+931
+RefSubID
+String
+Assigned value used to identify specific elements within a firm.
+932
+NetworkResponseID
+String
+Unique identifier for a network response.
+933
+NetworkRequestID
+String
+Unique identifier for a network resquest.
+934
+LastNetworkResponseID
+String
+Identifier of the previous Network Response message sent to a counterparty, used to allow incremental updates.
+935
+NetworkRequestType
+int
+Indicates the type and level of details required for a Network Status Request Message
+                Boolean logic applies EG If you want to subscribe for changes to certain id’s then UserRequestType =0 (8+2), Snapshot for certain ID’s = 9 (8+1)
+Valid values:
+	1 - Snapshot
+	2 - Subscribe
+	4 - Stop Subscribing
+	8 - Level of Detail, then NoCompID's becomes required
+936
+NoCompIDs
+NumInGroup
+Number of CompID entries in a repeating group.
+937
+NetworkStatusResponseType
+int
+Indicates the type of Network Response Message.
+Valid values:
+	1 - Full
+	2 - Incremental Update
+938
+NoCollInquiryQualifier
+NumInGroup
+Number of CollInquiryQualifier entries in a repeating group.
+939
+TrdRptStatus
+int
+Trade Report Status
+Valid values:
+	0 - Accepted
+	1 - Rejected
+	3 - Accepted with errors
+940
+AffirmStatus
+int
+Identifies the status of the ConfirmationAck.
+Valid values:
+	1 - Received
+	2 - Confirm rejected, i.e. not affirmed
+	3 - Affirmed
+941
+UnderlyingStrikeCurrency
+Currency
+Currency in which the strike price of an underlying instrument is denominated
+942
+LegStrikeCurrency
+Currency
+Currency in which the strike price of a instrument leg of a multileg instrument is denominated
+943
+TimeBracket
+String
+A code that represents a time interval in which a fill or trade occurred.
+      Required for US futures markets.
+944
+CollAction
+int
+Action proposed for an Underlying Instrument instance.
+Valid values:
+	0 - Retain
+	1 - Add
+	2 - Remove
+945
+CollInquiryStatus
+int
+Status of Collateral Inquiry
+Valid values:
+	0 - Accepted
+	1 - Accepted With Warnings
+	2 - Completed
+	3 - Completed With Warnings
+	4 - Rejected
+946
+CollInquiryResult
+int
+Result returned in response to Collateral Inquiry
+4000+ Reserved and available for bi-laterally agreed upon user-defined values
+Valid values:
+	0 - Successful (default)
+	1 - Invalid or unknown instrument
+	2 - Invalid or unknown collateral type
+	3 - Invalid Parties
+	4 - Invalid Transport Type requested
+	5 - Invalid Destination requested
+	6 - No collateral found for the trade specified
+	7 - No collateral found for the order specified
+	8 - Collateral inquiry type not supported
+	9 - Unauthorized for collateral inquiry
+	99 - Other (further information in Text (58) field)
+
+or any value conforming to the data type Reserved100Plus
+947
+StrikeCurrency
+Currency
+Currency in which the StrikePrice is denominated.
+948
+NoNested3PartyIDs
+NumInGroup
+Number of Nested3PartyID (949), Nested3PartyIDSource (950), and Nested3PartyRole (95) entries
+949
+Nested3PartyID
+String
+PartyID value within a "third instance" Nested repeating group.
+      Same values as  PartyID (448)
+950
+Nested3PartyIDSource
+char
+PartyIDSource value within a "third instance" Nested repeating group.
+      Same values as  PartyIDSource (447)
+Valid values:
+For all PartyRoles
+	B - BIC (Bank Identification Code - SWIFT managed) code (ISO9362 - See "Appendix 6-B")
+	C - Generally accepted market participant identifier (e.g. NASD mnemonic)
+	D - Proprietary / Custom code
+	E - ISO Country Code
+	F - Settlement Entity Location (note if Local Market Settlement use "E=ISO Country Code") (see "Appendix 6-G" for valid values)
+	G - MIC (ISO 10383 - Market Identificer Code) (See "Appendix 6-C")
+	H - CSD participant/member code (e.g.. Euroclear, DTC, CREST or Kassenverein number)
+For PartyRole = "InvestorID" and for CIV
+	6 - UK National Insurance or Pension Number
+	7 - US Social Security Number
+	8 - US Employer or Tax ID Number
+	9 - Australian Business Number
+	A - Australian Tax File Number
+For PartyRole = "InvestorID" and for Equities
+	1 - Korean Investor ID
+	2 - Taiwanese Qualified Foreign Investor ID QFII/FID
+	3 - Taiwanese Trading Acct
+	4 - Malaysian Central Depository (MCD) number
+	5 - Chinese Investor ID
+For PartyRole="Broker of Credit"
+	I - Directed broker three character acronym as defined in ISITC "ETC Best Practice" guidelines document
+951
+Nested3PartyRole
+int
+PartyRole value within a "third instance" Nested repeating group.
+      Same values as  PartyRole (452)
+Valid values:
+	1 - Executing Firm (formerly FIX 4.2 ExecBroker)
+	2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)
+	3 - Client ID (formerly FIX 4.2 ClientID)
+	4 - Clearing Firm (formerly FIX 4.2 ClearingFirm)
+	5 - Investor ID
+	6 - Introducing Firm
+	7 - Entering Firm
+	8 - Locate / Lending Firm (for short-sales)
+	9 - Fund Manager Client ID (for CIV)
+	10 - Settlement Location (formerly FIX 4.2 SettlLocation)
+	11 - Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order)
+	12 - Executing Trader (associated with Executing Firm - actually executes)
+	13 - Order Origination Firm (e.g. buy-side firm)
+	14 - Giveup Clearing Firm (firm to which trade is given up)
+	15 - Correspondant Clearing Firm
+	16 - Executing System
+	17 - Contra Firm
+	18 - Contra Clearing Firm
+	19 - Sponsoring Firm
+	20 - Underlying Contra Firm
+	21 - Clearing Organization
+	22 - Exchange
+	24 - Customer Account
+	25 - Correspondent Clearing Organization
+	26 - Correspondent Broker
+	27 - Buyer/Seller (Receiver/Deliverer)
+	28 - Custodian
+	29 - Intermediary
+	30 - Agent
+	31 - Sub-custodian
+	32 - Beneficiary
+	33 - Interested party
+	34 - Regulatory body
+	35 - Liquidity provider
+	36 - Entering trader
+	37 - Contra trader
+	38 - Position account
+	39 - Contra Investor ID
+	40 - Transfer to Firm
+	41 - Contra Position Account
+	42 - Contra Exchange
+	43 - Internal Carry Account
+	44 - Order Entry Operator ID
+	45 - Secondary Account Number
+	46 - Foriegn Firm
+	47 - Third Party Allocation Firm
+	48 - Claiming Account
+	49 - Asset Manager
+	50 - Pledgor Account
+	51 - Pledgee Account
+	52 - Large Trader Reportable Account
+	53 - Trader mnemonic
+	54 - Sender Location
+	55 - Session ID
+	56 - Acceptable Counterparty
+	57 - Unacceptable Counterparty
+	58 - Entering Unit
+	59 - Executing Unit
+	60 - Introducing Broker
+	61 - Quote originator
+	62 - Report originator
+	63 - Systematic internaliser (SI)
+	64 - Multilateral Trading Facility (MTF)
+	65 - Regulated Market (RM)
+	66 - Market Maker
+	67 - Investment Firm
+	68 - Host Competent Authority (Host CA)
+	69 - Home Competent Authority (Home CA)
+	70 - Competent Authority of the most relevant market in terms of liquidity (CAL)
+	71 - Competent Authority of the Transaction (Execution) Venue (CATV) 
+	72 - Reporting intermediary (medium/vendor via which report has been published)
+	73 - Execution Venue
+	74 - Market data entry originator
+	75 - Location ID
+	76 - Desk ID
+	77 - Market data market
+	78 - Allocation Entity
+952
+NoNested3PartySubIDs
+NumInGroup
+Number of Nested3PartySubIDs (953) entries
+953
+Nested3PartySubID
+String
+PartySubID value within a "third instance" Nested repeating group.
+      Same values as  PartySubID (523)
+954
+Nested3PartySubIDType
+int
+PartySubIDType value within a "third instance" Nested repeating group.
+      Same values as  PartySubIDType (803)
+Valid values:
+	1 - Firm
+	2 - Person
+	3 - System
+	4 - Application
+	5 - Full legal name of firm
+	6 - Postal address
+	7 - Phone number
+	8 - Email address
+	9 - Contact name
+	10 - Securities account number (for settlement instructions)
+	11 - Registration number (for settlement instructions and confirmations)
+	12 - Registered address (for confirmation purposes)
+	13 - Regulatory status (for confirmation purposes)
+	14 - Registration name (for settlement instructions)
+	15 - Cash account number (for settlement instructions)
+	16 - BIC
+	17 - CSD participant member code
+	18 - Registered address
+	19 - Fund account name
+	20 - Telex number
+	21 - Fax number
+	22 - Securities account name
+	23 - Cash account name
+	24 - Department
+	25 - Location desk
+	26 - Position account type
+	27 - Security locate ID
+	28 - Market maker
+	29 - Eligible counterparty
+	30 - Professional client
+	31 - Location
+	32 - Execution venue
+955
+LegContractSettlMonth
+month-year
+Specifies when the contract (i.e. MBS/TBA) will settle.
+956
+LegInterestAccrualDate
+LocalMktDate
+The start date used for calculating accrued interest on debt instruments which are being sold between interest payment dates.  Often but not always the same as the Issue Date and the Dated Date

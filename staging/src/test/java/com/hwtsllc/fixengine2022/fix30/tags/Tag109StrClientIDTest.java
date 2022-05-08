@@ -24,6 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  109
+ *  ClientID
+ *  String
+ *  Deprecated in FIX.4.2
+ *  Firm identifier used in third party-transactions
+ *  (should not be a substitute for OnBehalfOfCompID/DeliverToCompID).
+ */
 // @Deprecated
 class Tag109StrClientIDTest {
 

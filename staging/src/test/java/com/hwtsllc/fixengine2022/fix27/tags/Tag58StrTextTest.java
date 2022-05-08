@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  58
+ *  Text
+ *  String
+ *  Free format text string
+ *  (Note: this field does not have a specified maximum length)
+ */
 class Tag58StrTextTest {
-
     @Test
     void FIX0058Test() {
         FIX27 fixData = FIX27.FIX58_STR_TEXT;

@@ -22,6 +22,35 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  39
+ *  OrdStatus
+ *  char
+ *  Identifies current status of order.
+ *
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  *** See Replaced Features and Supported Approach ***
+ *      (see Volume : "Glossary" for value definitions)
+ *
+ *  Valid values:
+ *      0 - New
+ *      1 - Partially filled
+ *      2 - Filled
+ *      3 - Done for day
+ *      4 - Canceled
+ *
+ *      5 - Replaced (No longer used)
+ *      6 - Pending Cancel (i.e. result of Order Cancel Request)
+ *      7 - Stopped
+ *      8 - Rejected
+ *      9 - Suspended
+ *
+ *      A - Pending New
+ *      B - Calculated
+ *      C - Expired
+ *      D - Accepted for Bidding
+ *      E - Pending Replace (i.e. result of Order Cancel/Replace Request)
+ */
 class Enum39OrdStatusTest {
     @Test
     void Enum0039Test() {

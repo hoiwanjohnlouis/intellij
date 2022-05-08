@@ -19,6 +19,49 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  40
+ *  OrdType
+ *  char
+ *  Order type.
+ *
+ *  *** SOME VALUES ARE NO LONGER USED ***
+ *  *** See Deprecated (Phased-out) Features and Supported Approach ***
+ *      (see Volume : "Glossary" for value definitions)
+ *
+ *  Valid values:
+ *      1 - Market
+ *      2 - Limit
+ *      3 - Stop / Stop Loss
+ *      4 - Stop Limit
+ *      5 - Market On Close (No longer used)
+ *
+ *      6 - With Or Without
+ *      7 - Limit Or Better
+ *      8 - Limit With Or Without
+ *      9 - On Basis
+ *
+ *      A - On Close (No longer used)
+ *      B - Limit On Close (No longer used)
+ *      C - Forex Market (No longer used)
+ *      D - Previously Quoted
+ *      E - Previously Indicated
+ *
+ *      F - Forex Limit (No longer used)
+ *      G - Forex Swap
+ *      H - Forex Previously Quoted (No longer used)
+ *      I - Funari
+ *          (Limit day order with unexecuted portion handles as Market On Close.
+ *           e.g. Japan)
+ *      J - Market If Touched (MIT)
+ *
+ *      K - Market With Left Over as Limit
+ *          (market order with unexecuted quantity becoming limit order at last price)
+ *      L - Previous Fund Valuation Point (Historic pricing;  for CIV)
+ *      M - Next Fund Valuation Point (Forward pricing;  for CIV)
+ *      P - Pegged
+ *      Q - Counter-order selection
+ */
 public enum Enum40OrdType implements EnumAccessors, LogStringVerbose {
     MARKET("1", "MARKET", "1 - Market" ),
     LIMIT("2", "LIMIT", "2 - Limit" ),

@@ -19,6 +19,21 @@ package com.hwtsllc.fixengine2022.fix27.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  98
+ *  EncryptMethod
+ *  int
+ *  Method of encryption.
+ *  Valid values:
+ *      0 - None / Other
+ *      1 - PKCS (Proprietary)
+ *      2 - DES (ECB Mode)
+ *      3 - PKCS / DES (Proprietary)
+ *      4 - PGP / DES (Defunct)
+ *
+ *      5 - PGP / DES-MD5 (See app note on FIX web site)
+ *      6 - PEM / DES-MD5 (see app note on FIX web site)
+ */
 public enum Enum98EncryptMethod implements EnumAccessors, LogStringVerbose {
     NONE_OR_OTHER("0", "NONE_OR_OTHER", "0 - None / Other"),
     PKCS("1", "PKCS", "1 - PKCS (Proprietary)"),

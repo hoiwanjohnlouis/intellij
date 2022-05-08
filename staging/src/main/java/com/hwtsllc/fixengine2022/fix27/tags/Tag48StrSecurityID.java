@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  48
+ *  SecurityID
+ *  String
+ *  Security identifier value of SecurityIDSource (22) type
+ *  (e.g. CUSIP, SEDOL, ISIN, etc).  Requires SecurityIDSource.
+ */
 public class Tag48StrSecurityID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

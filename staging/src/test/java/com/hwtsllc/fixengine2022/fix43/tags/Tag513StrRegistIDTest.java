@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -29,9 +30,9 @@ class Tag513StrRegistIDTest {
         assertEquals( "", fixData.getID());
         assertEquals( "", fixData.getName());
         assertEquals( "", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0513Test() {

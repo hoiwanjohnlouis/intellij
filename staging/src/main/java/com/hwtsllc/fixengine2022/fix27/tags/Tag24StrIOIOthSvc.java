@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  24
+ *  IOIOthSvc  (no longer used)
+ *  char
+ *  Deprecated in FIX.4.1
+ */
 // @Deprecated
 public class Tag24StrIOIOthSvc extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;

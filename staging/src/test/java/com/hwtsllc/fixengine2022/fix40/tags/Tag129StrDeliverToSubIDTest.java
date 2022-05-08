@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  129
+ *  DeliverToSubID
+ *  String
+ *  Assigned value used to identify specific message recipient
+ *  (i.e. trader) if the message is delivered by a third party
+ */
 class Tag129StrDeliverToSubIDTest {
-
     @Test
     void FIX0129Test() {
         FIX40 fixData = FIX40.FIX129_STR_DELIVER_TO_SUB_ID;

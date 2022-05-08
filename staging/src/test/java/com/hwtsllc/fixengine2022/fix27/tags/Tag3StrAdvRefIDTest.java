@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  3
+ *  AdvRefID
+ *  String
+ *  Reference identifier used with CANCEL and REPLACE transaction types.
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 class Tag3StrAdvRefIDTest {
     @Test
     void FIX0003Test() {

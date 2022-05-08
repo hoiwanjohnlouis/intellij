@@ -23,10 +23,53 @@ import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  1096 (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
- *  PegSecurityIDSource
- *  Defines the identity of the security off whose prices the order will peg.
+ *  22
+ *  (same as 22, 305, 456, 459, 603, 606, 761, 1096, 1105)
+ *  SecurityIDSource
+ *  String
+ *  Identifies class or source of the SecurityID (48) value.  Required if SecurityID is specified.
+ *                  100+ are reserved for private security identifications
+ *  305
+ *  UnderlyingSecurityIDSource
+ *  String
+ *  Underlying security’s SecurityIDSource.
+ *                  Valid values:   See SecurityIDSource (22) field
+ *  456
+ *  SecurityAltIDSource
+ *  String
+ *  Identifies class or source of the SecurityAltID (455) value.  Required if SecurityAltID is specified.
+ *                  Valid values:   Same valid values as the SecurityIDSource (22) field
+ *  459
+ *  UnderlyingSecurityAltIDSource
+ *  String
+ *  Identifies class or source of the UnderlyingSecurityAltID (458) value.  Required if UnderlyingSecurityAltID is specified.
+ *                  Valid values:   Same valid values as the SecurityIDSource (22) field
+ *  603
+ *  LegSecurityIDSource
+ *  String
+ *  Multileg instrument's individual  security’s SecurityIDSource.
+ *                  Valid values:   See SecurityIDSource (22) field for description
+ *  606
+ *  LegSecurityAltIDSource
+ *  String
+ *  Multileg instrument's individual  security’s SecurityAltIDSource.
+ *                  Valid values:   See SecurityAltIDSource (456) field for description
+ *  761
+ *  BenchmarkSecurityIDSource
+ *  Identifies class or source of the BenchmarkSecurityID (699) value.
+ *  Required if BenchmarkSecurityID is specified.
  *              Same values as the SecurityIDSource (22) field
+ *  1096
+ *  PegSecurityIDSource
+ *  String
+ *  Defines the identity of the security off whose prices the order will peg.
+ *                  Valid values:   See SecurityIDSource (22) field for description
+ *  1105
+ *  TriggerSecurityIDSource
+ *  String
+ *  Defines the identity of the security whose prices will be tracked by the trigger logic.
+ *                  Valid values:   See SecurityIDSource (22) field for description
+ *
  *  Valid values:
  *      1 - CUSIP
  *      2 - SEDOL

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  53
+ *  Quantity
+ *  Qty
+ *  Overall/total quantity (e.g. number of shares)
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag53QtyQuantityTest {
 
     @Test

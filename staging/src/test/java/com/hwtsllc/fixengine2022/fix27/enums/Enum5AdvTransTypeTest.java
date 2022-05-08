@@ -22,6 +22,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  5
+ *  AdvTransType
+ *  String
+ *  Identifies advertisement message transaction type
+ *  Valid values:
+ *      N - New
+ *      C - Cancel
+ *      R - Replace
+ */
 class Enum5AdvTransTypeTest {
     @Test
     void Enum0005Test() {

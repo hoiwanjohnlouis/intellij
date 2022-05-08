@@ -21,6 +21,33 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  54 (same as 54, 624,)
+ *  Side
+ *  char
+ *  Side of order (see Volume : "Glossary" for value definitions)
+ *  624 (same as 54, 624,)
+ *  LegSide
+ *  char
+ *  The side of this individual leg (multileg security).
+ *  Valid values:
+ *      1 - Buy
+ *      2 - Sell
+ *      3 - Buy minus
+ *      4 - Sell plus
+ *      5 - Sell short
+ *      6 - Sell short exempt
+ *      7 - Undisclosed (valid for IOI and List Order messages only)
+ *      8 - Cross (orders where counterparty is an exchange, valid for all messages except IOIs)
+ *      9 - Cross short
+ *      A - Cross short exxmpt
+ *      B - "As Defined" (for use with multileg instruments)
+ *      C - "Opposite" (for use with multileg instruments)
+ *      D - Subscribe (e.g. CIV)
+ *      E - Redeem (e.g. CIV)
+ *      F - Lend (FINANCING - identifies direction of collateral)
+ *      G - Borrow (FINANCING - identifies direction of collateral)
+ */
 class MyEnumSideTest {
     /**
      *  Information is the same for TAGS 54, 624

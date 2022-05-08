@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  12
+ *  Commission
+ *  Amt
+ *  Commission.
+ *  Note if CommType (13) is percentage, Commission of 5% should be represented as .05.
+ */
 class Tag12AmtCommissionTest {
-
     @Test
     void FIX0012Test() {
         FIX27 fixData = FIX27.FIX12_AMT_COMMISSION;

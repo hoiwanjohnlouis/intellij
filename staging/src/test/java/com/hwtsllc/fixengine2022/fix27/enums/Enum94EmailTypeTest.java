@@ -22,6 +22,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  94
+ *  EmailType
+ *  char
+ *  Email message type.
+ *  Valid values:
+ *      0 - New
+ *      1 - Reply
+ *      2 - Admin Reply
+ */
 class Enum94EmailTypeTest {
     @Test
     void Enum0094Test() {

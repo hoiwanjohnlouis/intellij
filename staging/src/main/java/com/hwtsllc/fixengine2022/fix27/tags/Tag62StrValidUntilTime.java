@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  62
+ *  ValidUntilTime
+ *  UTCTimestamp
+ *  Indicates expiration time of indication message
+ *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
+ */
 public class Tag62StrValidUntilTime extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

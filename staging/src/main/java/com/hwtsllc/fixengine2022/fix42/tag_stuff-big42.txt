@@ -1,0 +1,1972 @@
+212
+XmlDataLen
+Length
+Length of the XmlData data block.
+213
+XmlData
+data
+Actual XML data stream (e.g. FIXML). See approriate XML reference (e.g. FIXML).  Note: may contain embedded SOH characters.
+214
+SettlInstRefID
+String
+Reference identifier for the SettlInstID (162) with Cancel and Replace SettlInstTransType (163) transaction types.
+215
+NoRoutingIDs
+NumInGroup
+Number of repeating groups of RoutingID (217) and RoutingType (216) values.
+
+      See Volume 3: "Pre-Trade Message Targeting/Routing"
+216
+RoutingType
+int
+Indicates the type of RoutingID (217) specified.
+Valid values:
+	1 - Target Firm
+	2 - Target List
+	3 - Block Firm
+	4 - Block List
+217
+RoutingID
+String
+Assigned value used to identify a specific routing destination.
+218
+Spread
+PriceOffset
+For Fixed Income.  Either Swap Spread or Spread to Benchmark depending upon the order type.
+      Spread to Benchmark:  Basis points relative to a benchmark.  To be expressed as "count of basis points" (vs. an absolute value).  E.g. High Grade Corporate Bonds may express price as basis points relative to benchmark (the BenchmarkCurveName (22) field).  Note: Basis points can be negative.
+      Swap Spread:  Target spread for a swap.
+219
+Benchmark
+char
+Deprecated in FIX.4.2 For Fixed Income.  Identifies the benchmark (e.g. used in conjunction with the Spread field).
+Valid values:
+	1 - CURVE
+	2 - 5YR
+	3 - OLD5
+	4 - 10YR
+	5 - OLD10
+	6 - 30YR
+	7 - OLD30
+	8 - 3MOLIBOR
+	9 - 6MOLIBOR
+220
+BenchmarkCurveCurrency
+Currency
+Identifies currency used for  benchmark curve. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+221
+BenchmarkCurveName
+String
+Name of benchmark curve.
+                (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+Valid values:
+	EONIA - EONIA
+	EUREPO - EUREPO
+	Euribor - Euribor
+	FutureSWAP - FutureSWAP
+	LIBID - LIBID
+	LIBOR - LIBOR (London Inter-Bank Offer)
+	MuniAAA - MuniAAA
+	OTHER - OTHER
+	Pfandbriefe - Pfandbriefe
+	SONIA - SONIA
+	SWAP - SWAP
+	Treasury - Treasury
+222
+BenchmarkCurvePoint
+String
+Point on benchmark curve.  Free form values:  e.g. "Y", "7Y", "INTERPOLATED".
+                Sample values:
+                M = combination of a number between 1-12 and a "M" for month
+                Y = combination of number between 1-100 and a "Y" for year}
+                10Y-OLD = see above, then add "-OLD" when appropriate
+                INTERPOLATED = the point is mathematically derived
+                2/2031 5 3/8 = the point is stated via a combination of maturity month / year and coupon
+                See Fixed Income-specific documentation at http://www.fixprotocol.org for additional values.
+                (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+223
+CouponRate
+Percentage
+The rate of interest that, when multiplied by the principal, par value, or face value of a bond, provides the currency amount of the periodic interest payment.  The coupon is always cited, along with maturity, in any quotation of a bond's price.
+224
+CouponPaymentDate
+LocalMktDate
+Date interest is to be paid.  Used in identifying Corporate Bond issues.
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+225
+IssueDate
+LocalMktDate
+The date on which a bond or stock offering is issued.  It may or may not be the same as the effective date ("Dated Date") or the date on which interest begins to accrue ("Interest Accrual Date")
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+226
+RepurchaseTerm
+int
+Deprecated in FIX.4.4 Number of business days before repurchase of a repo. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+227
+RepurchaseRate
+Percentage
+Deprecated in FIX.4.4 Percent of par at which a Repo will be repaid. Represented as a percent, e.g. .9525 represents 95-/4 percent of par. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+228
+Factor
+float
+For Fixed Income: Amorization Factor for deriving Current face from Original face for ABS or MBS securities, note the fraction may be greater than, equal to or less than .  In TIPS securities this is the Inflation index.
+      Qty * Factor * Price = Gross Trade Amount
+      For Derivatives: Contract Value Factor by which price must be adjusted to determine the true nominal value of one futures/options contract.
+      (Qty * Price) * Factor = Nominal Value
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+229
+TradeOriginationDate
+LocalMktDate
+Used with Fixed Income for Muncipal New Issue Market.  Agreement in principal between counter-parties prior to actual trade date.
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+230
+ExDate
+LocalMktDate
+The date when a distribution of interest is deducted from a securities assets or set aside for payment to bondholders. On the ex-date, the securities price drops by the amount of the distribution (plus or minus any market activity).
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+231
+ContractMultiplier
+float
+Specifies the ratio or multiply factor to convert from "nominal" units (e.g. contracts) to total units (e.g. shares) (e.g. 1.0, 100, 1000, etc).  Applicable For Fixed Income, Convertible Bonds, Derivatives, etc.
+                In general quantities for all calsses should be expressed in the basic unit of the instrument, e.g. shares for equities, norminal or par amount for bonds, currency for foreign exchange.  When quantity is expressed in contracts, e.g. financing transactions and bond trade reporting, ContractMutliplier should contain the number of units in one contract and can be omitted if the multiplier is the default amount for the instrument, i.e. 1,000 par of bonds, 1,000,000 par for financing transactions.
+232
+NoStipulations
+NumInGroup
+Number of stipulation entries
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3).
+233
+StipulationType
+String
+For Fixed Income.
+                Type of Stipulation.
+                Other types may be used by mutual agreement of the counterparties.
+                (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+Valid values:
+	AMT - Alternative Minimum Tax (Y/N)
+	AUTOREINV - Auto Reinvestment at <rate> or better
+	BANKQUAL - Bank qualified (Y/N)
+	BGNCON - Bargain conditions (see StipulationValue (234) for values)
+	COUPON - Coupon range
+	CURRENCY - ISO Currency Code
+	CUSTOMDATE - Custom start/end date
+	GEOG - Geographics and % range (ex. 234=CA 0-80 [minimum of 80% California assets])
+	HAIRCUT - Valuation Discount
+	INSURED - Insured (Y/N)
+	ISSUE - Year Or Year/Month of Issue (ex. 234=2002/09)
+	ISSUER - Issuer's ticker
+	ISSUESIZE - issue size range
+	LOOKBACK - Lookback Days
+	LOT - Explicit lot identifier
+	LOTVAR - Lot Variance (value in percent maximum over- or under-allocation allowed)
+	MAT - Maturity Year And Month
+	MATURITY - Maturity range
+	MAXSUBS - Maximum substitutions (Repo)
+	MINDNOM - Minimum denomination
+	MININCR - Minimum increment
+	MINQTY - Minimum quantity
+	PAYFREQ - Payment frequency, calendar
+	PIECES - Number Of Pieces
+	PMAX - Pools Maximum
+	PPL - Pools per Lot
+	PPM - Pools per Million
+	PPT - Pools per Trade
+	PRICE - Price Range
+	PRICEFREQ - Pricing frequency
+	PROD - Production Year
+	PROTECT - Call protection
+	PURPOSE - Purpose
+	PXSOURCE - Benchmark price source
+	RATING - Rating source and range
+	REDEMPTION - Type Of Redemption - values are: NonCallable, Prefunded, EscrowedToMaturity, Putable, Convertible
+	RESTRICTED - Restricted (Y/N)
+	SECTOR - Market Sector
+	SECTYPE - Security Type included or excluded
+	STRUCT - Structure
+	SUBSFREQ - Substitutions frequency (Repo)
+	SUBSLEFT - Substitutions left (Repo)
+	TEXT - Freeform Text
+	TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
+	WAC - Weighted Average Coupon - value in percent (exact or range) plus "Gross" or "Net" of servicing spread (the default) (ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])
+	WAL - Weighted Average Life Coupon - value in percent (exact or range)
+	WALA - Weighted Average Loan Age - value in months (exact or range)
+	WAM - Weighted Average Maturity - value in months (exact or range)
+	WHOLE - Whole Pool (Y/N)
+	YIELD - Yield Range
+Prepayment Speeds
+	ABS - Absolute Prepayment Speed
+	CPP - Constant Prepayment Penalty
+	CPR - Constant Prepayment Rate
+	CPY - Constant Prepayment Yield
+	HEP - final CPR of Home Equity Prepayment Curve
+	MHP - Percent of Manufactured Housing Prepayment Curve
+	MPR - Monthly Prepayment Rate
+	PPC - Percent of Prospectus Prepayment Curve
+	PSA - Percent of BMA Prepayment Curve
+	SMM - Single Monthly Mortality
+234
+StipulationValue
+String
+For Fixed Income.  Value of stipulation.
+                The expression can be an absolute single value or a combination of values and logical operators:
+                < value
+                > value
+                <= value
+                >= value
+                value
+                value – value2
+                value OR value2
+                value AND value2
+                YES
+                NO
+
+                Bargain conditions recognized by the London Stock Exchange – to be used when StipulationType is "BGNCON".
+                CD = Special cum Dividend
+                XD = Special ex Dividend
+                CC = Special cum Coupon
+                XC = Special ex Coupon
+                CB = Special cum Bonus
+                XB = Special ex Bonus
+                CR = Special cum Rights
+                XR = Special ex Rights
+                CP = Special cum Capital Repayments
+                XP = Special ex Capital Repayments
+                CS = Cash Settlement
+                SP = Special Price
+                TR = Report for European Equity Market Securities in accordance with Chapter 8 of the Rules.
+                GD = Guaranteed Delivery
+
+                Values for StipulationType = "PXSOURCE":
+                BB GENERIC
+                BB FAIRVALUE
+                BROKERTEC
+                ESPEED
+                GOVPX
+                HILLIARD FARBER
+                ICAP
+                TRADEWEB
+                TULLETT LIBERTY
+                If a particular side of the market is wanted append /BID /OFFER or /MID.
+
+                plus appropriate combinations of the above and other expressions by mutual agreement of the counterparties.
+                Examples: ">=60", ".25", "ORANGE OR CONTRACOSTA", etc.
+                (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+235
+YieldType
+String
+Type of yield. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+Valid values:
+	AFTERTAX - After Tax Yield (Municipals)
+	ANNUAL - Annual Yield
+	ATISSUE - Yield At Issue (Municipals)
+	AVGMATURITY - Yield To Avg Maturity
+	BOOK - Book Yield
+	CALL - Yield to Next Call
+	CHANGE - Yield Change Since Close
+	CLOSE - Closing Yield
+	COMPOUND - Compound Yield
+	CURRENT - Current Yield
+	GOVTEQUIV - Gvnt Equivalent Yield
+	GROSS - True Gross Yield
+	INFLATION - Yield with Inflation Assumption
+	INVERSEFLOATER - Inverse Floater Bond Yield
+	LASTCLOSE - Most Recent Closing Yield
+	LASTMONTH - Closing Yield Most Recent Month
+	LASTQUARTER - Closing Yield Most Recent Quarter
+	LASTYEAR - Closing Yield Most Recent Year
+	LONGAVGLIFE - Yield to Longest Average Life
+	MARK - Mark to Market Yield
+	MATURITY - Yield to Maturity
+	NEXTREFUND - Yield to Next Refund (Sinking Fund Bonds)
+	OPENAVG - Open Average Yield
+	PREVCLOSE - Previous Close Yield
+	PROCEEDS - Proceeds Yield
+	PUT - Yield to Next Put
+	SEMIANNUAL - Semi-annual Yield
+	SHORTAVGLIFE - Yield to Shortest Average Life
+	SIMPLE - Simple Yield
+	TAXEQUIV - Tax Equivalent Yield
+	TENDER - Yield to Tender Date
+	TRUE - True Yield
+	VALUE1_32 - Yield Value Of 1/32
+	WORST - Yield To Worst
+236
+Yield
+Percentage
+Yield percentage.
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+237
+TotalTakedown
+Amt
+The price at which the securities are distributed to the different members of an underwriting group for the primary market in Municipals, total gross underwriter's spread.
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+238
+Concession
+Amt
+Provides the reduction in price for the secondary market in Muncipals.
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+239
+RepoCollateralSecurityType
+int
+Identifies the collateral used in the transaction.
+                Valid values:   see SecurityType (167) field (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+240
+RedemptionDate
+LocalMktDate
+Deprecated in FIX.4.4 Return of investor's principal in a security.  Bond redemption can occur before maturity date.(Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
+241
+UnderlyingCouponPaymentDate
+LocalMktDate
+Underlying security’s CouponPaymentDate.
+      See CouponPaymentDate (224) field for description
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+242
+UnderlyingIssueDate
+LocalMktDate
+Underlying security’s IssueDate.
+      See IssueDate (225) field for description
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+243
+UnderlyingRepoCollateralSecurityType
+int
+Deprecated in FIX.4.4 Underlying security's RepoCollateralSecurityType. See RepoCollateralSecurityType (239) field for description.(Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+244
+UnderlyingRepurchaseTerm
+int
+Deprecated in FIX.4.4 Underlying security's RepurchaseTerm. See RepurchaseTerm (226) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+245
+UnderlyingRepurchaseRate
+Percentage
+Deprecated in FIX.4.4 Underlying security's RepurchaseRate. See RepurchaseRate (227) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+246
+UnderlyingFactor
+float
+Underlying security’s Factor.
+      See Factor (228) field for description
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+247
+UnderlyingRedemptionDate
+LocalMktDate
+Deprecated in FIX.4.4 Underlying security's RedemptionDate. See RedemptionDate (240) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
+248
+LegCouponPaymentDate
+LocalMktDate
+Multileg instrument's individual leg security’s CouponPaymentDate.
+      See CouponPaymentDate (224) field for description
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+249
+LegIssueDate
+LocalMktDate
+Multileg instrument's individual leg security’s IssueDate.
+      See IssueDate (225) field for description
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+250
+LegRepoCollateralSecurityType
+int
+Deprecated in FIX.4.4 Multileg instrument's individual leg security's RepoCollateralSecurityType. See RepoCollateralSecurityType (239) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+251
+LegRepurchaseTerm
+int
+Deprecated in FIX.4.4 Multileg instrument's individual leg security�s RepurchaseTerm. See RepurchaseTerm (226) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+252
+LegRepurchaseRate
+Percentage
+Deprecated in FIX.4.4 Multileg instrument's individual leg security's RepurchaseRate. See RepurchaseRate (227) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+253
+LegFactor
+float
+Multileg instrument's individual leg security’s Factor.
+      See Factor (228) field for description
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+254
+LegRedemptionDate
+LocalMktDate
+Deprecated in FIX.4.4 Multileg instrument's individual leg security's RedemptionDate. See RedemptionDate (240) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
+255
+CreditRating
+String
+An evaluation of a company's ability to repay obligations or its likelihood of not defaulting.  These evaluation are provided by Credit Rating Agencies, i.e. S&P, Moody's.
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+256
+UnderlyingCreditRating
+String
+Underlying security’s CreditRating.
+      See CreditRating (255) field for description
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+257
+LegCreditRating
+String
+Multileg instrument's individual leg security’s CreditRating.
+      See CreditRating (255) field for description
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+258
+TradedFlatSwitch
+Boolean
+Driver and part of trade in the event that the Security Master file was wrong at the point of entry(Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+Valid values:
+	N - Not Traded Flat
+	Y - Traded Flat
+259
+BasisFeatureDate
+LocalMktDate
+BasisFeatureDate allows requesting firms within fixed income the ability to request an alternative yield-to-worst, -maturity, -extended or other call. This flows through the confirm process.
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+      (prior to FIX 4.4 field was of type UTCDate)
+260
+BasisFeaturePrice
+Price
+Price for BasisFeatureDate.
+      See BasisFeatureDate (259)
+      (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+261
+Reserved/Allocated to the Fixed Income proposal
+
+
+262
+MDReqID
+String
+Unique identifier for Market Data Request
+263
+SubscriptionRequestType
+char
+Subscription Request Type
+Valid values:
+	0 - Snapshot
+	1 - Snapshot + Updates (Subscribe)
+	2 - Disable previous Snapshot + Update Request (Unsubscribe)
+264
+MarketDepth
+int
+Depth of market for Book Snapshot
+265
+MDUpdateType
+int
+Specifies the type of Market Data update.
+Valid values:
+	0 - Full refersh
+	1 - Incremental refres
+266
+AggregatedBook
+Boolean
+Specifies whether or not book entries should be aggregated. (Not specified) = broker option
+Valid values:
+	Y - book entries to be aggregated
+	N - book entries should not be aggregated
+267
+NoMDEntryTypes
+NumInGroup
+Number of MDEntryType (269) fields requested.
+268
+NoMDEntries
+NumInGroup
+Number of entries in Market Data message.
+269
+MDEntryType
+char
+Type  Market Data entry.
+Valid values:
+	0 - Bid
+	1 - Offer
+	2 - Trade
+	3 - Index Value
+	4 - Opening Price
+	5 - Closing Price
+	6 - Settlement Price
+	7 - Trading Session High Price
+	8 - Trading Session Low Price
+	9 - Trading Session VWAP Price
+	A - Imbalance
+	B - Trade Volume
+	C - Open Interest
+	D - Composite Underlying Price
+	E - Simulated Sell Price
+	F - Simulated Buy Price
+	G - Margin Rate
+	H - Mid Price 
+	J - Empty Book
+	K - Settle High Price
+	L - Settle Low Price
+	M - Prior Settle Price
+	N - Session High Bid
+	O - Session Low Offer
+	P - Early Prices
+	Q - Auction Clearing Price
+270
+MDEntryPx
+Price
+Price of the Market Data Entry.
+271
+MDEntrySize
+Qty
+Quantity or volume represented by the Market Data Entry.
+272
+MDEntryDate
+UTCDateOnly
+Date of Market Data Entry.
+      (prior to FIX 4.4 field was of type UTCDate)
+273
+MDEntryTime
+UTCTimeOnly
+Time of Market Data Entry.
+274
+TickDirection
+char
+Direction of the "tick".
+Valid values:
+	0 - Plus Tick
+	1 - Zero-Plus Tick
+	2 - Minus Tick
+	3 - Zero-Minus Tick
+275
+MDMkt
+Exchange
+Deprecated in FIX.5.0 Market posting quote / trade.
+                Valid values:
+                See "Appendix 6-C"
+276
+QuoteCondition
+MultipleStringValue
+Space-delimited list of conditions describing a quote.
+Valid values:
+	A - Open/Active
+	B - Closed/Inactive
+	C - Exchange Best
+	D - Consolidated Best
+	E - Locked
+	F - Crossed
+	G - Depth
+	H - Fast Trading
+	I - Non-Firm
+	L - Manual/Slow Quote
+	J - Outright Price
+	K - Implied Price
+	M - Depth on Offer
+	N - Depth on Bid
+	O - Closing
+	P - News Dissemination
+	Q - Trading Range
+	R - Order Influx
+	S - Due to Related
+	T - News Pending
+	U - Additional Info
+	V - Additional Info due to related
+	W - Resume
+	X - View of Common
+	Y - Volume Alert
+	Z - Order Imbalance
+	a - Equipment Changeover
+	b - No Open / No Resume
+	c - Regular ETH
+	d - Automatic Execution
+	e - Automatic Execution ETH
+	f  - Fast Market ETH
+	g - Inactive ETH
+	h - Rotation
+	i - Rotation ETH
+	j - Halt
+	k - Halt ETH
+	l - Due to News Dissemination
+	m - Due to News Pending
+	n - Trading Resume
+	o - Out of Sequence
+	p - Bid Specialist
+	q - Offer Specialist
+	r - Bid Offer Specialist
+	s - End of Day SAM
+	t - Forbidden SAM
+	u - Frozen SAM
+	v - PreOpening SAM
+	w - Opening SAM
+	x - Open SAM
+	y - Surveillance SAM
+	z - Suspended SAM
+	0 - Reserved SAM
+	1 - No Active SAM
+	2 - Restricted
+277
+TradeCondition
+MultipleStringValue
+Space-delimited list of conditions describing a trade
+Valid values:
+	A - Cash (only) Market
+	B - Average Price Trade
+	C - Cash Trade (same day clearing)
+	D - Next Day (only)Market
+	E - Opening/Reopening Trade Detail
+	F - Intraday Trade Detail
+	G - Rule 127 Trade (NYSE)
+	H - Rule 155 Trade (AMEX)
+	I - Sold Last (late reporting)
+	J - Next Day Trade (next day clearing)
+	K - Opened (late report of opened trade)
+	L - Seller
+	M - Sold (out of sequence)
+	N - Stopped Stock (guarantee of price but does not execute the order)
+	P - Imbalance More Buyers (cannot be used in combination with Q)
+	Q - Imbalance More Sellers (cannot be used in combination with P)
+	R - Opening Price
+	S - Bargain Condition (LSE)
+	T - Converted Price Indicator
+	U - Exchange Last
+	V - Final Price of Session
+	W - Ex-pit
+	X - Crossed
+	Y - Trades resulting from manual/slow quote
+	Z - Trades resulting from intermarket sweep
+	a - Volume Only
+	b - Direct Plus
+	c - Acquisition
+	d - Bunched
+	e - Distribution
+	f - Bunched Sale
+	g - Split Trade
+	h - Cancel Stopped
+	i - Cancel ETH
+	j - Cancel Stopped ETH
+	k - Out of Sequence ETH
+	l - Cancel Last ETH
+	m - Sold Last Sale ETH
+	n - Cancel Last
+	o - Sold Last Sale
+	p - Cancel Open
+	q - Cancel Open ETH
+	r - Opened Sale ETH
+	s - Cancel Only
+	t - Cancel Only ETH
+	u - Late Open ETH
+	v - Auto Execution ETH
+	w - Reopen
+	x - Reopen ETH
+	y - Adjusted
+	z - Adjusted ETH
+	AA - Spread
+	AB - Spread ETH
+	AC - Straddle
+	AD - Straddle ETH
+	AE - Stopped
+	AF - Stopped ETH
+	AG - Regular ETH
+	AH - Combo
+	AI - Combo ETH
+	AJ - Official Closing Price
+	AK - Prior Reference Price
+	0 - Cancel
+	AL - Stopped Sold Last
+	AM - Stopped Out of Sequence
+	AN - Offical Closing Price
+	AO - Crossed
+	AP - Fast Market
+	AQ - Automatic Execution
+	AR - Form T
+	AS - Basket Index
+	AT - Burst Basket
+278
+MDEntryID
+String
+Unique Market Data Entry identifier.
+279
+MDUpdateAction
+char
+Type of Market Data update action.
+Valid values:
+	0 - New
+	1 - Change
+	2 - Delete
+	3 - Delete Thru
+	4 - Delete From
+280
+MDEntryRefID
+String
+Refers to a previous MDEntryID (278).
+281
+MDReqRejReason
+char
+Reason for the rejection of a Market Data request.
+Valid values:
+	0 - Unknown symbol
+	1 - Duplicate MDReqID
+	2 - Insufficient Bandwidth
+	3 - Insufficient Permissions
+	4 - Unsupported SubscriptionRequestType
+	5 - Unsupported MarketDepth
+	6 - Unsupported MDUpdateType
+	7 - Unsupported AggregatedBook
+	8 - Unsupported MDEntryType
+	9 - Unsupported TradingSessionID
+	A - Unsupported Scope
+	B - Unsupported OpenCloseSettleFlag
+	C - Unsupported MDImplicitDelete
+	D - Insufficient credit
+282
+MDEntryOriginator
+String
+Deprecated in FIX.5.0 Originator of a Market Data Entry
+283
+LocationID
+String
+Identification of a Market Maker’s location
+284
+DeskID
+String
+Identification of a Market Maker’s desk
+285
+DeleteReason
+char
+Reason for deletion.
+Valid values:
+	0 - Cancellation / Trade Bust
+	1 - Error
+286
+OpenCloseSettlFlag
+MultipleCharValue
+Flag that identifies a market data entry. (Prior to FIX 4.3 this field was of type char)
+Valid values:
+	0 - Daily Open / Close / Settlement entry
+	1 - Session Open / Close / Settlement entry
+	2 - Delivery Settlement entry
+	3 - Expected entry
+	4 - Entry from previous business day
+	5 - Theoretical Price value
+287
+SellerDays
+int
+Specifies the number of days that may elapse before delivery of the security
+288
+MDEntryBuyer
+String
+Buying party in a trade
+289
+MDEntrySeller
+String
+Selling party in a trade
+290
+MDEntryPositionNo
+int
+Display position of a bid or offer, numbered from most competitive to least competitive, per market side, beginning with .
+291
+FinancialStatus
+MultipleCharValue
+Identifies a firm's or a security's financial status
+Valid values:
+	1 - Bankrupt
+	2 - Pending delisting
+	3 - Restricted
+292
+CorporateAction
+MultipleCharValue
+Identifies the type of Corporate Action.
+Valid values:
+	A - Ex-Dividend
+	B - Ex-Distribution
+	C - Ex-Rights
+	D - New
+	E - Ex-Interest
+	F - Cash Dividend
+	G - Stock Dividend
+	H - Non-Integer Stock Split
+	I - Reverse Stock Split
+	J - Standard-Integer Stock Split
+	K - Position Consolidation
+	L - Liquidation Reorganization
+	M - Merger Reorganization
+	N - Rights Offering
+	O - Shareholder Meeting
+	P - Spinoff
+	Q - Tender Offer
+	R - Warrant
+	S - Special Action
+	T - Symbol Conversion
+	U - CUSIP / Name Change
+	V - Leap Rollover
+293
+DefBidSize
+Qty
+Default Bid Size.
+294
+DefOfferSize
+Qty
+Default Offer Size.
+295
+NoQuoteEntries
+NumInGroup
+The number of quote entries for a QuoteSet.
+296
+NoQuoteSets
+NumInGroup
+The number of sets of quotes in the message.
+297
+QuoteStatus
+int
+Identifies the status of the quote acknowledgement.
+Valid values:
+	0 - Accepted
+	1 - Cancel for Symbol(s)
+	2 - Canceled for Security Type(s)
+	3 - Canceled for Underlying
+	4 - Canceled All
+	5 - Rejected
+	6 - Removed from Market
+	7 - Expired
+	8 - Query
+	9 - Quote Not Found
+	10 - Pending
+	11 - Pass
+	12 - Locked Market Warning
+	13 - Cross Market Warning
+	14 - Canceled Due To Lock Market
+	15 - Canceled Due To Cross Market
+298
+QuoteCancelType
+int
+Identifies the type of  quote cancel.
+Valid values:
+	1 - Cancel for Symbol(s)
+	2 - Cancel for Security Type(s)
+	3 - Cancel for Underlying Symbol
+	4 - Cancel All Quotes
+	5 - Cancel quote specified in QuoteID
+299
+QuoteEntryID
+String
+Uniquely identifies the quote as part of a QuoteSet.
+300
+QuoteRejectReason
+int
+Reason Quote was rejected:
+Valid values:
+	1 - Unknown Symbol (security)
+	2 - Exchange (Security) closed
+	3 - Quote Request exceeds limit
+	4 - Too late to enter
+	5 - Unknown Quote
+	6 - Duplicate Quote
+	7 - Invalid bid/ask spread
+	8 - Invalid price
+	9 - Not authorized to quote security
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+301
+QuoteResponseLevel
+int
+Level of Response requested from receiver of quote messages.
+Valid values:
+	0 - No Acknowledgement (default)
+	1 - Acknowledge only negative or erroneous quotes
+	2 - Acknowledge each quote messages
+302
+QuoteSetID
+String
+Unique id for the Quote Set.
+303
+QuoteRequestType
+int
+Indicates the type of Quote Request being generated
+Valid values:
+	1 - Manual
+	2 - Automatic
+304
+TotNoQuoteEntries
+int
+Total number of quotes for the quote set across all messages. Should be the sum of all NoQuoteEntries (295) in each message that has repeating quotes that are part of the same quote set.
+      (Prior to FIX 4.4 this field was named TotQuoteEntries)
+305
+UnderlyingSecurityIDSource
+String
+Underlying security’s SecurityIDSource.
+      Valid values:   see SecurityIDSource (22) field
+Valid values:
+	1 - CUSIP
+	2 - SEDOL
+	3 - QUIK
+	4 - ISIN number
+	5 - RIC code
+	6 - ISO Currency Code
+	7 - ISO Country Code
+	8 - Exchange Symbol
+	9 - Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format)
+	A - Bloomberg Symbol
+	B - Wertpapier
+	C - Dutch
+	D - Valoren
+	E - Sicovam
+	F - Belgian
+	G - "Common" (Clearstream and Euroclear)
+	H - Clearing House / Clearing Organization
+	I - ISDA/FpML Product Specification (XML in EncodedSecurityDesc)
+	J - Option Price Reporting Authority
+	K - ISDA/FpML Product URL (URL in SecurityID)
+	L - Letter of Credit
+306
+UnderlyingIssuer
+String
+Underlying security’s Issuer.
+      See Issuer (06) field for description
+307
+UnderlyingSecurityDesc
+String
+Underlying security’s SecurityDesc.
+      See SecurityDesc (07) field for description
+308
+UnderlyingSecurityExchange
+Exchange
+Underlying security’s SecurityExchange.  Can be used to identify the underlying security.
+      Valid values:  see SecurityExchange (207)
+309
+UnderlyingSecurityID
+String
+Underlying security’s SecurityID.
+      See SecurityID (48) field for description
+310
+UnderlyingSecurityType
+String
+Underlying security’s SecurityType.
+                Valid values:   see SecurityType (167) field
+                (see below for details concerning this fields use in conjunction with SecurityType=REPO)
+
+                The following applies when used in conjunction with SecurityType=REPO
+                Represents the general or specific type of security that underlies a financing agreement
+                Valid values for SecurityType=REPO:
+                If bonds of a particular issuer or country are wanted in an Order or are in the basket of an Execution and the SecurityType is not granular enough, include the UnderlyingIssuer (306), UnderlyingCountryOfIssue (592), UnderlyingProgram, UnderlyingRegType and/or < UnderlyingStipulations > block e.g.:
+Valid values:
+Deprecated values
+	FUT - Future
+	OPT - Option
+	UST - US Treasury Note (Deprecated Value Use TNOTE)
+	USTB - US Treasury Bill (Deprecated Value Use TBILL)
+Agency
+	EUSUPRA - Euro Supranational Coupons *
+	FAC - Federal Agency Coupon
+	FADN - Federal Agency Discount Note
+	PEF - Private Export Funding *
+	SUPRA - USD Supranational Coupons *
+Corporate
+	CORP - Corporate Bond
+	CPP - Corporate Private Placement
+	CB - Convertible Bond
+	DUAL - Dual Currency
+	EUCORP - Euro Corporate Bond
+	XLINKD - Indexed Linked
+	STRUCT - Structured Notes
+	YANK - Yankee Corporate Bond
+Currency
+	FOR - Foreign Exchange Contract
+Equity
+	CS - Common Stock
+	PS - Preferred Stock
+Financing
+	REPO - Repurchase
+	FORWARD - Forward
+	BUYSELL - Buy Sellback
+	SECLOAN - Securities Loan
+	SECPLEDGE - Securities Pledge
+Government
+	BRADY - Brady Bond
+	EUSOV - Euro Sovereigns *
+	TBOND - US Treasury Bond
+	TINT - Interest Strip From Any Bond Or Note
+	TIPS - Treasury Inflation Protected Securities
+	TCAL - Principal Strip Of A Callable Bond Or Note
+	TPRN - Principal Strip From A Non-Callable Bond Or Note
+	TNOTE - US Treasury Note
+	TBILL - US Treasury Bill
+Loan
+	TERM - Term Loan
+	RVLV - Revolver Loan
+	RVLVTRM - Revolver/Term Loan
+	BRIDGE - Bridge Loan
+	LOFC - Letter Of Credit
+	SWING - Swing Line Facility
+	DINP - Debtor In Possession
+	DEFLTED - Defaulted
+	WITHDRN - Withdrawn
+	REPLACD - Replaced
+	MATURED - Matured
+	AMENDED - Amended & Restated
+	RETIRED - Retired
+Money Market
+	BA - Bankers Acceptance
+	BN - Bank Notes
+	BOX - Bill Of Exchanges
+	CD - Certificate Of Deposit
+	CL - Call Loans
+	CP - Commercial Paper
+	DN - Deposit Notes
+	EUCD - Euro Certificate Of Deposit
+	EUCP - Euro Commercial Paper
+	LQN - Liquidity Note
+	MTN - Medium Term Notes
+	ONITE - Overnight
+	PN - Promissory Note
+	PZFJ - Plazos Fijos
+	STN - Short Term Loan Note
+	TD - Time Deposit
+	XCN - Extended Comm Note
+	YCD - Yankee Certificate Of Deposit
+Mortgage
+	ABS - Asset-backed Securities
+	CMBS - Corp. Mortgage-backed Securities
+	CMO - Collateralized Mortgage Obligation
+	IET - IOETTE Mortgage
+	MBS - Mortgage-backed Securities
+	MIO - Mortgage Interest Only
+	MPO - Mortgage Principal Only
+	MPP - Mortgage Private Placement
+	MPT - Miscellaneous Pass-through
+	PFAND - Pfandbriefe *
+	TBA - To Be Announced
+Municipal
+	AN - Other Anticipation Notes (BAN, GAN, etc.)
+	COFO - Certificate Of Obligation
+	COFP - Certificate Of Participation
+	GO - General Obligation Bonds
+	MT - Mandatory Tender
+	RAN - Revenue Anticipation Note
+	REV - Revenue Bonds
+	SPCLA - Special Assessment
+	SPCLO - Special Obligation
+	SPCLT - Special Tax
+	TAN - Tax Anticipation Note
+	TAXA - Tax Allocation
+	TECP - Tax Exempt Commercial Paper
+	TRAN - Tax Revenue Anticipation Note
+	VRDN - Variable Rate Demand Note
+	WAR - Warrant
+Other
+	MF - Mutual Fund
+	MLEG - Multileg Instrument
+	NONE - No Security Type
+	OOF - Options on Futures
+	OOP - Options on Physical
+	WLD - Wildcard Entry (was "?" in 4.4, used on Security Definition Request message)
+	CASH - Cash
+311
+UnderlyingSymbol
+String
+Underlying security’s Symbol.
+      See Symbol (55) field for description
+312
+UnderlyingSymbolSfx
+String
+Underlying security’s SymbolSfx.
+      See SymbolSfx (65) field for description
+Valid values:
+For Fixed Income
+	CD - EUCP with lump-sum interest rather than discount price
+	WI - "When Issued" for a security to be reissued under an old CUSIP or ISIN
+313
+UnderlyingMaturityMonthYear
+month-year
+Underlying security’s MaturityMonthYear. Can be used with standardized derivatives vs. the UnderlyingMaturityDate (542) field.
+      See MaturityMonthYear (200) field for description
+314
+UnderlyingMaturityDay
+day-of-month
+Deprecated in FIX.4.2 Underlying security�s MaturityDay. See MaturityDay field for description
+315
+UnderlyingPutOrCall
+int
+Deprecated in FIX.4.2 Underlying security's PutOrCall. See PutOrCall field for description
+316
+UnderlyingStrikePrice
+Price
+Underlying security’s StrikePrice.
+      See StrikePrice (202) field for description
+317
+UnderlyingOptAttribute
+char
+Underlying security’s OptAttribute.
+      See OptAttribute (206) field for description
+318
+UnderlyingCurrency
+Currency
+Underlying security’s Currency.
+      See Currency (5) field for description and valid values
+319
+RatioQty
+Qty
+Deprecated in FIX.4.2 Quantity of a particular leg in the security.
+320
+SecurityReqID
+String
+Unique ID of a Security Definition Request.
+321
+SecurityRequestType
+int
+Type of Security Definition Request.
+Valid values:
+	0 - Request Security identity and specifications
+	1 - Request Security identity for the specifications provided (name of the security is not supplied)
+	2 - Request List Security Types
+	3 - Request List Securities (can be qualified with Symbol, SecurityType, TradingSessionID, SecurityExchange. If provided then only list Securities for the specific type.)
+322
+SecurityResponseID
+String
+Unique ID of a Security Definition message.
+323
+SecurityResponseType
+int
+Type of Security Definition message response.
+Valid values:
+	1 - Accept security proposal as-is
+	2 - Accept security proposal with revisions as indicated in the message
+	3 - List of security types returned per request
+	4 - List of securities returned per request
+	5 - Reject security proposal
+	6 - Cannot match selection criteria
+324
+SecurityStatusReqID
+String
+Unique ID of a Security Status Request message.
+325
+UnsolicitedIndicator
+Boolean
+Indicates whether or not message is being sent as a result of a subscription request or not.
+Valid values:
+	N - Message is being sent as a result of a prior request
+	Y - Message is being secnt unsolicited
+326
+SecurityTradingStatus
+int
+Identifies the trading status applicable to the transaction.
+Valid values:
+	1 - Opening delay
+	2 - Trading halt
+	3 - Resume
+	4 - No Open / No Resume
+	5 - Price indication
+	6 - Trading Range Indication
+	7 - Market Imbalance Buy
+	8 - Market Imbalance Sell
+	9 - Market on Close Imbalance Buy
+	10 - Market on Close Imbalance Sell
+	11 - (not assigned)
+	12 - No Market Imbalance
+	13 - No Market on Close Imbalance
+	14 - ITS Pre-opening
+	15 - New Price Indication
+	16 - Trade Dissemination Time
+	17 - Ready to trade (start of session)
+	18 - Not available for trading (end of session)
+	19 - Not traded on this market
+	20 - Unknown or Invalid
+	21 - Pre-open
+	22 - Opening Rotation
+	23 - Fast Market
+327
+HaltReason
+char
+Denotes the reason for the Opening Delay or Trading Halt.
+Valid values:
+	D - News Dissemination
+	E - Order Influx
+	I - Order Imbalance
+	M - Additional Information
+	P - New Pending
+	X - Equipment Changeover
+328
+InViewOfCommon
+Boolean
+Indicates whether or not the halt was due to Common Stock trading being halted.
+Valid values:
+	N - Halt was not related to a halt of the common stock
+	Y - Half was due to common stock being halted
+329
+DueToRelated
+Boolean
+Indicates whether or not the halt was due to the Related Security being halted.
+Valid values:
+	N - Halt was not related to a halt of the related security
+	Y - Halt was due to related security being halted
+330
+BuyVolume
+Qty
+Quantity bought.
+331
+SellVolume
+Qty
+Quantity sold.
+332
+HighPx
+Price
+Represents an indication of the high end of the price range for a security prior to the open or reopen
+333
+LowPx
+Price
+Represents an indication of the low end of the price range for a security prior to the open or reopen
+334
+Adjustment
+int
+Identifies the type of adjustment.
+Valid values:
+	1 - Cancel
+	2 - Error
+	3 - Correction
+335
+TradSesReqID
+String
+Unique ID of a Trading Session Status message.
+336
+TradingSessionID
+String
+Identifier for Trading Session
+      Can be used to represent a specific market trading session (e.g. "PRE-OPEN", "CROSS_2", "AFTER-HOURS", "TOSTNET", "TOSTNET2", etc).
+      To specify good for session where session spans more than one calendar day, use TimeInForce = Day in conjunction with TradingSessionID.
+      Values should be bi-laterally agreed to between counterparties.
+      Firms may register Trading Session values on the FIX website (presently a document maintained within "ECN and Exchanges" working group section).
+337
+ContraTrader
+String
+Identifies the trader (e.g. "badge number") of the ContraBroker.
+338
+TradSesMethod
+int
+Method of trading
+Valid values:
+	1 - Electronic
+	2 - Open Outcry
+	3 - Two Party
+339
+TradSesMode
+int
+Trading Session Mode
+Valid values:
+	1 - Testing
+	2 - Simulated
+	3 - Production
+340
+TradSesStatus
+int
+State of the trading session.
+Valid values:
+	0 - Unknown
+	1 - Halted
+	2 - Open
+	3 - Closed
+	4 - Pre-Open
+	5 - Pre-Close
+	6 - Request Rejected
+341
+TradSesStartTime
+UTCTimestamp
+Starting time of the trading session
+342
+TradSesOpenTime
+UTCTimestamp
+Time of the opening of the trading session
+343
+TradSesPreCloseTime
+UTCTimestamp
+Time of the pre-closed of the trading session
+344
+TradSesCloseTime
+UTCTimestamp
+Closing time of the trading session
+345
+TradSesEndTime
+UTCTimestamp
+End time of the trading session
+346
+NumberOfOrders
+int
+Number of orders in the market.
+347
+MessageEncoding
+String
+Type of message encoding (non-ASCII (non-English) characters) used in a message’s "Encoded" fields.
+348
+EncodedIssuerLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedIssuer (349) field.
+349
+EncodedIssuer
+data
+Encoded (non-ASCII characters) representation of the Issuer field in the encoded format specified via the MessageEncoding (347) field.  If used, the ASCII (English) representation should also be specified in the Issuer field.
+350
+EncodedSecurityDescLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedSecurityDesc (351) field.
+351
+EncodedSecurityDesc
+data
+Encoded (non-ASCII characters) representation of the SecurityDesc (107) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the SecurityDesc field.
+352
+EncodedListExecInstLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedListExecInst (353) field.
+353
+EncodedListExecInst
+data
+Encoded (non-ASCII characters) representation of the ListExecInst (69) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the ListExecInst field.
+354
+EncodedTextLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedText (355) field.
+355
+EncodedText
+data
+Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text field.
+356
+EncodedSubjectLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedSubject (357) field.
+357
+EncodedSubject
+data
+Encoded (non-ASCII characters) representation of the Subject (147) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Subject field.
+358
+EncodedHeadlineLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedHeadline (359) field.
+359
+EncodedHeadline
+data
+Encoded (non-ASCII characters) representation of the Headline (148) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Headline field.
+360
+EncodedAllocTextLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedAllocText (361) field.
+361
+EncodedAllocText
+data
+Encoded (non-ASCII characters) representation of the AllocText (161) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the AllocText field.
+362
+EncodedUnderlyingIssuerLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedUnderlyingIssuer (363) field.
+363
+EncodedUnderlyingIssuer
+data
+Encoded (non-ASCII characters) representation of the UnderlyingIssuer (306) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingIssuer field.
+364
+EncodedUnderlyingSecurityDescLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedUnderlyingSecurityDesc (365) field.
+365
+EncodedUnderlyingSecurityDesc
+data
+Encoded (non-ASCII characters) representation of the UnderlyingSecurityDesc (307) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingSecurityeDesc  field.
+366
+AllocPrice
+Price
+Executed price for an AllocAccount (79) entry used when using "executed price" vs. "average price" allocations (e.g. Japan).
+367
+QuoteSetValidUntilTime
+UTCTimestamp
+Indicates expiration time of this particular QuoteSet (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
+368
+QuoteEntryRejectReason
+int
+Reason Quote Entry was rejected:
+Valid values:
+	1 - Unknown symbol (security)
+	2 - Exhcnage (security) closed
+	3 - Quote exceeds limit
+	4 - Too late to enter
+	5 - Unknown quote
+	6 - Duplicate quote
+	7 - Invalid bid/ask spread
+	8 - Invalid price
+	9 - Not authorized to quote security
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+369
+LastMsgSeqNumProcessed
+SeqNum
+The last MsgSeqNum (34) value received by the FIX engine and processed by downstream application, such as trading engine or order routing system.  Can be specified on every message sent.  Useful for detecting a backlog with a counterparty.
+370
+OnBehalfOfSendingTime
+UTCTimestamp
+Deprecated in FIX.4.3 Used when a message is sent via a 'hub' or 'service bureau'.  If A sends to Q (the hub) who then sends to B via a separate FIX session, then when Q sends to B the value of this field should represent the SendingTime on the message A sent to Q.   (always expressed in UTC (Universal Time Coordinated, also known as 'GMT')
+371
+RefTagID
+int
+The tag number of the FIX field being referenced.
+372
+RefMsgType
+String
+The MsgType (35) of the FIX message being referenced.
+Valid values:
+	0 - Heartbeat
+	1 - Test Request
+	2 - Resend Request
+	3 - Reject
+	4 - Sequence Reset
+	5 - Logout
+	6 - Indication of Interest
+	7 - Advertisement
+	8 - Execution Report
+	9 - Order Cancel Reject
+	A - Logon
+	B - News
+	C - Email
+	D - New Order - Single
+	E - New Order - List
+	F - Order Cancel Request
+	G - Order Cancel/Replace Request (a.k.a. Order Modification Request)
+	H - Order Status Request
+	J - Allocation Instruction
+	K - List Cancel Request
+	L - List Execute
+	M - List Status Request
+	N - List Status
+	P - Allocation Instruction Ack
+	Q - Don't Know Trade (DK)
+	R - Quote Request
+	S - Quote
+	T - Settlement Instructions
+	V - Market Data Request
+	W - Market Data - Snapshot/Full Refresh
+	X - Market Data - Incremental Refresh
+	Y - Market Data Request Reject
+	Z - Quote Cancel
+	a - Quote Status Request
+	b - Mass Quote Acknowledgement
+	c - Security Definition Request
+	d - Security Definition
+	e - Security Status Request
+	f - Security Status
+	g - Trading Session Status Request
+	h - Trading Session Status
+	i - Mass Quote
+	j - Business Message Reject
+	k - Bid Request
+	l - Bid Response (lowercase L)
+	m - List Strike Price
+	n - XML message (e.g. non FIX Msg Type)
+	o - Registration Instructions
+	p - Registration Instructions Response
+	q - Order Mass Cancel Request
+	r - Order Mass Cancel Report
+	s - New Order - Cross
+	t - Cross Order Cancel/Replace Request (a.k.a. Cross Order Modification Request)
+	u - Cross Order Cancel Request
+	v - Security Type Request
+	w - Security Types
+	x - Security List Request
+	y - Security List
+	z - Derivative Security List Request
+	AA - Derivative Security List
+	AB - New Order - Multileg
+	AC - Multileg Order Cancel/Replace (a.k.a. Multileg Order Modification Request)
+	AD - Trade Capture Report Request
+	AE - Trade Capture Report
+	AF - Order Mass Status Request
+	AG - Quote Request Reject
+	AH - RFQ Request
+	AI - Quote Status Report
+	AJ - Quote Response
+	AK - Confirmation
+	AL - Position Maintenance Request
+	AM - Position Maintenance Report
+	AN - Request For Positions
+	AO - Request For Positions Ack
+	AP - Position Report
+	AQ - Trade Capture Report Request Ack
+	AR - Trade Capture Report Ack
+	AS - Allocation Report (a.k.a. Allocation Claim)
+	AT - Allocation Report Ack (a.k.a. Allocation Claim Ack)
+	AU - Confirmation Ack (a.k.a. Affirmation)
+	AV - Settlement Instruction Request
+	AW - Assignment Report
+	AX - Collateral Request
+	AY - Collateral Assignment
+	AZ - Collateral Response
+	BA - Collateral Report
+	BB - Collateral Inquiry
+	BC - Network Counterparty System Status Request
+	BD - Network Counterparty System Status Response
+	BE - User Request
+	BF - User Response
+	BG - Collateral Inquiry Ack
+	BH - Confirmation Request
+	BI - Trading Session List Request
+	BJ - Trading Session List
+	BK - Security List Update Report
+	BL - Adjusted Position Report
+	BM - Allocation Instruction Alert
+	BN - Execution Acknowledgement
+	BO - Contrary Intention Report
+	BP - Security Definition Update Report
+373
+SessionRejectReason
+int
+Code to identify reason for a session-level Reject message.
+Valid values:
+	0 - Invalid Tag Number
+	1 - Required Tag Missing
+	2 - Tag not defined for this message type
+	3 - Undefined tag
+	4 - Tag specified without a value
+	5 - Value is incorrect (out of range) for this tag
+	6 - Incorrect data format for value
+	7 - Decryption problem
+	8 - Signature problem
+	9 -  CompID problem
+	10 - SendingTime Accuracy Problem
+	11 - Invalid MsgType
+	12 - XML Validation Error
+	13 - Tag appears more than once
+	14 - Tag specified out of required order
+	15 - Repeating group fields out of order
+	16 - Incorrect NumInGroup count for repeating group
+	17 - Non "Data" value includes field delimiter (<SOH> character)
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+374
+BidRequestTransType
+char
+Identifies the Bid Request message type.
+Valid values:
+	C - Cancel
+	N - New
+375
+ContraBroker
+String
+Identifies contra broker.  Standard NASD market-maker mnemonic is preferred.
+376
+ComplianceID
+String
+ID used to represent this transaction for compliance purposes (e.g. OATS reporting).
+377
+SolicitedFlag
+Boolean
+Indicates whether or not the order was solicited.
+Valid values:
+	N - Was not solicited
+	Y - Was solicited
+378
+ExecRestatementReason
+int
+Code to identify reason for an ExecutionRpt message sent with ExecType=Restated or used when communicating an unsolicited cancel.
+Valid values:
+	0 - GT corporate action
+	1 - GT renewal / restatement (no corporate action)
+	2 - Verbal change
+	3 - Repricing of order
+	4 - Broker option
+	5 - Partial decline of OrderQty (e.g. exchange initiated partial cancel)
+	6 - Cancel on Trading Halt
+	7 - Cancel on System Failure
+	8 - Market (Exchange) option
+	9 - Canceled, not best
+	10 - Warehouse Recap
+	11 - Peg Refresh
+	99 - Other
+
+or any value conforming to the data type Reserved100Plus
+379
+BusinessRejectRefID
+String
+The value of the business-level "ID" field on the message being referenced.
+380
+BusinessRejectReason
+int
+Code to identify reason for a Business Message Reject message.
+Valid values:
+	0 - Other
+	1 - Unknown ID
+	2 - Unknown Security
+	3 - Unknown Message Type
+	4 - Application not available
+	5 - Conditionally required field missing
+	6 - Not Authorized
+	7 - DeliverTo firm not available at this time
+	18 - Invalid price increment
+381
+GrossTradeAmt
+Amt
+Total amount traded (e.g. CumQty (14) * AvgPx (6)) expressed in units of currency. For FX Futures this is used to express the notional value of a fill when LastQty and other quantity fields are express in terms of contract size.
+382
+NoContraBrokers
+NumInGroup
+The number of ContraBroker (375) entries.
+383
+MaxMessageSize
+Length
+Maximum number of bytes supported for a single message.
+384
+NoMsgTypes
+NumInGroup
+Number of MsgTypes (35) in repeating group.
+385
+MsgDirection
+char
+Specifies the direction of the messsage.
+Valid values:
+	R - Receive
+	S - Send
+386
+NoTradingSessions
+NumInGroup
+Number of TradingSessionIDs (336) in repeating group.
+387
+TotalVolumeTraded
+Qty
+Total volume (quantity) traded.
+388
+DiscretionInst
+char
+Code to identify the price a DiscretionOffsetValue (389) is related to and should be mathematically added to.
+Valid values:
+	0 - Related to displayed price
+	1 - Related to market price
+	2 - Related to primary price
+	3 - Related to local primary price
+	4 - Related to midpoint price
+	5 - Related to last trade price
+	6 - Related to VWAP
+	7 - Average Price Guarantee
+389
+DiscretionOffsetValue
+float
+Amount (signed) added to the "related to" price specified via DiscretionInst (388), in the context of DiscretionOffsetType (842)
+      (Prior to FIX 4.4 this field was of type PriceOffset)
+390
+BidID
+String
+Unique identifier for Bid Response as assigned by sell-side (broker, exchange, ECN).  Uniqueness must be guaranteed within a single trading day.
+391
+ClientBidID
+String
+Unique identifier for a Bid Request as assigned by institution.  Uniqueness must be guaranteed within a single trading day.
+392
+ListName
+String
+Descriptive name for list order.
+393
+TotNoRelatedSym
+int
+Total number of securities.
+      (Prior to FIX 4.4 this field was named TotalNumSecurities)
+394
+BidType
+int
+Code to identify the type of Bid Request.
+Valid values:
+	1 - "Non Disclosed" style (e.g. US/European)
+	2 - "Disclosed" sytle (e.g. Japanese)
+	3 - No bidding process
+395
+NumTickets
+int
+Total number of tickets.
+396
+SideValue1
+Amt
+Amounts in currency
+397
+SideValue2
+Amt
+Amounts in currency
+398
+NoBidDescriptors
+NumInGroup
+Number of BidDescriptor (400) entries.
+399
+BidDescriptorType
+int
+Code to identify the type of BidDescriptor (400).
+Valid values:
+	1 - Sector
+	2 - Country
+	3 - Index
+400
+BidDescriptor
+String
+BidDescriptor value.  Usage depends upon BidDescriptorTyp (399).
+                If BidDescriptorType = 1
+                Industrials etc - Free text
+                If BidDescriptorType = 2
+                "FR" etc - ISO Country Codes
+                If BidDescriptorType = 3
+                FT00, FT250, STOX - Free text
+401
+SideValueInd
+int
+Code to identify which "SideValue" the value refers to.  SideValue1 and SideValue2 are used as opposed to Buy or Sell so that the basket can be quoted either way as Buy or Sell.
+Valid values:
+	1 - Side Value 1
+	2 - Side Value 2
+402
+LiquidityPctLow
+Percentage
+Liquidity indicator or lower limit if TotalNumSecurities (393) > 1.  Represented as a percentage.
+403
+LiquidityPctHigh
+Percentage
+Upper liquidity indicator if TotalNumSecurities (393) > 1.  Represented as a percentage.
+404
+LiquidityValue
+Amt
+Value between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency
+405
+EFPTrackingError
+Percentage
+Eg Used in EFP trades 2% (EFP – Exchange for Physical ).  Represented as a percentage.
+406
+FairValue
+Amt
+Used in EFP trades
+407
+OutsideIndexPct
+Percentage
+Used in EFP trades.  Represented as a percentage.
+408
+ValueOfFutures
+Amt
+Used in EFP trades
+409
+LiquidityIndType
+int
+Code to identify the type of liquidity indicator.
+Valid values:
+	1 - 5-day moving average
+	2 - 20-day moving average
+	3 - Normal market size
+	4 - Other
+410
+WtAverageLiquidity
+Percentage
+Overall weighted average liquidity expressed as a % of average daily volume.  Represented as a percentage.
+411
+ExchangeForPhysical
+Boolean
+Indicates whether or not to exchange for phsyical.
+Valid values:
+	N - False
+	Y - True
+412
+OutMainCntryUIndex
+Amt
+Value of stocks in Currency
+413
+CrossPercent
+Percentage
+Percentage of program that crosses in Currency.  Represented as a percentage.
+414
+ProgRptReqs
+int
+Code to identify the desired frequency of progress reports.
+Valid values:
+	1 - Buy-side explicitly requests status using Statue Request (default), the sell-side firm can, however, send a DONE status List STatus Response in an unsolicited fashion
+	2 - Sell-side periodically sends status using List Status. Period optionally specified in ProgressPeriod.
+	3 - Real-time execution reports (to be discourage)
+415
+ProgPeriodInterval
+int
+Time in minutes between each ListStatus report sent by SellSide. Zero means don’t send status.
+416
+IncTaxInd
+int
+Code to represent whether value is net (inclusive of tax) or gross.
+Valid values:
+	1 - Net
+	2 - Gross
+417
+NumBidders
+int
+Indicates the total number of bidders on the list
+418
+BidTradeType
+char
+Code to represent the type of trade.
+(Prior to FIX 4.4 this field was named "TradeType")
+Valid values:
+	A - Agency
+	G - VWAP Guarantee
+	J - Guaranteed Close
+	R - Risk Trade
+419
+BasisPxType
+char
+Code to represent the basis price type.
+Valid values:
+	2 - Closing price at morningn session
+	3 - Closing price
+	4 - Current price
+	5 - SQ
+	6 - VWAP through a day
+	7 - VWAP through a morning session
+	8 - VWAP through an afternoon session
+	9 - VWAP through a day except "YORI" (an opening auction)
+	A - VWAP through a morning session except "YORI" (an opening auction)
+	B - VWAP through an afternoon session except "YORI" (an opening auction)
+	C - Strike
+	D - Open
+	Z - Others
+420
+NoBidComponents
+NumInGroup
+Indicates the number of list entries.
+421
+Country
+Country
+ISO Country Code in field
+422
+TotNoStrikes
+int
+Total number of strike price entries across all messages. Should be the sum of all NoStrikes (428) in each message that has repeating strike price entries related to the same ListID (66).  Used to support fragmentation.
+423
+PriceType
+int
+Code to represent the price type.
+(For Financing transactions PriceType implies the "repo type" – Fixed or Floating – 9 (Yield) or 6 (Spread) respectively - and Price (44) gives the corresponding "repo rate".
+See Volume : "Glossary" for further value definitions)
+Valid values:
+	1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
+	2 - Per unit (i.e. per share or contract)
+	3 - Fixed amount (absolute value)
+	4 - Discount - percentage points below par
+	5 - Premium - percentage points over par
+	6 - Spread (basis points spread)
+	7 - TED Price
+	8 - TED Yield
+	9 - Yield
+	10 - Fixed cabinet trade price (primarily for listed futures and options)
+	11 - Variable cabinet trade price (primarily for listed futures and options)
+	13 - Product ticks in halfs
+	14 - Product ticks in fourths
+	15 - Product ticks in eights
+	16 - Product ticks in sixteenths
+	17 - Product ticks in thirty-seconds
+	18 - Product ticks in sixty-forths
+	19 - Product ticks in one-twenty-eights
+424
+DayOrderQty
+Qty
+For GT orders, the OrderQty (38) less all quantity (adjusted for stock splits) that traded on previous days.  DayOrderQty (424) = OrderQty – (CumQty (14) – DayCumQty (425))
+425
+DayCumQty
+Qty
+Quantity on a GT order that has traded today.
+426
+DayAvgPx
+Price
+The average price for quantity on a GT order that has traded today.
+427
+GTBookingInst
+int
+Code to identify whether to book out executions on a part-filled GT order on the day of execution or to accumulate.
+Valid values:
+	0 - Book out all trades on day of execution
+	1 - Accumulate exectuions until forder is filled or expires
+	2 - Accumulate until verballly notified otherwise
+428
+NoStrikes
+NumInGroup
+Number of list strike price entries.
+429
+ListStatusType
+int
+Code to represent the status type.
+Valid values:
+	1 - Ack
+	2 - Response
+	3 - Timed
+	4 - Exec Started
+	5 - All Done
+	6 - Alert
+430
+NetGrossInd
+int
+Code to represent whether value is net (inclusive of tax) or gross.
+Valid values:
+	1 - Net
+	2 - Gross
+431
+ListOrderStatus
+int
+Code to represent the status of a list order.
+Valid values:
+	1 - In bidding process
+	2 - Received for execution
+	3 - Executing
+	4 - Cancelling
+	5 - Alert
+	6 - All Done
+	7 - Reject
+432
+ExpireDate
+LocalMktDate
+Date of order expiration (last day the order can trade), always expressed in terms of the local market date.  The time at which the order expires is determined by the local market’s business practices
+433
+ListExecInstType
+char
+Identifies the type of ListExecInst (69).
+Valid values:
+	1 - Immediate
+	2 - Wait for Execut Instruction (i.e. a List Execut message or phone call before proceeding with execution of the list)
+	3 - Exchange/switch CIV order - Sell driven
+	4 - Exchange/switch CIV order - Buy driven, cash top-up (i.e. additional cash will be provided to fulfill the order)
+	5 - Exchange/switch CIV order - Buy driven, cash withdraw (i.e. additional cash will not be provided to fulfill the order)
+434
+CxlRejResponseTo
+char
+Identifies the type of request that a Cancel Reject is in response to.
+Valid values:
+	1 - Order cancel request
+	2 - Order cancel/replace request
+435
+UnderlyingCouponRate
+Percentage
+Underlying security’s CouponRate.
+      See CouponRate (223) field for description
+436
+UnderlyingContractMultiplier
+float
+Underlying security’s ContractMultiplier.
+      See ContractMultiplier (231) field for description
+437
+ContraTradeQty
+Qty
+Quantity traded with the ContraBroker (375).
+438
+ContraTradeTime
+UTCTimestamp
+Identifes the time of the trade with the ContraBroker (375).   (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
+439
+ClearingFirm
+String
+Deprecated in FIX.4.2 Firm that will clear the trade.  Used if different from the executing firm.
+440
+ClearingAccount
+String
+Deprecated in FIX.4.2 Supplemental accounting information forwared to clearing house/firm.
+441
+LiquidityNumSecurities
+int
+Number of Securites between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency.
+442
+MultiLegReportingType
+char
+Used to indicate what an Execution Report represents (e.g. used with multi-leg securities, such as option strategies, spreads, etc.).
+Valid values:
+	1 - Single security (defualt if not specified)
+	2 - Individual leg of a multi=leg security
+	3 - Multi-leg security
+443
+StrikeTime
+UTCTimestamp
+The time at which current market prices are used to determine the value of a basket.
+444
+ListStatusText
+String
+Free format text string related to List Status.
+445
+EncodedListStatusTextLen
+Length
+Byte length of encoded (non-ASCII characters) EncodedListStatusText (446) field.
+446
+EncodedListStatusText
+data
+Encoded (non-ASCII characters) representation of the ListStatusText (444) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the ListStatusText field.

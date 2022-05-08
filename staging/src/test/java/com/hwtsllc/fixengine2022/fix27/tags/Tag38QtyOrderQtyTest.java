@@ -24,8 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  38
+ *  OrderQty
+ *  Qty
+ *  Quantity ordered.
+ *  This represents the number of shares for equities or par, face or nominal value for FI instruments.
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag38QtyOrderQtyTest {
-
     @Test
     void FIX0038Test() {
         FIX27 fixData = FIX27.FIX38_QTY_ORDER_QTY;

@@ -24,6 +24,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  112
+ *  TestReqID
+ *  String
+ *  Identifier included in Test Request message to be returned in resulting Heartbeat
+ */
 class Tag112TestReqIDStTest {
 
     @Test

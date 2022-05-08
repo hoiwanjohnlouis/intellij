@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  120
+ *  SettlCurrency
+ *  Currency
+ *  Currency code of settlement denomination.
+ */
 public class Tag120CcySettlCurrency extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyCurrencyType dataValue;
 

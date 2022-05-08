@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  136
+ *  NoMiscFees
+ *  NumInGroup
+ *  Number of repeating groups of miscellaneous fees
+ */
 public class Tag136NumNoMiscFees extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 

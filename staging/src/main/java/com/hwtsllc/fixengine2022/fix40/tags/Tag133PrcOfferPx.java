@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  133
+ *  OfferPx
+ *  Price
+ *  Offer price/rate
+ */
 public class Tag133PrcOfferPx extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 

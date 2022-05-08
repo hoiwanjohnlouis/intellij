@@ -23,6 +23,10 @@ import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
+ *  54 (same as 54, 624,)
+ *  Side
+ *  char
+ *  Side of order (see Volume : "Glossary" for value definitions)
  *  624 (same as 54, 624,)
  *  LegSide
  *  char

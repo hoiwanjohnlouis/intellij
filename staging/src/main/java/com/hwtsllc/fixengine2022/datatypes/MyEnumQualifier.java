@@ -21,11 +21,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *  104 (same as 104, 695)
- *  QuoteQualifier
- *  Code to qualify Quote use
- *          See IOIQualifier (104) for description and valid values.
+ *  IOIQualifier
+ *  char
+ *  Code to qualify IOI use.  (see Volume : "Glossary" for value definitions)
  *  695  (same as 104, 695)
  *  QuoteQualifier
+ *  char
  *  Code to qualify Quote use
  *          See IOIQualifier (104) for description and valid values.
  *  Valid values:

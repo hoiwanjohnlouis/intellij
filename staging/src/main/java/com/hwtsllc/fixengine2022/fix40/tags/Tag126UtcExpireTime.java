@@ -22,6 +22,26 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  126
+ *  ExpireTime
+ *  UTCTimestamp
+ *  Time/Date of order expiration
+ *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
+ *      The meaning of expiration is specific to the context where the field is used.
+ *      For orders,
+ *          this is the expiration time of a Good Til Date TimeInForce.
+ *      For Quotes,
+ *          this is the expiration of the quote.
+ *
+ *      Expiration time is provided across the quote message dialog
+ *      to control the length of time of the overall quoting process.
+ *
+ *      For collateral requests,
+ *          this is the time by which collateral must be assigned.
+ *      For collateral assignments,
+ *          this is the time by which a response to the assignment is expected.
+ */
 public class Tag126UtcExpireTime extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyUTCTimestampType dataValue;
 

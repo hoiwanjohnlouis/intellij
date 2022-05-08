@@ -25,9 +25,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag35 (same as TAGS 35, 372)
- *  Enu
+ *  35 (same as TAGS 35, 372)
+ *  MsgType
+ *  String
+ *  Defines message type    ALWAYS THIRD FIELD IN MESSAGE. (Always unencrypted)
+ *  Note: A "U" as the first character in the MsgType field (i.e. U, U2, etc)
+ *        indicates that the  message format is privately defined between the sender and receiver.
+ *  *** Note the use of lower case letters ***
+ *  372 (same as TAGS 35, 372)
  *  RefMsgType
+ *  String
+ *  The MsgType (35) of the FIX message being referenced.
  *
  *      0-9, msg types
  *      A-Z, msg types, skipping "I", and "O"

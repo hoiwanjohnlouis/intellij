@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  2
+ *  AdvId
+ *  String
+ *  Unique identifier of advertisement message.
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 class Tag2StrAdvIDTest {
     @Test
     void FIX0002Test() {

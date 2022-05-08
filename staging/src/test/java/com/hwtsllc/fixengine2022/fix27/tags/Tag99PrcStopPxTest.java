@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  99
+ *  StopPx
+ *  Price
+ *  <p>
+ *  Price per unit of quantity (e.g. per share)
+ */
 class Tag99PrcStopPxTest {
-
     @Test
     void FIX0099Test() {
         FIX27 fixData = FIX27.FIX99_PRC_STOP_PX;

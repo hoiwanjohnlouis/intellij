@@ -24,8 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  9
+ *  BodyLength
+ *  Length
+ *  Message length, in bytes, forward to the CheckSum field.
+ *  ALWAYS SECOND FIELD IN MESSAGE.
+ *  (Always unencrypted)
+ */
 class Tag9LenBodyLengthTest {
-
     @Test
     void FIX0009Test() {
         FIX27 fixData = FIX27.FIX9_LEN_BODY_LENGTH;

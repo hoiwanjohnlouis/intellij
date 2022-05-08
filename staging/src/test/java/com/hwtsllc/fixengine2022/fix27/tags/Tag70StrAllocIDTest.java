@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  70
+ *  AllocID
+ *  String
+ *  <p>
+ *  Unique identifier for allocation message.
+ *  <p>
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 class Tag70StrAllocIDTest {
-
     @Test
     void FIX0070Test() {
         FIX27 fixData = FIX27.FIX70_STR_ALLOC_ID;

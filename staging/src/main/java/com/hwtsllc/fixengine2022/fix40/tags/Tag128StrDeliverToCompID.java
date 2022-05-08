@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  128
+ *  DeliverToCompID
+ *  String
+ *  Assigned value used to identify the firm targeted to receive
+ *  the message if the message is delivered by a third party
+ *  i.e.  the third party firm identifier would be delivered in the
+ *  TargetCompID (56) field and the ultimate receiver firm ID in this field.
+ */
 public class Tag128StrDeliverToCompID extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

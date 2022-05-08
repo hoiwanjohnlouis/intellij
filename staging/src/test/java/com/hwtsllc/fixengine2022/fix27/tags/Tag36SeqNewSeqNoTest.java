@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  36
+ *  NewSeqNo
+ *  SeqNum
+ *  New sequence number
+ */
 class Tag36SeqNewSeqNoTest {
-
     @Test
     void FIX0036Test() {
         FIX27 fixData = FIX27.FIX36_SEQ_NEW_SEQ_NO;

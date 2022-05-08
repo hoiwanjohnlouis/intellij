@@ -22,6 +22,21 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum87AllocStatus;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  87
+ *  AllocStatus
+ *  int
+ *  Identifies status of allocation.
+ *  Valid values:
+ *      0 - accepted (successfully processed)
+ *      1 - block level reject
+ *      2 - account level reject
+ *      3 - received (received, not yet processed)
+ *      4 - incomplete
+ *      5 - rejected by intermediary
+ *      6 - allocation pending
+ *      7 - reversed
+ */
 public class Tag87EnuAllocStatus extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum87AllocStatus dataValue;
 

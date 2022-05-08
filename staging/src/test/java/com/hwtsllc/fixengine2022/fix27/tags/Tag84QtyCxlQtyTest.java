@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  84
+ *  CxlQty
+ *  Qty
+ *  <p>
+ *  Total quantity canceled for this order.
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag84QtyCxlQtyTest {
-
     @Test
     void FIX0084Test() {
         FIX27 fixData = FIX27.FIX84_QTY_CXL_QTY;

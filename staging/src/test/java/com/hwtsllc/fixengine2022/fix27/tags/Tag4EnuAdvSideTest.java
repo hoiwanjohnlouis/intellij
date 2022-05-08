@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  4
+ *  AdvSide
+ *  char
+ *  Broker's side of advertised trade
+ *  Valid values:
+ *      B - Buy
+ *      S - Sell
+ *      T - Trade
+ *      X - Cross
+ */
 class Tag4EnuAdvSideTest {
     @Test
     void FIX0004Test() {

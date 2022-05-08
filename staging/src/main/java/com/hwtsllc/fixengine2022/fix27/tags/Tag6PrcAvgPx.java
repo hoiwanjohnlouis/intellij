@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  6
+ *  AvgPx
+ *  Price
+ *  Calculated average price of all fills on this order.
+ *
+ *  For Fixed Income trades AvgPx is always expressed as percent-of-par,
+ *  regardless of the PriceType (423) of LastPx (31).
+ *  i.e., AvgPx will contain an average of percent-of-par values
+ *  (see LastParPx (669)) for issues traded in Yield, Spread or Discount.
+ */
 public class Tag6PrcAvgPx extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 

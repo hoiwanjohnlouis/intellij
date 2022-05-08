@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  75
+ *  TradeDate
+ *  LocalMktDate
+ *  <p>
+ *  Indicates date of trade referenced in this message in YYYYMMDD format.
+ *  <p>
+ *  Absence of this field indicates current day (expressed in local time at place of trade).
+ */
 public class Tag75StrTradeDate extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

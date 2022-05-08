@@ -20,7 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- * Used in FIX20_EXEC_TRANS_TYPE
+ *  20
+ *  ExecTransType
+ *  char
+ *  Deprecated in FIX.4.2 Identifies transaction type
+ *  Valid values:
+ *      0 - New
+ *      1 - Cancel
+ *      2 - Correct
+ *      3 - Status
  */
 public enum Enum20ExecTransType implements EnumAccessors, LogStringVerbose {
     NEW("0", "NEW", "0 - New" ),

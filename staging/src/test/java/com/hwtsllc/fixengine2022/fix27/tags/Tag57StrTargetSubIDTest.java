@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  57
+ *  TargetSubID
+ *  String
+ *  Assigned value used to identify specific individual or unit intended to receive message.
+ *  "ADMIN" reserved for administrative messages not intended for a specific user.
+ */
 class Tag57StrTargetSubIDTest {
-
     @Test
     void FIX0057Test() {
         FIX27 fixData = FIX27.FIX57_STR_TARGET_SUB_ID;

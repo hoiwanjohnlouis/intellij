@@ -22,6 +22,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  25
+ *  IOIQltyInd
+ *  char
+ *  Relative quality of indication
+ *  Valid values:
+ *      H - High
+ *      L - Low
+ *      M - Medium
+ */
 class Enum25IOIQltyIndTest {
     @Test
     void Enum0025Test() {

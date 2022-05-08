@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  42
+ *  OrigTime
+ *  UTCTimestamp
+ *  Time of message origination
+ *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
+ */
 class Tag42UtcOrigTimeTest {
-
     @Test
     void FIX0042Test() {
         FIX27 fixData = FIX27.FIX42_UTC_ORIG_TIME;

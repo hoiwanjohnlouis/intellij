@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  73
+ *  NoOrders
+ *  NumInGroup
+ *  <p>
+ *  Indicates number of orders to be combined for average pricing and allocation.
+ */
 public class Tag73NumNoOrders extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 

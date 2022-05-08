@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  92
+ *  BrokerOfCredit
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.2 Broker to receive trade credit.
+ */
 // @Deprecated
 public class Tag92StrBrokerOfCredit extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;

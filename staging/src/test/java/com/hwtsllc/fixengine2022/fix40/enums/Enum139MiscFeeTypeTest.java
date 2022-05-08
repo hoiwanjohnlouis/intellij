@@ -22,6 +22,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  139
+ *  MiscFeeType
+ *  String
+ *  Indicates type of miscellaneous fee.
+ *  Valid values:
+ *      1 - Regulatory (e.g. SEC)
+ *      2 - Tax
+ *      3 - Local Commission
+ *      4 - Exchange Fees
+ *      5 - Stamp
+ *      6 - Levy
+ *      7 - Other
+ *      8 - Markup
+ *      9 - Consumption Tax
+ *      10 - Per transaction
+ *      11 - Conversion
+ *      12 - Agent
+ *      13 - Transfer Fee
+ *      14 - Security Lending
+ */
 class Enum139MiscFeeTypeTest {
 
     @Test

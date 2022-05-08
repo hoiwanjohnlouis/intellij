@@ -24,8 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  66
+ *  ListID
+ *  String
+ *  Unique identifier for list as assigned by institution,
+ *  used to associate multiple individual orders.
+ *
+ *  Uniqueness must be guaranteed within a single trading day.
+ *  Firms which generate multi-day orders should consider embedding
+ *  a date within the ListID field to assure uniqueness across days.
+ */
 class Tag66StrListIDTest {
-
     @Test
     void FIX0066Test() {
         FIX27 fixData = FIX27.FIX66_STR_LIST_ID;

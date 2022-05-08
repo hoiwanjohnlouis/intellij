@@ -22,6 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  127
+ *  DKReason
+ *  char
+ *  Reason for execution rejection.
+ *  Valid values:
+ *      A - Unknown Symbol
+ *      B - Wrong Side
+ *      C - Quantity Exceeds Order
+ *      D - No Matching Order
+ *      E - Price Exceeds Limit
+ *      F - Calculation Difference
+ *      Z - Other
+ */
 class Enum127DKReasonTest {
 
     @Test

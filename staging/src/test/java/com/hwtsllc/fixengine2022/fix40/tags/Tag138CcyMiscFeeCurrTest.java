@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  138
+ *  MiscFeeCurr
+ *  Currency
+ *  Currency of miscellaneous fee
+ */
 class Tag138CcyMiscFeeCurrTest {
-
     @Test
     void FIX0138Test() {
         FIX40 fixData = FIX40.FIX138_CCY_MISC_FEE_CURR;

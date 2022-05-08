@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  72
+ *  RefAllocID
+ *  String
+ *  <p>
+ *  Reference identifier to be used with AllocTransType (71) = Replace or Cancel.
+ *  <p>
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 public class Tag72StrRefAllocID extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

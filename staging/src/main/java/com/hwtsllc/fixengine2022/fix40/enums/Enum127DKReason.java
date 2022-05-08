@@ -19,6 +19,20 @@ package com.hwtsllc.fixengine2022.fix40.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  127
+ *  DKReason
+ *  char
+ *  Reason for execution rejection.
+ *  Valid values:
+ *      A - Unknown Symbol
+ *      B - Wrong Side
+ *      C - Quantity Exceeds Order
+ *      D - No Matching Order
+ *      E - Price Exceeds Limit
+ *      F - Calculation Difference
+ *      Z - Other
+ */
 public enum Enum127DKReason implements EnumAccessors, LogStringVerbose {
     UNKNOWN_SYMBOL("A", "UNKNOWN_SYMBOL", "A - Unknown Symbol"),
     WRONG_SIDE("B", "WRONG_SIDE", "B - Wrong Side"),

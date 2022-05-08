@@ -22,6 +22,22 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum81ProcessCode;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  81
+ *  ProcessCode
+ *  char
+ *  Processing code for sub-account.
+ *  Absence of this field in AllocAccount (79), AllocPrice (366),
+ *  AllocQty (80), ProcessCode instance indicates regular trade.
+ *  Valid values:
+ *      0 - Regular
+ *      1 - Soft Dollar
+ *      2 - Step-In
+ *      3 - Step-Out
+ *      4 - Soft-dollar Step-In
+ *      5 - Soft-dollar Step-Out
+ *      6 - Plan Sponsor
+ */
 public class Tag81EnuProcessCode extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum81ProcessCode dataValue;
 

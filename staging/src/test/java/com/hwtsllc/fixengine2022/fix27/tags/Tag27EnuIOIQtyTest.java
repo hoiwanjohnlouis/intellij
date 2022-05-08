@@ -19,7 +19,6 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumIOIQty;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.tags.Tag682EnuLegIOIQty;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,6 +26,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  *  27 (same as 27, 682)
+ *  IOIQty
+ *  String
+ *  Quantity (e.g. number of shares) in numeric form or relative size.
+ *  682 (same as 27, 682)
  *  LegIOIQty
  *  Leg-specific IOI quantity.
  *          See IOIQty (27) for description and valid values

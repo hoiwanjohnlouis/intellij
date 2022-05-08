@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  100
+ *  ExDestination
+ *  Exchange
+ *  <p>
+ *  Execution destination as defined by institution when order is entered.
+ *  <p>
+ *  Valid values:
+ *      See "Appendix 6-C"
+ */
 public class Tag100StrExDestination extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  30
+ *  LastMkt
+ *  Exchange
+ *  Market of execution for last fill, or an indication of the market where an order was routed
+ *  See "Appendix 6-C"
+ */
 class Tag30StrLastMktTest {
-
     @Test
     void FIX0030Test() {
         FIX27 fixData = FIX27.FIX30_STR_LAST_MKT;

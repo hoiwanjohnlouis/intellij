@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  110
+ *  MinQty
+ *  Qty
+ *  Minimum quantity of an order to be executed.
+ *              (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag110QtyMinQtyTest {
 
     @Test

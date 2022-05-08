@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  91
+ *  SecureData
+ *  data
+ *  <p>
+ *  Actual encrypted data stream
+ */
 public class Tag91DatSecureData extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyDataType dataValue;
 

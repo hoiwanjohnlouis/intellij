@@ -18,22 +18,22 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyDataType;
+import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public class Tag446DatListStatusEncodedText extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyDataType dataValue;
+public class Tag445LenEncodedListStatusTextLen extends FIX42Abstract implements FixTagValuePairString, LogStringVerbose {
+    private final MyLengthType dataValue;
 
-    public final static String TESTA_DAT_LIST_STATUS_ENCODED_TEXT = "BilboBaggins-Tag446DatListStatusEncodedText";
-    public final static String TESTB_DAT_LIST_STATUS_ENCODED_TEXT = "Gandalf-Tag446DatListStatusEncodedText";
+    public final static int TESTA_LEN_LIST_STATUS_ENCODED_TEXT_LEN = 445;
+    public final static int TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN = 544;
 
-    public Tag446DatListStatusEncodedText(MyDataType dataValue) {
-        setFixType(FIX42.FIX446_DAT_LIST_STATUS_ENCODED_TEXT);
+    public Tag445LenEncodedListStatusTextLen(MyLengthType dataValue) {
+        setFixType(FIX42.FIX445_LEN_LIST_STATUS_ENCODED_TEXT_LEN);
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public int getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -68,14 +68,14 @@ public class Tag446DatListStatusEncodedText extends FIX42Abstract implements Fix
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag446DatListStatusEncodedText tagData;
+        Tag445LenEncodedListStatusTextLen tagData;
 
-        tagData= new Tag446DatListStatusEncodedText(new MyDataType(TESTA_DAT_LIST_STATUS_ENCODED_TEXT) );
+        tagData = new Tag445LenEncodedListStatusTextLen(new MyLengthType(TESTA_LEN_LIST_STATUS_ENCODED_TEXT_LEN) );
         System.out.println("initial values A");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());
 
-        tagData = new Tag446DatListStatusEncodedText(new MyDataType(TESTB_DAT_LIST_STATUS_ENCODED_TEXT) );
+        tagData = new Tag445LenEncodedListStatusTextLen(new MyLengthType(TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN) );
         System.out.println("initial values B");
         System.out.println(tagData.toLogStringVerbose());
         System.out.println(tagData.toFixTagValuePairString());

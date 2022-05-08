@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  26
+ *  IOIRefID
+ *  String
+ *  Reference identifier used with CANCEL and REPLACE, transaction types.
+ *  (Prior to FIX 4.1 this field was of type int)
+ */
 class Tag26StrIOIRefIDTest {
-
     @Test
     void FIX0026Test() {
         FIX27 fixData = FIX27.FIX26_STR_IOI_REF_ID;

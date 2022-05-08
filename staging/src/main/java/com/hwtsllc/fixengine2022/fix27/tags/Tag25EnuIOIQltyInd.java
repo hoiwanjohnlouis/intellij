@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum25IOIQltyInd;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  25
+ *  IOIQltyInd
+ *  char
+ *  Relative quality of indication
+ *  Valid values:
+ *      H - High
+ *      L - Low
+ *      M - Medium
+ */
 public class Tag25EnuIOIQltyInd extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum25IOIQltyInd dataValue;
 

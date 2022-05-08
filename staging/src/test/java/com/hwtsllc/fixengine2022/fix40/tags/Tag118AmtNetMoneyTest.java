@@ -24,8 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  118
+ *  NetMoney
+ *  Amt
+ *  Total amount due as the result of the transaction
+ *  (e.g. for Buy order - principal + commission + fees)
+ *  reported in currency of execution.
+ */
 class Tag118AmtNetMoneyTest {
-
     @Test
     void FIX0118Test() {
         FIX40 fixData = FIX40.FIX118_AMT_NET_MONEY;

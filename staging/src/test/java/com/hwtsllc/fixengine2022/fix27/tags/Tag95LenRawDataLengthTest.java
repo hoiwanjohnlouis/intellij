@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  95
+ *  RawDataLength
+ *  Length
+ *  <p>
+ *  Number of bytes in raw data field.
+ */
 class Tag95LenRawDataLengthTest {
-
     @Test
     void FIX0095Test() {
         FIX27 fixData = FIX27.FIX95_LEN_RAW_DATA_LENGTH;

@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  33
+ *  NoLinesOfText
+ *  NumInGroup
+ *  Identifies number of lines of text body
+ */
 class Tag33NumNoLinesOfTextTest {
-
     @Test
     void FIX0033Test() {
         FIX27 fixData = FIX27.FIX33_NUM_NO_LINES_OF_TEXT;

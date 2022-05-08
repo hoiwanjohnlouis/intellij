@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  80
+ *  AllocQty
+ *  Qty
+ *  <p>
+ *  Quantity  to be allocated to specific sub-account
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag80QtyAllocQtyTest {
-
     @Test
     void FIX0080Test() {
         FIX27 fixData = FIX27.FIX80_QTY_ALLOC_SHARES;

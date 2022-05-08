@@ -21,6 +21,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *  88 (same as 88, 776)
+ *  AllocRejCode
+ *  int
+ *  Identifies reason for rejection.
+ *  776 (same as 88, 776)
  *  IndividualAllocRejCode
  *  Identified reason for rejecting an individual AllocAccount (79) detail.
  *        Same values as  AllocRejCode (88)

@@ -24,8 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  75
+ *  TradeDate
+ *  LocalMktDate
+ *  <p>
+ *  Indicates date of trade referenced in this message in YYYYMMDD format.
+ *  <p>
+ *  Absence of this field indicates current day (expressed in local time at place of trade).
+ */
 class Tag75StrTradeDateTest {
-
     @Test
     void FIX0075Test() {
         FIX27 fixData = FIX27.FIX75_STR_TRADE_DATE;

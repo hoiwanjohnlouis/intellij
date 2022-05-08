@@ -14,19 +14,38 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.datatypes;
+package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public enum Enum949Nested3PartyID implements EnumAccessors, LogStringVerbose {
+/**
+ *  65
+ *  SymbolSfx
+ *  String
+ *  Additional information about the security
+ *  (e.g. preferred, warrants, etc.).
+ *
+ *      Note also see SecurityType (167).
+ *
+ *      As defined in the NYSE Stock and bond Symbol Directory
+ *      and in the AMEX Fitch Directory.
+ *
+ *  Valid values:
+ *  For Fixed Income
+ *      CD - EUCP with lump-sum interest rather than discount price
+ *      WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
+ */
+public enum Enum65SymbolSfx implements EnumAccessors, LogStringVerbose {
+    EUCP( "CD", "EUCP", "CD - EUCP with lump-sum interest rather than discount price" ),
+    WHEN_ISSUED( "WI", "WHEN_ISSUED", "WI - When-Issued for a security to be reissued under an old CUSIP or ISIN" ),
     ;
 
     private final String id;
     private final String name;
     private final String description;
 
-    Enum949Nested3PartyID(final String id, final String name, final String description) {
+    Enum65SymbolSfx(final String id, final String name, final String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -101,7 +120,7 @@ public enum Enum949Nested3PartyID implements EnumAccessors, LogStringVerbose {
         /*
          * dump all the enum values
          */
-        for (Enum949Nested3PartyID oneEnum : Enum949Nested3PartyID.values()) {
+        for (Enum65SymbolSfx oneEnum : Enum65SymbolSfx.values()) {
             System.out.println(oneEnum);
         }
     }

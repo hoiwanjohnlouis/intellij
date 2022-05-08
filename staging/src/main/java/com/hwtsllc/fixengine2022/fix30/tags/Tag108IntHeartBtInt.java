@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  108
+ *  HeartBtInt
+ *  int
+ *  Heartbeat interval (seconds)
+ */
 public class Tag108IntHeartBtInt extends FIX30Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 

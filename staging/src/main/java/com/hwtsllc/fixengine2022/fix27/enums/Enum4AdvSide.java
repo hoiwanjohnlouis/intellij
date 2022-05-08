@@ -20,12 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- * Enum4AdvSide enum defines all the possible values for AdvSide (FIX) fields.
- * It consists of 3 fields.
- *
- * String action            type of transaction for field as defined by the FIX protocol document, no duplicates
- * String name              short name of transaction for as defined by the FIX protocol document, no duplicates
- * String description       describes what the action entails
+ *  4
+ *  AdvSide
+ *  char
+ *  Broker's side of advertised trade
+ *  Valid values:
+ *      B - Buy
+ *      S - Sell
+ *      T - Trade
+ *      X - Cross
  */
 public enum Enum4AdvSide implements EnumAccessors, LogStringVerbose {
     BUY ("B", "BUY", "B - Buy"),

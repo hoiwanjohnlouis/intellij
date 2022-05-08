@@ -24,8 +24,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  87
+ *  AllocStatus
+ *  int
+ *  Identifies status of allocation.
+ *  Valid values:
+ *      0 - accepted (successfully processed)
+ *      1 - block level reject
+ *      2 - account level reject
+ *      3 - received (received, not yet processed)
+ *      4 - incomplete
+ *      5 - rejected by intermediary
+ *      6 - allocation pending
+ *      7 - reversed
+ */
 class Tag87EnuAllocStatusTest {
-
     @Test
     void FIX0087Test() {
         FIX27 fixData = FIX27.FIX87_ENU_ALLOC_STATUS;

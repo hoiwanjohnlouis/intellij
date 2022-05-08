@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  124
+ *  NoExecs
+ *  NumInGroup
+ *  No of execution repeating group entries to follow.
+ */
 public class Tag124NumNoExecs extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 

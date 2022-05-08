@@ -19,6 +19,9 @@ package com.hwtsllc.fixengine2022.fix44.enums;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 /**
  *  905
  *  CollAsgnRespType

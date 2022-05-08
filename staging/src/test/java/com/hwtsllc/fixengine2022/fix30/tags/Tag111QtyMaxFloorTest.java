@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  111
+ *  MaxFloor
+ *  Qty
+ *  Deprecated in FIX.5.0
+ *  The quantity to be displayed. Required for reserve orders.
+ *  On orders specifies the qty to be displayed, on execution
+ *  reports the currently displayed quantity.
+ */
 class Tag111QtyMaxFloorTest {
 
     @Test

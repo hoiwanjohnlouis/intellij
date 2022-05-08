@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  90
+ *  SecureDataLen
+ *  Length
+ *  <p>
+ *  Length of encrypted message
+ */
 class Tag90LenSecureDataLenTest {
-
     @Test
     void FIX0090Test() {
         FIX27 fixData = FIX27.FIX90_LEN_SECURE_DATA_LEN;

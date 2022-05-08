@@ -24,8 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  62
+ *  ValidUntilTime
+ *  UTCTimestamp
+ *  Indicates expiration time of indication message
+ *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
+ */
 class Tag62StrValidUntilTimeTest {
-
     @Test
     void FIX0062Test() {
         FIX27 fixData = FIX27.FIX62_STR_VALID_UNTIL_TIME;

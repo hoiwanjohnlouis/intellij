@@ -24,9 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  86
+ *  DlvyInst
+ *  String
+ *  Deprecated in FIX.4.2 Free format text field to indicate delivery instructions
+ */
 // @Deprecated
 class Tag86StrDlvyInstTest {
-
     @Test
     void FIX0086Test() {
         FIX27 fixData = FIX27.FIX86_STR_DLVY_INST;

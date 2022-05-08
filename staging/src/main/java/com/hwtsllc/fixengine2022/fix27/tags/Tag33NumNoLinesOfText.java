@@ -22,6 +22,12 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  33
+ *  NoLinesOfText
+ *  NumInGroup
+ *  Identifies number of lines of text body
+ */
 public class Tag33NumNoLinesOfText extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 

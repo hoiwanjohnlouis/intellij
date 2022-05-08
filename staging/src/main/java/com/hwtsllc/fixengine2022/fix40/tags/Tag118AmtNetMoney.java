@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  118
+ *  NetMoney
+ *  Amt
+ *  Total amount due as the result of the transaction
+ *  (e.g. for Buy order - principal + commission + fees)
+ *  reported in currency of execution.
+ */
 public class Tag118AmtNetMoney extends FIX40Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 

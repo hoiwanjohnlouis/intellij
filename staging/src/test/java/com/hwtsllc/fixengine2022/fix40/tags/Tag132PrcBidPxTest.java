@@ -24,8 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  132
+ *  BidPx
+ *  Price
+ *  Bid price/rate
+ */
 class Tag132PrcBidPxTest {
-
     @Test
     void FIX0132Test() {
         FIX40 fixData = FIX40.FIX132_PRC_BID_PX;

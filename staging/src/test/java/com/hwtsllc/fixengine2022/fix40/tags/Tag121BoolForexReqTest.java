@@ -24,8 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  121
+ *  ForexReq
+ *  Boolean
+ *  Indicates request for forex accommodation trade
+ *  to be executed along with security transaction.
+ *  Valid values:
+ *      N - Do Not Execute Forex After Security Trade
+ *      Y - Execute Forex After Security Trade
+ */
 class Tag121BoolForexReqTest {
-
     @Test
     void FIX0121Test() {
         FIX40 fixData = FIX40.FIX121_BOOL_FOREX_REQ;

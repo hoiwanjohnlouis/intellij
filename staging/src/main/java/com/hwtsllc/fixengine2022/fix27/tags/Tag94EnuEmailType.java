@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.fix27.enums.Enum94EmailType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  94
+ *  EmailType
+ *  char
+ *  Email message type.
+ *  Valid values:
+ *      0 - New
+ *      1 - Reply
+ *      2 - Admin Reply
+ */
 public class Tag94EnuEmailType extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum94EmailType dataValue;
 

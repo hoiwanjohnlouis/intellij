@@ -21,6 +21,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
  *  27 (same as 27, 682)
+ *  IOIQty
+ *  String
+ *  Quantity (e.g. number of shares) in numeric form or relative size.
+ *  682 (same as 27, 682)
  *  LegIOIQty
  *  Leg-specific IOI quantity.
  *          See IOIQty (27) for description and valid values

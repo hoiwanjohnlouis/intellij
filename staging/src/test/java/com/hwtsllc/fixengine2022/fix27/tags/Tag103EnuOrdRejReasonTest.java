@@ -24,8 +24,36 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  103
+ *  OrdRejReason
+ *  int
+ *  Code to identify reason for order rejection.
+ *  Note: Values 3, 4, and 5 will be used when rejecting an
+ *        order due to pre-allocation information errors.
+ *  Valid values:
+ *      0 - Broker - Exchange option
+ *      1 - Unknown symbol
+ *      2 - Exchange closed
+ *      3 - Order exceeds limit
+ *      4 - Too late to enter
+ *      5 - Unknown order
+ *      6 - Duplicate Order (e.g. dupe ClOrdID)
+ *      7 - Duplicate of a verbally communicated order
+ *      8 - Stale order
+ *      9 - Trade along required
+ *      10 - Invalid Investor ID
+ *      11 - Unsupported order characteristic
+ *      12 - Surveillence Option
+ *      13 - Incorrect quantity
+ *      14 - Incorrect allocated quantity
+ *      15 - Unknown account(s)
+ *      18 - Invalid price increment
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Tag103EnuOrdRejReasonTest {
-
     @Test
     void FIX0103Test() {
         FIX27 fixData = FIX27.FIX103_ENU_ORD_REJ_REASON;

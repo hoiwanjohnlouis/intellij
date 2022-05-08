@@ -24,6 +24,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  34
+ *  MsgSeqNum
+ *  SeqNum
+ *  Integer message sequence number.
+ */
 class Tag34SeqMsgSeqNumTest {
 
     @Test
