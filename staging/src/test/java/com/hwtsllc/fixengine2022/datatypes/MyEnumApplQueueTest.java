@@ -18,6 +18,9 @@ package com.hwtsllc.fixengine2022.datatypes;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 /**
  *  814 (same as 814, 815)
  *  ApplQueueResolution
@@ -37,6 +40,10 @@ import org.junit.jupiter.api.Test;
  *  <p>    1 - Queue Flushed
  *  <p>    2 - Overlay Last
  *  <p>    3 - End Session
+ assertEquals("0 - No Action Taken", enumType.getDescription());
+ assertEquals("1 - Queue Flushed", enumType.getDescription());
+ assertEquals("2 - Overlay Last", enumType.getDescription());
+ assertEquals("3 - End Session", enumType.getDescription());
  */
 class MyEnumApplQueueTest {
     @Test
@@ -44,8 +51,35 @@ class MyEnumApplQueueTest {
         MyEnumApplQueue enumType;
 
         enumType = MyEnumApplQueue.NO_ACTION;
+        assertEquals("0", enumType.getID());
+        assertEquals("NO_ACTION", enumType.getName());
+        assertEquals("0 - No Action Taken", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = MyEnumApplQueue.QUEUE_FLUSHED;
+        assertEquals("1", enumType.getID());
+        assertEquals("QUEUE_FLUSHED", enumType.getName());
+        assertEquals("1 - Queue Flushed", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = MyEnumApplQueue.OVERLAY_LAST;
+        assertEquals("2", enumType.getID());
+        assertEquals("OVERLAY_LAST", enumType.getName());
+        assertEquals("2 - Overlay Last", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
         enumType = MyEnumApplQueue.END_SESSION;
+        assertEquals("3", enumType.getID());
+        assertEquals("END_SESSION", enumType.getName());
+        assertEquals("3 - End Session", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

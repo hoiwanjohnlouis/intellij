@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  189
+ *  BidForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  Bid F/X forward points added to spot rate. Maybe a negative value.
+ */
 public class Tag189PxoBidForwardPoints extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceOffsetType dataValue;
 

@@ -19,6 +19,19 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  172
+ *  SettlDeliveryType
+ *  int
+ *  <p>
+ *  Identifies type of settlement
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - "Versus. Payment": Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment
+ *  <p>    1 - "Free": Deliver (if Sell) or Receive (if Buy) Free
+ *  <p>    2 - Tri-Party
+ *  <p>    3 - Hold In Custody
+ */
 public enum Enum172SettlDeliveryType implements EnumAccessors, LogStringVerbose {
     VERSUS( "0",
             "VERSUS",

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  155
+ *  SettlCurrFxRate
+ *  float
+ *  <p>
+ *  Foreign exchange rate used to compute SettlCurrAmt (9) from Currency (5) to SettlCurrency (20)
+ */
 public class Tag155FloSettlCurrFxRate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyFloatType dataValue;
 

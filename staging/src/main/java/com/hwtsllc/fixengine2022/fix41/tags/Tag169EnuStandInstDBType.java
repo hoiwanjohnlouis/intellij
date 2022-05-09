@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum169StandInstDbType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  169
+ *  StandInstDbType
+ *  int
+ *  <p>
+ *  Identifies the Standing Instruction database used
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Other
+ *  <p>    1 - DTC SID
+ *  <p>    2 - Thomson ALERT
+ *  <p>    3 - A Global Custodian (StandInstDBName (70) must be provided)
+ *  <p>    4 - AccountNet
+ */
 public class Tag169EnuStandInstDBType extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum169StandInstDbType dataValue;
 

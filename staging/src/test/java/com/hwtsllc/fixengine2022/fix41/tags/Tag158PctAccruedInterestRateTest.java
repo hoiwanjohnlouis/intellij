@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  158
+ *  AccruedInterestRate
+ *  Percentage
+ *  <p>
+ *  The amount the buyer compensates the seller for the portion of the next coupon interest payment
+ *  the seller has earned but will not receive from the issuer because the issuer will send the
+ *  next coupon payment to the buyer.  Accrued Interest Rate is the annualized Accrued Interest
+ *  amount divided by the purchase price of the bond.
+ */
 class Tag158PctAccruedInterestRateTest {
     @Test
     void FIX0158Test() {

@@ -22,6 +22,43 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum150ExecType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  150
+ *  ExecType
+ *  char
+ *  <p>
+ *  Describes the specific ExecutionRpt
+ *  <p>
+ *  (i.e. Pending Cancel) while OrdStatus (39) will always identify the current order status (i.e. Partially Filled)
+ *  <p>
+ *  *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - New
+ *  <p>    3 - Done for day
+ *  <p>    4 - Canceled
+ *  <p>    5 - Replaced
+ *  <p>    6 - Pending Cancel (e.g. result of Order Cancel Request)
+ *  <p></p>
+ *  <p>    7 - Stopped
+ *  <p>    8 - Rejected
+ *  <p>    9 - Suspended
+ *  <p></p>
+ *  <p>    A - Pending New
+ *  <p>    B - Calculated
+ *  <p>    C - Expired
+ *  <p>    D - Restated (Execution Report sent unsolicited by sellside, with ExecRestatementReason (378) set)
+ *  <p>    E - Pending Replace (e.g. result of Order Cancel/Replace Request)
+ *  <p></p>
+ *  <p>    F - Trade (partial fill or fill)
+ *  <p>    G - Trade Correct
+ *  <p>    H - Trade Cancel
+ *  <p>    I - Order Status
+ *  <p>    J - Trade in a Clearing Hold
+ *  <p></p>
+ *  <p>    K - Trade has been released to Clearing
+ *  <p>    L - Triggered or Activated by System
+ */
 public class Tag150EnuExecType extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum150ExecType dataValue;
 

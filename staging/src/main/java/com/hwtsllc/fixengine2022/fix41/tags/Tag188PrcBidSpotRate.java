@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  188
+ *  BidSpotRate
+ *  Price
+ *  <p>
+ *  Bid F/X spot rate.
+ */
 public class Tag188PrcBidSpotRate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  208
+ *  NotifyBrokerOfCredit
+ *  Boolean
+ *  Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker).
+ *  Valid values:
+ *      N - Details should not be communicated
+ *      Y - Details should be communicated
+ */
 public class Tag208BoolNotifyBrokerOfCredit extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

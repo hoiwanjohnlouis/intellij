@@ -22,6 +22,26 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  200
+ *  MaturityMonthYear
+ *  month-year
+ *  <p>
+ *  Can be used with standardized derivatives vs. the MaturityDate (54) field.
+ *  Month and Year of the maturity (used for standardized futures and options).
+ *  <p>    Format:
+ *  <p>    YYYYMM      (i.e. 99903)
+ *  <p>    YYYYMMDD (20030323)
+ *  <p>    YYYYMMwN (200303w) for week
+ *  <p>
+ *  A specific date or can be appended to the MaturityMonthYear.
+ *  <p>
+ *  For instance, if multiple standard products exist that mature in the same Year and Month,
+ *  but actually mature at a different time, a value can be appended, such as "w" or "w2"
+ *  to indicate week as opposed to week 2 expiration.
+ *  <p>
+ *  Likewise, the date (0-3) can be appended to indicate a specific expiration (maturity date).
+ */
 public class Tag200StrMaturityMonthYear extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

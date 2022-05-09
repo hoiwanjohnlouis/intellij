@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  157
+ *  NumDaysInterest
+ *  int
+ *  <p>
+ *  Number of Days of Interest for convertible bonds and fixed income.
+ *  <p>
+ *  Note value may be negative.
+ */
 class Tag157IntNumDaysInterestTest {
     @Test
     void FIX0157Test() {

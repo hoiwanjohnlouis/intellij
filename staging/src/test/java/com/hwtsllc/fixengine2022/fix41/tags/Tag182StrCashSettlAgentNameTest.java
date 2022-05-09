@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  182
+ *  CashSettlAgentName
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3 Name of SettlInstSource's local agent bank if SettlDeliveryType=Free
+ */
 // @Deprecated
 class Tag182StrCashSettlAgentNameTest {
     @Test

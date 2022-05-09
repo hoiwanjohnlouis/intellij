@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  198
+ *  SecondaryOrderID
+ *  String
+ *  <p>
+ *  Assigned by the party which accepts the order.
+ *  Can be used to provide the OrderID (37) used by an exchange or executing system.
+ */
 public class Tag198StrSecondaryOrderID extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

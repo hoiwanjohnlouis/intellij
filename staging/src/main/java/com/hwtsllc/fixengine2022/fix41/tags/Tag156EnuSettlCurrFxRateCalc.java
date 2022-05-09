@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum156SettlCurrFxRateCalc;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  156
+ *  SettlCurrFxRateCalc
+ *  char
+ *  <p>
+ *  Specifies whether or not SettlCurrFxRate (55) should be multiplied or divided.
+ *  <p></p>
+ *  Valid values:
+ *  <p></p>
+ *  <p>    M - Multiply
+ *  <p>    D - Divide
+ */
 public class Tag156EnuSettlCurrFxRateCalc extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum156SettlCurrFxRateCalc dataValue;
 

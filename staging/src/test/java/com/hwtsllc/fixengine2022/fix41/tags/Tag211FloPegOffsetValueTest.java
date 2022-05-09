@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  211
+ *  PegOffsetValue
+ *  float
+ *  <p>
+ *  Amount (signed) added to the peg for a pegged order in the context of the PegOffsetType (836)
+ *  <p>
+ *  (Prior to FIX 4.4 this field was of type PriceOffset)
+ */
 class Tag211FloPegOffsetValueTest {
     @Test
     void FIX0211Test() {

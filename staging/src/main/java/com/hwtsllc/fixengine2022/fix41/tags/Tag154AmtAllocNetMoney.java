@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  154
+ *  AllocNetMoney
+ *  Amt
+ *  <p>
+ *  NetMoney (8) for a specific AllocAccount (79)
+ */
 public class Tag154AmtAllocNetMoney extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 

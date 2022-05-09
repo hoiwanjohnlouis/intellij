@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MyLengthTypeTest {
     @Test
-    void Test() {
+    void LengthTypeTest() {
         assertEquals(1,1);
         assertNotEquals(2,1);
     }

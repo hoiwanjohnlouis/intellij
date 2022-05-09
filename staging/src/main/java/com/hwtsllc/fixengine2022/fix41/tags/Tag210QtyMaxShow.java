@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  210
+ *  MaxShow
+ *  Qty
+ *  <p>
+ *  Deprecated in FIX.5.0
+ *  <p>
+ *  Maximum quantity (e.g. number of shares) within an order to be shown to other customers (i.e. sent via an IOI).
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 public class Tag210QtyMaxShow extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 

@@ -18,12 +18,29 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
-import com.hwtsllc.fixengine2022.fix41.enums.Enum201PutOrCall;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPutOrCall;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  201 (same as 201, 315)
+ *  PutOrCall
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2 Indicates whether an Option is for a put or call
+ *  <p></p>
+ *  315
+ *  UnderlyingPutOrCall
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2 Underlying security's PutOrCall. See PutOrCall field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Put
+ *  <p>    1 - Call
+ */
 class Tag201EnuPutOrCallTest {
     @Test
     void FIX0201Test() {
@@ -35,23 +52,16 @@ class Tag201EnuPutOrCallTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  201 (same as 201, 315)
-     *  UnderlyingPutOrCall
-     *
-     *      PUT( "0", "PUT", "0 - Put" ),
-     *      CALL( "1", "CALL", "1 - Call" ),
-     */
     @Test
     void Tag0201Test() {
         Tag201EnuPutOrCall tagData;
 
-        tagData = new Tag201EnuPutOrCall(Enum201PutOrCall.CALL);
-        assertEquals( Enum201PutOrCall.CALL.getID(), tagData.getDataValue());
+        tagData = new Tag201EnuPutOrCall(MyEnumPutOrCall.CALL);
+        assertEquals( MyEnumPutOrCall.CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag201EnuPutOrCall(Enum201PutOrCall.PUT);
-        assertEquals( Enum201PutOrCall.PUT.getID(), tagData.getDataValue());
+        tagData = new Tag201EnuPutOrCall(MyEnumPutOrCall.PUT);
+        assertEquals( MyEnumPutOrCall.PUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

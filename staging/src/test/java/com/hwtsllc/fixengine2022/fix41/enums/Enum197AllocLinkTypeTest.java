@@ -22,13 +22,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  197
+ *  AllocLinkType
+ *  int
+ *  <p>
+ *  Identifies the type of Allocation linkage when AllocLinkID (96) is used.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - FX Netting
+ *  <p>    1 - FX Swap
+ */
 class Enum197AllocLinkTypeTest {
-
     @Test
     void Enum0197Test() {
         Enum197AllocLinkType enumType;
 
-        /**
+        /*
          * 0-1 msg types
          */
         enumType = Enum197AllocLinkType.FX_NETTING;

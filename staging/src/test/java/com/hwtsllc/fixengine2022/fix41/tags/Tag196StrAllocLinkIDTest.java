@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  196
+ *  AllocLinkID
+ *  String
+ *  <p>
+ *  Can be used to link two different Allocation messages
+ *  (each with unique AllocID (70)) together, i.e. for F/X "Netting" or "Swaps".
+ *  Should be unique.
+ */
 class Tag196StrAllocLinkIDTest {
     @Test
     void FIX0196Test() {

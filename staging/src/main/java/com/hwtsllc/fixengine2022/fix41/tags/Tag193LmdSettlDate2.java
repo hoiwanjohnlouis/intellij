@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  193
+ *  SettlDate2
+ *  LocalMktDate
+ *  <p>
+ *  Deprecated in FIX.5.0 SettDate (64) of the future part of a F/X swap order.
+ */
 // @Deprecated
 public class Tag193LmdSettlDate2 extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyLocalMktDateType dataValue;

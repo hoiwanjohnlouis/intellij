@@ -14,28 +14,38 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.enums;
+package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-public enum Enum203CoveredOrUncovered implements EnumAccessors, LogStringVerbose {
-    /**
-     *  Information is the same for TAGS 203, 565
-     */
-
-    /*
-     *  0-1 types
-     */
-    COVERED( "0", "COVERED", "0 - Covered" ),
-    UNCOVERED( "1", "UNCOVERED", "1 - Uncovered" ),
+/**
+ *  201 (same as 201, 315)
+ *  PutOrCall
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2 Indicates whether an Option is for a put or call
+ *  <p></p>
+ *  315
+ *  UnderlyingPutOrCall
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2 Underlying security's PutOrCall. See PutOrCall field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Put
+ *  <p>    1 - Call
+ */
+public enum MyEnumPutOrCall implements EnumAccessors, LogStringVerbose {
+    PUT( "0", "PUT", "0 - Put" ),
+    CALL( "1", "CALL", "1 - Call" ),
     ;
 
     private final String id;
     private final String name;
     private final String description;
 
-    Enum203CoveredOrUncovered(final String id, final String name, final String description) {
+    MyEnumPutOrCall(final String id, final String name, final String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -110,7 +120,7 @@ public enum Enum203CoveredOrUncovered implements EnumAccessors, LogStringVerbose
         /*
          * dump all the enum values
          */
-        for (Enum203CoveredOrUncovered oneEnum : Enum203CoveredOrUncovered.values()) {
+        for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             System.out.println(oneEnum);
         }
     }

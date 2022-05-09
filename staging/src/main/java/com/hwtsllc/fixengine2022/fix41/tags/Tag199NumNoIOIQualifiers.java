@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  199
+ *  NoIOIQualifiers
+ *  NumInGroup
+ *  <p>
+ *  Number of repeating groups of IOIQualifiers (04).
+ */
 public class Tag199NumNoIOIQualifiers extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyNumInGroupType dataValue;
 

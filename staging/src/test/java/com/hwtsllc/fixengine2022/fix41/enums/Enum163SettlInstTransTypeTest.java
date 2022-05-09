@@ -22,13 +22,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  163
+ *  SettlInstTransType
+ *  char
+ *  <p>
+ *  Settlement Instructions message transaction type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - New
+ *  <p>    C - Cancel
+ *  <p>    R - Replace
+ *  <p>    T - Restate
+ */
 class Enum163SettlInstTransTypeTest {
-
     @Test
     void Enum0163Test() {
         Enum163SettlInstTransType enumType;
 
-        /**
+        /*
          * N,C,R,T msg types
          */
         enumType = Enum163SettlInstTransType.NEW;

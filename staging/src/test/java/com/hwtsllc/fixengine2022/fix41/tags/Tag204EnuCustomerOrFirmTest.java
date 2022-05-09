@@ -24,6 +24,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  204
+ *  CustomerOrFirm
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2
+ *  <p>
+ *  Used for options when delivering the order to an execution system
+ *  or an exchange to specify if the order is for a  customer or the firm placing the order itself.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Customer
+ *  <p>    1 - Firm
+ */
 // @Deprecated
 class Tag204EnuCustomerOrFirmTest {
     @Test

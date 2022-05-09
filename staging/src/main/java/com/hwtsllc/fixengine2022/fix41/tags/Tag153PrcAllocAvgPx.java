@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  153
+ *  AllocAvgPx
+ *  Price
+ *  <p>
+ *  AvgPx (6) for a specific AllocAccount (79)
+ *  <p>
+ *  For Fixed Income this is always expressed as "percent of par" price type.
+ */
 public class Tag153PrcAllocAvgPx extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 

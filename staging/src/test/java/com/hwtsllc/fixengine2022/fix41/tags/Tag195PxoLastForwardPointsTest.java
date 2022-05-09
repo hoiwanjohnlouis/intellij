@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  195
+ *  LastForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  F/X forward points added to LastSpotRate (94).
+ *  May be a negative value. Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 class Tag195PxoLastForwardPointsTest {
     @Test
     void FIX0195Test() {

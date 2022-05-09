@@ -24,6 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  198
+ *  SecondaryOrderID
+ *  String
+ *  <p>
+ *  Assigned by the party which accepts the order.
+ *  Can be used to provide the OrderID (37) used by an exchange or executing system.
+ */
 class Tag198StrSecondaryOrderIDTest {
     @Test
     void FIX0198Test() {

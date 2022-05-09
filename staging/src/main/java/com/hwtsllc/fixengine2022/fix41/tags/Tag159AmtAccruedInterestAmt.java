@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  159
+ *  AccruedInterestAmt
+ *  Amt
+ *  <p>
+ *  Amount of Accrued Interest for convertible bonds and fixed income
+ */
 public class Tag159AmtAccruedInterestAmt extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyAmtType dataValue;
 

@@ -19,6 +19,20 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  169
+ *  StandInstDbType
+ *  int
+ *  <p>
+ *  Identifies the Standing Instruction database used
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Other
+ *  <p>    1 - DTC SID
+ *  <p>    2 - Thomson ALERT
+ *  <p>    3 - A Global Custodian (StandInstDBName (70) must be provided)
+ *  <p>    4 - AccountNet
+ */
 public enum Enum169StandInstDbType implements EnumAccessors, LogStringVerbose {
     OTHER( "0",
             "OTHER",

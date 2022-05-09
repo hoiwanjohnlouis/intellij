@@ -24,6 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  173
+ *  SettlDepositoryCode
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3 Brokers account code at the depository
+ *  (i.e. CEDEL ID  for CEDEL, FINS for DTC, or Euroclear ID for Euroclear) if Settlement Location is a depository
+ */
 // @Deprecated
 class Tag173StrSettlDepositoryCodeTest {
     @Test

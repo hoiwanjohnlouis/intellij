@@ -18,25 +18,35 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.fix41.enums.Enum201PutOrCall;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPutOrCall;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
-// @Deprecated
 /**
  *  201 (same as 201, 315)
+ *  PutOrCall
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2 Indicates whether an Option is for a put or call
+ *  <p></p>
+ *  315
  *  UnderlyingPutOrCall
- *
- *      PUT( "0", "PUT", "0 - Put" ),
- *      CALL( "1", "CALL", "1 - Call" ),
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2 Underlying security's PutOrCall. See PutOrCall field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Put
+ *  <p>    1 - Call
  */
+// @Deprecated
 public class Tag201EnuPutOrCall extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum201PutOrCall dataValue;
+    private final MyEnumPutOrCall dataValue;
 
-    public final static Enum201PutOrCall TESTA_ENU_PUT_OR_CALL = Enum201PutOrCall.CALL;
-    public final static Enum201PutOrCall TESTB_ENU_PUT_OR_CALL = Enum201PutOrCall.PUT;
+    public final static MyEnumPutOrCall TESTA_ENU_PUT_OR_CALL = MyEnumPutOrCall.CALL;
+    public final static MyEnumPutOrCall TESTB_ENU_PUT_OR_CALL = MyEnumPutOrCall.PUT;
 
-    public Tag201EnuPutOrCall(Enum201PutOrCall dataValue) {
+    public Tag201EnuPutOrCall(MyEnumPutOrCall dataValue) {
         setFixType(FIX41.FIX201_ENU_PUT_OR_CALL);
         this.dataValue = dataValue;
     }

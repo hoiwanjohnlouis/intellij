@@ -24,6 +24,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  166
+ *  SettlLocation
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.2 Identifies Settlement Depository or Country Code, ISITC spec
+ *  <p></p>
+ *  Valid values:
+ *  <p>    CED - CEDEL
+ *  <p>    DTC - Depository Trust Company
+ *  <p>    EUR - Euro clear
+ *  <p>    FED - Federal Book Entry
+ *  <p>    ISO_Country_Code - Local Market Settle Location
+ *  <p></p>
+ *  <p>    PNY - Physical
+ *  <p>    PTC - Participant Trust Company
+ */
 // @Deprecated
 class Tag166EnuSettlLocationTest {
     @Test

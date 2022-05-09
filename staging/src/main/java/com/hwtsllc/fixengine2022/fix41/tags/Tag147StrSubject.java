@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  147
+ *  Subject
+ *  String
+ *  <p>
+ *  The subject of an Email message
+ */
 public class Tag147StrSubject extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

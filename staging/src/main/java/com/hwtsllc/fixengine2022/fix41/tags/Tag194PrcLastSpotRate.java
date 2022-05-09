@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  194
+ *  LastSpotRate
+ *  Price
+ *  <p>
+ *  F/X spot rate.
+ */
 public class Tag194PrcLastSpotRate extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceType dataValue;
 

@@ -19,6 +19,18 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  156
+ *  SettlCurrFxRateCalc
+ *  char
+ *  <p>
+ *  Specifies whether or not SettlCurrFxRate (55) should be multiplied or divided.
+ *  <p></p>
+ *  Valid values:
+ *  <p></p>
+ *  <p>    M - Multiply
+ *  <p>    D - Divide
+ */
 public enum Enum156SettlCurrFxRateCalc implements EnumAccessors, LogStringVerbose {
     MULTIPLY( "M", "MULTIPLY", "M - Multiply" ),
     DIVIDE( "D", "DIVIDE", "D - Divide" ),

@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  207
+ *  SecurityExchange
+ *  Exchange
+ *  <p>
+ *  Market used to help identify a security.
+ *  <p>
+ *  Valid values:
+ *      See "Appendix 6-C"
+ */
 class Tag207ExcSecurityExchangeTest {
     @Test
     void FIX0207Test() {

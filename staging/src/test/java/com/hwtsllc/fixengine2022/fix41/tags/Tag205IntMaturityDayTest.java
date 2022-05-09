@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  205
+ *  MaturityDay
+ *  day-of-month
+ *  <p>
+ *  Deprecated in FIX.4.2
+ *  <p>
+ *  Day of month used in conjunction with MaturityMonthYear
+ *  to specify the maturity date for SecurityType=FUT or SecurityType=OPT.
+ */
 // @Deprecated
 class Tag205IntMaturityDayTest {
     @Test

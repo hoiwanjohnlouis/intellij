@@ -14,39 +14,52 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.enums;
+package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Enum565LegCoveredOrUncoveredTest {
-    /**
-     *  Information is the same for TAGS 203, 565
-     */
+/**
+ *  203 (same as 203, 565,)
+ *  CoveredOrUncovered
+ *  int
+ *  <p>
+ *  Used for derivative products, such as options
+ *  <p></p>
+ *  565
+ *  LegCoveredOrUncovered
+ *  int
+ *  <p>
+ *  CoveredOrUncovered for leg of a multileg
+ *  <p>
+ *  See CoveredOrUncovered (203) field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Covered
+ *  <p>    1 - Uncovered
+ */
+class MyEnumCoveredOrUncoveredTest {
     @Test
-    void Enum0565Test() {
-        Enum565LegCoveredOrUncovered enumType;
+    void Enum0203Test() {
+        MyEnumCoveredOrUncovered enumType;
 
         /*
          * 0-1 msg types
          */
-        enumType = Enum565LegCoveredOrUncovered.COVERED;
+        enumType = MyEnumCoveredOrUncovered.COVERED;
         assertEquals("0", enumType.getID());
         assertEquals("COVERED", enumType.getName());
         assertEquals("0 - Covered", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum565LegCoveredOrUncovered.UNCOVERED;
+        enumType = MyEnumCoveredOrUncovered.UNCOVERED;
         assertEquals("1", enumType.getID());
         assertEquals("UNCOVERED", enumType.getName());
         assertEquals("1 - Uncovered", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());

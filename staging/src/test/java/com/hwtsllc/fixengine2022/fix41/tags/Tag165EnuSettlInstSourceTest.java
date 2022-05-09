@@ -24,6 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  165
+ *  SettlInstSource
+ *  char
+ *  <p>
+ *  Indicates source of Settlement Instructions
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Broker's Instructions
+ *  <p>    2 - Institution's Instructions
+ *  <p>    3 - Investor (e.g. CIV use)
+ */
 class Tag165EnuSettlInstSourceTest {
     @Test
     void FIX0165Test() {

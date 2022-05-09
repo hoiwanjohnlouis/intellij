@@ -19,6 +19,17 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  197
+ *  AllocLinkType
+ *  int
+ *  <p>
+ *  Identifies the type of Allocation linkage when AllocLinkID (96) is used.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - FX Netting
+ *  <p>    1 - FX Swap
+ */
 public enum Enum197AllocLinkType implements EnumAccessors, LogStringVerbose {
     FX_NETTING( "0", "FX_NETTING", "0 - FX Netting" ),
     FX_SWAP( "1", "FX_SWAP", "1 - FX Swap" ),

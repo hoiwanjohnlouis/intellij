@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  148
+ *  Headline
+ *  String
+ *  <p>
+ *  The headline of a News message
+ */
 class Tag148StrHeadlineTest {
     @Test
     void FIX0148Test() {

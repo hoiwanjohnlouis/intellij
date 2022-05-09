@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum197AllocLinkType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  197
+ *  AllocLinkType
+ *  int
+ *  <p>
+ *  Identifies the type of Allocation linkage when AllocLinkID (96) is used.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - FX Netting
+ *  <p>    1 - FX Swap
+ */
 public class Tag197EnuAllocLinkType extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum197AllocLinkType dataValue;
 

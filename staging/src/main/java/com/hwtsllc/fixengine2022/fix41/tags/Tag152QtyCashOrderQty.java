@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  152
+ *  CashOrderQty
+ *  Qty
+ *  <p>
+ *  Specifies the approximate order quantity desired in
+ *  total monetary units vs. as tradeable units (e.g. number of shares).
+ *  The broker or fund manager (for CIV orders) would be responsible for
+ *  converting and calculating a tradeable unit (e.g. share) quantity (OrderQty (38))
+ *  based upon this amount to be used for the actual order and subsequent messages.
+ */
 public class Tag152QtyCashOrderQty extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 

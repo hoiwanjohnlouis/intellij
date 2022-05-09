@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  153
+ *  AllocAvgPx
+ *  Price
+ *  <p>
+ *  AvgPx (6) for a specific AllocAccount (79)
+ *  <p>
+ *  For Fixed Income this is always expressed as "percent of par" price type.
+ */
 class Tag153PrcAllocAvgPxTest {
     @Test
     void FIX0153Test() {

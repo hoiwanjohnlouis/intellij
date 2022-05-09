@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  161
+ *  AllocText
+ *  String
+ *  <p>
+ *  Free format text related to a specific AllocAccount (79).
+ */
 class Tag161StrAllocTextTest {
     @Test
     void FIX0161Test() {

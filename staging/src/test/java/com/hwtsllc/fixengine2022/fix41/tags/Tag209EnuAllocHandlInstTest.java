@@ -24,6 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  209
+ *  AllocHandlInst
+ *  int
+ *  <p>
+ *  Indicates how the receiver (i.e. third party) of Allocation message should handle/process the account details.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Match
+ *  <p>    2 - Forward
+ *  <p>    3 - Forward and Match
+ */
 class Tag209EnuAllocHandlInstTest {
     @Test
     void FIX0209Test() {

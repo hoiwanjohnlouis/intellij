@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  148
+ *  Headline
+ *  String
+ *  <p>
+ *  The headline of a News message
+ */
 public class Tag148StrHeadline extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

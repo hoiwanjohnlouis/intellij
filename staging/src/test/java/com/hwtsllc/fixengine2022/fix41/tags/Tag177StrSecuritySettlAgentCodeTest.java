@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  177
+ *  SecuritySettlAgentCode
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3 BIC
+ *  <p>
+ *  (Bank Identification Code--Swift managed) code of the SettlInstSource's local agent bank
+ *  if SettlLocation is not a depository
+ */
 // @Deprecated
 class Tag177StrSecuritySettlAgentCodeTest {
     @Test

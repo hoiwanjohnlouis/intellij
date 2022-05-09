@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  179
+ *  SecuritySettlAgentAcctName
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3 Name of SettlInstSource's account at local agent bank if  SettlLocation is not a depository
+ */
 // @Deprecated
 class Tag179StrSecuritySettlAgentAcctNameTest {
     @Test

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  154
+ *  AllocNetMoney
+ *  Amt
+ *  <p>
+ *  NetMoney (8) for a specific AllocAccount (79)
+ */
 class Tag154AmtAllocNetMoneyTest {
     @Test
     void FIX0154Test() {

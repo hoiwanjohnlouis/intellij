@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  205
+ *  MaturityDay
+ *  day-of-month
+ *  <p>
+ *  Deprecated in FIX.4.2
+ *  <p>
+ *  Day of month used in conjunction with MaturityMonthYear
+ *  to specify the maturity date for SecurityType=FUT or SecurityType=OPT.
+ */
 // @Deprecated
 public class Tag205IntMaturityDay extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;

@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  152
+ *  CashOrderQty
+ *  Qty
+ *  <p>
+ *  Specifies the approximate order quantity desired in
+ *  total monetary units vs. as tradeable units (e.g. number of shares).
+ *  The broker or fund manager (for CIV orders) would be responsible for
+ *  converting and calculating a tradeable unit (e.g. share) quantity (OrderQty (38))
+ *  based upon this amount to be used for the actual order and subsequent messages.
+ */
 class Tag152QtyCashOrderQtyTest {
     @Test
     void FIX0152Test() {

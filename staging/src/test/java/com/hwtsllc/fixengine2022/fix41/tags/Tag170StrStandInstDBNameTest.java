@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  170
+ *  StandInstDbName
+ *  String
+ *  <p>
+ *  Name of the Standing Instruction database represented with StandInstDbType (169) (i.e. the Global Custodian’s name).
+ */
 class Tag170StrStandInstDBNameTest {
     @Test
     void FIX0170Test() {

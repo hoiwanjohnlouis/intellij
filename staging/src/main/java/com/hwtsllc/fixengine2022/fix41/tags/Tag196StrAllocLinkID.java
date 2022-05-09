@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  196
+ *  AllocLinkID
+ *  String
+ *  <p>
+ *  Can be used to link two different Allocation messages
+ *  (each with unique AllocID (70)) together, i.e. for F/X "Netting" or "Swaps".
+ *  Should be unique.
+ */
 public class Tag196StrAllocLinkID extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

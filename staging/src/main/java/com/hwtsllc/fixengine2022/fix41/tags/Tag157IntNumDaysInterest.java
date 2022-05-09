@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  157
+ *  NumDaysInterest
+ *  int
+ *  <p>
+ *  Number of Days of Interest for convertible bonds and fixed income.
+ *  <p>
+ *  Note value may be negative.
+ */
 public class Tag157IntNumDaysInterest extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyIntType dataValue;
 

@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  173
+ *  SettlDepositoryCode
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3 Brokers account code at the depository
+ *  (i.e. CEDEL ID  for CEDEL, FINS for DTC, or Euroclear ID for Euroclear) if Settlement Location is a depository
+ */
 // @Deprecated
 public class Tag173StrSettlDepositoryCode extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;

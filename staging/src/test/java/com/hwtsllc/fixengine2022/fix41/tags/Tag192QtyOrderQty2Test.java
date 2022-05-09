@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  192
+ *  OrderQty2
+ *  Qty
+ *  <p>
+ *  Deprecated in FIX.5.0 OrderQty (38) of the future part of a F/X swap order.
+ */
 // @Deprecated
 class Tag192QtyOrderQty2Test {
     @Test

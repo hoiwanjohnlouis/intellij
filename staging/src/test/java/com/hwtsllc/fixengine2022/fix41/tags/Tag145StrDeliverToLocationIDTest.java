@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  145
+ *  DeliverToLocationID
+ *  String
+ *  <p>
+ *  Assigned value used to identify specific message recipient’s location (i.e. geographic location and/or desk, trader) if the message was delivered by a third party
+ */
 class Tag145StrDeliverToLocationIDTest {
     @Test
     void FIX0145Test() {

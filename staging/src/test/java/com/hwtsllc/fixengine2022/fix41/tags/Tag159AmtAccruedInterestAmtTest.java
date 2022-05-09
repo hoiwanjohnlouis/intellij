@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  159
+ *  AccruedInterestAmt
+ *  Amt
+ *  <p>
+ *  Amount of Accrued Interest for convertible bonds and fixed income
+ */
 class Tag159AmtAccruedInterestAmtTest {
     @Test
     void FIX0159Test() {

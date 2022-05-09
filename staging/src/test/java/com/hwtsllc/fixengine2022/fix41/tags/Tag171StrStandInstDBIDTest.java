@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  171
+ *  StandInstDbID
+ *  String
+ *  <p>
+ *  Unique identifier used on the Standing Instructions database for the Standing Instructions to be referenced.
+ */
 class Tag171StrStandInstDBIDTest {
     @Test
     void FIX0171Test() {

@@ -18,17 +18,36 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.fix41.enums.Enum203CoveredOrUncovered;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumCoveredOrUncovered;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  203 (same as 203, 565,)
+ *  CoveredOrUncovered
+ *  int
+ *  <p>
+ *  Used for derivative products, such as options
+ *  <p></p>
+ *  565
+ *  LegCoveredOrUncovered
+ *  int
+ *  <p>
+ *  CoveredOrUncovered for leg of a multileg
+ *  <p>
+ *  See CoveredOrUncovered (203) field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Covered
+ *  <p>    1 - Uncovered
+ */
 public class Tag203EnuCoveredOrUncovered extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum203CoveredOrUncovered dataValue;
+    private final MyEnumCoveredOrUncovered dataValue;
 
-    public final static Enum203CoveredOrUncovered TESTA_ENU_MISC_FEE_TYPE = Enum203CoveredOrUncovered.COVERED;
-    public final static Enum203CoveredOrUncovered TESTB_ENU_MISC_FEE_TYPE = Enum203CoveredOrUncovered.UNCOVERED;
+    public final static MyEnumCoveredOrUncovered TESTA_ENU_MISC_FEE_TYPE = MyEnumCoveredOrUncovered.COVERED;
+    public final static MyEnumCoveredOrUncovered TESTB_ENU_MISC_FEE_TYPE = MyEnumCoveredOrUncovered.UNCOVERED;
 
-    public Tag203EnuCoveredOrUncovered(Enum203CoveredOrUncovered dataValue) {
+    public Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered dataValue) {
         setFixType(FIX41.FIX203_ENU_COVERED_OR_UNCOVERED);
         this.dataValue = dataValue;
     }

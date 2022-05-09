@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  192
+ *  OrderQty2
+ *  Qty
+ *  <p>
+ *  Deprecated in FIX.5.0 OrderQty (38) of the future part of a F/X swap order.
+ */
 // @Deprecated
 public class Tag192QtyOrderQty2 extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;

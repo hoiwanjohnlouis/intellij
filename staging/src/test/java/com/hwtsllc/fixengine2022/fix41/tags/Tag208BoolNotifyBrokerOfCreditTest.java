@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  208
+ *  NotifyBrokerOfCredit
+ *  Boolean
+ *  Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker).
+ *  Valid values:
+ *      N - Details should not be communicated
+ *      Y - Details should be communicated
+ */
 class Tag208BoolNotifyBrokerOfCreditTest {
     @Test
     void FIX0208Test() {

@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  149
+ *  URLLink
+ *  String
+ *  <p>
+ *  A URI (Uniform Resource Identifier) or URL (Uniform Resource Locator)
+ *  link to additional information (i.e. http://www.XYZ.com/research.html)
+ *  <p>
+ *  See "Appendix 6-B FIX Fields Based Upon Other Standards"
+ */
 public class Tag149StrURLLink extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

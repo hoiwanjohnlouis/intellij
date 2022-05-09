@@ -22,6 +22,23 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum166SettlLocation;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  166
+ *  SettlLocation
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.2 Identifies Settlement Depository or Country Code, ISITC spec
+ *  <p></p>
+ *  Valid values:
+ *  <p>    CED - CEDEL
+ *  <p>    DTC - Depository Trust Company
+ *  <p>    EUR - Euro clear
+ *  <p>    FED - Federal Book Entry
+ *  <p>    ISO_Country_Code - Local Market Settle Location
+ *  <p></p>
+ *  <p>    PNY - Physical
+ *  <p>    PTC - Participant Trust Company
+ */
 // @Deprecated
 public class Tag166EnuSettlLocation extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum166SettlLocation dataValue;

@@ -19,6 +19,19 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  163
+ *  SettlInstTransType
+ *  char
+ *  <p>
+ *  Settlement Instructions message transaction type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - New
+ *  <p>    C - Cancel
+ *  <p>    R - Replace
+ *  <p>    T - Restate
+ */
 public enum Enum163SettlInstTransType implements EnumAccessors, LogStringVerbose {
     NEW( "N", "NEW", "N - New" ),
     CANCEL( "C", "CANCEL", "C - Cancel" ),

@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum204CustomerOrFirm;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  204
+ *  CustomerOrFirm
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2
+ *  <p>
+ *  Used for options when delivering the order to an execution system
+ *  or an exchange to specify if the order is for a  customer or the firm placing the order itself.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Customer
+ *  <p>    1 - Firm
+ */
 // @Deprecated
 public class Tag204EnuCustomerOrFirm extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum204CustomerOrFirm dataValue;

@@ -22,13 +22,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  169
+ *  StandInstDbType
+ *  int
+ *  <p>
+ *  Identifies the Standing Instruction database used
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Other
+ *  <p>    1 - DTC SID
+ *  <p>    2 - Thomson ALERT
+ *  <p>    3 - A Global Custodian (StandInstDBName (70) must be provided)
+ *  <p>    4 - AccountNet
+ */
 class Enum169StandInstDbTypeTest {
-
     @Test
     void Enum0169Test() {
         Enum169StandInstDbType enumType;
 
-        /**
+        /*
          * 0-4 msg types
          */
         enumType = Enum169StandInstDbType.OTHER;

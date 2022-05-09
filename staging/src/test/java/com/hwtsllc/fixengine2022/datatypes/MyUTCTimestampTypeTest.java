@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MyUTCTimestampTypeTest {
     @Test
-    void Test() {
+    void UTCTimestampTypeTest() {
         assertEquals(1,1);
         assertNotEquals(2,1);
     }

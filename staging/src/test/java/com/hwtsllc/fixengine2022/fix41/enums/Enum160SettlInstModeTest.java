@@ -22,13 +22,30 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  160
+ *  SettlInstMode
+ *  char
+ *  <p>
+ *  Indicates mode used for Settlement Instructions message.
+ *  <p>
+ *  *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Default (Replaced)
+ *  <p>    1 - Standing Instructions Provided
+ *  <p>    2 - Specific Allocation Account Overriding (Replaced)
+ *  <p>    3 - Specific Allocation Account Standing (Replaced)
+ *  <p>    4 - Specific Order for a single account (for CIV)
+ *  <p></p>
+ *  <p>    5 - Request reject
+ */
 class Enum160SettlInstModeTest {
-
     @Test
     void Enum0160Test() {
         Enum160SettlInstMode enumType;
 
-        /**
+        /*
          * 0-5 msg types
          */
         enumType = Enum160SettlInstMode.DEFAULT;

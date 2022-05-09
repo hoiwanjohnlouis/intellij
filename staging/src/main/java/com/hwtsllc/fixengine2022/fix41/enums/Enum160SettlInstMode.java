@@ -19,6 +19,24 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  160
+ *  SettlInstMode
+ *  char
+ *  <p>
+ *  Indicates mode used for Settlement Instructions message.
+ *  <p>
+ *  *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Default (Replaced)
+ *  <p>    1 - Standing Instructions Provided
+ *  <p>    2 - Specific Allocation Account Overriding (Replaced)
+ *  <p>    3 - Specific Allocation Account Standing (Replaced)
+ *  <p>    4 - Specific Order for a single account (for CIV)
+ *  <p></p>
+ *  <p>    5 - Request reject
+ */
 public enum Enum160SettlInstMode implements EnumAccessors, LogStringVerbose {
     DEFAULT( "0", "DEFAULT",
             "0 - Default (Replaced)" ),

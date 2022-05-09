@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum209AllocHandlInst;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  209
+ *  AllocHandlInst
+ *  int
+ *  <p>
+ *  Indicates how the receiver (i.e. third party) of Allocation message should handle/process the account details.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Match
+ *  <p>    2 - Forward
+ *  <p>    3 - Forward and Match
+ */
 public class Tag209EnuAllocHandlInst extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum209AllocHandlInst dataValue;
 

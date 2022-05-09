@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MyNumInGroupTypeTest {
     @Test
-    void Test() {
+    void NumInGroupTypeTest() {
         assertEquals(1,1);
         assertNotEquals(2,1);
     }

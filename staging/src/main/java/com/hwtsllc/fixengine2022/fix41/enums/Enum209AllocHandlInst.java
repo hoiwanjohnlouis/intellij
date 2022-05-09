@@ -19,6 +19,18 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  209
+ *  AllocHandlInst
+ *  int
+ *  <p>
+ *  Indicates how the receiver (i.e. third party) of Allocation message should handle/process the account details.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Match
+ *  <p>    2 - Forward
+ *  <p>    3 - Forward and Match
+ */
 public enum Enum209AllocHandlInst implements EnumAccessors, LogStringVerbose {
     MATCH( "1", "MATCH", "1 - Match" ),
     FORWARD( "2", "FORWARD", "2 - Forward" ),

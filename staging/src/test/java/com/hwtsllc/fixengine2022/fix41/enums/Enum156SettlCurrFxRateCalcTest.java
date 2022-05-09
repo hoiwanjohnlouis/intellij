@@ -22,13 +22,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  156
+ *  SettlCurrFxRateCalc
+ *  char
+ *  <p>
+ *  Specifies whether or not SettlCurrFxRate (55) should be multiplied or divided.
+ *  <p></p>
+ *  Valid values:
+ *  <p></p>
+ *  <p>    M - Multiply
+ *  <p>    D - Divide
+ */
 class Enum156SettlCurrFxRateCalcTest {
-
     @Test
     void Enum0156Test() {
         Enum156SettlCurrFxRateCalc enumType;
 
-        /**
+        /*
          * M,D msg types
          */
         enumType = Enum156SettlCurrFxRateCalc.MULTIPLY;

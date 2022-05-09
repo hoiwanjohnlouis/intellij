@@ -22,6 +22,19 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum172SettlDeliveryType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  172
+ *  SettlDeliveryType
+ *  int
+ *  <p>
+ *  Identifies type of settlement
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - "Versus. Payment": Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment
+ *  <p>    1 - "Free": Deliver (if Sell) or Receive (if Buy) Free
+ *  <p>    2 - Tri-Party
+ *  <p>    3 - Hold In Custody
+ */
 public class Tag172EnuSettlDeliveryType extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum172SettlDeliveryType dataValue;
 

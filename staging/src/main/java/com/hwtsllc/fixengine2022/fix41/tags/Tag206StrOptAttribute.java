@@ -22,6 +22,24 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  206
+ *  OptAttribute
+ *  char
+ *  <p>
+ *  Can be used for SecurityType (167) =OPT to identify a particular security.
+ *  <p></p>
+ *  Valid values vary by SecurityExchange:
+ *  <p>    *** REPLACED values - See "Replaced Features and Supported Approach" ***
+ *  <p></p>
+ *      For Exchange: MONEP (Paris)
+ *  <p>    L = Long (a.k.a. "American")
+ *  <p>    S = Short (a.k.a. "European")
+ *  <p></p>
+ *      For Exchanges: DTB (Frankfurt), HKSE (Hong Kong), and SOFFEX (Zurich)
+ *  <p>    0-9 = single digit "version" number assigned by exchange following capital adjustments
+ *               (0=current, 1=prior, 2=prior to , etc).
+ */
 public class Tag206StrOptAttribute extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  141
+ *  ResetSeqNumFlag
+ *  Boolean
+ *  Indicates that the both sides of the FIX session should reset sequence numbers.
+ *  Valid values:
+ *      N - No
+ *      Y - Yes, reset sequence numbers
+ */
 class Tag141BoolResetSeqNumFlagTest {
     @Test
     void FIX0141Test() {

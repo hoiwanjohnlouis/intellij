@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  202
+ *  StrikePrice
+ *  Price
+ *  <p>
+ *  Strike Price for an Option.
+ */
 class Tag202PrcStrikePriceTest {
     @Test
     void FIX0202Test() {

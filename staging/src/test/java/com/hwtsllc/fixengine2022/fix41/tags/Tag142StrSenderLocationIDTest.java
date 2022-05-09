@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  142
+ *  SenderLocationID
+ *  String
+ *  <p>
+ *  Assigned value used to identify specific message originator’s location (i.e. geographic location and/or desk, trader)
+ */
 class Tag142StrSenderLocationIDTest {
     @Test
     void FIX0142Test() {

@@ -16,6 +16,15 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-class MyExchangeTypeTest {
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+class MyExchangeTypeTest {
+    @Test
+    void ExchangeTypeTest() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+    }
 }

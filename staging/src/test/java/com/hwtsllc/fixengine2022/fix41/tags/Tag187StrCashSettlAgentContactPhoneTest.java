@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  187
+ *  CashSettlAgentContactPhone
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3
+ *  <p>
+ *  Phone number for contact at local agent bank for SettlInstSource's account if SettlDeliveryType=Free
+ */
 // @Deprecated
 class Tag187StrCashSettlAgentContactPhoneTest {
     @Test

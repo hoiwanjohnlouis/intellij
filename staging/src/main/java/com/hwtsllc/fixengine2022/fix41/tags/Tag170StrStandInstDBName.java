@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  170
+ *  StandInstDbName
+ *  String
+ *  <p>
+ *  Name of the Standing Instruction database represented with StandInstDbType (169) (i.e. the Global Custodian’s name).
+ */
 public class Tag170StrStandInstDBName extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

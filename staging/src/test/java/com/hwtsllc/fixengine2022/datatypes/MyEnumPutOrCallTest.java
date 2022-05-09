@@ -14,9 +14,8 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.enums;
+package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,20 +23,30 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  *  201 (same as 201, 315)
+ *  PutOrCall
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2 Indicates whether an Option is for a put or call
+ *  <p></p>
+ *  315
  *  UnderlyingPutOrCall
- *
- *      PUT( "0", "PUT", "0 - Put" ),
- *      CALL( "1", "CALL", "1 - Call" ),
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2 Underlying security's PutOrCall. See PutOrCall field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Put
+ *  <p>    1 - Call
  */
-class Enum201PutOrCallTest {
+class MyEnumPutOrCallTest {
     @Test
     void Enum0201Test() {
-        Enum201PutOrCall enumType;
+        MyEnumPutOrCall enumType;
 
-        /**
+        /*
          * 0-1 msg types
          */
-        enumType = Enum201PutOrCall.PUT;
+        enumType = MyEnumPutOrCall.PUT;
         assertEquals("0", enumType.getID());
         assertEquals("PUT", enumType.getName());
         assertEquals("0 - Put", enumType.getDescription());
@@ -45,7 +54,7 @@ class Enum201PutOrCallTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum201PutOrCall.CALL;
+        enumType = MyEnumPutOrCall.CALL;
         assertEquals("1", enumType.getID());
         assertEquals("CALL", enumType.getName());
         assertEquals("1 - Call", enumType.getDescription());

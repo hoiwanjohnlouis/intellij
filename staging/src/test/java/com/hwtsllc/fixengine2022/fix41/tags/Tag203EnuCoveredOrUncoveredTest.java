@@ -18,12 +18,31 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
-import com.hwtsllc.fixengine2022.fix41.enums.Enum203CoveredOrUncovered;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumCoveredOrUncovered;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  203 (same as 203, 565,)
+ *  CoveredOrUncovered
+ *  int
+ *  <p>
+ *  Used for derivative products, such as options
+ *  <p></p>
+ *  565
+ *  LegCoveredOrUncovered
+ *  int
+ *  <p>
+ *  CoveredOrUncovered for leg of a multileg
+ *  <p>
+ *  See CoveredOrUncovered (203) field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Covered
+ *  <p>    1 - Uncovered
+ */
 class Tag203EnuCoveredOrUncoveredTest {
     @Test
     void FIX0203Test() {
@@ -39,12 +58,12 @@ class Tag203EnuCoveredOrUncoveredTest {
     void Tag0203Test() {
         Tag203EnuCoveredOrUncovered tagData;
 
-        tagData = new Tag203EnuCoveredOrUncovered(Enum203CoveredOrUncovered.COVERED);
-        assertEquals( Enum203CoveredOrUncovered.COVERED.getID(), tagData.getDataValue());
+        tagData = new Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
+        assertEquals( MyEnumCoveredOrUncovered.COVERED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag203EnuCoveredOrUncovered(Enum203CoveredOrUncovered.UNCOVERED);
-        assertEquals( Enum203CoveredOrUncovered.UNCOVERED.getID(), tagData.getDataValue());
+        tagData = new Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.UNCOVERED);
+        assertEquals( MyEnumCoveredOrUncovered.UNCOVERED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

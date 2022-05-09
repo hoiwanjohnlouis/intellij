@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  207
+ *  SecurityExchange
+ *  Exchange
+ *  <p>
+ *  Market used to help identify a security.
+ *  <p>
+ *  Valid values:
+ *      See "Appendix 6-C"
+ */
 public class Tag207ExcSecurityExchange extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyExchangeType dataValue;
 

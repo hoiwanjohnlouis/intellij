@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  174
+ *  SettlBrkrCode
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3 BIC
+ *  <p>
+ *  (Bank Identification Code - Swift managed) code of  the broker involved (i.e. for multi-company brokerage firms)
+ */
 // @Deprecated
 class Tag174StrSettlBrkrCodeTest {
     @Test

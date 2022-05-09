@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  162
+ *  SettlInstID
+ *  String
+ *  <p>
+ *  Unique identifier for Settlement Instruction.
+ */
 class Tag162StrSettlInstIDTest {
     @Test
     void FIX0162Test() {

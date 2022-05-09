@@ -19,6 +19,20 @@ package com.hwtsllc.fixengine2022.fix41.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  204
+ *  CustomerOrFirm
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.2
+ *  <p>
+ *  Used for options when delivering the order to an execution system
+ *  or an exchange to specify if the order is for a  customer or the firm placing the order itself.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Customer
+ *  <p>    1 - Firm
+ */
 public enum Enum204CustomerOrFirm implements EnumAccessors, LogStringVerbose {
     CUSTOMER( "0", "CUSTOMER", "0 - Customer" ),
     FIRM( "1", "FIRM", "1 - Firm" ),

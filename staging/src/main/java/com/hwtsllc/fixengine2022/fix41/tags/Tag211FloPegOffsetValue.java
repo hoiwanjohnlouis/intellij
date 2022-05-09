@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  211
+ *  PegOffsetValue
+ *  float
+ *  <p>
+ *  Amount (signed) added to the peg for a pegged order in the context of the PegOffsetType (836)
+ *  <p>
+ *  (Prior to FIX 4.4 this field was of type PriceOffset)
+ */
 public class Tag211FloPegOffsetValue extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyFloatType dataValue;
 

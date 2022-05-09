@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  142
+ *  SenderLocationID
+ *  String
+ *  <p>
+ *  Assigned value used to identify specific message originator’s location (i.e. geographic location and/or desk, trader)
+ */
 public class Tag142StrSenderLocationID extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

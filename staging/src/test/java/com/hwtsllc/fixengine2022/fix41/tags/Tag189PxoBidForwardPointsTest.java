@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  189
+ *  BidForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  Bid F/X forward points added to spot rate. Maybe a negative value.
+ */
 class Tag189PxoBidForwardPointsTest {
     @Test
     void FIX0189Test() {

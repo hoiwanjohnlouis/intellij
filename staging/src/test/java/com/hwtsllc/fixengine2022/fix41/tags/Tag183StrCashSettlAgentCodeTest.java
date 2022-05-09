@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  183
+ *  CashSettlAgentCode
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3
+ *  <p>
+ *  BIC (Bank Identification Code--Swift managed) code of the SettlInstSource's local agent bank if SettlDeliveryType=Free
+ */
 // @Deprecated
 class Tag183StrCashSettlAgentCodeTest {
     @Test

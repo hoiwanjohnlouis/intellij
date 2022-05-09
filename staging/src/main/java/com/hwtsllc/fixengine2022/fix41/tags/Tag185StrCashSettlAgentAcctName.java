@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  185
+ *  CashSettlAgentAcctName
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3
+ *  <p>
+ *  Name of SettlInstSource's account at local agent bank if SettlDeliveryType=Free
+ */
 // @Deprecated
 public class Tag185StrCashSettlAgentAcctName extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;

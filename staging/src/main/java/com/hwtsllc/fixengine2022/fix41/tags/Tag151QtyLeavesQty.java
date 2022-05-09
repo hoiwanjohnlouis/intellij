@@ -22,6 +22,19 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  151
+ *  LeavesQty
+ *  Qty
+ *  <p>
+ *  Quantity open for further execution.
+ *  <p>
+ *  If the OrdStatus (39) is Canceled, DoneForTheDay, Expired, Calculated, or Rejected
+ *  (in which case the order is no longer active)  then LeavesQty could be 0,
+ *  otherwise LeavesQty = OrderQty (38) – CumQty (14).
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 public class Tag151QtyLeavesQty extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyQtyType dataValue;
 

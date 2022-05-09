@@ -22,13 +22,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  172
+ *  SettlDeliveryType
+ *  int
+ *  <p>
+ *  Identifies type of settlement
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - "Versus. Payment": Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment
+ *  <p>    1 - "Free": Deliver (if Sell) or Receive (if Buy) Free
+ *  <p>    2 - Tri-Party
+ *  <p>    3 - Hold In Custody
+ */
 class Enum172SettlDeliveryTypeTest {
-
     @Test
     void Enum0172Test() {
         Enum172SettlDeliveryType enumType;
 
-        /**
+        /*
          * 0-4 msg types
          */
         enumType = Enum172SettlDeliveryType.VERSUS;

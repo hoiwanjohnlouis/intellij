@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  194
+ *  LastSpotRate
+ *  Price
+ *  <p>
+ *  F/X spot rate.
+ */
 class Tag194PrcLastSpotRateTest {
     @Test
     void FIX0194Test() {

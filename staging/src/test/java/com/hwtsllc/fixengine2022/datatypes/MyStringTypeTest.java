@@ -16,6 +16,15 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-class MyStringTypeTest {
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+class MyStringTypeTest {
+    @Test
+    void StringTypeTest() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+    }
 }

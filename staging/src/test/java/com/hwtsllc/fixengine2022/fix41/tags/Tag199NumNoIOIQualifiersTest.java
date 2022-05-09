@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  199
+ *  NoIOIQualifiers
+ *  NumInGroup
+ *  <p>
+ *  Number of repeating groups of IOIQualifiers (04).
+ */
 class Tag199NumNoIOIQualifiersTest {
     @Test
     void FIX0199Test() {

@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  151
+ *  LeavesQty
+ *  Qty
+ *  <p>
+ *  Quantity open for further execution.
+ *  <p>
+ *  If the OrdStatus (39) is Canceled, DoneForTheDay, Expired, Calculated, or Rejected
+ *  (in which case the order is no longer active)  then LeavesQty could be 0,
+ *  otherwise LeavesQty = OrderQty (38) – CumQty (14).
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag151QtyLeavesQtyTest {
     @Test
     void FIX0151Test() {

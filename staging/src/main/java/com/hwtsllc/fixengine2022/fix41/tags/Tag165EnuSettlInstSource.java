@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum165SettlInstSource;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  165
+ *  SettlInstSource
+ *  char
+ *  <p>
+ *  Indicates source of Settlement Instructions
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Broker's Instructions
+ *  <p>    2 - Institution's Instructions
+ *  <p>    3 - Investor (e.g. CIV use)
+ */
 public class Tag165EnuSettlInstSource extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum165SettlInstSource dataValue;
 

@@ -24,6 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  168
+ *  EffectiveTime
+ *  UTCTimestamp
+ *  <p>
+ *  Time the details within the message should take effect (always expressed in UTC (Universal Time Coordinated),
+ *  also known as "GMT")
+ */
 class Tag168UtcEffectiveTimeTest {
     @Test
     void FIX0168Test() {

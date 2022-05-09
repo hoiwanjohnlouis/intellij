@@ -22,6 +22,19 @@ import com.hwtsllc.fixengine2022.fix41.enums.Enum163SettlInstTransType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  163
+ *  SettlInstTransType
+ *  char
+ *  <p>
+ *  Settlement Instructions message transaction type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - New
+ *  <p>    C - Cancel
+ *  <p>    R - Replace
+ *  <p>    T - Restate
+ */
 public class Tag163EnuSettlInstTransType extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final Enum163SettlInstTransType dataValue;
 

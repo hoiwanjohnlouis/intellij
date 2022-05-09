@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MyAmtTypeTest {
     @Test
-    void Test() {
+    void AmtTypeTest() {
         assertEquals(1,1);
         assertNotEquals(2,1);
     }

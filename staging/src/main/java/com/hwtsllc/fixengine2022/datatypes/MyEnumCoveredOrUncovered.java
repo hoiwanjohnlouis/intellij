@@ -14,15 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.enums;
+package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  Information is the same for TAGS 203, 565
+ *  203 (same as 203, 565,)
+ *  CoveredOrUncovered
+ *  int
+ *  <p>
+ *  Used for derivative products, such as options
+ *  <p></p>
+ *  565
+ *  LegCoveredOrUncovered
+ *  int
+ *  <p>
+ *  CoveredOrUncovered for leg of a multileg
+ *  <p>
+ *  See CoveredOrUncovered (203) field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Covered
+ *  <p>    1 - Uncovered
  */
-public enum Enum565LegCoveredOrUncovered implements EnumAccessors, LogStringVerbose {
+public enum MyEnumCoveredOrUncovered implements EnumAccessors, LogStringVerbose {
     /*
      *  0-1 types
      */
@@ -34,7 +50,7 @@ public enum Enum565LegCoveredOrUncovered implements EnumAccessors, LogStringVerb
     private final String name;
     private final String description;
 
-    Enum565LegCoveredOrUncovered(final String id, final String name, final String description) {
+    MyEnumCoveredOrUncovered(final String id, final String name, final String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -109,7 +125,7 @@ public enum Enum565LegCoveredOrUncovered implements EnumAccessors, LogStringVerb
         /*
          * dump all the enum values
          */
-        for (Enum565LegCoveredOrUncovered oneEnum : Enum565LegCoveredOrUncovered.values()) {
+        for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             System.out.println(oneEnum);
         }
     }

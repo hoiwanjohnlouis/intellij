@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MyLocalMktDateTypeTest {
     @Test
-    void Test() {
+    void LocalMktDateTypeTest() {
         assertEquals(1,1);
         assertNotEquals(2,1);
     }

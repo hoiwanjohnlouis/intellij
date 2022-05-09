@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  193
+ *  SettlDate2
+ *  LocalMktDate
+ *  <p>
+ *  Deprecated in FIX.5.0 SettDate (64) of the future part of a F/X swap order.
+ */
 // @Deprecated
 class Tag193LmdSettlDate2Test {
     @Test

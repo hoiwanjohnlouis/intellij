@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  176
+ *  SecuritySettlAgentName
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3 Name of SettlInstSource's local agent bank if SettlLocation is not a depository
+ */
 // @Deprecated
 public class Tag176StrSecuritySettlAgentName extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;

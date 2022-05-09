@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  171
+ *  StandInstDbID
+ *  String
+ *  <p>
+ *  Unique identifier used on the Standing Instructions database for the Standing Instructions to be referenced.
+ */
 public class Tag171StrStandInstDBID extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyStringType dataValue;
 

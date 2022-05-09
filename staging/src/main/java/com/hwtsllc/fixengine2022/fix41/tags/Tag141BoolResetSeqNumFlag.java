@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  141
+ *  ResetSeqNumFlag
+ *  Boolean
+ *  Indicates that the both sides of the FIX session should reset sequence numbers.
+ *  Valid values:
+ *      N - No
+ *      Y - Yes, reset sequence numbers
+ */
 public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyBooleanType dataValue;
 

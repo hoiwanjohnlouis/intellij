@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  164
+ *  EmailThreadID
+ *  String
+ *  <p>
+ *  Unique identifier for an email thread (new and chain of replies)
+ */
 class Tag164StrEmailThreadIDTest {
     @Test
     void FIX0164Test() {

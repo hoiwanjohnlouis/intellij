@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  163
+ *  SettlInstTransType
+ *  char
+ *  <p>
+ *  Settlement Instructions message transaction type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - New
+ *  <p>    C - Cancel
+ *  <p>    R - Replace
+ *  <p>    T - Restate
+ */
 class Tag163EnuSettlInstTransTypeTest {
     @Test
     void FIX0163Test() {

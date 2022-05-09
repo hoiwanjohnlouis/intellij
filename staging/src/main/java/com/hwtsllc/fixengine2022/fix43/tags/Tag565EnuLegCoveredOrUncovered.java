@@ -18,19 +18,38 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.fix43.enums.Enum565LegCoveredOrUncovered;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumCoveredOrUncovered;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  203 (same as 203, 565,)
+ *  CoveredOrUncovered
+ *  int
+ *  <p>
+ *  Used for derivative products, such as options
+ *  <p></p>
+ *  565
+ *  LegCoveredOrUncovered
+ *  int
+ *  <p>
+ *  CoveredOrUncovered for leg of a multileg
+ *  <p>
+ *  See CoveredOrUncovered (203) field for description
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Covered
+ *  <p>    1 - Uncovered
+ */
 public class Tag565EnuLegCoveredOrUncovered extends FIX43Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum565LegCoveredOrUncovered dataValue;
+    private final MyEnumCoveredOrUncovered dataValue;
 
-    public final static Enum565LegCoveredOrUncovered TESTA_ENU_LEG_COVERED_OR_UNCOVERED
-            = Enum565LegCoveredOrUncovered.COVERED;
-    public final static Enum565LegCoveredOrUncovered TESTB_ENU_LEG_COVERED_OR_UNCOVERED
-            = Enum565LegCoveredOrUncovered.UNCOVERED;
+    public final static MyEnumCoveredOrUncovered TESTA_ENU_LEG_COVERED_OR_UNCOVERED
+            = MyEnumCoveredOrUncovered.COVERED;
+    public final static MyEnumCoveredOrUncovered TESTB_ENU_LEG_COVERED_OR_UNCOVERED
+            = MyEnumCoveredOrUncovered.UNCOVERED;
 
-    public Tag565EnuLegCoveredOrUncovered(Enum565LegCoveredOrUncovered dataValue) {
+    public Tag565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered dataValue) {
         setFixType(FIX43.FIX565_ENU_LEG_COVERED_OR_UNCOVERED);
         this.dataValue = dataValue;
     }

@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  210
+ *  MaxShow
+ *  Qty
+ *  <p>
+ *  Deprecated in FIX.5.0
+ *  <p>
+ *  Maximum quantity (e.g. number of shares) within an order to be shown to other customers (i.e. sent via an IOI).
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
+ */
 class Tag210QtyMaxShowTest {
     @Test
     void FIX0210Test() {

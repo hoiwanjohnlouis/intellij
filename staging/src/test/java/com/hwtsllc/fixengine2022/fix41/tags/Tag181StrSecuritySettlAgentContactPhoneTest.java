@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  181
+ *  SecuritySettlAgentContactPhone
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.3 Phone number for contact at local agent bank if  SettlLocation is not a depository
+ */
 // @Deprecated
 class Tag181StrSecuritySettlAgentContactPhoneTest {
     @Test

@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  195
+ *  LastForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  F/X forward points added to LastSpotRate (94).
+ *  May be a negative value. Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 public class Tag195PxoLastForwardPoints extends FIX41Abstract implements FixTagValuePairString, LogStringVerbose {
     private final MyPriceOffsetType dataValue;
 

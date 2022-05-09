@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  149
+ *  URLLink
+ *  String
+ *  <p>
+ *  A URI (Uniform Resource Identifier) or URL (Uniform Resource Locator)
+ *  link to additional information (i.e. http://www.XYZ.com/research.html)
+ *  <p>
+ *  See "Appendix 6-B FIX Fields Based Upon Other Standards"
+ */
 class Tag149StrURLLinkTest {
     @Test
     void FIX0149Test() {
