@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1101
+ *  TriggerAction
+ *  char
+ *  <p>
+ *  Defines the type of action to take when the trigger hits.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Activate
+ *  <p>    2 - Modify
+ *  <p>    3 - Cancel
+ */
 public enum Enum1101TriggerAction implements EnumAccessors, LogStringVerbose {
+    ACTIVATE( "1", "ACTIVATE", "1 - Activate" ),
+    MODIFY( "2", "MODIFY", "2 - Modify" ),
+    CANCEL( "3", "CANCEL", "3 - Cancel" ),
     ;
 
     private final String id;

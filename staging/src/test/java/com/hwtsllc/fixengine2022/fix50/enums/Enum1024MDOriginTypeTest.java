@@ -16,12 +16,51 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1024
+ *  MDOriginType
+ *  int
+ *  <p>
+ *  Used to describe the origin of an entry in the book
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Book
+ *  <p>    1 - Off-Book
+ *  <p>    2 - Cross
+ */
 class Enum1024MDOriginTypeTest {
     @Test
     void EnumTest() {
         Enum1024MDOriginType enumType;
 
+        enumType = Enum1024MDOriginType.BOOK;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "BOOK", enumType.getName() );
+        assertEquals( "0 - Book", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1024MDOriginType.OFF_BOOK;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "OFF_BOOK", enumType.getName() );
+        assertEquals( "1 - Off-Book", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1024MDOriginType.CROSS;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "CROSS", enumType.getName() );
+        assertEquals( "2 - Cross", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

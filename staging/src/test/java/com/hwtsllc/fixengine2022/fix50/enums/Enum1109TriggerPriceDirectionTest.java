@@ -16,12 +16,42 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1109
+ *  TriggerPriceDirection
+ *  char
+ *  <p>
+ *  The side from which the trigger price is reached.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price
+ *  <p>    D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price
+ */
 class Enum1109TriggerPriceDirectionTest {
     @Test
     void EnumTest() {
         Enum1109TriggerPriceDirection enumType;
 
+        enumType = Enum1109TriggerPriceDirection.TRIGGER_UP;
+        assertEquals( "U", enumType.getID() );
+        assertEquals( "TRIGGER_UP", enumType.getName() );
+        assertEquals( "U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1109TriggerPriceDirection.TRIGGER_DOWN;
+        assertEquals( "D", enumType.getID() );
+        assertEquals( "TRIGGER_DOWN", enumType.getName() );
+        assertEquals( "D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

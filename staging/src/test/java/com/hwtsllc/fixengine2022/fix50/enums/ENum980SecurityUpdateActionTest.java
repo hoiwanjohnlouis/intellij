@@ -16,12 +16,50 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  980
+ *  SecurityUpdateAction
+ *  char
+ *
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Add
+ *  <p>    D - Delete
+ *  <p>    M - Modify
+ */
 class ENum980SecurityUpdateActionTest {
     @Test
     void EnumTest() {
         ENum980SecurityUpdateAction enumType;
 
+        enumType = ENum980SecurityUpdateAction.ADD;
+        assertEquals( "A", enumType.getID() );
+        assertEquals( "ADD", enumType.getName() );
+        assertEquals( "A - Add", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = ENum980SecurityUpdateAction.DELETE;
+        assertEquals( "D", enumType.getID() );
+        assertEquals( "DELETE", enumType.getName() );
+        assertEquals( "D - Delete", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = ENum980SecurityUpdateAction.MODIFY;
+        assertEquals( "M", enumType.getID() );
+        assertEquals( "MODIFY", enumType.getName() );
+        assertEquals( "M - Modify", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

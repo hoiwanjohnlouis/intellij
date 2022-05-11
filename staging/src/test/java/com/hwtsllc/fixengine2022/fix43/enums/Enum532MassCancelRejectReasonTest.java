@@ -38,63 +38,63 @@ class Enum532MassCancelRejectReasonTest {
          *  0-6, types
          */
         enumType = Enum532MassCancelRejectReason.MASS_CANCEL_NOT_SUPPORTED;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,MASS_CANCEL_NOT_SUPPORTED,0 - Mass Cancel Not Supported", enumType.getDescription());
+        assertEquals("0", enumType.getID());
+        assertEquals("MASS_CANCEL_NOT_SUPPORTED", enumType.getName());
+        assertEquals("0 - Mass Cancel Not Supported", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SECURITY;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,UNKNOWN_SECURITY,1 - Invalid or Unknown Security", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("UNKNOWN_SECURITY", enumType.getName());
+        assertEquals("1 - Invalid or Unknown Security", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_UNDERLYING;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,UNKNOWN_UNDERLYING,2 - Invalid or Unknown Underlying security", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("UNKNOWN_UNDERLYING", enumType.getName());
+        assertEquals("2 - Invalid or Unknown Underlying security", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_PRODUCT;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("3,UNKNOWN_PRODUCT,3 - Invalid or Unknown Product", enumType.getDescription());
+        assertEquals("3", enumType.getID());
+        assertEquals("UNKNOWN_PRODUCT", enumType.getName());
+        assertEquals("3 - Invalid or Unknown Product", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_CFICODE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("4,UNKNOWN_CFICODE,4 - Invalid or Unknown CFICode", enumType.getDescription());
+        assertEquals("4", enumType.getID());
+        assertEquals("UNKNOWN_CFICODE", enumType.getName());
+        assertEquals("4 - Invalid or Unknown CFICode", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("5,UNKNOWN_SECURITYTYPE,5 - Invalid or Unknown SecurityType", enumType.getDescription());
+        assertEquals("5", enumType.getID());
+        assertEquals("UNKNOWN_SECURITYTYPE", enumType.getName());
+        assertEquals("5 - Invalid or Unknown SecurityType", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SESSION;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("6,UNKNOWN_SESSION,6 - Invalid or Unknown Trading Session", enumType.getDescription());
+        assertEquals("6", enumType.getID());
+        assertEquals("UNKNOWN_SESSION", enumType.getName());
+        assertEquals("6 - Invalid or Unknown Trading Session", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

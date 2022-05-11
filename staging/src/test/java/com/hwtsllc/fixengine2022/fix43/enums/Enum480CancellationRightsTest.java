@@ -35,8 +35,8 @@ class Enum480CancellationRightsTest {
          */
         enumType = Enum480CancellationRights.YES;
         assertEquals("Y", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("Y,YES,Y - Yes", enumType.getDescription());
+        assertEquals("YES", enumType.getName());
+        assertEquals("Y - Yes", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -44,8 +44,8 @@ class Enum480CancellationRightsTest {
 
         enumType = Enum480CancellationRights.EXECUTION_ONLY;
         assertEquals("N", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("N,EXECUTION_ONLY,N - No - Execution Only", enumType.getDescription());
+        assertEquals("EXECUTION_ONLY", enumType.getName());
+        assertEquals("N - No - Execution Only", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -53,8 +53,8 @@ class Enum480CancellationRightsTest {
 
         enumType = Enum480CancellationRights.WAIVER_AGREEMENT;
         assertEquals("M", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("M,WAIVER_AGREEMENT,M - No - Waiver agreement", enumType.getDescription());
+        assertEquals("WAIVER_AGREEMENT", enumType.getName());
+        assertEquals("M - No - Waiver agreement", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -62,8 +62,8 @@ class Enum480CancellationRightsTest {
 
         enumType = Enum480CancellationRights.INSTITUTIONAL;
         assertEquals("O", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("O,INSTITUTIONAL,O - No - Institutional", enumType.getDescription());
+        assertEquals("INSTITUTIONAL", enumType.getName());
+        assertEquals("O - No - Institutional", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

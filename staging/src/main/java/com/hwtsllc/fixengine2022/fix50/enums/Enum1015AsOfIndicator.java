@@ -19,7 +19,21 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1015
+ *  AsOfIndicator
+ *  char
+ *  <p>
+ *  Used to indicate that a floor-trade was originally submitted 'as of'
+ *  a specific trade date which is earlier than its clearing date.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - false - trade is not an AsOf trade
+ *  <p>    1 - true - trade is an AsOf  trade
+ */
 public enum Enum1015AsOfIndicator implements EnumAccessors, LogStringVerbose {
+    FALSE( "0", "FALSE", "0 - false - trade is not an AsOf trade" ),
+    TRUE( "1", "TRUE", "1 - true - trade is an AsOf  trade" ),
     ;
 
     private final String id;

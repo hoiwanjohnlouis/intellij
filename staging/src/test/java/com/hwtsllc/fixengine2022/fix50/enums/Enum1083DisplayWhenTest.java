@@ -16,12 +16,42 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1083
+ *  DisplayWhen
+ *  char
+ *  <p>
+ *  Instructs when to refresh DisplayQty (1138).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Immediate (after each fill)
+ *  <p>    2 - Exhaust (when DisplayQty = 0)
+ */
 class Enum1083DisplayWhenTest {
     @Test
     void EnumTest() {
         Enum1083DisplayWhen enumType;
 
+        enumType = Enum1083DisplayWhen.IMMEDIATE;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "IMMEDIATE", enumType.getName() );
+        assertEquals( "1 - Immediate (after each fill)", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1083DisplayWhen.EXHAUST;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "EXHAUST", enumType.getName() );
+        assertEquals( "2 - Exhaust (when DisplayQty = 0)", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

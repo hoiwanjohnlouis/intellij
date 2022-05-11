@@ -16,12 +16,44 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  965
+ *  SecurityStatus
+ *  String
+ *  <p>
+ *  Used for derivatives.
+ *  <p>
+ *  Denotes the current state of the Instrument.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Active
+ *  <p>    2 - Inactive
+ */
 class Enum965SecurityStatusTest {
     @Test
     void EnumTest() {
         Enum965SecurityStatus enumType;
 
+        enumType = Enum965SecurityStatus.ACTIVE;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "ACTIVE", enumType.getName() );
+        assertEquals( "1 - Active", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum965SecurityStatus.INACTIVE;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "INACTIVE", enumType.getName() );
+        assertEquals( "2 - Inactive", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  965
+ *  SecurityStatus
+ *  String
+ *  <p>
+ *  Used for derivatives.
+ *  <p>
+ *  Denotes the current state of the Instrument.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Active
+ *  <p>    2 - Inactive
+ */
 public enum Enum965SecurityStatus implements EnumAccessors, LogStringVerbose {
+    ACTIVE( "1", "ACTIVE", "1 - Active" ),
+    INACTIVE( "2", "INACTIVE", "2 - Inactive" ),
     ;
 
     private final String id;

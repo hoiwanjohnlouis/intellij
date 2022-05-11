@@ -17,13 +17,47 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum312UnderlyingSymbolSfx;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  65 (same as 65, 312. 601,)
+ *  SymbolSfx
+ *  String
+ *  <p>
+ *  Additional information about the security
+ *  <p>
+ *  (e.g. preferred, warrants, etc.).
+ *  <p>
+ *  Note also see SecurityType (167).
+ *  <p>
+ *  As defined in the NYSE Stock and bond Symbol Directory and in the AMEX Fitch Directory.
+ *  <p></p>
+ *  312
+ *  UnderlyingSymbolSfx
+ *  String
+ *  <p>
+ *  Underlying security’s SymbolSfx.
+ *  <p>
+ *  See SymbolSfx (65) field for description
+ *  <p></p>
+ *  601
+ *  LegSymbolSfx
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s SymbolSfx.
+ *  <p>
+ *  See SymbolSfx (65) field for description
+ *  <p></p>
+ *  Valid values:
+ *  For Fixed Income
+ *  <p>    CD - EUCP with lump-sum interest rather than discount price
+ *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
+ */
 class Tag312EnuUnderlyingSymbolSfxTest {
     @Test
     void FIX0312Test() {
@@ -35,29 +69,16 @@ class Tag312EnuUnderlyingSymbolSfxTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  312
-     *  UnderlyingSymbolSfx
-     *
-     *      CD, and WI msg types for Fixed Income
-     *      LUMP_SUM_INTEREST( "CD", "LUMP_SUM_INTEREST",
-     *                          "CD - EUCP with lump-sum interest rather than discount price" ),
-     *      WHEN_ISSUED( "WI", "WHEN_ISSUED",
-     *                          "WI - When Issued for a security to be reissued under an old CUSIP or ISIN" ),
-     */
     @Test
     void Tag0312Test() {
         Tag312EnuUnderlyingSymbolSfx tagData;
 
-        /**
-         * CD, and WI msg types for Fixed Income
-         */
-        tagData = new Tag312EnuUnderlyingSymbolSfx(Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST);
-        assertEquals( Enum312UnderlyingSymbolSfx.LUMP_SUM_INTEREST.getID(), tagData.getDataValue());
+        tagData = new Tag312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.EUCP);
+        assertEquals( MyEnumSymbolSfx.EUCP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag312EnuUnderlyingSymbolSfx(Enum312UnderlyingSymbolSfx.WHEN_ISSUED);
-        assertEquals( Enum312UnderlyingSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
+        tagData = new Tag312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
+        assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

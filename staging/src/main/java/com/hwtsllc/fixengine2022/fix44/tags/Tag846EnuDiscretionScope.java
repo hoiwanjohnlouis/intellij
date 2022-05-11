@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyEnumScope;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPegDiscretionScope;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
@@ -42,14 +42,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    4 - National excluding local
  */
 public class Tag846EnuDiscretionScope extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final MyEnumScope dataValue;
+    private final MyEnumPegDiscretionScope dataValue;
 
-    public final static MyEnumScope TESTA_ENU_DISCRETION_SCOPE
-            = MyEnumScope.NATIONAL;
-    public final static MyEnumScope TESTB_ENU_DISCRETION_SCOPE
-            = MyEnumScope.NATIONAL_EXCLUDING_LOCAL;
+    public final static MyEnumPegDiscretionScope TESTA_ENU_DISCRETION_SCOPE
+            = MyEnumPegDiscretionScope.NATIONAL;
+    public final static MyEnumPegDiscretionScope TESTB_ENU_DISCRETION_SCOPE
+            = MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL;
 
-    public Tag846EnuDiscretionScope(MyEnumScope dataValue) {
+    public Tag846EnuDiscretionScope(MyEnumPegDiscretionScope dataValue) {
         setFixType(FIX44.FIX846_ENU_DISCRETION_SCOPE);
         this.dataValue = dataValue;
     }

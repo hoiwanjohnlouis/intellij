@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1024
+ *  MDOriginType
+ *  int
+ *  <p>
+ *  Used to describe the origin of an entry in the book
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Book
+ *  <p>    1 - Off-Book
+ *  <p>    2 - Cross
+ */
 public enum Enum1024MDOriginType implements EnumAccessors, LogStringVerbose {
+    BOOK( "0", "BOOK", "0 - Book" ),
+    OFF_BOOK( "1", "OFF_BOOK", "1 - Off-Book" ),
+    CROSS( "2", "CROSS", "2 - Cross" ),
     ;
 
     private final String id;

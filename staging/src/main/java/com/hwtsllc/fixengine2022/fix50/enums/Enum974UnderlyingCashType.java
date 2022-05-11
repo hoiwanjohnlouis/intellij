@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  974
+ *  UnderlyingCashType
+ *  String
+ *  <p>
+ *  Specific to the &lt;UnderlyingInstrument&gt; Used for derivatives that deliver into cash underlying.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    FIXED - FIXED
+ *  <p>    DIFF - DIFF
+ */
 public enum Enum974UnderlyingCashType implements EnumAccessors, LogStringVerbose {
+    FIXED( "FIXED", "FIXED", "FIXED - FIXED" ),
+    DIFF( "DIFF", "DIFF", "DIFF - DIFF" ),
     ;
 
     private final String id;

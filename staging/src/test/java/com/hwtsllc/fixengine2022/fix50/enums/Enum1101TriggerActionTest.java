@@ -16,12 +16,51 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1101
+ *  TriggerAction
+ *  char
+ *  <p>
+ *  Defines the type of action to take when the trigger hits.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Activate
+ *  <p>    2 - Modify
+ *  <p>    3 - Cancel
+ */
 class Enum1101TriggerActionTest {
     @Test
     void EnumTest() {
         Enum1101TriggerAction enumType;
 
+        enumType = Enum1101TriggerAction.ACTIVATE;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "ACTIVATE", enumType.getName() );
+        assertEquals( "1 - Activate", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1101TriggerAction.MODIFY;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "MODIFY", enumType.getName() );
+        assertEquals( "2 - Modify", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1101TriggerAction.CANCEL;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "CANCEL", enumType.getName() );
+        assertEquals( "3 - Cancel", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

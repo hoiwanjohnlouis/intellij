@@ -18,13 +18,15 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPositionEffect;
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.fix43.tags.Tag564EnuLegPositionEffect;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  77 (Same for TAGS 77, 564,)
+ *  77 (Same for TAGS 77, 564, 1047, )
  *  PositionEffect
  *  char
  *  <p>
@@ -41,6 +43,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  PositionEffect for leg of a multileg
  *  <p>
  *  See PositionEffect (77) field for description
+ *  <p></p>
+ *  1047
+ *  AllocPositionEffect
+ *  char
+ *  <p>
+ *  Indicates whether the resulting position after a trade should be an opening position or closing position.
+ *  <p>
+ *  Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.
  *  <p></p>
  *  Valid values:
  *  <p>    C - Close
@@ -72,15 +82,15 @@ class Tag77EnuPositionEffectTest {
          */
         tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.OPEN);
         assertEquals( "O", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.FIFO);
         assertEquals( "F", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.CLOSE);
         assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.ROLLED);
         assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

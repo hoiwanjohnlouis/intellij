@@ -19,7 +19,24 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1084
+ *  DisplayMethod
+ *  char
+ *  <p>
+ *  Defines what value to use in DisplayQty (1138).
+ *  <p>
+ *  If not specified the default DisplayMethod is "1"
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Initial (use original DisplayQty)
+ *  <p>    2 - New (use RefreshQty)
+ *  <p>    3 - Random (randomize value)
+ */
 public enum Enum1084DisplayMethod implements EnumAccessors, LogStringVerbose {
+    INITIAL( "1", "INITIAL", "1 - Initial (use original DisplayQty)" ),
+    NEW( "2", "NEW", "2 - New (use RefreshQty)" ),
+    RANDOM( "3", "RANDOM", "3 - Random (randomize value)" ),
     ;
 
     private final String id;

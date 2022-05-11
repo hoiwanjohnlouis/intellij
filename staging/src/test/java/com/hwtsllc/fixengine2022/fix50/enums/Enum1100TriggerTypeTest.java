@@ -16,12 +16,61 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1100
+ *  TriggerType
+ *  char
+ *  <p>
+ *  Defines when the trigger will hit,
+ *  i.e. the action specified by the trigger instructions will come into effect.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Partial Execution
+ *  <p>    2 - Specified Trading Session
+ *  <p>    3 - Next Auction
+ *  <p>    4 - Price Movement
+ */
 class Enum1100TriggerTypeTest {
     @Test
     void EnumTest() {
         Enum1100TriggerType enumType;
 
+        enumType = Enum1100TriggerType.PARTIAL_EXECUTION;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "PARTIAL_EXECUTION", enumType.getName() );
+        assertEquals( "1 - Partial Execution", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1100TriggerType.SPECIFIED_SESSION;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "SPECIFIED_SESSION", enumType.getName() );
+        assertEquals( "2 - Specified Trading Session", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1100TriggerType.NEXT_AUCTION;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "NEXT_AUCTION", enumType.getName() );
+        assertEquals( "3 - Next Auction", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1100TriggerType.PRICE_MOVEMENT;
+        assertEquals( "4", enumType.getID() );
+        assertEquals( "PRICE_MOVEMENT", enumType.getName() );
+        assertEquals( "4 - Price Movement", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

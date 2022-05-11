@@ -16,12 +16,51 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1002
+ *  AllocMethod
+ *  int
+ *  <p>
+ *  Specifies the method under which a trade quantity was allocated.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Automatic
+ *  <p>    2 - Guarantor
+ *  <p>    3 - Manual
+ */
 class Enum1002AllocMethodTest {
     @Test
     void EnumTest() {
         Enum1002AllocMethod enumType;
 
+        enumType = Enum1002AllocMethod.AUTOMATIC;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "AUTOMATIC", enumType.getName() );
+        assertEquals( "1 - Automatic", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1002AllocMethod.GUARANTOR;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "GUARANTOR", enumType.getName() );
+        assertEquals( "2 - Guarantor", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1002AllocMethod.MANUAL;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "MANUAL", enumType.getName() );
+        assertEquals( "3 - Manual", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

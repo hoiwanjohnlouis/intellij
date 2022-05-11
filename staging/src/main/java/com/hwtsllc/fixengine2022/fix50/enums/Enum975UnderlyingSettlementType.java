@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  975
+ *  UnderlyingSettlementType
+ *  int
+ *  <p>
+ *  Indicates order settlement period for the underlying instrument.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    2 - T+1
+ *  <p>    4 - T+3
+ *  <p>    5 - T+4
+ */
 public enum Enum975UnderlyingSettlementType implements EnumAccessors, LogStringVerbose {
+    T_PLUS_1( "2", "T_PLUS_1", "2 - T+1" ),
+    T_PLUS_3( "4", "T_PLUS_3", "4 - T+3" ),
+    T_PLUS_4( "5", "T_PLUS_4", "5 - T+4" ),
     ;
 
     private final String id;

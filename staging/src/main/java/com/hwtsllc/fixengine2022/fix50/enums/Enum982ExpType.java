@@ -19,7 +19,26 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  982
+ *  ExpType
+ *  int
+ *  <p>
+ *  Expiration Qty types.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Auto Exercise
+ *  <p>    2 - Non Auto Exercise
+ *  <p>    3 - Final Will Be Exercised
+ *  <p>    4 - Contrary Intention
+ *  <p>    5 - Difference
+ */
 public enum Enum982ExpType implements EnumAccessors, LogStringVerbose {
+    AUTO_EXERCISE( "1", "AUTO_EXERCISE", "1 - Auto Exercise" ),
+    NON_AUTO_EXERCISE( "2", "NON_AUTO_EXERCISE", "2 - Non Auto Exercise" ),
+    FINAL_EXERCISED( "3", "FINAL_EXERCISED", "3 - Final Will Be Exercised" ),
+    CONTRARY_INTENTION( "4", "CONTRARY_INTENTION", "4 - Contrary Intention" ),
+    DIFFERENCE( "5", "DIFFERENCE", "5 - Difference" ),
     ;
 
     private final String id;

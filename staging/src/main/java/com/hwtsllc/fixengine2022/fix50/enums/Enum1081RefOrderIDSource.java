@@ -19,7 +19,24 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1081
+ *  RefOrderIDSource
+ *  char
+ *  <p>
+ *  Used to specify what identifier, provided in order depth market data, to use when hitting (taking) a specific order.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - SecondaryOrdeID (198)
+ *  <p>    1 - OrdeID (37)
+ *  <p>    2 - MEntryID (278)
+ *  <p>    3 - QuotEntryID (299)
+ */
 public enum Enum1081RefOrderIDSource implements EnumAccessors, LogStringVerbose {
+    SECONDARY_ORDE_ID( "0", "SECONDARY_ORDE_ID", "0 - SecondaryOrdeID (198)" ),
+    ORDE_ID( "1", "ORDE_ID", "1 - OrdeID (37)" ),
+    M_ENTRY_ID( "2", "M_ENTRY_ID", "2 - MEntryID (278)" ),
+    QUOT_ENTRY_ID( "3", "QUOT_ENTRY_ID", "3 - QuotEntryID (299)" ),
     ;
 
     private final String id;

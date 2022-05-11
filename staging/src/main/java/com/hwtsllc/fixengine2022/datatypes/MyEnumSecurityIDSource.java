@@ -125,8 +125,6 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    L - Letter of Credit
  */
 public enum MyEnumSecurityIDSource implements EnumAccessors, LogStringVerbose {
-
-
     /*
      * 0-9 msg types
      */

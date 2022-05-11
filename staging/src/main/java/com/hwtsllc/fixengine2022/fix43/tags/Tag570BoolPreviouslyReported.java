@@ -31,7 +31,7 @@ public class Tag570BoolPreviouslyReported extends FIX43Abstract implements FixTa
     // Y - Previously reported to counterparty
 
     public Tag570BoolPreviouslyReported(MyBooleanType dataValue) {
-        setFixType(FIX43.FIX546_ENU_SCOPE);
+        setFixType(FIX43.FIX546_ENU_MARKET_SCOPE);
         this.dataValue = dataValue;
     }
 

@@ -17,29 +17,38 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAssignmentMethod;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum744AssignmentMethod;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  744
+ *  744 (same as 744, 1049,)
  *  AssignmentMethod
- *  Method by which short positions are assigned to an exercise
- *  notice during exercise and assignment processing
+ *  char
+ *  <p>
+ *  Method by which short positions are assigned
+ *  to an exercise notice during exercise and assignment
+ *  <p></p>
+ *  1049
+ *  InstrmtAssignmentMethod
+ *  char
+ *  <p>
+ *  Method under which assignment was conducted
+ *  <p></p>
  *  Valid values:
- *      P - Pro-rata
- *      R - Random
+ *  <p>    P - Pro-rata
+ *  <p>    R - Random
  */
 class Tag744EnuAssignmentMethodTest {
     @Test
     void FIX0744Test() {
         FIX44 fixData = FIX44.FIX744_ENU_ASSIGNMENT_METHOD;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "744", fixData.getID());
+        assertEquals( "ASSIGNMENT_METHOD", fixData.getName());
+        assertEquals( "AssignmentMethod", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -48,7 +57,12 @@ class Tag744EnuAssignmentMethodTest {
     void Tag0744Test() {
         Tag744EnuAssignmentMethod tagData;
 
-        tagData = new Tag744EnuAssignmentMethod(Enum744AssignmentMethod.PRO_RATA);
-        tagData = new Tag744EnuAssignmentMethod(Enum744AssignmentMethod.RANDOM);
+        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
+        assertEquals( MyEnumAssignmentMethod.PRO_RATA.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
+        assertEquals( MyEnumAssignmentMethod.RANDOM.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

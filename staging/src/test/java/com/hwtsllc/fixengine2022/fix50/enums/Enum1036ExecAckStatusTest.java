@@ -16,12 +16,51 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1036
+ *  ExecAckStatus
+ *  char
+ *  <p>
+ *  The status of this execution acknowledgement message.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Received, not yet processed
+ *  <p>    1 - Accepted
+ *  <p>    2 - Don't know / Rejected
+ */
 class Enum1036ExecAckStatusTest {
     @Test
     void EnumTest() {
         Enum1036ExecAckStatus enumType;
 
+        enumType = Enum1036ExecAckStatus.RECEIVED;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "RECEIVED", enumType.getName() );
+        assertEquals( "0 - Received, not yet processed", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1036ExecAckStatus.ACCEPTED;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "ACCEPTED", enumType.getName() );
+        assertEquals( "1 - Accepted", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1036ExecAckStatus.DONT_KNOW_REJECTED;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "DONT_KNOW_REJECTED", enumType.getName() );
+        assertEquals( "2 - Don't know / Rejected", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

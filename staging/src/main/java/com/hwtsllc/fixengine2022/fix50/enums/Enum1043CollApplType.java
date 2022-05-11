@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1043
+ *  CollApplType
+ *  int
+ *  <p>
+ *  conveys how the collateral should be/has been applied
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Specific Deposit
+ *  <p>    1 - General
+ */
 public enum Enum1043CollApplType implements EnumAccessors, LogStringVerbose {
+    SPECIFIC_DEPOSIT( "0", "SPECIFIC_DEPOSIT", "0 - Specific Deposit" ),
+    GENERAL( "1", "GENERAL", "1 - General" ),
     ;
 
     private final String id;

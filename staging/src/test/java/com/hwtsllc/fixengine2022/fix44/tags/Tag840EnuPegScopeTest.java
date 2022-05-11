@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyEnumScope;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPegDiscretionScope;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -58,20 +58,20 @@ class Tag840EnuPegScopeTest {
     void Tag0840Test() {
         Tag840EnuPegScope tagData;
 
-        tagData = new Tag840EnuPegScope(MyEnumScope.LOCAL);
-        assertEquals( MyEnumScope.LOCAL.getID(), tagData.getDataValue());
+        tagData = new Tag840EnuPegScope(MyEnumPegDiscretionScope.LOCAL);
+        assertEquals( MyEnumPegDiscretionScope.LOCAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag840EnuPegScope(MyEnumScope.NATIONAL);
-        assertEquals( MyEnumScope.NATIONAL.getID(), tagData.getDataValue());
+        tagData = new Tag840EnuPegScope(MyEnumPegDiscretionScope.NATIONAL);
+        assertEquals( MyEnumPegDiscretionScope.NATIONAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag840EnuPegScope(MyEnumScope.GLOBAL);
-        assertEquals( MyEnumScope.GLOBAL.getID(), tagData.getDataValue());
+        tagData = new Tag840EnuPegScope(MyEnumPegDiscretionScope.GLOBAL);
+        assertEquals( MyEnumPegDiscretionScope.GLOBAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag840EnuPegScope(MyEnumScope.NATIONAL_EXCLUDING_LOCAL);
-        assertEquals( MyEnumScope.NATIONAL_EXCLUDING_LOCAL.getID(), tagData.getDataValue());
+        tagData = new Tag840EnuPegScope(MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL);
+        assertEquals( MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

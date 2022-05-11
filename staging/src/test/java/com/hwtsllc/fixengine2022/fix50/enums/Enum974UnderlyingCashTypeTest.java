@@ -16,12 +16,42 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  974
+ *  UnderlyingCashType
+ *  String
+ *  <p>
+ *  Specific to the &lt;UnderlyingInstrument&gt; Used for derivatives that deliver into cash underlying.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    FIXED - FIXED
+ *  <p>    DIFF - DIFF
+ */
 class Enum974UnderlyingCashTypeTest {
     @Test
     void EnumTest() {
         Enum974UnderlyingCashType enumType;
 
+        enumType = Enum974UnderlyingCashType.FIXED;
+        assertEquals( "FIXED", enumType.getID() );
+        assertEquals( "FIXED", enumType.getName() );
+        assertEquals( "FIXED - FIXED", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum974UnderlyingCashType.DIFF;
+        assertEquals( "DIFF", enumType.getID() );
+        assertEquals( "DIFF", enumType.getName() );
+        assertEquals( "DIFF - DIFF", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

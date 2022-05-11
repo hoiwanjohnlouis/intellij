@@ -19,7 +19,25 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1100
+ *  TriggerType
+ *  char
+ *  <p>
+ *  Defines when the trigger will hit,
+ *  i.e. the action specified by the trigger instructions will come into effect.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Partial Execution
+ *  <p>    2 - Specified Trading Session
+ *  <p>    3 - Next Auction
+ *  <p>    4 - Price Movement
+ */
 public enum Enum1100TriggerType implements EnumAccessors, LogStringVerbose {
+    PARTIAL_EXECUTION( "1", "PARTIAL_EXECUTION", "1 - Partial Execution" ),
+    SPECIFIED_SESSION( "2", "SPECIFIED_SESSION", "2 - Specified Trading Session" ),
+    NEXT_AUCTION( "3", "NEXT_AUCTION", "3 - Next Auction" ),
+    PRICE_MOVEMENT( "4", "PRICE_MOVEMENT", "4 - Price Movement" ),
     ;
 
     private final String id;

@@ -24,7 +24,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyStringTypeTest {
     @Test
     void StringTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyStringType dataType;
+
+        dataType = new MyStringType( "The Quick Brown Fox Jumped Over The Lazy Dog" );
+        assertEquals( "The Quick Brown Fox Jumped Over The Lazy Dog", dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
     }
 }

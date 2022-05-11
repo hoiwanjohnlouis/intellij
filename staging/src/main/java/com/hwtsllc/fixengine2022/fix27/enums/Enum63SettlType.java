@@ -73,7 +73,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      or any value conforming to the data type Tenor
  */
 public enum Enum63SettlType implements EnumAccessors, LogStringVerbose {
-    REGULAR( "0", "REGULAR", "0 - Regular - FX Spot settlement (T+1 or T+2 depending on currency)" ),
+    REGULAR( "0", "REGULAR", "0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)" ),
     CASH( "1", "CASH", "1 - Cash (TOD / T+0)" ),
     NEXT_DAY( "2", "NEXT_DAY", "2 - Next Day (TOM / T+1)" ),
     T_PLUS_2( "3", "T_PLUS_2", "3 - T+2" ),

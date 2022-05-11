@@ -19,7 +19,36 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1094
+ *  PegPriceType
+ *  int
+ *  <p>
+ *  Defines the type of peg.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Last peg (last sale)
+ *  <p>    2 - Mid-price peg (midprice of inside quote)
+ *  <p>    3 - Opening peg
+ *  <p>    4 - Market peg
+ *  <p>    5 - Primary peg (primary market - buy at bid or sell at offer)
+ *  <p></p>
+ *  <p>    6 - Fixed Peg to Local best bid or offer at time of order
+ *  <p>    7 - Peg to VWAP
+ *  <p>    8 - Trailing Stop Peg
+ *  <p>    9 - Peg to Limit Price
+ */
 public enum Enum1094PegPriceType implements EnumAccessors, LogStringVerbose {
+    LAST_PEG( "1", "LAST_PEG", "1 - Last peg (last sale)" ),
+    MID_PEG( "2", "MID_PEG", "2 - Mid-price peg (midprice of inside quote)" ),
+    OPENING_PEG( "3", "OPENING_PEG", "3 - Opening peg" ),
+    MARKET_PEG( "4", "MARKET_PEG", "4 - Market peg" ),
+    PRIMARY_PEG( "5", "PRIMARY_PEG", "5 - Primary peg (primary market - buy at bid or sell at offer)" ),
+
+    FIXED_PEG( "6", "FIXED_PEG", "6 - Fixed Peg to Local best bid or offer at time of order" ),
+    PEG_TO_VWAP( "7", "PEG_TO_VWAP", "7 - Peg to VWAP" ),
+    TRAILING_STOP( "8", "TRAILING_STOP", "8 - Trailing Stop Peg" ),
+    PEG_TO_LIMIT( "9", "PEG_TO_LIMIT", "9 - Peg to Limit Price" ),
     ;
 
     private final String id;

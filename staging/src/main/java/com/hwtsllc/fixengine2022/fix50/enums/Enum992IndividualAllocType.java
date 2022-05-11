@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  992
+ *  IndividualAllocType
+ *  int
+ *  <p>
+ *  Identifies whether the allocation is to be sub-allocated or allocated to a third party
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Sub Allocate
+ *  <p>    2 - Third Party Allocation
+ */
 public enum Enum992IndividualAllocType implements EnumAccessors, LogStringVerbose {
+    SUB_ALLOCATE( "1", "SUB_ALLOCATE", "1 - Sub Allocate" ),
+    THIRD_PARTY_ALLOCATION( "2", "THIRD_PARTY_ALLOCATION", "2 - Third Party Allocation" ),
     ;
 
     private final String id;

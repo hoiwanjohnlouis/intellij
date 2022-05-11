@@ -16,12 +16,42 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1043
+ *  CollApplType
+ *  int
+ *  <p>
+ *  conveys how the collateral should be/has been applied
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Specific Deposit
+ *  <p>    1 - General
+ */
 class Enum1043CollApplTypeTest {
     @Test
     void EnumTest() {
         Enum1043CollApplType enumType;
 
+        enumType = Enum1043CollApplType.SPECIFIC_DEPOSIT;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "SPECIFIC_DEPOSIT", enumType.getName() );
+        assertEquals( "0 - Specific Deposit", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1043CollApplType.GENERAL;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "GENERAL", enumType.getName() );
+        assertEquals( "1 - General", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

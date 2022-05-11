@@ -19,7 +19,27 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1133
+ *  ExDestinationIDSource
+ *  char
+ *  <p>
+ *  The ID source of ExDestination
+ *  <p></p>
+ *  Valid values:
+ *  <p>    B - BIC (Bank Identification Code) (ISO 9362)
+ *  <p>    C - Generally accepted market participant identifier (e.g. NASD mnemonic)
+ *  <p>    D - Proprietary / Custom code
+ *  <p>    E - ISO Country Code
+ *  <p>    G - MIC (ISO 10383 - Market Identifier Code)
+ */
 public enum Enum1133DestinationSource implements EnumAccessors, LogStringVerbose {
+    BIC( "B", "BIC", "B - BIC (Bank Identification Code) (ISO 9362)" ),
+    MARKET_PARTICIPANT_IDENTIFIER( "C", "MARKET_PARTICIPANT_IDENTIFIER",
+            "C - Generally accepted market participant identifier (e.g. NASD mnemonic)" ),
+    PROPRIETARY( "D", "PROPRIETARY", "D - Proprietary / Custom code" ),
+    ISO_COUNTRY_CODE( "E", "ISO_COUNTRY_CODE", "E - ISO Country Code" ),
+    MIC( "G", "MIC", "G - MIC (ISO 10383 - Market Identifier Code)" ),
     ;
 
     private final String id;

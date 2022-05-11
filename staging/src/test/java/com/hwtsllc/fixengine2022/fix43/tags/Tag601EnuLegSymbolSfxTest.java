@@ -17,19 +17,54 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  65 (same as 65, 312. 601,)
+ *  SymbolSfx
+ *  String
+ *  <p>
+ *  Additional information about the security
+ *  <p>
+ *  (e.g. preferred, warrants, etc.).
+ *  <p>
+ *  Note also see SecurityType (167).
+ *  <p>
+ *  As defined in the NYSE Stock and bond Symbol Directory and in the AMEX Fitch Directory.
+ *  <p></p>
+ *  312
+ *  UnderlyingSymbolSfx
+ *  String
+ *  <p>
+ *  Underlying security’s SymbolSfx.
+ *  <p>
+ *  See SymbolSfx (65) field for description
+ *  <p></p>
+ *  601
+ *  LegSymbolSfx
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s SymbolSfx.
+ *  <p>
+ *  See SymbolSfx (65) field for description
+ *  <p></p>
+ *  Valid values:
+ *  For Fixed Income
+ *  <p>    CD - EUCP with lump-sum interest rather than discount price
+ *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
+ */
 class Tag601EnuLegSymbolSfxTest {
     @Test
     void FIX0601Test() {
         FIX43 fixData = FIX43.FIX601_ENU_LEG_SYMBOL_SFX;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "601", fixData.getID());
+        assertEquals( "LEG_SYMBOL_SFX", fixData.getName());
+        assertEquals( "LegSymbolSfx", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -38,5 +73,12 @@ class Tag601EnuLegSymbolSfxTest {
     void Tag0601Test() {
         Tag601EnuLegSymbolSfx tagData;
 
+        tagData = new Tag601EnuLegSymbolSfx(MyEnumSymbolSfx.EUCP);
+        assertEquals( MyEnumSymbolSfx.EUCP.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag601EnuLegSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
+        assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

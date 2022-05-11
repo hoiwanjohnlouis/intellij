@@ -19,7 +19,42 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1008
+ *  SideTrdSubTyp
+ *  int
+ *  <p>
+ *  Used on a multi-sided trade to specify the type of trade for a given side
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - CMTA
+ *  <p>    1 - Internal Transfer
+ *  <p>    2 - External Transfer
+ *  <p>    3 - Reject for Submitting Trade
+ *  <p>    4 - Advisory for Contra Side
+ *  <p></p>
+ *  <p>    5 - Offset due to an allocation
+ *  <p>    6 - Onset due to an allocation
+ *  <p>    7 - Differential Spread
+ *  <p>    8 - Implied Spread leg executed against an outright
+ *  <p>    9 - Transaction from Exercise
+ *  <p></p>
+ *  <p>    10 - Transaction from Assignment
+ */
 public enum Enum1008SideTrdSubTyp implements EnumAccessors, LogStringVerbose {
+    CMTA( "0", "CMTA", "0 - CMTA" ),
+    INTERNAL_TRANSFER( "1", "INTERNAL_TRANSFER", "1 - Internal Transfer" ),
+    EXTERNAL_TRANSFER( "2", "EXTERNAL_TRANSFER", "2 - External Transfer" ),
+    REJECT_SUBMISSION( "3", "REJECT_SUBMISSION", "3 - Reject for Submitting Trade" ),
+    ADVISORY_FOR_CONTRA( "4", "ADVISORY_FOR_CONTRA", "4 - Advisory for Contra Side" ),
+
+    OFFSET_DUE_TO_ALLOCATION( "5", "OFFSET_DUE_TO_ALLOCATION", "5 - Offset due to an allocation" ),
+    ONSET_DUE_TO_ALLOCATION( "6", "ONSET_DUE_TO_ALLOCATION", "6 - Onset due to an allocation" ),
+    DIFFERENTIAL_SPREAD( "7", "DIFFERENTIAL_SPREAD", "7 - Differential Spread" ),
+    IMPLIED_SPREAD_LEG( "8", "IMPLIED_SPREAD_LEG", "8 - Implied Spread leg executed against an outright" ),
+    TRANSACTION_FROM_EXERCISE( "9", "TRANSACTION_FROM_EXERCISE", "9 - Transaction from Exercise" ),
+
+    TRANSACTION_FROM_ASSIGNMENT( "10", "TRANSACTION_FROM_ASSIGNMENT", "10 - Transaction from Assignment" ),
     ;
 
     private final String id;

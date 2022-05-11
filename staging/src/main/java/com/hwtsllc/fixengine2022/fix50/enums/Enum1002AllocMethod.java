@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1002
+ *  AllocMethod
+ *  int
+ *  <p>
+ *  Specifies the method under which a trade quantity was allocated.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Automatic
+ *  <p>    2 - Guarantor
+ *  <p>    3 - Manual
+ */
 public enum Enum1002AllocMethod implements EnumAccessors, LogStringVerbose {
+    AUTOMATIC( "1", "AUTOMATIC", "1 - Automatic" ),
+    GUARANTOR( "2", "GUARANTOR", "2 - Guarantor" ),
+    MANUAL( "3", "MANUAL", "3 - Manual" ),
     ;
 
     private final String id;

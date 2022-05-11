@@ -24,7 +24,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MySeqNumTypeTest {
     @Test
     void SeqNumTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MySeqNumType dataType;
+
+        dataType = new MySeqNumType( 777777 );
+        assertEquals(  777777 , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, dataType.getDataValue());
     }
 }

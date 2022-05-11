@@ -16,12 +16,46 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1111
+ *  TriggerOrderType
+ *  char
+ *  <p>
+ *  The OrdType the order should have after the trigger has hit.
+ *  <p>
+ *  Required to express orders that change from Limit to Market.
+ *  <p>
+ *  Other values from OrdType (40) may be used if appropriate and bilaterally agreed upon.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Market
+ *  <p>    2 - Limit
+ */
 class Enum1111TriggerOrderTypeTest {
     @Test
     void EnumTest() {
         Enum1111TriggerOrderType enumType;
 
+        enumType = Enum1111TriggerOrderType.MARKET;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "MARKET", enumType.getName() );
+        assertEquals( "1 - Market", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1111TriggerOrderType.LIMIT;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "LIMIT", enumType.getName() );
+        assertEquals( "2 - Limit", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

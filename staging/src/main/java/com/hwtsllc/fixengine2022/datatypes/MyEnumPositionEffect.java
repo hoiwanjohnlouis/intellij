@@ -20,7 +20,7 @@ import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  77 (Same for TAGS 77, 564,)
+ *  77 (Same for TAGS 77, 564, 1047, )
  *  PositionEffect
  *  char
  *  <p>
@@ -37,6 +37,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  PositionEffect for leg of a multileg
  *  <p>
  *  See PositionEffect (77) field for description
+ *  <p></p>
+ *  1047
+ *  AllocPositionEffect
+ *  char
+ *  <p>
+ *  Indicates whether the resulting position after a trade should be an opening position or closing position.
+ *  <p>
+ *  Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.
  *  <p></p>
  *  Valid values:
  *  <p>    C - Close

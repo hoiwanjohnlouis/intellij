@@ -27,8 +27,8 @@ public enum Enum514RegistTransType implements EnumAccessors, LogStringVerbose {
      * 0-2 types
      */
     NEW("0", "NEW", "0 - New" ),
-    CANCEL("1", "CANCEL", "2 - Cancel" ),
-    REPLACE("2", "REPLACE", "1 - Replace" ),
+    REPLACE("1", "REPLACE", "1 - Replace" ),
+    CANCEL("2", "CANCEL", "2 - Cancel" ),
     ;
 
     private final String id;

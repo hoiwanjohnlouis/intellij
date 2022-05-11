@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1109
+ *  TriggerPriceDirection
+ *  char
+ *  <p>
+ *  The side from which the trigger price is reached.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price
+ *  <p>    D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price
+ */
 public enum Enum1109TriggerPriceDirection implements EnumAccessors, LogStringVerbose {
+    TRIGGER_UP( "U", "TRIGGER_UP", "U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price" ),
+    TRIGGER_DOWN( "D", "TRIGGER_DOWN", "D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price" ),
     ;
 
     private final String id;

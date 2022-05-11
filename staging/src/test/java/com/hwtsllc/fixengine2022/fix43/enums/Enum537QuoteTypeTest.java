@@ -35,8 +35,8 @@ class Enum537QuoteTypeTest {
          */
         enumType = Enum537QuoteType.INDICATIVE;
         assertEquals("0", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,INDICATIVE,0 - Indicative", enumType.getDescription());
+        assertEquals("INDICATIVE", enumType.getName());
+        assertEquals("0 - Indicative", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -44,8 +44,8 @@ class Enum537QuoteTypeTest {
 
         enumType = Enum537QuoteType.TRADEABLE;
         assertEquals("1", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,TRADEABLE,1 - Tradeable", enumType.getDescription());
+        assertEquals("TRADEABLE", enumType.getName());
+        assertEquals("1 - Tradeable", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -53,8 +53,8 @@ class Enum537QuoteTypeTest {
 
         enumType = Enum537QuoteType.RESTRICTED_TRADEABLE;
         assertEquals("2", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,RESTRICTED_TRADEABLE,2 - Restricted Tradeable", enumType.getDescription());
+        assertEquals("RESTRICTED_TRADEABLE", enumType.getName());
+        assertEquals("2 - Restricted Tradeable", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -62,8 +62,8 @@ class Enum537QuoteTypeTest {
 
         enumType = Enum537QuoteType.COUNTER;
         assertEquals("3", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("3,COUNTER,3 - Counter (tradeable)", enumType.getDescription());
+        assertEquals("COUNTER", enumType.getName());
+        assertEquals("3 - Counter (tradeable)", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

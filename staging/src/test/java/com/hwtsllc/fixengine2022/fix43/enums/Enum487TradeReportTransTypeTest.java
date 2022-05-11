@@ -35,8 +35,8 @@ class Enum487TradeReportTransTypeTest {
          */
         enumType = Enum487TradeReportTransType.NEW;
         assertEquals("0", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,NEW,0 - New", enumType.getDescription());
+        assertEquals("NEW", enumType.getName());
+        assertEquals("0 - New", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -44,8 +44,8 @@ class Enum487TradeReportTransTypeTest {
 
         enumType = Enum487TradeReportTransType.CANCEL;
         assertEquals("1", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,CANCEL,1 - Cancel", enumType.getDescription());
+        assertEquals("CANCEL", enumType.getName());
+        assertEquals("1 - Cancel", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -53,8 +53,8 @@ class Enum487TradeReportTransTypeTest {
 
         enumType = Enum487TradeReportTransType.REPLACE;
         assertEquals("2", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,REPLACE,2 - Replace", enumType.getDescription());
+        assertEquals("REPLACE", enumType.getName());
+        assertEquals("2 - Replace", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -62,8 +62,8 @@ class Enum487TradeReportTransTypeTest {
 
         enumType = Enum487TradeReportTransType.RELEASE;
         assertEquals("3", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("3,RELEASE,3 - Release", enumType.getDescription());
+        assertEquals("RELEASE", enumType.getName());
+        assertEquals("3 - Release", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -71,8 +71,8 @@ class Enum487TradeReportTransTypeTest {
 
         enumType = Enum487TradeReportTransType.REVERSE;
         assertEquals("4", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("4,REVERSE,4 - Reverse", enumType.getDescription());
+        assertEquals("REVERSE", enumType.getName());
+        assertEquals("4 - Reverse", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -80,8 +80,8 @@ class Enum487TradeReportTransTypeTest {
 
         enumType = Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE;
         assertEquals("5", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("5,CANCEL_BACK_OUT_TRADE,5 - Cancel Due To Back Out of Trade", enumType.getDescription());
+        assertEquals("CANCEL_BACK_OUT_TRADE", enumType.getName());
+        assertEquals("5 - Cancel Due To Back Out of Trade", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

@@ -19,7 +19,34 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1115
+ *  OrderCategory
+ *  char
+ *  <p>
+ *  Defines the type of interest behind a trade (fill or partial fill).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Order
+ *  <p>    2 - Quote
+ *  <p>    3 - Privately Negotiated Trade
+ *  <p>    4 - Multileg order
+ *  <p>    5 - Linked order
+ *  <p></p>
+ *  <p>    6 - Quote Request
+ *  <p>    7 - Implied Order
+ *  <p>    8 - Cross Order
+ */
 public enum Enum1115OrderCategory implements EnumAccessors, LogStringVerbose {
+    ORDER( "1", "ORDER", "1 - Order" ),
+    QUOTE( "2", "QUOTE", "2 - Quote" ),
+    PRIVATELY( "3", "PRIVATELY", "3 - Privately Negotiated Trade" ),
+    MULTILEG( "4", "MULTILEG", "4 - Multileg order" ),
+    LINKED( "5", "LINKED", "5 - Linked order" ),
+
+    QUOTE_REQUEST( "6", "QUOTE_REQUEST", "6 - Quote Request" ),
+    IMPLIED_ORDER( "7", "IMPLIED_ORDER", "7 - Implied Order" ),
+    CROSS_ORDER( "8", "CROSS_ORDER", "8 - Cross Order" ),
     ;
 
     private final String id;

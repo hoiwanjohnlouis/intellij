@@ -19,7 +19,42 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1033
+ *  DeskType
+ *  String
+ *  <p>
+ *  Type of trading desk
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Agency
+ *  <p>    AR - Arbitrage
+ *  <p>    D - Derivatives
+ *  <p>    IN - International
+ *  <p>    IS - Institutional
+ *  <p></p>
+ *  <p>    O - Other
+ *  <p>    PF - Preferred Trading
+ *  <p>    PR - Proprietary
+ *  <p>    PT - Program Trading
+ *  <p>    S - Sales
+ *  <p></p>
+ *  <p>    T - Trading
+ */
 public enum Enum1033DeskType implements EnumAccessors, LogStringVerbose {
+    AGENCY( "A", "AGENCY", "A - Agency" ),
+    ARBITRAGE( "AR", "ARBITRAGE", "AR - Arbitrage" ),
+    DERIVATIVES( "D", "DERIVATIVES", "D - Derivatives" ),
+    INTERNATIONAL( "IN", "INTERNATIONAL", "IN - International" ),
+    INSTITUTIONAL( "IS", "INSTITUTIONAL", "IS - Institutional" ),
+
+    OTHER( "O", "OTHER", "O - Other" ),
+    PREFERRED( "PF", "PREFERRED", "PF - Preferred Trading" ),
+    PROPRIETARY( "PR", "PROPRIETARY", "PR - Proprietary" ),
+    PROGRAM_TRADING( "PT", "PROGRAM_TRADING", "PT - Program Trading" ),
+    SALES( "S", "SALES", "S - Sales" ),
+
+    TRADING( "T", "TRADING", "T - Trading" ),
     ;
 
     private final String id;

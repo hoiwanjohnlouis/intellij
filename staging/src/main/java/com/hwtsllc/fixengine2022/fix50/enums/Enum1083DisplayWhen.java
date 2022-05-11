@@ -19,7 +19,20 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1083
+ *  DisplayWhen
+ *  char
+ *  <p>
+ *  Instructs when to refresh DisplayQty (1138).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Immediate (after each fill)
+ *  <p>    2 - Exhaust (when DisplayQty = 0)
+ */
 public enum Enum1083DisplayWhen implements EnumAccessors, LogStringVerbose {
+    IMMEDIATE( "1", "IMMEDIATE", "1 - Immediate (after each fill)" ),
+    EXHAUST( "2", "EXHAUST", "2 - Exhaust (when DisplayQty = 0)" ),
     ;
 
     private final String id;

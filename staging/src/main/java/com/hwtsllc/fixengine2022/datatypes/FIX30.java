@@ -28,12 +28,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>
  *  <p>                 BOOL = EnumType field
  *  <p>                 ENU = EnumType field
- *  <p>                 AMT = MyAmtType field
- *  <p>                 CCY = MyCurrencyType field
- *  <p>                 COU = MyCountryType field
- *  <p>                 DAT = MyDataType field
+ *  <p>                 AMT = MyAmtType field, saved as double
+ *  <p>                 CCY = MyCurrencyType field, saved as String
+ *  <p>                 CHA = MyCharType field, saved as char
+ *  <p>                 COU = MyCountryType field, saved as String
+ *  <p>                 DAT = MyDataType field, saved as String
  *  <p>                 EXC = MyExchangeType field, saved as String
- *  <p>                 FLO = MyFloatType field, saved as String
+ *  <p>                 FLO = MyFloatType field, saved as float
  *  <p>                 INT = MyIntType field, saved as int
  *  <p>                 LEN = MyLengthType field, saved as int
  *  <p>                 LMD = MyLocalMktDateType field, saved as String
@@ -45,6 +46,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>                 SEQ = MySeqNumType field, saved as int
  *  <p>                 STR = MyStringType field, saved as String
  *  <p>                 UTC = MyUTCTimestampType field, saved as String
+ *  <p>                 UTCD = MyUTCDateType field, saved as String
+ *  <p>                 UTCT = MyUTCTimeType field, saved as String
  *  <p>                 others to follow
  *  <p>
  * String  id           The identifier of the field as defined by the FIX protocol document, no duplicates.

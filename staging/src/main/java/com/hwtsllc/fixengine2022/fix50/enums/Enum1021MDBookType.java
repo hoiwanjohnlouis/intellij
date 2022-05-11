@@ -19,7 +19,24 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1021
+ *  MDBookType
+ *  int
+ *  <p>
+ *  Describes the type of book for which the feed is intended.
+ *  <p>
+ *  Used when multiple feeds are provided over the same connection
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Top of Book
+ *  <p>    2 - Price Depth
+ *  <p>    3 - Order Depth
+ */
 public enum Enum1021MDBookType implements EnumAccessors, LogStringVerbose {
+    TOP_OF_BOOK( "1", "TOP_OF_BOOK", "1 - Top of Book" ),
+    PRICE_DEPTH( "2", "PRICE_DEPTH", "2 - Price Depth" ),
+    ORDER_DEPTH( "3", "ORDER_DEPTH", "3 - Order Depth" ),
     ;
 
     private final String id;

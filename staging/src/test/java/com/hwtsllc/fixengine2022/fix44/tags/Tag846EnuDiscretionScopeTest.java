@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyEnumScope;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPegDiscretionScope;
 import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -58,20 +58,20 @@ class Tag846EnuDiscretionScopeTest {
     void Tag0846Test() {
         Tag846EnuDiscretionScope tagData;
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumScope.LOCAL);
-        assertEquals( MyEnumScope.LOCAL.getID(), tagData.getDataValue());
+        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.LOCAL);
+        assertEquals( MyEnumPegDiscretionScope.LOCAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumScope.NATIONAL);
-        assertEquals( MyEnumScope.NATIONAL.getID(), tagData.getDataValue());
+        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.NATIONAL);
+        assertEquals( MyEnumPegDiscretionScope.NATIONAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumScope.GLOBAL);
-        assertEquals( MyEnumScope.GLOBAL.getID(), tagData.getDataValue());
+        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.GLOBAL);
+        assertEquals( MyEnumPegDiscretionScope.GLOBAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumScope.NATIONAL_EXCLUDING_LOCAL);
-        assertEquals( MyEnumScope.NATIONAL_EXCLUDING_LOCAL.getID(), tagData.getDataValue());
+        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL);
+        assertEquals( MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

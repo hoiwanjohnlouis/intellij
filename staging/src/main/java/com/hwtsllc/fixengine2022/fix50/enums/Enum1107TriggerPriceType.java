@@ -19,7 +19,30 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1107
+ *  TriggerPriceType
+ *  char
+ *  <p>
+ *  The type of price that the trigger is compared to.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Best Offer
+ *  <p>    2 - Last Trade
+ *  <p>    3 - Best Bid
+ *  <p>    4 - Best Bid or Last Trade
+ *  <p>    5 - Best Offer or Last Trade
+ *  <p></p>
+ *  <p>    6 - Best Mid
+ */
 public enum Enum1107TriggerPriceType implements EnumAccessors, LogStringVerbose {
+    BEST_OFFER( "1", "BEST_OFFER", "1 - Best Offer" ),
+    LAST_TRADE( "2", "LAST_TRADE", "2 - Last Trade" ),
+    BEST_BID( "3", "BEST_BID", "3 - Best Bid" ),
+    BEST_BID_OR_LAST_TRADE( "4", "BEST_BID_OR_LAST_TRADE", "4 - Best Bid or Last Trade" ),
+    BEST_OFFER_OR_LAST_TRADE( "5", "BEST_OFFER_OR_LAST_TRADE", "5 - Best Offer or Last Trade" ),
+
+    BEST_MID( "6", "BEST_MID", "6 - Best Mid" ),
     ;
 
     private final String id;

@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1093
+ *  LotType
+ *  char
+ *  <p>
+ *  Defines the lot type assigned to the order.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Odd Lot
+ *  <p>    2 - Round Lot
+ *  <p>    3 - Block Lot
+ */
 public enum Enum1093LotType implements EnumAccessors, LogStringVerbose {
+    ODD_LOT( "1", "ODD_LOT", "1 - Odd Lot" ),
+    ROUND_LOT( "2", "ROUND_LOT", "2 - Round Lot" ),
+    BLOCK_LOT( "3", "BLOCK_LOT", "3 - Block Lot" ),
     ;
 
     private final String id;

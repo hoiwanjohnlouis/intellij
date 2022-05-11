@@ -24,7 +24,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyQtyTypeTest {
     @Test
     void QtyTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyQtyType dataType;
+
+        dataType = new MyQtyType( 999999 );
+        assertEquals(  999999 , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, dataType.getDataValue());
     }
 }

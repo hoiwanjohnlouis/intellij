@@ -16,12 +16,69 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1070
+ *  MDQuoteType
+ *  int
+ *  <p>
+ *  Identifies market data quote type.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Indicative
+ *  <p>    1 - Tradeable
+ *  <p>    2 - Restricted Tradeable
+ *  <p>    3 - Counter
+ *  <p>    4 - Indicative and Tradeable
+ */
 class Enum1070MDQuoteTypeTest {
     @Test
     void EnumTest() {
         Enum1070MDQuoteType enumType;
 
+        enumType = Enum1070MDQuoteType.INDICATIVE;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "INDICATIVE", enumType.getName() );
+        assertEquals( "0 - Indicative", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1070MDQuoteType.TRADEABLE;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "TRADEABLE", enumType.getName() );
+        assertEquals( "1 - Tradeable", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1070MDQuoteType.RESTRICTED;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "RESTRICTED", enumType.getName() );
+        assertEquals( "2 - Restricted Tradeable", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1070MDQuoteType.COUNTER;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "COUNTER", enumType.getName() );
+        assertEquals( "3 - Counter", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1070MDQuoteType.INDICATIVE_TRADEABLE;
+        assertEquals( "4", enumType.getID() );
+        assertEquals( "INDICATIVE_TRADEABLE", enumType.getName() );
+        assertEquals( "4 - Indicative and Tradeable", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

@@ -19,7 +19,26 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1070
+ *  MDQuoteType
+ *  int
+ *  <p>
+ *  Identifies market data quote type.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Indicative
+ *  <p>    1 - Tradeable
+ *  <p>    2 - Restricted Tradeable
+ *  <p>    3 - Counter
+ *  <p>    4 - Indicative and Tradeable
+ */
 public enum Enum1070MDQuoteType implements EnumAccessors, LogStringVerbose {
+    INDICATIVE( "0", "INDICATIVE", "0 - Indicative" ),
+    TRADEABLE( "1", "TRADEABLE", "1 - Tradeable" ),
+    RESTRICTED( "2", "RESTRICTED", "2 - Restricted Tradeable" ),
+    COUNTER( "3", "COUNTER", "3 - Counter" ),
+    INDICATIVE_TRADEABLE( "4", "INDICATIVE_TRADEABLE", "4 - Indicative and Tradeable" ),
     ;
 
     private final String id;

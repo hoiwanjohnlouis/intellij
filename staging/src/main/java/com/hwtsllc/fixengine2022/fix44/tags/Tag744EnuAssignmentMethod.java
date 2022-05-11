@@ -18,28 +18,37 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum744AssignmentMethod;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumAssignmentMethod;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  744
+ *  744 (same as 744, 1049,)
  *  AssignmentMethod
- *  Method by which short positions are assigned to an exercise
- *  notice during exercise and assignment processing
+ *  char
+ *  <p>
+ *  Method by which short positions are assigned
+ *  to an exercise notice during exercise and assignment
+ *  <p></p>
+ *  1049
+ *  InstrmtAssignmentMethod
+ *  char
+ *  <p>
+ *  Method under which assignment was conducted
+ *  <p></p>
  *  Valid values:
- *      P - Pro-rata
- *      R - Random
+ *  <p>    P - Pro-rata
+ *  <p>    R - Random
  */
 public class Tag744EnuAssignmentMethod extends FIX44Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum744AssignmentMethod dataValue;
+    private final MyEnumAssignmentMethod dataValue;
 
-    public final static Enum744AssignmentMethod TESTA_ENU_ASSIGNMENT_METHOD
-            = Enum744AssignmentMethod.PRO_RATA;
-    public final static Enum744AssignmentMethod TESTB_ENU_ASSIGNMENT_METHOD
-            = Enum744AssignmentMethod.RANDOM;
+    public final static MyEnumAssignmentMethod TESTA_ENU_ASSIGNMENT_METHOD
+            = MyEnumAssignmentMethod.PRO_RATA;
+    public final static MyEnumAssignmentMethod TESTB_ENU_ASSIGNMENT_METHOD
+            = MyEnumAssignmentMethod.RANDOM;
 
-    public Tag744EnuAssignmentMethod(Enum744AssignmentMethod dataValue) {
+    public Tag744EnuAssignmentMethod(MyEnumAssignmentMethod dataValue) {
         setFixType(FIX44.FIX744_ENU_ASSIGNMENT_METHOD);
         this.dataValue = dataValue;
     }

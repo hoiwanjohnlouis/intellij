@@ -19,7 +19,22 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1036
+ *  ExecAckStatus
+ *  char
+ *  <p>
+ *  The status of this execution acknowledgement message.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Received, not yet processed
+ *  <p>    1 - Accepted
+ *  <p>    2 - Don't know / Rejected
+ */
 public enum Enum1036ExecAckStatus implements EnumAccessors, LogStringVerbose {
+    RECEIVED( "0", "RECEIVED", "0 - Received, not yet processed" ),
+    ACCEPTED( "1", "ACCEPTED", "1 - Accepted" ),
+    DONT_KNOW_REJECTED( "2", "DONT_KNOW_REJECTED", "2 - Don't know / Rejected" ),
     ;
 
     private final String id;

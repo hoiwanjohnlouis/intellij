@@ -42,19 +42,19 @@ class Enum514RegistTransTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum514RegistTransType.CANCEL;
+        enumType = Enum514RegistTransType.REPLACE;
         assertEquals("1", enumType.getID());
-        assertEquals("CANCEL", enumType.getName());
-        assertEquals("1 - Cancel", enumType.getDescription());
+        assertEquals("REPLACE", enumType.getName());
+        assertEquals("1 - Replace", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum514RegistTransType.REPLACE;
+        enumType = Enum514RegistTransType.CANCEL;
         assertEquals("2", enumType.getID());
-        assertEquals("REPLACE", enumType.getName());
-        assertEquals("2 - Replace", enumType.getDescription());
+        assertEquals("CANCEL", enumType.getName());
+        assertEquals("2 - Cancel", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

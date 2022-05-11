@@ -33,9 +33,9 @@ class Tag901CashOutstandingTest {
     @Test
     void FIX0901Test() {
         FIX44 fixData = FIX44.FIX901_CASH_OUTSTANDING;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "901", fixData.getID());
+        assertEquals( "CASH_OUTSTANDING", fixData.getName());
+        assertEquals( "CashOutstanding", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

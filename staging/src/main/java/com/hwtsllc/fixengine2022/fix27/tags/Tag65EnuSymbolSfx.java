@@ -18,34 +18,51 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum65SymbolSfx;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
 import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
 /**
- *  65
+ *  65 (same as 65, 312. 601,)
  *  SymbolSfx
  *  String
+ *  <p>
  *  Additional information about the security
+ *  <p>
  *  (e.g. preferred, warrants, etc.).
- *
- *      Note also see SecurityType (167).
- *
- *      As defined in the NYSE Stock and bond Symbol Directory
- *      and in the AMEX Fitch Directory.
- *
+ *  <p>
+ *  Note also see SecurityType (167).
+ *  <p>
+ *  As defined in the NYSE Stock and bond Symbol Directory and in the AMEX Fitch Directory.
+ *  <p></p>
+ *  312
+ *  UnderlyingSymbolSfx
+ *  String
+ *  <p>
+ *  Underlying security’s SymbolSfx.
+ *  <p>
+ *  See SymbolSfx (65) field for description
+ *  <p></p>
+ *  601
+ *  LegSymbolSfx
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s SymbolSfx.
+ *  <p>
+ *  See SymbolSfx (65) field for description
+ *  <p></p>
  *  Valid values:
  *  For Fixed Income
- *      CD - EUCP with lump-sum interest rather than discount price
- *      WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
+ *  <p>    CD - EUCP with lump-sum interest rather than discount price
+ *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
  */
 public class Tag65EnuSymbolSfx extends FIX27Abstract implements FixTagValuePairString, LogStringVerbose {
-    private final Enum65SymbolSfx dataValue;
+    private final MyEnumSymbolSfx dataValue;
 
-    public final static Enum65SymbolSfx TESTA_STR_SYMBOL_SFX = Enum65SymbolSfx.EUCP;
-    public final static Enum65SymbolSfx TESTB_STR_SYMBOL_SFX = Enum65SymbolSfx.WHEN_ISSUED;
+    public final static MyEnumSymbolSfx TESTA_STR_SYMBOL_SFX = MyEnumSymbolSfx.EUCP;
+    public final static MyEnumSymbolSfx TESTB_STR_SYMBOL_SFX = MyEnumSymbolSfx.WHEN_ISSUED;
 
-    public Tag65EnuSymbolSfx(Enum65SymbolSfx dataValue) {
+    public Tag65EnuSymbolSfx(MyEnumSymbolSfx dataValue) {
         setFixType(FIX27.FIX65_ENU_SYMBOL_SFX);
         this.dataValue = dataValue;
     }

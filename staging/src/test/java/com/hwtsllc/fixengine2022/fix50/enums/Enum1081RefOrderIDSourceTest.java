@@ -16,12 +16,60 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1081
+ *  RefOrderIDSource
+ *  char
+ *  <p>
+ *  Used to specify what identifier, provided in order depth market data, to use when hitting (taking) a specific order.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - SecondaryOrdeID (198)
+ *  <p>    1 - OrdeID (37)
+ *  <p>    2 - MEntryID (278)
+ *  <p>    3 - QuotEntryID (299)
+ */
 class Enum1081RefOrderIDSourceTest {
     @Test
     void EnumTest() {
         Enum1081RefOrderIDSource enumType;
 
+        enumType = Enum1081RefOrderIDSource.SECONDARY_ORDE_ID;
+        assertEquals( "0", enumType.getID() );
+        assertEquals( "SECONDARY_ORDE_ID", enumType.getName() );
+        assertEquals( "0 - SecondaryOrdeID (198)", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1081RefOrderIDSource.ORDE_ID;
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "ORDE_ID", enumType.getName() );
+        assertEquals( "1 - OrdeID (37)", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1081RefOrderIDSource.M_ENTRY_ID;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "M_ENTRY_ID", enumType.getName() );
+        assertEquals( "2 - MEntryID (278)", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum1081RefOrderIDSource.QUOT_ENTRY_ID;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "QUOT_ENTRY_ID", enumType.getName() );
+        assertEquals( "3 - QuotEntryID (299)", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
     }
 }

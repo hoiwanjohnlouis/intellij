@@ -24,7 +24,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyNumInGroupTypeTest {
     @Test
     void NumInGroupTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyNumInGroupType dataType;
+
+        dataType = new MyNumInGroupType( 888888 );
+        assertEquals(  888888 , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, dataType.getDataValue());
     }
 }

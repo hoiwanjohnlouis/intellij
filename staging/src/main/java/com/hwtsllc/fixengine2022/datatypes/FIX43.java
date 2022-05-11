@@ -28,12 +28,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>
  *  <p>                 BOOL = EnumType field
  *  <p>                 ENU = EnumType field
- *  <p>                 AMT = MyAmtType field
- *  <p>                 CCY = MyCurrencyType field
- *  <p>                 COU = MyCountryType field
- *  <p>                 DAT = MyDataType field
+ *  <p>                 AMT = MyAmtType field, saved as double
+ *  <p>                 CCY = MyCurrencyType field, saved as String
+ *  <p>                 CHA = MyCharType field, saved as char
+ *  <p>                 COU = MyCountryType field, saved as String
+ *  <p>                 DAT = MyDataType field, saved as String
  *  <p>                 EXC = MyExchangeType field, saved as String
- *  <p>                 FLO = MyFloatType field, saved as String
+ *  <p>                 FLO = MyFloatType field, saved as float
  *  <p>                 INT = MyIntType field, saved as int
  *  <p>                 LEN = MyLengthType field, saved as int
  *  <p>                 LMD = MyLocalMktDateType field, saved as String
@@ -45,6 +46,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>                 SEQ = MySeqNumType field, saved as int
  *  <p>                 STR = MyStringType field, saved as String
  *  <p>                 UTC = MyUTCTimestampType field, saved as String
+ *  <p>                 UTCD = MyUTCDateType field, saved as String
+ *  <p>                 UTCT = MyUTCTimeType field, saved as String
  *  <p>                 others to follow
  *  <p>
  * String  id           The identifier of the field as defined by the FIX protocol document, no duplicates.
@@ -172,7 +175,7 @@ public enum FIX43 implements EnumAccessors, LogStringVerbose {
     FIX543_STR_INSTR_REGISTRY(543, "INSTR_REGISTRY", "InstrRegistry"),
     FIX544_ENU_CASH_MARGIN(544, "CASH_MARGIN", "CashMargin"),
     FIX545_STR_NESTED_PARTY_SUB_ID(545, "NESTED_PARTY_SUB_ID", "NestedPartySubID"),
-    FIX546_ENU_SCOPE(546, "SCOPE", "Scope"),
+    FIX546_ENU_MARKET_SCOPE(546, "MARKET_SCOPE", "MarketScope"),
     FIX547_BOOL_MD_IMPLICIT_DELETE(547, "MD_IMPLICIT_DELETE", "MDImplicitDelete"),
     FIX548_STR_CROSS_ID(548, "CROSS_ID", "CrossID"),
     FIX549_ENU_CROSS_TYPE(549, "CROSS_TYPE", "CrossType"),

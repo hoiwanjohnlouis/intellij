@@ -19,7 +19,24 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  1111
+ *  TriggerOrderType
+ *  char
+ *  <p>
+ *  The OrdType the order should have after the trigger has hit.
+ *  <p>
+ *  Required to express orders that change from Limit to Market.
+ *  <p>
+ *  Other values from OrdType (40) may be used if appropriate and bilaterally agreed upon.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Market
+ *  <p>    2 - Limit
+ */
 public enum Enum1111TriggerOrderType implements EnumAccessors, LogStringVerbose {
+    MARKET( "1", "MARKET", "1 - Market" ),
+    LIMIT( "2", "LIMIT", "2 - Limit" ),
     ;
 
     private final String id;

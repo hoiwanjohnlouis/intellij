@@ -24,7 +24,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyAmtTypeTest {
     @Test
     void AmtTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyAmtType dataType;
+
+        dataType = new MyAmtType( 00.23D );
+        assertEquals(  00.23D , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, dataType.getDataValue());
     }
 }

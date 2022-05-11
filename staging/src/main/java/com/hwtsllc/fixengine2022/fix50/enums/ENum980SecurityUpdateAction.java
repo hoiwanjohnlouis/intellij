@@ -19,7 +19,21 @@ package com.hwtsllc.fixengine2022.fix50.enums;
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
 import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
 
+/**
+ *  980
+ *  SecurityUpdateAction
+ *  char
+ *
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Add
+ *  <p>    D - Delete
+ *  <p>    M - Modify
+ */
 public enum ENum980SecurityUpdateAction implements EnumAccessors, LogStringVerbose {
+    ADD( "A", "ADD", "A - Add" ),
+    DELETE( "D", "DELETE", "D - Delete" ),
+    MODIFY( "M", "MODIFY", "M - Modify" ),
     ;
 
     private final String id;
