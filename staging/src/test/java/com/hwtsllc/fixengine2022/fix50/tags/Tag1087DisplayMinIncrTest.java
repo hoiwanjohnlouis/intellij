@@ -17,19 +17,29 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1087
+ *  DisplayMinIncr
+ *  Qty
+ *  <p>
+ *  Defines the minimum increment to be used when calculating a random refresh of DisplayQty.
+ *  <p>
+ *  A user specifies this when he wants a larger increment than
+ *  the standard provided by the market (e.g. the round lot size).
+ */
 class Tag1087DisplayMinIncrTest {
     @Test
     void FIX1087Test() {
         FIX50 fixData = FIX50.FIX1087_DISPLAY_MIN_INCR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1087", fixData.getID());
+        assertEquals( "DISPLAY_MIN_INCR", fixData.getName());
+        assertEquals( "display_min_incr", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

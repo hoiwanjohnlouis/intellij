@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPegDiscretionScope;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -56,21 +56,21 @@ class Tag846EnuDiscretionScopeTest {
     }
     @Test
     void Tag0846Test() {
-        Tag846EnuDiscretionScope tagData;
+        Log846EnuDiscretionScope tagData;
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.LOCAL);
+        tagData = new Log846EnuDiscretionScope(MyEnumPegDiscretionScope.LOCAL);
         assertEquals( MyEnumPegDiscretionScope.LOCAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.NATIONAL);
+        tagData = new Log846EnuDiscretionScope(MyEnumPegDiscretionScope.NATIONAL);
         assertEquals( MyEnumPegDiscretionScope.NATIONAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.GLOBAL);
+        tagData = new Log846EnuDiscretionScope(MyEnumPegDiscretionScope.GLOBAL);
         assertEquals( MyEnumPegDiscretionScope.GLOBAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL);
+        tagData = new Log846EnuDiscretionScope(MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL);
         assertEquals( MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag347StrMessageEncodingTest {
     }
     @Test
     void Tag0347Test() {
-        Tag347StrMessageEncoding tagData;
+        Log347StrMessageEncoding tagData;
 
-        tagData = new Tag347StrMessageEncoding(new MyStringType(
-                Tag347StrMessageEncoding.TESTA_STR_MESSAGE_ENCODING));
-        assertEquals( Tag347StrMessageEncoding.TESTA_STR_MESSAGE_ENCODING,
+        tagData = new Log347StrMessageEncoding(new MyStringType(
+                Log347StrMessageEncoding.TESTA_STR_MESSAGE_ENCODING));
+        assertEquals( Log347StrMessageEncoding.TESTA_STR_MESSAGE_ENCODING,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag347StrMessageEncoding(new MyStringType(
-                Tag347StrMessageEncoding.TESTB_STR_MESSAGE_ENCODING));
-        assertEquals( Tag347StrMessageEncoding.TESTB_STR_MESSAGE_ENCODING,
+        tagData = new Log347StrMessageEncoding(new MyStringType(
+                Log347StrMessageEncoding.TESTB_STR_MESSAGE_ENCODING));
+        assertEquals( Log347StrMessageEncoding.TESTB_STR_MESSAGE_ENCODING,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

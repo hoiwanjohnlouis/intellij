@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag433
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                          "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
  *                          "(i.e. additional cash will not be provided to fulfill the order)" ),
  */
-public enum Enum433ListExecInstType implements EnumAccessors, LogStringVerbose {
+public enum Enum433ListExecInstType implements EnumAccessors, LogVerboseString {
     /**
      * 1-5 msg types
      */
@@ -98,7 +98,7 @@ public enum Enum433ListExecInstType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

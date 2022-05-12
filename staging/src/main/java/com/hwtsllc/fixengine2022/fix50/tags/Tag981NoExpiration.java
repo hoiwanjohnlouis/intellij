@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  981
+ *  NoExpiration
+ *  NumInGroup
+ *  <p>
+ *  Number of Expiration Qty entries
+ */
 public class Tag981NoExpiration {
 }

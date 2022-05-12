@@ -16,5 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  962
+ *  SideTimeInForce
+ *  UTCTimestamp
+ *  <p>
+ *  Indicates how long the order as specified in the side stays in effect.
+ *  <p>
+ *  SideTimeInForce allows a two-sided cross order to specify order behavior separately for each side.
+ *  Absence of this field indicates that TimeInForce should be referenced.
+ *  <p>
+ *  SideTimeInForce will override TimeInForce if both are provided.
+ */
 public class Tag962SideTimeInForce {
 }

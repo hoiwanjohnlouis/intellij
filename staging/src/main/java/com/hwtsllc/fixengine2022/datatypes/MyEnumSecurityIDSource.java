@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  22
@@ -124,7 +124,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    K - ISDA/FpML Product URL (URL in SecurityID)
  *  <p>    L - Letter of Credit
  */
-public enum MyEnumSecurityIDSource implements EnumAccessors, LogStringVerbose {
+public enum MyEnumSecurityIDSource implements EnumAccessors, LogVerboseString {
     /*
      * 0-9 msg types
      */
@@ -204,7 +204,7 @@ public enum MyEnumSecurityIDSource implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

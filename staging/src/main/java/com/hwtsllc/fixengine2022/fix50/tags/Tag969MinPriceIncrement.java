@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  969
+ *  MinPriceIncrement
+ *  float
+ *  <p>
+ *  Minimum price increase for a given exchange-traded Instrument
+ */
 public class Tag969MinPriceIncrement {
 }

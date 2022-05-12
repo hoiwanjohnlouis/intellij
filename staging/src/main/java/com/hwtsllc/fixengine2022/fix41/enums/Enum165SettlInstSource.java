@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  165
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - Institution's Instructions
  *  <p>    3 - Investor (e.g. CIV use)
  */
-public enum Enum165SettlInstSource implements EnumAccessors, LogStringVerbose {
+public enum Enum165SettlInstSource implements EnumAccessors, LogVerboseString {
     BROKER_INSTRUCTIONS( "1", "BROKER_INSTRUCTIONS", "1 - Broker Instructions" ),
     INSTITUTION_INSTRUCTIONS( "2", "INSTITUTION_INSTRUCTIONS", "2 - Institution Instructions" ),
     INVESTOR( "3", "INVESTOR", "3 - Investor (e.g. CIV use)" ),
@@ -79,7 +79,7 @@ public enum Enum165SettlInstSource implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

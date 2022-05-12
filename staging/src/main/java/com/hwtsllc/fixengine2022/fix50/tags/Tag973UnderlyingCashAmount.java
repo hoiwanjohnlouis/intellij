@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  973
+ *  UnderlyingCashAmount
+ *  Amt
+ *  <p>
+ *  Cash amount associated with the underlying component.
+ */
 public class Tag973UnderlyingCashAmount {
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1026
+ *  MDEntrySpotRate
+ *  float
+ *  <p>
+ *  The spot rate for an FX entry
+ */
 public class Tag1026MDEntrySpotRate {
 }

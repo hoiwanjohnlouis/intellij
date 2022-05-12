@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1107TriggerPriceType;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1107
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p></p>
  *  <p>    6 - Best Mid
  */
-public class Tag1107EnuTriggerPriceType extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1107EnuTriggerPriceType extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final Enum1107TriggerPriceType dataValue;
 
     public final static Enum1107TriggerPriceType TESTA_ENU_TRIGGER_PRICE_TYPE
@@ -58,7 +58,7 @@ public class Tag1107EnuTriggerPriceType extends FIX50Abstract implements FixTagV
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -67,8 +67,8 @@ public class Tag1107EnuTriggerPriceType extends FIX50Abstract implements FixTagV
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -90,12 +90,12 @@ public class Tag1107EnuTriggerPriceType extends FIX50Abstract implements FixTagV
 
         tagData = new Tag1107EnuTriggerPriceType(TESTA_ENU_TRIGGER_PRICE_TYPE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1107EnuTriggerPriceType(TESTB_ENU_TRIGGER_PRICE_TYPE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

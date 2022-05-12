@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  326
@@ -52,7 +52,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      OPENING_ROTATION( "22", "OPENING_ROTATION", "22 - Opening Rotation" ),
  *      FAST_MARKET( "23", "FAST_MARKET", "23 - Fast Market" ),
  */
-public enum Enum326SecurityTradingStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum326SecurityTradingStatus implements EnumAccessors, LogVerboseString {
     /**
      * 1-10, 12-23 msg types. skipped 11.
      */
@@ -122,7 +122,7 @@ public enum Enum326SecurityTradingStatus implements EnumAccessors, LogStringVerb
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

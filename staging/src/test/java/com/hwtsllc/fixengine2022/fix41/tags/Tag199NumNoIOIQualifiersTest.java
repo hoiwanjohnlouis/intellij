@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,16 +44,16 @@ class Tag199NumNoIOIQualifiersTest {
     }
     @Test
     void Tag0199Test() {
-        Tag199NumNoIOIQualifiers tagData;
+        Log199NumNoIOIQualifiers tagData;
 
-        tagData = new Tag199NumNoIOIQualifiers(
-                new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS));
-        assertEquals( Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
+        tagData = new Log199NumNoIOIQualifiers(
+                new MyNumInGroupType(Log199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( Log199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag199NumNoIOIQualifiers(
-                new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
-        assertEquals( Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
+        tagData = new Log199NumNoIOIQualifiers(
+                new MyNumInGroupType(Log199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( Log199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag238AmtConcessionTest {
     }
     @Test
     void Tag0238Test() {
-        Tag238AmtConcession tagData;
+        Log238AmtConcession tagData;
 
-        tagData = new Tag238AmtConcession(new MyAmtType(
-                Tag238AmtConcession.TESTA_AMT_CONCESSION));
-        assertEquals( Tag238AmtConcession.TESTA_AMT_CONCESSION,
+        tagData = new Log238AmtConcession(new MyAmtType(
+                Log238AmtConcession.TESTA_AMT_CONCESSION));
+        assertEquals( Log238AmtConcession.TESTA_AMT_CONCESSION,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag238AmtConcession(new MyAmtType(
-                Tag238AmtConcession.TESTB_AMT_CONCESSION));
-        assertEquals( Tag238AmtConcession.TESTB_AMT_CONCESSION,
+        tagData = new Log238AmtConcession(new MyAmtType(
+                Log238AmtConcession.TESTB_AMT_CONCESSION));
+        assertEquals( Log238AmtConcession.TESTB_AMT_CONCESSION,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  204
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    0 - Customer
  *  <p>    1 - Firm
  */
-public enum Enum204CustomerOrFirm implements EnumAccessors, LogStringVerbose {
+public enum Enum204CustomerOrFirm implements EnumAccessors, LogVerboseString {
     CUSTOMER( "0", "CUSTOMER", "0 - Customer" ),
     FIRM( "1", "FIRM", "1 - Firm" ),
     ;
@@ -80,7 +80,7 @@ public enum Enum204CustomerOrFirm implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

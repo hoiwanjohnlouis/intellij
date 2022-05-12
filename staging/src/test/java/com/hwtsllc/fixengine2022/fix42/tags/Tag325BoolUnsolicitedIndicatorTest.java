@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,13 +37,13 @@ class Tag325BoolUnsolicitedIndicatorTest {
     }
     @Test
     void Tag0325Test() {
-        Tag325BoolUnsolicitedIndicator tagData;
+        Log325BoolUnsolicitedIndicator tagData;
 
-        tagData = new Tag325BoolUnsolicitedIndicator(MyBooleanType.NO);
+        tagData = new Log325BoolUnsolicitedIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag325BoolUnsolicitedIndicator(MyBooleanType.YES);
+        tagData = new Log325BoolUnsolicitedIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1121
+ *  RootPartySubID
+ *  String
+ *  <p>
+ *  PartySubID value within a root parties component. Same values as PartySubID (523)
+ */
 public class Tag1121RootPartySubID {
 }

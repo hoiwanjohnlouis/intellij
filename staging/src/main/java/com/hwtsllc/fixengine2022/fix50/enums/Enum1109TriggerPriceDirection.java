@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1109
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price
  *  <p>    D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price
  */
-public enum Enum1109TriggerPriceDirection implements EnumAccessors, LogStringVerbose {
+public enum Enum1109TriggerPriceDirection implements EnumAccessors, LogVerboseString {
     TRIGGER_UP( "U", "TRIGGER_UP", "U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price" ),
     TRIGGER_DOWN( "D", "TRIGGER_DOWN", "D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price" ),
     ;
@@ -77,7 +77,7 @@ public enum Enum1109TriggerPriceDirection implements EnumAccessors, LogStringVer
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

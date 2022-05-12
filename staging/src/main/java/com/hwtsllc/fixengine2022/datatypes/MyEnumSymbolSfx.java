@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  65 (same as 65, 312. 601,)
@@ -53,7 +53,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    CD - EUCP with lump-sum interest rather than discount price
  *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
  */
-public enum MyEnumSymbolSfx implements EnumAccessors, LogStringVerbose {
+public enum MyEnumSymbolSfx implements EnumAccessors, LogVerboseString {
     EUCP( "CD", "EUCP", "CD - EUCP with lump-sum interest rather than discount price" ),
     WHEN_ISSUED( "WI", "WHEN_ISSUED", "WI - When-Issued for a security to be reissued under an old CUSIP or ISIN" ),
     ;
@@ -100,7 +100,7 @@ public enum MyEnumSymbolSfx implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

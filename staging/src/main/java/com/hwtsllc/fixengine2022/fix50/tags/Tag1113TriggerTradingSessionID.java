@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1113
+ *  TriggerTradingSessionID
+ *  String
+ *  <p>
+ *  Defines the trading session at which the order will be activated.
+ */
 public class Tag1113TriggerTradingSessionID {
 }

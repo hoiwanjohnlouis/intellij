@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag330QtyBuyVolumeTest {
     }
     @Test
     void Tag0330Test() {
-        Tag330QtyBuyVolume tagData;
+        Log330QtyBuyVolume tagData;
 
-        tagData = new Tag330QtyBuyVolume(new MyQtyType(
-                Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME));
-        assertEquals( Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME,
+        tagData = new Log330QtyBuyVolume(new MyQtyType(
+                Log330QtyBuyVolume.TESTA_QTY_BUY_VOLUME));
+        assertEquals( Log330QtyBuyVolume.TESTA_QTY_BUY_VOLUME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag330QtyBuyVolume(new MyQtyType(
-                Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME));
-        assertEquals( Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME,
+        tagData = new Log330QtyBuyVolume(new MyQtyType(
+                Log330QtyBuyVolume.TESTB_QTY_BUY_VOLUME));
+        assertEquals( Log330QtyBuyVolume.TESTB_QTY_BUY_VOLUME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

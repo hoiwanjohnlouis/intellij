@@ -17,19 +17,30 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1138
+ *  DisplayQty
+ *  Qty
+ *  <p>
+ *  The quantity to be displayed.
+ *  <p>
+ *  Required for reserve orders.
+ *  <p>
+ *  On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
+ */
 class Tag1138DisplayQtyTest {
     @Test
     void FIX1138Test() {
         FIX50 fixData = FIX50.FIX1138_DISPLAY_QTY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1138", fixData.getID());
+        assertEquals( "DISPLAY_QTY", fixData.getName());
+        assertEquals( "display_qty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,9 +45,9 @@ class Tag46StrRelatdSymTest {
     }
     @Test
     void Tag0046Test() {
-        Tag46StrRelatdSym tagData;
+        Log46StrRelatdSym tagData;
 
-        tagData = new Tag46StrRelatdSym(new MyStringType("IBM") );
+        tagData = new Log46StrRelatdSym(new MyStringType("IBM") );
         assertEquals( "IBM", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

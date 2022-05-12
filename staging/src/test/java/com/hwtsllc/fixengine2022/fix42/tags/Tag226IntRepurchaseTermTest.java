@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,17 +38,17 @@ class Tag226IntRepurchaseTermTest {
     }
     @Test
     void Tag0226Test() {
-        Tag226IntRepurchaseTerm tagData;
+        Log226IntRepurchaseTerm tagData;
 
-        tagData = new Tag226IntRepurchaseTerm(new MyIntType(
-                Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM));
-        assertEquals( Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM,
+        tagData = new Log226IntRepurchaseTerm(new MyIntType(
+                Log226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM));
+        assertEquals( Log226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag226IntRepurchaseTerm(new MyIntType(
-                Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM));
-        assertEquals( Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM,
+        tagData = new Log226IntRepurchaseTerm(new MyIntType(
+                Log226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM));
+        assertEquals( Log226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

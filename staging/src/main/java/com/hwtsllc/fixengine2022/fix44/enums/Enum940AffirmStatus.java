@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  940
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      2 - Confirm rejected, i.e. not affirmed
  *      3 - Affirmed
  */
-public enum Enum940AffirmStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum940AffirmStatus implements EnumAccessors, LogVerboseString {
     RECEIVED( "1", "RECEIVED", "1 - Received" ),
     REJECTED( "2", "REJECTED", "2 - Confirm rejected, i.e. not affirmed" ),
     AFFIRMED( "3", "AFFIRMED", "3 - Affirmed" ),
@@ -77,7 +77,7 @@ public enum Enum940AffirmStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

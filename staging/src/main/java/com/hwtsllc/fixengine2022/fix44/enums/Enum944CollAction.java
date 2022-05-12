@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  944
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Add
  *      2 - Remove
  */
-public enum Enum944CollAction implements EnumAccessors, LogStringVerbose {
+public enum Enum944CollAction implements EnumAccessors, LogVerboseString {
     RETAIN( "0", "RETAIN", "0 - Retain" ),
     ADD( "1", "ADD", "1 - Add" ),
     REMOVE( "2", "REMOVE", "2 - Remove" ),
@@ -77,7 +77,7 @@ public enum Enum944CollAction implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

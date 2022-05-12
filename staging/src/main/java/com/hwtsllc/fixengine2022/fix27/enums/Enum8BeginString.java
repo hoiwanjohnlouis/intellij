@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  8
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      FIX.4.4
  *      FIXT.1.1
  */
-public enum Enum8BeginString implements EnumAccessors, LogStringVerbose {
+public enum Enum8BeginString implements EnumAccessors, LogVerboseString {
     BEGIN_STRING_2_7( "FIX.2.7","BEGIN_STRING_2_7","Begin String 2.7"),
     BEGIN_STRING_3_0( "FIX.3.0","BEGIN_STRING_3_0","Begin String 3.0"),
     BEGIN_STRING_4_0( "FIX.4.0","BEGIN_STRING_4_0","Begin String 4.0"),
@@ -92,7 +92,7 @@ public enum Enum8BeginString implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

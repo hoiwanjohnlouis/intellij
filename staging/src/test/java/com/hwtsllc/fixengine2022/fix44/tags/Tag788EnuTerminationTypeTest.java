@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum788TerminationType;
 import org.junit.jupiter.api.Test;
 
@@ -38,30 +38,30 @@ class Tag788EnuTerminationTypeTest {
     @Test
     void FIX0788Test() {
         FIX44 fixData = FIX44.FIX788_ENU_TERMINATION_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "788", fixData.getID());
+        assertEquals( "TERMINATION_TYPE", fixData.getName());
+        assertEquals( "TerminationType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0788Test() {
-        Tag788EnuTerminationType tagData;
+        Log788EnuTerminationType tagData;
 
-        tagData = new Tag788EnuTerminationType( Enum788TerminationType.OVERNIGHT );
+        tagData = new Log788EnuTerminationType( Enum788TerminationType.OVERNIGHT );
         assertEquals( Enum788TerminationType.OVERNIGHT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag788EnuTerminationType( Enum788TerminationType.TERM );
+        tagData = new Log788EnuTerminationType( Enum788TerminationType.TERM );
         assertEquals( Enum788TerminationType.TERM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag788EnuTerminationType( Enum788TerminationType.FLEXIBLE );
+        tagData = new Log788EnuTerminationType( Enum788TerminationType.FLEXIBLE );
         assertEquals( Enum788TerminationType.FLEXIBLE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag788EnuTerminationType( Enum788TerminationType.OPEN );
+        tagData = new Log788EnuTerminationType( Enum788TerminationType.OPEN );
         assertEquals( Enum788TerminationType.OPEN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

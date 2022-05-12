@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  788
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      3 - Flexible
  *      4 - Open
  */
-public enum Enum788TerminationType implements EnumAccessors, LogStringVerbose {
+public enum Enum788TerminationType implements EnumAccessors, LogVerboseString {
     OVERNIGHT( "1", "OVERNIGHT", "1 - Overnight" ),
     TERM( "2", "TERM", "2 - Term" ),
     FLEXIBLE( "3", "FLEXIBLE", "3 - Flexible" ),
@@ -78,7 +78,7 @@ public enum Enum788TerminationType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

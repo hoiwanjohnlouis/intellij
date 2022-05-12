@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum20ExecTransType;
 import org.junit.jupiter.api.Test;
 
@@ -51,21 +51,21 @@ class Tag20EnuExecTransTypeTest {
     }
     @Test
     void Tag0020Test() {
-        Tag20EnuExecTransType tagData;
+        Log20EnuExecTransType tagData;
 
-        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.NEW);
+        tagData = new Log20EnuExecTransType(Enum20ExecTransType.NEW);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.CANCEL);
+        tagData = new Log20EnuExecTransType(Enum20ExecTransType.CANCEL);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.CORRECT);
+        tagData = new Log20EnuExecTransType(Enum20ExecTransType.CORRECT);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.STATUS);
+        tagData = new Log20EnuExecTransType(Enum20ExecTransType.STATUS);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

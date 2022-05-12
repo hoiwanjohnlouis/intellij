@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,9 +45,9 @@ class Tag89DatSignatureTest {
     }
     @Test
     void Tag0089Test() {
-        Tag89DatSignature tagData;
+        Log89DatSignature tagData;
 
-        tagData = new Tag89DatSignature(new MyDataType("BarleymanButterBurr-89StSignature") );
+        tagData = new Log89DatSignature(new MyDataType("BarleymanButterBurr-89StSignature") );
         assertEquals( "BarleymanButterBurr-89StSignature", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

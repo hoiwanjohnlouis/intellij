@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,9 +34,9 @@ class Tag672LegIndividualAllocIDTest {
     @Test
     void FIX0672Test() {
         FIX44 fixData = FIX44.FIX672_LEG_INDIVIDUAL_ALLOC_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "672", fixData.getID());
+        assertEquals( "LEG_INDIVIDUAL_ALLOC_ID", fixData.getName());
+        assertEquals( "LegIndividualAllocId", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag346IntNumberOfOrdersTest {
     }
     @Test
     void Tag0346Test() {
-        Tag346IntNumberOfOrders tagData;
+        Log346IntNumberOfOrders tagData;
 
-        tagData = new Tag346IntNumberOfOrders(new MyIntType(
-                Tag346IntNumberOfOrders.TESTA_INT_NUMBER_OF_ORDERS));
-        assertEquals( Tag346IntNumberOfOrders.TESTA_INT_NUMBER_OF_ORDERS,
+        tagData = new Log346IntNumberOfOrders(new MyIntType(
+                Log346IntNumberOfOrders.TESTA_INT_NUMBER_OF_ORDERS));
+        assertEquals( Log346IntNumberOfOrders.TESTA_INT_NUMBER_OF_ORDERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag346IntNumberOfOrders(new MyIntType(
-                Tag346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS));
-        assertEquals( Tag346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS,
+        tagData = new Log346IntNumberOfOrders(new MyIntType(
+                Log346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS));
+        assertEquals( Log346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

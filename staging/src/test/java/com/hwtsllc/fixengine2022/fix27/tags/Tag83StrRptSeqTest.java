@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,9 +47,9 @@ class Tag83StrRptSeqTest {
     }
     @Test
     void Tag0083Test() {
-        Tag83StrRptSeq tagData;
+        Log83StrRptSeq tagData;
 
-        tagData = new Tag83StrRptSeq(new MyStringType("Legolas-83RptSeq") );
+        tagData = new Log83StrRptSeq(new MyStringType("Legolas-83RptSeq") );
         assertEquals( "Legolas-83RptSeq", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

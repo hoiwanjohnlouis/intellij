@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
@@ -37,17 +37,17 @@ class Tag343UtcTradSesPreCloseTimeTest {
     }
     @Test
     void Tag0343Test() {
-        Tag343UtcTradSesPreCloseTime tagData;
+        Log343UtcTradSesPreCloseTime tagData;
 
-        tagData = new Tag343UtcTradSesPreCloseTime(new MyUTCTimestampType(
-                Tag343UtcTradSesPreCloseTime.TESTA_UTC_TRAD_SES_PRE_CLOSE_TIME));
-        assertEquals( Tag343UtcTradSesPreCloseTime.TESTA_UTC_TRAD_SES_PRE_CLOSE_TIME,
+        tagData = new Log343UtcTradSesPreCloseTime(new MyUTCTimestampType(
+                Log343UtcTradSesPreCloseTime.TESTA_UTC_TRAD_SES_PRE_CLOSE_TIME));
+        assertEquals( Log343UtcTradSesPreCloseTime.TESTA_UTC_TRAD_SES_PRE_CLOSE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag343UtcTradSesPreCloseTime(new MyUTCTimestampType(
-                Tag343UtcTradSesPreCloseTime.TESTB_UTC_TRAD_SES_PRE_CLOSE_TIME));
-        assertEquals( Tag343UtcTradSesPreCloseTime.TESTB_UTC_TRAD_SES_PRE_CLOSE_TIME,
+        tagData = new Log343UtcTradSesPreCloseTime(new MyUTCTimestampType(
+                Log343UtcTradSesPreCloseTime.TESTB_UTC_TRAD_SES_PRE_CLOSE_TIME));
+        assertEquals( Log343UtcTradSesPreCloseTime.TESTB_UTC_TRAD_SES_PRE_CLOSE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

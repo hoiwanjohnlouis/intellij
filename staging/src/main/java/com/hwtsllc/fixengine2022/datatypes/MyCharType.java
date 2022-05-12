@@ -16,9 +16,9 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class MyCharType implements LogStringVerbose {
+public class MyCharType implements LogVerboseString {
     private final char dataValue;
 
     public MyCharType(final char dataValue) {
@@ -32,7 +32,7 @@ public class MyCharType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -52,6 +52,6 @@ public class MyCharType implements LogStringVerbose {
     public static void main(String[] args) {
         MyCharType dataType = new MyCharType('1');
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

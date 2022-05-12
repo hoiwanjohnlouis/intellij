@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1016
+ *  NoSideTrdRegTS
+ *  NumInGroup
+ *  <p>
+ *  Indicates number of  SideTimestamps contained in group
+ */
 class Tag1016NoSideTrdRegTSTest {
     @Test
     void FIX1016Test() {
         FIX50 fixData = FIX50.FIX1016_NO_SIDE_TRD_REG_TS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1016", fixData.getID());
+        assertEquals( "NO_SIDE_TRD_REG_TS", fixData.getName());
+        assertEquals( "NoSideTrdRegTS", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

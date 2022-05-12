@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag431
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      ALL_DONE( "6", "ALL_DONE", "6 - All Done" ),
  *      REJECT( "7", "REJECT", "7 - Reject" ),
  */
-public enum Enum431ListOrderStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum431ListOrderStatus implements EnumAccessors, LogVerboseString {
     /**
      * 1-7 msg types
      */
@@ -88,7 +88,7 @@ public enum Enum431ListOrderStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

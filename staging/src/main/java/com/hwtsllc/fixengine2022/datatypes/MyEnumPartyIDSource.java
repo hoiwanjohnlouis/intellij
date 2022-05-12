@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  447 (same as 447, 525, 758, 783, 950, 1050, 1060, 1118)
@@ -123,7 +123,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    I - Directed broker three character acronym as defined in
  *              ISITC "ETC Best Practice" guidelines document
  */
-public enum MyEnumPartyIDSource implements EnumAccessors, LogStringVerbose {
+public enum MyEnumPartyIDSource implements EnumAccessors, LogVerboseString {
     /*
      * All PartyRoles
      *  B-H types
@@ -227,7 +227,7 @@ public enum MyEnumPartyIDSource implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum722PosMaintStatus;
 import org.junit.jupiter.api.Test;
 
@@ -48,25 +48,25 @@ class Tag722EnuPosMaintStatusTest {
     }
     @Test
     void Tag0722Test() {
-        Tag722EnuPosMaintStatus tagData;
+        Log722EnuPosMaintStatus tagData;
 
-        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED);
+        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED_WITH_WARNINGS);
+        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED_WITH_WARNINGS);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.REJECTED);
+        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.REJECTED);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED);
+        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED_WITH_WARNINGS);
+        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED_WITH_WARNINGS);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

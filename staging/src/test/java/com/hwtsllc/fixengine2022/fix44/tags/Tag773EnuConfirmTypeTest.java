@@ -17,7 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum773ConfirmType;
 import org.junit.jupiter.api.Test;
 
@@ -46,10 +47,12 @@ class Tag773EnuConfirmTypeTest {
     }
     @Test
     void Tag0773Test() {
-        Tag773EnuConfirmType tagData;
+        Log773EnuConfirmType tagData;
 
-        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.STATUS);
-        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
-        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
+        tagData = new Log773EnuConfirmType(Enum773ConfirmType.STATUS);
+        tagData = new Log773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
+        tagData = new Log773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
+        assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

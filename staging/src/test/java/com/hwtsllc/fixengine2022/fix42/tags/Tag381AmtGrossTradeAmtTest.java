@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag381AmtGrossTradeAmtTest {
     }
     @Test
     void Tag0381Test() {
-        Tag381AmtGrossTradeAmt tagData;
+        Log381AmtGrossTradeAmt tagData;
 
-        tagData = new Tag381AmtGrossTradeAmt(new MyAmtType(
-                Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT));
-        assertEquals( Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT,
+        tagData = new Log381AmtGrossTradeAmt(new MyAmtType(
+                Log381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT));
+        assertEquals( Log381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag381AmtGrossTradeAmt(new MyAmtType(
-                Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT));
-        assertEquals( Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT,
+        tagData = new Log381AmtGrossTradeAmt(new MyAmtType(
+                Log381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT));
+        assertEquals( Log381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

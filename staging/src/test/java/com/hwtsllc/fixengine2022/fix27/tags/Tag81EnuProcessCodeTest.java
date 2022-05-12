@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum81ProcessCode;
 import org.junit.jupiter.api.Test;
 
@@ -55,36 +55,36 @@ class Tag81EnuProcessCodeTest {
     }
     @Test
     void Tag0081Test() {
-        Tag81EnuProcessCode tagData;
+        Log81EnuProcessCode tagData;
 
         /**
          * 0-6 AllocRejCode types
          */
-        tagData = new Tag81EnuProcessCode(Enum81ProcessCode.REGULAR);
+        tagData = new Log81EnuProcessCode(Enum81ProcessCode.REGULAR);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR);
+        tagData = new Log81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag81EnuProcessCode(Enum81ProcessCode.STEP_IN);
+        tagData = new Log81EnuProcessCode(Enum81ProcessCode.STEP_IN);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag81EnuProcessCode(Enum81ProcessCode.STEP_OUT);
+        tagData = new Log81EnuProcessCode(Enum81ProcessCode.STEP_OUT);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_IN);
+        tagData = new Log81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_IN);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_OUT);
+        tagData = new Log81EnuProcessCode(Enum81ProcessCode.SOFT_DOLLAR_STEP_OUT);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag81EnuProcessCode(Enum81ProcessCode.PLAN_SPONSOR);
+        tagData = new Log81EnuProcessCode(Enum81ProcessCode.PLAN_SPONSOR);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

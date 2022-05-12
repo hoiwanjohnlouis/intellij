@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  59
@@ -40,7 +40,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      6 - Good Till Date (GTD)
  *      7 - At the Close
  */
-public enum Enum59TimeInForce implements EnumAccessors, LogStringVerbose {
+public enum Enum59TimeInForce implements EnumAccessors, LogVerboseString {
     DAY("0", "DAY", "0 - Day (or session)" ),
     GOOD_TILL_CANCEL("1", "GOOD_TILL_CANCEL", "1 - Good Till Cancel (GTC)" ),
     AT_THE_OPENING("2", "AT_THE_OPENING", "2 - At the Opening (OPG)" ),
@@ -94,7 +94,7 @@ public enum Enum59TimeInForce implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

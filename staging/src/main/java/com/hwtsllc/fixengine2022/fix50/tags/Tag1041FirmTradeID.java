@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1041
+ *  FirmTradeID
+ *  String
+ *  <p>
+ *  The ID assigned to a trade by the Firm to track a trade within the Firm's system.
+ *  This ID can be assigned either before or after submission to the exchange or central counterpary
+ */
 public class Tag1041FirmTradeID {
 }

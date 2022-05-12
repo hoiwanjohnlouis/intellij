@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  993
+ *  AllocCustomerCapacity
+ *  String
+ *  <p>
+ *  Capacity of customer in the allocation block.
+ */
 class Tag993AllocCustomerCapacityTest {
     @Test
     void FIX0993Test() {
         FIX50 fixData = FIX50.FIX993_ALLOC_CUSTOMER_CAPACITY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "993", fixData.getID());
+        assertEquals( "ALLOC_CUSTOMER_CAPACITY", fixData.getName());
+        assertEquals( "AllocCustomerCapacity", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,9 +48,9 @@ class Tag15CcyCurrencyTest {
     }
     @Test
     void Tag0015Test() {
-        Tag15CcyCurrency tagData;
+        Log15CcyCurrency tagData;
 
-        tagData = new Tag15CcyCurrency(new MyCurrencyType("USD") );
+        tagData = new Log15CcyCurrency(new MyCurrencyType("USD") );
         assertEquals( "USD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

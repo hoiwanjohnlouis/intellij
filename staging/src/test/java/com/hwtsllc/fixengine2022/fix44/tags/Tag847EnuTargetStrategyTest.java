@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum847TargetStrategy;
 import org.junit.jupiter.api.Test;
 
@@ -50,17 +50,17 @@ class Tag847EnuTargetStrategyTest {
     }
     @Test
     void Tag0847Test() {
-        Tag847EnuTargetStrategy tagData;
+        Log847EnuTargetStrategy tagData;
 
-        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.VWAP );
+        tagData = new Log847EnuTargetStrategy( Enum847TargetStrategy.VWAP );
         assertEquals( Enum847TargetStrategy.VWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.PARTICIPATE );
+        tagData = new Log847EnuTargetStrategy( Enum847TargetStrategy.PARTICIPATE );
         assertEquals( Enum847TargetStrategy.PARTICIPATE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT );
+        tagData = new Log847EnuTargetStrategy( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT );
         assertEquals( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

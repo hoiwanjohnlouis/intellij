@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1044
+ *  UnderlyingAdjustedQuantity
+ *  Qty
+ *  <p>
+ *  Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated.
+ */
 public class Tag1044UnderlyingAdjustedQuantity {
 }

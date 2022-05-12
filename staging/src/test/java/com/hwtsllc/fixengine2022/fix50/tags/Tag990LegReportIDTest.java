@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  990
+ *  LegReportID
+ *  String
+ *  <p>
+ *  Additional attribute to store the Trade ID of the Leg.
+ */
 class Tag990LegReportIDTest {
     @Test
     void FIX0990Test() {
         FIX50 fixData = FIX50.FIX990_LEG_REPORT_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "990", fixData.getID());
+        assertEquals( "LEG_REPORT_ID", fixData.getName());
+        assertEquals( "LegReportId", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

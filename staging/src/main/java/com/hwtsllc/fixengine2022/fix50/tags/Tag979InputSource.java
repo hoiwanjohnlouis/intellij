@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  979
+ *  InputSource
+ *  String
+ *  <p>
+ *  Source of the contrary intention
+ */
 public class Tag979InputSource {
 }

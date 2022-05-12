@@ -17,11 +17,11 @@
 package com.hwtsllc.fixengine2022.factories;
 
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrcPrevClosePx;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.fix40.tags.Log140PrcPrevClosePx;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class FIXBody implements LogStringVerbose {
-    private final Tag140PrcPrevClosePx tag140PrcPrevClosePx;
+public class FIXBody implements LogVerboseString {
+    private final Log140PrcPrevClosePx tag140PrcPrevClosePx;
 
     //
     private FIXBody(FIXBody.Builder builder) {
@@ -34,8 +34,8 @@ public class FIXBody implements LogStringVerbose {
                 .concat(tag140PrcPrevClosePx.toString());
     }
     @Override
-    public String toLogStringVerbose() {
-        return tag140PrcPrevClosePx.toLogStringVerbose();
+    public String toVerboseString() {
+        return tag140PrcPrevClosePx.toVerboseString();
     }
 
 //    public int compareTo(Object o) {
@@ -44,14 +44,14 @@ public class FIXBody implements LogStringVerbose {
 
     // static builder helper class
     public static class Builder {
-        private Tag140PrcPrevClosePx tag140PrcPrevClosePx;    // 4
+        private Log140PrcPrevClosePx tag140PrcPrevClosePx;    // 4
 
         // helper class to build object
         public Builder() {
         }
 
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.tag140PrcPrevClosePx = new Tag140PrcPrevClosePx(new MyPriceType(12.34D) );
+            this.tag140PrcPrevClosePx = new Log140PrcPrevClosePx(new MyPriceType(12.34D) );
             return this;
         }
 
@@ -70,6 +70,6 @@ public class FIXBody implements LogStringVerbose {
                         .buildPreviousDaysClosingPrice(56.78D)
                         .build();
         System.out.println(record);
-        System.out.println(record.toLogStringVerbose());
+        System.out.println(record.toVerboseString());
     }
 }

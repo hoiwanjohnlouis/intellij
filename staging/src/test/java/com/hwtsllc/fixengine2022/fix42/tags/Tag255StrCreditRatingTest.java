@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag255StrCreditRatingTest {
     }
     @Test
     void Tag0255Test() {
-        Tag255StrCreditRating tagData;
+        Log255StrCreditRating tagData;
 
-        tagData = new Tag255StrCreditRating(
-                new MyStringType(Tag255StrCreditRating.TESTA_STR_CREDIT_RATING));
-        assertEquals( Tag255StrCreditRating.TESTA_STR_CREDIT_RATING, tagData.getDataValue() );
+        tagData = new Log255StrCreditRating(
+                new MyStringType(Log255StrCreditRating.TESTA_STR_CREDIT_RATING));
+        assertEquals( Log255StrCreditRating.TESTA_STR_CREDIT_RATING, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag255StrCreditRating(
-                new MyStringType(Tag255StrCreditRating.TESTB_STR_CREDIT_RATING));
-        assertEquals( Tag255StrCreditRating.TESTB_STR_CREDIT_RATING, tagData.getDataValue() );
+        tagData = new Log255StrCreditRating(
+                new MyStringType(Log255StrCreditRating.TESTB_STR_CREDIT_RATING));
+        assertEquals( Log255StrCreditRating.TESTB_STR_CREDIT_RATING, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

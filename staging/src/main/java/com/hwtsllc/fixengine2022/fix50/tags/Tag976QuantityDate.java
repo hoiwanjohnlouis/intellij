@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  976
+ *  QuantityDate
+ *  LocalMktDate
+ *  <p>
+ *  Date associated to the quantity that is being reported for the position.
+ */
 public class Tag976QuantityDate {
 }

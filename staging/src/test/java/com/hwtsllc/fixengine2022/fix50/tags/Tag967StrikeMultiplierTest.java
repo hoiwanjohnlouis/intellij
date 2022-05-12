@@ -17,19 +17,28 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  967
+ *  StrikeMultiplier
+ *  float
+ *  <p>
+ *  Used for derivatives.
+ *  <p>
+ *  Multiplier applied to the strike price for the purpose of calculating the settlement value.
+ */
 class Tag967StrikeMultiplierTest {
     @Test
     void FIX0967Test() {
         FIX50 fixData = FIX50.FIX967_STRIKE_MULTIPLIER;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "967", fixData.getID());
+        assertEquals( "STRIKE_MULTIPLIER", fixData.getName());
+        assertEquals( "StrikeMultiplier", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

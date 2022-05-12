@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag248LmdLegCouponPaymentDateTest {
     }
     @Test
     void Tag0248Test() {
-        Tag248LmdLegCouponPaymentDate tagData;
+        Log248LmdLegCouponPaymentDate tagData;
 
-        tagData = new Tag248LmdLegCouponPaymentDate(new MyLocalMktDateType(
-                Tag248LmdLegCouponPaymentDate.TESTA_LMD_LEG_COUPON_PAYMENT_DATE));
-        assertEquals( Tag248LmdLegCouponPaymentDate.TESTA_LMD_LEG_COUPON_PAYMENT_DATE,
+        tagData = new Log248LmdLegCouponPaymentDate(new MyLocalMktDateType(
+                Log248LmdLegCouponPaymentDate.TESTA_LMD_LEG_COUPON_PAYMENT_DATE));
+        assertEquals( Log248LmdLegCouponPaymentDate.TESTA_LMD_LEG_COUPON_PAYMENT_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag248LmdLegCouponPaymentDate(new MyLocalMktDateType(
-                Tag248LmdLegCouponPaymentDate.TESTB_LMD_LEG_COUPON_PAYMENT_DATE));
-        assertEquals( Tag248LmdLegCouponPaymentDate.TESTB_LMD_LEG_COUPON_PAYMENT_DATE,
+        tagData = new Log248LmdLegCouponPaymentDate(new MyLocalMktDateType(
+                Log248LmdLegCouponPaymentDate.TESTB_LMD_LEG_COUPON_PAYMENT_DATE));
+        assertEquals( Log248LmdLegCouponPaymentDate.TESTB_LMD_LEG_COUPON_PAYMENT_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

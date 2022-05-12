@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1129
+ *  CstmApplVerID
+ *  String
+ *  <p>
+ *  Specifies a custom extension to a message being applied at the message level. Enumerated field
+ */
 public class Tag1129CstmApplVerID {
 }

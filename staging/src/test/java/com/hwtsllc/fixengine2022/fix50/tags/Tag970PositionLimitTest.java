@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  970
+ *  PositionLimit
+ *  int
+ *  <p>
+ *  Position Limit for a given exchange-traded product.
+ */
 class Tag970PositionLimitTest {
     @Test
     void FIX0970Test() {
         FIX50 fixData = FIX50.FIX970_POSITION_LIMIT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "970", fixData.getID());
+        assertEquals( "POSITION_LIMIT", fixData.getName());
+        assertEquals( "PositionLimit", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

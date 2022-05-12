@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  828
@@ -77,7 +77,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      46 - Delta neutral transaction
  *      47 - Financing transaction (includes repo and stock lending)
  */
-public enum Enum828TrdType implements EnumAccessors, LogStringVerbose {
+public enum Enum828TrdType implements EnumAccessors, LogVerboseString {
     REGULAR_TRADE( "0", "REGULAR_TRADE", "0 - Regular Trade" ),
     BLOCK_TRADE( "1", "BLOCK_TRADE", "1 - Block Trade" ),
     EFP( "2", "EFP", "2 - EFP (Exchange for physical)" ),
@@ -183,7 +183,7 @@ public enum Enum828TrdType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

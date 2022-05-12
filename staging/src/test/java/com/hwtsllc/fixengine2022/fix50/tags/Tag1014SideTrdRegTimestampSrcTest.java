@@ -17,19 +17,30 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1014
+ *  SideTrdRegTimestampSrc
+ *  String
+ *  <p>
+ *  Same as TrdRegTimestampOrigin
+ *  <p>
+ *  Text which identifies the origin.
+ *  <p>
+ *  i.e. system which was used to generate the time stamp for the Traded Regulatory timestamp value
+ */
 class Tag1014SideTrdRegTimestampSrcTest {
     @Test
     void FIX1014Test() {
         FIX50 fixData = FIX50.FIX1014_SIDE_TRD_REG_TIMESTAMP_SRC;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1014", fixData.getID());
+        assertEquals( "SIDE_TRD_REG_TIMESTAMP_SRC", fixData.getName());
+        assertEquals( "SideTrdRegTimestampSrc", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

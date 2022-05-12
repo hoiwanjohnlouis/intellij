@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  166
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    PNY - Physical
  *  <p>    PTC - Participant Trust Company
  */
-public enum Enum166SettlLocation implements EnumAccessors, LogStringVerbose {
+public enum Enum166SettlLocation implements EnumAccessors, LogVerboseString {
     CEDEL( "CED",
             "CEDEL",
             "CED - CEDEL" ),
@@ -102,7 +102,7 @@ public enum Enum166SettlLocation implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

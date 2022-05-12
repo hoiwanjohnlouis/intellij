@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1136
+ *  AllocClearingFeeIndicator
+ *  String
+ *  <p>
+ *  ClearingFeeIndicator(635) for Allocation, see ClearingFeeIndicator(635) for permitted values.
+ */
 class Tag1136AllocClearingFeeIndicatorTest {
     @Test
     void FIX1136Test() {
         FIX50 fixData = FIX50.FIX1136_ALLOC_CLEARING_FEE_INDICATOR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1136", fixData.getID());
+        assertEquals( "ALLOC_CLEARING_FEE_INDICATOR", fixData.getName());
+        assertEquals( "Alloc_Clearing_Fee_Indicator", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

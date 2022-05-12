@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum826TradeAllocIndicator;
 import org.junit.jupiter.api.Test;
 
@@ -50,30 +50,30 @@ class Tag826EnuTradeAllocIndicatorTest {
     }
     @Test
     void Tag0826Test() {
-        Tag826EnuTradeAllocIndicator tagData;
+        Log826EnuTradeAllocIndicator tagData;
 
-        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.NOT_REQUIRED );
+        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.NOT_REQUIRED );
         assertEquals( Enum826TradeAllocIndicator.NOT_REQUIRED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.REQUIRED );
+        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.REQUIRED );
         assertEquals( Enum826TradeAllocIndicator.REQUIRED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.USE_PROVIDED_INFO );
+        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.USE_PROVIDED_INFO );
         assertEquals( Enum826TradeAllocIndicator.USE_PROVIDED_INFO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR );
+        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR );
         assertEquals( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.FROM_EXECUTOR );
+        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.FROM_EXECUTOR );
         assertEquals( Enum826TradeAllocIndicator.FROM_EXECUTOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.CLAIM_ACCOUNT );
+        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.CLAIM_ACCOUNT );
         assertEquals( Enum826TradeAllocIndicator.CLAIM_ACCOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

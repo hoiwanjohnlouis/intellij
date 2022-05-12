@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimeType;
 import org.junit.jupiter.api.Test;
 
@@ -37,17 +37,17 @@ class Tag273UtctMDEntryTimeTest {
     }
     @Test
     void Tag0273Test() {
-        Tag273UtctMDEntryTime tagData;
+        Log273UtctMDEntryTime tagData;
 
-        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType(
-                Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME));
-        assertEquals( Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME,
+        tagData = new Log273UtctMDEntryTime(new MyUTCTimeType(
+                Log273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME));
+        assertEquals( Log273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType(
-                Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME));
-        assertEquals( Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME,
+        tagData = new Log273UtctMDEntryTime(new MyUTCTimeType(
+                Log273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME));
+        assertEquals( Log273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

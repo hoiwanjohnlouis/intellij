@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum414ProgRptReqs;
 import org.junit.jupiter.api.Test;
 
@@ -53,20 +53,20 @@ class Tag414EnuProgRptReqsTest {
      */
     @Test
     void Tag0414Test() {
-        Tag414EnuProgRptReqs tagData;
+        Log414EnuProgRptReqs tagData;
 
         /**
          * 1-3 msg types
          */
-        tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.BUY_SIDE_STATUS);
+        tagData = new Log414EnuProgRptReqs(Enum414ProgRptReqs.BUY_SIDE_STATUS);
         assertEquals( Enum414ProgRptReqs.BUY_SIDE_STATUS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.SELL_SIDE_STATUS);
+        tagData = new Log414EnuProgRptReqs(Enum414ProgRptReqs.SELL_SIDE_STATUS);
         assertEquals( Enum414ProgRptReqs.SELL_SIDE_STATUS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS);
+        tagData = new Log414EnuProgRptReqs(Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS);
         assertEquals( Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

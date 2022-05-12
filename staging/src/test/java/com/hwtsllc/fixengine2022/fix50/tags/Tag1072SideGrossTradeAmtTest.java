@@ -17,19 +17,28 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1072
+ *  SideGrossTradeAmt
+ *  Amt
+ *  <p>
+ *  The gross trade amount for this side of the trade.
+ *  <p>
+ *  See also GrossTradeAmt (381) for additional definition.
+ */
 class Tag1072SideGrossTradeAmtTest {
     @Test
     void FIX1072Test() {
         FIX50 fixData = FIX50.FIX1072_SIDE_GROSS_TRADE_AMT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1072", fixData.getID());
+        assertEquals( "SIDE_GROSS_TRADE_AMT", fixData.getName());
+        assertEquals( "side_gross_trade_amt", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

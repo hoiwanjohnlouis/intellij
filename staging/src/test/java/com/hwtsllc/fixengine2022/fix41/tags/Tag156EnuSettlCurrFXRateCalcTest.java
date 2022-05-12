@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumFXRateCalc;
 import org.junit.jupiter.api.Test;
 
@@ -55,13 +55,13 @@ class Tag156EnuSettlCurrFXRateCalcTest {
     }
     @Test
     void Tag0156Test() {
-        Tag156EnuSettlCurrFXRateCalc tagData;
+        Log156EnuSettlCurrFXRateCalc tagData;
 
-        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.MULTIPLY);
+        tagData = new Log156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.MULTIPLY);
         assertEquals( MyEnumFXRateCalc.MULTIPLY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.DIVIDE);
+        tagData = new Log156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.DIVIDE);
         assertEquals( MyEnumFXRateCalc.DIVIDE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

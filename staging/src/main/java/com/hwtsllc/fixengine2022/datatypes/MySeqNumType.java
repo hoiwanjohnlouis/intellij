@@ -16,14 +16,14 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *
  * MySeqNumType is a wrapper class for any MySeqNumType field
  * Initially it will be an int.
  */
-public class MySeqNumType implements LogStringVerbose {
+public class MySeqNumType implements LogVerboseString {
     private final int dataValue;
 
     public MySeqNumType(final int dataValue) {
@@ -38,7 +38,7 @@ public class MySeqNumType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -58,6 +58,6 @@ public class MySeqNumType implements LogStringVerbose {
     public static void main(String[] args) {
         MySeqNumType dataType = new MySeqNumType(12345);
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

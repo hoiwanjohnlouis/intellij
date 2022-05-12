@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  926
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      5 - Password Changed
  *      6 - Other
  */
-public enum Enum926UserStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum926UserStatus implements EnumAccessors, LogVerboseString {
     LOGGED_IN( "1", "LOGGED_IN", "1 - Logged In" ),
     NOT_LOGGED_IN( "2", "NOT_LOGGED_IN", "2 - Not Logged In" ),
     USER_NOT_RECOGNISED( "3", "USER_NOT_RECOGNISED", "3 - User Not Recognised" ),
@@ -83,7 +83,7 @@ public enum Enum926UserStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

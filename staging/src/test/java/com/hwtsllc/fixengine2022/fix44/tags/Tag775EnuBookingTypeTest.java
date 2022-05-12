@@ -17,7 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum775BookingType;
 import org.junit.jupiter.api.Test;
 
@@ -48,10 +49,12 @@ class Tag775EnuBookingTypeTest {
     }
     @Test
     void Tag0775Test() {
-        Tag775EnuBookingType tagData;
+        Log775EnuBookingType tagData;
 
-        tagData = new Tag775EnuBookingType(Enum775BookingType.REGULAR_BOOKING);
-        tagData = new Tag775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
-        tagData = new Tag775EnuBookingType(Enum775BookingType.TOTAL_RETURN_SWAP);
+        tagData = new Log775EnuBookingType(Enum775BookingType.REGULAR_BOOKING);
+        tagData = new Log775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
+        tagData = new Log775EnuBookingType(Enum775BookingType.TOTAL_RETURN_SWAP);
+        assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

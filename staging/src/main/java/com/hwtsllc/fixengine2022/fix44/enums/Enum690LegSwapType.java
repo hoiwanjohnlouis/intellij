@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  690
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      4 - Risk
  *      5 - Proceeds
  */
-public enum Enum690LegSwapType implements EnumAccessors, LogStringVerbose {
+public enum Enum690LegSwapType implements EnumAccessors, LogVerboseString {
     PAR_FOR_PAR( "1", "PAR_FOR_PAR", "1 - Par For Par" ),
     MODIFIED_DURATION( "2", "MODIFIED_DURATION", "2 - Modified Duration" ),
     RISK( "4", "RISK", "4 - Risk" ),
@@ -80,7 +80,7 @@ public enum Enum690LegSwapType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

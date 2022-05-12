@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1055
+ *  PositionCurrency
+ *  String
+ *  <p>
+ *  The Currency in which the position Amount is denominated
+ */
 public class Tag1055PositionCurrency {
 }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
@@ -37,17 +37,17 @@ class Tag367UtcQuoteSetValidUntilTimeTest {
     }
     @Test
     void Tag0367Test() {
-        Tag367UtcQuoteSetValidUntilTime tagData;
+        Log367UtcQuoteSetValidUntilTime tagData;
 
-        tagData = new Tag367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
-                Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME));
-        assertEquals( Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME,
+        tagData = new Log367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
+                Log367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME));
+        assertEquals( Log367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
-                Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME));
-        assertEquals( Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME,
+        tagData = new Log367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
+                Log367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME));
+        assertEquals( Log367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

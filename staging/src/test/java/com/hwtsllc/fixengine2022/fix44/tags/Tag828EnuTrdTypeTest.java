@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum828TrdType;
 import org.junit.jupiter.api.Test;
 
@@ -95,101 +95,101 @@ class Tag828EnuTrdTypeTest {
     }
     @Test
     void Tag0828Test() {
-        Tag828EnuTrdType tagData;
+        Log828EnuTrdType tagData;
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.REGULAR_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.REGULAR_TRADE);
         assertEquals( Enum828TrdType.REGULAR_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.BLOCK_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.BLOCK_TRADE);
         assertEquals( Enum828TrdType.BLOCK_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.EFP);
+        tagData = new Log828EnuTrdType(Enum828TrdType.EFP);
         assertEquals( Enum828TrdType.EFP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.TRANSFER);
+        tagData = new Log828EnuTrdType(Enum828TrdType.TRANSFER);
         assertEquals( Enum828TrdType.TRANSFER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.LATE_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.LATE_TRADE);
         assertEquals( Enum828TrdType.LATE_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.T_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.T_TRADE);
         assertEquals( Enum828TrdType.T_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.WEIGHTED_AVERAGE_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.WEIGHTED_AVERAGE_TRADE);
         assertEquals( Enum828TrdType.WEIGHTED_AVERAGE_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.BUNCHED_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.BUNCHED_TRADE);
         assertEquals( Enum828TrdType.BUNCHED_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.LATE_BUNCHED_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.LATE_BUNCHED_TRADE);
         assertEquals( Enum828TrdType.LATE_BUNCHED_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.PRIOR_REFERENCE_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.PRIOR_REFERENCE_TRADE);
         assertEquals( Enum828TrdType.PRIOR_REFERENCE_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.AFTER_HOURS_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.AFTER_HOURS_TRADE);
         assertEquals( Enum828TrdType.AFTER_HOURS_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.EFR);
+        tagData = new Log828EnuTrdType(Enum828TrdType.EFR);
         assertEquals( Enum828TrdType.EFR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.EFS);
+        tagData = new Log828EnuTrdType(Enum828TrdType.EFS);
         assertEquals( Enum828TrdType.EFS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.EFM);
+        tagData = new Log828EnuTrdType(Enum828TrdType.EFM);
         assertEquals( Enum828TrdType.EFM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.EOO);
+        tagData = new Log828EnuTrdType(Enum828TrdType.EOO);
         assertEquals( Enum828TrdType.EOO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.TRADING_AT_SETTLEMENT);
+        tagData = new Log828EnuTrdType(Enum828TrdType.TRADING_AT_SETTLEMENT);
         assertEquals( Enum828TrdType.TRADING_AT_SETTLEMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.AON);
+        tagData = new Log828EnuTrdType(Enum828TrdType.AON);
         assertEquals( Enum828TrdType.AON.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.FUTURES_LARGE_ORDER_EXECUTION);
+        tagData = new Log828EnuTrdType(Enum828TrdType.FUTURES_LARGE_ORDER_EXECUTION);
         assertEquals( Enum828TrdType.FUTURES_LARGE_ORDER_EXECUTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.EFF);
+        tagData = new Log828EnuTrdType(Enum828TrdType.EFF);
         assertEquals( Enum828TrdType.EFF.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.OPTION_INTERIM_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.OPTION_INTERIM_TRADE);
         assertEquals( Enum828TrdType.OPTION_INTERIM_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.OPTION_CABINET_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.OPTION_CABINET_TRADE);
         assertEquals( Enum828TrdType.OPTION_CABINET_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.PRIVATELY_NEGOTIATED_TRADES);
+        tagData = new Log828EnuTrdType(Enum828TrdType.PRIVATELY_NEGOTIATED_TRADES);
         assertEquals( Enum828TrdType.PRIVATELY_NEGOTIATED_TRADES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.SUBSTITUTION_OF_FUTURES_FORWARDS);
+        tagData = new Log828EnuTrdType(Enum828TrdType.SUBSTITUTION_OF_FUTURES_FORWARDS);
         assertEquals( Enum828TrdType.SUBSTITUTION_OF_FUTURES_FORWARDS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -197,103 +197,103 @@ class Tag828EnuTrdTypeTest {
         /**
          *  MiFID Values
          */
-        tagData = new Tag828EnuTrdType(Enum828TrdType.ERROR_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.ERROR_TRADE);
         assertEquals( Enum828TrdType.ERROR_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.CD);
+        tagData = new Log828EnuTrdType(Enum828TrdType.CD);
         assertEquals( Enum828TrdType.CD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.XD);
+        tagData = new Log828EnuTrdType(Enum828TrdType.XD);
         assertEquals( Enum828TrdType.XD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.CC);
+        tagData = new Log828EnuTrdType(Enum828TrdType.CC);
         assertEquals( Enum828TrdType.CC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.XC);
+        tagData = new Log828EnuTrdType(Enum828TrdType.XC);
         assertEquals( Enum828TrdType.XC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.CS);
+        tagData = new Log828EnuTrdType(Enum828TrdType.CS);
         assertEquals( Enum828TrdType.CS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.SP);
+        tagData = new Log828EnuTrdType(Enum828TrdType.SP);
         assertEquals( Enum828TrdType.SP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.GD);
+        tagData = new Log828EnuTrdType(Enum828TrdType.GD);
         assertEquals( Enum828TrdType.GD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.CR);
+        tagData = new Log828EnuTrdType(Enum828TrdType.CR);
         assertEquals( Enum828TrdType.CR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.XR);
+        tagData = new Log828EnuTrdType(Enum828TrdType.XR);
         assertEquals( Enum828TrdType.XR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.CP);
+        tagData = new Log828EnuTrdType(Enum828TrdType.CP);
         assertEquals( Enum828TrdType.CP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.XP);
+        tagData = new Log828EnuTrdType(Enum828TrdType.XP);
         assertEquals( Enum828TrdType.XP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.CB);
+        tagData = new Log828EnuTrdType(Enum828TrdType.CB);
         assertEquals( Enum828TrdType.CB.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.XB);
+        tagData = new Log828EnuTrdType(Enum828TrdType.XB);
         assertEquals( Enum828TrdType.XB.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.LARGE_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.LARGE_TRADE);
         assertEquals( Enum828TrdType.LARGE_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.WORKED_PRINCIPAL_TRADE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.WORKED_PRINCIPAL_TRADE);
         assertEquals( Enum828TrdType.WORKED_PRINCIPAL_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.BLOCK_TRADE_AFTER_MARKET);
+        tagData = new Log828EnuTrdType(Enum828TrdType.BLOCK_TRADE_AFTER_MARKET);
         assertEquals( Enum828TrdType.BLOCK_TRADE_AFTER_MARKET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.NAME_CHANGE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.NAME_CHANGE);
         assertEquals( Enum828TrdType.NAME_CHANGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.PORTFOLIO_TRANSFER);
+        tagData = new Log828EnuTrdType(Enum828TrdType.PORTFOLIO_TRANSFER);
         assertEquals( Enum828TrdType.PORTFOLIO_TRANSFER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.PROROGATION_BUY);
+        tagData = new Log828EnuTrdType(Enum828TrdType.PROROGATION_BUY);
         assertEquals( Enum828TrdType.PROROGATION_BUY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.PROROGATION_SELL);
+        tagData = new Log828EnuTrdType(Enum828TrdType.PROROGATION_SELL);
         assertEquals( Enum828TrdType.PROROGATION_SELL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.OPTION_EXERCISE);
+        tagData = new Log828EnuTrdType(Enum828TrdType.OPTION_EXERCISE);
         assertEquals( Enum828TrdType.OPTION_EXERCISE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.DELTA_NEUTRAL_TRANSACTION);
+        tagData = new Log828EnuTrdType(Enum828TrdType.DELTA_NEUTRAL_TRANSACTION);
         assertEquals( Enum828TrdType.DELTA_NEUTRAL_TRANSACTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag828EnuTrdType(Enum828TrdType.FINANCING_TRANSACTION);
+        tagData = new Log828EnuTrdType(Enum828TrdType.FINANCING_TRANSACTION);
         assertEquals( Enum828TrdType.FINANCING_TRANSACTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

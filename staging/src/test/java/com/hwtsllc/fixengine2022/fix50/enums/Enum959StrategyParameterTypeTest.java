@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -107,7 +107,7 @@ class Enum959StrategyParameterTypeTest {
 
         enumType = Enum959StrategyParameterType.FLOAT;
         assertEquals( "6", enumType.getID() );
-        assertEquals( "", enumType.getName() );
+        assertEquals( "FLOAT", enumType.getName() );
         assertEquals( "6 - Float", enumType.getDescription() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -123,7 +123,7 @@ class Enum959StrategyParameterTypeTest {
 
         enumType = Enum959StrategyParameterType.PRICE;
         assertEquals( "8", enumType.getID() );
-        assertEquals( "", enumType.getName() );
+        assertEquals( "PRICE", enumType.getName() );
         assertEquals( "8 - Price", enumType.getDescription() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -131,7 +131,7 @@ class Enum959StrategyParameterTypeTest {
 
         enumType = Enum959StrategyParameterType.PRICE_OFFSET;
         assertEquals( "9", enumType.getID() );
-        assertEquals( "PRICE", enumType.getName() );
+        assertEquals( "PRICE_OFFSET", enumType.getName() );
         assertEquals( "9 - PriceOffset", enumType.getDescription() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -211,9 +211,9 @@ class Enum959StrategyParameterTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
-        enumType = Enum959StrategyParameterType.UTC_TIME_STAMP;
+        enumType = Enum959StrategyParameterType.UTC_TIMESTAMP;
         assertEquals( "19", enumType.getID() );
-        assertEquals( "UTC_TIME_STAMP", enumType.getName() );
+        assertEquals( "UTC_TIMESTAMP", enumType.getName() );
         assertEquals( "19 - UTCTimeStamp", enumType.getDescription() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

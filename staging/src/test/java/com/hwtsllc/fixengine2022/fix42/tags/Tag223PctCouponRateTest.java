@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag223PctCouponRateTest {
     }
     @Test
     void Tag0223Test() {
-        Tag223PctCouponRate tagData;
+        Log223PctCouponRate tagData;
 
-        tagData = new Tag223PctCouponRate(new MyPercentageType(
-                Tag223PctCouponRate.TESTA_PCT_COUPON_RATE));
-        assertEquals( Tag223PctCouponRate.TESTA_PCT_COUPON_RATE,
+        tagData = new Log223PctCouponRate(new MyPercentageType(
+                Log223PctCouponRate.TESTA_PCT_COUPON_RATE));
+        assertEquals( Log223PctCouponRate.TESTA_PCT_COUPON_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag223PctCouponRate(new MyPercentageType(
-                Tag223PctCouponRate.TESTB_PCT_COUPON_RATE));
-        assertEquals( Tag223PctCouponRate.TESTB_PCT_COUPON_RATE,
+        tagData = new Log223PctCouponRate(new MyPercentageType(
+                Log223PctCouponRate.TESTB_PCT_COUPON_RATE));
+        assertEquals( Log223PctCouponRate.TESTB_PCT_COUPON_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,14 +44,14 @@ class Tag155FloSettlCurrFxRateTest {
     }
     @Test
     void Tag0155Test() {
-        Tag155FloSettlCurrFxRate tagData;
+        Log155FloSettlCurrFxRate tagData;
 
-        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
-        assertEquals( Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
+        tagData = new Log155FloSettlCurrFxRate(new MyFloatType(Log155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( Log155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
-        assertEquals( Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
+        tagData = new Log155FloSettlCurrFxRate(new MyFloatType(Log155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( Log155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
 }

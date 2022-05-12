@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumOffsetType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -56,21 +56,21 @@ class Tag836EnuPegOffsetTypeTest {
     }
     @Test
     void Tag0836Test() {
-        Tag836EnuPegOffsetType tagData;
+        Log836EnuPegOffsetType tagData;
 
-        tagData = new Tag836EnuPegOffsetType(MyEnumOffsetType.PRICE);
+        tagData = new Log836EnuPegOffsetType(MyEnumOffsetType.PRICE);
         assertEquals( MyEnumOffsetType.PRICE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag836EnuPegOffsetType(MyEnumOffsetType.BASIS);
+        tagData = new Log836EnuPegOffsetType(MyEnumOffsetType.BASIS);
         assertEquals( MyEnumOffsetType.BASIS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag836EnuPegOffsetType(MyEnumOffsetType.TICKS);
+        tagData = new Log836EnuPegOffsetType(MyEnumOffsetType.TICKS);
         assertEquals( MyEnumOffsetType.TICKS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag836EnuPegOffsetType(MyEnumOffsetType.TIER_OR_LEVEL);
+        tagData = new Log836EnuPegOffsetType(MyEnumOffsetType.TIER_OR_LEVEL);
         assertEquals( MyEnumOffsetType.TIER_OR_LEVEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  167 (same as TAGS 167, 310, 609)
@@ -221,7 +221,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                          "WLD - Wildcard Entry (used on Security Definition Request message)" ),
  *      CASH( "CASH", "CASH", "CASH - Cash" ),
  */
-public enum MyEnumSecurityType implements EnumAccessors, LogStringVerbose {
+public enum MyEnumSecurityType implements EnumAccessors, LogVerboseString {
     /*
      * Deprecated, 4
      */
@@ -524,7 +524,7 @@ public enum MyEnumSecurityType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

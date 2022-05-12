@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  460 (same as 460, 462, 607,)
@@ -62,7 +62,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>     12 - OTHER
  *  <p>     13 - FINANCING
  */
-public enum MyEnumProduct implements EnumAccessors, LogStringVerbose {
+public enum MyEnumProduct implements EnumAccessors, LogVerboseString {
     /*
      * 0-13 msg types
      */
@@ -125,7 +125,7 @@ public enum MyEnumProduct implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

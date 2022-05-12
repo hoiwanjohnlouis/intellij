@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  712
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      4 - Reverse - used to completely back-out the transaction
  *                      such that the transaction never existed
  */
-public enum Enum712PosMaintAction implements EnumAccessors, LogStringVerbose {
+public enum Enum712PosMaintAction implements EnumAccessors, LogVerboseString {
     NEW( "1", "NEW",
             "1 - New - used to increment the overall transaction quantity" ),
     REPLACE( "2", "REPLACE",
@@ -88,7 +88,7 @@ public enum Enum712PosMaintAction implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

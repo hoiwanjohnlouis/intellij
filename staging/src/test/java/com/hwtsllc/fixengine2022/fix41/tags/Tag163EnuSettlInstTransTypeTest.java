@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum163SettlInstTransType;
 import org.junit.jupiter.api.Test;
 
@@ -50,21 +50,21 @@ class Tag163EnuSettlInstTransTypeTest {
     }
     @Test
     void Tag0163Test() {
-        Tag163EnuSettlInstTransType tagData;
+        Log163EnuSettlInstTransType tagData;
 
-        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
+        tagData = new Log163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
         assertEquals( Enum163SettlInstTransType.NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.CANCEL);
+        tagData = new Log163EnuSettlInstTransType(Enum163SettlInstTransType.CANCEL);
         assertEquals( Enum163SettlInstTransType.CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.REPLACE);
+        tagData = new Log163EnuSettlInstTransType(Enum163SettlInstTransType.REPLACE);
         assertEquals( Enum163SettlInstTransType.REPLACE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.RESTATE);
+        tagData = new Log163EnuSettlInstTransType(Enum163SettlInstTransType.RESTATE);
         assertEquals( Enum163SettlInstTransType.RESTATE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

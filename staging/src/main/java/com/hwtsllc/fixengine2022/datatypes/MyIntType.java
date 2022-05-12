@@ -16,14 +16,14 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *
  * MyIntType is a wrapper class for any int primitive  field
  * Initially it will be an int.
  */
-public class MyIntType implements LogStringVerbose {
+public class MyIntType implements LogVerboseString {
     private final int dataValue;
 
     public MyIntType(final int dataValue) {
@@ -38,7 +38,7 @@ public class MyIntType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -60,6 +60,6 @@ public class MyIntType implements LogStringVerbose {
 
         dataType = new MyIntType(12345);
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

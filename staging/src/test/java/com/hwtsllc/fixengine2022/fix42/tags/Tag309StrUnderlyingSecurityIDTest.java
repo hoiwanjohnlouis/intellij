@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag309StrUnderlyingSecurityIDTest {
     }
     @Test
     void Tag0309Test() {
-        Tag309StrUnderlyingSecurityID tagData;
+        Log309StrUnderlyingSecurityID tagData;
 
-        tagData = new Tag309StrUnderlyingSecurityID(
-                new MyStringType(Tag309StrUnderlyingSecurityID.TESTA_STR_UNDERLYING_SECURITY_ID));
-        assertEquals( Tag309StrUnderlyingSecurityID.TESTA_STR_UNDERLYING_SECURITY_ID, tagData.getDataValue() );
+        tagData = new Log309StrUnderlyingSecurityID(
+                new MyStringType(Log309StrUnderlyingSecurityID.TESTA_STR_UNDERLYING_SECURITY_ID));
+        assertEquals( Log309StrUnderlyingSecurityID.TESTA_STR_UNDERLYING_SECURITY_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag309StrUnderlyingSecurityID(
-                new MyStringType(Tag309StrUnderlyingSecurityID.TESTB_STR_UNDERLYING_SECURITY_ID));
-        assertEquals( Tag309StrUnderlyingSecurityID.TESTB_STR_UNDERLYING_SECURITY_ID, tagData.getDataValue() );
+        tagData = new Log309StrUnderlyingSecurityID(
+                new MyStringType(Log309StrUnderlyingSecurityID.TESTB_STR_UNDERLYING_SECURITY_ID));
+        assertEquals( Log309StrUnderlyingSecurityID.TESTB_STR_UNDERLYING_SECURITY_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

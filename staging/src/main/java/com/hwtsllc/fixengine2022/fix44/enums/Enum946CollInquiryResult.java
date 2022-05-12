@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  946
@@ -40,7 +40,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum946CollInquiryResult implements EnumAccessors, LogStringVerbose {
+public enum Enum946CollInquiryResult implements EnumAccessors, LogVerboseString {
     SUCCESSFUL( "0", "SUCCESSFUL", "0 - Successful (default)" ),
     INVALID_INSTRUMENT( "1", "INVALID_INSTRUMENT", "1 - Invalid or unknown instrument" ),
     UNKNOWN_COLLATERAL_TYPE( "2", "UNKNOWN_COLLATERAL_TYPE", "2 - Invalid or unknown collateral type" ),
@@ -98,7 +98,7 @@ public enum Enum946CollInquiryResult implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

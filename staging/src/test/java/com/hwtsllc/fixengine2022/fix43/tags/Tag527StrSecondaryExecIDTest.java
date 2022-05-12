@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +36,7 @@ class Tag527StrSecondaryExecIDTest {
     }
     @Test
     void Tag0527Test() {
-        Tag527StrSecondaryExecID tagData;
+        Log527StrSecondaryExecID tagData;
 
     }
 }

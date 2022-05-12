@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1132
+ *  TZTransactTime
+ *  TZTimestamp
+ *  <p>
+ *  Transact time in the local date-time stamp with a TZ offset to UTC identified
+ */
 public class Tag1132TZTransactTime {
 }

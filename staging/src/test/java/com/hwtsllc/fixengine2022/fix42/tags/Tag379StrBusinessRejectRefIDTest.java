@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag379StrBusinessRejectRefIDTest {
     }
     @Test
     void Tag0379Test() {
-        Tag379StrBusinessRejectRefID tagData;
+        Log379StrBusinessRejectRefID tagData;
 
-        tagData = new Tag379StrBusinessRejectRefID(new MyStringType(
-                Tag379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID));
-        assertEquals( Tag379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID,
+        tagData = new Log379StrBusinessRejectRefID(new MyStringType(
+                Log379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID));
+        assertEquals( Log379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag379StrBusinessRejectRefID(new MyStringType(
-                Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID));
-        assertEquals( Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID,
+        tagData = new Log379StrBusinessRejectRefID(new MyStringType(
+                Log379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID));
+        assertEquals( Log379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

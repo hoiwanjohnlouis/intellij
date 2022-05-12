@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1103
+ *  TriggerSymbol
+ *  String
+ *  <p>
+ *  Defines the common, 'human understood' representation of the
+ *  security whose prices will be tracked by the trigger logic.
+ */
 public class Tag1103TriggerSymbol {
 }

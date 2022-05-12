@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1005
+ *  SideTradeReportID
+ *  String
+ *  <p>
+ *  Used on a multi-sided trade to designate the ReportID
+ */
 public class Tag1005SideTradeReportID {
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1136
+ *  AllocClearingFeeIndicator
+ *  String
+ *  <p>
+ *  ClearingFeeIndicator(635) for Allocation, see ClearingFeeIndicator(635) for permitted values.
+ */
 public class Tag1136AllocClearingFeeIndicator {
 }

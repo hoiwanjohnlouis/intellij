@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,14 +44,14 @@ class Tag188PrcBidSpotRateTest {
     }
     @Test
     void Tag0188Test() {
-        Tag188PrcBidSpotRate tagData;
+        Log188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE));
-        assertEquals( Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE, tagData.getDataValue());
+        tagData = new Log188PrcBidSpotRate(new MyPriceType(Log188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE));
+        assertEquals( Log188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
-        assertEquals( Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE, tagData.getDataValue());
+        tagData = new Log188PrcBidSpotRate(new MyPriceType(Log188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
+        assertEquals( Log188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

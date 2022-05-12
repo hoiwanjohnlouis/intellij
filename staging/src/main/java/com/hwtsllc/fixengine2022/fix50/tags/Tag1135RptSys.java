@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1135
+ *  RptSys
+ *  String
+ *  <p>
+ *  Indicates the system or medium on which the report has been published
+ */
 public class Tag1135RptSys {
 }

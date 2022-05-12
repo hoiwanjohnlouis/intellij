@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  975
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    4 - T+3
  *  <p>    5 - T+4
  */
-public enum Enum975UnderlyingSettlementType implements EnumAccessors, LogStringVerbose {
+public enum Enum975UnderlyingSettlementType implements EnumAccessors, LogVerboseString {
     T_PLUS_1( "2", "T_PLUS_1", "2 - T+1" ),
     T_PLUS_3( "4", "T_PLUS_3", "4 - T+3" ),
     T_PLUS_4( "5", "T_PLUS_4", "5 - T+4" ),
@@ -79,7 +79,7 @@ public enum Enum975UnderlyingSettlementType implements EnumAccessors, LogStringV
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

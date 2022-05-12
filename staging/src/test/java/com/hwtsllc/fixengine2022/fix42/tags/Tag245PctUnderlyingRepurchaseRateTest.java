@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,17 +38,17 @@ class Tag245PctUnderlyingRepurchaseRateTest {
     }
     @Test
     void Tag0245Test() {
-        Tag245PctUnderlyingRepurchaseRate tagData;
+        Log245PctUnderlyingRepurchaseRate tagData;
 
-        tagData = new Tag245PctUnderlyingRepurchaseRate(new MyPercentageType(
-                Tag245PctUnderlyingRepurchaseRate.TESTA_PCT_UNDERLYING_REPURCHASE_RATE));
-        assertEquals( Tag245PctUnderlyingRepurchaseRate.TESTA_PCT_UNDERLYING_REPURCHASE_RATE,
+        tagData = new Log245PctUnderlyingRepurchaseRate(new MyPercentageType(
+                Log245PctUnderlyingRepurchaseRate.TESTA_PCT_UNDERLYING_REPURCHASE_RATE));
+        assertEquals( Log245PctUnderlyingRepurchaseRate.TESTA_PCT_UNDERLYING_REPURCHASE_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag245PctUnderlyingRepurchaseRate(new MyPercentageType(
-                Tag245PctUnderlyingRepurchaseRate.TESTB_PCT_UNDERLYING_REPURCHASE_RATE));
-        assertEquals( Tag245PctUnderlyingRepurchaseRate.TESTB_PCT_UNDERLYING_REPURCHASE_RATE,
+        tagData = new Log245PctUnderlyingRepurchaseRate(new MyPercentageType(
+                Log245PctUnderlyingRepurchaseRate.TESTB_PCT_UNDERLYING_REPURCHASE_RATE));
+        assertEquals( Log245PctUnderlyingRepurchaseRate.TESTB_PCT_UNDERLYING_REPURCHASE_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

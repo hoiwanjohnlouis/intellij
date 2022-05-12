@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,9 +47,9 @@ class Tag92StrBrokerOfCreditTest {
     }
     @Test
     void Tag0092Test() {
-        Tag92StrBrokerOfCredit tagData;
+        Log92StrBrokerOfCredit tagData;
 
-        tagData = new Tag92StrBrokerOfCredit(new MyStringType("Saruman-92StBrokerOfCredit") );
+        tagData = new Log92StrBrokerOfCredit(new MyStringType("Saruman-92StBrokerOfCredit") );
         assertEquals( "Saruman-92StBrokerOfCredit", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

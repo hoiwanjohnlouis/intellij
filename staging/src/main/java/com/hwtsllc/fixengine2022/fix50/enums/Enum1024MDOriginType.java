@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1024
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    1 - Off-Book
  *  <p>    2 - Cross
  */
-public enum Enum1024MDOriginType implements EnumAccessors, LogStringVerbose {
+public enum Enum1024MDOriginType implements EnumAccessors, LogVerboseString {
     BOOK( "0", "BOOK", "0 - Book" ),
     OFF_BOOK( "1", "OFF_BOOK", "1 - Off-Book" ),
     CROSS( "2", "CROSS", "2 - Cross" ),
@@ -79,7 +79,7 @@ public enum Enum1024MDOriginType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

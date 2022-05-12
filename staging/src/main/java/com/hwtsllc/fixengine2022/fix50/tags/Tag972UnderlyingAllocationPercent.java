@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  972
+ *  UnderlyingAllocationPercent
+ *  Percentage
+ *  <p>
+ *  Percent of the Strike Price that this underlying represents.
+ */
 public class Tag972UnderlyingAllocationPercent {
 }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,14 +44,14 @@ class Tag170StrStandInstDBNameTest {
     }
     @Test
     void Tag0170Test() {
-        Tag170StrStandInstDBName tagData;
+        Log170StrStandInstDBName tagData;
 
-        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME));
-        assertEquals( Tag170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME, tagData.getDataValue());
+        tagData = new Log170StrStandInstDBName(new MyStringType(Log170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME));
+        assertEquals( Log170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME));
-        assertEquals( Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME, tagData.getDataValue());
+        tagData = new Log170StrStandInstDBName(new MyStringType(Log170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME));
+        assertEquals( Log170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

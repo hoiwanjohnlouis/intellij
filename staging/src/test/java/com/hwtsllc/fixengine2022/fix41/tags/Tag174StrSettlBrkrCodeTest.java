@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,14 +47,14 @@ class Tag174StrSettlBrkrCodeTest {
     }
     @Test
     void Tag0174Test() {
-        Tag174StrSettlBrkrCode tagData;
+        Log174StrSettlBrkrCode tagData;
 
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE));
-        assertEquals( Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE, tagData.getDataValue());
+        tagData = new Log174StrSettlBrkrCode(new MyStringType(Log174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE));
+        assertEquals( Log174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
-        assertEquals( Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE, tagData.getDataValue());
+        tagData = new Log174StrSettlBrkrCode(new MyStringType(Log174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
+        assertEquals( Log174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

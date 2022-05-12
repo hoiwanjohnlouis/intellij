@@ -17,19 +17,28 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1063
+ *  UndlyInstrumentPartySubID
+ *  String
+ *  <p>
+ *  PartySubID value within an underlying instrument party repeating group.
+ *  <p>
+ *  Same values as  PartySubID (523)
+ */
 class Tag1063UndlyInstrumentPartySubIDTest {
     @Test
     void FIX1063Test() {
         FIX50 fixData = FIX50.FIX1063_UNDLY_INSTRUMENT_PARTY_SUB_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1063", fixData.getID());
+        assertEquals( "UNDLY_INSTRUMENT_PARTY_SUB_ID", fixData.getName());
+        assertEquals( "UndlyInstrumentPartySubId", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

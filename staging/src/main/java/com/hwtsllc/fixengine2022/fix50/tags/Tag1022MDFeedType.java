@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1022
+ *  MDFeedType
+ *  String
+ *  <p>
+ *  Describes a class of service for a given data feed.
+ *  i.e. Regular and Market Maker, Bandwidth Intensive or Bandwidth Conservative
+ */
 public class Tag1022MDFeedType {
 }

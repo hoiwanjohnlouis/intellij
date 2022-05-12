@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  716
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      ETH - Electronic Trading Hours
  *      EOD - End Of Day
  */
-public enum Enum716SettlSessID implements EnumAccessors, LogStringVerbose {
+public enum Enum716SettlSessID implements EnumAccessors, LogVerboseString {
     INTRADAY( "ITD", "INTRADAY", "ITD - Intraday" ),
     REGULAR_TRADING_HOURS( "RTH", "REGULAR_TRADING_HOURS", "RTH - Regular Trading Hours" ),
     ELECTRONIC_TRADING_HOURS( "ETH", "ELECTRONIC_TRADING_HOURS", "ETH - Electronic Trading Hours" ),
@@ -78,7 +78,7 @@ public enum Enum716SettlSessID implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

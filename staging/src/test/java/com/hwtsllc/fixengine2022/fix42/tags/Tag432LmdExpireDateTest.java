@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag432LmdExpireDateTest {
     }
     @Test
     void Tag0432Test() {
-        Tag432LmdExpireDate tagData;
+        Log432LmdExpireDate tagData;
 
-        tagData = new Tag432LmdExpireDate(new MyLocalMktDateType(
-                Tag432LmdExpireDate.TESTA_LMD_EXPIRE_DATE));
-        assertEquals( Tag432LmdExpireDate.TESTA_LMD_EXPIRE_DATE,
+        tagData = new Log432LmdExpireDate(new MyLocalMktDateType(
+                Log432LmdExpireDate.TESTA_LMD_EXPIRE_DATE));
+        assertEquals( Log432LmdExpireDate.TESTA_LMD_EXPIRE_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag432LmdExpireDate(new MyLocalMktDateType(
-                Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE));
-        assertEquals( Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE,
+        tagData = new Log432LmdExpireDate(new MyLocalMktDateType(
+                Log432LmdExpireDate.TESTB_LMD_EXPIRE_DATE));
+        assertEquals( Log432LmdExpireDate.TESTB_LMD_EXPIRE_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

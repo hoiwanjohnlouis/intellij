@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum197AllocLinkType;
 import org.junit.jupiter.api.Test;
 
@@ -48,13 +48,13 @@ class Tag197EnuAllocLinkTypeTest {
     }
     @Test
     void Tag0197Test() {
-        Tag197EnuAllocLinkType tagData;
+        Log197EnuAllocLinkType tagData;
 
-        tagData = new Tag197EnuAllocLinkType(Enum197AllocLinkType.FX_NETTING);
+        tagData = new Log197EnuAllocLinkType(Enum197AllocLinkType.FX_NETTING);
         assertEquals( Enum197AllocLinkType.FX_NETTING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag197EnuAllocLinkType(Enum197AllocLinkType.FX_SWAP);
+        tagData = new Log197EnuAllocLinkType(Enum197AllocLinkType.FX_SWAP);
         assertEquals( Enum197AllocLinkType.FX_SWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1062
+ *  NoUndlyInstrumentPartySubIDs
+ *  NumInGroup
+ *  <p>
+ *  Number of Underlying InstrumentPartySubID (1053) and InstrumentPartySubIDType (1054) entries
+ */
 public class Tag1062NoUndlyInstrumentPartySubIDs {
 }

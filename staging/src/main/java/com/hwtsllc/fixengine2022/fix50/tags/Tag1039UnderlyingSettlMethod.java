@@ -16,5 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1039
+ *  UnderlyingSettlMethod
+ *  String
+ *  <p>
+ */
 public class Tag1039UnderlyingSettlMethod {
 }

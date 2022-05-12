@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +36,7 @@ class Tag448StrPartyIDTest {
     }
     @Test
     void Tag0448Test() {
-        Tag448StrPartyID tagData;
+        Log448StrPartyID tagData;
 
     }
 }

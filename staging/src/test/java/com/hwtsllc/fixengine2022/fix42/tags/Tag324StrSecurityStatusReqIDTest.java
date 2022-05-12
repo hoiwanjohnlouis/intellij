@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag324StrSecurityStatusReqIDTest {
     }
     @Test
     void Tag0324Test() {
-        Tag324StrSecurityStatusReqID tagData;
+        Log324StrSecurityStatusReqID tagData;
 
-        tagData = new Tag324StrSecurityStatusReqID(new MyStringType(
-                Tag324StrSecurityStatusReqID.TESTA_STR_SECURITY_STATUS_REQ_ID));
-        assertEquals( Tag324StrSecurityStatusReqID.TESTA_STR_SECURITY_STATUS_REQ_ID,
+        tagData = new Log324StrSecurityStatusReqID(new MyStringType(
+                Log324StrSecurityStatusReqID.TESTA_STR_SECURITY_STATUS_REQ_ID));
+        assertEquals( Log324StrSecurityStatusReqID.TESTA_STR_SECURITY_STATUS_REQ_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag324StrSecurityStatusReqID(new MyStringType(
-                Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID));
-        assertEquals( Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID,
+        tagData = new Log324StrSecurityStatusReqID(new MyStringType(
+                Log324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID));
+        assertEquals( Log324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

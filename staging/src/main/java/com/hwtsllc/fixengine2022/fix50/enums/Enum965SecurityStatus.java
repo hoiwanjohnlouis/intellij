@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  965
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    1 - Active
  *  <p>    2 - Inactive
  */
-public enum Enum965SecurityStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum965SecurityStatus implements EnumAccessors, LogVerboseString {
     ACTIVE( "1", "ACTIVE", "1 - Active" ),
     INACTIVE( "2", "INACTIVE", "2 - Inactive" ),
     ;
@@ -79,7 +79,7 @@ public enum Enum965SecurityStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

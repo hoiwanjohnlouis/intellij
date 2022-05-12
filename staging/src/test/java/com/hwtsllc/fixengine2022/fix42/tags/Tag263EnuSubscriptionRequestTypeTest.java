@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum263SubscriptionRequestType;
 import org.junit.jupiter.api.Test;
 
@@ -44,20 +44,20 @@ class Tag263EnuSubscriptionRequestTypeTest {
      */
     @Test
     void Tag0263Test() {
-        Tag263EnuSubscriptionRequestType tagData;
+        Log263EnuSubscriptionRequestType tagData;
 
         /**
          * 0-2 msg types
          */
-        tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SNAPSHOT);
+        tagData = new Log263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SNAPSHOT);
         assertEquals( Enum263SubscriptionRequestType.SNAPSHOT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT);
+        tagData = new Log263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT);
         assertEquals( Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT);
+        tagData = new Log263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT);
         assertEquals( Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

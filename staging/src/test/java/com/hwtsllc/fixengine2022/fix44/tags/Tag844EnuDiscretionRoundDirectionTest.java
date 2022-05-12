@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumRoundDirection;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -58,13 +58,13 @@ class Tag844EnuDiscretionRoundDirectionTest {
     }
     @Test
     void Tag0844Test() {
-        Tag844EnuDiscretionRoundDirection tagData;
+        Log844EnuDiscretionRoundDirection tagData;
 
-        tagData = new Tag844EnuDiscretionRoundDirection(MyEnumRoundDirection.AGGRESSIVE);
+        tagData = new Log844EnuDiscretionRoundDirection(MyEnumRoundDirection.AGGRESSIVE);
         assertEquals( MyEnumRoundDirection.AGGRESSIVE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag844EnuDiscretionRoundDirection(MyEnumRoundDirection.PASSIVE);
+        tagData = new Log844EnuDiscretionRoundDirection(MyEnumRoundDirection.PASSIVE);
         assertEquals( MyEnumRoundDirection.PASSIVE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

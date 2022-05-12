@@ -17,19 +17,29 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1075
+ *  LegGrossTradeAmt
+ *  Amt
+ *  <p>
+ *  The gross trade amount of the leg.
+ *  <p>
+ *  For FX Futures this is used to express the notional value of a fill
+ *  when LegLastQty and other quantity fields are express in terms of contract size.
+ */
 class Tag1075LegGrossTradeAmtTest {
     @Test
     void FIX1075Test() {
         FIX50 fixData = FIX50.FIX1075_LEG_GROSS_TRADE_AMT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1075", fixData.getID());
+        assertEquals( "LEG_GROSS_TRADE_AMT", fixData.getName());
+        assertEquals( "leg_gross_trade_amt", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

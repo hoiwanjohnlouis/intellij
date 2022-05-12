@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag388
@@ -35,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      RELATED_TO_VWAP( "6", "RELATED_TO_VWAP", "6 - Related to VWAP" ),
  *      AVERAGE_PRICE_GUARANTEE( "7", "AVERAGE_PRICE_GUARANTEE", "7 - Average Price Guarantee" ),
  */
-public enum Enum388DiscretionInst implements EnumAccessors, LogStringVerbose {
+public enum Enum388DiscretionInst implements EnumAccessors, LogVerboseString {
     /**
      * 0-7 msg types
      */
@@ -99,7 +99,7 @@ public enum Enum388DiscretionInst implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

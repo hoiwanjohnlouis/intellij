@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  985
+ *  UnderlyingPayAmount
+ *  Amt
+ *  <p>
+ *  Amount to pay in order to receive the underlying instrument
+ */
 public class Tag985UnderlyingPayAmount {
 }

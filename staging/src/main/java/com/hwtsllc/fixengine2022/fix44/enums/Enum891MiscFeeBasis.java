@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  891
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Per Unit
  *      2 - Percentage
  */
-public enum Enum891MiscFeeBasis implements EnumAccessors, LogStringVerbose {
+public enum Enum891MiscFeeBasis implements EnumAccessors, LogVerboseString {
     ABSOLUTE( "0", "ABSOLUTE", "0 - Absolute" ),
     PER_UNIT( "1", "PER_UNIT", "1 - Per Unit" ),
     PERCENTAGE( "2", "PERCENTAGE", "2 - Percentage" ),
@@ -77,7 +77,7 @@ public enum Enum891MiscFeeBasis implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum827ExpirationCycle;
 import org.junit.jupiter.api.Test;
 
@@ -46,13 +46,13 @@ class Tag827EnuExpirationCycleTest {
     }
     @Test
     void Tag0827Test() {
-        Tag827EnuExpirationCycle tagData;
+        Log827EnuExpirationCycle tagData;
 
-        tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_CLOSE );
+        tagData = new Log827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_CLOSE );
         assertEquals( Enum827ExpirationCycle.EXPIRE_ON_CLOSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_OPEN );
+        tagData = new Log827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_OPEN );
         assertEquals( Enum827ExpirationCycle.EXPIRE_ON_OPEN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

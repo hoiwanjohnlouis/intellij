@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  857
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      0 - Not Specified
  *      1 - Explicit List Provided
  */
-public enum Enum857AllocNoOrdersType implements EnumAccessors, LogStringVerbose {
+public enum Enum857AllocNoOrdersType implements EnumAccessors, LogVerboseString {
     NOT_SPECIFIED( "0", "NOT_SPECIFIED", "0 - Not Specified" ),
     LIST_PROVIDED( "1", "LIST_PROVIDED", "1 - Explicit List Provided" ),
     ;
@@ -76,7 +76,7 @@ public enum Enum857AllocNoOrdersType implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

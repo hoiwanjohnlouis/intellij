@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag256StrUnderlyingCreditRatingTest {
     }
     @Test
     void Tag0256Test() {
-        Tag256StrUnderlyingCreditRating tagData;
+        Log256StrUnderlyingCreditRating tagData;
 
-        tagData = new Tag256StrUnderlyingCreditRating(new MyStringType(
-                Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING));
-        assertEquals( Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING,
+        tagData = new Log256StrUnderlyingCreditRating(new MyStringType(
+                Log256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING));
+        assertEquals( Log256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag256StrUnderlyingCreditRating(new MyStringType(
-                Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING));
-        assertEquals( Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING,
+        tagData = new Log256StrUnderlyingCreditRating(new MyStringType(
+                Log256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING));
+        assertEquals( Log256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

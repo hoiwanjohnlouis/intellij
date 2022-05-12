@@ -16,5 +16,18 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1017
+ *  LegOptionRatio
+ *  float
+ *  <p>
+ *  Expresses the risk of an option leg
+ *  <p>
+ *  Value must be between -1 and 1.
+ *  <p>
+ *  A Call Option will require a ratio value between 0 and 1
+ *  <p>
+ *  A Put Option will require a ratio value between -1 and 0
+ */
 public class Tag1017LegOptionRatio {
 }

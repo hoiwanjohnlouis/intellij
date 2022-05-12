@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag415IntProgPeriodIntervalTest {
     }
     @Test
     void Tag0415Test() {
-        Tag415IntProgPeriodInterval tagData;
+        Log415IntProgPeriodInterval tagData;
 
-        tagData = new Tag415IntProgPeriodInterval(new MyIntType(
-                Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL));
-        assertEquals( Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL,
+        tagData = new Log415IntProgPeriodInterval(new MyIntType(
+                Log415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL));
+        assertEquals( Log415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag415IntProgPeriodInterval(new MyIntType(
-                Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL));
-        assertEquals( Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL,
+        tagData = new Log415IntProgPeriodInterval(new MyIntType(
+                Log415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL));
+        assertEquals( Log415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

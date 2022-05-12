@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum787DlvyInstType;
 import org.junit.jupiter.api.Test;
 
@@ -45,13 +45,13 @@ class Tag787EnuDlvyInstTypeTest {
     }
     @Test
     void Tag0787Test() {
-        Tag787EnuDlvyInstType tagData;
+        Log787EnuDlvyInstType tagData;
 
-        tagData = new Tag787EnuDlvyInstType( Enum787DlvyInstType.CASH );
+        tagData = new Log787EnuDlvyInstType( Enum787DlvyInstType.CASH );
         assertEquals( Enum787DlvyInstType.CASH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag787EnuDlvyInstType( Enum787DlvyInstType.SECURITIES);
+        tagData = new Log787EnuDlvyInstType( Enum787DlvyInstType.SECURITIES);
         assertEquals( Enum787DlvyInstType.SECURITIES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

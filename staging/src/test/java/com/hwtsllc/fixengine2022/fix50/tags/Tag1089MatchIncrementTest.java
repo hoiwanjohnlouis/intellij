@@ -17,19 +17,30 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1089
+ *  MatchIncrement
+ *  Qty
+ *  <p>
+ *  Allows orders to specify a minimum quantity that applies to every execution
+ *  (one execution could be for multiple counter-orders).
+ *  <p>
+ *  The order may still fill against smaller orders, but the cumulative quantity
+ *  of the execution must be in multiples of the MatchIncrement.
+ */
 class Tag1089MatchIncrementTest {
     @Test
     void FIX1089Test() {
         FIX50 fixData = FIX50.FIX1089_MATCH_INCREMENT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1089", fixData.getID());
+        assertEquals( "MATCH_INCREMENT", fixData.getName());
+        assertEquals( "match_increment", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1056
+ *  CalculatedCcyLastQty
+ *  Qty
+ *  <p>
+ *  Used for the calculated quantity of the other side of the currency trade.
+ *  <p>
+ *  Can be derived from LastQty and LastPx.
+ */
 public class Tag1056CalculatedCcyLastQty {
 }

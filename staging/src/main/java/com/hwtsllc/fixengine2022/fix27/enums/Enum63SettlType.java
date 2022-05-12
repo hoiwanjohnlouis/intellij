@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  63
@@ -72,7 +72,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Tenor
  */
-public enum Enum63SettlType implements EnumAccessors, LogStringVerbose {
+public enum Enum63SettlType implements EnumAccessors, LogVerboseString {
     REGULAR( "0", "REGULAR", "0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)" ),
     CASH( "1", "CASH", "1 - Cash (TOD / T+0)" ),
     NEXT_DAY( "2", "NEXT_DAY", "2 - Next Day (TOM / T+1)" ),
@@ -131,7 +131,7 @@ public enum Enum63SettlType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

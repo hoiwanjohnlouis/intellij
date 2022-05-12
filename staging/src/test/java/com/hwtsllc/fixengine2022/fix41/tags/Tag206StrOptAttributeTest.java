@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -55,14 +55,14 @@ class Tag206StrOptAttributeTest {
     }
     @Test
     void Tag0206Test() {
-        Tag206StrOptAttribute tagData;
+        Log206StrOptAttribute tagData;
 
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE));
-        assertEquals( Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE, tagData.getDataValue());
+        tagData = new Log206StrOptAttribute(new MyStringType(Log206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE));
+        assertEquals( Log206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
-        assertEquals( Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE, tagData.getDataValue());
+        tagData = new Log206StrOptAttribute(new MyStringType(Log206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
+        assertEquals( Log206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

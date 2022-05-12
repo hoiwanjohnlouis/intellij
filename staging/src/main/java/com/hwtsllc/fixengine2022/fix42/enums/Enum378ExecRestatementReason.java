@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag378
@@ -41,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      PEG_REFRESH( "11", "PEG_REFRESH", "11 - Peg Refresh" ),
  *      OTHER( "99", "OTHER", "99 - Other" ),
  */
-public enum Enum378ExecRestatementReason implements EnumAccessors, LogStringVerbose {
+public enum Enum378ExecRestatementReason implements EnumAccessors, LogVerboseString {
     /**
      * 0-11, 99 msg types
      */
@@ -115,7 +115,7 @@ public enum Enum378ExecRestatementReason implements EnumAccessors, LogStringVerb
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

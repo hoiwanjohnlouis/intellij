@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1058
+ *  NoUndlyInstrumentParties
+ *  NumInGroup
+ *  <p>
+ *  Identifies the number of parties identified with an underlying instrument
+ */
 class Tag1058NoUndlyInstrumentPartiesTest {
     @Test
     void FIX1058Test() {
         FIX50 fixData = FIX50.FIX1058_NO_UNDLY_INSTRUMENT_PARTIES;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1058", fixData.getID());
+        assertEquals( "NO_UNDLY_INSTRUMENT_PARTIES", fixData.getName());
+        assertEquals( "NoUndlyInstrumentParties", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

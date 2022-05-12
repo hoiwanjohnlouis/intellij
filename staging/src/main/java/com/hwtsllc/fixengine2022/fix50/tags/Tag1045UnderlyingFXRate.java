@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1045
+ *  UnderlyingFXRate
+ *  float
+ *  <p>
+ *  Foreign exchange rate used to compute UnderlyingCurrentValue (885) (or market value)
+ *  from UnderlyingCurrency (318) to Currency (15).
+ */
 public class Tag1045UnderlyingFXRate {
 }

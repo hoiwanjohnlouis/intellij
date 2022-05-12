@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag402PctLiquidityPctLowTest {
     }
     @Test
     void Tag0402Test() {
-        Tag402PctLiquidityPctLow tagData;
+        Log402PctLiquidityPctLow tagData;
 
-        tagData = new Tag402PctLiquidityPctLow(new MyPercentageType(
-                Tag402PctLiquidityPctLow.TESTA_PCT_LIQUIDITY_PCT_LOW));
-        assertEquals( Tag402PctLiquidityPctLow.TESTA_PCT_LIQUIDITY_PCT_LOW,
+        tagData = new Log402PctLiquidityPctLow(new MyPercentageType(
+                Log402PctLiquidityPctLow.TESTA_PCT_LIQUIDITY_PCT_LOW));
+        assertEquals( Log402PctLiquidityPctLow.TESTA_PCT_LIQUIDITY_PCT_LOW,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag402PctLiquidityPctLow(new MyPercentageType(
-                Tag402PctLiquidityPctLow.TESTB_PCT_LIQUIDITY_PCT_LOW));
-        assertEquals( Tag402PctLiquidityPctLow.TESTB_PCT_LIQUIDITY_PCT_LOW,
+        tagData = new Log402PctLiquidityPctLow(new MyPercentageType(
+                Log402PctLiquidityPctLow.TESTB_PCT_LIQUIDITY_PCT_LOW));
+        assertEquals( Log402PctLiquidityPctLow.TESTB_PCT_LIQUIDITY_PCT_LOW,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

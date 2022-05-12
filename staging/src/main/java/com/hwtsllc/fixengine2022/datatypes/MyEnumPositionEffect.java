@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  77 (Same for TAGS 77, 564, 1047, )
@@ -52,7 +52,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    O - Open
  *  <p>    R - Rolled
  */
-public enum MyEnumPositionEffect implements EnumAccessors, LogStringVerbose {
+public enum MyEnumPositionEffect implements EnumAccessors, LogVerboseString {
     CLOSE("C", "CLOSE", "C - Close" ),
     FIFO("F", "FIFO", "F - First In, First Out" ),
     OPEN("O", "OPEN", "O - Open" ),
@@ -101,7 +101,7 @@ public enum MyEnumPositionEffect implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

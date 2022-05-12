@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag222StrBenchmarkCurvePointTest {
     }
     @Test
     void Tag0222Test() {
-        Tag222StrBenchmarkCurvePoint tagData;
+        Log222StrBenchmarkCurvePoint tagData;
 
-        tagData = new Tag222StrBenchmarkCurvePoint(
-                new MyStringType(Tag222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT));
-        assertEquals( Tag222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
+        tagData = new Log222StrBenchmarkCurvePoint(
+                new MyStringType(Log222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT));
+        assertEquals( Log222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag222StrBenchmarkCurvePoint(
-                new MyStringType(Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT));
-        assertEquals( Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
+        tagData = new Log222StrBenchmarkCurvePoint(
+                new MyStringType(Log222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT));
+        assertEquals( Log222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

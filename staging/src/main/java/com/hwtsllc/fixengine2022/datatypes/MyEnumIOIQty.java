@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  27 (same as 27, 682)
@@ -41,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    L - Large
  *  <p>    U - Undisclosed Quantity
  */
-public enum MyEnumIOIQty implements EnumAccessors, LogStringVerbose {
+public enum MyEnumIOIQty implements EnumAccessors, LogVerboseString {
     ONE_BILLION("0", "ONE_BILLION", "0 - 1,000,000,000" ),
     SMALL("S", "SMALL", "S - Small" ),
     MEDIUM("M", "MEDIUM", "M - Medium" ),
@@ -91,7 +91,7 @@ public enum MyEnumIOIQty implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

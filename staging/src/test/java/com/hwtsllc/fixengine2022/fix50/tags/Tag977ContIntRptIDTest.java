@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  977
+ *  ContIntRptID
+ *  String
+ *  <p>
+ *  Unique identifier for the Contrary Intention report
+ */
 class Tag977ContIntRptIDTest {
     @Test
     void FIX0977Test() {
         FIX50 fixData = FIX50.FIX977_CONT_INT_RPT_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "977", fixData.getID());
+        assertEquals( "CONT_INT_RPT_ID", fixData.getName());
+        assertEquals( "ContIntRptId", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

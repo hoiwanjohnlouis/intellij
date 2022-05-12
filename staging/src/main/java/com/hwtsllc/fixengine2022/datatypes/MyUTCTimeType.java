@@ -16,12 +16,12 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  MyUTCTimeType contains only the TIME portion of UTC.
  */
-public class MyUTCTimeType implements LogStringVerbose {
+public class MyUTCTimeType implements LogVerboseString {
     private final String dataValue;
 
     public MyUTCTimeType(final String dataValue) {
@@ -35,7 +35,7 @@ public class MyUTCTimeType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -57,6 +57,6 @@ public class MyUTCTimeType implements LogStringVerbose {
 
         dataType = new MyUTCTimeType("120000");
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  827
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      0 - Expire on trading session close (default)
  *      1 - Expire on trading session open
  */
-public enum Enum827ExpirationCycle implements EnumAccessors, LogStringVerbose {
+public enum Enum827ExpirationCycle implements EnumAccessors, LogVerboseString {
     EXPIRE_ON_CLOSE( "0", "EXPIRE_ON_CLOSE", "0 - Expire on trading session close (default)" ),
     EXPIRE_ON_OPEN( "1", "EXPIRE_ON_OPEN", "1 - Expire on trading session open" ),
     ;
@@ -75,7 +75,7 @@ public enum Enum827ExpirationCycle implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

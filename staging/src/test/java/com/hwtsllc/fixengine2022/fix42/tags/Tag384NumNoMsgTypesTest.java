@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag384NumNoMsgTypesTest {
     }
     @Test
     void Tag0384Test() {
-        Tag384NumNoMsgTypes tagData;
+        Log384NumNoMsgTypes tagData;
 
-        tagData = new Tag384NumNoMsgTypes(new MyNumInGroupType(
-                Tag384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES));
-        assertEquals( Tag384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES,
+        tagData = new Log384NumNoMsgTypes(new MyNumInGroupType(
+                Log384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES));
+        assertEquals( Log384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag384NumNoMsgTypes(new MyNumInGroupType(
-                Tag384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES));
-        assertEquals( Tag384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES,
+        tagData = new Log384NumNoMsgTypes(new MyNumInGroupType(
+                Log384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES));
+        assertEquals( Log384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

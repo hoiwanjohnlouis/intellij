@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +36,7 @@ class Tag472StrLocaleOfIssueTest {
     }
     @Test
     void Tag0472Test() {
-        Tag472StrLocaleOfIssue tagData;
+        Log472StrLocaleOfIssue tagData;
 
     }
 }

@@ -16,5 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1073
+ *  LegLastForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  The forward points for this leg's fill event.
+ *  <p>
+ *  Value can be negative. Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 public class Tag1073LegLastForwardPoints {
 }

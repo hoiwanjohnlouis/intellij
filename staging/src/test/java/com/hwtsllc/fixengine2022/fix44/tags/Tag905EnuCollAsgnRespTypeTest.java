@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum905CollAsgnRespType;
 import org.junit.jupiter.api.Test;
 
@@ -48,21 +48,21 @@ class Tag905EnuCollAsgnRespTypeTest {
     }
     @Test
     void Tag0905Test() {
-        Tag905EnuCollAsgnRespType tagData;
+        Log905EnuCollAsgnRespType tagData;
 
-        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.RECEIVED );
+        tagData = new Log905EnuCollAsgnRespType( Enum905CollAsgnRespType.RECEIVED );
         assertEquals( Enum905CollAsgnRespType.RECEIVED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.ACCEPTED );
+        tagData = new Log905EnuCollAsgnRespType( Enum905CollAsgnRespType.ACCEPTED );
         assertEquals( Enum905CollAsgnRespType.ACCEPTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.DECLINED );
+        tagData = new Log905EnuCollAsgnRespType( Enum905CollAsgnRespType.DECLINED );
         assertEquals( Enum905CollAsgnRespType.DECLINED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.REJECTED );
+        tagData = new Log905EnuCollAsgnRespType( Enum905CollAsgnRespType.REJECTED );
         assertEquals( Enum905CollAsgnRespType.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

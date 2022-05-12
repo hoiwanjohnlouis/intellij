@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1102
+ *  TriggerPrice
+ *  Price
+ *  <p>
+ *  The price at which the trigger should hit.
+ */
 public class Tag1102TriggerPrice {
 }

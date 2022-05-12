@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  792
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum792SettlInstReqRejCode implements EnumAccessors, LogStringVerbose {
+public enum Enum792SettlInstReqRejCode implements EnumAccessors, LogVerboseString {
     UNABLE_TO_PROCESS_REQUEST( "0", "UNABLE_TO_PROCESS_REQUEST", "0 - Unable to process request" ),
     UNKNOWN_ACCOUNT( "1", "UNKNOWN_ACCOUNT", "1 - Unknown account" ),
     NO_MATCHING_INSTRUCTIONS( "2", "NO_MATCHING_INSTRUCTIONS", "2 - No matching settlement instructions found" ),
@@ -80,7 +80,7 @@ public enum Enum792SettlInstReqRejCode implements EnumAccessors, LogStringVerbos
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

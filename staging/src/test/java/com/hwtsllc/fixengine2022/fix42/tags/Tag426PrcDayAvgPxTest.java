@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag426PrcDayAvgPxTest {
     }
     @Test
     void Tag0426Test() {
-        Tag426PrcDayAvgPx tagData;
+        Log426PrcDayAvgPx tagData;
 
-        tagData = new Tag426PrcDayAvgPx(new MyPriceType(
-                Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX));
-        assertEquals( Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX,
+        tagData = new Log426PrcDayAvgPx(new MyPriceType(
+                Log426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX));
+        assertEquals( Log426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag426PrcDayAvgPx(new MyPriceType(
-                Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX));
-        assertEquals( Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX,
+        tagData = new Log426PrcDayAvgPx(new MyPriceType(
+                Log426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX));
+        assertEquals( Log426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

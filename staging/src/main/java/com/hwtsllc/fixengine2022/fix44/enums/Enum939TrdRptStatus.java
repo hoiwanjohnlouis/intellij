@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  939
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Rejected
  *      3 - Accepted with errors
  */
-public enum Enum939TrdRptStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum939TrdRptStatus implements EnumAccessors, LogVerboseString {
     ACCEPTED( "0", "ACCEPTED", "0 - Accepted" ),
     REJECTED( "1", "REJECTED", "1 - Rejected" ),
     ACCEPTED_WITH_ERRORS( "3", "ACCEPTED_WITH_ERRORS", "3 - Accepted with errors" ),
@@ -77,7 +77,7 @@ public enum Enum939TrdRptStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

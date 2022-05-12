@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1048
+ *  DealingCapacity
+ *  PriceOffset
+ *  <p>
+ *  Identifies role of dealer; Agent, Principal, RisklessPrincipal
+ */
 class Tag1048DealingCapacityTest {
     @Test
     void FIX1048Test() {
         FIX50 fixData = FIX50.FIX1048_DEALING_CAPACITY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1048", fixData.getID());
+        assertEquals( "DEALING_CAPACITY", fixData.getName());
+        assertEquals( "DealingCapacity", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -16,5 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1023
+ *  MDPriceLevel
+ *  int
+ *  <p>
+ *  Integer to convey the level of a bid or offer at a given price level.
+ *  <p>
+ *  This is in contrast to MDEntryPositionNo which is used to
+ *  convey the position of an order within a Price level
+ */
 public class Tag1023MDPriceLevel {
 }

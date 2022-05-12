@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPutOrCall;
 import org.junit.jupiter.api.Test;
 
@@ -54,13 +54,13 @@ class Tag201EnuPutOrCallTest {
     }
     @Test
     void Tag0201Test() {
-        Tag201EnuPutOrCall tagData;
+        Log201EnuPutOrCall tagData;
 
-        tagData = new Tag201EnuPutOrCall(MyEnumPutOrCall.CALL);
+        tagData = new Log201EnuPutOrCall(MyEnumPutOrCall.CALL);
         assertEquals( MyEnumPutOrCall.CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag201EnuPutOrCall(MyEnumPutOrCall.PUT);
+        tagData = new Log201EnuPutOrCall(MyEnumPutOrCall.PUT);
         assertEquals( MyEnumPutOrCall.PUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  103
@@ -48,7 +48,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum103OrdRejReason implements EnumAccessors, LogStringVerbose {
+public enum Enum103OrdRejReason implements EnumAccessors, LogVerboseString {
     BROKER_OR_EXCHANGE("0", "BROKER_OR_EXCHANGE",
             "0 - Broker or Exchange option"),
     UNKNOWN_SYMBOL("1", "UNKNOWN_SYMBOL",
@@ -132,7 +132,7 @@ public enum Enum103OrdRejReason implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

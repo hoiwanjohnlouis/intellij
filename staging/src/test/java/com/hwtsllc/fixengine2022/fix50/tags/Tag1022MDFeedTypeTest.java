@@ -17,19 +17,27 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1022
+ *  MDFeedType
+ *  String
+ *  <p>
+ *  Describes a class of service for a given data feed.
+ *  i.e. Regular and Market Maker, Bandwidth Intensive or Bandwidth Conservative
+ */
 class Tag1022MDFeedTypeTest {
     @Test
     void FIX1022Test() {
         FIX50 fixData = FIX50.FIX1022_MD_FEED_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1022", fixData.getID());
+        assertEquals( "MD_FEED_TYPE", fixData.getName());
+        assertEquals( "MDFeedType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  303
@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      MANUAL( "1", "MANUAL", "1 - Manual" ),
  *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
  */
-public enum Enum303QuoteRequestType implements EnumAccessors, LogStringVerbose {
+public enum Enum303QuoteRequestType implements EnumAccessors, LogVerboseString {
     /**
      * 1-2 msg types
      */
@@ -77,7 +77,7 @@ public enum Enum303QuoteRequestType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  279
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
  *      DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
  */
-public enum Enum279MDUpdateAction implements EnumAccessors, LogStringVerbose {
+public enum Enum279MDUpdateAction implements EnumAccessors, LogVerboseString {
     /**
      * 0-4 msg types
      */
@@ -83,7 +83,7 @@ public enum Enum279MDUpdateAction implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

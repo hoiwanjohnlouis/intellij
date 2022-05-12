@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum431ListOrderStatus;
 import org.junit.jupiter.api.Test;
 
@@ -51,36 +51,36 @@ class Tag431EnuListOrderStatusTest {
      */
     @Test
     void Tag0431Test() {
-        Tag431EnuListOrderStatus tagData;
+        Log431EnuListOrderStatus tagData;
 
         /**
          * 1-7 msg types
          */
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.IN_BIDDING_PROCESS);
+        tagData = new Log431EnuListOrderStatus(Enum431ListOrderStatus.IN_BIDDING_PROCESS);
         assertEquals( Enum431ListOrderStatus.IN_BIDDING_PROCESS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION);
+        tagData = new Log431EnuListOrderStatus(Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION);
         assertEquals( Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.EXECUTING);
+        tagData = new Log431EnuListOrderStatus(Enum431ListOrderStatus.EXECUTING);
         assertEquals( Enum431ListOrderStatus.EXECUTING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.CANCELLING);
+        tagData = new Log431EnuListOrderStatus(Enum431ListOrderStatus.CANCELLING);
         assertEquals( Enum431ListOrderStatus.CANCELLING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALERT);
+        tagData = new Log431EnuListOrderStatus(Enum431ListOrderStatus.ALERT);
         assertEquals( Enum431ListOrderStatus.ALERT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALL_DONE);
+        tagData = new Log431EnuListOrderStatus(Enum431ListOrderStatus.ALL_DONE);
         assertEquals( Enum431ListOrderStatus.ALL_DONE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.REJECT);
+        tagData = new Log431EnuListOrderStatus(Enum431ListOrderStatus.REJECT);
         assertEquals( Enum431ListOrderStatus.REJECT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

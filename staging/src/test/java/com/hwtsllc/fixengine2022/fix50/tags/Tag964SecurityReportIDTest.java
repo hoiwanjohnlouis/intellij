@@ -17,19 +17,28 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  964
+ *  SecurityReportID
+ *  int
+ *  <p>
+ *  Security Report ID.
+ *  <p>
+ *  Unique identifier for the Security Report.
+ */
 class Tag964SecurityReportIDTest {
     @Test
     void FIX0964Test() {
         FIX50 fixData = FIX50.FIX964_SECURITY_REPORT_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "964", fixData.getID());
+        assertEquals( "SECURITY_REPORT_ID", fixData.getName());
+        assertEquals( "SecurityReportId", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

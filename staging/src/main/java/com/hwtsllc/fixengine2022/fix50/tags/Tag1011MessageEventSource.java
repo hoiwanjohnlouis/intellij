@@ -16,5 +16,19 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1011
+ *  MessageEventSource
+ *  String
+ *  <p>
+ *  Used to identify the event or source  which gave rise to a message.
+ *  <p>
+ *  Valid values will be based on an exchange's implementation.
+ *  <p>
+ *  Example values are:
+ *  <p>     "MQM" (originated at Firm Back Office)
+ *  <p>     "Clear" (originated in Clearing System)
+ *  <p>     "Reg" (static data generated via Register request)
+ */
 public class Tag1011MessageEventSource {
 }

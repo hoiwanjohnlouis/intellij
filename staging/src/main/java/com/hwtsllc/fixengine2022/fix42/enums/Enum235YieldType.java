@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  235
@@ -58,7 +58,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      "VALUE1_32 - Yield Value Of 1/32"
  *      "WORST - Yield To Worst"
  */
-public enum Enum235YieldType implements EnumAccessors, LogStringVerbose {
+public enum Enum235YieldType implements EnumAccessors, LogVerboseString {
     AFTERTAX( "AFTERTAX", "AFTERTAX", "AFTERTAX - After Tax Yield (Municipals)" ),
     ANNUAL( "ANNUAL", "ANNUAL", "ANNUAL - Annual Yield" ),
     ATISSUE( "ATISSUE", "ATISSUE", "ATISSUE - Yield At Issue (Municipals)" ),
@@ -137,7 +137,7 @@ public enum Enum235YieldType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

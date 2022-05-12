@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  977
+ *  ContIntRptID
+ *  String
+ *  <p>
+ *  Unique identifier for the Contrary Intention report
+ */
 public class Tag977ContIntRptID {
 }

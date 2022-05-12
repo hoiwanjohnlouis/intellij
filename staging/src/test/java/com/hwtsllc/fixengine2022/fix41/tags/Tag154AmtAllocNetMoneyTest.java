@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,14 +44,14 @@ class Tag154AmtAllocNetMoneyTest {
     }
     @Test
     void Tag0154Test() {
-        Tag154AmtAllocNetMoney tagData;
+        Log154AmtAllocNetMoney tagData;
 
-        tagData = new Tag154AmtAllocNetMoney(new MyAmtType(Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY));
-        assertEquals( Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY, tagData.getDataValue());
+        tagData = new Log154AmtAllocNetMoney(new MyAmtType(Log154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY));
+        assertEquals( Log154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag154AmtAllocNetMoney(new MyAmtType(Tag154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY));
-        assertEquals( Tag154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY, tagData.getDataValue());
+        tagData = new Log154AmtAllocNetMoney(new MyAmtType(Log154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY));
+        assertEquals( Log154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

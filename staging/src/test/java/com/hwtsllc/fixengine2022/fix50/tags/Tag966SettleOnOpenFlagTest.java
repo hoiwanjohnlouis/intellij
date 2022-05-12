@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  966
+ *  SettleOnOpenFlag
+ *  String
+ *  <p>
+ *  Indicator to determine if instrument is settle on open
+ */
 class Tag966SettleOnOpenFlagTest {
     @Test
     void FIX0966Test() {
         FIX50 fixData = FIX50.FIX966_SETTLE_ON_OPEN_FLAG;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "966", fixData.getID());
+        assertEquals( "SETTLE_ON_OPEN_FLAG", fixData.getName());
+        assertEquals( "SettleOnOpenFlag", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

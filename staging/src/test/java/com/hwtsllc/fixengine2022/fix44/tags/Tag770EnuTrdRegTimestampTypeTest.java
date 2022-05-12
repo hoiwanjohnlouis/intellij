@@ -17,7 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum770TrdRegTimestampType;
 import org.junit.jupiter.api.Test;
 
@@ -53,13 +54,15 @@ class Tag770EnuTrdRegTimestampTypeTest {
     }
     @Test
     void Tag0770Test() {
-        Tag770EnuTrdRegTimestampType tagData;
+        Log770EnuTrdRegTimestampType tagData;
 
-        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.EXECUTION_TIME);
-        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_IN);
-        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_OUT);
-        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_RECEIPT);
-        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_EXECUTION);
-        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.DESK_RECEIPT);
+        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.EXECUTION_TIME);
+        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_IN);
+        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_OUT);
+        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_RECEIPT);
+        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_EXECUTION);
+        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.DESK_RECEIPT);
+        assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

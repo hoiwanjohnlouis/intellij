@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag332PrcHighPxTest {
     }
     @Test
     void Tag0332Test() {
-        Tag332PrcHighPx tagData;
+        Log332PrcHighPx tagData;
 
-        tagData = new Tag332PrcHighPx(new MyPriceType(
-                Tag332PrcHighPx.TESTA_PRC_HIGH_PX));
-        assertEquals( Tag332PrcHighPx.TESTA_PRC_HIGH_PX,
+        tagData = new Log332PrcHighPx(new MyPriceType(
+                Log332PrcHighPx.TESTA_PRC_HIGH_PX));
+        assertEquals( Log332PrcHighPx.TESTA_PRC_HIGH_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag332PrcHighPx(new MyPriceType(
-                Tag332PrcHighPx.TESTB_PRC_HIGH_PX));
-        assertEquals( Tag332PrcHighPx.TESTB_PRC_HIGH_PX,
+        tagData = new Log332PrcHighPx(new MyPriceType(
+                Log332PrcHighPx.TESTB_PRC_HIGH_PX));
+        assertEquals( Log332PrcHighPx.TESTB_PRC_HIGH_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

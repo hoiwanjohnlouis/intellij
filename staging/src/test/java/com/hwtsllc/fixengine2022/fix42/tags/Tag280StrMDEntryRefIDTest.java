@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag280StrMDEntryRefIDTest {
     }
     @Test
     void Tag0280Test() {
-        Tag280StrMDEntryRefID tagData;
+        Log280StrMDEntryRefID tagData;
 
-        tagData = new Tag280StrMDEntryRefID(
-                new MyStringType(Tag280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID));
-        assertEquals( Tag280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID, tagData.getDataValue() );
+        tagData = new Log280StrMDEntryRefID(
+                new MyStringType(Log280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID));
+        assertEquals( Log280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag280StrMDEntryRefID(
-                new MyStringType(Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD));
-        assertEquals( Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD, tagData.getDataValue() );
+        tagData = new Log280StrMDEntryRefID(
+                new MyStringType(Log280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD));
+        assertEquals( Log280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

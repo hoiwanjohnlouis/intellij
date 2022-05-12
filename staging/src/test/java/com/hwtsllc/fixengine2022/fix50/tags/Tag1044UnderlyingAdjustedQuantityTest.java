@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1044
+ *  UnderlyingAdjustedQuantity
+ *  Qty
+ *  <p>
+ *  Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated.
+ */
 class Tag1044UnderlyingAdjustedQuantityTest {
     @Test
     void FIX1044Test() {
         FIX50 fixData = FIX50.FIX1044_UNDERLYING_ADJUSTED_QUANTITY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1044", fixData.getID());
+        assertEquals( "UNDERLYING_ADJUSTED_QUANTITY", fixData.getName());
+        assertEquals( "UnderlyingAdjustedQuantity", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

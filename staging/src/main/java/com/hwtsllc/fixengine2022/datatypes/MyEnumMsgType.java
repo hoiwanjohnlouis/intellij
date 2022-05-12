@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  35 (same as TAGS 35, 372)
@@ -184,7 +184,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    SECURITY_DEFINITION_UPDATE_REPORT("BP", "SECURITY_DEFINITION_UPDATE_REPORT",
  *                          "BP - Security Definition Update Report" ),
  */
-public enum MyEnumMsgType implements EnumAccessors, LogStringVerbose {
+public enum MyEnumMsgType implements EnumAccessors, LogVerboseString {
     /*
      *  0-9, msg types
      *  A-Z, msg types, skipping "I", and "O"
@@ -450,7 +450,7 @@ public enum MyEnumMsgType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

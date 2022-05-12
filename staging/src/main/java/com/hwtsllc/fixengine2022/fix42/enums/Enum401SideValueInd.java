@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag401
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
  *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
  */
-public enum Enum401SideValueInd implements EnumAccessors, LogStringVerbose {
+public enum Enum401SideValueInd implements EnumAccessors, LogVerboseString {
     /**
      * 1-2 msg types
      */
@@ -78,7 +78,7 @@ public enum Enum401SideValueInd implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

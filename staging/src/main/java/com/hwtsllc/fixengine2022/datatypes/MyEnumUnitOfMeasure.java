@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  996 (same as 996, 998, 999,)
@@ -58,7 +58,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    tn - Tons (US)
  *  <p>    USD - US Dollars
  */
-public enum MyEnumUnitOfMeasure implements EnumAccessors, LogStringVerbose {
+public enum MyEnumUnitOfMeasure implements EnumAccessors, LogVerboseString {
     BARRELS( "Bbl", "BARRELS", "Bbl - Barrels" ),
     BILLION_CUBIC_FEET( "Bcf", "BILLION_CUBIC_FEET", "Bcf - Billion cubic feet" ),
     BUSHELS( "Bu", "BUSHELS", "Bu - Bushels" ),
@@ -117,7 +117,7 @@ public enum MyEnumUnitOfMeasure implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

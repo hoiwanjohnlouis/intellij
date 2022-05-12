@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,9 +48,9 @@ class Tag16SeqEndSeqNoTest {
     }
     @Test
     void Tag0016Test() {
-        Tag16SeqEndSeqNo tagData;
+        Log16SeqEndSeqNo tagData;
 
-        tagData = new Tag16SeqEndSeqNo(new MySeqNumType(6789));
+        tagData = new Log16SeqEndSeqNo(new MySeqNumType(6789));
         assertEquals( 6789, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag418
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
  *      RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
  */
-public enum Enum418BidTradeType implements EnumAccessors, LogStringVerbose {
+public enum Enum418BidTradeType implements EnumAccessors, LogVerboseString {
     /**
      * A, G, J, and R msg types
      */
@@ -82,7 +82,7 @@ public enum Enum418BidTradeType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

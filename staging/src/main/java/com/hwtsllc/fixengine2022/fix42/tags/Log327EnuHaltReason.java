@@ -1,0 +1,96 @@
+/*
+ * Copyright (c) 2022.  HW Tech Services, LLC
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+
+package com.hwtsllc.fixengine2022.fix42.tags;
+
+import com.hwtsllc.fixengine2022.datatypes.FIX42;
+import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum327HaltReason;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
+
+/**
+ *  Tag327
+ *  Enu
+ *  HaltReason
+ *
+ *      D, E, I, M, P, and X msg types
+ *      NEWS_DISSEMINATION( "D", "NEWS_DISSEMINATION", "D - News Dissemination" ),
+ *      ORDER_INFLUX( "E", "ORDER_INFLUX", "E - Order Influx" ),
+ *      ORDER_IMBALANCE( "I", "ORDER_IMBALANCE", "I - Order Imbalance" ),
+ *      ADDITIONAL_INFORMATION( "M", "ADDITIONAL_INFORMATION", "M - Additional Information" ),
+ *      NEW_PENDING( "P", "NEW_PENDING", "P - New Pending" ),
+ *      EQUIPMENT_CHANGE_OVER( "X", "EQUIPMENT_CHANGE_OVER", "X - Equipment Changeover" ),
+ */
+public class Log327EnuHaltReason extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+    private final Enum327HaltReason dataValue;
+
+    public final static Enum327HaltReason TESTA_ENU_HALT_REASON = Enum327HaltReason.ADDITIONAL_INFORMATION;
+    public final static Enum327HaltReason TESTB_ENU_HALT_REASON = Enum327HaltReason.EQUIPMENT_CHANGE_OVER;
+
+    public Log327EnuHaltReason(Enum327HaltReason dataValue) {
+        setFixType(FIX42.FIX327_ENU_HALT_REASON);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getID();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(getDataValue());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toVerboseString() {
+        return super.toVerboseString()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Log327EnuHaltReason tagData;
+
+        tagData = new Log327EnuHaltReason(TESTA_ENU_HALT_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
+
+        tagData = new Log327EnuHaltReason(TESTB_ENU_HALT_REASON);
+        System.out.println(tagData);
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
+    }
+}

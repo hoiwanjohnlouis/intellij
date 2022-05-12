@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag349DatEncodedIssuerTest {
     }
     @Test
     void Tag0349Test() {
-        Tag349DatEncodedIssuer tagData;
+        Log349DatEncodedIssuer tagData;
 
-        tagData = new Tag349DatEncodedIssuer(
-                new MyDataType(Tag349DatEncodedIssuer.TESTA_DAT_ENCODED_ISSUER));
-        assertEquals( Tag349DatEncodedIssuer.TESTA_DAT_ENCODED_ISSUER, tagData.getDataValue() );
+        tagData = new Log349DatEncodedIssuer(
+                new MyDataType(Log349DatEncodedIssuer.TESTA_DAT_ENCODED_ISSUER));
+        assertEquals( Log349DatEncodedIssuer.TESTA_DAT_ENCODED_ISSUER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag349DatEncodedIssuer(
-                new MyDataType(Tag349DatEncodedIssuer.TESTB_DAT_ENCODED_ISSUER));
-        assertEquals( Tag349DatEncodedIssuer.TESTB_DAT_ENCODED_ISSUER, tagData.getDataValue() );
+        tagData = new Log349DatEncodedIssuer(
+                new MyDataType(Log349DatEncodedIssuer.TESTB_DAT_ENCODED_ISSUER));
+        assertEquals( Log349DatEncodedIssuer.TESTB_DAT_ENCODED_ISSUER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

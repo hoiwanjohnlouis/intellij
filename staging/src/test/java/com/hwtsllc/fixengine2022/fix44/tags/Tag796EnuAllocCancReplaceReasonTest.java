@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,7 +47,7 @@ class Tag796EnuAllocCancReplaceReasonTest {
     }
     @Test
     void Tag0796Test() {
-        Tag796EnuAllocCancReplaceReason tagData;
+        Log796EnuAllocCancReplaceReason tagData;
 
     }
 }

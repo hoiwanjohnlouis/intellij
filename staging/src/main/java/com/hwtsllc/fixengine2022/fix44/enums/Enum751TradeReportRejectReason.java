@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  751
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum751TradeReportRejectReason implements EnumAccessors, LogStringVerbose {
+public enum Enum751TradeReportRejectReason implements EnumAccessors, LogVerboseString {
     SUCCESSFUL( "0", "SUCCESSFUL", "0 - Successful (default)" ),
     INVALID_PARTY_INFORMATION( "1", "INVALID_PARTY_INFORMATION", "1 - Invalid party information" ),
     UNKNOWN_INSTRUMENT( "2", "UNKNOWN_INSTRUMENT", "2 - Unknown instrument" ),
@@ -85,7 +85,7 @@ public enum Enum751TradeReportRejectReason implements EnumAccessors, LogStringVe
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

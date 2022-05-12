@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  160
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p></p>
  *  <p>    5 - Request reject
  */
-public enum Enum160SettlInstMode implements EnumAccessors, LogStringVerbose {
+public enum Enum160SettlInstMode implements EnumAccessors, LogVerboseString {
     DEFAULT( "0", "DEFAULT",
             "0 - Default (Replaced)" ),
     STANDING_INSTRUCTIONS_PROVIDED( "1", "STANDING_INSTRUCTIONS_PROVIDED",
@@ -95,7 +95,7 @@ public enum Enum160SettlInstMode implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

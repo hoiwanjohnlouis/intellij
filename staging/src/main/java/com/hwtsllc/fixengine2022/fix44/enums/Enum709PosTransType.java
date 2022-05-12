@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  709
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      5 - Pledge
  *      6 - Large Trader Submission
  */
-public enum Enum709PosTransType implements EnumAccessors, LogStringVerbose {
+public enum Enum709PosTransType implements EnumAccessors, LogVerboseString {
     EXERCISE( "1", "EXERCISE", "1 - Exercise" ),
     DO_NOT_EXERCISE( "2", "DO_NOT_EXERCISE", "2 - Do Not Exercise" ),
     POSITION_ADJUSTMENT( "3", "POSITION_ADJUSTMENT", "3 - Position Adjustment" ),
@@ -82,7 +82,7 @@ public enum Enum709PosTransType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

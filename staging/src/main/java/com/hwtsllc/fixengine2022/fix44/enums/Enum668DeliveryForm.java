@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  668
@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Book Entry (default)
  *      2 - Bearer
  */
-public enum Enum668DeliveryForm implements EnumAccessors, LogStringVerbose {
+public enum Enum668DeliveryForm implements EnumAccessors, LogVerboseString {
     BOOK_ENTRY( "1", "BOOK_ENTRY", "1 - Book Entry (default)" ),
     BEARER( "2", "BEARER", "2 - Bearer" ),
     ;
@@ -74,7 +74,7 @@ public enum Enum668DeliveryForm implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

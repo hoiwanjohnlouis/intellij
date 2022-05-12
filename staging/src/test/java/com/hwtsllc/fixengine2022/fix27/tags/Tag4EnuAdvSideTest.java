@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
 import org.junit.jupiter.api.Test;
 
@@ -49,21 +49,21 @@ class Tag4EnuAdvSideTest {
     }
     @Test
     void Tag0004Test() {
-        Tag4EnuAdvSide tagData;
+        Log4EnuAdvSide tagData;
 
-        tagData = new Tag4EnuAdvSide(Enum4AdvSide.BUY);
+        tagData = new Log4EnuAdvSide(Enum4AdvSide.BUY);
         assertEquals( "B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag4EnuAdvSide(Enum4AdvSide.SELL);
+        tagData = new Log4EnuAdvSide(Enum4AdvSide.SELL);
         assertEquals( "S", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag4EnuAdvSide(Enum4AdvSide.CROSS);
+        tagData = new Log4EnuAdvSide(Enum4AdvSide.CROSS);
         assertEquals( "X", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag4EnuAdvSide(Enum4AdvSide.TRADE);
+        tagData = new Log4EnuAdvSide(Enum4AdvSide.TRADE);
         assertEquals( "T", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

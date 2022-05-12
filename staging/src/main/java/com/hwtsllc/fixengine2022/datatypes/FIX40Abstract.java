@@ -16,9 +16,9 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public abstract class FIX40Abstract implements LogStringVerbose {
+public abstract class FIX40Abstract implements LogVerboseString {
     private FIX40 fixValue;
 
     public void setFixType(FIX40 fixType) {
@@ -40,7 +40,7 @@ public abstract class FIX40Abstract implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tFIXTypeName[")
                 .concat(getEnumName())

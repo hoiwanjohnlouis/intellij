@@ -17,19 +17,31 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  962
+ *  SideTimeInForce
+ *  UTCTimestamp
+ *  <p>
+ *  Indicates how long the order as specified in the side stays in effect.
+ *  <p>
+ *  SideTimeInForce allows a two-sided cross order to specify order behavior separately for each side.
+ *  Absence of this field indicates that TimeInForce should be referenced.
+ *  <p>
+ *  SideTimeInForce will override TimeInForce if both are provided.
+ */
 class Tag962SideTimeInForceTest {
     @Test
     void FIX0962Test() {
         FIX50 fixData = FIX50.FIX962_SIDE_TIME_IN_FORCE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "962", fixData.getID());
+        assertEquals( "SIDE_TIME_IN_FORCE", fixData.getName());
+        assertEquals( "SideTimeInForce", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  * Used in various tags such as FIX121_FOREX_REQ, etc
@@ -25,7 +25,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  * each tag uses the enum differently, review each tag independently
  *
  */
-public enum MyBooleanType implements EnumAccessors, LogStringVerbose {
+public enum MyBooleanType implements EnumAccessors, LogVerboseString {
     NO ("N", "NO", "N - No"),
     YES ("Y", "YES", "Y - Yes"),
     ;
@@ -72,7 +72,7 @@ public enum MyBooleanType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

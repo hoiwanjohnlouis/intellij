@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
@@ -57,9 +57,9 @@ class Tag126UtcExpireTimeTest {
     }
     @Test
     void Tag0126Test() {
-        Tag126UtcExpireTime tagData;
+        Log126UtcExpireTime tagData;
 
-        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType("HaJiWon-126ExpireTime") );
+        tagData = new Log126UtcExpireTime(new MyUTCTimestampType("HaJiWon-126ExpireTime") );
         assertEquals( "HaJiWon-126ExpireTime", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

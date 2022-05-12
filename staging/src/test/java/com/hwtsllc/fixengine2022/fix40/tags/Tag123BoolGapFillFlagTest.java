@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,13 +47,13 @@ class Tag123BoolGapFillFlagTest {
     }
     @Test
     void Tag0123Test() {
-        Tag123BoolGapFillFlag tagData;
+        Log123BoolGapFillFlag tagData;
 
-        tagData = new Tag123BoolGapFillFlag(MyBooleanType.NO);
+        tagData = new Log123BoolGapFillFlag(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag123BoolGapFillFlag(MyBooleanType.YES);
+        tagData = new Log123BoolGapFillFlag(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

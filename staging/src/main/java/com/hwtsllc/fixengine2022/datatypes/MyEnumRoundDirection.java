@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  838 (same as 838, 844,)
@@ -40,7 +40,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - More passive - on a buy order round down to the nearest tick;
  *                  on a sell order round up to the nearest tick
  */
-public enum MyEnumRoundDirection implements EnumAccessors, LogStringVerbose {
+public enum MyEnumRoundDirection implements EnumAccessors, LogVerboseString {
     AGGRESSIVE( "1", "AGGRESSIVE", "1 - More aggressive - on a buy order round the price up to the nearest tick; on a sell order round down to the nearest tick" ),
     PASSIVE( "2", "PASSIVE", "2 - More passive - on a buy order round down to the nearest tick; on a sell order round up to the nearest tick" ),
     ;
@@ -87,7 +87,7 @@ public enum MyEnumRoundDirection implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

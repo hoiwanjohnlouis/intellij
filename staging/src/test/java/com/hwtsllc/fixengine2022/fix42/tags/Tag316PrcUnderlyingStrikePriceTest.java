@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag316PrcUnderlyingStrikePriceTest {
     }
     @Test
     void Tag0316Test() {
-        Tag316PrcUnderlyingStrikePrice tagData;
+        Log316PrcUnderlyingStrikePrice tagData;
 
-        tagData = new Tag316PrcUnderlyingStrikePrice(new MyPriceType(
-                Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE));
-        assertEquals( Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE,
+        tagData = new Log316PrcUnderlyingStrikePrice(new MyPriceType(
+                Log316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE));
+        assertEquals( Log316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag316PrcUnderlyingStrikePrice(new MyPriceType(
-                Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE));
-        assertEquals( Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE,
+        tagData = new Log316PrcUnderlyingStrikePrice(new MyPriceType(
+                Log316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE));
+        assertEquals( Log316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

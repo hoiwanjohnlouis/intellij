@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag246FloUnderlyingFactorTest {
     }
     @Test
     void Tag0246Test() {
-        Tag246FloUnderlyingFactor tagData;
+        Log246FloUnderlyingFactor tagData;
 
-        tagData = new Tag246FloUnderlyingFactor(new MyFloatType(
-                Tag246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR));
-        assertEquals( Tag246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR,
+        tagData = new Log246FloUnderlyingFactor(new MyFloatType(
+                Log246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR));
+        assertEquals( Log246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag246FloUnderlyingFactor(new MyFloatType(
-                Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR));
-        assertEquals( Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR,
+        tagData = new Log246FloUnderlyingFactor(new MyFloatType(
+                Log246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR));
+        assertEquals( Log246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }

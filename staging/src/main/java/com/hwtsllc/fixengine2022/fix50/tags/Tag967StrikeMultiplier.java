@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  967
+ *  StrikeMultiplier
+ *  float
+ *  <p>
+ *  Used for derivatives.
+ *  <p>
+ *  Multiplier applied to the strike price for the purpose of calculating the settlement value.
+ */
 public class Tag967StrikeMultiplier {
 }

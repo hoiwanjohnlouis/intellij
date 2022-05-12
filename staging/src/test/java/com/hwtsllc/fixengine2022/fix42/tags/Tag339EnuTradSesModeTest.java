@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum339TrdSesMode;
 import org.junit.jupiter.api.Test;
 
@@ -47,20 +47,20 @@ class Tag339EnuTradSesModeTest {
      */
     @Test
     void Tag0339Test() {
-        Tag339EnuTradSesMode tagData;
+        Log339EnuTradSesMode tagData;
 
         /**
          * 1-3 msg types
          */
-        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.TESTING);
+        tagData = new Log339EnuTradSesMode(Enum339TrdSesMode.TESTING);
         assertEquals( Enum339TrdSesMode.TESTING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.SIMULATED);
+        tagData = new Log339EnuTradSesMode(Enum339TrdSesMode.SIMULATED);
         assertEquals( Enum339TrdSesMode.SIMULATED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.PRODUCTION);
+        tagData = new Log339EnuTradSesMode(Enum339TrdSesMode.PRODUCTION);
         assertEquals( Enum339TrdSesMode.PRODUCTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag413PctCrossPercentTest {
     }
     @Test
     void Tag0413Test() {
-        Tag413PctCrossPercent tagData;
+        Log413PctCrossPercent tagData;
 
-        tagData = new Tag413PctCrossPercent(new MyPercentageType(
-                Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT));
-        assertEquals( Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT,
+        tagData = new Log413PctCrossPercent(new MyPercentageType(
+                Log413PctCrossPercent.TESTA_PCT_CROSS_PERCENT));
+        assertEquals( Log413PctCrossPercent.TESTA_PCT_CROSS_PERCENT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag413PctCrossPercent(new MyPercentageType(
-                Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT));
-        assertEquals( Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT,
+        tagData = new Log413PctCrossPercent(new MyPercentageType(
+                Log413PctCrossPercent.TESTB_PCT_CROSS_PERCENT));
+        assertEquals( Log413PctCrossPercent.TESTB_PCT_CROSS_PERCENT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

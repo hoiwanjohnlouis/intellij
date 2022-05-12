@@ -16,5 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  987
+ *  UnderlyingSettlementDate
+ *  LocalMktDate
+ *  <p>
+ *  Date the underlying instrument will settle.
+ *  <p>
+ *  Used for derivatives that deliver into more than one underlying instrument.
+ *  <p>
+ *  Settlement dates can vary across underlying instruments.
+ */
 public class Tag987UnderlyingSettlementDate {
 }

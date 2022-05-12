@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAcctIDSource;
 import org.junit.jupiter.api.Test;
 
@@ -61,29 +61,29 @@ class Tag660EnuAcctIDSourceTest {
     }
     @Test
     void Tag0660Test() {
-        Tag660EnuAcctIDSource tagData;
+        Log660EnuAcctIDSource tagData;
 
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.BIC);
+        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.BIC);
         assertEquals( MyEnumAcctIDSource.BIC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.SID);
+        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.SID);
         assertEquals( MyEnumAcctIDSource.SID.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.TFM);
+        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.TFM);
         assertEquals( MyEnumAcctIDSource.TFM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OMGEO);
+        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.OMGEO);
         assertEquals( MyEnumAcctIDSource.OMGEO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.DTCC);
+        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.DTCC);
         assertEquals( MyEnumAcctIDSource.DTCC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OTHER);
+        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.OTHER);
         assertEquals( MyEnumAcctIDSource.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

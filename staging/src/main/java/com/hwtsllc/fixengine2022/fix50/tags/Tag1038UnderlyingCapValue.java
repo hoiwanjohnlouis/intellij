@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1038
+ *  UnderlyingCapValue
+ *  Amt
+ *  <p>
+ *  Maximum notional value for a capped financial instrument
+ */
 public class Tag1038UnderlyingCapValue {
 }

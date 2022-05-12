@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum169StandInstDbType;
 import org.junit.jupiter.api.Test;
 
@@ -51,25 +51,25 @@ class Tag169EnuStandInstDBTypeTest {
     }
     @Test
     void Tag0169Test() {
-        Tag169EnuStandInstDBType tagData;
+        Log169EnuStandInstDBType tagData;
 
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
+        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
         assertEquals( Enum169StandInstDbType.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
+        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
         assertEquals( Enum169StandInstDbType.DTC_SID.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
+        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
         assertEquals( Enum169StandInstDbType.THOMPSON_ALERT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
+        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
         assertEquals( Enum169StandInstDbType.GLOBAL_CUSTODIAN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
+        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
         assertEquals( Enum169StandInstDbType.ACCOUNT_NET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

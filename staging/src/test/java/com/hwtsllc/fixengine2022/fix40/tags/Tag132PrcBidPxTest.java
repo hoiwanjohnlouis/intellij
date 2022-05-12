@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,9 +43,9 @@ class Tag132PrcBidPxTest {
     }
     @Test
     void Tag0132Test() {
-        Tag132PrcBidPx tagData;
+        Log132PrcBidPx tagData;
 
-        tagData = new Tag132PrcBidPx(new MyPriceType(1.32D) );
+        tagData = new Log132PrcBidPx(new MyPriceType(1.32D) );
         assertEquals( 1.32D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

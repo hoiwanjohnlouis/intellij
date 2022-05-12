@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  993
+ *  AllocCustomerCapacity
+ *  String
+ *  <p>
+ *  Capacity of customer in the allocation block.
+ */
 public class Tag993AllocCustomerCapacity {
 }

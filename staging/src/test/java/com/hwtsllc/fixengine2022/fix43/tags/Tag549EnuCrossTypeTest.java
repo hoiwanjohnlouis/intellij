@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +36,7 @@ class Tag549EnuCrossTypeTest {
     }
     @Test
     void Tag0549Test() {
-        Tag549EnuCrossType tagData;
+        Log549EnuCrossType tagData;
 
     }
 }

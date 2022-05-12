@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,16 +44,16 @@ class Tag191PxoOfferForwardPointsTest {
     }
     @Test
     void Tag0191Test() {
-        Tag191PxoOfferForwardPoints tagData;
+        Log191PxoOfferForwardPoints tagData;
 
-        tagData = new Tag191PxoOfferForwardPoints(
-                new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS));
-        assertEquals( Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS, tagData.getDataValue());
+        tagData = new Log191PxoOfferForwardPoints(
+                new MyPriceOffsetType(Log191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS));
+        assertEquals( Log191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag191PxoOfferForwardPoints(
-                new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS));
-        assertEquals( Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS, tagData.getDataValue());
+        tagData = new Log191PxoOfferForwardPoints(
+                new MyPriceOffsetType(Log191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS));
+        assertEquals( Log191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
     }
 }

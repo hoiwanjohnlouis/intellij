@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum209AllocHandlInst;
 import org.junit.jupiter.api.Test;
 
@@ -49,17 +49,17 @@ class Tag209EnuAllocHandlInstTest {
     }
     @Test
     void Tag0209Test() {
-        Tag209EnuAllocHandlInst tagData;
+        Log209EnuAllocHandlInst tagData;
 
-        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
+        tagData = new Log209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
         assertEquals( Enum209AllocHandlInst.MATCH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD);
+        tagData = new Log209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD);
         assertEquals( Enum209AllocHandlInst.FORWARD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD_AND_MATCH);
+        tagData = new Log209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD_AND_MATCH);
         assertEquals( Enum209AllocHandlInst.FORWARD_AND_MATCH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

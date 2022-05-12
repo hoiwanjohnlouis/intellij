@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  775
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - CFD (Contract for difference)
  *      2 - Total Return Swap
  */
-public enum Enum775BookingType implements EnumAccessors, LogStringVerbose {
+public enum Enum775BookingType implements EnumAccessors, LogVerboseString {
     REGULAR_BOOKING( "0", "REGULAR_BOOKING", "0 - Regular booking" ),
     CONTRACT_FOR_DIFFERENCE( "1", "CONTRACT_FOR_DIFFERENCE", "1 - CFD (Contract for difference)" ),
     TOTAL_RETURN_SWAP( "2", "TOTAL_RETURN_SWAP", "2 - Total Return Swap" ),
@@ -78,7 +78,7 @@ public enum Enum775BookingType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

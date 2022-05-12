@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1081
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - MEntryID (278)
  *  <p>    3 - QuotEntryID (299)
  */
-public enum Enum1081RefOrderIDSource implements EnumAccessors, LogStringVerbose {
+public enum Enum1081RefOrderIDSource implements EnumAccessors, LogVerboseString {
     SECONDARY_ORDE_ID( "0", "SECONDARY_ORDE_ID", "0 - SecondaryOrdeID (198)" ),
     ORDE_ID( "1", "ORDE_ID", "1 - OrdeID (37)" ),
     M_ENTRY_ID( "2", "M_ENTRY_ID", "2 - MEntryID (278)" ),
@@ -81,7 +81,7 @@ public enum Enum1081RefOrderIDSource implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

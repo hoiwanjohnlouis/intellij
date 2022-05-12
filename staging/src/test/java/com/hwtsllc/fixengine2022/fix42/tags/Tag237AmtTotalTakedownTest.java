@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag237AmtTotalTakedownTest {
     }
     @Test
     void Tag0237Test() {
-        Tag237AmtTotalTakedown tagData;
+        Log237AmtTotalTakedown tagData;
 
-        tagData = new Tag237AmtTotalTakedown(new MyAmtType(
-                Tag237AmtTotalTakedown.TESTA_AMT_TOTAL_TAKEDOWN));
-        assertEquals( Tag237AmtTotalTakedown.TESTA_AMT_TOTAL_TAKEDOWN,
+        tagData = new Log237AmtTotalTakedown(new MyAmtType(
+                Log237AmtTotalTakedown.TESTA_AMT_TOTAL_TAKEDOWN));
+        assertEquals( Log237AmtTotalTakedown.TESTA_AMT_TOTAL_TAKEDOWN,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag237AmtTotalTakedown(new MyAmtType(
-                Tag237AmtTotalTakedown.TESTB_AMT_TOTAL_TAKEDOWN));
-        assertEquals( Tag237AmtTotalTakedown.TESTB_AMT_TOTAL_TAKEDOWN,
+        tagData = new Log237AmtTotalTakedown(new MyAmtType(
+                Log237AmtTotalTakedown.TESTB_AMT_TOTAL_TAKEDOWN));
+        assertEquals( Log237AmtTotalTakedown.TESTB_AMT_TOTAL_TAKEDOWN,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

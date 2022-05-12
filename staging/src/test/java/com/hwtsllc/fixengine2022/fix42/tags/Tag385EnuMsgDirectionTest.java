@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum385MsgDirection;
 import org.junit.jupiter.api.Test;
 
@@ -46,16 +46,16 @@ class Tag385EnuMsgDirectionTest {
      */
     @Test
     void Tag0385Test() {
-        Tag385EnuMsgDirection tagData;
+        Log385EnuMsgDirection tagData;
 
         /**
          * R, and S msg types
          */
-        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
+        tagData = new Log385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
         assertEquals( Enum385MsgDirection.RECEIVE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.SEND);
+        tagData = new Log385EnuMsgDirection(Enum385MsgDirection.SEND);
         assertEquals( Enum385MsgDirection.SEND.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

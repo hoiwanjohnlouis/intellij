@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag373
@@ -52,7 +52,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                          "17 - Non *Data* value includes field delimiter (<SOH> character)" ),
  *      OTHER( "99", "OTHER", "99 - Other" ),
  */
-public enum Enum373SessionRejectReason implements EnumAccessors, LogStringVerbose {
+public enum Enum373SessionRejectReason implements EnumAccessors, LogVerboseString {
     /**
      * 0-17, 99 msg types
      */
@@ -119,7 +119,7 @@ public enum Enum373SessionRejectReason implements EnumAccessors, LogStringVerbos
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

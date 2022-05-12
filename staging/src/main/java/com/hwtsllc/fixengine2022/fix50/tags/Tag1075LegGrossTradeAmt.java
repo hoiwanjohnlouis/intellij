@@ -16,5 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1075
+ *  LegGrossTradeAmt
+ *  Amt
+ *  <p>
+ *  The gross trade amount of the leg.
+ *  <p>
+ *  For FX Futures this is used to express the notional value of a fill
+ *  when LegLastQty and other quantity fields are express in terms of contract size.
+ */
 public class Tag1075LegGrossTradeAmt {
 }

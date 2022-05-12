@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1120
+ *  NoRootPartySubIDs
+ *  NumInGroup
+ *  <p>
+ *  Number of RootPartySubID (1121) and RootPartySubIDType (1122) entries
+ */
 public class Tag1120NoRootPartySubIDs {
 }

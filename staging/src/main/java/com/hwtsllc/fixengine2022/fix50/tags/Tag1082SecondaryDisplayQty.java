@@ -16,5 +16,15 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1082
+ *  SecondaryDisplayQty
+ *  Qty
+ *  <p>
+ *  Used for reserve orders when DisplayQty applies to the primary execution market (e.g.an ECN)
+ *  and another quantity is to be shown at other markets (e.g. the exchange).
+ *  <p>
+ *  On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
+ */
 public class Tag1082SecondaryDisplayQty {
 }

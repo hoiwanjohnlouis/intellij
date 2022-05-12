@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  FIX44 enum defines all the Financial Exchange Protocol's (FIX) fields.
@@ -57,7 +57,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>
  * String  description  A short blurb which describes what information the field contains
  */
-public enum FIX44 implements EnumAccessors, LogStringVerbose {
+public enum FIX44 implements EnumAccessors, LogVerboseString {
 
 
     /*
@@ -462,7 +462,7 @@ public enum FIX44 implements EnumAccessors, LogStringVerbose {
         return description;
     }
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tFIXTypeName[")
                 .concat(getEnumName())

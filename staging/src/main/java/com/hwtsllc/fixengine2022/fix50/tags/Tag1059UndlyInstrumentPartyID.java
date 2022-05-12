@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1059
+ *  UndlyInstrumentPartyID
+ *  String
+ *  <p>
+ *  PartyID value within an underlying instrument party repeating group.
+ *  <p>
+ *  Same values as  PartyID (448)
+ */
 public class Tag1059UndlyInstrumentPartyID {
 }

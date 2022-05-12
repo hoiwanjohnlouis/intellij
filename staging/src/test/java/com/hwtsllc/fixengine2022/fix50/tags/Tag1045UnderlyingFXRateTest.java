@@ -17,19 +17,27 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1045
+ *  UnderlyingFXRate
+ *  float
+ *  <p>
+ *  Foreign exchange rate used to compute UnderlyingCurrentValue (885) (or market value)
+ *  from UnderlyingCurrency (318) to Currency (15).
+ */
 class Tag1045UnderlyingFXRateTest {
     @Test
     void FIX1045Test() {
         FIX50 fixData = FIX50.FIX1045_UNDERLYING_FX_RATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1045", fixData.getID());
+        assertEquals( "UNDERLYING_FX_RATE", fixData.getName());
+        assertEquals( "UnderlyingFXRate", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

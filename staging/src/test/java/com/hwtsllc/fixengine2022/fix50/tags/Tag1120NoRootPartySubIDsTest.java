@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1120
+ *  NoRootPartySubIDs
+ *  NumInGroup
+ *  <p>
+ *  Number of RootPartySubID (1121) and RootPartySubIDType (1122) entries
+ */
 class Tag1120NoRootPartySubIDsTest {
     @Test
     void FIX1120Test() {
         FIX50 fixData = FIX50.FIX1120_NO_ROOT_PARTY_SUB_IDS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1120", fixData.getID());
+        assertEquals( "NO_ROOT_PARTY_SUB_IDS", fixData.getName());
+        assertEquals( "no_root_party_sub_ids", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

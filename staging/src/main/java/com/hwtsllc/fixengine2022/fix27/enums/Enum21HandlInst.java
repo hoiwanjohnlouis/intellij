@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  21
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      2 - Automated execution order, public, Broker intervention OK
  *      3 - Manual order, best execution
  */
-public enum Enum21HandlInst implements EnumAccessors, LogStringVerbose {
+public enum Enum21HandlInst implements EnumAccessors, LogVerboseString {
     AUTOMATIC_EXECUTION_NO_BROKER("1", "AUTOMATIC_EXECUTION_NO_BROKER",
             "1 - Automated execution order, private, no Broker intervention" ),
     AUTOMATIC_EXECUTION_BROKER_OKAY("2", "AUTOMATIC_EXECUTION_BROKER_OKAY",
@@ -80,7 +80,7 @@ public enum Enum21HandlInst implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

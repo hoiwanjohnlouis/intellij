@@ -17,19 +17,30 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1073
+ *  LegLastForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  The forward points for this leg's fill event.
+ *  <p>
+ *  Value can be negative. Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 class Tag1073LegLastForwardPointsTest {
     @Test
     void FIX1073Test() {
         FIX50 fixData = FIX50.FIX1073_LEG_LAST_FORWARD_POINTS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1073", fixData.getID());
+        assertEquals( "LEG_LAST_FORWARD_POINTS", fixData.getName());
+        assertEquals( "leg_last_forward_points", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

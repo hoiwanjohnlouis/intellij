@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum204CustomerOrFirm;
 import org.junit.jupiter.api.Test;
 
@@ -52,13 +52,13 @@ class Tag204EnuCustomerOrFirmTest {
     }
     @Test
     void Tag0204Test() {
-        Tag204EnuCustomerOrFirm tagData;
+        Log204EnuCustomerOrFirm tagData;
 
-        tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.CUSTOMER);
+        tagData = new Log204EnuCustomerOrFirm(Enum204CustomerOrFirm.CUSTOMER);
         assertEquals( Enum204CustomerOrFirm.CUSTOMER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.FIRM);
+        tagData = new Log204EnuCustomerOrFirm(Enum204CustomerOrFirm.FIRM);
         assertEquals( Enum204CustomerOrFirm.FIRM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

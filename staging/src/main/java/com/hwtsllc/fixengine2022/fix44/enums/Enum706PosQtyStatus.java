@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  706
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  1 - Accepted
  *  2 - Rejected
  */
-public enum Enum706PosQtyStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum706PosQtyStatus implements EnumAccessors, LogVerboseString {
     SUBMITTED( "0", "SUBMITTED", "0 - Submitted" ),
     ACCEPTED( "1", "ACCEPTED", "1 - Accepted" ),
     REJECTED( "2", "REJECTED", "2 - Rejected" ),
@@ -76,7 +76,7 @@ public enum Enum706PosQtyStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

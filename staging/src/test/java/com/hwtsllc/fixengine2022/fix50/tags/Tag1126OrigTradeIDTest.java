@@ -17,19 +17,27 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1126
+ *  OrigTradeID
+ *  String
+ *  <p>
+ *  Used to preserve original trade id when original trade is being
+ *  referenced in a subsequent trade transaction such as a transfer
+ */
 class Tag1126OrigTradeIDTest {
     @Test
     void FIX1126Test() {
         FIX50 fixData = FIX50.FIX1126_ORIG_TRADE_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1126", fixData.getID());
+        assertEquals( "ORIG_TRADE_ID", fixData.getName());
+        assertEquals( "orig_trade_id", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

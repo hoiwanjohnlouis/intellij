@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,9 +45,9 @@ class Tag14QtyCumQtyTest {
     }
     @Test
     void Tag0014Test() {
-        Tag14QtyCumQty tagData;
+        Log14QtyCumQty tagData;
 
-        tagData = new Tag14QtyCumQty(new MyQtyType(12345) );
+        tagData = new Log14QtyCumQty(new MyQtyType(12345) );
         assertEquals( 12345, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

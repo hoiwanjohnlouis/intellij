@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum340TradSesStatus;
 import org.junit.jupiter.api.Test;
 
@@ -51,36 +51,36 @@ class Tag340EnuTradSesStatusTest {
      */
     @Test
     void Tag0340Test() {
-        Tag340EnuTradSesStatus tagData;
+        Log340EnuTradSesStatus tagData;
 
         /**
          * 0-6 msg types
          */
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.UNKNOWN);
+        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.UNKNOWN);
         assertEquals( Enum340TradSesStatus.UNKNOWN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.HALTED);
+        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.HALTED);
         assertEquals( Enum340TradSesStatus.HALTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.OPEN);
+        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.OPEN);
         assertEquals( Enum340TradSesStatus.OPEN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
+        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
         assertEquals( Enum340TradSesStatus.CLOSED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.PRE_CLOSE);
+        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.PRE_CLOSE);
         assertEquals( Enum340TradSesStatus.PRE_CLOSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.REQUEST_REJECTED);
+        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.REQUEST_REJECTED);
         assertEquals( Enum340TradSesStatus.REQUEST_REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
+        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
         assertEquals( Enum340TradSesStatus.CLOSED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

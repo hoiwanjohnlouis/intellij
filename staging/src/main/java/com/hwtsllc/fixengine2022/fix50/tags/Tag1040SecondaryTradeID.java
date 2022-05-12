@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1040
+ *  SecondaryTradeID
+ *  String
+ *  <p>
+ *  Used to carry  an internal trade entity ID which may or may not be reported to the firm
+ */
 public class Tag1040SecondaryTradeID {
 }

@@ -16,38 +16,74 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum663BenchmarkPriceType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  663 (same as 423, 663, 686, 698)
- *  Identifies type of BenchmarkPrice (662).
- *        See PriceType (423) for valid values.
+ *  423 (same as 423, 663, 686, 698)
+ *  PriceType
+ *  int
+ *  <p>
+ *  Code to represent the price type.
+ *  <p>
+ *  (For Financing transactions PriceType implies the "repo type"
+ *  – Fixed or Floating – 9 (Yield) or 6 (Spread) respectively
+ *  - and Price (44) gives the corresponding "repo rate".
+ *  <p>
+ *  See Volume : "Glossary" for further value definitions)
+ *  <p></p>
+ *  663
  *  BenchmarkPriceType
+ *  int
+ *  <p>
+ *  Identifies type of BenchmarkPrice (662).
+ *  <p>
+ *  See PriceType (423) for valid values.
+ *  <p></p>
+ *  686
+ *  LegPriceType
+ *  int
+ *  <p>
+ *  The price type of the LegBidPx (681) and/or LegOfferPx (684).
+ *  <p>
+ *  See PriceType (423) for description and valid values
+ *  <p></p>
+ *  698
+ *  YieldRedemptionPriceType
+ *  int
+ *  <p>
+ *  The price type of the YieldRedemptionPrice (697)
+ *  <p>
+ *  See PriceType (423) for description and valid values.
+ *  <p></p>
  *  Valid values:
- *      1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
- *      2 - Per unit (i.e. per share or contract)
- *      3 - Fixed amount (absolute value)
- *      4 - Discount - percentage points below par
- *      5 - Premium - percentage points over par
- *      6 - Spread (basis points spread)
- *      7 - TED Price
- *      8 - TED Yield
- *      9 - Yield
- *      10 - Fixed cabinet trade price (primarily for listed futures and options)
- *      11 - Variable cabinet trade price (primarily for listed futures and options)
- *      13 - Product ticks in halfs
- *      14 - Product ticks in fourths
- *      15 - Product ticks in eights
- *      16 - Product ticks in sixteenths
- *      17 - Product ticks in thirty-seconds
- *      18 - Product ticks in sixty-forths
- *      19 - Product ticks in one-twenty-eights
+ *  <p>    1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
+ *  <p>    2 - Per unit (i.e. per share or contract)
+ *  <p>    3 - Fixed amount (absolute value)
+ *  <p>    4 - Discount - percentage points below par
+ *  <p>    5 - Premium - percentage points over par
+ *  <p></p>
+ *  <p>    6 - Spread (basis points spread)
+ *  <p>    7 - TED Price
+ *  <p>    8 - TED Yield
+ *  <p>    9 - Yield
+ *  <p>    10 - Fixed cabinet trade price (primarily for listed futures and options)
+ *  <p></p>
+ *  <p>    11 - Variable cabinet trade price (primarily for listed futures and options)
+ *  <p></p>
+ *  <p>    13 - Product ticks in halfs
+ *  <p>    14 - Product ticks in fourths
+ *  <p>    15 - Product ticks in eights
+ *  <p>    16 - Product ticks in sixteenths
+ *  <p>    17 - Product ticks in thirty-seconds
+ *  <p></p>
+ *  <p>    18 - Product ticks in sixty-forths
+ *  <p>    19 - Product ticks in one-twenty-eights
  */
 class Tag663EnuBenchmarkPriceTypeTest {
     @Test
@@ -62,7 +98,7 @@ class Tag663EnuBenchmarkPriceTypeTest {
     }
     @Test
     void Tag0663Test() {
-        Tag663EnuBenchmarkPriceType tagData;
+        Log663EnuBenchmarkPriceType tagData;
 
         /*
          * 1-11, 13-19 msg types
@@ -71,48 +107,50 @@ class Tag663EnuBenchmarkPriceTypeTest {
         /*
          * 1-11 msg types
          */
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.PERCENTAGE);
-        assertEquals( Enum663BenchmarkPriceType.PERCENTAGE.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.PERCENTAGE);
+        assertEquals( MyEnumPriceType.PERCENTAGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.PER_UNIT);
-        assertEquals( Enum663BenchmarkPriceType.PER_UNIT.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.PER_UNIT);
+        assertEquals( MyEnumPriceType.PER_UNIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.FIXED_AMOUNT);
-        assertEquals( Enum663BenchmarkPriceType.FIXED_AMOUNT.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.FIXED_AMOUNT);
+        assertEquals( MyEnumPriceType.FIXED_AMOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.DISCOUNT);
-        assertEquals( Enum663BenchmarkPriceType.DISCOUNT.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.DISCOUNT);
+        assertEquals( MyEnumPriceType.DISCOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.PREMIUM);
-        assertEquals( Enum663BenchmarkPriceType.PREMIUM.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.PREMIUM);
+        assertEquals( MyEnumPriceType.PREMIUM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.SPREAD);
-        assertEquals( Enum663BenchmarkPriceType.SPREAD.getID(), tagData.getDataValue());
+
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.SPREAD);
+        assertEquals( MyEnumPriceType.SPREAD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TED_PRICE);
-        assertEquals( Enum663BenchmarkPriceType.TED_PRICE.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TED_PRICE);
+        assertEquals( MyEnumPriceType.TED_PRICE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TED_YIELD);
-        assertEquals( Enum663BenchmarkPriceType.TED_YIELD.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TED_YIELD);
+        assertEquals( MyEnumPriceType.TED_YIELD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.YIELD);
-        assertEquals( Enum663BenchmarkPriceType.YIELD.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.YIELD);
+        assertEquals( MyEnumPriceType.YIELD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.FIXED_TRADE_PRICE);
-        assertEquals( Enum663BenchmarkPriceType.FIXED_TRADE_PRICE.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.FIXED_TRADE_PRICE);
+        assertEquals( MyEnumPriceType.FIXED_TRADE_PRICE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.VARIABLE_TRADE_PRICE);
-        assertEquals( Enum663BenchmarkPriceType.VARIABLE_TRADE_PRICE.getID(), tagData.getDataValue());
+
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.VARIABLE_TRADE_PRICE);
+        assertEquals( MyEnumPriceType.VARIABLE_TRADE_PRICE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -120,32 +158,33 @@ class Tag663EnuBenchmarkPriceTypeTest {
         /*
          * 13-19 msg types
          */
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TICKS_IN_HALFS);
-        assertEquals( Enum663BenchmarkPriceType.TICKS_IN_HALFS.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_HALFS);
+        assertEquals( MyEnumPriceType.TICKS_IN_HALFS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TICKS_IN_FOURTHS);
-        assertEquals( Enum663BenchmarkPriceType.TICKS_IN_FOURTHS.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_FOURTHS);
+        assertEquals( MyEnumPriceType.TICKS_IN_FOURTHS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TICKS_IN_EIGHTHS);
-        assertEquals( Enum663BenchmarkPriceType.TICKS_IN_EIGHTHS.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_EIGHTHS);
+        assertEquals( MyEnumPriceType.TICKS_IN_EIGHTHS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TICKS_IN_SIXTEENTHS);
-        assertEquals( Enum663BenchmarkPriceType.TICKS_IN_SIXTEENTHS.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_SIXTEENTHS);
+        assertEquals( MyEnumPriceType.TICKS_IN_SIXTEENTHS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TICKS_IN_THIRTY_SECONDS);
-        assertEquals( Enum663BenchmarkPriceType.TICKS_IN_THIRTY_SECONDS.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_THIRTY_SECONDS);
+        assertEquals( MyEnumPriceType.TICKS_IN_THIRTY_SECONDS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TICKS_IN_SIXTY_FOURTHS);
-        assertEquals( Enum663BenchmarkPriceType.TICKS_IN_SIXTY_FOURTHS.getID(), tagData.getDataValue());
+
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS);
+        assertEquals( MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag663EnuBenchmarkPriceType(Enum663BenchmarkPriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
-        assertEquals( Enum663BenchmarkPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.getID(), tagData.getDataValue());
+        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
+        assertEquals( MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

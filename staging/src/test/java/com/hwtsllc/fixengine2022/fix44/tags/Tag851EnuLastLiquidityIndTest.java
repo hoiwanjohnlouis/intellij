@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum851LastLiquidityInd;
 import org.junit.jupiter.api.Test;
 
@@ -49,17 +49,17 @@ class Tag851EnuLastLiquidityIndTest {
     }
     @Test
     void Tag0851Test() {
-        Tag851EnuLastLiquidityInd tagData;
+        Log851EnuLastLiquidityInd tagData;
 
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ADDED );
+        tagData = new Log851EnuLastLiquidityInd( Enum851LastLiquidityInd.ADDED );
         assertEquals( Enum851LastLiquidityInd.ADDED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.REMOVED );
+        tagData = new Log851EnuLastLiquidityInd( Enum851LastLiquidityInd.REMOVED );
         assertEquals( Enum851LastLiquidityInd.REMOVED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ROUTED_OUT );
+        tagData = new Log851EnuLastLiquidityInd( Enum851LastLiquidityInd.ROUTED_OUT );
         assertEquals( Enum851LastLiquidityInd.ROUTED_OUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPutOrCall;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -56,13 +56,13 @@ class Tag315EnuUnderlyingPutOrCallTest {
 
     @Test
     void Tag0315Test() {
-        Tag315EnuUnderlyingPutOrCall tagData;
+        Log315EnuUnderlyingPutOrCall tagData;
 
-        tagData = new Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall.CALL);
+        tagData = new Log315EnuUnderlyingPutOrCall(MyEnumPutOrCall.CALL);
         assertEquals( MyEnumPutOrCall.CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall.PUT);
+        tagData = new Log315EnuUnderlyingPutOrCall(MyEnumPutOrCall.PUT);
         assertEquals( MyEnumPutOrCall.PUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

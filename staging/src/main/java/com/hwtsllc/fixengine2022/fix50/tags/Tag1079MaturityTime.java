@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1079
+ *  MaturityTime
+ *  TZTimeOnly
+ *  <p>
+ *  Time of security's maturity expressed in local time with offset to UTC specified
+ */
 public class Tag1079MaturityTime {
 }

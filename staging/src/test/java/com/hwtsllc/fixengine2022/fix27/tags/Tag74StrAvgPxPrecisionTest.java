@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,9 +48,9 @@ class Tag74StrAvgPxPrecisionTest {
     }
     @Test
     void Tag0074Test() {
-        Tag74StrAvgPxPrecision tagData;
+        Log74StrAvgPxPrecision tagData;
 
-        tagData = new Tag74StrAvgPxPrecision(new MyStringType("Saruman-74AvgPxPrecision") );
+        tagData = new Log74StrAvgPxPrecision(new MyStringType("Saruman-74AvgPxPrecision") );
         assertEquals( "Saruman-74AvgPxPrecision", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

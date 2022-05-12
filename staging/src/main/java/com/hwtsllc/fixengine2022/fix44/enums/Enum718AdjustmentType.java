@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  718
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      2 - Delta Minus
  *      3 - Final
  */
-public enum Enum718AdjustmentType implements EnumAccessors, LogStringVerbose {
+public enum Enum718AdjustmentType implements EnumAccessors, LogVerboseString {
     MARGIN_DISPOSITION( "0", "MARGIN_DISPOSITION", "0 - Process Request As Margin Disposition" ),
     DELTA_PLUS( "1", "DELTA_PLUS", "1 - Delta Plus" ),
     DELTA_MINUS( "2", "DELTA_MINUS", "2 - Delta Minus" ),
@@ -78,7 +78,7 @@ public enum Enum718AdjustmentType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

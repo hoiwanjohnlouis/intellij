@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1074
+ *  LegCalculatedCcyLastQty
+ *  Qty
+ *  <p>
+ *  Used for the calculated quantity of the other side of the currency for this leg.
+ *  <p>
+ *  Can be derived from LegQty and LegLastPx.
+ */
 public class Tag1074LegCalculatedCcyLastQty {
 }

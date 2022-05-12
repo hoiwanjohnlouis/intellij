@@ -17,19 +17,31 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1027
+ *  MDEntryForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  Used for an F/X entry.
+ *  <p>
+ *  The forward points to be added to or subtracted from the spot rate
+ *  to get the "all-in" rate in MDEntryPx.  Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 class Tag1027MDEntryForwardPointsTest {
     @Test
     void FIX1027Test() {
         FIX50 fixData = FIX50.FIX1027_MD_ENTRY_FORWARD_POINTS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1027", fixData.getID());
+        assertEquals( "MD_ENTRY_FORWARD_POINTS", fixData.getName());
+        assertEquals( "MDEntryForwardPoints", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

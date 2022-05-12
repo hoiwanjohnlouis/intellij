@@ -16,13 +16,13 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  * MyLocalMktDateType is a wrapper class for the LocalMktDate field
  * it will probably be a String.
  */
-public class MyLocalMktDateType implements LogStringVerbose {
+public class MyLocalMktDateType implements LogVerboseString {
     private final String dataValue;
 
     public MyLocalMktDateType(final String dataValue) {
@@ -36,7 +36,7 @@ public class MyLocalMktDateType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -56,6 +56,6 @@ public class MyLocalMktDateType implements LogStringVerbose {
     public static void main(String[] args) {
         MyLocalMktDateType dataType = new MyLocalMktDateType("12345");
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

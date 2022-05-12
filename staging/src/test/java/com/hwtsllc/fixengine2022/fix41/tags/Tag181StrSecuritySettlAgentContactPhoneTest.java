@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,17 +45,17 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
     }
     @Test
     void Tag0181Test() {
-        Tag181StrSecuritySettlAgentContactPhone tagData;
+        Log181StrSecuritySettlAgentContactPhone tagData;
 
-        tagData = new Tag181StrSecuritySettlAgentContactPhone(
-                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
-        assertEquals( Tag181StrSecuritySettlAgentContactPhone.TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE,
+        tagData = new Log181StrSecuritySettlAgentContactPhone(
+                new MyStringType(Log181StrSecuritySettlAgentContactPhone.TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
+        assertEquals( Log181StrSecuritySettlAgentContactPhone.TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag181StrSecuritySettlAgentContactPhone(
-                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
-        assertEquals( Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE,
+        tagData = new Log181StrSecuritySettlAgentContactPhone(
+                new MyStringType(Log181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
+        assertEquals( Log181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

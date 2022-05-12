@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1015
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    0 - false - trade is not an AsOf trade
  *  <p>    1 - true - trade is an AsOf  trade
  */
-public enum Enum1015AsOfIndicator implements EnumAccessors, LogStringVerbose {
+public enum Enum1015AsOfIndicator implements EnumAccessors, LogVerboseString {
     FALSE( "0", "FALSE", "0 - false - trade is not an AsOf trade" ),
     TRUE( "1", "TRUE", "1 - true - trade is an AsOf  trade" ),
     ;
@@ -78,7 +78,7 @@ public enum Enum1015AsOfIndicator implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

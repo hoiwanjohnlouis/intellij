@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  896
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      6 - Fully Assigned
  *      7 - Outstanding Trades (Today < end date)
  */
-public enum Enum896CollInquiryQualifier implements EnumAccessors, LogStringVerbose {
+public enum Enum896CollInquiryQualifier implements EnumAccessors, LogVerboseString {
     TRADE_DATE( "0", "TRADE_DATE", "0 - Trade Date" ),
     GC_INSTRUMENT( "1", "GC_INSTRUMENT", "1 - GC Instrument" ),
     COLLATERAL_INSTRUMENT( "2", "COLLATERAL_INSTRUMENT", "2 - Collateral Instrument" ),
@@ -88,7 +88,7 @@ public enum Enum896CollInquiryQualifier implements EnumAccessors, LogStringVerbo
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

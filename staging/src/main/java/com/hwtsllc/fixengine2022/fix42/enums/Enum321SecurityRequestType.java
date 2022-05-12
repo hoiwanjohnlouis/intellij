@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  321
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                          "TradingSessionID, SecurityExchange. " +
  *                          "If provided, then only list Securities for the specific type.)" ),
  */
-public enum Enum321SecurityRequestType implements EnumAccessors, LogStringVerbose {
+public enum Enum321SecurityRequestType implements EnumAccessors, LogVerboseString {
     /**
      * 0-3 msg types
      */
@@ -95,7 +95,7 @@ public enum Enum321SecurityRequestType implements EnumAccessors, LogStringVerbos
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

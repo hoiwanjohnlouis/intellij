@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  966
+ *  SettleOnOpenFlag
+ *  String
+ *  <p>
+ *  Indicator to determine if instrument is settle on open
+ */
 public class Tag966SettleOnOpenFlag {
 }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag220CcyBenchmarkCurveCurrencyTest {
     }
     @Test
     void Tag0220Test() {
-        Tag220CcyBenchmarkCurveCurrency tagData;
+        Log220CcyBenchmarkCurveCurrency tagData;
 
-        tagData = new Tag220CcyBenchmarkCurveCurrency(new MyCurrencyType(
-                Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY));
-        assertEquals( Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY,
+        tagData = new Log220CcyBenchmarkCurveCurrency(new MyCurrencyType(
+                Log220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY));
+        assertEquals( Log220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag220CcyBenchmarkCurveCurrency(new MyCurrencyType(
-                Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY));
-        assertEquals( Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY,
+        tagData = new Log220CcyBenchmarkCurveCurrency(new MyCurrencyType(
+                Log220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY));
+        assertEquals( Log220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

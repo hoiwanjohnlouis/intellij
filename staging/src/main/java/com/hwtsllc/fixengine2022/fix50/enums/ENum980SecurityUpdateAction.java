@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  980
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    D - Delete
  *  <p>    M - Modify
  */
-public enum ENum980SecurityUpdateAction implements EnumAccessors, LogStringVerbose {
+public enum ENum980SecurityUpdateAction implements EnumAccessors, LogVerboseString {
     ADD( "A", "ADD", "A - Add" ),
     DELETE( "D", "DELETE", "D - Delete" ),
     MODIFY( "M", "MODIFY", "M - Modify" ),
@@ -78,7 +78,7 @@ public enum ENum980SecurityUpdateAction implements EnumAccessors, LogStringVerbo
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

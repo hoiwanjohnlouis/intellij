@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,13 +47,13 @@ class Tag893BoolLastFragmentTest {
     }
     @Test
     void Tag0893Test() {
-        Tag893BoolLastFragment tagData;
+        Log893BoolLastFragment tagData;
 
-        tagData = new Tag893BoolLastFragment(MyBooleanType.NO);
+        tagData = new Log893BoolLastFragment(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag893BoolLastFragment(MyBooleanType.YES);
+        tagData = new Log893BoolLastFragment(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

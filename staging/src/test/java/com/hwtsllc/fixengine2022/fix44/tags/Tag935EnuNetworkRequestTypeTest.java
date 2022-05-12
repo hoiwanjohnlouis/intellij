@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum935NetworkRequestType;
 import org.junit.jupiter.api.Test;
 
@@ -49,21 +49,21 @@ class Tag935EnuNetworkRequestTypeTest {
     }
     @Test
     void Tag0935Test() {
-        Tag935EnuNetworkRequestType tagData;
+        Log935EnuNetworkRequestType tagData;
 
-        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.SNAPSHOT );
+        tagData = new Log935EnuNetworkRequestType( Enum935NetworkRequestType.SNAPSHOT );
         assertEquals( Enum935NetworkRequestType.SNAPSHOT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.SUBSCRIBE );
+        tagData = new Log935EnuNetworkRequestType( Enum935NetworkRequestType.SUBSCRIBE );
         assertEquals( Enum935NetworkRequestType.SUBSCRIBE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.STOP_SUBSCRIBING );
+        tagData = new Log935EnuNetworkRequestType( Enum935NetworkRequestType.STOP_SUBSCRIBING );
         assertEquals( Enum935NetworkRequestType.STOP_SUBSCRIBING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.LEVEL_OF_DETAIL );
+        tagData = new Log935EnuNetworkRequestType( Enum935NetworkRequestType.LEVEL_OF_DETAIL );
         assertEquals( Enum935NetworkRequestType.LEVEL_OF_DETAIL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  692
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      9 - Yield Spread (swaps)
  *      10 - Yield
  */
-public enum Enum692QuotePriceType implements EnumAccessors, LogStringVerbose {
+public enum Enum692QuotePriceType implements EnumAccessors, LogVerboseString {
     PERCENT( "1", "PERCENT", "1 - Percent (percent of par)" ),
     PER_SHARE( "2", "PER_SHARE", "2 - Per Share (e.g. cents per share)" ),
     FIXED_AMOUNT( "3", "FIXED_AMOUNT", "3 - Fixed Amount (absolute value)" ),
@@ -91,7 +91,7 @@ public enum Enum692QuotePriceType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

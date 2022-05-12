@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,14 +44,14 @@ class Tag148StrHeadlineTest {
     }
     @Test
     void Tag0148Test() {
-        Tag148StrHeadline tagData;
+        Log148StrHeadline tagData;
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTA_STR_HEADLINE));
-        assertEquals( Tag148StrHeadline.TESTA_STR_HEADLINE, tagData.getDataValue());
+        tagData = new Log148StrHeadline(new MyStringType(Log148StrHeadline.TESTA_STR_HEADLINE));
+        assertEquals( Log148StrHeadline.TESTA_STR_HEADLINE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
-        assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
+        tagData = new Log148StrHeadline(new MyStringType(Log148StrHeadline.TESTB_STR_HEADLINE));
+        assertEquals( Log148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

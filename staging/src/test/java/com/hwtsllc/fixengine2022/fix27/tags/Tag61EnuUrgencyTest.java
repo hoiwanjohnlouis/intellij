@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum61Urgency;
 import org.junit.jupiter.api.Test;
 
@@ -48,20 +48,20 @@ class Tag61EnuUrgencyTest {
     }
     @Test
     void Tag0061Test() {
-        Tag61EnuUrgency tagData;
+        Log61EnuUrgency tagData;
 
         /**
          * 0-2 Urgency types
          */
-        tagData = new Tag61EnuUrgency(Enum61Urgency.NORMAL);
+        tagData = new Log61EnuUrgency(Enum61Urgency.NORMAL);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag61EnuUrgency(Enum61Urgency.FLASH);
+        tagData = new Log61EnuUrgency(Enum61Urgency.FLASH);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag61EnuUrgency(Enum61Urgency.BACKGROUND);
+        tagData = new Log61EnuUrgency(Enum61Urgency.BACKGROUND);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

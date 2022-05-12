@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1111
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    1 - Market
  *  <p>    2 - Limit
  */
-public enum Enum1111TriggerOrderType implements EnumAccessors, LogStringVerbose {
+public enum Enum1111TriggerOrderType implements EnumAccessors, LogVerboseString {
     MARKET( "1", "MARKET", "1 - Market" ),
     LIMIT( "2", "LIMIT", "2 - Limit" ),
     ;
@@ -81,7 +81,7 @@ public enum Enum1111TriggerOrderType implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

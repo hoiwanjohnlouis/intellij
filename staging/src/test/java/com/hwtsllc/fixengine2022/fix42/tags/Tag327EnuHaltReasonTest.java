@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum327HaltReason;
 import org.junit.jupiter.api.Test;
 
@@ -50,32 +50,32 @@ class Tag327EnuHaltReasonTest {
      */
     @Test
     void Tag0327Test() {
-        Tag327EnuHaltReason tagData;
+        Log327EnuHaltReason tagData;
 
         /**
          * D, E, I, M, P, and X msg types
          */
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEWS_DISSEMINATION);
+        tagData = new Log327EnuHaltReason(Enum327HaltReason.NEWS_DISSEMINATION);
         assertEquals( Enum327HaltReason.NEWS_DISSEMINATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ORDER_INFLUX);
+        tagData = new Log327EnuHaltReason(Enum327HaltReason.ORDER_INFLUX);
         assertEquals( Enum327HaltReason.ORDER_INFLUX.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ORDER_IMBALANCE);
+        tagData = new Log327EnuHaltReason(Enum327HaltReason.ORDER_IMBALANCE);
         assertEquals( Enum327HaltReason.ORDER_IMBALANCE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ADDITIONAL_INFORMATION);
+        tagData = new Log327EnuHaltReason(Enum327HaltReason.ADDITIONAL_INFORMATION);
         assertEquals( Enum327HaltReason.ADDITIONAL_INFORMATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEW_PENDING);
+        tagData = new Log327EnuHaltReason(Enum327HaltReason.NEW_PENDING);
         assertEquals( Enum327HaltReason.NEW_PENDING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.EQUIPMENT_CHANGE_OVER);
+        tagData = new Log327EnuHaltReason(Enum327HaltReason.EQUIPMENT_CHANGE_OVER);
         assertEquals( Enum327HaltReason.EQUIPMENT_CHANGE_OVER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

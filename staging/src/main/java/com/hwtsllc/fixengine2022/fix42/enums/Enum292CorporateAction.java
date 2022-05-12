@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  292
@@ -47,7 +47,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      CUSIP_OR_NAME_CHANGE( "U", "CUSIP_OR_NAME_CHANGE", "U - CUSIP / Name Change" ),
  *      LEAP_ROLLOVER( "V", "LEAP_ROLLOVER", "V - Leap Rollover" ),
  */
-public enum Enum292CorporateAction implements EnumAccessors, LogStringVerbose {
+public enum Enum292CorporateAction implements EnumAccessors, LogVerboseString {
     /**
      * A-V msg types
      */
@@ -117,7 +117,7 @@ public enum Enum292CorporateAction implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

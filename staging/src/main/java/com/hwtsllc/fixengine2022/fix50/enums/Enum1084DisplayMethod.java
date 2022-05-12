@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1084
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - New (use RefreshQty)
  *  <p>    3 - Random (randomize value)
  */
-public enum Enum1084DisplayMethod implements EnumAccessors, LogStringVerbose {
+public enum Enum1084DisplayMethod implements EnumAccessors, LogVerboseString {
     INITIAL( "1", "INITIAL", "1 - Initial (use original DisplayQty)" ),
     NEW( "2", "NEW", "2 - New (use RefreshQty)" ),
     RANDOM( "3", "RANDOM", "3 - Random (randomize value)" ),
@@ -81,7 +81,7 @@ public enum Enum1084DisplayMethod implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

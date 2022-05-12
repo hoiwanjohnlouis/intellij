@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  847
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *  or any value conforming to the data type Reserved1000Plus
  */
-public enum Enum847TargetStrategy implements EnumAccessors, LogStringVerbose {
+public enum Enum847TargetStrategy implements EnumAccessors, LogVerboseString {
     VWAP( "1", "VWAP", "1 - VWAP" ),
     PARTICIPATE( "2", "PARTICIPATE", "2 - Participate (i.e. aim to be x percent of the market volume)" ),
     MINIMIZE_MARKET_IMPACT( "3", "MINIMIZE_MARKET_IMPACT", "3 - Minimize market impact" ),
@@ -80,7 +80,7 @@ public enum Enum847TargetStrategy implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

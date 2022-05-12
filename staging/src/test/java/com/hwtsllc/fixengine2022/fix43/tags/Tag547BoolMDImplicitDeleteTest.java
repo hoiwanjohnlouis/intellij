@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,13 +37,13 @@ class Tag547BoolMDImplicitDeleteTest {
     }
     @Test
     void Tag0547Test() {
-        Tag547BoolMDImplicitDelete tagData;
+        Log547BoolMDImplicitDelete tagData;
 
-        tagData = new Tag547BoolMDImplicitDelete(MyBooleanType.NO);
+        tagData = new Log547BoolMDImplicitDelete(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag547BoolMDImplicitDelete(MyBooleanType.YES);
+        tagData = new Log547BoolMDImplicitDelete(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

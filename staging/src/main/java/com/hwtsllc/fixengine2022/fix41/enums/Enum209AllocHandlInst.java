@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  209
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - Forward
  *  <p>    3 - Forward and Match
  */
-public enum Enum209AllocHandlInst implements EnumAccessors, LogStringVerbose {
+public enum Enum209AllocHandlInst implements EnumAccessors, LogVerboseString {
     MATCH( "1", "MATCH", "1 - Match" ),
     FORWARD( "2", "FORWARD", "2 - Forward" ),
     FORWARD_AND_MATCH( "3", "FORWARD_AND_MATCH", "3 - Forward and Match" ),
@@ -79,7 +79,7 @@ public enum Enum209AllocHandlInst implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

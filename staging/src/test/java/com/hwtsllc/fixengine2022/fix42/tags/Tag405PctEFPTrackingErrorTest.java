@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag405PctEFPTrackingErrorTest {
     }
     @Test
     void Tag0405Test() {
-        Tag405PctEFPTrackingError tagData;
+        Log405PctEFPTrackingError tagData;
 
-        tagData = new Tag405PctEFPTrackingError(new MyPercentageType(
-                Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR));
-        assertEquals( Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR,
+        tagData = new Log405PctEFPTrackingError(new MyPercentageType(
+                Log405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR));
+        assertEquals( Log405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag405PctEFPTrackingError(new MyPercentageType(
-                Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR));
-        assertEquals( Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR,
+        tagData = new Log405PctEFPTrackingError(new MyPercentageType(
+                Log405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR));
+        assertEquals( Log405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

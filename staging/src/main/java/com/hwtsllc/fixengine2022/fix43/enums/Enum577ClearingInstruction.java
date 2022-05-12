@@ -17,12 +17,12 @@
 package com.hwtsllc.fixengine2022.fix43.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Information is the same for TAGS 577
  */
-public enum Enum577ClearingInstruction implements EnumAccessors, LogStringVerbose {
+public enum Enum577ClearingInstruction implements EnumAccessors, LogVerboseString {
     /*
      *  0-13 types
      */
@@ -91,7 +91,7 @@ public enum Enum577ClearingInstruction implements EnumAccessors, LogStringVerbos
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

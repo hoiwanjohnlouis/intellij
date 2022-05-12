@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,9 +46,9 @@ class Tag115StrOnBehalfOfCompIDTest {
     }
     @Test
     void Tag0115Test() {
-        Tag115StrOnBehalfOfCompID tagData;
+        Log115StrOnBehalfOfCompID tagData;
 
-        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType("Legolas-115OnBehalfOfCompID") );
+        tagData = new Log115StrOnBehalfOfCompID(new MyStringType("Legolas-115OnBehalfOfCompID") );
         assertEquals( "Legolas-115OnBehalfOfCompID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

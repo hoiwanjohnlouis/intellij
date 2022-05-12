@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  752
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      2 - Individual leg of a multileg security
  *      3 - Multileg Security
  */
-public enum Enum752SideMultiLegReportingType implements EnumAccessors, LogStringVerbose {
+public enum Enum752SideMultiLegReportingType implements EnumAccessors, LogVerboseString {
     SINGLE_SECURITY( "1", "SINGLE_SECURITY", "1 - Single Security (default if not specified)" ),
     INDIVIDUAL_LEG( "2", "INDIVIDUAL_LEG", "2 - Individual leg of a multileg security" ),
     MULTILEG_SECURITY( "3", "MULTILEG_SECURITY", "3 - Multileg Security" ),
@@ -77,7 +77,7 @@ public enum Enum752SideMultiLegReportingType implements EnumAccessors, LogString
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

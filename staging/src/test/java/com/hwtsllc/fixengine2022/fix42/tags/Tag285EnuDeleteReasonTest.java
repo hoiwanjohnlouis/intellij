@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum285DeleteReason;
 import org.junit.jupiter.api.Test;
 
@@ -45,16 +45,16 @@ class Tag285EnuDeleteReasonTest {
      */
     @Test
     void Tag0285Test() {
-        Tag285EnuDeleteReason tagData;
+        Log285EnuDeleteReason tagData;
 
         /**
          * 0-1 msg types
          */
-        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
+        tagData = new Log285EnuDeleteReason(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
         assertEquals( Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.ERROR);
+        tagData = new Log285EnuDeleteReason(Enum285DeleteReason.ERROR);
         assertEquals( Enum285DeleteReason.ERROR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

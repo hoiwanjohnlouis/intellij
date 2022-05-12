@@ -16,13 +16,13 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  * MyPriceOffsetType is a wrapper class for the Price field
  * Initially it will be a String, later on it will become BigDecimal.
  */
-public class MyPriceOffsetType implements LogStringVerbose {
+public class MyPriceOffsetType implements LogVerboseString {
     private final double dataValue;
 
     public MyPriceOffsetType(final double dataValue) {
@@ -36,7 +36,7 @@ public class MyPriceOffsetType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -56,6 +56,6 @@ public class MyPriceOffsetType implements LogStringVerbose {
     public static void main(String[] args) {
         MyPriceOffsetType dataType = new MyPriceOffsetType( 0.005D );
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1072
+ *  SideGrossTradeAmt
+ *  Amt
+ *  <p>
+ *  The gross trade amount for this side of the trade.
+ *  <p>
+ *  See also GrossTradeAmt (381) for additional definition.
+ */
 public class Tag1072SideGrossTradeAmt {
 }

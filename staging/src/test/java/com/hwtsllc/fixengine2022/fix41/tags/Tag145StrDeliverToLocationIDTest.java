@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,16 +44,16 @@ class Tag145StrDeliverToLocationIDTest {
     }
     @Test
     void Tag0145Test() {
-        Tag145StrDeliverToLocationID tagData;
+        Log145StrDeliverToLocationID tagData;
 
-        tagData = new Tag145StrDeliverToLocationID(
-                        new MyStringType(Tag145StrDeliverToLocationID.TESTA_STR_DELIVER_TO_LOCATION_ID));
-        assertEquals( Tag145StrDeliverToLocationID.TESTA_STR_DELIVER_TO_LOCATION_ID, tagData.getDataValue());
+        tagData = new Log145StrDeliverToLocationID(
+                        new MyStringType(Log145StrDeliverToLocationID.TESTA_STR_DELIVER_TO_LOCATION_ID));
+        assertEquals( Log145StrDeliverToLocationID.TESTA_STR_DELIVER_TO_LOCATION_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag145StrDeliverToLocationID(
-                new MyStringType(Tag145StrDeliverToLocationID.TESTB_STR_DELIVER_TO_LOCATION_ID));
-        assertEquals( Tag145StrDeliverToLocationID.TESTB_STR_DELIVER_TO_LOCATION_ID, tagData.getDataValue());
+        tagData = new Log145StrDeliverToLocationID(
+                new MyStringType(Log145StrDeliverToLocationID.TESTB_STR_DELIVER_TO_LOCATION_ID));
+        assertEquals( Log145StrDeliverToLocationID.TESTB_STR_DELIVER_TO_LOCATION_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

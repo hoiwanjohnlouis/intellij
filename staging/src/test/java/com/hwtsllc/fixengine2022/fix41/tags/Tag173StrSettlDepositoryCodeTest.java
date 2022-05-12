@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,16 +46,16 @@ class Tag173StrSettlDepositoryCodeTest {
     }
     @Test
     void Tag0173Test() {
-        Tag173StrSettlDepositoryCode tagData;
+        Log173StrSettlDepositoryCode tagData;
 
-        tagData = new Tag173StrSettlDepositoryCode(
-                new MyStringType(Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE));
-        assertEquals( Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE, tagData.getDataValue());
+        tagData = new Log173StrSettlDepositoryCode(
+                new MyStringType(Log173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE));
+        assertEquals( Log173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag173StrSettlDepositoryCode(
-                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE));
-        assertEquals( Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE, tagData.getDataValue());
+        tagData = new Log173StrSettlDepositoryCode(
+                new MyStringType(Log173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE));
+        assertEquals( Log173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

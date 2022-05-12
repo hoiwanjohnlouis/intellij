@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1086
+ *  DisplayHighQty
+ *  Qty
+ *  <p>
+ *  Defines the upper quantity limit to a randomized refresh of DisplayQty.
+ */
 class Tag1086DisplayHighQtyTest {
     @Test
     void FIX1086Test() {
         FIX50 fixData = FIX50.FIX1086_DISPLAY_HIGH_QTY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1086", fixData.getID());
+        assertEquals( "DISPLAY_HIGH_QTY", fixData.getName());
+        assertEquals( "display_high_qty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

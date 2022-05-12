@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumCoveredOrUncovered;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -56,13 +56,13 @@ class Tag565EnuLegCoveredOrUncoveredTest {
     }
     @Test
     void Tag0565Test() {
-        Tag565EnuLegCoveredOrUncovered tagData;
+        Log565EnuLegCoveredOrUncovered tagData;
 
-        tagData = new Tag565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
+        tagData = new Log565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
         assertEquals( MyEnumCoveredOrUncovered.COVERED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered.UNCOVERED);
+        tagData = new Log565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered.UNCOVERED);
         assertEquals( MyEnumCoveredOrUncovered.UNCOVERED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

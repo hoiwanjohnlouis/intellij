@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum716SettlSessID;
 import org.junit.jupiter.api.Test;
 
@@ -47,21 +47,21 @@ class Tag716EnuSettlSessIDTest {
      */
     @Test
     void Tag0716Test() {
-        Tag716EnuSettlSessID tagData;
+        Log716EnuSettlSessID tagData;
 
-        tagData = new Tag716EnuSettlSessID(Enum716SettlSessID.INTRADAY);
+        tagData = new Log716EnuSettlSessID(Enum716SettlSessID.INTRADAY);
         assertEquals( "ITD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag716EnuSettlSessID(Enum716SettlSessID.REGULAR_TRADING_HOURS);
+        tagData = new Log716EnuSettlSessID(Enum716SettlSessID.REGULAR_TRADING_HOURS);
         assertEquals( "RTH", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag716EnuSettlSessID(Enum716SettlSessID.ELECTRONIC_TRADING_HOURS);
+        tagData = new Log716EnuSettlSessID(Enum716SettlSessID.ELECTRONIC_TRADING_HOURS);
         assertEquals( "ETH", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag716EnuSettlSessID(Enum716SettlSessID.END_OF_DAY);
+        tagData = new Log716EnuSettlSessID(Enum716SettlSessID.END_OF_DAY);
         assertEquals( "EOD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

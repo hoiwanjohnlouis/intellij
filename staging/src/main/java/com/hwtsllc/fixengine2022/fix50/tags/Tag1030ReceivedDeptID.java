@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1030
+ *  ReceivedDeptID
+ *  String
+ *  <p>
+ *  Identifies the Broker / Dealer Department that first took the order.
+ */
 public class Tag1030ReceivedDeptID {
 }

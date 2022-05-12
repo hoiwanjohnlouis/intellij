@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -57,16 +57,16 @@ class Tag200StrMaturityMonthYearTest {
     }
     @Test
     void Tag0200Test() {
-        Tag200StrMaturityMonthYear tagData;
+        Log200StrMaturityMonthYear tagData;
 
-        tagData = new Tag200StrMaturityMonthYear(
-                new MyStringType(Tag200StrMaturityMonthYear.TESTA_STR_MATURITY_MONTH_YEAR));
-        assertEquals( Tag200StrMaturityMonthYear.TESTA_STR_MATURITY_MONTH_YEAR, tagData.getDataValue());
+        tagData = new Log200StrMaturityMonthYear(
+                new MyStringType(Log200StrMaturityMonthYear.TESTA_STR_MATURITY_MONTH_YEAR));
+        assertEquals( Log200StrMaturityMonthYear.TESTA_STR_MATURITY_MONTH_YEAR, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag200StrMaturityMonthYear(
-                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR));
-        assertEquals( Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR, tagData.getDataValue());
+        tagData = new Log200StrMaturityMonthYear(
+                new MyStringType(Log200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR));
+        assertEquals( Log200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

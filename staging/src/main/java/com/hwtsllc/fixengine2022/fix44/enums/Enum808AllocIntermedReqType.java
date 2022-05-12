@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  808
@@ -35,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      5 - Block Level Reject
  *      6 - Account Level Reject
  */
-public enum Enum808AllocIntermedReqType implements EnumAccessors, LogStringVerbose {
+public enum Enum808AllocIntermedReqType implements EnumAccessors, LogVerboseString {
     PENDING_ACCEPT( "1", "PENDING_ACCEPT", "1 - Pending Accept" ),
     PENDING_RELEASE( "2", "PENDING_RELEASE", "2 - Pending Release" ),
     PENDING_REVERSAL( "3", "PENDING_REVERSAL", "3 - Pending Reversal" ),
@@ -87,7 +87,7 @@ public enum Enum808AllocIntermedReqType implements EnumAccessors, LogStringVerbo
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1043
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    0 - Specific Deposit
  *  <p>    1 - General
  */
-public enum Enum1043CollApplType implements EnumAccessors, LogStringVerbose {
+public enum Enum1043CollApplType implements EnumAccessors, LogVerboseString {
     SPECIFIC_DEPOSIT( "0", "SPECIFIC_DEPOSIT", "0 - Specific Deposit" ),
     GENERAL( "1", "GENERAL", "1 - General" ),
     ;
@@ -77,7 +77,7 @@ public enum Enum1043CollApplType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

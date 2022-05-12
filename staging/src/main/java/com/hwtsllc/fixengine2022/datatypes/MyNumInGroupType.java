@@ -16,14 +16,14 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *
  * MyNumInGroupType is a wrapper class for any MyNumInGroupType field
  * Initially it will be an int.
  */
-public class MyNumInGroupType implements LogStringVerbose {
+public class MyNumInGroupType implements LogVerboseString {
     private final int dataValue;
 
     public MyNumInGroupType(final int dataValue) {
@@ -37,7 +37,7 @@ public class MyNumInGroupType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -57,6 +57,6 @@ public class MyNumInGroupType implements LogStringVerbose {
     public static void main(String[] args) {
         MyNumInGroupType dataType = new MyNumInGroupType(12345);
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,9 +46,9 @@ class Tag128StrDeliverToCompIDTest {
     }
     @Test
     void Tag0128Test() {
-        Tag128StrDeliverToCompID tagData;
+        Log128StrDeliverToCompID tagData;
 
-        tagData = new Tag128StrDeliverToCompID(new MyStringType("SongJiHyo-128DeliverToCompID") );
+        tagData = new Log128StrDeliverToCompID(new MyStringType("SongJiHyo-128DeliverToCompID") );
         assertEquals( "SongJiHyo-128DeliverToCompID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

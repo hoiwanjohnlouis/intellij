@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  935
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      4 - Stop Subscribing
  *      8 - Level of Detail, then NoCompID's becomes required
  */
-public enum Enum935NetworkRequestType implements EnumAccessors, LogStringVerbose {
+public enum Enum935NetworkRequestType implements EnumAccessors, LogVerboseString {
     SNAPSHOT( "1", "SNAPSHOT", "1 - Snapshot" ),
     SUBSCRIBE( "2", "SUBSCRIBE", "2 - Subscribe" ),
     STOP_SUBSCRIBING( "4", "STOP_SUBSCRIBING", "4 - Stop Subscribing" ),
@@ -80,7 +80,7 @@ public enum Enum935NetworkRequestType implements EnumAccessors, LogStringVerbose
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

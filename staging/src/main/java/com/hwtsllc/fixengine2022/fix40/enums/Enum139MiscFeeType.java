@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  139
@@ -40,7 +40,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      13 - Transfer Fee
  *      14 - Security Lending
  */
-public enum Enum139MiscFeeType implements EnumAccessors, LogStringVerbose {
+public enum Enum139MiscFeeType implements EnumAccessors, LogVerboseString {
     REGULATORY( "1", "REGULATORY", "1 - Regulatory (e.g. SEC)" ),
     TAX( "2", "TAX", "2 - Tax" ),
     LOCAL_COMMISSION( "3", "LOCAL_COMMISSION", "3 - Local Commission" ),
@@ -99,7 +99,7 @@ public enum Enum139MiscFeeType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

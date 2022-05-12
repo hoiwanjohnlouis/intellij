@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  992
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    1 - Sub Allocate
  *  <p>    2 - Third Party Allocation
  */
-public enum Enum992IndividualAllocType implements EnumAccessors, LogStringVerbose {
+public enum Enum992IndividualAllocType implements EnumAccessors, LogVerboseString {
     SUB_ALLOCATE( "1", "SUB_ALLOCATE", "1 - Sub Allocate" ),
     THIRD_PARTY_ALLOCATION( "2", "THIRD_PARTY_ALLOCATION", "2 - Third Party Allocation" ),
     ;
@@ -77,7 +77,7 @@ public enum Enum992IndividualAllocType implements EnumAccessors, LogStringVerbos
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,17 +38,17 @@ class Tag318CcyUnderlyingCurrencyTest {
     }
     @Test
     void Tag0318Test() {
-        Tag318CcyUnderlyingCurrency tagData;
+        Log318CcyUnderlyingCurrency tagData;
 
-        tagData = new Tag318CcyUnderlyingCurrency(new MyCurrencyType(
-                Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY));
-        assertEquals( Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY,
+        tagData = new Log318CcyUnderlyingCurrency(new MyCurrencyType(
+                Log318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY));
+        assertEquals( Log318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag318CcyUnderlyingCurrency(new MyCurrencyType(
-                Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY));
-        assertEquals( Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY,
+        tagData = new Log318CcyUnderlyingCurrency(new MyCurrencyType(
+                Log318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY));
+        assertEquals( Log318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag429
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      ALL_DONE( "5", "ALL_DONE", "5 - All Done" ),
  *      ALERT( "6", "ALERT", "6 - Alert" ),
  */
-public enum Enum429ListStatusType implements EnumAccessors, LogStringVerbose {
+public enum Enum429ListStatusType implements EnumAccessors, LogVerboseString {
     /**
      * 1-6 msg types
      */
@@ -86,7 +86,7 @@ public enum Enum429ListStatusType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

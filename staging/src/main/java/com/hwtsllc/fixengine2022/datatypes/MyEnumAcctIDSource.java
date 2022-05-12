@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  660 (same as 660, 661)
@@ -43,7 +43,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    5 - DTCC Code
  *  <p>    99 - Other (custom or proprietary)
  */
-public enum MyEnumAcctIDSource implements EnumAccessors, LogStringVerbose {
+public enum MyEnumAcctIDSource implements EnumAccessors, LogVerboseString {
     BIC( "1", "BIC", "1 - BIC" ),
     SID( "2", "SID", "2 - SID Code" ),
     TFM( "3", "TFM", "3 - TFM (GSPTA)" ),
@@ -95,7 +95,7 @@ public enum MyEnumAcctIDSource implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

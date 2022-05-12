@@ -17,19 +17,27 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1103
+ *  TriggerSymbol
+ *  String
+ *  <p>
+ *  Defines the common, 'human understood' representation of the
+ *  security whose prices will be tracked by the trigger logic.
+ */
 class Tag1103TriggerSymbolTest {
     @Test
     void FIX1103Test() {
         FIX50 fixData = FIX50.FIX1103_TRIGGER_SYMBOL;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1103", fixData.getID());
+        assertEquals( "TRIGGER_SYMBOL", fixData.getName());
+        assertEquals( "trigger_symbol", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumIOIQty;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -60,25 +60,25 @@ class Tag27EnuIOIQtyTest {
     }
     @Test
     void Tag0027Test() {
-        Tag27EnuIOIQty tagData;
+        Log27EnuIOIQty tagData;
 
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.ONE_BILLION);
+        tagData = new Log27EnuIOIQty(MyEnumIOIQty.ONE_BILLION);
         assertEquals( MyEnumIOIQty.ONE_BILLION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.SMALL);
+        tagData = new Log27EnuIOIQty(MyEnumIOIQty.SMALL);
         assertEquals( MyEnumIOIQty.SMALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.MEDIUM);
+        tagData = new Log27EnuIOIQty(MyEnumIOIQty.MEDIUM);
         assertEquals( MyEnumIOIQty.MEDIUM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.LARGE);
+        tagData = new Log27EnuIOIQty(MyEnumIOIQty.LARGE);
         assertEquals( MyEnumIOIQty.LARGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
+        tagData = new Log27EnuIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
         assertEquals( MyEnumIOIQty.UNDISCLOSED_QUANTITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag437QtyContraTradeQtyTest {
     }
     @Test
     void Tag0437Test() {
-        Tag437QtyContraTradeQty tagData;
+        Log437QtyContraTradeQty tagData;
 
-        tagData = new Tag437QtyContraTradeQty(new MyQtyType(
-                Tag437QtyContraTradeQty.TESTA_QTY_CONTRA_TRADE_QTY));
-        assertEquals( Tag437QtyContraTradeQty.TESTA_QTY_CONTRA_TRADE_QTY,
+        tagData = new Log437QtyContraTradeQty(new MyQtyType(
+                Log437QtyContraTradeQty.TESTA_QTY_CONTRA_TRADE_QTY));
+        assertEquals( Log437QtyContraTradeQty.TESTA_QTY_CONTRA_TRADE_QTY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag437QtyContraTradeQty(new MyQtyType(
-                Tag437QtyContraTradeQty.TESTB_QTY_CONTRA_TRADE_QTY));
-        assertEquals( Tag437QtyContraTradeQty.TESTB_QTY_CONTRA_TRADE_QTY,
+        tagData = new Log437QtyContraTradeQty(new MyQtyType(
+                Log437QtyContraTradeQty.TESTB_QTY_CONTRA_TRADE_QTY));
+        assertEquals( Log437QtyContraTradeQty.TESTB_QTY_CONTRA_TRADE_QTY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

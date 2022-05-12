@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,16 +45,16 @@ class Tag184StrCashSettlAgentAcctNumTest {
     }
     @Test
     void Tag0184Test() {
-        Tag184StrCashSettlAgentAcctNum tagData;
+        Log184StrCashSettlAgentAcctNum tagData;
 
-        tagData = new Tag184StrCashSettlAgentAcctNum(
-                new MyStringType(Tag184StrCashSettlAgentAcctNum.TESTA_STR_CASH_SETTL_AGENT_ACCT_NUM));
-        assertEquals( Tag184StrCashSettlAgentAcctNum.TESTA_STR_CASH_SETTL_AGENT_ACCT_NUM, tagData.getDataValue());
+        tagData = new Log184StrCashSettlAgentAcctNum(
+                new MyStringType(Log184StrCashSettlAgentAcctNum.TESTA_STR_CASH_SETTL_AGENT_ACCT_NUM));
+        assertEquals( Log184StrCashSettlAgentAcctNum.TESTA_STR_CASH_SETTL_AGENT_ACCT_NUM, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag184StrCashSettlAgentAcctNum(
-                new MyStringType(Tag184StrCashSettlAgentAcctNum.TESTB_STR_CASH_SETTL_AGENT_ACCT_NUM));
-        assertEquals( Tag184StrCashSettlAgentAcctNum.TESTB_STR_CASH_SETTL_AGENT_ACCT_NUM, tagData.getDataValue());
+        tagData = new Log184StrCashSettlAgentAcctNum(
+                new MyStringType(Log184StrCashSettlAgentAcctNum.TESTB_STR_CASH_SETTL_AGENT_ACCT_NUM));
+        assertEquals( Log184StrCashSettlAgentAcctNum.TESTB_STR_CASH_SETTL_AGENT_ACCT_NUM, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

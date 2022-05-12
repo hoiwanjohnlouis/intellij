@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum416IncTaxInd;
 import org.junit.jupiter.api.Test;
 
@@ -46,16 +46,16 @@ class Tag416EnuIncTaxIndTest {
      */
     @Test
     void Tag0416Test() {
-        Tag416EnuIncTaxInd tagData;
+        Log416EnuIncTaxInd tagData;
 
         /**
          * 1-2 msg types
          */
-        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.NET);
+        tagData = new Log416EnuIncTaxInd(Enum416IncTaxInd.NET);
         assertEquals( Enum416IncTaxInd.NET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
+        tagData = new Log416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
         assertEquals( Enum416IncTaxInd.GROSS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

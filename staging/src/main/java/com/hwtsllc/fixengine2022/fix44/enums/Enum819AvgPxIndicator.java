@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  819
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Trade is part of an average price group identified by the TradeLinkID (820)
  *      2 - Last trade is the average price group identified by the TradeLinkID (820)
  */
-public enum Enum819AvgPxIndicator implements EnumAccessors, LogStringVerbose {
+public enum Enum819AvgPxIndicator implements EnumAccessors, LogVerboseString {
     NO_PRICING( "0", "NO_PRICING", "0 - No Average Pricing" ),
     PART_OF_APG( "1", "PART_OF_APG", "1 - Trade is part of an average price group identified by the TradeLinkID (820)" ),
     LAST_TRADE( "2", "LAST_TRADE", "2 - Last trade is the average price group identified by the TradeLinkID (820)" ),
@@ -77,7 +77,7 @@ public enum Enum819AvgPxIndicator implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

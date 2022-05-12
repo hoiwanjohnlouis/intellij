@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1104
+ *  TriggerSecurityID
+ *  String
+ *  <p>
+ *  Defines the identity of the security whose prices will be tracked by the trigger logic.
+ */
 public class Tag1104TriggerSecurityID {
 }

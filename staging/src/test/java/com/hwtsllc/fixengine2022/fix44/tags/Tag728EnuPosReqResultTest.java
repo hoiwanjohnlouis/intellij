@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum728PosReqResult;
 import org.junit.jupiter.api.Test;
 
@@ -52,29 +52,29 @@ class Tag728EnuPosReqResultTest {
     }
     @Test
     void Tag0728Test() {
-        Tag728EnuPosReqResult tagData;
+        Log728EnuPosReqResult tagData;
 
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.VALID_REQUEST);
+        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.VALID_REQUEST);
         assertEquals( "0", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.UNSUPPORTED_REQUEST);
+        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.UNSUPPORTED_REQUEST);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.NO_POSITIONS_FOUND);
+        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.NO_POSITIONS_FOUND);
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.NOT_AUTHORIZED);
+        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.NOT_AUTHORIZED);
         assertEquals( "3", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.REQUEST_NOT_SUPPORTED);
+        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.REQUEST_NOT_SUPPORTED);
         assertEquals( "4", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.OTHER);
+        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.OTHER);
         assertEquals( "99", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

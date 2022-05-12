@@ -16,5 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1027
+ *  MDEntryForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  Used for an F/X entry.
+ *  <p>
+ *  The forward points to be added to or subtracted from the spot rate
+ *  to get the "all-in" rate in MDEntryPx.  Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 public class Tag1027MDEntryForwardPoints {
 }

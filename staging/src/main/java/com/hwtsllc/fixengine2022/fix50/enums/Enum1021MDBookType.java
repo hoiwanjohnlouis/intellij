@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1021
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - Price Depth
  *  <p>    3 - Order Depth
  */
-public enum Enum1021MDBookType implements EnumAccessors, LogStringVerbose {
+public enum Enum1021MDBookType implements EnumAccessors, LogVerboseString {
     TOP_OF_BOOK( "1", "TOP_OF_BOOK", "1 - Top of Book" ),
     PRICE_DEPTH( "2", "PRICE_DEPTH", "2 - Price Depth" ),
     ORDER_DEPTH( "3", "ORDER_DEPTH", "3 - Order Depth" ),
@@ -81,7 +81,7 @@ public enum Enum1021MDBookType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

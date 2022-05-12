@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  826
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      4 - Allocation from executor
  *      5 - Allocation to claim account
  */
-public enum Enum826TradeAllocIndicator implements EnumAccessors, LogStringVerbose {
+public enum Enum826TradeAllocIndicator implements EnumAccessors, LogVerboseString {
     NOT_REQUIRED( "0", "NOT_REQUIRED", "0 - Allocation not required" ),
     REQUIRED( "1", "REQUIRED", "1 - Allocation required (give-up trade) allocation information not provided (incomplete)" ),
     USE_PROVIDED_INFO( "2", "USE_PROVIDED_INFO", "2 - Use allocation provided with the trade" ),
@@ -84,7 +84,7 @@ public enum Enum826TradeAllocIndicator implements EnumAccessors, LogStringVerbos
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

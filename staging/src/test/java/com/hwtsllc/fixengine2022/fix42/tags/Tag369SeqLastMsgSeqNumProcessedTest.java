@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag369SeqLastMsgSeqNumProcessedTest {
     }
     @Test
     void Tag0369Test() {
-        Tag369SeqLastMsgSeqNumProcessed tagData;
+        Log369SeqLastMsgSeqNumProcessed tagData;
 
-        tagData = new Tag369SeqLastMsgSeqNumProcessed(new MySeqNumType(
-                Tag369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
-        assertEquals( Tag369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED,
+        tagData = new Log369SeqLastMsgSeqNumProcessed(new MySeqNumType(
+                Log369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
+        assertEquals( Log369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag369SeqLastMsgSeqNumProcessed(new MySeqNumType(
-                Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
-        assertEquals( Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED,
+        tagData = new Log369SeqLastMsgSeqNumProcessed(new MySeqNumType(
+                Log369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
+        assertEquals( Log369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }

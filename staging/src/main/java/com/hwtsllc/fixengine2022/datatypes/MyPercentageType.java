@@ -16,13 +16,13 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  * MyPercentageType is a wrapper class for the PCT field
  * Initially it will be a String, later on it will become BigDecimal.
  */
-public class MyPercentageType implements LogStringVerbose {
+public class MyPercentageType implements LogVerboseString {
     private final double dataValue;
 
     public final static double TESTA_PCT_PERCENTAGE_TYPE = 0.025D;
@@ -39,7 +39,7 @@ public class MyPercentageType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -61,10 +61,10 @@ public class MyPercentageType implements LogStringVerbose {
 
         dataType = new MyPercentageType( TESTA_PCT_PERCENTAGE_TYPE );
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
 
         dataType = new MyPercentageType( TESTB_PCT_PERCENTAGE_TYPE );
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

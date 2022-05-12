@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1093
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - Round Lot
  *  <p>    3 - Block Lot
  */
-public enum Enum1093LotType implements EnumAccessors, LogStringVerbose {
+public enum Enum1093LotType implements EnumAccessors, LogVerboseString {
     ODD_LOT( "1", "ODD_LOT", "1 - Odd Lot" ),
     ROUND_LOT( "2", "ROUND_LOT", "2 - Round Lot" ),
     BLOCK_LOT( "3", "BLOCK_LOT", "3 - Block Lot" ),
@@ -79,7 +79,7 @@ public enum Enum1093LotType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum959StrategyParameterType;
 import org.junit.jupiter.api.Test;
 
@@ -151,8 +151,8 @@ class Tag959EnuStrategyParameterTypeTest {
         assertEquals( Enum959StrategyParameterType.MONTH_YEAR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_TIME_STAMP );
-        assertEquals( Enum959StrategyParameterType.UTC_TIME_STAMP.getID(), tagData.getDataValue());
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_TIMESTAMP);
+        assertEquals( Enum959StrategyParameterType.UTC_TIMESTAMP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_TIME_ONLY );

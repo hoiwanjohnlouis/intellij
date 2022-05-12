@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum29LastCapacity;
 import org.junit.jupiter.api.Test;
 
@@ -49,21 +49,21 @@ class Tag29EnuLastCapacityTest {
     }
     @Test
     void Tag0029Test() {
-        Tag29EnuLastCapacity tagData;
+        Log29EnuLastCapacity tagData;
 
-        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.AGENT);
+        tagData = new Log29EnuLastCapacity(Enum29LastCapacity.AGENT);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_AGENT);
+        tagData = new Log29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_AGENT);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_PRINCIPAL);
+        tagData = new Log29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_PRINCIPAL);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.PRINCIPAL);
+        tagData = new Log29EnuLastCapacity(Enum29LastCapacity.PRINCIPAL);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

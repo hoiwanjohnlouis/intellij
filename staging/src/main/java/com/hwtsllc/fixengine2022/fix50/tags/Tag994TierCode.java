@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  994
+ *  TierCode
+ *  String
+ *  <p>
+ *  The Tier the trade was matched by the clearing system.
+ */
 public class Tag994TierCode {
 }

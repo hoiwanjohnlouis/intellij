@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag408AmtValueOfFuturesTest {
     }
     @Test
     void Tag0408Test() {
-        Tag408AmtValueOfFutures tagData;
+        Log408AmtValueOfFutures tagData;
 
-        tagData = new Tag408AmtValueOfFutures(new MyAmtType(
-                Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES));
-        assertEquals( Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES,
+        tagData = new Log408AmtValueOfFutures(new MyAmtType(
+                Log408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES));
+        assertEquals( Log408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag408AmtValueOfFutures(new MyAmtType(
-                Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES));
-        assertEquals( Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES,
+        tagData = new Log408AmtValueOfFutures(new MyAmtType(
+                Log408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES));
+        assertEquals( Log408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

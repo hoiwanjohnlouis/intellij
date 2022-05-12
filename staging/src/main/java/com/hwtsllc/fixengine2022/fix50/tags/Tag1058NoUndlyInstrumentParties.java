@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1058
+ *  NoUndlyInstrumentParties
+ *  NumInGroup
+ *  <p>
+ *  Identifies the number of parties identified with an underlying instrument
+ */
 public class Tag1058NoUndlyInstrumentParties {
 }

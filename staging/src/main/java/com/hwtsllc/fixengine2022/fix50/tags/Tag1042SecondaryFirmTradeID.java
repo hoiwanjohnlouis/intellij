@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1042
+ *  SecondaryFirmTradeID
+ *  String
+ *  <p>
+ *  Used to carry an internal firm assigned ID which may
+ *  or may not be reported to the exchange or central counterparty
+ */
 public class Tag1042SecondaryFirmTradeID {
 }

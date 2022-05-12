@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag215NumNoRoutingIDsTest {
     }
     @Test
     void Tag0215Test() {
-        Tag215NumNoRoutingIDs tagData;
+        Log215NumNoRoutingIDs tagData;
 
-        tagData = new Tag215NumNoRoutingIDs(new MyNumInGroupType(
-                Tag215NumNoRoutingIDs.TESTA_NUM_NO_ROUTING_IDS));
-        assertEquals( Tag215NumNoRoutingIDs.TESTA_NUM_NO_ROUTING_IDS,
+        tagData = new Log215NumNoRoutingIDs(new MyNumInGroupType(
+                Log215NumNoRoutingIDs.TESTA_NUM_NO_ROUTING_IDS));
+        assertEquals( Log215NumNoRoutingIDs.TESTA_NUM_NO_ROUTING_IDS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag215NumNoRoutingIDs(new MyNumInGroupType(
-                Tag215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS));
-        assertEquals( Tag215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS,
+        tagData = new Log215NumNoRoutingIDs(new MyNumInGroupType(
+                Log215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS));
+        assertEquals( Log215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

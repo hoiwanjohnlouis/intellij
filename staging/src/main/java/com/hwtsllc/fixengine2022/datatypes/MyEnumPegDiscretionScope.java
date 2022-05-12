@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  840 (same as 840, 846,)
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    3 - Global
  *  <p>    4 - National excluding local
  */
-public enum MyEnumPegDiscretionScope implements EnumAccessors, LogStringVerbose {
+public enum MyEnumPegDiscretionScope implements EnumAccessors, LogVerboseString {
     LOCAL( "1", "LOCAL", "1 - Local (Exchange, ECN, ATS)" ),
     NATIONAL( "2", "NATIONAL", "2 - National" ),
     GLOBAL( "3", "GLOBAL", "3 - Global" ),
@@ -87,7 +87,7 @@ public enum MyEnumPegDiscretionScope implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

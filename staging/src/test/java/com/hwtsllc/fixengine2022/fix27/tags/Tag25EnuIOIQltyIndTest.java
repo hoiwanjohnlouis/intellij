@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum25IOIQltyInd;
 import org.junit.jupiter.api.Test;
 
@@ -48,17 +48,17 @@ class Tag25EnuIOIQltyIndTest {
     }
     @Test
     void Tag0025Test() {
-        Tag25EnuIOIQltyInd tagData;
+        Log25EnuIOIQltyInd tagData;
 
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.HIGH);
+        tagData = new Log25EnuIOIQltyInd(Enum25IOIQltyInd.HIGH);
         assertEquals( "H", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.MEDIUM);
+        tagData = new Log25EnuIOIQltyInd(Enum25IOIQltyInd.MEDIUM);
         assertEquals( "M", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.LOW);
+        tagData = new Log25EnuIOIQltyInd(Enum25IOIQltyInd.LOW);
         assertEquals( "L", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

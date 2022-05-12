@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1112
+ *  TriggerNewQty
+ *  Qty
+ *  <p>
+ *  The Quantity the order should have after the trigger has hit.
+ */
 public class Tag1112TriggerNewQty {
 }

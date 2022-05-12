@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,9 +43,9 @@ class Tag124NumNoExecsTest {
     }
     @Test
     void Tag0124Test() {
-        Tag124NumNoExecs tagData;
+        Log124NumNoExecs tagData;
 
-        tagData = new Tag124NumNoExecs(new MyNumInGroupType(100) );
+        tagData = new Log124NumNoExecs(new MyNumInGroupType(100) );
         assertEquals( 100, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

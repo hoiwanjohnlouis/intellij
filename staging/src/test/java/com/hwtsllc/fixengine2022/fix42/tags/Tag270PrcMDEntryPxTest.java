@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag270PrcMDEntryPxTest {
     }
     @Test
     void Tag0270Test() {
-        Tag270PrcMDEntryPx tagData;
+        Log270PrcMDEntryPx tagData;
 
-        tagData = new Tag270PrcMDEntryPx(new MyPriceType(
-                Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX));
-        assertEquals( Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX,
+        tagData = new Log270PrcMDEntryPx(new MyPriceType(
+                Log270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX));
+        assertEquals( Log270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag270PrcMDEntryPx(new MyPriceType(
-                Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX));
-        assertEquals( Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX,
+        tagData = new Log270PrcMDEntryPx(new MyPriceType(
+                Log270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX));
+        assertEquals( Log270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

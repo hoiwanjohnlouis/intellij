@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag392StrListNameTest {
     }
     @Test
     void Tag0392Test() {
-        Tag392StrListName tagData;
+        Log392StrListName tagData;
 
-        tagData = new Tag392StrListName(new MyStringType(
-                Tag392StrListName.TESTA_STR_LIST_NAME));
-        assertEquals( Tag392StrListName.TESTA_STR_LIST_NAME,
+        tagData = new Log392StrListName(new MyStringType(
+                Log392StrListName.TESTA_STR_LIST_NAME));
+        assertEquals( Log392StrListName.TESTA_STR_LIST_NAME,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag392StrListName(new MyStringType(
-                Tag392StrListName.TESTB_STR_LIST_NAME));
-        assertEquals( Tag392StrListName.TESTB_STR_LIST_NAME,
+        tagData = new Log392StrListName(new MyStringType(
+                Log392StrListName.TESTB_STR_LIST_NAME));
+        assertEquals( Log392StrListName.TESTB_STR_LIST_NAME,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

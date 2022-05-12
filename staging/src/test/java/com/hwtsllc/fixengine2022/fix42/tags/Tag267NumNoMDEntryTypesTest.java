@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag267NumNoMDEntryTypesTest {
     }
     @Test
     void Tag0267Test() {
-        Tag267NumNoMDEntryTypes tagData;
+        Log267NumNoMDEntryTypes tagData;
 
-        tagData = new Tag267NumNoMDEntryTypes(new MyNumInGroupType(
-                Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES));
-        assertEquals( Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES,
+        tagData = new Log267NumNoMDEntryTypes(new MyNumInGroupType(
+                Log267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES));
+        assertEquals( Log267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag267NumNoMDEntryTypes(new MyNumInGroupType(
-                Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES));
-        assertEquals( Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES,
+        tagData = new Log267NumNoMDEntryTypes(new MyNumInGroupType(
+                Log267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES));
+        assertEquals( Log267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

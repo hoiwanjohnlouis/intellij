@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  971
+ *  NTPositionLimit
+ *  int
+ *  <p>
+ *  Position Limit in the near-term contract for a given exchange-traded product.
+ */
 public class Tag971NTPositionLimit {
 }

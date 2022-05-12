@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  94
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Reply
  *      2 - Admin Reply
  */
-public enum Enum94EmailType implements EnumAccessors, LogStringVerbose {
+public enum Enum94EmailType implements EnumAccessors, LogVerboseString {
     NEW("0", "NEW", "0 - New" ),
     REPLY("1", "REPLY", "1 - Reply" ),
     ADMIN_REPLY("2", "ADMIN_REPLY", "2 - Admin Reply" ),
@@ -77,7 +77,7 @@ public enum Enum94EmailType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum729PosReqStatus;
 import org.junit.jupiter.api.Test;
 
@@ -46,11 +46,11 @@ class Tag729EnuPosReqStatusTest {
     }
     @Test
     void Tag0729Test() {
-        Tag729EnuPosReqStatus tagData;
+        Log729EnuPosReqStatus tagData;
 
-        tagData = new Tag729EnuPosReqStatus(Enum729PosReqStatus.COMPLETED);
-        tagData = new Tag729EnuPosReqStatus(Enum729PosReqStatus.COMPLETED_WITH_WARNINGS);
-        tagData = new Tag729EnuPosReqStatus(Enum729PosReqStatus.REJECTED);
+        tagData = new Log729EnuPosReqStatus(Enum729PosReqStatus.COMPLETED);
+        tagData = new Log729EnuPosReqStatus(Enum729PosReqStatus.COMPLETED_WITH_WARNINGS);
+        tagData = new Log729EnuPosReqStatus(Enum729PosReqStatus.REJECTED);
 
         assertEquals( "0", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());

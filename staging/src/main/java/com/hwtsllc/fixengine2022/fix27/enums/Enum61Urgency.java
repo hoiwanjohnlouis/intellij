@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  61
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Flash
  *      2 - Background
  */
-public enum Enum61Urgency implements EnumAccessors, LogStringVerbose {
+public enum Enum61Urgency implements EnumAccessors, LogVerboseString {
     NORMAL("0", "NORMAL", "0 - Normal" ),
     FLASH("1", "FLASH", "1 - Flash" ),
     BACKGROUND("2", "BACKGROUND", "2 - Background" ),
@@ -77,7 +77,7 @@ public enum Enum61Urgency implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

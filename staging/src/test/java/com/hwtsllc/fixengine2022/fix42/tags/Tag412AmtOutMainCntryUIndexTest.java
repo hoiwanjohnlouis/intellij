@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag412AmtOutMainCntryUIndexTest {
     }
     @Test
     void Tag0412Test() {
-        Tag412AmtOutMainCntryUIndex tagData;
+        Log412AmtOutMainCntryUIndex tagData;
 
-        tagData = new Tag412AmtOutMainCntryUIndex(new MyAmtType(
-                Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX));
-        assertEquals( Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX,
+        tagData = new Log412AmtOutMainCntryUIndex(new MyAmtType(
+                Log412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX));
+        assertEquals( Log412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag412AmtOutMainCntryUIndex(new MyAmtType(
-                Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX));
-        assertEquals( Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX,
+        tagData = new Log412AmtOutMainCntryUIndex(new MyAmtType(
+                Log412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX));
+        assertEquals( Log412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

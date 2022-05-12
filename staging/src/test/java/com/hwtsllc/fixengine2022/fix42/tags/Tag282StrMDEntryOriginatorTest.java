@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag282StrMDEntryOriginatorTest {
     }
     @Test
     void Tag0282Test() {
-        Tag282StrMDEntryOriginator tagData;
+        Log282StrMDEntryOriginator tagData;
 
-        tagData = new Tag282StrMDEntryOriginator(
-                new MyStringType(Tag282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR));
-        assertEquals( Tag282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
+        tagData = new Log282StrMDEntryOriginator(
+                new MyStringType(Log282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR));
+        assertEquals( Log282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag282StrMDEntryOriginator(
-                new MyStringType(Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR));
-        assertEquals( Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
+        tagData = new Log282StrMDEntryOriginator(
+                new MyStringType(Log282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR));
+        assertEquals( Log282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

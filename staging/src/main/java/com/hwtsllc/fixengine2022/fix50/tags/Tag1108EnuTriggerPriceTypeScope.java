@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceScope;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1092 (same as 1092, 1108,)
@@ -41,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - National (Across all national markets)
  *  <p>    3 - Global (Across all markets)
  */
-public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final MyEnumPriceScope dataValue;
 
     public final static MyEnumPriceScope TESTA_ENU_TRIGGER_PRICE_TYPE_SCOPE
@@ -61,7 +61,7 @@ public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements Fi
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -70,8 +70,8 @@ public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements Fi
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -93,12 +93,12 @@ public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements Fi
 
         tagData = new Tag1108EnuTriggerPriceTypeScope(TESTA_ENU_TRIGGER_PRICE_TYPE_SCOPE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1108EnuTriggerPriceTypeScope(TESTB_ENU_TRIGGER_PRICE_TYPE_SCOPE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

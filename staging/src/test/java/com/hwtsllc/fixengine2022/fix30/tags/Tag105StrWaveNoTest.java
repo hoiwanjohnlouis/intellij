@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,9 +45,9 @@ class Tag105StrWaveNoTest {
     }
     @Test
     void Tag0105Test() {
-        Tag105StrWaveNo tagData;
+        Log105StrWaveNo tagData;
 
-        tagData = new Tag105StrWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
+        tagData = new Log105StrWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
         assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

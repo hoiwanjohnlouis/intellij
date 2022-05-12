@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag355DatEncodedTextTest {
     }
     @Test
     void Tag0355Test() {
-        Tag355DatEncodedText tagData;
+        Log355DatEncodedText tagData;
 
-        tagData = new Tag355DatEncodedText(
-                new MyDataType(Tag355DatEncodedText.TESTA_DAT_ENCODED_TEXT));
-        assertEquals( Tag355DatEncodedText.TESTA_DAT_ENCODED_TEXT, tagData.getDataValue() );
+        tagData = new Log355DatEncodedText(
+                new MyDataType(Log355DatEncodedText.TESTA_DAT_ENCODED_TEXT));
+        assertEquals( Log355DatEncodedText.TESTA_DAT_ENCODED_TEXT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag355DatEncodedText(
-                new MyDataType(Tag355DatEncodedText.TESTB_DAT_ENCODED_TEXT));
-        assertEquals( Tag355DatEncodedText.TESTB_DAT_ENCODED_TEXT, tagData.getDataValue() );
+        tagData = new Log355DatEncodedText(
+                new MyDataType(Log355DatEncodedText.TESTB_DAT_ENCODED_TEXT));
+        assertEquals( Log355DatEncodedText.TESTB_DAT_ENCODED_TEXT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

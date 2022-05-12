@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1107
@@ -35,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p></p>
  *  <p>    6 - Best Mid
  */
-public enum Enum1107TriggerPriceType implements EnumAccessors, LogStringVerbose {
+public enum Enum1107TriggerPriceType implements EnumAccessors, LogVerboseString {
     BEST_OFFER( "1", "BEST_OFFER", "1 - Best Offer" ),
     LAST_TRADE( "2", "LAST_TRADE", "2 - Last Trade" ),
     BEST_BID( "3", "BEST_BID", "3 - Best Bid" ),
@@ -87,7 +87,7 @@ public enum Enum1107TriggerPriceType implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

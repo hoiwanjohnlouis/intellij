@@ -28,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class PriceSubjectImplTest {
     private final String WHERE_AM_I = this.getClass().getSimpleName();
     private static final Logger logger = LogManager.getRootLogger();
-    // private static final Logger logger = LogManager.getLogger(Tag1StrAccount.class);
+    // private static final Logger logger = LogManager.getLogger(Log1StrAccount.class);
 
     @BeforeEach
     void setUp() {

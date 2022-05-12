@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1131
+ *  RefCstmApplVerID
+ *  String
+ *  <p>
+ *  Specifies a custom extension to a message being applied at the session level.
+ */
 public class Tag1131RefCstmApplVerID {
 }

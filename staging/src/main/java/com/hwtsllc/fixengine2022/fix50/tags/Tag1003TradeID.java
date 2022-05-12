@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1003
+ *  TradeID
+ *  String
+ *  <p>
+ *  The unique ID assigned to the trade entity once it is received
+ *  or matched by the exchange or central counterparty.
+ */
 public class Tag1003TradeID {
 }

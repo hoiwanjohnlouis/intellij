@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  39
@@ -48,7 +48,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      D - Accepted for Bidding
  *      E - Pending Replace (i.e. result of Order Cancel/Replace Request)
  */
-public enum Enum39OrdStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum39OrdStatus implements EnumAccessors, LogVerboseString {
     NEW("0", "NEW", "0 - New" ),
     PARTIALLY_FILLED("1", "PARTIALLY_FILLED", "1 - Partially filled" ),
     FILLED("2", "FILLED", "2 - Filled" ),
@@ -112,7 +112,7 @@ public enum Enum39OrdStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  744 (same as 744, 1049,)
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    P - Pro-rata
  *  <p>    R - Random
  */
-public enum MyEnumAssignmentMethod implements EnumAccessors, LogStringVerbose {
+public enum MyEnumAssignmentMethod implements EnumAccessors, LogVerboseString {
     PRO_RATA( "P", "PRO_RATA", "P - Pro-rata" ),
     RANDOM( "R", "RANDOM", "R - Random" ),
     ;
@@ -84,7 +84,7 @@ public enum MyEnumAssignmentMethod implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

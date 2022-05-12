@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  219
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      "8 - 3MOLIBOR"
  *      "9 - 6MOLIBOR"
  */
-public enum Enum219Benchmark implements EnumAccessors, LogStringVerbose {
+public enum Enum219Benchmark implements EnumAccessors, LogVerboseString {
     /**
      * 1-9 msg types
      */
@@ -90,7 +90,7 @@ public enum Enum219Benchmark implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

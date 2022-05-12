@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  22
@@ -127,7 +127,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    K - ISDA/FpML Product URL (URL in SecurityID)
  *  <p>    L - Letter of Credit
  */
-public class Tag1096EnuPegSecurityIDSource extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1096EnuPegSecurityIDSource extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final MyEnumSecurityIDSource dataValue;
 
     public final static MyEnumSecurityIDSource TESTA_ENU_PEG_SECURITY_ID_SOURCE
@@ -147,7 +147,7 @@ public class Tag1096EnuPegSecurityIDSource extends FIX50Abstract implements FixT
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -156,8 +156,8 @@ public class Tag1096EnuPegSecurityIDSource extends FIX50Abstract implements FixT
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -179,12 +179,12 @@ public class Tag1096EnuPegSecurityIDSource extends FIX50Abstract implements FixT
 
         tagData = new Tag1096EnuPegSecurityIDSource(TESTA_ENU_PEG_SECURITY_ID_SOURCE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1096EnuPegSecurityIDSource(TESTB_ENU_PEG_SECURITY_ID_SOURCE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

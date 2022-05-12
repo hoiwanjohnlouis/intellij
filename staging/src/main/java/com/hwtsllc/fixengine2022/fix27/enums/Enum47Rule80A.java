@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  47
@@ -66,7 +66,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      Y - Program Order, non-index arb, for other agency
  *      Z - Short exempt transaction for non-member competing market-maker (refer to A and R types)
  */
-public enum Enum47Rule80A implements EnumAccessors, LogStringVerbose {
+public enum Enum47Rule80A implements EnumAccessors, LogVerboseString {
     AGENCY_SINGLE_ORDER("A", "AGENCY_SINGLE_ORDER",
             "A - Agency single order"),
     SHORT_EXEMPT_A("B", "SHORT_EXEMPT_A",
@@ -164,7 +164,7 @@ public enum Enum47Rule80A implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

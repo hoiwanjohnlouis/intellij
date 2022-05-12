@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,9 +45,9 @@ class Tag67StrListSeqNoTest {
     }
     @Test
     void Tag0067Test() {
-        Tag67StrListSeqNo tagData;
+        Log67StrListSeqNo tagData;
 
-        tagData = new Tag67StrListSeqNo(new MyStringType("EOWYN-67ListSeqNo") );
+        tagData = new Log67StrListSeqNo(new MyStringType("EOWYN-67ListSeqNo") );
         assertEquals( "EOWYN-67ListSeqNo", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

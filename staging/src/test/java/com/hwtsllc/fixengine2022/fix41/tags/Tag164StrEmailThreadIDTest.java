@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,14 +44,14 @@ class Tag164StrEmailThreadIDTest {
     }
     @Test
     void Tag0164Test() {
-        Tag164StrEmailThreadID tagData;
+        Log164StrEmailThreadID tagData;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID));
-        assertEquals( Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID, tagData.getDataValue());
+        tagData = new Log164StrEmailThreadID(new MyStringType(Log164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID));
+        assertEquals( Log164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
-        assertEquals( Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID, tagData.getDataValue());
+        tagData = new Log164StrEmailThreadID(new MyStringType(Log164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
+        assertEquals( Log164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum865EventType;
 import org.junit.jupiter.api.Test;
 
@@ -54,34 +54,34 @@ class Tag865EnuEventTypeTest {
     }
     @Test
     void Tag0865Test() {
-        Tag865EnuEventType tagData;
+        Log865EnuEventType tagData;
 
-        tagData = new Tag865EnuEventType( Enum865EventType.PUT );
+        tagData = new Log865EnuEventType( Enum865EventType.PUT );
         assertEquals( Enum865EventType.PUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag865EnuEventType( Enum865EventType.CALL );
+        tagData = new Log865EnuEventType( Enum865EventType.CALL );
         assertEquals( Enum865EventType.CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag865EnuEventType( Enum865EventType.TENDER );
+        tagData = new Log865EnuEventType( Enum865EventType.TENDER );
         assertEquals( Enum865EventType.TENDER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag865EnuEventType( Enum865EventType.SINKING_FUND_CALL );
+        tagData = new Log865EnuEventType( Enum865EventType.SINKING_FUND_CALL );
         assertEquals( Enum865EventType.SINKING_FUND_CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag865EnuEventType( Enum865EventType.ACTIVATION );
+        tagData = new Log865EnuEventType( Enum865EventType.ACTIVATION );
         assertEquals( Enum865EventType.ACTIVATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag865EnuEventType( Enum865EventType.INACTIVATION );
+        tagData = new Log865EnuEventType( Enum865EventType.INACTIVATION );
         assertEquals( Enum865EventType.INACTIVATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag865EnuEventType( Enum865EventType.OTHER );
+        tagData = new Log865EnuEventType( Enum865EventType.OTHER );
         assertEquals( Enum865EventType.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

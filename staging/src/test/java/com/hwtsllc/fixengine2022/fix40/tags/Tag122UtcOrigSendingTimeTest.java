@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
@@ -45,9 +45,9 @@ class Tag122UtcOrigSendingTimeTest {
     }
     @Test
     void Tag0122Test() {
-        Tag122UtcOrigSendingTime tagData;
+        Log122UtcOrigSendingTime tagData;
 
-        tagData = new Tag122UtcOrigSendingTime(new MyUTCTimestampType("KimSoYeon-122OrigSendingTime") );
+        tagData = new Log122UtcOrigSendingTime(new MyUTCTimestampType("KimSoYeon-122OrigSendingTime") );
         assertEquals( "KimSoYeon-122OrigSendingTime", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

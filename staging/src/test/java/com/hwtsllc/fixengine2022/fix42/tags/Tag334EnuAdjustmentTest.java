@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum334Adjustment;
 import org.junit.jupiter.api.Test;
 
@@ -47,20 +47,20 @@ class Tag334EnuAdjustmentTest {
      */
     @Test
     void Tag0334Test() {
-        Tag334EnuAdjustment tagData;
+        Log334EnuAdjustment tagData;
 
         /**
          * 1-3 msg types
          */
-        tagData = new Tag334EnuAdjustment(Enum334Adjustment.CANCEL);
+        tagData = new Log334EnuAdjustment(Enum334Adjustment.CANCEL);
         assertEquals( Enum334Adjustment.CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag334EnuAdjustment(Enum334Adjustment.ERROR);
+        tagData = new Log334EnuAdjustment(Enum334Adjustment.ERROR);
         assertEquals( Enum334Adjustment.ERROR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag334EnuAdjustment(Enum334Adjustment.CORRECTION);
+        tagData = new Log334EnuAdjustment(Enum334Adjustment.CORRECTION);
         assertEquals( Enum334Adjustment.CORRECTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

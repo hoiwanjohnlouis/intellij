@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  905
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      2 - Declined
  *      3 - Rejected
  */
-public enum Enum905CollAsgnRespType implements EnumAccessors, LogStringVerbose {
+public enum Enum905CollAsgnRespType implements EnumAccessors, LogVerboseString {
     RECEIVED( "0", "RECEIVED", "0 - Received" ),
     ACCEPTED( "1", "ACCEPTED", "1 - Accepted" ),
     DECLINED( "2", "DECLINED", "2 - Declined" ),
@@ -79,7 +79,7 @@ public enum Enum905CollAsgnRespType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

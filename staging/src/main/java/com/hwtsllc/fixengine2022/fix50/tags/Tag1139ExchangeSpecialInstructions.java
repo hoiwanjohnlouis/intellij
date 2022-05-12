@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1139
+ *  ExchangeSpecialInstructions
+ *  String
+ *  <p>
+ *  Free format test string related to exchange.
+ */
 public class Tag1139ExchangeSpecialInstructions {
 }

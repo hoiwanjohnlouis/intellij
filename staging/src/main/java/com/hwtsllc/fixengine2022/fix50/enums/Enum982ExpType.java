@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  982
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    4 - Contrary Intention
  *  <p>    5 - Difference
  */
-public enum Enum982ExpType implements EnumAccessors, LogStringVerbose {
+public enum Enum982ExpType implements EnumAccessors, LogVerboseString {
     AUTO_EXERCISE( "1", "AUTO_EXERCISE", "1 - Auto Exercise" ),
     NON_AUTO_EXERCISE( "2", "NON_AUTO_EXERCISE", "2 - Non Auto Exercise" ),
     FINAL_EXERCISED( "3", "FINAL_EXERCISED", "3 - Final Will Be Exercised" ),
@@ -83,7 +83,7 @@ public enum Enum982ExpType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

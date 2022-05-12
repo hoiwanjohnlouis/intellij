@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag218PxoSpreadTest {
     }
     @Test
     void Tag0218Test() {
-        Tag218PxoSpread tagData;
+        Log218PxoSpread tagData;
 
-        tagData = new Tag218PxoSpread(
-                new MyPriceOffsetType(Tag218PxoSpread.TESTA_PXO_SPREAD));
-        assertEquals( Tag218PxoSpread.TESTA_PXO_SPREAD, tagData.getDataValue());
+        tagData = new Log218PxoSpread(
+                new MyPriceOffsetType(Log218PxoSpread.TESTA_PXO_SPREAD));
+        assertEquals( Log218PxoSpread.TESTA_PXO_SPREAD, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag218PxoSpread(
-                new MyPriceOffsetType(Tag218PxoSpread.TESTB_PXO_SPREAD));
-        assertEquals( Tag218PxoSpread.TESTB_PXO_SPREAD, tagData.getDataValue());
+        tagData = new Log218PxoSpread(
+                new MyPriceOffsetType(Log218PxoSpread.TESTB_PXO_SPREAD));
+        assertEquals( Log218PxoSpread.TESTB_PXO_SPREAD, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
     }
 }

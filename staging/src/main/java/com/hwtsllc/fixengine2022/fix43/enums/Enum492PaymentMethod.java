@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  492 (same as 492,)
@@ -43,7 +43,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved1000Plus
  */
-public enum Enum492PaymentMethod implements EnumAccessors, LogStringVerbose {
+public enum Enum492PaymentMethod implements EnumAccessors, LogVerboseString {
     /*
      * 1-15 types
      */
@@ -108,7 +108,7 @@ public enum Enum492PaymentMethod implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

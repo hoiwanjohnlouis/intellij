@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,9 +44,9 @@ class Tag116StrOnBehalfOfSubIDTest {
     }
     @Test
     void Tag0116Test() {
-        Tag116StrOnBehalfOfSubID tagData;
+        Log116StrOnBehalfOfSubID tagData;
 
-        tagData = new Tag116StrOnBehalfOfSubID(new MyStringType("Gimli-116OnBehalfOfSubID") );
+        tagData = new Log116StrOnBehalfOfSubID(new MyStringType("Gimli-116OnBehalfOfSubID") );
         assertEquals( "Gimli-116OnBehalfOfSubID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

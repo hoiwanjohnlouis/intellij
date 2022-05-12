@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1127
+ *  OrigSecondaryTradeID
+ *  String
+ *  <p>
+ *  Used to preserve original secondary trade id when original trade
+ *  is being referenced in a subsequent trade transaction such as a transfer
+ */
 public class Tag1127OrigSecondaryTradeID {
 }

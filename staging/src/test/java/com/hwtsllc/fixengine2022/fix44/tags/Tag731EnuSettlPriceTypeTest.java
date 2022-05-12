@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum731SettlPriceType;
 import org.junit.jupiter.api.Test;
 
@@ -45,13 +45,13 @@ class Tag731EnuSettlPriceTypeTest {
     }
     @Test
     void Tag0731Test() {
-        Tag731EnuSettlPriceType tagData;
+        Log731EnuSettlPriceType tagData;
 
-        tagData = new Tag731EnuSettlPriceType(Enum731SettlPriceType.FINAL);
+        tagData = new Log731EnuSettlPriceType(Enum731SettlPriceType.FINAL);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag731EnuSettlPriceType(Enum731SettlPriceType.THEORETICAL);
+        tagData = new Log731EnuSettlPriceType(Enum731SettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1106
+ *  TriggerSecurityDesc
+ *  String
+ *  <p>
+ *  Defines the security description of the security whose prices will be tracked by the trigger logic.
+ */
 public class Tag1106TriggerSecurityDesc {
 }

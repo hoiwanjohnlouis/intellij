@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1032 (same as 1032, 1034,)
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  Valid values:
  *  <p>    1 - NASD OATS
  */
-public enum MyEnumOrderSource implements EnumAccessors, LogStringVerbose {
+public enum MyEnumOrderSource implements EnumAccessors, LogVerboseString {
     NASD_OATS( "1", "NASD_OATS", "1 - NASD OATS" ),
     ;
 
@@ -83,7 +83,7 @@ public enum MyEnumOrderSource implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

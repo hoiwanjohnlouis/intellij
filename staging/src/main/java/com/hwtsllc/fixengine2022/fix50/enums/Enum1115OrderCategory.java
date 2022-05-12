@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1115
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    7 - Implied Order
  *  <p>    8 - Cross Order
  */
-public enum Enum1115OrderCategory implements EnumAccessors, LogStringVerbose {
+public enum Enum1115OrderCategory implements EnumAccessors, LogVerboseString {
     ORDER( "1", "ORDER", "1 - Order" ),
     QUOTE( "2", "QUOTE", "2 - Quote" ),
     PRIVATELY( "3", "PRIVATELY", "3 - Privately Negotiated Trade" ),
@@ -91,7 +91,7 @@ public enum Enum1115OrderCategory implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

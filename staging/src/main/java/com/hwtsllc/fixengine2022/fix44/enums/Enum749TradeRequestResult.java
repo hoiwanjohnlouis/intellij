@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  749
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum749TradeRequestResult implements EnumAccessors, LogStringVerbose {
+public enum Enum749TradeRequestResult implements EnumAccessors, LogVerboseString {
     SUCCESSFUL( "0", "SUCCESSFUL", "0 - Successful (default)" ),
     UNKNOWN_INSTRUMENT( "1", "UNKNOWN_INSTRUMENT", "1 - Invalid or unknown instrument" ),
     INVALID_TRADE_TYPE( "2", "INVALID_TRADE_TYPE", "2 - Invalid type of trade requested" ),
@@ -91,7 +91,7 @@ public enum Enum749TradeRequestResult implements EnumAccessors, LogStringVerbose
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

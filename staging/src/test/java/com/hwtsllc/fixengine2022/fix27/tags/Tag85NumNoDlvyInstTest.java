@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,9 +48,9 @@ class Tag85NumNoDlvyInstTest {
     }
     @Test
     void Tag0085Test() {
-        Tag85NumNoDlvyInst tagData;
+        Log85NumNoDlvyInst tagData;
 
-        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(42) );
+        tagData = new Log85NumNoDlvyInst(new MyNumInGroupType(42) );
         assertEquals( 42, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

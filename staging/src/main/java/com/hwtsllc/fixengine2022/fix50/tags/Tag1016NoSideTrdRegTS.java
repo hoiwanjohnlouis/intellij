@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1016
+ *  NoSideTrdRegTS
+ *  NumInGroup
+ *  <p>
+ *  Indicates number of  SideTimestamps contained in group
+ */
 public class Tag1016NoSideTrdRegTS {
 }

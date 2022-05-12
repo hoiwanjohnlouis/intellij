@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,10 +46,10 @@ class Tag93LenSignatureLengthTest {
     @Test
     void Tag0093Test() {
         int dataLength;
-        Tag93LenSignatureLength tagData;
+        Log93LenSignatureLength tagData;
 
         dataLength = "BarleymanButterBurr-89Signature".length();
-        tagData = new Tag93LenSignatureLength(new MyLengthType(dataLength) );
+        tagData = new Log93LenSignatureLength(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }

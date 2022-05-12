@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag380
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                          "7 - DeliverTo firm not available at this time" ),
  *      INVALID_PRICE_INCREMENT( "18", "INVALID_PRICE_INCREMENT", "18 - Invalid price increment" ),
  */
-public enum Enum380BusinessRejectReason implements EnumAccessors, LogStringVerbose {
+public enum Enum380BusinessRejectReason implements EnumAccessors, LogVerboseString {
     /**
      * 0-7, 18 msg types
      */
@@ -102,7 +102,7 @@ public enum Enum380BusinessRejectReason implements EnumAccessors, LogStringVerbo
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

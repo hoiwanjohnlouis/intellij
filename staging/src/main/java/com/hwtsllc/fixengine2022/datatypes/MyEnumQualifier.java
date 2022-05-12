@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  104 (same as 104, 695)
@@ -59,7 +59,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    Y - At the Midpoint
  *  <p>    Z - Pre-open
  */
-public enum MyEnumQualifier implements EnumAccessors, LogStringVerbose {
+public enum MyEnumQualifier implements EnumAccessors, LogVerboseString {
     ALL_OR_NONE("A", "ALL_OR_NONE", "A - All or None (AON)"),
     MARKET_ON_CLOSE("B", "MARKET_ON_CLOSE", "B - Market On Close (MOC) (held to close)"),
     AT_THE_CLOSE("C", "AT_THE_CLOSE", "C - At the close (around/not held to close)"),
@@ -125,7 +125,7 @@ public enum MyEnumQualifier implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

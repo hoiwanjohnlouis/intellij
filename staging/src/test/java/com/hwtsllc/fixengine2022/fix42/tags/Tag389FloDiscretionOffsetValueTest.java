@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag389FloDiscretionOffsetValueTest {
     }
     @Test
     void Tag0389Test() {
-        Tag389FloDiscretionOffsetValue tagData;
+        Log389FloDiscretionOffsetValue tagData;
 
-        tagData = new Tag389FloDiscretionOffsetValue(new MyFloatType(
-                Tag389FloDiscretionOffsetValue.TESTA_FLO_DISCRETION_OFFSET_VALUE));
-        assertEquals( Tag389FloDiscretionOffsetValue.TESTA_FLO_DISCRETION_OFFSET_VALUE,
+        tagData = new Log389FloDiscretionOffsetValue(new MyFloatType(
+                Log389FloDiscretionOffsetValue.TESTA_FLO_DISCRETION_OFFSET_VALUE));
+        assertEquals( Log389FloDiscretionOffsetValue.TESTA_FLO_DISCRETION_OFFSET_VALUE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag389FloDiscretionOffsetValue(new MyFloatType(
-                Tag389FloDiscretionOffsetValue.TESTB_FLO_DISCRETION_OFFSET_VALUE));
-        assertEquals( Tag389FloDiscretionOffsetValue.TESTB_FLO_DISCRETION_OFFSET_VALUE,
+        tagData = new Log389FloDiscretionOffsetValue(new MyFloatType(
+                Log389FloDiscretionOffsetValue.TESTB_FLO_DISCRETION_OFFSET_VALUE));
+        assertEquals( Log389FloDiscretionOffsetValue.TESTB_FLO_DISCRETION_OFFSET_VALUE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }

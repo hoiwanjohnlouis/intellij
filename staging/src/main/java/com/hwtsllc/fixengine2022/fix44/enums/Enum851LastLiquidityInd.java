@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  851
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      2 - Removed Liquidity
  *      3 - Liquidity Routed Out
  */
-public enum Enum851LastLiquidityInd implements EnumAccessors, LogStringVerbose {
+public enum Enum851LastLiquidityInd implements EnumAccessors, LogVerboseString {
     ADDED( "1", "ADDED", "1 - Added Liquidity" ),
     REMOVED( "2", "REMOVED", "2 - Removed Liquidity" ),
     ROUTED_OUT( "3", "ROUTED_OUT", "3 - Liquidity Routed Out" ),
@@ -79,7 +79,7 @@ public enum Enum851LastLiquidityInd implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

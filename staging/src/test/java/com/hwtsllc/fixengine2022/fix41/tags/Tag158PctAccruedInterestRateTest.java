@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,16 +47,16 @@ class Tag158PctAccruedInterestRateTest {
     }
     @Test
     void Tag0158Test() {
-        Tag158PctAccruedInterestRate tagData;
+        Log158PctAccruedInterestRate tagData;
 
-        tagData = new Tag158PctAccruedInterestRate(
-                new MyPercentageType(Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE));
-        assertEquals( Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
+        tagData = new Log158PctAccruedInterestRate(
+                new MyPercentageType(Log158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE));
+        assertEquals( Log158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag158PctAccruedInterestRate(
-                new MyPercentageType(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
-        assertEquals( Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
+        tagData = new Log158PctAccruedInterestRate(
+                new MyPercentageType(Log158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
+        assertEquals( Log158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

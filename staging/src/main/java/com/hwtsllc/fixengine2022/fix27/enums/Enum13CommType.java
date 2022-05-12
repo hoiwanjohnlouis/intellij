@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  13
@@ -35,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *           if the object security is denominated in a size other than the
  *           industry default - 1000 par for bonds)
  */
-public enum Enum13CommType implements EnumAccessors, LogStringVerbose {
+public enum Enum13CommType implements EnumAccessors, LogVerboseString {
     PER_UNIT ("1", "PER_UNIT",
             "1 - Per Unit (implying shares, par, currency, etc.)"),
     PERCENT ("2", "PERCENT",
@@ -93,7 +93,7 @@ public enum Enum13CommType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

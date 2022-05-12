@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1006
+ *  SideFillStationCd
+ *  String
+ *  <p>
+ *  Used on a multi-sided trade to convey order routing information
+ */
 public class Tag1006SideFillStationCd {
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  984
+ *  NoUnderlyingAmounts
+ *  NumInGroup
+ *  <p>
+ *  Total number of occurrences of Amount to pay in order to receive the underlying instrument
+ */
 public class Tag984NoUnderlyingAmounts {
 }

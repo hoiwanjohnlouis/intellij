@@ -17,12 +17,27 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  961
+ *  HostCrossID
+ *  String
+ *  <p>
+ *  Host assigned entity ID that can be used to reference all components of a cross;
+ *  sides + strategy + legs.
+ *  <p>
+ *  Used as the primary key with which to refer to the Cross Order for cancellation and replace.
+ *  <p>
+ *  The HostCrossID will also be used to link together components of the Cross Order.
+ *  <p>
+ *  i.e. each individual Execution Report associated with the order will carry
+ *  HostCrossID in order to tie back to the original cross order.
+ */
 class Tag961HostCrossIDTest {
     @Test
     void FIX0961Test() {

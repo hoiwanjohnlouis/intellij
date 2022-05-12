@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1013
+ *  SideTrdRegTimestampType
+ *  int
+ *  <p>
+ *  Same as TrdRegTimeStampType
+ */
 public class Tag1013SideTrdRegTimestampType {
 }

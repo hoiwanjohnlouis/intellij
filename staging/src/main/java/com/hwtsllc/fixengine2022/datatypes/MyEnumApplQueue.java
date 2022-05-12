@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  814 (same as 814, 815)
@@ -39,7 +39,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - Overlay Last
  *  <p>    3 - End Session
  */
-public enum MyEnumApplQueue implements EnumAccessors, LogStringVerbose {
+public enum MyEnumApplQueue implements EnumAccessors, LogVerboseString {
     NO_ACTION( "0", "NO_ACTION", "0 - No Action Taken" ),
     QUEUE_FLUSHED( "1", "QUEUE_FLUSHED", "1 - Queue Flushed" ),
     OVERLAY_LAST( "2", "OVERLAY_LAST", "2 - Overlay Last" ),
@@ -88,7 +88,7 @@ public enum MyEnumApplQueue implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

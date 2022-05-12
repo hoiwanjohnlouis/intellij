@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1104
+ *  TriggerSecurityID
+ *  String
+ *  <p>
+ *  Defines the identity of the security whose prices will be tracked by the trigger logic.
+ */
 class Tag1104TriggerSecurityIDTest {
     @Test
     void FIX1104Test() {
         FIX50 fixData = FIX50.FIX1104_TRIGGER_SECURITY_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1104", fixData.getID());
+        assertEquals( "TRIGGER_SECURITY_ID", fixData.getName());
+        assertEquals( "trigger_security_id", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

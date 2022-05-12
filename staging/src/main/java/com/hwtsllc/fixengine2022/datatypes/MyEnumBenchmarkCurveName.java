@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  221 (same as 221, 677)
@@ -50,7 +50,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    SWAP - SWAP
  *  <p>    Treasury - Treasury
  */
-public enum MyEnumBenchmarkCurveName implements EnumAccessors, LogStringVerbose {
+public enum MyEnumBenchmarkCurveName implements EnumAccessors, LogVerboseString {
     EONIA( "EONIA", "EONIA", "EONIA - EONIA" ),
     EUREPO( "EUREPO", "EUREPO", "EUREPO - EUREPO" ),
     EURIBOR( "Euribor", "EURIBOR", "Euribor - Euribor" ),
@@ -109,7 +109,7 @@ public enum MyEnumBenchmarkCurveName implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

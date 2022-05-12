@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  853
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      5 - QSR or AGU Contra Side Sold Short Exempt
  */
-public enum Enum853ShortSaleReason implements EnumAccessors, LogStringVerbose {
+public enum Enum853ShortSaleReason implements EnumAccessors, LogVerboseString {
     DEALER_SOLD_SHORT( "0", "DEALER_SOLD_SHORT", "0 - Dealer Sold Short" ),
     DEALER_SOLD_SHORT_EXEMPT( "1", "DEALER_SOLD_SHORT_EXEMPT", "1 - Dealer Sold Short Exempt" ),
     CUSTOMER_SOLD_SHORT( "2", "CUSTOMER_SOLD_SHORT", "2 - Selling Customer Sold Short" ),
@@ -85,7 +85,7 @@ public enum Enum853ShortSaleReason implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

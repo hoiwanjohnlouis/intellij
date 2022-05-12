@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  968
+ *  StrikeValue
+ *  float
+ *  <p>
+ *  Used for derivatives.
+ *  <p>
+ *  The number of shares/units for the financial instrument involved in the option trade.
+ */
 public class Tag968StrikeValue {
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1080
+ *  RefOrderID
+ *  String
+ *  <p>
+ *  The ID reference to the order being hit or taken
+ */
 public class Tag1080RefOrderID {
 }

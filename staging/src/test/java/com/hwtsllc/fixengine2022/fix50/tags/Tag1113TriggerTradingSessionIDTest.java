@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1113
+ *  TriggerTradingSessionID
+ *  String
+ *  <p>
+ *  Defines the trading session at which the order will be activated.
+ */
 class Tag1113TriggerTradingSessionIDTest {
     @Test
     void FIX1113Test() {
         FIX50 fixData = FIX50.FIX1113_TRIGGER_TRADING_SESSION_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1113", fixData.getID());
+        assertEquals( "TRIGGER_TRADING_SESSION_ID", fixData.getName());
+        assertEquals( "trigger_trading_session_id", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

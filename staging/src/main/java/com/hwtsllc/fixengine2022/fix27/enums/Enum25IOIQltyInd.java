@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  25
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      L - Low
  *      M - Medium
  */
-public enum Enum25IOIQltyInd implements EnumAccessors, LogStringVerbose {
+public enum Enum25IOIQltyInd implements EnumAccessors, LogVerboseString {
     HIGH("H", "HIGH", "H - High" ),
     LOW("L", "LOW", "L - Low" ),
     MEDIUM("M", "MEDIUM", "M - Medium" ),
@@ -77,7 +77,7 @@ public enum Enum25IOIQltyInd implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

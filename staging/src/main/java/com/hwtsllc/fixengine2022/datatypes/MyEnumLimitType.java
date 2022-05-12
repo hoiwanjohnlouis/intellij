@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  837 (same as 837, 843,)
@@ -39,7 +39,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                  and for a sell the peg limit is a maximum
  *                  (for use for orders which have a price range)
  */
-public enum MyEnumLimitType implements EnumAccessors, LogStringVerbose {
+public enum MyEnumLimitType implements EnumAccessors, LogVerboseString {
     OR_BETTER( "0", "OR_BETTER", "0 - Or better (default) - price improvement allowed" ),
     STRICT( "1", "STRICT", "1 - Strict - limit is a strict limit" ),
     OR_WORSE( "2", "OR_WORSE", "2 - Or worse - for a buy the peg limit is a minimum and for a sell the peg limit is a maximum (for use for orders which have a price range)" ),
@@ -87,7 +87,7 @@ public enum MyEnumLimitType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

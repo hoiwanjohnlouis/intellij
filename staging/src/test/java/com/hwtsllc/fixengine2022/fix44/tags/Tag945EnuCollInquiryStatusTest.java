@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum945CollInquiryStatus;
 import org.junit.jupiter.api.Test;
 
@@ -49,25 +49,25 @@ class Tag945EnuCollInquiryStatusTest {
     }
     @Test
     void Tag0945Test() {
-        Tag945EnuCollInquiryStatus tagData;
+        Log945EnuCollInquiryStatus tagData;
 
-        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED );
+        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED );
         assertEquals( Enum945CollInquiryStatus.ACCEPTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS );
+        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS );
         assertEquals( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED );
+        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED );
         assertEquals( Enum945CollInquiryStatus.COMPLETED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS );
+        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS );
         assertEquals( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.REJECTED );
+        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.REJECTED );
         assertEquals( Enum945CollInquiryStatus.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

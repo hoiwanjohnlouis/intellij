@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyIDSource;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -141,38 +141,38 @@ class Tag525EnuNestedPartyIDSourceTest {
     }
     @Test
     void Tag0525Test() {
-        Tag525EnuNestedPartyIDSource tagData;
+        Log525EnuNestedPartyIDSource tagData;
 
 
         /**
          * All PartyRoles
          *  B-H types
          */
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.BANK_IDENTIFICATION_CODE);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.BANK_IDENTIFICATION_CODE);
         assertEquals( MyEnumPartyIDSource.BANK_IDENTIFICATION_CODE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.GENERAL_IDENTIFIER);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.GENERAL_IDENTIFIER);
         assertEquals( MyEnumPartyIDSource.GENERAL_IDENTIFIER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.PROPRIETARY);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.PROPRIETARY);
         assertEquals( MyEnumPartyIDSource.PROPRIETARY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.ISO_COUNTRY_CODE);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.ISO_COUNTRY_CODE);
         assertEquals( MyEnumPartyIDSource.ISO_COUNTRY_CODE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.SETTLEMENT_ENTITY_LOCATION);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.SETTLEMENT_ENTITY_LOCATION);
         assertEquals( MyEnumPartyIDSource.SETTLEMENT_ENTITY_LOCATION.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.MARKET_IDENTIFIER_CODE);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.MARKET_IDENTIFIER_CODE);
         assertEquals( MyEnumPartyIDSource.MARKET_IDENTIFIER_CODE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.CSD_MEMBER_CODE);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.CSD_MEMBER_CODE);
         assertEquals( MyEnumPartyIDSource.CSD_MEMBER_CODE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
@@ -181,23 +181,23 @@ class Tag525EnuNestedPartyIDSourceTest {
          * For PartyRole = "InvestorID" and for CIV
          * 6-9, A types
          */
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.UK_NATIONAL_NUMBER);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.UK_NATIONAL_NUMBER);
         assertEquals( MyEnumPartyIDSource.UK_NATIONAL_NUMBER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.US_SOCIAL_SECURITY_NUMBER);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.US_SOCIAL_SECURITY_NUMBER);
         assertEquals( MyEnumPartyIDSource.US_SOCIAL_SECURITY_NUMBER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.US_TAX_ID_NUMBER);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.US_TAX_ID_NUMBER);
         assertEquals( MyEnumPartyIDSource.US_TAX_ID_NUMBER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.AUSTRALIAN_BUSINESS_NUMBER);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.AUSTRALIAN_BUSINESS_NUMBER);
         assertEquals( MyEnumPartyIDSource.AUSTRALIAN_BUSINESS_NUMBER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER);
         assertEquals( MyEnumPartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
@@ -206,23 +206,23 @@ class Tag525EnuNestedPartyIDSourceTest {
          * For PartyRole = "InvestorID" and for Equities
          * 1-5 types
          */
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.KOREAN_INVESTOR_ID);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.KOREAN_INVESTOR_ID);
         assertEquals( MyEnumPartyIDSource.KOREAN_INVESTOR_ID.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID);
         assertEquals( MyEnumPartyIDSource.TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.TAIWANESE_TRADING_ACCT);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.TAIWANESE_TRADING_ACCT);
         assertEquals( MyEnumPartyIDSource.TAIWANESE_TRADING_ACCT.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER);
         assertEquals( MyEnumPartyIDSource.MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.CHINESE_INVESTOR_ID);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.CHINESE_INVESTOR_ID);
         assertEquals( MyEnumPartyIDSource.CHINESE_INVESTOR_ID.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
@@ -231,7 +231,7 @@ class Tag525EnuNestedPartyIDSourceTest {
          * For PartyRole="Broker of Credit"
          * I type
          */
-        tagData = new Tag525EnuNestedPartyIDSource(MyEnumPartyIDSource.DIRECTED_BROKER_ACRONYM);
+        tagData = new Log525EnuNestedPartyIDSource(MyEnumPartyIDSource.DIRECTED_BROKER_ACRONYM);
         assertEquals( MyEnumPartyIDSource.DIRECTED_BROKER_ACRONYM.getID(),  tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum401SideValueInd;
 import org.junit.jupiter.api.Test;
 
@@ -46,16 +46,16 @@ class Tag401EnuSideValueIndTest {
      */
     @Test
     void Tag0401Test() {
-        Tag401EnuSideValueInd tagData;
+        Log401EnuSideValueInd tagData;
 
         /**
          * 1-2 msg types
          */
-        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
+        tagData = new Log401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
         assertEquals( Enum401SideValueInd.SIDE_VALUE_1.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
+        tagData = new Log401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
         assertEquals( Enum401SideValueInd.SIDE_VALUE_2.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,19 +17,28 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1110
+ *  TriggerNewPrice
+ *  Price
+ *  <p>
+ *  The Price that the order should have after the trigger has hit.
+ *  <p>
+ *  Could be applicable for any trigger type, but must be specified for Trigger Type 1.
+ */
 class Tag1110TriggerNewPriceTest {
     @Test
     void FIX1110Test() {
         FIX50 fixData = FIX50.FIX1110_TRIGGER_NEW_PRICE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1110", fixData.getID());
+        assertEquals( "TRIGGER_NEW_PRICE", fixData.getName());
+        assertEquals( "trigger_new_price", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

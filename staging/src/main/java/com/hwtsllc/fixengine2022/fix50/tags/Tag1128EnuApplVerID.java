@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.*;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1128 (same as 1128, 1030, 1137,)
@@ -60,7 +60,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    6 - FIX44
  *  <p>    7 - FIX50
  */
-public class Tag1128EnuApplVerID extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1128EnuApplVerID extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final MyEnumApplVerID dataValue;
 
     public final static MyEnumApplVerID TESTA_ENU_APPL_VER_ID
@@ -80,7 +80,7 @@ public class Tag1128EnuApplVerID extends FIX50Abstract implements FixTagValuePai
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -89,8 +89,8 @@ public class Tag1128EnuApplVerID extends FIX50Abstract implements FixTagValuePai
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -112,12 +112,12 @@ public class Tag1128EnuApplVerID extends FIX50Abstract implements FixTagValuePai
 
         tagData = new Tag1128EnuApplVerID(TESTA_ENU_APPL_VER_ID);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1128EnuApplVerID(TESTB_ENU_APPL_VER_ID);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

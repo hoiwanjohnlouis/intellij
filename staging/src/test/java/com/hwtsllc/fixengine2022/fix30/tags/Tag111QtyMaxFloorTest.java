@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,9 +47,9 @@ class Tag111QtyMaxFloorTest {
     }
     @Test
     void Tag0111Test() {
-        Tag111QtyMaxFloor tagData;
+        Log111QtyMaxFloor tagData;
 
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(200) );
+        tagData = new Log111QtyMaxFloor(new MyQtyType(200) );
         assertEquals( 200, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

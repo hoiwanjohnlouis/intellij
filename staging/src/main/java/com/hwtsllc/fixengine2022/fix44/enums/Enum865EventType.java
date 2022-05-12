@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  865
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum865EventType implements EnumAccessors, LogStringVerbose {
+public enum Enum865EventType implements EnumAccessors, LogVerboseString {
     PUT( "1", "PUT", "1 - Put" ),
     CALL( "2", "CALL", "2 - Call" ),
     TENDER( "3", "TENDER", "3 - Tender" ),
@@ -88,7 +88,7 @@ public enum Enum865EventType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag427
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE( "2", "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE",
  *                          "2 - Accumulate until verbally notified otherwise" ),
  */
-public enum Enum427GTBookingInst implements EnumAccessors, LogStringVerbose {
+public enum Enum427GTBookingInst implements EnumAccessors, LogVerboseString {
     /**
      * 0-2 msg types
      */
@@ -86,7 +86,7 @@ public enum Enum427GTBookingInst implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

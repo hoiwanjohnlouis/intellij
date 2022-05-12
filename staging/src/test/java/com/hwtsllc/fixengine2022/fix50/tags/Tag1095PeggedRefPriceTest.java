@@ -17,19 +17,31 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1095
+ *  PeggedRefPrice
+ *  Price
+ *  <p>
+ *  The value of the reference price that the order is pegged to.
+ *  <p>
+ *  PeggedRefPrice + PegOffsetValue (211) = PeggedPrice (839)
+ *  unless the limit price (44, Price) is breached.
+ *  <p>
+ *  The values may not be exact due to rounding.
+ */
 class Tag1095PeggedRefPriceTest {
     @Test
     void FIX1095Test() {
         FIX50 fixData = FIX50.FIX1095_PEGGED_REF_PRICE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1095", fixData.getID());
+        assertEquals( "PEGGED_REF_PRICE", fixData.getName());
+        assertEquals( "pegged_ref_price", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

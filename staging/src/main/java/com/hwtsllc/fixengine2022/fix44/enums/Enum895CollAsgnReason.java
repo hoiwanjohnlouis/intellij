@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  895
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      6 - Event of default
  *      7 - Adverse tax event
  */
-public enum Enum895CollAsgnReason implements EnumAccessors, LogStringVerbose {
+public enum Enum895CollAsgnReason implements EnumAccessors, LogVerboseString {
     INITIAL( "0", "INITIAL", "0 - Initial" ),
     SCHEDULED( "1", "SCHEDULED", "1 - Scheduled" ),
     TIME_WARNING( "2", "TIME_WARNING", "2 - Time Warning" ),
@@ -88,7 +88,7 @@ public enum Enum895CollAsgnReason implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

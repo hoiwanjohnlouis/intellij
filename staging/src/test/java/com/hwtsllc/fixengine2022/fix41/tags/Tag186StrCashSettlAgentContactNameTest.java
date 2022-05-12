@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,17 +47,17 @@ class Tag186StrCashSettlAgentContactNameTest {
     }
     @Test
     void Tag0186Test() {
-        Tag186StrCashSettlAgentContactName tagData;
+        Log186StrCashSettlAgentContactName tagData;
 
-        tagData = new Tag186StrCashSettlAgentContactName(
-                new MyStringType(Tag186StrCashSettlAgentContactName.TESTA_STR_CASH_SETTL_AGENT_CONTACT_NAME));
-        assertEquals( Tag186StrCashSettlAgentContactName.TESTA_STR_CASH_SETTL_AGENT_CONTACT_NAME,
+        tagData = new Log186StrCashSettlAgentContactName(
+                new MyStringType(Log186StrCashSettlAgentContactName.TESTA_STR_CASH_SETTL_AGENT_CONTACT_NAME));
+        assertEquals( Log186StrCashSettlAgentContactName.TESTA_STR_CASH_SETTL_AGENT_CONTACT_NAME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag186StrCashSettlAgentContactName(
-                new MyStringType(Tag186StrCashSettlAgentContactName.TESTB_STR_CASH_SETTL_AGENT_CONTACT_NAME));
-        assertEquals( Tag186StrCashSettlAgentContactName.TESTB_STR_CASH_SETTL_AGENT_CONTACT_NAME,
+        tagData = new Log186StrCashSettlAgentContactName(
+                new MyStringType(Log186StrCashSettlAgentContactName.TESTB_STR_CASH_SETTL_AGENT_CONTACT_NAME));
+        assertEquals( Log186StrCashSettlAgentContactName.TESTB_STR_CASH_SETTL_AGENT_CONTACT_NAME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

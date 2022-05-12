@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,9 +45,9 @@ class Tag57StrTargetSubIDTest {
     }
     @Test
     void Tag0057Test() {
-        Tag57StrTargetSubID tagData;
+        Log57StrTargetSubID tagData;
 
-        tagData = new Tag57StrTargetSubID(new MyStringType("MLCO") );
+        tagData = new Log57StrTargetSubID(new MyStringType("MLCO") );
         assertEquals( "MLCO", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

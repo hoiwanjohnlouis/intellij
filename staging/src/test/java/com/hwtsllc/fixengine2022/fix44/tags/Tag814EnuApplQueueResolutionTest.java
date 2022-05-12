@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumApplQueue;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -57,21 +57,21 @@ class Tag814EnuApplQueueResolutionTest {
     }
     @Test
     void Tag0814Test() {
-        Tag814EnuApplQueueResolution tagData;
+        Log814EnuApplQueueResolution tagData;
 
-        tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.NO_ACTION);
+        tagData = new Log814EnuApplQueueResolution(MyEnumApplQueue.NO_ACTION);
         assertEquals( MyEnumApplQueue.NO_ACTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.QUEUE_FLUSHED);
+        tagData = new Log814EnuApplQueueResolution(MyEnumApplQueue.QUEUE_FLUSHED);
         assertEquals( MyEnumApplQueue.QUEUE_FLUSHED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.OVERLAY_LAST);
+        tagData = new Log814EnuApplQueueResolution(MyEnumApplQueue.OVERLAY_LAST);
         assertEquals( MyEnumApplQueue.OVERLAY_LAST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.END_SESSION);
+        tagData = new Log814EnuApplQueueResolution(MyEnumApplQueue.END_SESSION);
         assertEquals( MyEnumApplQueue.END_SESSION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

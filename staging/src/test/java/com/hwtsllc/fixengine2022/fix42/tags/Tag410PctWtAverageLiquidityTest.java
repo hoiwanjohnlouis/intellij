@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag410PctWtAverageLiquidityTest {
     }
     @Test
     void Tag0410Test() {
-        Tag410PctWtAverageLiquidity tagData;
+        Log410PctWtAverageLiquidity tagData;
 
-        tagData = new Tag410PctWtAverageLiquidity(new MyPercentageType(
-                Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY));
-        assertEquals( Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY,
+        tagData = new Log410PctWtAverageLiquidity(new MyPercentageType(
+                Log410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY));
+        assertEquals( Log410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag410PctWtAverageLiquidity(new MyPercentageType(
-                Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY));
-        assertEquals( Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY,
+        tagData = new Log410PctWtAverageLiquidity(new MyPercentageType(
+                Log410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY));
+        assertEquals( Log410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

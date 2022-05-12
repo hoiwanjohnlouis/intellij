@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumLimitType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -57,17 +57,17 @@ class Tag837EnuPegLimitTypeTest {
     }
     @Test
     void Tag0837Test() {
-        Tag837EnuPegLimitType tagData;
+        Log837EnuPegLimitType tagData;
 
-        tagData = new Tag837EnuPegLimitType(MyEnumLimitType.OR_BETTER);
+        tagData = new Log837EnuPegLimitType(MyEnumLimitType.OR_BETTER);
         assertEquals( MyEnumLimitType.OR_BETTER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag837EnuPegLimitType(MyEnumLimitType.STRICT);
+        tagData = new Log837EnuPegLimitType(MyEnumLimitType.STRICT);
         assertEquals( MyEnumLimitType.STRICT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag837EnuPegLimitType(MyEnumLimitType.OR_WORSE);
+        tagData = new Log837EnuPegLimitType(MyEnumLimitType.OR_WORSE);
         assertEquals( MyEnumLimitType.OR_WORSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

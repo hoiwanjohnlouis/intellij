@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumTradeHandlingInstr;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1123 (same as 1123, 1124,)
@@ -45,7 +45,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    3 - One-Party Report for Pass Through
  *  <p>    4 - Automated Floor Order Routing
  */
-public class Tag1123EnuTradeHandlingInstr extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1123EnuTradeHandlingInstr extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final MyEnumTradeHandlingInstr dataValue;
 
     public final static MyEnumTradeHandlingInstr TESTA_ENU_TRADE_HANDLING_INSTR
@@ -65,7 +65,7 @@ public class Tag1123EnuTradeHandlingInstr extends FIX50Abstract implements FixTa
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -74,8 +74,8 @@ public class Tag1123EnuTradeHandlingInstr extends FIX50Abstract implements FixTa
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -97,12 +97,12 @@ public class Tag1123EnuTradeHandlingInstr extends FIX50Abstract implements FixTa
 
         tagData = new Tag1123EnuTradeHandlingInstr(TESTA_ENU_TRADE_HANDLING_INSTR);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1123EnuTradeHandlingInstr(TESTB_ENU_TRADE_HANDLING_INSTR);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  20
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      2 - Correct
  *      3 - Status
  */
-public enum Enum20ExecTransType implements EnumAccessors, LogStringVerbose {
+public enum Enum20ExecTransType implements EnumAccessors, LogVerboseString {
     NEW("0", "NEW", "0 - New" ),
     CANCEL("1", "CANCEL", "1 - Cancel" ),
     CORRECT("2", "CORRECT", "2 - Correct" ),
@@ -79,7 +79,7 @@ public enum Enum20ExecTransType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

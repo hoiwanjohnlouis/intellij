@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  829
@@ -95,7 +95,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      31 - WN (Worked principal notification for a single order book security)
  *      32 - WT (Worked principal transaction (other than a portfolio transaction))
  */
-public enum Enum829TrdSubType implements EnumAccessors, LogStringVerbose {
+public enum Enum829TrdSubType implements EnumAccessors, LogVerboseString {
     CMTA( "0", "CMTA", "0 - CMTA" ),
     INTERNAL_TRANSFER( "1", "INTERNAL_TRANSFER", "1 - Internal transfer or adjustment" ),
     EXTERNAL_TRANSFER( "2", "EXTERNAL_TRANSFER", "2 - External transfer or transfer of account" ),
@@ -205,7 +205,7 @@ public enum Enum829TrdSubType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

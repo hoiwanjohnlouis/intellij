@@ -16,13 +16,13 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  * MyCurrencyType is a wrapper class for the Currency field
  * It will be a String,
  */
-public class MyCurrencyType implements LogStringVerbose {
+public class MyCurrencyType implements LogVerboseString {
     private final String dataValue;
 
     public MyCurrencyType(final String dataValue) {
@@ -36,7 +36,7 @@ public class MyCurrencyType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -56,6 +56,6 @@ public class MyCurrencyType implements LogStringVerbose {
     public static void main(String[] args) {
         MyCurrencyType dataType = new MyCurrencyType("USD");
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

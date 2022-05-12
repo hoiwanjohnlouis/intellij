@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1005
+ *  SideTradeReportID
+ *  String
+ *  <p>
+ *  Used on a multi-sided trade to designate the ReportID
+ */
 class Tag1005SideTradeReportIDTest {
     @Test
     void FIX1005Test() {
         FIX50 fixData = FIX50.FIX1005_SIDE_TRADE_REPORT_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1005", fixData.getID());
+        assertEquals( "SIDE_TRADE_REPORT_ID", fixData.getName());
+        assertEquals( "SideTradeReportId", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

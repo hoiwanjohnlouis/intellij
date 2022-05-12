@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartySubIDType;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  786 (same as 786, 803, 805, 807, 954, 1054, 1064, 1122)
@@ -129,7 +129,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>
  *  <p>    or any value conforming to the data type Reserved4000Plus
  */
-public class Tag1054EnuInstrumentPartySubIDType extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1054EnuInstrumentPartySubIDType extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final MyEnumPartySubIDType dataValue;
 
     public final static MyEnumPartySubIDType TESTA_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE
@@ -149,7 +149,7 @@ public class Tag1054EnuInstrumentPartySubIDType extends FIX50Abstract implements
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -158,8 +158,8 @@ public class Tag1054EnuInstrumentPartySubIDType extends FIX50Abstract implements
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -181,12 +181,12 @@ public class Tag1054EnuInstrumentPartySubIDType extends FIX50Abstract implements
 
         tagData = new Tag1054EnuInstrumentPartySubIDType(TESTA_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1054EnuInstrumentPartySubIDType(TESTB_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

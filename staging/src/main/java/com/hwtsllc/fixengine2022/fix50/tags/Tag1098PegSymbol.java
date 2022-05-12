@@ -16,5 +16,13 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1098
+ *  PegSymbol
+ *  String
+ *  <p>
+ *  Defines the common, 'human understood' representation of the
+ *  security off whose prices the order will Peg.
+ */
 public class Tag1098PegSymbol {
 }

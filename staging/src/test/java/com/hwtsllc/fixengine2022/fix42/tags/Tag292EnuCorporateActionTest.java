@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum292CorporateAction;
 import org.junit.jupiter.api.Test;
 
@@ -65,79 +65,79 @@ class Tag292EnuCorporateActionTest {
      */
     @Test
     void Tag0292Test() {
-        Tag292EnuCorporateAction tagData;
+        Log292EnuCorporateAction tagData;
 
         /**
          * A-V msg types
          */
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.EX_DIVIDEND);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.EX_DIVIDEND);
         assertEquals( Enum292CorporateAction.EX_DIVIDEND.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.EX_DISTRIBUTION);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.EX_DISTRIBUTION);
         assertEquals( Enum292CorporateAction.EX_DISTRIBUTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.EX_RIGHTS);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.EX_RIGHTS);
         assertEquals( Enum292CorporateAction.EX_RIGHTS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.NEW);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.NEW);
         assertEquals( Enum292CorporateAction.NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.EX_INTEREST);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.EX_INTEREST);
         assertEquals( Enum292CorporateAction.EX_INTEREST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.CASH_DIVIDEND);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.CASH_DIVIDEND);
         assertEquals( Enum292CorporateAction.CASH_DIVIDEND.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.STOCK_DIVIDEND);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.STOCK_DIVIDEND);
         assertEquals( Enum292CorporateAction.STOCK_DIVIDEND.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.NON_INTEGER_STOCK_SPLIT);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.NON_INTEGER_STOCK_SPLIT);
         assertEquals( Enum292CorporateAction.NON_INTEGER_STOCK_SPLIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.REVERSE_STOCK_SPLIT);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.REVERSE_STOCK_SPLIT);
         assertEquals( Enum292CorporateAction.REVERSE_STOCK_SPLIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.STANDARD_INTEGER_STOCK_SPLIT);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.STANDARD_INTEGER_STOCK_SPLIT);
         assertEquals( Enum292CorporateAction.STANDARD_INTEGER_STOCK_SPLIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.POSITION_CONSOLIDATION);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.POSITION_CONSOLIDATION);
         assertEquals( Enum292CorporateAction.POSITION_CONSOLIDATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.LIQUIDATION_REORGANIZATION);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.LIQUIDATION_REORGANIZATION);
         assertEquals( Enum292CorporateAction.LIQUIDATION_REORGANIZATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.MERGER_REORGANIZATION);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.MERGER_REORGANIZATION);
         assertEquals( Enum292CorporateAction.MERGER_REORGANIZATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.RIGHTS_OFFERING);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.RIGHTS_OFFERING);
         assertEquals( Enum292CorporateAction.RIGHTS_OFFERING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.SHAREHOLDER_MEETING);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.SHAREHOLDER_MEETING);
         assertEquals( Enum292CorporateAction.SHAREHOLDER_MEETING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.SPINOFF);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.SPINOFF);
         assertEquals( Enum292CorporateAction.SPINOFF.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.TENDER_OFFER);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.TENDER_OFFER);
         assertEquals( Enum292CorporateAction.TENDER_OFFER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.WARRANT);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.WARRANT);
         assertEquals( Enum292CorporateAction.WARRANT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.SPECIAL_ACTION);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.SPECIAL_ACTION);
         assertEquals( Enum292CorporateAction.SPECIAL_ACTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.SYMBOL_CONVERSION);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.SYMBOL_CONVERSION);
         assertEquals( Enum292CorporateAction.SYMBOL_CONVERSION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.CUSIP_OR_NAME_CHANGE);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.CUSIP_OR_NAME_CHANGE);
         assertEquals( Enum292CorporateAction.CUSIP_OR_NAME_CHANGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.LEAP_ROLLOVER);
+        tagData = new Log292EnuCorporateAction(Enum292CorporateAction.LEAP_ROLLOVER);
         assertEquals( Enum292CorporateAction.LEAP_ROLLOVER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

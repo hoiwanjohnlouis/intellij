@@ -17,12 +17,12 @@
 package com.hwtsllc.fixengine2022.msgs.application;
 
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag60UtcTransactTime;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrcPrevClosePx;
+import com.hwtsllc.fixengine2022.fix27.tags.Log60UtcTransactTime;
+import com.hwtsllc.fixengine2022.fix40.tags.Log140PrcPrevClosePx;
 
 public class NewOrder implements Comparable {
-    private final Tag140PrcPrevClosePx tag140PrcPrevClosePx;
-    private final Tag60UtcTransactTime tag60UtcTransactTime;
+    private final Log140PrcPrevClosePx tag140PrcPrevClosePx;
+    private final Log60UtcTransactTime tag60UtcTransactTime;
 
     //
     private NewOrder(Builder builder) {
@@ -30,10 +30,10 @@ public class NewOrder implements Comparable {
         this.tag60UtcTransactTime = builder.tag60UtcTransactTime;
     }
 
-    public Tag140PrcPrevClosePx getPreviousDaysClosingPrice() {
+    public Log140PrcPrevClosePx getPreviousDaysClosingPrice() {
         return tag140PrcPrevClosePx;
     }
-    public Tag60UtcTransactTime getLastTradeTimeStamp() {
+    public Log60UtcTransactTime getLastTradeTimeStamp() {
         return tag60UtcTransactTime;
     }
 
@@ -54,11 +54,11 @@ public class NewOrder implements Comparable {
     public static class Builder {
         private StringBuilder stringBuilder = new StringBuilder();
 
-        private Tag140PrcPrevClosePx tag140PrcPrevClosePx;    // 4
-        private Tag60UtcTransactTime tag60UtcTransactTime;  // 8
+        private Log140PrcPrevClosePx tag140PrcPrevClosePx;    // 4
+        private Log60UtcTransactTime tag60UtcTransactTime;  // 8
 
         public Builder buildLastTradeTimeStamp(String lastTradeTimeStamp) {
-            this.tag60UtcTransactTime = new Tag60UtcTransactTime(new MyUTCTimestampType(lastTradeTimeStamp) );
+            this.tag60UtcTransactTime = new Log60UtcTransactTime(new MyUTCTimestampType(lastTradeTimeStamp) );
             return this;
         }
 

@@ -17,19 +17,32 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1065
+ *  BidSwapPoints
+ *  PriceOffset
+ *  <p>
+ *  The bid FX Swap points for an FX Swap.
+ *  <p>
+ *  It is the "far bid forward points - near offer forward point".
+ *  <p>
+ *  Value can be negative.  Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 class Tag1065BidSwapPointsTest {
     @Test
     void FIX1065Test() {
         FIX50 fixData = FIX50.FIX1065_BID_SWAP_POINTS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1065", fixData.getID());
+        assertEquals( "BID_SWAP_POINTS", fixData.getName());
+        assertEquals( "BidSwapPoints", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

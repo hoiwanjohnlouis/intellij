@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum40OrdType;
 import org.junit.jupiter.api.Test;
 
@@ -81,45 +81,45 @@ class Tag40EnuOrdTypeTest {
     }
     @Test
     void Tag0040Test() {
-        Tag40EnuOrdType tagData;
+        Log40EnuOrdType tagData;
 
         /**
          * 1-9 Order Type msg
          */
-        tagData = new Tag40EnuOrdType(Enum40OrdType.MARKET);
+        tagData = new Log40EnuOrdType(Enum40OrdType.MARKET);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.LIMIT);
+        tagData = new Log40EnuOrdType(Enum40OrdType.LIMIT);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.STOP_OR_STOP_LOSS);
+        tagData = new Log40EnuOrdType(Enum40OrdType.STOP_OR_STOP_LOSS);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.STOP_LIMIT);
+        tagData = new Log40EnuOrdType(Enum40OrdType.STOP_LIMIT);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.MARKET_ON_CLOSE);
+        tagData = new Log40EnuOrdType(Enum40OrdType.MARKET_ON_CLOSE);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.WITH_OR_WITHOUT);
+        tagData = new Log40EnuOrdType(Enum40OrdType.WITH_OR_WITHOUT);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.LIMIT_OR_BETTER);
+        tagData = new Log40EnuOrdType(Enum40OrdType.LIMIT_OR_BETTER);
         assertEquals( "7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.LIMIT_WITH_OR_WITHOUT);
+        tagData = new Log40EnuOrdType(Enum40OrdType.LIMIT_WITH_OR_WITHOUT);
         assertEquals( "8", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.ON_BASIS);
+        tagData = new Log40EnuOrdType(Enum40OrdType.ON_BASIS);
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -127,65 +127,65 @@ class Tag40EnuOrdTypeTest {
         /**
          * A-Q Order Type msg
          */
-        tagData = new Tag40EnuOrdType(Enum40OrdType.ON_CLOSE);
+        tagData = new Log40EnuOrdType(Enum40OrdType.ON_CLOSE);
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.LIMIT_ON_CLOSE);
+        tagData = new Log40EnuOrdType(Enum40OrdType.LIMIT_ON_CLOSE);
         assertEquals( "B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.FOREX_MARKET);
+        tagData = new Log40EnuOrdType(Enum40OrdType.FOREX_MARKET);
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.PREVIOUSLY_QUOTED);
+        tagData = new Log40EnuOrdType(Enum40OrdType.PREVIOUSLY_QUOTED);
         assertEquals( "D", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.PREVIOUSLY_INDICATED);
+        tagData = new Log40EnuOrdType(Enum40OrdType.PREVIOUSLY_INDICATED);
         assertEquals( "E", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.FOREX_LIMIT);
+        tagData = new Log40EnuOrdType(Enum40OrdType.FOREX_LIMIT);
         assertEquals( "F", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.FOREX_SWAP);
+        tagData = new Log40EnuOrdType(Enum40OrdType.FOREX_SWAP);
         assertEquals( "G", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.FOREX_PREVIOUSLY_QUOTED);
+        tagData = new Log40EnuOrdType(Enum40OrdType.FOREX_PREVIOUSLY_QUOTED);
         assertEquals( "H", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.FUNARI);
+        tagData = new Log40EnuOrdType(Enum40OrdType.FUNARI);
         assertEquals( "I", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.MARKET_IF_TOUCHED);
+        tagData = new Log40EnuOrdType(Enum40OrdType.MARKET_IF_TOUCHED);
         assertEquals( "J", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.MARKET_WITH_LEFT_OVER_AS_LIMIT);
+        tagData = new Log40EnuOrdType(Enum40OrdType.MARKET_WITH_LEFT_OVER_AS_LIMIT);
         assertEquals( "K", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.PREVIOUS_FUND_VALUATION_POINT);
+        tagData = new Log40EnuOrdType(Enum40OrdType.PREVIOUS_FUND_VALUATION_POINT);
         assertEquals( "L", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.NEXT_FUND_VALUATION_POINT);
+        tagData = new Log40EnuOrdType(Enum40OrdType.NEXT_FUND_VALUATION_POINT);
         assertEquals( "M", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.PEGGED);
+        tagData = new Log40EnuOrdType(Enum40OrdType.PEGGED);
         assertEquals( "P", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag40EnuOrdType(Enum40OrdType.COUNTER_ORDER_SELECTION);
+        tagData = new Log40EnuOrdType(Enum40OrdType.COUNTER_ORDER_SELECTION);
         assertEquals( "Q", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,19 +17,30 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  988
+ *  UnderlyingSettlementStatus
+ *  String
+ *  <p>
+ *  Settlement status of the underlying instrument.
+ *  <p>
+ *  Used for derivatives that deliver into more than one underlying instrument.
+ *  <p>
+ *  Settlement can be delayed for an underlying instrument.
+ */
 class Tag988UnderlyingSettlementStatusTest {
     @Test
     void FIX0988Test() {
         FIX50 fixData = FIX50.FIX988_UNDERLYING_SETTLEMENT_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "988", fixData.getID());
+        assertEquals( "UNDERLYING_SETTLEMENT_STATUS", fixData.getName());
+        assertEquals( "UnderlyingSettlementStatus", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

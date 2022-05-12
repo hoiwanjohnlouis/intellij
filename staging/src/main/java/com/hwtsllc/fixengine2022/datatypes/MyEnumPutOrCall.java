@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  201 (same as 201, 315)
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    0 - Put
  *  <p>    1 - Call
  */
-public enum MyEnumPutOrCall implements EnumAccessors, LogStringVerbose {
+public enum MyEnumPutOrCall implements EnumAccessors, LogVerboseString {
     PUT( "0", "PUT", "0 - Put" ),
     CALL( "1", "CALL", "1 - Call" ),
     ;
@@ -83,7 +83,7 @@ public enum MyEnumPutOrCall implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

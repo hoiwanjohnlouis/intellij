@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum733UnderlyingSettlPriceType;
 import org.junit.jupiter.api.Test;
 
@@ -46,13 +46,13 @@ class Tag733EnuUnderlyingSettlPriceTypeTest {
     }
     @Test
     void Tag0733Test() {
-        Tag733EnuUnderlyingSettlPriceType tagData;
+        Log733EnuUnderlyingSettlPriceType tagData;
 
-        tagData = new Tag733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.FINAL);
+        tagData = new Log733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.FINAL);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.THEORETICAL);
+        tagData = new Log733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

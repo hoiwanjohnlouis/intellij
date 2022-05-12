@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  285
@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
  *      ERROR( "1", "ERROR", "1 - Error" ),
  */
-public enum Enum285DeleteReason implements EnumAccessors, LogStringVerbose {
+public enum Enum285DeleteReason implements EnumAccessors, LogVerboseString {
     /**
      * 0-1 msg types
      */
@@ -77,7 +77,7 @@ public enum Enum285DeleteReason implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

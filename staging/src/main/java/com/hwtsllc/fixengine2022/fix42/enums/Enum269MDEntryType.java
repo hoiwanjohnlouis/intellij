@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  269
@@ -53,7 +53,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      "P - Early Prices"
  *      "Q - Auction Clearing Price"
  */
-public enum Enum269MDEntryType implements EnumAccessors, LogStringVerbose {
+public enum Enum269MDEntryType implements EnumAccessors, LogVerboseString {
     /**
      * 0-9 msg types
      */
@@ -131,7 +131,7 @@ public enum Enum269MDEntryType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

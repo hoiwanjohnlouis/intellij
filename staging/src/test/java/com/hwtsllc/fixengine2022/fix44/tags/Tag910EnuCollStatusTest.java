@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum910CollStatus;
 import org.junit.jupiter.api.Test;
 
@@ -49,25 +49,25 @@ class Tag910EnuCollStatusTest {
     }
     @Test
     void Tag0910Test() {
-        Tag910EnuCollStatus tagData;
+        Log910EnuCollStatus tagData;
 
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.UNASSIGNED );
+        tagData = new Log910EnuCollStatus( Enum910CollStatus.UNASSIGNED );
         assertEquals( Enum910CollStatus.UNASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.PARTIALLY_ASSIGNED );
+        tagData = new Log910EnuCollStatus( Enum910CollStatus.PARTIALLY_ASSIGNED );
         assertEquals( Enum910CollStatus.PARTIALLY_ASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNMENT_PROPOSED );
+        tagData = new Log910EnuCollStatus( Enum910CollStatus.ASSIGNMENT_PROPOSED );
         assertEquals( Enum910CollStatus.ASSIGNMENT_PROPOSED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNED );
+        tagData = new Log910EnuCollStatus( Enum910CollStatus.ASSIGNED );
         assertEquals( Enum910CollStatus.ASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.CHALLENGED );
+        tagData = new Log910EnuCollStatus( Enum910CollStatus.CHALLENGED );
         assertEquals( Enum910CollStatus.CHALLENGED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

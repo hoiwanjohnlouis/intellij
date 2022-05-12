@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum430NetGrossInd;
 import org.junit.jupiter.api.Test;
 
@@ -46,16 +46,16 @@ class Tag430EnuNetGrossIndTest {
      */
     @Test
     void Tag0430Test() {
-        Tag430EnuNetGrossInd tagData;
+        Log430EnuNetGrossInd tagData;
 
         /**
          * 1-2 msg types
          */
-        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.NET);
+        tagData = new Log430EnuNetGrossInd(Enum430NetGrossInd.NET);
         assertEquals( Enum430NetGrossInd.NET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
+        tagData = new Log430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
         assertEquals( Enum430NetGrossInd.GROSS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

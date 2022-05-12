@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1008
@@ -41,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p></p>
  *  <p>    10 - Transaction from Assignment
  */
-public enum Enum1008SideTrdSubTyp implements EnumAccessors, LogStringVerbose {
+public enum Enum1008SideTrdSubTyp implements EnumAccessors, LogVerboseString {
     CMTA( "0", "CMTA", "0 - CMTA" ),
     INTERNAL_TRANSFER( "1", "INTERNAL_TRANSFER", "1 - Internal Transfer" ),
     EXTERNAL_TRANSFER( "2", "EXTERNAL_TRANSFER", "2 - External Transfer" ),
@@ -99,7 +99,7 @@ public enum Enum1008SideTrdSubTyp implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

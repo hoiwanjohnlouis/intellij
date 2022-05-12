@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  150
@@ -56,7 +56,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    K - Trade has been released to Clearing
  *  <p>    L - Triggered or Activated by System
  */
-public enum Enum150ExecType implements EnumAccessors, LogStringVerbose {
+public enum Enum150ExecType implements EnumAccessors, LogVerboseString {
     NEW( "0", "NEW",
             "0 - New" ),
     DONE_FOR_DAY( "3", "DONE_FOR_DAY",
@@ -145,7 +145,7 @@ public enum Enum150ExecType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

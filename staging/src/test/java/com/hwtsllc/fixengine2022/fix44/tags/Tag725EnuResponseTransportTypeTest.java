@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum725ResponseTransportType;
 import org.junit.jupiter.api.Test;
 
@@ -47,13 +47,13 @@ class Tag725EnuResponseTransportTypeTest {
     }
     @Test
     void Tag0725Test() {
-        Tag725EnuResponseTransportType tagData;
+        Log725EnuResponseTransportType tagData;
 
-        tagData = new Tag725EnuResponseTransportType(Enum725ResponseTransportType.INBAND);
+        tagData = new Log725EnuResponseTransportType(Enum725ResponseTransportType.INBAND);
         assertEquals( "0", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag725EnuResponseTransportType(Enum725ResponseTransportType.OUT_OF_BAND);
+        tagData = new Log725EnuResponseTransportType(Enum725ResponseTransportType.OUT_OF_BAND);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

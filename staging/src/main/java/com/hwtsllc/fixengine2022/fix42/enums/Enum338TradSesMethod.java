@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag338
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
  *      TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
  */
-public enum Enum338TradSesMethod implements EnumAccessors, LogStringVerbose {
+public enum Enum338TradSesMethod implements EnumAccessors, LogVerboseString {
     /**
      * 1-3 msg types
      */
@@ -80,7 +80,7 @@ public enum Enum338TradSesMethod implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1018
+ *  NoInstrumentParties
+ *  NumInGroup
+ *  <p>
+ *  Identifies the number of parties identified with an instrument
+ */
 class Tag1018NoInstrumentPartiesTest {
     @Test
     void FIX1018Test() {
         FIX50 fixData = FIX50.FIX1018_NO_INSTRUMENT_PARTIES;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1018", fixData.getID());
+        assertEquals( "NO_INSTRUMENT_PARTIES", fixData.getName());
+        assertEquals( "NoInstrumentParties", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -35,6 +35,6 @@ class FIXBodyTest {
                         .build();
 
         System.out.println(record);
-        System.out.println(record.toLogStringVerbose());
+        System.out.println(record.toVerboseString());
     }
 }

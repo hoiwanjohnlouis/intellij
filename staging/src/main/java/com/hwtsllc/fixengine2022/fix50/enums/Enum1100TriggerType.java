@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1100
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    3 - Next Auction
  *  <p>    4 - Price Movement
  */
-public enum Enum1100TriggerType implements EnumAccessors, LogStringVerbose {
+public enum Enum1100TriggerType implements EnumAccessors, LogVerboseString {
     PARTIAL_EXECUTION( "1", "PARTIAL_EXECUTION", "1 - Partial Execution" ),
     SPECIFIED_SESSION( "2", "SPECIFIED_SESSION", "2 - Specified Trading Session" ),
     NEXT_AUCTION( "3", "NEXT_AUCTION", "3 - Next Auction" ),
@@ -82,7 +82,7 @@ public enum Enum1100TriggerType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum937NetworkStatusResponseType;
 import org.junit.jupiter.api.Test;
 
@@ -46,13 +46,13 @@ class Tag937EnuNetworkStatusResponseTypeTest {
     }
     @Test
     void Tag0937Test() {
-        Tag937EnuNetworkStatusResponseType tagData;
+        Log937EnuNetworkStatusResponseType tagData;
 
-        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
+        tagData = new Log937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
         assertEquals( Enum937NetworkStatusResponseType.FULL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
+        tagData = new Log937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
         assertEquals( Enum937NetworkStatusResponseType.INCREMENTAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

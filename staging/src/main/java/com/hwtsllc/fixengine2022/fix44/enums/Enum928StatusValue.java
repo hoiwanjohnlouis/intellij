@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  928
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      3 - Not Connected - down expected down
  *      4 - In Process
  */
-public enum Enum928StatusValue implements EnumAccessors, LogStringVerbose {
+public enum Enum928StatusValue implements EnumAccessors, LogVerboseString {
     CONNECTED( "1", "CONNECTED", "1 - Connected" ),
     DOWN_EXPECTED_UP( "2", "DOWN_EXPECTED_UP", "2 - Not Connected - down expected up" ),
     DOWN_EXPECTED_DOWN( "3", "DOWN_EXPECTED_DOWN", "3 - Not Connected - down expected down" ),
@@ -79,7 +79,7 @@ public enum Enum928StatusValue implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  991
+ *  RndPx
+ *  Price
+ *  <p>
+ *  Specifies average price rounded to quoted precision.
+ */
 public class Tag991RndPx {
 }

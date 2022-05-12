@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,14 +46,14 @@ class Tag153PrcAllocAvgPxTest {
     }
     @Test
     void Tag0153Test() {
-        Tag153PrcAllocAvgPx tagData;
+        Log153PrcAllocAvgPx tagData;
 
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX));
-        assertEquals( Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX, tagData.getDataValue());
+        tagData = new Log153PrcAllocAvgPx(new MyPriceType(Log153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX));
+        assertEquals( Log153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
-        assertEquals( Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX, tagData.getDataValue());
+        tagData = new Log153PrcAllocAvgPx(new MyPriceType(Log153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
+        assertEquals( Log153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

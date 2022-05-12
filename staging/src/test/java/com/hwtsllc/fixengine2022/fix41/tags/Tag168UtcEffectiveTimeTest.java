@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
@@ -45,14 +45,14 @@ class Tag168UtcEffectiveTimeTest {
     }
     @Test
     void Tag0168Test() {
-        Tag168UtcEffectiveTime tagData;
+        Log168UtcEffectiveTime tagData;
 
-        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME));
-        assertEquals( Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME, tagData.getDataValue());
+        tagData = new Log168UtcEffectiveTime(new MyUTCTimestampType(Log168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME));
+        assertEquals( Log168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME));
-        assertEquals( Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME, tagData.getDataValue());
+        tagData = new Log168UtcEffectiveTime(new MyUTCTimestampType(Log168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME));
+        assertEquals( Log168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

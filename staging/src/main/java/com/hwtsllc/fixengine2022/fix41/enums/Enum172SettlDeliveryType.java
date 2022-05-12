@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  172
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - Tri-Party
  *  <p>    3 - Hold In Custody
  */
-public enum Enum172SettlDeliveryType implements EnumAccessors, LogStringVerbose {
+public enum Enum172SettlDeliveryType implements EnumAccessors, LogVerboseString {
     VERSUS( "0",
             "VERSUS",
             "0 - Versus. Payment: Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment" ),
@@ -89,7 +89,7 @@ public enum Enum172SettlDeliveryType implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

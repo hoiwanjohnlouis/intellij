@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  81
@@ -35,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      5 - Soft-dollar Step-Out
  *      6 - Plan Sponsor
  */
-public enum Enum81ProcessCode implements EnumAccessors, LogStringVerbose {
+public enum Enum81ProcessCode implements EnumAccessors, LogVerboseString {
     REGULAR("0", "REGULAR", "0 - Regular" ),
     SOFT_DOLLAR("1", "SOFT_DOLLAR", "1 - Soft Dollar" ),
     STEP_IN("2", "STEP_IN", "2 - Step In" ),
@@ -88,7 +88,7 @@ public enum Enum81ProcessCode implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

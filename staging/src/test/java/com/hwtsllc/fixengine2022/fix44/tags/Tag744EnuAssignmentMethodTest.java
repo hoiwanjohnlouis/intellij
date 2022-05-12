@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAssignmentMethod;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -55,13 +55,13 @@ class Tag744EnuAssignmentMethodTest {
     }
     @Test
     void Tag0744Test() {
-        Tag744EnuAssignmentMethod tagData;
+        Log744EnuAssignmentMethod tagData;
 
-        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
+        tagData = new Log744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
         assertEquals( MyEnumAssignmentMethod.PRO_RATA.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
+        tagData = new Log744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
         assertEquals( MyEnumAssignmentMethod.RANDOM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

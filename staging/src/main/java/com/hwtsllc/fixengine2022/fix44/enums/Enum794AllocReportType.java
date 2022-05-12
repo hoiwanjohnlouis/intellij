@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  794
@@ -35,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      12 - Complete
  *      14 - Reverse Pending
  */
-public enum Enum794AllocReportType implements EnumAccessors, LogStringVerbose {
+public enum Enum794AllocReportType implements EnumAccessors, LogVerboseString {
     PRELIMINARY_REQUEST( "2", "PRELIMINARY_REQUEST", "2 - Preliminary Request to Intermediary" ),
     SELLSIDE_USING_PRELIMINARY( "3", "SELLSIDE_USING_PRELIMINARY", "3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)" ),
     SELLSIDE_WITHOUT_PRELIMINARY( "4", "SELLSIDE_WITHOUT_PRELIMINARY", "4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)" ),
@@ -90,7 +90,7 @@ public enum Enum794AllocReportType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

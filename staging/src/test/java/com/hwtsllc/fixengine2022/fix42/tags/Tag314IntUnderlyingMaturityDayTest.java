@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,17 +38,17 @@ class Tag314IntUnderlyingMaturityDayTest {
     }
     @Test
     void Tag0314Test() {
-        Tag314IntUnderlyingMaturityDay tagData;
+        Log314IntUnderlyingMaturityDay tagData;
 
-        tagData = new Tag314IntUnderlyingMaturityDay(new MyIntType(
-                Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY));
-        assertEquals( Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY,
+        tagData = new Log314IntUnderlyingMaturityDay(new MyIntType(
+                Log314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY));
+        assertEquals( Log314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag314IntUnderlyingMaturityDay(new MyIntType(
-                Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY));
-        assertEquals( Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY,
+        tagData = new Log314IntUnderlyingMaturityDay(new MyIntType(
+                Log314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY));
+        assertEquals( Log314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

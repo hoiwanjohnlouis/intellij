@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag336StrTradingSessionIDTest {
     }
     @Test
     void Tag0336Test() {
-        Tag336StrTradingSessionID tagData;
+        Log336StrTradingSessionID tagData;
 
-        tagData = new Tag336StrTradingSessionID(new MyStringType(
-                Tag336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID));
-        assertEquals( Tag336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID,
+        tagData = new Log336StrTradingSessionID(new MyStringType(
+                Log336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID));
+        assertEquals( Log336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag336StrTradingSessionID(new MyStringType(
-                Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID));
-        assertEquals( Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID,
+        tagData = new Log336StrTradingSessionID(new MyStringType(
+                Log336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID));
+        assertEquals( Log336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

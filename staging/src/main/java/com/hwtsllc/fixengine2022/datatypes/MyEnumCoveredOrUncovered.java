@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  203 (same as 203, 565,)
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    0 - Covered
  *  <p>    1 - Uncovered
  */
-public enum MyEnumCoveredOrUncovered implements EnumAccessors, LogStringVerbose {
+public enum MyEnumCoveredOrUncovered implements EnumAccessors, LogVerboseString {
     /*
      *  0-1 types
      */
@@ -88,7 +88,7 @@ public enum MyEnumCoveredOrUncovered implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

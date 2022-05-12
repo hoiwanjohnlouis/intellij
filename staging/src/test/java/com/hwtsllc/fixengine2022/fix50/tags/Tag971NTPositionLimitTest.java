@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  971
+ *  NTPositionLimit
+ *  int
+ *  <p>
+ *  Position Limit in the near-term contract for a given exchange-traded product.
+ */
 class Tag971NTPositionLimitTest {
     @Test
     void FIX0971Test() {
         FIX50 fixData = FIX50.FIX971_NT_POSITION_LIMIT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "971", fixData.getID());
+        assertEquals( "NT_POSITION_LIMIT", fixData.getName());
+        assertEquals( "NTPositionLimit", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

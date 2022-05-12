@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum975UnderlyingSettlementType;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  975
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    4 - T+3
  *  <p>    5 - T+4
  */
-public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final Enum975UnderlyingSettlementType dataValue;
 
     public final static Enum975UnderlyingSettlementType TESTA_ENU_UNDERLYING_SETTLEMENT_TYPE
@@ -54,7 +54,7 @@ public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements 
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -63,8 +63,8 @@ public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements 
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -86,12 +86,12 @@ public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements 
 
         tagData = new Tag975EnuUnderlyingSettlementType(TESTA_ENU_UNDERLYING_SETTLEMENT_TYPE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag975EnuUnderlyingSettlementType(TESTB_ENU_UNDERLYING_SETTLEMENT_TYPE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

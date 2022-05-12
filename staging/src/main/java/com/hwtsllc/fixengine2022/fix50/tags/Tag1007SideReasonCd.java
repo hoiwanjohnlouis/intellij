@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1007
+ *  SideReasonCd
+ *  String
+ *  <p>
+ *  Used on a multi-sided trade to convey reason for execution
+ */
 public class Tag1007SideReasonCd {
 }

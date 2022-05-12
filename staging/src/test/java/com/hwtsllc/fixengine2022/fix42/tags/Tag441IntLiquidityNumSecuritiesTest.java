@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag441IntLiquidityNumSecuritiesTest {
     }
     @Test
     void Tag0441Test() {
-        Tag441IntLiquidityNumSecurities tagData;
+        Log441IntLiquidityNumSecurities tagData;
 
-        tagData = new Tag441IntLiquidityNumSecurities(new MyIntType(
-                Tag441IntLiquidityNumSecurities.TESTA_INT_LIQUIDITY_NUM_SECURITIES));
-        assertEquals( Tag441IntLiquidityNumSecurities.TESTA_INT_LIQUIDITY_NUM_SECURITIES,
+        tagData = new Log441IntLiquidityNumSecurities(new MyIntType(
+                Log441IntLiquidityNumSecurities.TESTA_INT_LIQUIDITY_NUM_SECURITIES));
+        assertEquals( Log441IntLiquidityNumSecurities.TESTA_INT_LIQUIDITY_NUM_SECURITIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag441IntLiquidityNumSecurities(new MyIntType(
-                Tag441IntLiquidityNumSecurities.TESTB_INT_LIQUIDITY_NUM_SECURITIES));
-        assertEquals( Tag441IntLiquidityNumSecurities.TESTB_INT_LIQUIDITY_NUM_SECURITIES,
+        tagData = new Log441IntLiquidityNumSecurities(new MyIntType(
+                Log441IntLiquidityNumSecurities.TESTB_INT_LIQUIDITY_NUM_SECURITIES));
+        assertEquals( Log441IntLiquidityNumSecurities.TESTB_INT_LIQUIDITY_NUM_SECURITIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

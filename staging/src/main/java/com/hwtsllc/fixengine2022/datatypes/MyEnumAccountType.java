@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  581 (same as 581, 798)
@@ -41,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    7 - Account is house trader and is cross margined
  *  <p>    8 - Joint back office account (JBO)
  */
-public enum MyEnumAccountType implements EnumAccessors, LogStringVerbose {
+public enum MyEnumAccountType implements EnumAccessors, LogVerboseString {
     /*
      *  1-4, types
      */
@@ -103,7 +103,7 @@ public enum MyEnumAccountType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

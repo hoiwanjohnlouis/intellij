@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1048
+ *  DealingCapacity
+ *  PriceOffset
+ *  <p>
+ *  Identifies role of dealer; Agent, Principal, RisklessPrincipal
+ */
 public class Tag1048DealingCapacity {
 }

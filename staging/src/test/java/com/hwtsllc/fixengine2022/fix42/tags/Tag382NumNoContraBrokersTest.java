@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag382NumNoContraBrokersTest {
     }
     @Test
     void Tag0382Test() {
-        Tag382NumNoContraBrokers tagData;
+        Log382NumNoContraBrokers tagData;
 
-        tagData = new Tag382NumNoContraBrokers(new MyNumInGroupType(
-                Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS));
-        assertEquals( Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS,
+        tagData = new Log382NumNoContraBrokers(new MyNumInGroupType(
+                Log382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS));
+        assertEquals( Log382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag382NumNoContraBrokers(new MyNumInGroupType(
-                Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS));
-        assertEquals( Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS,
+        tagData = new Log382NumNoContraBrokers(new MyNumInGroupType(
+                Log382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS));
+        assertEquals( Log382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

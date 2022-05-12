@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  197
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    0 - FX Netting
  *  <p>    1 - FX Swap
  */
-public enum Enum197AllocLinkType implements EnumAccessors, LogStringVerbose {
+public enum Enum197AllocLinkType implements EnumAccessors, LogVerboseString {
     FX_NETTING( "0", "FX_NETTING", "0 - FX Netting" ),
     FX_SWAP( "1", "FX_SWAP", "1 - FX Swap" ),
     ;
@@ -77,7 +77,7 @@ public enum Enum197AllocLinkType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

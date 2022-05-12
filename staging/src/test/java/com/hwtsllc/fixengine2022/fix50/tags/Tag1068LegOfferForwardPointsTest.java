@@ -17,19 +17,30 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1068
+ *  LegOfferForwardPoints
+ *  PriceOffset
+ *  <p>
+ *  The offer FX forward points for the leg of an FX Swap.
+ *  <p>
+ *  Value can be negative. Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 class Tag1068LegOfferForwardPointsTest {
     @Test
     void FIX1068Test() {
         FIX50 fixData = FIX50.FIX1068_LEG_OFFER_FORWARD_POINTS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1068", fixData.getID());
+        assertEquals( "LEG_OFFER_FORWARD_POINTS", fixData.getName());
+        assertEquals( "LegOfferForwardPoints", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

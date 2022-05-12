@@ -16,13 +16,13 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  * MyExchangeType is a wrapper class for the Exchange field
  * it will probably be a String.
  */
-public class MyExchangeType implements LogStringVerbose {
+public class MyExchangeType implements LogVerboseString {
     private final String dataValue;
 
     public MyExchangeType(final String dataValue) {
@@ -36,7 +36,7 @@ public class MyExchangeType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -56,6 +56,6 @@ public class MyExchangeType implements LogStringVerbose {
     public static void main(String[] args) {
         MyExchangeType dataType = new MyExchangeType("12345");
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

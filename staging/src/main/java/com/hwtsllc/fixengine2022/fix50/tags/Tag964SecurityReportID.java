@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  964
+ *  SecurityReportID
+ *  int
+ *  <p>
+ *  Security Report ID.
+ *  <p>
+ *  Unique identifier for the Security Report.
+ */
 public class Tag964SecurityReportID {
 }

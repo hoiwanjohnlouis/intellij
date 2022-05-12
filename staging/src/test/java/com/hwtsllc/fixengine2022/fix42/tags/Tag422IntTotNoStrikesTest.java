@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag422IntTotNoStrikesTest {
     }
     @Test
     void Tag0422Test() {
-        Tag422IntTotNoStrikes tagData;
+        Log422IntTotNoStrikes tagData;
 
-        tagData = new Tag422IntTotNoStrikes(new MyIntType(
-                Tag422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES));
-        assertEquals( Tag422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES,
+        tagData = new Log422IntTotNoStrikes(new MyIntType(
+                Log422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES));
+        assertEquals( Log422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag422IntTotNoStrikes(new MyIntType(
-                Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES));
-        assertEquals( Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES,
+        tagData = new Log422IntTotNoStrikes(new MyIntType(
+                Log422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES));
+        assertEquals( Log422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

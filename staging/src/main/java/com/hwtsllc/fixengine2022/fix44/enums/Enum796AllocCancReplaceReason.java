@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  796
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum796AllocCancReplaceReason implements EnumAccessors, LogStringVerbose {
+public enum Enum796AllocCancReplaceReason implements EnumAccessors, LogVerboseString {
     ORIGINAL_DETAILS_INCOMPLETE( "1", "ORIGINAL_DETAILS_INCOMPLETE", "1 - Original details incomplete or incorrect" ),
     CHANGE_IN_UNDERLYING_ORDER( "2", "CHANGE_IN_UNDERLYING_ORDER", "2 - Change in underlying order details" ),
     OTHER( "99", "OTHER", "99 - Other" ),
@@ -78,7 +78,7 @@ public enum Enum796AllocCancReplaceReason implements EnumAccessors, LogStringVer
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  959
@@ -56,7 +56,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    23 - Data
  *  <p>    24 - MultipleStringValue
  */
-public enum Enum959StrategyParameterType implements EnumAccessors, LogStringVerbose {
+public enum Enum959StrategyParameterType implements EnumAccessors, LogVerboseString {
     INT( "1", "INT", "1 - Int" ),
     LENGTH( "2", "LENGTH", "2 - Length" ),
     NUM_IN_GROUP( "3", "NUM_IN_GROUP", "3 - NumInGroup" ),
@@ -78,7 +78,7 @@ public enum Enum959StrategyParameterType implements EnumAccessors, LogStringVerb
     CURRENCY( "16", "CURRENCY", "16 - Currency" ),
     EXCHANGE( "17", "EXCHANGE", "17 - Exchange" ),
     MONTH_YEAR( "18", "MONTH_YEAR", "18 - Month-Year" ),
-    UTC_TIME_STAMP( "19", "UTC_TIME_STAMP", "19 - UTCTimeStamp" ),
+    UTC_TIMESTAMP( "19", "UTC_TIME_STAMP", "19 - UTCTimeStamp" ),
     UTC_TIME_ONLY( "20", "UTC_TIME_ONLY", "20 - UTCTimeOnly" ),
 
     LOCAL_MKT_TIME( "21", "LOCAL_MKT_TIME", "21 - LocalMktTime" ),
@@ -129,7 +129,7 @@ public enum Enum959StrategyParameterType implements EnumAccessors, LogStringVerb
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

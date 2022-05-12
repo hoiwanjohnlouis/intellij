@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum666ConfirmTransType;
 import org.junit.jupiter.api.Test;
 
@@ -46,17 +46,17 @@ class Tag666EnuConfirmTransTypeTest {
     }
     @Test
     void Tag0666Test() {
-        Tag666EnuConfirmTransType tagData;
+        Log666EnuConfirmTransType tagData;
 
-        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.NEW);
+        tagData = new Log666EnuConfirmTransType(Enum666ConfirmTransType.NEW);
         assertEquals( Enum666ConfirmTransType.NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.REPLACE);
+        tagData = new Log666EnuConfirmTransType(Enum666ConfirmTransType.REPLACE);
         assertEquals( Enum666ConfirmTransType.REPLACE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.CANCEL);
+        tagData = new Log666EnuConfirmTransType(Enum666ConfirmTransType.CANCEL);
         assertEquals( Enum666ConfirmTransType.CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  871
@@ -56,7 +56,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum871InstrAttribType implements EnumAccessors, LogStringVerbose {
+public enum Enum871InstrAttribType implements EnumAccessors, LogVerboseString {
     FLAT( "1", "FLAT", "1 - Flat (securities pay interest on a current basis but are traded without interest)" ),
     ZERO_COUPON( "2", "ZERO_COUPON", "2 - Zero coupon" ),
     INTEREST_BEARING( "3", "INTEREST_BEARING", "3 - Interest bearing (for Euro commercial paper when not issued at discount)" ),
@@ -129,7 +129,7 @@ public enum Enum871InstrAttribType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

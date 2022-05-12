@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum265MDUpdateType;
 import org.junit.jupiter.api.Test;
 
@@ -44,16 +44,16 @@ class Tag265EnuMDUpdateTypeTest {
      */
     @Test
     void Tag0265Test() {
-        Tag265EnuMDUpdateType tagData;
+        Log265EnuMDUpdateType tagData;
 
         /**
          * 0-1 msg types
          */
-        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.FULL_REFRESH);
+        tagData = new Log265EnuMDUpdateType(Enum265MDUpdateType.FULL_REFRESH);
         assertEquals( Enum265MDUpdateType.FULL_REFRESH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.INCREMENTAL_REFRESH);
+        tagData = new Log265EnuMDUpdateType(Enum265MDUpdateType.INCREMENTAL_REFRESH);
         assertEquals( Enum265MDUpdateType.INCREMENTAL_REFRESH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

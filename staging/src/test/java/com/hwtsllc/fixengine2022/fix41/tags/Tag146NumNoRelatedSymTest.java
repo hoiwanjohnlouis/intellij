@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,14 +44,14 @@ class Tag146NumNoRelatedSymTest {
     }
     @Test
     void Tag0146Test() {
-        Tag146NumNoRelatedSym tagData;
+        Log146NumNoRelatedSym tagData;
 
-        tagData = new Tag146NumNoRelatedSym(new MyNumInGroupType(Tag146NumNoRelatedSym.TESTA_NUM_NO_RELATED_SYM));
-        assertEquals( Tag146NumNoRelatedSym.TESTA_NUM_NO_RELATED_SYM, tagData.getDataValue());
+        tagData = new Log146NumNoRelatedSym(new MyNumInGroupType(Log146NumNoRelatedSym.TESTA_NUM_NO_RELATED_SYM));
+        assertEquals( Log146NumNoRelatedSym.TESTA_NUM_NO_RELATED_SYM, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag146NumNoRelatedSym(new MyNumInGroupType(Tag146NumNoRelatedSym.TESTB_NUM_NO_RELATED_SYM));
-        assertEquals( Tag146NumNoRelatedSym.TESTB_NUM_NO_RELATED_SYM, tagData.getDataValue());
+        tagData = new Log146NumNoRelatedSym(new MyNumInGroupType(Log146NumNoRelatedSym.TESTB_NUM_NO_RELATED_SYM));
+        assertEquals( Log146NumNoRelatedSym.TESTB_NUM_NO_RELATED_SYM, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

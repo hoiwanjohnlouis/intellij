@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumMoveType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -54,13 +54,13 @@ class Tag841EnuDiscretionMoveTypeTest {
     }
     @Test
     void Tag0841Test() {
-        Tag841EnuDiscretionMoveType tagData;
+        Log841EnuDiscretionMoveType tagData;
 
-        tagData = new Tag841EnuDiscretionMoveType(MyEnumMoveType.FLOATING);
+        tagData = new Log841EnuDiscretionMoveType(MyEnumMoveType.FLOATING);
         assertEquals( MyEnumMoveType.FLOATING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag841EnuDiscretionMoveType(MyEnumMoveType.FIXED);
+        tagData = new Log841EnuDiscretionMoveType(MyEnumMoveType.FIXED);
         assertEquals( MyEnumMoveType.FIXED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

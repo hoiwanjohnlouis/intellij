@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  986
+ *  UnderlyingCollectAmount
+ *  Amt
+ *  <p>
+ *  Amount to collect in order to deliver the underlying instrument
+ */
 public class Tag986UnderlyingCollectAmount {
 }

@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1088
+ *  RefreshQty
+ *  Qty
+ *  <p>
+ *  Defines the quantity used to refresh DisplayQty.
+ */
 public class Tag1088RefreshQty {
 }

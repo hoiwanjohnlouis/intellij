@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  274
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      "2 - Minus Tick"
  *      "3 - Zero-Minus Tick"
  */
-public enum Enum274TickDirection implements EnumAccessors, LogStringVerbose {
+public enum Enum274TickDirection implements EnumAccessors, LogVerboseString {
     /**
      * 0-3 msg types
      */
@@ -80,7 +80,7 @@ public enum Enum274TickDirection implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

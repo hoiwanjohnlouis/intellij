@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum819AvgPxIndicator;
 import org.junit.jupiter.api.Test;
 
@@ -47,17 +47,17 @@ class Tag819EnuAvgPxIndicatorTest {
     }
     @Test
     void Tag0819Test() {
-        Tag819EnuAvgPxIndicator tagData;
+        Log819EnuAvgPxIndicator tagData;
 
-        tagData = new Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator.NO_PRICING);
+        tagData = new Log819EnuAvgPxIndicator(Enum819AvgPxIndicator.NO_PRICING);
         assertEquals( Enum819AvgPxIndicator.NO_PRICING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator.PART_OF_APG);
+        tagData = new Log819EnuAvgPxIndicator(Enum819AvgPxIndicator.PART_OF_APG);
         assertEquals( Enum819AvgPxIndicator.PART_OF_APG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator.LAST_TRADE);
+        tagData = new Log819EnuAvgPxIndicator(Enum819AvgPxIndicator.LAST_TRADE);
         assertEquals( Enum819AvgPxIndicator.LAST_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

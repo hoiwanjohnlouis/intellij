@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,13 +46,13 @@ class Tag208BoolNotifyBrokerOfCreditTest {
     }
     @Test
     void Tag0208Test() {
-        Tag208BoolNotifyBrokerOfCredit tagData;
+        Log208BoolNotifyBrokerOfCredit tagData;
 
-        tagData = new Tag208BoolNotifyBrokerOfCredit(MyBooleanType.NO);
+        tagData = new Log208BoolNotifyBrokerOfCredit(MyBooleanType.NO);
         assertEquals( MyBooleanType.NO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag208BoolNotifyBrokerOfCredit(MyBooleanType.YES);
+        tagData = new Log208BoolNotifyBrokerOfCredit(MyBooleanType.YES);
         assertEquals( MyBooleanType.YES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

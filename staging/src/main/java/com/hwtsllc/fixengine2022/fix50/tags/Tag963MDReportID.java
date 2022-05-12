@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  963
+ *  MDReportID
+ *  int
+ *  <p>
+ *  Unique identifier for the Market Data Report.
+ */
 public class Tag963MDReportID {
 }

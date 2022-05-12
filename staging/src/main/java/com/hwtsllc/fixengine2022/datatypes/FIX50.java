@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  FIX50 enum defines all the Financial Exchange Protocol's (FIX) fields.
@@ -57,7 +57,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>
  * String  description  A short blurb which describes what information the field contains
  */
-public enum FIX50 implements EnumAccessors, LogStringVerbose {
+public enum FIX50 implements EnumAccessors, LogVerboseString {
 
 
     /*
@@ -87,7 +87,7 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX975_ENU_UNDERLYING_SETTLEMENT_TYPE(975, "UNDERLYING_SETTLEMENT_TYPE", "UnderlyingSettlementType"),
     FIX976_QUANTITY_DATE(976, "QUANTITY_DATE", "QuantityDate"),
     FIX977_CONT_INT_RPT_ID(977, "CONT_INT_RPT_ID", "ContIntRptID"),
-    FIX978_LATE_INDICATOR(978, "LATE_INDICATOR", "LateIndicator"),
+    FIX978_BOOL_LATE_INDICATOR(978, "LATE_INDICATOR", "LateIndicator"),
     FIX979_INPUT_SOURCE(979, "INPUT_SOURCE", "InputSource"),
     FIX980_ENU_SECURITY_UPDATE_ACTION(980, "SECURITY_UPDATE_ACTION", "SecurityUpdateAction"),
 
@@ -142,8 +142,8 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX1025_FIRST_PX(1025, "FIRST_PX", "FirstPx"),
     FIX1026_MD_ENTRY_SPOT_RATE(1026, "MD_ENTRY_SPOT_RATE", "MDEntrySpotRate"),
     FIX1027_MD_ENTRY_FORWARD_POINTS(1027, "MD_ENTRY_FORWARD_POINTS", "MDEntryForwardPoints"),
-    FIX1028_MANUAL_ORDER_INDICATOR(1028, "MANUAL_ORDER_INDICATOR", "ManualOrderIndicator"),
-    FIX1029_CUST_DIRECTED_ORDER(1029, "CUST_DIRECTED_ORDER", "CustDirectedOrder"),
+    FIX1028_BOOL_MANUAL_ORDER_INDICATOR(1028, "MANUAL_ORDER_INDICATOR", "ManualOrderIndicator"),
+    FIX1029_BOOL_CUST_DIRECTED_ORDER(1029, "CUST_DIRECTED_ORDER", "CustDirectedOrder"),
     FIX1030_RECEIVED_DEPT_ID(1030, "RECEIVED_DEPT_ID", "ReceivedDeptID"),
 
     FIX1031_ENU_CUST_ORDER_HANDLING_INST(1031, "CUST_ORDER_HANDLING_INST", "CustOrderHandlingInst"),
@@ -174,7 +174,7 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX1054_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE(1054, "INSTRUMENT_PARTY_SUB_ID_TYPE", "InstrumentPartySubIDType"),
     FIX1055_POSITION_CURRENCY(1055, "POSITION_CURRENCY", "PositionCurrency"),
     FIX1056_CALCULATED_CCY_LAST_QTY(1056, "CALCULATED_CCY_LAST_QTY", "CalculatedCcyLastQty"),
-    FIX1057_ENU_AGGRESSOR_INDICATOR(1057, "AGGRESSOR_INDICATOR", "AggressorIndicator"),
+    FIX1057_BOOL_AGGRESSOR_INDICATOR(1057, "AGGRESSOR_INDICATOR", "AggressorIndicator"),
     FIX1058_NO_UNDLY_INSTRUMENT_PARTIES(1058, "NO_UNDLY_INSTRUMENT_PARTIES", "NoUndlyInstrumentParties"),
     FIX1059_UNDLY_INSTRUMENT_PARTY_ID(1059, "UNDLY_INSTRUMENT_PARTY_ID", "UndlyInstrumentPartyID"),
     FIX1060_ENU_UNDLY_INSTRUMENT_PARTY_ID_SOURCE(1060, "UNDLY_INSTRUMENT_PARTY_ID_SOURCE", "UndlyInstrumentPartyIDSource"),
@@ -209,7 +209,7 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX1089_MATCH_INCREMENT(1089, "MATCH_INCREMENT", "MatchIncrement"),
     FIX1090_MAX_PRICE_LEVELS(1090, "MAX_PRICE_LEVELS", "MaxPriceLevels"),
 
-    FIX1091_PRE_TRADE_ANONYMITY(1091, "PRE_TRADE_ANONYMITY", "PreTradeAnonymity"),
+    FIX1091_BOOL_PRE_TRADE_ANONYMITY(1091, "PRE_TRADE_ANONYMITY", "PreTradeAnonymity"),
     FIX1092_ENU_PRICE_PROTECTION_SCOPE(1092, "PRICE_PROTECTION_SCOPE", "PriceProtectionScope"),
     FIX1093_ENU_LOT_TYPE(1093, "LOT_TYPE", "LotType"),
     FIX1094_ENU_PEG_PRICE_TYPE(1094, "PEG_PRICE_TYPE", "PegPriceType"),
@@ -259,7 +259,7 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
     FIX1131_REF_CSTM_APPL_VER_ID(1131, "REF_CSTM_APPL_VER_ID", "RefCstmApplVerID"),
     FIX1132_TZ_TRANSACT_TIME(1132, "TZ_TRANSACT_TIME", "TZTransactTime"),
     FIX1133_ENU_EX_DESTINATION_ID_SOURCE(1133, "EX_DESTINATION_ID_SOURCE", "ExDestinationIDSource"),
-    FIX1134_REPORTED_PX_DIFF(1134, "REPORTED_PX_DIFF", "ReportedPxDiff"),
+    FIX1134_BOOL_REPORTED_PX_DIFF(1134, "REPORTED_PX_DIFF", "ReportedPxDiff"),
     FIX1135_RPT_SYS(1135, "RPT_SYS", "RptSys"),
     FIX1136_ALLOC_CLEARING_FEE_INDICATOR(1136, "ALLOC_CLEARING_FEE_INDICATOR", "AllocClearingFeeIndicator"),
     FIX1137_ENU_DEFAULT_APPL_VER_ID(1137, "DEFAULT_APPL_VER_ID", "DefaultApplVerID"),
@@ -328,7 +328,7 @@ public enum FIX50 implements EnumAccessors, LogStringVerbose {
         return description;
     }
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tFIXTypeName[")
                 .concat(getEnumName())

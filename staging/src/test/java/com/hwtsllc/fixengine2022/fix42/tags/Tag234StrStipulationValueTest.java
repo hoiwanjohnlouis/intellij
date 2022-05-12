@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag234StrStipulationValueTest {
     }
     @Test
     void Tag0234Test() {
-        Tag234StrStipulationValue tagData;
+        Log234StrStipulationValue tagData;
 
-        tagData = new Tag234StrStipulationValue(
-                new MyStringType(Tag234StrStipulationValue.TESTA_STR_STIPULATION_VALUE));
-        assertEquals( Tag234StrStipulationValue.TESTA_STR_STIPULATION_VALUE, tagData.getDataValue() );
+        tagData = new Log234StrStipulationValue(
+                new MyStringType(Log234StrStipulationValue.TESTA_STR_STIPULATION_VALUE));
+        assertEquals( Log234StrStipulationValue.TESTA_STR_STIPULATION_VALUE, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag234StrStipulationValue(
-                new MyStringType(Tag234StrStipulationValue.TESTB_STR_STIPULATION_VALUE));
-        assertEquals( Tag234StrStipulationValue.TESTB_STR_STIPULATION_VALUE, tagData.getDataValue() );
+        tagData = new Log234StrStipulationValue(
+                new MyStringType(Log234StrStipulationValue.TESTB_STR_STIPULATION_VALUE));
+        assertEquals( Log234StrStipulationValue.TESTB_STR_STIPULATION_VALUE, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

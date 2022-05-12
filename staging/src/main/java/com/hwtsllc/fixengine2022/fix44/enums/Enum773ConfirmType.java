@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  773
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      2 - Confirmation
  *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
  */
-public enum Enum773ConfirmType implements EnumAccessors, LogStringVerbose {
+public enum Enum773ConfirmType implements EnumAccessors, LogVerboseString {
     STATUS( "1", "STATUS", "1 - Status" ),
     CONFIRMATION( "2", "CONFIRMATION", "2 - Confirmation" ),
     CONFIRMATION_REJECTED( "3", "CONFIRMATION_REJECTED", "3 - Confirmation Request Rejected (reason can be stated in Text (58) field)" ),
@@ -76,7 +76,7 @@ public enum Enum773ConfirmType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

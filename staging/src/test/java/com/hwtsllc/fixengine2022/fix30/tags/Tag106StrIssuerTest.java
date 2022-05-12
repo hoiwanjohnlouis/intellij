@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,9 +45,9 @@ class Tag106StrIssuerTest {
     }
     @Test
     void Tag0106Test() {
-        Tag106StrIssuer tagData;
+        Log106StrIssuer tagData;
 
-        tagData = new Tag106StrIssuer(new MyStringType("show me the money") );
+        tagData = new Log106StrIssuer(new MyStringType("show me the money") );
         assertEquals("show me the money", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

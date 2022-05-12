@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum281MDReqRejReason;
 import org.junit.jupiter.api.Test;
 
@@ -59,48 +59,48 @@ class Tag281EnuMDReqRejReasonTest {
      */
     @Test
     void Tag0281Test() {
-        Tag281EnuMDReqRejReason tagData;
+        Log281EnuMDReqRejReason tagData;
 
         /**
          * 0-9 msg types
          */
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNKNOWN_SYMBOL);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNKNOWN_SYMBOL);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.DUPLICATE_MDREQID);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.DUPLICATE_MDREQID);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -108,19 +108,19 @@ class Tag281EnuMDReqRejReasonTest {
         /**
          * A-D msg types
          */
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_SCOPE);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_SCOPE);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_CREDIT);
+        tagData = new Log281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_CREDIT);
         assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

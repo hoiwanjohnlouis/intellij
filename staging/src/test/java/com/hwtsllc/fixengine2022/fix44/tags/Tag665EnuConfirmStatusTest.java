@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import org.junit.jupiter.api.Test;
 
@@ -48,25 +48,25 @@ class Tag665EnuConfirmStatusTest {
     }
     @Test
     void Tag0665Test() {
-        Tag665EnuConfirmStatus tagData;
+        Log665EnuConfirmStatus tagData;
 
-        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.RECEIVED);
+        tagData = new Log665EnuConfirmStatus(Enum665ConfirmStatus.RECEIVED);
         assertEquals( Enum665ConfirmStatus.RECEIVED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.MISMATCHED_ACCOUNT);
+        tagData = new Log665EnuConfirmStatus(Enum665ConfirmStatus.MISMATCHED_ACCOUNT);
         assertEquals( Enum665ConfirmStatus.MISMATCHED_ACCOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.MISSING_INSTRUCTIONS);
+        tagData = new Log665EnuConfirmStatus(Enum665ConfirmStatus.MISSING_INSTRUCTIONS);
         assertEquals( Enum665ConfirmStatus.MISSING_INSTRUCTIONS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.CONFIRMED);
+        tagData = new Log665EnuConfirmStatus(Enum665ConfirmStatus.CONFIRMED);
         assertEquals( Enum665ConfirmStatus.CONFIRMED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.REJECTED);
+        tagData = new Log665EnuConfirmStatus(Enum665ConfirmStatus.REJECTED);
         assertEquals( Enum665ConfirmStatus.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

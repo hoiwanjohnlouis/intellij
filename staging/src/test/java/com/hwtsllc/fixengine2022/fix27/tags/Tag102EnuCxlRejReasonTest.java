@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum102CxlRejReason;
 import org.junit.jupiter.api.Test;
 
@@ -56,7 +56,7 @@ class Tag102EnuCxlRejReasonTest {
     }
     @Test
     void Tag0102Test() {
-        Tag102EnuCxlRejReason tagData;
+        Log102EnuCxlRejReason tagData;
 
 
 
@@ -68,32 +68,32 @@ class Tag102EnuCxlRejReasonTest {
         /**
          *  0-6, CxlRejReason type
          */
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.TOO_LATE_TO_CANCEL);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.TOO_LATE_TO_CANCEL);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.UNKNOWN_ORDER);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.UNKNOWN_ORDER);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.BROKER_OR_EXCHANGE_OPTION);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.BROKER_OR_EXCHANGE_OPTION);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.PENDING_STATUS);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.PENDING_STATUS);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.UNABLE_TO_PROCESS_MASS_CANCEL_REQUEST);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.UNABLE_TO_PROCESS_MASS_CANCEL_REQUEST);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.UNMATCHED_ORIG_ORD_MOD_TIME);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.UNMATCHED_ORIG_ORD_MOD_TIME);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.DUPLICATE_CLORDID);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.DUPLICATE_CLORDID);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -101,7 +101,7 @@ class Tag102EnuCxlRejReasonTest {
         /**
          *  18, CxlRejReason type
          */
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.INVALID_PRICE_INCREMENT);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.INVALID_PRICE_INCREMENT);
         assertEquals( "18", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -109,7 +109,7 @@ class Tag102EnuCxlRejReasonTest {
         /**
          *  99, CxlRejReason type
          */
-        tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.OTHER);
+        tagData = new Log102EnuCxlRejReason(Enum102CxlRejReason.OTHER);
         assertEquals( "99", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

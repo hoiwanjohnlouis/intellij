@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum668DeliveryForm;
 import org.junit.jupiter.api.Test;
 
@@ -45,13 +45,13 @@ class Tag668EnuDeliveryFormTest {
     }
     @Test
     void Tag0668Test() {
-        Tag668EnuDeliveryForm tagData;
+        Log668EnuDeliveryForm tagData;
 
-        tagData = new Tag668EnuDeliveryForm(Enum668DeliveryForm.BOOK_ENTRY);
+        tagData = new Log668EnuDeliveryForm(Enum668DeliveryForm.BOOK_ENTRY);
         assertEquals( Enum668DeliveryForm.BOOK_ENTRY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag668EnuDeliveryForm(Enum668DeliveryForm.BEARER);
+        tagData = new Log668EnuDeliveryForm(Enum668DeliveryForm.BEARER);
         assertEquals( Enum668DeliveryForm.BEARER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

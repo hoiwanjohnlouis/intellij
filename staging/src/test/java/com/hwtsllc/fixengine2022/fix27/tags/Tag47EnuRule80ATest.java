@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum47Rule80A;
 import org.junit.jupiter.api.Test;
 
@@ -86,9 +86,9 @@ class Tag47EnuRule80ATest {
     }
     @Test
     void Tag0047Test() {
-        Tag47EnuRule80A tagData;
+        Log47EnuRule80A tagData;
 
-        tagData = new Tag47EnuRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
+        tagData = new Log47EnuRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
         assertEquals( Enum47Rule80A.AGENCY_SINGLE_ORDER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

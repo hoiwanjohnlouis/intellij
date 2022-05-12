@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,23 +37,23 @@ class Tag760StrNested2PartySubIDTest {
         FIX44 fixData = FIX44.FIX760_STR_NESTED_2_PARTY_SUB_ID;
         assertEquals( "760", fixData.getID());
         assertEquals( "NESTED_2_PARTY_SUB_ID", fixData.getName());
-        assertEquals( "Nested 2 Party Sub Id", fixData.getDescription());
+        assertEquals( "Nested2PartySubId", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0760Test() {
-        Tag760StrNested2PartySubID tagData;
+        Log760StrNested2PartySubID tagData;
 
         tagData =
-                new Tag760StrNested2PartySubID(new MyStringType(Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID));
-        assertEquals( Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
+                new Log760StrNested2PartySubID(new MyStringType(Log760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID));
+        assertEquals( Log760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData =
-                new Tag760StrNested2PartySubID(new MyStringType(Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID));
-        assertEquals( Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
+                new Log760StrNested2PartySubID(new MyStringType(Log760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID));
+        assertEquals( Log760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,5 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1069
+ *  SwapPoints
+ *  PriceOffset
+ *  <p>
+ *  For FX Swap, this is used to express the differential
+ *  between the far leg's bid/offer and the near leg's bid/offer.
+ *  <p>
+ *  Value can be negative. Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 public class Tag1069SwapPoints {
 }

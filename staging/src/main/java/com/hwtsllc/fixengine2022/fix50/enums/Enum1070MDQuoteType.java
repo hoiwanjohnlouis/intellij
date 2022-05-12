@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1070
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    3 - Counter
  *  <p>    4 - Indicative and Tradeable
  */
-public enum Enum1070MDQuoteType implements EnumAccessors, LogStringVerbose {
+public enum Enum1070MDQuoteType implements EnumAccessors, LogVerboseString {
     INDICATIVE( "0", "INDICATIVE", "0 - Indicative" ),
     TRADEABLE( "1", "TRADEABLE", "1 - Tradeable" ),
     RESTRICTED( "2", "RESTRICTED", "2 - Restricted Tradeable" ),
@@ -83,7 +83,7 @@ public enum Enum1070MDQuoteType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

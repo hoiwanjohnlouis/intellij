@@ -16,5 +16,18 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1090
+ *  MaxPriceLevels
+ *  int
+ *  <p>
+ *  Allows an order to specify a maximum number of price levels to trade through.
+ *  <p>
+ *  Only valid for aggressive orders and during continuous (autoexecution) trading sessions.
+ *  <p>
+ *  Property lost when order is put on book.
+ *  A partially filled order is assigned last trade price as limit price.
+ *  Non-filled order behaves as ordinary Market or Limit.
+ */
 public class Tag1090MaxPriceLevels {
 }

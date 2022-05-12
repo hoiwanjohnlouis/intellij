@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag430
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      NET( "1", "NET", "1 - Net" ),
  *      GROSS( "2", "GROSS", "2 - Gross" ),
  */
-public enum Enum430NetGrossInd implements EnumAccessors, LogStringVerbose {
+public enum Enum430NetGrossInd implements EnumAccessors, LogVerboseString {
     /**
      * 1-2 msg types
      */
@@ -78,7 +78,7 @@ public enum Enum430NetGrossInd implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

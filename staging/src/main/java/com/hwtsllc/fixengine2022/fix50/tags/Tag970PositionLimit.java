@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  970
+ *  PositionLimit
+ *  int
+ *  <p>
+ *  Position Limit for a given exchange-traded product.
+ */
 public class Tag970PositionLimit {
 }

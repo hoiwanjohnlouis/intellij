@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag374
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      CANCEL( "C", "CANCEL", "C - Cancel" ),
  *      NEW( "N", "NEW", "N - New" ),
  */
-public enum Enum374BidRequestTransType implements EnumAccessors, LogStringVerbose {
+public enum Enum374BidRequestTransType implements EnumAccessors, LogVerboseString {
     /**
      * C, and N msg types
      */
@@ -78,7 +78,7 @@ public enum Enum374BidRequestTransType implements EnumAccessors, LogStringVerbos
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

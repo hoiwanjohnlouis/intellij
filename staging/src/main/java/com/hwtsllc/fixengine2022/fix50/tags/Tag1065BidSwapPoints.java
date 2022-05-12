@@ -16,5 +16,18 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1065
+ *  BidSwapPoints
+ *  PriceOffset
+ *  <p>
+ *  The bid FX Swap points for an FX Swap.
+ *  <p>
+ *  It is the "far bid forward points - near offer forward point".
+ *  <p>
+ *  Value can be negative.  Expressed in decimal form.
+ *  <p>
+ *  For example, 61.99 points is expressed and sent as 0.006199
+ */
 public class Tag1065BidSwapPoints {
 }

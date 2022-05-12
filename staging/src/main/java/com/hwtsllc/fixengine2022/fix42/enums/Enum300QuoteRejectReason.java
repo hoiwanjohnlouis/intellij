@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  300
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *                      "9 - Not authorized to quote security" ),
  *      OTHER( "99", "OTHER", "99 - Other" ),
  */
-public enum Enum300QuoteRejectReason implements EnumAccessors, LogStringVerbose {
+public enum Enum300QuoteRejectReason implements EnumAccessors, LogVerboseString {
     /**
      * 1-9, 99 msg types
      */
@@ -104,7 +104,7 @@ public enum Enum300QuoteRejectReason implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

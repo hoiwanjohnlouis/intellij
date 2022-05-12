@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag236PctYieldTest {
     }
     @Test
     void Tag0236Test() {
-        Tag236PctYield tagData;
+        Log236PctYield tagData;
 
-        tagData = new Tag236PctYield(new MyPercentageType(
-                Tag236PctYield.TESTA_PCT_YIELD));
-        assertEquals( Tag236PctYield.TESTA_PCT_YIELD,
+        tagData = new Log236PctYield(new MyPercentageType(
+                Log236PctYield.TESTA_PCT_YIELD));
+        assertEquals( Log236PctYield.TESTA_PCT_YIELD,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag236PctYield(new MyPercentageType(
-                Tag236PctYield.TESTB_PCT_YIELD));
-        assertEquals( Tag236PctYield.TESTB_PCT_YIELD,
+        tagData = new Log236PctYield(new MyPercentageType(
+                Log236PctYield.TESTB_PCT_YIELD));
+        assertEquals( Log236PctYield.TESTB_PCT_YIELD,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

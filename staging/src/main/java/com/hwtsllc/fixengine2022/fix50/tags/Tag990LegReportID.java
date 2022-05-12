@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  990
+ *  LegReportID
+ *  String
+ *  <p>
+ *  Additional attribute to store the Trade ID of the Leg.
+ */
 public class Tag990LegReportID {
 }

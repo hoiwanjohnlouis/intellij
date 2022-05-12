@@ -16,5 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1138
+ *  DisplayQty
+ *  Qty
+ *  <p>
+ *  The quantity to be displayed.
+ *  <p>
+ *  Required for reserve orders.
+ *  <p>
+ *  On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
+ */
 public class Tag1138DisplayQty {
 }

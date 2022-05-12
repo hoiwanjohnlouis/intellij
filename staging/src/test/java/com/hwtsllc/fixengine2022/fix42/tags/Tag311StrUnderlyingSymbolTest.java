@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,16 +37,16 @@ class Tag311StrUnderlyingSymbolTest {
     }
     @Test
     void Tag0311Test() {
-        Tag311StrUnderlyingSymbol tagData;
+        Log311StrUnderlyingSymbol tagData;
 
-        tagData = new Tag311StrUnderlyingSymbol(
-                new MyStringType(Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL));
-        assertEquals( Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
+        tagData = new Log311StrUnderlyingSymbol(
+                new MyStringType(Log311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL));
+        assertEquals( Log311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag311StrUnderlyingSymbol(
-                new MyStringType(Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL));
-        assertEquals( Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
+        tagData = new Log311StrUnderlyingSymbol(
+                new MyStringType(Log311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL));
+        assertEquals( Log311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

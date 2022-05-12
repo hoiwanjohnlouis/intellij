@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  774
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum774ConfirmRejReason implements EnumAccessors, LogStringVerbose {
+public enum Enum774ConfirmRejReason implements EnumAccessors, LogVerboseString {
     MISMATCHED_ACCOUNT( "1", "MISMATCHED_ACCOUNT", "1 - Mismatched account" ),
     MISSING_INSTRUCTIONS( "2", "MISSING_INSTRUCTIONS", "2 - Missing settlement instructions" ),
     OTHER( "99", "OTHER", "99 - Other" ),
@@ -78,7 +78,7 @@ public enum Enum774ConfirmRejReason implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

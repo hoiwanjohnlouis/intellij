@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  854
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Contracts (if used - must specify ContractMultiplier (tag 231))
  *      2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
  */
-public enum Enum854QtyType implements EnumAccessors, LogStringVerbose {
+public enum Enum854QtyType implements EnumAccessors, LogVerboseString {
     UNITS( "0", "UNITS", "0 - Units (shares, par, currency)" ),
     CONTRACTS( "1", "CONTRACTS", "1 - Contracts (if used - must specify ContractMultiplier (tag 231))" ),
     MEASURE_PER_TIME( "2", "MEASURE_PER_TIME", "2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))" ),
@@ -77,7 +77,7 @@ public enum Enum854QtyType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

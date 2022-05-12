@@ -18,8 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag214StrSettlInstRefID;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,11 +44,11 @@ class Tag949StrNested3PartyIDTest {
     }
     @Test
     void Tag0949Test() {
-        Tag949StrNested3PartyID tagData;
+        Log949StrNested3PartyID tagData;
 
-        tagData = new Tag949StrNested3PartyID(
-                new MyStringType(Tag949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID));
-        assertEquals( Tag949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID, tagData.getDataValue() );
+        tagData = new Log949StrNested3PartyID(
+                new MyStringType(Log949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID));
+        assertEquals( Log949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1031 (same as 1031, 1035,)
@@ -70,7 +70,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    TS - Trailing Stop
  *  <p>    WRK - Work
  */
-public enum MyEnumOrderHandlingInst implements EnumAccessors, LogStringVerbose {
+public enum MyEnumOrderHandlingInst implements EnumAccessors, LogVerboseString {
     ADD_ON_ORDER( "ADD", "ADD_ON_ORDER", "ADD - Add On Order" ),
     ALL_OR_NONE( "AON", "ALL_OR_NONE", "AON - All Or None" ),
     CASH_NOT_HELD( "CNH", "CASH_NOT_HELD", "CNH - Cash Not Held" ),
@@ -143,7 +143,7 @@ public enum MyEnumOrderHandlingInst implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

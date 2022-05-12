@@ -16,5 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1095
+ *  PeggedRefPrice
+ *  Price
+ *  <p>
+ *  The value of the reference price that the order is pegged to.
+ *  <p>
+ *  PeggedRefPrice + PegOffsetValue (211) = PeggedPrice (839)
+ *  unless the limit price (44, Price) is breached.
+ *  <p>
+ *  The values may not be exact due to rounding.
+ */
 public class Tag1095PeggedRefPrice {
 }

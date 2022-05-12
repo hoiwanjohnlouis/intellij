@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag434
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
  *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
  */
-public enum Enum434CxlRejResponseTo implements EnumAccessors, LogStringVerbose {
+public enum Enum434CxlRejResponseTo implements EnumAccessors, LogVerboseString {
     /**
      * 1-2 msg types
      */
@@ -80,7 +80,7 @@ public enum Enum434CxlRejResponseTo implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

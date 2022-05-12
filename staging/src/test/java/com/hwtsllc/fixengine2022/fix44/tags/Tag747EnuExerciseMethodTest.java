@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum747ExerciseMethod;
 import org.junit.jupiter.api.Test;
 
@@ -45,9 +45,9 @@ class Tag747EnuExerciseMethodTest {
     }
     @Test
     void Tag0747Test() {
-        Tag747EnuExerciseMethod tagData;
+        Log747EnuExerciseMethod tagData;
 
-        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.AUTOMATIC);
-        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
+        tagData = new Log747EnuExerciseMethod(Enum747ExerciseMethod.AUTOMATIC);
+        tagData = new Log747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
     }
 }

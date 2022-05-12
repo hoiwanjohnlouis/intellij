@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,9 +44,9 @@ class Tag125StrCxlTypeTest {
     }
     @Test
     void Tag0125Test() {
-        Tag125StrCxlType tagData;
+        Log125StrCxlType tagData;
 
-        tagData = new Tag125StrCxlType(new MyStringType("KimHaNeul-125CxlType") );
+        tagData = new Log125StrCxlType(new MyStringType("KimHaNeul-125CxlType") );
         assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum298QuoteCancelType;
 import org.junit.jupiter.api.Test;
 
@@ -48,28 +48,28 @@ class Tag298EnuQuoteCancelTypeTest {
      */
     @Test
     void Tag0298Test() {
-        Tag298EnuQuoteCancelType tagData;
+        Log298EnuQuoteCancelType tagData;
 
         /**
          * 1-5 msg types
          */
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
+        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SYMBOL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
+        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
+        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
+        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
         assertEquals( Enum298QuoteCancelType.CANCEL_ALL_QUOTES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
+        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
         assertEquals( Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

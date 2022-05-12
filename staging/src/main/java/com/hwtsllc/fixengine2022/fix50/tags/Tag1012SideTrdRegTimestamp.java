@@ -16,5 +16,17 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1012
+ *  SideTrdRegTimestamp
+ *  UTCTimestamp
+ *  <p>
+ *  Will be used in a multi-sided message.
+ *  <p>
+ *  Traded Regulatory timestamp value.
+ *  <p>
+ *  Use to store time information required by government regulators
+ *  or self regulatory organizations such as an exchange or clearing house
+ */
 public class Tag1012SideTrdRegTimestamp {
 }

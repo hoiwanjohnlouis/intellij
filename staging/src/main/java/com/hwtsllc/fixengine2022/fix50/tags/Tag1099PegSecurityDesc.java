@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1099
+ *  PegSecurityDesc
+ *  String
+ *  <p>
+ *  Security description of the security off whose prices the order will Peg.
+ */
 public class Tag1099PegSecurityDesc {
 }

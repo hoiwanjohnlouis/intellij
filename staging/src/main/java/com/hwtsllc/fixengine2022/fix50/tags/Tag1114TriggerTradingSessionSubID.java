@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1114
+ *  TriggerTradingSessionSubID
+ *  String
+ *  <p>
+ *  Defines the subordinate trading session at which the order will be activated.
+ */
 public class Tag1114TriggerTradingSessionSubID {
 }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1094
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    8 - Trailing Stop Peg
  *  <p>    9 - Peg to Limit Price
  */
-public enum Enum1094PegPriceType implements EnumAccessors, LogStringVerbose {
+public enum Enum1094PegPriceType implements EnumAccessors, LogVerboseString {
     LAST_PEG( "1", "LAST_PEG", "1 - Last peg (last sale)" ),
     MID_PEG( "2", "MID_PEG", "2 - Mid-price peg (midprice of inside quote)" ),
     OPENING_PEG( "3", "OPENING_PEG", "3 - Opening peg" ),
@@ -93,7 +93,7 @@ public enum Enum1094PegPriceType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum274TickDirection;
 import org.junit.jupiter.api.Test;
 
@@ -46,24 +46,24 @@ class Tag274EnuTickDirectionTest {
      */
     @Test
     void Tag0274Test() {
-        Tag274EnuTickDirection tagData;
+        Log274EnuTickDirection tagData;
 
         /**
          * 0-3 msg types
          */
-        tagData = new Tag274EnuTickDirection(Enum274TickDirection.PLUS_TICK);
+        tagData = new Log274EnuTickDirection(Enum274TickDirection.PLUS_TICK);
         assertEquals( Enum274TickDirection.PLUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag274EnuTickDirection(Enum274TickDirection.ZERO_PLUS_TICK);
+        tagData = new Log274EnuTickDirection(Enum274TickDirection.ZERO_PLUS_TICK);
         assertEquals( Enum274TickDirection.ZERO_PLUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag274EnuTickDirection(Enum274TickDirection.MINUS_TICK);
+        tagData = new Log274EnuTickDirection(Enum274TickDirection.MINUS_TICK);
         assertEquals( Enum274TickDirection.MINUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag274EnuTickDirection(Enum274TickDirection.ZERO_MINUS_TICK);
+        tagData = new Log274EnuTickDirection(Enum274TickDirection.ZERO_MINUS_TICK);
         assertEquals( Enum274TickDirection.ZERO_MINUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

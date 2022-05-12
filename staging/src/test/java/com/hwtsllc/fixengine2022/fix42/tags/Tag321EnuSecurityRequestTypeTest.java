@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum321SecurityRequestType;
 import org.junit.jupiter.api.Test;
 
@@ -55,24 +55,24 @@ class Tag321EnuSecurityRequestTypeTest {
      */
     @Test
     void Tag0321Test() {
-        Tag321EnuSecurityRequestType tagData;
+        Log321EnuSecurityRequestType tagData;
 
         /**
          * 0-3 msg types
          */
-        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY);
+        tagData = new Log321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY);
         assertEquals( Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY);
+        tagData = new Log321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY);
         assertEquals( Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES);
+        tagData = new Log321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES);
         assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITIES);
+        tagData = new Log321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITIES);
         assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITIES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

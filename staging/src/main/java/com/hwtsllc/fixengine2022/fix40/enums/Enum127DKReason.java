@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  127
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      F - Calculation Difference
  *      Z - Other
  */
-public enum Enum127DKReason implements EnumAccessors, LogStringVerbose {
+public enum Enum127DKReason implements EnumAccessors, LogVerboseString {
     UNKNOWN_SYMBOL("A", "UNKNOWN_SYMBOL", "A - Unknown Symbol"),
     WRONG_SIDE("B", "WRONG_SIDE", "B - Wrong Side"),
     QUANTITY_EXCEEDS_ORDER("C", "QUANTITY_EXCEEDS_ORDER", "C - Quantity Exceeds Order"),
@@ -85,7 +85,7 @@ public enum Enum127DKReason implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

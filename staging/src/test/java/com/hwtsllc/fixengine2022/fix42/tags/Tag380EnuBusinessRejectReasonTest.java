@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum380BusinessRejectReason;
 import org.junit.jupiter.api.Test;
 
@@ -54,44 +54,44 @@ class Tag380EnuBusinessRejectReasonTest {
      */
     @Test
     void Tag0380Test() {
-        Tag380EnuBusinessRejectReason tagData;
+        Log380EnuBusinessRejectReason tagData;
 
         /**
          * 0-7, 18 msg types
          */
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.OTHER);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.OTHER);
         assertEquals( Enum380BusinessRejectReason.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_ID);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_ID);
         assertEquals( Enum380BusinessRejectReason.UNKNOWN_ID.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_SECURITY);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_SECURITY);
         assertEquals( Enum380BusinessRejectReason.UNKNOWN_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_MESSAGE_TYPE);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_MESSAGE_TYPE);
         assertEquals( Enum380BusinessRejectReason.UNKNOWN_MESSAGE_TYPE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.APPLICATION_NOT_AVAILABLE);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.APPLICATION_NOT_AVAILABLE);
         assertEquals( Enum380BusinessRejectReason.APPLICATION_NOT_AVAILABLE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.REQUIRED_FIELD_MISSING);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.REQUIRED_FIELD_MISSING);
         assertEquals( Enum380BusinessRejectReason.REQUIRED_FIELD_MISSING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.NOT_AUTHORIZED);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.NOT_AUTHORIZED);
         assertEquals( Enum380BusinessRejectReason.NOT_AUTHORIZED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.DELIVERTO_FIRM_NOT_AVAILABLE);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.DELIVERTO_FIRM_NOT_AVAILABLE);
         assertEquals( Enum380BusinessRejectReason.DELIVERTO_FIRM_NOT_AVAILABLE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT);
+        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT);
         assertEquals( Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

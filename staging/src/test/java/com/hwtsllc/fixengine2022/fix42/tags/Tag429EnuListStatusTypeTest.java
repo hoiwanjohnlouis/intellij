@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum429ListStatusType;
 import org.junit.jupiter.api.Test;
 
@@ -50,32 +50,32 @@ class Tag429EnuListStatusTypeTest {
      */
     @Test
     void Tag0429Test() {
-        Tag429EnuListStatusType tagData;
+        Log429EnuListStatusType tagData;
 
         /**
          * 1-6 msg types
          */
-        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.ACK);
+        tagData = new Log429EnuListStatusType(Enum429ListStatusType.ACK);
         assertEquals( Enum429ListStatusType.ACK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.RESPONSE);
+        tagData = new Log429EnuListStatusType(Enum429ListStatusType.RESPONSE);
         assertEquals( Enum429ListStatusType.RESPONSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.TIMED);
+        tagData = new Log429EnuListStatusType(Enum429ListStatusType.TIMED);
         assertEquals( Enum429ListStatusType.TIMED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.EXEC_STARTED);
+        tagData = new Log429EnuListStatusType(Enum429ListStatusType.EXEC_STARTED);
         assertEquals( Enum429ListStatusType.EXEC_STARTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.ALL_DONE);
+        tagData = new Log429EnuListStatusType(Enum429ListStatusType.ALL_DONE);
         assertEquals( Enum429ListStatusType.ALL_DONE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.ALERT);
+        tagData = new Log429EnuListStatusType(Enum429ListStatusType.ALERT);
         assertEquals( Enum429ListStatusType.ALERT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

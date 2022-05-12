@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1025
+ *  FirstPx
+ *  Price
+ *  <p>
+ *  Indicates the first trade price of the day/session
+ */
 public class Tag1025FirstPx {
 }

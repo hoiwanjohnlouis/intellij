@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1129
+ *  CstmApplVerID
+ *  String
+ *  <p>
+ *  Specifies a custom extension to a message being applied at the message level. Enumerated field
+ */
 class Tag1129CstmApplVerIDTest {
     @Test
     void FIX1129Test() {
         FIX50 fixData = FIX50.FIX1129_CSTM_APPL_VER_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1129", fixData.getID());
+        assertEquals( "CSTM_APPL_VER_ID", fixData.getName());
+        assertEquals( "Cstm Appl Ver Id", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

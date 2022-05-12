@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumBenchmarkCurveName;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -52,57 +52,57 @@ class Tag221EnuBenchmarkCurveNameTest {
      */
     @Test
     void Tag0221Test() {
-        Tag221EnuBenchmarkCurveName tagData;
+        Log221EnuBenchmarkCurveName tagData;
 
         /**
          * various msg types
          */
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.EONIA);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.EONIA);
         assertEquals( MyEnumBenchmarkCurveName.EONIA.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.EUREPO);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.EUREPO);
         assertEquals( MyEnumBenchmarkCurveName.EUREPO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.EURIBOR);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.EURIBOR);
         assertEquals( MyEnumBenchmarkCurveName.EURIBOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.FUTURESWAP);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.FUTURESWAP);
         assertEquals( MyEnumBenchmarkCurveName.FUTURESWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.LIBID);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.LIBID);
         assertEquals( MyEnumBenchmarkCurveName.LIBID.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.LIBOR);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.LIBOR);
         assertEquals( MyEnumBenchmarkCurveName.LIBOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.MUNIAAA);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.MUNIAAA);
         assertEquals( MyEnumBenchmarkCurveName.MUNIAAA.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.OTHER);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.OTHER);
         assertEquals( MyEnumBenchmarkCurveName.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.PFANDBRIEFE);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.PFANDBRIEFE);
         assertEquals( MyEnumBenchmarkCurveName.PFANDBRIEFE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.SONIA);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.SONIA);
         assertEquals( MyEnumBenchmarkCurveName.SONIA.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.SWAP);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.SWAP);
         assertEquals( MyEnumBenchmarkCurveName.SWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.TREASURY);
+        tagData = new Log221EnuBenchmarkCurveName(MyEnumBenchmarkCurveName.TREASURY);
         assertEquals( MyEnumBenchmarkCurveName.TREASURY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

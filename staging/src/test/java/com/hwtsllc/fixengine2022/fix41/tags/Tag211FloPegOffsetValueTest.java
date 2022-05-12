@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,14 +46,14 @@ class Tag211FloPegOffsetValueTest {
     }
     @Test
     void Tag0211Test() {
-        Tag211FloPegOffsetValue tagData;
+        Log211FloPegOffsetValue tagData;
 
-        tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE));
-        assertEquals( Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE, tagData.getDataValue());
+        tagData = new Log211FloPegOffsetValue(new MyFloatType(Log211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE));
+        assertEquals( Log211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
-        assertEquals( Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE, tagData.getDataValue());
+        tagData = new Log211FloPegOffsetValue(new MyFloatType(Log211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
+        assertEquals( Log211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
 }

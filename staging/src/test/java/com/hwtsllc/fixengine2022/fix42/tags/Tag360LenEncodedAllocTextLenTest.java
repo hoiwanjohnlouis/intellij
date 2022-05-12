@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,9 +37,9 @@ class Tag360LenEncodedAllocTextLenTest {
     }
     @Test
     void Tag0360Test() {
-        Tag360LenEncodedAllocTextLen tagData;
+        Log360LenEncodedAllocTextLen tagData;
 
-        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType(23) );
+        tagData = new Log360LenEncodedAllocTextLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

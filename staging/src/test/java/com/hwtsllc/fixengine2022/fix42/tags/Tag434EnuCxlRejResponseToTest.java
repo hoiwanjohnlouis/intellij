@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum434CxlRejResponseTo;
 import org.junit.jupiter.api.Test;
 
@@ -46,16 +46,16 @@ class Tag434EnuCxlRejResponseToTest {
      */
     @Test
     void Tag0434Test() {
-        Tag434EnuCxlRejResponseTo tagData;
+        Log434EnuCxlRejResponseTo tagData;
 
         /**
          * 1-2 msg types
          */
-        tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST);
+        tagData = new Log434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST);
         assertEquals( Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST);
+        tagData = new Log434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST);
         assertEquals( Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

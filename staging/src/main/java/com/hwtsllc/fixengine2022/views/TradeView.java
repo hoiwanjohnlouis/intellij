@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.views;
 
-import com.hwtsllc.fixengine2022.fix27.tags.Tag35EnuMsgType;
+import com.hwtsllc.fixengine2022.fix27.tags.Log35EnuMsgType;
 
 public class TradeView {
     private final StringBuilder stringBuilder = new StringBuilder();
@@ -35,7 +35,7 @@ public class TradeView {
     // static helper class to build tradeview
     public static class TradeViewBuilder {
         // static helper class to build object
-        public TradeViewBuilder(Tag35EnuMsgType tag35EnuMsgType) {
+        public TradeViewBuilder(Log35EnuMsgType tag35EnuMsgType) {
         }
 
         /**

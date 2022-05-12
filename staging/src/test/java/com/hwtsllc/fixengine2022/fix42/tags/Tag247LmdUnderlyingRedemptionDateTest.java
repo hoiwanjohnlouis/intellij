@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,17 +38,17 @@ class Tag247LmdUnderlyingRedemptionDateTest {
     }
     @Test
     void Tag0247Test() {
-        Tag247LmdUnderlyingRedemptionDate tagData;
+        Log247LmdUnderlyingRedemptionDate tagData;
 
-        tagData = new Tag247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
-                Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE));
-        assertEquals( Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE,
+        tagData = new Log247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
+                Log247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE));
+        assertEquals( Log247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
-                Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE));
-        assertEquals( Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE,
+        tagData = new Log247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
+                Log247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE));
+        assertEquals( Log247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

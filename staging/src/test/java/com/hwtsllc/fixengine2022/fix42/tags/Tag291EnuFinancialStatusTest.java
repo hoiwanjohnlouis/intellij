@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum291FinancialStatus;
 import org.junit.jupiter.api.Test;
 
@@ -46,20 +46,20 @@ class Tag291EnuFinancialStatusTest {
      */
     @Test
     void Tag0291Test() {
-        Tag291EnuFinancialStatus tagData;
+        Log291EnuFinancialStatus tagData;
 
         /**
          * 1-3 msg types
          */
-        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.BANKRUPT);
+        tagData = new Log291EnuFinancialStatus(Enum291FinancialStatus.BANKRUPT);
         assertEquals( Enum291FinancialStatus.BANKRUPT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.PENDING_DELISTING);
+        tagData = new Log291EnuFinancialStatus(Enum291FinancialStatus.PENDING_DELISTING);
         assertEquals( Enum291FinancialStatus.PENDING_DELISTING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.RESTRICTED);
+        tagData = new Log291EnuFinancialStatus(Enum291FinancialStatus.RESTRICTED);
         assertEquals( Enum291FinancialStatus.RESTRICTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

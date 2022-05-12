@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -35,22 +35,22 @@ class Tag754BoolAutoAcceptIndicatorTest {
     @Test
     void FIX0754Test() {
         FIX44 fixData = FIX44.FIX754_BOOL_AUTO_ACCEPT_INDICATOR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "754", fixData.getID());
+        assertEquals( "AUTO_ACCEPT_INDICATOR", fixData.getName());
+        assertEquals( "AutoAcceptIndicator", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0754Test() {
-        Tag754BoolAutoAcceptIndicator tagData;
+        Log754BoolAutoAcceptIndicator tagData;
 
-        tagData = new Tag754BoolAutoAcceptIndicator(MyBooleanType.NO);
+        tagData = new Log754BoolAutoAcceptIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag754BoolAutoAcceptIndicator(MyBooleanType.YES);
+        tagData = new Log754BoolAutoAcceptIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

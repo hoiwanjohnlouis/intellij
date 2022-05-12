@@ -16,5 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  988
+ *  UnderlyingSettlementStatus
+ *  String
+ *  <p>
+ *  Settlement status of the underlying instrument.
+ *  <p>
+ *  Used for derivatives that deliver into more than one underlying instrument.
+ *  <p>
+ *  Settlement can be delayed for an underlying instrument.
+ */
 public class Tag988UnderlyingSettlementStatus {
 }

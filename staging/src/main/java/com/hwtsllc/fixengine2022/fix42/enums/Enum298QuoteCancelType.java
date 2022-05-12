@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  298
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      CANCEL_ALL_QUOTES( "4", "CANCEL_ALL_QUOTES", "4 - Cancel All Quotes" ),
  *      CANCEL_QUOTEID_QUOTE("5", "CANCEL_QUOTEID_QUOTE", "5 - Cancel quote specified in QuoteID" ),
  */
-public enum Enum298QuoteCancelType implements EnumAccessors, LogStringVerbose {
+public enum Enum298QuoteCancelType implements EnumAccessors, LogVerboseString {
     /**
      * 1-5 msg types
      */
@@ -88,7 +88,7 @@ public enum Enum298QuoteCancelType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

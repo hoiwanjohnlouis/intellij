@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum399BidDescriptorType;
 import org.junit.jupiter.api.Test;
 
@@ -47,20 +47,20 @@ class Tag399EnuBidDescriptorTypeTest {
      */
     @Test
     void Tag0399Test() {
-        Tag399EnuBidDescriptorType tagData;
+        Log399EnuBidDescriptorType tagData;
 
         /**
          * 1-3 msg types
          */
-        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
+        tagData = new Log399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
         assertEquals( Enum399BidDescriptorType.SECTOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
+        tagData = new Log399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
         assertEquals( Enum399BidDescriptorType.COUNTRY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
+        tagData = new Log399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
         assertEquals( Enum399BidDescriptorType.INDEX.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

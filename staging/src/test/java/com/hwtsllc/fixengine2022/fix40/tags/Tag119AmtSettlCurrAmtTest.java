@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,9 +44,9 @@ class Tag119AmtSettlCurrAmtTest {
     }
     @Test
     void Tag0119Test() {
-        Tag119AmtSettlCurrAmt tagData;
+        Log119AmtSettlCurrAmt tagData;
 
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(119D) );
+        tagData = new Log119AmtSettlCurrAmt(new MyAmtType(119D) );
         assertEquals( 119D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,19 +17,28 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1074
+ *  LegCalculatedCcyLastQty
+ *  Qty
+ *  <p>
+ *  Used for the calculated quantity of the other side of the currency for this leg.
+ *  <p>
+ *  Can be derived from LegQty and LegLastPx.
+ */
 class Tag1074LegCalculatedCcyLastQtyTest {
     @Test
     void FIX1074Test() {
         FIX50 fixData = FIX50.FIX1074_LEG_CALCULATED_CCY_LAST_QTY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1074", fixData.getID());
+        assertEquals( "LEG_CALCULATED_CCY_LAST_QTY", fixData.getName());
+        assertEquals( "leg_calculated_ccy_last_qty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

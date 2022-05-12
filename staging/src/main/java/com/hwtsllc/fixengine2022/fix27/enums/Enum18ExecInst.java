@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  18
@@ -94,7 +94,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      k - Best Execution
  */
-public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
+public enum Enum18ExecInst implements EnumAccessors, LogVerboseString {
     STAY_ON_OFFER_SIDE("0", "STAY_ON_OFFER_SIDE", "0 - Stay on offer side" ),
     NOT_HELD("1", "NOT_HELD", "1 - Not held" ),
     WORK("2", "WORK", "2 - Work" ),
@@ -206,7 +206,7 @@ public enum Enum18ExecInst implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

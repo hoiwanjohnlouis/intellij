@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  747
@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      A - Automatic
  *      M - Manual
  */
-public enum Enum747ExerciseMethod implements EnumAccessors, LogStringVerbose {
+public enum Enum747ExerciseMethod implements EnumAccessors, LogVerboseString {
     AUTOMATIC( "A", "AUTOMATIC", "A - Automatic" ),
     MANUAL( "M", "MANUAL", "M - Manual" ),
     ;
@@ -74,7 +74,7 @@ public enum Enum747ExerciseMethod implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

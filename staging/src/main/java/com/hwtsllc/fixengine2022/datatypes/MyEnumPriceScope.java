@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1092 (same as 1092, 1108,)
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - National (Across all national markets)
  *  <p>    3 - Global (Across all markets)
  */
-public enum MyEnumPriceScope implements EnumAccessors, LogStringVerbose {
+public enum MyEnumPriceScope implements EnumAccessors, LogVerboseString {
     NONE( "0", "NONE", "0 - None" ),
     LOCAL( "1", "LOCAL", "1 - Local (Exchange, ECN, ATS)" ),
     NATIONAL( "2", "NATIONAL", "2 - National (Across all national markets)" ),
@@ -87,7 +87,7 @@ public enum MyEnumPriceScope implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

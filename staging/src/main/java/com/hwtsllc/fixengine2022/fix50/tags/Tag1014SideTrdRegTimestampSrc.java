@@ -16,5 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1014
+ *  SideTrdRegTimestampSrc
+ *  String
+ *  <p>
+ *  Same as TrdRegTimestampOrigin
+ *  <p>
+ *  Text which identifies the origin.
+ *  <p>
+ *  i.e. system which was used to generate the time stamp for the Traded Regulatory timestamp value
+ */
 public class Tag1014SideTrdRegTimestampSrc {
 }

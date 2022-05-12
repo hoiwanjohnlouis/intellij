@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1099
+ *  PegSecurityDesc
+ *  String
+ *  <p>
+ *  Security description of the security off whose prices the order will Peg.
+ */
 class Tag1099PegSecurityDescTest {
     @Test
     void FIX1099Test() {
         FIX50 fixData = FIX50.FIX1099_PEG_SECURITY_DESC;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1099", fixData.getID());
+        assertEquals( "PEG_SECURITY_DESC", fixData.getName());
+        assertEquals( "peg_security_desc", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

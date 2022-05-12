@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  729
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Completed With Warnings
  *      2 - Rejected
  */
-public enum Enum729PosReqStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum729PosReqStatus implements EnumAccessors, LogVerboseString {
     COMPLETED( "0", "COMPLETED", "0 - Completed" ),
     COMPLETED_WITH_WARNINGS( "1", "COMPLETED_WITH_WARNINGS", "1 - Completed With Warnings" ),
     REJECTED( "2", "REJECTED", "2 - Rejected" ),
@@ -76,7 +76,7 @@ public enum Enum729PosReqStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

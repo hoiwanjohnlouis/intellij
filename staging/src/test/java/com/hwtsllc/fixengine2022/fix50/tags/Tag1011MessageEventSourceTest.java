@@ -17,19 +17,33 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1011
+ *  MessageEventSource
+ *  String
+ *  <p>
+ *  Used to identify the event or source  which gave rise to a message.
+ *  <p>
+ *  Valid values will be based on an exchange's implementation.
+ *  <p>
+ *  Example values are:
+ *  <p>     "MQM" (originated at Firm Back Office)
+ *  <p>     "Clear" (originated in Clearing System)
+ *  <p>     "Reg" (static data generated via Register request)
+ */
 class Tag1011MessageEventSourceTest {
     @Test
     void FIX1011Test() {
         FIX50 fixData = FIX50.FIX1011_MESSAGE_EVENT_SOURCE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1011", fixData.getID());
+        assertEquals( "MESSAGE_EVENT_SOURCE", fixData.getName());
+        assertEquals( "MessageEventSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

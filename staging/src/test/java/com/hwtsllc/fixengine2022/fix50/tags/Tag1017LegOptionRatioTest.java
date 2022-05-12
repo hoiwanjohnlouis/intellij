@@ -17,19 +17,32 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1017
+ *  LegOptionRatio
+ *  float
+ *  <p>
+ *  Expresses the risk of an option leg
+ *  <p>
+ *  Value must be between -1 and 1.
+ *  <p>
+ *  A Call Option will require a ratio value between 0 and 1
+ *  <p>
+ *  A Put Option will require a ratio value between -1 and 0
+ */
 class Tag1017LegOptionRatioTest {
     @Test
     void FIX1017Test() {
         FIX50 fixData = FIX50.FIX1017_LEG_OPTION_RATIO;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1017", fixData.getID());
+        assertEquals( "LEG_OPTION_RATIO", fixData.getName());
+        assertEquals( "LegOptionRatio", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

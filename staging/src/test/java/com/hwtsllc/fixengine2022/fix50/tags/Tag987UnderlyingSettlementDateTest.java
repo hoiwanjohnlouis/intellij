@@ -17,19 +17,30 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  987
+ *  UnderlyingSettlementDate
+ *  LocalMktDate
+ *  <p>
+ *  Date the underlying instrument will settle.
+ *  <p>
+ *  Used for derivatives that deliver into more than one underlying instrument.
+ *  <p>
+ *  Settlement dates can vary across underlying instruments.
+ */
 class Tag987UnderlyingSettlementDateTest {
     @Test
     void FIX0987Test() {
         FIX50 fixData = FIX50.FIX987_UNDERLYING_SETTLEMENT_DATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "987", fixData.getID());
+        assertEquals( "UNDERLYING_SETTLEMENT_DATE", fixData.getName());
+        assertEquals( "UnderlyingSettlementDate", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

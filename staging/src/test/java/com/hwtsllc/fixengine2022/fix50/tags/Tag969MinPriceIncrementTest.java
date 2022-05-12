@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  969
+ *  MinPriceIncrement
+ *  float
+ *  <p>
+ *  Minimum price increase for a given exchange-traded Instrument
+ */
 class Tag969MinPriceIncrementTest {
     @Test
     void FIX0969Test() {
         FIX50 fixData = FIX50.FIX969_MIN_PRICE_INCREMENT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "969", fixData.getID());
+        assertEquals( "MIN_PRICE_INCREMENT", fixData.getName());
+        assertEquals( "MinPriceIncrement", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

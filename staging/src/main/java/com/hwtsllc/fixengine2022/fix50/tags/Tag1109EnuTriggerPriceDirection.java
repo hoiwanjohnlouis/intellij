@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1109TriggerPriceDirection;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1109
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price
  *  <p>    D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price
  */
-public class Tag1109EnuTriggerPriceDirection extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1109EnuTriggerPriceDirection extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final Enum1109TriggerPriceDirection dataValue;
 
     public final static Enum1109TriggerPriceDirection TESTA_ENU_TRIGGER_PRICE_DIRECTION
@@ -53,7 +53,7 @@ public class Tag1109EnuTriggerPriceDirection extends FIX50Abstract implements Fi
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -62,8 +62,8 @@ public class Tag1109EnuTriggerPriceDirection extends FIX50Abstract implements Fi
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -85,12 +85,12 @@ public class Tag1109EnuTriggerPriceDirection extends FIX50Abstract implements Fi
 
         tagData = new Tag1109EnuTriggerPriceDirection(TESTA_ENU_TRIGGER_PRICE_DIRECTION);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1109EnuTriggerPriceDirection(TESTB_ENU_TRIGGER_PRICE_DIRECTION);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

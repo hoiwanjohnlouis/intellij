@@ -17,9 +17,9 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public enum Enum263SubscriptionRequestType implements EnumAccessors, LogStringVerbose {
+public enum Enum263SubscriptionRequestType implements EnumAccessors, LogVerboseString {
     /**
      * 0-2 msg types
      */
@@ -73,7 +73,7 @@ public enum Enum263SubscriptionRequestType implements EnumAccessors, LogStringVe
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

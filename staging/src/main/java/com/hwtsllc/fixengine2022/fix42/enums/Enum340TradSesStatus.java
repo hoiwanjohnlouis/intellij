@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag340
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
  *      REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
  */
-public enum Enum340TradSesStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum340TradSesStatus implements EnumAccessors, LogVerboseString {
     /**
      * 0-6 msg types
      */
@@ -88,7 +88,7 @@ public enum Enum340TradSesStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

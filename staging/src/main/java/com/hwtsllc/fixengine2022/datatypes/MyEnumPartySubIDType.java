@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  786 (same as 786, 803, 805, 807, 954, 1054, 1064, 1122)
@@ -126,7 +126,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>
  *  <p>    or any value conforming to the data type Reserved4000Plus
  */
-public enum MyEnumPartySubIDType implements EnumAccessors, LogStringVerbose {
+public enum MyEnumPartySubIDType implements EnumAccessors, LogVerboseString {
     FIRM( "1", "FIRM", "1 - Firm" ),
     PERSON( "2", "PERSON", "2 - Person" ),
     SYSTEM( "3", "SYSTEM", "3 - System" ),
@@ -209,7 +209,7 @@ public enum MyEnumPartySubIDType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

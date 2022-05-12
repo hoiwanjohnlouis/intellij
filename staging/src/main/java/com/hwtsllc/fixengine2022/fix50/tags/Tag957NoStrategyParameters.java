@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  957
+ *  NoStrategyParameters
+ *  NumInGroup
+ *  <p>
+ *  Indicates number of strategy parameters
+ */
 class Tag957NoStrategyParameters {
 }

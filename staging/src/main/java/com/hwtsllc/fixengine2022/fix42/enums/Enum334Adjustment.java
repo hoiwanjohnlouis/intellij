@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  Tag334
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      ERROR( "2", "ERROR", "2 - Error" ),
  *      CORRECTION( "3", "CORRECTION", "3 - Correction" ),
  */
-public enum Enum334Adjustment implements EnumAccessors, LogStringVerbose {
+public enum Enum334Adjustment implements EnumAccessors, LogVerboseString {
     /**
      * 1-3 msg types
      */
@@ -80,7 +80,7 @@ public enum Enum334Adjustment implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

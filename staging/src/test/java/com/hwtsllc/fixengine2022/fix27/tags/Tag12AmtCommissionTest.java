@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,9 +45,9 @@ class Tag12AmtCommissionTest {
     }
     @Test
     void Tag0012Test() {
-        Tag12AmtCommission tagData;
+        Log12AmtCommission tagData;
 
-        tagData = new Tag12AmtCommission(new MyAmtType(10D) );
+        tagData = new Log12AmtCommission(new MyAmtType(10D) );
         assertEquals( 10D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

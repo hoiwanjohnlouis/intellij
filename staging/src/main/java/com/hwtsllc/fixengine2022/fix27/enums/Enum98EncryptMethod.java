@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  98
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      5 - PGP / DES-MD5 (See app note on FIX web site)
  *      6 - PEM / DES-MD5 (see app note on FIX web site)
  */
-public enum Enum98EncryptMethod implements EnumAccessors, LogStringVerbose {
+public enum Enum98EncryptMethod implements EnumAccessors, LogVerboseString {
     NONE_OR_OTHER("0", "NONE_OR_OTHER", "0 - None / Other"),
     PKCS("1", "PKCS", "1 - PKCS (Proprietary)"),
     DES_ECB("2", "DES_ECB", "2 - DES (ECB Mode)"),
@@ -87,7 +87,7 @@ public enum Enum98EncryptMethod implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

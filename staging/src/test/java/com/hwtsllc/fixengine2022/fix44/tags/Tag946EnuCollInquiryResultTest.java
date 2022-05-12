@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum946CollInquiryResult;
 import org.junit.jupiter.api.Test;
 
@@ -58,50 +58,50 @@ class Tag946EnuCollInquiryResultTest {
     }
     @Test
     void Tag0946Test() {
-        Tag946EnuCollInquiryResult tagData;
+        Log946EnuCollInquiryResult tagData;
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.SUCCESSFUL );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.SUCCESSFUL );
         assertEquals( Enum946CollInquiryResult.SUCCESSFUL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_INSTRUMENT );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_INSTRUMENT );
         assertEquals( Enum946CollInquiryResult.INVALID_INSTRUMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE );
         assertEquals( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_PARTIES );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_PARTIES );
         assertEquals( Enum946CollInquiryResult.INVALID_PARTIES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE );
         assertEquals( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_DESTINATION );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_DESTINATION );
         assertEquals( Enum946CollInquiryResult.INVALID_DESTINATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE );
         assertEquals( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER );
         assertEquals( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED );
         assertEquals( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY );
         assertEquals( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.OTHER );
+        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.OTHER );
         assertEquals( Enum946CollInquiryResult.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

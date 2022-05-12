@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  169
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    3 - A Global Custodian (StandInstDBName (70) must be provided)
  *  <p>    4 - AccountNet
  */
-public enum Enum169StandInstDbType implements EnumAccessors, LogStringVerbose {
+public enum Enum169StandInstDbType implements EnumAccessors, LogVerboseString {
     OTHER( "0",
             "OTHER",
             "0 - Other" ),
@@ -93,7 +93,7 @@ public enum Enum169StandInstDbType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum939TrdRptStatus;
 import org.junit.jupiter.api.Test;
 
@@ -47,17 +47,17 @@ class Tag939EnuTrdRptStatusTest {
     }
     @Test
     void Tag0939Test() {
-        Tag939EnuTrdRptStatus tagData;
+        Log939EnuTrdRptStatus tagData;
 
-        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED );
+        tagData = new Log939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED );
         assertEquals( Enum939TrdRptStatus.ACCEPTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.REJECTED );
+        tagData = new Log939EnuTrdRptStatus( Enum939TrdRptStatus.REJECTED );
         assertEquals( Enum939TrdRptStatus.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS );
+        tagData = new Log939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS );
         assertEquals( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum750TradeRequestStatus;
 import org.junit.jupiter.api.Test;
 
@@ -46,10 +46,10 @@ class Tag750EnuTradeRequestStatusTest {
     }
     @Test
     void Tag0750Test() {
-        Tag750EnuTradeRequestStatus tagData;
+        Log750EnuTradeRequestStatus tagData;
 
-        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.ACCEPTED);
-        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.COMPLETED);
-        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.REJECTED);
+        tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.ACCEPTED);
+        tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.COMPLETED);
+        tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.REJECTED);
     }
 }

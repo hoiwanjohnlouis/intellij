@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1086
+ *  DisplayHighQty
+ *  Qty
+ *  <p>
+ *  Defines the upper quantity limit to a randomized refresh of DisplayQty.
+ */
 public class Tag1086DisplayHighQty {
 }

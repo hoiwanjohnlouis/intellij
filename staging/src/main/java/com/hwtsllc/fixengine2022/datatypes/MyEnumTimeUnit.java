@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  997 (same as 997, 1000, 1001)
@@ -50,7 +50,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    Mo - Month
  *  <p>    Yr - Year
  */
-public enum MyEnumTimeUnit implements EnumAccessors, LogStringVerbose {
+public enum MyEnumTimeUnit implements EnumAccessors, LogVerboseString {
     HH( "H", "HH", "H - Hour" ),
     MM( "Min", "MM", "Min - Minute" ),
     SS( "S", "SS", "S - Second" ),
@@ -103,7 +103,7 @@ public enum MyEnumTimeUnit implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

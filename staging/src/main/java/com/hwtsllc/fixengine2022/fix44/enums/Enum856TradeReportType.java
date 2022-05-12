@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  856
@@ -42,7 +42,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      14 - Alleged Trade Report Cancel
  *      15 - Alleged (Locked-In) Trade Break
  */
-public enum Enum856TradeReportType implements EnumAccessors, LogStringVerbose {
+public enum Enum856TradeReportType implements EnumAccessors, LogVerboseString {
     SUBMIT( "0", "SUBMIT", "0 - Submit" ),
     ALLEGED( "1", "ALLEGED", "1 - Alleged" ),
     ACCEPT( "2", "ACCEPT", "2 - Accept" ),
@@ -106,7 +106,7 @@ public enum Enum856TradeReportType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

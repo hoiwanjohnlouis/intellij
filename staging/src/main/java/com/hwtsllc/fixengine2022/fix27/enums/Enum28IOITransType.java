@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  28
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      C - Cancel
  *      R - Replace
  */
-public enum Enum28IOITransType implements EnumAccessors, LogStringVerbose {
+public enum Enum28IOITransType implements EnumAccessors, LogVerboseString {
     NEW("N", "NEW", "N - New" ),
     CANCEL("C", "CANCEL", "C - Cancel" ),
     REPLACE("R", "REPLACE", "R - Replace" ),
@@ -77,7 +77,7 @@ public enum Enum28IOITransType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

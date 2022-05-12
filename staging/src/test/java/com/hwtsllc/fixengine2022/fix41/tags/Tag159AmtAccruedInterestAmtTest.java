@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,16 +44,16 @@ class Tag159AmtAccruedInterestAmtTest {
     }
     @Test
     void Tag0159Test() {
-        Tag159AmtAccruedInterestAmt tagData;
+        Log159AmtAccruedInterestAmt tagData;
 
-        tagData = new Tag159AmtAccruedInterestAmt(
-                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT));
-        assertEquals( Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
+        tagData = new Log159AmtAccruedInterestAmt(
+                new MyAmtType(Log159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT));
+        assertEquals( Log159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag159AmtAccruedInterestAmt(
-                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
-        assertEquals( Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
+        tagData = new Log159AmtAccruedInterestAmt(
+                new MyAmtType(Log159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
+        assertEquals( Log159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

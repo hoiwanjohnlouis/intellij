@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  924
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      3 - Change Password For User
  *      4 - Request Individual User Status
  */
-public enum Enum924UserRequestType implements EnumAccessors, LogStringVerbose {
+public enum Enum924UserRequestType implements EnumAccessors, LogVerboseString {
     LOG_ON( "1", "LOG_ON", "1 - Log On User" ),
     LOG_OFF( "2", "LOG_OFF", "2 - Log Off User" ),
     CHANGE_PASSWORD( "3", "CHANGE_PASSWORD", "3 - Change Password For User" ),
@@ -79,7 +79,7 @@ public enum Enum924UserRequestType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

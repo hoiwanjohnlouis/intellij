@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -71,13 +71,13 @@ class Tag312EnuUnderlyingSymbolSfxTest {
     }
     @Test
     void Tag0312Test() {
-        Tag312EnuUnderlyingSymbolSfx tagData;
+        Log312EnuUnderlyingSymbolSfx tagData;
 
-        tagData = new Tag312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.EUCP);
+        tagData = new Log312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.EUCP);
         assertEquals( MyEnumSymbolSfx.EUCP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
+        tagData = new Log312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
         assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

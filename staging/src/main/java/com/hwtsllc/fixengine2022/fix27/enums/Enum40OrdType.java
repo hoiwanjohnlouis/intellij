@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  40
@@ -62,7 +62,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      P - Pegged
  *      Q - Counter-order selection
  */
-public enum Enum40OrdType implements EnumAccessors, LogStringVerbose {
+public enum Enum40OrdType implements EnumAccessors, LogVerboseString {
     MARKET("1", "MARKET", "1 - Market" ),
     LIMIT("2", "LIMIT", "2 - Limit" ),
     STOP_OR_STOP_LOSS("3", "STOP_OR_STOP_LOSS", "3 - Stop or Stop Loss" ),
@@ -139,7 +139,7 @@ public enum Enum40OrdType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

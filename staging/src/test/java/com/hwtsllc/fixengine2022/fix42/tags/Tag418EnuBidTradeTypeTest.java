@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum418BidTradeType;
 import org.junit.jupiter.api.Test;
 
@@ -48,24 +48,24 @@ class Tag418EnuBidTradeTypeTest {
      */
     @Test
     void Tag0418Test() {
-        Tag418EnuBidTradeType tagData;
+        Log418EnuBidTradeType tagData;
 
         /**
          * A, G, J, and R msg types
          */
-        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.AGENCY);
+        tagData = new Log418EnuBidTradeType(Enum418BidTradeType.AGENCY);
         assertEquals( Enum418BidTradeType.AGENCY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
+        tagData = new Log418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
         assertEquals( Enum418BidTradeType.VWAP_GUARANTEE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
+        tagData = new Log418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
         assertEquals( Enum418BidTradeType.GUARANTEED_CLOSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
+        tagData = new Log418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
         assertEquals( Enum418BidTradeType.RISK_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

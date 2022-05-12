@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag293QtyDefBidSizeTest {
     }
     @Test
     void Tag0293Test() {
-        Tag293QtyDefBidSize tagData;
+        Log293QtyDefBidSize tagData;
 
-        tagData = new Tag293QtyDefBidSize(new MyQtyType(
-                Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE));
-        assertEquals( Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE,
+        tagData = new Log293QtyDefBidSize(new MyQtyType(
+                Log293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE));
+        assertEquals( Log293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag293QtyDefBidSize(new MyQtyType(
-                Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE));
-        assertEquals( Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE,
+        tagData = new Log293QtyDefBidSize(new MyQtyType(
+                Log293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE));
+        assertEquals( Log293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

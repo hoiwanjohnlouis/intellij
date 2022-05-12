@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  703
@@ -48,7 +48,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      DN - Delivery Notice Qty
  *      EP - Exchange for Physical Qty
  */
-public enum Enum703PosType implements EnumAccessors, LogStringVerbose {
+public enum Enum703PosType implements EnumAccessors, LogVerboseString {
     ALLOCATION_TRADE_QTY( "ALC", "ALLOCATION_TRADE_QTY", "ALC - Allocation Trade Qty" ),
     OPTION_ASSIGNMENT( "AS", "OPTION_ASSIGNMENT", "AS - Option Assignment" ),
     AS_OF_TRADE_QTY( "ASF", "AS_OF_TRADE_QTY", "ASF - As-of Trade Qty" ),
@@ -116,7 +116,7 @@ public enum Enum703PosType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

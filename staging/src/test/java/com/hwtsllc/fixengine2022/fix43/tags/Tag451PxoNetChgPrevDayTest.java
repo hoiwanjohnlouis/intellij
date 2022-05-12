@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +36,7 @@ class Tag451PxoNetChgPrevDayTest {
     }
     @Test
     void Tag0451Test() {
-        Tag451PxoNetChgPrevDay tagData;
+        Log451PxoNetChgPrevDay tagData;
 
     }
 }

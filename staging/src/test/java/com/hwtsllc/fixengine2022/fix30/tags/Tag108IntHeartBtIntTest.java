@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,9 +44,9 @@ class Tag108IntHeartBtIntTest {
     }
     @Test
     void Tag0108Test() {
-        Tag108IntHeartBtInt tagData;
+        Log108IntHeartBtInt tagData;
 
-        tagData = new Tag108IntHeartBtInt(new MyIntType(60) );
+        tagData = new Log108IntHeartBtInt(new MyIntType(60) );
         assertEquals(60, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

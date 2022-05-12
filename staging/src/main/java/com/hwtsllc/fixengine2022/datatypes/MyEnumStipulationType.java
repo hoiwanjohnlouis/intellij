@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  233 (same as 233, 688, 888)
@@ -123,7 +123,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    PSA - Percent of BMA Prepayment Curve
  *  <p>    SMM - Single Monthly Mortality
  */
-public enum MyEnumStipulationType implements EnumAccessors, LogStringVerbose {
+public enum MyEnumStipulationType implements EnumAccessors, LogVerboseString {
     /*
      *  233 StipulationType
      */
@@ -303,7 +303,7 @@ public enum MyEnumStipulationType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

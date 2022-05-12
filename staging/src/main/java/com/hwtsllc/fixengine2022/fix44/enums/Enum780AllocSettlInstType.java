@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  780
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      3 - SSI DB IDs provided
  *      4 - Phone for instructions
  */
-public enum Enum780AllocSettlInstType implements EnumAccessors, LogStringVerbose {
+public enum Enum780AllocSettlInstType implements EnumAccessors, LogVerboseString {
     USE_DEFAULTS( "0", "USE_DEFAULTS", "0 - Use default instructions" ),
     DERIVE_FROM_PARAMETERS( "1", "DERIVE_FROM_PARAMETERS", "1 - Derive from parameters provided" ),
     FULL_DETAILS( "2", "FULL_DETAILS", "2 - Full details provided" ),
@@ -81,7 +81,7 @@ public enum Enum780AllocSettlInstType implements EnumAccessors, LogStringVerbose
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

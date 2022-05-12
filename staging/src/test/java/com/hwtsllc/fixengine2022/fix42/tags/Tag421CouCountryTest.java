@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag421CouCountryTest {
     }
     @Test
     void Tag0421Test() {
-        Tag421CouCountry tagData;
+        Log421CouCountry tagData;
 
-        tagData = new Tag421CouCountry(new MyCountryType(
-                Tag421CouCountry.TESTA_COU_COUNTRY));
-        assertEquals( Tag421CouCountry.TESTA_COU_COUNTRY,
+        tagData = new Log421CouCountry(new MyCountryType(
+                Log421CouCountry.TESTA_COU_COUNTRY));
+        assertEquals( Log421CouCountry.TESTA_COU_COUNTRY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag421CouCountry(new MyCountryType(
-                Tag421CouCountry.TESTB_COU_COUNTRY));
-        assertEquals( Tag421CouCountry.TESTB_COU_COUNTRY,
+        tagData = new Log421CouCountry(new MyCountryType(
+                Log421CouCountry.TESTB_COU_COUNTRY));
+        assertEquals( Log421CouCountry.TESTB_COU_COUNTRY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

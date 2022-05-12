@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1037
+ *  UnderlyingDeliveryAmount
+ *  Amt
+ *  <p>
+ *  Indicates the underlying position amount to be delivered
+ */
 public class Tag1037UnderlyingDeliveryAmount {
 }

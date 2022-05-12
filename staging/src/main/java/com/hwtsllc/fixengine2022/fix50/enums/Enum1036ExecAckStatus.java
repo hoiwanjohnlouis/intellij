@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1036
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    1 - Accepted
  *  <p>    2 - Don't know / Rejected
  */
-public enum Enum1036ExecAckStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum1036ExecAckStatus implements EnumAccessors, LogVerboseString {
     RECEIVED( "0", "RECEIVED", "0 - Received, not yet processed" ),
     ACCEPTED( "1", "ACCEPTED", "1 - Accepted" ),
     DONT_KNOW_REJECTED( "2", "DONT_KNOW_REJECTED", "2 - Don't know / Rejected" ),
@@ -79,7 +79,7 @@ public enum Enum1036ExecAckStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

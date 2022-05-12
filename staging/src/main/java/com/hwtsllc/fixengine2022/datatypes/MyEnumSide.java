@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  54 (same as 54, 624,)
@@ -53,7 +53,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    F - Lend (FINANCING - identifies direction of collateral)
  *  <p>    G - Borrow (FINANCING - identifies direction of collateral)
  */
-public enum MyEnumSide implements EnumAccessors, LogStringVerbose {
+public enum MyEnumSide implements EnumAccessors, LogVerboseString {
     /*
      *  MyEnumSide enum defines all the possible values for Side (FIX) fields.
      *  It consists of 3 fields.
@@ -135,7 +135,7 @@ public enum MyEnumSide implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

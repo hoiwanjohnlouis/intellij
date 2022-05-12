@@ -16,15 +16,15 @@
 
 package com.hwtsllc.fixengine2022.factories;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class FIXStandardTrailer implements LogStringVerbose {
+public class FIXStandardTrailer implements LogVerboseString {
     private static final Logger logger = LogManager.getRootLogger();
 
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return "hello from toLogStringVerbose()";
     }
     @Override

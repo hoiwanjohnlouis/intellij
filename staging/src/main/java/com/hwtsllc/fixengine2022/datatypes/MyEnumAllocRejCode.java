@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  88 (same as 88, 776)
@@ -50,7 +50,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    12 - Unknown ClOrdID
  *  <p>    13 - Warehouse request rejected
  */
-public enum MyEnumAllocRejCode implements EnumAccessors, LogStringVerbose {
+public enum MyEnumAllocRejCode implements EnumAccessors, LogVerboseString {
     UNKNOWN_ACCOUNT("0", "UNKNOWN_ACCOUNT",
             "0 - Unknown account(s)" ),
     INCORRECT_QUANTITY("1", "INCORRECT_QUANTITY",
@@ -125,7 +125,7 @@ public enum MyEnumAllocRejCode implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

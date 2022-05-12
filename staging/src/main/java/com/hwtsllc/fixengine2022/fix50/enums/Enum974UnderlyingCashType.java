@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  974
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    FIXED - FIXED
  *  <p>    DIFF - DIFF
  */
-public enum Enum974UnderlyingCashType implements EnumAccessors, LogStringVerbose {
+public enum Enum974UnderlyingCashType implements EnumAccessors, LogVerboseString {
     FIXED( "FIXED", "FIXED", "FIXED - FIXED" ),
     DIFF( "DIFF", "DIFF", "DIFF - DIFF" ),
     ;
@@ -77,7 +77,7 @@ public enum Enum974UnderlyingCashType implements EnumAccessors, LogStringVerbose
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

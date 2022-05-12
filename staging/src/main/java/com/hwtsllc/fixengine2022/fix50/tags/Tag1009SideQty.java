@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1009
+ *  SideQty
+ *  int
+ *  <p>
+ *  Used to indicate the quantity on one of a multi-sided Trade Capture Report
+ */
 public class Tag1009SideQty {
 }

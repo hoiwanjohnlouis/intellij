@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1110
+ *  TriggerNewPrice
+ *  Price
+ *  <p>
+ *  The Price that the order should have after the trigger has hit.
+ *  <p>
+ *  Could be applicable for any trigger type, but must be specified for Trigger Type 1.
+ */
 public class Tag1110TriggerNewPrice {
 }

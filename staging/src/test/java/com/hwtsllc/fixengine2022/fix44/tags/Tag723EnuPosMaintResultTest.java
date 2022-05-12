@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum723PosMaintResult;
 import org.junit.jupiter.api.Test;
 
@@ -49,17 +49,17 @@ class Tag723EnuPosMaintResultTest {
     }
     @Test
     void Tag0723Test() {
-        Tag723EnuPosMaintResult tagData;
+        Log723EnuPosMaintResult tagData;
 
-        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.SUCCESSFUL);
+        tagData = new Log723EnuPosMaintResult(Enum723PosMaintResult.SUCCESSFUL);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.REJECTED);
+        tagData = new Log723EnuPosMaintResult(Enum723PosMaintResult.REJECTED);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.OTHER);
+        tagData = new Log723EnuPosMaintResult(Enum723PosMaintResult.OTHER);
         assertEquals( "99", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

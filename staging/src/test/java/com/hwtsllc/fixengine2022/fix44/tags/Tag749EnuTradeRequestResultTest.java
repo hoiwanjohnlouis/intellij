@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum749TradeRequestResult;
 import org.junit.jupiter.api.Test;
 
@@ -55,16 +55,16 @@ class Tag749EnuTradeRequestResultTest {
     }
     @Test
     void Tag0749Test() {
-        Tag749EnuTradeRequestResult tagData;
+        Log749EnuTradeRequestResult tagData;
 
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.SUCCESSFUL);
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNKNOWN_INSTRUMENT);
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRADE_TYPE);
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_PARTIES);
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRANSPORT_TYPE);
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_DESTINATION_REQUESTED);
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.TRADE_REQUEST_TYPE_NOT_SUPPORTED);
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNAUTHORIZED_REPORT_REQUEST);
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.OTHER);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.SUCCESSFUL);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.UNKNOWN_INSTRUMENT);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRADE_TYPE);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_PARTIES);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRANSPORT_TYPE);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_DESTINATION_REQUESTED);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.TRADE_REQUEST_TYPE_NOT_SUPPORTED);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.UNAUTHORIZED_REPORT_REQUEST);
+        tagData = new Log749EnuTradeRequestResult(Enum749TradeRequestResult.OTHER);
     }
 }

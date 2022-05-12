@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag435PctUnderlyingCouponRateTest {
     }
     @Test
     void Tag0435Test() {
-        Tag435PctUnderlyingCouponRate tagData;
+        Log435PctUnderlyingCouponRate tagData;
 
-        tagData = new Tag435PctUnderlyingCouponRate(new MyPercentageType(
-                Tag435PctUnderlyingCouponRate.TESTA_PCT_UNDERLYING_COUPON_RATE));
-        assertEquals( Tag435PctUnderlyingCouponRate.TESTA_PCT_UNDERLYING_COUPON_RATE,
+        tagData = new Log435PctUnderlyingCouponRate(new MyPercentageType(
+                Log435PctUnderlyingCouponRate.TESTA_PCT_UNDERLYING_COUPON_RATE));
+        assertEquals( Log435PctUnderlyingCouponRate.TESTA_PCT_UNDERLYING_COUPON_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag435PctUnderlyingCouponRate(new MyPercentageType(
-                Tag435PctUnderlyingCouponRate.TESTB_PCT_UNDERLYING_COUPON_RATE));
-        assertEquals( Tag435PctUnderlyingCouponRate.TESTB_PCT_UNDERLYING_COUPON_RATE,
+        tagData = new Log435PctUnderlyingCouponRate(new MyPercentageType(
+                Log435PctUnderlyingCouponRate.TESTB_PCT_UNDERLYING_COUPON_RATE));
+        assertEquals( Log435PctUnderlyingCouponRate.TESTB_PCT_UNDERLYING_COUPON_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

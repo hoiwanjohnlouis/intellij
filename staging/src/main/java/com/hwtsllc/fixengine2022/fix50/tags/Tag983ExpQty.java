@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  983
+ *  ExpQty
+ *  Qty
+ *  <p>
+ *  Expiration Quantity associated with the Expiration Type
+ */
 public class Tag983ExpQty {
 }

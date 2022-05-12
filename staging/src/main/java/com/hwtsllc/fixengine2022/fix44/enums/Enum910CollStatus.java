@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  910
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      3 - Assigned (Accepted)
  *      4 - Challenged
  */
-public enum Enum910CollStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum910CollStatus implements EnumAccessors, LogVerboseString {
     UNASSIGNED( "0", "UNASSIGNED", "0 - Unassigned" ),
     PARTIALLY_ASSIGNED( "1", "PARTIALLY_ASSIGNED", "1 - Partially Assigned" ),
     ASSIGNMENT_PROPOSED( "2", "ASSIGNMENT_PROPOSED", "2 - Assignment Proposed" ),
@@ -81,7 +81,7 @@ public enum Enum910CollStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

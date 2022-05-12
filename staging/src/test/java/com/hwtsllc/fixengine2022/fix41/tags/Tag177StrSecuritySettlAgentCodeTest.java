@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,16 +48,16 @@ class Tag177StrSecuritySettlAgentCodeTest {
     }
     @Test
     void Tag0177Test() {
-        Tag177StrSecuritySettlAgentCode tagData;
+        Log177StrSecuritySettlAgentCode tagData;
 
-        tagData = new Tag177StrSecuritySettlAgentCode(
-                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE));
-        assertEquals( Tag177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE, tagData.getDataValue());
+        tagData = new Log177StrSecuritySettlAgentCode(
+                new MyStringType(Log177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE));
+        assertEquals( Log177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag177StrSecuritySettlAgentCode(
-                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE));
-        assertEquals( Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE, tagData.getDataValue());
+        tagData = new Log177StrSecuritySettlAgentCode(
+                new MyStringType(Log177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE));
+        assertEquals( Log177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

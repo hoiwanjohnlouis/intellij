@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  4
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      T - Trade
  *      X - Cross
  */
-public enum Enum4AdvSide implements EnumAccessors, LogStringVerbose {
+public enum Enum4AdvSide implements EnumAccessors, LogVerboseString {
     BUY ("B", "BUY", "B - Buy"),
     SELL ("S", "SELL", "S - Sell"),
     CROSS ("X", "CROSS", "X - Cross"),
@@ -79,7 +79,7 @@ public enum Enum4AdvSide implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

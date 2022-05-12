@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  87
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      6 - allocation pending
  *      7 - reversed
  */
-public enum Enum87AllocStatus implements EnumAccessors, LogStringVerbose {
+public enum Enum87AllocStatus implements EnumAccessors, LogVerboseString {
     ACCEPTED("0", "ACCEPTED", "0 -accepted (successfully processed)" ),
     BLOCK_LEVEL_REJECT("1", "BLOCK_LEVEL_REJECT", "1 - block level reject" ),
     ACCOUNT_LEVEL_REJECT("2", "ACCOUNT_LEVEL_REJECT", "2 - account level reject" ),
@@ -88,7 +88,7 @@ public enum Enum87AllocStatus implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

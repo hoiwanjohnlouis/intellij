@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  323
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      CANNOT_MATCH_SELECTION( "6", "CANNOT_MATCH_SELECTION",
  *                          "6 - Cannot match selection criteria" ),
  */
-public enum Enum323SecurityResponseType implements EnumAccessors, LogStringVerbose {
+public enum Enum323SecurityResponseType implements EnumAccessors, LogVerboseString {
     /**
      * 1-6 msg types
      */
@@ -98,7 +98,7 @@ public enum Enum323SecurityResponseType implements EnumAccessors, LogStringVerbo
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

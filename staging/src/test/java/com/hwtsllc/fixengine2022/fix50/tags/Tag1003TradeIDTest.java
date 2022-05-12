@@ -17,19 +17,27 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  1003
+ *  TradeID
+ *  String
+ *  <p>
+ *  The unique ID assigned to the trade entity once it is received
+ *  or matched by the exchange or central counterparty.
+ */
 class Tag1003TradeIDTest {
     @Test
     void FIX1003Test() {
         FIX50 fixData = FIX50.FIX1003_TRADE_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "1003", fixData.getID());
+        assertEquals( "TRADE_ID", fixData.getName());
+        assertEquals( "Trade Id", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

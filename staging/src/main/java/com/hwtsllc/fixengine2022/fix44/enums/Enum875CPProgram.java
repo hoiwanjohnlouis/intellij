@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  875
@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *  or any value conforming to the data type Reserved100Plus
  */
-public enum Enum875CPProgram implements EnumAccessors, LogStringVerbose {
+public enum Enum875CPProgram implements EnumAccessors, LogVerboseString {
     THREE( "1", "THREE", "1 - 3(a)(3)" ),
     FOUR( "2", "FOUR", "2 - 4(2)" ),
     OTHER( "99", "OTHER", "99 - Other" ),
@@ -79,7 +79,7 @@ public enum Enum875CPProgram implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

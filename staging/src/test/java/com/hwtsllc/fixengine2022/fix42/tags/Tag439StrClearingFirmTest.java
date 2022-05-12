@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,17 +38,17 @@ class Tag439StrClearingFirmTest {
     }
     @Test
     void Tag0439Test() {
-        Tag439StrClearingFirm tagData;
+        Log439StrClearingFirm tagData;
 
-        tagData = new Tag439StrClearingFirm(new MyStringType(
-                Tag439StrClearingFirm.TESTA_STR_CLEARING_FIRM));
-        assertEquals( Tag439StrClearingFirm.TESTA_STR_CLEARING_FIRM,
+        tagData = new Log439StrClearingFirm(new MyStringType(
+                Log439StrClearingFirm.TESTA_STR_CLEARING_FIRM));
+        assertEquals( Log439StrClearingFirm.TESTA_STR_CLEARING_FIRM,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag439StrClearingFirm(new MyStringType(
-                Tag439StrClearingFirm.TESTB_STR_CLEARING_FIRM));
-        assertEquals( Tag439StrClearingFirm.TESTB_STR_CLEARING_FIRM,
+        tagData = new Log439StrClearingFirm(new MyStringType(
+                Log439StrClearingFirm.TESTB_STR_CLEARING_FIRM));
+        assertEquals( Log439StrClearingFirm.TESTB_STR_CLEARING_FIRM,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

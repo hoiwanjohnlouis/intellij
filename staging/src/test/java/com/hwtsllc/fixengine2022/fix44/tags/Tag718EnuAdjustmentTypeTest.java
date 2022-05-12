@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum718AdjustmentType;
 import org.junit.jupiter.api.Test;
 
@@ -47,21 +47,21 @@ class Tag718EnuAdjustmentTypeTest {
     }
     @Test
     void Tag0718Test() {
-        Tag718EnuAdjustmentType tagData;
+        Log718EnuAdjustmentType tagData;
 
-        tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.MARGIN_DISPOSITION);
+        tagData = new Log718EnuAdjustmentType(Enum718AdjustmentType.MARGIN_DISPOSITION);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.DELTA_PLUS);
+        tagData = new Log718EnuAdjustmentType(Enum718AdjustmentType.DELTA_PLUS);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.DELTA_MINUS);
+        tagData = new Log718EnuAdjustmentType(Enum718AdjustmentType.DELTA_MINUS);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.FINAL);
+        tagData = new Log718EnuAdjustmentType(Enum718AdjustmentType.FINAL);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

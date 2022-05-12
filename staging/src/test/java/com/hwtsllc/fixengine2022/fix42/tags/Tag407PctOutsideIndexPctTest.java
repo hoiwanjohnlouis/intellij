@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag407PctOutsideIndexPctTest {
     }
     @Test
     void Tag0407Test() {
-        Tag407PctOutsideIndexPct tagData;
+        Log407PctOutsideIndexPct tagData;
 
-        tagData = new Tag407PctOutsideIndexPct(new MyPercentageType(
-                Tag407PctOutsideIndexPct.TESTA_PCT_OUTSIDE_INDEX_PCT));
-        assertEquals( Tag407PctOutsideIndexPct.TESTA_PCT_OUTSIDE_INDEX_PCT,
+        tagData = new Log407PctOutsideIndexPct(new MyPercentageType(
+                Log407PctOutsideIndexPct.TESTA_PCT_OUTSIDE_INDEX_PCT));
+        assertEquals( Log407PctOutsideIndexPct.TESTA_PCT_OUTSIDE_INDEX_PCT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag407PctOutsideIndexPct(new MyPercentageType(
-                Tag407PctOutsideIndexPct.TESTB_PCT_OUTSIDE_INDEX_PCT));
-        assertEquals( Tag407PctOutsideIndexPct.TESTB_PCT_OUTSIDE_INDEX_PCT,
+        tagData = new Log407PctOutsideIndexPct(new MyPercentageType(
+                Log407PctOutsideIndexPct.TESTB_PCT_OUTSIDE_INDEX_PCT));
+        assertEquals( Log407PctOutsideIndexPct.TESTB_PCT_OUTSIDE_INDEX_PCT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

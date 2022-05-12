@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1133
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    E - ISO Country Code
  *  <p>    G - MIC (ISO 10383 - Market Identifier Code)
  */
-public enum Enum1133DestinationSource implements EnumAccessors, LogStringVerbose {
+public enum Enum1133DestinationSource implements EnumAccessors, LogVerboseString {
     BIC( "B", "BIC", "B - BIC (Bank Identification Code) (ISO 9362)" ),
     MARKET_PARTICIPANT_IDENTIFIER( "C", "MARKET_PARTICIPANT_IDENTIFIER",
             "C - Generally accepted market participant identifier (e.g. NASD mnemonic)" ),
@@ -84,7 +84,7 @@ public enum Enum1133DestinationSource implements EnumAccessors, LogStringVerbose
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

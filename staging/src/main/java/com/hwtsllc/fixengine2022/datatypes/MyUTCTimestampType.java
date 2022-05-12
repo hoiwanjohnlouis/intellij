@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  MyUTCTimestampType contains complete DATE and TIME
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      During a leap second insertion, a UTCTimestamp field may read "19981231-23:59:59", "19981231-23:59:60", "19990101-00:00:00".
  *      (see http://tycho.usno.navy.mil/leapsec.html)
  */
-public class MyUTCTimestampType implements LogStringVerbose {
+public class MyUTCTimestampType implements LogVerboseString {
     private final String dataValue;
 
     public MyUTCTimestampType(final String dataValue) {
@@ -51,7 +51,7 @@ public class MyUTCTimestampType implements LogStringVerbose {
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tDataValue[")
                 .concat(toString())
@@ -73,6 +73,6 @@ public class MyUTCTimestampType implements LogStringVerbose {
 
         dataType = new MyUTCTimestampType("18991231 235959");
         System.out.println(dataType);
-        System.out.println(dataType.toLogStringVerbose());
+        System.out.println(dataType.toVerboseString());
     }
 }

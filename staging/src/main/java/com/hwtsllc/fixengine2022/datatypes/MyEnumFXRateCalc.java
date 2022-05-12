@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  156 (same as 156, 1046,)
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    M - Multiply
  *  <p>    D - Divide
  */
-public enum MyEnumFXRateCalc implements EnumAccessors, LogStringVerbose {
+public enum MyEnumFXRateCalc implements EnumAccessors, LogVerboseString {
     MULTIPLY( "M", "MULTIPLY", "M - Multiply" ),
     DIVIDE( "D", "DIVIDE", "D - Divide" ),
     ;
@@ -84,7 +84,7 @@ public enum MyEnumFXRateCalc implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

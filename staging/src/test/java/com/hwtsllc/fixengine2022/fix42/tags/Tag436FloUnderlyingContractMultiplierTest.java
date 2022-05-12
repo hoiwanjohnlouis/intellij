@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag436FloUnderlyingContractMultiplierTest {
     }
     @Test
     void Tag0436Test() {
-        Tag436FloUnderlyingContractMultiplier tagData;
+        Log436FloUnderlyingContractMultiplier tagData;
 
-        tagData = new Tag436FloUnderlyingContractMultiplier(new MyFloatType(
-                Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
-        assertEquals( Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
+        tagData = new Log436FloUnderlyingContractMultiplier(new MyFloatType(
+                Log436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
+        assertEquals( Log436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag436FloUnderlyingContractMultiplier(new MyFloatType(
-                Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
-        assertEquals( Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
+        tagData = new Log436FloUnderlyingContractMultiplier(new MyFloatType(
+                Log436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
+        assertEquals( Log436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }

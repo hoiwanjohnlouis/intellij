@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum906CollAsgnRejectReason;
 import org.junit.jupiter.api.Test;
 
@@ -53,34 +53,34 @@ class Tag906EnuCollAsgnRejectReasonTest {
     }
     @Test
     void Tag0906Test() {
-        Tag906EnuCollAsgnRejectReason tagData;
+        Log906EnuCollAsgnRejectReason tagData;
 
-        tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.UNKNOWN_DEAL );
+        tagData = new Log906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.UNKNOWN_DEAL );
         assertEquals( Enum906CollAsgnRejectReason.UNKNOWN_DEAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INVALID_INSTRUMENT );
+        tagData = new Log906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INVALID_INSTRUMENT );
         assertEquals( Enum906CollAsgnRejectReason.INVALID_INSTRUMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.UNAUTHORIZED_TRANSACTION );
+        tagData = new Log906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.UNAUTHORIZED_TRANSACTION );
         assertEquals( Enum906CollAsgnRejectReason.UNAUTHORIZED_TRANSACTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INSUFFICIENT_COLLATERAL );
+        tagData = new Log906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INSUFFICIENT_COLLATERAL );
         assertEquals( Enum906CollAsgnRejectReason.INSUFFICIENT_COLLATERAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INVALID_COLLATERAL );
+        tagData = new Log906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INVALID_COLLATERAL );
         assertEquals( Enum906CollAsgnRejectReason.INVALID_COLLATERAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.EXCESSIVE_SUBSTITUTION );
+        tagData = new Log906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.EXCESSIVE_SUBSTITUTION );
         assertEquals( Enum906CollAsgnRejectReason.EXCESSIVE_SUBSTITUTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.OTHER );
+        tagData = new Log906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.OTHER );
         assertEquals( Enum906CollAsgnRejectReason.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

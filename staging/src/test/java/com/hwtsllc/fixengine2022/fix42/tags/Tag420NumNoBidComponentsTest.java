@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag420NumNoBidComponentsTest {
     }
     @Test
     void Tag0420Test() {
-        Tag420NumNoBidComponents tagData;
+        Log420NumNoBidComponents tagData;
 
-        tagData = new Tag420NumNoBidComponents(new MyNumInGroupType(
-                Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS));
-        assertEquals( Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS,
+        tagData = new Log420NumNoBidComponents(new MyNumInGroupType(
+                Log420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS));
+        assertEquals( Log420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag420NumNoBidComponents(new MyNumInGroupType(
-                Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS));
-        assertEquals( Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS,
+        tagData = new Log420NumNoBidComponents(new MyNumInGroupType(
+                Log420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS));
+        assertEquals( Log420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,10 +48,10 @@ class Tag210QtyMaxShowTest {
     }
     @Test
     void Tag0210Test() {
-        Tag210QtyMaxShow tagData;
+        Log210QtyMaxShow tagData;
 
-        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW));
-        assertEquals( Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW, tagData.getDataValue());
+        tagData = new Log210QtyMaxShow(new MyQtyType(Log210QtyMaxShow.TESTA_QTY_MAX_SHOW));
+        assertEquals( Log210QtyMaxShow.TESTA_QTY_MAX_SHOW, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

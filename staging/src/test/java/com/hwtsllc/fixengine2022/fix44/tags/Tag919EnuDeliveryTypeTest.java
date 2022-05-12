@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum919DeliveryType;
 import org.junit.jupiter.api.Test;
 
@@ -48,21 +48,21 @@ class Tag919EnuDeliveryTypeTest {
     }
     @Test
     void Tag0919Test() {
-        Tag919EnuDeliveryType tagData;
+        Log919EnuDeliveryType tagData;
 
-        tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.VERSUS_PAYMENT );
+        tagData = new Log919EnuDeliveryType( Enum919DeliveryType.VERSUS_PAYMENT );
         assertEquals( Enum919DeliveryType.VERSUS_PAYMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.FREE );
+        tagData = new Log919EnuDeliveryType( Enum919DeliveryType.FREE );
         assertEquals( Enum919DeliveryType.FREE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.TRI_PARTY );
+        tagData = new Log919EnuDeliveryType( Enum919DeliveryType.TRI_PARTY );
         assertEquals( Enum919DeliveryType.TRI_PARTY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.HOLD_IN_CUSTODY );
+        tagData = new Log919EnuDeliveryType( Enum919DeliveryType.HOLD_IN_CUSTODY );
         assertEquals( Enum919DeliveryType.HOLD_IN_CUSTODY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

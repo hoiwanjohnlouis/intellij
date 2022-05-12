@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum427GTBookingInst;
 import org.junit.jupiter.api.Test;
 
@@ -50,20 +50,20 @@ class Tag427EnuGTBookingInstTest {
      */
     @Test
     void Tag0427Test() {
-        Tag427EnuGTBookingInst tagData;
+        Log427EnuGTBookingInst tagData;
 
         /**
          * 0-2 msg types
          */
-        tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.BOOK_OUT_ALL_TRADES);
+        tagData = new Log427EnuGTBookingInst(Enum427GTBookingInst.BOOK_OUT_ALL_TRADES);
         assertEquals( Enum427GTBookingInst.BOOK_OUT_ALL_TRADES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES);
+        tagData = new Log427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES);
         assertEquals( Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE);
+        tagData = new Log427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE);
         assertEquals( Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

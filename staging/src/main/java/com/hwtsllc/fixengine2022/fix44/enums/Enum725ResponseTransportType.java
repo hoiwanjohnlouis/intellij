@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  725
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
  *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
  */
-public enum Enum725ResponseTransportType implements EnumAccessors, LogStringVerbose {
+public enum Enum725ResponseTransportType implements EnumAccessors, LogVerboseString {
     INBAND( "0", "INBAND",
             "0 - Inband - transport the request was sent over (default)" ),
     OUT_OF_BAND( "1", "OUT_OF_BAND",
@@ -79,7 +79,7 @@ public enum Enum725ResponseTransportType implements EnumAccessors, LogStringVerb
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

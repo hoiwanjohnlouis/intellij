@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum301QuoteResponseLevel;
 import org.junit.jupiter.api.Test;
 
@@ -47,20 +47,20 @@ class Tag301EnuQuoteResponseLevelTest {
      */
     @Test
     void Tag0301Test() {
-        Tag301EnuQuoteResponseLevel tagData;
+        Log301EnuQuoteResponseLevel tagData;
 
         /**
          * 0-2 msg types
          */
-        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT);
+        tagData = new Log301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT);
         assertEquals( Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS);
+        tagData = new Log301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS);
         assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE);
+        tagData = new Log301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE);
         assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

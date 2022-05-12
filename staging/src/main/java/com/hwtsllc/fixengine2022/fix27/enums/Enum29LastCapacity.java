@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  29
@@ -30,7 +30,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      3 - Cross as principal
  *      4 - Principal
  */
-public enum Enum29LastCapacity implements EnumAccessors, LogStringVerbose {
+public enum Enum29LastCapacity implements EnumAccessors, LogVerboseString {
     AGENT("1", "AGENT", "1 - Agent" ),
     CROSS_AS_AGENT("2", "CROSS_AS_AGENT", "2 - Cross as agent" ),
     CROSS_AS_PRINCIPAL("3", "CROSS_AS_PRINCIPAL", "3 - Cross as principal" ),
@@ -79,7 +79,7 @@ public enum Enum29LastCapacity implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

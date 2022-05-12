@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  836 (same as 836, 842,)
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    2 - Ticks
  *  <p>    3 - Price Tier or Level
  */
-public enum MyEnumOffsetType implements EnumAccessors, LogStringVerbose {
+public enum MyEnumOffsetType implements EnumAccessors, LogVerboseString {
     PRICE( "0", "PRICE", "0 - Price (default)" ),
     BASIS( "1", "BASIS", "1 - Basis Points" ),
     TICKS( "2", "TICKS", "2 - Ticks" ),
@@ -87,7 +87,7 @@ public enum MyEnumOffsetType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

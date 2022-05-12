@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum690LegSwapType;
 import org.junit.jupiter.api.Test;
 
@@ -40,30 +40,30 @@ class Tag690EnuLegSwapTypeTest {
     @Test
     void FIX0690Test() {
         FIX44 fixData = FIX44.FIX690_ENU_LEG_SWAP_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "690", fixData.getID());
+        assertEquals( "LEG_SWAP_TYPE", fixData.getName());
+        assertEquals( "LegSwapType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0690Test() {
-        Tag690EnuLegSwapType tagData;
+        Log690EnuLegSwapType tagData;
 
-        tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.PAR_FOR_PAR);
+        tagData = new Log690EnuLegSwapType(Enum690LegSwapType.PAR_FOR_PAR);
         assertEquals( Enum690LegSwapType.PAR_FOR_PAR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.MODIFIED_DURATION);
+        tagData = new Log690EnuLegSwapType(Enum690LegSwapType.MODIFIED_DURATION);
         assertEquals( Enum690LegSwapType.MODIFIED_DURATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.RISK);
+        tagData = new Log690EnuLegSwapType(Enum690LegSwapType.RISK);
         assertEquals( Enum690LegSwapType.RISK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.PROCEEDS);
+        tagData = new Log690EnuLegSwapType(Enum690LegSwapType.PROCEEDS);
         assertEquals( Enum690LegSwapType.PROCEEDS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

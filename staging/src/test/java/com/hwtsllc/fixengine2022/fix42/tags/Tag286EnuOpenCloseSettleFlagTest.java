@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum286OpenCLoseSettlFlag;
 import org.junit.jupiter.api.Test;
 
@@ -51,32 +51,32 @@ class Tag286EnuOpenCloseSettleFlagTest {
      */
     @Test
     void Tag0286Test() {
-        Tag286EnuOpenCloseSettleFlag tagData;
+        Log286EnuOpenCloseSettleFlag tagData;
 
         /**
          * 0-5 msg types
          */
-        tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT);
+        tagData = new Log286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT);
         assertEquals( Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT);
+        tagData = new Log286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT);
         assertEquals( Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT);
+        tagData = new Log286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT);
         assertEquals( Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.EXPECTED);
+        tagData = new Log286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.EXPECTED);
         assertEquals( Enum286OpenCLoseSettlFlag.EXPECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY);
+        tagData = new Log286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY);
         assertEquals( Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE);
+        tagData = new Log286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE);
         assertEquals( Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

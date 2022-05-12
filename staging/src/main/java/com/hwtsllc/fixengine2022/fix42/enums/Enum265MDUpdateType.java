@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  265
@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      "0 - Full refresh"
  *      "1 - Incremental refresh"
  */
-public enum Enum265MDUpdateType implements EnumAccessors, LogStringVerbose {
+public enum Enum265MDUpdateType implements EnumAccessors, LogVerboseString {
     /**
      * 0-1 msg types
      */
@@ -76,7 +76,7 @@ public enum Enum265MDUpdateType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

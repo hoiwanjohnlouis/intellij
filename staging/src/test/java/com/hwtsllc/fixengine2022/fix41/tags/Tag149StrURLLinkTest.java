@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,14 +47,14 @@ class Tag149StrURLLinkTest {
     }
     @Test
     void Tag0149Test() {
-        Tag149StrURLLink tagData;
+        Log149StrURLLink tagData;
 
-        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTA_STR_URL_LINK));
-        assertEquals( Tag149StrURLLink.TESTA_STR_URL_LINK, tagData.getDataValue());
+        tagData = new Log149StrURLLink(new MyStringType(Log149StrURLLink.TESTA_STR_URL_LINK));
+        assertEquals( Log149StrURLLink.TESTA_STR_URL_LINK, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTB_STR_URL_LINK));
-        assertEquals( Tag149StrURLLink.TESTB_STR_URL_LINK, tagData.getDataValue());
+        tagData = new Log149StrURLLink(new MyStringType(Log149StrURLLink.TESTB_STR_URL_LINK));
+        assertEquals( Log149StrURLLink.TESTB_STR_URL_LINK, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

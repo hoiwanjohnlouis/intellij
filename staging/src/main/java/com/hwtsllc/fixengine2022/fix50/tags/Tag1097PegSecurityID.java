@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1097
+ *  PegSecurityID
+ *  String
+ *  <p>
+ *  Defines the identity of the security off whose prices the order will peg.
+ */
 public class Tag1097PegSecurityID {
 }

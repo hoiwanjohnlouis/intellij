@@ -17,19 +17,26 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  985
+ *  UnderlyingPayAmount
+ *  Amt
+ *  <p>
+ *  Amount to pay in order to receive the underlying instrument
+ */
 class Tag985UnderlyingPayAmountTest {
     @Test
     void FIX0985Test() {
         FIX50 fixData = FIX50.FIX985_UNDERLYING_PAY_AMOUNT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "985", fixData.getID());
+        assertEquals( "UNDERLYING_PAY_AMOUNT", fixData.getName());
+        assertEquals( "UnderlyingPayAmount", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

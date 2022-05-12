@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1123 (same as 1123, 1124,)
@@ -42,7 +42,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    3 - One-Party Report for Pass Through
  *  <p>    4 - Automated Floor Order Routing
  */
-public enum MyEnumTradeHandlingInstr implements EnumAccessors, LogStringVerbose {
+public enum MyEnumTradeHandlingInstr implements EnumAccessors, LogVerboseString {
     TRADE_CONFIRMATION( "0", "TRADE_CONFIRMATION", "0 - Trade Confirmation" ),
     TWO_PARTY_REPORT( "1", "TWO_PARTY_REPORT", "1 - Two-Party Report" ),
     ONE_PARTY_MATCHING( "2", "ONE_PARTY_MATCHING", "2 - One-Party Report for Matching" ),
@@ -92,7 +92,7 @@ public enum MyEnumTradeHandlingInstr implements EnumAccessors, LogStringVerbose 
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

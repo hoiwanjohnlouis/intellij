@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum891MiscFeeBasis;
 import org.junit.jupiter.api.Test;
 
@@ -47,17 +47,17 @@ class Tag891EnuMiscFeeBasisTest {
     }
     @Test
     void Tag0891Test() {
-        Tag891EnuMiscFeeBasis tagData;
+        Log891EnuMiscFeeBasis tagData;
 
-        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.ABSOLUTE );
+        tagData = new Log891EnuMiscFeeBasis( Enum891MiscFeeBasis.ABSOLUTE );
         assertEquals( Enum891MiscFeeBasis.ABSOLUTE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PER_UNIT );
+        tagData = new Log891EnuMiscFeeBasis( Enum891MiscFeeBasis.PER_UNIT );
         assertEquals( Enum891MiscFeeBasis.PER_UNIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PERCENTAGE );
+        tagData = new Log891EnuMiscFeeBasis( Enum891MiscFeeBasis.PERCENTAGE );
         assertEquals( Enum891MiscFeeBasis.PERCENTAGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

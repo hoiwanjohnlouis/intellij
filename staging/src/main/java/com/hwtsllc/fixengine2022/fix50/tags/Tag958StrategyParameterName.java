@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  958
+ *  StrategyParameterName
+ *  String
+ *  <p>
+ *  Name of parameter
+ */
 public class Tag958StrategyParameterName {
 }

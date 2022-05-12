@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,17 +37,17 @@ class Tag366PrcAllocPriceTest {
     }
     @Test
     void Tag0366Test() {
-        Tag366PrcAllocPrice tagData;
+        Log366PrcAllocPrice tagData;
 
-        tagData = new Tag366PrcAllocPrice(new MyPriceType(
-                Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE));
-        assertEquals( Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE,
+        tagData = new Log366PrcAllocPrice(new MyPriceType(
+                Log366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE));
+        assertEquals( Log366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag366PrcAllocPrice(new MyPriceType(
-                Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE));
-        assertEquals( Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE,
+        tagData = new Log366PrcAllocPrice(new MyPriceType(
+                Log366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE));
+        assertEquals( Log366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

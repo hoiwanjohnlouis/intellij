@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  835 (same as 835, 841,)
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    0 - Floating (default)
  *  <p>    1 - Fixed
  */
-public enum MyEnumMoveType implements EnumAccessors, LogStringVerbose {
+public enum MyEnumMoveType implements EnumAccessors, LogVerboseString {
     FLOATING( "0", "FLOATING", "0 - Floating (default)" ),
     FIXED( "1", "FIXED", "1 - Fixed" ),
     ;
@@ -83,7 +83,7 @@ public enum MyEnumMoveType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  666
@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Replace
  *      2 - Cancel
  */
-public enum Enum666ConfirmTransType implements EnumAccessors, LogStringVerbose {
+public enum Enum666ConfirmTransType implements EnumAccessors, LogVerboseString {
     NEW( "0", "NEW", "0 - New" ),
     REPLACE( "1", "REPLACE", "1 - Replace" ),
     CANCEL( "2", "CANCEL", "2 - Cancel" ),
@@ -76,7 +76,7 @@ public enum Enum666ConfirmTransType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

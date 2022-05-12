@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum378ExecRestatementReason;
 import org.junit.jupiter.api.Test;
 
@@ -59,60 +59,60 @@ class Tag378EnuExecRestatementReasonTest {
      */
     @Test
     void Tag0378Test() {
-        Tag378EnuExecRestatementReason tagData;
+        Log378EnuExecRestatementReason tagData;
 
         /**
          * 0-11, 99 msg types
          */
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.GT_CORPORATE_ACTION);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.GT_CORPORATE_ACTION);
         assertEquals( Enum378ExecRestatementReason.GT_CORPORATE_ACTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.GT_RENEWAL_RESTATEMENT);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.GT_RENEWAL_RESTATEMENT);
         assertEquals( Enum378ExecRestatementReason.GT_RENEWAL_RESTATEMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.VERBAL_CHANGE);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.VERBAL_CHANGE);
         assertEquals( Enum378ExecRestatementReason.VERBAL_CHANGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.REPRICING_OF_ORDER);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.REPRICING_OF_ORDER);
         assertEquals( Enum378ExecRestatementReason.REPRICING_OF_ORDER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.BROKER_OPTION);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.BROKER_OPTION);
         assertEquals( Enum378ExecRestatementReason.BROKER_OPTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.PARTIAL_DECLINE_OF_ORDER_QTY);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.PARTIAL_DECLINE_OF_ORDER_QTY);
         assertEquals( Enum378ExecRestatementReason.PARTIAL_DECLINE_OF_ORDER_QTY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCEL_ON_TRADING_HALT);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCEL_ON_TRADING_HALT);
         assertEquals( Enum378ExecRestatementReason.CANCEL_ON_TRADING_HALT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCEL_ON_SYSTEM_FAILURE);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCEL_ON_SYSTEM_FAILURE);
         assertEquals( Enum378ExecRestatementReason.CANCEL_ON_SYSTEM_FAILURE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.MARKET_EXCHANGE_OPTION);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.MARKET_EXCHANGE_OPTION);
         assertEquals( Enum378ExecRestatementReason.MARKET_EXCHANGE_OPTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCELED_NOT_BEST);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCELED_NOT_BEST);
         assertEquals( Enum378ExecRestatementReason.CANCELED_NOT_BEST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.WAREHOUSE_RECAP);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.WAREHOUSE_RECAP);
         assertEquals( Enum378ExecRestatementReason.WAREHOUSE_RECAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.PEG_REFRESH);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.PEG_REFRESH);
         assertEquals( Enum378ExecRestatementReason.PEG_REFRESH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.OTHER);
+        tagData = new Log378EnuExecRestatementReason(Enum378ExecRestatementReason.OTHER);
         assertEquals( Enum378ExecRestatementReason.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

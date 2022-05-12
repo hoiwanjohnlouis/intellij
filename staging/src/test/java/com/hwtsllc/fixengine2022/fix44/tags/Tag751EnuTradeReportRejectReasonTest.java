@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum751TradeReportRejectReason;
 import org.junit.jupiter.api.Test;
 
@@ -52,13 +52,13 @@ class Tag751EnuTradeReportRejectReasonTest {
     }
     @Test
     void Tag0751Test() {
-        Tag751EnuTradeReportRejectReason tagData;
+        Log751EnuTradeReportRejectReason tagData;
 
-        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.SUCCESSFUL);
-        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION);
-        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT);
-        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES);
-        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_TRADE_TYPE);
-        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.OTHER);
+        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.SUCCESSFUL);
+        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION);
+        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT);
+        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES);
+        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_TRADE_TYPE);
+        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.OTHER);
     }
 }

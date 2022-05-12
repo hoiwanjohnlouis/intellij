@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  728
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public enum Enum728PosReqResult implements EnumAccessors, LogStringVerbose {
+public enum Enum728PosReqResult implements EnumAccessors, LogVerboseString {
     VALID_REQUEST( "0", "VALID_REQUEST", "0 - Valid request" ),
     UNSUPPORTED_REQUEST( "1", "UNSUPPORTED_REQUEST", "1 - Invalid or unsupported request" ),
     NO_POSITIONS_FOUND( "2", "NO_POSITIONS_FOUND", "2 - No positions found that match criteria" ),
@@ -85,7 +85,7 @@ public enum Enum728PosReqResult implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

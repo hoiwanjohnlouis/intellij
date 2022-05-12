@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAllocRejCode;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -68,64 +68,64 @@ class Tag776EnuIndividualAllocRejCodeTest {
     }
     @Test
     void Tag0776Test() {
-        Tag776EnuIndividualAllocRejCode tagData;
+        Log776EnuIndividualAllocRejCode tagData;
 
         /*
          * 0-13 AllocRejCode types
          */
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_ACCOUNT);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_ACCOUNT);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.INCORRECT_QUANTITY);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.INCORRECT_QUANTITY);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.INCORRECT_AVERAGE_PRICE);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.INCORRECT_AVERAGE_PRICE);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_EXECUTING_BROKER_MNEMONIC);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_EXECUTING_BROKER_MNEMONIC);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.COMMISSION_DIFFERENCE);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.COMMISSION_DIFFERENCE);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_ORDERID);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_ORDERID);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_LISTID);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_LISTID);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.OTHER);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.OTHER);
         assertEquals( "7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.INCORRECT_ALLOCATED_QUANTITY);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.INCORRECT_ALLOCATED_QUANTITY);
         assertEquals( "8", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.CALCULATION_DIFFERENCE);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.CALCULATION_DIFFERENCE);
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_OR_STALE_EXECID);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_OR_STALE_EXECID);
         assertEquals( "10", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.MISMATCHED_DATA);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.MISMATCHED_DATA);
         assertEquals( "11", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_CLORDID);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_CLORDID);
         assertEquals( "12", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.WAREHOUSE_REQUEST_REJECTED);
+        tagData = new Log776EnuIndividualAllocRejCode(MyEnumAllocRejCode.WAREHOUSE_REQUEST_REJECTED);
         assertEquals( "13", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

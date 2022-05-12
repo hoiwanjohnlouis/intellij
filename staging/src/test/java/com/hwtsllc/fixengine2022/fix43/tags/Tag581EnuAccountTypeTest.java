@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAccountType;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -59,24 +59,24 @@ class Tag581EnuAccountTypeTest {
     }
     @Test
     void Tag0581Test() {
-        Tag581EnuAccountType tagData;
+        Log581EnuAccountType tagData;
 
         /**
          *  1-4, types
          */
-        tagData = new Tag581EnuAccountType(MyEnumAccountType.CUSTOMER_BOOK);
+        tagData = new Log581EnuAccountType(MyEnumAccountType.CUSTOMER_BOOK);
         assertEquals( MyEnumAccountType.CUSTOMER_BOOK.getID(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag581EnuAccountType(MyEnumAccountType.NON_CUSTOMER_BOOK);
+        tagData = new Log581EnuAccountType(MyEnumAccountType.NON_CUSTOMER_BOOK);
         assertEquals( MyEnumAccountType.NON_CUSTOMER_BOOK.getID(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag581EnuAccountType(MyEnumAccountType.HOUSE_TRADER);
+        tagData = new Log581EnuAccountType(MyEnumAccountType.HOUSE_TRADER);
         assertEquals( MyEnumAccountType.HOUSE_TRADER.getID(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag581EnuAccountType(MyEnumAccountType.FLOOR_TRADER);
+        tagData = new Log581EnuAccountType(MyEnumAccountType.FLOOR_TRADER);
         assertEquals( MyEnumAccountType.FLOOR_TRADER.getID(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -84,15 +84,15 @@ class Tag581EnuAccountTypeTest {
         /**
          *  6-8, types
          */
-        tagData = new Tag581EnuAccountType(MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK);
+        tagData = new Log581EnuAccountType(MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK);
         assertEquals( MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK.getID(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag581EnuAccountType(MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK);
+        tagData = new Log581EnuAccountType(MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK);
         assertEquals( MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK.getID(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag581EnuAccountType(MyEnumAccountType.JOINT_BACK_OFFICE);
+        tagData = new Log581EnuAccountType(MyEnumAccountType.JOINT_BACK_OFFICE);
         assertEquals( MyEnumAccountType.JOINT_BACK_OFFICE.getID(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

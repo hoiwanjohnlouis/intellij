@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  731 (same as 731, 733)
@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      1 - Final
  *      2 - Theoretical
  */
-public enum Enum731SettlPriceType implements EnumAccessors, LogStringVerbose {
+public enum Enum731SettlPriceType implements EnumAccessors, LogVerboseString {
     FINAL( "1", "FINAL", "1 - Final" ),
     THEORETICAL( "2", "THEORETICAL", "2 - Theoretical" ),
     ;
@@ -74,7 +74,7 @@ public enum Enum731SettlPriceType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

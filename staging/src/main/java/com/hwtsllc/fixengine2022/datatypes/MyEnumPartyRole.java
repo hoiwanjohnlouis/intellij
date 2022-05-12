@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  452 (same as 452, 538, 759, 784, 951, 1051, 1061, 1119)
@@ -186,7 +186,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    77 - Market data market
  *  <p>    78 - Allocation Entity
  */
-public enum MyEnumPartyRole implements EnumAccessors, LogStringVerbose {
+public enum MyEnumPartyRole implements EnumAccessors, LogVerboseString {
     /*
      * 1-22, 24-78 msg types
      */
@@ -336,7 +336,7 @@ public enum MyEnumPartyRole implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

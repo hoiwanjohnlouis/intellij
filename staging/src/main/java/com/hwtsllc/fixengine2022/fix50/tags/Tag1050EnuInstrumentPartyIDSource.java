@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyIDSource;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  447 (same as 447, 525, 758, 783, 950, 1050, 1060, 1118)
@@ -126,7 +126,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    I - Directed broker three character acronym as defined in
  *              ISITC "ETC Best Practice" guidelines document
  */
-public class Tag1050EnuInstrumentPartyIDSource extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1050EnuInstrumentPartyIDSource extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final MyEnumPartyIDSource dataValue;
 
     public final static MyEnumPartyIDSource TESTA_ENU_INSTRUMENT_PARTY_ID_SOURCE
@@ -146,7 +146,7 @@ public class Tag1050EnuInstrumentPartyIDSource extends FIX50Abstract implements 
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -155,8 +155,8 @@ public class Tag1050EnuInstrumentPartyIDSource extends FIX50Abstract implements 
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -178,12 +178,12 @@ public class Tag1050EnuInstrumentPartyIDSource extends FIX50Abstract implements 
 
         tagData = new Tag1050EnuInstrumentPartyIDSource(TESTA_ENU_INSTRUMENT_PARTY_ID_SOURCE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1050EnuInstrumentPartyIDSource(TESTB_ENU_INSTRUMENT_PARTY_ID_SOURCE);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

@@ -16,5 +16,16 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1089
+ *  MatchIncrement
+ *  Qty
+ *  <p>
+ *  Allows orders to specify a minimum quantity that applies to every execution
+ *  (one execution could be for multiple counter-orders).
+ *  <p>
+ *  The order may still fill against smaller orders, but the cumulative quantity
+ *  of the execution must be in multiples of the MatchIncrement.
+ */
 public class Tag1089MatchIncrement {
 }

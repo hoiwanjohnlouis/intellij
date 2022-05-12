@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  707
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *      VADJ - Value Adjusted Amount
  *      SETL - Settlement Value
  */
-public enum Enum707PosAmtType implements EnumAccessors, LogStringVerbose {
+public enum Enum707PosAmtType implements EnumAccessors, LogVerboseString {
     CASH_AMOUNT( "CASH", "CASH_AMOUNT", "CASH - Cash Amount (Corporate Event)" ),
     CASH_RESIDUAL_AMOUNT( "CRES", "CASH_RESIDUAL_AMOUNT", "CRES - Cash Residual Amount" ),
     FINAL_MARK_TO_MARKET_AMOUNT( "FMTM", "FINAL_MARK_TO_MARKET_AMOUNT", "FMTM - Final Mark-to-Market Amount" ),
@@ -88,7 +88,7 @@ public enum Enum707PosAmtType implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

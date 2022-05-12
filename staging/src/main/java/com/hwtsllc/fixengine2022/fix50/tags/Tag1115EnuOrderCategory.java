@@ -19,8 +19,8 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1115OrderCategory;
-import com.hwtsllc.fixengine2022.interfaces.FixTagValuePairString;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1115
@@ -40,7 +40,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    7 - Implied Order
  *  <p>    8 - Cross Order
  */
-public class Tag1115EnuOrderCategory extends FIX50Abstract implements FixTagValuePairString, LogStringVerbose {
+public class Tag1115EnuOrderCategory extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final Enum1115OrderCategory dataValue;
 
     public final static Enum1115OrderCategory TESTA_ENU_ORDER_CATEGORY
@@ -60,7 +60,7 @@ public class Tag1115EnuOrderCategory extends FIX50Abstract implements FixTagValu
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
-    public String toFixTagValuePairString() {
+    public String toValuePairString() {
         return getID()
                 .concat("=")
                 .concat(getDataValue());
@@ -69,8 +69,8 @@ public class Tag1115EnuOrderCategory extends FIX50Abstract implements FixTagValu
      * standard wrapper to format a detailed string describing this data field
      */
     @Override
-    public String toLogStringVerbose() {
-        return super.toLogStringVerbose()
+    public String toVerboseString() {
+        return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
@@ -92,12 +92,12 @@ public class Tag1115EnuOrderCategory extends FIX50Abstract implements FixTagValu
 
         tagData = new Tag1115EnuOrderCategory(TESTA_ENU_ORDER_CATEGORY);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1115EnuOrderCategory(TESTB_ENU_ORDER_CATEGORY);
         System.out.println(tagData);
-        System.out.println(tagData.toLogStringVerbose());
-        System.out.println(tagData.toFixTagValuePairString());
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
     }
 }

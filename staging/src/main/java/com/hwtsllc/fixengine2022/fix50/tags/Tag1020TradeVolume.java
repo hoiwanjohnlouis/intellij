@@ -16,5 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+/**
+ *  1020
+ *  TradeVolume
+ *  Qty
+ *  <p>
+ *  Used to report volume with a trade
+ */
 public class Tag1020TradeVolume {
 }

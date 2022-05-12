@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum792SettlInstReqRejCode;
 import org.junit.jupiter.api.Test;
 
@@ -40,30 +40,30 @@ class Tag792EnuSettlInstReqRejCodeTest {
     @Test
     void FIX0792Test() {
         FIX44 fixData = FIX44.FIX792_ENU_SETTL_INST_REQ_REJ_CODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "792", fixData.getID());
+        assertEquals( "SETTL_INST_REQ_REJ_CODE", fixData.getName());
+        assertEquals( "SettlInstReqRejCode", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0792Test() {
-        Tag792EnuSettlInstReqRejCode tagData;
+        Log792EnuSettlInstReqRejCode tagData;
 
-        tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.UNABLE_TO_PROCESS_REQUEST );
+        tagData = new Log792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.UNABLE_TO_PROCESS_REQUEST );
         assertEquals( Enum792SettlInstReqRejCode.UNABLE_TO_PROCESS_REQUEST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT );
+        tagData = new Log792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT );
         assertEquals( Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.NO_MATCHING_INSTRUCTIONS );
+        tagData = new Log792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.NO_MATCHING_INSTRUCTIONS );
         assertEquals( Enum792SettlInstReqRejCode.NO_MATCHING_INSTRUCTIONS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.OTHER );
+        tagData = new Log792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.OTHER );
         assertEquals( Enum792SettlInstReqRejCode.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

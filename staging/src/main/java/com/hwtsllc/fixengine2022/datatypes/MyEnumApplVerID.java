@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.datatypes;
 
 import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
-import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  1128 (same as 1128, 1030, 1137,)
@@ -59,7 +59,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogStringVerbose;
  *  <p>    6 - FIX44
  *  <p>    7 - FIX50
  */
-public enum MyEnumApplVerID implements EnumAccessors, LogStringVerbose {
+public enum MyEnumApplVerID implements EnumAccessors, LogVerboseString {
     FIX27( "0", "FIX27", "0 - FIX27" ),
     FIX30( "1", "FIX30", "1 - FIX30" ),
     FIX40( "2", "FIX40", "2 - FIX40" ),
@@ -113,7 +113,7 @@ public enum MyEnumApplVerID implements EnumAccessors, LogStringVerbose {
      * standard wrapper to format a detailed string describing this enum
      */
     @Override
-    public String toLogStringVerbose() {
+    public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
                 .concat(getEnumName())

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum944CollAction;
 import org.junit.jupiter.api.Test;
 
@@ -47,17 +47,17 @@ class Tag944EnuCollActionTest {
     }
     @Test
     void Tag0944Test() {
-        Tag944EnuCollAction tagData;
+        Log944EnuCollAction tagData;
 
-        tagData = new Tag944EnuCollAction( Enum944CollAction.RETAIN );
+        tagData = new Log944EnuCollAction( Enum944CollAction.RETAIN );
         assertEquals( Enum944CollAction.RETAIN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag944EnuCollAction( Enum944CollAction.ADD );
+        tagData = new Log944EnuCollAction( Enum944CollAction.ADD );
         assertEquals( Enum944CollAction.ADD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag944EnuCollAction( Enum944CollAction.REMOVE );
+        tagData = new Log944EnuCollAction( Enum944CollAction.REMOVE );
         assertEquals( Enum944CollAction.REMOVE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

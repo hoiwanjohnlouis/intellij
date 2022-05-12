@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyTestValues;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum875CPProgram;
 import org.junit.jupiter.api.Test;
 
@@ -49,17 +49,17 @@ class Tag875EnuCPProgramTest {
     }
     @Test
     void Tag0875Test() {
-        Tag875EnuCPProgram tagData;
+        Log875EnuCPProgram tagData;
 
-        tagData = new Tag875EnuCPProgram( Enum875CPProgram.THREE );
+        tagData = new Log875EnuCPProgram( Enum875CPProgram.THREE );
         assertEquals( Enum875CPProgram.THREE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag875EnuCPProgram( Enum875CPProgram.FOUR );
+        tagData = new Log875EnuCPProgram( Enum875CPProgram.FOUR );
         assertEquals( Enum875CPProgram.FOUR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag875EnuCPProgram( Enum875CPProgram.OTHER );
+        tagData = new Log875EnuCPProgram( Enum875CPProgram.OTHER );
         assertEquals( Enum875CPProgram.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
