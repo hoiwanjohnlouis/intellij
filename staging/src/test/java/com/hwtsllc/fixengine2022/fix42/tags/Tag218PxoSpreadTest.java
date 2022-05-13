@@ -30,23 +30,23 @@ class Tag218PxoSpreadTest {
         FIX42 fixData = FIX42.FIX218_PXO_SPREAD;
         assertEquals( "218", fixData.getID());
         assertEquals( "SPREAD", fixData.getName());
-        assertEquals( "Spread", fixData.getDescription());
+        assertEquals( "For Fixed Income.  Either Swap Spread or Spread to Benchmark depending upon the order type", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0218Test() {
-        Log218PxoSpread tagData;
+        Tag218PxoSpread tagData;
 
-        tagData = new Log218PxoSpread(
-                new MyPriceOffsetType(Log218PxoSpread.TESTA_PXO_SPREAD));
-        assertEquals( Log218PxoSpread.TESTA_PXO_SPREAD, tagData.getDataValue());
+        tagData = new Tag218PxoSpread(
+                new MyPriceOffsetType(Tag218PxoSpread.TESTA_PXO_SPREAD));
+        assertEquals( Tag218PxoSpread.TESTA_PXO_SPREAD, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log218PxoSpread(
-                new MyPriceOffsetType(Log218PxoSpread.TESTB_PXO_SPREAD));
-        assertEquals( Log218PxoSpread.TESTB_PXO_SPREAD, tagData.getDataValue());
+        tagData = new Tag218PxoSpread(
+                new MyPriceOffsetType(Tag218PxoSpread.TESTB_PXO_SPREAD));
+        assertEquals( Tag218PxoSpread.TESTB_PXO_SPREAD, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
     }
 }

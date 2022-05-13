@@ -27,9 +27,9 @@ class Tag656FloSettlCurrBidFxRateTest {
     @Test
     void FIX0656Test() {
         FIX43 fixData = FIX43.FIX656_FLO_SETTL_CURR_BID_FX_RATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "656", fixData.getID());
+        assertEquals( "SETTL_CURR_BID_FX_RATE", fixData.getName());
+        assertEquals( "FIX656_FLO_SETTL_CURR_BID_FX_RATE", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

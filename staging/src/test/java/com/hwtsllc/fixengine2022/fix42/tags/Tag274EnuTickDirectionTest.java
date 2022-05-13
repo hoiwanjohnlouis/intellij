@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  274
+ *  TickDirection
+ *      0-3 msg types
+ *      "0 - Plus Tick"
+ *      "1 - Zero-Plus Tick"
+ *      "2 - Minus Tick"
+ *      "3 - Zero-Minus Tick"
+ */
 class Tag274EnuTickDirectionTest {
     @Test
     void FIX0274Test() {
@@ -35,35 +44,26 @@ class Tag274EnuTickDirectionTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  274
-     *  TickDirection
-     *      0-3 msg types
-     *      "0 - Plus Tick"
-     *      "1 - Zero-Plus Tick"
-     *      "2 - Minus Tick"
-     *      "3 - Zero-Minus Tick"
-     */
     @Test
     void Tag0274Test() {
-        Log274EnuTickDirection tagData;
+        Tag274EnuTickDirection tagData;
 
-        /**
+        /*
          * 0-3 msg types
          */
-        tagData = new Log274EnuTickDirection(Enum274TickDirection.PLUS_TICK);
+        tagData = new Tag274EnuTickDirection(Enum274TickDirection.PLUS_TICK);
         assertEquals( Enum274TickDirection.PLUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log274EnuTickDirection(Enum274TickDirection.ZERO_PLUS_TICK);
+        tagData = new Tag274EnuTickDirection(Enum274TickDirection.ZERO_PLUS_TICK);
         assertEquals( Enum274TickDirection.ZERO_PLUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log274EnuTickDirection(Enum274TickDirection.MINUS_TICK);
+        tagData = new Tag274EnuTickDirection(Enum274TickDirection.MINUS_TICK);
         assertEquals( Enum274TickDirection.MINUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log274EnuTickDirection(Enum274TickDirection.ZERO_MINUS_TICK);
+        tagData = new Tag274EnuTickDirection(Enum274TickDirection.ZERO_MINUS_TICK);
         assertEquals( Enum274TickDirection.ZERO_MINUS_TICK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

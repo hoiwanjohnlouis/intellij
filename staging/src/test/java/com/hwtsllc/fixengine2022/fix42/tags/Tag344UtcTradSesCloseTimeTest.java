@@ -37,17 +37,17 @@ class Tag344UtcTradSesCloseTimeTest {
     }
     @Test
     void Tag0344Test() {
-        Log344UtcTradSesCloseTime tagData;
+        Tag344UtcTradSesCloseTime tagData;
 
-        tagData = new Log344UtcTradSesCloseTime(new MyUTCTimestampType(
-                Log344UtcTradSesCloseTime.TESTA_UTC_TRAD_SES_CLOSE_TIME));
-        assertEquals( Log344UtcTradSesCloseTime.TESTA_UTC_TRAD_SES_CLOSE_TIME,
+        tagData = new Tag344UtcTradSesCloseTime(new MyUTCTimestampType(
+                Tag344UtcTradSesCloseTime.TESTA_UTC_TRAD_SES_CLOSE_TIME));
+        assertEquals( Tag344UtcTradSesCloseTime.TESTA_UTC_TRAD_SES_CLOSE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log344UtcTradSesCloseTime(new MyUTCTimestampType(
-                Log344UtcTradSesCloseTime.TESTB_UTC_TRAD_SES_CLOSE_TIME));
-        assertEquals( Log344UtcTradSesCloseTime.TESTB_UTC_TRAD_SES_CLOSE_TIME,
+        tagData = new Tag344UtcTradSesCloseTime(new MyUTCTimestampType(
+                Tag344UtcTradSesCloseTime.TESTB_UTC_TRAD_SES_CLOSE_TIME));
+        assertEquals( Tag344UtcTradSesCloseTime.TESTB_UTC_TRAD_SES_CLOSE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

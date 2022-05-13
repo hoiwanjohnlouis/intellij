@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  291
+ *  FinancialStatus
+ *
+ *      1-3 msg types
+ *      BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
+ *      PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
+ *      RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
+ */
 class Tag291EnuFinancialStatusTest {
     @Test
     void FIX0291Test() {
@@ -35,31 +44,22 @@ class Tag291EnuFinancialStatusTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  291
-     *  FinancialStatus
-     *
-     *      1-3 msg types
-     *      BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
-     *      PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
-     *      RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
-     */
     @Test
     void Tag0291Test() {
-        Log291EnuFinancialStatus tagData;
+        Tag291EnuFinancialStatus tagData;
 
-        /**
+        /*
          * 1-3 msg types
          */
-        tagData = new Log291EnuFinancialStatus(Enum291FinancialStatus.BANKRUPT);
+        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.BANKRUPT);
         assertEquals( Enum291FinancialStatus.BANKRUPT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log291EnuFinancialStatus(Enum291FinancialStatus.PENDING_DELISTING);
+        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.PENDING_DELISTING);
         assertEquals( Enum291FinancialStatus.PENDING_DELISTING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log291EnuFinancialStatus(Enum291FinancialStatus.RESTRICTED);
+        tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.RESTRICTED);
         assertEquals( Enum291FinancialStatus.RESTRICTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

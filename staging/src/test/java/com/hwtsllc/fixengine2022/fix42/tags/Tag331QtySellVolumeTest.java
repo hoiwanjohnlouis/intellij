@@ -37,17 +37,17 @@ class Tag331QtySellVolumeTest {
     }
     @Test
     void Tag0331Test() {
-        Log331QtySellVolume tagData;
+        Tag331QtySellVolume tagData;
 
-        tagData = new Log331QtySellVolume(new MyQtyType(
-                Log331QtySellVolume.TESTA_QTY_SELL_VOLUME));
-        assertEquals( Log331QtySellVolume.TESTA_QTY_SELL_VOLUME,
+        tagData = new Tag331QtySellVolume(new MyQtyType(
+                Tag331QtySellVolume.TESTA_QTY_SELL_VOLUME));
+        assertEquals( Tag331QtySellVolume.TESTA_QTY_SELL_VOLUME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log331QtySellVolume(new MyQtyType(
-                Log331QtySellVolume.TESTB_QTY_SELL_VOLUME));
-        assertEquals( Log331QtySellVolume.TESTB_QTY_SELL_VOLUME,
+        tagData = new Tag331QtySellVolume(new MyQtyType(
+                Tag331QtySellVolume.TESTB_QTY_SELL_VOLUME));
+        assertEquals( Tag331QtySellVolume.TESTB_QTY_SELL_VOLUME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

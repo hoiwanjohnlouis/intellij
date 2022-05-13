@@ -24,6 +24,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag340
+ *  Enu
+ *  TradSesStatus
+ *
+ *      0-6 msg types
+ *      UNKNOWN( "0", "UNKNOWN", "0 - Unknown" ),
+ *      HALTED( "1", "HALTED", "1 - Halted" ),
+ *      OPEN( "2", "OPEN", "2 - Open" ),
+ *      CLOSED( "3", "CLOSED", "3 - Closed" ),
+ *      PRE_OPEN( "4", "PRE_OPEN", "4 - Pre-Open" ),
+ *      PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
+ *      REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
+ */
 class Tag340EnuTradSesStatusTest {
     @Test
     void FIX0340Test() {
@@ -35,52 +49,38 @@ class Tag340EnuTradSesStatusTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag340
-     *  Enu
-     *  TradSesStatus
-     *
-     *      0-6 msg types
-     *      UNKNOWN( "0", "UNKNOWN", "0 - Unknown" ),
-     *      HALTED( "1", "HALTED", "1 - Halted" ),
-     *      OPEN( "2", "OPEN", "2 - Open" ),
-     *      CLOSED( "3", "CLOSED", "3 - Closed" ),
-     *      PRE_OPEN( "4", "PRE_OPEN", "4 - Pre-Open" ),
-     *      PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
-     *      REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
-     */
     @Test
     void Tag0340Test() {
-        Log340EnuTradSesStatus tagData;
+        Tag340EnuTradSesStatus tagData;
 
-        /**
+        /*
          * 0-6 msg types
          */
-        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.UNKNOWN);
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.UNKNOWN);
         assertEquals( Enum340TradSesStatus.UNKNOWN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.HALTED);
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.HALTED);
         assertEquals( Enum340TradSesStatus.HALTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.OPEN);
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.OPEN);
         assertEquals( Enum340TradSesStatus.OPEN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
         assertEquals( Enum340TradSesStatus.CLOSED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.PRE_CLOSE);
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.PRE_CLOSE);
         assertEquals( Enum340TradSesStatus.PRE_CLOSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.REQUEST_REJECTED);
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.REQUEST_REJECTED);
         assertEquals( Enum340TradSesStatus.REQUEST_REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
         assertEquals( Enum340TradSesStatus.CLOSED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

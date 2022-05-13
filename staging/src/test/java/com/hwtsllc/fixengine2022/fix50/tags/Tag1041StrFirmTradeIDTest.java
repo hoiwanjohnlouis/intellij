@@ -38,7 +38,7 @@ class Tag1041StrFirmTradeIDTest {
         FIX50 fixData = FIX50.FIX1041_STR_FIRM_TRADE_ID;
         assertEquals( "1041", fixData.getID());
         assertEquals( "FIRM_TRADE_ID", fixData.getName());
-        assertEquals( "FirmTradeId", fixData.getDescription());
+        assertEquals( "FirmTradeID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

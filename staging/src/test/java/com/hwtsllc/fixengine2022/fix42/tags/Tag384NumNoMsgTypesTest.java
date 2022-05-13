@@ -37,17 +37,17 @@ class Tag384NumNoMsgTypesTest {
     }
     @Test
     void Tag0384Test() {
-        Log384NumNoMsgTypes tagData;
+        Tag384NumNoMsgTypes tagData;
 
-        tagData = new Log384NumNoMsgTypes(new MyNumInGroupType(
-                Log384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES));
-        assertEquals( Log384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES,
+        tagData = new Tag384NumNoMsgTypes(new MyNumInGroupType(
+                Tag384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES));
+        assertEquals( Tag384NumNoMsgTypes.TESTA_NUM_NO_MSG_TYPES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log384NumNoMsgTypes(new MyNumInGroupType(
-                Log384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES));
-        assertEquals( Log384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES,
+        tagData = new Tag384NumNoMsgTypes(new MyNumInGroupType(
+                Tag384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES));
+        assertEquals( Tag384NumNoMsgTypes.TESTB_NUM_NO_MSG_TYPES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

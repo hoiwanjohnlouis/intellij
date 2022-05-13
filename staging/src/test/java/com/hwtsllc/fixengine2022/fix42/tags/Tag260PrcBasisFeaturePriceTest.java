@@ -37,17 +37,17 @@ class Tag260PrcBasisFeaturePriceTest {
     }
     @Test
     void Tag0260Test() {
-        Log260PrcBasisFeaturePrice tagData;
+        Tag260PrcBasisFeaturePrice tagData;
 
-        tagData = new Log260PrcBasisFeaturePrice(new MyPriceType(
-                Log260PrcBasisFeaturePrice.TESTA_PRC_BASIS_FEATURE_PRICE));
-        assertEquals( Log260PrcBasisFeaturePrice.TESTA_PRC_BASIS_FEATURE_PRICE,
+        tagData = new Tag260PrcBasisFeaturePrice(new MyPriceType(
+                Tag260PrcBasisFeaturePrice.TESTA_PRC_BASIS_FEATURE_PRICE));
+        assertEquals( Tag260PrcBasisFeaturePrice.TESTA_PRC_BASIS_FEATURE_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log260PrcBasisFeaturePrice(new MyPriceType(
-                Log260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE));
-        assertEquals( Log260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE,
+        tagData = new Tag260PrcBasisFeaturePrice(new MyPriceType(
+                Tag260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE));
+        assertEquals( Tag260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

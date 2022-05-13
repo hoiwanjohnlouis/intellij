@@ -30,24 +30,24 @@ class Tag376StrComplianceIDTest {
         FIX42 fixData = FIX42.FIX376_STR_COMPLIANCE_ID;
         assertEquals( "376", fixData.getID());
         assertEquals( "COMPLIANCE_ID", fixData.getName());
-        assertEquals( "ComplianceId", fixData.getDescription());
+        assertEquals( "ComplianceID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0376Test() {
-        Log376StrComplianceID tagData;
+        Tag376StrComplianceID tagData;
 
-        tagData = new Log376StrComplianceID(new MyStringType(
-                Log376StrComplianceID.TESTA_STR_COMPLIANCE_ID));
-        assertEquals( Log376StrComplianceID.TESTA_STR_COMPLIANCE_ID,
+        tagData = new Tag376StrComplianceID(new MyStringType(
+                Tag376StrComplianceID.TESTA_STR_COMPLIANCE_ID));
+        assertEquals( Tag376StrComplianceID.TESTA_STR_COMPLIANCE_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log376StrComplianceID(new MyStringType(
-                Log376StrComplianceID.TESTB_STR_COMPLIANCE_ID));
-        assertEquals( Log376StrComplianceID.TESTB_STR_COMPLIANCE_ID,
+        tagData = new Tag376StrComplianceID(new MyStringType(
+                Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID));
+        assertEquals( Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

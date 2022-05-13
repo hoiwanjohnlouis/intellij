@@ -37,17 +37,17 @@ class Tag228FloFactorTest {
     }
     @Test
     void Tag0228Test() {
-        Log228FloFactor tagData;
+        Tag228FloFactor tagData;
 
-        tagData = new Log228FloFactor(new MyFloatType(
-                Log228FloFactor.TESTA_FLO_FACTOR));
-        assertEquals( Log228FloFactor.TESTA_FLO_FACTOR,
+        tagData = new Tag228FloFactor(new MyFloatType(
+                Tag228FloFactor.TESTA_FLO_FACTOR));
+        assertEquals( Tag228FloFactor.TESTA_FLO_FACTOR,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log228FloFactor(new MyFloatType(
-                Log228FloFactor.TESTB_FLO_FACTOR));
-        assertEquals( Log228FloFactor.TESTB_FLO_FACTOR,
+        tagData = new Tag228FloFactor(new MyFloatType(
+                Tag228FloFactor.TESTB_FLO_FACTOR));
+        assertEquals( Tag228FloFactor.TESTB_FLO_FACTOR,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }

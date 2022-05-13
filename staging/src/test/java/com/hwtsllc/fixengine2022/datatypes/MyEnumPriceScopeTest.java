@@ -65,7 +65,7 @@ class MyEnumPriceScopeTest {
         enumType = MyEnumPriceScope.NATIONAL;
         assertEquals( "2", enumType.getID());
         assertEquals( "NATIONAL", enumType.getName());
-        assertEquals( "2 - National", enumType.getDescription());
+        assertEquals( "2 - National (Across all national markets)", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
@@ -73,7 +73,7 @@ class MyEnumPriceScopeTest {
         enumType = MyEnumPriceScope.GLOBAL;
         assertEquals( "3", enumType.getID());
         assertEquals( "GLOBAL", enumType.getName());
-        assertEquals( "3 - Global", enumType.getDescription());
+        assertEquals( "3 - Global (Across all markets)", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());

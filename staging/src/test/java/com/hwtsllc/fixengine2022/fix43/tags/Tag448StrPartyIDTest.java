@@ -27,9 +27,9 @@ class Tag448StrPartyIDTest {
     @Test
     void FIX0448Test() {
         FIX43 fixData = FIX43.FIX448_STR_PARTY_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "448", fixData.getID());
+        assertEquals( "PARTY_ID", fixData.getName());
+        assertEquals( "PartyID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

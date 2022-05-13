@@ -49,7 +49,7 @@ class Tag1StrAccountTest {
     @Test
     void FIX0001Test() {
         FIX27 fixData = FIX27.FIX1_STR_ACCOUNT;
-        assertEquals( "FIX1_ST_ACCOUNT", fixData.getEnumName());
+        assertEquals( "FIX1_STR_ACCOUNT", fixData.getEnumName());
         assertEquals( "1", fixData.getID());
         assertEquals( "ACCOUNT", fixData.getName());
         assertEquals( "Account", fixData.getDescription());

@@ -36,7 +36,7 @@ class Tag1085DisplayLowQtyTest {
         FIX50 fixData = FIX50.FIX1085_DISPLAY_LOW_QTY;
         assertEquals( "1085", fixData.getID());
         assertEquals( "DISPLAY_LOW_QTY", fixData.getName());
-        assertEquals( "display_low_qty", fixData.getDescription());
+        assertEquals( "DisplayLowQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

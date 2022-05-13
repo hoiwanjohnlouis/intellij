@@ -37,7 +37,7 @@ class Tag1136StrAllocClearingFeeIndicatorTest {
         FIX50 fixData = FIX50.FIX1136_STR_ALLOC_CLEARING_FEE_INDICATOR;
         assertEquals( "1136", fixData.getID());
         assertEquals( "ALLOC_CLEARING_FEE_INDICATOR", fixData.getName());
-        assertEquals( "Alloc_Clearing_Fee_Indicator", fixData.getDescription());
+        assertEquals( "AllocClearingFeeIndicator", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

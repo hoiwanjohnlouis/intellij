@@ -37,17 +37,17 @@ class Tag386NumNoTradingSessionsTest {
     }
     @Test
     void Tag0386Test() {
-        Log386NumNoTradingSessions tagData;
+        Tag386NumNoTradingSessions tagData;
 
-        tagData = new Log386NumNoTradingSessions(new MyNumInGroupType(
-                Log386NumNoTradingSessions.TESTA_NUM_NO_TRADING_SESSIONS));
-        assertEquals( Log386NumNoTradingSessions.TESTA_NUM_NO_TRADING_SESSIONS,
+        tagData = new Tag386NumNoTradingSessions(new MyNumInGroupType(
+                Tag386NumNoTradingSessions.TESTA_NUM_NO_TRADING_SESSIONS));
+        assertEquals( Tag386NumNoTradingSessions.TESTA_NUM_NO_TRADING_SESSIONS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log386NumNoTradingSessions(new MyNumInGroupType(
-                Log386NumNoTradingSessions.TESTB_NUM_NO_TRADING_SESSIONS));
-        assertEquals( Log386NumNoTradingSessions.TESTB_NUM_NO_TRADING_SESSIONS,
+        tagData = new Tag386NumNoTradingSessions(new MyNumInGroupType(
+                Tag386NumNoTradingSessions.TESTB_NUM_NO_TRADING_SESSIONS));
+        assertEquals( Tag386NumNoTradingSessions.TESTB_NUM_NO_TRADING_SESSIONS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

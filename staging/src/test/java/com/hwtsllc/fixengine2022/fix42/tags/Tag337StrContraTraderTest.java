@@ -37,17 +37,17 @@ class Tag337StrContraTraderTest {
     }
     @Test
     void Tag0337Test() {
-        Log337StrContraTrader tagData;
+        Tag337StrContraTrader tagData;
 
-        tagData = new Log337StrContraTrader(new MyStringType(
-                Log337StrContraTrader.TESTA_STR_CONTRA_TRADER));
-        assertEquals( Log337StrContraTrader.TESTA_STR_CONTRA_TRADER,
+        tagData = new Tag337StrContraTrader(new MyStringType(
+                Tag337StrContraTrader.TESTA_STR_CONTRA_TRADER));
+        assertEquals( Tag337StrContraTrader.TESTA_STR_CONTRA_TRADER,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log337StrContraTrader(new MyStringType(
-                Log337StrContraTrader.TESTB_STR_CONTRA_TRADER));
-        assertEquals( Log337StrContraTrader.TESTB_STR_CONTRA_TRADER,
+        tagData = new Tag337StrContraTrader(new MyStringType(
+                Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER));
+        assertEquals( Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

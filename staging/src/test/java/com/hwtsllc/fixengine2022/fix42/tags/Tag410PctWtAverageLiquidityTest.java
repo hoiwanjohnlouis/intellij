@@ -37,17 +37,17 @@ class Tag410PctWtAverageLiquidityTest {
     }
     @Test
     void Tag0410Test() {
-        Log410PctWtAverageLiquidity tagData;
+        Tag410PctWtAverageLiquidity tagData;
 
-        tagData = new Log410PctWtAverageLiquidity(new MyPercentageType(
-                Log410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY));
-        assertEquals( Log410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY,
+        tagData = new Tag410PctWtAverageLiquidity(new MyPercentageType(
+                Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY));
+        assertEquals( Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log410PctWtAverageLiquidity(new MyPercentageType(
-                Log410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY));
-        assertEquals( Log410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY,
+        tagData = new Tag410PctWtAverageLiquidity(new MyPercentageType(
+                Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY));
+        assertEquals( Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

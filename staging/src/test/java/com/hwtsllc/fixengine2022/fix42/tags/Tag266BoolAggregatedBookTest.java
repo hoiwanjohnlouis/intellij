@@ -37,13 +37,13 @@ class Tag266BoolAggregatedBookTest {
     }
     @Test
     void Tag0266Test() {
-        Log266BoolAggregatedBook tagData;
+        Tag266BoolAggregatedBook tagData;
 
-        tagData = new Log266BoolAggregatedBook(MyBooleanType.NO);
+        tagData = new Tag266BoolAggregatedBook(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log266BoolAggregatedBook(MyBooleanType.YES);
+        tagData = new Tag266BoolAggregatedBook(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

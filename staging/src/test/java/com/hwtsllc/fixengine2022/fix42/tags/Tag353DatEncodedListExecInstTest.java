@@ -37,16 +37,16 @@ class Tag353DatEncodedListExecInstTest {
     }
     @Test
     void Tag0353Test() {
-        Log353DatEncodedListExecInst tagData;
+        Tag353DatEncodedListExecInst tagData;
 
-        tagData = new Log353DatEncodedListExecInst(
-                new MyDataType(Log353DatEncodedListExecInst.TESTA_DAT_ENCODED_LIST_EXEC_INST));
-        assertEquals( Log353DatEncodedListExecInst.TESTA_DAT_ENCODED_LIST_EXEC_INST, tagData.getDataValue() );
+        tagData = new Tag353DatEncodedListExecInst(
+                new MyDataType(Tag353DatEncodedListExecInst.TESTA_DAT_ENCODED_LIST_EXEC_INST));
+        assertEquals( Tag353DatEncodedListExecInst.TESTA_DAT_ENCODED_LIST_EXEC_INST, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log353DatEncodedListExecInst(
-                new MyDataType(Log353DatEncodedListExecInst.TESTB_DAT_ENCODED_LIST_EXEC_INST));
-        assertEquals( Log353DatEncodedListExecInst.TESTB_DAT_ENCODED_LIST_EXEC_INST, tagData.getDataValue() );
+        tagData = new Tag353DatEncodedListExecInst(
+                new MyDataType(Tag353DatEncodedListExecInst.TESTB_DAT_ENCODED_LIST_EXEC_INST));
+        assertEquals( Tag353DatEncodedListExecInst.TESTB_DAT_ENCODED_LIST_EXEC_INST, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

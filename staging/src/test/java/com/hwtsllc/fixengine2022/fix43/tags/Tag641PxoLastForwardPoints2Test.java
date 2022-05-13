@@ -27,9 +27,9 @@ class Tag641PxoLastForwardPoints2Test {
     @Test
     void FIX0641Test() {
         FIX43 fixData = FIX43.FIX641_PXO_LAST_FORWARD_POINTS_2;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "641", fixData.getID());
+        assertEquals( "LAST_FORWARD_POINTS_2", fixData.getName());
+        assertEquals( "LastForwardPoints2", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -37,16 +37,16 @@ class Tag289StrMDEntrySellerTest {
     }
     @Test
     void Tag0289Test() {
-        Log289StrMDEntrySeller tagData;
+        Tag289StrMDEntrySeller tagData;
 
-        tagData = new Log289StrMDEntrySeller(
-                new MyStringType(Log289StrMDEntrySeller.TESTA_STR_MD_ENTRY_SELLER));
-        assertEquals( Log289StrMDEntrySeller.TESTA_STR_MD_ENTRY_SELLER, tagData.getDataValue() );
+        tagData = new Tag289StrMDEntrySeller(
+                new MyStringType(Tag289StrMDEntrySeller.TESTA_STR_MD_ENTRY_SELLER));
+        assertEquals( Tag289StrMDEntrySeller.TESTA_STR_MD_ENTRY_SELLER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log289StrMDEntrySeller(
-                new MyStringType(Log289StrMDEntrySeller.TESTB_STR_MD_ENTRY_SELLER));
-        assertEquals( Log289StrMDEntrySeller.TESTB_STR_MD_ENTRY_SELLER, tagData.getDataValue() );
+        tagData = new Tag289StrMDEntrySeller(
+                new MyStringType(Tag289StrMDEntrySeller.TESTB_STR_MD_ENTRY_SELLER));
+        assertEquals( Tag289StrMDEntrySeller.TESTB_STR_MD_ENTRY_SELLER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

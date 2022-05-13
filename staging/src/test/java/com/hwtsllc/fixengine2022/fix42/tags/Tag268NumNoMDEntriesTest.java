@@ -37,17 +37,17 @@ class Tag268NumNoMDEntriesTest {
     }
     @Test
     void Tag0268Test() {
-        Log268NumNoMDEntries tagData;
+        Tag268NumNoMDEntries tagData;
 
-        tagData = new Log268NumNoMDEntries(new MyNumInGroupType(
-                Log268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES));
-        assertEquals( Log268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES,
+        tagData = new Tag268NumNoMDEntries(new MyNumInGroupType(
+                Tag268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES));
+        assertEquals( Tag268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log268NumNoMDEntries(new MyNumInGroupType(
-                Log268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES));
-        assertEquals( Log268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES,
+        tagData = new Tag268NumNoMDEntries(new MyNumInGroupType(
+                Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES));
+        assertEquals( Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

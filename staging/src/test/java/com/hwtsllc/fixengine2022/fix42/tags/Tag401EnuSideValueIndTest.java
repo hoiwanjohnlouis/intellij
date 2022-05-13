@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag401
+ *  Enu
+ *  SideValueInd
+ *
+ *      1-2 msg types
+ *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
+ *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
+ */
 class Tag401EnuSideValueIndTest {
     @Test
     void FIX0401Test() {
@@ -35,27 +44,18 @@ class Tag401EnuSideValueIndTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag401
-     *  Enu
-     *  SideValueInd
-     *
-     *      1-2 msg types
-     *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
-     *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
-     */
     @Test
     void Tag0401Test() {
-        Log401EnuSideValueInd tagData;
+        Tag401EnuSideValueInd tagData;
 
-        /**
+        /*
          * 1-2 msg types
          */
-        tagData = new Log401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
+        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
         assertEquals( Enum401SideValueInd.SIDE_VALUE_1.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
+        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
         assertEquals( Enum401SideValueInd.SIDE_VALUE_2.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

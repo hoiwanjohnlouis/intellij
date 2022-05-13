@@ -42,7 +42,7 @@ class Tag1090MaxPriceLevelsTest {
         FIX50 fixData = FIX50.FIX1090_MAX_PRICE_LEVELS;
         assertEquals( "1090", fixData.getID());
         assertEquals( "MAX_PRICE_LEVELS", fixData.getName());
-        assertEquals( "max_price_levels", fixData.getDescription());
+        assertEquals( "MaxPriceLevels", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

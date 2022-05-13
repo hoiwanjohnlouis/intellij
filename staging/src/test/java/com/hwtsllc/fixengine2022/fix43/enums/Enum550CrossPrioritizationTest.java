@@ -34,27 +34,27 @@ class Enum550CrossPrioritizationTest {
          *  0-2 types
          */
         enumType = Enum550CrossPrioritization.NONE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,NONE,0 - None", enumType.getDescription());
+        assertEquals("0", enumType.getID());
+        assertEquals("NONE", enumType.getName());
+        assertEquals("0 - None", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum550CrossPrioritization.BUY_PRIORITY;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,BUY_PRIORITY,1 - Buy side is prioritized", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("BUY_PRIORITY", enumType.getName());
+        assertEquals("1 - Buy side is prioritized", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum550CrossPrioritization.SELL_PRIORITY;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,SELL_PRIORITY,2 - Sell side is prioritized", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("SELL_PRIORITY", enumType.getName());
+        assertEquals("2 - Sell side is prioritized", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

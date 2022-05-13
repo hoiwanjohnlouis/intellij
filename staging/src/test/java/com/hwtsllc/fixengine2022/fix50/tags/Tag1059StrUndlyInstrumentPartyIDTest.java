@@ -39,7 +39,7 @@ class Tag1059StrUndlyInstrumentPartyIDTest {
         FIX50 fixData = FIX50.FIX1059_STR_UNDLY_INSTRUMENT_PARTY_ID;
         assertEquals( "1059", fixData.getID());
         assertEquals( "UNDLY_INSTRUMENT_PARTY_ID", fixData.getName());
-        assertEquals( "UndlyInstrumentPartyId", fixData.getDescription());
+        assertEquals( "UndlyInstrumentPartyID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

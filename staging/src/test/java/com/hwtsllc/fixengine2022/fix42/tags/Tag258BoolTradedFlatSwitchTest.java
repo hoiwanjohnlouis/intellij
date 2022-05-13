@@ -37,13 +37,13 @@ class Tag258BoolTradedFlatSwitchTest {
     }
     @Test
     void Tag0258Test() {
-        Log258BoolTradedFlatSwitch tagData;
+        Tag258BoolTradedFlatSwitch tagData;
 
-        tagData = new Log258BoolTradedFlatSwitch(MyBooleanType.NO);
+        tagData = new Tag258BoolTradedFlatSwitch(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log258BoolTradedFlatSwitch(MyBooleanType.YES);
+        tagData = new Tag258BoolTradedFlatSwitch(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

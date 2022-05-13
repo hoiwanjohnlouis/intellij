@@ -37,17 +37,17 @@ class Tag316PrcUnderlyingStrikePriceTest {
     }
     @Test
     void Tag0316Test() {
-        Log316PrcUnderlyingStrikePrice tagData;
+        Tag316PrcUnderlyingStrikePrice tagData;
 
-        tagData = new Log316PrcUnderlyingStrikePrice(new MyPriceType(
-                Log316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE));
-        assertEquals( Log316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE,
+        tagData = new Tag316PrcUnderlyingStrikePrice(new MyPriceType(
+                Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE));
+        assertEquals( Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log316PrcUnderlyingStrikePrice(new MyPriceType(
-                Log316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE));
-        assertEquals( Log316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE,
+        tagData = new Tag316PrcUnderlyingStrikePrice(new MyPriceType(
+                Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE));
+        assertEquals( Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

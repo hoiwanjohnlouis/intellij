@@ -40,7 +40,7 @@ class Tag1138DisplayQtyTest {
         FIX50 fixData = FIX50.FIX1138_DISPLAY_QTY;
         assertEquals( "1138", fixData.getID());
         assertEquals( "DISPLAY_QTY", fixData.getName());
-        assertEquals( "display_qty", fixData.getDescription());
+        assertEquals( "DisplayQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

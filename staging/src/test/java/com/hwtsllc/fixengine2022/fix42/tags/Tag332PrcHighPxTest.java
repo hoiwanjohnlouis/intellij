@@ -37,17 +37,17 @@ class Tag332PrcHighPxTest {
     }
     @Test
     void Tag0332Test() {
-        Log332PrcHighPx tagData;
+        Tag332PrcHighPx tagData;
 
-        tagData = new Log332PrcHighPx(new MyPriceType(
-                Log332PrcHighPx.TESTA_PRC_HIGH_PX));
-        assertEquals( Log332PrcHighPx.TESTA_PRC_HIGH_PX,
+        tagData = new Tag332PrcHighPx(new MyPriceType(
+                Tag332PrcHighPx.TESTA_PRC_HIGH_PX));
+        assertEquals( Tag332PrcHighPx.TESTA_PRC_HIGH_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log332PrcHighPx(new MyPriceType(
-                Log332PrcHighPx.TESTB_PRC_HIGH_PX));
-        assertEquals( Log332PrcHighPx.TESTB_PRC_HIGH_PX,
+        tagData = new Tag332PrcHighPx(new MyPriceType(
+                Tag332PrcHighPx.TESTB_PRC_HIGH_PX));
+        assertEquals( Tag332PrcHighPx.TESTB_PRC_HIGH_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

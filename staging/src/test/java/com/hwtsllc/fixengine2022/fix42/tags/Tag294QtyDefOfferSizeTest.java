@@ -37,17 +37,17 @@ class Tag294QtyDefOfferSizeTest {
     }
     @Test
     void Tag0294Test() {
-        Log294QtyDefOfferSize tagData;
+        Tag294QtyDefOfferSize tagData;
 
-        tagData = new Log294QtyDefOfferSize(new MyQtyType(
-                Log294QtyDefOfferSize.TESTA_QTY_DEF_OFFER_SIZE));
-        assertEquals( Log294QtyDefOfferSize.TESTA_QTY_DEF_OFFER_SIZE,
+        tagData = new Tag294QtyDefOfferSize(new MyQtyType(
+                Tag294QtyDefOfferSize.TESTA_QTY_DEF_OFFER_SIZE));
+        assertEquals( Tag294QtyDefOfferSize.TESTA_QTY_DEF_OFFER_SIZE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log294QtyDefOfferSize(new MyQtyType(
-                Log294QtyDefOfferSize.TESTB_QTY_DEF_OFFER_SIZE));
-        assertEquals( Log294QtyDefOfferSize.TESTB_QTY_DEF_OFFER_SIZE,
+        tagData = new Tag294QtyDefOfferSize(new MyQtyType(
+                Tag294QtyDefOfferSize.TESTB_QTY_DEF_OFFER_SIZE));
+        assertEquals( Tag294QtyDefOfferSize.TESTB_QTY_DEF_OFFER_SIZE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

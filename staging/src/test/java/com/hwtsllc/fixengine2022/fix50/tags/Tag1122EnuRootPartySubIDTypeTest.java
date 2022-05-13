@@ -137,7 +137,7 @@ class Tag1122EnuRootPartySubIDTypeTest {
         FIX50 fixData = FIX50.FIX1122_ENU_ROOT_PARTY_SUB_ID_TYPE;
         assertEquals( "1122", fixData.getID());
         assertEquals( "ROOT_PARTY_SUB_ID_TYPE", fixData.getName());
-        assertEquals( "RootPartySubIdType", fixData.getDescription());
+        assertEquals( "RootPartySubIDType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

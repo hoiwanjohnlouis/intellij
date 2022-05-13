@@ -36,7 +36,7 @@ class Tag699BenchmarkSecurityIDTest {
         FIX44 fixData = FIX44.FIX699_BENCHMARK_SECURITY_ID;
         assertEquals( "699", fixData.getID());
         assertEquals( "BENCHMARK_SECURITY_ID", fixData.getName());
-        assertEquals( "BenchmarkSecurityId", fixData.getDescription());
+        assertEquals( "BenchmarkSecurityID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

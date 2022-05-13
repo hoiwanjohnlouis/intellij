@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  265
+ *  MDUpdateType
+ *  0-1 msg types
+ *      "0 - Full refresh"
+ *      "1 - Incremental refresh"
+ */
 class Tag265EnuMDUpdateTypeTest {
     @Test
     void FIX0265Test() {
@@ -35,25 +42,18 @@ class Tag265EnuMDUpdateTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  265
-     *  MDUpdateType
-     *  0-1 msg types
-     *      "0 - Full refresh"
-     *      "1 - Incremental refresh"
-     */
     @Test
     void Tag0265Test() {
-        Log265EnuMDUpdateType tagData;
+        Tag265EnuMDUpdateType tagData;
 
-        /**
+        /*
          * 0-1 msg types
          */
-        tagData = new Log265EnuMDUpdateType(Enum265MDUpdateType.FULL_REFRESH);
+        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.FULL_REFRESH);
         assertEquals( Enum265MDUpdateType.FULL_REFRESH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log265EnuMDUpdateType(Enum265MDUpdateType.INCREMENTAL_REFRESH);
+        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.INCREMENTAL_REFRESH);
         assertEquals( Enum265MDUpdateType.INCREMENTAL_REFRESH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

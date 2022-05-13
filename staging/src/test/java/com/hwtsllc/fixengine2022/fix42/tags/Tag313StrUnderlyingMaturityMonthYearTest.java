@@ -28,26 +28,26 @@ class Tag313StrUnderlyingMaturityMonthYearTest {
     @Test
     void FIX0313Test() {
         FIX42 fixData = FIX42.FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR;
-        assertEquals( "FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR", fixData.getID());
-        assertEquals( "FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR", fixData.getName());
-        assertEquals( "FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR", fixData.getDescription());
+        assertEquals( "313", fixData.getID());
+        assertEquals( "UNDERLYING_MATURITY_MONTH_YEAR", fixData.getName());
+        assertEquals( "UnderlyingMaturityMonthYear", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0313Test() {
-        Log313StrUnderlyingMaturityMonthYear tagData;
+        Tag313StrUnderlyingMaturityMonthYear tagData;
 
-        tagData = new Log313StrUnderlyingMaturityMonthYear(new MyStringType(
-                Log313StrUnderlyingMaturityMonthYear.TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR));
-        assertEquals( Log313StrUnderlyingMaturityMonthYear.TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR,
+        tagData = new Tag313StrUnderlyingMaturityMonthYear(new MyStringType(
+                Tag313StrUnderlyingMaturityMonthYear.TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR));
+        assertEquals( Tag313StrUnderlyingMaturityMonthYear.TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log313StrUnderlyingMaturityMonthYear(new MyStringType(
-                Log313StrUnderlyingMaturityMonthYear.TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR));
-        assertEquals( Log313StrUnderlyingMaturityMonthYear.TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR,
+        tagData = new Tag313StrUnderlyingMaturityMonthYear(new MyStringType(
+                Tag313StrUnderlyingMaturityMonthYear.TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR));
+        assertEquals( Tag313StrUnderlyingMaturityMonthYear.TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

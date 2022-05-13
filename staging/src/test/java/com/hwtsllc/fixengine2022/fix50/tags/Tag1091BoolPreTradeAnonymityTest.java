@@ -43,7 +43,7 @@ class Tag1091BoolPreTradeAnonymityTest {
         FIX50 fixData = FIX50.FIX1091_BOOL_PRE_TRADE_ANONYMITY;
         assertEquals( "1091", fixData.getID());
         assertEquals( "PRE_TRADE_ANONYMITY", fixData.getName());
-        assertEquals( "pre_trade_anonymity", fixData.getDescription());
+        assertEquals( "PreTradeAnonymity", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

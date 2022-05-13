@@ -37,17 +37,17 @@ class Tag246FloUnderlyingFactorTest {
     }
     @Test
     void Tag0246Test() {
-        Log246FloUnderlyingFactor tagData;
+        Tag246FloUnderlyingFactor tagData;
 
-        tagData = new Log246FloUnderlyingFactor(new MyFloatType(
-                Log246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR));
-        assertEquals( Log246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR,
+        tagData = new Tag246FloUnderlyingFactor(new MyFloatType(
+                Tag246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR));
+        assertEquals( Tag246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log246FloUnderlyingFactor(new MyFloatType(
-                Log246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR));
-        assertEquals( Log246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR,
+        tagData = new Tag246FloUnderlyingFactor(new MyFloatType(
+                Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR));
+        assertEquals( Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }

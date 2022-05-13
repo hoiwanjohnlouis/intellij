@@ -31,24 +31,24 @@ class Tag245PctUnderlyingRepurchaseRateTest {
         FIX42 fixData = FIX42.FIX245_PCT_UNDERLYING_REPURCHASE_RATE;
         assertEquals( "245", fixData.getID());
         assertEquals( "UNDERLYING_REPURCHASE_RATE", fixData.getName());
-        assertEquals( "UnderlyingRepurchaseRate", fixData.getDescription());
+        assertEquals( "UnderlyingRepurchaseRate (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0245Test() {
-        Log245PctUnderlyingRepurchaseRate tagData;
+        Tag245PctUnderlyingRepurchaseRate tagData;
 
-        tagData = new Log245PctUnderlyingRepurchaseRate(new MyPercentageType(
-                Log245PctUnderlyingRepurchaseRate.TESTA_PCT_UNDERLYING_REPURCHASE_RATE));
-        assertEquals( Log245PctUnderlyingRepurchaseRate.TESTA_PCT_UNDERLYING_REPURCHASE_RATE,
+        tagData = new Tag245PctUnderlyingRepurchaseRate(new MyPercentageType(
+                Tag245PctUnderlyingRepurchaseRate.TESTA_PCT_UNDERLYING_REPURCHASE_RATE));
+        assertEquals( Tag245PctUnderlyingRepurchaseRate.TESTA_PCT_UNDERLYING_REPURCHASE_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log245PctUnderlyingRepurchaseRate(new MyPercentageType(
-                Log245PctUnderlyingRepurchaseRate.TESTB_PCT_UNDERLYING_REPURCHASE_RATE));
-        assertEquals( Log245PctUnderlyingRepurchaseRate.TESTB_PCT_UNDERLYING_REPURCHASE_RATE,
+        tagData = new Tag245PctUnderlyingRepurchaseRate(new MyPercentageType(
+                Tag245PctUnderlyingRepurchaseRate.TESTB_PCT_UNDERLYING_REPURCHASE_RATE));
+        assertEquals( Tag245PctUnderlyingRepurchaseRate.TESTB_PCT_UNDERLYING_REPURCHASE_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

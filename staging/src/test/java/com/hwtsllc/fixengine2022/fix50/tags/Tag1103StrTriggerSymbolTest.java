@@ -38,7 +38,7 @@ class Tag1103StrTriggerSymbolTest {
         FIX50 fixData = FIX50.FIX1103_STR_TRIGGER_SYMBOL;
         assertEquals( "1103", fixData.getID());
         assertEquals( "TRIGGER_SYMBOL", fixData.getName());
-        assertEquals( "trigger_symbol", fixData.getDescription());
+        assertEquals( "TriggerSymbol", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

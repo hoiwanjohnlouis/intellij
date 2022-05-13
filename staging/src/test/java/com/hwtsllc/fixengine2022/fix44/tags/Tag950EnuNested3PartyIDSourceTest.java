@@ -134,7 +134,7 @@ class Tag950EnuNested3PartyIDSourceTest {
         FIX44 fixData = FIX44.FIX950_ENU_NESTED_3_PARTY_ID_SOURCE;
         assertEquals( "950", fixData.getID());
         assertEquals( "NESTED_3_PARTY_ID_SOURCE", fixData.getName());
-        assertEquals( "Nested3PartyIdSource", fixData.getDescription());
+        assertEquals( "Nested3PartyIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

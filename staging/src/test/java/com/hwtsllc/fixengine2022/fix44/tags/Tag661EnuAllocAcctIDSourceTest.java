@@ -54,7 +54,7 @@ class Tag661EnuAllocAcctIDSourceTest {
         FIX44 fixData = FIX44.FIX661_ENU_ALLOC_ACCT_ID_SOURCE;
         assertEquals( "661", fixData.getID());
         assertEquals( "ALLOC_ACCT_ID_SOURCE", fixData.getName());
-        assertEquals( "AllocAcctIdSource", fixData.getDescription());
+        assertEquals( "AllocAcctIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

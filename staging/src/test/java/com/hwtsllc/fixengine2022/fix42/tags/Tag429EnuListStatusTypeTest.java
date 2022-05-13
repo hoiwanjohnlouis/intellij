@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag429
+ *  Enu
+ *  ListStatusType
+ *
+ *      1-6 msg types
+ *      ACK( "1", "ACK", "1 - Ack" ),
+ *      RESPONSE( "2", "RESPONSE", "2 - Response" ),
+ *      TIMED( "3", "TIMED", "3 - Timed" ),
+ *      EXEC_STARTED( "4", "EXEC_STARTED", "4 - Exec Started" ),
+ *      ALL_DONE( "5", "ALL_DONE", "5 - All Done" ),
+ *      ALERT( "6", "ALERT", "6 - Alert" ),
+ */
 class Tag429EnuListStatusTypeTest {
     @Test
     void FIX0429Test() {
@@ -35,47 +48,34 @@ class Tag429EnuListStatusTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag429
-     *  Enu
-     *  ListStatusType
-     *
-     *      1-6 msg types
-     *      ACK( "1", "ACK", "1 - Ack" ),
-     *      RESPONSE( "2", "RESPONSE", "2 - Response" ),
-     *      TIMED( "3", "TIMED", "3 - Timed" ),
-     *      EXEC_STARTED( "4", "EXEC_STARTED", "4 - Exec Started" ),
-     *      ALL_DONE( "5", "ALL_DONE", "5 - All Done" ),
-     *      ALERT( "6", "ALERT", "6 - Alert" ),
-     */
     @Test
     void Tag0429Test() {
-        Log429EnuListStatusType tagData;
+        Tag429EnuListStatusType tagData;
 
-        /**
+        /*
          * 1-6 msg types
          */
-        tagData = new Log429EnuListStatusType(Enum429ListStatusType.ACK);
+        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.ACK);
         assertEquals( Enum429ListStatusType.ACK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log429EnuListStatusType(Enum429ListStatusType.RESPONSE);
+        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.RESPONSE);
         assertEquals( Enum429ListStatusType.RESPONSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log429EnuListStatusType(Enum429ListStatusType.TIMED);
+        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.TIMED);
         assertEquals( Enum429ListStatusType.TIMED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log429EnuListStatusType(Enum429ListStatusType.EXEC_STARTED);
+        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.EXEC_STARTED);
         assertEquals( Enum429ListStatusType.EXEC_STARTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log429EnuListStatusType(Enum429ListStatusType.ALL_DONE);
+        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.ALL_DONE);
         assertEquals( Enum429ListStatusType.ALL_DONE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log429EnuListStatusType(Enum429ListStatusType.ALERT);
+        tagData = new Tag429EnuListStatusType(Enum429ListStatusType.ALERT);
         assertEquals( Enum429ListStatusType.ALERT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

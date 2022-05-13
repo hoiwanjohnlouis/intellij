@@ -30,24 +30,24 @@ class Tag215NumNoRoutingIDsTest {
         FIX42 fixData = FIX42.FIX215_NUM_NO_ROUTING_IDS;
         assertEquals( "215", fixData.getID());
         assertEquals( "NO_ROUTING_IDS", fixData.getName());
-        assertEquals( "NoRoutingIds", fixData.getDescription());
+        assertEquals( "NoRoutingIDs", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0215Test() {
-        Log215NumNoRoutingIDs tagData;
+        Tag215NumNoRoutingIDs tagData;
 
-        tagData = new Log215NumNoRoutingIDs(new MyNumInGroupType(
-                Log215NumNoRoutingIDs.TESTA_NUM_NO_ROUTING_IDS));
-        assertEquals( Log215NumNoRoutingIDs.TESTA_NUM_NO_ROUTING_IDS,
+        tagData = new Tag215NumNoRoutingIDs(new MyNumInGroupType(
+                Tag215NumNoRoutingIDs.TESTA_NUM_NO_ROUTING_IDS));
+        assertEquals( Tag215NumNoRoutingIDs.TESTA_NUM_NO_ROUTING_IDS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log215NumNoRoutingIDs(new MyNumInGroupType(
-                Log215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS));
-        assertEquals( Log215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS,
+        tagData = new Tag215NumNoRoutingIDs(new MyNumInGroupType(
+                Tag215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS));
+        assertEquals( Tag215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

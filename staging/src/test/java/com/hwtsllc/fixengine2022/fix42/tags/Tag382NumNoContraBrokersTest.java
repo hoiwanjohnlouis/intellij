@@ -37,17 +37,17 @@ class Tag382NumNoContraBrokersTest {
     }
     @Test
     void Tag0382Test() {
-        Log382NumNoContraBrokers tagData;
+        Tag382NumNoContraBrokers tagData;
 
-        tagData = new Log382NumNoContraBrokers(new MyNumInGroupType(
-                Log382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS));
-        assertEquals( Log382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS,
+        tagData = new Tag382NumNoContraBrokers(new MyNumInGroupType(
+                Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS));
+        assertEquals( Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log382NumNoContraBrokers(new MyNumInGroupType(
-                Log382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS));
-        assertEquals( Log382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS,
+        tagData = new Tag382NumNoContraBrokers(new MyNumInGroupType(
+                Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS));
+        assertEquals( Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

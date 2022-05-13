@@ -33,9 +33,9 @@ class Tag927UserStatusTextTest {
     @Test
     void FIX0927Test() {
         FIX44 fixData = FIX44.FIX927_USER_STATUS_TEXT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "927", fixData.getID());
+        assertEquals( "USER_STATUS_TEXT", fixData.getName());
+        assertEquals( "UserStatusText", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

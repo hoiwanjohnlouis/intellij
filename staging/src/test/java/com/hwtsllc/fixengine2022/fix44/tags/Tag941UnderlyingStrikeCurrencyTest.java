@@ -33,9 +33,9 @@ class Tag941UnderlyingStrikeCurrencyTest {
     @Test
     void FIX0941Test() {
         FIX44 fixData = FIX44.FIX941_UNDERLYING_STRIKE_CURRENCY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "941", fixData.getID());
+        assertEquals( "UNDERLYING_STRIKE_CURRENCY", fixData.getName());
+        assertEquals( "UnderlyingStrikeCurrency", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

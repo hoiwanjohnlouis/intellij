@@ -37,17 +37,17 @@ class Tag293QtyDefBidSizeTest {
     }
     @Test
     void Tag0293Test() {
-        Log293QtyDefBidSize tagData;
+        Tag293QtyDefBidSize tagData;
 
-        tagData = new Log293QtyDefBidSize(new MyQtyType(
-                Log293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE));
-        assertEquals( Log293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE,
+        tagData = new Tag293QtyDefBidSize(new MyQtyType(
+                Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE));
+        assertEquals( Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log293QtyDefBidSize(new MyQtyType(
-                Log293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE));
-        assertEquals( Log293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE,
+        tagData = new Tag293QtyDefBidSize(new MyQtyType(
+                Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE));
+        assertEquals( Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

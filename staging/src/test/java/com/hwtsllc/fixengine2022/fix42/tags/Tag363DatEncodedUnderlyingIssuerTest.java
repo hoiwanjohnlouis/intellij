@@ -37,16 +37,16 @@ class Tag363DatEncodedUnderlyingIssuerTest {
     }
     @Test
     void Tag0363Test() {
-        Log363DatEncodedUnderlyingIssuer tagData;
+        Tag363DatEncodedUnderlyingIssuer tagData;
 
-        tagData = new Log363DatEncodedUnderlyingIssuer(
-                new MyDataType(Log363DatEncodedUnderlyingIssuer.TESTA_DAT_ENCODED_UNDERLYING_ISSUER));
-        assertEquals( Log363DatEncodedUnderlyingIssuer.TESTA_DAT_ENCODED_UNDERLYING_ISSUER, tagData.getDataValue() );
+        tagData = new Tag363DatEncodedUnderlyingIssuer(
+                new MyDataType(Tag363DatEncodedUnderlyingIssuer.TESTA_DAT_ENCODED_UNDERLYING_ISSUER));
+        assertEquals( Tag363DatEncodedUnderlyingIssuer.TESTA_DAT_ENCODED_UNDERLYING_ISSUER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log363DatEncodedUnderlyingIssuer(
-                new MyDataType(Log363DatEncodedUnderlyingIssuer.TESTB_DAT_ENCODED_UNDERLYING_ISSUER));
-        assertEquals( Log363DatEncodedUnderlyingIssuer.TESTB_DAT_ENCODED_UNDERLYING_ISSUER, tagData.getDataValue() );
+        tagData = new Tag363DatEncodedUnderlyingIssuer(
+                new MyDataType(Tag363DatEncodedUnderlyingIssuer.TESTB_DAT_ENCODED_UNDERLYING_ISSUER));
+        assertEquals( Tag363DatEncodedUnderlyingIssuer.TESTB_DAT_ENCODED_UNDERLYING_ISSUER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

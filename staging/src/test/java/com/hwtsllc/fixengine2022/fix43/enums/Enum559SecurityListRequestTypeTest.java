@@ -34,45 +34,45 @@ class Enum559SecurityListRequestTypeTest {
          *  0-4 types
          */
         enumType = Enum559SecurityListRequestType.SYMBOL;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,SYMBOL,0 - Symbol", enumType.getDescription());
+        assertEquals("0", enumType.getID());
+        assertEquals("SYMBOL", enumType.getName());
+        assertEquals("0 - Symbol", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum559SecurityListRequestType.SECURITY_TYPE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,SECURITY_TYPE,1 - SecurityType and/or CFICode", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("SECURITY_TYPE", enumType.getName());
+        assertEquals("1 - SecurityType and/or CFICode", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum559SecurityListRequestType.PRODUCT;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,PRODUCT,2 - Product", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("PRODUCT", enumType.getName());
+        assertEquals("2 - Product", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum559SecurityListRequestType.TRADING_SESSION_ID;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("3,TRADING_SESSION_ID,3 - TradingSessionID", enumType.getDescription());
+        assertEquals("3", enumType.getID());
+        assertEquals("TRADING_SESSION_ID", enumType.getName());
+        assertEquals("3 - TradingSessionID", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum559SecurityListRequestType.ALL_SECURITIES;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("4,ALL_SECURITIES,4 - All Securities", enumType.getDescription());
+        assertEquals("4", enumType.getID());
+        assertEquals("ALL_SECURITIES", enumType.getName());
+        assertEquals("4 - All Securities", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

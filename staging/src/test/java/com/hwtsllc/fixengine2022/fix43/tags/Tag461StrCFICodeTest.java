@@ -27,9 +27,9 @@ class Tag461StrCFICodeTest {
     @Test
     void FIX0461Test() {
         FIX43 fixData = FIX43.FIX461_STR_CFI_CODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "461", fixData.getID());
+        assertEquals( "CFI_CODE", fixData.getName());
+        assertEquals( "CFICode", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

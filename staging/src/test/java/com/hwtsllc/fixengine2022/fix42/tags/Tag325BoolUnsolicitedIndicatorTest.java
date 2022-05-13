@@ -37,13 +37,13 @@ class Tag325BoolUnsolicitedIndicatorTest {
     }
     @Test
     void Tag0325Test() {
-        Log325BoolUnsolicitedIndicator tagData;
+        Tag325BoolUnsolicitedIndicator tagData;
 
-        tagData = new Log325BoolUnsolicitedIndicator(MyBooleanType.NO);
+        tagData = new Tag325BoolUnsolicitedIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log325BoolUnsolicitedIndicator(MyBooleanType.YES);
+        tagData = new Tag325BoolUnsolicitedIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

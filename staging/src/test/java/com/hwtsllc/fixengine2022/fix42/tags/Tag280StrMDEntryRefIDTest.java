@@ -30,23 +30,23 @@ class Tag280StrMDEntryRefIDTest {
         FIX42 fixData = FIX42.FIX280_STR_MD_ENTRY_REF_ID;
         assertEquals( "280", fixData.getID());
         assertEquals( "MD_ENTRY_REF_ID", fixData.getName());
-        assertEquals( "MDEntryRefId", fixData.getDescription());
+        assertEquals( "MDEntryRefID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0280Test() {
-        Log280StrMDEntryRefID tagData;
+        Tag280StrMDEntryRefID tagData;
 
-        tagData = new Log280StrMDEntryRefID(
-                new MyStringType(Log280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID));
-        assertEquals( Log280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID, tagData.getDataValue() );
+        tagData = new Tag280StrMDEntryRefID(
+                new MyStringType(Tag280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID));
+        assertEquals( Tag280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log280StrMDEntryRefID(
-                new MyStringType(Log280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD));
-        assertEquals( Log280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD, tagData.getDataValue() );
+        tagData = new Tag280StrMDEntryRefID(
+                new MyStringType(Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD));
+        assertEquals( Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

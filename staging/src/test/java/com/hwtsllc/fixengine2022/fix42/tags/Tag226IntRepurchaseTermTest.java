@@ -31,24 +31,24 @@ class Tag226IntRepurchaseTermTest {
         FIX42 fixData = FIX42.FIX226_INT_REPURCHASE_TERM;
         assertEquals( "226", fixData.getID());
         assertEquals( "REPURCHASE_TERM", fixData.getName());
-        assertEquals( "RepurchaseTerm", fixData.getDescription());
+        assertEquals( "RepurchaseTerm (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0226Test() {
-        Log226IntRepurchaseTerm tagData;
+        Tag226IntRepurchaseTerm tagData;
 
-        tagData = new Log226IntRepurchaseTerm(new MyIntType(
-                Log226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM));
-        assertEquals( Log226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM,
+        tagData = new Tag226IntRepurchaseTerm(new MyIntType(
+                Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM));
+        assertEquals( Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log226IntRepurchaseTerm(new MyIntType(
-                Log226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM));
-        assertEquals( Log226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM,
+        tagData = new Tag226IntRepurchaseTerm(new MyIntType(
+                Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM));
+        assertEquals( Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

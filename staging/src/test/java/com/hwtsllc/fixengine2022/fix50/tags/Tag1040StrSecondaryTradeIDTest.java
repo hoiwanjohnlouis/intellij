@@ -37,7 +37,7 @@ class Tag1040StrSecondaryTradeIDTest {
         FIX50 fixData = FIX50.FIX1040_STR_SECONDARY_TRADE_ID;
         assertEquals( "1040", fixData.getID());
         assertEquals( "SECONDARY_TRADE_ID", fixData.getName());
-        assertEquals( "SecondaryTradeId", fixData.getDescription());
+        assertEquals( "SecondaryTradeID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

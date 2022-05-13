@@ -39,7 +39,7 @@ class Tag196StrAllocLinkIDTest {
         FIX41 fixData = FIX41.FIX196_STR_ALLOC_LINK_ID;
         assertEquals( "196", fixData.getID());
         assertEquals( "ALLOC_LINK_ID", fixData.getName());
-        assertEquals( "AllocLinkId", fixData.getDescription());
+        assertEquals( "AllocLinkID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

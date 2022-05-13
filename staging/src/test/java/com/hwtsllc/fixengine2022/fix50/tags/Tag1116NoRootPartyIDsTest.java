@@ -36,7 +36,7 @@ class Tag1116NoRootPartyIDsTest {
         FIX50 fixData = FIX50.FIX1116_NO_ROOT_PARTY_IDS;
         assertEquals( "1116", fixData.getID());
         assertEquals( "NO_ROOT_PARTY_IDS", fixData.getName());
-        assertEquals( "no_root_party_ids", fixData.getDescription());
+        assertEquals( "NoRootPartyIDs", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -35,7 +35,7 @@ class Tag904CollRespIDTest {
         FIX44 fixData = FIX44.FIX904_COLL_RESP_ID;
         assertEquals( "904", fixData.getID());
         assertEquals( "COLL_RESP_ID", fixData.getName());
-        assertEquals( "CollRespId", fixData.getDescription());
+        assertEquals( "CollRespID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

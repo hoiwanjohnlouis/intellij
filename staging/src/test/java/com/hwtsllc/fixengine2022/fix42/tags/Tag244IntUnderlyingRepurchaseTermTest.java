@@ -31,24 +31,24 @@ class Tag244IntUnderlyingRepurchaseTermTest {
         FIX42 fixData = FIX42.FIX244_INT_UNDERLYING_REPURCHASE_TERM;
         assertEquals( "244", fixData.getID());
         assertEquals( "UNDERLYING_REPURCHASE_TERM", fixData.getName());
-        assertEquals( "UnderlyingRepurchaseTerm", fixData.getDescription());
+        assertEquals( "UnderlyingRepurchaseTerm (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0244Test() {
-        Log244IntUnderlyingRepurchaseTerm tagData;
+        Tag244IntUnderlyingRepurchaseTerm tagData;
 
-        tagData = new Log244IntUnderlyingRepurchaseTerm(new MyIntType(
-                Log244IntUnderlyingRepurchaseTerm.TESTA_INT_UNDERLYING_REPURCHASE_TERM));
-        assertEquals( Log244IntUnderlyingRepurchaseTerm.TESTA_INT_UNDERLYING_REPURCHASE_TERM,
+        tagData = new Tag244IntUnderlyingRepurchaseTerm(new MyIntType(
+                Tag244IntUnderlyingRepurchaseTerm.TESTA_INT_UNDERLYING_REPURCHASE_TERM));
+        assertEquals( Tag244IntUnderlyingRepurchaseTerm.TESTA_INT_UNDERLYING_REPURCHASE_TERM,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log244IntUnderlyingRepurchaseTerm(new MyIntType(
-                Log244IntUnderlyingRepurchaseTerm.TESTB_INT_UNDERLYING_REPURCHASE_TERM));
-        assertEquals( Log244IntUnderlyingRepurchaseTerm.TESTB_INT_UNDERLYING_REPURCHASE_TERM,
+        tagData = new Tag244IntUnderlyingRepurchaseTerm(new MyIntType(
+                Tag244IntUnderlyingRepurchaseTerm.TESTB_INT_UNDERLYING_REPURCHASE_TERM));
+        assertEquals( Tag244IntUnderlyingRepurchaseTerm.TESTB_INT_UNDERLYING_REPURCHASE_TERM,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

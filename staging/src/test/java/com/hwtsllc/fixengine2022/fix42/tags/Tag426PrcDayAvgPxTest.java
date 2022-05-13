@@ -37,17 +37,17 @@ class Tag426PrcDayAvgPxTest {
     }
     @Test
     void Tag0426Test() {
-        Log426PrcDayAvgPx tagData;
+        Tag426PrcDayAvgPx tagData;
 
-        tagData = new Log426PrcDayAvgPx(new MyPriceType(
-                Log426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX));
-        assertEquals( Log426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX,
+        tagData = new Tag426PrcDayAvgPx(new MyPriceType(
+                Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX));
+        assertEquals( Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log426PrcDayAvgPx(new MyPriceType(
-                Log426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX));
-        assertEquals( Log426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX,
+        tagData = new Tag426PrcDayAvgPx(new MyPriceType(
+                Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX));
+        assertEquals( Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

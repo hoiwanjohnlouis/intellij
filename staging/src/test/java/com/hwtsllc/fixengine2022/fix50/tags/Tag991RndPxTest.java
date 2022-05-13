@@ -36,7 +36,7 @@ class Tag991RndPxTest {
         FIX50 fixData = FIX50.FIX991_RND_PX;
         assertEquals( "991", fixData.getID());
         assertEquals( "RND_PX", fixData.getName());
-        assertEquals( "Rnd Px", fixData.getDescription());
+        assertEquals( "RndPx", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

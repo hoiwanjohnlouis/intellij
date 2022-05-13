@@ -37,17 +37,17 @@ class Tag259LmdBasisFeatureDateTest {
     }
     @Test
     void Tag0259Test() {
-        Log259LmdBasisFeatureDate tagData;
+        Tag259LmdBasisFeatureDate tagData;
 
-        tagData = new Log259LmdBasisFeatureDate(new MyLocalMktDateType(
-                Log259LmdBasisFeatureDate.TESTA_LMD_BASIS_FEATURE_DATE));
-        assertEquals( Log259LmdBasisFeatureDate.TESTA_LMD_BASIS_FEATURE_DATE,
+        tagData = new Tag259LmdBasisFeatureDate(new MyLocalMktDateType(
+                Tag259LmdBasisFeatureDate.TESTA_LMD_BASIS_FEATURE_DATE));
+        assertEquals( Tag259LmdBasisFeatureDate.TESTA_LMD_BASIS_FEATURE_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log259LmdBasisFeatureDate(new MyLocalMktDateType(
-                Log259LmdBasisFeatureDate.TESTB_LMD_BASIS_FEATURE_DATE));
-        assertEquals( Log259LmdBasisFeatureDate.TESTB_LMD_BASIS_FEATURE_DATE,
+        tagData = new Tag259LmdBasisFeatureDate(new MyLocalMktDateType(
+                Tag259LmdBasisFeatureDate.TESTB_LMD_BASIS_FEATURE_DATE));
+        assertEquals( Tag259LmdBasisFeatureDate.TESTB_LMD_BASIS_FEATURE_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

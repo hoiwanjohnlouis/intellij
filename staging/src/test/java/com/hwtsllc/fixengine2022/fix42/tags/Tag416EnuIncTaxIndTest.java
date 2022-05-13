@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag416
+ *  Enu
+ *  IncTaxInd
+ *
+ *      1-2 msg types
+ *      NET( "1", "NET", "1 - Net" ),
+ *      GROSS( "2", "GROSS", "2 - Gross" ),
+ */
 class Tag416EnuIncTaxIndTest {
     @Test
     void FIX0416Test() {
@@ -35,27 +44,18 @@ class Tag416EnuIncTaxIndTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag416
-     *  Enu
-     *  IncTaxInd
-     *
-     *      1-2 msg types
-     *      NET( "1", "NET", "1 - Net" ),
-     *      GROSS( "2", "GROSS", "2 - Gross" ),
-     */
     @Test
     void Tag0416Test() {
-        Log416EnuIncTaxInd tagData;
+        Tag416EnuIncTaxInd tagData;
 
-        /**
+        /*
          * 1-2 msg types
          */
-        tagData = new Log416EnuIncTaxInd(Enum416IncTaxInd.NET);
+        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.NET);
         assertEquals( Enum416IncTaxInd.NET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
+        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
         assertEquals( Enum416IncTaxInd.GROSS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

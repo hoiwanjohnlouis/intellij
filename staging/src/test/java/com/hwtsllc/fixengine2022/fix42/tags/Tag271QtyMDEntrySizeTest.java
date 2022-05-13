@@ -37,17 +37,17 @@ class Tag271QtyMDEntrySizeTest {
     }
     @Test
     void Tag0271Test() {
-        Log271QtyMDEntrySize tagData;
+        Tag271QtyMDEntrySize tagData;
 
-        tagData = new Log271QtyMDEntrySize(new MyQtyType(
-                Log271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE));
-        assertEquals( Log271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE,
+        tagData = new Tag271QtyMDEntrySize(new MyQtyType(
+                Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE));
+        assertEquals( Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log271QtyMDEntrySize(new MyQtyType(
-                Log271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE));
-        assertEquals( Log271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE,
+        tagData = new Tag271QtyMDEntrySize(new MyQtyType(
+                Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE));
+        assertEquals( Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

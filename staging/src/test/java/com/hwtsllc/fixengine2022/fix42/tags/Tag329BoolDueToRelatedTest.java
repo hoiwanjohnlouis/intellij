@@ -37,13 +37,13 @@ class Tag329BoolDueToRelatedTest {
     }
     @Test
     void Tag0329Test() {
-        Log329BoolDueToRelated tagData;
+        Tag329BoolDueToRelated tagData;
 
-        tagData = new Log329BoolDueToRelated(MyBooleanType.NO);
+        tagData = new Tag329BoolDueToRelated(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log329BoolDueToRelated(MyBooleanType.YES);
+        tagData = new Tag329BoolDueToRelated(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

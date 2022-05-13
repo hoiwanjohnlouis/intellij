@@ -37,17 +37,17 @@ class Tag224LmdCouponPaymentDateTest {
     }
     @Test
     void Tag0224Test() {
-        Log224LmdCouponPaymentDate tagData;
+        Tag224LmdCouponPaymentDate tagData;
 
-        tagData = new Log224LmdCouponPaymentDate(new MyLocalMktDateType(
-                Log224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE));
-        assertEquals( Log224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE,
+        tagData = new Tag224LmdCouponPaymentDate(new MyLocalMktDateType(
+                Tag224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE));
+        assertEquals( Tag224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log224LmdCouponPaymentDate(new MyLocalMktDateType(
-                Log224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE));
-        assertEquals( Log224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE,
+        tagData = new Tag224LmdCouponPaymentDate(new MyLocalMktDateType(
+                Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE));
+        assertEquals( Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

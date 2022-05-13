@@ -134,7 +134,7 @@ class Tag447EnuPartyIDSourceTest {
         FIX43 fixData = FIX43.FIX447_ENU_PARTY_ID_SOURCE;
         assertEquals( "447", fixData.getID());
         assertEquals( "PARTY_ID_SOURCE", fixData.getName());
-        assertEquals( "PartyIdSource", fixData.getDescription());
+        assertEquals( "PartyIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

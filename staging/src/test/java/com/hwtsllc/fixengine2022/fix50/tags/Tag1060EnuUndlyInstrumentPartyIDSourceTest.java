@@ -134,7 +134,7 @@ class Tag1060EnuUndlyInstrumentPartyIDSourceTest {
         FIX50 fixData = FIX50.FIX1060_ENU_UNDLY_INSTRUMENT_PARTY_ID_SOURCE;
         assertEquals( "1060", fixData.getID());
         assertEquals( "UNDLY_INSTRUMENT_PARTY_ID_SOURCE", fixData.getName());
-        assertEquals( "UndlyInstrumentPartyIdSource", fixData.getDescription());
+        assertEquals( "UndlyInstrumentPartyIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

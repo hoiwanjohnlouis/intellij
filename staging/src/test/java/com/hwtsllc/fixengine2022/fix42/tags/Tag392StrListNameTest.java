@@ -37,17 +37,17 @@ class Tag392StrListNameTest {
     }
     @Test
     void Tag0392Test() {
-        Log392StrListName tagData;
+        Tag392StrListName tagData;
 
-        tagData = new Log392StrListName(new MyStringType(
-                Log392StrListName.TESTA_STR_LIST_NAME));
-        assertEquals( Log392StrListName.TESTA_STR_LIST_NAME,
+        tagData = new Tag392StrListName(new MyStringType(
+                Tag392StrListName.TESTA_STR_LIST_NAME));
+        assertEquals( Tag392StrListName.TESTA_STR_LIST_NAME,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log392StrListName(new MyStringType(
-                Log392StrListName.TESTB_STR_LIST_NAME));
-        assertEquals( Log392StrListName.TESTB_STR_LIST_NAME,
+        tagData = new Tag392StrListName(new MyStringType(
+                Tag392StrListName.TESTB_STR_LIST_NAME));
+        assertEquals( Tag392StrListName.TESTB_STR_LIST_NAME,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

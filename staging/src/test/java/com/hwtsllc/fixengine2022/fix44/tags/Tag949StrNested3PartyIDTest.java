@@ -37,7 +37,7 @@ class Tag949StrNested3PartyIDTest {
         FIX44 fixData = FIX44.FIX949_STR_NESTED_3_PARTY_ID;
         assertEquals( "949", fixData.getID());
         assertEquals( "NESTED_3_PARTY_ID", fixData.getName());
-        assertEquals( "Nested3PartyId", fixData.getDescription());
+        assertEquals( "Nested3PartyID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

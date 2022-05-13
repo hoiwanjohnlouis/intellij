@@ -30,24 +30,24 @@ class Tag391StrClientBidIDTest {
         FIX42 fixData = FIX42.FIX391_STR_CLIENT_BID_ID;
         assertEquals( "391", fixData.getID());
         assertEquals( "CLIENT_BID_ID", fixData.getName());
-        assertEquals( "ClientBidId", fixData.getDescription());
+        assertEquals( "ClientBidID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0391Test() {
-        Log391StrClientBidID tagData;
+        Tag391StrClientBidID tagData;
 
-        tagData = new Log391StrClientBidID(new MyStringType(
-                Log391StrClientBidID.TESTA_STR_CLIENT_BID_ID));
-        assertEquals( Log391StrClientBidID.TESTA_STR_CLIENT_BID_ID,
+        tagData = new Tag391StrClientBidID(new MyStringType(
+                Tag391StrClientBidID.TESTA_STR_CLIENT_BID_ID));
+        assertEquals( Tag391StrClientBidID.TESTA_STR_CLIENT_BID_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log391StrClientBidID(new MyStringType(
-                Log391StrClientBidID.TESTB_STR_CLIENT_BID_ID));
-        assertEquals( Log391StrClientBidID.TESTB_STR_CLIENT_BID_ID,
+        tagData = new Tag391StrClientBidID(new MyStringType(
+                Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID));
+        assertEquals( Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

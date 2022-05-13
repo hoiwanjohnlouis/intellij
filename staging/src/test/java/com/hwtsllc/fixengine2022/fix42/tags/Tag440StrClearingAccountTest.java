@@ -38,17 +38,17 @@ class Tag440StrClearingAccountTest {
     }
     @Test
     void Tag0440Test() {
-        Log440StrClearingAccount tagData;
+        Tag440StrClearingAccount tagData;
 
-        tagData = new Log440StrClearingAccount(new MyStringType(
-                Log440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT));
-        assertEquals( Log440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT,
+        tagData = new Tag440StrClearingAccount(new MyStringType(
+                Tag440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT));
+        assertEquals( Tag440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log440StrClearingAccount(new MyStringType(
-                Log440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT));
-        assertEquals( Log440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT,
+        tagData = new Tag440StrClearingAccount(new MyStringType(
+                Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT));
+        assertEquals( Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

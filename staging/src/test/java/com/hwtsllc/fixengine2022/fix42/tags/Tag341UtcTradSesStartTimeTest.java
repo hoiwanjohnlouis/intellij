@@ -37,17 +37,17 @@ class Tag341UtcTradSesStartTimeTest {
     }
     @Test
     void Tag0341Test() {
-        Log341UtcTradSesStartTime tagData;
+        Tag341UtcTradSesStartTime tagData;
 
-        tagData = new Log341UtcTradSesStartTime(new MyUTCTimestampType(
-                Log341UtcTradSesStartTime.TESTA_UTC_TRAD_SES_START_TIME));
-        assertEquals( Log341UtcTradSesStartTime.TESTA_UTC_TRAD_SES_START_TIME,
+        tagData = new Tag341UtcTradSesStartTime(new MyUTCTimestampType(
+                Tag341UtcTradSesStartTime.TESTA_UTC_TRAD_SES_START_TIME));
+        assertEquals( Tag341UtcTradSesStartTime.TESTA_UTC_TRAD_SES_START_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log341UtcTradSesStartTime(new MyUTCTimestampType(
-                Log341UtcTradSesStartTime.TESTB_UTC_TRAD_SES_START_TIME));
-        assertEquals( Log341UtcTradSesStartTime.TESTB_UTC_TRAD_SES_START_TIME,
+        tagData = new Tag341UtcTradSesStartTime(new MyUTCTimestampType(
+                Tag341UtcTradSesStartTime.TESTB_UTC_TRAD_SES_START_TIME));
+        assertEquals( Tag341UtcTradSesStartTime.TESTB_UTC_TRAD_SES_START_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

@@ -37,7 +37,7 @@ class Tag666EnuConfirmTransTypeTest {
     @Test
     void FIX0666Test() {
         FIX44 fixData = FIX44.FIX666_ENU_CONFIRM_TRANS_TYPE;
-        assertEquals( "FIX666", fixData.getID());
+        assertEquals( "666", fixData.getID());
         assertEquals( "CONFIRM_TRANS_TYPE", fixData.getName());
         assertEquals( "ConfirmTransType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());

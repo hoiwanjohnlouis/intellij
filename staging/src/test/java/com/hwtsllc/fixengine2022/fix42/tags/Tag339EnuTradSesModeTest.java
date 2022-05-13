@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag339
+ *  Enu
+ *  TradSesMode
+ *
+ *      1-3 msg types
+ *      TESTING( "1", "TESTING", "1 - Testing" ),
+ *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
+ *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
+ */
 class Tag339EnuTradSesModeTest {
     @Test
     void FIX0339Test() {
@@ -35,32 +45,22 @@ class Tag339EnuTradSesModeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag339
-     *  Enu
-     *  TradSesMode
-     *
-     *      1-3 msg types
-     *      TESTING( "1", "TESTING", "1 - Testing" ),
-     *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
-     *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
-     */
     @Test
     void Tag0339Test() {
-        Log339EnuTradSesMode tagData;
+        Tag339EnuTradSesMode tagData;
 
-        /**
+        /*
          * 1-3 msg types
          */
-        tagData = new Log339EnuTradSesMode(Enum339TrdSesMode.TESTING);
+        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.TESTING);
         assertEquals( Enum339TrdSesMode.TESTING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log339EnuTradSesMode(Enum339TrdSesMode.SIMULATED);
+        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.SIMULATED);
         assertEquals( Enum339TrdSesMode.SIMULATED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log339EnuTradSesMode(Enum339TrdSesMode.PRODUCTION);
+        tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.PRODUCTION);
         assertEquals( Enum339TrdSesMode.PRODUCTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

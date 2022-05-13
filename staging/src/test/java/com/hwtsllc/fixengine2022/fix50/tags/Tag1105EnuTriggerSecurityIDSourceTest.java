@@ -135,7 +135,7 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
         FIX50 fixData = FIX50.FIX1105_ENU_TRIGGER_SECURITY_ID_SOURCE;
         assertEquals( "1105", fixData.getID());
         assertEquals( "TRIGGER_SECURITY_ID_SOURCE", fixData.getName());
-        assertEquals( "TriggerSecurityIdSource", fixData.getDescription());
+        assertEquals( "TriggerSecurityIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

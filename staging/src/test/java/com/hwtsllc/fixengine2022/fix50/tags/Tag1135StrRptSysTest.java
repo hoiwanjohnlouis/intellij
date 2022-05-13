@@ -37,7 +37,7 @@ class Tag1135StrRptSysTest {
         FIX50 fixData = FIX50.FIX1135_STR_RPT_SYS;
         assertEquals( "1135", fixData.getID());
         assertEquals( "RPT_SYS", fixData.getName());
-        assertEquals( "rpt_sys", fixData.getDescription());
+        assertEquals( "RptSys", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -37,17 +37,17 @@ class Tag287IntSellerDaysTest {
     }
     @Test
     void Tag0287Test() {
-        Log287IntSellerDays tagData;
+        Tag287IntSellerDays tagData;
 
-        tagData = new Log287IntSellerDays(new MyIntType(
-                Log287IntSellerDays.TESTA_INT_SELLER_DAYS));
-        assertEquals( Log287IntSellerDays.TESTA_INT_SELLER_DAYS,
+        tagData = new Tag287IntSellerDays(new MyIntType(
+                Tag287IntSellerDays.TESTA_INT_SELLER_DAYS));
+        assertEquals( Tag287IntSellerDays.TESTA_INT_SELLER_DAYS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log287IntSellerDays(new MyIntType(
-                Log287IntSellerDays.TESTB_INT_SELLER_DAYS));
-        assertEquals( Log287IntSellerDays.TESTB_INT_SELLER_DAYS,
+        tagData = new Tag287IntSellerDays(new MyIntType(
+                Tag287IntSellerDays.TESTB_INT_SELLER_DAYS));
+        assertEquals( Tag287IntSellerDays.TESTB_INT_SELLER_DAYS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

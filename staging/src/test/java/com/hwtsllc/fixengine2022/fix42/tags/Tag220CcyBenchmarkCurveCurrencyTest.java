@@ -37,17 +37,17 @@ class Tag220CcyBenchmarkCurveCurrencyTest {
     }
     @Test
     void Tag0220Test() {
-        Log220CcyBenchmarkCurveCurrency tagData;
+        Tag220CcyBenchmarkCurveCurrency tagData;
 
-        tagData = new Log220CcyBenchmarkCurveCurrency(new MyCurrencyType(
-                Log220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY));
-        assertEquals( Log220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY,
+        tagData = new Tag220CcyBenchmarkCurveCurrency(new MyCurrencyType(
+                Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY));
+        assertEquals( Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log220CcyBenchmarkCurveCurrency(new MyCurrencyType(
-                Log220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY));
-        assertEquals( Log220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY,
+        tagData = new Tag220CcyBenchmarkCurveCurrency(new MyCurrencyType(
+                Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY));
+        assertEquals( Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

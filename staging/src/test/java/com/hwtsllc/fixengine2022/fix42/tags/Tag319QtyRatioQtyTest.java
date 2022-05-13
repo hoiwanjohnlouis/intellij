@@ -31,24 +31,24 @@ class Tag319QtyRatioQtyTest {
         FIX42 fixData = FIX42.FIX319_QTY_RATIO_QTY;
         assertEquals( "319", fixData.getID());
         assertEquals( "RATIO_QTY", fixData.getName());
-        assertEquals( "RatioQty", fixData.getDescription());
+        assertEquals( "RatioQty (unused)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0319Test() {
-        Log319QtyRatioQty tagData;
+        Tag319QtyRatioQty tagData;
 
-        tagData = new Log319QtyRatioQty(new MyQtyType(
-                Log319QtyRatioQty.TESTA_QTY_RATIO_QTY));
-        assertEquals( Log319QtyRatioQty.TESTA_QTY_RATIO_QTY,
+        tagData = new Tag319QtyRatioQty(new MyQtyType(
+                Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY));
+        assertEquals( Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log319QtyRatioQty(new MyQtyType(
-                Log319QtyRatioQty.TESTB_QTY_RATIO_QTY));
-        assertEquals( Log319QtyRatioQty.TESTB_QTY_RATIO_QTY,
+        tagData = new Tag319QtyRatioQty(new MyQtyType(
+                Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY));
+        assertEquals( Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

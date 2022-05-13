@@ -37,9 +37,9 @@ class Tag350LenEncodedSecurityDescLenTest {
     }
     @Test
     void Tag0350Test() {
-        Log350LenEncodedSecurityDescLen tagData;
+        Tag350LenEncodedSecurityDescLen tagData;
 
-        tagData = new Log350LenEncodedSecurityDescLen( new MyLengthType(23) );
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

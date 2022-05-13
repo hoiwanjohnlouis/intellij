@@ -37,17 +37,17 @@ class Tag346IntNumberOfOrdersTest {
     }
     @Test
     void Tag0346Test() {
-        Log346IntNumberOfOrders tagData;
+        Tag346IntNumberOfOrders tagData;
 
-        tagData = new Log346IntNumberOfOrders(new MyIntType(
-                Log346IntNumberOfOrders.TESTA_INT_NUMBER_OF_ORDERS));
-        assertEquals( Log346IntNumberOfOrders.TESTA_INT_NUMBER_OF_ORDERS,
+        tagData = new Tag346IntNumberOfOrders(new MyIntType(
+                Tag346IntNumberOfOrders.TESTA_INT_NUMBER_OF_ORDERS));
+        assertEquals( Tag346IntNumberOfOrders.TESTA_INT_NUMBER_OF_ORDERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log346IntNumberOfOrders(new MyIntType(
-                Log346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS));
-        assertEquals( Log346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS,
+        tagData = new Tag346IntNumberOfOrders(new MyIntType(
+                Tag346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS));
+        assertEquals( Tag346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

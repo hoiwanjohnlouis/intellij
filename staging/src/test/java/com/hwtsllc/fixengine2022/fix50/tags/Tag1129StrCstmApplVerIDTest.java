@@ -36,7 +36,7 @@ class Tag1129StrCstmApplVerIDTest {
         FIX50 fixData = FIX50.FIX1129_CSTM_APPL_VER_ID;
         assertEquals( "1129", fixData.getID());
         assertEquals( "CSTM_APPL_VER_ID", fixData.getName());
-        assertEquals( "Cstm Appl Ver Id", fixData.getDescription());
+        assertEquals( "CstmApplVerID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

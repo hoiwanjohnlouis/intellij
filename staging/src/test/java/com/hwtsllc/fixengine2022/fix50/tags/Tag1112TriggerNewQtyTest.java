@@ -36,7 +36,7 @@ class Tag1112TriggerNewQtyTest {
         FIX50 fixData = FIX50.FIX1112_TRIGGER_NEW_QTY;
         assertEquals( "1112", fixData.getID());
         assertEquals( "TRIGGER_NEW_QTY", fixData.getName());
-        assertEquals( "trigger_new_qty", fixData.getDescription());
+        assertEquals( "TriggerNewQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

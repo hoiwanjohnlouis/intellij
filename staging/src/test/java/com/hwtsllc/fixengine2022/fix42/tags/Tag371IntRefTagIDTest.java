@@ -30,7 +30,7 @@ class Tag371IntRefTagIDTest {
         FIX42 fixData = FIX42.FIX371_INT_REF_TAG_ID;
         assertEquals( "371", fixData.getID());
         assertEquals( "REF_TAG_ID", fixData.getName());
-        assertEquals( "RefTagId", fixData.getDescription());
+        assertEquals( "RefTagID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

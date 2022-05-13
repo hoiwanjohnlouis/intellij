@@ -30,24 +30,24 @@ class Tag335StrTradSesReqIDTest {
         FIX42 fixData = FIX42.FIX335_STR_TRAD_SES_REQ_ID;
         assertEquals( "335", fixData.getID());
         assertEquals( "TRAD_SES_REQ_ID", fixData.getName());
-        assertEquals( "TradSesReqId", fixData.getDescription());
+        assertEquals( "TradSesReqID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0335Test() {
-        Log335StrTradSesReqID tagData;
+        Tag335StrTradSesReqID tagData;
 
-        tagData = new Log335StrTradSesReqID(new MyStringType(
-                Log335StrTradSesReqID.TESTA_STR_TRAD_SES_REQ_ID));
-        assertEquals( Log335StrTradSesReqID.TESTA_STR_TRAD_SES_REQ_ID,
+        tagData = new Tag335StrTradSesReqID(new MyStringType(
+                Tag335StrTradSesReqID.TESTA_STR_TRAD_SES_REQ_ID));
+        assertEquals( Tag335StrTradSesReqID.TESTA_STR_TRAD_SES_REQ_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log335StrTradSesReqID(new MyStringType(
-                Log335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID));
-        assertEquals( Log335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID,
+        tagData = new Tag335StrTradSesReqID(new MyStringType(
+                Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID));
+        assertEquals( Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

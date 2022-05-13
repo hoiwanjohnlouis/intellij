@@ -37,17 +37,17 @@ class Tag403PctLiquidityPctHighTest {
     }
     @Test
     void Tag0403Test() {
-        Log403PctLiquidityPctHigh tagData;
+        Tag403PctLiquidityPctHigh tagData;
 
-        tagData = new Log403PctLiquidityPctHigh(new MyPercentageType(
-                Log403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH));
-        assertEquals( Log403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH,
+        tagData = new Tag403PctLiquidityPctHigh(new MyPercentageType(
+                Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH));
+        assertEquals( Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log403PctLiquidityPctHigh(new MyPercentageType(
-                Log403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH));
-        assertEquals( Log403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH,
+        tagData = new Tag403PctLiquidityPctHigh(new MyPercentageType(
+                Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH));
+        assertEquals( Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

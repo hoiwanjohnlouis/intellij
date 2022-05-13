@@ -37,17 +37,17 @@ class Tag400StrBidDescriptorTest {
     }
     @Test
     void Tag0400Test() {
-        Log400StrBidDescriptor tagData;
+        Tag400StrBidDescriptor tagData;
 
-        tagData = new Log400StrBidDescriptor(new MyStringType(
-                Log400StrBidDescriptor.TESTA_STR_BID_DESCRIPTOR));
-        assertEquals( Log400StrBidDescriptor.TESTA_STR_BID_DESCRIPTOR,
+        tagData = new Tag400StrBidDescriptor(new MyStringType(
+                Tag400StrBidDescriptor.TESTA_STR_BID_DESCRIPTOR));
+        assertEquals( Tag400StrBidDescriptor.TESTA_STR_BID_DESCRIPTOR,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log400StrBidDescriptor(new MyStringType(
-                Log400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR));
-        assertEquals( Log400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR,
+        tagData = new Tag400StrBidDescriptor(new MyStringType(
+                Tag400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR));
+        assertEquals( Tag400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

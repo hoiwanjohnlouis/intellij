@@ -37,17 +37,17 @@ class Tag273UtctMDEntryTimeTest {
     }
     @Test
     void Tag0273Test() {
-        Log273UtctMDEntryTime tagData;
+        Tag273UtctMDEntryTime tagData;
 
-        tagData = new Log273UtctMDEntryTime(new MyUTCTimeType(
-                Log273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME));
-        assertEquals( Log273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME,
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType(
+                Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME));
+        assertEquals( Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log273UtctMDEntryTime(new MyUTCTimeType(
-                Log273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME));
-        assertEquals( Log273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME,
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType(
+                Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME));
+        assertEquals( Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

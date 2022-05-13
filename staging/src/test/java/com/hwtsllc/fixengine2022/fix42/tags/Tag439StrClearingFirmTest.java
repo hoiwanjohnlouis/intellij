@@ -38,17 +38,17 @@ class Tag439StrClearingFirmTest {
     }
     @Test
     void Tag0439Test() {
-        Log439StrClearingFirm tagData;
+        Tag439StrClearingFirm tagData;
 
-        tagData = new Log439StrClearingFirm(new MyStringType(
-                Log439StrClearingFirm.TESTA_STR_CLEARING_FIRM));
-        assertEquals( Log439StrClearingFirm.TESTA_STR_CLEARING_FIRM,
+        tagData = new Tag439StrClearingFirm(new MyStringType(
+                Tag439StrClearingFirm.TESTA_STR_CLEARING_FIRM));
+        assertEquals( Tag439StrClearingFirm.TESTA_STR_CLEARING_FIRM,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log439StrClearingFirm(new MyStringType(
-                Log439StrClearingFirm.TESTB_STR_CLEARING_FIRM));
-        assertEquals( Log439StrClearingFirm.TESTB_STR_CLEARING_FIRM,
+        tagData = new Tag439StrClearingFirm(new MyStringType(
+                Tag439StrClearingFirm.TESTB_STR_CLEARING_FIRM));
+        assertEquals( Tag439StrClearingFirm.TESTB_STR_CLEARING_FIRM,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

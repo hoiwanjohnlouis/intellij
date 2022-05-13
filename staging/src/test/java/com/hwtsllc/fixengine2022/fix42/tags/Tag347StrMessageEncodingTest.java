@@ -37,17 +37,17 @@ class Tag347StrMessageEncodingTest {
     }
     @Test
     void Tag0347Test() {
-        Log347StrMessageEncoding tagData;
+        Tag347StrMessageEncoding tagData;
 
-        tagData = new Log347StrMessageEncoding(new MyStringType(
-                Log347StrMessageEncoding.TESTA_STR_MESSAGE_ENCODING));
-        assertEquals( Log347StrMessageEncoding.TESTA_STR_MESSAGE_ENCODING,
+        tagData = new Tag347StrMessageEncoding(new MyStringType(
+                Tag347StrMessageEncoding.TESTA_STR_MESSAGE_ENCODING));
+        assertEquals( Tag347StrMessageEncoding.TESTA_STR_MESSAGE_ENCODING,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log347StrMessageEncoding(new MyStringType(
-                Log347StrMessageEncoding.TESTB_STR_MESSAGE_ENCODING));
-        assertEquals( Log347StrMessageEncoding.TESTB_STR_MESSAGE_ENCODING,
+        tagData = new Tag347StrMessageEncoding(new MyStringType(
+                Tag347StrMessageEncoding.TESTB_STR_MESSAGE_ENCODING));
+        assertEquals( Tag347StrMessageEncoding.TESTB_STR_MESSAGE_ENCODING,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

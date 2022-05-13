@@ -37,7 +37,7 @@ class Tag1113StrTriggerTradingSessionIDTest {
         FIX50 fixData = FIX50.FIX1113_STR_TRIGGER_TRADING_SESSION_ID;
         assertEquals( "1113", fixData.getID());
         assertEquals( "TRIGGER_TRADING_SESSION_ID", fixData.getName());
-        assertEquals( "trigger_trading_session_id", fixData.getDescription());
+        assertEquals( "TriggerTradingSessionID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

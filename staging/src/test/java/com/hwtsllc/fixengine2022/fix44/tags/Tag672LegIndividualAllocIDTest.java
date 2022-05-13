@@ -36,7 +36,7 @@ class Tag672LegIndividualAllocIDTest {
         FIX44 fixData = FIX44.FIX672_LEG_INDIVIDUAL_ALLOC_ID;
         assertEquals( "672", fixData.getID());
         assertEquals( "LEG_INDIVIDUAL_ALLOC_ID", fixData.getName());
-        assertEquals( "LegIndividualAllocId", fixData.getDescription());
+        assertEquals( "LegIndividualAllocID", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

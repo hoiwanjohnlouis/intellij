@@ -38,7 +38,7 @@ class Tag1098StrPegSymbolTest {
         FIX50 fixData = FIX50.FIX1098_STR_PEG_SYMBOL;
         assertEquals( "1098", fixData.getID());
         assertEquals( "PEG_SYMBOL", fixData.getName());
-        assertEquals( "peg_symbol", fixData.getDescription());
+        assertEquals( "PegSymbol", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

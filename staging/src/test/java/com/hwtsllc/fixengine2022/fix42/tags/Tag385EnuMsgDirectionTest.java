@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag385
+ *  Enu
+ *  MsgDirection
+ *
+ *      R, and S msg types
+ *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
+ *      SEND( "S", "SEND", "S - Send" ),
+ */
 class Tag385EnuMsgDirectionTest {
     @Test
     void FIX0385Test() {
@@ -35,27 +44,18 @@ class Tag385EnuMsgDirectionTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag385
-     *  Enu
-     *  MsgDirection
-     *
-     *      R, and S msg types
-     *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
-     *      SEND( "S", "SEND", "S - Send" ),
-     */
     @Test
     void Tag0385Test() {
-        Log385EnuMsgDirection tagData;
+        Tag385EnuMsgDirection tagData;
 
-        /**
+        /*
          * R, and S msg types
          */
-        tagData = new Log385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
+        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
         assertEquals( Enum385MsgDirection.RECEIVE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log385EnuMsgDirection(Enum385MsgDirection.SEND);
+        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.SEND);
         assertEquals( Enum385MsgDirection.SEND.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

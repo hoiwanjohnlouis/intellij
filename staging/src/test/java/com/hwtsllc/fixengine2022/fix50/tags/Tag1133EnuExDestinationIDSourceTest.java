@@ -44,7 +44,7 @@ class Tag1133EnuExDestinationIDSourceTest {
         FIX50 fixData = FIX50.FIX1133_ENU_EX_DESTINATION_ID_SOURCE;
         assertEquals( "1133", fixData.getID());
         assertEquals( "EX_DESTINATION_ID_SOURCE", fixData.getName());
-        assertEquals( "ExDestinationIdSource", fixData.getDescription());
+        assertEquals( "ExDestinationIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

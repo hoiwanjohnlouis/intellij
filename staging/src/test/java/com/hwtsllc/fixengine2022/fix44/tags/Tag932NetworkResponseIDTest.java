@@ -33,9 +33,9 @@ class Tag932NetworkResponseIDTest {
     @Test
     void FIX0932Test() {
         FIX44 fixData = FIX44.FIX932_NETWORK_RESPONSE_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "932", fixData.getID());
+        assertEquals( "NETWORK_RESPONSE_ID", fixData.getName());
+        assertEquals( "NetworkResponseID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

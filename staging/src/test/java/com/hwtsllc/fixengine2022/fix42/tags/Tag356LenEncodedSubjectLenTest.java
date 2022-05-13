@@ -37,9 +37,9 @@ class Tag356LenEncodedSubjectLenTest {
     }
     @Test
     void Tag0356Test() {
-        Log356LenEncodedSubjectLen tagData;
+        Tag356LenEncodedSubjectLen tagData;
 
-        tagData = new Log356LenEncodedSubjectLen( new MyLengthType(23) );
+        tagData = new Tag356LenEncodedSubjectLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

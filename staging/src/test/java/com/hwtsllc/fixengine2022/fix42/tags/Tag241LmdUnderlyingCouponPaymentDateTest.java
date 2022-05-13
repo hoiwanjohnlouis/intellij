@@ -37,17 +37,17 @@ class Tag241LmdUnderlyingCouponPaymentDateTest {
     }
     @Test
     void Tag0241Test() {
-        Log241LmdUnderlyingCouponPaymentDate tagData;
+        Tag241LmdUnderlyingCouponPaymentDate tagData;
 
-        tagData = new Log241LmdUnderlyingCouponPaymentDate(new MyLocalMktDateType(
-                Log241LmdUnderlyingCouponPaymentDate.TESTA_LMD_UNDERLYING_COUPON_PAYMENT_DATE));
-        assertEquals( Log241LmdUnderlyingCouponPaymentDate.TESTA_LMD_UNDERLYING_COUPON_PAYMENT_DATE,
+        tagData = new Tag241LmdUnderlyingCouponPaymentDate(new MyLocalMktDateType(
+                Tag241LmdUnderlyingCouponPaymentDate.TESTA_LMD_UNDERLYING_COUPON_PAYMENT_DATE));
+        assertEquals( Tag241LmdUnderlyingCouponPaymentDate.TESTA_LMD_UNDERLYING_COUPON_PAYMENT_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log241LmdUnderlyingCouponPaymentDate(new MyLocalMktDateType(
-                Log241LmdUnderlyingCouponPaymentDate.TESTB_LMD_UNDERLYING_COUPON_PAYMENT_DATE));
-        assertEquals( Log241LmdUnderlyingCouponPaymentDate.TESTB_LMD_UNDERLYING_COUPON_PAYMENT_DATE,
+        tagData = new Tag241LmdUnderlyingCouponPaymentDate(new MyLocalMktDateType(
+                Tag241LmdUnderlyingCouponPaymentDate.TESTB_LMD_UNDERLYING_COUPON_PAYMENT_DATE));
+        assertEquals( Tag241LmdUnderlyingCouponPaymentDate.TESTB_LMD_UNDERLYING_COUPON_PAYMENT_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

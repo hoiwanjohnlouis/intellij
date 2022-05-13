@@ -37,17 +37,17 @@ class Tag437QtyContraTradeQtyTest {
     }
     @Test
     void Tag0437Test() {
-        Log437QtyContraTradeQty tagData;
+        Tag437QtyContraTradeQty tagData;
 
-        tagData = new Log437QtyContraTradeQty(new MyQtyType(
-                Log437QtyContraTradeQty.TESTA_QTY_CONTRA_TRADE_QTY));
-        assertEquals( Log437QtyContraTradeQty.TESTA_QTY_CONTRA_TRADE_QTY,
+        tagData = new Tag437QtyContraTradeQty(new MyQtyType(
+                Tag437QtyContraTradeQty.TESTA_QTY_CONTRA_TRADE_QTY));
+        assertEquals( Tag437QtyContraTradeQty.TESTA_QTY_CONTRA_TRADE_QTY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log437QtyContraTradeQty(new MyQtyType(
-                Log437QtyContraTradeQty.TESTB_QTY_CONTRA_TRADE_QTY));
-        assertEquals( Log437QtyContraTradeQty.TESTB_QTY_CONTRA_TRADE_QTY,
+        tagData = new Tag437QtyContraTradeQty(new MyQtyType(
+                Tag437QtyContraTradeQty.TESTB_QTY_CONTRA_TRADE_QTY));
+        assertEquals( Tag437QtyContraTradeQty.TESTB_QTY_CONTRA_TRADE_QTY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

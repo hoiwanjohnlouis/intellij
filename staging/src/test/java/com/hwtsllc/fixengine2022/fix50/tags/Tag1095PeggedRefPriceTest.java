@@ -41,7 +41,7 @@ class Tag1095PeggedRefPriceTest {
         FIX50 fixData = FIX50.FIX1095_PEGGED_REF_PRICE;
         assertEquals( "1095", fixData.getID());
         assertEquals( "PEGGED_REF_PRICE", fixData.getName());
-        assertEquals( "pegged_ref_price", fixData.getDescription());
+        assertEquals( "PeggedRefPrice", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

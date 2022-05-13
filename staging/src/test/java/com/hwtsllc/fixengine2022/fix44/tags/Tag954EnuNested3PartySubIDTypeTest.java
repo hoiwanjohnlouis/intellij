@@ -137,7 +137,7 @@ class Tag954EnuNested3PartySubIDTypeTest {
         FIX44 fixData = FIX44.FIX954_ENU_NESTED_3_PARTY_SUB_ID_TYPE;
         assertEquals( "954", fixData.getID());
         assertEquals( "NESTED_3_PARTY_SUB_ID_TYPE", fixData.getName());
-        assertEquals( "Nested3PartySubIdType", fixData.getDescription());
+        assertEquals( "Nested3PartySubIDType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

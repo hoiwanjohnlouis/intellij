@@ -36,7 +36,7 @@ class Tag1102TriggerPriceTest {
         FIX50 fixData = FIX50.FIX1102_TRIGGER_PRICE;
         assertEquals( "1102", fixData.getID());
         assertEquals( "TRIGGER_PRICE", fixData.getName());
-        assertEquals( "trigger_price", fixData.getDescription());
+        assertEquals( "TriggerPrice", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

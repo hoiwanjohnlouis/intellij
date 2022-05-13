@@ -135,7 +135,7 @@ class Tag1096EnuPegSecurityIDSourceTest {
         FIX50 fixData = FIX50.FIX1096_ENU_PEG_SECURITY_ID_SOURCE;
         assertEquals( "1096", fixData.getID());
         assertEquals( "PEG_SECURITY_ID_SOURCE", fixData.getName());
-        assertEquals( "PegSecurityIdSource", fixData.getDescription());
+        assertEquals( "PegSecurityIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

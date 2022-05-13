@@ -30,24 +30,24 @@ class Tag320StrSecurityReqIDTest {
         FIX42 fixData = FIX42.FIX320_STR_SECURITY_REQ_ID;
         assertEquals( "320", fixData.getID());
         assertEquals( "SECURITY_REQ_ID", fixData.getName());
-        assertEquals( "SecurityReqId", fixData.getDescription());
+        assertEquals( "SecurityReqID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0320Test() {
-        Log320StrSecurityReqID tagData;
+        Tag320StrSecurityReqID tagData;
 
-        tagData = new Log320StrSecurityReqID(new MyStringType(
-                Log320StrSecurityReqID.TESTA_STR_SECURITY_REQ_ID));
-        assertEquals( Log320StrSecurityReqID.TESTA_STR_SECURITY_REQ_ID,
+        tagData = new Tag320StrSecurityReqID(new MyStringType(
+                Tag320StrSecurityReqID.TESTA_STR_SECURITY_REQ_ID));
+        assertEquals( Tag320StrSecurityReqID.TESTA_STR_SECURITY_REQ_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log320StrSecurityReqID(new MyStringType(
-                Log320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID));
-        assertEquals( Log320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID,
+        tagData = new Tag320StrSecurityReqID(new MyStringType(
+                Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID));
+        assertEquals( Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

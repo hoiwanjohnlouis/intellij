@@ -37,17 +37,17 @@ class Tag223PctCouponRateTest {
     }
     @Test
     void Tag0223Test() {
-        Log223PctCouponRate tagData;
+        Tag223PctCouponRate tagData;
 
-        tagData = new Log223PctCouponRate(new MyPercentageType(
-                Log223PctCouponRate.TESTA_PCT_COUPON_RATE));
-        assertEquals( Log223PctCouponRate.TESTA_PCT_COUPON_RATE,
+        tagData = new Tag223PctCouponRate(new MyPercentageType(
+                Tag223PctCouponRate.TESTA_PCT_COUPON_RATE));
+        assertEquals( Tag223PctCouponRate.TESTA_PCT_COUPON_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log223PctCouponRate(new MyPercentageType(
-                Log223PctCouponRate.TESTB_PCT_COUPON_RATE));
-        assertEquals( Log223PctCouponRate.TESTB_PCT_COUPON_RATE,
+        tagData = new Tag223PctCouponRate(new MyPercentageType(
+                Tag223PctCouponRate.TESTB_PCT_COUPON_RATE));
+        assertEquals( Tag223PctCouponRate.TESTB_PCT_COUPON_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

@@ -28,9 +28,9 @@ class Tag464TestMessageIndicatorEnuTest {
     @Test
     void FIX0464Test() {
         FIX43 fixData = FIX43.FIX464_BOOL_TEST_MESSAGE_INDICATOR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "464", fixData.getID());
+        assertEquals( "TEST_MESSAGE_INDICATOR", fixData.getName());
+        assertEquals( "TestMessageIndicator", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

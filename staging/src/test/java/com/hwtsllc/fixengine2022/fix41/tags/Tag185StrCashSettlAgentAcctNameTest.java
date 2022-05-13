@@ -40,7 +40,7 @@ class Tag185StrCashSettlAgentAcctNameTest {
         FIX41 fixData = FIX41.FIX185_STR_CASH_SETTL_AGENT_ACCT_NAME;
         assertEquals( "185", fixData.getID());
         assertEquals( "CASH_SETTL_AGENT_ACCT_NAME", fixData.getName());
-        assertEquals( "CashSettlAgentAcctName", fixData.getDescription());
+        assertEquals( "CashSettlAgentAcctName (replaced)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -31,24 +31,24 @@ class Tag247LmdUnderlyingRedemptionDateTest {
         FIX42 fixData = FIX42.FIX247_LMD_UNDERLYING_REDEMPTION_DATE;
         assertEquals( "247", fixData.getID());
         assertEquals( "UNDERLYING_REDEMPTION_DATE", fixData.getName());
-        assertEquals( "UnderlyingRedemptionDate", fixData.getDescription());
+        assertEquals( "UnderlyingRedemptionDate (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0247Test() {
-        Log247LmdUnderlyingRedemptionDate tagData;
+        Tag247LmdUnderlyingRedemptionDate tagData;
 
-        tagData = new Log247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
-                Log247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE));
-        assertEquals( Log247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE,
+        tagData = new Tag247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
+                Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE));
+        assertEquals( Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
-                Log247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE));
-        assertEquals( Log247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE,
+        tagData = new Tag247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
+                Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE));
+        assertEquals( Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

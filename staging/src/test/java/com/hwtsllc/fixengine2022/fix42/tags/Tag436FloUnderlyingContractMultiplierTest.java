@@ -37,17 +37,17 @@ class Tag436FloUnderlyingContractMultiplierTest {
     }
     @Test
     void Tag0436Test() {
-        Log436FloUnderlyingContractMultiplier tagData;
+        Tag436FloUnderlyingContractMultiplier tagData;
 
-        tagData = new Log436FloUnderlyingContractMultiplier(new MyFloatType(
-                Log436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
-        assertEquals( Log436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
+        tagData = new Tag436FloUnderlyingContractMultiplier(new MyFloatType(
+                Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
+        assertEquals( Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log436FloUnderlyingContractMultiplier(new MyFloatType(
-                Log436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
-        assertEquals( Log436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
+        tagData = new Tag436FloUnderlyingContractMultiplier(new MyFloatType(
+                Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
+        assertEquals( Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }

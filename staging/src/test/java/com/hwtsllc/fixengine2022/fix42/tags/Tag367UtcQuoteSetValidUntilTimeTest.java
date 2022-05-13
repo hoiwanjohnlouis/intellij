@@ -37,17 +37,17 @@ class Tag367UtcQuoteSetValidUntilTimeTest {
     }
     @Test
     void Tag0367Test() {
-        Log367UtcQuoteSetValidUntilTime tagData;
+        Tag367UtcQuoteSetValidUntilTime tagData;
 
-        tagData = new Log367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
-                Log367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME));
-        assertEquals( Log367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME,
+        tagData = new Tag367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
+                Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME));
+        assertEquals( Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
-                Log367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME));
-        assertEquals( Log367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME,
+        tagData = new Tag367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
+                Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME));
+        assertEquals( Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

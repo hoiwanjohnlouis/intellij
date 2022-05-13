@@ -37,16 +37,16 @@ class Tag355DatEncodedTextTest {
     }
     @Test
     void Tag0355Test() {
-        Log355DatEncodedText tagData;
+        Tag355DatEncodedText tagData;
 
-        tagData = new Log355DatEncodedText(
-                new MyDataType(Log355DatEncodedText.TESTA_DAT_ENCODED_TEXT));
-        assertEquals( Log355DatEncodedText.TESTA_DAT_ENCODED_TEXT, tagData.getDataValue() );
+        tagData = new Tag355DatEncodedText(
+                new MyDataType(Tag355DatEncodedText.TESTA_DAT_ENCODED_TEXT));
+        assertEquals( Tag355DatEncodedText.TESTA_DAT_ENCODED_TEXT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log355DatEncodedText(
-                new MyDataType(Log355DatEncodedText.TESTB_DAT_ENCODED_TEXT));
-        assertEquals( Log355DatEncodedText.TESTB_DAT_ENCODED_TEXT, tagData.getDataValue() );
+        tagData = new Tag355DatEncodedText(
+                new MyDataType(Tag355DatEncodedText.TESTB_DAT_ENCODED_TEXT));
+        assertEquals( Tag355DatEncodedText.TESTB_DAT_ENCODED_TEXT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

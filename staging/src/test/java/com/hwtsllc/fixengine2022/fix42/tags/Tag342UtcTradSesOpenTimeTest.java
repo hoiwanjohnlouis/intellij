@@ -37,17 +37,17 @@ class Tag342UtcTradSesOpenTimeTest {
     }
     @Test
     void Tag0342Test() {
-        Log342UtcTradSesOpenTime tagData;
+        Tag342UtcTradSesOpenTime tagData;
 
-        tagData = new Log342UtcTradSesOpenTime(new MyUTCTimestampType(
-                Log342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME));
-        assertEquals( Log342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME,
+        tagData = new Tag342UtcTradSesOpenTime(new MyUTCTimestampType(
+                Tag342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME));
+        assertEquals( Tag342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log342UtcTradSesOpenTime(new MyUTCTimestampType(
-                Log342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME));
-        assertEquals( Log342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME,
+        tagData = new Tag342UtcTradSesOpenTime(new MyUTCTimestampType(
+                Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME));
+        assertEquals( Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

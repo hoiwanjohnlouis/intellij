@@ -134,7 +134,7 @@ class Tag1050EnuInstrumentPartyIDSourceTest {
         FIX50 fixData = FIX50.FIX1050_ENU_INSTRUMENT_PARTY_ID_SOURCE;
         assertEquals( "1050", fixData.getID());
         assertEquals( "INSTRUMENT_PARTY_ID_SOURCE", fixData.getName());
-        assertEquals( "InstrumentPartyIdSource", fixData.getDescription());
+        assertEquals( "InstrumentPartyIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

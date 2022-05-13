@@ -37,7 +37,7 @@ class Tag171StrStandInstDBIDTest {
         FIX41 fixData = FIX41.FIX171_STR_STAND_INST_DB_ID;
         assertEquals( "171", fixData.getID());
         assertEquals( "STAND_INST_DB_ID", fixData.getName());
-        assertEquals( "StandInstDbId", fixData.getDescription());
+        assertEquals( "StandInstDbID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

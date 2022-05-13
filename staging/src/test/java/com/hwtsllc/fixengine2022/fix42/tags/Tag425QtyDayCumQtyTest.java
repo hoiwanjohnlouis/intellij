@@ -37,17 +37,17 @@ class Tag425QtyDayCumQtyTest {
     }
     @Test
     void Tag0425Test() {
-        Log425QtyDayCumQty tagData;
+        Tag425QtyDayCumQty tagData;
 
-        tagData = new Log425QtyDayCumQty(new MyQtyType(
-                Log425QtyDayCumQty.TESTA_QTY_DAY_CUM_QTY));
-        assertEquals( Log425QtyDayCumQty.TESTA_QTY_DAY_CUM_QTY,
+        tagData = new Tag425QtyDayCumQty(new MyQtyType(
+                Tag425QtyDayCumQty.TESTA_QTY_DAY_CUM_QTY));
+        assertEquals( Tag425QtyDayCumQty.TESTA_QTY_DAY_CUM_QTY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log425QtyDayCumQty(new MyQtyType(
-                Log425QtyDayCumQty.TESTB_QTY_DAY_CUM_QTY));
-        assertEquals( Log425QtyDayCumQty.TESTB_QTY_DAY_CUM_QTY,
+        tagData = new Tag425QtyDayCumQty(new MyQtyType(
+                Tag425QtyDayCumQty.TESTB_QTY_DAY_CUM_QTY));
+        assertEquals( Tag425QtyDayCumQty.TESTB_QTY_DAY_CUM_QTY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

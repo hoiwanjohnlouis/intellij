@@ -71,13 +71,13 @@ class Tag312EnuUnderlyingSymbolSfxTest {
     }
     @Test
     void Tag0312Test() {
-        Log312EnuUnderlyingSymbolSfx tagData;
+        Tag312EnuUnderlyingSymbolSfx tagData;
 
-        tagData = new Log312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.EUCP);
+        tagData = new Tag312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.EUCP);
         assertEquals( MyEnumSymbolSfx.EUCP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
+        tagData = new Tag312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
         assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

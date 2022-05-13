@@ -33,9 +33,9 @@ class Tag930RefCompIDTest {
     @Test
     void FIX0930Test() {
         FIX44 fixData = FIX44.FIX930_REF_COMP_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "930", fixData.getID());
+        assertEquals( "REF_COMP_ID", fixData.getName());
+        assertEquals( "RefCompID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

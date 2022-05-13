@@ -37,17 +37,17 @@ class Tag405PctEFPTrackingErrorTest {
     }
     @Test
     void Tag0405Test() {
-        Log405PctEFPTrackingError tagData;
+        Tag405PctEFPTrackingError tagData;
 
-        tagData = new Log405PctEFPTrackingError(new MyPercentageType(
-                Log405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR));
-        assertEquals( Log405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR,
+        tagData = new Tag405PctEFPTrackingError(new MyPercentageType(
+                Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR));
+        assertEquals( Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log405PctEFPTrackingError(new MyPercentageType(
-                Log405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR));
-        assertEquals( Log405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR,
+        tagData = new Tag405PctEFPTrackingError(new MyPercentageType(
+                Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR));
+        assertEquals( Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

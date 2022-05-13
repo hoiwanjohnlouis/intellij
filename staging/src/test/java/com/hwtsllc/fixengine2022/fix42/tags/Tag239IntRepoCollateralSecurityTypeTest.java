@@ -30,24 +30,24 @@ class Tag239IntRepoCollateralSecurityTypeTest {
         FIX42 fixData = FIX42.FIX239_INT_REPO_COLLATERAL_SECURITY_TYPE;
         assertEquals( "239", fixData.getID());
         assertEquals( "REPO_COLLATERAL_SECURITY_TYPE", fixData.getName());
-        assertEquals( "RepoCollateralSecurityType", fixData.getDescription());
+        assertEquals( "RepoCollateralSecurityType (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0239Test() {
-        Log239IntRepoCollateralSecurityType tagData;
+        Tag239IntRepoCollateralSecurityType tagData;
 
-        tagData = new Log239IntRepoCollateralSecurityType(new MyIntType(
-                Log239IntRepoCollateralSecurityType.TESTA_INT_REPO_COLLATERAL_SECURITY_TYPE));
-        assertEquals( Log239IntRepoCollateralSecurityType.TESTA_INT_REPO_COLLATERAL_SECURITY_TYPE,
+        tagData = new Tag239IntRepoCollateralSecurityType(new MyIntType(
+                Tag239IntRepoCollateralSecurityType.TESTA_INT_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag239IntRepoCollateralSecurityType.TESTA_INT_REPO_COLLATERAL_SECURITY_TYPE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log239IntRepoCollateralSecurityType(new MyIntType(
-                Log239IntRepoCollateralSecurityType.TESTB_INT_REPO_COLLATERAL_SECURITY_TYPE));
-        assertEquals( Log239IntRepoCollateralSecurityType.TESTB_INT_REPO_COLLATERAL_SECURITY_TYPE,
+        tagData = new Tag239IntRepoCollateralSecurityType(new MyIntType(
+                Tag239IntRepoCollateralSecurityType.TESTB_INT_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag239IntRepoCollateralSecurityType.TESTB_INT_REPO_COLLATERAL_SECURITY_TYPE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

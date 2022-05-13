@@ -37,16 +37,16 @@ class Tag349DatEncodedIssuerTest {
     }
     @Test
     void Tag0349Test() {
-        Log349DatEncodedIssuer tagData;
+        Tag349DatEncodedIssuer tagData;
 
-        tagData = new Log349DatEncodedIssuer(
-                new MyDataType(Log349DatEncodedIssuer.TESTA_DAT_ENCODED_ISSUER));
-        assertEquals( Log349DatEncodedIssuer.TESTA_DAT_ENCODED_ISSUER, tagData.getDataValue() );
+        tagData = new Tag349DatEncodedIssuer(
+                new MyDataType(Tag349DatEncodedIssuer.TESTA_DAT_ENCODED_ISSUER));
+        assertEquals( Tag349DatEncodedIssuer.TESTA_DAT_ENCODED_ISSUER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log349DatEncodedIssuer(
-                new MyDataType(Log349DatEncodedIssuer.TESTB_DAT_ENCODED_ISSUER));
-        assertEquals( Log349DatEncodedIssuer.TESTB_DAT_ENCODED_ISSUER, tagData.getDataValue() );
+        tagData = new Tag349DatEncodedIssuer(
+                new MyDataType(Tag349DatEncodedIssuer.TESTB_DAT_ENCODED_ISSUER));
+        assertEquals( Tag349DatEncodedIssuer.TESTB_DAT_ENCODED_ISSUER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -36,7 +36,7 @@ class Tag1052NoInstrumentPartySubIDsTest {
         FIX50 fixData = FIX50.FIX1052_NO_INSTRUMENT_PARTY_SUB_IDS;
         assertEquals( "1052", fixData.getID());
         assertEquals( "NO_INSTRUMENT_PARTY_SUB_IDS", fixData.getName());
-        assertEquals( "NoInstrumentPartySubIds", fixData.getDescription());
+        assertEquals( "NoInstrumentPartySubIDs", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

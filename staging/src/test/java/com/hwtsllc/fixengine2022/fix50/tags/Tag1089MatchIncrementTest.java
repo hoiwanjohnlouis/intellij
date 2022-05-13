@@ -40,7 +40,7 @@ class Tag1089MatchIncrementTest {
         FIX50 fixData = FIX50.FIX1089_MATCH_INCREMENT;
         assertEquals( "1089", fixData.getID());
         assertEquals( "MATCH_INCREMENT", fixData.getName());
-        assertEquals( "match_increment", fixData.getDescription());
+        assertEquals( "MatchIncrement", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

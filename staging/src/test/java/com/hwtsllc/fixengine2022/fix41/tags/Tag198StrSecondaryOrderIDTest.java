@@ -38,7 +38,7 @@ class Tag198StrSecondaryOrderIDTest {
         FIX41 fixData = FIX41.FIX198_STR_SECONDARY_ORDER_ID;
         assertEquals( "198", fixData.getID());
         assertEquals( "SECONDARY_ORDER_ID", fixData.getName());
-        assertEquals( "SecondaryOrderId", fixData.getDescription());
+        assertEquals( "SecondaryOrderID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

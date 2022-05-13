@@ -31,24 +31,24 @@ class Tag250IntLegRepoCollateralSecurityTypeTest {
         FIX42 fixData = FIX42.FIX250_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
         assertEquals( "250", fixData.getID());
         assertEquals( "LEG_REPO_COLLATERAL_SECURITY_TYPE", fixData.getName());
-        assertEquals( "LegRepoCollateralSecurityType", fixData.getDescription());
+        assertEquals( "LegRepoCollateralSecurityType (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0250Test() {
-        Log250IntLegRepoCollateralSecurityType tagData;
+        Tag250IntLegRepoCollateralSecurityType tagData;
 
-        tagData = new Log250IntLegRepoCollateralSecurityType(new MyIntType(
-                Log250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE));
-        assertEquals( Log250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE,
+        tagData = new Tag250IntLegRepoCollateralSecurityType(new MyIntType(
+                Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log250IntLegRepoCollateralSecurityType(new MyIntType(
-                Log250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE));
-        assertEquals( Log250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE,
+        tagData = new Tag250IntLegRepoCollateralSecurityType(new MyIntType(
+                Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

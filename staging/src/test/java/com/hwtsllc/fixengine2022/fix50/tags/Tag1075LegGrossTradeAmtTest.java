@@ -39,7 +39,7 @@ class Tag1075LegGrossTradeAmtTest {
         FIX50 fixData = FIX50.FIX1075_LEG_GROSS_TRADE_AMT;
         assertEquals( "1075", fixData.getID());
         assertEquals( "LEG_GROSS_TRADE_AMT", fixData.getName());
-        assertEquals( "leg_gross_trade_amt", fixData.getDescription());
+        assertEquals( "LegGrossTradeAmt", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

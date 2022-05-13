@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  298
+ *  QuoteCancelType
+ *
+ *      1-5 msg types
+ *      CANCEL_FOR_SYMBOL( "1", "CANCEL_FOR_SYMBOL", "1 - Cancel for Symbol(s)" ),
+ *      CANCEL_FOR_SECURITY_TYPE( "2", "CANCEL_FOR_SECURITY_TYPE", "2 - Cancel for Security Type(s)" ),
+ *      CANCEL_FOR_UNDERLYING_SYMBOL( "3", "CANCEL_FOR_UNDERLYING_SYMBOL", "3 - Cancel for Underlying Symbol" ),
+ *      CANCEL_ALL_QUOTES( "4", "CANCEL_ALL_QUOTES", "4 - Cancel All Quotes" ),
+ *      CANCEL_QUOTEID_QUOTE("5", "CANCEL_QUOTEID_QUOTE", "5 - Cancel quote specified in QuoteID" ),
+ */
 class Tag298EnuQuoteCancelTypeTest {
     @Test
     void FIX0298Test() {
@@ -35,41 +46,30 @@ class Tag298EnuQuoteCancelTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  298
-     *  QuoteCancelType
-     *
-     *      1-5 msg types
-     *      CANCEL_FOR_SYMBOL( "1", "CANCEL_FOR_SYMBOL", "1 - Cancel for Symbol(s)" ),
-     *      CANCEL_FOR_SECURITY_TYPE( "2", "CANCEL_FOR_SECURITY_TYPE", "2 - Cancel for Security Type(s)" ),
-     *      CANCEL_FOR_UNDERLYING_SYMBOL( "3", "CANCEL_FOR_UNDERLYING_SYMBOL", "3 - Cancel for Underlying Symbol" ),
-     *      CANCEL_ALL_QUOTES( "4", "CANCEL_ALL_QUOTES", "4 - Cancel All Quotes" ),
-     *      CANCEL_QUOTEID_QUOTE("5", "CANCEL_QUOTEID_QUOTE", "5 - Cancel quote specified in QuoteID" ),
-     */
     @Test
     void Tag0298Test() {
-        Log298EnuQuoteCancelType tagData;
+        Tag298EnuQuoteCancelType tagData;
 
-        /**
+        /*
          * 1-5 msg types
          */
-        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SYMBOL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
         assertEquals( Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
         assertEquals( Enum298QuoteCancelType.CANCEL_ALL_QUOTES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
         assertEquals( Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

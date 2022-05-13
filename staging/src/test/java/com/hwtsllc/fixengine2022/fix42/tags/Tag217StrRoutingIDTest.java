@@ -30,23 +30,23 @@ class Tag217StrRoutingIDTest {
         FIX42 fixData = FIX42.FIX217_STR_ROUTING_ID;
         assertEquals( "217", fixData.getID());
         assertEquals( "ROUTING_ID", fixData.getName());
-        assertEquals( "RoutingId", fixData.getDescription());
+        assertEquals( "RoutingID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0217Test() {
-        Log217StrRoutingID tagData;
+        Tag217StrRoutingID tagData;
 
-        tagData = new Log217StrRoutingID(
-                new MyStringType(Log217StrRoutingID.TESTA_STR_ROUTING_ID));
-        assertEquals( Log217StrRoutingID.TESTA_STR_ROUTING_ID, tagData.getDataValue() );
+        tagData = new Tag217StrRoutingID(
+                new MyStringType(Tag217StrRoutingID.TESTA_STR_ROUTING_ID));
+        assertEquals( Tag217StrRoutingID.TESTA_STR_ROUTING_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log217StrRoutingID(
-                new MyStringType(Log217StrRoutingID.TESTB_STR_ROUTING_ID));
-        assertEquals( Log217StrRoutingID.TESTB_STR_ROUTING_ID, tagData.getDataValue() );
+        tagData = new Tag217StrRoutingID(
+                new MyStringType(Tag217StrRoutingID.TESTB_STR_ROUTING_ID));
+        assertEquals( Tag217StrRoutingID.TESTB_STR_ROUTING_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

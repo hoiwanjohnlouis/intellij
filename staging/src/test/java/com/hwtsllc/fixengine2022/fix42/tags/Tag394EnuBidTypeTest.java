@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag394
+ *  Enu
+ *  BidType
+ *
+ *      1-3 msg types
+ *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
+ *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
+ *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
+ */
 class Tag394EnuBidTypeTest {
     @Test
     void FIX0394Test() {
@@ -35,32 +45,22 @@ class Tag394EnuBidTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag394
-     *  Enu
-     *  BidType
-     *
-     *      1-3 msg types
-     *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
-     *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
-     *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
-     */
     @Test
     void Tag0394Test() {
-        Log394EnuBidType tagData;
+        Tag394EnuBidType tagData;
 
-        /**
+        /*
          * 1-3 msg types
          */
-        tagData = new Log394EnuBidType(Enum394BidType.NON_DISCLOSED);
+        tagData = new Tag394EnuBidType(Enum394BidType.NON_DISCLOSED);
         assertEquals( Enum394BidType.NON_DISCLOSED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log394EnuBidType(Enum394BidType.DISCLOSED);
+        tagData = new Tag394EnuBidType(Enum394BidType.DISCLOSED);
         assertEquals( Enum394BidType.DISCLOSED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log394EnuBidType(Enum394BidType.NO_BIDDING);
+        tagData = new Tag394EnuBidType(Enum394BidType.NO_BIDDING);
         assertEquals( Enum394BidType.NO_BIDDING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

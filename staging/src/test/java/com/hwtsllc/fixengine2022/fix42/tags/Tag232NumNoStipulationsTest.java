@@ -37,17 +37,17 @@ class Tag232NumNoStipulationsTest {
     }
     @Test
     void Tag0232Test() {
-        Log232NumNoStipulations tagData;
+        Tag232NumNoStipulations tagData;
 
-        tagData = new Log232NumNoStipulations(new MyNumInGroupType(
-                Log232NumNoStipulations.TESTA_NUM_NO_STIPULATIONS));
-        assertEquals( Log232NumNoStipulations.TESTA_NUM_NO_STIPULATIONS,
+        tagData = new Tag232NumNoStipulations(new MyNumInGroupType(
+                Tag232NumNoStipulations.TESTA_NUM_NO_STIPULATIONS));
+        assertEquals( Tag232NumNoStipulations.TESTA_NUM_NO_STIPULATIONS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log232NumNoStipulations(new MyNumInGroupType(
-                Log232NumNoStipulations.TESTB_NUM_NO_STIPULATIONS));
-        assertEquals( Log232NumNoStipulations.TESTB_NUM_NO_STIPULATIONS,
+        tagData = new Tag232NumNoStipulations(new MyNumInGroupType(
+                Tag232NumNoStipulations.TESTB_NUM_NO_STIPULATIONS));
+        assertEquals( Tag232NumNoStipulations.TESTB_NUM_NO_STIPULATIONS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

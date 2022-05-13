@@ -134,7 +134,7 @@ class Tag1118EnuRootPartyIDSourceTest {
         FIX50 fixData = FIX50.FIX1118_ENU_ROOT_PARTY_ID_SOURCE;
         assertEquals( "1118", fixData.getID());
         assertEquals( "ROOT_PARTY_ID_SOURCE", fixData.getName());
-        assertEquals( "RootPartyIdSource", fixData.getDescription());
+        assertEquals( "RootPartyIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

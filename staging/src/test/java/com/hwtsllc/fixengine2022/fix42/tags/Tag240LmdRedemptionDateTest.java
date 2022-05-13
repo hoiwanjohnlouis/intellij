@@ -31,24 +31,24 @@ class Tag240LmdRedemptionDateTest {
         FIX42 fixData = FIX42.FIX240_LMD_REDEMPTION_DATE;
         assertEquals( "240", fixData.getID());
         assertEquals( "REDEMPTION_DATE", fixData.getName());
-        assertEquals( "RedemptionDate", fixData.getDescription());
+        assertEquals( "RedemptionDate (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0240Test() {
-        Log240LmdRedemptionDate tagData;
+        Tag240LmdRedemptionDate tagData;
 
-        tagData = new Log240LmdRedemptionDate(new MyLocalMktDateType(
-                Log240LmdRedemptionDate.TESTA_LMD_REDEMPTION_DATE));
-        assertEquals( Log240LmdRedemptionDate.TESTA_LMD_REDEMPTION_DATE,
+        tagData = new Tag240LmdRedemptionDate(new MyLocalMktDateType(
+                Tag240LmdRedemptionDate.TESTA_LMD_REDEMPTION_DATE));
+        assertEquals( Tag240LmdRedemptionDate.TESTA_LMD_REDEMPTION_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log240LmdRedemptionDate(new MyLocalMktDateType(
-                Log240LmdRedemptionDate.TESTB_LMD_REDEMPTION_DATE));
-        assertEquals( Log240LmdRedemptionDate.TESTB_LMD_REDEMPTION_DATE,
+        tagData = new Tag240LmdRedemptionDate(new MyLocalMktDateType(
+                Tag240LmdRedemptionDate.TESTB_LMD_REDEMPTION_DATE));
+        assertEquals( Tag240LmdRedemptionDate.TESTB_LMD_REDEMPTION_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

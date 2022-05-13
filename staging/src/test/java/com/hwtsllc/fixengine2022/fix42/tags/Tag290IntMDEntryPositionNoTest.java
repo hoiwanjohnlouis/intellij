@@ -37,17 +37,17 @@ class Tag290IntMDEntryPositionNoTest {
     }
     @Test
     void Tag0290Test() {
-        Log290IntMDEntryPositionNo tagData;
+        Tag290IntMDEntryPositionNo tagData;
 
-        tagData = new Log290IntMDEntryPositionNo(new MyIntType(
-                Log290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO));
-        assertEquals( Log290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO,
+        tagData = new Tag290IntMDEntryPositionNo(new MyIntType(
+                Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO));
+        assertEquals( Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log290IntMDEntryPositionNo(new MyIntType(
-                Log290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO));
-        assertEquals( Log290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO,
+        tagData = new Tag290IntMDEntryPositionNo(new MyIntType(
+                Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO));
+        assertEquals( Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

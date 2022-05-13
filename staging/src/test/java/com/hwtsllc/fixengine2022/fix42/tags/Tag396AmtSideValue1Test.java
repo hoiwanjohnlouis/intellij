@@ -37,17 +37,17 @@ class Tag396AmtSideValue1Test {
     }
     @Test
     void Tag0396Test() {
-        Log396AmtSideValue1 tagData;
+        Tag396AmtSideValue1 tagData;
 
-        tagData = new Log396AmtSideValue1(new MyAmtType(
-                Log396AmtSideValue1.TESTA_AMT_SIDE_VALUE1));
-        assertEquals( Log396AmtSideValue1.TESTA_AMT_SIDE_VALUE1,
+        tagData = new Tag396AmtSideValue1(new MyAmtType(
+                Tag396AmtSideValue1.TESTA_AMT_SIDE_VALUE1));
+        assertEquals( Tag396AmtSideValue1.TESTA_AMT_SIDE_VALUE1,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log396AmtSideValue1(new MyAmtType(
-                Log396AmtSideValue1.TESTB_AMT_SIDE_VALUE1));
-        assertEquals( Log396AmtSideValue1.TESTB_AMT_SIDE_VALUE1,
+        tagData = new Tag396AmtSideValue1(new MyAmtType(
+                Tag396AmtSideValue1.TESTB_AMT_SIDE_VALUE1));
+        assertEquals( Tag396AmtSideValue1.TESTB_AMT_SIDE_VALUE1,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

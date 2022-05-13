@@ -37,17 +37,17 @@ class Tag264IntMarketDepthTest {
     }
     @Test
     void Tag0264Test() {
-        Log264IntMarketDepth tagData;
+        Tag264IntMarketDepth tagData;
 
-        tagData = new Log264IntMarketDepth(new MyIntType(
-                Log264IntMarketDepth.TESTA_INT_MARKET_DEPTH));
-        assertEquals( Log264IntMarketDepth.TESTA_INT_MARKET_DEPTH,
+        tagData = new Tag264IntMarketDepth(new MyIntType(
+                Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH));
+        assertEquals( Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log264IntMarketDepth(new MyIntType(
-                Log264IntMarketDepth.TESTB_INT_MARKET_DEPTH));
-        assertEquals( Log264IntMarketDepth.TESTB_INT_MARKET_DEPTH,
+        tagData = new Tag264IntMarketDepth(new MyIntType(
+                Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH));
+        assertEquals( Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

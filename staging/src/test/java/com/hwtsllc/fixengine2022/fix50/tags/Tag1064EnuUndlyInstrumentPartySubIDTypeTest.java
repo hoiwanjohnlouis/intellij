@@ -137,7 +137,7 @@ class Tag1064EnuUndlyInstrumentPartySubIDTypeTest {
         FIX50 fixData = FIX50.FIX1064_ENU_UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE;
         assertEquals( "1064", fixData.getID());
         assertEquals( "UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE", fixData.getName());
-        assertEquals( "UndlyInstrumentPartySubIdType", fixData.getDescription());
+        assertEquals( "UndlyInstrumentPartySubIDType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

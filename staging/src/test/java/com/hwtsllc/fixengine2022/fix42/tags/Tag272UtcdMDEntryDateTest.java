@@ -37,17 +37,17 @@ class Tag272UtcdMDEntryDateTest {
     }
     @Test
     void Tag0272Test() {
-        Log272UtcdMDEntryDate tagData;
+        Tag272UtcdMDEntryDate tagData;
 
-        tagData = new Log272UtcdMDEntryDate(new MyUTCDateType(
-                Log272UtcdMDEntryDate.TESTA_UTCD_MD_ENTRY_DATE));
-        assertEquals( Log272UtcdMDEntryDate.TESTA_UTCD_MD_ENTRY_DATE,
+        tagData = new Tag272UtcdMDEntryDate(new MyUTCDateType(
+                Tag272UtcdMDEntryDate.TESTA_UTCD_MD_ENTRY_DATE));
+        assertEquals( Tag272UtcdMDEntryDate.TESTA_UTCD_MD_ENTRY_DATE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log272UtcdMDEntryDate(new MyUTCDateType(
-                Log272UtcdMDEntryDate.TESTB_UTCD_MD_ENTRY_DATE));
-        assertEquals( Log272UtcdMDEntryDate.TESTB_UTCD_MD_ENTRY_DATE,
+        tagData = new Tag272UtcdMDEntryDate(new MyUTCDateType(
+                Tag272UtcdMDEntryDate.TESTB_UTCD_MD_ENTRY_DATE));
+        assertEquals( Tag272UtcdMDEntryDate.TESTB_UTCD_MD_ENTRY_DATE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

@@ -37,7 +37,7 @@ class Tag143StrTargetLocationIDTest {
         FIX41 fixData = FIX41.FIX143_STR_TARGET_LOCATION_ID;
         assertEquals( "143", fixData.getID());
         assertEquals( "TARGET_LOCATION_ID", fixData.getName());
-        assertEquals( "TargetLocationId", fixData.getDescription());
+        assertEquals( "TargetLocationID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

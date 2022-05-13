@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag338
+ *  Enu
+ *  TradSesMethod
+ *
+ *      1-3 msg types
+ *      ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
+ *      OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
+ *      TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
+ */
 class Tag338EnuTradSesMethodTest {
     @Test
     void FIX0338Test() {
@@ -35,32 +45,22 @@ class Tag338EnuTradSesMethodTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag338
-     *  Enu
-     *  TradSesMethod
-     *
-     *      1-3 msg types
-     *      ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
-     *      OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
-     *      TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
-     */
     @Test
     void Tag0338Test() {
-        Log338EnuTradSesMethod tagData;
+        Tag338EnuTradSesMethod tagData;
 
-        /**
+        /*
          * 1-3 msg types
          */
-        tagData = new Log338EnuTradSesMethod(Enum338TradSesMethod.ELECTRONIC);
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.ELECTRONIC);
         assertEquals( Enum338TradSesMethod.ELECTRONIC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log338EnuTradSesMethod(Enum338TradSesMethod.OPEN_OUTCRY);
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.OPEN_OUTCRY);
         assertEquals( Enum338TradSesMethod.OPEN_OUTCRY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log338EnuTradSesMethod(Enum338TradSesMethod.TWO_PARTY);
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.TWO_PARTY);
         assertEquals( Enum338TradSesMethod.TWO_PARTY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

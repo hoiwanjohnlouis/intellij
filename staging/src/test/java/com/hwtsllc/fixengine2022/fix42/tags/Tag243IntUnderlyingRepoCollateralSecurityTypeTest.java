@@ -31,24 +31,24 @@ class Tag243IntUnderlyingRepoCollateralSecurityTypeTest {
         FIX42 fixData = FIX42.FIX243_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE;
         assertEquals( "243", fixData.getID());
         assertEquals( "UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", fixData.getName());
-        assertEquals( "UnderlyingRepoCollateralSecurityType", fixData.getDescription());
+        assertEquals( "UnderlyingRepoCollateralSecurityType (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0243Test() {
-        Log243IntUnderlyingRepoCollateralSecurityType tagData;
+        Tag243IntUnderlyingRepoCollateralSecurityType tagData;
 
-        tagData = new Log243IntUnderlyingRepoCollateralSecurityType(new MyIntType(
-                Log243IntUnderlyingRepoCollateralSecurityType.TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE));
-        assertEquals( Log243IntUnderlyingRepoCollateralSecurityType.TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE,
+        tagData = new Tag243IntUnderlyingRepoCollateralSecurityType(new MyIntType(
+                Tag243IntUnderlyingRepoCollateralSecurityType.TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag243IntUnderlyingRepoCollateralSecurityType.TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log243IntUnderlyingRepoCollateralSecurityType(new MyIntType(
-                Log243IntUnderlyingRepoCollateralSecurityType.TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE));
-        assertEquals( Log243IntUnderlyingRepoCollateralSecurityType.TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE,
+        tagData = new Tag243IntUnderlyingRepoCollateralSecurityType(new MyIntType(
+                Tag243IntUnderlyingRepoCollateralSecurityType.TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE));
+        assertEquals( Tag243IntUnderlyingRepoCollateralSecurityType.TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

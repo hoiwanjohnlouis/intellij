@@ -37,17 +37,17 @@ class Tag366PrcAllocPriceTest {
     }
     @Test
     void Tag0366Test() {
-        Log366PrcAllocPrice tagData;
+        Tag366PrcAllocPrice tagData;
 
-        tagData = new Log366PrcAllocPrice(new MyPriceType(
-                Log366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE));
-        assertEquals( Log366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE,
+        tagData = new Tag366PrcAllocPrice(new MyPriceType(
+                Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE));
+        assertEquals( Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log366PrcAllocPrice(new MyPriceType(
-                Log366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE));
-        assertEquals( Log366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE,
+        tagData = new Tag366PrcAllocPrice(new MyPriceType(
+                Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE));
+        assertEquals( Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

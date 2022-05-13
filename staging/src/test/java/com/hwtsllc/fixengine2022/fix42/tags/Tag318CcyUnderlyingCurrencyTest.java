@@ -38,17 +38,17 @@ class Tag318CcyUnderlyingCurrencyTest {
     }
     @Test
     void Tag0318Test() {
-        Log318CcyUnderlyingCurrency tagData;
+        Tag318CcyUnderlyingCurrency tagData;
 
-        tagData = new Log318CcyUnderlyingCurrency(new MyCurrencyType(
-                Log318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY));
-        assertEquals( Log318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY,
+        tagData = new Tag318CcyUnderlyingCurrency(new MyCurrencyType(
+                Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY));
+        assertEquals( Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log318CcyUnderlyingCurrency(new MyCurrencyType(
-                Log318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY));
-        assertEquals( Log318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY,
+        tagData = new Tag318CcyUnderlyingCurrency(new MyCurrencyType(
+                Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY));
+        assertEquals( Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

@@ -94,49 +94,49 @@ class Tag63EnuSettlmntTypTest {
         Tag63EnuSettlmntTyp tagData;
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.REGULAR );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.REGULAR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.CASH );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.CASH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.NEXT_DAY );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.NEXT_DAY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.T_PLUS_2 );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.T_PLUS_2.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.T_PLUS_3 );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.T_PLUS_3.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.T_PLUS_4 );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.T_PLUS_4.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.FUTURE );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.FUTURE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.WHEN_ISSUED );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.WHEN_ISSUED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.SELLERS_OPTION );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.SELLERS_OPTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.T_PLUS_5 );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.T_PLUS_5.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.BROKEN_DATE );
-        assertEquals( Enum63SettlType.FX_SPOT.getID(), tagData.getDataValue());
+        assertEquals( Enum63SettlType.BROKEN_DATE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.FX_SPOT );

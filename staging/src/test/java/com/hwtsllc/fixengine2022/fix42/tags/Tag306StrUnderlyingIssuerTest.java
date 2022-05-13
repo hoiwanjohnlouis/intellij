@@ -37,16 +37,16 @@ class Tag306StrUnderlyingIssuerTest {
     }
     @Test
     void Tag0306Test() {
-        Log306StrUnderlyingIssuer tagData;
+        Tag306StrUnderlyingIssuer tagData;
 
-        tagData = new Log306StrUnderlyingIssuer(
-                new MyStringType(Log306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER));
-        assertEquals( Log306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER, tagData.getDataValue() );
+        tagData = new Tag306StrUnderlyingIssuer(
+                new MyStringType(Tag306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER));
+        assertEquals( Tag306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log306StrUnderlyingIssuer(
-                new MyStringType(Log306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER));
-        assertEquals( Log306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER, tagData.getDataValue() );
+        tagData = new Tag306StrUnderlyingIssuer(
+                new MyStringType(Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER));
+        assertEquals( Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

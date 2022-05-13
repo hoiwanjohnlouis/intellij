@@ -37,17 +37,17 @@ class Tag267NumNoMDEntryTypesTest {
     }
     @Test
     void Tag0267Test() {
-        Log267NumNoMDEntryTypes tagData;
+        Tag267NumNoMDEntryTypes tagData;
 
-        tagData = new Log267NumNoMDEntryTypes(new MyNumInGroupType(
-                Log267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES));
-        assertEquals( Log267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES,
+        tagData = new Tag267NumNoMDEntryTypes(new MyNumInGroupType(
+                Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES));
+        assertEquals( Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log267NumNoMDEntryTypes(new MyNumInGroupType(
-                Log267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES));
-        assertEquals( Log267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES,
+        tagData = new Tag267NumNoMDEntryTypes(new MyNumInGroupType(
+                Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES));
+        assertEquals( Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

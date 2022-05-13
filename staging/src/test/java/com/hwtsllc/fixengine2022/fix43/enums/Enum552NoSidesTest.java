@@ -34,18 +34,18 @@ class Enum552NoSidesTest {
          *  1-2 types
          */
         enumType = Enum552NoSides.ONE_SIDE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,ONE_SIDE,1 - One Side", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("ONE_SIDE", enumType.getName());
+        assertEquals("1 - One Side", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum552NoSides.BOTH_SIDES;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,BOTH_SIDES,2 - Both Sides", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("BOTH_SIDES", enumType.getName());
+        assertEquals("2 - Both Sides", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

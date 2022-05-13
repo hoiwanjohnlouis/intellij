@@ -37,17 +37,17 @@ class Tag406AmtFairValueTest {
     }
     @Test
     void Tag0406Test() {
-        Log406AmtFairValue tagData;
+        Tag406AmtFairValue tagData;
 
-        tagData = new Log406AmtFairValue(new MyAmtType(
-                Log406AmtFairValue.TESTA_AMT_FAIR_VALUE));
-        assertEquals( Log406AmtFairValue.TESTA_AMT_FAIR_VALUE,
+        tagData = new Tag406AmtFairValue(new MyAmtType(
+                Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE));
+        assertEquals( Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log406AmtFairValue(new MyAmtType(
-                Log406AmtFairValue.TESTB_AMT_FAIR_VALUE));
-        assertEquals( Log406AmtFairValue.TESTB_AMT_FAIR_VALUE,
+        tagData = new Tag406AmtFairValue(new MyAmtType(
+                Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE));
+        assertEquals( Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

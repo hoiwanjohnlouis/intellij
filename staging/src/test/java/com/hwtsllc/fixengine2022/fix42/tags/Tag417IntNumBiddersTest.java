@@ -37,17 +37,17 @@ class Tag417IntNumBiddersTest {
     }
     @Test
     void Tag0417Test() {
-        Log417IntNumBidders tagData;
+        Tag417IntNumBidders tagData;
 
-        tagData = new Log417IntNumBidders(new MyIntType(
-                Log417IntNumBidders.TESTA_INT_NUM_BIDDERS));
-        assertEquals( Log417IntNumBidders.TESTA_INT_NUM_BIDDERS,
+        tagData = new Tag417IntNumBidders(new MyIntType(
+                Tag417IntNumBidders.TESTA_INT_NUM_BIDDERS));
+        assertEquals( Tag417IntNumBidders.TESTA_INT_NUM_BIDDERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log417IntNumBidders(new MyIntType(
-                Log417IntNumBidders.TESTB_INT_NUM_BIDDERS));
-        assertEquals( Log417IntNumBidders.TESTB_INT_NUM_BIDDERS,
+        tagData = new Tag417IntNumBidders(new MyIntType(
+                Tag417IntNumBidders.TESTB_INT_NUM_BIDDERS));
+        assertEquals( Tag417IntNumBidders.TESTB_INT_NUM_BIDDERS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

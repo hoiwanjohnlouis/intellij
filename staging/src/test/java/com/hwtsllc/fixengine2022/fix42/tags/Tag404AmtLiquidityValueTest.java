@@ -37,17 +37,17 @@ class Tag404AmtLiquidityValueTest {
     }
     @Test
     void Tag0404Test() {
-        Log404AmtLiquidityValue tagData;
+        Tag404AmtLiquidityValue tagData;
 
-        tagData = new Log404AmtLiquidityValue(new MyAmtType(
-                Log404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE));
-        assertEquals( Log404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE,
+        tagData = new Tag404AmtLiquidityValue(new MyAmtType(
+                Tag404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE));
+        assertEquals( Tag404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log404AmtLiquidityValue(new MyAmtType(
-                Log404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE));
-        assertEquals( Log404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE,
+        tagData = new Tag404AmtLiquidityValue(new MyAmtType(
+                Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE));
+        assertEquals( Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

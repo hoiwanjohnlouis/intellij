@@ -37,17 +37,17 @@ class Tag296NumNoQuoteSetsTest {
     }
     @Test
     void Tag0296Test() {
-        Log296NumNoQuoteSets tagData;
+        Tag296NumNoQuoteSets tagData;
 
-        tagData = new Log296NumNoQuoteSets(new MyNumInGroupType(
-                Log296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS));
-        assertEquals( Log296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS,
+        tagData = new Tag296NumNoQuoteSets(new MyNumInGroupType(
+                Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS));
+        assertEquals( Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log296NumNoQuoteSets(new MyNumInGroupType(
-                Log296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS));
-        assertEquals( Log296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS,
+        tagData = new Tag296NumNoQuoteSets(new MyNumInGroupType(
+                Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS));
+        assertEquals( Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

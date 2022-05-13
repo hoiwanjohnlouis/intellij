@@ -43,7 +43,7 @@ class Tag1081EnuRefOrderIDSourceTest {
         FIX50 fixData = FIX50.FIX1081_ENU_REF_ORDER_ID_SOURCE;
         assertEquals( "1081", fixData.getID());
         assertEquals( "REF_ORDER_ID_SOURCE", fixData.getName());
-        assertEquals( "RefOrderIdSource", fixData.getDescription());
+        assertEquals( "RefOrderIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

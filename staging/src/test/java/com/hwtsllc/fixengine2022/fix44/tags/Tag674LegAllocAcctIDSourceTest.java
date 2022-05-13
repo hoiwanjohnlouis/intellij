@@ -36,7 +36,7 @@ class Tag674LegAllocAcctIDSourceTest {
         FIX44 fixData = FIX44.FIX674_LEG_ALLOC_ACCT_ID_SOURCE;
         assertEquals( "674", fixData.getID());
         assertEquals( "LEG_ALLOC_ACCT_ID_SOURCE", fixData.getName());
-        assertEquals( "LegAllocAcctIdSource", fixData.getDescription());
+        assertEquals( "LegAllocAcctIDSource", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

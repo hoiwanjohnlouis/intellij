@@ -36,7 +36,7 @@ class Tag1088RefreshQtyTest {
         FIX50 fixData = FIX50.FIX1088_REFRESH_QTY;
         assertEquals( "1088", fixData.getID());
         assertEquals( "REFRESH_QTY", fixData.getName());
-        assertEquals( "refresh_qty", fixData.getDescription());
+        assertEquals( "RefreshQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

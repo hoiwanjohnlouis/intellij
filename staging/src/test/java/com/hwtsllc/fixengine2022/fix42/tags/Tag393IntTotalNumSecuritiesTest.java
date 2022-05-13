@@ -37,17 +37,17 @@ class Tag393IntTotalNumSecuritiesTest {
     }
     @Test
     void Tag0393Test() {
-        Log393IntTotalNumSecurities tagData;
+        Tag393IntTotalNumSecurities tagData;
 
-        tagData = new Log393IntTotalNumSecurities(new MyIntType(
-                Log393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES));
-        assertEquals( Log393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES,
+        tagData = new Tag393IntTotalNumSecurities(new MyIntType(
+                Tag393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES));
+        assertEquals( Tag393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log393IntTotalNumSecurities(new MyIntType(
-                Log393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES));
-        assertEquals( Log393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES,
+        tagData = new Tag393IntTotalNumSecurities(new MyIntType(
+                Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES));
+        assertEquals( Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

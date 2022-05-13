@@ -37,16 +37,16 @@ class Tag361DatEncodedAllocTextTest {
     }
     @Test
     void Tag0361Test() {
-        Log361DatEncodedAllocText tagData;
+        Tag361DatEncodedAllocText tagData;
 
-        tagData = new Log361DatEncodedAllocText(
-                new MyDataType(Log361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT));
-        assertEquals( Log361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT, tagData.getDataValue() );
+        tagData = new Tag361DatEncodedAllocText(
+                new MyDataType(Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT));
+        assertEquals( Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log361DatEncodedAllocText(
-                new MyDataType(Log361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT));
-        assertEquals( Log361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT, tagData.getDataValue() );
+        tagData = new Tag361DatEncodedAllocText(
+                new MyDataType(Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT));
+        assertEquals( Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

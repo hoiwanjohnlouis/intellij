@@ -35,7 +35,7 @@ class Tag664ConfirmIDTest {
         FIX44 fixData = FIX44.FIX664_CONFIRM_ID;
         assertEquals( "664", fixData.getID());
         assertEquals( "CONFIRM_ID", fixData.getName());
-        assertEquals( "ConfirmId", fixData.getDescription());
+        assertEquals( "ConfirmID", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

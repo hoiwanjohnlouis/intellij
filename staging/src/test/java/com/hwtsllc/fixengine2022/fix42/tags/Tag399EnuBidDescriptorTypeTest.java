@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag399
+ *  Enu
+ *  BidDescriptorType
+ *
+ *      1-3 msg types
+ *      SECTOR( "1", "SECTOR", "1 - Sector" ),
+ *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
+ *      INDEX( "3", "INDEX", "3 - Index" ),
+ */
 class Tag399EnuBidDescriptorTypeTest {
     @Test
     void FIX0399Test() {
@@ -35,32 +45,22 @@ class Tag399EnuBidDescriptorTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag399
-     *  Enu
-     *  BidDescriptorType
-     *
-     *      1-3 msg types
-     *      SECTOR( "1", "SECTOR", "1 - Sector" ),
-     *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
-     *      INDEX( "3", "INDEX", "3 - Index" ),
-     */
     @Test
     void Tag0399Test() {
-        Log399EnuBidDescriptorType tagData;
+        Tag399EnuBidDescriptorType tagData;
 
-        /**
+        /*
          * 1-3 msg types
          */
-        tagData = new Log399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
         assertEquals( Enum399BidDescriptorType.SECTOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
         assertEquals( Enum399BidDescriptorType.COUNTRY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
         assertEquals( Enum399BidDescriptorType.INDEX.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

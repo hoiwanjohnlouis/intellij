@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag442
+ *  Enu
+ *  MultiLegReportingType
+ *
+ *      1-3 msg types
+ *      SINGLE_SECURITY( "1", "SINGLE_SECURITY", "1 - Single security (default if not specified)" ),
+ *      INDIVIDUAL_LEG_SECURITY( "2", "INDIVIDUAL_LEG_SECURITY", "2 - Individual leg of a multi=leg security" ),
+ *      MULTI_LEG_SECURITY( "3", "MULTI_LEG_SECURITY", "3 - Multi-leg security" ),
+ */
 class Tag442EnuMultiLegReportingTypeTest {
     @Test
     void FIX0442Test() {
@@ -35,32 +45,22 @@ class Tag442EnuMultiLegReportingTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag442
-     *  Enu
-     *  MultiLegReportingType
-     *
-     *      1-3 msg types
-     *      SINGLE_SECURITY( "1", "SINGLE_SECURITY", "1 - Single security (default if not specified)" ),
-     *      INDIVIDUAL_LEG_SECURITY( "2", "INDIVIDUAL_LEG_SECURITY", "2 - Individual leg of a multi=leg security" ),
-     *      MULTI_LEG_SECURITY( "3", "MULTI_LEG_SECURITY", "3 - Multi-leg security" ),
-     */
     @Test
     void Tag0442Test() {
-        Log442EnuMultiLegReportingType tagData;
+        Tag442EnuMultiLegReportingType tagData;
 
-        /**
+        /*
          * 1-3 msg types
          */
-        tagData = new Log442EnuMultiLegReportingType(Enum442MultiLegReportingType.SINGLE_SECURITY);
+        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.SINGLE_SECURITY);
         assertEquals( Enum442MultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log442EnuMultiLegReportingType(Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY);
+        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY);
         assertEquals( Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log442EnuMultiLegReportingType(Enum442MultiLegReportingType.MULTI_LEG_SECURITY);
+        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.MULTI_LEG_SECURITY);
         assertEquals( Enum442MultiLegReportingType.MULTI_LEG_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

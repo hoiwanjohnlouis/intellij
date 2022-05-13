@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag374
+ *  Enu
+ *  BidRequestTransType
+ *
+ *      C, and N msg types
+ *      CANCEL( "C", "CANCEL", "C - Cancel" ),
+ *      NEW( "N", "NEW", "N - New" ),
+ */
 class Tag374EnuBidRequestTransTypeTest {
     @Test
     void FIX0374Test() {
@@ -35,28 +44,19 @@ class Tag374EnuBidRequestTransTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag374
-     *  Enu
-     *  BidRequestTransType
-     *
-     *      C, and N msg types
-     *      CANCEL( "C", "CANCEL", "C - Cancel" ),
-     *      NEW( "N", "NEW", "N - New" ),
-     */
     @Test
     void Tag0374Test() {
-        Log374EnuBidRequestTransType tagData;
+        Tag374EnuBidRequestTransType tagData;
 
 
-        /**
+        /*
          * C, and N msg types
          */
-        tagData = new Log374EnuBidRequestTransType(Enum374BidRequestTransType.CANCEL);
+        tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.CANCEL);
         assertEquals( Enum374BidRequestTransType.CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log374EnuBidRequestTransType(Enum374BidRequestTransType.NEW);
+        tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.NEW);
         assertEquals( Enum374BidRequestTransType.NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

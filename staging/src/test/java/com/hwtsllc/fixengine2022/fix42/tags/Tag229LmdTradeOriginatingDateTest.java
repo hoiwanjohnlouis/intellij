@@ -37,17 +37,17 @@ class Tag229LmdTradeOriginatingDateTest {
     }
     @Test
     void Tag0229Test() {
-        Log229LmdTradeOriginatingDate tagData;
+        Tag229LmdTradeOriginatingDate tagData;
 
-        tagData = new Log229LmdTradeOriginatingDate(new MyLocalMktDateType(
-                Log229LmdTradeOriginatingDate.TESTA_LMD_TRADE_ORIGINATION_DATE));
-        assertEquals( Log229LmdTradeOriginatingDate.TESTA_LMD_TRADE_ORIGINATION_DATE,
+        tagData = new Tag229LmdTradeOriginatingDate(new MyLocalMktDateType(
+                Tag229LmdTradeOriginatingDate.TESTA_LMD_TRADE_ORIGINATION_DATE));
+        assertEquals( Tag229LmdTradeOriginatingDate.TESTA_LMD_TRADE_ORIGINATION_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log229LmdTradeOriginatingDate(new MyLocalMktDateType(
-                Log229LmdTradeOriginatingDate.TESTB_LMD_TRADE_ORIGINATION_DATE));
-        assertEquals( Log229LmdTradeOriginatingDate.TESTB_LMD_TRADE_ORIGINATION_DATE,
+        tagData = new Tag229LmdTradeOriginatingDate(new MyLocalMktDateType(
+                Tag229LmdTradeOriginatingDate.TESTB_LMD_TRADE_ORIGINATION_DATE));
+        assertEquals( Tag229LmdTradeOriginatingDate.TESTB_LMD_TRADE_ORIGINATION_DATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }

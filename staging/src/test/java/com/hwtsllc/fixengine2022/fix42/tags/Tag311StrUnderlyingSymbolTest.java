@@ -37,16 +37,16 @@ class Tag311StrUnderlyingSymbolTest {
     }
     @Test
     void Tag0311Test() {
-        Log311StrUnderlyingSymbol tagData;
+        Tag311StrUnderlyingSymbol tagData;
 
-        tagData = new Log311StrUnderlyingSymbol(
-                new MyStringType(Log311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL));
-        assertEquals( Log311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
+        tagData = new Tag311StrUnderlyingSymbol(
+                new MyStringType(Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL));
+        assertEquals( Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log311StrUnderlyingSymbol(
-                new MyStringType(Log311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL));
-        assertEquals( Log311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
+        tagData = new Tag311StrUnderlyingSymbol(
+                new MyStringType(Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL));
+        assertEquals( Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

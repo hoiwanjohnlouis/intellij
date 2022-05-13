@@ -37,17 +37,17 @@ class Tag381AmtGrossTradeAmtTest {
     }
     @Test
     void Tag0381Test() {
-        Log381AmtGrossTradeAmt tagData;
+        Tag381AmtGrossTradeAmt tagData;
 
-        tagData = new Log381AmtGrossTradeAmt(new MyAmtType(
-                Log381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT));
-        assertEquals( Log381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT,
+        tagData = new Tag381AmtGrossTradeAmt(new MyAmtType(
+                Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT));
+        assertEquals( Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log381AmtGrossTradeAmt(new MyAmtType(
-                Log381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT));
-        assertEquals( Log381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT,
+        tagData = new Tag381AmtGrossTradeAmt(new MyAmtType(
+                Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT));
+        assertEquals( Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

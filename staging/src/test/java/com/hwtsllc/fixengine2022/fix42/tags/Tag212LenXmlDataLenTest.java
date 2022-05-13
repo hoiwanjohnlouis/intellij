@@ -37,9 +37,9 @@ class Tag212LenXmlDataLenTest {
     }
     @Test
     void Tag0212Test() {
-        Log212LenXmlDataLen tagData;
+        Tag212LenXmlDataLen tagData;
 
-        tagData = new Log212LenXmlDataLen( new MyLengthType(23) );
+        tagData = new Tag212LenXmlDataLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

@@ -37,17 +37,17 @@ class Tag408AmtValueOfFuturesTest {
     }
     @Test
     void Tag0408Test() {
-        Log408AmtValueOfFutures tagData;
+        Tag408AmtValueOfFutures tagData;
 
-        tagData = new Log408AmtValueOfFutures(new MyAmtType(
-                Log408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES));
-        assertEquals( Log408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES,
+        tagData = new Tag408AmtValueOfFutures(new MyAmtType(
+                Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES));
+        assertEquals( Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log408AmtValueOfFutures(new MyAmtType(
-                Log408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES));
-        assertEquals( Log408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES,
+        tagData = new Tag408AmtValueOfFutures(new MyAmtType(
+                Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES));
+        assertEquals( Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

@@ -37,17 +37,17 @@ class Tag420NumNoBidComponentsTest {
     }
     @Test
     void Tag0420Test() {
-        Log420NumNoBidComponents tagData;
+        Tag420NumNoBidComponents tagData;
 
-        tagData = new Log420NumNoBidComponents(new MyNumInGroupType(
-                Log420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS));
-        assertEquals( Log420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS,
+        tagData = new Tag420NumNoBidComponents(new MyNumInGroupType(
+                Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS));
+        assertEquals( Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log420NumNoBidComponents(new MyNumInGroupType(
-                Log420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS));
-        assertEquals( Log420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS,
+        tagData = new Tag420NumNoBidComponents(new MyNumInGroupType(
+                Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS));
+        assertEquals( Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

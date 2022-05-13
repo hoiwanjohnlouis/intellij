@@ -28,26 +28,26 @@ class Tag231FloContractMultiplierTest {
     @Test
     void FIX0231Test() {
         FIX42 fixData = FIX42.FIX231_FLO_CONTRACT_MULTIPLIER;
-        assertEquals( "FIX231_FLO_CONTRACT_MULTIPLIER", fixData.getID());
-        assertEquals( "FIX231_FLO_CONTRACT_MULTIPLIER", fixData.getName());
-        assertEquals( "FIX231_FLO_CONTRACT_MULTIPLIER", fixData.getDescription());
+        assertEquals( "231", fixData.getID());
+        assertEquals( "CONTRACT_MULTIPLIER", fixData.getName());
+        assertEquals( "ContractMultiplier", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0231Test() {
-        Log231FloContractMultiplier tagData;
+        Tag231FloContractMultiplier tagData;
 
-        tagData = new Log231FloContractMultiplier(new MyFloatType(
-                Log231FloContractMultiplier.TESTA_FLO_CONTRACT_MULTIPLIER));
-        assertEquals( Log231FloContractMultiplier.TESTA_FLO_CONTRACT_MULTIPLIER,
+        tagData = new Tag231FloContractMultiplier(new MyFloatType(
+                Tag231FloContractMultiplier.TESTA_FLO_CONTRACT_MULTIPLIER));
+        assertEquals( Tag231FloContractMultiplier.TESTA_FLO_CONTRACT_MULTIPLIER,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log231FloContractMultiplier(new MyFloatType(
-                Log231FloContractMultiplier.TESTB_FLO_CONTRACT_MULTIPLIER));
-        assertEquals( Log231FloContractMultiplier.TESTB_FLO_CONTRACT_MULTIPLIER,
+        tagData = new Tag231FloContractMultiplier(new MyFloatType(
+                Tag231FloContractMultiplier.TESTB_FLO_CONTRACT_MULTIPLIER));
+        assertEquals( Tag231FloContractMultiplier.TESTB_FLO_CONTRACT_MULTIPLIER,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }

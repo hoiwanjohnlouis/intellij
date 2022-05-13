@@ -31,24 +31,24 @@ class Tag314IntUnderlyingMaturityDayTest {
         FIX42 fixData = FIX42.FIX314_INT_UNDERLYING_MATURITY_DAY;
         assertEquals( "314", fixData.getID());
         assertEquals( "UNDERLYING_MATURITY_DAY", fixData.getName());
-        assertEquals( "UnderlyingMaturityDay", fixData.getDescription());
+        assertEquals( "UnderlyingMaturityDay (replaced)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0314Test() {
-        Log314IntUnderlyingMaturityDay tagData;
+        Tag314IntUnderlyingMaturityDay tagData;
 
-        tagData = new Log314IntUnderlyingMaturityDay(new MyIntType(
-                Log314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY));
-        assertEquals( Log314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY,
+        tagData = new Tag314IntUnderlyingMaturityDay(new MyIntType(
+                Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY));
+        assertEquals( Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log314IntUnderlyingMaturityDay(new MyIntType(
-                Log314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY));
-        assertEquals( Log314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY,
+        tagData = new Tag314IntUnderlyingMaturityDay(new MyIntType(
+                Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY));
+        assertEquals( Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

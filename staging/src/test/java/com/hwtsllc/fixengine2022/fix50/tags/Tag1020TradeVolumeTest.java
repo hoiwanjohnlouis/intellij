@@ -36,7 +36,7 @@ class Tag1020TradeVolumeTest {
         FIX50 fixData = FIX50.FIX1020_TRADE_VOLUME;
         assertEquals( "1020", fixData.getID());
         assertEquals( "TRADE_VOLUME", fixData.getName());
-        assertEquals( "Trade Volume", fixData.getDescription());
+        assertEquals( "TradeVolume", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

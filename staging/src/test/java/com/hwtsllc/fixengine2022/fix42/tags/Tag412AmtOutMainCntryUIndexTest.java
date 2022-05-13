@@ -37,17 +37,17 @@ class Tag412AmtOutMainCntryUIndexTest {
     }
     @Test
     void Tag0412Test() {
-        Log412AmtOutMainCntryUIndex tagData;
+        Tag412AmtOutMainCntryUIndex tagData;
 
-        tagData = new Log412AmtOutMainCntryUIndex(new MyAmtType(
-                Log412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX));
-        assertEquals( Log412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX,
+        tagData = new Tag412AmtOutMainCntryUIndex(new MyAmtType(
+                Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX));
+        assertEquals( Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log412AmtOutMainCntryUIndex(new MyAmtType(
-                Log412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX));
-        assertEquals( Log412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX,
+        tagData = new Tag412AmtOutMainCntryUIndex(new MyAmtType(
+                Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX));
+        assertEquals( Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

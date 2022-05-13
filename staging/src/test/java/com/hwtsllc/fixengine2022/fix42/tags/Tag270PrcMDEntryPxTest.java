@@ -37,17 +37,17 @@ class Tag270PrcMDEntryPxTest {
     }
     @Test
     void Tag0270Test() {
-        Log270PrcMDEntryPx tagData;
+        Tag270PrcMDEntryPx tagData;
 
-        tagData = new Log270PrcMDEntryPx(new MyPriceType(
-                Log270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX));
-        assertEquals( Log270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX,
+        tagData = new Tag270PrcMDEntryPx(new MyPriceType(
+                Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX));
+        assertEquals( Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log270PrcMDEntryPx(new MyPriceType(
-                Log270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX));
-        assertEquals( Log270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX,
+        tagData = new Tag270PrcMDEntryPx(new MyPriceType(
+                Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX));
+        assertEquals( Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

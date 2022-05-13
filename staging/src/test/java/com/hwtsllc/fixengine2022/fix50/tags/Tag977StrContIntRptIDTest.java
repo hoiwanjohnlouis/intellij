@@ -37,7 +37,7 @@ class Tag977StrContIntRptIDTest {
         FIX50 fixData = FIX50.FIX977_STR_CONT_INT_RPT_ID;
         assertEquals( "977", fixData.getID());
         assertEquals( "CONT_INT_RPT_ID", fixData.getName());
-        assertEquals( "ContIntRptId", fixData.getDescription());
+        assertEquals( "ContIntRptID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

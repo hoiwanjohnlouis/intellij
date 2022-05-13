@@ -28,9 +28,9 @@ class Tag449UtcdTotalVolumeTradedDateTest {
     @Test
     void FIX0449Test() {
         FIX43 fixData = FIX43.FIX449_UTCD_TOTAL_VOLUME_TRADED_DATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "449", fixData.getID());
+        assertEquals( "TOTAL_VOLUME_TRADED_DATE", fixData.getName());
+        assertEquals( "TotalVolumeTradedDate (replaced)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

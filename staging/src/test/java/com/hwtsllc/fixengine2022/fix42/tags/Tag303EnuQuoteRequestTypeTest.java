@@ -24,6 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  303
+ *  QuoteRequestType
+ *
+ *      1-2 msg types
+ *      MANUAL( "1", "MANUAL", "1 - Manual" ),
+ *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
+ */
 class Tag303EnuQuoteRequestTypeTest {
     @Test
     void FIX0303Test() {
@@ -35,26 +43,18 @@ class Tag303EnuQuoteRequestTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  303
-     *  QuoteRequestType
-     *
-     *      1-2 msg types
-     *      MANUAL( "1", "MANUAL", "1 - Manual" ),
-     *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
-     */
     @Test
     void Tag0303Test() {
-        Log303EnuQuoteRequestType tagData;
+        Tag303EnuQuoteRequestType tagData;
 
-        /**
+        /*
          * 1-2 msg types
          */
-        tagData = new Log303EnuQuoteRequestType(Enum303QuoteRequestType.MANUAL);
+        tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.MANUAL);
         assertEquals( Enum303QuoteRequestType.MANUAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log303EnuQuoteRequestType(Enum303QuoteRequestType.AUTOMATIC);
+        tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.AUTOMATIC);
         assertEquals( Enum303QuoteRequestType.AUTOMATIC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

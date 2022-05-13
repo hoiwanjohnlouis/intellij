@@ -37,7 +37,7 @@ class Tag1099StrPegSecurityDescTest {
         FIX50 fixData = FIX50.FIX1099_STR_PEG_SECURITY_DESC;
         assertEquals( "1099", fixData.getID());
         assertEquals( "PEG_SECURITY_DESC", fixData.getName());
-        assertEquals( "peg_security_desc", fixData.getDescription());
+        assertEquals( "PegSecurityDesc", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

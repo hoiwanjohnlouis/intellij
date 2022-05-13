@@ -37,7 +37,7 @@ class Tag1080StrRefOrderIDTest {
         FIX50 fixData = FIX50.FIX1080_STR_REF_ORDER_ID;
         assertEquals( "1080", fixData.getID());
         assertEquals( "REF_ORDER_ID", fixData.getName());
-        assertEquals( "ref_order_id", fixData.getDescription());
+        assertEquals( "RefOrderID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

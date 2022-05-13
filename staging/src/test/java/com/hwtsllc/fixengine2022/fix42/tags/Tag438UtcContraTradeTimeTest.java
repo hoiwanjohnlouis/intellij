@@ -37,17 +37,17 @@ class Tag438UtcContraTradeTimeTest {
     }
     @Test
     void Tag0438Test() {
-        Log438UtcContraTradeTime tagData;
+        Tag438UtcContraTradeTime tagData;
 
-        tagData = new Log438UtcContraTradeTime(new MyUTCTimestampType(
-                Log438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME));
-        assertEquals( Log438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME,
+        tagData = new Tag438UtcContraTradeTime(new MyUTCTimestampType(
+                Tag438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME));
+        assertEquals( Tag438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log438UtcContraTradeTime(new MyUTCTimestampType(
-                Log438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME));
-        assertEquals( Log438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME,
+        tagData = new Tag438UtcContraTradeTime(new MyUTCTimestampType(
+                Tag438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME));
+        assertEquals( Tag438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

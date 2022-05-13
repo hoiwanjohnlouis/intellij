@@ -30,23 +30,23 @@ class Tag299StrQuoteEntryIDTest {
         FIX42 fixData = FIX42.FIX299_STR_QUOTE_ENTRY_ID;
         assertEquals( "299", fixData.getID());
         assertEquals( "QUOTE_ENTRY_ID", fixData.getName());
-        assertEquals( "QuoteEntryId", fixData.getDescription());
+        assertEquals( "QuoteEntryID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0299Test() {
-        Log299StrQuoteEntryID tagData;
+        Tag299StrQuoteEntryID tagData;
 
-        tagData = new Log299StrQuoteEntryID(
-                new MyStringType(Log299StrQuoteEntryID.TESTA_STR_QUOTE_ENTRY_ID));
-        assertEquals( Log299StrQuoteEntryID.TESTA_STR_QUOTE_ENTRY_ID, tagData.getDataValue() );
+        tagData = new Tag299StrQuoteEntryID(
+                new MyStringType(Tag299StrQuoteEntryID.TESTA_STR_QUOTE_ENTRY_ID));
+        assertEquals( Tag299StrQuoteEntryID.TESTA_STR_QUOTE_ENTRY_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log299StrQuoteEntryID(
-                new MyStringType(Log299StrQuoteEntryID.TESTB_STR_QUOTE_ENTRY_ID));
-        assertEquals( Log299StrQuoteEntryID.TESTB_STR_QUOTE_ENTRY_ID, tagData.getDataValue() );
+        tagData = new Tag299StrQuoteEntryID(
+                new MyStringType(Tag299StrQuoteEntryID.TESTB_STR_QUOTE_ENTRY_ID));
+        assertEquals( Tag299StrQuoteEntryID.TESTB_STR_QUOTE_ENTRY_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

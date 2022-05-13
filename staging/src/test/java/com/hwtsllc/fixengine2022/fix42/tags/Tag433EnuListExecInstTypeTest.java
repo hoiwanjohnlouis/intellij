@@ -24,6 +24,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag433
+ *  Enu
+ *  ListExecInstType
+ *
+ *      1-5 msg types
+ *      IMMEDIATE( "1", "IMMEDIATE", "1 - Immediate" ),
+ *      WAIT_FOR_EXECUTION_INSTRUCTION( "2", "WAIT_FOR_EXECUTION_INSTRUCTION",
+ *                          "2 - Wait for Execution Instruction (i.e. a List Execution message or " +
+ *                          "phone call before proceeding with execution of the list)" ),
+ *      SELL_DRIVEN( "3", "SELL_DRIVEN", "3 - Exchange/switch CIV order - Sell driven" ),
+ *      BUY_DRIVEN_CASH_TOP_UP( "4", "BUY_DRIVEN_CASH_TOP_UP",
+ *                          "4 - Exchange/switch CIV order - Buy driven, cash top-up " +
+ *                          "(i.e. additional cash will be provided to fulfill the order)" ),
+ *      BUY_DRIVEN_CASH_WITHDRAW( "5", "BUY_DRIVEN_CASH_WITHDRAW",
+ *                          "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
+ *                          "(i.e. additional cash will not be provided to fulfill the order)" ),
+ */
 class Tag433EnuListExecInstTypeTest {
     @Test
     void FIX0433Test() {
@@ -35,48 +53,30 @@ class Tag433EnuListExecInstTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag433
-     *  Enu
-     *  ListExecInstType
-     *
-     *      1-5 msg types
-     *      IMMEDIATE( "1", "IMMEDIATE", "1 - Immediate" ),
-     *      WAIT_FOR_EXECUTION_INSTRUCTION( "2", "WAIT_FOR_EXECUTION_INSTRUCTION",
-     *                          "2 - Wait for Execution Instruction (i.e. a List Execution message or " +
-     *                          "phone call before proceeding with execution of the list)" ),
-     *      SELL_DRIVEN( "3", "SELL_DRIVEN", "3 - Exchange/switch CIV order - Sell driven" ),
-     *      BUY_DRIVEN_CASH_TOP_UP( "4", "BUY_DRIVEN_CASH_TOP_UP",
-     *                          "4 - Exchange/switch CIV order - Buy driven, cash top-up " +
-     *                          "(i.e. additional cash will be provided to fulfill the order)" ),
-     *      BUY_DRIVEN_CASH_WITHDRAW( "5", "BUY_DRIVEN_CASH_WITHDRAW",
-     *                          "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
-     *                          "(i.e. additional cash will not be provided to fulfill the order)" ),
-     */
     @Test
     void Tag0433Test() {
-        Log433EnuListExecInstType tagData;
+        Tag433EnuListExecInstType tagData;
 
-        /**
+        /*
          * 1-5 msg types
          */
-        tagData = new Log433EnuListExecInstType(Enum433ListExecInstType.IMMEDIATE);
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.IMMEDIATE);
         assertEquals( Enum433ListExecInstType.IMMEDIATE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log433EnuListExecInstType(Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION);
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION);
         assertEquals( Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log433EnuListExecInstType(Enum433ListExecInstType.SELL_DRIVEN);
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.SELL_DRIVEN);
         assertEquals( Enum433ListExecInstType.SELL_DRIVEN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP);
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP);
         assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW);
+        tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW);
         assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

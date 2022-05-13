@@ -71,8 +71,8 @@ class Enum531MassCancelResponseTest {
 
         enumType = Enum531MassCancelResponse.CANCEL_ORDERS_FOR_CFICODE;
         assertEquals("4", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("4,CANCEL_ORDERS_FOR_CFICODE,4 - Cancel orders for a CFICode", enumType.getDescription());
+        assertEquals("CANCEL_ORDERS_FOR_CFICODE", enumType.getName());
+        assertEquals("4 - Cancel orders for a CFICode", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

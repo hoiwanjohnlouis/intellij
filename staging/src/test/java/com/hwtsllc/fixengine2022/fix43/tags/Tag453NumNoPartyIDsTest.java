@@ -27,9 +27,9 @@ class Tag453NumNoPartyIDsTest {
     @Test
     void FIX0453Test() {
         FIX43 fixData = FIX43.FIX453_NUM_NO_PARTY_IDS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "453", fixData.getID());
+        assertEquals( "NO_PARTY_IDS", fixData.getName());
+        assertEquals( "NoPartyIDs", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

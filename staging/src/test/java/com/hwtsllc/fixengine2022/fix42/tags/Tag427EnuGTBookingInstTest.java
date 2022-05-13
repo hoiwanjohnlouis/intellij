@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag427
+ *  Enu
+ *  GTBookingInst
+ *
+ *      0-2 msg types
+ *      BOOK_OUT_ALL_TRADES( "0", "BOOK_OUT_ALL_TRADES",
+ *                          "0 - Book out all trades on day of execution" ),
+ *      ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES( "1", "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES",
+ *                          "1 - Accumulate executions until order is filled or expires" ),
+ *      ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE( "2", "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE",
+ *                          "2 - Accumulate until verbally notified otherwise" ),
+ */
 class Tag427EnuGTBookingInstTest {
     @Test
     void FIX0427Test() {
@@ -35,35 +48,22 @@ class Tag427EnuGTBookingInstTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag427
-     *  Enu
-     *  GTBookingInst
-     *
-     *      0-2 msg types
-     *      BOOK_OUT_ALL_TRADES( "0", "BOOK_OUT_ALL_TRADES",
-     *                          "0 - Book out all trades on day of execution" ),
-     *      ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES( "1", "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES",
-     *                          "1 - Accumulate executions until order is filled or expires" ),
-     *      ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE( "2", "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE",
-     *                          "2 - Accumulate until verbally notified otherwise" ),
-     */
     @Test
     void Tag0427Test() {
-        Log427EnuGTBookingInst tagData;
+        Tag427EnuGTBookingInst tagData;
 
-        /**
+        /*
          * 0-2 msg types
          */
-        tagData = new Log427EnuGTBookingInst(Enum427GTBookingInst.BOOK_OUT_ALL_TRADES);
+        tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.BOOK_OUT_ALL_TRADES);
         assertEquals( Enum427GTBookingInst.BOOK_OUT_ALL_TRADES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES);
+        tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES);
         assertEquals( Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE);
+        tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE);
         assertEquals( Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

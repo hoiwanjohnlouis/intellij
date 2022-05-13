@@ -37,16 +37,16 @@ class Tag357DatEncodedSubjectTest {
     }
     @Test
     void Tag0357Test() {
-        Log357DatEncodedSubject tagData;
+        Tag357DatEncodedSubject tagData;
 
-        tagData = new Log357DatEncodedSubject(
-                new MyDataType(Log357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT));
-        assertEquals( Log357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT, tagData.getDataValue() );
+        tagData = new Tag357DatEncodedSubject(
+                new MyDataType(Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT));
+        assertEquals( Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log357DatEncodedSubject(
-                new MyDataType(Log357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT));
-        assertEquals( Log357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT, tagData.getDataValue() );
+        tagData = new Tag357DatEncodedSubject(
+                new MyDataType(Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT));
+        assertEquals( Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

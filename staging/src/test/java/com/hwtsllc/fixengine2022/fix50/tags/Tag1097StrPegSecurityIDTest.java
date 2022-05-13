@@ -37,7 +37,7 @@ class Tag1097StrPegSecurityIDTest {
         FIX50 fixData = FIX50.FIX1097_STR_PEG_SECURITY_ID;
         assertEquals( "1097", fixData.getID());
         assertEquals( "PEG_SECURITY_ID", fixData.getName());
-        assertEquals( "peg_security_id", fixData.getDescription());
+        assertEquals( "PegSecurityID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

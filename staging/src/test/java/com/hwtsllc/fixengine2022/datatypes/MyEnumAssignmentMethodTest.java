@@ -48,7 +48,7 @@ class MyEnumAssignmentMethodTest {
         enumType = MyEnumAssignmentMethod.PRO_RATA;
         assertEquals( "P", enumType.getID());
         assertEquals( "PRO_RATA", enumType.getName());
-        assertEquals( "P - Pro-rat", enumType.getDescription());
+        assertEquals( "P - Pro-rata", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());

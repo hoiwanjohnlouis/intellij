@@ -33,7 +33,7 @@ class Tag662BenchmarkPriceTest {
     @Test
     void FIX0662Test() {
         FIX44 fixData = FIX44.FIX662_BENCHMARK_PRICE;
-        assertEquals( "FIX662", fixData.getID());
+        assertEquals( "662", fixData.getID());
         assertEquals( "BENCHMARK_PRICE", fixData.getName());
         assertEquals( "BenchmarkPrice", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());

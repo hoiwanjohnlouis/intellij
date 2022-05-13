@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag418
+ *  Enu
+ *  BidTradeType
+ *
+ *      A, G, J, and R msg types
+ *      AGENCY( "A", "AGENCY", "A - Agency" ),
+ *      VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
+ *      GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
+ *      RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
+ */
 class Tag418EnuBidTradeTypeTest {
     @Test
     void FIX0418Test() {
@@ -35,37 +46,26 @@ class Tag418EnuBidTradeTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag418
-     *  Enu
-     *  BidTradeType
-     *
-     *      A, G, J, and R msg types
-     *      AGENCY( "A", "AGENCY", "A - Agency" ),
-     *      VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
-     *      GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
-     *      RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
-     */
     @Test
     void Tag0418Test() {
-        Log418EnuBidTradeType tagData;
+        Tag418EnuBidTradeType tagData;
 
-        /**
+        /*
          * A, G, J, and R msg types
          */
-        tagData = new Log418EnuBidTradeType(Enum418BidTradeType.AGENCY);
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.AGENCY);
         assertEquals( Enum418BidTradeType.AGENCY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
         assertEquals( Enum418BidTradeType.VWAP_GUARANTEE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
         assertEquals( Enum418BidTradeType.GUARANTEED_CLOSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
         assertEquals( Enum418BidTradeType.RISK_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

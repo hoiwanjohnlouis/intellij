@@ -37,16 +37,16 @@ class Tag282StrMDEntryOriginatorTest {
     }
     @Test
     void Tag0282Test() {
-        Log282StrMDEntryOriginator tagData;
+        Tag282StrMDEntryOriginator tagData;
 
-        tagData = new Log282StrMDEntryOriginator(
-                new MyStringType(Log282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR));
-        assertEquals( Log282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
+        tagData = new Tag282StrMDEntryOriginator(
+                new MyStringType(Tag282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR));
+        assertEquals( Tag282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log282StrMDEntryOriginator(
-                new MyStringType(Log282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR));
-        assertEquals( Log282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
+        tagData = new Tag282StrMDEntryOriginator(
+                new MyStringType(Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR));
+        assertEquals( Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

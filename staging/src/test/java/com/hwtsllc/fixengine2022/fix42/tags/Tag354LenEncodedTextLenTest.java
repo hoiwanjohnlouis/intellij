@@ -37,9 +37,9 @@ class Tag354LenEncodedTextLenTest {
     }
     @Test
     void Tag0354Test() {
-        Log354LenEncodedTextLen tagData;
+        Tag354LenEncodedTextLen tagData;
 
-        tagData = new Log354LenEncodedTextLen( new MyLengthType(23) );
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

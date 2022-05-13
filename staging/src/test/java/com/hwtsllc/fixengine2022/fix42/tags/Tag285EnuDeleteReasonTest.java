@@ -24,6 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  285
+ *  DeleteReason
+ *
+ *      0-1 msg types
+ *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
+ *      ERROR( "1", "ERROR", "1 - Error" ),
+ */
 class Tag285EnuDeleteReasonTest {
     @Test
     void FIX0285Test() {
@@ -35,26 +43,18 @@ class Tag285EnuDeleteReasonTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  285
-     *  DeleteReason
-     *
-     *      0-1 msg types
-     *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
-     *      ERROR( "1", "ERROR", "1 - Error" ),
-     */
     @Test
     void Tag0285Test() {
-        Log285EnuDeleteReason tagData;
+        Tag285EnuDeleteReason tagData;
 
-        /**
+        /*
          * 0-1 msg types
          */
-        tagData = new Log285EnuDeleteReason(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
+        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
         assertEquals( Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log285EnuDeleteReason(Enum285DeleteReason.ERROR);
+        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.ERROR);
         assertEquals( Enum285DeleteReason.ERROR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

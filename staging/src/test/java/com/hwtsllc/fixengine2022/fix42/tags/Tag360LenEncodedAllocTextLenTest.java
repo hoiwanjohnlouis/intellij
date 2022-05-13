@@ -37,9 +37,9 @@ class Tag360LenEncodedAllocTextLenTest {
     }
     @Test
     void Tag0360Test() {
-        Log360LenEncodedAllocTextLen tagData;
+        Tag360LenEncodedAllocTextLen tagData;
 
-        tagData = new Log360LenEncodedAllocTextLen( new MyLengthType(23) );
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

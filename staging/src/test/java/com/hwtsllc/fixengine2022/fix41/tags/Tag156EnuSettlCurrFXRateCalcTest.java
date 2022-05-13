@@ -47,8 +47,8 @@ class Tag156EnuSettlCurrFXRateCalcTest {
     void FIX0156Test() {
         FIX41 fixData = FIX41.FIX156_SETTL_CURR_FX_RATE_CALC;
         assertEquals( "156", fixData.getID());
-        assertEquals( "CURR_FX_RATE_CALC", fixData.getName());
-        assertEquals( "CurrFxRateCalc", fixData.getDescription());
+        assertEquals( "SETTL_CURR_FX_RATE_CALC", fixData.getName());
+        assertEquals( "SettlCurrFxRateCalc", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

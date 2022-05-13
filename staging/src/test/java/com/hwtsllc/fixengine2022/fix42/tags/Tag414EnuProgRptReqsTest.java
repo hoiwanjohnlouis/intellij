@@ -24,6 +24,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag414
+ *  Enu
+ *  ProgRptReqs
+ *
+ *      1-3 msg types
+ *      BUY_SIDE_STATUS( "1", "BUY_SIDE_STATUS",
+ *                          "1 - Buy-side explicitly requests status using Statue Request (default), " +
+ *                          "the sell-side firm can, however, send a DONE status List STatus Response " +
+ *                          "in an unsolicited fashion" ),
+ *      SELL_SIDE_STATUS( "2", "SELL_SIDE_STATUS",
+ *                          "2 - Sell-side periodically sends status using List Status. " +
+ *                          "Period optionally specified in ProgressPeriod" ),
+ *      REAL_TIME_EXECUTION_REPORTS( "3", "REAL_TIME_EXECUTION_REPORTS",
+ *                          "3 - Real-time execution reports (to be discourage)" ),
+ */
 class Tag414EnuProgRptReqsTest {
     @Test
     void FIX0414Test() {
@@ -35,38 +51,22 @@ class Tag414EnuProgRptReqsTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag414
-     *  Enu
-     *  ProgRptReqs
-     *
-     *      1-3 msg types
-     *      BUY_SIDE_STATUS( "1", "BUY_SIDE_STATUS",
-     *                          "1 - Buy-side explicitly requests status using Statue Request (default), " +
-     *                          "the sell-side firm can, however, send a DONE status List STatus Response " +
-     *                          "in an unsolicited fashion" ),
-     *      SELL_SIDE_STATUS( "2", "SELL_SIDE_STATUS",
-     *                          "2 - Sell-side periodically sends status using List Status. " +
-     *                          "Period optionally specified in ProgressPeriod" ),
-     *      REAL_TIME_EXECUTION_REPORTS( "3", "REAL_TIME_EXECUTION_REPORTS",
-     *                          "3 - Real-time execution reports (to be discourage)" ),
-     */
     @Test
     void Tag0414Test() {
-        Log414EnuProgRptReqs tagData;
+        Tag414EnuProgRptReqs tagData;
 
-        /**
+        /*
          * 1-3 msg types
          */
-        tagData = new Log414EnuProgRptReqs(Enum414ProgRptReqs.BUY_SIDE_STATUS);
+        tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.BUY_SIDE_STATUS);
         assertEquals( Enum414ProgRptReqs.BUY_SIDE_STATUS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log414EnuProgRptReqs(Enum414ProgRptReqs.SELL_SIDE_STATUS);
+        tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.SELL_SIDE_STATUS);
         assertEquals( Enum414ProgRptReqs.SELL_SIDE_STATUS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log414EnuProgRptReqs(Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS);
+        tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS);
         assertEquals( Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

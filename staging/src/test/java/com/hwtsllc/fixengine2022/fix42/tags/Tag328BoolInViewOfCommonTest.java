@@ -37,13 +37,13 @@ class Tag328BoolInViewOfCommonTest {
     }
     @Test
     void Tag0328Test() {
-        Log328BoolInViewOfCommon tagData;
+        Tag328BoolInViewOfCommon tagData;
 
-        tagData = new Log328BoolInViewOfCommon(MyBooleanType.NO);
+        tagData = new Tag328BoolInViewOfCommon(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log328BoolInViewOfCommon(MyBooleanType.YES);
+        tagData = new Tag328BoolInViewOfCommon(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

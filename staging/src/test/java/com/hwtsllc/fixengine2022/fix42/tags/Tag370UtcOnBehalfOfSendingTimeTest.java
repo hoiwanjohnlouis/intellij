@@ -37,17 +37,17 @@ class Tag370UtcOnBehalfOfSendingTimeTest {
     }
     @Test
     void Tag0370Test() {
-        Log370UtcOnBehalfOfSendingTime tagData;
+        Tag370UtcOnBehalfOfSendingTime tagData;
 
-        tagData = new Log370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(
-                Log370UtcOnBehalfOfSendingTime.TESTA_UTC_ON_BEHALF_OF_SENDING_TIME));
-        assertEquals( Log370UtcOnBehalfOfSendingTime.TESTA_UTC_ON_BEHALF_OF_SENDING_TIME,
+        tagData = new Tag370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(
+                Tag370UtcOnBehalfOfSendingTime.TESTA_UTC_ON_BEHALF_OF_SENDING_TIME));
+        assertEquals( Tag370UtcOnBehalfOfSendingTime.TESTA_UTC_ON_BEHALF_OF_SENDING_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(
-                Log370UtcOnBehalfOfSendingTime.TESTB_UTC_ON_BEHALF_OF_SENDING_TIME));
-        assertEquals( Log370UtcOnBehalfOfSendingTime.TESTB_UTC_ON_BEHALF_OF_SENDING_TIME,
+        tagData = new Tag370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(
+                Tag370UtcOnBehalfOfSendingTime.TESTB_UTC_ON_BEHALF_OF_SENDING_TIME));
+        assertEquals( Tag370UtcOnBehalfOfSendingTime.TESTB_UTC_ON_BEHALF_OF_SENDING_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

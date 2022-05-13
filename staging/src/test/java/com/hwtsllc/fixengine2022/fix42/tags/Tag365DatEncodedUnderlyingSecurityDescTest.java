@@ -37,17 +37,17 @@ class Tag365DatEncodedUnderlyingSecurityDescTest {
     }
     @Test
     void Tag0365Test() {
-        Log365DatEncodedUnderlyingSecurityDesc tagData;
+        Tag365DatEncodedUnderlyingSecurityDesc tagData;
 
-        tagData = new Log365DatEncodedUnderlyingSecurityDesc(
-                new MyDataType(Log365DatEncodedUnderlyingSecurityDesc.TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC));
-        assertEquals( Log365DatEncodedUnderlyingSecurityDesc.TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC,
+        tagData = new Tag365DatEncodedUnderlyingSecurityDesc(
+                new MyDataType(Tag365DatEncodedUnderlyingSecurityDesc.TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC));
+        assertEquals( Tag365DatEncodedUnderlyingSecurityDesc.TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log365DatEncodedUnderlyingSecurityDesc(
-                new MyDataType(Log365DatEncodedUnderlyingSecurityDesc.TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC));
-        assertEquals( Log365DatEncodedUnderlyingSecurityDesc.TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC,
+        tagData = new Tag365DatEncodedUnderlyingSecurityDesc(
+                new MyDataType(Tag365DatEncodedUnderlyingSecurityDesc.TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC));
+        assertEquals( Tag365DatEncodedUnderlyingSecurityDesc.TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }

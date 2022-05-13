@@ -30,24 +30,24 @@ class Tag379StrBusinessRejectRefIDTest {
         FIX42 fixData = FIX42.FIX379_STR_BUSINESS_REJECT_REF_ID;
         assertEquals( "379", fixData.getID());
         assertEquals( "BUSINESS_REJECT_REF_ID", fixData.getName());
-        assertEquals( "BusinessRejectRefId", fixData.getDescription());
+        assertEquals( "BusinessRejectRefID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0379Test() {
-        Log379StrBusinessRejectRefID tagData;
+        Tag379StrBusinessRejectRefID tagData;
 
-        tagData = new Log379StrBusinessRejectRefID(new MyStringType(
-                Log379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID));
-        assertEquals( Log379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID,
+        tagData = new Tag379StrBusinessRejectRefID(new MyStringType(
+                Tag379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID));
+        assertEquals( Tag379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log379StrBusinessRejectRefID(new MyStringType(
-                Log379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID));
-        assertEquals( Log379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID,
+        tagData = new Tag379StrBusinessRejectRefID(new MyStringType(
+                Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID));
+        assertEquals( Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

@@ -24,6 +24,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  321
+ *  Enu
+ *  SecurityRequestType
+ *
+ *      0-3 msg types
+ *      REQUEST_SECURITY_IDENTITY( "0", "REQUEST_SECURITY_IDENTITY",
+ *                          "0 - Request Security identity and specifications" ),
+ *      REQUEST_SPECIFIED_SECURITY( "1", "REQUEST_SPECIFIED_SECURITY",
+ *                          "1 - Request Security identity for the specifications provided " +
+ *                          "(name of the security is not supplied)" ),
+ *      REQUEST_LIST_SECURITY_TYPES( "2", "REQUEST_LIST_SECURITY_TYPES",
+ *                          "2 - Request List Security Types" ),
+ *      REQUEST_LIST_SECURITIES( "3", "REQUEST_LIST_SECURITIES",
+ *                          "3 - Request List Securities (can be qualified with Symbol, SecurityType, " +
+ *                          "TradingSessionID, SecurityExchange. " +
+ *                          "If provided, then only list Securities for the specific type.)" ),
+ */
 class Tag321EnuSecurityRequestTypeTest {
     @Test
     void FIX0321Test() {
@@ -35,44 +53,26 @@ class Tag321EnuSecurityRequestTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  321
-     *  Enu
-     *  SecurityRequestType
-     *
-     *      0-3 msg types
-     *      REQUEST_SECURITY_IDENTITY( "0", "REQUEST_SECURITY_IDENTITY",
-     *                          "0 - Request Security identity and specifications" ),
-     *      REQUEST_SPECIFIED_SECURITY( "1", "REQUEST_SPECIFIED_SECURITY",
-     *                          "1 - Request Security identity for the specifications provided " +
-     *                          "(name of the security is not supplied)" ),
-     *      REQUEST_LIST_SECURITY_TYPES( "2", "REQUEST_LIST_SECURITY_TYPES",
-     *                          "2 - Request List Security Types" ),
-     *      REQUEST_LIST_SECURITIES( "3", "REQUEST_LIST_SECURITIES",
-     *                          "3 - Request List Securities (can be qualified with Symbol, SecurityType, " +
-     *                          "TradingSessionID, SecurityExchange. " +
-     *                          "If provided, then only list Securities for the specific type.)" ),
-     */
     @Test
     void Tag0321Test() {
-        Log321EnuSecurityRequestType tagData;
+        Tag321EnuSecurityRequestType tagData;
 
-        /**
+        /*
          * 0-3 msg types
          */
-        tagData = new Log321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY);
+        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY);
         assertEquals( Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY);
+        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY);
         assertEquals( Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES);
+        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES);
         assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITIES);
+        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITIES);
         assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITIES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

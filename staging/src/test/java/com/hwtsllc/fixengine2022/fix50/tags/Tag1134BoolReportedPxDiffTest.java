@@ -39,7 +39,7 @@ class Tag1134BoolReportedPxDiffTest {
         FIX50 fixData = FIX50.FIX1134_BOOL_REPORTED_PX_DIFF;
         assertEquals( "1134", fixData.getID());
         assertEquals( "REPORTED_PX_DIFF", fixData.getName());
-        assertEquals( "reported_px_diff", fixData.getDescription());
+        assertEquals( "ReportedPxDiff", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -37,9 +37,9 @@ class Tag362LenEncodedUnderlyingIssuerLenTest {
     }
     @Test
     void Tag0362Test() {
-        Log362LenEncodedUnderlyingIssuerLen tagData;
+        Tag362LenEncodedUnderlyingIssuerLen tagData;
 
-        tagData = new Log362LenEncodedUnderlyingIssuerLen( new MyLengthType(23) );
+        tagData = new Tag362LenEncodedUnderlyingIssuerLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

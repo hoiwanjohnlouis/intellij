@@ -36,7 +36,7 @@ class Tag1079MaturityTimeTest {
         FIX50 fixData = FIX50.FIX1079_MATURITY_TIME;
         assertEquals( "1079", fixData.getID());
         assertEquals( "MATURITY_TIME", fixData.getName());
-        assertEquals( "maturity_time", fixData.getDescription());
+        assertEquals( "MaturityTime", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

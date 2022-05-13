@@ -37,16 +37,16 @@ class Tag222StrBenchmarkCurvePointTest {
     }
     @Test
     void Tag0222Test() {
-        Log222StrBenchmarkCurvePoint tagData;
+        Tag222StrBenchmarkCurvePoint tagData;
 
-        tagData = new Log222StrBenchmarkCurvePoint(
-                new MyStringType(Log222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT));
-        assertEquals( Log222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
+        tagData = new Tag222StrBenchmarkCurvePoint(
+                new MyStringType(Tag222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT));
+        assertEquals( Tag222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log222StrBenchmarkCurvePoint(
-                new MyStringType(Log222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT));
-        assertEquals( Log222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
+        tagData = new Tag222StrBenchmarkCurvePoint(
+                new MyStringType(Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT));
+        assertEquals( Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

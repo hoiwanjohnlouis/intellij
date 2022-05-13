@@ -37,17 +37,17 @@ class Tag343UtcTradSesPreCloseTimeTest {
     }
     @Test
     void Tag0343Test() {
-        Log343UtcTradSesPreCloseTime tagData;
+        Tag343UtcTradSesPreCloseTime tagData;
 
-        tagData = new Log343UtcTradSesPreCloseTime(new MyUTCTimestampType(
-                Log343UtcTradSesPreCloseTime.TESTA_UTC_TRAD_SES_PRE_CLOSE_TIME));
-        assertEquals( Log343UtcTradSesPreCloseTime.TESTA_UTC_TRAD_SES_PRE_CLOSE_TIME,
+        tagData = new Tag343UtcTradSesPreCloseTime(new MyUTCTimestampType(
+                Tag343UtcTradSesPreCloseTime.TESTA_UTC_TRAD_SES_PRE_CLOSE_TIME));
+        assertEquals( Tag343UtcTradSesPreCloseTime.TESTA_UTC_TRAD_SES_PRE_CLOSE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log343UtcTradSesPreCloseTime(new MyUTCTimestampType(
-                Log343UtcTradSesPreCloseTime.TESTB_UTC_TRAD_SES_PRE_CLOSE_TIME));
-        assertEquals( Log343UtcTradSesPreCloseTime.TESTB_UTC_TRAD_SES_PRE_CLOSE_TIME,
+        tagData = new Tag343UtcTradSesPreCloseTime(new MyUTCTimestampType(
+                Tag343UtcTradSesPreCloseTime.TESTB_UTC_TRAD_SES_PRE_CLOSE_TIME));
+        assertEquals( Tag343UtcTradSesPreCloseTime.TESTB_UTC_TRAD_SES_PRE_CLOSE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

@@ -37,17 +37,17 @@ class Tag435PctUnderlyingCouponRateTest {
     }
     @Test
     void Tag0435Test() {
-        Log435PctUnderlyingCouponRate tagData;
+        Tag435PctUnderlyingCouponRate tagData;
 
-        tagData = new Log435PctUnderlyingCouponRate(new MyPercentageType(
-                Log435PctUnderlyingCouponRate.TESTA_PCT_UNDERLYING_COUPON_RATE));
-        assertEquals( Log435PctUnderlyingCouponRate.TESTA_PCT_UNDERLYING_COUPON_RATE,
+        tagData = new Tag435PctUnderlyingCouponRate(new MyPercentageType(
+                Tag435PctUnderlyingCouponRate.TESTA_PCT_UNDERLYING_COUPON_RATE));
+        assertEquals( Tag435PctUnderlyingCouponRate.TESTA_PCT_UNDERLYING_COUPON_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log435PctUnderlyingCouponRate(new MyPercentageType(
-                Log435PctUnderlyingCouponRate.TESTB_PCT_UNDERLYING_COUPON_RATE));
-        assertEquals( Log435PctUnderlyingCouponRate.TESTB_PCT_UNDERLYING_COUPON_RATE,
+        tagData = new Tag435PctUnderlyingCouponRate(new MyPercentageType(
+                Tag435PctUnderlyingCouponRate.TESTB_PCT_UNDERLYING_COUPON_RATE));
+        assertEquals( Tag435PctUnderlyingCouponRate.TESTB_PCT_UNDERLYING_COUPON_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

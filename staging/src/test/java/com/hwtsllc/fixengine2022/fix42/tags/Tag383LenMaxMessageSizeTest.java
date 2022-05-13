@@ -37,9 +37,9 @@ class Tag383LenMaxMessageSizeTest {
     }
     @Test
     void Tag0383Test() {
-        Log383LenMaxMessageSize tagData;
+        Tag383LenMaxMessageSize tagData;
 
-        tagData = new Log383LenMaxMessageSize( new MyLengthType(23) );
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

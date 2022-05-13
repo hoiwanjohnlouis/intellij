@@ -48,7 +48,7 @@ class Tag315EnuUnderlyingPutOrCallTest {
         FIX42 fixData = FIX42.FIX315_ENU_UNDERLYING_PUT_OR_CALL;
         assertEquals( "315", fixData.getID());
         assertEquals( "UNDERLYING_PUT_OR_CALL", fixData.getName());
-        assertEquals( "UnderlyingPutOrCall", fixData.getDescription());
+        assertEquals( "UnderlyingPutOrCall (replaced)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -56,13 +56,13 @@ class Tag315EnuUnderlyingPutOrCallTest {
 
     @Test
     void Tag0315Test() {
-        Log315EnuUnderlyingPutOrCall tagData;
+        Tag315EnuUnderlyingPutOrCall tagData;
 
-        tagData = new Log315EnuUnderlyingPutOrCall(MyEnumPutOrCall.CALL);
+        tagData = new Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall.CALL);
         assertEquals( MyEnumPutOrCall.CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log315EnuUnderlyingPutOrCall(MyEnumPutOrCall.PUT);
+        tagData = new Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall.PUT);
         assertEquals( MyEnumPutOrCall.PUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

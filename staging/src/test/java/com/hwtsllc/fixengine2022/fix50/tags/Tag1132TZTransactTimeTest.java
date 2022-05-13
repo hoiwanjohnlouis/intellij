@@ -36,7 +36,7 @@ class Tag1132TZTransactTimeTest {
         FIX50 fixData = FIX50.FIX1132_TZ_TRANSACT_TIME;
         assertEquals( "1132", fixData.getID());
         assertEquals( "TZ_TRANSACT_TIME", fixData.getName());
-        assertEquals( "TZ_transact_time", fixData.getDescription());
+        assertEquals( "TZTransactTime", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

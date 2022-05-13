@@ -37,17 +37,17 @@ class Tag441IntLiquidityNumSecuritiesTest {
     }
     @Test
     void Tag0441Test() {
-        Log441IntLiquidityNumSecurities tagData;
+        Tag441IntLiquidityNumSecurities tagData;
 
-        tagData = new Log441IntLiquidityNumSecurities(new MyIntType(
-                Log441IntLiquidityNumSecurities.TESTA_INT_LIQUIDITY_NUM_SECURITIES));
-        assertEquals( Log441IntLiquidityNumSecurities.TESTA_INT_LIQUIDITY_NUM_SECURITIES,
+        tagData = new Tag441IntLiquidityNumSecurities(new MyIntType(
+                Tag441IntLiquidityNumSecurities.TESTA_INT_LIQUIDITY_NUM_SECURITIES));
+        assertEquals( Tag441IntLiquidityNumSecurities.TESTA_INT_LIQUIDITY_NUM_SECURITIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log441IntLiquidityNumSecurities(new MyIntType(
-                Log441IntLiquidityNumSecurities.TESTB_INT_LIQUIDITY_NUM_SECURITIES));
-        assertEquals( Log441IntLiquidityNumSecurities.TESTB_INT_LIQUIDITY_NUM_SECURITIES,
+        tagData = new Tag441IntLiquidityNumSecurities(new MyIntType(
+                Tag441IntLiquidityNumSecurities.TESTB_INT_LIQUIDITY_NUM_SECURITIES));
+        assertEquals( Tag441IntLiquidityNumSecurities.TESTB_INT_LIQUIDITY_NUM_SECURITIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

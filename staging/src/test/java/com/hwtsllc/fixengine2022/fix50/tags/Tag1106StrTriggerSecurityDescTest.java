@@ -37,7 +37,7 @@ class Tag1106StrTriggerSecurityDescTest {
         FIX50 fixData = FIX50.FIX1106_STR_TRIGGER_SECURITY_DESC;
         assertEquals( "1106", fixData.getID());
         assertEquals( "TRIGGER_SECURITY_DESC", fixData.getName());
-        assertEquals( "trigger_security_desc", fixData.getDescription());
+        assertEquals( "TriggerSecurityDesc", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

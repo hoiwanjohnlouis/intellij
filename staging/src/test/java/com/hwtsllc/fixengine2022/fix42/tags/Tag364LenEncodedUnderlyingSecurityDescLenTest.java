@@ -37,9 +37,9 @@ class Tag364LenEncodedUnderlyingSecurityDescLenTest {
     }
     @Test
     void Tag0364Test() {
-        Log364LenEncodedUnderlyingSecurityDescLen tagData;
+        Tag364LenEncodedUnderlyingSecurityDescLen tagData;
 
-        tagData = new Log364LenEncodedUnderlyingSecurityDescLen( new MyLengthType(23) );
+        tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

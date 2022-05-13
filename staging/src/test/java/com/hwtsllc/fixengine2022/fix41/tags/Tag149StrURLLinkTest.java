@@ -40,7 +40,7 @@ class Tag149StrURLLinkTest {
         FIX41 fixData = FIX41.FIX149_STR_URL_LINK;
         assertEquals( "149", fixData.getID());
         assertEquals( "URL_LINK", fixData.getName());
-        assertEquals( "UrlLink", fixData.getDescription());
+        assertEquals( "URLLink", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

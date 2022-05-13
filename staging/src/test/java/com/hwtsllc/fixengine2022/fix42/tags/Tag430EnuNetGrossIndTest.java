@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag430
+ *  Enu
+ *  NetGrossInd
+ *
+ *      1-2 msg types
+ *      NET( "1", "NET", "1 - Net" ),
+ *      GROSS( "2", "GROSS", "2 - Gross" ),
+ */
 class Tag430EnuNetGrossIndTest {
     @Test
     void FIX0430Test() {
@@ -35,27 +44,18 @@ class Tag430EnuNetGrossIndTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag430
-     *  Enu
-     *  NetGrossInd
-     *
-     *      1-2 msg types
-     *      NET( "1", "NET", "1 - Net" ),
-     *      GROSS( "2", "GROSS", "2 - Gross" ),
-     */
     @Test
     void Tag0430Test() {
-        Log430EnuNetGrossInd tagData;
+        Tag430EnuNetGrossInd tagData;
 
-        /**
+        /*
          * 1-2 msg types
          */
-        tagData = new Log430EnuNetGrossInd(Enum430NetGrossInd.NET);
+        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.NET);
         assertEquals( Enum430NetGrossInd.NET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
+        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
         assertEquals( Enum430NetGrossInd.GROSS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -37,16 +37,16 @@ class Tag234StrStipulationValueTest {
     }
     @Test
     void Tag0234Test() {
-        Log234StrStipulationValue tagData;
+        Tag234StrStipulationValue tagData;
 
-        tagData = new Log234StrStipulationValue(
-                new MyStringType(Log234StrStipulationValue.TESTA_STR_STIPULATION_VALUE));
-        assertEquals( Log234StrStipulationValue.TESTA_STR_STIPULATION_VALUE, tagData.getDataValue() );
+        tagData = new Tag234StrStipulationValue(
+                new MyStringType(Tag234StrStipulationValue.TESTA_STR_STIPULATION_VALUE));
+        assertEquals( Tag234StrStipulationValue.TESTA_STR_STIPULATION_VALUE, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log234StrStipulationValue(
-                new MyStringType(Log234StrStipulationValue.TESTB_STR_STIPULATION_VALUE));
-        assertEquals( Log234StrStipulationValue.TESTB_STR_STIPULATION_VALUE, tagData.getDataValue() );
+        tagData = new Tag234StrStipulationValue(
+                new MyStringType(Tag234StrStipulationValue.TESTB_STR_STIPULATION_VALUE));
+        assertEquals( Tag234StrStipulationValue.TESTB_STR_STIPULATION_VALUE, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

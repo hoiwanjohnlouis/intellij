@@ -37,17 +37,17 @@ class Tag444StrListStatusTextTest {
     }
     @Test
     void Tag0444Test() {
-        Log444StrListStatusText tagData;
+        Tag444StrListStatusText tagData;
 
-        tagData = new Log444StrListStatusText(new MyStringType(
-                Log444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT));
-        assertEquals( Log444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT,
+        tagData = new Tag444StrListStatusText(new MyStringType(
+                Tag444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT));
+        assertEquals( Tag444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log444StrListStatusText(new MyStringType(
-                Log444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT));
-        assertEquals( Log444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT,
+        tagData = new Tag444StrListStatusText(new MyStringType(
+                Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT));
+        assertEquals( Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

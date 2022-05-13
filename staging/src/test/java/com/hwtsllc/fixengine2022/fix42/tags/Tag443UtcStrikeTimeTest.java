@@ -37,17 +37,17 @@ class Tag443UtcStrikeTimeTest {
     }
     @Test
     void Tag0443Test() {
-        Log443UtcStrikeTime tagData;
+        Tag443UtcStrikeTime tagData;
 
-        tagData = new Log443UtcStrikeTime(new MyUTCTimestampType(
-                Log443UtcStrikeTime.TESTA_UTC_STRIKE_TIME));
-        assertEquals( Log443UtcStrikeTime.TESTA_UTC_STRIKE_TIME,
+        tagData = new Tag443UtcStrikeTime(new MyUTCTimestampType(
+                Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME));
+        assertEquals( Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log443UtcStrikeTime(new MyUTCTimestampType(
-                Log443UtcStrikeTime.TESTB_UTC_STRIKE_TIME));
-        assertEquals( Log443UtcStrikeTime.TESTB_UTC_STRIKE_TIME,
+        tagData = new Tag443UtcStrikeTime(new MyUTCTimestampType(
+                Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME));
+        assertEquals( Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

@@ -37,17 +37,17 @@ class Tag275ExcMDMktTest {
     }
     @Test
     void Tag0275Test() {
-        Log275ExcMDMkt tagData;
+        Tag275ExcMDMkt tagData;
 
-        tagData = new Log275ExcMDMkt(new MyExchangeType(
-                Log275ExcMDMkt.TESTA_EXC_MD_MKT));
-        assertEquals( Log275ExcMDMkt.TESTA_EXC_MD_MKT,
+        tagData = new Tag275ExcMDMkt(new MyExchangeType(
+                Tag275ExcMDMkt.TESTA_EXC_MD_MKT));
+        assertEquals( Tag275ExcMDMkt.TESTA_EXC_MD_MKT,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log275ExcMDMkt(new MyExchangeType(
-                Log275ExcMDMkt.TESTB_EXC_MD_MKT));
-        assertEquals( Log275ExcMDMkt.TESTB_EXC_MD_MKT,
+        tagData = new Tag275ExcMDMkt(new MyExchangeType(
+                Tag275ExcMDMkt.TESTB_EXC_MD_MKT));
+        assertEquals( Tag275ExcMDMkt.TESTB_EXC_MD_MKT,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
     }

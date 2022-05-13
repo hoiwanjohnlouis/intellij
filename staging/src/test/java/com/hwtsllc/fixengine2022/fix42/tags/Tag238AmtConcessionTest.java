@@ -37,17 +37,17 @@ class Tag238AmtConcessionTest {
     }
     @Test
     void Tag0238Test() {
-        Log238AmtConcession tagData;
+        Tag238AmtConcession tagData;
 
-        tagData = new Log238AmtConcession(new MyAmtType(
-                Log238AmtConcession.TESTA_AMT_CONCESSION));
-        assertEquals( Log238AmtConcession.TESTA_AMT_CONCESSION,
+        tagData = new Tag238AmtConcession(new MyAmtType(
+                Tag238AmtConcession.TESTA_AMT_CONCESSION));
+        assertEquals( Tag238AmtConcession.TESTA_AMT_CONCESSION,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log238AmtConcession(new MyAmtType(
-                Log238AmtConcession.TESTB_AMT_CONCESSION));
-        assertEquals( Log238AmtConcession.TESTB_AMT_CONCESSION,
+        tagData = new Tag238AmtConcession(new MyAmtType(
+                Tag238AmtConcession.TESTB_AMT_CONCESSION));
+        assertEquals( Tag238AmtConcession.TESTB_AMT_CONCESSION,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

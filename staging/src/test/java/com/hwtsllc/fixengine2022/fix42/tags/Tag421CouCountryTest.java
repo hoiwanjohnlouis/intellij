@@ -37,17 +37,17 @@ class Tag421CouCountryTest {
     }
     @Test
     void Tag0421Test() {
-        Log421CouCountry tagData;
+        Tag421CouCountry tagData;
 
-        tagData = new Log421CouCountry(new MyCountryType(
-                Log421CouCountry.TESTA_COU_COUNTRY));
-        assertEquals( Log421CouCountry.TESTA_COU_COUNTRY,
+        tagData = new Tag421CouCountry(new MyCountryType(
+                Tag421CouCountry.TESTA_COU_COUNTRY));
+        assertEquals( Tag421CouCountry.TESTA_COU_COUNTRY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log421CouCountry(new MyCountryType(
-                Log421CouCountry.TESTB_COU_COUNTRY));
-        assertEquals( Log421CouCountry.TESTB_COU_COUNTRY,
+        tagData = new Tag421CouCountry(new MyCountryType(
+                Tag421CouCountry.TESTB_COU_COUNTRY));
+        assertEquals( Tag421CouCountry.TESTB_COU_COUNTRY,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

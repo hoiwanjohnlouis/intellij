@@ -48,7 +48,7 @@ class Tag1046EnuUnderlyingFXRateCalcTest {
         FIX50 fixData = FIX50.FIX1046_ENU_UNDERLYING_FX_RATE_CALC;
         assertEquals( "1046", fixData.getID());
         assertEquals( "UNDERLYING_FX_RATE_CALC", fixData.getName());
-        assertEquals( "UnderlyingFxRateCalc", fixData.getDescription());
+        assertEquals( "UnderlyingFXRateCalc", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

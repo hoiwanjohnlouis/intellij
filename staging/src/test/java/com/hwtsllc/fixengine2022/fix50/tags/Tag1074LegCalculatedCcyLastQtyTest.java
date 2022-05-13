@@ -38,7 +38,7 @@ class Tag1074LegCalculatedCcyLastQtyTest {
         FIX50 fixData = FIX50.FIX1074_LEG_CALCULATED_CCY_LAST_QTY;
         assertEquals( "1074", fixData.getID());
         assertEquals( "LEG_CALCULATED_CCY_LAST_QTY", fixData.getName());
-        assertEquals( "leg_calculated_ccy_last_qty", fixData.getDescription());
+        assertEquals( "LegCalculatedCcyLastQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

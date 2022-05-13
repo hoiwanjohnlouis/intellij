@@ -37,17 +37,17 @@ class Tag407PctOutsideIndexPctTest {
     }
     @Test
     void Tag0407Test() {
-        Log407PctOutsideIndexPct tagData;
+        Tag407PctOutsideIndexPct tagData;
 
-        tagData = new Log407PctOutsideIndexPct(new MyPercentageType(
-                Log407PctOutsideIndexPct.TESTA_PCT_OUTSIDE_INDEX_PCT));
-        assertEquals( Log407PctOutsideIndexPct.TESTA_PCT_OUTSIDE_INDEX_PCT,
+        tagData = new Tag407PctOutsideIndexPct(new MyPercentageType(
+                Tag407PctOutsideIndexPct.TESTA_PCT_OUTSIDE_INDEX_PCT));
+        assertEquals( Tag407PctOutsideIndexPct.TESTA_PCT_OUTSIDE_INDEX_PCT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log407PctOutsideIndexPct(new MyPercentageType(
-                Log407PctOutsideIndexPct.TESTB_PCT_OUTSIDE_INDEX_PCT));
-        assertEquals( Log407PctOutsideIndexPct.TESTB_PCT_OUTSIDE_INDEX_PCT,
+        tagData = new Tag407PctOutsideIndexPct(new MyPercentageType(
+                Tag407PctOutsideIndexPct.TESTB_PCT_OUTSIDE_INDEX_PCT));
+        assertEquals( Tag407PctOutsideIndexPct.TESTB_PCT_OUTSIDE_INDEX_PCT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

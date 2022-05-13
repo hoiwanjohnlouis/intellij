@@ -33,9 +33,9 @@ class Tag948NoNested3PartyIDsTest {
     @Test
     void FIX0948Test() {
         FIX44 fixData = FIX44.FIX948_NO_NESTED_3_PARTY_IDS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "948", fixData.getID());
+        assertEquals( "NO_NESTED_3_PARTY_IDS", fixData.getName());
+        assertEquals( "NoNested3PartyIDs", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

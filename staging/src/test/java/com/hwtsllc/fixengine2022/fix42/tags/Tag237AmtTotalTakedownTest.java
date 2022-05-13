@@ -37,17 +37,17 @@ class Tag237AmtTotalTakedownTest {
     }
     @Test
     void Tag0237Test() {
-        Log237AmtTotalTakedown tagData;
+        Tag237AmtTotalTakedown tagData;
 
-        tagData = new Log237AmtTotalTakedown(new MyAmtType(
-                Log237AmtTotalTakedown.TESTA_AMT_TOTAL_TAKEDOWN));
-        assertEquals( Log237AmtTotalTakedown.TESTA_AMT_TOTAL_TAKEDOWN,
+        tagData = new Tag237AmtTotalTakedown(new MyAmtType(
+                Tag237AmtTotalTakedown.TESTA_AMT_TOTAL_TAKEDOWN));
+        assertEquals( Tag237AmtTotalTakedown.TESTA_AMT_TOTAL_TAKEDOWN,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log237AmtTotalTakedown(new MyAmtType(
-                Log237AmtTotalTakedown.TESTB_AMT_TOTAL_TAKEDOWN));
-        assertEquals( Log237AmtTotalTakedown.TESTB_AMT_TOTAL_TAKEDOWN,
+        tagData = new Tag237AmtTotalTakedown(new MyAmtType(
+                Tag237AmtTotalTakedown.TESTB_AMT_TOTAL_TAKEDOWN));
+        assertEquals( Tag237AmtTotalTakedown.TESTB_AMT_TOTAL_TAKEDOWN,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

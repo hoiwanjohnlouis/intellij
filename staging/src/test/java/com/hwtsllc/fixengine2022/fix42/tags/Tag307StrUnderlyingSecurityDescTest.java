@@ -37,16 +37,16 @@ class Tag307StrUnderlyingSecurityDescTest {
     }
     @Test
     void Tag0307Test() {
-        Log307StrUnderlyingSecurityDesc tagData;
+        Tag307StrUnderlyingSecurityDesc tagData;
 
-        tagData = new Log307StrUnderlyingSecurityDesc(
-                new MyStringType(Log307StrUnderlyingSecurityDesc.TESTA_STR_UNDERLYING_SECURITY_DESC));
-        assertEquals( Log307StrUnderlyingSecurityDesc.TESTA_STR_UNDERLYING_SECURITY_DESC, tagData.getDataValue() );
+        tagData = new Tag307StrUnderlyingSecurityDesc(
+                new MyStringType(Tag307StrUnderlyingSecurityDesc.TESTA_STR_UNDERLYING_SECURITY_DESC));
+        assertEquals( Tag307StrUnderlyingSecurityDesc.TESTA_STR_UNDERLYING_SECURITY_DESC, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log307StrUnderlyingSecurityDesc(
-                new MyStringType(Log307StrUnderlyingSecurityDesc.TESTB_STR_UNDERLYING_SECURITY_DESC));
-        assertEquals( Log307StrUnderlyingSecurityDesc.TESTB_STR_UNDERLYING_SECURITY_DESC, tagData.getDataValue() );
+        tagData = new Tag307StrUnderlyingSecurityDesc(
+                new MyStringType(Tag307StrUnderlyingSecurityDesc.TESTB_STR_UNDERLYING_SECURITY_DESC));
+        assertEquals( Tag307StrUnderlyingSecurityDesc.TESTB_STR_UNDERLYING_SECURITY_DESC, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

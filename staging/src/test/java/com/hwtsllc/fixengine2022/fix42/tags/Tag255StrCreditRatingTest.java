@@ -37,16 +37,16 @@ class Tag255StrCreditRatingTest {
     }
     @Test
     void Tag0255Test() {
-        Log255StrCreditRating tagData;
+        Tag255StrCreditRating tagData;
 
-        tagData = new Log255StrCreditRating(
-                new MyStringType(Log255StrCreditRating.TESTA_STR_CREDIT_RATING));
-        assertEquals( Log255StrCreditRating.TESTA_STR_CREDIT_RATING, tagData.getDataValue() );
+        tagData = new Tag255StrCreditRating(
+                new MyStringType(Tag255StrCreditRating.TESTA_STR_CREDIT_RATING));
+        assertEquals( Tag255StrCreditRating.TESTA_STR_CREDIT_RATING, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log255StrCreditRating(
-                new MyStringType(Log255StrCreditRating.TESTB_STR_CREDIT_RATING));
-        assertEquals( Log255StrCreditRating.TESTB_STR_CREDIT_RATING, tagData.getDataValue() );
+        tagData = new Tag255StrCreditRating(
+                new MyStringType(Tag255StrCreditRating.TESTB_STR_CREDIT_RATING));
+        assertEquals( Tag255StrCreditRating.TESTB_STR_CREDIT_RATING, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

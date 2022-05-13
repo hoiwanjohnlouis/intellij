@@ -37,9 +37,9 @@ class Tag352LenEncodedListExecInstLenTest {
     }
     @Test
     void Tag0352Test() {
-        Log352LenEncodedListExecInstLen tagData;
+        Tag352LenEncodedListExecInstLen tagData;
 
-        tagData = new Log352LenEncodedListExecInstLen( new MyLengthType(23) );
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

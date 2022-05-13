@@ -27,9 +27,9 @@ class Tag911TotNumReportsTest {
     @Test
     void FIX0911Test() {
         FIX44 fixData = FIX44.FIX911_TOT_NUM_REPORTS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "911", fixData.getID());
+        assertEquals( "TOT_NUM_REPORTS", fixData.getName());
+        assertEquals( "FIX911_TOT_NUM_REPORTS", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

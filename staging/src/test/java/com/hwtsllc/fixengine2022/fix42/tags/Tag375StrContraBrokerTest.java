@@ -37,17 +37,17 @@ class Tag375StrContraBrokerTest {
     }
     @Test
     void Tag0375Test() {
-        Log375StrContraBroker tagData;
+        Tag375StrContraBroker tagData;
 
-        tagData = new Log375StrContraBroker(new MyStringType(
-                Log375StrContraBroker.TESTA_STR_CONTRA_BROKER));
-        assertEquals( Log375StrContraBroker.TESTA_STR_CONTRA_BROKER,
+        tagData = new Tag375StrContraBroker(new MyStringType(
+                Tag375StrContraBroker.TESTA_STR_CONTRA_BROKER));
+        assertEquals( Tag375StrContraBroker.TESTA_STR_CONTRA_BROKER,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log375StrContraBroker(new MyStringType(
-                Log375StrContraBroker.TESTB_STR_CONTRA_BROKER));
-        assertEquals( Log375StrContraBroker.TESTB_STR_CONTRA_BROKER,
+        tagData = new Tag375StrContraBroker(new MyStringType(
+                Tag375StrContraBroker.TESTB_STR_CONTRA_BROKER));
+        assertEquals( Tag375StrContraBroker.TESTB_STR_CONTRA_BROKER,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

@@ -37,7 +37,7 @@ class Tag162StrSettlInstIDTest {
         FIX41 fixData = FIX41.FIX162_STR_SETTL_INST_ID;
         assertEquals( "162", fixData.getID());
         assertEquals( "SETTL_INST_ID", fixData.getName());
-        assertEquals( "SettlInstId", fixData.getDescription());
+        assertEquals( "SettlInstID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

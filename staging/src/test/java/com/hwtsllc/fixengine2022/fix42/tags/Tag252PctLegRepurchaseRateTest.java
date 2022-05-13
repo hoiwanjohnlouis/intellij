@@ -31,24 +31,24 @@ class Tag252PctLegRepurchaseRateTest {
         FIX42 fixData = FIX42.FIX252_PCT_LEG_REPURCHASE_RATE;
         assertEquals( "252", fixData.getID());
         assertEquals( "LEG_REPURCHASE_RATE", fixData.getName());
-        assertEquals( "LegRepurchaseRate", fixData.getDescription());
+        assertEquals( "LegRepurchaseRate (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0252Test() {
-        Log252PctLegRepurchaseRate tagData;
+        Tag252PctLegRepurchaseRate tagData;
 
-        tagData = new Log252PctLegRepurchaseRate(new MyPercentageType(
-                Log252PctLegRepurchaseRate.TESTA_PCT_LEG_REPURCHASE_RATE));
-        assertEquals( Log252PctLegRepurchaseRate.TESTA_PCT_LEG_REPURCHASE_RATE,
+        tagData = new Tag252PctLegRepurchaseRate(new MyPercentageType(
+                Tag252PctLegRepurchaseRate.TESTA_PCT_LEG_REPURCHASE_RATE));
+        assertEquals( Tag252PctLegRepurchaseRate.TESTA_PCT_LEG_REPURCHASE_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log252PctLegRepurchaseRate(new MyPercentageType(
-                Log252PctLegRepurchaseRate.TESTB_PCT_LEG_REPURCHASE_RATE));
-        assertEquals( Log252PctLegRepurchaseRate.TESTB_PCT_LEG_REPURCHASE_RATE,
+        tagData = new Tag252PctLegRepurchaseRate(new MyPercentageType(
+                Tag252PctLegRepurchaseRate.TESTB_PCT_LEG_REPURCHASE_RATE));
+        assertEquals( Tag252PctLegRepurchaseRate.TESTB_PCT_LEG_REPURCHASE_RATE,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }

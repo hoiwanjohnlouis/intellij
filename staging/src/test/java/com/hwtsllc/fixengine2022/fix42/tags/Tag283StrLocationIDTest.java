@@ -30,23 +30,23 @@ class Tag283StrLocationIDTest {
         FIX42 fixData = FIX42.FIX283_STR_LOCATION_ID;
         assertEquals( "283", fixData.getID());
         assertEquals( "LOCATION_ID", fixData.getName());
-        assertEquals( "LocationId", fixData.getDescription());
+        assertEquals( "LocationID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0283Test() {
-        Log283StrLocationID tagData;
+        Tag283StrLocationID tagData;
 
-        tagData = new Log283StrLocationID(
-                new MyStringType(Log283StrLocationID.TESTA_STR_LOCATION_ID));
-        assertEquals( Log283StrLocationID.TESTA_STR_LOCATION_ID, tagData.getDataValue() );
+        tagData = new Tag283StrLocationID(
+                new MyStringType(Tag283StrLocationID.TESTA_STR_LOCATION_ID));
+        assertEquals( Tag283StrLocationID.TESTA_STR_LOCATION_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log283StrLocationID(
-                new MyStringType(Log283StrLocationID.TESTB_STR_LOCATION_ID));
-        assertEquals( Log283StrLocationID.TESTB_STR_LOCATION_ID, tagData.getDataValue() );
+        tagData = new Tag283StrLocationID(
+                new MyStringType(Tag283StrLocationID.TESTB_STR_LOCATION_ID));
+        assertEquals( Tag283StrLocationID.TESTB_STR_LOCATION_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -37,14 +37,14 @@ class Tag213DatXmlDataTest {
     }
     @Test
     void Tag0213Test() {
-        Log213DatXmlData tagData;
+        Tag213DatXmlData tagData;
 
-        tagData = new Log213DatXmlData(new MyDataType(Log213DatXmlData.TESTA_DAT_XML_DATA));
-        assertEquals( Log213DatXmlData.TESTA_DAT_XML_DATA, tagData.getDataValue() );
+        tagData = new Tag213DatXmlData(new MyDataType(Tag213DatXmlData.TESTA_DAT_XML_DATA));
+        assertEquals( Tag213DatXmlData.TESTA_DAT_XML_DATA, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log213DatXmlData(new MyDataType(Log213DatXmlData.TESTB_DAT_XML_DATA));
-        assertEquals( Log213DatXmlData.TESTB_DAT_XML_DATA, tagData.getDataValue() );
+        tagData = new Tag213DatXmlData(new MyDataType(Tag213DatXmlData.TESTB_DAT_XML_DATA));
+        assertEquals( Tag213DatXmlData.TESTB_DAT_XML_DATA, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
     }
 }

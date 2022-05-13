@@ -30,23 +30,23 @@ class Tag214StrSettlInstRefIDTest {
         FIX42 fixData = FIX42.FIX214_STR_SETTL_INST_REF_ID;
         assertEquals( "214", fixData.getID());
         assertEquals( "SETTL_INST_REF_ID", fixData.getName());
-        assertEquals( "SettlInstRefId", fixData.getDescription());
+        assertEquals( "SettlInstRefID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0214Test() {
-        Log214StrSettlInstRefID tagData;
+        Tag214StrSettlInstRefID tagData;
 
-        tagData = new Log214StrSettlInstRefID(
-                new MyStringType(Log214StrSettlInstRefID.TESTA_STR_SETTL_INST_REF_ID));
-        assertEquals( Log214StrSettlInstRefID.TESTA_STR_SETTL_INST_REF_ID, tagData.getDataValue() );
+        tagData = new Tag214StrSettlInstRefID(
+                new MyStringType(Tag214StrSettlInstRefID.TESTA_STR_SETTL_INST_REF_ID));
+        assertEquals( Tag214StrSettlInstRefID.TESTA_STR_SETTL_INST_REF_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log214StrSettlInstRefID(
-                new MyStringType(Log214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID));
-        assertEquals( Log214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID, tagData.getDataValue() );
+        tagData = new Tag214StrSettlInstRefID(
+                new MyStringType(Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID));
+        assertEquals( Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

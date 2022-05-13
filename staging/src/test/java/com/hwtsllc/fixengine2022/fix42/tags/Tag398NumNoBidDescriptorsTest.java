@@ -28,26 +28,26 @@ class Tag398NumNoBidDescriptorsTest {
     @Test
     void FIX0398Test() {
         FIX42 fixData = FIX42.FIX398_NUM_NO_BID_DESCRIPTORS;
-        assertEquals( "FIX398_NUM_NO_BID_DESCRIPTORS", fixData.getID());
-        assertEquals( "FIX398_NUM_NO_BID_DESCRIPTORS", fixData.getName());
-        assertEquals( "FIX398_NUM_NO_BID_DESCRIPTORS", fixData.getDescription());
+        assertEquals( "398", fixData.getID());
+        assertEquals( "NO_BID_DESCRIPTORS", fixData.getName());
+        assertEquals( "NoBidDescriptors", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0398Test() {
-        Log398NumNoBidDescriptors tagData;
+        Tag398NumNoBidDescriptors tagData;
 
-        tagData = new Log398NumNoBidDescriptors(new MyNumInGroupType(
-                Log398NumNoBidDescriptors.TESTA_NUM_NO_BID_DESCRIPTORS));
-        assertEquals( Log398NumNoBidDescriptors.TESTA_NUM_NO_BID_DESCRIPTORS,
+        tagData = new Tag398NumNoBidDescriptors(new MyNumInGroupType(
+                Tag398NumNoBidDescriptors.TESTA_NUM_NO_BID_DESCRIPTORS));
+        assertEquals( Tag398NumNoBidDescriptors.TESTA_NUM_NO_BID_DESCRIPTORS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log398NumNoBidDescriptors(new MyNumInGroupType(
-                Log398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS));
-        assertEquals( Log398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS,
+        tagData = new Tag398NumNoBidDescriptors(new MyNumInGroupType(
+                Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS));
+        assertEquals( Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

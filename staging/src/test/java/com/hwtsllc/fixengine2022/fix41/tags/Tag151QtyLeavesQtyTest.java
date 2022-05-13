@@ -41,7 +41,7 @@ class Tag151QtyLeavesQtyTest {
     @Test
     void FIX0151Test() {
         FIX41 fixData = FIX41.FIX151_QTY_LEAVES_QTY;
-        assertEquals( "FIX151", fixData.getID());
+        assertEquals( "151", fixData.getID());
         assertEquals( "LEAVES_QTY", fixData.getName());
         assertEquals( "LeavesQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());

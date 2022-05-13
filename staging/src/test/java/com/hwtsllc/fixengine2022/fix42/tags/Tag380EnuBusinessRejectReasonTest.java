@@ -24,6 +24,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag380
+ *  Enu
+ *  BusinessRejectReason
+ *
+ *      0-7, 18 msg types
+ *      OTHER( "0", "OTHER", "0 - Other" ),
+ *      UNKNOWN_ID( "1", "UNKNOWN_ID", "1 - Unknown ID" ),
+ *      UNKNOWN_SECURITY( "2", "UNKNOWN_SECURITY", "2 - Unknown Security" ),
+ *      UNKNOWN_MESSAGE_TYPE( "3", "UNKNOWN_MESSAGE_TYPE", "3 - Unknown Message Type" ),
+ *      APPLICATION_NOT_AVAILABLE( "4", "APPLICATION_NOT_AVAILABLE", "4 - Application not available" ),
+ *      REQUIRED_FIELD_MISSING( "5", "REQUIRED_FIELD_MISSING", "5 - Conditionally required field missing" ),
+ *      NOT_AUTHORIZED( "6", "NOT_AUTHORIZED", "6 - Not Authorized" ),
+ *      DELIVERTO_FIRM_NOT_AVAILABLE( "7", "DELIVERTO_FIRM_NOT_AVAILABLE",
+ *                          "7 - DeliverTo firm not available at this time" ),
+ *      INVALID_PRICE_INCREMENT( "18", "INVALID_PRICE_INCREMENT", "18 - Invalid price increment" ),
+ */
 class Tag380EnuBusinessRejectReasonTest {
     @Test
     void FIX0380Test() {
@@ -35,63 +52,46 @@ class Tag380EnuBusinessRejectReasonTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag380
-     *  Enu
-     *  BusinessRejectReason
-     *
-     *      0-7, 18 msg types
-     *      OTHER( "0", "OTHER", "0 - Other" ),
-     *      UNKNOWN_ID( "1", "UNKNOWN_ID", "1 - Unknown ID" ),
-     *      UNKNOWN_SECURITY( "2", "UNKNOWN_SECURITY", "2 - Unknown Security" ),
-     *      UNKNOWN_MESSAGE_TYPE( "3", "UNKNOWN_MESSAGE_TYPE", "3 - Unknown Message Type" ),
-     *      APPLICATION_NOT_AVAILABLE( "4", "APPLICATION_NOT_AVAILABLE", "4 - Application not available" ),
-     *      REQUIRED_FIELD_MISSING( "5", "REQUIRED_FIELD_MISSING", "5 - Conditionally required field missing" ),
-     *      NOT_AUTHORIZED( "6", "NOT_AUTHORIZED", "6 - Not Authorized" ),
-     *      DELIVERTO_FIRM_NOT_AVAILABLE( "7", "DELIVERTO_FIRM_NOT_AVAILABLE",
-     *                          "7 - DeliverTo firm not available at this time" ),
-     *      INVALID_PRICE_INCREMENT( "18", "INVALID_PRICE_INCREMENT", "18 - Invalid price increment" ),
-     */
     @Test
     void Tag0380Test() {
-        Log380EnuBusinessRejectReason tagData;
+        Tag380EnuBusinessRejectReason tagData;
 
-        /**
+        /*
          * 0-7, 18 msg types
          */
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.OTHER);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.OTHER);
         assertEquals( Enum380BusinessRejectReason.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_ID);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_ID);
         assertEquals( Enum380BusinessRejectReason.UNKNOWN_ID.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_SECURITY);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_SECURITY);
         assertEquals( Enum380BusinessRejectReason.UNKNOWN_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_MESSAGE_TYPE);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.UNKNOWN_MESSAGE_TYPE);
         assertEquals( Enum380BusinessRejectReason.UNKNOWN_MESSAGE_TYPE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.APPLICATION_NOT_AVAILABLE);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.APPLICATION_NOT_AVAILABLE);
         assertEquals( Enum380BusinessRejectReason.APPLICATION_NOT_AVAILABLE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.REQUIRED_FIELD_MISSING);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.REQUIRED_FIELD_MISSING);
         assertEquals( Enum380BusinessRejectReason.REQUIRED_FIELD_MISSING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.NOT_AUTHORIZED);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.NOT_AUTHORIZED);
         assertEquals( Enum380BusinessRejectReason.NOT_AUTHORIZED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.DELIVERTO_FIRM_NOT_AVAILABLE);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.DELIVERTO_FIRM_NOT_AVAILABLE);
         assertEquals( Enum380BusinessRejectReason.DELIVERTO_FIRM_NOT_AVAILABLE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log380EnuBusinessRejectReason(Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT);
+        tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT);
         assertEquals( Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

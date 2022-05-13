@@ -37,13 +37,13 @@ class Tag411BoolExchangeForPhysicalTest {
     }
     @Test
     void Tag0411Test() {
-        Log411BoolExchangeForPhysical tagData;
+        Tag411BoolExchangeForPhysical tagData;
 
-        tagData = new Log411BoolExchangeForPhysical(MyBooleanType.NO);
+        tagData = new Tag411BoolExchangeForPhysical(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log411BoolExchangeForPhysical(MyBooleanType.YES);
+        tagData = new Tag411BoolExchangeForPhysical(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

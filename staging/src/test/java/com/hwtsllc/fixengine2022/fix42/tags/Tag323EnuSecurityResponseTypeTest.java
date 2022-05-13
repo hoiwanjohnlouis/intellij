@@ -24,6 +24,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  323
+ *  Enu
+ *  SecurityResponseType
+ *
+ *      1-6 msg types
+ *      ACCEPT_SECURITY_AS_IS( "1", "ACCEPT_SECURITY_AS_IS",
+ *                          "1 - Accept security proposal as-is" ),
+ *      ACCEPT_SECURITY_REVISIONS( "2", "ACCEPT_SECURITY_REVISIONS",
+ *                          "2 - Accept security proposal with revisions as indicated in the message" ),
+ *      LIST_OF_SECURITY_TYPES_RETURNED( "3", "LIST_OF_SECURITY_TYPES_RETURNED",
+ *                          "3 - List of security types returned per request" ),
+ *      LIST_OF_SECURITIES_RETURNED_PER_REQUEST( "4", "LIST_OF_SECURITIES_RETURNED_PER_REQUEST",
+ *                          "4 - List of securities returned per request" ),
+ *      REJECT_SECURITY_PROPOSAL( "5", "REJECT_SECURITY_PROPOSAL",
+ *                          "5 - Reject security proposal" ),
+ *      CANNOT_MATCH_SELECTION( "6", "CANNOT_MATCH_SELECTION",
+ *                          "6 - Cannot match selection criteria" ),
+ */
 class Tag323EnuSecurityResponseTypeTest {
     @Test
     void FIX0323Test() {
@@ -35,53 +54,34 @@ class Tag323EnuSecurityResponseTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  323
-     *  Enu
-     *  SecurityResponseType
-     *
-     *      1-6 msg types
-     *      ACCEPT_SECURITY_AS_IS( "1", "ACCEPT_SECURITY_AS_IS",
-     *                          "1 - Accept security proposal as-is" ),
-     *      ACCEPT_SECURITY_REVISIONS( "2", "ACCEPT_SECURITY_REVISIONS",
-     *                          "2 - Accept security proposal with revisions as indicated in the message" ),
-     *      LIST_OF_SECURITY_TYPES_RETURNED( "3", "LIST_OF_SECURITY_TYPES_RETURNED",
-     *                          "3 - List of security types returned per request" ),
-     *      LIST_OF_SECURITIES_RETURNED_PER_REQUEST( "4", "LIST_OF_SECURITIES_RETURNED_PER_REQUEST",
-     *                          "4 - List of securities returned per request" ),
-     *      REJECT_SECURITY_PROPOSAL( "5", "REJECT_SECURITY_PROPOSAL",
-     *                          "5 - Reject security proposal" ),
-     *      CANNOT_MATCH_SELECTION( "6", "CANNOT_MATCH_SELECTION",
-     *                          "6 - Cannot match selection criteria" ),
-     */
     @Test
     void Tag0323Test() {
-        Log323EnuSecurityResponseType tagData;
+        Tag323EnuSecurityResponseType tagData;
 
-        /**
+        /*
          * 1-6 msg types
          */
-        tagData = new Log323EnuSecurityResponseType(Enum323SecurityResponseType.ACCEPT_SECURITY_AS_IS);
+        tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.ACCEPT_SECURITY_AS_IS);
         assertEquals( Enum323SecurityResponseType.ACCEPT_SECURITY_AS_IS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log323EnuSecurityResponseType(Enum323SecurityResponseType.ACCEPT_SECURITY_REVISIONS);
+        tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.ACCEPT_SECURITY_REVISIONS);
         assertEquals( Enum323SecurityResponseType.ACCEPT_SECURITY_REVISIONS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log323EnuSecurityResponseType(Enum323SecurityResponseType.LIST_OF_SECURITY_TYPES_RETURNED);
+        tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.LIST_OF_SECURITY_TYPES_RETURNED);
         assertEquals( Enum323SecurityResponseType.LIST_OF_SECURITY_TYPES_RETURNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log323EnuSecurityResponseType(Enum323SecurityResponseType.LIST_OF_SECURITIES_RETURNED_PER_REQUEST);
+        tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.LIST_OF_SECURITIES_RETURNED_PER_REQUEST);
         assertEquals( Enum323SecurityResponseType.LIST_OF_SECURITIES_RETURNED_PER_REQUEST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log323EnuSecurityResponseType(Enum323SecurityResponseType.REJECT_SECURITY_PROPOSAL);
+        tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.REJECT_SECURITY_PROPOSAL);
         assertEquals( Enum323SecurityResponseType.REJECT_SECURITY_PROPOSAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log323EnuSecurityResponseType(Enum323SecurityResponseType.CANNOT_MATCH_SELECTION);
+        tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.CANNOT_MATCH_SELECTION);
         assertEquals( Enum323SecurityResponseType.CANNOT_MATCH_SELECTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

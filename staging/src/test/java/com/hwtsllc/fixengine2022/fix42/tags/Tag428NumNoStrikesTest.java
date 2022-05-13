@@ -37,17 +37,17 @@ class Tag428NumNoStrikesTest {
     }
     @Test
     void Tag0428Test() {
-        Log428NumNoStrikes tagData;
+        Tag428NumNoStrikes tagData;
 
-        tagData = new Log428NumNoStrikes(new MyNumInGroupType(
-                Log428NumNoStrikes.TESTA_NUM_NO_STRIKES));
-        assertEquals( Log428NumNoStrikes.TESTA_NUM_NO_STRIKES,
+        tagData = new Tag428NumNoStrikes(new MyNumInGroupType(
+                Tag428NumNoStrikes.TESTA_NUM_NO_STRIKES));
+        assertEquals( Tag428NumNoStrikes.TESTA_NUM_NO_STRIKES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log428NumNoStrikes(new MyNumInGroupType(
-                Log428NumNoStrikes.TESTB_NUM_NO_STRIKES));
-        assertEquals( Log428NumNoStrikes.TESTB_NUM_NO_STRIKES,
+        tagData = new Tag428NumNoStrikes(new MyNumInGroupType(
+                Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES));
+        assertEquals( Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

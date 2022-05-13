@@ -37,7 +37,7 @@ class Tag1139StrExchangeSpecialInstructionsTest {
         FIX50 fixData = FIX50.FIX1139_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
         assertEquals( "1139", fixData.getID());
         assertEquals( "EXCHANGE_SPECIAL_INSTRUCTIONS", fixData.getName());
-        assertEquals( "Exchange_Special_Instructions", fixData.getDescription());
+        assertEquals( "ExchangeSpecialInstructions", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

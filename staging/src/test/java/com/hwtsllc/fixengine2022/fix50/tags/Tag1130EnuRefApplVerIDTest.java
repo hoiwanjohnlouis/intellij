@@ -70,7 +70,7 @@ class Tag1130EnuRefApplVerIDTest {
         FIX50 fixData = FIX50.FIX1130_ENU_REF_APPL_VER_ID;
         assertEquals( "1130", fixData.getID());
         assertEquals( "REF_APPL_VER_ID", fixData.getName());
-        assertEquals( "RefApplVerId", fixData.getDescription());
+        assertEquals( "RefApplVerID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

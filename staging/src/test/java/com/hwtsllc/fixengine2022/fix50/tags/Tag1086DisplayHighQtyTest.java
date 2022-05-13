@@ -36,7 +36,7 @@ class Tag1086DisplayHighQtyTest {
         FIX50 fixData = FIX50.FIX1086_DISPLAY_HIGH_QTY;
         assertEquals( "1086", fixData.getID());
         assertEquals( "DISPLAY_HIGH_QTY", fixData.getName());
-        assertEquals( "display_high_qty", fixData.getDescription());
+        assertEquals( "DisplayHighQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -39,7 +39,7 @@ class Tag1087DisplayMinIncrTest {
         FIX50 fixData = FIX50.FIX1087_DISPLAY_MIN_INCR;
         assertEquals( "1087", fixData.getID());
         assertEquals( "DISPLAY_MIN_INCR", fixData.getName());
-        assertEquals( "display_min_incr", fixData.getDescription());
+        assertEquals( "DisplayMinIncr", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

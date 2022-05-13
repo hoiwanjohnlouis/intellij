@@ -37,17 +37,17 @@ class Tag308ExcUnderlyingSecurityExchangeTest {
     }
     @Test
     void Tag0308Test() {
-        Log308ExcUnderlyingSecurityExchange tagData;
+        Tag308ExcUnderlyingSecurityExchange tagData;
 
-        tagData = new Log308ExcUnderlyingSecurityExchange(new MyExchangeType(
-                Log308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE));
-        assertEquals( Log308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE,
+        tagData = new Tag308ExcUnderlyingSecurityExchange(new MyExchangeType(
+                Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE));
+        assertEquals( Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log308ExcUnderlyingSecurityExchange(new MyExchangeType(
-                Log308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE));
-        assertEquals( Log308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE,
+        tagData = new Tag308ExcUnderlyingSecurityExchange(new MyExchangeType(
+                Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE));
+        assertEquals( Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
     }

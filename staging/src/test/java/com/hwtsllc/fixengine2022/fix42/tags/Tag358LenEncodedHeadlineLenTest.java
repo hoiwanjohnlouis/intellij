@@ -37,9 +37,9 @@ class Tag358LenEncodedHeadlineLenTest {
     }
     @Test
     void Tag0358Test() {
-        Log358LenEncodedHeadlineLen tagData;
+        Tag358LenEncodedHeadlineLen tagData;
 
-        tagData = new Log358LenEncodedHeadlineLen( new MyLengthType(23) );
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType(23) );
         assertEquals( 23, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }

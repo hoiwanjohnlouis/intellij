@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Tag434
+ *  Enu
+ *  CxlRejResponseTo
+ *
+ *      1-2 msg types
+ *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
+ *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
+ */
 class Tag434EnuCxlRejResponseToTest {
     @Test
     void FIX0434Test() {
@@ -35,27 +44,18 @@ class Tag434EnuCxlRejResponseToTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Tag434
-     *  Enu
-     *  CxlRejResponseTo
-     *
-     *      1-2 msg types
-     *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
-     *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
-     */
     @Test
     void Tag0434Test() {
-        Log434EnuCxlRejResponseTo tagData;
+        Tag434EnuCxlRejResponseTo tagData;
 
-        /**
+        /*
          * 1-2 msg types
          */
-        tagData = new Log434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST);
+        tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST);
         assertEquals( Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST);
+        tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST);
         assertEquals( Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

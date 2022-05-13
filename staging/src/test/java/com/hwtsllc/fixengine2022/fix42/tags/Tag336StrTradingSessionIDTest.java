@@ -30,24 +30,24 @@ class Tag336StrTradingSessionIDTest {
         FIX42 fixData = FIX42.FIX336_STR_TRADING_SESSION_ID;
         assertEquals( "336", fixData.getID());
         assertEquals( "TRADING_SESSION_ID", fixData.getName());
-        assertEquals( "TradingSessionId", fixData.getDescription());
+        assertEquals( "TradingSessionID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
     void Tag0336Test() {
-        Log336StrTradingSessionID tagData;
+        Tag336StrTradingSessionID tagData;
 
-        tagData = new Log336StrTradingSessionID(new MyStringType(
-                Log336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID));
-        assertEquals( Log336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID,
+        tagData = new Tag336StrTradingSessionID(new MyStringType(
+                Tag336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID));
+        assertEquals( Tag336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log336StrTradingSessionID(new MyStringType(
-                Log336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID));
-        assertEquals( Log336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID,
+        tagData = new Tag336StrTradingSessionID(new MyStringType(
+                Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID));
+        assertEquals( Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

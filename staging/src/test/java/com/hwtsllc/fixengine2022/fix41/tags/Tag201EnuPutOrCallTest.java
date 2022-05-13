@@ -47,7 +47,7 @@ class Tag201EnuPutOrCallTest {
         FIX41 fixData = FIX41.FIX201_ENU_PUT_OR_CALL;
         assertEquals( "201", fixData.getID());
         assertEquals( "PUT_OR_CALL", fixData.getName());
-        assertEquals( "PutOrCall", fixData.getDescription());
+        assertEquals( "PutOrCall (replaced)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

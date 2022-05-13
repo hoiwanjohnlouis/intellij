@@ -36,7 +36,7 @@ class Tag963MDReportIDTest {
         FIX50 fixData = FIX50.FIX963_MD_REPORT_ID;
         assertEquals( "963", fixData.getID());
         assertEquals( "MD_REPORT_ID", fixData.getName());
-        assertEquals( "MDReportId", fixData.getDescription());
+        assertEquals( "MDReportID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

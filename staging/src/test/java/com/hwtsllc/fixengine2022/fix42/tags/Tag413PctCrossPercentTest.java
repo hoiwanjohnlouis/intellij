@@ -37,17 +37,17 @@ class Tag413PctCrossPercentTest {
     }
     @Test
     void Tag0413Test() {
-        Log413PctCrossPercent tagData;
+        Tag413PctCrossPercent tagData;
 
-        tagData = new Log413PctCrossPercent(new MyPercentageType(
-                Log413PctCrossPercent.TESTA_PCT_CROSS_PERCENT));
-        assertEquals( Log413PctCrossPercent.TESTA_PCT_CROSS_PERCENT,
+        tagData = new Tag413PctCrossPercent(new MyPercentageType(
+                Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT));
+        assertEquals( Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log413PctCrossPercent(new MyPercentageType(
-                Log413PctCrossPercent.TESTB_PCT_CROSS_PERCENT));
-        assertEquals( Log413PctCrossPercent.TESTB_PCT_CROSS_PERCENT,
+        tagData = new Tag413PctCrossPercent(new MyPercentageType(
+                Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT));
+        assertEquals( Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT,
                 tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }
