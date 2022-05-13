@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1039StrUnderlyingSettlMethodTest {
     @Test
     void FIX1039Test() {
-        FIX50 fixData = FIX50.FIX1039_UNDERLYING_SETTL_METHOD;
+        FIX50 fixData = FIX50.FIX1039_STR_UNDERLYING_SETTL_METHOD;
         assertEquals( "1039", fixData.getID());
         assertEquals( "UNDERLYING_SETTL_METHOD", fixData.getName());
         assertEquals( "UnderlyingSettlMethod", fixData.getDescription());
@@ -44,5 +45,8 @@ class Tag1039StrUnderlyingSettlMethodTest {
     void Tag1039Test() {
         Tag1039StrUnderlyingSettlMethod tagData;
 
+        tagData = new Tag1039StrUnderlyingSettlMethod( new MyStringType("Chloe Kim") );
+        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

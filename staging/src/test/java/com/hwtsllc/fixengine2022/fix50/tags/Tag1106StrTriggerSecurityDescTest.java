@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1106StrTriggerSecurityDescTest {
     @Test
     void FIX1106Test() {
-        FIX50 fixData = FIX50.FIX1106_TRIGGER_SECURITY_DESC;
+        FIX50 fixData = FIX50.FIX1106_STR_TRIGGER_SECURITY_DESC;
         assertEquals( "1106", fixData.getID());
         assertEquals( "TRIGGER_SECURITY_DESC", fixData.getName());
         assertEquals( "trigger_security_desc", fixData.getDescription());
@@ -45,5 +46,8 @@ class Tag1106StrTriggerSecurityDescTest {
     void Tag1106Test() {
         Tag1106StrTriggerSecurityDesc tagData;
 
+        tagData = new Tag1106StrTriggerSecurityDesc( new MyStringType("Chloe Kim") );
+        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

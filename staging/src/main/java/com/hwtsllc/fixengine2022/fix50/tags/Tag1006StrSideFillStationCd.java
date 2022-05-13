@@ -16,7 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -28,4 +30,63 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Used on a multi-sided trade to convey order routing information
  */
 public class Tag1006StrSideFillStationCd extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+    private final MyStringType dataValue;
+
+    public final static String TESTA_STR_SIDE_FILL_STATION_CD
+            = "BilboBaggins-Tag1006StrSideFillStationCd";
+    public final static String TESTB_STR_SIDE_FILL_STATION_CD
+            = "Gandalf-Tag1006StrSideFillStationCd";
+
+    public Tag1006StrSideFillStationCd(MyStringType dataValue) {
+        setFixType(FIX50.FIX1006_STR_SIDE_FILL_STATION_CD);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getDataValue();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(dataValue.toString());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toVerboseString() {
+        return super.toVerboseString()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag1006StrSideFillStationCd tagData;
+
+        tagData = new Tag1006StrSideFillStationCd(new MyStringType(TESTA_STR_SIDE_FILL_STATION_CD) );
+        System.out.println(tagData);
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
+
+        tagData = new Tag1006StrSideFillStationCd(new MyStringType(TESTB_STR_SIDE_FILL_STATION_CD) );
+        System.out.println(tagData);
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
+    }
 }

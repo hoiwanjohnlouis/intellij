@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1136StrAllocClearingFeeIndicatorTest {
     @Test
     void FIX1136Test() {
-        FIX50 fixData = FIX50.FIX1136_ALLOC_CLEARING_FEE_INDICATOR;
+        FIX50 fixData = FIX50.FIX1136_STR_ALLOC_CLEARING_FEE_INDICATOR;
         assertEquals( "1136", fixData.getID());
         assertEquals( "ALLOC_CLEARING_FEE_INDICATOR", fixData.getName());
         assertEquals( "Alloc_Clearing_Fee_Indicator", fixData.getDescription());
@@ -45,5 +46,8 @@ class Tag1136StrAllocClearingFeeIndicatorTest {
     void Tag1136Test() {
         Tag1136StrAllocClearingFeeIndicator tagData;
 
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType("Chloe Kim") );
+        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

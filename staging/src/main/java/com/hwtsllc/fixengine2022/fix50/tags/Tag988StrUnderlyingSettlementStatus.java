@@ -16,7 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,4 +34,63 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Settlement can be delayed for an underlying instrument.
  */
 public class Tag988StrUnderlyingSettlementStatus extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+    private final MyStringType dataValue;
+
+    public final static String TESTA_STR_UNDERLYING_SETTLEMENT_STATUS
+            = "BilboBaggins-Tag988StrUnderlyingSettlementStatus";
+    public final static String TESTB_STR_UNDERLYING_SETTLEMENT_STATUS
+            = "Gandalf-Tag988StrUnderlyingSettlementStatus";
+
+    public Tag988StrUnderlyingSettlementStatus(MyStringType dataValue) {
+        setFixType(FIX50.FIX988_STR_UNDERLYING_SETTLEMENT_STATUS);
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getDataValue();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toValuePairString() {
+        return getID()
+                .concat("=")
+                .concat(dataValue.toString());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toVerboseString() {
+        return super.toVerboseString()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]");
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag988StrUnderlyingSettlementStatus tagData;
+
+        tagData = new Tag988StrUnderlyingSettlementStatus(new MyStringType(TESTA_STR_UNDERLYING_SETTLEMENT_STATUS) );
+        System.out.println(tagData);
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
+
+        tagData = new Tag988StrUnderlyingSettlementStatus(new MyStringType(TESTB_STR_UNDERLYING_SETTLEMENT_STATUS) );
+        System.out.println(tagData);
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
+    }
 }

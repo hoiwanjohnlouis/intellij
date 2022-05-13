@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag960StrStrategyParameterValueTest {
     @Test
     void FIX0960Test() {
-        FIX50 fixData = FIX50.FIX960_STRATEGY_PARAMETER_VALUE;
+        FIX50 fixData = FIX50.FIX960_STR_STRATEGY_PARAMETER_VALUE;
         assertEquals( "960", fixData.getID());
         assertEquals( "STRATEGY_PARAMETER_VALUE", fixData.getName());
         assertEquals( "StrategyParameterValue", fixData.getDescription());
@@ -45,5 +46,8 @@ class Tag960StrStrategyParameterValueTest {
     void Tag0960Test() {
         Tag960StrStrategyParameterValue tagData;
 
+        tagData = new Tag960StrStrategyParameterValue( new MyStringType("Chloe Kim") );
+        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

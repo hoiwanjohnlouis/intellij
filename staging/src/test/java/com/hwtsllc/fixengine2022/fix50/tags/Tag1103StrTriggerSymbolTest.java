@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -34,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1103StrTriggerSymbolTest {
     @Test
     void FIX1103Test() {
-        FIX50 fixData = FIX50.FIX1103_TRIGGER_SYMBOL;
+        FIX50 fixData = FIX50.FIX1103_STR_TRIGGER_SYMBOL;
         assertEquals( "1103", fixData.getID());
         assertEquals( "TRIGGER_SYMBOL", fixData.getName());
         assertEquals( "trigger_symbol", fixData.getDescription());
@@ -46,5 +47,8 @@ class Tag1103StrTriggerSymbolTest {
     void Tag1103Test() {
         Tag1103StrTriggerSymbol tagData;
 
+        tagData = new Tag1103StrTriggerSymbol( new MyStringType("Chloe Kim") );
+        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

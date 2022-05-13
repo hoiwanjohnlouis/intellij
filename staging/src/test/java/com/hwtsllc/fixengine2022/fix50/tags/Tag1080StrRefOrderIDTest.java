@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1080StrRefOrderIDTest {
     @Test
     void FIX1080Test() {
-        FIX50 fixData = FIX50.FIX1080_REF_ORDER_ID;
+        FIX50 fixData = FIX50.FIX1080_STR_REF_ORDER_ID;
         assertEquals( "1080", fixData.getID());
         assertEquals( "REF_ORDER_ID", fixData.getName());
         assertEquals( "ref_order_id", fixData.getDescription());
@@ -45,5 +46,8 @@ class Tag1080StrRefOrderIDTest {
     void Tag1080Test() {
         Tag1080StrRefOrderID tagData;
 
+        tagData = new Tag1080StrRefOrderID( new MyStringType("Chloe Kim") );
+        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

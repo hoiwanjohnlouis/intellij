@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag966StrSettleOnOpenFlagTest {
     @Test
     void FIX0966Test() {
-        FIX50 fixData = FIX50.FIX966_SETTLE_ON_OPEN_FLAG;
+        FIX50 fixData = FIX50.FIX966_STR_SETTLE_ON_OPEN_FLAG;
         assertEquals( "966", fixData.getID());
         assertEquals( "SETTLE_ON_OPEN_FLAG", fixData.getName());
         assertEquals( "SettleOnOpenFlag", fixData.getDescription());
@@ -45,5 +46,8 @@ class Tag966StrSettleOnOpenFlagTest {
     void Tag0966Test() {
         Tag966StrSettleOnOpenFlag tagData;
 
+        tagData = new Tag966StrSettleOnOpenFlag( new MyStringType("Chloe Kim") );
+        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

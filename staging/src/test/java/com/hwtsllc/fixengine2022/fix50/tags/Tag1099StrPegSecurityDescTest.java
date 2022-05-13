@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag1099StrPegSecurityDescTest {
     @Test
     void FIX1099Test() {
-        FIX50 fixData = FIX50.FIX1099_PEG_SECURITY_DESC;
+        FIX50 fixData = FIX50.FIX1099_STR_PEG_SECURITY_DESC;
         assertEquals( "1099", fixData.getID());
         assertEquals( "PEG_SECURITY_DESC", fixData.getName());
         assertEquals( "peg_security_desc", fixData.getDescription());
@@ -45,5 +46,8 @@ class Tag1099StrPegSecurityDescTest {
     void Tag1099Test() {
         Tag1099StrPegSecurityDesc tagData;
 
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType("Chloe Kim") );
+        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }
