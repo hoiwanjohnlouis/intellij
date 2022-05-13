@@ -45,14 +45,14 @@ class Tag192QtyOrderQty2Test {
     }
     @Test
     void Tag0192Test() {
-        Log192QtyOrderQty2 tagData;
+        Tag192QtyOrderQty2 tagData;
 
-        tagData = new Log192QtyOrderQty2(new MyQtyType(Log192QtyOrderQty2.TESTA_QTY_ORDER_QTY_2));
-        assertEquals( Log192QtyOrderQty2.TESTA_QTY_ORDER_QTY_2, tagData.getDataValue());
+        tagData = new Tag192QtyOrderQty2(new MyQtyType(Tag192QtyOrderQty2.TESTA_QTY_ORDER_QTY_2));
+        assertEquals( Tag192QtyOrderQty2.TESTA_QTY_ORDER_QTY_2, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log192QtyOrderQty2(new MyQtyType(Log192QtyOrderQty2.TESTB_QTY_ORDER_QTY_2));
-        assertEquals( Log192QtyOrderQty2.TESTB_QTY_ORDER_QTY_2, tagData.getDataValue());
+        tagData = new Tag192QtyOrderQty2(new MyQtyType(Tag192QtyOrderQty2.TESTB_QTY_ORDER_QTY_2));
+        assertEquals( Tag192QtyOrderQty2.TESTB_QTY_ORDER_QTY_2, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

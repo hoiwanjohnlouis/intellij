@@ -46,10 +46,10 @@ class Tag95LenRawDataLengthTest {
     @Test
     void Tag0095Test() {
         int dataLength;
-        Log95LenRawDataLength tagData;
+        Tag95LenRawDataLength tagData;
 
         dataLength = "FrodoBaggins-95RawData".length();
-        tagData = new Log95LenRawDataLength(new MyLengthType(dataLength) );
+        tagData = new Tag95LenRawDataLength(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }

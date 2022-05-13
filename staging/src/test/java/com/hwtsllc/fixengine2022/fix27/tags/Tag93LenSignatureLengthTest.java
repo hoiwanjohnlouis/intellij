@@ -46,10 +46,10 @@ class Tag93LenSignatureLengthTest {
     @Test
     void Tag0093Test() {
         int dataLength;
-        Log93LenSignatureLength tagData;
+        Tag93LenSignatureLength tagData;
 
         dataLength = "BarleymanButterBurr-89Signature".length();
-        tagData = new Log93LenSignatureLength(new MyLengthType(dataLength) );
+        tagData = new Tag93LenSignatureLength(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }

@@ -33,6 +33,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Anonymity is relevant in markets where counterparties are regularly disclosed in order depth feeds.
  *  <p>
  *  Disclosure is relevant when counterparties are not normally visible.
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Trader explicitly request anonymity" ),
+ *  <p> NO( "N", "NO", "N - Anonymity not required" ),
  */
 class Tag1091BoolPreTradeAnonymityTest {
     @Test

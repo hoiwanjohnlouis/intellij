@@ -48,17 +48,17 @@ class Tag28EnuIOITransTypeTest {
     }
     @Test
     void Tag0028Test() {
-        Log28EnuIOITransType tagData;
+        Tag28EnuIOITransType tagData;
 
-        tagData = new Log28EnuIOITransType(Enum28IOITransType.NEW);
+        tagData = new Tag28EnuIOITransType(Enum28IOITransType.NEW);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log28EnuIOITransType(Enum28IOITransType.REPLACE);
+        tagData = new Tag28EnuIOITransType(Enum28IOITransType.REPLACE);
         assertEquals( "R", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log28EnuIOITransType(Enum28IOITransType.CANCEL);
+        tagData = new Tag28EnuIOITransType(Enum28IOITransType.CANCEL);
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -45,9 +45,9 @@ class Tag122UtcOrigSendingTimeTest {
     }
     @Test
     void Tag0122Test() {
-        Log122UtcOrigSendingTime tagData;
+        Tag122UtcOrigSendingTime tagData;
 
-        tagData = new Log122UtcOrigSendingTime(new MyUTCTimestampType("KimSoYeon-122OrigSendingTime") );
+        tagData = new Tag122UtcOrigSendingTime(new MyUTCTimestampType("KimSoYeon-122OrigSendingTime") );
         assertEquals( "KimSoYeon-122OrigSendingTime", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

@@ -48,13 +48,13 @@ class Tag130BoolIOINaturalFlagTest {
     }
     @Test
     void Tag0130Test() {
-        Log130BoolIOINaturalFlag tagData;
+        Tag130BoolIOINaturalFlag tagData;
 
-        tagData = new Log130BoolIOINaturalFlag(MyBooleanType.NO);
+        tagData = new Tag130BoolIOINaturalFlag(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log130BoolIOINaturalFlag(MyBooleanType.YES);
+        tagData = new Tag130BoolIOINaturalFlag(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

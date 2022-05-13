@@ -45,9 +45,9 @@ class Tag82IntNoRptsTest {
     }
     @Test
     void Tag0082Test() {
-        Log82IntNoRpts tagData;
+        Tag82IntNoRpts tagData;
 
-        tagData = new Log82IntNoRpts(new MyIntType(23) );
+        tagData = new Tag82IntNoRpts(new MyIntType(23) );
         assertEquals( 23, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

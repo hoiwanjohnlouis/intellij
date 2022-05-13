@@ -44,14 +44,14 @@ class Tag164StrEmailThreadIDTest {
     }
     @Test
     void Tag0164Test() {
-        Log164StrEmailThreadID tagData;
+        Tag164StrEmailThreadID tagData;
 
-        tagData = new Log164StrEmailThreadID(new MyStringType(Log164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID));
-        assertEquals( Log164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID, tagData.getDataValue());
+        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID));
+        assertEquals( Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log164StrEmailThreadID(new MyStringType(Log164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
-        assertEquals( Log164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID, tagData.getDataValue());
+        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
+        assertEquals( Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

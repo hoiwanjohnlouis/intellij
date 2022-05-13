@@ -55,33 +55,33 @@ class Tag166EnuSettlLocationTest {
     }
     @Test
     void Tag0166Test() {
-        Log166EnuSettlLocation tagData;
+        Tag166EnuSettlLocation tagData;
 
-        tagData = new Log166EnuSettlLocation(Enum166SettlLocation.CEDEL);
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.CEDEL);
         assertEquals( Enum166SettlLocation.CEDEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log166EnuSettlLocation(Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY);
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY);
         assertEquals( Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log166EnuSettlLocation(Enum166SettlLocation.EURO_CLEAR);
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.EURO_CLEAR);
         assertEquals( Enum166SettlLocation.EURO_CLEAR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log166EnuSettlLocation(Enum166SettlLocation.FEDERAL_BOOK_ENTRY);
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.FEDERAL_BOOK_ENTRY);
         assertEquals( Enum166SettlLocation.FEDERAL_BOOK_ENTRY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log166EnuSettlLocation(Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION);
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION);
         assertEquals( Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log166EnuSettlLocation(Enum166SettlLocation.PHYSICAL);
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PHYSICAL);
         assertEquals( Enum166SettlLocation.PHYSICAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log166EnuSettlLocation(Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY);
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY);
         assertEquals( Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

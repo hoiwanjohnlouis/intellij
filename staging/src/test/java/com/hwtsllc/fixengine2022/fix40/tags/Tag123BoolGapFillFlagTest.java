@@ -47,13 +47,13 @@ class Tag123BoolGapFillFlagTest {
     }
     @Test
     void Tag0123Test() {
-        Log123BoolGapFillFlag tagData;
+        Tag123BoolGapFillFlag tagData;
 
-        tagData = new Log123BoolGapFillFlag(MyBooleanType.NO);
+        tagData = new Tag123BoolGapFillFlag(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log123BoolGapFillFlag(MyBooleanType.YES);
+        tagData = new Tag123BoolGapFillFlag(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -44,9 +44,9 @@ class Tag129StrDeliverToSubIDTest {
     }
     @Test
     void Tag0129Test() {
-        Log129StrDeliverToSubID tagData;
+        Tag129StrDeliverToSubID tagData;
 
-        tagData = new Log129StrDeliverToSubID(new MyStringType("HanHyoJoo-129DeliverToSubID") );
+        tagData = new Tag129StrDeliverToSubID(new MyStringType("HanHyoJoo-129DeliverToSubID") );
         assertEquals( "HanHyoJoo-129DeliverToSubID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

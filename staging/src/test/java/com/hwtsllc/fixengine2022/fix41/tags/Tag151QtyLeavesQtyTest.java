@@ -50,14 +50,14 @@ class Tag151QtyLeavesQtyTest {
     }
     @Test
     void Tag0151Test() {
-        Log151QtyLeavesQty tagData;
+        Tag151QtyLeavesQty tagData;
 
-        tagData = new Log151QtyLeavesQty(new MyQtyType(Log151QtyLeavesQty.TESTA_QTY_LEAVES_QTY));
-        assertEquals( Log151QtyLeavesQty.TESTA_QTY_LEAVES_QTY, tagData.getDataValue());
+        tagData = new Tag151QtyLeavesQty(new MyQtyType(Tag151QtyLeavesQty.TESTA_QTY_LEAVES_QTY));
+        assertEquals( Tag151QtyLeavesQty.TESTA_QTY_LEAVES_QTY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log151QtyLeavesQty(new MyQtyType(Log151QtyLeavesQty.TESTB_QTY_LEAVES_QTY));
-        assertEquals( Log151QtyLeavesQty.TESTB_QTY_LEAVES_QTY, tagData.getDataValue());
+        tagData = new Tag151QtyLeavesQty(new MyQtyType(Tag151QtyLeavesQty.TESTB_QTY_LEAVES_QTY));
+        assertEquals( Tag151QtyLeavesQty.TESTB_QTY_LEAVES_QTY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

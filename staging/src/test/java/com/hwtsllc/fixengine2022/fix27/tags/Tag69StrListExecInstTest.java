@@ -44,10 +44,10 @@ class Tag69StrListExecInstTest {
     }
     @Test
     void Tag0069Test() {
-        Log69StrListExecInst tagData;
+        Tag69StrListExecInst tagData;
 
-        tagData = new Log69StrListExecInst(new MyStringType(Log69StrListExecInst.TESTA_STR_LIST_EXEC_INST) );
-        assertEquals(Log69StrListExecInst.TESTA_STR_LIST_EXEC_INST, tagData.getDataValue());
+        tagData = new Tag69StrListExecInst(new MyStringType(Tag69StrListExecInst.TESTA_STR_LIST_EXEC_INST) );
+        assertEquals(Tag69StrListExecInst.TESTA_STR_LIST_EXEC_INST, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

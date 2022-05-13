@@ -67,7 +67,7 @@ class Tag103EnuOrdRejReasonTest {
     }
     @Test
     void Tag0103Test() {
-        Log103EnuOrdRejReason tagData;
+        Tag103EnuOrdRejReason tagData;
 
 
 
@@ -79,70 +79,70 @@ class Tag103EnuOrdRejReasonTest {
         /**
          *  1-15, OrdRejReason types
          */
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.BROKER_OR_EXCHANGE);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.BROKER_OR_EXCHANGE);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.UNKNOWN_SYMBOL);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.UNKNOWN_SYMBOL);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.EXCHANGE_CLOSED);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.EXCHANGE_CLOSED);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.ORDER_EXCEEDS_LIMIT);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.ORDER_EXCEEDS_LIMIT);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.TOO_LATE_TO_ENTER);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.TOO_LATE_TO_ENTER);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.UNKNOWN_ORDER);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.UNKNOWN_ORDER);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.DUPLICATE_ORDER);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.DUPLICATE_ORDER);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.DUPLICATE_VERBAL_ORDER);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.DUPLICATE_VERBAL_ORDER);
         assertEquals( "7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.STALE_ORDER);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.STALE_ORDER);
         assertEquals( "8", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.TRADE_ALONG_REQUIRED);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.TRADE_ALONG_REQUIRED);
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.INVALID_INVESTOR_ID);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.INVALID_INVESTOR_ID);
         assertEquals( "10", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.UNSUPPORTED_ORDER_CHARACTERISTIC);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.UNSUPPORTED_ORDER_CHARACTERISTIC);
         assertEquals( "11", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.SURVEILLANCE_OPTION);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.SURVEILLANCE_OPTION);
         assertEquals( "12", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.INCORRECT_QUANTITY);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.INCORRECT_QUANTITY);
         assertEquals( "13", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.INCORRECT_ALLOCATED_QUANTITY);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.INCORRECT_ALLOCATED_QUANTITY);
         assertEquals( "14", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.UNKNOWN_ACCOUNT);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.UNKNOWN_ACCOUNT);
         assertEquals( "15", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -150,7 +150,7 @@ class Tag103EnuOrdRejReasonTest {
         /*
          *  18, OrdRejReason types
          */
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.INVALID_PRICE_INCREMENT);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.INVALID_PRICE_INCREMENT);
         assertEquals( "18", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -158,7 +158,7 @@ class Tag103EnuOrdRejReasonTest {
         /*
          *  99, OrdRejReason types
          */
-        tagData = new Log103EnuOrdRejReason(Enum103OrdRejReason.OTHER);
+        tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.OTHER);
         assertEquals( "99", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

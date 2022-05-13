@@ -45,9 +45,9 @@ class Tag19StrExecRefIDTest {
     }
     @Test
     void Tag0019Test() {
-        Log19StrExecRefID tagData;
+        Tag19StrExecRefID tagData;
 
-        tagData = new Log19StrExecRefID(new MyStringType("6789-XYZ") );
+        tagData = new Tag19StrExecRefID(new MyStringType("6789-XYZ") );
         assertEquals( "6789-XYZ", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -48,9 +48,9 @@ class Tag100StrExDestinationTest {
     }
     @Test
     void Tag0100Test() {
-        Log100StrExDestination tagData;
+        Tag100StrExDestination tagData;
 
-        tagData = new Log100StrExDestination(new MyStringType("JPMC"));
+        tagData = new Tag100StrExDestination(new MyStringType("JPMC"));
         assertEquals( "JPMC", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

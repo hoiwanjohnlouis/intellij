@@ -45,9 +45,9 @@ class Tag105StrWaveNoTest {
     }
     @Test
     void Tag0105Test() {
-        Log105StrWaveNo tagData;
+        Tag105StrWaveNo tagData;
 
-        tagData = new Log105StrWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
+        tagData = new Tag105StrWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
         assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

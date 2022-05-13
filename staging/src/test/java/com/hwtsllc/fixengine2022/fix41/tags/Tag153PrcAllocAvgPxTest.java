@@ -46,14 +46,14 @@ class Tag153PrcAllocAvgPxTest {
     }
     @Test
     void Tag0153Test() {
-        Log153PrcAllocAvgPx tagData;
+        Tag153PrcAllocAvgPx tagData;
 
-        tagData = new Log153PrcAllocAvgPx(new MyPriceType(Log153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX));
-        assertEquals( Log153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX, tagData.getDataValue());
+        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX));
+        assertEquals( Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log153PrcAllocAvgPx(new MyPriceType(Log153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
-        assertEquals( Log153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX, tagData.getDataValue());
+        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
+        assertEquals( Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

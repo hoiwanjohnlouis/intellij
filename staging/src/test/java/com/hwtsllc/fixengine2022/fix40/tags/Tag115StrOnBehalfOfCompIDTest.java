@@ -46,9 +46,9 @@ class Tag115StrOnBehalfOfCompIDTest {
     }
     @Test
     void Tag0115Test() {
-        Log115StrOnBehalfOfCompID tagData;
+        Tag115StrOnBehalfOfCompID tagData;
 
-        tagData = new Log115StrOnBehalfOfCompID(new MyStringType("Legolas-115OnBehalfOfCompID") );
+        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType("Legolas-115OnBehalfOfCompID") );
         assertEquals( "Legolas-115OnBehalfOfCompID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

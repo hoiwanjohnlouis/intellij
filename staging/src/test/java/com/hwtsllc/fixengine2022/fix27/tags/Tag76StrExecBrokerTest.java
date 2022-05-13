@@ -50,9 +50,9 @@ class Tag76StrExecBrokerTest {
     }
     @Test
     void Tag0076Test() {
-        Log76StrExecBroker tagData;
+        Tag76StrExecBroker tagData;
 
-        tagData = new Log76StrExecBroker(new MyStringType("Denethor-76ExecBroker") );
+        tagData = new Tag76StrExecBroker(new MyStringType("Denethor-76ExecBroker") );
         assertEquals( "Denethor-76ExecBroker", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

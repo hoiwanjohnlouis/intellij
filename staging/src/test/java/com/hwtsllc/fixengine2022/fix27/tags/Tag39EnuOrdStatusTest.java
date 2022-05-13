@@ -67,49 +67,49 @@ class Tag39EnuOrdStatusTest {
     }
     @Test
     void Tag0039Test() {
-        Log39EnuOrdStatus tagData;
+        Tag39EnuOrdStatus tagData;
 
         /**
          * 0-9 Order Status msg
          */
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.NEW);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.NEW);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.PARTIALLY_FILLED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.PARTIALLY_FILLED);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.FILLED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.FILLED);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.DONE_FOR_DAY);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.DONE_FOR_DAY);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.CANCELED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.CANCELED);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.REPLACED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.REPLACED);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.PENDING_CANCEL);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.PENDING_CANCEL);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.STOPPED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.STOPPED);
         assertEquals( "7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.REJECTED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.REJECTED);
         assertEquals( "8", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.SUSPENDED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.SUSPENDED);
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -117,23 +117,23 @@ class Tag39EnuOrdStatusTest {
         /*
          * A-E Order Status msg
          */
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.PENDING_NEW);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.PENDING_NEW);
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.CALCULATED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.CALCULATED);
         assertEquals( "B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.EXPIRED);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.EXPIRED);
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.ACCEPTED_FOR_BIDDING);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.ACCEPTED_FOR_BIDDING);
         assertEquals( "D", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log39EnuOrdStatus(Enum39OrdStatus.PENDING_REPLACE);
+        tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.PENDING_REPLACE);
         assertEquals( "E", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

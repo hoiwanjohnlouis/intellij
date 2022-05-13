@@ -45,9 +45,9 @@ class Tag67StrListSeqNoTest {
     }
     @Test
     void Tag0067Test() {
-        Log67StrListSeqNo tagData;
+        Tag67StrListSeqNo tagData;
 
-        tagData = new Log67StrListSeqNo(new MyStringType("EOWYN-67ListSeqNo") );
+        tagData = new Tag67StrListSeqNo(new MyStringType("EOWYN-67ListSeqNo") );
         assertEquals( "EOWYN-67ListSeqNo", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

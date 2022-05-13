@@ -45,9 +45,9 @@ class Tag32QtyLastQtyTest {
     }
     @Test
     void Tag0032Test() {
-        Log32QtyLastQty tagData;
+        Tag32QtyLastQty tagData;
 
-        tagData = new Log32QtyLastQty(new MyQtyType(200) );
+        tagData = new Tag32QtyLastQty(new MyQtyType(200) );
         assertEquals( 200, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

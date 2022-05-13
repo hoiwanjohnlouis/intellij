@@ -49,17 +49,17 @@ class Tag165EnuSettlInstSourceTest {
     }
     @Test
     void Tag0165Test() {
-        Log165EnuSettlInstSource tagData;
+        Tag165EnuSettlInstSource tagData;
 
-        tagData = new Log165EnuSettlInstSource(Enum165SettlInstSource.BROKER_INSTRUCTIONS);
+        tagData = new Tag165EnuSettlInstSource(Enum165SettlInstSource.BROKER_INSTRUCTIONS);
         assertEquals( Enum165SettlInstSource.BROKER_INSTRUCTIONS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log165EnuSettlInstSource(Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS);
+        tagData = new Tag165EnuSettlInstSource(Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS);
         assertEquals( Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log165EnuSettlInstSource(Enum165SettlInstSource.INVESTOR);
+        tagData = new Tag165EnuSettlInstSource(Enum165SettlInstSource.INVESTOR);
         assertEquals( Enum165SettlInstSource.INVESTOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

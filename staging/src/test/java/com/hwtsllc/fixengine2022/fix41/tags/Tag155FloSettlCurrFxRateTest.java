@@ -44,14 +44,14 @@ class Tag155FloSettlCurrFxRateTest {
     }
     @Test
     void Tag0155Test() {
-        Log155FloSettlCurrFxRate tagData;
+        Tag155FloSettlCurrFxRate tagData;
 
-        tagData = new Log155FloSettlCurrFxRate(new MyFloatType(Log155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
-        assertEquals( Log155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log155FloSettlCurrFxRate(new MyFloatType(Log155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
-        assertEquals( Log155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
 }

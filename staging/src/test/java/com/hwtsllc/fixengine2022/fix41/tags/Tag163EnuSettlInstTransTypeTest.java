@@ -50,21 +50,21 @@ class Tag163EnuSettlInstTransTypeTest {
     }
     @Test
     void Tag0163Test() {
-        Log163EnuSettlInstTransType tagData;
+        Tag163EnuSettlInstTransType tagData;
 
-        tagData = new Log163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
         assertEquals( Enum163SettlInstTransType.NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log163EnuSettlInstTransType(Enum163SettlInstTransType.CANCEL);
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.CANCEL);
         assertEquals( Enum163SettlInstTransType.CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log163EnuSettlInstTransType(Enum163SettlInstTransType.REPLACE);
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.REPLACE);
         assertEquals( Enum163SettlInstTransType.REPLACE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log163EnuSettlInstTransType(Enum163SettlInstTransType.RESTATE);
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.RESTATE);
         assertEquals( Enum163SettlInstTransType.RESTATE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

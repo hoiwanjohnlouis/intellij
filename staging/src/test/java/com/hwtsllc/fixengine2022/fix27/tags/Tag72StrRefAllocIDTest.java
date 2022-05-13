@@ -47,10 +47,10 @@ class Tag72StrRefAllocIDTest {
     }
     @Test
     void Tag0072Test() {
-        Log72StrRefAllocID tagData;
+        Tag72StrRefAllocID tagData;
 
-        tagData = new Log72StrRefAllocID(new MyStringType(Log72StrRefAllocID.TESTA_STR_REF_ALLOC_ID) );
-        assertEquals( Log72StrRefAllocID.TESTA_STR_REF_ALLOC_ID, tagData.getDataValue());
+        tagData = new Tag72StrRefAllocID(new MyStringType(Tag72StrRefAllocID.TESTA_STR_REF_ALLOC_ID) );
+        assertEquals( Tag72StrRefAllocID.TESTA_STR_REF_ALLOC_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

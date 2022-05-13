@@ -46,13 +46,13 @@ class Tag141BoolResetSeqNumFlagTest {
     }
     @Test
     void Tag0141Test() {
-        Log141BoolResetSeqNumFlag tagData;
+        Tag141BoolResetSeqNumFlag tagData;
 
-        tagData = new Log141BoolResetSeqNumFlag(MyBooleanType.NO);
+        tagData = new Tag141BoolResetSeqNumFlag(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log141BoolResetSeqNumFlag(MyBooleanType.YES);
+        tagData = new Tag141BoolResetSeqNumFlag(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

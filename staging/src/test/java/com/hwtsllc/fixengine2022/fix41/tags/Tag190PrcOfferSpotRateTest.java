@@ -44,14 +44,14 @@ class Tag190PrcOfferSpotRateTest {
     }
     @Test
     void Tag0190Test() {
-        Log190PrcOfferSpotRate tagData;
+        Tag190PrcOfferSpotRate tagData;
 
-        tagData = new Log190PrcOfferSpotRate(new MyPriceType(Log190PrcOfferSpotRate.TESTA_PRC_OFFER_SPOT_RATE));
-        assertEquals( Log190PrcOfferSpotRate.TESTA_PRC_OFFER_SPOT_RATE, tagData.getDataValue());
+        tagData = new Tag190PrcOfferSpotRate(new MyPriceType(Tag190PrcOfferSpotRate.TESTA_PRC_OFFER_SPOT_RATE));
+        assertEquals( Tag190PrcOfferSpotRate.TESTA_PRC_OFFER_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log190PrcOfferSpotRate(new MyPriceType(Log190PrcOfferSpotRate.TESTB_PRC_OFFER_SPOT_RATE));
-        assertEquals( Log190PrcOfferSpotRate.TESTB_PRC_OFFER_SPOT_RATE, tagData.getDataValue());
+        tagData = new Tag190PrcOfferSpotRate(new MyPriceType(Tag190PrcOfferSpotRate.TESTB_PRC_OFFER_SPOT_RATE));
+        assertEquals( Tag190PrcOfferSpotRate.TESTB_PRC_OFFER_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

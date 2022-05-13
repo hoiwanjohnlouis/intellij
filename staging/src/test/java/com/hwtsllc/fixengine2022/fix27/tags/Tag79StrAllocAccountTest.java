@@ -45,10 +45,10 @@ class Tag79StrAllocAccountTest {
     }
     @Test
     void Tag0079Test() {
-        Log79StrAllocAccount tagData;
+        Tag79StrAllocAccount tagData;
 
-        tagData = new Log79StrAllocAccount(new MyStringType(Log79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT) );
-        assertEquals( Log79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT, tagData.getDataValue());
+        tagData = new Tag79StrAllocAccount(new MyStringType(Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT) );
+        assertEquals( Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

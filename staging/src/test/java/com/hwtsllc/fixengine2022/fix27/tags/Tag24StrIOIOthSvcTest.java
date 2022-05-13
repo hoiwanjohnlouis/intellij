@@ -45,9 +45,9 @@ class Tag24StrIOIOthSvcTest {
     }
     @Test
     void Tag0024Test() {
-        Log24StrIOIOthSvc tagData;
+        Tag24StrIOIOthSvc tagData;
 
-        tagData = new Log24StrIOIOthSvc(new MyStringType("A") );
+        tagData = new Tag24StrIOIOthSvc(new MyStringType("A") );
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

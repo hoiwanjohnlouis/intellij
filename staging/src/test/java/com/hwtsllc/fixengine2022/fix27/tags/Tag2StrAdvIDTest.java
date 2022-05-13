@@ -44,9 +44,9 @@ class Tag2StrAdvIDTest {
     }
     @Test
     void Tag0002Test() {
-        Log2StrAdvID tagData;
+        Tag2StrAdvID tagData;
 
-        tagData = new Log2StrAdvID(new MyStringType("ABC987654321XYZ") );
+        tagData = new Tag2StrAdvID(new MyStringType("ABC987654321XYZ") );
         assertEquals( "ABC987654321XYZ", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

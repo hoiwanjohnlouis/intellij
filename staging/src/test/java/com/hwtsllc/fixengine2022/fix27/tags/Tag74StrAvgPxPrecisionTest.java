@@ -48,9 +48,9 @@ class Tag74StrAvgPxPrecisionTest {
     }
     @Test
     void Tag0074Test() {
-        Log74StrAvgPxPrecision tagData;
+        Tag74StrAvgPxPrecision tagData;
 
-        tagData = new Log74StrAvgPxPrecision(new MyStringType("Saruman-74AvgPxPrecision") );
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType("Saruman-74AvgPxPrecision") );
         assertEquals( "Saruman-74AvgPxPrecision", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

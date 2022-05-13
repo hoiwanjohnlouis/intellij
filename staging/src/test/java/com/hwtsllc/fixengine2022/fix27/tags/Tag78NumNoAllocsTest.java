@@ -45,9 +45,9 @@ class Tag78NumNoAllocsTest {
     }
     @Test
     void Tag0078Test() {
-        Log78NumNoAllocs tagData;
+        Tag78NumNoAllocs tagData;
 
-        tagData = new Log78NumNoAllocs(new MyNumInGroupType(321));
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(321));
         assertEquals( 321, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

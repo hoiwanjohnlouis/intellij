@@ -46,9 +46,9 @@ class Tag41StrOrigClOrdIDTest {
     }
     @Test
     void Tag0041Test() {
-        Log41StrOrigClOrdID tagData;
+        Tag41StrOrigClOrdID tagData;
 
-        tagData = new Log41StrOrigClOrdID(new MyStringType("ORD-12345") );
+        tagData = new Tag41StrOrigClOrdID(new MyStringType("ORD-12345") );
         assertEquals( "ORD-12345", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -43,9 +43,9 @@ class Tag120CcySettlCurrencyTest {
     }
     @Test
     void Tag0120Test() {
-        Log120CcySettlCurrency tagData;
+        Tag120CcySettlCurrency tagData;
 
-        tagData = new Log120CcySettlCurrency(new MyCurrencyType("MoonChaeWon-120SettlCurrency") );
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType("MoonChaeWon-120SettlCurrency") );
         assertEquals( "MoonChaeWon-120SettlCurrency", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

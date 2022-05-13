@@ -44,16 +44,16 @@ class Tag145StrDeliverToLocationIDTest {
     }
     @Test
     void Tag0145Test() {
-        Log145StrDeliverToLocationID tagData;
+        Tag145StrDeliverToLocationID tagData;
 
-        tagData = new Log145StrDeliverToLocationID(
-                        new MyStringType(Log145StrDeliverToLocationID.TESTA_STR_DELIVER_TO_LOCATION_ID));
-        assertEquals( Log145StrDeliverToLocationID.TESTA_STR_DELIVER_TO_LOCATION_ID, tagData.getDataValue());
+        tagData = new Tag145StrDeliverToLocationID(
+                        new MyStringType(Tag145StrDeliverToLocationID.TESTA_STR_DELIVER_TO_LOCATION_ID));
+        assertEquals( Tag145StrDeliverToLocationID.TESTA_STR_DELIVER_TO_LOCATION_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log145StrDeliverToLocationID(
-                new MyStringType(Log145StrDeliverToLocationID.TESTB_STR_DELIVER_TO_LOCATION_ID));
-        assertEquals( Log145StrDeliverToLocationID.TESTB_STR_DELIVER_TO_LOCATION_ID, tagData.getDataValue());
+        tagData = new Tag145StrDeliverToLocationID(
+                new MyStringType(Tag145StrDeliverToLocationID.TESTB_STR_DELIVER_TO_LOCATION_ID));
+        assertEquals( Tag145StrDeliverToLocationID.TESTB_STR_DELIVER_TO_LOCATION_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

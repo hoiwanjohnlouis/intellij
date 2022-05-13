@@ -46,9 +46,9 @@ class Tag128StrDeliverToCompIDTest {
     }
     @Test
     void Tag0128Test() {
-        Log128StrDeliverToCompID tagData;
+        Tag128StrDeliverToCompID tagData;
 
-        tagData = new Log128StrDeliverToCompID(new MyStringType("SongJiHyo-128DeliverToCompID") );
+        tagData = new Tag128StrDeliverToCompID(new MyStringType("SongJiHyo-128DeliverToCompID") );
         assertEquals( "SongJiHyo-128DeliverToCompID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

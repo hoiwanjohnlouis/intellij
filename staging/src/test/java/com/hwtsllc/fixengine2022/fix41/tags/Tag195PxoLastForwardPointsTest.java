@@ -47,16 +47,16 @@ class Tag195PxoLastForwardPointsTest {
     }
     @Test
     void Tag0195Test() {
-        Log195PxoLastForwardPoints tagData;
+        Tag195PxoLastForwardPoints tagData;
 
-        tagData = new Log195PxoLastForwardPoints(
-                new MyPriceOffsetType(Log195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS));
-        assertEquals( Log195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS, tagData.getDataValue());
+        tagData = new Tag195PxoLastForwardPoints(
+                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS));
+        assertEquals( Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log195PxoLastForwardPoints(
-                new MyPriceOffsetType(Log195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
-        assertEquals( Log195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS, tagData.getDataValue());
+        tagData = new Tag195PxoLastForwardPoints(
+                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
+        assertEquals( Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
     }
 }

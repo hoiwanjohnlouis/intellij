@@ -44,9 +44,9 @@ class Tag125StrCxlTypeTest {
     }
     @Test
     void Tag0125Test() {
-        Log125StrCxlType tagData;
+        Tag125StrCxlType tagData;
 
-        tagData = new Log125StrCxlType(new MyStringType("KimHaNeul-125CxlType") );
+        tagData = new Tag125StrCxlType(new MyStringType("KimHaNeul-125CxlType") );
         assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

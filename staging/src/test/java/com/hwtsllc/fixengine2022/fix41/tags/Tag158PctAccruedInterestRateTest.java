@@ -47,16 +47,16 @@ class Tag158PctAccruedInterestRateTest {
     }
     @Test
     void Tag0158Test() {
-        Log158PctAccruedInterestRate tagData;
+        Tag158PctAccruedInterestRate tagData;
 
-        tagData = new Log158PctAccruedInterestRate(
-                new MyPercentageType(Log158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE));
-        assertEquals( Log158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
+        tagData = new Tag158PctAccruedInterestRate(
+                new MyPercentageType(Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE));
+        assertEquals( Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log158PctAccruedInterestRate(
-                new MyPercentageType(Log158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
-        assertEquals( Log158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
+        tagData = new Tag158PctAccruedInterestRate(
+                new MyPercentageType(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
+        assertEquals( Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

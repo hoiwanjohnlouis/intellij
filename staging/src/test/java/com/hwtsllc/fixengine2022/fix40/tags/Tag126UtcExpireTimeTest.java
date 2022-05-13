@@ -57,9 +57,9 @@ class Tag126UtcExpireTimeTest {
     }
     @Test
     void Tag0126Test() {
-        Log126UtcExpireTime tagData;
+        Tag126UtcExpireTime tagData;
 
-        tagData = new Log126UtcExpireTime(new MyUTCTimestampType("HaJiWon-126ExpireTime") );
+        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType("HaJiWon-126ExpireTime") );
         assertEquals( "HaJiWon-126ExpireTime", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

@@ -43,9 +43,9 @@ class Tag137AmtMiscFeeAmtTest {
     }
     @Test
     void Tag0137Test() {
-        Log137AmtMiscFeeAmt tagData;
+        Tag137AmtMiscFeeAmt tagData;
 
-        tagData = new Log137AmtMiscFeeAmt(new MyAmtType(137D ) );
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(137D ) );
         assertEquals( 137D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

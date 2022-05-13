@@ -29,6 +29,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Boolean
  *  <p>
  *  Indicates if the contrary intention was received after the exchange imposed cutoff time
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - After the exchange cutoff time" ),
+ *  <p> NO( "N", "NO", "N - Received during normal exchange hours" ),
  */
 class Tag978BoolLateIndicatorTest {
     @Test

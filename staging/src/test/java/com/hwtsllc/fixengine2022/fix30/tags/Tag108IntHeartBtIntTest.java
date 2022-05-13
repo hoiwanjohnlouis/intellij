@@ -44,9 +44,9 @@ class Tag108IntHeartBtIntTest {
     }
     @Test
     void Tag0108Test() {
-        Log108IntHeartBtInt tagData;
+        Tag108IntHeartBtInt tagData;
 
-        tagData = new Log108IntHeartBtInt(new MyIntType(60) );
+        tagData = new Tag108IntHeartBtInt(new MyIntType(60) );
         assertEquals(60, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

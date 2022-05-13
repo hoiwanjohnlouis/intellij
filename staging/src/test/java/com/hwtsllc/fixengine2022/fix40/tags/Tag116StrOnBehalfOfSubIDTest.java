@@ -44,9 +44,9 @@ class Tag116StrOnBehalfOfSubIDTest {
     }
     @Test
     void Tag0116Test() {
-        Log116StrOnBehalfOfSubID tagData;
+        Tag116StrOnBehalfOfSubID tagData;
 
-        tagData = new Log116StrOnBehalfOfSubID(new MyStringType("Gimli-116OnBehalfOfSubID") );
+        tagData = new Tag116StrOnBehalfOfSubID(new MyStringType("Gimli-116OnBehalfOfSubID") );
         assertEquals( "Gimli-116OnBehalfOfSubID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

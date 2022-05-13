@@ -49,21 +49,21 @@ class Tag29EnuLastCapacityTest {
     }
     @Test
     void Tag0029Test() {
-        Log29EnuLastCapacity tagData;
+        Tag29EnuLastCapacity tagData;
 
-        tagData = new Log29EnuLastCapacity(Enum29LastCapacity.AGENT);
+        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.AGENT);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_AGENT);
+        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_AGENT);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_PRINCIPAL);
+        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_PRINCIPAL);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log29EnuLastCapacity(Enum29LastCapacity.PRINCIPAL);
+        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.PRINCIPAL);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

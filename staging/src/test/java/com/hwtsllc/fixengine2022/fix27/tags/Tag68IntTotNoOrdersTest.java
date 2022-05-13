@@ -50,9 +50,9 @@ class Tag68IntTotNoOrdersTest {
     }
     @Test
     void Tag0068Test() {
-        Log68IntTotNoOrders tagData;
+        Tag68IntTotNoOrders tagData;
 
-        tagData = new Log68IntTotNoOrders(new MyIntType(123));
+        tagData = new Tag68IntTotNoOrders(new MyIntType(123));
         assertEquals( 123, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

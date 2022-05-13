@@ -45,9 +45,9 @@ class Tag89DatSignatureTest {
     }
     @Test
     void Tag0089Test() {
-        Log89DatSignature tagData;
+        Tag89DatSignature tagData;
 
-        tagData = new Log89DatSignature(new MyDataType("BarleymanButterBurr-89StSignature") );
+        tagData = new Tag89DatSignature(new MyDataType("BarleymanButterBurr-89StSignature") );
         assertEquals( "BarleymanButterBurr-89StSignature", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

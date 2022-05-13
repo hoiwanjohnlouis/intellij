@@ -16,8 +16,40 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ *  1028
+ *  ManualOrderIndicator
+ *  Boolean
+ *  <p>
+ *  Indicates if the order was initially received manually (as opposed to electronically)
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Manually Order" ),
+ *  <p> NO( "N", "NO", "N - Electronic Order" ),
+ */
 class Bool1028ManualOrderIndicatorTest {
+    @Test
+    void Bool1028Test() {
+        Bool1028ManualOrderIndicator enumType;
 
+        enumType = Bool1028ManualOrderIndicator.NO;
+        assertEquals("N",enumType.getID());
+        assertEquals("NO", enumType.getName());
+        assertEquals("N - Electronic Order", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Bool1028ManualOrderIndicator.YES;
+        assertEquals("Y", enumType.getID());
+        assertEquals("YES", enumType.getName());
+        assertEquals("Y - Manually Order", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+    }
 }

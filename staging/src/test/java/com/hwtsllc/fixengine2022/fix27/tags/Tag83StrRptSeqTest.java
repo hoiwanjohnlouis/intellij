@@ -47,9 +47,9 @@ class Tag83StrRptSeqTest {
     }
     @Test
     void Tag0083Test() {
-        Log83StrRptSeq tagData;
+        Tag83StrRptSeq tagData;
 
-        tagData = new Log83StrRptSeq(new MyStringType("Legolas-83RptSeq") );
+        tagData = new Tag83StrRptSeq(new MyStringType("Legolas-83RptSeq") );
         assertEquals( "Legolas-83RptSeq", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

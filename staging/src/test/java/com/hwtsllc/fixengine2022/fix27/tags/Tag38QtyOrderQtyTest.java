@@ -46,9 +46,9 @@ class Tag38QtyOrderQtyTest {
     }
     @Test
     void Tag0038Test() {
-        Log38QtyOrderQty tagData;
+        Tag38QtyOrderQty tagData;
 
-        tagData = new Log38QtyOrderQty(new MyQtyType(100) );
+        tagData = new Tag38QtyOrderQty(new MyQtyType(100) );
         assertEquals( 100, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

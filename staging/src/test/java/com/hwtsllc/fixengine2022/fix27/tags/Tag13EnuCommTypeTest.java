@@ -54,32 +54,32 @@ class Tag13EnuCommTypeTest {
     }
     @Test
     void Tag0013Test() {
-        Log13EnuCommType tagData;
+        Tag13EnuCommType tagData;
 
         /*
          * 1-6 CommTypes
          */
-        tagData = new Log13EnuCommType(Enum13CommType.PER_UNIT);
+        tagData = new Tag13EnuCommType(Enum13CommType.PER_UNIT);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log13EnuCommType(Enum13CommType.PERCENT);
+        tagData = new Tag13EnuCommType(Enum13CommType.PERCENT);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log13EnuCommType(Enum13CommType.ABSOLUTE);
+        tagData = new Tag13EnuCommType(Enum13CommType.ABSOLUTE);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT);
+        tagData = new Tag13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS);
+        tagData = new Tag13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log13EnuCommType(Enum13CommType.POINTS_PER_BOND);
+        tagData = new Tag13EnuCommType(Enum13CommType.POINTS_PER_BOND);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -45,9 +45,9 @@ class Tag73NumNoOrdersTest {
     }
     @Test
     void Tag0073Test() {
-        Log73NumNoOrders tagData;
+        Tag73NumNoOrders tagData;
 
-        tagData = new Log73NumNoOrders(new MyNumInGroupType(24601));
+        tagData = new Tag73NumNoOrders(new MyNumInGroupType(24601));
         assertEquals( 24601, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

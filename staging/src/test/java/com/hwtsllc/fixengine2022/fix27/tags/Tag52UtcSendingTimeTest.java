@@ -45,9 +45,9 @@ class Tag52UtcSendingTimeTest {
     }
     @Test
     void Tag0052Test() {
-        Log52UtcSendingTime tagData;
+        Tag52UtcSendingTime tagData;
 
-        tagData = new Log52UtcSendingTime(new MyUTCTimestampType("20220320 141400") );
+        tagData = new Tag52UtcSendingTime(new MyUTCTimestampType("20220320 141400") );
         assertEquals( "20220320 141400", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

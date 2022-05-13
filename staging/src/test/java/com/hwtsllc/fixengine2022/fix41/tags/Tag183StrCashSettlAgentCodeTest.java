@@ -47,16 +47,16 @@ class Tag183StrCashSettlAgentCodeTest {
     }
     @Test
     void Tag0183Test() {
-        Log183StrCashSettlAgentCode tagData;
+        Tag183StrCashSettlAgentCode tagData;
 
-        tagData = new Log183StrCashSettlAgentCode(
-                new MyStringType(Log183StrCashSettlAgentCode.TESTA_STR_CASH_SETTL_AGENT_CODE));
-        assertEquals( Log183StrCashSettlAgentCode.TESTA_STR_CASH_SETTL_AGENT_CODE, tagData.getDataValue());
+        tagData = new Tag183StrCashSettlAgentCode(
+                new MyStringType(Tag183StrCashSettlAgentCode.TESTA_STR_CASH_SETTL_AGENT_CODE));
+        assertEquals( Tag183StrCashSettlAgentCode.TESTA_STR_CASH_SETTL_AGENT_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log183StrCashSettlAgentCode(
-                new MyStringType(Log183StrCashSettlAgentCode.TESTB_STR_CASH_SETTL_AGENT_CODE));
-        assertEquals( Log183StrCashSettlAgentCode.TESTB_STR_CASH_SETTL_AGENT_CODE, tagData.getDataValue());
+        tagData = new Tag183StrCashSettlAgentCode(
+                new MyStringType(Tag183StrCashSettlAgentCode.TESTB_STR_CASH_SETTL_AGENT_CODE));
+        assertEquals( Tag183StrCashSettlAgentCode.TESTB_STR_CASH_SETTL_AGENT_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

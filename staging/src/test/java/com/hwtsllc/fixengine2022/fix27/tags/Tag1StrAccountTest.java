@@ -59,9 +59,9 @@ class Tag1StrAccountTest {
     }
     @Test
     void Tag0001Test() {
-        Log1StrAccount tagData;
+        Tag1StrAccount tagData;
 
-        tagData = new Log1StrAccount(new MyStringType("ABC987654321XYZ"));
+        tagData = new Tag1StrAccount(new MyStringType("ABC987654321XYZ"));
         assertEquals( "ABC987654321XYZ", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -46,9 +46,9 @@ class Tag9LenBodyLengthTest {
     }
     @Test
     void Tag0009Test() {
-        Log9LenBodyLength tagData;
+        Tag9LenBodyLength tagData;
 
-        tagData = new Log9LenBodyLength(new MyLengthType(120) );
+        tagData = new Tag9LenBodyLength(new MyLengthType(120) );
         assertEquals( 120, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }

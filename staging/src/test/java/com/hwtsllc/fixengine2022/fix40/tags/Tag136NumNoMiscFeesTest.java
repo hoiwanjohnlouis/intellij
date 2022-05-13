@@ -43,9 +43,9 @@ class Tag136NumNoMiscFeesTest {
     }
     @Test
     void Tag0136Test() {
-        Log136NumNoMiscFees tagData;
+        Tag136NumNoMiscFees tagData;
 
-        tagData = new Log136NumNoMiscFees(new MyNumInGroupType(3) );
+        tagData = new Tag136NumNoMiscFees(new MyNumInGroupType(3) );
         assertEquals( 3, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

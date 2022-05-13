@@ -16,8 +16,41 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ *  1057
+ *  AggressorIndicator
+ *  Boolean
+ *  <p>
+ *  Used to identify whether the order initiator is an aggressor or not in the trade.
+ *  <p></p>
+ *  Valid values:
+ *  <p>  AGGRESSOR( "Y", "AGGRESSOR", "Y - Order initiator is aggressor" ),
+ *  <p>  PASSIVE( "N", "PASSIVE", "N - Order initiator is passive" ),
+ */
 class Bool1057AggressorIndicatorTest {
+    @Test
+    void Bool1057Test() {
+        Bool1057AggressorIndicator enumType;
 
+        enumType = Bool1057AggressorIndicator.PASSIVE;
+        assertEquals("N",enumType.getID());
+        assertEquals("PASSIVE", enumType.getName());
+        assertEquals("N - Order initiator is passive", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Bool1057AggressorIndicator.AGGRESSOR;
+        assertEquals("Y", enumType.getID());
+        assertEquals("AGGRESSOR", enumType.getName());
+        assertEquals("Y - Order initiator is aggressor", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+    }
 }

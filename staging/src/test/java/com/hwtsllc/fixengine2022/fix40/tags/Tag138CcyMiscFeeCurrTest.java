@@ -43,9 +43,9 @@ class Tag138CcyMiscFeeCurrTest {
     }
     @Test
     void Tag0138Test() {
-        Log138CcyMiscFeeCurr tagData;
+        Tag138CcyMiscFeeCurr tagData;
 
-        tagData = new Log138CcyMiscFeeCurr(new MyCurrencyType("SungHyunAh-138MiscFeeCurr") );
+        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType("SungHyunAh-138MiscFeeCurr") );
         assertEquals( "SungHyunAh-138MiscFeeCurr", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

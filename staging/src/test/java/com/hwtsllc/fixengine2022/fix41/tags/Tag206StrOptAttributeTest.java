@@ -55,14 +55,14 @@ class Tag206StrOptAttributeTest {
     }
     @Test
     void Tag0206Test() {
-        Log206StrOptAttribute tagData;
+        Tag206StrOptAttribute tagData;
 
-        tagData = new Log206StrOptAttribute(new MyStringType(Log206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE));
-        assertEquals( Log206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE, tagData.getDataValue());
+        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE));
+        assertEquals( Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log206StrOptAttribute(new MyStringType(Log206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
-        assertEquals( Log206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE, tagData.getDataValue());
+        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
+        assertEquals( Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

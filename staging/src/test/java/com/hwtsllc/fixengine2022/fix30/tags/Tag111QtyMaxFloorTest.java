@@ -47,9 +47,9 @@ class Tag111QtyMaxFloorTest {
     }
     @Test
     void Tag0111Test() {
-        Log111QtyMaxFloor tagData;
+        Tag111QtyMaxFloor tagData;
 
-        tagData = new Log111QtyMaxFloor(new MyQtyType(200) );
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(200) );
         assertEquals( 200, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

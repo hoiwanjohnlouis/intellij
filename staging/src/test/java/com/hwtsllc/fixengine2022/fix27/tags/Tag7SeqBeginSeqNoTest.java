@@ -44,14 +44,14 @@ class Tag7SeqBeginSeqNoTest {
     }
     @Test
     void Tag0007Test() {
-        Log7SeqBeginSeqNo tagData;
+        Tag7SeqBeginSeqNo tagData;
 
-        tagData = new Log7SeqBeginSeqNo(new MySeqNumType(Log7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO) );
-        assertEquals( Log7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO, tagData.getDataValue());
+        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO) );
+        assertEquals( Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log7SeqBeginSeqNo(new MySeqNumType(Log7SeqBeginSeqNo.TESTB_SEQ_BEGIN_SEQ_NO) );
-        assertEquals( Log7SeqBeginSeqNo.TESTB_SEQ_BEGIN_SEQ_NO, tagData.getDataValue());
+        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTB_SEQ_BEGIN_SEQ_NO) );
+        assertEquals( Tag7SeqBeginSeqNo.TESTB_SEQ_BEGIN_SEQ_NO, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }
 }

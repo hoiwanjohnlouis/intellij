@@ -44,14 +44,14 @@ class Tag170StrStandInstDBNameTest {
     }
     @Test
     void Tag0170Test() {
-        Log170StrStandInstDBName tagData;
+        Tag170StrStandInstDBName tagData;
 
-        tagData = new Log170StrStandInstDBName(new MyStringType(Log170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME));
-        assertEquals( Log170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME, tagData.getDataValue());
+        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME));
+        assertEquals( Tag170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log170StrStandInstDBName(new MyStringType(Log170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME));
-        assertEquals( Log170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME, tagData.getDataValue());
+        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME));
+        assertEquals( Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

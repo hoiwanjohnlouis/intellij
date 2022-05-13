@@ -48,14 +48,14 @@ class Tag205IntMaturityDayTest {
     }
     @Test
     void Tag0205Test() {
-        Log205IntMaturityDay tagData;
+        Tag205IntMaturityDay tagData;
 
-        tagData = new Log205IntMaturityDay(new MyIntType(Log205IntMaturityDay.TESTA_INT_MATURITY_DAY));
-        assertEquals( Log205IntMaturityDay.TESTA_INT_MATURITY_DAY, tagData.getDataValue());
+        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTA_INT_MATURITY_DAY));
+        assertEquals( Tag205IntMaturityDay.TESTA_INT_MATURITY_DAY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log205IntMaturityDay(new MyIntType(Log205IntMaturityDay.TESTB_INT_MATURITY_DAY));
-        assertEquals( Log205IntMaturityDay.TESTB_INT_MATURITY_DAY, tagData.getDataValue());
+        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY));
+        assertEquals( Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

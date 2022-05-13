@@ -47,14 +47,14 @@ class Tag174StrSettlBrkrCodeTest {
     }
     @Test
     void Tag0174Test() {
-        Log174StrSettlBrkrCode tagData;
+        Tag174StrSettlBrkrCode tagData;
 
-        tagData = new Log174StrSettlBrkrCode(new MyStringType(Log174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE));
-        assertEquals( Log174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE, tagData.getDataValue());
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE));
+        assertEquals( Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log174StrSettlBrkrCode(new MyStringType(Log174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
-        assertEquals( Log174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE, tagData.getDataValue());
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
+        assertEquals( Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

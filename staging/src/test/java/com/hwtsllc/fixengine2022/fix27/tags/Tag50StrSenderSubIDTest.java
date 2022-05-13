@@ -44,9 +44,9 @@ class Tag50StrSenderSubIDTest {
     }
     @Test
     void Tag0050Test() {
-        Log50StrSenderSubID tagData;
+        Tag50StrSenderSubID tagData;
 
-        tagData = new Log50StrSenderSubID(new MyStringType("BEST") );
+        tagData = new Tag50StrSenderSubID(new MyStringType("BEST") );
         assertEquals( "BEST", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

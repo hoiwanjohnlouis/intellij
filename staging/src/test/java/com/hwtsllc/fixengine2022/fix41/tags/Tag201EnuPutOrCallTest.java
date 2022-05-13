@@ -54,13 +54,13 @@ class Tag201EnuPutOrCallTest {
     }
     @Test
     void Tag0201Test() {
-        Log201EnuPutOrCall tagData;
+        Tag201EnuPutOrCall tagData;
 
-        tagData = new Log201EnuPutOrCall(MyEnumPutOrCall.CALL);
+        tagData = new Tag201EnuPutOrCall(MyEnumPutOrCall.CALL);
         assertEquals( MyEnumPutOrCall.CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log201EnuPutOrCall(MyEnumPutOrCall.PUT);
+        tagData = new Tag201EnuPutOrCall(MyEnumPutOrCall.PUT);
         assertEquals( MyEnumPutOrCall.PUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

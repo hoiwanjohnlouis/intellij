@@ -32,8 +32,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Used to identify whether the order initiator is an aggressor or not in the trade.
  *  <p></p>
  *  Valid values:
- *  <p> Y - Order initiator is aggressor
- *  <p> N - Order initiator is passive
+ *  <p>  AGGRESSOR( "Y", "AGGRESSOR", "Y - Order initiator is aggressor" ),
+ *  <p>  PASSIVE( "N", "PASSIVE", "N - Order initiator is passive" ),
  */
 class Tag1057BoolAggressorIndicatorTest {
     @Test

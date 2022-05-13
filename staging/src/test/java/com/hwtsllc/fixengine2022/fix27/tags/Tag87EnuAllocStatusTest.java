@@ -53,41 +53,41 @@ class Tag87EnuAllocStatusTest {
     }
     @Test
     void Tag0087Test() {
-        Log87EnuAllocStatus tagData;
+        Tag87EnuAllocStatus tagData;
 
         /**
          * 0-7 AllocStatus types
          */
-        tagData = new Log87EnuAllocStatus(Enum87AllocStatus.ACCEPTED);
+        tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.ACCEPTED);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log87EnuAllocStatus(Enum87AllocStatus.BLOCK_LEVEL_REJECT);
+        tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.BLOCK_LEVEL_REJECT);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log87EnuAllocStatus(Enum87AllocStatus.ACCOUNT_LEVEL_REJECT);
+        tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.ACCOUNT_LEVEL_REJECT);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log87EnuAllocStatus(Enum87AllocStatus.RECEIVED_NOT_PROCESSED);
+        tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.RECEIVED_NOT_PROCESSED);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log87EnuAllocStatus(Enum87AllocStatus.INCOMPLETE);
+        tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.INCOMPLETE);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log87EnuAllocStatus(Enum87AllocStatus.REJECTED_BY_INTERMEDIARY);
+        tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.REJECTED_BY_INTERMEDIARY);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log87EnuAllocStatus(Enum87AllocStatus.ALLOCATION_PENDING);
+        tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.ALLOCATION_PENDING);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log87EnuAllocStatus(Enum87AllocStatus.REVERSED);
+        tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.REVERSED);
         assertEquals( "7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

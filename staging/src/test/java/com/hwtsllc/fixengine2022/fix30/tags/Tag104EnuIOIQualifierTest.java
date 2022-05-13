@@ -78,83 +78,83 @@ class Tag104EnuIOIQualifierTest {
     }
     @Test
     void Tag0104Test() {
-        Log104EnuIOIQualifier tagData;
+        Tag104EnuIOIQualifier tagData;
 
         /**
          * A-Z IOI Qualifier types
          */
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.ALL_OR_NONE);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.ALL_OR_NONE);
         assertEquals( MyEnumQualifier.ALL_OR_NONE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.MARKET_ON_CLOSE);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.MARKET_ON_CLOSE);
         assertEquals( MyEnumQualifier.MARKET_ON_CLOSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.AT_THE_CLOSE);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.AT_THE_CLOSE);
         assertEquals( MyEnumQualifier.AT_THE_CLOSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.VWAP);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.VWAP);
         assertEquals( MyEnumQualifier.VWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.IN_TOUCH_WITH);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.IN_TOUCH_WITH);
         assertEquals( MyEnumQualifier.IN_TOUCH_WITH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.LIMIT);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.LIMIT);
         assertEquals( MyEnumQualifier.LIMIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.MORE_BEHIND);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.MORE_BEHIND);
         assertEquals( MyEnumQualifier.MORE_BEHIND.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.AT_THE_OPEN);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.AT_THE_OPEN);
         assertEquals( MyEnumQualifier.AT_THE_OPEN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.TAKING_A_POSITION);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.TAKING_A_POSITION);
         assertEquals( MyEnumQualifier.TAKING_A_POSITION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.AT_THE_MARKET);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.AT_THE_MARKET);
         assertEquals( MyEnumQualifier.AT_THE_MARKET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.READY_TO_TRADE);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.READY_TO_TRADE);
         assertEquals( MyEnumQualifier.READY_TO_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.PORTFOLIO_SHOWN);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.PORTFOLIO_SHOWN);
         assertEquals( MyEnumQualifier.PORTFOLIO_SHOWN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.THROUGH_THE_DAY);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.THROUGH_THE_DAY);
         assertEquals( MyEnumQualifier.THROUGH_THE_DAY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.VERSUS);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.VERSUS);
         assertEquals( MyEnumQualifier.VERSUS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.INDICATION_WORKING_AWAY);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.INDICATION_WORKING_AWAY);
         assertEquals( MyEnumQualifier.INDICATION_WORKING_AWAY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.CROSSING_OPPORTUNITY);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.CROSSING_OPPORTUNITY);
         assertEquals( MyEnumQualifier.CROSSING_OPPORTUNITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.AT_THE_MIDPOINT);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.AT_THE_MIDPOINT);
         assertEquals( MyEnumQualifier.AT_THE_MIDPOINT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log104EnuIOIQualifier(MyEnumQualifier.PRE_OPEN);
+        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.PRE_OPEN);
         assertEquals( MyEnumQualifier.PRE_OPEN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

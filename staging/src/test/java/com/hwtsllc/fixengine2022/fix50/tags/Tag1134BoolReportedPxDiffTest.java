@@ -29,6 +29,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Boolean
  *  <p>
  *  Shows that the reported price that is different from the market price
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Reported price is different from the market price" ),
+ *  <p> NO( "N", "NO", "N - Reported price is equal to market price" ),
  */
 class Tag1134BoolReportedPxDiffTest {
     @Test

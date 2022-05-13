@@ -18,18 +18,18 @@ package com.hwtsllc.fixengine2022.views;
 
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumMsgType;
-import com.hwtsllc.fixengine2022.fix27.tags.Log60UtcTransactTime;
-import com.hwtsllc.fixengine2022.fix27.tags.Log35EnuMsgType;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag60UtcTransactTime;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag35EnuMsgType;
 
 public class PriceView {
-    private final Log60UtcTransactTime tag60UtcTransactTime;
+    private final Tag60UtcTransactTime tag60UtcTransactTime;
 
     //
     private PriceView(Builder builder) {
         this.tag60UtcTransactTime = builder.tag60UtcTransactTime;
     }
 
-    public Log60UtcTransactTime getLastTradeTimeStamp() {
+    public Tag60UtcTransactTime getLastTradeTimeStamp() {
         return tag60UtcTransactTime;
     }
 
@@ -39,13 +39,13 @@ public class PriceView {
     }
 
     public static class Builder {
-        private Log60UtcTransactTime tag60UtcTransactTime;
+        private Tag60UtcTransactTime tag60UtcTransactTime;
 
         //
         public Builder(MyEnumMsgType myEnumMsgType) {
-            this.tag60UtcTransactTime = new Log60UtcTransactTime(new MyUTCTimestampType("18991231235959") );
+            this.tag60UtcTransactTime = new Tag60UtcTransactTime(new MyUTCTimestampType("18991231235959") );
         }
-        public Builder buildTradeTimeStamp(Log60UtcTransactTime tag60UtcTransactTime) {
+        public Builder buildTradeTimeStamp(Tag60UtcTransactTime tag60UtcTransactTime) {
             this.tag60UtcTransactTime = tag60UtcTransactTime;
             return this;
         }
@@ -59,8 +59,8 @@ public class PriceView {
      */
     public static void main(String[] args) {
         PriceView view =
-            new PriceView.Builder(Log35EnuMsgType.TESTA_ENU_MSG_TYPE)
-                    .buildTradeTimeStamp(new Log60UtcTransactTime(new MyUTCTimestampType("093000_000000") ))
+            new PriceView.Builder(Tag35EnuMsgType.TESTA_ENU_MSG_TYPE)
+                    .buildTradeTimeStamp(new Tag60UtcTransactTime(new MyUTCTimestampType("093000_000000") ))
                     .build();
         System.out.println(view);
     }

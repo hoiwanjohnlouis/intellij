@@ -72,13 +72,13 @@ class Tag65EnuSymbolSfxTest {
     }
     @Test
     void Tag0065Test() {
-        Log65EnuSymbolSfx tagData;
+        Tag65EnuSymbolSfx tagData;
 
-        tagData = new Log65EnuSymbolSfx(MyEnumSymbolSfx.EUCP);
+        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.EUCP);
         assertEquals( MyEnumSymbolSfx.EUCP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log65EnuSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
+        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
         assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

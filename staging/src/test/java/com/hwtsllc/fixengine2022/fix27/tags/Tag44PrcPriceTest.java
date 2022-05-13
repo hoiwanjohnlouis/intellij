@@ -44,9 +44,9 @@ class Tag44PrcPriceTest {
     }
     @Test
     void Tag0044Test() {
-        Log44PrcPrice tagData;
+        Tag44PrcPrice tagData;
 
-        tagData = new Log44PrcPrice(new MyPriceType(10.43D) );
+        tagData = new Tag44PrcPrice(new MyPriceType(10.43D) );
         assertEquals( 10.43D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

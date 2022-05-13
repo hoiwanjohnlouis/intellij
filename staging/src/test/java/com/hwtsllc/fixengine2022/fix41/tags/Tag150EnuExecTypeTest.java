@@ -74,85 +74,85 @@ class Tag150EnuExecTypeTest {
     }
     @Test
     void Tag0150Test() {
-        Log150EnuExecType tagData;
+        Tag150EnuExecType tagData;
 
-        tagData = new Log150EnuExecType(Enum150ExecType.NEW);
+        tagData = new Tag150EnuExecType(Enum150ExecType.NEW);
         assertEquals( Enum150ExecType.NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.DONE_FOR_DAY);
+        tagData = new Tag150EnuExecType(Enum150ExecType.DONE_FOR_DAY);
         assertEquals( Enum150ExecType.DONE_FOR_DAY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.CANCELED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.CANCELED);
         assertEquals( Enum150ExecType.CANCELED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.REPLACED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.REPLACED);
         assertEquals( Enum150ExecType.REPLACED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.PENDING_CANCEL);
+        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_CANCEL);
         assertEquals( Enum150ExecType.PENDING_CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.STOPPED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.STOPPED);
         assertEquals( Enum150ExecType.STOPPED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.REJECTED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.REJECTED);
         assertEquals( Enum150ExecType.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.REJECTED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.REJECTED);
         assertEquals( Enum150ExecType.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.PENDING_NEW);
+        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_NEW);
         assertEquals( Enum150ExecType.PENDING_NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.CALCULATED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.CALCULATED);
         assertEquals( Enum150ExecType.CALCULATED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.EXPIRED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.EXPIRED);
         assertEquals( Enum150ExecType.EXPIRED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.RESTATED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.RESTATED);
         assertEquals( Enum150ExecType.RESTATED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.PENDING_REPLACE);
+        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_REPLACE);
         assertEquals( Enum150ExecType.PENDING_REPLACE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.TRADE_PARTIAL_OR_FILLED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_PARTIAL_OR_FILLED);
         assertEquals( Enum150ExecType.TRADE_PARTIAL_OR_FILLED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.TRADE_CORRECT);
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_CORRECT);
         assertEquals( Enum150ExecType.TRADE_CORRECT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.TRADE_CANCEL);
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_CANCEL);
         assertEquals( Enum150ExecType.TRADE_CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.ORDER_STATUS);
+        tagData = new Tag150EnuExecType(Enum150ExecType.ORDER_STATUS);
         assertEquals( Enum150ExecType.ORDER_STATUS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.TRADE_IN_CLEARING_HOLD);
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_IN_CLEARING_HOLD);
         assertEquals( Enum150ExecType.TRADE_IN_CLEARING_HOLD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.TRADE_RELEASE_TO_CLEARING);
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_RELEASE_TO_CLEARING);
         assertEquals( Enum150ExecType.TRADE_RELEASE_TO_CLEARING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log150EnuExecType(Enum150ExecType.TRIGGERED_OR_ACTIVATED);
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRIGGERED_OR_ACTIVATED);
         assertEquals( Enum150ExecType.TRIGGERED_OR_ACTIVATED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

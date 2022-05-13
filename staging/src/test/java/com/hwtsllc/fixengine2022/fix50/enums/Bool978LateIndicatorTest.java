@@ -16,8 +16,41 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  978
+ *  LateIndicator
+ *  Boolean
+ *  <p>
+ *  Indicates if the contrary intention was received after the exchange imposed cutoff time
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - After the exchange cutoff time" ),
+ *  <p> NO( "N", "NO", "N - Received during normal exchange hours" ),
+ */
 class Bool978LateIndicatorTest {
+    @Test
+    void Bool0978Test() {
+        Bool978LateIndicator enumType;
 
+        enumType = Bool978LateIndicator.NO;
+        assertEquals("N",enumType.getID());
+        assertEquals("NO", enumType.getName());
+        assertEquals("N - Received during normal exchange hours", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Bool978LateIndicator.YES;
+        assertEquals("Y", enumType.getID());
+        assertEquals("YES", enumType.getName());
+        assertEquals("Y - After the exchange cutoff time", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+    }
 }

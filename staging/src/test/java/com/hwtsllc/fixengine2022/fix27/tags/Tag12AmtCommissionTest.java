@@ -45,9 +45,9 @@ class Tag12AmtCommissionTest {
     }
     @Test
     void Tag0012Test() {
-        Log12AmtCommission tagData;
+        Tag12AmtCommission tagData;
 
-        tagData = new Log12AmtCommission(new MyAmtType(10D) );
+        tagData = new Tag12AmtCommission(new MyAmtType(10D) );
         assertEquals( 10D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

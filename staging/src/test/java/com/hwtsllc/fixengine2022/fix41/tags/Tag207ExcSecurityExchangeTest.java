@@ -47,16 +47,16 @@ class Tag207ExcSecurityExchangeTest {
     }
     @Test
     void Tag0207Test() {
-        Log207ExcSecurityExchange tagData;
+        Tag207ExcSecurityExchange tagData;
 
-        tagData = new Log207ExcSecurityExchange(
-                new MyExchangeType(Log207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE));
-        assertEquals( Log207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE, tagData.getDataValue());
+        tagData = new Tag207ExcSecurityExchange(
+                new MyExchangeType(Tag207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE));
+        assertEquals( Tag207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log207ExcSecurityExchange(
-                new MyExchangeType(Log207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE));
-        assertEquals( Log207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE, tagData.getDataValue());
+        tagData = new Tag207ExcSecurityExchange(
+                new MyExchangeType(Tag207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE));
+        assertEquals( Tag207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

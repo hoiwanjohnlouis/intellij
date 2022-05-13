@@ -25,6 +25,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Boolean
  *  <p>
  *  Indicates if the order was initially received manually (as opposed to electronically)
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Manually Order" ),
+ *  <p> NO( "N", "NO", "N - Electronic Order" ),
  */
 public enum Bool1028ManualOrderIndicator implements EnumAccessors, LogVerboseString {
     YES( "Y", "YES", "Y - Manually Order" ),

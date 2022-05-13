@@ -49,10 +49,10 @@ class Tag66StrListIDTest {
     }
     @Test
     void Tag0066Test() {
-        Log66StrListID tagData;
+        Tag66StrListID tagData;
 
-        tagData = new Log66StrListID(new MyStringType(Log66StrListID.TESTA_STR_LIST_ID) );
-        assertEquals( Log66StrListID.TESTA_STR_LIST_ID, tagData.getDataValue());
+        tagData = new Tag66StrListID(new MyStringType(Tag66StrListID.TESTA_STR_LIST_ID) );
+        assertEquals( Tag66StrListID.TESTA_STR_LIST_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -49,9 +49,9 @@ class Tag6PrcAvgPxTest {
     }
     @Test
     void Tag0006Test() {
-        Log6PrcAvgPx tagData;
+        Tag6PrcAvgPx tagData;
 
-        tagData = new Log6PrcAvgPx(new MyPriceType(123.45D) );
+        tagData = new Tag6PrcAvgPx(new MyPriceType(123.45D) );
         assertEquals( 123.45D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

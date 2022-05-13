@@ -53,37 +53,37 @@ class Tag98EnuEncryptMethodTest {
     }
     @Test
     void Tag0098Test() {
-        Log98EnuEncryptMethod tagData;
+        Tag98EnuEncryptMethod tagData;
 
         /**
          * 0-6 EncryptMethod types
          */
-        tagData = new Log98EnuEncryptMethod(Enum98EncryptMethod.NONE_OR_OTHER);
+        tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.NONE_OR_OTHER);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log98EnuEncryptMethod(Enum98EncryptMethod.PKCS);
+        tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.PKCS);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log98EnuEncryptMethod(Enum98EncryptMethod.DES_ECB);
+        tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.DES_ECB);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log98EnuEncryptMethod(Enum98EncryptMethod.PKCS_DES);
+        tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.PKCS_DES);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log98EnuEncryptMethod(Enum98EncryptMethod.PGP_DES);
+        tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.PGP_DES);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log98EnuEncryptMethod(Enum98EncryptMethod.PGP_DES_MD5);
+        tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.PGP_DES_MD5);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log98EnuEncryptMethod(Enum98EncryptMethod.PEM_DES_MD5);
+        tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.PEM_DES_MD5);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

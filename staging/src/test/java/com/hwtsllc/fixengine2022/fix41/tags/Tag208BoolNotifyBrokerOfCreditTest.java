@@ -46,13 +46,13 @@ class Tag208BoolNotifyBrokerOfCreditTest {
     }
     @Test
     void Tag0208Test() {
-        Log208BoolNotifyBrokerOfCredit tagData;
+        Tag208BoolNotifyBrokerOfCredit tagData;
 
-        tagData = new Log208BoolNotifyBrokerOfCredit(MyBooleanType.NO);
+        tagData = new Tag208BoolNotifyBrokerOfCredit(MyBooleanType.NO);
         assertEquals( MyBooleanType.NO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log208BoolNotifyBrokerOfCredit(MyBooleanType.YES);
+        tagData = new Tag208BoolNotifyBrokerOfCredit(MyBooleanType.YES);
         assertEquals( MyBooleanType.YES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

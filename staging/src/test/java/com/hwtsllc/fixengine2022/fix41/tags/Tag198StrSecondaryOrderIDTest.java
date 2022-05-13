@@ -45,16 +45,16 @@ class Tag198StrSecondaryOrderIDTest {
     }
     @Test
     void Tag0198Test() {
-        Log198StrSecondaryOrderID tagData;
+        Tag198StrSecondaryOrderID tagData;
 
-        tagData = new Log198StrSecondaryOrderID(
-                new MyStringType(Log198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID));
-        assertEquals( Log198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID, tagData.getDataValue());
+        tagData = new Tag198StrSecondaryOrderID(
+                new MyStringType(Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID));
+        assertEquals( Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log198StrSecondaryOrderID(
-                new MyStringType(Log198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
-        assertEquals( Log198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID, tagData.getDataValue());
+        tagData = new Tag198StrSecondaryOrderID(
+                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
+        assertEquals( Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

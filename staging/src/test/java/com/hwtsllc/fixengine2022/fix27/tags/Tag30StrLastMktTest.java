@@ -45,9 +45,9 @@ class Tag30StrLastMktTest {
     }
     @Test
     void Tag0030Test() {
-        Log30StrLastMkt tagData;
+        Tag30StrLastMkt tagData;
 
-        tagData = new Log30StrLastMkt(new MyStringType("NYSE") );
+        tagData = new Tag30StrLastMkt(new MyStringType("NYSE") );
         assertEquals( "NYSE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

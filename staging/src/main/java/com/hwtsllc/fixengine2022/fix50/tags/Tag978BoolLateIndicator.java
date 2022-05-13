@@ -29,6 +29,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Boolean
  *  <p>
  *  Indicates if the contrary intention was received after the exchange imposed cutoff time
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - After the exchange cutoff time" ),
+ *  <p> NO( "N", "NO", "N - Received during normal exchange hours" ),
  */
 public class Tag978BoolLateIndicator extends FIX50Abstract implements LogValuePairString, LogVerboseString, BooleanString {
     private final Bool978LateIndicator dataValue;

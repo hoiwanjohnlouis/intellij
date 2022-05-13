@@ -51,25 +51,25 @@ class Tag169EnuStandInstDBTypeTest {
     }
     @Test
     void Tag0169Test() {
-        Log169EnuStandInstDBType tagData;
+        Tag169EnuStandInstDBType tagData;
 
-        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
         assertEquals( Enum169StandInstDbType.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
         assertEquals( Enum169StandInstDbType.DTC_SID.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
         assertEquals( Enum169StandInstDbType.THOMPSON_ALERT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
         assertEquals( Enum169StandInstDbType.GLOBAL_CUSTODIAN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
         assertEquals( Enum169StandInstDbType.ACCOUNT_NET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -27,8 +27,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Used to identify whether the order initiator is an aggressor or not in the trade.
  *  <p></p>
  *  Valid values:
- *  <p> Y - Order initiator is aggressor
- *  <p> N - Order initiator is passive
+ *  <p>  AGGRESSOR( "Y", "AGGRESSOR", "Y - Order initiator is aggressor" ),
+ *  <p>  PASSIVE( "N", "PASSIVE", "N - Order initiator is passive" ),
  */
 public enum Bool1057AggressorIndicator implements EnumAccessors, LogVerboseString {
     AGGRESSOR( "Y", "AGGRESSOR", "Y - Order initiator is aggressor" ),

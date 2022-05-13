@@ -29,6 +29,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Boolean
  *  <p>
  *  Indicates if the order was initially received manually (as opposed to electronically)
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Manually Order" ),
+ *  <p> NO( "N", "NO", "N - Electronic Order" ),
  */
 class Tag1028BoolManualOrderIndicatorTest {
     @Test

@@ -49,9 +49,9 @@ class Tag64StrSettlDateTest {
     }
     @Test
     void Tag0064Test() {
-        Log64StrSettlDate tagData;
+        Tag64StrSettlDate tagData;
 
-        tagData = new Log64StrSettlDate(new MyStringType("MeriadocBrandybuck-64SettlDate") );
+        tagData = new Tag64StrSettlDate(new MyStringType("MeriadocBrandybuck-64SettlDate") );
         assertEquals( "MeriadocBrandybuck-64SettlDate", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

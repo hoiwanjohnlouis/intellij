@@ -29,6 +29,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Boolean
  *  <p>
  *  Indicates if the order was initially received manually (as opposed to electronically)
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Manually Order" ),
+ *  <p> NO( "N", "NO", "N - Electronic Order" ),
  */
 public class Tag1028BoolManualOrderIndicator extends FIX50Abstract implements LogValuePairString, LogVerboseString, BooleanString {
     private final Bool1028ManualOrderIndicator dataValue;

@@ -45,9 +45,9 @@ class Tag46StrRelatdSymTest {
     }
     @Test
     void Tag0046Test() {
-        Log46StrRelatdSym tagData;
+        Tag46StrRelatdSym tagData;
 
-        tagData = new Log46StrRelatdSym(new MyStringType("IBM") );
+        tagData = new Tag46StrRelatdSym(new MyStringType("IBM") );
         assertEquals( "IBM", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

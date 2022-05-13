@@ -48,9 +48,9 @@ class Tag85NumNoDlvyInstTest {
     }
     @Test
     void Tag0085Test() {
-        Log85NumNoDlvyInst tagData;
+        Tag85NumNoDlvyInst tagData;
 
-        tagData = new Log85NumNoDlvyInst(new MyNumInGroupType(42) );
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(42) );
         assertEquals( 42, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

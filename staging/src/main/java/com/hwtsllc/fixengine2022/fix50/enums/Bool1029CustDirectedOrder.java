@@ -30,6 +30,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>
  *  customer didn’t direct this order – should be used in the case
  *  where the information is both missing and essential.
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Customer directed this order to a specific execution venue" ),
+ *  <p> NO( "N", "NO", "N - Execution venue not specified" ),
  */
 public enum Bool1029CustDirectedOrder implements EnumAccessors, LogVerboseString {
     YES( "Y", "YES", "Y - Customer directed this order to a specific execution venue" ),

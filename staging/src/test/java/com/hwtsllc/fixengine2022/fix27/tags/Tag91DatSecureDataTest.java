@@ -45,9 +45,9 @@ class Tag91DatSecureDataTest {
     }
     @Test
     void Tag0091Test() {
-        Log91DatSecureData tagData;
+        Tag91DatSecureData tagData;
 
-        tagData = new Log91DatSecureData(new MyDataType("Gollum-91StSecureData") );
+        tagData = new Tag91DatSecureData(new MyDataType("Gollum-91StSecureData") );
         assertEquals( "Gollum-91StSecureData", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

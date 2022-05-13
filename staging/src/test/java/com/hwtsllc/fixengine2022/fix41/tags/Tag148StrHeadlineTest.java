@@ -44,14 +44,14 @@ class Tag148StrHeadlineTest {
     }
     @Test
     void Tag0148Test() {
-        Log148StrHeadline tagData;
+        Tag148StrHeadline tagData;
 
-        tagData = new Log148StrHeadline(new MyStringType(Log148StrHeadline.TESTA_STR_HEADLINE));
-        assertEquals( Log148StrHeadline.TESTA_STR_HEADLINE, tagData.getDataValue());
+        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTA_STR_HEADLINE));
+        assertEquals( Tag148StrHeadline.TESTA_STR_HEADLINE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log148StrHeadline(new MyStringType(Log148StrHeadline.TESTB_STR_HEADLINE));
-        assertEquals( Log148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
+        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
+        assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

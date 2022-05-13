@@ -47,10 +47,10 @@ class Tag70StrAllocIDTest {
     }
     @Test
     void Tag0070Test() {
-        Log70StrAllocID tagData;
+        Tag70StrAllocID tagData;
 
-        tagData = new Log70StrAllocID(new MyStringType(Log70StrAllocID.TESTA_STR_ALLOC_ID) );
-        assertEquals( Log70StrAllocID.TESTA_STR_ALLOC_ID, tagData.getDataValue());
+        tagData = new Tag70StrAllocID(new MyStringType(Tag70StrAllocID.TESTA_STR_ALLOC_ID) );
+        assertEquals( Tag70StrAllocID.TESTA_STR_ALLOC_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

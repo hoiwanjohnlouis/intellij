@@ -86,9 +86,9 @@ class Tag47EnuRule80ATest {
     }
     @Test
     void Tag0047Test() {
-        Log47EnuRule80A tagData;
+        Tag47EnuRule80A tagData;
 
-        tagData = new Log47EnuRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
         assertEquals( Enum47Rule80A.AGENCY_SINGLE_ORDER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -45,9 +45,9 @@ class Tag14QtyCumQtyTest {
     }
     @Test
     void Tag0014Test() {
-        Log14QtyCumQty tagData;
+        Tag14QtyCumQty tagData;
 
-        tagData = new Log14QtyCumQty(new MyQtyType(12345) );
+        tagData = new Tag14QtyCumQty(new MyQtyType(12345) );
         assertEquals( 12345, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

@@ -49,21 +49,21 @@ class Tag4EnuAdvSideTest {
     }
     @Test
     void Tag0004Test() {
-        Log4EnuAdvSide tagData;
+        Tag4EnuAdvSide tagData;
 
-        tagData = new Log4EnuAdvSide(Enum4AdvSide.BUY);
+        tagData = new Tag4EnuAdvSide(Enum4AdvSide.BUY);
         assertEquals( "B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log4EnuAdvSide(Enum4AdvSide.SELL);
+        tagData = new Tag4EnuAdvSide(Enum4AdvSide.SELL);
         assertEquals( "S", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log4EnuAdvSide(Enum4AdvSide.CROSS);
+        tagData = new Tag4EnuAdvSide(Enum4AdvSide.CROSS);
         assertEquals( "X", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log4EnuAdvSide(Enum4AdvSide.TRADE);
+        tagData = new Tag4EnuAdvSide(Enum4AdvSide.TRADE);
         assertEquals( "T", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

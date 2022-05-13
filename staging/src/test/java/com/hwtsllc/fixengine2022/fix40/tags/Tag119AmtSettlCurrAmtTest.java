@@ -44,9 +44,9 @@ class Tag119AmtSettlCurrAmtTest {
     }
     @Test
     void Tag0119Test() {
-        Log119AmtSettlCurrAmt tagData;
+        Tag119AmtSettlCurrAmt tagData;
 
-        tagData = new Log119AmtSettlCurrAmt(new MyAmtType(119D) );
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(119D) );
         assertEquals( 119D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

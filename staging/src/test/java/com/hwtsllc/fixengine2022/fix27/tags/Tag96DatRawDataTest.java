@@ -45,9 +45,9 @@ class Tag96DatRawDataTest {
     }
     @Test
     void Tag0096Test() {
-        Log96DatRawData tagData;
+        Tag96DatRawData tagData;
 
-        tagData = new Log96DatRawData(new MyDataType("FrodoBaggins-96StRawData") );
+        tagData = new Tag96DatRawData(new MyDataType("FrodoBaggins-96StRawData") );
         assertEquals( "FrodoBaggins-96StRawData", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

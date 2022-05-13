@@ -48,13 +48,13 @@ class Tag197EnuAllocLinkTypeTest {
     }
     @Test
     void Tag0197Test() {
-        Log197EnuAllocLinkType tagData;
+        Tag197EnuAllocLinkType tagData;
 
-        tagData = new Log197EnuAllocLinkType(Enum197AllocLinkType.FX_NETTING);
+        tagData = new Tag197EnuAllocLinkType(Enum197AllocLinkType.FX_NETTING);
         assertEquals( Enum197AllocLinkType.FX_NETTING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log197EnuAllocLinkType(Enum197AllocLinkType.FX_SWAP);
+        tagData = new Tag197EnuAllocLinkType(Enum197AllocLinkType.FX_SWAP);
         assertEquals( Enum197AllocLinkType.FX_SWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -52,9 +52,9 @@ class Tag10StrCheckSumTest {
     }
     @Test
     void Tag0010Test() {
-        Log10StrCheckSum tagData;
+        Tag10StrCheckSum tagData;
 
-        tagData = new Log10StrCheckSum(new MyStringType("ABC") );
+        tagData = new Tag10StrCheckSum(new MyStringType("ABC") );
         assertEquals( "ABC", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

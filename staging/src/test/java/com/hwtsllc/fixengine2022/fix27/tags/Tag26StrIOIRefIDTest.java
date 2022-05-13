@@ -45,9 +45,9 @@ class Tag26StrIOIRefIDTest {
     }
     @Test
     void Tag0026Test() {
-        Log26StrIOIRefID tagData;
+        Tag26StrIOIRefID tagData;
 
-        tagData = new Log26StrIOIRefID(new MyStringType("A") );
+        tagData = new Tag26StrIOIRefID(new MyStringType("A") );
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

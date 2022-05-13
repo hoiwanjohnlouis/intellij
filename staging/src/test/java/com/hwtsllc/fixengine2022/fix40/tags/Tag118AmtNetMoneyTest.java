@@ -45,9 +45,9 @@ class Tag118AmtNetMoneyTest {
     }
     @Test
     void Tag0118Test() {
-        Log118AmtNetMoney tagData;
+        Tag118AmtNetMoney tagData;
 
-        tagData = new Log118AmtNetMoney(new MyAmtType(118D) );
+        tagData = new Tag118AmtNetMoney(new MyAmtType(118D) );
         assertEquals( 118D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }

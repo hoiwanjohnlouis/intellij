@@ -45,9 +45,9 @@ class Tag106StrIssuerTest {
     }
     @Test
     void Tag0106Test() {
-        Log106StrIssuer tagData;
+        Tag106StrIssuer tagData;
 
-        tagData = new Log106StrIssuer(new MyStringType("show me the money") );
+        tagData = new Tag106StrIssuer(new MyStringType("show me the money") );
         assertEquals("show me the money", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

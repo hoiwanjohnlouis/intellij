@@ -46,10 +46,10 @@ class Tag90LenSecureDataLenTest {
     @Test
     void Tag0090Test() {
         int dataLength;
-        Log90LenSecureDataLen tagData;
+        Tag90LenSecureDataLen tagData;
 
         dataLength = "MeriadocBrandybuck-90LtSecureData".length();
-        tagData = new Log90LenSecureDataLen(new MyLengthType(dataLength) );
+        tagData = new Tag90LenSecureDataLen(new MyLengthType(dataLength) );
         assertEquals( dataLength, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }

@@ -47,9 +47,9 @@ class Tag92StrBrokerOfCreditTest {
     }
     @Test
     void Tag0092Test() {
-        Log92StrBrokerOfCredit tagData;
+        Tag92StrBrokerOfCredit tagData;
 
-        tagData = new Log92StrBrokerOfCredit(new MyStringType("Saruman-92StBrokerOfCredit") );
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType("Saruman-92StBrokerOfCredit") );
         assertEquals( "Saruman-92StBrokerOfCredit", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

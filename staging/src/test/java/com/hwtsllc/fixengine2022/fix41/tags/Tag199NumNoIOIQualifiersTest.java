@@ -44,16 +44,16 @@ class Tag199NumNoIOIQualifiersTest {
     }
     @Test
     void Tag0199Test() {
-        Log199NumNoIOIQualifiers tagData;
+        Tag199NumNoIOIQualifiers tagData;
 
-        tagData = new Log199NumNoIOIQualifiers(
-                new MyNumInGroupType(Log199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS));
-        assertEquals( Log199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
+        tagData = new Tag199NumNoIOIQualifiers(
+                new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log199NumNoIOIQualifiers(
-                new MyNumInGroupType(Log199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
-        assertEquals( Log199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
+        tagData = new Tag199NumNoIOIQualifiers(
+                new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

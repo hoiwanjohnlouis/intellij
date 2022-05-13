@@ -29,6 +29,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Boolean
  *  <p>
  *  Shows that the reported price that is different from the market price
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Reported price is different from the market price" ),
+ *  <p> NO( "N", "NO", "N - Reported price is equal to market price" ),
  */
 public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValuePairString, LogVerboseString, BooleanString {
     private final Bool1134ReportedPxDiff dataValue;

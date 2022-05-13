@@ -44,14 +44,14 @@ class Tag162StrSettlInstIDTest {
     }
     @Test
     void Tag0162Test() {
-        Log162StrSettlInstID tagData;
+        Tag162StrSettlInstID tagData;
 
-        tagData = new Log162StrSettlInstID(new MyStringType(Log162StrSettlInstID.TESTA_STR_SETTL_INST_ID));
-        assertEquals( Log162StrSettlInstID.TESTA_STR_SETTL_INST_ID, tagData.getDataValue());
+        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID));
+        assertEquals( Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log162StrSettlInstID(new MyStringType(Log162StrSettlInstID.TESTB_STR_SETTL_INST_ID));
-        assertEquals( Log162StrSettlInstID.TESTB_STR_SETTL_INST_ID, tagData.getDataValue());
+        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID));
+        assertEquals( Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

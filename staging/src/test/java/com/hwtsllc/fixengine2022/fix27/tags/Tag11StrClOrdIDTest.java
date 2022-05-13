@@ -51,9 +51,9 @@ class Tag11StrClOrdIDTest {
     }
     @Test
     void Tag0011Test() {
-        Log11StrClOrdID tagData;
+        Tag11StrClOrdID tagData;
 
-        tagData = new Log11StrClOrdID(new MyStringType("MLCO-ABCD1234") );
+        tagData = new Tag11StrClOrdID(new MyStringType("MLCO-ABCD1234") );
         assertEquals( "MLCO-ABCD1234", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

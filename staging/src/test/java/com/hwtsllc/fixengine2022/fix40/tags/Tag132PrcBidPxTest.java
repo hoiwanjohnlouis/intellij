@@ -43,9 +43,9 @@ class Tag132PrcBidPxTest {
     }
     @Test
     void Tag0132Test() {
-        Log132PrcBidPx tagData;
+        Tag132PrcBidPx tagData;
 
-        tagData = new Log132PrcBidPx(new MyPriceType(1.32D) );
+        tagData = new Tag132PrcBidPx(new MyPriceType(1.32D) );
         assertEquals( 1.32D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

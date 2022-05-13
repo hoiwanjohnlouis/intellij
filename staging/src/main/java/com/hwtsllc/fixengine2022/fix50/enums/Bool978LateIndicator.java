@@ -25,6 +25,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Boolean
  *  <p>
  *  Indicates if the contrary intention was received after the exchange imposed cutoff time
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - After the exchange cutoff time" ),
+ *  <p> NO( "N", "NO", "N - Received during normal exchange hours" ),
  */
 public enum Bool978LateIndicator implements EnumAccessors, LogVerboseString {
     YES( "Y", "YES", "Y - After the exchange cutoff time" ),

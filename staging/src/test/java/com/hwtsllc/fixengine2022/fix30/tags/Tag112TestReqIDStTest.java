@@ -44,9 +44,9 @@ class Tag112TestReqIDStTest {
     }
     @Test
     void Tag0112Test() {
-        Log112StrTestReqID tagData;
+        Tag112StrTestReqID tagData;
 
-        tagData = new Log112StrTestReqID(new MyStringType("30"));
+        tagData = new Tag112StrTestReqID(new MyStringType("30"));
         assertEquals( "30", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

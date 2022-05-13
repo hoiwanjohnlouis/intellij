@@ -16,26 +16,20 @@
 
 package com.hwtsllc.fixengine2022.factories;
 
-import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.fix40.tags.Log140PrcPrevClosePx;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 public class FIXBody implements LogVerboseString {
-    private final Log140PrcPrevClosePx tag140PrcPrevClosePx;
 
-    //
     private FIXBody(FIXBody.Builder builder) {
-        this.tag140PrcPrevClosePx = builder.tag140PrcPrevClosePx;
     }
 
     @Override
     public String toString() {
-        return super.toString()
-                .concat(tag140PrcPrevClosePx.toString());
+        return super.toString();
     }
     @Override
     public String toVerboseString() {
-        return tag140PrcPrevClosePx.toVerboseString();
+        return null;
     }
 
 //    public int compareTo(Object o) {
@@ -44,14 +38,12 @@ public class FIXBody implements LogVerboseString {
 
     // static builder helper class
     public static class Builder {
-        private Log140PrcPrevClosePx tag140PrcPrevClosePx;    // 4
 
         // helper class to build object
         public Builder() {
         }
 
         public Builder buildPreviousDaysClosingPrice(double previousDaysClosingPrice) {
-            this.tag140PrcPrevClosePx = new Log140PrcPrevClosePx(new MyPriceType(12.34D) );
             return this;
         }
 

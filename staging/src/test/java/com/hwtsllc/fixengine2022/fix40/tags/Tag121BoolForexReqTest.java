@@ -47,13 +47,13 @@ class Tag121BoolForexReqTest {
     }
     @Test
     void Tag0121Test() {
-        Log121BoolForexReq tagData;
+        Tag121BoolForexReq tagData;
 
-        tagData = new Log121BoolForexReq(MyBooleanType.NO);
+        tagData = new Tag121BoolForexReq(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log121BoolForexReq(MyBooleanType.YES);
+        tagData = new Tag121BoolForexReq(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -44,14 +44,14 @@ class Tag161StrAllocTextTest {
     }
     @Test
     void Tag0161Test() {
-        Log161StrAllocText tagData;
+        Tag161StrAllocText tagData;
 
-        tagData = new Log161StrAllocText(new MyStringType(Log161StrAllocText.TESTA_STR_ALLOC_TEXT));
-        assertEquals( Log161StrAllocText.TESTA_STR_ALLOC_TEXT, tagData.getDataValue());
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTA_STR_ALLOC_TEXT));
+        assertEquals( Tag161StrAllocText.TESTA_STR_ALLOC_TEXT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log161StrAllocText(new MyStringType(Log161StrAllocText.TESTB_STR_ALLOC_TEXT));
-        assertEquals( Log161StrAllocText.TESTB_STR_ALLOC_TEXT, tagData.getDataValue());
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_ALLOC_TEXT));
+        assertEquals( Tag161StrAllocText.TESTB_STR_ALLOC_TEXT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

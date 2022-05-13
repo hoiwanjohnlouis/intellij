@@ -18,11 +18,11 @@ package com.hwtsllc.fixengine2022.msgs.application;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumMsgType;
-import com.hwtsllc.fixengine2022.fix27.tags.Log55StrSymbol;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag55StrSymbol;
 
 public class ExecutionReport {
     private final MyEnumMsgType tag35MsgType;
-    private final Log55StrSymbol tag55StrSymbol;
+    private final Tag55StrSymbol tag55StrSymbol;
 
     //
     private ExecutionReport(ExecutionReport.Builder builder) {
@@ -48,7 +48,7 @@ public class ExecutionReport {
         private StringBuilder stringBuilder = new StringBuilder();
 
         private MyEnumMsgType tag35MsgType;
-        private Log55StrSymbol tag55StrSymbol;              // 2
+        private Tag55StrSymbol tag55StrSymbol;              // 2
 
         // helper class to build object
         public Builder(MyEnumMsgType tag35MsgType) {
@@ -56,7 +56,7 @@ public class ExecutionReport {
         }
 
         public Builder buildTickerSymbol(String tickerSymbol) {
-            this.tag55StrSymbol = new Log55StrSymbol(new MyStringType(tickerSymbol) );
+            this.tag55StrSymbol = new Tag55StrSymbol(new MyStringType(tickerSymbol) );
             return this;
         }
         public ExecutionReport build() {
@@ -71,7 +71,7 @@ public class ExecutionReport {
     public static void main(String[] args) {
         ExecutionReport record =
                 new ExecutionReport.Builder(MyEnumMsgType.EXECUTION_REPORT)
-                        .buildTickerSymbol(Log55StrSymbol.TESTA_STR_SYMBOL)
+                        .buildTickerSymbol(Tag55StrSymbol.TESTA_STR_SYMBOL)
                         .build();
         System.out.println(record);
     }

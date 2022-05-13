@@ -44,14 +44,14 @@ class Tag188PrcBidSpotRateTest {
     }
     @Test
     void Tag0188Test() {
-        Log188PrcBidSpotRate tagData;
+        Tag188PrcBidSpotRate tagData;
 
-        tagData = new Log188PrcBidSpotRate(new MyPriceType(Log188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE));
-        assertEquals( Log188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE, tagData.getDataValue());
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE));
+        assertEquals( Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log188PrcBidSpotRate(new MyPriceType(Log188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
-        assertEquals( Log188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE, tagData.getDataValue());
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
+        assertEquals( Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

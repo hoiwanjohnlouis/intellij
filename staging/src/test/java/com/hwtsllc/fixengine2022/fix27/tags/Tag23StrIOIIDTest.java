@@ -45,9 +45,9 @@ class Tag23StrIOIIDTest {
     }
     @Test
     void Tag0023Test() {
-        Log23StrIOIID tagData;
+        Tag23StrIOIID tagData;
 
-        tagData = new Log23StrIOIID(new MyStringType("A") );
+        tagData = new Tag23StrIOIID(new MyStringType("A") );
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

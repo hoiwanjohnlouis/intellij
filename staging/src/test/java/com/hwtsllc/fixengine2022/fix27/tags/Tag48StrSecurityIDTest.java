@@ -45,9 +45,9 @@ class Tag48StrSecurityIDTest {
     }
     @Test
     void Tag0048Test() {
-        Log48StrSecurityID tagData;
+        Tag48StrSecurityID tagData;
 
-        tagData = new Log48StrSecurityID(new MyStringType("TESTA") );
+        tagData = new Tag48StrSecurityID(new MyStringType("TESTA") );
         assertEquals( "TESTA", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

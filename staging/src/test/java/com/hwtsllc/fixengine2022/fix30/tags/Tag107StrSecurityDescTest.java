@@ -44,9 +44,9 @@ class Tag107StrSecurityDescTest {
     }
     @Test
     void Tag0107Test() {
-        Log107StrSecurityDesc tagData;
+        Tag107StrSecurityDesc tagData;
 
-        tagData = new Log107StrSecurityDesc(new MyStringType("International Widgets, Inc.") );
+        tagData = new Tag107StrSecurityDesc(new MyStringType("International Widgets, Inc.") );
         assertEquals("International Widgets, Inc.", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

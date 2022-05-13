@@ -46,13 +46,13 @@ class Tag114BoolLocateReqdTest {
     }
     @Test
     void Tag0114Test() {
-        Log114BoolLocateReqd tagData;
+        Tag114BoolLocateReqd tagData;
 
-        tagData = new Log114BoolLocateReqd(MyBooleanType.NO);
+        tagData = new Tag114BoolLocateReqd(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log114BoolLocateReqd(MyBooleanType.YES);
+        tagData = new Tag114BoolLocateReqd(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -48,9 +48,9 @@ class Tag55StrSymbolTest {
     }
     @Test
     void Tag0055Test() {
-        Log55StrSymbol tagData;
+        Tag55StrSymbol tagData;
 
-        tagData = new Log55StrSymbol(new MyStringType("INTC") );
+        tagData = new Tag55StrSymbol(new MyStringType("INTC") );
         assertEquals( "INTC", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

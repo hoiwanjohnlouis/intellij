@@ -51,38 +51,38 @@ class Tag127EnuDKReasonTest {
     }
     @Test
     void Tag0127Test() {
-        Log127EnuDKReason tagData;
+        Tag127EnuDKReason tagData;
 
         /**
          * A-F, Z DKReason type
          */
-        tagData = new Log127EnuDKReason(Enum127DKReason.UNKNOWN_SYMBOL);
+        tagData = new Tag127EnuDKReason(Enum127DKReason.UNKNOWN_SYMBOL);
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log127EnuDKReason(Enum127DKReason.WRONG_SIDE);
+        tagData = new Tag127EnuDKReason(Enum127DKReason.WRONG_SIDE);
         assertEquals( "B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log127EnuDKReason(Enum127DKReason.QUANTITY_EXCEEDS_ORDER);
+        tagData = new Tag127EnuDKReason(Enum127DKReason.QUANTITY_EXCEEDS_ORDER);
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log127EnuDKReason(Enum127DKReason.NO_MATCHING_ORDER);
+        tagData = new Tag127EnuDKReason(Enum127DKReason.NO_MATCHING_ORDER);
         assertEquals( "D", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log127EnuDKReason(Enum127DKReason.PRICE_EXCEEDS_LIMIT);
+        tagData = new Tag127EnuDKReason(Enum127DKReason.PRICE_EXCEEDS_LIMIT);
         assertEquals( "E", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log127EnuDKReason(Enum127DKReason.CALCULATION_DIFFERENCE);
+        tagData = new Tag127EnuDKReason(Enum127DKReason.CALCULATION_DIFFERENCE);
         assertEquals( "F", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log127EnuDKReason(Enum127DKReason.OTHER);
+        tagData = new Tag127EnuDKReason(Enum127DKReason.OTHER);
         assertEquals( "Z", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

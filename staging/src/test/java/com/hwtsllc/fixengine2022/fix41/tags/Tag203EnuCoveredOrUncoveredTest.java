@@ -56,13 +56,13 @@ class Tag203EnuCoveredOrUncoveredTest {
     }
     @Test
     void Tag0203Test() {
-        Log203EnuCoveredOrUncovered tagData;
+        Tag203EnuCoveredOrUncovered tagData;
 
-        tagData = new Log203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
+        tagData = new Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
         assertEquals( MyEnumCoveredOrUncovered.COVERED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.UNCOVERED);
+        tagData = new Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.UNCOVERED);
         assertEquals( MyEnumCoveredOrUncovered.UNCOVERED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

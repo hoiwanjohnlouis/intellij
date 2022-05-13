@@ -45,16 +45,16 @@ class Tag176StrSecuritySettlAgentNameTest {
     }
     @Test
     void Tag0176Test() {
-        Log176StrSecuritySettlAgentName tagData;
+        Tag176StrSecuritySettlAgentName tagData;
 
-        tagData = new Log176StrSecuritySettlAgentName(
-                new MyStringType(Log176StrSecuritySettlAgentName.TESTA_STR_SECURITY_SETTL_AGENT_NAME));
-        assertEquals( Log176StrSecuritySettlAgentName.TESTA_STR_SECURITY_SETTL_AGENT_NAME, tagData.getDataValue());
+        tagData = new Tag176StrSecuritySettlAgentName(
+                new MyStringType(Tag176StrSecuritySettlAgentName.TESTA_STR_SECURITY_SETTL_AGENT_NAME));
+        assertEquals( Tag176StrSecuritySettlAgentName.TESTA_STR_SECURITY_SETTL_AGENT_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log176StrSecuritySettlAgentName(
-                new MyStringType(Log176StrSecuritySettlAgentName.TESTB_STR_SECURITY_SETTL_AGENT_NAME));
-        assertEquals( Log176StrSecuritySettlAgentName.TESTB_STR_SECURITY_SETTL_AGENT_NAME, tagData.getDataValue());
+        tagData = new Tag176StrSecuritySettlAgentName(
+                new MyStringType(Tag176StrSecuritySettlAgentName.TESTB_STR_SECURITY_SETTL_AGENT_NAME));
+        assertEquals( Tag176StrSecuritySettlAgentName.TESTB_STR_SECURITY_SETTL_AGENT_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

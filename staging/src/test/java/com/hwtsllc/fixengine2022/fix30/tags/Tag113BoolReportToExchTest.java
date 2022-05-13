@@ -46,13 +46,13 @@ class Tag113BoolReportToExchTest {
     }
     @Test
     void Tag0113Test() {
-        Log113BoolReportToExch tagData;
+        Tag113BoolReportToExch tagData;
 
-        tagData = new Log113BoolReportToExch(MyBooleanType.NO);
+        tagData = new Tag113BoolReportToExch(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log113BoolReportToExch(MyBooleanType.YES);
+        tagData = new Tag113BoolReportToExch(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

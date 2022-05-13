@@ -25,10 +25,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Boolean
  *  <p>
  *  Shows that the reported price that is different from the market price
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Reported price is different from the market price" ),
+ *  <p> NO( "N", "NO", "N - Reported price is equal to market price" ),
  */
 public enum Bool1134ReportedPxDiff implements EnumAccessors, LogVerboseString {
-    YES( "Y", "YES", "Y - Order initiator is aggressor" ),
-    NO( "N", "NO", "N - Order initiator is passive" ),
+    YES( "Y", "YES", "Y - Reported price is different from the market price" ),
+    NO( "N", "NO", "N - Reported price is equal to market price" ),
     ;
 
     private final String id;

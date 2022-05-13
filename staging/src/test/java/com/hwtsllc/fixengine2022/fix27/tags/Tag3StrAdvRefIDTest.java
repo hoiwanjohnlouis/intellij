@@ -45,9 +45,9 @@ class Tag3StrAdvRefIDTest {
     }
     @Test
     void Tag0003Test() {
-        Log3StrAdvRefID tagData;
+        Tag3StrAdvRefID tagData;
 
-        tagData = new Log3StrAdvRefID(new MyStringType("hello from main routine") );
+        tagData = new Tag3StrAdvRefID(new MyStringType("hello from main routine") );
         assertEquals( "hello from main routine", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

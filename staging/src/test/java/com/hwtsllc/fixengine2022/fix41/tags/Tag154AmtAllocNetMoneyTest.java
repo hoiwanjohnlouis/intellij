@@ -44,14 +44,14 @@ class Tag154AmtAllocNetMoneyTest {
     }
     @Test
     void Tag0154Test() {
-        Log154AmtAllocNetMoney tagData;
+        Tag154AmtAllocNetMoney tagData;
 
-        tagData = new Log154AmtAllocNetMoney(new MyAmtType(Log154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY));
-        assertEquals( Log154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY, tagData.getDataValue());
+        tagData = new Tag154AmtAllocNetMoney(new MyAmtType(Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY));
+        assertEquals( Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log154AmtAllocNetMoney(new MyAmtType(Log154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY));
-        assertEquals( Log154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY, tagData.getDataValue());
+        tagData = new Tag154AmtAllocNetMoney(new MyAmtType(Tag154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY));
+        assertEquals( Tag154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -48,9 +48,9 @@ class Tag15CcyCurrencyTest {
     }
     @Test
     void Tag0015Test() {
-        Log15CcyCurrency tagData;
+        Tag15CcyCurrency tagData;
 
-        tagData = new Log15CcyCurrency(new MyCurrencyType("USD") );
+        tagData = new Tag15CcyCurrency(new MyCurrencyType("USD") );
         assertEquals( "USD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

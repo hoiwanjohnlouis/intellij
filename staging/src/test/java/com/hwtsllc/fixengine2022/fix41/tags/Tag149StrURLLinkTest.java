@@ -47,14 +47,14 @@ class Tag149StrURLLinkTest {
     }
     @Test
     void Tag0149Test() {
-        Log149StrURLLink tagData;
+        Tag149StrURLLink tagData;
 
-        tagData = new Log149StrURLLink(new MyStringType(Log149StrURLLink.TESTA_STR_URL_LINK));
-        assertEquals( Log149StrURLLink.TESTA_STR_URL_LINK, tagData.getDataValue());
+        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTA_STR_URL_LINK));
+        assertEquals( Tag149StrURLLink.TESTA_STR_URL_LINK, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log149StrURLLink(new MyStringType(Log149StrURLLink.TESTB_STR_URL_LINK));
-        assertEquals( Log149StrURLLink.TESTB_STR_URL_LINK, tagData.getDataValue());
+        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTB_STR_URL_LINK));
+        assertEquals( Tag149StrURLLink.TESTB_STR_URL_LINK, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

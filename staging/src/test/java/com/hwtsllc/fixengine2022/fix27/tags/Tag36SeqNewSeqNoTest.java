@@ -44,9 +44,9 @@ class Tag36SeqNewSeqNoTest {
     }
     @Test
     void Tag0036Test() {
-        Log36SeqNewSeqNo tagData;
+        Tag36SeqNewSeqNo tagData;
 
-        tagData = new Log36SeqNewSeqNo(new MySeqNumType(23456) );
+        tagData = new Tag36SeqNewSeqNo(new MySeqNumType(23456) );
         assertEquals( 23456, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }

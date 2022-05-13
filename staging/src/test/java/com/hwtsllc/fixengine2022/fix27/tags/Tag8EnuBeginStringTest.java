@@ -57,37 +57,37 @@ class Tag8EnuBeginStringTest {
     }
     @Test
     void Tag0008Test() {
-        Log8EnuBeginString tagData;
+        Tag8EnuBeginString tagData;
 
-        tagData = new Log8EnuBeginString(Enum8BeginString.BEGIN_STRING_2_7);
+        tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_2_7);
         assertEquals( Enum8BeginString.BEGIN_STRING_2_7.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log8EnuBeginString(Enum8BeginString.BEGIN_STRING_3_0);
+        tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_3_0);
         assertEquals( Enum8BeginString.BEGIN_STRING_3_0.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_0);
+        tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_0);
         assertEquals( Enum8BeginString.BEGIN_STRING_4_0.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_1);
+        tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_1);
         assertEquals( Enum8BeginString.BEGIN_STRING_4_1.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_2);
+        tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_2);
         assertEquals( Enum8BeginString.BEGIN_STRING_4_2.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_3);
+        tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_3);
         assertEquals( Enum8BeginString.BEGIN_STRING_4_3.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_4);
+        tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_4_4);
         assertEquals( Enum8BeginString.BEGIN_STRING_4_4.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log8EnuBeginString(Enum8BeginString.BEGIN_STRING_5_0);
+        tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_5_0);
         assertEquals( Enum8BeginString.BEGIN_STRING_5_0.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

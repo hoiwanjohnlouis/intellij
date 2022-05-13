@@ -44,14 +44,14 @@ class Tag194PrcLastSpotRateTest {
     }
     @Test
     void Tag0194Test() {
-        Log194PrcLastSpotRate tagData;
+        Tag194PrcLastSpotRate tagData;
 
-        tagData = new Log194PrcLastSpotRate(new MyPriceType(Log194PrcLastSpotRate.TESTA_PRC_LAST_SPOT_RATE));
-        assertEquals( Log194PrcLastSpotRate.TESTA_PRC_LAST_SPOT_RATE, tagData.getDataValue());
+        tagData = new Tag194PrcLastSpotRate(new MyPriceType(Tag194PrcLastSpotRate.TESTA_PRC_LAST_SPOT_RATE));
+        assertEquals( Tag194PrcLastSpotRate.TESTA_PRC_LAST_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log194PrcLastSpotRate(new MyPriceType(Log194PrcLastSpotRate.TESTB_PRC_LAST_SPOT_RATE));
-        assertEquals( Log194PrcLastSpotRate.TESTB_PRC_LAST_SPOT_RATE, tagData.getDataValue());
+        tagData = new Tag194PrcLastSpotRate(new MyPriceType(Tag194PrcLastSpotRate.TESTB_PRC_LAST_SPOT_RATE));
+        assertEquals( Tag194PrcLastSpotRate.TESTB_PRC_LAST_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 }

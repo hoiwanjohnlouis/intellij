@@ -44,9 +44,9 @@ class Tag49StrSenderCompIDTest {
     }
     @Test
     void Tag0049Test() {
-        Log49StrSenderCompID tagData;
+        Tag49StrSenderCompID tagData;
 
-        tagData = new Log49StrSenderCompID(new MyStringType("JPMC") );
+        tagData = new Tag49StrSenderCompID(new MyStringType("JPMC") );
         assertEquals( "JPMC", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

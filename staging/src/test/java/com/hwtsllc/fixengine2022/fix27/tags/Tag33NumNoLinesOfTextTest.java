@@ -44,9 +44,9 @@ class Tag33NumNoLinesOfTextTest {
     }
     @Test
     void Tag0033Test() {
-        Log33NumNoLinesOfText tagData;
+        Tag33NumNoLinesOfText tagData;
 
-        tagData = new Log33NumNoLinesOfText(new MyNumInGroupType(5));
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(5));
         assertEquals( 5, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

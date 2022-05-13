@@ -47,9 +47,9 @@ class Tag80QtyAllocQtyTest {
     }
     @Test
     void Tag0080Test() {
-        Log80QtyAllocQty tagData;
+        Tag80QtyAllocQty tagData;
 
-        tagData = new Log80QtyAllocQty(new MyQtyType(80));
+        tagData = new Tag80QtyAllocQty(new MyQtyType(80));
         assertEquals( 80, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

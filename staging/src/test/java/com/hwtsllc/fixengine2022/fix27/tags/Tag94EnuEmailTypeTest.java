@@ -48,20 +48,20 @@ class Tag94EnuEmailTypeTest {
     }
     @Test
     void Tag0094Test() {
-        Log94EnuEmailType tagData;
+        Tag94EnuEmailType tagData;
 
         /**
          * 0-2 email types
          */
-        tagData = new Log94EnuEmailType(Enum94EmailType.NEW);
+        tagData = new Tag94EnuEmailType(Enum94EmailType.NEW);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log94EnuEmailType(Enum94EmailType.REPLY);
+        tagData = new Tag94EnuEmailType(Enum94EmailType.REPLY);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log94EnuEmailType(Enum94EmailType.ADMIN_REPLY);
+        tagData = new Tag94EnuEmailType(Enum94EmailType.ADMIN_REPLY);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

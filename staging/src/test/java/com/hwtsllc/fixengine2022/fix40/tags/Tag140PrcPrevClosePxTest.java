@@ -43,11 +43,11 @@ class Tag140PrcPrevClosePxTest {
     }
     @Test
     void Tag0140Test() {
-        Log140PrcPrevClosePx tagData;
+        Tag140PrcPrevClosePx tagData;
 
         // assertEquals(10.23D, tagData.);
 
-        tagData = new Log140PrcPrevClosePx(new MyPriceType(12.34D) );
+        tagData = new Tag140PrcPrevClosePx(new MyPriceType(12.34D) );
         assertEquals( 12.34D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }

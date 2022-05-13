@@ -50,9 +50,9 @@ class Tag17StrExecIDTest {
     }
     @Test
     void Tag0017Test() {
-        Log17StrExecID tagData;
+        Tag17StrExecID tagData;
 
-        tagData = new Log17StrExecID(new MyStringType("BEST-1234") );
+        tagData = new Tag17StrExecID(new MyStringType("BEST-1234") );
         assertEquals( "BEST-1234", tagData.getDataValue());
     }
 }

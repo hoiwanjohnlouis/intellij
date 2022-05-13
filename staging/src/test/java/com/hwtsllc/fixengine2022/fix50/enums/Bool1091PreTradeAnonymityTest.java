@@ -16,8 +16,44 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ *  1091
+ *  PreTradeAnonymity
+ *  Boolean
+ *  <p>
+ *  Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds.
+ *  <p>
+ *  Anonymity is relevant in markets where counterparties are regularly disclosed in order depth feeds.
+ *  <p>
+ *  Disclosure is relevant when counterparties are not normally visible.
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Trader explicitly request anonymity" ),
+ *  <p> NO( "N", "NO", "N - Anonymity not required" ),
+ */
 class Bool1091PreTradeAnonymityTest {
+    @Test
+    void Bool1091Test() {
+        Bool1091PreTradeAnonymity enumType;
 
+        enumType = Bool1091PreTradeAnonymity.NO;
+        assertEquals("N",enumType.getID());
+        assertEquals("NO", enumType.getName());
+        assertEquals("N - Anonymity not required", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Bool1091PreTradeAnonymity.YES;
+        assertEquals("Y", enumType.getID());
+        assertEquals("YES", enumType.getName());
+        assertEquals("Y - Trader explicitly request anonymity", enumType.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+    }
 }

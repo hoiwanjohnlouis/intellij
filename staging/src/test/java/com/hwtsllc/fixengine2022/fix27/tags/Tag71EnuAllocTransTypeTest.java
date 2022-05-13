@@ -56,36 +56,36 @@ class Tag71EnuAllocTransTypeTest {
     }
     @Test
     void Tag0071Test() {
-        Log71EnuAllocTransType tagData;
+        Tag71EnuAllocTransType tagData;
 
         /**
          * 0-6 AllocTransType types
          */
-        tagData = new Log71EnuAllocTransType(Enum71AllocTransType.NEW);
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.NEW);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log71EnuAllocTransType(Enum71AllocTransType.REPLACE);
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.REPLACE);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log71EnuAllocTransType(Enum71AllocTransType.CANCEL);
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CANCEL);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log71EnuAllocTransType(Enum71AllocTransType.PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY);
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log71EnuAllocTransType(Enum71AllocTransType.CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY);
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log71EnuAllocTransType(Enum71AllocTransType.CALCULATED_WITHOUT_PRELIMINARY);
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CALCULATED_WITHOUT_PRELIMINARY);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log71EnuAllocTransType(Enum71AllocTransType.REVERSAL);
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.REVERSAL);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -44,9 +44,9 @@ class Tag45SeqRefSeqNumTest {
     }
     @Test
     void Tag0045Test() {
-        Log45SeqRefSeqNum tagData;
+        Tag45SeqRefSeqNum tagData;
 
-        tagData = new Log45SeqRefSeqNum(new MySeqNumType(32523) );
+        tagData = new Tag45SeqRefSeqNum(new MySeqNumType(32523) );
         assertEquals( 32523, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }

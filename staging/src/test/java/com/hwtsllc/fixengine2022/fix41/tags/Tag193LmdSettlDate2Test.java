@@ -45,14 +45,14 @@ class Tag193LmdSettlDate2Test {
     }
     @Test
     void Tag0193Test() {
-        Log193LmdSettlDate2 tagData;
+        Tag193LmdSettlDate2 tagData;
 
-        tagData = new Log193LmdSettlDate2(new MyLocalMktDateType(Log193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2));
-        assertEquals( Log193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2, tagData.getDataValue());
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2));
+        assertEquals( Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log193LmdSettlDate2(new MyLocalMktDateType(Log193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
-        assertEquals( Log193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2, tagData.getDataValue());
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
+        assertEquals( Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -44,9 +44,9 @@ class Tag58StrTextTest {
     }
     @Test
     void Tag0058Test() {
-        Log58StrText tagData;
+        Tag58StrText tagData;
 
-        tagData = new Log58StrText(new MyStringType("hello from main routine"));
+        tagData = new Tag58StrText(new MyStringType("hello from main routine"));
         assertEquals( "hello from main routine", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

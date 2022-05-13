@@ -52,13 +52,13 @@ class Tag204EnuCustomerOrFirmTest {
     }
     @Test
     void Tag0204Test() {
-        Log204EnuCustomerOrFirm tagData;
+        Tag204EnuCustomerOrFirm tagData;
 
-        tagData = new Log204EnuCustomerOrFirm(Enum204CustomerOrFirm.CUSTOMER);
+        tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.CUSTOMER);
         assertEquals( Enum204CustomerOrFirm.CUSTOMER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log204EnuCustomerOrFirm(Enum204CustomerOrFirm.FIRM);
+        tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.FIRM);
         assertEquals( Enum204CustomerOrFirm.FIRM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

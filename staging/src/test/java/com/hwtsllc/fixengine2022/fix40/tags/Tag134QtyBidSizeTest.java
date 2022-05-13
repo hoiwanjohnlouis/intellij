@@ -44,9 +44,9 @@ class Tag134QtyBidSizeTest {
     }
     @Test
     void Tag0134Test() {
-        Log134QtyBidSize tagData;
+        Tag134QtyBidSize tagData;
 
-        tagData = new Log134QtyBidSize(new MyQtyType(100) );
+        tagData = new Tag134QtyBidSize(new MyQtyType(100) );
         assertEquals( 100, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }

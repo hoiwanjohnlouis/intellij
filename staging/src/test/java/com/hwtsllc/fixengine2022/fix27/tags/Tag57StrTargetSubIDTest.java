@@ -45,9 +45,9 @@ class Tag57StrTargetSubIDTest {
     }
     @Test
     void Tag0057Test() {
-        Log57StrTargetSubID tagData;
+        Tag57StrTargetSubID tagData;
 
-        tagData = new Log57StrTargetSubID(new MyStringType("MLCO") );
+        tagData = new Tag57StrTargetSubID(new MyStringType("MLCO") );
         assertEquals( "MLCO", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

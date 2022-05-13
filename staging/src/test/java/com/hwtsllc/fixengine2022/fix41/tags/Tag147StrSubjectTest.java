@@ -44,14 +44,14 @@ class Tag147StrSubjectTest {
     }
     @Test
     void Tag0147Test() {
-        Log147StrSubject tagData;
+        Tag147StrSubject tagData;
 
-        tagData = new Log147StrSubject(new MyStringType(Log147StrSubject.TESTA_STR_SUBJECT));
-        assertEquals( Log147StrSubject.TESTA_STR_SUBJECT, tagData.getDataValue());
+        tagData = new Tag147StrSubject(new MyStringType(Tag147StrSubject.TESTA_STR_SUBJECT));
+        assertEquals( Tag147StrSubject.TESTA_STR_SUBJECT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log147StrSubject(new MyStringType(Log147StrSubject.TESTB_STR_SUBJECT));
-        assertEquals( Log147StrSubject.TESTB_STR_SUBJECT, tagData.getDataValue());
+        tagData = new Tag147StrSubject(new MyStringType(Tag147StrSubject.TESTB_STR_SUBJECT));
+        assertEquals( Tag147StrSubject.TESTB_STR_SUBJECT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

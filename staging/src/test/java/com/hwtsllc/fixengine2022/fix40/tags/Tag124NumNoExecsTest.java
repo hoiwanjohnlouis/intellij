@@ -43,9 +43,9 @@ class Tag124NumNoExecsTest {
     }
     @Test
     void Tag0124Test() {
-        Log124NumNoExecs tagData;
+        Tag124NumNoExecs tagData;
 
-        tagData = new Log124NumNoExecs(new MyNumInGroupType(100) );
+        tagData = new Tag124NumNoExecs(new MyNumInGroupType(100) );
         assertEquals( 100, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }

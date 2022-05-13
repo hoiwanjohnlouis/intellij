@@ -47,16 +47,16 @@ class Tag185StrCashSettlAgentAcctNameTest {
     }
     @Test
     void Tag0185Test() {
-        Log185StrCashSettlAgentAcctName tagData;
+        Tag185StrCashSettlAgentAcctName tagData;
 
-        tagData = new Log185StrCashSettlAgentAcctName(
-                new MyStringType(Log185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME));
-        assertEquals( Log185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME, tagData.getDataValue());
+        tagData = new Tag185StrCashSettlAgentAcctName(
+                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME));
+        assertEquals( Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log185StrCashSettlAgentAcctName(
-                new MyStringType(Log185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME));
-        assertEquals( Log185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME, tagData.getDataValue());
+        tagData = new Tag185StrCashSettlAgentAcctName(
+                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME));
+        assertEquals( Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

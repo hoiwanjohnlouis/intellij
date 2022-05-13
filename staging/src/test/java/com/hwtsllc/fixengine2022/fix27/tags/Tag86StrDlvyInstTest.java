@@ -45,9 +45,9 @@ class Tag86StrDlvyInstTest {
     }
     @Test
     void Tag0086Test() {
-        Log86StrDlvyInst tagData;
+        Tag86StrDlvyInst tagData;
 
-        tagData = new Log86StrDlvyInst(new MyStringType("Galadriel-86StDlvyInst"));
+        tagData = new Tag86StrDlvyInst(new MyStringType("Galadriel-86StDlvyInst"));
         assertEquals( "Galadriel-86StDlvyInst", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

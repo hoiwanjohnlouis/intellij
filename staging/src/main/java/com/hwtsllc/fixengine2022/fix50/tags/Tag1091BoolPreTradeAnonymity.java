@@ -33,6 +33,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Anonymity is relevant in markets where counterparties are regularly disclosed in order depth feeds.
  *  <p>
  *  Disclosure is relevant when counterparties are not normally visible.
+ *  <p></p>
+ *  <p> YES( "Y", "YES", "Y - Trader explicitly request anonymity" ),
+ *  <p> NO( "N", "NO", "N - Anonymity not required" ),
  */
 public class Tag1091BoolPreTradeAnonymity extends FIX50Abstract implements LogValuePairString, LogVerboseString, BooleanString {
     private final Bool1091PreTradeAnonymity dataValue;

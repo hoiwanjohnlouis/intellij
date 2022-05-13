@@ -49,17 +49,17 @@ class Tag209EnuAllocHandlInstTest {
     }
     @Test
     void Tag0209Test() {
-        Log209EnuAllocHandlInst tagData;
+        Tag209EnuAllocHandlInst tagData;
 
-        tagData = new Log209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
+        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
         assertEquals( Enum209AllocHandlInst.MATCH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD);
+        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD);
         assertEquals( Enum209AllocHandlInst.FORWARD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD_AND_MATCH);
+        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD_AND_MATCH);
         assertEquals( Enum209AllocHandlInst.FORWARD_AND_MATCH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

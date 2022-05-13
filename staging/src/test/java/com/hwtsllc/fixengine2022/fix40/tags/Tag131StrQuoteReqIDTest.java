@@ -43,9 +43,9 @@ class Tag131StrQuoteReqIDTest {
     }
     @Test
     void Tag0131Test() {
-        Log131StrQuoteReqID tagData;
+        Tag131StrQuoteReqID tagData;
 
-        tagData = new Log131StrQuoteReqID(new MyStringType("MoonJiIn-131QuoteReqID") );
+        tagData = new Tag131StrQuoteReqID(new MyStringType("MoonJiIn-131QuoteReqID") );
         assertEquals( "MoonJiIn-131QuoteReqID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

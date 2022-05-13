@@ -44,16 +44,16 @@ class Tag159AmtAccruedInterestAmtTest {
     }
     @Test
     void Tag0159Test() {
-        Log159AmtAccruedInterestAmt tagData;
+        Tag159AmtAccruedInterestAmt tagData;
 
-        tagData = new Log159AmtAccruedInterestAmt(
-                new MyAmtType(Log159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT));
-        assertEquals( Log159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
+        tagData = new Tag159AmtAccruedInterestAmt(
+                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT));
+        assertEquals( Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log159AmtAccruedInterestAmt(
-                new MyAmtType(Log159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
-        assertEquals( Log159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
+        tagData = new Tag159AmtAccruedInterestAmt(
+                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
+        assertEquals( Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 }

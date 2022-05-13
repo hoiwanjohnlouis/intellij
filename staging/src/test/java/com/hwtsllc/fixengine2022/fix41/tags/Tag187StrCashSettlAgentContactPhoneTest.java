@@ -47,17 +47,17 @@ class Tag187StrCashSettlAgentContactPhoneTest {
     }
     @Test
     void Tag0187Test() {
-        Log187StrCashSettlAgentContactPhone tagData;
+        Tag187StrCashSettlAgentContactPhone tagData;
 
-        tagData = new Log187StrCashSettlAgentContactPhone(
-                new MyStringType(Log187StrCashSettlAgentContactPhone.TESTA_STR_CASH_SETTL_AGENT_CONTACT_PHONE));
-        assertEquals( Log187StrCashSettlAgentContactPhone.TESTA_STR_CASH_SETTL_AGENT_CONTACT_PHONE,
+        tagData = new Tag187StrCashSettlAgentContactPhone(
+                new MyStringType(Tag187StrCashSettlAgentContactPhone.TESTA_STR_CASH_SETTL_AGENT_CONTACT_PHONE));
+        assertEquals( Tag187StrCashSettlAgentContactPhone.TESTA_STR_CASH_SETTL_AGENT_CONTACT_PHONE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log187StrCashSettlAgentContactPhone(
-                new MyStringType(Log187StrCashSettlAgentContactPhone.TESTB_STR_CASH_SETTL_AGENT_CONTACT_PHONE));
-        assertEquals( Log187StrCashSettlAgentContactPhone.TESTB_STR_CASH_SETTL_AGENT_CONTACT_PHONE,
+        tagData = new Tag187StrCashSettlAgentContactPhone(
+                new MyStringType(Tag187StrCashSettlAgentContactPhone.TESTB_STR_CASH_SETTL_AGENT_CONTACT_PHONE));
+        assertEquals( Tag187StrCashSettlAgentContactPhone.TESTB_STR_CASH_SETTL_AGENT_CONTACT_PHONE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
