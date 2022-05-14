@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum388DiscretionInst;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -38,7 +39,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      RELATED_TO_VWAP( "6", "RELATED_TO_VWAP", "6 - Related to VWAP" ),
  *      AVERAGE_PRICE_GUARANTEE( "7", "AVERAGE_PRICE_GUARANTEE", "7 - Average Price Guarantee" ),
  */
-public class Tag388EnuDiscretionInst extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag388EnuDiscretionInst extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum388DiscretionInst dataValue;
 
     public final static Enum388DiscretionInst TESTA_ENU_DISCRETION_INST
@@ -74,7 +75,14 @@ public class Tag388EnuDiscretionInst extends FIX42Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -92,10 +100,12 @@ public class Tag388EnuDiscretionInst extends FIX42Abstract implements LogValuePa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag388EnuDiscretionInst(TESTB_ENU_DISCRETION_INST);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

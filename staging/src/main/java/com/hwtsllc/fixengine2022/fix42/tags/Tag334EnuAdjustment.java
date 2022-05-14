@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum334Adjustment;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,11 +33,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      ERROR( "2", "ERROR", "2 - Error" ),
  *      CORRECTION( "3", "CORRECTION", "3 - Correction" ),
  */
-public class Tag334EnuAdjustment extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag334EnuAdjustment extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum334Adjustment dataValue;
 
-    public final static Enum334Adjustment TESTA_ENU_ADJUSTMENT = Enum334Adjustment.CORRECTION;
-    public final static Enum334Adjustment TESTB_ENU_ADJUSTMENT = Enum334Adjustment.ERROR;
+    public final static Enum334Adjustment TESTA_ENU_ADJUSTMENT
+            = Enum334Adjustment.CORRECTION;
+    public final static Enum334Adjustment TESTB_ENU_ADJUSTMENT
+            = Enum334Adjustment.ERROR;
 
     public Tag334EnuAdjustment(Enum334Adjustment dataValue) {
         setFixType(FIX42.FIX334_ENU_ADJUSTMENT);
@@ -66,7 +69,14 @@ public class Tag334EnuAdjustment extends FIX42Abstract implements LogValuePairSt
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -84,10 +94,12 @@ public class Tag334EnuAdjustment extends FIX42Abstract implements LogValuePairSt
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag334EnuAdjustment(TESTB_ENU_ADJUSTMENT);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

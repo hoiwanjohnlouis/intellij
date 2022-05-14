@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag411BoolExchangeForPhysical extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag411BoolExchangeForPhysical extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyBooleanType dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_EXCHANGE_FOR_PHYSICAL = MyBooleanType.NO;   // N - False
-    public final static MyBooleanType TESTB_BOOL_EXCHANGE_FOR_PHYSICAL = MyBooleanType.YES;  // Y - True
+    public final static MyBooleanType TESTA_BOOL_EXCHANGE_FOR_PHYSICAL
+            = MyBooleanType.NO;   // N - False
+    public final static MyBooleanType TESTB_BOOL_EXCHANGE_FOR_PHYSICAL
+            = MyBooleanType.YES;  // Y - True
 
     public Tag411BoolExchangeForPhysical(MyBooleanType dataValue) {
         setFixType(FIX42.FIX411_BOOL_EXCHANGE_FOR_PHYSICAL);
@@ -56,7 +59,14 @@ public class Tag411BoolExchangeForPhysical extends FIX42Abstract implements LogV
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag411BoolExchangeForPhysical extends FIX42Abstract implements LogV
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag411BoolExchangeForPhysical(TESTB_BOOL_EXCHANGE_FOR_PHYSICAL);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

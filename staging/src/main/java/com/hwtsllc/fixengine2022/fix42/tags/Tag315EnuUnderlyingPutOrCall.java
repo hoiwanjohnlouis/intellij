@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPutOrCall;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -40,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    1 - Call
  */
 // @Deprecated
-public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumPutOrCall dataValue;
 
     public final static MyEnumPutOrCall TESTA_ENU_UNDERLYING_PUT_OR_CALL = MyEnumPutOrCall.CALL;
@@ -74,7 +75,14 @@ public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogVa
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -92,10 +100,12 @@ public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag315EnuUnderlyingPutOrCall(TESTB_ENU_UNDERLYING_PUT_OR_CALL);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

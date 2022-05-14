@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum414ProgRptReqs;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -38,11 +39,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      REAL_TIME_EXECUTION_REPORTS( "3", "REAL_TIME_EXECUTION_REPORTS",
  *                          "3 - Real-time execution reports (to be discourage)" ),
  */
-public class Tag414EnuProgRptReqs extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag414EnuProgRptReqs extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum414ProgRptReqs dataValue;
 
-    public final static Enum414ProgRptReqs TESTA_ENU_PROG_RPT_REQS = Enum414ProgRptReqs.BUY_SIDE_STATUS;
-    public final static Enum414ProgRptReqs TESTB_ENU_PROG_RPT_REQS = Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS;
+    public final static Enum414ProgRptReqs TESTA_ENU_PROG_RPT_REQS
+            = Enum414ProgRptReqs.BUY_SIDE_STATUS;
+    public final static Enum414ProgRptReqs TESTB_ENU_PROG_RPT_REQS
+            = Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS;
 
     public Tag414EnuProgRptReqs(Enum414ProgRptReqs dataValue) {
         setFixType(FIX42.FIX414_ENU_PROG_RPT_REQS);
@@ -72,7 +75,14 @@ public class Tag414EnuProgRptReqs extends FIX42Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -90,10 +100,12 @@ public class Tag414EnuProgRptReqs extends FIX42Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag414EnuProgRptReqs(TESTB_ENU_PROG_RPT_REQS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

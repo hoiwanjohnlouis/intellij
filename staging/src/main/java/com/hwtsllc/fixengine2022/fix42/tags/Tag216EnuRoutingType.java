@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -30,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      3 - Block Firm
  *      4 - Block List
  */
-public class Tag216EnuRoutingType extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag216EnuRoutingType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum216RoutingType dataValue;
 
     public final static Enum216RoutingType TESTA_ENU_ROUTING_TYPE = Enum216RoutingType.TARGET_FIRM;
@@ -64,7 +65,14 @@ public class Tag216EnuRoutingType extends FIX42Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -82,10 +90,12 @@ public class Tag216EnuRoutingType extends FIX42Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag216EnuRoutingType(TESTB_ENU_ROUTING_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

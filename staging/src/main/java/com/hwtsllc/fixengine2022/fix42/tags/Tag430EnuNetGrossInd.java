@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum430NetGrossInd;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -31,11 +32,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      NET( "1", "NET", "1 - Net" ),
  *      GROSS( "2", "GROSS", "2 - Gross" ),
  */
-public class Tag430EnuNetGrossInd extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag430EnuNetGrossInd extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum430NetGrossInd dataValue;
 
-    public final static Enum430NetGrossInd TESTA_ENU_NET_GROSS_IND = Enum430NetGrossInd.GROSS;
-    public final static Enum430NetGrossInd TESTB_ENU_NET_GROSS_IND = Enum430NetGrossInd.NET;
+    public final static Enum430NetGrossInd TESTA_ENU_NET_GROSS_IND
+            = Enum430NetGrossInd.GROSS;
+    public final static Enum430NetGrossInd TESTB_ENU_NET_GROSS_IND
+            = Enum430NetGrossInd.NET;
 
     public Tag430EnuNetGrossInd(Enum430NetGrossInd dataValue) {
         setFixType(FIX42.FIX430_ENU_NET_GROSS_IND);
@@ -65,7 +68,14 @@ public class Tag430EnuNetGrossInd extends FIX42Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -83,10 +93,12 @@ public class Tag430EnuNetGrossInd extends FIX42Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag430EnuNetGrossInd(TESTB_ENU_NET_GROSS_IND);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

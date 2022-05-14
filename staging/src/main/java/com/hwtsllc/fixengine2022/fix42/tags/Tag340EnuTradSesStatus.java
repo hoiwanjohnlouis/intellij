@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum340TradSesStatus;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -36,11 +37,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
  *      REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
  */
-public class Tag340EnuTradSesStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag340EnuTradSesStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum340TradSesStatus dataValue;
 
-    public final static Enum340TradSesStatus TESTA_ENU_TRAD_SES_STATUS = Enum340TradSesStatus.REQUEST_REJECTED;
-    public final static Enum340TradSesStatus TESTB_ENU_TRAD_SES_STATUS = Enum340TradSesStatus.PRE_OPEN;
+    public final static Enum340TradSesStatus TESTA_ENU_TRAD_SES_STATUS
+            = Enum340TradSesStatus.REQUEST_REJECTED;
+    public final static Enum340TradSesStatus TESTB_ENU_TRAD_SES_STATUS
+            = Enum340TradSesStatus.PRE_OPEN;
 
     public Tag340EnuTradSesStatus(Enum340TradSesStatus dataValue) {
         setFixType(FIX42.FIX340_ENU_TRAD_SES_STATUS);
@@ -70,7 +73,14 @@ public class Tag340EnuTradSesStatus extends FIX42Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -88,10 +98,12 @@ public class Tag340EnuTradSesStatus extends FIX42Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag340EnuTradSesStatus(TESTB_ENU_TRAD_SES_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum416IncTaxInd;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -31,11 +32,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      NET( "1", "NET", "1 - Net" ),
  *      GROSS( "2", "GROSS", "2 - Gross" ),
  */
-public class Tag416EnuIncTaxInd extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag416EnuIncTaxInd extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum416IncTaxInd dataValue;
 
-    public final static Enum416IncTaxInd TESTA_ENU_INC_TAX_IND = Enum416IncTaxInd.GROSS;
-    public final static Enum416IncTaxInd TESTB_ENU_INC_TAX_IND = Enum416IncTaxInd.NET;
+    public final static Enum416IncTaxInd TESTA_ENU_INC_TAX_IND
+            = Enum416IncTaxInd.GROSS;
+    public final static Enum416IncTaxInd TESTB_ENU_INC_TAX_IND
+            = Enum416IncTaxInd.NET;
 
     public Tag416EnuIncTaxInd(Enum416IncTaxInd dataValue) {
         setFixType(FIX42.FIX416_ENU_INC_TAX_IND);
@@ -65,7 +68,14 @@ public class Tag416EnuIncTaxInd extends FIX42Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -83,10 +93,12 @@ public class Tag416EnuIncTaxInd extends FIX42Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag416EnuIncTaxInd(TESTB_ENU_INC_TAX_IND);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum274TickDirection;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -31,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      "2 - Minus Tick"
  *      "3 - Zero-Minus Tick"
  */
-public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum274TickDirection dataValue;
 
     public final static Enum274TickDirection TESTA_ENU_TICK_DIRECTION = Enum274TickDirection.PLUS_TICK;
@@ -65,7 +66,14 @@ public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -83,10 +91,12 @@ public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag274EnuTickDirection(TESTB_ENU_TICK_DIRECTION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

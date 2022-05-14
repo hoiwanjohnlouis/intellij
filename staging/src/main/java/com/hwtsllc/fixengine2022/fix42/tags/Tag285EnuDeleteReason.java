@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum285DeleteReason;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -30,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
  *      ERROR( "1", "ERROR", "1 - Error" ),
  */
-public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum285DeleteReason dataValue;
 
     public final static Enum285DeleteReason TESTA_ENU_DELETE_REASON = Enum285DeleteReason.ERROR;
@@ -64,7 +65,14 @@ public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -82,10 +90,12 @@ public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag285EnuDeleteReason(TESTB_ENU_DELETE_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum419BasisPxType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -45,11 +46,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      OPEN( "D", "OPEN", "D - Open" ),
  *      OTHER( "Z", "OTHER", "Z - Others" ),
  */
-public class Tag419EnuBasisPxType extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag419EnuBasisPxType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum419BasisPxType dataValue;
 
-    public final static Enum419BasisPxType TESTA_ENU_BASIS_PX_TYPE = Enum419BasisPxType.CLOSING_PRICE_MORNING;
-    public final static Enum419BasisPxType TESTB_ENU_BASIS_PX_TYPE = Enum419BasisPxType.VWAP_AFTERNOON_EXCEPT_YORI;
+    public final static Enum419BasisPxType TESTA_ENU_BASIS_PX_TYPE
+            = Enum419BasisPxType.CLOSING_PRICE_MORNING;
+    public final static Enum419BasisPxType TESTB_ENU_BASIS_PX_TYPE
+            = Enum419BasisPxType.VWAP_AFTERNOON_EXCEPT_YORI;
 
     public Tag419EnuBasisPxType(Enum419BasisPxType dataValue) {
         setFixType(FIX42.FIX419_ENU_BASIS_PX_TYPE);
@@ -79,7 +82,14 @@ public class Tag419EnuBasisPxType extends FIX42Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -97,10 +107,12 @@ public class Tag419EnuBasisPxType extends FIX42Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag419EnuBasisPxType(TESTB_ENU_BASIS_PX_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

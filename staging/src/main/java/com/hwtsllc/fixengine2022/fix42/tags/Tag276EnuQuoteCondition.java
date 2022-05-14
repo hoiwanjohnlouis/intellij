@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum276QuoteCondition;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -87,7 +88,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      "1 - No Active SAM"
  *      "2 - Restricted"
  */
-public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum276QuoteCondition dataValue;
 
     public final static Enum276QuoteCondition TESTA_ENU_QUOTE_CONDITION = Enum276QuoteCondition.ADDITIONAL_INFO;
@@ -121,7 +122,14 @@ public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -139,10 +147,12 @@ public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag276EnuQuoteCondition(TESTB_ENU_QUOTE_CONDITION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

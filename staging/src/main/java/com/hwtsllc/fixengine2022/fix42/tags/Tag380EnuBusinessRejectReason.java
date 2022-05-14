@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum380BusinessRejectReason;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -39,7 +40,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *                          "7 - DeliverTo firm not available at this time" ),
  *      INVALID_PRICE_INCREMENT( "18", "INVALID_PRICE_INCREMENT", "18 - Invalid price increment" ),
  */
-public class Tag380EnuBusinessRejectReason extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag380EnuBusinessRejectReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum380BusinessRejectReason dataValue;
 
     public final static Enum380BusinessRejectReason TESTA_ENU_BUSINESS_REJECT_REASON
@@ -75,7 +76,14 @@ public class Tag380EnuBusinessRejectReason extends FIX42Abstract implements LogV
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -93,10 +101,12 @@ public class Tag380EnuBusinessRejectReason extends FIX42Abstract implements LogV
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag380EnuBusinessRejectReason(TESTB_ENU_BUSINESS_REJECT_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

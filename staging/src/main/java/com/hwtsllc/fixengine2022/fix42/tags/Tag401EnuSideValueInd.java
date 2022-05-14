@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum401SideValueInd;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -31,11 +32,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
  *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
  */
-public class Tag401EnuSideValueInd extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag401EnuSideValueInd extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum401SideValueInd dataValue;
 
-    public final static Enum401SideValueInd TESTA_ENU_SIDE_VALUE_IND = Enum401SideValueInd.SIDE_VALUE_1;
-    public final static Enum401SideValueInd TESTB_ENU_SIDE_VALUE_IND = Enum401SideValueInd.SIDE_VALUE_2;
+    public final static Enum401SideValueInd TESTA_ENU_SIDE_VALUE_IND
+            = Enum401SideValueInd.SIDE_VALUE_1;
+    public final static Enum401SideValueInd TESTB_ENU_SIDE_VALUE_IND
+            = Enum401SideValueInd.SIDE_VALUE_2;
 
     public Tag401EnuSideValueInd(Enum401SideValueInd dataValue) {
         setFixType(FIX42.FIX401_ENU_SIDE_VALUE_IND);
@@ -65,7 +68,14 @@ public class Tag401EnuSideValueInd extends FIX42Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -83,10 +93,12 @@ public class Tag401EnuSideValueInd extends FIX42Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag401EnuSideValueInd(TESTB_ENU_SIDE_VALUE_IND);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

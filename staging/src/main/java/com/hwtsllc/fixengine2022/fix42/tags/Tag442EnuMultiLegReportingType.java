@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum442MultiLegReportingType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      INDIVIDUAL_LEG_SECURITY( "2", "INDIVIDUAL_LEG_SECURITY", "2 - Individual leg of a multi=leg security" ),
  *      MULTI_LEG_SECURITY( "3", "MULTI_LEG_SECURITY", "3 - Multi-leg security" ),
  */
-public class Tag442EnuMultiLegReportingType extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag442EnuMultiLegReportingType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum442MultiLegReportingType dataValue;
 
     public final static Enum442MultiLegReportingType TESTA_ENU_MULTI_LEG_REPORTING_TYPE
@@ -68,7 +69,14 @@ public class Tag442EnuMultiLegReportingType extends FIX42Abstract implements Log
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -86,10 +94,12 @@ public class Tag442EnuMultiLegReportingType extends FIX42Abstract implements Log
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag442EnuMultiLegReportingType(TESTB_ENU_MULTI_LEG_REPORTING_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

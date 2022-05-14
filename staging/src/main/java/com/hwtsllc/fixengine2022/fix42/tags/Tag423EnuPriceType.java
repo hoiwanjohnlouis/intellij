@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -82,11 +83,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    18 - Product ticks in sixty-forths
  *  <p>    19 - Product ticks in one-twenty-eights
  */
-public class Tag423EnuPriceType extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag423EnuPriceType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumPriceType dataValue;
 
-    public final static MyEnumPriceType TESTA_ENU_PRICE_TYPE = MyEnumPriceType.VARIABLE_TRADE_PRICE;
-    public final static MyEnumPriceType TESTB_ENU_PRICE_TYPE = MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS;
+    public final static MyEnumPriceType TESTA_ENU_PRICE_TYPE
+            = MyEnumPriceType.VARIABLE_TRADE_PRICE;
+    public final static MyEnumPriceType TESTB_ENU_PRICE_TYPE
+            = MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS;
 
     public Tag423EnuPriceType(MyEnumPriceType dataValue) {
         setFixType(FIX42.FIX423_ENU_PRICE_TYPE);
@@ -116,7 +119,14 @@ public class Tag423EnuPriceType extends FIX42Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -134,10 +144,12 @@ public class Tag423EnuPriceType extends FIX42Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag423EnuPriceType(TESTB_ENU_PRICE_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

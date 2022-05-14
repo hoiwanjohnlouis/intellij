@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum297QuoteStatus;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -44,7 +45,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      CANCELED_DUE_TO_LOCK_MARKET( "14", "CANCELED_DUE_TO_LOCK_MARKET", "14 - Canceled Due To Lock Market" ),
  *      CANCELED_DUE_TO_CROSS_MARKET( "15", "CANCELED_DUE_TO_CROSS_MARKET", "15 - Canceled Due To Cross Market" ),
  */
-public class Tag297EnuQuoteAckStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag297EnuQuoteAckStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum297QuoteStatus dataValue;
 
     public final static Enum297QuoteStatus TESTA_ENU_QUOTE_ACK_STATUS = Enum297QuoteStatus.QUOTE_NOT_FOUND;
@@ -78,7 +79,14 @@ public class Tag297EnuQuoteAckStatus extends FIX42Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -96,10 +104,12 @@ public class Tag297EnuQuoteAckStatus extends FIX42Abstract implements LogValuePa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag297EnuQuoteAckStatus(TESTB_ENU_QUOTE_ACK_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

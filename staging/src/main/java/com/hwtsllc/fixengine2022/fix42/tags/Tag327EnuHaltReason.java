@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum327HaltReason;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -35,11 +36,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      NEW_PENDING( "P", "NEW_PENDING", "P - New Pending" ),
  *      EQUIPMENT_CHANGE_OVER( "X", "EQUIPMENT_CHANGE_OVER", "X - Equipment Changeover" ),
  */
-public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum327HaltReason dataValue;
 
-    public final static Enum327HaltReason TESTA_ENU_HALT_REASON = Enum327HaltReason.ADDITIONAL_INFORMATION;
-    public final static Enum327HaltReason TESTB_ENU_HALT_REASON = Enum327HaltReason.EQUIPMENT_CHANGE_OVER;
+    public final static Enum327HaltReason TESTA_ENU_HALT_REASON
+            = Enum327HaltReason.ADDITIONAL_INFORMATION;
+    public final static Enum327HaltReason TESTB_ENU_HALT_REASON
+            = Enum327HaltReason.EQUIPMENT_CHANGE_OVER;
 
     public Tag327EnuHaltReason(Enum327HaltReason dataValue) {
         setFixType(FIX42.FIX327_ENU_HALT_REASON);
@@ -69,7 +72,14 @@ public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairSt
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -87,10 +97,12 @@ public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairSt
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag327EnuHaltReason(TESTB_ENU_HALT_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

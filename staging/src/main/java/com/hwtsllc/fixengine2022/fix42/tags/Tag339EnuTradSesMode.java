@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum339TrdSesMode;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,11 +33,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
  *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
  */
-public class Tag339EnuTradSesMode extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag339EnuTradSesMode extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum339TrdSesMode dataValue;
 
-    public final static Enum339TrdSesMode TESTA_ENU_TRAD_SES_MODE = Enum339TrdSesMode.TESTING;
-    public final static Enum339TrdSesMode TESTB_ENU_TRAD_SES_MODE = Enum339TrdSesMode.SIMULATED;
+    public final static Enum339TrdSesMode TESTA_ENU_TRAD_SES_MODE
+            = Enum339TrdSesMode.TESTING;
+    public final static Enum339TrdSesMode TESTB_ENU_TRAD_SES_MODE
+            = Enum339TrdSesMode.SIMULATED;
 
     public Tag339EnuTradSesMode(Enum339TrdSesMode dataValue) {
         setFixType(FIX42.FIX339_ENU_TRAD_SES_MODE);
@@ -66,7 +69,14 @@ public class Tag339EnuTradSesMode extends FIX42Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -84,10 +94,12 @@ public class Tag339EnuTradSesMode extends FIX42Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag339EnuTradSesMode(TESTB_ENU_TRAD_SES_MODE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

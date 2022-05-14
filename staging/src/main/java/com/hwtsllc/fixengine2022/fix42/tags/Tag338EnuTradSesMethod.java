@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum338TradSesMethod;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,11 +33,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
  *      TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
  */
-public class Tag338EnuTradSesMethod extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+public class Tag338EnuTradSesMethod extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum338TradSesMethod dataValue;
 
-    public final static Enum338TradSesMethod TESTA_ENU_TRAD_SES_METHOD = Enum338TradSesMethod.ELECTRONIC;
-    public final static Enum338TradSesMethod TESTB_ENU_TRAD_SES_METHOD = Enum338TradSesMethod.OPEN_OUTCRY;
+    public final static Enum338TradSesMethod TESTA_ENU_TRAD_SES_METHOD
+            = Enum338TradSesMethod.ELECTRONIC;
+    public final static Enum338TradSesMethod TESTB_ENU_TRAD_SES_METHOD
+            = Enum338TradSesMethod.OPEN_OUTCRY;
 
     public Tag338EnuTradSesMethod(Enum338TradSesMethod dataValue) {
         setFixType(FIX42.FIX338_ENU_TRAD_SES_METHOD);
@@ -66,7 +69,14 @@ public class Tag338EnuTradSesMethod extends FIX42Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -84,10 +94,12 @@ public class Tag338EnuTradSesMethod extends FIX42Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag338EnuTradSesMethod(TESTB_ENU_TRAD_SES_METHOD);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }
