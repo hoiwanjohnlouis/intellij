@@ -47,17 +47,17 @@ class Tag819EnuAvgPxIndicatorTest {
     }
     @Test
     void Tag0819Test() {
-        Log819EnuAvgPxIndicator tagData;
+        Tag819EnuAvgPxIndicator tagData;
 
-        tagData = new Log819EnuAvgPxIndicator(Enum819AvgPxIndicator.NO_PRICING);
+        tagData = new Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator.NO_PRICING);
         assertEquals( Enum819AvgPxIndicator.NO_PRICING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log819EnuAvgPxIndicator(Enum819AvgPxIndicator.PART_OF_APG);
+        tagData = new Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator.PART_OF_APG);
         assertEquals( Enum819AvgPxIndicator.PART_OF_APG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log819EnuAvgPxIndicator(Enum819AvgPxIndicator.LAST_TRADE);
+        tagData = new Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator.LAST_TRADE);
         assertEquals( Enum819AvgPxIndicator.LAST_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

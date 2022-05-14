@@ -52,29 +52,29 @@ class Tag751EnuTradeReportRejectReasonTest {
     }
     @Test
     void Tag0751Test() {
-        Log751EnuTradeReportRejectReason tagData;
+        Tag751EnuTradeReportRejectReason tagData;
 
-        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.SUCCESSFUL);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.SUCCESSFUL);
         assertEquals( Enum751TradeReportRejectReason.SUCCESSFUL.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION);
         assertEquals( Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT);
         assertEquals( Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES);
         assertEquals( Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_TRADE_TYPE);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_TRADE_TYPE);
         assertEquals( Enum751TradeReportRejectReason.INVALID_TRADE_TYPE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.OTHER);
+        tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.OTHER);
         assertEquals( Enum751TradeReportRejectReason.OTHER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

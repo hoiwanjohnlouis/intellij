@@ -47,13 +47,13 @@ class Tag912BoolLastRptRequestedTest {
     }
     @Test
     void Tag0912Test() {
-        Log912BoolLastRptRequested tagData;
+        Tag912BoolLastRptRequested tagData;
 
-        tagData = new Log912BoolLastRptRequested(MyBooleanType.NO);
+        tagData = new Tag912BoolLastRptRequested(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log912BoolLastRptRequested(MyBooleanType.YES);
+        tagData = new Tag912BoolLastRptRequested(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

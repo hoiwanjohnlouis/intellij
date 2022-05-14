@@ -49,21 +49,21 @@ class Tag935EnuNetworkRequestTypeTest {
     }
     @Test
     void Tag0935Test() {
-        Log935EnuNetworkRequestType tagData;
+        Tag935EnuNetworkRequestType tagData;
 
-        tagData = new Log935EnuNetworkRequestType( Enum935NetworkRequestType.SNAPSHOT );
+        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.SNAPSHOT );
         assertEquals( Enum935NetworkRequestType.SNAPSHOT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log935EnuNetworkRequestType( Enum935NetworkRequestType.SUBSCRIBE );
+        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.SUBSCRIBE );
         assertEquals( Enum935NetworkRequestType.SUBSCRIBE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log935EnuNetworkRequestType( Enum935NetworkRequestType.STOP_SUBSCRIBING );
+        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.STOP_SUBSCRIBING );
         assertEquals( Enum935NetworkRequestType.STOP_SUBSCRIBING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log935EnuNetworkRequestType( Enum935NetworkRequestType.LEVEL_OF_DETAIL );
+        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.LEVEL_OF_DETAIL );
         assertEquals( Enum935NetworkRequestType.LEVEL_OF_DETAIL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -46,13 +46,13 @@ class Tag827EnuExpirationCycleTest {
     }
     @Test
     void Tag0827Test() {
-        Log827EnuExpirationCycle tagData;
+        Tag827EnuExpirationCycle tagData;
 
-        tagData = new Log827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_CLOSE );
+        tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_CLOSE );
         assertEquals( Enum827ExpirationCycle.EXPIRE_ON_CLOSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_OPEN );
+        tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_OPEN );
         assertEquals( Enum827ExpirationCycle.EXPIRE_ON_OPEN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

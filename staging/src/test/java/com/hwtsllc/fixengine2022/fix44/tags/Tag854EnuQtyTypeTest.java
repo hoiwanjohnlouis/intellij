@@ -47,17 +47,17 @@ class Tag854EnuQtyTypeTest {
     }
     @Test
     void Tag0854Test() {
-        Log854EnuQtyType tagData;
+        Tag854EnuQtyType tagData;
 
-        tagData = new Log854EnuQtyType( Enum854QtyType.UNITS );
+        tagData = new Tag854EnuQtyType( Enum854QtyType.UNITS );
         assertEquals( Enum854QtyType.UNITS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log854EnuQtyType( Enum854QtyType.CONTRACTS );
+        tagData = new Tag854EnuQtyType( Enum854QtyType.CONTRACTS );
         assertEquals( Enum854QtyType.CONTRACTS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log854EnuQtyType( Enum854QtyType.MEASURE_PER_TIME );
+        tagData = new Tag854EnuQtyType( Enum854QtyType.MEASURE_PER_TIME );
         assertEquals( Enum854QtyType.MEASURE_PER_TIME.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

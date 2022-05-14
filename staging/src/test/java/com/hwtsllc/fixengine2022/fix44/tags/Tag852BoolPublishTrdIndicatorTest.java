@@ -46,13 +46,13 @@ class Tag852BoolPublishTrdIndicatorTest {
     }
     @Test
     void Tag0852Test() {
-        Log852BoolPublishTrdIndicator tagData;
+        Tag852BoolPublishTrdIndicator tagData;
 
-        tagData = new Log852BoolPublishTrdIndicator(MyBooleanType.NO);
+        tagData = new Tag852BoolPublishTrdIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log852BoolPublishTrdIndicator(MyBooleanType.YES);
+        tagData = new Tag852BoolPublishTrdIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -57,17 +57,17 @@ class Tag843EnuDiscretionLimitTypeTest {
     }
     @Test
     void Tag0843Test() {
-        Log843EnuDiscretionLimitType tagData;
+        Tag843EnuDiscretionLimitType tagData;
 
-        tagData = new Log843EnuDiscretionLimitType(MyEnumLimitType.OR_BETTER);
+        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.OR_BETTER);
         assertEquals( MyEnumLimitType.OR_BETTER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log843EnuDiscretionLimitType(MyEnumLimitType.STRICT);
+        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.STRICT);
         assertEquals( MyEnumLimitType.STRICT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log843EnuDiscretionLimitType(MyEnumLimitType.OR_WORSE);
+        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.OR_WORSE);
         assertEquals( MyEnumLimitType.OR_WORSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

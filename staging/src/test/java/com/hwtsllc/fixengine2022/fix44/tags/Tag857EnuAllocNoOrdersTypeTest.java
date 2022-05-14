@@ -47,13 +47,13 @@ class Tag857EnuAllocNoOrdersTypeTest {
     }
     @Test
     void Tag0857Test() {
-        Log857EnuAllocNoOrdersType tagData;
+        Tag857EnuAllocNoOrdersType tagData;
 
-        tagData = new Log857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.NOT_SPECIFIED );
+        tagData = new Tag857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.NOT_SPECIFIED );
         assertEquals( Enum857AllocNoOrdersType.NOT_SPECIFIED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.LIST_PROVIDED );
+        tagData = new Tag857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.LIST_PROVIDED );
         assertEquals( Enum857AllocNoOrdersType.LIST_PROVIDED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

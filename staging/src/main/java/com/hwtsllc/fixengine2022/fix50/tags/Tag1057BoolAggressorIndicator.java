@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Bool1057AggressorIndicator;
-import com.hwtsllc.fixengine2022.interfaces.LogBooleanString;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>  AGGRESSOR( "Y", "AGGRESSOR", "Y - Order initiator is aggressor" ),
  *  <p>  PASSIVE( "N", "PASSIVE", "N - Order initiator is passive" ),
  */
-public class Tag1057BoolAggressorIndicator extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogBooleanString {
+public class Tag1057BoolAggressorIndicator extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Bool1057AggressorIndicator dataValue;
 
     public final static Bool1057AggressorIndicator TESTA_BOOL_AGGRESSOR_INDICATOR
@@ -73,14 +73,7 @@ public class Tag1057BoolAggressorIndicator extends FIX50Abstract implements LogV
      * wrapper to format a simple Yes string describing the data
      */
     @Override
-    public String toTrueString() {
-        return null;
-    }
-    /**
-     * wrapper to format a simple No string describing the data
-     */
-    @Override
-    public String toFalseString() {
+    public String toEnumString() {
         return null;
     }
     /**

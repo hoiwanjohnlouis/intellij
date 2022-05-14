@@ -53,29 +53,29 @@ class Tag770EnuTrdRegTimestampTypeTest {
     }
     @Test
     void Tag0770Test() {
-        Log770EnuTrdRegTimestampType tagData;
+        Tag770EnuTrdRegTimestampType tagData;
 
-        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.EXECUTION_TIME);
+        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.EXECUTION_TIME);
         assertEquals( Enum770TrdRegTimestampType.EXECUTION_TIME.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_IN);
+        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_IN);
         assertEquals( Enum770TrdRegTimestampType.TIME_IN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_OUT);
+        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_OUT);
         assertEquals( Enum770TrdRegTimestampType.TIME_OUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_RECEIPT);
+        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_RECEIPT);
         assertEquals( Enum770TrdRegTimestampType.BROKER_RECEIPT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_EXECUTION);
+        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_EXECUTION);
         assertEquals( Enum770TrdRegTimestampType.BROKER_EXECUTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.DESK_RECEIPT);
+        tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.DESK_RECEIPT);
         assertEquals( Enum770TrdRegTimestampType.DESK_RECEIPT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

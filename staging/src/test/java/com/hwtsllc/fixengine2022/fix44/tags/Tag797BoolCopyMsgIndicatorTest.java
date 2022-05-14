@@ -43,13 +43,13 @@ class Tag797BoolCopyMsgIndicatorTest {
     }
     @Test
     void Tag0797Test() {
-        Log797BoolCopyMsgIndicator tagData;
+        Tag797BoolCopyMsgIndicator tagData;
 
-        tagData = new Log797BoolCopyMsgIndicator(MyBooleanType.NO);
+        tagData = new Tag797BoolCopyMsgIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log797BoolCopyMsgIndicator(MyBooleanType.YES);
+        tagData = new Tag797BoolCopyMsgIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

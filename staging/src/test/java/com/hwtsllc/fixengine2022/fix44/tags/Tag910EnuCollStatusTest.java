@@ -49,25 +49,25 @@ class Tag910EnuCollStatusTest {
     }
     @Test
     void Tag0910Test() {
-        Log910EnuCollStatus tagData;
+        Tag910EnuCollStatus tagData;
 
-        tagData = new Log910EnuCollStatus( Enum910CollStatus.UNASSIGNED );
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.UNASSIGNED );
         assertEquals( Enum910CollStatus.UNASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log910EnuCollStatus( Enum910CollStatus.PARTIALLY_ASSIGNED );
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.PARTIALLY_ASSIGNED );
         assertEquals( Enum910CollStatus.PARTIALLY_ASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log910EnuCollStatus( Enum910CollStatus.ASSIGNMENT_PROPOSED );
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNMENT_PROPOSED );
         assertEquals( Enum910CollStatus.ASSIGNMENT_PROPOSED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log910EnuCollStatus( Enum910CollStatus.ASSIGNED );
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNED );
         assertEquals( Enum910CollStatus.ASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log910EnuCollStatus( Enum910CollStatus.CHALLENGED );
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.CHALLENGED );
         assertEquals( Enum910CollStatus.CHALLENGED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -47,17 +47,17 @@ class Tag891EnuMiscFeeBasisTest {
     }
     @Test
     void Tag0891Test() {
-        Log891EnuMiscFeeBasis tagData;
+        Tag891EnuMiscFeeBasis tagData;
 
-        tagData = new Log891EnuMiscFeeBasis( Enum891MiscFeeBasis.ABSOLUTE );
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.ABSOLUTE );
         assertEquals( Enum891MiscFeeBasis.ABSOLUTE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log891EnuMiscFeeBasis( Enum891MiscFeeBasis.PER_UNIT );
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PER_UNIT );
         assertEquals( Enum891MiscFeeBasis.PER_UNIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log891EnuMiscFeeBasis( Enum891MiscFeeBasis.PERCENTAGE );
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PERCENTAGE );
         assertEquals( Enum891MiscFeeBasis.PERCENTAGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -45,13 +45,13 @@ class Tag668EnuDeliveryFormTest {
     }
     @Test
     void Tag0668Test() {
-        Log668EnuDeliveryForm tagData;
+        Tag668EnuDeliveryForm tagData;
 
-        tagData = new Log668EnuDeliveryForm(Enum668DeliveryForm.BOOK_ENTRY);
+        tagData = new Tag668EnuDeliveryForm(Enum668DeliveryForm.BOOK_ENTRY);
         assertEquals( Enum668DeliveryForm.BOOK_ENTRY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log668EnuDeliveryForm(Enum668DeliveryForm.BEARER);
+        tagData = new Tag668EnuDeliveryForm(Enum668DeliveryForm.BEARER);
         assertEquals( Enum668DeliveryForm.BEARER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

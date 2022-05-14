@@ -53,30 +53,30 @@ class Tag808EnuAllocIntermedReqTypeTest {
     }
     @Test
     void Tag0808Test() {
-        Log808EnuAllocIntermedReqType tagData;
+        Tag808EnuAllocIntermedReqType tagData;
 
-        tagData = new Log808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_ACCEPT );
+        tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_ACCEPT );
         assertEquals( Enum808AllocIntermedReqType.PENDING_ACCEPT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_RELEASE );
+        tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_RELEASE );
         assertEquals( Enum808AllocIntermedReqType.PENDING_RELEASE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_REVERSAL );
+        tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_REVERSAL );
         assertEquals( Enum808AllocIntermedReqType.PENDING_REVERSAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.ACCEPT );
+        tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.ACCEPT );
         assertEquals( Enum808AllocIntermedReqType.ACCEPT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.BLOCK_LEVEL_REJECT );
+        tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.BLOCK_LEVEL_REJECT );
         assertEquals( Enum808AllocIntermedReqType.BLOCK_LEVEL_REJECT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.ACCOUNT_LEVEL_REJECT );
+        tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.ACCOUNT_LEVEL_REJECT );
         assertEquals( Enum808AllocIntermedReqType.ACCOUNT_LEVEL_REJECT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

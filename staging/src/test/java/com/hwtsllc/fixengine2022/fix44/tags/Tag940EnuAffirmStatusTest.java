@@ -47,17 +47,17 @@ class Tag940EnuAffirmStatusTest {
     }
     @Test
     void Tag0940Test() {
-        Log940EnuAffirmStatus tagData;
+        Tag940EnuAffirmStatus tagData;
 
-        tagData = new Log940EnuAffirmStatus( Enum940AffirmStatus.RECEIVED );
+        tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.RECEIVED );
         assertEquals( Enum940AffirmStatus.RECEIVED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log940EnuAffirmStatus( Enum940AffirmStatus.REJECTED );
+        tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.REJECTED );
         assertEquals( Enum940AffirmStatus.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log940EnuAffirmStatus( Enum940AffirmStatus.AFFIRMED );
+        tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.AFFIRMED );
         assertEquals( Enum940AffirmStatus.AFFIRMED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

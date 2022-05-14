@@ -98,7 +98,7 @@ class Tag663EnuBenchmarkPriceTypeTest {
     }
     @Test
     void Tag0663Test() {
-        Log663EnuBenchmarkPriceType tagData;
+        Tag663EnuBenchmarkPriceType tagData;
 
         /*
          * 1-11, 13-19 msg types
@@ -107,49 +107,49 @@ class Tag663EnuBenchmarkPriceTypeTest {
         /*
          * 1-11 msg types
          */
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.PERCENTAGE);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.PERCENTAGE);
         assertEquals( MyEnumPriceType.PERCENTAGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.PER_UNIT);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.PER_UNIT);
         assertEquals( MyEnumPriceType.PER_UNIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.FIXED_AMOUNT);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.FIXED_AMOUNT);
         assertEquals( MyEnumPriceType.FIXED_AMOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.DISCOUNT);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.DISCOUNT);
         assertEquals( MyEnumPriceType.DISCOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.PREMIUM);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.PREMIUM);
         assertEquals( MyEnumPriceType.PREMIUM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.SPREAD);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.SPREAD);
         assertEquals( MyEnumPriceType.SPREAD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TED_PRICE);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TED_PRICE);
         assertEquals( MyEnumPriceType.TED_PRICE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TED_YIELD);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TED_YIELD);
         assertEquals( MyEnumPriceType.TED_YIELD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.YIELD);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.YIELD);
         assertEquals( MyEnumPriceType.YIELD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.FIXED_TRADE_PRICE);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.FIXED_TRADE_PRICE);
         assertEquals( MyEnumPriceType.FIXED_TRADE_PRICE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.VARIABLE_TRADE_PRICE);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.VARIABLE_TRADE_PRICE);
         assertEquals( MyEnumPriceType.VARIABLE_TRADE_PRICE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
@@ -158,32 +158,32 @@ class Tag663EnuBenchmarkPriceTypeTest {
         /*
          * 13-19 msg types
          */
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_HALFS);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_HALFS);
         assertEquals( MyEnumPriceType.TICKS_IN_HALFS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_FOURTHS);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_FOURTHS);
         assertEquals( MyEnumPriceType.TICKS_IN_FOURTHS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_EIGHTHS);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_EIGHTHS);
         assertEquals( MyEnumPriceType.TICKS_IN_EIGHTHS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_SIXTEENTHS);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_SIXTEENTHS);
         assertEquals( MyEnumPriceType.TICKS_IN_SIXTEENTHS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_THIRTY_SECONDS);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_THIRTY_SECONDS);
         assertEquals( MyEnumPriceType.TICKS_IN_THIRTY_SECONDS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS);
         assertEquals( MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
+        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
         assertEquals( MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

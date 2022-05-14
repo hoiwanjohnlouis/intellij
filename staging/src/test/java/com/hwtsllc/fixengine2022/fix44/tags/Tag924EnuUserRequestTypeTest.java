@@ -48,21 +48,21 @@ class Tag924EnuUserRequestTypeTest {
     }
     @Test
     void Tag0924Test() {
-        Log924EnuUserRequestType tagData;
+        Tag924EnuUserRequestType tagData;
 
-        tagData = new Log924EnuUserRequestType( Enum924UserRequestType.LOG_ON );
+        tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.LOG_ON );
         assertEquals( Enum924UserRequestType.LOG_ON.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log924EnuUserRequestType( Enum924UserRequestType.LOG_OFF );
+        tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.LOG_OFF );
         assertEquals( Enum924UserRequestType.LOG_OFF.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log924EnuUserRequestType( Enum924UserRequestType.CHANGE_PASSWORD );
+        tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.CHANGE_PASSWORD );
         assertEquals( Enum924UserRequestType.CHANGE_PASSWORD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log924EnuUserRequestType( Enum924UserRequestType.REQUEST_STATUS );
+        tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.REQUEST_STATUS );
         assertEquals( Enum924UserRequestType.REQUEST_STATUS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

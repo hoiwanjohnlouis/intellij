@@ -44,13 +44,13 @@ class Tag754BoolAutoAcceptIndicatorTest {
     }
     @Test
     void Tag0754Test() {
-        Log754BoolAutoAcceptIndicator tagData;
+        Tag754BoolAutoAcceptIndicator tagData;
 
-        tagData = new Log754BoolAutoAcceptIndicator(MyBooleanType.NO);
+        tagData = new Tag754BoolAutoAcceptIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log754BoolAutoAcceptIndicator(MyBooleanType.YES);
+        tagData = new Tag754BoolAutoAcceptIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

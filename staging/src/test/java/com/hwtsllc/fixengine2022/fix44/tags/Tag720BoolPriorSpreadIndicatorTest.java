@@ -43,13 +43,13 @@ class Tag720BoolPriorSpreadIndicatorTest {
     }
     @Test
     void Tag0720Test() {
-        Log720BoolPriorSpreadIndicator tagData;
+        Tag720BoolPriorSpreadIndicator tagData;
 
-        tagData = new Log720BoolPriorSpreadIndicator(MyBooleanType.NO);
+        tagData = new Tag720BoolPriorSpreadIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log720BoolPriorSpreadIndicator(MyBooleanType.YES);
+        tagData = new Tag720BoolPriorSpreadIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

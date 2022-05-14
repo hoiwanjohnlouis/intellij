@@ -61,29 +61,29 @@ class Tag661EnuAllocAcctIDSourceTest {
     }
     @Test
     void Tag0661Test() {
-        Log661EnuAllocAcctIDSource tagData;
+        Tag661EnuAllocAcctIDSource tagData;
 
-        tagData = new Log661EnuAllocAcctIDSource(MyEnumAcctIDSource.BIC);
+        tagData = new Tag661EnuAllocAcctIDSource(MyEnumAcctIDSource.BIC);
         assertEquals( MyEnumAcctIDSource.BIC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log661EnuAllocAcctIDSource(MyEnumAcctIDSource.SID);
+        tagData = new Tag661EnuAllocAcctIDSource(MyEnumAcctIDSource.SID);
         assertEquals( MyEnumAcctIDSource.SID.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log661EnuAllocAcctIDSource(MyEnumAcctIDSource.TFM);
+        tagData = new Tag661EnuAllocAcctIDSource(MyEnumAcctIDSource.TFM);
         assertEquals( MyEnumAcctIDSource.TFM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log661EnuAllocAcctIDSource(MyEnumAcctIDSource.OMGEO);
+        tagData = new Tag661EnuAllocAcctIDSource(MyEnumAcctIDSource.OMGEO);
         assertEquals( MyEnumAcctIDSource.OMGEO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log661EnuAllocAcctIDSource(MyEnumAcctIDSource.DTCC);
+        tagData = new Tag661EnuAllocAcctIDSource(MyEnumAcctIDSource.DTCC);
         assertEquals( MyEnumAcctIDSource.DTCC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log661EnuAllocAcctIDSource(MyEnumAcctIDSource.OTHER);
+        tagData = new Tag661EnuAllocAcctIDSource(MyEnumAcctIDSource.OTHER);
         assertEquals( MyEnumAcctIDSource.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

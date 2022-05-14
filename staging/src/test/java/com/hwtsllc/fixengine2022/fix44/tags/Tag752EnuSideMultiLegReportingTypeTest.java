@@ -47,17 +47,17 @@ class Tag752EnuSideMultiLegReportingTypeTest {
     }
     @Test
     void Tag0752Test() {
-        Log752EnuSideMultiLegReportingType tagData;
+        Tag752EnuSideMultiLegReportingType tagData;
 
-        tagData = new Log752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.SINGLE_SECURITY);
+        tagData = new Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.SINGLE_SECURITY);
         assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.INDIVIDUAL_LEG);
+        tagData = new Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.INDIVIDUAL_LEG);
         assertEquals( Enum752SideMultiLegReportingType.INDIVIDUAL_LEG.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.MULTILEG_SECURITY);
+        tagData = new Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.MULTILEG_SECURITY);
         assertEquals( Enum752SideMultiLegReportingType.MULTILEG_SECURITY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

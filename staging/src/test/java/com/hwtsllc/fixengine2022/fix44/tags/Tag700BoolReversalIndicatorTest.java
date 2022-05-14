@@ -43,13 +43,13 @@ class Tag700BoolReversalIndicatorTest {
     }
     @Test
     void Tag0700Test() {
-        Log700BoolReversalIndicator tagData;
+        Tag700BoolReversalIndicator tagData;
 
-        tagData = new Log700BoolReversalIndicator(MyBooleanType.NO);
+        tagData = new Tag700BoolReversalIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log700BoolReversalIndicator(MyBooleanType.YES);
+        tagData = new Tag700BoolReversalIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

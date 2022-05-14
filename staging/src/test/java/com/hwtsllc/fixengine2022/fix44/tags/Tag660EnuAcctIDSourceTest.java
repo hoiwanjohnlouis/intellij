@@ -61,29 +61,29 @@ class Tag660EnuAcctIDSourceTest {
     }
     @Test
     void Tag0660Test() {
-        Log660EnuAcctIDSource tagData;
+        Tag660EnuAcctIDSource tagData;
 
-        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.BIC);
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.BIC);
         assertEquals( MyEnumAcctIDSource.BIC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.SID);
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.SID);
         assertEquals( MyEnumAcctIDSource.SID.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.TFM);
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.TFM);
         assertEquals( MyEnumAcctIDSource.TFM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.OMGEO);
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OMGEO);
         assertEquals( MyEnumAcctIDSource.OMGEO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.DTCC);
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.DTCC);
         assertEquals( MyEnumAcctIDSource.DTCC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log660EnuAcctIDSource(MyEnumAcctIDSource.OTHER);
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OTHER);
         assertEquals( MyEnumAcctIDSource.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

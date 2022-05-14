@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Bool1028ManualOrderIndicator;
-import com.hwtsllc.fixengine2022.interfaces.LogBooleanString;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p> YES( "Y", "YES", "Y - Manually Order" ),
  *  <p> NO( "N", "NO", "N - Electronic Order" ),
  */
-public class Tag1028BoolManualOrderIndicator extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogBooleanString {
+public class Tag1028BoolManualOrderIndicator extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Bool1028ManualOrderIndicator dataValue;
 
     public final static Bool1028ManualOrderIndicator TESTA_BOOL_MANUAL_ORDER_INDICATOR
@@ -72,14 +72,7 @@ public class Tag1028BoolManualOrderIndicator extends FIX50Abstract implements Lo
      * wrapper to format a simple Yes string describing the data
      */
     @Override
-    public String toTrueString() {
-        return null;
-    }
-    /**
-     * wrapper to format a simple No string describing the data
-     */
-    @Override
-    public String toFalseString() {
+    public String toEnumString() {
         return null;
     }
     /**

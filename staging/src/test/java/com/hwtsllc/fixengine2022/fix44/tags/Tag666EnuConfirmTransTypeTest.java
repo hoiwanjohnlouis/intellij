@@ -46,17 +46,17 @@ class Tag666EnuConfirmTransTypeTest {
     }
     @Test
     void Tag0666Test() {
-        Log666EnuConfirmTransType tagData;
+        Tag666EnuConfirmTransType tagData;
 
-        tagData = new Log666EnuConfirmTransType(Enum666ConfirmTransType.NEW);
+        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.NEW);
         assertEquals( Enum666ConfirmTransType.NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log666EnuConfirmTransType(Enum666ConfirmTransType.REPLACE);
+        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.REPLACE);
         assertEquals( Enum666ConfirmTransType.REPLACE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log666EnuConfirmTransType(Enum666ConfirmTransType.CANCEL);
+        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.CANCEL);
         assertEquals( Enum666ConfirmTransType.CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

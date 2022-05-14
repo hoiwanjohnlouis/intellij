@@ -46,17 +46,17 @@ class Tag773EnuConfirmTypeTest {
     }
     @Test
     void Tag0773Test() {
-        Log773EnuConfirmType tagData;
+        Tag773EnuConfirmType tagData;
 
-        tagData = new Log773EnuConfirmType(Enum773ConfirmType.STATUS);
+        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.STATUS);
         assertEquals( Enum773ConfirmType.STATUS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
+        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
         assertEquals( Enum773ConfirmType.CONFIRMATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
+        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
         assertEquals( Enum773ConfirmType.CONFIRMATION_REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

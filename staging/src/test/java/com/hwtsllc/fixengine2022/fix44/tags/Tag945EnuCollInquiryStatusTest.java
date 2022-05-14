@@ -49,25 +49,25 @@ class Tag945EnuCollInquiryStatusTest {
     }
     @Test
     void Tag0945Test() {
-        Log945EnuCollInquiryStatus tagData;
+        Tag945EnuCollInquiryStatus tagData;
 
-        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED );
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED );
         assertEquals( Enum945CollInquiryStatus.ACCEPTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS );
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS );
         assertEquals( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED );
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED );
         assertEquals( Enum945CollInquiryStatus.COMPLETED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS );
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS );
         assertEquals( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log945EnuCollInquiryStatus( Enum945CollInquiryStatus.REJECTED );
+        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.REJECTED );
         assertEquals( Enum945CollInquiryStatus.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

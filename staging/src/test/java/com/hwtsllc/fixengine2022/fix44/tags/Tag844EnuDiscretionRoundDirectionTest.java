@@ -58,13 +58,13 @@ class Tag844EnuDiscretionRoundDirectionTest {
     }
     @Test
     void Tag0844Test() {
-        Log844EnuDiscretionRoundDirection tagData;
+        Tag844EnuDiscretionRoundDirection tagData;
 
-        tagData = new Log844EnuDiscretionRoundDirection(MyEnumRoundDirection.AGGRESSIVE);
+        tagData = new Tag844EnuDiscretionRoundDirection(MyEnumRoundDirection.AGGRESSIVE);
         assertEquals( MyEnumRoundDirection.AGGRESSIVE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log844EnuDiscretionRoundDirection(MyEnumRoundDirection.PASSIVE);
+        tagData = new Tag844EnuDiscretionRoundDirection(MyEnumRoundDirection.PASSIVE);
         assertEquals( MyEnumRoundDirection.PASSIVE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

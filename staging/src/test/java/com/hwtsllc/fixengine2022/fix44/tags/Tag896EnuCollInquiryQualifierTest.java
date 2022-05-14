@@ -52,38 +52,38 @@ class Tag896EnuCollInquiryQualifierTest {
     }
     @Test
     void Tag0896Test() {
-        Log896EnuCollInquiryQualifier tagData;
+        Tag896EnuCollInquiryQualifier tagData;
 
-        tagData = new Log896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.TRADE_DATE );
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.TRADE_DATE );
         assertEquals( Enum896CollInquiryQualifier.TRADE_DATE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.GC_INSTRUMENT );
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.GC_INSTRUMENT );
         assertEquals( Enum896CollInquiryQualifier.GC_INSTRUMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.COLLATERAL_INSTRUMENT );
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.COLLATERAL_INSTRUMENT );
         assertEquals( Enum896CollInquiryQualifier.COLLATERAL_INSTRUMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.SUBSTITUTION_ELIGIBLE );
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.SUBSTITUTION_ELIGIBLE );
         assertEquals( Enum896CollInquiryQualifier.SUBSTITUTION_ELIGIBLE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.NOT_ASSIGNED );
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.NOT_ASSIGNED );
         assertEquals( Enum896CollInquiryQualifier.NOT_ASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.PARTIALLY_ASSIGNED );
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.PARTIALLY_ASSIGNED );
         assertEquals( Enum896CollInquiryQualifier.PARTIALLY_ASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.FULLY_ASSIGNED );
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.FULLY_ASSIGNED );
         assertEquals( Enum896CollInquiryQualifier.FULLY_ASSIGNED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.OUTSTANDING_TRADES );
+        tagData = new Tag896EnuCollInquiryQualifier( Enum896CollInquiryQualifier.OUTSTANDING_TRADES );
         assertEquals( Enum896CollInquiryQualifier.OUTSTANDING_TRADES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

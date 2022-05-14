@@ -47,13 +47,13 @@ class Tag725EnuResponseTransportTypeTest {
     }
     @Test
     void Tag0725Test() {
-        Log725EnuResponseTransportType tagData;
+        Tag725EnuResponseTransportType tagData;
 
-        tagData = new Log725EnuResponseTransportType(Enum725ResponseTransportType.INBAND);
+        tagData = new Tag725EnuResponseTransportType(Enum725ResponseTransportType.INBAND);
         assertEquals( "0", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log725EnuResponseTransportType(Enum725ResponseTransportType.OUT_OF_BAND);
+        tagData = new Tag725EnuResponseTransportType(Enum725ResponseTransportType.OUT_OF_BAND);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

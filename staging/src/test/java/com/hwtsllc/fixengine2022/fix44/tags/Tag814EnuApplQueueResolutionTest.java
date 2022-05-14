@@ -57,21 +57,21 @@ class Tag814EnuApplQueueResolutionTest {
     }
     @Test
     void Tag0814Test() {
-        Log814EnuApplQueueResolution tagData;
+        Tag814EnuApplQueueResolution tagData;
 
-        tagData = new Log814EnuApplQueueResolution(MyEnumApplQueue.NO_ACTION);
+        tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.NO_ACTION);
         assertEquals( MyEnumApplQueue.NO_ACTION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log814EnuApplQueueResolution(MyEnumApplQueue.QUEUE_FLUSHED);
+        tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.QUEUE_FLUSHED);
         assertEquals( MyEnumApplQueue.QUEUE_FLUSHED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log814EnuApplQueueResolution(MyEnumApplQueue.OVERLAY_LAST);
+        tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.OVERLAY_LAST);
         assertEquals( MyEnumApplQueue.OVERLAY_LAST.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log814EnuApplQueueResolution(MyEnumApplQueue.END_SESSION);
+        tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.END_SESSION);
         assertEquals( MyEnumApplQueue.END_SESSION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

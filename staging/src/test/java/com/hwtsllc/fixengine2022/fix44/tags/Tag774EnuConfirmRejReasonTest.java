@@ -48,17 +48,17 @@ class Tag774EnuConfirmRejReasonTest {
     }
     @Test
     void Tag0774Test() {
-        Log774EnuConfirmRejReason tagData;
+        Tag774EnuConfirmRejReason tagData;
 
-        tagData = new Log774EnuConfirmRejReason(Enum774ConfirmRejReason.MISMATCHED_ACCOUNT);
+        tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.MISMATCHED_ACCOUNT);
         assertEquals( Enum774ConfirmRejReason.MISMATCHED_ACCOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log774EnuConfirmRejReason(Enum774ConfirmRejReason.MISSING_INSTRUCTIONS);
+        tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.MISSING_INSTRUCTIONS);
         assertEquals( Enum774ConfirmRejReason.MISSING_INSTRUCTIONS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log774EnuConfirmRejReason(Enum774ConfirmRejReason.OTHER);
+        tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.OTHER);
         assertEquals( Enum774ConfirmRejReason.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -50,30 +50,30 @@ class Tag826EnuTradeAllocIndicatorTest {
     }
     @Test
     void Tag0826Test() {
-        Log826EnuTradeAllocIndicator tagData;
+        Tag826EnuTradeAllocIndicator tagData;
 
-        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.NOT_REQUIRED );
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.NOT_REQUIRED );
         assertEquals( Enum826TradeAllocIndicator.NOT_REQUIRED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.REQUIRED );
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.REQUIRED );
         assertEquals( Enum826TradeAllocIndicator.REQUIRED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.USE_PROVIDED_INFO );
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.USE_PROVIDED_INFO );
         assertEquals( Enum826TradeAllocIndicator.USE_PROVIDED_INFO.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR );
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR );
         assertEquals( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.FROM_EXECUTOR );
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.FROM_EXECUTOR );
         assertEquals( Enum826TradeAllocIndicator.FROM_EXECUTOR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.CLAIM_ACCOUNT );
+        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.CLAIM_ACCOUNT );
         assertEquals( Enum826TradeAllocIndicator.CLAIM_ACCOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

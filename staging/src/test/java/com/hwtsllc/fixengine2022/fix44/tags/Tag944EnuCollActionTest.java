@@ -47,17 +47,17 @@ class Tag944EnuCollActionTest {
     }
     @Test
     void Tag0944Test() {
-        Log944EnuCollAction tagData;
+        Tag944EnuCollAction tagData;
 
-        tagData = new Log944EnuCollAction( Enum944CollAction.RETAIN );
+        tagData = new Tag944EnuCollAction( Enum944CollAction.RETAIN );
         assertEquals( Enum944CollAction.RETAIN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log944EnuCollAction( Enum944CollAction.ADD );
+        tagData = new Tag944EnuCollAction( Enum944CollAction.ADD );
         assertEquals( Enum944CollAction.ADD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log944EnuCollAction( Enum944CollAction.REMOVE );
+        tagData = new Tag944EnuCollAction( Enum944CollAction.REMOVE );
         assertEquals( Enum944CollAction.REMOVE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

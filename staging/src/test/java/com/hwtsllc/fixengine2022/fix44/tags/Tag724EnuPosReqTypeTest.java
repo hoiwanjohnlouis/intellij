@@ -49,29 +49,29 @@ class Tag724EnuPosReqTypeTest {
     }
     @Test
     void Tag0724Test() {
-        Log724EnuPosReqType tagData;
+        Tag724EnuPosReqType tagData;
 
-        tagData = new Log724EnuPosReqType(Enum724PosReqType.POSITIONS);
+        tagData = new Tag724EnuPosReqType(Enum724PosReqType.POSITIONS);
         assertEquals( "0", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log724EnuPosReqType(Enum724PosReqType.TRADES);
+        tagData = new Tag724EnuPosReqType(Enum724PosReqType.TRADES);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log724EnuPosReqType(Enum724PosReqType.EXERCISES);
+        tagData = new Tag724EnuPosReqType(Enum724PosReqType.EXERCISES);
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log724EnuPosReqType(Enum724PosReqType.ASSIGNMENTS);
+        tagData = new Tag724EnuPosReqType(Enum724PosReqType.ASSIGNMENTS);
         assertEquals( "3", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log724EnuPosReqType(Enum724PosReqType.SETTLEMENT_ACTIVITY);
+        tagData = new Tag724EnuPosReqType(Enum724PosReqType.SETTLEMENT_ACTIVITY);
         assertEquals( "4", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log724EnuPosReqType(Enum724PosReqType.BACKOUT_MESSAGE);
+        tagData = new Tag724EnuPosReqType(Enum724PosReqType.BACKOUT_MESSAGE);
         assertEquals( "5", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -58,50 +58,50 @@ class Tag946EnuCollInquiryResultTest {
     }
     @Test
     void Tag0946Test() {
-        Log946EnuCollInquiryResult tagData;
+        Tag946EnuCollInquiryResult tagData;
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.SUCCESSFUL );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.SUCCESSFUL );
         assertEquals( Enum946CollInquiryResult.SUCCESSFUL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_INSTRUMENT );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_INSTRUMENT );
         assertEquals( Enum946CollInquiryResult.INVALID_INSTRUMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE );
         assertEquals( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_PARTIES );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_PARTIES );
         assertEquals( Enum946CollInquiryResult.INVALID_PARTIES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE );
         assertEquals( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_DESTINATION );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_DESTINATION );
         assertEquals( Enum946CollInquiryResult.INVALID_DESTINATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE );
         assertEquals( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER );
         assertEquals( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED );
         assertEquals( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY );
         assertEquals( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log946EnuCollInquiryResult( Enum946CollInquiryResult.OTHER );
+        tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.OTHER );
         assertEquals( Enum946CollInquiryResult.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

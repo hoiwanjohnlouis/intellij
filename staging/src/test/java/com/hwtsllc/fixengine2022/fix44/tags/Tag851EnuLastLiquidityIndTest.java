@@ -49,17 +49,17 @@ class Tag851EnuLastLiquidityIndTest {
     }
     @Test
     void Tag0851Test() {
-        Log851EnuLastLiquidityInd tagData;
+        Tag851EnuLastLiquidityInd tagData;
 
-        tagData = new Log851EnuLastLiquidityInd( Enum851LastLiquidityInd.ADDED );
+        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ADDED );
         assertEquals( Enum851LastLiquidityInd.ADDED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log851EnuLastLiquidityInd( Enum851LastLiquidityInd.REMOVED );
+        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.REMOVED );
         assertEquals( Enum851LastLiquidityInd.REMOVED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log851EnuLastLiquidityInd( Enum851LastLiquidityInd.ROUTED_OUT );
+        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ROUTED_OUT );
         assertEquals( Enum851LastLiquidityInd.ROUTED_OUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

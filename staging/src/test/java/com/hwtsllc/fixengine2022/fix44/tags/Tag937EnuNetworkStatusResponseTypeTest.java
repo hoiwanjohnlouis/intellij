@@ -46,13 +46,13 @@ class Tag937EnuNetworkStatusResponseTypeTest {
     }
     @Test
     void Tag0937Test() {
-        Log937EnuNetworkStatusResponseType tagData;
+        Tag937EnuNetworkStatusResponseType tagData;
 
-        tagData = new Log937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
+        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
         assertEquals( Enum937NetworkStatusResponseType.FULL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
+        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
         assertEquals( Enum937NetworkStatusResponseType.INCREMENTAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

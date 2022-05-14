@@ -46,17 +46,17 @@ class Tag750EnuTradeRequestStatusTest {
     }
     @Test
     void Tag0750Test() {
-        Log750EnuTradeRequestStatus tagData;
+        Tag750EnuTradeRequestStatus tagData;
 
-        tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.ACCEPTED);
+        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.ACCEPTED);
         assertEquals( Enum750TradeRequestStatus.ACCEPTED.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.COMPLETED);
+        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.COMPLETED);
         assertEquals( Enum750TradeRequestStatus.COMPLETED.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.REJECTED);
+        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.REJECTED);
         assertEquals( Enum750TradeRequestStatus.REJECTED.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

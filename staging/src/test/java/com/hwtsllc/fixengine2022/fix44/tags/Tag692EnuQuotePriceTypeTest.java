@@ -54,45 +54,45 @@ class Tag692EnuQuotePriceTypeTest {
     }
     @Test
     void Tag0692Test() {
-        Log692EnuQuotePriceType tagData;
+        Tag692EnuQuotePriceType tagData;
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.PERCENT);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.PERCENT);
         assertEquals( Enum692QuotePriceType.PERCENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.PER_SHARE);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.PER_SHARE);
         assertEquals( Enum692QuotePriceType.PER_SHARE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.FIXED_AMOUNT);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.FIXED_AMOUNT);
         assertEquals( Enum692QuotePriceType.FIXED_AMOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.DISCOUNT);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.DISCOUNT);
         assertEquals( Enum692QuotePriceType.DISCOUNT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.PREMIUM);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.PREMIUM);
         assertEquals( Enum692QuotePriceType.PREMIUM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.SPREAD);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.SPREAD);
         assertEquals( Enum692QuotePriceType.SPREAD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.TED_PRICE);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.TED_PRICE);
         assertEquals( Enum692QuotePriceType.TED_PRICE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.TED_YIELD);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.TED_YIELD);
         assertEquals( Enum692QuotePriceType.TED_YIELD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.YIELD_SPREAD);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.YIELD_SPREAD);
         assertEquals( Enum692QuotePriceType.YIELD_SPREAD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log692EnuQuotePriceType(Enum692QuotePriceType.YIELD);
+        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.YIELD);
         assertEquals( Enum692QuotePriceType.YIELD.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

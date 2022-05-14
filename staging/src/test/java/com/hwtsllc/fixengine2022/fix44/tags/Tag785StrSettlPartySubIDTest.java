@@ -44,14 +44,14 @@ class Tag785StrSettlPartySubIDTest {
     }
     @Test
     void Tag0785Test() {
-        Log785StrSettlPartySubID tagData;
+        Tag785StrSettlPartySubID tagData;
 
-        tagData = new Log785StrSettlPartySubID(new MyStringType(Log785StrSettlPartySubID.TESTA_STR_SETTL_PARTY_SUB_ID));
-        assertEquals( Log785StrSettlPartySubID.TESTA_STR_SETTL_PARTY_SUB_ID, tagData.getDataValue());
+        tagData = new Tag785StrSettlPartySubID(new MyStringType(Tag785StrSettlPartySubID.TESTA_STR_SETTL_PARTY_SUB_ID));
+        assertEquals( Tag785StrSettlPartySubID.TESTA_STR_SETTL_PARTY_SUB_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log785StrSettlPartySubID(new MyStringType(Log785StrSettlPartySubID.TESTB_STR_SETTL_PARTY_SUB_ID));
-        assertEquals( Log785StrSettlPartySubID.TESTB_STR_SETTL_PARTY_SUB_ID, tagData.getDataValue());
+        tagData = new Tag785StrSettlPartySubID(new MyStringType(Tag785StrSettlPartySubID.TESTB_STR_SETTL_PARTY_SUB_ID));
+        assertEquals( Tag785StrSettlPartySubID.TESTB_STR_SETTL_PARTY_SUB_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -49,17 +49,17 @@ class Tag875EnuCPProgramTest {
     }
     @Test
     void Tag0875Test() {
-        Log875EnuCPProgram tagData;
+        Tag875EnuCPProgram tagData;
 
-        tagData = new Log875EnuCPProgram( Enum875CPProgram.THREE );
+        tagData = new Tag875EnuCPProgram( Enum875CPProgram.THREE );
         assertEquals( Enum875CPProgram.THREE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log875EnuCPProgram( Enum875CPProgram.FOUR );
+        tagData = new Tag875EnuCPProgram( Enum875CPProgram.FOUR );
         assertEquals( Enum875CPProgram.FOUR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log875EnuCPProgram( Enum875CPProgram.OTHER );
+        tagData = new Tag875EnuCPProgram( Enum875CPProgram.OTHER );
         assertEquals( Enum875CPProgram.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

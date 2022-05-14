@@ -55,13 +55,13 @@ class Tag744EnuAssignmentMethodTest {
     }
     @Test
     void Tag0744Test() {
-        Log744EnuAssignmentMethod tagData;
+        Tag744EnuAssignmentMethod tagData;
 
-        tagData = new Log744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
+        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
         assertEquals( MyEnumAssignmentMethod.PRO_RATA.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
+        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
         assertEquals( MyEnumAssignmentMethod.RANDOM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

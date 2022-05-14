@@ -54,13 +54,13 @@ class Tag841EnuDiscretionMoveTypeTest {
     }
     @Test
     void Tag0841Test() {
-        Log841EnuDiscretionMoveType tagData;
+        Tag841EnuDiscretionMoveType tagData;
 
-        tagData = new Log841EnuDiscretionMoveType(MyEnumMoveType.FLOATING);
+        tagData = new Tag841EnuDiscretionMoveType(MyEnumMoveType.FLOATING);
         assertEquals( MyEnumMoveType.FLOATING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log841EnuDiscretionMoveType(MyEnumMoveType.FIXED);
+        tagData = new Tag841EnuDiscretionMoveType(MyEnumMoveType.FIXED);
         assertEquals( MyEnumMoveType.FIXED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

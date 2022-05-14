@@ -43,13 +43,13 @@ class Tag719BoolContraryInstructionIndicatorTest {
     }
     @Test
     void Tag0719Test() {
-        Log719BoolContraryInstructionIndicator tagData;
+        Tag719BoolContraryInstructionIndicator tagData;
 
-        tagData = new Log719BoolContraryInstructionIndicator(MyBooleanType.NO);
+        tagData = new Tag719BoolContraryInstructionIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log719BoolContraryInstructionIndicator(MyBooleanType.YES);
+        tagData = new Tag719BoolContraryInstructionIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

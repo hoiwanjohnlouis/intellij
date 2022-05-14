@@ -57,17 +57,17 @@ class Tag837EnuPegLimitTypeTest {
     }
     @Test
     void Tag0837Test() {
-        Log837EnuPegLimitType tagData;
+        Tag837EnuPegLimitType tagData;
 
-        tagData = new Log837EnuPegLimitType(MyEnumLimitType.OR_BETTER);
+        tagData = new Tag837EnuPegLimitType(MyEnumLimitType.OR_BETTER);
         assertEquals( MyEnumLimitType.OR_BETTER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log837EnuPegLimitType(MyEnumLimitType.STRICT);
+        tagData = new Tag837EnuPegLimitType(MyEnumLimitType.STRICT);
         assertEquals( MyEnumLimitType.STRICT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log837EnuPegLimitType(MyEnumLimitType.OR_WORSE);
+        tagData = new Tag837EnuPegLimitType(MyEnumLimitType.OR_WORSE);
         assertEquals( MyEnumLimitType.OR_WORSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

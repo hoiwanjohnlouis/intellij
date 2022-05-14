@@ -60,72 +60,72 @@ class Tag856EnuTradeReportTypeTest {
     }
     @Test
     void Tag0856Test() {
-        Log856EnuTradeReportType tagData;
+        Tag856EnuTradeReportType tagData;
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.SUBMIT);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.SUBMIT);
         assertEquals( Enum856TradeReportType.SUBMIT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.ALLEGED);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ALLEGED);
         assertEquals( Enum856TradeReportType.ALLEGED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.ACCEPT);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ACCEPT);
         assertEquals( Enum856TradeReportType.ACCEPT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.DECLINE);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.DECLINE);
         assertEquals( Enum856TradeReportType.DECLINE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.ADDENDUM);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ADDENDUM);
         assertEquals( Enum856TradeReportType.ADDENDUM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.NO_WAS);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.NO_WAS);
         assertEquals( Enum856TradeReportType.NO_WAS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.TRADE_REPORT_CANCEL);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.TRADE_REPORT_CANCEL);
         assertEquals( Enum856TradeReportType.TRADE_REPORT_CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.LOCKED_IN_TRADE_BREAK);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.LOCKED_IN_TRADE_BREAK);
         assertEquals( Enum856TradeReportType.LOCKED_IN_TRADE_BREAK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.DEFAULTED);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.DEFAULTED);
         assertEquals( Enum856TradeReportType.DEFAULTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.INVALID_CMTA);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.INVALID_CMTA);
         assertEquals( Enum856TradeReportType.INVALID_CMTA.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.PENDED);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.PENDED);
         assertEquals( Enum856TradeReportType.PENDED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.ALLEGED_NEW);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ALLEGED_NEW);
         assertEquals( Enum856TradeReportType.ALLEGED_NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.ALLEGED_ADDENDUM);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ALLEGED_ADDENDUM);
         assertEquals( Enum856TradeReportType.ALLEGED_ADDENDUM.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.ALLEGED_NO_WAS);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ALLEGED_NO_WAS);
         assertEquals( Enum856TradeReportType.ALLEGED_NO_WAS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.ALLEGED_TRADE_REPORT_CANCEL);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ALLEGED_TRADE_REPORT_CANCEL);
         assertEquals( Enum856TradeReportType.ALLEGED_TRADE_REPORT_CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log856EnuTradeReportType(Enum856TradeReportType.ALLEGED_LOCKED_IN_TRADE_BREAK);
+        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ALLEGED_LOCKED_IN_TRADE_BREAK);
         assertEquals( Enum856TradeReportType.ALLEGED_LOCKED_IN_TRADE_BREAK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -47,13 +47,13 @@ class Tag893BoolLastFragmentTest {
     }
     @Test
     void Tag0893Test() {
-        Log893BoolLastFragment tagData;
+        Tag893BoolLastFragment tagData;
 
-        tagData = new Log893BoolLastFragment(MyBooleanType.NO);
+        tagData = new Tag893BoolLastFragment(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log893BoolLastFragment(MyBooleanType.YES);
+        tagData = new Tag893BoolLastFragment(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

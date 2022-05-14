@@ -48,17 +48,17 @@ class Tag775EnuBookingTypeTest {
     }
     @Test
     void Tag0775Test() {
-        Log775EnuBookingType tagData;
+        Tag775EnuBookingType tagData;
 
-        tagData = new Log775EnuBookingType(Enum775BookingType.REGULAR_BOOKING);
+        tagData = new Tag775EnuBookingType(Enum775BookingType.REGULAR_BOOKING);
         assertEquals( Enum775BookingType.REGULAR_BOOKING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
+        tagData = new Tag775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
         assertEquals( Enum775BookingType.CONTRACT_FOR_DIFFERENCE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log775EnuBookingType(Enum775BookingType.TOTAL_RETURN_SWAP);
+        tagData = new Tag775EnuBookingType(Enum775BookingType.TOTAL_RETURN_SWAP);
         assertEquals( Enum775BookingType.TOTAL_RETURN_SWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

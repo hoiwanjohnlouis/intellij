@@ -45,13 +45,13 @@ class Tag787EnuDlvyInstTypeTest {
     }
     @Test
     void Tag0787Test() {
-        Log787EnuDlvyInstType tagData;
+        Tag787EnuDlvyInstType tagData;
 
-        tagData = new Log787EnuDlvyInstType( Enum787DlvyInstType.CASH );
+        tagData = new Tag787EnuDlvyInstType( Enum787DlvyInstType.CASH );
         assertEquals( Enum787DlvyInstType.CASH.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log787EnuDlvyInstType( Enum787DlvyInstType.SECURITIES);
+        tagData = new Tag787EnuDlvyInstType( Enum787DlvyInstType.SECURITIES);
         assertEquals( Enum787DlvyInstType.SECURITIES.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

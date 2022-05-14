@@ -56,21 +56,21 @@ class Tag840EnuPegScopeTest {
     }
     @Test
     void Tag0840Test() {
-        Log840EnuPegScope tagData;
+        Tag840EnuPegScope tagData;
 
-        tagData = new Log840EnuPegScope(MyEnumPegDiscretionScope.LOCAL);
+        tagData = new Tag840EnuPegScope(MyEnumPegDiscretionScope.LOCAL);
         assertEquals( MyEnumPegDiscretionScope.LOCAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log840EnuPegScope(MyEnumPegDiscretionScope.NATIONAL);
+        tagData = new Tag840EnuPegScope(MyEnumPegDiscretionScope.NATIONAL);
         assertEquals( MyEnumPegDiscretionScope.NATIONAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log840EnuPegScope(MyEnumPegDiscretionScope.GLOBAL);
+        tagData = new Tag840EnuPegScope(MyEnumPegDiscretionScope.GLOBAL);
         assertEquals( MyEnumPegDiscretionScope.GLOBAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log840EnuPegScope(MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL);
+        tagData = new Tag840EnuPegScope(MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL);
         assertEquals( MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

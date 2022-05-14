@@ -50,17 +50,17 @@ class Tag847EnuTargetStrategyTest {
     }
     @Test
     void Tag0847Test() {
-        Log847EnuTargetStrategy tagData;
+        Tag847EnuTargetStrategy tagData;
 
-        tagData = new Log847EnuTargetStrategy( Enum847TargetStrategy.VWAP );
+        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.VWAP );
         assertEquals( Enum847TargetStrategy.VWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log847EnuTargetStrategy( Enum847TargetStrategy.PARTICIPATE );
+        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.PARTICIPATE );
         assertEquals( Enum847TargetStrategy.PARTICIPATE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log847EnuTargetStrategy( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT );
+        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT );
         assertEquals( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

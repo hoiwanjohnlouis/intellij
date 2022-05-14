@@ -46,13 +46,13 @@ class Tag733EnuUnderlyingSettlPriceTypeTest {
     }
     @Test
     void Tag0733Test() {
-        Log733EnuUnderlyingSettlPriceType tagData;
+        Tag733EnuUnderlyingSettlPriceType tagData;
 
-        tagData = new Log733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.FINAL);
+        tagData = new Tag733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.FINAL);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.THEORETICAL);
+        tagData = new Tag733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

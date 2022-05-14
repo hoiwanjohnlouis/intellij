@@ -47,21 +47,21 @@ class Tag718EnuAdjustmentTypeTest {
     }
     @Test
     void Tag0718Test() {
-        Log718EnuAdjustmentType tagData;
+        Tag718EnuAdjustmentType tagData;
 
-        tagData = new Log718EnuAdjustmentType(Enum718AdjustmentType.MARGIN_DISPOSITION);
+        tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.MARGIN_DISPOSITION);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log718EnuAdjustmentType(Enum718AdjustmentType.DELTA_PLUS);
+        tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.DELTA_PLUS);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log718EnuAdjustmentType(Enum718AdjustmentType.DELTA_MINUS);
+        tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.DELTA_MINUS);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log718EnuAdjustmentType(Enum718AdjustmentType.FINAL);
+        tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.FINAL);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -48,21 +48,21 @@ class Tag905EnuCollAsgnRespTypeTest {
     }
     @Test
     void Tag0905Test() {
-        Log905EnuCollAsgnRespType tagData;
+        Tag905EnuCollAsgnRespType tagData;
 
-        tagData = new Log905EnuCollAsgnRespType( Enum905CollAsgnRespType.RECEIVED );
+        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.RECEIVED );
         assertEquals( Enum905CollAsgnRespType.RECEIVED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log905EnuCollAsgnRespType( Enum905CollAsgnRespType.ACCEPTED );
+        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.ACCEPTED );
         assertEquals( Enum905CollAsgnRespType.ACCEPTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log905EnuCollAsgnRespType( Enum905CollAsgnRespType.DECLINED );
+        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.DECLINED );
         assertEquals( Enum905CollAsgnRespType.DECLINED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log905EnuCollAsgnRespType( Enum905CollAsgnRespType.REJECTED );
+        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.REJECTED );
         assertEquals( Enum905CollAsgnRespType.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

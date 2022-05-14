@@ -44,16 +44,16 @@ class Tag760StrNested2PartySubIDTest {
     }
     @Test
     void Tag0760Test() {
-        Log760StrNested2PartySubID tagData;
+        Tag760StrNested2PartySubID tagData;
 
         tagData =
-                new Log760StrNested2PartySubID(new MyStringType(Log760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID));
-        assertEquals( Log760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
+                new Tag760StrNested2PartySubID(new MyStringType(Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID));
+        assertEquals( Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData =
-                new Log760StrNested2PartySubID(new MyStringType(Log760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID));
-        assertEquals( Log760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
+                new Tag760StrNested2PartySubID(new MyStringType(Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID));
+        assertEquals( Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

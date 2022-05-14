@@ -48,25 +48,25 @@ class Tag722EnuPosMaintStatusTest {
     }
     @Test
     void Tag0722Test() {
-        Log722EnuPosMaintStatus tagData;
+        Tag722EnuPosMaintStatus tagData;
 
-        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED);
+        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED_WITH_WARNINGS);
+        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED_WITH_WARNINGS);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.REJECTED);
+        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.REJECTED);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED);
+        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED_WITH_WARNINGS);
+        tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.COMPLETED_WITH_WARNINGS);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

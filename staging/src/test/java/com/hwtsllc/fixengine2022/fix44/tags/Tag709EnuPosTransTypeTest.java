@@ -49,29 +49,29 @@ class Tag709EnuPosTransTypeTest {
     }
     @Test
     void Tag0709Test() {
-        Log709EnuPosTransType tagData;
+        Tag709EnuPosTransType tagData;
 
-        tagData = new Log709EnuPosTransType(Enum709PosTransType.EXERCISE);
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.EXERCISE);
         assertEquals( Enum709PosTransType.EXERCISE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log709EnuPosTransType(Enum709PosTransType.DO_NOT_EXERCISE);
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.DO_NOT_EXERCISE);
         assertEquals( Enum709PosTransType.DO_NOT_EXERCISE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log709EnuPosTransType(Enum709PosTransType.POSITION_ADJUSTMENT);
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.POSITION_ADJUSTMENT);
         assertEquals( Enum709PosTransType.POSITION_ADJUSTMENT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log709EnuPosTransType(Enum709PosTransType.MARGIN_DISPOSITION);
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.MARGIN_DISPOSITION);
         assertEquals( Enum709PosTransType.MARGIN_DISPOSITION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log709EnuPosTransType(Enum709PosTransType.PLEDGE);
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.PLEDGE);
         assertEquals( Enum709PosTransType.PLEDGE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log709EnuPosTransType(Enum709PosTransType.LARGE_TRADER_SUBMISSION);
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.LARGE_TRADER_SUBMISSION);
         assertEquals( Enum709PosTransType.LARGE_TRADER_SUBMISSION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

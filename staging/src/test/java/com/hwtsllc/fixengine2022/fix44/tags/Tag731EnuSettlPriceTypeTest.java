@@ -45,13 +45,13 @@ class Tag731EnuSettlPriceTypeTest {
     }
     @Test
     void Tag0731Test() {
-        Log731EnuSettlPriceType tagData;
+        Tag731EnuSettlPriceType tagData;
 
-        tagData = new Log731EnuSettlPriceType(Enum731SettlPriceType.FINAL);
+        tagData = new Tag731EnuSettlPriceType(Enum731SettlPriceType.FINAL);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log731EnuSettlPriceType(Enum731SettlPriceType.THEORETICAL);
+        tagData = new Tag731EnuSettlPriceType(Enum731SettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

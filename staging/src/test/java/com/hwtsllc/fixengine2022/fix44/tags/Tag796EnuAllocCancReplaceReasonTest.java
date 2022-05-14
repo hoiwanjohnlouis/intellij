@@ -48,17 +48,17 @@ class Tag796EnuAllocCancReplaceReasonTest {
     }
     @Test
     void Tag0796Test() {
-        Log796EnuAllocCancReplaceReason tagData;
+        Tag796EnuAllocCancReplaceReason tagData;
 
-        tagData = new Log796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE);
+        tagData = new Tag796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE);
         assertEquals( Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER);
+        tagData = new Tag796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER);
         assertEquals( Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.OTHER);
+        tagData = new Tag796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.OTHER);
         assertEquals( Enum796AllocCancReplaceReason.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

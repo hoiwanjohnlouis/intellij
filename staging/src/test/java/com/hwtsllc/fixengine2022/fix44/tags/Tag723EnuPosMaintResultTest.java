@@ -49,17 +49,17 @@ class Tag723EnuPosMaintResultTest {
     }
     @Test
     void Tag0723Test() {
-        Log723EnuPosMaintResult tagData;
+        Tag723EnuPosMaintResult tagData;
 
-        tagData = new Log723EnuPosMaintResult(Enum723PosMaintResult.SUCCESSFUL);
+        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.SUCCESSFUL);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log723EnuPosMaintResult(Enum723PosMaintResult.REJECTED);
+        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.REJECTED);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log723EnuPosMaintResult(Enum723PosMaintResult.OTHER);
+        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.OTHER);
         assertEquals( "99", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

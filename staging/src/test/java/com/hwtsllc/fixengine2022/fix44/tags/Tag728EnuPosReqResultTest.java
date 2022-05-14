@@ -52,29 +52,29 @@ class Tag728EnuPosReqResultTest {
     }
     @Test
     void Tag0728Test() {
-        Log728EnuPosReqResult tagData;
+        Tag728EnuPosReqResult tagData;
 
-        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.VALID_REQUEST);
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.VALID_REQUEST);
         assertEquals( "0", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.UNSUPPORTED_REQUEST);
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.UNSUPPORTED_REQUEST);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.NO_POSITIONS_FOUND);
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.NO_POSITIONS_FOUND);
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.NOT_AUTHORIZED);
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.NOT_AUTHORIZED);
         assertEquals( "3", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.REQUEST_NOT_SUPPORTED);
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.REQUEST_NOT_SUPPORTED);
         assertEquals( "4", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log728EnuPosReqResult(Enum728PosReqResult.OTHER);
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.OTHER);
         assertEquals( "99", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

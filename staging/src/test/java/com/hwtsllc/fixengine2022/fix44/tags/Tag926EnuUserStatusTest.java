@@ -50,30 +50,30 @@ class Tag926EnuUserStatusTest {
     }
     @Test
     void Tag0926Test() {
-        Log926EnuUserStatus tagData;
+        Tag926EnuUserStatus tagData;
 
-        tagData = new Log926EnuUserStatus( Enum926UserStatus.LOGGED_IN );
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.LOGGED_IN );
         assertEquals( Enum926UserStatus.LOGGED_IN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log926EnuUserStatus( Enum926UserStatus.NOT_LOGGED_IN );
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.NOT_LOGGED_IN );
         assertEquals( Enum926UserStatus.NOT_LOGGED_IN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log926EnuUserStatus( Enum926UserStatus.USER_NOT_RECOGNISED );
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.USER_NOT_RECOGNISED );
         assertEquals( Enum926UserStatus.USER_NOT_RECOGNISED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log926EnuUserStatus( Enum926UserStatus.PASSWORD_INCORRECT );
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.PASSWORD_INCORRECT );
         assertEquals( Enum926UserStatus.PASSWORD_INCORRECT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log926EnuUserStatus( Enum926UserStatus.PASSWORD_CHANGED );
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.PASSWORD_CHANGED );
         assertEquals( Enum926UserStatus.PASSWORD_CHANGED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log926EnuUserStatus( Enum926UserStatus.OTHER );
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.OTHER );
         assertEquals( Enum926UserStatus.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -47,17 +47,17 @@ class Tag939EnuTrdRptStatusTest {
     }
     @Test
     void Tag0939Test() {
-        Log939EnuTrdRptStatus tagData;
+        Tag939EnuTrdRptStatus tagData;
 
-        tagData = new Log939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED );
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED );
         assertEquals( Enum939TrdRptStatus.ACCEPTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log939EnuTrdRptStatus( Enum939TrdRptStatus.REJECTED );
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.REJECTED );
         assertEquals( Enum939TrdRptStatus.REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS );
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS );
         assertEquals( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

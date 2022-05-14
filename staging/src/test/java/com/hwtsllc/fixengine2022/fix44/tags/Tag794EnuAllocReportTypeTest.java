@@ -53,45 +53,45 @@ class Tag794EnuAllocReportTypeTest {
     }
     @Test
     void Tag0794Test() {
-        Log794EnuAllocReportType tagData;
+        Tag794EnuAllocReportType tagData;
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.PRELIMINARY_REQUEST);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.PRELIMINARY_REQUEST);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_USING_PRELIMINARY);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_USING_PRELIMINARY);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_WITHOUT_PRELIMINARY);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_WITHOUT_PRELIMINARY);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.WAREHOUSE_RECAP);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.WAREHOUSE_RECAP);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.REQUEST_TO_INTERMEDIARY);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REQUEST_TO_INTERMEDIARY);
         assertEquals( "8", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.ACCEPT);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.ACCEPT);
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.REJECT);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REJECT);
         assertEquals( "10", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.ACCEPT_PENDING);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.ACCEPT_PENDING);
         assertEquals( "11", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.COMPLETE);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.COMPLETE);
         assertEquals( "12", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log794EnuAllocReportType(Enum794AllocReportType.REVERSE_PENDING);
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REVERSE_PENDING);
         assertEquals( "14", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

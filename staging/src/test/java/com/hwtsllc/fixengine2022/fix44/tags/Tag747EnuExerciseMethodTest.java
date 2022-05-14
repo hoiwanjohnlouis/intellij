@@ -45,13 +45,13 @@ class Tag747EnuExerciseMethodTest {
     }
     @Test
     void Tag0747Test() {
-        Log747EnuExerciseMethod tagData;
+        Tag747EnuExerciseMethod tagData;
 
-        tagData = new Log747EnuExerciseMethod(Enum747ExerciseMethod.AUTOMATIC);
+        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.AUTOMATIC);
         assertEquals( Enum747ExerciseMethod.AUTOMATIC.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
+        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
         assertEquals( Enum747ExerciseMethod.MANUAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

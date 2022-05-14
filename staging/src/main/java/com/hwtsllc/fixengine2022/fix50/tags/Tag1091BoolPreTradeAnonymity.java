@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Bool1091PreTradeAnonymity;
-import com.hwtsllc.fixengine2022.interfaces.LogBooleanString;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p> YES( "Y", "YES", "Y - Trader explicitly request anonymity" ),
  *  <p> NO( "N", "NO", "N - Anonymity not required" ),
  */
-public class Tag1091BoolPreTradeAnonymity extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogBooleanString {
+public class Tag1091BoolPreTradeAnonymity extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Bool1091PreTradeAnonymity dataValue;
 
     public final static Bool1091PreTradeAnonymity TESTA_BOOL_PRE_TRADE_ANONYMITY
@@ -76,14 +76,7 @@ public class Tag1091BoolPreTradeAnonymity extends FIX50Abstract implements LogVa
      * wrapper to format a simple Yes string describing the data
      */
     @Override
-    public String toTrueString() {
-        return null;
-    }
-    /**
-     * wrapper to format a simple No string describing the data
-     */
-    @Override
-    public String toFalseString() {
+    public String toEnumString() {
         return null;
     }
     /**

@@ -49,25 +49,25 @@ class Tag903EnuCollAsgnTransTypeTest {
     }
     @Test
     void Tag0903Test() {
-        Log903EnuCollAsgnTransType tagData;
+        Tag903EnuCollAsgnTransType tagData;
 
-        tagData = new Log903EnuCollAsgnTransType( Enum903CollAsgnTransType.NEW );
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.NEW );
         assertEquals( Enum903CollAsgnTransType.NEW.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log903EnuCollAsgnTransType( Enum903CollAsgnTransType.REPLACE );
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REPLACE );
         assertEquals( Enum903CollAsgnTransType.REPLACE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log903EnuCollAsgnTransType( Enum903CollAsgnTransType.CANCEL );
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.CANCEL );
         assertEquals( Enum903CollAsgnTransType.CANCEL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log903EnuCollAsgnTransType( Enum903CollAsgnTransType.RELEASE );
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.RELEASE );
         assertEquals( Enum903CollAsgnTransType.RELEASE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log903EnuCollAsgnTransType( Enum903CollAsgnTransType.REVERSE );
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REVERSE );
         assertEquals( Enum903CollAsgnTransType.REVERSE.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

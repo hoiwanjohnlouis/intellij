@@ -54,13 +54,13 @@ class Tag835EnuPegMoveTypeTest {
     }
     @Test
     void Tag0835Test() {
-        Log835EnuPegMoveType tagData;
+        Tag835EnuPegMoveType tagData;
 
-        tagData = new Log835EnuPegMoveType(MyEnumMoveType.FLOATING);
+        tagData = new Tag835EnuPegMoveType(MyEnumMoveType.FLOATING);
         assertEquals( MyEnumMoveType.FLOATING.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log835EnuPegMoveType(MyEnumMoveType.FIXED);
+        tagData = new Tag835EnuPegMoveType(MyEnumMoveType.FIXED);
         assertEquals( MyEnumMoveType.FIXED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

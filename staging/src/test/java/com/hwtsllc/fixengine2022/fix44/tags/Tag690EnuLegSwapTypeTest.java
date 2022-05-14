@@ -49,21 +49,21 @@ class Tag690EnuLegSwapTypeTest {
     }
     @Test
     void Tag0690Test() {
-        Log690EnuLegSwapType tagData;
+        Tag690EnuLegSwapType tagData;
 
-        tagData = new Log690EnuLegSwapType(Enum690LegSwapType.PAR_FOR_PAR);
+        tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.PAR_FOR_PAR);
         assertEquals( Enum690LegSwapType.PAR_FOR_PAR.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log690EnuLegSwapType(Enum690LegSwapType.MODIFIED_DURATION);
+        tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.MODIFIED_DURATION);
         assertEquals( Enum690LegSwapType.MODIFIED_DURATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log690EnuLegSwapType(Enum690LegSwapType.RISK);
+        tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.RISK);
         assertEquals( Enum690LegSwapType.RISK.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log690EnuLegSwapType(Enum690LegSwapType.PROCEEDS);
+        tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.PROCEEDS);
         assertEquals( Enum690LegSwapType.PROCEEDS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

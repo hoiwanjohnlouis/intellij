@@ -48,21 +48,21 @@ class Tag928EnuStatusValueTest {
     }
     @Test
     void Tag0928Test() {
-        Log928EnuStatusValue tagData;
+        Tag928EnuStatusValue tagData;
 
-        tagData = new Log928EnuStatusValue( Enum928StatusValue.CONNECTED );
+        tagData = new Tag928EnuStatusValue( Enum928StatusValue.CONNECTED );
         assertEquals( Enum928StatusValue.CONNECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log928EnuStatusValue( Enum928StatusValue.DOWN_EXPECTED_UP );
+        tagData = new Tag928EnuStatusValue( Enum928StatusValue.DOWN_EXPECTED_UP );
         assertEquals( Enum928StatusValue.DOWN_EXPECTED_UP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log928EnuStatusValue( Enum928StatusValue.DOWN_EXPECTED_DOWN );
+        tagData = new Tag928EnuStatusValue( Enum928StatusValue.DOWN_EXPECTED_DOWN );
         assertEquals( Enum928StatusValue.DOWN_EXPECTED_DOWN.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log928EnuStatusValue( Enum928StatusValue.IN_PROCESS );
+        tagData = new Tag928EnuStatusValue( Enum928StatusValue.IN_PROCESS );
         assertEquals( Enum928StatusValue.IN_PROCESS.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

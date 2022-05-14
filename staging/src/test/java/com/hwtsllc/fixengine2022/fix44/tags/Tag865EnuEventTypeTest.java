@@ -54,34 +54,34 @@ class Tag865EnuEventTypeTest {
     }
     @Test
     void Tag0865Test() {
-        Log865EnuEventType tagData;
+        Tag865EnuEventType tagData;
 
-        tagData = new Log865EnuEventType( Enum865EventType.PUT );
+        tagData = new Tag865EnuEventType( Enum865EventType.PUT );
         assertEquals( Enum865EventType.PUT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log865EnuEventType( Enum865EventType.CALL );
+        tagData = new Tag865EnuEventType( Enum865EventType.CALL );
         assertEquals( Enum865EventType.CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log865EnuEventType( Enum865EventType.TENDER );
+        tagData = new Tag865EnuEventType( Enum865EventType.TENDER );
         assertEquals( Enum865EventType.TENDER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log865EnuEventType( Enum865EventType.SINKING_FUND_CALL );
+        tagData = new Tag865EnuEventType( Enum865EventType.SINKING_FUND_CALL );
         assertEquals( Enum865EventType.SINKING_FUND_CALL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log865EnuEventType( Enum865EventType.ACTIVATION );
+        tagData = new Tag865EnuEventType( Enum865EventType.ACTIVATION );
         assertEquals( Enum865EventType.ACTIVATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log865EnuEventType( Enum865EventType.INACTIVATION );
+        tagData = new Tag865EnuEventType( Enum865EventType.INACTIVATION );
         assertEquals( Enum865EventType.INACTIVATION.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log865EnuEventType( Enum865EventType.OTHER );
+        tagData = new Tag865EnuEventType( Enum865EventType.OTHER );
         assertEquals( Enum865EventType.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
