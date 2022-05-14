@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Bool1029CustDirectedOrder;
-import com.hwtsllc.fixengine2022.interfaces.BooleanString;
+import com.hwtsllc.fixengine2022.interfaces.LogBooleanString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p> YES( "Y", "YES", "Y - Customer directed this order to a specific execution venue" ),
  *  <p> NO( "N", "NO", "N - Execution venue not specified" ),
  */
-public class Tag1029BoolCustDirectedOrder extends FIX50Abstract implements LogValuePairString, LogVerboseString, BooleanString {
+public class Tag1029BoolCustDirectedOrder extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogBooleanString {
     private final Bool1029CustDirectedOrder dataValue;
 
     public final static Bool1029CustDirectedOrder TESTA_BOOL_CUST_DIRECTED_ORDER
@@ -77,14 +77,14 @@ public class Tag1029BoolCustDirectedOrder extends FIX50Abstract implements LogVa
      * wrapper to format a simple Yes string describing the data
      */
     @Override
-    public String toYesString() {
+    public String toTrueString() {
         return null;
     }
     /**
      * wrapper to format a simple No string describing the data
      */
     @Override
-    public String toNoString() {
+    public String toFalseString() {
         return null;
     }
     /**

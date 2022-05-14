@@ -36,7 +36,7 @@ class Tag611LmdLegMaturityDateTest {
     }
     @Test
     void Tag0611Test() {
-        Log611LmdLegMaturityDate tagData;
+        Tag611LmdLegMaturityDate tagData;
 
     }
 }

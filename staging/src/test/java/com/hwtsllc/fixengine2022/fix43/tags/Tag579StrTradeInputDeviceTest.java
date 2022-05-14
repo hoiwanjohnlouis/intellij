@@ -36,7 +36,7 @@ class Tag579StrTradeInputDeviceTest {
     }
     @Test
     void Tag0579Test() {
-        Log579StrTradeInputDevice tagData;
+        Tag579StrTradeInputDevice tagData;
 
     }
 }

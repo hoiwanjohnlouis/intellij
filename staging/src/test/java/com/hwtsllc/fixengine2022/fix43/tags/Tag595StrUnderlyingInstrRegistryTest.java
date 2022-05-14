@@ -36,7 +36,7 @@ class Tag595StrUnderlyingInstrRegistryTest {
     }
     @Test
     void Tag0595Test() {
-        Log595StrUnderlyingInstrRegistry tagData;
+        Tag595StrUnderlyingInstrRegistry tagData;
 
     }
 }

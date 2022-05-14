@@ -36,7 +36,7 @@ class Tag466StrBookingRefIDTest {
     }
     @Test
     void Tag0466Test() {
-        Log466StrBookingRefID tagData;
+        Tag466StrBookingRefID tagData;
 
     }
 }

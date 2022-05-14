@@ -37,9 +37,9 @@ class Tag554StrPasswordTest {
     }
     @Test
     void Tag0554Test() {
-        Log554StrPassword tagData;
+        Tag554StrPassword tagData;
 
-        tagData = new Log554StrPassword(new MyStringType("JohnWick") );
+        tagData = new Tag554StrPassword(new MyStringType("JohnWick") );
         assertEquals( "JohnWick", tagData.getDataValue());
         assertNotEquals( "goodbye JohnWick", tagData.getDataValue());
     }

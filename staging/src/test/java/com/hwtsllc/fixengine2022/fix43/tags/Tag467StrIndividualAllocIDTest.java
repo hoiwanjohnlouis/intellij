@@ -36,7 +36,7 @@ class Tag467StrIndividualAllocIDTest {
     }
     @Test
     void Tag0467Test() {
-        Log467StrIndividualAllocID tagData;
+        Tag467StrIndividualAllocID tagData;
 
     }
 }

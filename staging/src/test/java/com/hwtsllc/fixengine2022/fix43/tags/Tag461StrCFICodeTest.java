@@ -36,7 +36,7 @@ class Tag461StrCFICodeTest {
     }
     @Test
     void Tag0461Test() {
-        Log461StrCFICode tagData;
+        Tag461StrCFICode tagData;
 
     }
 }

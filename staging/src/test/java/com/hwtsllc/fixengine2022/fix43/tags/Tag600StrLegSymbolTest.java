@@ -36,7 +36,7 @@ class Tag600StrLegSymbolTest {
     }
     @Test
     void Tag0600Test() {
-        Log600StrLegSymbol tagData;
+        Tag600StrLegSymbol tagData;
 
     }
 }

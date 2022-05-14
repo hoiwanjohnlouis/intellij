@@ -36,7 +36,7 @@ class Tag594StrUnderlyingLocaleOfIssueTest {
     }
     @Test
     void Tag0594Test() {
-        Log594StrUnderlyingLocaleOfIssue tagData;
+        Tag594StrUnderlyingLocaleOfIssue tagData;
 
     }
 }

@@ -36,7 +36,7 @@ class Tag543StrInstrRegistryTest {
     }
     @Test
     void Tag0543Test() {
-        Log543StrInstrRegistry tagData;
+        Tag543StrInstrRegistry tagData;
 
     }
 }

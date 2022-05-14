@@ -36,7 +36,7 @@ class Tag455StrSecurityAltIDTest {
     }
     @Test
     void Tag0455Test() {
-        Log455StrSecurityAltID tagData;
+        Tag455StrSecurityAltID tagData;
 
     }
 }

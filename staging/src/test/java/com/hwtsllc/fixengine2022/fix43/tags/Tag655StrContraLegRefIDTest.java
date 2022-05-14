@@ -36,7 +36,7 @@ class Tag655StrContraLegRefIDTest {
     }
     @Test
     void Tag0655Test() {
-        Log655StrContraLegRefID tagData;
+        Tag655StrContraLegRefID tagData;
 
     }
 }

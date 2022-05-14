@@ -36,7 +36,7 @@ class Tag597StrLegStateOrProvinceOfIssueTest {
     }
     @Test
     void Tag0597Test() {
-        Log597StrLegStateOrProvinceOfIssue tagData;
+        Tag597StrLegStateOrProvinceOfIssue tagData;
 
     }
 }

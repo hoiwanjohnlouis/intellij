@@ -36,7 +36,7 @@ class Tag622DatEncodedLegSecurityDescTest {
     }
     @Test
     void Tag0622Test() {
-        Log622DatEncodedLegSecurityDesc tagData;
+        Tag622DatEncodedLegSecurityDesc tagData;
 
     }
 }

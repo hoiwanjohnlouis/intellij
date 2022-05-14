@@ -36,7 +36,7 @@ class Tag503LmdCardStartDateTest {
     }
     @Test
     void Tag0503Test() {
-        Log503LmdCardStartDate tagData;
+        Tag503LmdCardStartDate tagData;
 
     }
 }

@@ -36,7 +36,7 @@ class Tag513StrRegistIDTest {
     }
     @Test
     void Tag0513Test() {
-        Log513StrRegistID tagData;
+        Tag513StrRegistID tagData;
 
     }
 }

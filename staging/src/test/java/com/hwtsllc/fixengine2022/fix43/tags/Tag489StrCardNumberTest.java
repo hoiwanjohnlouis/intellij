@@ -36,7 +36,7 @@ class Tag489StrCardNumberTest {
     }
     @Test
     void Tag0489Test() {
-        Log489StrCardNumber tagData;
+        Tag489StrCardNumber tagData;
 
     }
 }

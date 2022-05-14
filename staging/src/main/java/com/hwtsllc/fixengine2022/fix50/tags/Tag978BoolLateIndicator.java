@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Bool978LateIndicator;
-import com.hwtsllc.fixengine2022.interfaces.BooleanString;
+import com.hwtsllc.fixengine2022.interfaces.LogBooleanString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p> YES( "Y", "YES", "Y - After the exchange cutoff time" ),
  *  <p> NO( "N", "NO", "N - Received during normal exchange hours" ),
  */
-public class Tag978BoolLateIndicator extends FIX50Abstract implements LogValuePairString, LogVerboseString, BooleanString {
+public class Tag978BoolLateIndicator extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogBooleanString {
     private final Bool978LateIndicator dataValue;
 
     public final static Bool978LateIndicator TESTA_BOOL_LATE_INDICATOR
@@ -72,14 +72,14 @@ public class Tag978BoolLateIndicator extends FIX50Abstract implements LogValuePa
      * wrapper to format a simple Yes string describing the data
      */
     @Override
-    public String toYesString() {
+    public String toTrueString() {
         return null;
     }
     /**
      * wrapper to format a simple No string describing the data
      */
     @Override
-    public String toNoString() {
+    public String toFalseString() {
         return null;
     }
     /**

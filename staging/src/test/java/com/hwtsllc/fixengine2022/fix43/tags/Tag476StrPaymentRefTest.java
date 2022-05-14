@@ -36,7 +36,7 @@ class Tag476StrPaymentRefTest {
     }
     @Test
     void Tag0476Test() {
-        Log476StrPaymentRef tagData;
+        Tag476StrPaymentRef tagData;
 
     }
 }

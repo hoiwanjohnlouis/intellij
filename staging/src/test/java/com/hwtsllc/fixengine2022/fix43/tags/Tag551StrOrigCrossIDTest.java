@@ -36,7 +36,7 @@ class Tag551StrOrigCrossIDTest {
     }
     @Test
     void Tag0551Test() {
-        Log551StrOrigCrossID tagData;
+        Tag551StrOrigCrossID tagData;
 
     }
 }

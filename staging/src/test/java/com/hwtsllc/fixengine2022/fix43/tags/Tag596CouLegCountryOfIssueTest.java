@@ -36,7 +36,7 @@ class Tag596CouLegCountryOfIssueTest {
     }
     @Test
     void Tag0596Test() {
-        Log596CouLegCountryOfIssue tagData;
+        Tag596CouLegCountryOfIssue tagData;
 
     }
 }

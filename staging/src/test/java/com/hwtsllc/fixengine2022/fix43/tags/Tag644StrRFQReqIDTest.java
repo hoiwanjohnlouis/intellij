@@ -36,7 +36,7 @@ class Tag644StrRFQReqIDTest {
     }
     @Test
     void Tag0644Test() {
-        Log644StrRFQReqID tagData;
+        Tag644StrRFQReqID tagData;
 
     }
 }

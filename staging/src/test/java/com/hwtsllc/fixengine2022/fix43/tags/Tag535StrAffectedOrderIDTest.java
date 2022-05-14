@@ -36,7 +36,7 @@ class Tag535StrAffectedOrderIDTest {
     }
     @Test
     void Tag0535Test() {
-        Log535StrAffectedOrderID tagData;
+        Tag535StrAffectedOrderID tagData;
 
     }
 }

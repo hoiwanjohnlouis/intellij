@@ -36,7 +36,7 @@ class Tag593StrUnderlyingStateOrProvinceOfIssueTest {
     }
     @Test
     void Tag0593Test() {
-        Log593StrUnderlyingStateOrProvinceOfIssue tagData;
+        Tag593StrUnderlyingStateOrProvinceOfIssue tagData;
 
     }
 }

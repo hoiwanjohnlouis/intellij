@@ -36,7 +36,7 @@ class Tag496StrRegistRejReasonTextTest {
     }
     @Test
     void Tag0496Test() {
-        Log496StrRegistRejReasonText tagData;
+        Tag496StrRegistRejReasonText tagData;
 
     }
 }

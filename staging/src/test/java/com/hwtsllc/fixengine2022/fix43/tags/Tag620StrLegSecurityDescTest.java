@@ -36,7 +36,7 @@ class Tag620StrLegSecurityDescTest {
     }
     @Test
     void Tag0620Test() {
-        Log620StrLegSecurityDesc tagData;
+        Tag620StrLegSecurityDesc tagData;
 
     }
 }

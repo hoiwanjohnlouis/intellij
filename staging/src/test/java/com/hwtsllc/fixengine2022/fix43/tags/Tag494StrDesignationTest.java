@@ -36,7 +36,7 @@ class Tag494StrDesignationTest {
     }
     @Test
     void Tag0494Test() {
-        Log494StrDesignation tagData;
+        Tag494StrDesignation tagData;
 
     }
 }

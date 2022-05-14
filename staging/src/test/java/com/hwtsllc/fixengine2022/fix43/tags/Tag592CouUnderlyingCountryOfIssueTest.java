@@ -36,7 +36,7 @@ class Tag592CouUnderlyingCountryOfIssueTest {
     }
     @Test
     void Tag0592Test() {
-        Log592CouUnderlyingCountryOfIssue tagData;
+        Tag592CouUnderlyingCountryOfIssue tagData;
 
     }
 }

@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Bool1134ReportedPxDiff;
-import com.hwtsllc.fixengine2022.interfaces.BooleanString;
+import com.hwtsllc.fixengine2022.interfaces.LogBooleanString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p> YES( "Y", "YES", "Y - Reported price is different from the market price" ),
  *  <p> NO( "N", "NO", "N - Reported price is equal to market price" ),
  */
-public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValuePairString, LogVerboseString, BooleanString {
+public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogBooleanString {
     private final Bool1134ReportedPxDiff dataValue;
 
     public final static Bool1134ReportedPxDiff TESTA_BOOL_REPORTED_PX_DIFF
@@ -72,14 +72,14 @@ public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValue
      * wrapper to format a simple Yes string describing the data
      */
     @Override
-    public String toYesString() {
+    public String toTrueString() {
         return null;
     }
     /**
      * wrapper to format a simple No string describing the data
      */
     @Override
-    public String toNoString() {
+    public String toFalseString() {
         return null;
     }
     /**

@@ -36,7 +36,7 @@ class Tag511StrRegistEmailTest {
     }
     @Test
     void Tag0511Test() {
-        Log511StrRegistEmail tagData;
+        Tag511StrRegistEmail tagData;
 
     }
 }

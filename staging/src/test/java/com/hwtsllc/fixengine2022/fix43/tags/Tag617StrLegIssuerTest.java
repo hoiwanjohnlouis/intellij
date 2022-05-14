@@ -36,7 +36,7 @@ class Tag617StrLegIssuerTest {
     }
     @Test
     void Tag0617Test() {
-        Log617StrLegIssuer tagData;
+        Tag617StrLegIssuer tagData;
 
     }
 }

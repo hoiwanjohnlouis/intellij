@@ -36,7 +36,7 @@ class Tag493StrRegistAcctTypeTest {
     }
     @Test
     void Tag0493Test() {
-        Log493StrRegistAcctType tagData;
+        Tag493StrRegistAcctType tagData;
 
     }
 }

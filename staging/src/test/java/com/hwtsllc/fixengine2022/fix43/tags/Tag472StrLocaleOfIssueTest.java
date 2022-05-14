@@ -36,7 +36,7 @@ class Tag472StrLocaleOfIssueTest {
     }
     @Test
     void Tag0472Test() {
-        Log472StrLocaleOfIssue tagData;
+        Tag472StrLocaleOfIssue tagData;
 
     }
 }

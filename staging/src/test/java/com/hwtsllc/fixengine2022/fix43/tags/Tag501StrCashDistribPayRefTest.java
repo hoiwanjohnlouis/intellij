@@ -36,7 +36,7 @@ class Tag501StrCashDistribPayRefTest {
     }
     @Test
     void Tag0501Test() {
-        Log501StrCashDistribPayRef tagData;
+        Tag501StrCashDistribPayRef tagData;
 
     }
 }

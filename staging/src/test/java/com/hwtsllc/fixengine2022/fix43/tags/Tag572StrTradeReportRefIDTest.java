@@ -36,7 +36,7 @@ class Tag572StrTradeReportRefIDTest {
     }
     @Test
     void Tag0572Test() {
-        Log572StrTradeReportRefID tagData;
+        Tag572StrTradeReportRefID tagData;
 
     }
 }

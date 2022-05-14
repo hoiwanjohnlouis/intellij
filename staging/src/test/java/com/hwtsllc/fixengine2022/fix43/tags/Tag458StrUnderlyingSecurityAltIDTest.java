@@ -36,7 +36,7 @@ class Tag458StrUnderlyingSecurityAltIDTest {
     }
     @Test
     void Tag0458Test() {
-        Log458StrUnderlyingSecurityAltID tagData;
+        Tag458StrUnderlyingSecurityAltID tagData;
 
     }
 }

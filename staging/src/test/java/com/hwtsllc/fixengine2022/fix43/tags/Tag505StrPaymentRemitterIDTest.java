@@ -36,7 +36,7 @@ class Tag505StrPaymentRemitterIDTest {
     }
     @Test
     void Tag0505Test() {
-        Log505StrPaymentRemitterID tagData;
+        Tag505StrPaymentRemitterID tagData;
 
     }
 }

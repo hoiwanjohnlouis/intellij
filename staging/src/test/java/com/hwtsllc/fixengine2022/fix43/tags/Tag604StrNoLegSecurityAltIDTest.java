@@ -36,7 +36,7 @@ class Tag604StrNoLegSecurityAltIDTest {
     }
     @Test
     void Tag0604Test() {
-        Log604StrNoLegSecurityAltID tagData;
+        Tag604StrNoLegSecurityAltID tagData;
 
     }
 }

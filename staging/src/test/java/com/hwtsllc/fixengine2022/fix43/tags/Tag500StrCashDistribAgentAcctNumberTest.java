@@ -36,7 +36,7 @@ class Tag500StrCashDistribAgentAcctNumberTest {
     }
     @Test
     void Tag0500Test() {
-        Log500StrCashDistribAgentAcctNumber tagData;
+        Tag500StrCashDistribAgentAcctNumber tagData;
 
     }
 }

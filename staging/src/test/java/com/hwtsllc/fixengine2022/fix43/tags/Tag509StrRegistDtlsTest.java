@@ -36,7 +36,7 @@ class Tag509StrRegistDtlsTest {
     }
     @Test
     void Tag0509Test() {
-        Log509StrRegistDtls tagData;
+        Tag509StrRegistDtls tagData;
 
     }
 }
