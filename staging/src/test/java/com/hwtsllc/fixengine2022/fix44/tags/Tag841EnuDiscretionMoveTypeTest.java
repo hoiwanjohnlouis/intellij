@@ -45,7 +45,7 @@ class Tag841EnuDiscretionMoveTypeTest {
     @Test
     void FIX0841Test() {
         FIX44 fixData = FIX44.FIX841_ENU_DISCRETION_MOVE_TYPE;
-        assertEquals( "FIX841", fixData.getID());
+        assertEquals( "841", fixData.getID());
         assertEquals( "DISCRETION_MOVE_TYPE", fixData.getName());
         assertEquals( "DiscretionMoveType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());

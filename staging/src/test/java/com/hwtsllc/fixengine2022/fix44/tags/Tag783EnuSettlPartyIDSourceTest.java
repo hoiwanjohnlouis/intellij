@@ -134,7 +134,7 @@ class Tag783EnuSettlPartyIDSourceTest {
         FIX44 fixData = FIX44.FIX783_ENU_SETTL_PARTY_ID_SOURCE;
         assertEquals( "783", fixData.getID());
         assertEquals( "SETTL_PARTY_ID_SOURCE", fixData.getName());
-        assertEquals( "SettlPartyIdSource", fixData.getDescription());
+        assertEquals( "SettlPartyIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -176,7 +176,7 @@ class Tag783EnuSettlPartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole = "InvestorID" and for CIV
          * 6-9, A types
          */
@@ -201,7 +201,7 @@ class Tag783EnuSettlPartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole = "InvestorID" and for Equities
          * 1-5 types
          */
@@ -226,7 +226,7 @@ class Tag783EnuSettlPartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole="Broker of Credit"
          * I type
          */

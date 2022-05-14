@@ -33,9 +33,9 @@ class Tag778NoSettlInstTest {
     @Test
     void FIX0778Test() {
         FIX44 fixData = FIX44.FIX778_NO_SETTL_INST;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "778", fixData.getID());
+        assertEquals( "NO_SETTL_INST", fixData.getName());
+        assertEquals( "NoSettlInst", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

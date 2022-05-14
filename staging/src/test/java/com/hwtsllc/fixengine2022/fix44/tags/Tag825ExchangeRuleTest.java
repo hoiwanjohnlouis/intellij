@@ -37,9 +37,9 @@ class Tag825ExchangeRuleTest {
     @Test
     void FIX0825Test() {
         FIX44 fixData = FIX44.FIX825_EXCHANGE_RULE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "825", fixData.getID());
+        assertEquals( "EXCHANGE_RULE", fixData.getName());
+        assertEquals( "ExchangeRule", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

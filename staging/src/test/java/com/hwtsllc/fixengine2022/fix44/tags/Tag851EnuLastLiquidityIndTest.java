@@ -40,9 +40,9 @@ class Tag851EnuLastLiquidityIndTest {
     @Test
     void FIX0851Test() {
         FIX44 fixData = FIX44.FIX851_ENU_LAST_LIQUIDITY_IND;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "851", fixData.getID());
+        assertEquals( "LAST_LIQUIDITY_IND", fixData.getName());
+        assertEquals( "LastLiquidityInd", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

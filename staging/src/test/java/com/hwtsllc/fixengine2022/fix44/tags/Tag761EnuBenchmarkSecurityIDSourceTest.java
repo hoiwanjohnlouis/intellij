@@ -135,7 +135,7 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
         FIX44 fixData = FIX44.FIX761_ENU_BENCHMARK_SECURITY_ID_SOURCE;
         assertEquals( "761", fixData.getID());
         assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", fixData.getName());
-        assertEquals( "BenchmarkSecurityIdSource", fixData.getDescription());
+        assertEquals( "BenchmarkSecurityIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -144,7 +144,7 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
     void Tag0761Test() {
         Log761EnuBenchmarkSecurityIDSource tagData;
 
-        /**
+        /*
          * 1-9 Security ID Source
          */
         tagData = new Log761EnuBenchmarkSecurityIDSource(MyEnumSecurityIDSource.CUSIP);
@@ -185,7 +185,7 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          * A-L Security ID Source
          */
         tagData = new Log761EnuBenchmarkSecurityIDSource(MyEnumSecurityIDSource.BLOOMBERG);

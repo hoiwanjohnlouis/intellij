@@ -33,9 +33,9 @@ class Tag816NoAltMDSourceTest {
     @Test
     void FIX0816Test() {
         FIX44 fixData = FIX44.FIX816_NO_ALT_MD_SOURCE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "816", fixData.getID());
+        assertEquals( "NO_ALT_MD_SOURCE", fixData.getName());
+        assertEquals( "NoAltMDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,9 +27,9 @@ class Tag730SettlPriceTest {
     @Test
     void FIX0730Test() {
         FIX44 fixData = FIX44.FIX730_SETTL_PRICE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "730", fixData.getID());
+        assertEquals( "SETTL_PRICE", fixData.getName());
+        assertEquals( "SettlPrice", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

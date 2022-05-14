@@ -33,9 +33,9 @@ class Tag702NoPositionsTest {
     @Test
     void FIX0702Test() {
         FIX44 fixData = FIX44.FIX702_NO_POSITIONS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "702", fixData.getID());
+        assertEquals( "NO_POSITIONS", fixData.getName());
+        assertEquals( "NoPositions", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

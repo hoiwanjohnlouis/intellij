@@ -34,9 +34,9 @@ class Tag813ApplQueueDepthTest {
     @Test
     void FIX0813Test() {
         FIX44 fixData = FIX44.FIX813_APPL_QUEUE_DEPTH;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "813", fixData.getID());
+        assertEquals( "APPL_QUEUE_DEPTH", fixData.getName());
+        assertEquals( "ApplQueueDepth", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

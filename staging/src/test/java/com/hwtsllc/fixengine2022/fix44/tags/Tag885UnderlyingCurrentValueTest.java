@@ -33,9 +33,9 @@ class Tag885UnderlyingCurrentValueTest {
     @Test
     void FIX0885Test() {
         FIX44 fixData = FIX44.FIX885_UNDERLYING_CURRENT_VALUE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "885", fixData.getID());
+        assertEquals( "UNDERLYING_CURRENT_VALUE", fixData.getName());
+        assertEquals( "UnderlyingCurrentValue", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

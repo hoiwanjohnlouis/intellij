@@ -34,9 +34,9 @@ class Tag858SharedCommissionTest {
     @Test
     void FIX0858Test() {
         FIX44 fixData = FIX44.FIX858_SHARED_COMMISSION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "858", fixData.getID());
+        assertEquals( "SHARED_COMMISSION", fixData.getName());
+        assertEquals( "SharedCommission", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

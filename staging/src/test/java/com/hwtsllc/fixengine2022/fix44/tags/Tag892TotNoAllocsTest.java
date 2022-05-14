@@ -36,9 +36,9 @@ class Tag892TotNoAllocsTest {
     @Test
     void FIX0892Test() {
         FIX44 fixData = FIX44.FIX892_TOT_NO_ALLOCS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "892", fixData.getID());
+        assertEquals( "TOT_NO_ALLOCS", fixData.getName());
+        assertEquals( "TotNoAllocs", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

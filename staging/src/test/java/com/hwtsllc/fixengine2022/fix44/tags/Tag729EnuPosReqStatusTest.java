@@ -49,10 +49,15 @@ class Tag729EnuPosReqStatusTest {
         Log729EnuPosReqStatus tagData;
 
         tagData = new Log729EnuPosReqStatus(Enum729PosReqStatus.COMPLETED);
-        tagData = new Log729EnuPosReqStatus(Enum729PosReqStatus.COMPLETED_WITH_WARNINGS);
-        tagData = new Log729EnuPosReqStatus(Enum729PosReqStatus.REJECTED);
+        assertEquals( Enum729PosReqStatus.COMPLETED.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        assertEquals( "0", tagData.getDataValue() );
+        tagData = new Log729EnuPosReqStatus(Enum729PosReqStatus.COMPLETED_WITH_WARNINGS);
+        assertEquals( Enum729PosReqStatus.COMPLETED_WITH_WARNINGS.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log729EnuPosReqStatus(Enum729PosReqStatus.REJECTED);
+        assertEquals( Enum729PosReqStatus.REJECTED.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

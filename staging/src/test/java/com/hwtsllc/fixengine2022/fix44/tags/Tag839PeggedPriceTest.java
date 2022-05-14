@@ -33,9 +33,9 @@ class Tag839PeggedPriceTest {
     @Test
     void FIX0839Test() {
         FIX44 fixData = FIX44.FIX839_PEGGED_PRICE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "839", fixData.getID());
+        assertEquals( "PEGGED_PRICE", fixData.getName());
+        assertEquals( "PeggedPrice", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -33,9 +33,9 @@ class Tag711NoUnderlyingsTest {
     @Test
     void FIX0711Test() {
         FIX44 fixData = FIX44.FIX711_NO_UNDERLYINGS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "711", fixData.getID());
+        assertEquals( "NO_UNDERLYINGS", fixData.getName());
+        assertEquals( "NoUnderlyings", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

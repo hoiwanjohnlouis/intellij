@@ -34,9 +34,9 @@ class Tag812ApplQueueMaxTest {
     @Test
     void FIX0812Test() {
         FIX44 fixData = FIX44.FIX812_APPL_QUEUE_MAX;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "812", fixData.getID());
+        assertEquals( "APPL_QUEUE_MAX", fixData.getName());
+        assertEquals( "ApplQueueMax", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

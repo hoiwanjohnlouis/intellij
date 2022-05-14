@@ -33,9 +33,9 @@ class Tag735NoQuoteQualifiersTest {
     @Test
     void FIX0735Test() {
         FIX44 fixData = FIX44.FIX735_NO_QUOTE_QUALIFIERS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "735", fixData.getID());
+        assertEquals( "NO_QUOTE_QUALIFIERS", fixData.getName());
+        assertEquals( "NoQuoteQualifiers", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

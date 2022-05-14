@@ -37,7 +37,7 @@ class Tag760StrNested2PartySubIDTest {
         FIX44 fixData = FIX44.FIX760_STR_NESTED_2_PARTY_SUB_ID;
         assertEquals( "760", fixData.getID());
         assertEquals( "NESTED_2_PARTY_SUB_ID", fixData.getName());
-        assertEquals( "Nested2PartySubId", fixData.getDescription());
+        assertEquals( "Nested2PartySubID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

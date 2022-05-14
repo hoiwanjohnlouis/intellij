@@ -137,7 +137,7 @@ class Tag807EnuNested2PartySubIDTypeTest {
         FIX44 fixData = FIX44.FIX807_ENU_NESTED_2_PARTY_SUB_ID_TYPE;
         assertEquals( "807", fixData.getID());
         assertEquals( "NESTED_2_PARTY_SUB_ID_TYPE", fixData.getName());
-        assertEquals( "Nested2PartySubIdType", fixData.getDescription());
+        assertEquals( "Nested2PartySubIDType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -146,7 +146,7 @@ class Tag807EnuNested2PartySubIDTypeTest {
     void Tag0807Test() {
         Log807EnuNested2PartySubIDType tagData;
 
-        /**
+        /*
          *  1-32
          */
         tagData = new Log807EnuNested2PartySubIDType(MyEnumPartySubIDType.FIRM);

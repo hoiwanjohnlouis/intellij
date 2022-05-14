@@ -17,9 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum775BookingType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -40,9 +39,9 @@ class Tag775EnuBookingTypeTest {
     @Test
     void FIX0775Test() {
         FIX44 fixData = FIX44.FIX775_ENU_BOOKING_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "775", fixData.getID());
+        assertEquals( "BOOKING_TYPE", fixData.getName());
+        assertEquals( "BookingType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -52,9 +51,15 @@ class Tag775EnuBookingTypeTest {
         Log775EnuBookingType tagData;
 
         tagData = new Log775EnuBookingType(Enum775BookingType.REGULAR_BOOKING);
+        assertEquals( Enum775BookingType.REGULAR_BOOKING.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
+        assertEquals( Enum775BookingType.CONTRACT_FOR_DIFFERENCE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log775EnuBookingType(Enum775BookingType.TOTAL_RETURN_SWAP);
-        assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
+        assertEquals( Enum775BookingType.TOTAL_RETURN_SWAP.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -35,9 +35,9 @@ class Tag874InterestAccrualDateTest {
     @Test
     void FIX0874Test() {
         FIX44 fixData = FIX44.FIX874_INTEREST_ACCRUAL_DATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "874", fixData.getID());
+        assertEquals( "INTEREST_ACCRUAL_DATE", fixData.getName());
+        assertEquals( "InterestAccrualDate", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

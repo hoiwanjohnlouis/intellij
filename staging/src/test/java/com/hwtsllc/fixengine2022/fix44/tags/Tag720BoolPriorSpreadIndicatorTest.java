@@ -34,9 +34,9 @@ class Tag720BoolPriorSpreadIndicatorTest {
     @Test
     void FIX0720Test() {
         FIX44 fixData = FIX44.FIX720_BOOL_PRIOR_SPREAD_INDICATOR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "720", fixData.getID());
+        assertEquals( "PRIOR_SPREAD_INDICATOR", fixData.getName());
+        assertEquals( "PriorSpreadIndicator", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

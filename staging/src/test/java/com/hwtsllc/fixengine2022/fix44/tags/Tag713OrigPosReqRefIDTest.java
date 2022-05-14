@@ -33,9 +33,9 @@ class Tag713OrigPosReqRefIDTest {
     @Test
     void FIX0713Test() {
         FIX44 fixData = FIX44.FIX713_ORIG_POS_REQ_REF_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "713", fixData.getID());
+        assertEquals( "ORIG_POS_REQ_REF_ID", fixData.getName());
+        assertEquals( "OrigPosReqRefID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

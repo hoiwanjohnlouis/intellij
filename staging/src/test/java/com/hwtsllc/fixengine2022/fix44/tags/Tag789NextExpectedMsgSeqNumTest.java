@@ -33,9 +33,9 @@ class Tag789NextExpectedMsgSeqNumTest {
     @Test
     void FIX0789Test() {
         FIX44 fixData = FIX44.FIX789_NEXT_EXPECTED_MSG_SEQ_NUM;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "789", fixData.getID());
+        assertEquals( "NEXT_EXPECTED_MSG_SEQ_NUM", fixData.getName());
+        assertEquals( "NextExpectedMsgSeqNum", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -34,9 +34,9 @@ class Tag766AllowableOneSidednessValueTest {
     @Test
     void FIX0766Test() {
         FIX44 fixData = FIX44.FIX766_ALLOWABLE_ONE_SIDEDNESS_VALUE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "766", fixData.getID());
+        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_VALUE", fixData.getName());
+        assertEquals( "AllowableOneSidednessValue", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

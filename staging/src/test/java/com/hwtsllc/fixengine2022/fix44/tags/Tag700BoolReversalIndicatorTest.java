@@ -34,9 +34,9 @@ class Tag700BoolReversalIndicatorTest {
     @Test
     void FIX0700Test() {
         FIX44 fixData = FIX44.FIX700_BOOL_REVERSAL_INDICATOR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "700", fixData.getID());
+        assertEquals( "REVERSAL_INDICATOR", fixData.getName());
+        assertEquals( "ReversalIndicator", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

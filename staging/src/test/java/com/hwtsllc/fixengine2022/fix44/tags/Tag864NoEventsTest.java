@@ -33,9 +33,9 @@ class Tag864NoEventsTest {
     @Test
     void FIX0864Test() {
         FIX44 fixData = FIX44.FIX864_NO_EVENTS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "864", fixData.getID());
+        assertEquals( "NO_EVENTS", fixData.getName());
+        assertEquals( "NoEvents", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

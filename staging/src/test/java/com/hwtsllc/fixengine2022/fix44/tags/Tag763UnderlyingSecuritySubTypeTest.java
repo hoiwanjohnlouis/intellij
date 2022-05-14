@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -35,9 +34,9 @@ class Tag763UnderlyingSecuritySubTypeTest {
     @Test
     void FIX0763Test() {
         FIX44 fixData = FIX44.FIX763_UNDERLYING_SECURITY_SUB_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "763", fixData.getID());
+        assertEquals( "UNDERLYING_SECURITY_SUB_TYPE", fixData.getName());
+        assertEquals( "UnderlyingSecuritySubType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

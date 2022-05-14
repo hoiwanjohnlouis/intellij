@@ -33,9 +33,9 @@ class Tag890MaturityNetMoneyTest {
     @Test
     void FIX0890Test() {
         FIX44 fixData = FIX44.FIX890_MATURITY_NET_MONEY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "890", fixData.getID());
+        assertEquals( "MATURITY_NET_MONEY", fixData.getName());
+        assertEquals( "MaturityNetMoney", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

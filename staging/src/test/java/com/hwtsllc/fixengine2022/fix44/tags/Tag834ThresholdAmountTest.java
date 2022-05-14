@@ -33,9 +33,9 @@ class Tag834ThresholdAmountTest {
     @Test
     void FIX0834Test() {
         FIX44 fixData = FIX44.FIX834_THRESHOLD_AMOUNT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "834", fixData.getID());
+        assertEquals( "THRESHOLD_AMOUNT", fixData.getName());
+        assertEquals( "ThresholdAmount", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

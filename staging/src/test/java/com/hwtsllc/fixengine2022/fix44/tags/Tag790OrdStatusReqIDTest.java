@@ -33,9 +33,9 @@ class Tag790OrdStatusReqIDTest {
     @Test
     void FIX0790Test() {
         FIX44 fixData = FIX44.FIX790_ORD_STATUS_REQ_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "790", fixData.getID());
+        assertEquals( "ORD_STATUS_REQ_ID", fixData.getName());
+        assertEquals( "OrdStatusReqID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

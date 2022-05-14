@@ -33,9 +33,9 @@ class Tag810UnderlyingPxTest {
     @Test
     void FIX0810Test() {
         FIX44 fixData = FIX44.FIX810_UNDERLYING_PX;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "810", fixData.getID());
+        assertEquals( "UNDERLYING_PX", fixData.getName());
+        assertEquals( "UnderlyingPx", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -35,9 +35,9 @@ class Tag769TrdRegTimestampTest {
     @Test
     void FIX0769Test() {
         FIX44 fixData = FIX44.FIX769_TRD_REG_TIMESTAMP;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "769", fixData.getID());
+        assertEquals( "TRD_REG_TIMESTAMP", fixData.getName());
+        assertEquals( "TrdRegTimestamp", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

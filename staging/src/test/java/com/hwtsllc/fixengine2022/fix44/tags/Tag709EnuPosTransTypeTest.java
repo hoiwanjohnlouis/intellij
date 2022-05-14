@@ -39,9 +39,9 @@ class Tag709EnuPosTransTypeTest {
     @Test
     void FIX0709Test() {
         FIX44 fixData = FIX44.FIX709_ENU_POS_TRANS_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "709", fixData.getID());
+        assertEquals( "POS_TRANS_TYPE", fixData.getName());
+        assertEquals( "PosTransType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

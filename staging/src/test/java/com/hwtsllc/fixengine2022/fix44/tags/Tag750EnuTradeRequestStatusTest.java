@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum750TradeRequestStatus;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,9 +37,9 @@ class Tag750EnuTradeRequestStatusTest {
     @Test
     void FIX0750Test() {
         FIX44 fixData = FIX44.FIX750_ENU_TRADE_REQUEST_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "750", fixData.getID());
+        assertEquals( "TRADE_REQUEST_STATUS", fixData.getName());
+        assertEquals( "TradeRequestStatus", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -49,7 +49,15 @@ class Tag750EnuTradeRequestStatusTest {
         Log750EnuTradeRequestStatus tagData;
 
         tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.ACCEPTED);
+        assertEquals( Enum750TradeRequestStatus.ACCEPTED.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
         tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.COMPLETED);
+        assertEquals( Enum750TradeRequestStatus.COMPLETED.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
         tagData = new Log750EnuTradeRequestStatus(Enum750TradeRequestStatus.REJECTED);
+        assertEquals( Enum750TradeRequestStatus.REJECTED.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

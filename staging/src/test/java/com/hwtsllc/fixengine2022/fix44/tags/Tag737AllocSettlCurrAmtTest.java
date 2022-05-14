@@ -34,9 +34,9 @@ class Tag737AllocSettlCurrAmtTest {
     @Test
     void FIX0737Test() {
         FIX44 fixData = FIX44.FIX737_ALLOC_SETTL_CURR_AMT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "737", fixData.getID());
+        assertEquals( "ALLOC_SETTL_CURR_AMT", fixData.getName());
+        assertEquals( "AllocSettlCurrAmt", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

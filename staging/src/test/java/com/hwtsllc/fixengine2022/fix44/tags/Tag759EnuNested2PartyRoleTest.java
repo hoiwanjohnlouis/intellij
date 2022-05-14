@@ -207,12 +207,12 @@ class Tag759EnuNested2PartyRoleTest {
         Log759EnuNested2PartyRole tagData;
 
 
-        /**
+        /*
          * 1-22, 24-78 msg types
          */
 
 
-        /**
+        /*
          *  1-22, msg types
          */
         tagData = new Log759EnuNested2PartyRole(MyEnumPartyRole.EXECUTING_FIRM);
@@ -309,7 +309,7 @@ class Tag759EnuNested2PartyRoleTest {
 
 
 
-        /**
+        /*
          *  24-78 msg types
          */
         tagData = new Log759EnuNested2PartyRole(MyEnumPartyRole.CUSTOMER_ACCOUNT);

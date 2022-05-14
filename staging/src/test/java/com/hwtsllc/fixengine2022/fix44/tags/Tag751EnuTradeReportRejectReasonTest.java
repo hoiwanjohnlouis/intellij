@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum751TradeReportRejectReason;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,9 +43,9 @@ class Tag751EnuTradeReportRejectReasonTest {
     @Test
     void FIX0751Test() {
         FIX44 fixData = FIX44.FIX751_ENU_TRADE_REPORT_REJECT_REASON;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "751", fixData.getID());
+        assertEquals( "TRADE_REPORT_REJECT_REASON", fixData.getName());
+        assertEquals( "TradeReportRejectReason", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -55,10 +55,27 @@ class Tag751EnuTradeReportRejectReasonTest {
         Log751EnuTradeReportRejectReason tagData;
 
         tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.SUCCESSFUL);
+        assertEquals( Enum751TradeReportRejectReason.SUCCESSFUL.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
         tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION);
+        assertEquals( Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
         tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT);
+        assertEquals( Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
         tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES);
+        assertEquals( Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
         tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_TRADE_TYPE);
+        assertEquals( Enum751TradeReportRejectReason.INVALID_TRADE_TYPE.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
         tagData = new Log751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.OTHER);
+        assertEquals( Enum751TradeReportRejectReason.OTHER.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -34,9 +34,9 @@ class Tag818SecondaryTradeReportIDTest {
     @Test
     void FIX0818Test() {
         FIX44 fixData = FIX44.FIX818_SECONDARY_TRADE_REPORT_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "818", fixData.getID());
+        assertEquals( "SECONDARY_TRADE_REPORT_ID", fixData.getName());
+        assertEquals( "SecondaryTradeReportID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

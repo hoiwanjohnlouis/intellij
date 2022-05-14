@@ -33,9 +33,9 @@ class Tag745AssignmentUnitTest {
     @Test
     void FIX0745Test() {
         FIX44 fixData = FIX44.FIX745_ASSIGNMENT_UNIT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "745", fixData.getID());
+        assertEquals( "ASSIGNMENT_UNIT", fixData.getName());
+        assertEquals( "AssignmentUnit", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

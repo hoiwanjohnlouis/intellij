@@ -36,9 +36,9 @@ class Tag726ResponseDestinationTest {
     @Test
     void FIX0726Test() {
         FIX44 fixData = FIX44.FIX726_RESPONSE_DESTINATION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "726", fixData.getID());
+        assertEquals( "RESPONSE_DESTINATION", fixData.getName());
+        assertEquals( "ResponseDestination", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

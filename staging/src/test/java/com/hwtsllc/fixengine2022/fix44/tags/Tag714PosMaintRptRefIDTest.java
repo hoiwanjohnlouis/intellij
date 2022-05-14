@@ -34,9 +34,9 @@ class Tag714PosMaintRptRefIDTest {
     @Test
     void FIX0714Test() {
         FIX44 fixData = FIX44.FIX714_POS_MAINT_RPT_REF_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "714", fixData.getID());
+        assertEquals( "POS_MAINT_RPT_REF_ID", fixData.getName());
+        assertEquals( "PosMaintRptRefID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

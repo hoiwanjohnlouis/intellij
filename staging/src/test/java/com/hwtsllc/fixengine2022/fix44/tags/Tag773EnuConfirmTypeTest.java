@@ -17,9 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum773ConfirmType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -50,9 +49,15 @@ class Tag773EnuConfirmTypeTest {
         Log773EnuConfirmType tagData;
 
         tagData = new Log773EnuConfirmType(Enum773ConfirmType.STATUS);
+        assertEquals( Enum773ConfirmType.STATUS.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
+        assertEquals( Enum773ConfirmType.CONFIRMATION.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
-        assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
+        assertEquals( Enum773ConfirmType.CONFIRMATION_REJECTED.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum788TerminationType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,9 +33,9 @@ class Tag791SettlInstReqIDTest {
     @Test
     void FIX0791Test() {
         FIX44 fixData = FIX44.FIX791_SETTL_INST_REQ_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "791", fixData.getID());
+        assertEquals( "SETTL_INST_REQ_ID", fixData.getName());
+        assertEquals( "SettlInstReqID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

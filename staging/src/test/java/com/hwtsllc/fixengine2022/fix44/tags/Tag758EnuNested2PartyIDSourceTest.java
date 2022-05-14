@@ -134,7 +134,7 @@ class Tag758EnuNested2PartyIDSourceTest {
         FIX44 fixData = FIX44.FIX758_ENU_NESTED_2_PARTY_ID_SOURCE;
         assertEquals( "758", fixData.getID());
         assertEquals( "NESTED_2_PARTY_ID_SOURCE", fixData.getName());
-        assertEquals( "Nested2PartyIdSource", fixData.getDescription());
+        assertEquals( "Nested2PartyIDSource", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -144,7 +144,7 @@ class Tag758EnuNested2PartyIDSourceTest {
         Log758EnuNested2PartyIDSource tagData;
 
 
-        /**
+        /*
          * All PartyRoles
          *  B-H types
          */
@@ -177,7 +177,7 @@ class Tag758EnuNested2PartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole = "InvestorID" and for CIV
          * 6-9, A types
          */
@@ -202,7 +202,7 @@ class Tag758EnuNested2PartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole = "InvestorID" and for Equities
          * 1-5 types
          */
@@ -227,7 +227,7 @@ class Tag758EnuNested2PartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole="Broker of Credit"
          * I type
          */

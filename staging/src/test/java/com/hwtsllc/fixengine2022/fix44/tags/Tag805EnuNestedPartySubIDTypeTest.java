@@ -137,7 +137,7 @@ class Tag805EnuNestedPartySubIDTypeTest {
         FIX44 fixData = FIX44.FIX805_ENU_NESTED_PARTY_SUB_ID_TYPE;
         assertEquals( "805", fixData.getID());
         assertEquals( "NESTED_PARTY_SUB_ID_TYPE", fixData.getName());
-        assertEquals( "NestedPartySubIdType", fixData.getDescription());
+        assertEquals( "NestedPartySubIDType", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
@@ -146,7 +146,7 @@ class Tag805EnuNestedPartySubIDTypeTest {
     void Tag0805Test() {
         Log805EnuNestedPartySubIDType tagData;
 
-        /**
+        /*
          *  1-32
          */
         tagData = new Log805EnuNestedPartySubIDType(MyEnumPartySubIDType.FIRM);

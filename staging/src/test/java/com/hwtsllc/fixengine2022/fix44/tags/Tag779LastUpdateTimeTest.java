@@ -33,9 +33,9 @@ class Tag779LastUpdateTimeTest {
     @Test
     void FIX0779Test() {
         FIX44 fixData = FIX44.FIX779_LAST_UPDATE_TIME;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "779", fixData.getID());
+        assertEquals( "LAST_UPDATE_TIME", fixData.getName());
+        assertEquals( "LastUpdateTime", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

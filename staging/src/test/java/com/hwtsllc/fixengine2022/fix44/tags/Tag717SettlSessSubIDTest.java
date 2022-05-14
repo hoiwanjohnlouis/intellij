@@ -33,9 +33,9 @@ class Tag717SettlSessSubIDTest {
     @Test
     void FIX0717Test() {
         FIX44 fixData = FIX44.FIX717_SETTL_SESS_SUB_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "717", fixData.getID());
+        assertEquals( "SETTL_SESS_SUB_ID", fixData.getName());
+        assertEquals( "SettlSessSubID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

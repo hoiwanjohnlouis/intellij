@@ -24,27 +24,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  716
+ *  SettlSessID
+ *  Identifies a specific settlement session
+ *  Valid values:
+ *      ITD - Intraday
+ *      RTH - Regular Trading Hours
+ *      ETH - Electronic Trading Hours
+ *      EOD - End Of Day
+ */
 class Tag716EnuSettlSessIDTest {
     @Test
     void FIX0716Test() {
         FIX44 fixData = FIX44.FIX716_ENU_SETTL_SESS_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "716", fixData.getID());
+        assertEquals( "SETTL_SESS_ID", fixData.getName());
+        assertEquals( "SettlSessID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  716
-     *  SettlSessID
-     *  Identifies a specific settlement session
-     *  Valid values:
-     *      ITD - Intraday
-     *      RTH - Regular Trading Hours
-     *      ETH - Electronic Trading Hours
-     *      EOD - End Of Day
-     */
     @Test
     void Tag0716Test() {
         Log716EnuSettlSessID tagData;

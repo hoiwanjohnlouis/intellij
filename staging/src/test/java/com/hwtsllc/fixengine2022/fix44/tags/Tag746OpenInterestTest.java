@@ -33,9 +33,9 @@ class Tag746OpenInterestTest {
     @Test
     void FIX0746Test() {
         FIX44 fixData = FIX44.FIX746_OPEN_INTEREST;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "746", fixData.getID());
+        assertEquals( "OPEN_INTEREST", fixData.getName());
+        assertEquals( "OpenInterest", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

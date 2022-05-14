@@ -34,9 +34,9 @@ class Tag882UnderlyingDirtyPriceTest {
     @Test
     void FIX0882Test() {
         FIX44 fixData = FIX44.FIX882_UNDERLYING_DIRTY_PRICE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "882", fixData.getID());
+        assertEquals( "UNDERLYING_DIRTY_PRICE", fixData.getName());
+        assertEquals( "UnderlyingDirtyPrice", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

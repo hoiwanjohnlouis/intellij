@@ -47,8 +47,8 @@ class Tag840EnuPegScopeTest {
     @Test
     void FIX0840Test() {
         FIX44 fixData = FIX44.FIX840_ENU_PEG_SCOPE;
-        assertEquals( "840", fixData.getName());
-        assertEquals( "PEG_SCOPE", fixData.getID());
+        assertEquals( "840", fixData.getID());
+        assertEquals( "PEG_SCOPE", fixData.getName());
         assertEquals( "PegScope", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());

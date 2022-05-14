@@ -33,9 +33,9 @@ class Tag830TransferReasonTest {
     @Test
     void FIX0830Test() {
         FIX44 fixData = FIX44.FIX830_TRANSFER_REASON;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "830", fixData.getID());
+        assertEquals( "TRANSFER_REASON", fixData.getName());
+        assertEquals( "TransferReason", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

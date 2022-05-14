@@ -37,7 +37,7 @@ class Tag782StrSettlPartyIDTest {
         FIX44 fixData = FIX44.FIX782_STR_SETTL_PARTY_ID;
         assertEquals( "782", fixData.getID());
         assertEquals( "SETTL_PARTY_ID", fixData.getName());
-        assertEquals( "SettlPartyId", fixData.getDescription());
+        assertEquals( "SettlPartyID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

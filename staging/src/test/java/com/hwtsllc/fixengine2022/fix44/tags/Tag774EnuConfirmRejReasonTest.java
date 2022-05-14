@@ -17,9 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum774ConfirmRejReason;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -52,9 +51,15 @@ class Tag774EnuConfirmRejReasonTest {
         Log774EnuConfirmRejReason tagData;
 
         tagData = new Log774EnuConfirmRejReason(Enum774ConfirmRejReason.MISMATCHED_ACCOUNT);
+        assertEquals( Enum774ConfirmRejReason.MISMATCHED_ACCOUNT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log774EnuConfirmRejReason(Enum774ConfirmRejReason.MISSING_INSTRUCTIONS);
+        assertEquals( Enum774ConfirmRejReason.MISSING_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log774EnuConfirmRejReason(Enum774ConfirmRejReason.OTHER);
-        assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
+        assertEquals( Enum774ConfirmRejReason.OTHER.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

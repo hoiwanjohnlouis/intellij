@@ -17,9 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum770TrdRegTimestampType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -57,12 +56,27 @@ class Tag770EnuTrdRegTimestampTypeTest {
         Log770EnuTrdRegTimestampType tagData;
 
         tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.EXECUTION_TIME);
+        assertEquals( Enum770TrdRegTimestampType.EXECUTION_TIME.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_IN);
+        assertEquals( Enum770TrdRegTimestampType.TIME_IN.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_OUT);
+        assertEquals( Enum770TrdRegTimestampType.TIME_OUT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_RECEIPT);
+        assertEquals( Enum770TrdRegTimestampType.BROKER_RECEIPT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_EXECUTION);
+        assertEquals( Enum770TrdRegTimestampType.BROKER_EXECUTION.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
         tagData = new Log770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.DESK_RECEIPT);
-        assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.getID(), tagData.getDataValue());
+        assertEquals( Enum770TrdRegTimestampType.DESK_RECEIPT.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

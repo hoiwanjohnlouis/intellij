@@ -33,9 +33,9 @@ class Tag741AllocInterestAtMaturityTest {
     @Test
     void FIX0741Test() {
         FIX44 fixData = FIX44.FIX741_ALLOC_INTEREST_AT_MATURITY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "741", fixData.getID());
+        assertEquals( "ALLOC_INTEREST_AT_MATURITY", fixData.getName());
+        assertEquals( "AllocInterestAtMaturity", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -33,9 +33,9 @@ class Tag823UnderlyingTradingSessionSubIDTest {
     @Test
     void FIX0823Test() {
         FIX44 fixData = FIX44.FIX823_UNDERLYING_TRADING_SESSION_SUB_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "823", fixData.getID());
+        assertEquals( "UNDERLYING_TRADING_SESSION_SUB_ID", fixData.getName());
+        assertEquals( "UnderlyingTradingSessionSubID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

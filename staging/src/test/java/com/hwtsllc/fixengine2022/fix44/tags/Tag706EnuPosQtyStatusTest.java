@@ -36,9 +36,9 @@ class Tag706EnuPosQtyStatusTest {
     @Test
     void FIX0706Test() {
         FIX44 fixData = FIX44.FIX706_ENU_POS_QTY_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "706", fixData.getID());
+        assertEquals( "POS_QTY_STATUS", fixData.getName());
+        assertEquals( "PosQtyStatus", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
