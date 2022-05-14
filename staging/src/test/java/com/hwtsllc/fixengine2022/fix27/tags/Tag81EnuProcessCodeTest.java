@@ -57,7 +57,7 @@ class Tag81EnuProcessCodeTest {
     void Tag0081Test() {
         Tag81EnuProcessCode tagData;
 
-        /**
+        /*
          * 0-6 AllocRejCode types
          */
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.REGULAR);

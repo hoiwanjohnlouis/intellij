@@ -55,7 +55,7 @@ class Tag87EnuAllocStatusTest {
     void Tag0087Test() {
         Tag87EnuAllocStatus tagData;
 
-        /**
+        /*
          * 0-7 AllocStatus types
          */
         tagData = new Tag87EnuAllocStatus(Enum87AllocStatus.ACCEPTED);

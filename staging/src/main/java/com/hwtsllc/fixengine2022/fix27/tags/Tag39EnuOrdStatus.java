@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum39OrdStatus;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -51,11 +52,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      D - Accepted for Bidding
  *      E - Pending Replace (i.e. result of Order Cancel/Replace Request)
  */
-public class Tag39EnuOrdStatus extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag39EnuOrdStatus extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum39OrdStatus dataValue;
 
-    public final static Enum39OrdStatus TESTA_ENU_ORDER_STATUS = Enum39OrdStatus.NEW; // fake data
-    public final static Enum39OrdStatus TESTB_ENU_ORDER_STATUS = Enum39OrdStatus.ACCEPTED_FOR_BIDDING;
+    public final static Enum39OrdStatus TESTA_ENU_ORDER_STATUS
+            = Enum39OrdStatus.NEW;
+    public final static Enum39OrdStatus TESTB_ENU_ORDER_STATUS
+            = Enum39OrdStatus.ACCEPTED_FOR_BIDDING;
 
     public Tag39EnuOrdStatus(Enum39OrdStatus dataValue) {
         setFixType(FIX27.FIX39_ENU_ORD_STATUS);
@@ -85,7 +88,14 @@ public class Tag39EnuOrdStatus extends FIX27Abstract implements LogValuePairStri
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -103,10 +113,12 @@ public class Tag39EnuOrdStatus extends FIX27Abstract implements LogValuePairStri
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag39EnuOrdStatus(TESTB_ENU_ORDER_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -71,12 +71,12 @@ class Tag103EnuOrdRejReasonTest {
 
 
 
-        /**
+        /*
          * 1-15, 18, 99 OrdRejReason types
          */
 
 
-        /**
+        /*
          *  1-15, OrdRejReason types
          */
         tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.BROKER_OR_EXCHANGE);

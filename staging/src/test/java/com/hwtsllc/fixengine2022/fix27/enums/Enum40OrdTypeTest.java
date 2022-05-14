@@ -70,7 +70,7 @@ class Enum40OrdTypeTest {
     void Enum0040Test() {
         Enum40OrdType enumType;
 
-        /**
+        /*
          * 1-9 msg types
          */
         enumType = Enum40OrdType.MARKET;
@@ -147,7 +147,7 @@ class Enum40OrdTypeTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /**
+        /*
          *
          * A-Q msg types
          */

@@ -50,7 +50,7 @@ class Tag94EnuEmailTypeTest {
     void Tag0094Test() {
         Tag94EnuEmailType tagData;
 
-        /**
+        /*
          * 0-2 email types
          */
         tagData = new Tag94EnuEmailType(Enum94EmailType.NEW);

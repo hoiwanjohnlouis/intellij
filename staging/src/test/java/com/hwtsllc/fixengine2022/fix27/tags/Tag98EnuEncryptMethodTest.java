@@ -55,7 +55,7 @@ class Tag98EnuEncryptMethodTest {
     void Tag0098Test() {
         Tag98EnuEncryptMethod tagData;
 
-        /**
+        /*
          * 0-6 EncryptMethod types
          */
         tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.NONE_OR_OTHER);

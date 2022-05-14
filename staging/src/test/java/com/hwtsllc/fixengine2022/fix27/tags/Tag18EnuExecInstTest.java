@@ -115,7 +115,7 @@ class Tag18EnuExecInstTest {
     void Tag0018Test() {
         Tag18EnuExecInst tagData;
 
-        /**
+        /*
          * 0-9 exec inst types
          */
         tagData = new Tag18EnuExecInst(Enum18ExecInst.STAY_ON_OFFER_SIDE);
@@ -159,7 +159,7 @@ class Tag18EnuExecInstTest {
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        /**
+        /*
          * A-Z exec inst types
          */
         tagData = new Tag18EnuExecInst(Enum18ExecInst.NO_CROSS);
@@ -271,7 +271,7 @@ class Tag18EnuExecInstTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          * a-k exec inst types
          */
         tagData = new Tag18EnuExecInst(Enum18ExecInst.TRAILING_STOP_PEG);

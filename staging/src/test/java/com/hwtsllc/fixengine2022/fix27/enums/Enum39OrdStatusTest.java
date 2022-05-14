@@ -56,7 +56,7 @@ class Enum39OrdStatusTest {
     void Enum0039Test() {
         Enum39OrdStatus enumType;
 
-        /**
+        /*
          * 0-9 msg types
          */
         enumType = Enum39OrdStatus.NEW;
@@ -141,7 +141,7 @@ class Enum39OrdStatusTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
 
-        /**
+        /*
          * A-E msg types
          */
         enumType = Enum39OrdStatus.PENDING_NEW;

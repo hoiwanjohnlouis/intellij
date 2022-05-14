@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSide;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -56,11 +57,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    F - Lend (FINANCING - identifies direction of collateral)
  *  <p>    G - Borrow (FINANCING - identifies direction of collateral)
  */
-public class Tag54EnuSide extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag54EnuSide extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumSide dataValue;
 
-    public final static MyEnumSide TESTA_ENU_SIDE = MyEnumSide.BUY; // fake data
-    public final static MyEnumSide TESTB_ENU_SIDE = MyEnumSide.SELL;
+    public final static MyEnumSide TESTA_ENU_SIDE
+            = MyEnumSide.BUY;
+    public final static MyEnumSide TESTB_ENU_SIDE
+            = MyEnumSide.SELL;
 
     public Tag54EnuSide(MyEnumSide dataValue) {
         setFixType(FIX27.FIX54_ENU_SIDE);
@@ -90,7 +93,14 @@ public class Tag54EnuSide extends FIX27Abstract implements LogValuePairString, L
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -107,10 +117,12 @@ public class Tag54EnuSide extends FIX27Abstract implements LogValuePairString, L
         tagData = new Tag54EnuSide(TESTA_ENU_SIDE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag54EnuSide(TESTB_ENU_SIDE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

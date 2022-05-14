@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -31,11 +32,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      N - Original transmission
  *      Y - Possible duplicate
  */
-public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyBooleanType dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_POSS_DUP_FLAG = MyBooleanType.NO; // fake data
-    public final static MyBooleanType TESTB_BOOL_POSS_DUP_FLAG = MyBooleanType.YES;
+    public final static MyBooleanType TESTA_BOOL_POSS_DUP_FLAG
+            = MyBooleanType.NO;
+    public final static MyBooleanType TESTB_BOOL_POSS_DUP_FLAG
+            = MyBooleanType.YES;
 
     public Tag43BoolPossDupFlag(MyBooleanType dataValue) {
         setFixType(FIX27.FIX43_BOOL_POSS_DUP_FLAG);
@@ -65,7 +68,14 @@ public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -83,10 +93,12 @@ public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag43BoolPossDupFlag(TESTB_BOOL_POSS_DUP_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum47Rule80A;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -70,11 +71,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      Z - Short exempt transaction for non-member competing market-maker (refer to A and R types)
  */
 // @Deprecated
-public class Tag47EnuRule80A extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag47EnuRule80A extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum47Rule80A dataValue;
 
-    public final static Enum47Rule80A TESTA_ENU_RULE_80_A = Enum47Rule80A.AGENCY_SINGLE_ORDER; // fake data
-    public final static Enum47Rule80A TESTB_ENU_RULE_80_A = Enum47Rule80A.PRINCIPAL;
+    public final static Enum47Rule80A TESTA_ENU_RULE_80_A
+            = Enum47Rule80A.AGENCY_SINGLE_ORDER;
+    public final static Enum47Rule80A TESTB_ENU_RULE_80_A
+            = Enum47Rule80A.PRINCIPAL;
 
     public Tag47EnuRule80A(Enum47Rule80A dataValue) {
         setFixType(FIX27.FIX47_ENU_RULE_80_A);
@@ -104,7 +107,14 @@ public class Tag47EnuRule80A extends FIX27Abstract implements LogValuePairString
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -122,10 +132,12 @@ public class Tag47EnuRule80A extends FIX27Abstract implements LogValuePairString
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag47EnuRule80A(TESTB_ENU_RULE_80_A);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

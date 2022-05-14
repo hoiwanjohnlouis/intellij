@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum25IOIQltyInd;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,11 +33,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      L - Low
  *      M - Medium
  */
-public class Tag25EnuIOIQltyInd extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag25EnuIOIQltyInd extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum25IOIQltyInd dataValue;
 
-    public final static Enum25IOIQltyInd TESTA_ENU_IOI_QLTY_IND = Enum25IOIQltyInd.LOW; // fake data
-    public final static Enum25IOIQltyInd TESTB_ENU_IOI_QLTY_IND = Enum25IOIQltyInd.HIGH;
+    public final static Enum25IOIQltyInd TESTA_ENU_IOI_QLTY_IND
+            = Enum25IOIQltyInd.LOW;
+    public final static Enum25IOIQltyInd TESTB_ENU_IOI_QLTY_IND
+            = Enum25IOIQltyInd.HIGH;
 
     public Tag25EnuIOIQltyInd(Enum25IOIQltyInd dataValue) {
         setFixType(FIX27.FIX25_ENU_IOI_QLTY_IND);
@@ -66,7 +69,14 @@ public class Tag25EnuIOIQltyInd extends FIX27Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -84,10 +94,12 @@ public class Tag25EnuIOIQltyInd extends FIX27Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag25EnuIOIQltyInd(TESTB_ENU_IOI_QLTY_IND);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

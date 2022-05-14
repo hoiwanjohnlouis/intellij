@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum81ProcessCode;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -38,11 +39,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      5 - Soft-dollar Step-Out
  *      6 - Plan Sponsor
  */
-public class Tag81EnuProcessCode extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag81EnuProcessCode extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum81ProcessCode dataValue;
 
-    public final static Enum81ProcessCode TESTA_ENU_PROCESS_CODE = Enum81ProcessCode.REGULAR;
-    public final static Enum81ProcessCode TESTB_ENU_PROCESS_CODE = Enum81ProcessCode.PLAN_SPONSOR;
+    public final static Enum81ProcessCode TESTA_ENU_PROCESS_CODE
+            = Enum81ProcessCode.REGULAR;
+    public final static Enum81ProcessCode TESTB_ENU_PROCESS_CODE
+            = Enum81ProcessCode.PLAN_SPONSOR;
 
     public Tag81EnuProcessCode(Enum81ProcessCode dataValue) {
         setFixType(FIX27.FIX81_ENU_PROCESS_CODE);
@@ -72,7 +75,14 @@ public class Tag81EnuProcessCode extends FIX27Abstract implements LogValuePairSt
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -90,10 +100,12 @@ public class Tag81EnuProcessCode extends FIX27Abstract implements LogValuePairSt
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag81EnuProcessCode(TESTB_ENU_PROCESS_CODE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

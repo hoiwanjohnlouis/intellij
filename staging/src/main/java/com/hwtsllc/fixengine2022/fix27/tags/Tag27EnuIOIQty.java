@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumIOIQty;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -44,11 +45,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    L - Large
  *  <p>    U - Undisclosed Quantity
  */
-public class Tag27EnuIOIQty extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag27EnuIOIQty extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumIOIQty dataValue;
 
-    public final static MyEnumIOIQty TESTA_ENU_IOI_QTY = MyEnumIOIQty.ONE_BILLION; // fake data
-    public final static MyEnumIOIQty TESTB_ENU_IOI_QTY = MyEnumIOIQty.UNDISCLOSED_QUANTITY;
+    public final static MyEnumIOIQty TESTA_ENU_IOI_QTY
+            = MyEnumIOIQty.ONE_BILLION;
+    public final static MyEnumIOIQty TESTB_ENU_IOI_QTY
+            = MyEnumIOIQty.UNDISCLOSED_QUANTITY;
 
     public Tag27EnuIOIQty(MyEnumIOIQty dataValue) {
         setFixType(FIX27.FIX27_ENU_IOI_SHARES);
@@ -78,7 +81,14 @@ public class Tag27EnuIOIQty extends FIX27Abstract implements LogValuePairString,
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -96,10 +106,12 @@ public class Tag27EnuIOIQty extends FIX27Abstract implements LogValuePairString,
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag27EnuIOIQty(TESTB_ENU_IOI_QTY);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

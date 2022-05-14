@@ -58,13 +58,13 @@ class Enum103OrdRejReasonTest {
 
 
 
-        /**
+        /*
          *  0-15, 18, 99, msg types
          */
 
 
 
-        /**
+        /*
          *  0-15, msg types
          */
         enumType = Enum103OrdRejReason.BROKER_OR_EXCHANGE;
@@ -200,7 +200,7 @@ class Enum103OrdRejReasonTest {
 
 
 
-        /**
+        /*
          *  18, msg types
          */
         enumType = Enum103OrdRejReason.INVALID_PRICE_INCREMENT;
@@ -213,7 +213,7 @@ class Enum103OrdRejReasonTest {
 
 
 
-        /**
+        /*
          *  99, msg types
          */
         enumType = Enum103OrdRejReason.OTHER;

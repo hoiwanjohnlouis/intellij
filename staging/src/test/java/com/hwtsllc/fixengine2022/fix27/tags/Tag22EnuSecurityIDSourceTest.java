@@ -144,7 +144,7 @@ class Tag22EnuSecurityIDSourceTest {
     void Tag0022Test() {
         Tag22EnuSecurityIDSource tagData;
 
-        /**
+        /*
          * 1-9 Security ID Source
          */
         tagData = new Tag22EnuSecurityIDSource(MyEnumSecurityIDSource.CUSIP);
@@ -185,7 +185,7 @@ class Tag22EnuSecurityIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          * A-L Security ID Source
          */
         tagData = new Tag22EnuSecurityIDSource(MyEnumSecurityIDSource.BLOOMBERG);

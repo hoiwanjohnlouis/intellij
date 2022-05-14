@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum71AllocTransType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -40,11 +41,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *          (Removed-Replaced)
  *      6 - Reversal
  */
-public class Tag71EnuAllocTransType extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag71EnuAllocTransType extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum71AllocTransType dataValue;
 
-    public final static Enum71AllocTransType TESTA_ENU_ALLOC_TRANS_TYPE = Enum71AllocTransType.NEW; // fake data
-    public final static Enum71AllocTransType TESTB_ENU_ALLOC_TRANS_TYPE = Enum71AllocTransType.REVERSAL;
+    public final static Enum71AllocTransType TESTA_ENU_ALLOC_TRANS_TYPE
+            = Enum71AllocTransType.NEW;
+    public final static Enum71AllocTransType TESTB_ENU_ALLOC_TRANS_TYPE
+            = Enum71AllocTransType.REVERSAL;
 
     public Tag71EnuAllocTransType(Enum71AllocTransType dataValue) {
         setFixType(FIX27.FIX71_ENU_ALLOC_TRANS_TYPE);
@@ -74,7 +77,14 @@ public class Tag71EnuAllocTransType extends FIX27Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -92,10 +102,12 @@ public class Tag71EnuAllocTransType extends FIX27Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag71EnuAllocTransType(TESTB_ENU_ALLOC_TRANS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

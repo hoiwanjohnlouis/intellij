@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAllocRejCode;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -53,11 +54,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    12 - Unknown ClOrdID
  *  <p>    13 - Warehouse request rejected
  */
-public class Tag88EnuAllocRejCode extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag88EnuAllocRejCode extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumAllocRejCode dataValue;
 
-    public final static MyEnumAllocRejCode TESTA_ENU_ALLOC_STATUS = MyEnumAllocRejCode.UNKNOWN_ACCOUNT;
-    public final static MyEnumAllocRejCode TESTB_ENU_ALLOC_STATUS = MyEnumAllocRejCode.CALCULATION_DIFFERENCE;
+    public final static MyEnumAllocRejCode TESTA_ENU_ALLOC_STATUS
+            = MyEnumAllocRejCode.UNKNOWN_ACCOUNT;
+    public final static MyEnumAllocRejCode TESTB_ENU_ALLOC_STATUS
+            = MyEnumAllocRejCode.CALCULATION_DIFFERENCE;
 
     public Tag88EnuAllocRejCode(MyEnumAllocRejCode dataValue) {
         setFixType(FIX27.FIX88_ENU_ALLOC_REJ_CODE);
@@ -87,7 +90,14 @@ public class Tag88EnuAllocRejCode extends FIX27Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -105,10 +115,12 @@ public class Tag88EnuAllocRejCode extends FIX27Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag88EnuAllocRejCode(TESTB_ENU_ALLOC_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

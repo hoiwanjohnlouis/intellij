@@ -61,7 +61,7 @@ class Tag59EnuTimeInForceTest {
     void Tag0059Test() {
         Tag59EnuTimeInForce tagData;
 
-        /**
+        /*
          * 0-7 TimeInForce types
          */
         tagData = new Tag59EnuTimeInForce(Enum59TimeInForce.DAY);

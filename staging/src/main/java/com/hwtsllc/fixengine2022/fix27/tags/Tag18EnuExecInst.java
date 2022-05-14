@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum18ExecInst;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -97,11 +98,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *
  *      k - Best Execution
  */
-public class Tag18EnuExecInst extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag18EnuExecInst extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum18ExecInst dataValue;
 
-    public final static Enum18ExecInst TESTA_ENU_EXEC_INST = Enum18ExecInst.STAY_ON_OFFER_SIDE; // fake data
-    public final static Enum18ExecInst TESTB_ENU_EXEC_INST = Enum18ExecInst.STAY_ON_BID_SIDE;
+    public final static Enum18ExecInst TESTA_ENU_EXEC_INST
+            = Enum18ExecInst.STAY_ON_OFFER_SIDE;
+    public final static Enum18ExecInst TESTB_ENU_EXEC_INST
+            = Enum18ExecInst.STAY_ON_BID_SIDE;
 
     public Tag18EnuExecInst(Enum18ExecInst dataValue) {
         setFixType(FIX27.FIX18_ENU_EXEC_INST);
@@ -131,7 +134,14 @@ public class Tag18EnuExecInst extends FIX27Abstract implements LogValuePairStrin
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -149,10 +159,12 @@ public class Tag18EnuExecInst extends FIX27Abstract implements LogValuePairStrin
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag18EnuExecInst(TESTB_ENU_EXEC_INST);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

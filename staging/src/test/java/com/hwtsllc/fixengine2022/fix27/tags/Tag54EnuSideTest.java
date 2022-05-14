@@ -74,7 +74,7 @@ class Tag54EnuSideTest {
         Tag54EnuSide tagData;
 
 
-        /**
+        /*
          * 1-9 msg types
          */
         tagData = new Tag54EnuSide(MyEnumSide.BUY);
@@ -116,7 +116,7 @@ class Tag54EnuSideTest {
 
 
 
-        /**
+        /*
          * A-G msg types
          */
         tagData = new Tag54EnuSide(MyEnumSide.CROSS_SHORT_EXEMPT);

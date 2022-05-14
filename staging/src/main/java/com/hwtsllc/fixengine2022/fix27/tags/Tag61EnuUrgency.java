@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum61Urgency;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,11 +33,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      1 - Flash
  *      2 - Background
  */
-public class Tag61EnuUrgency extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag61EnuUrgency extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum61Urgency dataValue;
 
-    public final static Enum61Urgency TESTA_ENU_URGENCY = Enum61Urgency.NORMAL; // fake data
-    public final static Enum61Urgency TESTB_ENU_URGENCY = Enum61Urgency.BACKGROUND;
+    public final static Enum61Urgency TESTA_ENU_URGENCY
+            = Enum61Urgency.NORMAL;
+    public final static Enum61Urgency TESTB_ENU_URGENCY
+            = Enum61Urgency.BACKGROUND;
 
     public Tag61EnuUrgency(Enum61Urgency dataValue) {
         setFixType(FIX27.FIX61_ENU_URGENCY);
@@ -66,7 +69,14 @@ public class Tag61EnuUrgency extends FIX27Abstract implements LogValuePairString
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -84,10 +94,12 @@ public class Tag61EnuUrgency extends FIX27Abstract implements LogValuePairString
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag61EnuUrgency(TESTB_ENU_URGENCY);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

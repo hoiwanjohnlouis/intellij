@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum87AllocStatus;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -37,11 +38,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      6 - allocation pending
  *      7 - reversed
  */
-public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum87AllocStatus dataValue;
 
-    public final static Enum87AllocStatus TESTA_ENU_ALLOC_STATUS = Enum87AllocStatus.ACCEPTED;
-    public final static Enum87AllocStatus TESTB_ENU_ALLOC_STATUS = Enum87AllocStatus.ALLOCATION_PENDING;
+    public final static Enum87AllocStatus TESTA_ENU_ALLOC_STATUS
+            = Enum87AllocStatus.ACCEPTED;
+    public final static Enum87AllocStatus TESTB_ENU_ALLOC_STATUS
+            = Enum87AllocStatus.ALLOCATION_PENDING;
 
     public Tag87EnuAllocStatus(Enum87AllocStatus dataValue) {
         setFixType(FIX27.FIX87_ENU_ALLOC_STATUS);
@@ -71,7 +74,14 @@ public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairSt
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -89,10 +99,12 @@ public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairSt
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag87EnuAllocStatus(TESTB_ENU_ALLOC_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

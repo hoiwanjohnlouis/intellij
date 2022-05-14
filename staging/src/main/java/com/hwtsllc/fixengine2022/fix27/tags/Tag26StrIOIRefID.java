@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag26StrIOIRefID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_IOI_REF_ID = "BilboBaggins-26StIOIRefID"; // fake data
-    public final static String TESTB_STR_IOI_REF_ID = "Gandalf-26StIOIRefID";
+    public final static String TESTA_STR_IOI_REF_ID
+            = "BilboBaggins-26StIOIRefID";
+    public final static String TESTB_STR_IOI_REF_ID
+            = "Gandalf-26StIOIRefID";
 
     public Tag26StrIOIRefID(MyStringType dataValue) {
         setFixType(FIX27.FIX26_STR_IOI_REF_ID);
@@ -63,7 +65,7 @@ public class Tag26StrIOIRefID extends FIX27Abstract implements LogValuePairStrin
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {

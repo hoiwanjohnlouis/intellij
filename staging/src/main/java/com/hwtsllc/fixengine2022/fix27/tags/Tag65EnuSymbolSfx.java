@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -56,11 +57,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    CD - EUCP with lump-sum interest rather than discount price
  *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
  */
-public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumSymbolSfx dataValue;
 
-    public final static MyEnumSymbolSfx TESTA_STR_SYMBOL_SFX = MyEnumSymbolSfx.EUCP;
-    public final static MyEnumSymbolSfx TESTB_STR_SYMBOL_SFX = MyEnumSymbolSfx.WHEN_ISSUED;
+    public final static MyEnumSymbolSfx TESTA_STR_SYMBOL_SFX
+            = MyEnumSymbolSfx.EUCP;
+    public final static MyEnumSymbolSfx TESTB_STR_SYMBOL_SFX
+            = MyEnumSymbolSfx.WHEN_ISSUED;
 
     public Tag65EnuSymbolSfx(MyEnumSymbolSfx dataValue) {
         setFixType(FIX27.FIX65_ENU_SYMBOL_SFX);
@@ -90,7 +93,14 @@ public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairStri
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -108,15 +118,18 @@ public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairStri
         System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag65EnuSymbolSfx( TESTB_STR_SYMBOL_SFX );
         System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
         System.out.println("Accessing FIXType Directly");
         System.out.println("EnumName:" + tagData.getEnumName());
         System.out.println("ID:" + tagData.getID());
         System.out.println("Name:" + tagData.getName());
         System.out.println("Description:" + tagData.getDescription());
+        System.out.println("EnumString:" + tagData.toEnumString());
     }
 }

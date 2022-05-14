@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum103OrdRejReason;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -51,11 +52,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public class Tag103EnuOrdRejReason extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag103EnuOrdRejReason extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum103OrdRejReason dataValue;
 
-    public final static Enum103OrdRejReason TESTA_ENU_ORD_REJ_REASON = Enum103OrdRejReason.BROKER_OR_EXCHANGE;
-    public final static Enum103OrdRejReason TESTB_ENU_ORD_REJ_REASON = Enum103OrdRejReason.OTHER;
+    public final static Enum103OrdRejReason TESTA_ENU_ORD_REJ_REASON
+            = Enum103OrdRejReason.BROKER_OR_EXCHANGE;
+    public final static Enum103OrdRejReason TESTB_ENU_ORD_REJ_REASON
+            = Enum103OrdRejReason.OTHER;
 
     public Tag103EnuOrdRejReason(Enum103OrdRejReason dataValue) {
         setFixType(FIX27.FIX103_ENU_ORD_REJ_REASON);
@@ -85,7 +88,14 @@ public class Tag103EnuOrdRejReason extends FIX27Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -103,10 +113,12 @@ public class Tag103EnuOrdRejReason extends FIX27Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData =  new Tag103EnuOrdRejReason(TESTB_ENU_ORD_REJ_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

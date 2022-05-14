@@ -60,12 +60,12 @@ class Tag102EnuCxlRejReasonTest {
 
 
 
-        /**
+        /*
          * 0-6, 18, 99 CxlRejReason type
          */
 
 
-        /**
+        /*
          *  0-6, CxlRejReason type
          */
         tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.TOO_LATE_TO_CANCEL);
@@ -98,7 +98,7 @@ class Tag102EnuCxlRejReasonTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          *  18, CxlRejReason type
          */
         tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.INVALID_PRICE_INCREMENT);
@@ -106,7 +106,7 @@ class Tag102EnuCxlRejReasonTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          *  99, CxlRejReason type
          */
         tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.OTHER);

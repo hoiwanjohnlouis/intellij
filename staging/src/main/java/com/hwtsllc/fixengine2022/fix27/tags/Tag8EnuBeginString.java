@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum8BeginString;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -41,11 +42,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      FIX.4.4
  *      FIXT.1.1
  */
-public class Tag8EnuBeginString extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag8EnuBeginString extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum8BeginString dataValue;
 
-    public final static Enum8BeginString TESTA_ENU_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_2_7;
-    public final static Enum8BeginString TESTB_ENU_BEGIN_STRING = Enum8BeginString.BEGIN_STRING_4_0;
+    public final static Enum8BeginString TESTA_ENU_BEGIN_STRING
+            = Enum8BeginString.BEGIN_STRING_2_7;
+    public final static Enum8BeginString TESTB_ENU_BEGIN_STRING
+            = Enum8BeginString.BEGIN_STRING_4_0;
 
     public Tag8EnuBeginString(Enum8BeginString dataValue) {
         setFixType(FIX27.FIX8_ENU_BEGIN_STRING);
@@ -75,7 +78,14 @@ public class Tag8EnuBeginString extends FIX27Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -93,10 +103,12 @@ public class Tag8EnuBeginString extends FIX27Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag8EnuBeginString(TESTB_ENU_BEGIN_STRING);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

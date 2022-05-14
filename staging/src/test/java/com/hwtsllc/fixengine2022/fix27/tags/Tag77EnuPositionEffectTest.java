@@ -69,9 +69,6 @@ class Tag77EnuPositionEffectTest {
         assertNotEquals( FIX27.JUNK_ID, fixData.getID());
         assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
     }
-    /**
-     *  Information is the same for TAGS 77, 564
-     */
     @Test
     void Tag0077Test() {
         Tag77EnuPositionEffect tagData;

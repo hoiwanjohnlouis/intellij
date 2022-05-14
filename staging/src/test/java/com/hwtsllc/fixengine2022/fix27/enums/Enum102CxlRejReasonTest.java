@@ -47,13 +47,13 @@ class Enum102CxlRejReasonTest {
 
 
 
-        /**
+        /*
          *  0-6, 18, 99, msg types
          */
 
 
 
-        /**
+        /*
          *  0-6, msg types
          */
         enumType = Enum102CxlRejReason.TOO_LATE_TO_CANCEL;
@@ -116,7 +116,7 @@ class Enum102CxlRejReasonTest {
 
 
 
-        /**
+        /*
          *  18, msg types
          */
         enumType = Enum102CxlRejReason.INVALID_PRICE_INCREMENT;
@@ -129,7 +129,7 @@ class Enum102CxlRejReasonTest {
 
 
 
-        /**
+        /*
          *  99, msg types
          */
         enumType = Enum102CxlRejReason.OTHER;

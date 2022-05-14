@@ -58,7 +58,7 @@ class Tag71EnuAllocTransTypeTest {
     void Tag0071Test() {
         Tag71EnuAllocTransType tagData;
 
-        /**
+        /*
          * 0-6 AllocTransType types
          */
         tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.NEW);

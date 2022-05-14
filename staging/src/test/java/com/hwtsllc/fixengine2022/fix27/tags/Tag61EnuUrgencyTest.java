@@ -50,7 +50,7 @@ class Tag61EnuUrgencyTest {
     void Tag0061Test() {
         Tag61EnuUrgency tagData;
 
-        /**
+        /*
          * 0-2 Urgency types
          */
         tagData = new Tag61EnuUrgency(Enum61Urgency.NORMAL);

@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum63SettlType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -75,11 +76,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *
  *      or any value conforming to the data type Tenor
  */
-public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum63SettlType dataValue;
 
-    public final static Enum63SettlType TESTA_ENU_SETTLMNT_TYP = Enum63SettlType.CASH;
-    public final static Enum63SettlType TESTB_ENU_SETTLMNT_TYP = Enum63SettlType.T_PLUS_5;
+    public final static Enum63SettlType TESTA_ENU_SETTLMNT_TYP
+            = Enum63SettlType.CASH;
+    public final static Enum63SettlType TESTB_ENU_SETTLMNT_TYP
+            = Enum63SettlType.T_PLUS_5;
 
     public Tag63EnuSettlmntTyp(Enum63SettlType dataValue) {
         setFixType(FIX27.FIX63_ENU_SETTLMNT_TYP);
@@ -109,7 +112,14 @@ public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairSt
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -127,10 +137,12 @@ public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairSt
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag63EnuSettlmntTyp(TESTB_ENU_SETTLMNT_TYP);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -38,11 +39,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *           if the object security is denominated in a size other than the
  *           industry default - 1000 par for bonds)
  */
-public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum13CommType dataValue;
 
-    public final static Enum13CommType TESTA_ENU_COMMISSION = Enum13CommType.PER_UNIT; // fake data
-    public final static Enum13CommType TESTB_ENU_COMMISSION = Enum13CommType.POINTS_PER_BOND;
+    public final static Enum13CommType TESTA_ENU_COMMISSION
+            = Enum13CommType.PER_UNIT;
+    public final static Enum13CommType TESTB_ENU_COMMISSION
+            = Enum13CommType.POINTS_PER_BOND;
 
     public Tag13EnuCommType(Enum13CommType dataValue) {
         setFixType(FIX27.FIX13_ENU_COMM_TYPE);
@@ -72,7 +75,14 @@ public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairStrin
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -90,10 +100,12 @@ public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairStrin
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag13EnuCommType(TESTB_ENU_COMMISSION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }
