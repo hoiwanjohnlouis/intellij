@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceScope;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -41,7 +42,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    2 - National (Across all national markets)
  *  <p>    3 - Global (Across all markets)
  */
-public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumPriceScope dataValue;
 
     public final static MyEnumPriceScope TESTA_ENU_TRIGGER_PRICE_TYPE_SCOPE
@@ -77,7 +78,14 @@ public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements Lo
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {

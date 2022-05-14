@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.fix50.enums.Bool978LateIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,5 +49,12 @@ class Tag978BoolLateIndicatorTest {
     void Tag0978Test() {
         Tag978BoolLateIndicator tagData;
 
+        tagData = new Tag978BoolLateIndicator( Bool978LateIndicator.NO );
+        assertEquals( Bool978LateIndicator.NO.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag978BoolLateIndicator( Bool978LateIndicator.YES );
+        assertEquals( Bool978LateIndicator.YES.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

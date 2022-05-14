@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.fix50.enums.Bool1028ManualOrderIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,5 +49,12 @@ class Tag1028BoolManualOrderIndicatorTest {
     void Tag1028Test() {
         Tag1028BoolManualOrderIndicator tagData;
 
+        tagData = new Tag1028BoolManualOrderIndicator( Bool1028ManualOrderIndicator.NO );
+        assertEquals( Bool1028ManualOrderIndicator.NO.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag1028BoolManualOrderIndicator( Bool1028ManualOrderIndicator.YES );
+        assertEquals( Bool1028ManualOrderIndicator.YES.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

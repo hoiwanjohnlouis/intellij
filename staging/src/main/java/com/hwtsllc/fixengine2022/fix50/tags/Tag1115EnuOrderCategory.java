@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1115OrderCategory;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -40,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    7 - Implied Order
  *  <p>    8 - Cross Order
  */
-public class Tag1115EnuOrderCategory extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+public class Tag1115EnuOrderCategory extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum1115OrderCategory dataValue;
 
     public final static Enum1115OrderCategory TESTA_ENU_ORDER_CATEGORY
@@ -76,7 +77,14 @@ public class Tag1115EnuOrderCategory extends FIX50Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {

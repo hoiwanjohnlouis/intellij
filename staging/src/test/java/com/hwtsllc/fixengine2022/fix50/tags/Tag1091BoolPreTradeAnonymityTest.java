@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.fix50.enums.Bool1091PreTradeAnonymity;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -52,5 +53,12 @@ class Tag1091BoolPreTradeAnonymityTest {
     void Tag1091Test() {
         Tag1091BoolPreTradeAnonymity tagData;
 
+        tagData = new Tag1091BoolPreTradeAnonymity( Bool1091PreTradeAnonymity.NO );
+        assertEquals( Bool1091PreTradeAnonymity.NO.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag1091BoolPreTradeAnonymity( Bool1091PreTradeAnonymity.YES );
+        assertEquals( Bool1091PreTradeAnonymity.YES.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }
