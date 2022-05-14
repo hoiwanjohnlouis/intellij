@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      N - Not Natural
  *      Y - Natural
  */
-public class Tag130BoolIOINaturalFlag extends FIX40Abstract implements LogValuePairString, LogVerboseString {
+public class Tag130BoolIOINaturalFlag extends FIX40Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyBooleanType dataValue;
 
     public final static MyBooleanType TESTA_BOOL_IOI_NATURAL_FLAG = MyBooleanType.NO ; // fake data
@@ -67,7 +68,14 @@ public class Tag130BoolIOINaturalFlag extends FIX40Abstract implements LogValueP
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -85,10 +93,12 @@ public class Tag130BoolIOINaturalFlag extends FIX40Abstract implements LogValueP
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag130BoolIOINaturalFlag(TESTB_BOOL_IOI_NATURAL_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

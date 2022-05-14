@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
  *      Y - Gap Fill Message, Msg Seq Num Field Valid
  */
-public class Tag123BoolGapFillFlag extends FIX40Abstract implements LogValuePairString, LogVerboseString {
+public class Tag123BoolGapFillFlag extends FIX40Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyBooleanType dataValue;
 
     public final static MyBooleanType TESTA_BOOL_GAP_FILL_FLAG = MyBooleanType.NO; // fake data
@@ -66,7 +67,14 @@ public class Tag123BoolGapFillFlag extends FIX40Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -84,10 +92,12 @@ public class Tag123BoolGapFillFlag extends FIX40Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag123BoolGapFillFlag(TESTB_BOOL_GAP_FILL_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

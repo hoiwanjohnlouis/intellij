@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum127DKReason;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -36,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      F - Calculation Difference
  *      Z - Other
  */
-public class Tag127EnuDKReason extends FIX40Abstract implements LogValuePairString, LogVerboseString {
+public class Tag127EnuDKReason extends FIX40Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum127DKReason dataValue;
 
     public final static Enum127DKReason TESTA_ENU_DK_REASON = Enum127DKReason.UNKNOWN_SYMBOL; // fake data
@@ -70,7 +71,14 @@ public class Tag127EnuDKReason extends FIX40Abstract implements LogValuePairStri
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -88,10 +96,12 @@ public class Tag127EnuDKReason extends FIX40Abstract implements LogValuePairStri
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag127EnuDKReason(TESTB_ENU_DK_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

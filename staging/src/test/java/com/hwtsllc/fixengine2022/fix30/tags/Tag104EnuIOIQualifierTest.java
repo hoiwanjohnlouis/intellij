@@ -80,7 +80,7 @@ class Tag104EnuIOIQualifierTest {
     void Tag0104Test() {
         Tag104EnuIOIQualifier tagData;
 
-        /**
+        /*
          * A-Z IOI Qualifier types
          */
         tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.ALL_OR_NONE);
