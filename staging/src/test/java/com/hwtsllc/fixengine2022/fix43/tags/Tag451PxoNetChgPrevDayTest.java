@@ -36,7 +36,7 @@ class Tag451PxoNetChgPrevDayTest {
     }
     @Test
     void Tag0451Test() {
-        Log451PxoNetChgPrevDay tagData;
+        Tag451PxoNetChgPrevDay tagData;
 
     }
 }

@@ -36,7 +36,7 @@ class Tag468EnuRoundingDirectionTest {
     }
     @Test
     void Tag0468Test() {
-        Log468EnuRoundingDirection tagData;
+        Tag468EnuRoundingDirection tagData;
 
     }
 }

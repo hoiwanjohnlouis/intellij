@@ -36,7 +36,7 @@ class Tag480EnuCancellationRightsTest {
     }
     @Test
     void Tag0480Test() {
-        Log480EnuCancellationRights tagData;
+        Tag480EnuCancellationRights tagData;
 
     }
 }

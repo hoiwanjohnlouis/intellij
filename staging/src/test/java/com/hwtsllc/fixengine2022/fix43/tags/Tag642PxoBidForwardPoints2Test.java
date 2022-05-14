@@ -36,7 +36,7 @@ class Tag642PxoBidForwardPoints2Test {
     }
     @Test
     void Tag0642Test() {
-        Log642PxoBidForwardPoints2 tagData;
+        Tag642PxoBidForwardPoints2 tagData;
 
     }
 }

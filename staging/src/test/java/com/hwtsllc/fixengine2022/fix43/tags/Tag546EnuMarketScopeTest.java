@@ -49,17 +49,17 @@ class Tag546EnuMarketScopeTest {
     }
     @Test
     void Tag0546Test() {
-        Log546EnuMarketScope tagData;
+        Tag546EnuMarketScope tagData;
 
-        tagData = new Log546EnuMarketScope(MyEnumMarketScope.LOCAL_MARKET);
+        tagData = new Tag546EnuMarketScope(MyEnumMarketScope.LOCAL_MARKET);
         assertEquals( MyEnumMarketScope.LOCAL_MARKET.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log546EnuMarketScope(MyEnumMarketScope.NATIONAL);
+        tagData = new Tag546EnuMarketScope(MyEnumMarketScope.NATIONAL);
         assertEquals( MyEnumMarketScope.NATIONAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log546EnuMarketScope(MyEnumMarketScope.GLOBAL);
+        tagData = new Tag546EnuMarketScope(MyEnumMarketScope.GLOBAL);
         assertEquals( MyEnumMarketScope.GLOBAL.getID(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

@@ -37,7 +37,7 @@ class Tag540AmtTotalAccruedInterestAmtTest {
     }
     @Test
     void Tag0540Test() {
-        Log540AmtTotalAccruedInterestAmt tagData;
+        Tag540AmtTotalAccruedInterestAmt tagData;
 
     }
 }

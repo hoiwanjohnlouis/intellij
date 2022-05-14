@@ -36,7 +36,7 @@ class Tag537EnuQuoteTypeTest {
     }
     @Test
     void Tag0537Test() {
-        Log537EnuQuoteType tagData;
+        Tag537EnuQuoteType tagData;
 
     }
 }

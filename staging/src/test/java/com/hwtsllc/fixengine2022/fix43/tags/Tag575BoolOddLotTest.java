@@ -37,13 +37,13 @@ class Tag575BoolOddLotTest {
     }
     @Test
     void Tag0575Test() {
-        Log575BoolOddLot tagData;
+        Tag575BoolOddLot tagData;
 
-        tagData = new Log575BoolOddLot(MyBooleanType.NO);
+        tagData = new Tag575BoolOddLot(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log575BoolOddLot(MyBooleanType.YES);
+        tagData = new Tag575BoolOddLot(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

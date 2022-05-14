@@ -37,13 +37,13 @@ class Tag464TestMessageIndicatorEnuTest {
     }
     @Test
     void Tag0464Test() {
-        Log464BoolTestMessageIndicator tagData;
+        Tag464BoolTestMessageIndicator tagData;
 
-        tagData = new Log464BoolTestMessageIndicator(MyBooleanType.NO);
+        tagData = new Tag464BoolTestMessageIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log464BoolTestMessageIndicator(MyBooleanType.YES);
+        tagData = new Tag464BoolTestMessageIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

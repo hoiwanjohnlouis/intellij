@@ -36,7 +36,7 @@ class Tag475CouInvestorCountryOfResidenceTest {
     }
     @Test
     void Tag0475Test() {
-        Log475CouInvestorCountryOfResidence tagData;
+        Tag475CouInvestorCountryOfResidence tagData;
 
     }
 }

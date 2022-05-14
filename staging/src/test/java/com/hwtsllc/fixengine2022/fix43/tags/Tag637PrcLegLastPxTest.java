@@ -36,7 +36,7 @@ class Tag637PrcLegLastPxTest {
     }
     @Test
     void Tag0637Test() {
-        Log637PrcLegLastPx tagData;
+        Tag637PrcLegLastPx tagData;
 
     }
 }

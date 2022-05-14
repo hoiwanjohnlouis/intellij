@@ -36,7 +36,7 @@ class Tag552NumNoSidesTest {
     }
     @Test
     void Tag0552Test() {
-        Log552NumNoSides tagData;
+        Tag552NumNoSides tagData;
 
     }
 }

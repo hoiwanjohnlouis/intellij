@@ -36,7 +36,7 @@ class Tag616ExcLegSecurityExchangeTest {
     }
     @Test
     void Tag0616Test() {
-        Log616ExcLegSecurityExchange tagData;
+        Tag616ExcLegSecurityExchange tagData;
 
     }
 }

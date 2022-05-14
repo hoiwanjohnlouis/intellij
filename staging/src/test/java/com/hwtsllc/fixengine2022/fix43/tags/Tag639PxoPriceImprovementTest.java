@@ -36,7 +36,7 @@ class Tag639PxoPriceImprovementTest {
     }
     @Test
     void Tag0639Test() {
-        Log639PxoPriceImprovement tagData;
+        Tag639PxoPriceImprovement tagData;
 
     }
 }

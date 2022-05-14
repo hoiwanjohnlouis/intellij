@@ -36,7 +36,7 @@ class Tag506EnuRegistStatusTest {
     }
     @Test
     void Tag0506Test() {
-        Log506EnuRegistStatus tagData;
+        Tag506EnuRegistStatus tagData;
 
     }
 }

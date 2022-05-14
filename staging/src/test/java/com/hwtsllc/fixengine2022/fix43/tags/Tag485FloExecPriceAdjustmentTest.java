@@ -36,7 +36,7 @@ class Tag485FloExecPriceAdjustmentTest {
     }
     @Test
     void Tag0485Test() {
-        Log485FloExecPriceAdjustment tagData;
+        Tag485FloExecPriceAdjustment tagData;
 
     }
 }

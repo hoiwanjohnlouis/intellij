@@ -35,7 +35,7 @@ class Tag484EnuExecPriceTypeTest {
     }
     @Test
     void Tag0484Test() {
-        Log484EnuExecPriceType tagData;
+        Tag484EnuExecPriceType tagData;
 
     }
 }

@@ -80,62 +80,62 @@ class Tag460EnuProductTest {
     }
     @Test
     void Tag0460Test() {
-        Log460EnuProduct tagData;
+        Tag460EnuProduct tagData;
 
-        /**
+        /*
          * 0-13 msg types
          */
-        tagData = new Log460EnuProduct(MyEnumProduct.AGENCY);
+        tagData = new Tag460EnuProduct(MyEnumProduct.AGENCY);
         assertEquals( MyEnumProduct.AGENCY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.COMMODITY);
+        tagData = new Tag460EnuProduct(MyEnumProduct.COMMODITY);
         assertEquals( MyEnumProduct.COMMODITY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.CORPORATE);
+        tagData = new Tag460EnuProduct(MyEnumProduct.CORPORATE);
         assertEquals( MyEnumProduct.CORPORATE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.CURRENCY);
+        tagData = new Tag460EnuProduct(MyEnumProduct.CURRENCY);
         assertEquals( MyEnumProduct.CURRENCY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.EQUITY);
+        tagData = new Tag460EnuProduct(MyEnumProduct.EQUITY);
         assertEquals( MyEnumProduct.EQUITY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        tagData = new Log460EnuProduct(MyEnumProduct.GOVERNMENT);
+        tagData = new Tag460EnuProduct(MyEnumProduct.GOVERNMENT);
         assertEquals( MyEnumProduct.GOVERNMENT.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.INDEX);
+        tagData = new Tag460EnuProduct(MyEnumProduct.INDEX);
         assertEquals( MyEnumProduct.INDEX.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.LOAN);
+        tagData = new Tag460EnuProduct(MyEnumProduct.LOAN);
         assertEquals( MyEnumProduct.LOAN.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.MONEY_MARKET);
+        tagData = new Tag460EnuProduct(MyEnumProduct.MONEY_MARKET);
         assertEquals( MyEnumProduct.MONEY_MARKET.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.MORTGAGE);
+        tagData = new Tag460EnuProduct(MyEnumProduct.MORTGAGE);
         assertEquals( MyEnumProduct.MORTGAGE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        tagData = new Log460EnuProduct(MyEnumProduct.MUNICIPAL);
+        tagData = new Tag460EnuProduct(MyEnumProduct.MUNICIPAL);
         assertEquals( MyEnumProduct.MUNICIPAL.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.OTHER);
+        tagData = new Tag460EnuProduct(MyEnumProduct.OTHER);
         assertEquals( MyEnumProduct.OTHER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log460EnuProduct(MyEnumProduct.FINANCING);
+        tagData = new Tag460EnuProduct(MyEnumProduct.FINANCING);
         assertEquals( MyEnumProduct.FINANCING.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

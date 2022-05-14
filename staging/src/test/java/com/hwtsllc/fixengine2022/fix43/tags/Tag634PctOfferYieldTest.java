@@ -36,7 +36,7 @@ class Tag634PctOfferYieldTest {
     }
     @Test
     void Tag0634Test() {
-        Log634PctOfferYield tagData;
+        Tag634PctOfferYield tagData;
 
     }
 }

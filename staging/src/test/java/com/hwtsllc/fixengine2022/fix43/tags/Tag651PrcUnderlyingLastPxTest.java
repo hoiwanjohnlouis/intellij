@@ -36,7 +36,7 @@ class Tag651PrcUnderlyingLastPxTest {
     }
     @Test
     void Tag0651Test() {
-        Log651PrcUnderlyingLastPx tagData;
+        Tag651PrcUnderlyingLastPx tagData;
 
     }
 }

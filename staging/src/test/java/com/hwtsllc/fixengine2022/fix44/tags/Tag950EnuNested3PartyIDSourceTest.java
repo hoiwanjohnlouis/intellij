@@ -144,7 +144,7 @@ class Tag950EnuNested3PartyIDSourceTest {
         Log950EnuNested3PartyIDSource tagData;
 
 
-        /**
+        /*
          * All PartyRoles
          *  B-H types
          */
@@ -177,7 +177,7 @@ class Tag950EnuNested3PartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole = "InvestorID" and for CIV
          * 6-9, A types
          */
@@ -202,7 +202,7 @@ class Tag950EnuNested3PartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole = "InvestorID" and for Equities
          * 1-5 types
          */
@@ -227,7 +227,7 @@ class Tag950EnuNested3PartyIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        /**
+        /*
          * For PartyRole="Broker of Credit"
          * I type
          */

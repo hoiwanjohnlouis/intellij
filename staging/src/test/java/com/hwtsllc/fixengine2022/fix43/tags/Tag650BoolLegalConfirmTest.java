@@ -37,13 +37,13 @@ class Tag650BoolLegalConfirmTest {
     }
     @Test
     void Tag0650Test() {
-        Log650BoolLegalConfirm tagData;
+        Tag650BoolLegalConfirm tagData;
 
-        tagData = new Log650BoolLegalConfirm(MyBooleanType.NO);
+        tagData = new Tag650BoolLegalConfirm(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log650BoolLegalConfirm(MyBooleanType.YES);
+        tagData = new Tag650BoolLegalConfirm(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

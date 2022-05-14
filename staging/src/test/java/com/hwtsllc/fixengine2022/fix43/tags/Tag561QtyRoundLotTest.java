@@ -36,7 +36,7 @@ class Tag561QtyRoundLotTest {
     }
     @Test
     void Tag0561Test() {
-        Log561QtyRoundLot tagData;
+        Tag561QtyRoundLot tagData;
 
     }
 }

@@ -36,7 +36,7 @@ class Tag515UtcExecValuationPointTest {
     }
     @Test
     void Tag0515Test() {
-        Log515UtcExecValuationPoint tagData;
+        Tag515UtcExecValuationPoint tagData;
 
     }
 }

@@ -37,13 +37,13 @@ class Tag570BoolPreviouslyReportedTest {
     }
     @Test
     void Tag0570Test() {
-        Log570BoolPreviouslyReported tagData;
+        Tag570BoolPreviouslyReported tagData;
 
-        tagData = new Log570BoolPreviouslyReported(MyBooleanType.NO);
+        tagData = new Tag570BoolPreviouslyReported(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log570BoolPreviouslyReported(MyBooleanType.YES);
+        tagData = new Tag570BoolPreviouslyReported(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

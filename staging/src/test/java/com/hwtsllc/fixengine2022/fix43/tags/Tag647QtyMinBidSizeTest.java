@@ -36,7 +36,7 @@ class Tag647QtyMinBidSizeTest {
     }
     @Test
     void Tag0647Test() {
-        Log647QtyMinBidSize tagData;
+        Tag647QtyMinBidSize tagData;
 
     }
 }

@@ -73,21 +73,21 @@ class Tag564EnuLegPositionEffectTest {
      */
     @Test
     void Tag0564Test() {
-        Log564EnuLegPositionEffect tagData;
+        Tag564EnuLegPositionEffect tagData;
 
         /*
          * O, F, C, and R PositionEffect types
          */
-        tagData = new Log564EnuLegPositionEffect(MyEnumPositionEffect.OPEN);
+        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.OPEN);
         assertEquals( "O", tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Log564EnuLegPositionEffect(MyEnumPositionEffect.FIFO);
+        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.FIFO);
         assertEquals( "F", tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Log564EnuLegPositionEffect(MyEnumPositionEffect.CLOSE);
+        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.CLOSE);
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Log564EnuLegPositionEffect(MyEnumPositionEffect.ROLLED);
+        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.ROLLED);
         assertEquals( "R", tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

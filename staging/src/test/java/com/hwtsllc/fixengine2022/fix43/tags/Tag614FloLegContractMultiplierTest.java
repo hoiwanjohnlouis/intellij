@@ -36,7 +36,7 @@ class Tag614FloLegContractMultiplierTest {
     }
     @Test
     void Tag0614Test() {
-        Log614FloLegContractMultiplier tagData;
+        Tag614FloLegContractMultiplier tagData;
 
     }
 }

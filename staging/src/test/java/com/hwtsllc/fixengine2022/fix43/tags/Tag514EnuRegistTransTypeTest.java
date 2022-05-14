@@ -36,7 +36,7 @@ class Tag514EnuRegistTransTypeTest {
     }
     @Test
     void Tag0514Test() {
-        Log514EnuRegistTransType tagData;
+        Tag514EnuRegistTransType tagData;
 
     }
 }

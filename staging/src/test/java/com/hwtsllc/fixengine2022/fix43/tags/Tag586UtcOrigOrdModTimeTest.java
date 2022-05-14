@@ -36,7 +36,7 @@ class Tag586UtcOrigOrdModTimeTest {
     }
     @Test
     void Tag0586Test() {
-        Log586UtcOrigOrdModTime tagData;
+        Tag586UtcOrigOrdModTime tagData;
 
     }
 }

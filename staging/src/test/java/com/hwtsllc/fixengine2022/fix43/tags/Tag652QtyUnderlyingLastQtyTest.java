@@ -36,7 +36,7 @@ class Tag652QtyUnderlyingLastQtyTest {
     }
     @Test
     void Tag0652Test() {
-        Log652QtyUnderlyingLastQty tagData;
+        Tag652QtyUnderlyingLastQty tagData;
 
     }
 }

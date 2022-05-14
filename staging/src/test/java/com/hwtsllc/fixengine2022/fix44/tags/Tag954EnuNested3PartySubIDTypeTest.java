@@ -146,7 +146,7 @@ class Tag954EnuNested3PartySubIDTypeTest {
     void Tag0954Test() {
         Log954EnuNested3PartySubIDType tagData;
 
-        /**
+        /*
          *  1-32
          */
         tagData = new Log954EnuNested3PartySubIDType(MyEnumPartySubIDType.FIRM);

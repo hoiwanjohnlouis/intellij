@@ -36,7 +36,7 @@ class Tag574EnuMatchTypeTest {
     }
     @Test
     void Tag0574Test() {
-        Log574EnuMatchType tagData;
+        Tag574EnuMatchType tagData;
 
     }
 }

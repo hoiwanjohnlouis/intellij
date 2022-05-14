@@ -80,62 +80,62 @@ class Tag607EnuLegProductTest {
     }
     @Test
     void Tag0607Test() {
-        Log607EnuLegProduct tagData;
+        Tag607EnuLegProduct tagData;
 
-        /**
+        /*
          * 0-13 msg types
          */
-        tagData = new Log607EnuLegProduct(MyEnumProduct.AGENCY);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.AGENCY);
         assertEquals( MyEnumProduct.AGENCY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.COMMODITY);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.COMMODITY);
         assertEquals( MyEnumProduct.COMMODITY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.CORPORATE);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.CORPORATE);
         assertEquals( MyEnumProduct.CORPORATE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.CURRENCY);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.CURRENCY);
         assertEquals( MyEnumProduct.CURRENCY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.EQUITY);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.EQUITY);
         assertEquals( MyEnumProduct.EQUITY.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.GOVERNMENT);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.GOVERNMENT);
         assertEquals( MyEnumProduct.GOVERNMENT.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.INDEX);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.INDEX);
         assertEquals( MyEnumProduct.INDEX.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.LOAN);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.LOAN);
         assertEquals( MyEnumProduct.LOAN.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.MONEY_MARKET);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.MONEY_MARKET);
         assertEquals( MyEnumProduct.MONEY_MARKET.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.MORTGAGE);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.MORTGAGE);
         assertEquals( MyEnumProduct.MORTGAGE.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.MUNICIPAL);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.MUNICIPAL);
         assertEquals( MyEnumProduct.MUNICIPAL.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.OTHER);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.OTHER);
         assertEquals( MyEnumProduct.OTHER.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Log607EnuLegProduct(MyEnumProduct.FINANCING);
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.FINANCING);
         assertEquals( MyEnumProduct.FINANCING.getID(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }

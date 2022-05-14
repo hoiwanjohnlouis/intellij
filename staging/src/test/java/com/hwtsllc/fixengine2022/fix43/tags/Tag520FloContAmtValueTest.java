@@ -36,7 +36,7 @@ class Tag520FloContAmtValueTest {
     }
     @Test
     void Tag0520Test() {
-        Log520FloContAmtValue tagData;
+        Tag520FloContAmtValue tagData;
 
     }
 }

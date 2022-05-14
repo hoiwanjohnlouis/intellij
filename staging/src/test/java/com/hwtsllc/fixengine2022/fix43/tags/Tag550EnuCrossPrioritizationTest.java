@@ -36,7 +36,7 @@ class Tag550EnuCrossPrioritizationTest {
     }
     @Test
     void Tag0550Test() {
-        Log550EnuCrossPrioritization tagData;
+        Tag550EnuCrossPrioritization tagData;
 
     }
 }

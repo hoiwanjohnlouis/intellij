@@ -36,7 +36,7 @@ class Tag559EnuSecurityListRequestTypeTest {
     }
     @Test
     void Tag0559Test() {
-        Log559EnuSecurityListRequestType tagData;
+        Tag559EnuSecurityListRequestType tagData;
 
     }
 }

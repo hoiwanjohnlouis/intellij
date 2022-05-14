@@ -36,7 +36,7 @@ class Tag630SeqHopRefIDTest {
     }
     @Test
     void Tag0630Test() {
-        Log630SeqHopRefID tagData;
+        Tag630SeqHopRefID tagData;
 
     }
 }

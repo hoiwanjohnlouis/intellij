@@ -36,7 +36,7 @@ class Tag549EnuCrossTypeTest {
     }
     @Test
     void Tag0549Test() {
-        Log549EnuCrossType tagData;
+        Tag549EnuCrossType tagData;
 
     }
 }

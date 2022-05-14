@@ -36,7 +36,7 @@ class Tag591EnuPreallocMethodTest {
     }
     @Test
     void Tag0591Test() {
-        Log591EnuPreallocMethod tagData;
+        Tag591EnuPreallocMethod tagData;
 
     }
 }

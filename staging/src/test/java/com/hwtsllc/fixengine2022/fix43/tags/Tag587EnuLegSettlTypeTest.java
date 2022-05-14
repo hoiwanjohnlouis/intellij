@@ -36,7 +36,7 @@ class Tag587EnuLegSettlTypeTest {
     }
     @Test
     void Tag0587Test() {
-        Log587EnuLegSettlType tagData;
+        Tag587EnuLegSettlType tagData;
 
     }
 }

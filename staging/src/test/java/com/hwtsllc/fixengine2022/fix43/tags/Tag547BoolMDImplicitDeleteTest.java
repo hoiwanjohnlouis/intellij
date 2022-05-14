@@ -37,13 +37,13 @@ class Tag547BoolMDImplicitDeleteTest {
     }
     @Test
     void Tag0547Test() {
-        Log547BoolMDImplicitDelete tagData;
+        Tag547BoolMDImplicitDelete tagData;
 
-        tagData = new Log547BoolMDImplicitDelete(MyBooleanType.NO);
+        tagData = new Tag547BoolMDImplicitDelete(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log547BoolMDImplicitDelete(MyBooleanType.YES);
+        tagData = new Tag547BoolMDImplicitDelete(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

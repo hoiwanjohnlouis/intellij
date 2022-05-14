@@ -36,7 +36,7 @@ class Tag632PctBidYieldTest {
     }
     @Test
     void Tag0632Test() {
-        Log632PctBidYield tagData;
+        Tag632PctBidYield tagData;
 
     }
 }

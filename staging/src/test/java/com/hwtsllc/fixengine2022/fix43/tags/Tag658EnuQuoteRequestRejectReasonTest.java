@@ -36,7 +36,7 @@ class Tag658EnuQuoteRequestRejectReasonTest {
     }
     @Test
     void Tag0658Test() {
-        Log658EnuQuoteRequestRejectReason tagData;
+        Tag658EnuQuoteRequestRejectReason tagData;
 
     }
 }

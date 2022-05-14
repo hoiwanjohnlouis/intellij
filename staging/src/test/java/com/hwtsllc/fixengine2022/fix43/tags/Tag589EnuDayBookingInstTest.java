@@ -36,7 +36,7 @@ class Tag589EnuDayBookingInstTest {
     }
     @Test
     void Tag0589Test() {
-        Log589EnuDayBookingInst tagData;
+        Tag589EnuDayBookingInst tagData;
 
     }
 }

@@ -36,7 +36,7 @@ class Tag483UtcTransBkdTimeTest {
     }
     @Test
     void Tag0483Test() {
-        Log483UtcTransBkdTime tagData;
+        Tag483UtcTransBkdTime tagData;
 
     }
 }

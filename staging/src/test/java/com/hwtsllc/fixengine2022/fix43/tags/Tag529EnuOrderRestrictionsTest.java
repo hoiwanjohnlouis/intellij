@@ -36,7 +36,7 @@ class Tag529EnuOrderRestrictionsTest {
     }
     @Test
     void Tag0529Test() {
-        Log529EnuOrderRestrictions tagData;
+        Tag529EnuOrderRestrictions tagData;
 
     }
 }

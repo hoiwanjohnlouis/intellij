@@ -36,7 +36,7 @@ class Tag479CcyCommCurrencyTest {
     }
     @Test
     void Tag0479Test() {
-        Log479CcyCommCurrency tagData;
+        Tag479CcyCommCurrency tagData;
 
     }
 }

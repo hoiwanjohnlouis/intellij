@@ -36,7 +36,7 @@ class Tag580IntNoDatesTest {
     }
     @Test
     void Tag0580Test() {
-        Log580IntNoDates tagData;
+        Tag580IntNoDates tagData;
 
     }
 }

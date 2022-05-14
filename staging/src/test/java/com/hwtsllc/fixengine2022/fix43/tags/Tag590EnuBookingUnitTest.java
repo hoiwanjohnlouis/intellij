@@ -36,7 +36,7 @@ class Tag590EnuBookingUnitTest {
     }
     @Test
     void Tag0590Test() {
-        Log590EnuBookingUnit tagData;
+        Tag590EnuBookingUnit tagData;
 
     }
 }

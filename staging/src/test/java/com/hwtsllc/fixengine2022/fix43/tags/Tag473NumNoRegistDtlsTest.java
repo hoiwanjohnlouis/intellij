@@ -36,7 +36,7 @@ class Tag473NumNoRegistDtlsTest {
     }
     @Test
     void Tag0473Test() {
-        Log473NumNoRegistDtls tagData;
+        Tag473NumNoRegistDtls tagData;
 
     }
 }

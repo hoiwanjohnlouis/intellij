@@ -36,7 +36,7 @@ class Tag497EnuFundRenewWaivTest {
     }
     @Test
     void Tag0497Test() {
-        Log497EnuFundRenewWaiv tagData;
+        Tag497EnuFundRenewWaiv tagData;
 
     }
 }

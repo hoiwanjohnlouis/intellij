@@ -36,7 +36,7 @@ class Tag453NumNoPartyIDsTest {
     }
     @Test
     void Tag0453Test() {
-        Log453NumNoPartyIDs tagData;
+        Tag453NumNoPartyIDs tagData;
 
     }
 }

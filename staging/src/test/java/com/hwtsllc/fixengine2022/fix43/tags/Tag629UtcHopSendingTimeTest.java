@@ -36,7 +36,7 @@ class Tag629UtcHopSendingTimeTest {
     }
     @Test
     void Tag0629Test() {
-        Log629UtcHopSendingTime tagData;
+        Tag629UtcHopSendingTime tagData;
 
     }
 }

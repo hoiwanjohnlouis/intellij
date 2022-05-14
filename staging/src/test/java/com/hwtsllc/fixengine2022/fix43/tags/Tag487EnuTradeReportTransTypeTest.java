@@ -36,7 +36,7 @@ class Tag487EnuTradeReportTransTypeTest {
     }
     @Test
     void Tag0487Test() {
-        Log487EnuTradeReportTransType tagData;
+        Tag487EnuTradeReportTransType tagData;
 
     }
 }

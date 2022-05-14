@@ -36,7 +36,7 @@ class Tag495EnuTaxAdvantageTypeTest {
     }
     @Test
     void Tag0495Test() {
-        Log495EnuTaxAdvantageType tagData;
+        Tag495EnuTaxAdvantageType tagData;
 
     }
 }

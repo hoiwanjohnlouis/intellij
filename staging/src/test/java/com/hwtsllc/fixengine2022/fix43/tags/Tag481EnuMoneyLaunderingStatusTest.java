@@ -36,7 +36,7 @@ class Tag481EnuMoneyLaunderingStatusTest {
     }
     @Test
     void Tag0481Test() {
-        Log481EnuMoneyLaunderingStatus tagData;
+        Tag481EnuMoneyLaunderingStatus tagData;
 
     }
 }

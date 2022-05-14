@@ -36,7 +36,7 @@ class Tag626EnuAllocTypeTest {
     }
     @Test
     void Tag0626Test() {
-        Log626EnuAllocType tagData;
+        Tag626EnuAllocType tagData;
 
     }
 }

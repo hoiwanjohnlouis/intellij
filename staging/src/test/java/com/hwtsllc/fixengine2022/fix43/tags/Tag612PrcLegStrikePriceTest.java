@@ -36,7 +36,7 @@ class Tag612PrcLegStrikePriceTest {
     }
     @Test
     void Tag0612Test() {
-        Log612PrcLegStrikePrice tagData;
+        Tag612PrcLegStrikePrice tagData;
 
     }
 }

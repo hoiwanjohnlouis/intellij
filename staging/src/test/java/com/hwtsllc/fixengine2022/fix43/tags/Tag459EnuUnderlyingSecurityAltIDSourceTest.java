@@ -143,99 +143,99 @@ class Tag459EnuUnderlyingSecurityAltIDSourceTest {
     }
     @Test
     void Tag0459Test() {
-        Log459EnuUnderlyingSecurityAltIDSource tagData;
+        Tag459EnuUnderlyingSecurityAltIDSource tagData;
 
-        /**
+        /*
          * 1-9 Security ID Source
          */
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.CUSIP);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.CUSIP);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.SEDOL);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.SEDOL);
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.QUIK);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.QUIK);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISIN);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISIN);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.RIC);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.RIC);
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISO_CURRENCY_CODE);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISO_CURRENCY_CODE);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISO_COUNTRY_CODE);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISO_COUNTRY_CODE);
         assertEquals( "7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.EXCHANGE_SYMBOL);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.EXCHANGE_SYMBOL);
         assertEquals( "8", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.CTA);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.CTA);
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          * A-L Security ID Source
          */
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.BLOOMBERG);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.BLOOMBERG);
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.WERTPAPIER);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.WERTPAPIER);
         assertEquals( "B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.DUTCH);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.DUTCH);
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.VALOREN);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.VALOREN);
         assertEquals( "D", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.SICOVAM);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.SICOVAM);
         assertEquals( "E", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.BELGIAN);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.BELGIAN);
         assertEquals( "F", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.COMMON);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.COMMON);
         assertEquals( "G", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.CLEARING_HOUSE_OR_ORGANIZATION);
         assertEquals( "H", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISDA_PRODUCT_SPECIFICATION);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISDA_PRODUCT_SPECIFICATION);
         assertEquals( "I", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.OPTION_PRICE_REPORTING_AUTHORITY);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.OPTION_PRICE_REPORTING_AUTHORITY);
         assertEquals( "J", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISDA_PRODUCT_URL);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.ISDA_PRODUCT_URL);
         assertEquals( "K", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.LETTER_OF_CREDIT);
+        tagData = new Tag459EnuUnderlyingSecurityAltIDSource(MyEnumSecurityIDSource.LETTER_OF_CREDIT);
         assertEquals( "L", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

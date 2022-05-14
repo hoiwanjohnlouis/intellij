@@ -36,7 +36,7 @@ class Tag469FloRoundingModulusTest {
     }
     @Test
     void Tag0469Test() {
-        Log469FloRoundingModulus tagData;
+        Tag469FloRoundingModulus tagData;
 
     }
 }

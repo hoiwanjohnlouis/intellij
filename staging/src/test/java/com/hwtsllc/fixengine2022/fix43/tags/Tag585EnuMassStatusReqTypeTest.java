@@ -36,7 +36,7 @@ class Tag585EnuMassStatusReqTypeTest {
     }
     @Test
     void Tag0585Test() {
-        Log585EnuMassStatusReqType tagData;
+        Tag585EnuMassStatusReqType tagData;
 
     }
 }

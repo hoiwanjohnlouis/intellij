@@ -37,7 +37,7 @@ class Tag449UtcdTotalVolumeTradedDateTest {
     }
     @Test
     void Tag0449Test() {
-        Log449UtcdTotalVolumeTradedDate tagData;
+        Tag449UtcdTotalVolumeTradedDate tagData;
 
     }
 }

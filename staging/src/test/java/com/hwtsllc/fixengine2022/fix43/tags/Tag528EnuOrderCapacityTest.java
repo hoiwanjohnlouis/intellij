@@ -36,7 +36,7 @@ class Tag528EnuOrderCapacityTest {
     }
     @Test
     void Tag0528Test() {
-        Log528EnuOrderCapacity tagData;
+        Tag528EnuOrderCapacity tagData;
 
     }
 }

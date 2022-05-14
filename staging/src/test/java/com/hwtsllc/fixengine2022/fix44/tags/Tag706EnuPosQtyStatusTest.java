@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum706PosQtyStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -47,5 +48,16 @@ class Tag706EnuPosQtyStatusTest {
     void Tag0706Test() {
         Log706EnuPosQtyStatus tagData;
 
+        tagData = new Log706EnuPosQtyStatus(Enum706PosQtyStatus.SUBMITTED);
+        assertEquals( Enum706PosQtyStatus.SUBMITTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log706EnuPosQtyStatus(Enum706PosQtyStatus.ACCEPTED);
+        assertEquals( Enum706PosQtyStatus.ACCEPTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log706EnuPosQtyStatus(Enum706PosQtyStatus.REJECTED);
+        assertEquals( Enum706PosQtyStatus.REJECTED.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

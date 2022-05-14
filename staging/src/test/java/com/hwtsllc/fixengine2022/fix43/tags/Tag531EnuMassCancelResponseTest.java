@@ -36,7 +36,7 @@ class Tag531EnuMassCancelResponseTest {
     }
     @Test
     void Tag0531Test() {
-        Log531EnuMassCancelResponse tagData;
+        Tag531EnuMassCancelResponse tagData;
 
     }
 }

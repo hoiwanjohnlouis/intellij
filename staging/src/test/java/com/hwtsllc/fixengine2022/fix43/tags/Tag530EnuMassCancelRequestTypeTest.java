@@ -36,7 +36,7 @@ class Tag530EnuMassCancelRequestTypeTest {
     }
     @Test
     void Tag0530Test() {
-        Log530EnuMassCancelRequestType tagData;
+        Tag530EnuMassCancelRequestType tagData;
 
     }
 }

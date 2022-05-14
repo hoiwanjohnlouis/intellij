@@ -36,7 +36,7 @@ class Tag510NumNoDistribInstsTest {
     }
     @Test
     void Tag0510Test() {
-        Log510NumNoDistribInsts tagData;
+        Tag510NumNoDistribInsts tagData;
 
     }
 }

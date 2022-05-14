@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum712PosMaintAction;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -51,5 +52,20 @@ class Tag712EnuPosMaintActionTest {
     void Tag0712Test() {
         Log712EnuPosMaintAction tagData;
 
+        tagData = new Log712EnuPosMaintAction( Enum712PosMaintAction.NEW );
+        assertEquals( Enum712PosMaintAction.NEW.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log712EnuPosMaintAction( Enum712PosMaintAction.REPLACE );
+        assertEquals( Enum712PosMaintAction.REPLACE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log712EnuPosMaintAction( Enum712PosMaintAction.CANCEL );
+        assertEquals( Enum712PosMaintAction.CANCEL.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log712EnuPosMaintAction( Enum712PosMaintAction.REVERSE );
+        assertEquals( Enum712PosMaintAction.REVERSE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -36,7 +36,7 @@ class Tag569EnuTradeRequestTypeTest {
     }
     @Test
     void Tag0569Test() {
-        Log569EnuTradeRequestType tagData;
+        Tag569EnuTradeRequestType tagData;
 
     }
 }

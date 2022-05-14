@@ -61,7 +61,7 @@ class Tag798EnuAllocAccountTypeTest {
     void Tag0798Test() {
         Log798EnuAllocAccountType tagData;
 
-        /**
+        /*
          *  1-4, types
          */
         tagData = new Log798EnuAllocAccountType(MyEnumAccountType.CUSTOMER_BOOK);
@@ -81,7 +81,7 @@ class Tag798EnuAllocAccountTypeTest {
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          *  6-8, types
          */
         tagData = new Log798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK);

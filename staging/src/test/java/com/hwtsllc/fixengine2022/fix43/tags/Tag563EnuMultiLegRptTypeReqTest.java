@@ -36,7 +36,7 @@ class Tag563EnuMultiLegRptTypeReqTest {
     }
     @Test
     void Tag0563Test() {
-        Log563EnuMultiLegRptTypeReq tagData;
+        Tag563EnuMultiLegRptTypeReq tagData;
 
     }
 }

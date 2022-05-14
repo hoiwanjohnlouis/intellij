@@ -36,7 +36,7 @@ class Tag618LenEncodedLegIssuerLenTest {
     }
     @Test
     void Tag0618Test() {
-        Log618LenEncodedLegIssuerLen tagData;
+        Tag618LenEncodedLegIssuerLen tagData;
 
     }
 }

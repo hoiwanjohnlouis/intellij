@@ -36,7 +36,7 @@ class Tag532EnuMassCancelRejectReasonTest {
     }
     @Test
     void Tag0532Test() {
-        Log532EnuMassCancelRejectReason tagData;
+        Tag532EnuMassCancelRejectReason tagData;
 
     }
 }

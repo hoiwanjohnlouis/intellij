@@ -36,7 +36,7 @@ class Tag641PxoLastForwardPoints2Test {
     }
     @Test
     void Tag0641Test() {
-        Log641PxoLastForwardPoints2 tagData;
+        Tag641PxoLastForwardPoints2 tagData;
 
     }
 }

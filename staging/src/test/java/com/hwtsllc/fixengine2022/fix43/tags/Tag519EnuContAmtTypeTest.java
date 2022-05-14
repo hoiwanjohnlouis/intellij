@@ -35,7 +35,7 @@ class Tag519EnuContAmtTypeTest {
     }
     @Test
     void Tag0519Test() {
-        Log519EnuContAmtType tagData;
+        Tag519EnuContAmtType tagData;
 
     }
 }

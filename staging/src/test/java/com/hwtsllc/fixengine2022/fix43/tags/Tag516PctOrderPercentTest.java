@@ -36,7 +36,7 @@ class Tag516PctOrderPercentTest {
     }
     @Test
     void Tag0516Test() {
-        Log516PctOrderPercent tagData;
+        Tag516PctOrderPercent tagData;
 
     }
 }

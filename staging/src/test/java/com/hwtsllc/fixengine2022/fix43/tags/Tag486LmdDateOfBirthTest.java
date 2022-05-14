@@ -36,7 +36,7 @@ class Tag486LmdDateOfBirthTest {
     }
     @Test
     void Tag0486Test() {
-        Log486LmdDateOfBirth tagData;
+        Tag486LmdDateOfBirth tagData;
 
     }
 }

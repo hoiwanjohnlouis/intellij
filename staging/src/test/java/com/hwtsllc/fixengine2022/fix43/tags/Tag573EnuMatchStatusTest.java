@@ -36,7 +36,7 @@ class Tag573EnuMatchStatusTest {
     }
     @Test
     void Tag0573Test() {
-        Log573EnuMatchStatus tagData;
+        Tag573EnuMatchStatus tagData;
 
     }
 }

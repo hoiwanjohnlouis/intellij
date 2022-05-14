@@ -37,13 +37,13 @@ class Tag636BoolWorkingIndicatorTest {
     }
     @Test
     void Tag0636Test() {
-        Log636BoolWorkingIndicator tagData;
+        Tag636BoolWorkingIndicator tagData;
 
-        tagData = new Log636BoolWorkingIndicator(MyBooleanType.NO);
+        tagData = new Tag636BoolWorkingIndicator(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Log636BoolWorkingIndicator(MyBooleanType.YES);
+        tagData = new Tag636BoolWorkingIndicator(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

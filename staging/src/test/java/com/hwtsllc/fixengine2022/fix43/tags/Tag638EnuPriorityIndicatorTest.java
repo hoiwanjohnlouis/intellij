@@ -36,7 +36,7 @@ class Tag638EnuPriorityIndicatorTest {
     }
     @Test
     void Tag0638Test() {
-        Log638EnuPriorityIndicator tagData;
+        Tag638EnuPriorityIndicator tagData;
 
     }
 }

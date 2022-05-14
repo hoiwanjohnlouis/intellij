@@ -36,7 +36,7 @@ class Tag562QtyMinTradeVolTest {
     }
     @Test
     void Tag0562Test() {
-        Log562QtyMinTradeVol tagData;
+        Tag562QtyMinTradeVol tagData;
 
     }
 }

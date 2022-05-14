@@ -36,7 +36,7 @@ class Tag465EnuQuantityTypeTest {
     }
     @Test
     void Tag0465Test() {
-        Log465EnuQuantityType tagData;
+        Tag465EnuQuantityType tagData;
 
     }
 }

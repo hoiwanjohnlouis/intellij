@@ -36,7 +36,7 @@ class Tag577EnuClearingInstructionTest {
     }
     @Test
     void Tag0577Test() {
-        Log577EnuClearingInstruction tagData;
+        Tag577EnuClearingInstruction tagData;
 
     }
 }

@@ -207,12 +207,12 @@ class Tag951EnuNested3PartyRoleTest {
         Log951EnuNested3PartyRole tagData;
 
 
-        /**
+        /*
          * 1-22, 24-78 msg types
          */
 
 
-        /**
+        /*
          *  1-22, msg types
          */
         tagData = new Log951EnuNested3PartyRole(MyEnumPartyRole.EXECUTING_FIRM);
@@ -309,7 +309,7 @@ class Tag951EnuNested3PartyRoleTest {
 
 
 
-        /**
+        /*
          *  24-78 msg types
          */
         tagData = new Log951EnuNested3PartyRole(MyEnumPartyRole.CUSTOMER_ACCOUNT);

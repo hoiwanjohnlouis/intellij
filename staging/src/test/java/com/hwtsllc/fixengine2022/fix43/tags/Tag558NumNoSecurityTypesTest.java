@@ -36,7 +36,7 @@ class Tag558NumNoSecurityTypesTest {
     }
     @Test
     void Tag0558Test() {
-        Log558NumNoSecurityTypes tagData;
+        Tag558NumNoSecurityTypes tagData;
 
     }
 }

@@ -36,7 +36,7 @@ class Tag566PrcLegPriceTest {
     }
     @Test
     void Tag0566Test() {
-        Log566PrcLegPrice tagData;
+        Tag566PrcLegPrice tagData;
 
     }
 }

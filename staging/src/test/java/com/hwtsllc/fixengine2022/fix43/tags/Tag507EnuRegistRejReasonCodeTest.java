@@ -36,7 +36,7 @@ class Tag507EnuRegistRejReasonCodeTest {
     }
     @Test
     void Tag0507Test() {
-        Log507EnuRegistRejReasonCode tagData;
+        Tag507EnuRegistRejReasonCode tagData;
 
     }
 }

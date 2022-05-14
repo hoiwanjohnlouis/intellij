@@ -36,7 +36,7 @@ class Tag521CcyContAmtCurrTest {
     }
     @Test
     void Tag0521Test() {
-        Log521CcyContAmtCurr tagData;
+        Tag521CcyContAmtCurr tagData;
 
     }
 }

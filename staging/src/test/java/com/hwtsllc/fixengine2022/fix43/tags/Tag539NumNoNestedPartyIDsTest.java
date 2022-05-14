@@ -36,7 +36,7 @@ class Tag539NumNoNestedPartyIDsTest {
     }
     @Test
     void Tag0539Test() {
-        Log539NumNoNestedPartyIDs tagData;
+        Tag539NumNoNestedPartyIDs tagData;
 
     }
 }

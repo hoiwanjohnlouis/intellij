@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum796AllocCancReplaceReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -49,5 +50,16 @@ class Tag796EnuAllocCancReplaceReasonTest {
     void Tag0796Test() {
         Log796EnuAllocCancReplaceReason tagData;
 
+        tagData = new Log796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE);
+        assertEquals( Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER);
+        assertEquals( Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.OTHER);
+        assertEquals( Enum796AllocCancReplaceReason.OTHER.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

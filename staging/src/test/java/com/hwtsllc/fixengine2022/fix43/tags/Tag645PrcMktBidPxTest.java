@@ -36,7 +36,7 @@ class Tag645PrcMktBidPxTest {
     }
     @Test
     void Tag0645Test() {
-        Log645PrcMktBidPx tagData;
+        Tag645PrcMktBidPx tagData;
 
     }
 }

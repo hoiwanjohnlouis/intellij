@@ -36,7 +36,7 @@ class Tag517EnuOwnershipTypeTest {
     }
     @Test
     void Tag0517Test() {
-        Log517EnuOwnershipType tagData;
+        Tag517EnuOwnershipType tagData;
 
     }
 }

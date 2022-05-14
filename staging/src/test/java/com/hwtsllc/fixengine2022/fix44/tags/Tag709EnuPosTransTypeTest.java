@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum709PosTransType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -50,6 +51,28 @@ class Tag709EnuPosTransTypeTest {
     void Tag0709Test() {
         Log709EnuPosTransType tagData;
 
+        tagData = new Log709EnuPosTransType(Enum709PosTransType.EXERCISE);
+        assertEquals( Enum709PosTransType.EXERCISE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        tagData = new Log709EnuPosTransType(Enum709PosTransType.DO_NOT_EXERCISE);
+        assertEquals( Enum709PosTransType.DO_NOT_EXERCISE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log709EnuPosTransType(Enum709PosTransType.POSITION_ADJUSTMENT);
+        assertEquals( Enum709PosTransType.POSITION_ADJUSTMENT.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log709EnuPosTransType(Enum709PosTransType.MARGIN_DISPOSITION);
+        assertEquals( Enum709PosTransType.MARGIN_DISPOSITION.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log709EnuPosTransType(Enum709PosTransType.PLEDGE);
+        assertEquals( Enum709PosTransType.PLEDGE.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Log709EnuPosTransType(Enum709PosTransType.LARGE_TRADER_SUBMISSION);
+        assertEquals( Enum709PosTransType.LARGE_TRADER_SUBMISSION.getID(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

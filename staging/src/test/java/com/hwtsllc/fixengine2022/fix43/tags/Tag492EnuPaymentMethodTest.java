@@ -36,7 +36,7 @@ class Tag492EnuPaymentMethodTest {
     }
     @Test
     void Tag0492Test() {
-        Log492EnuPaymentMethod tagData;
+        Tag492EnuPaymentMethod tagData;
 
     }
 }

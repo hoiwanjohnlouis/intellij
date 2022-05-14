@@ -36,7 +36,7 @@ class Tag533IntTotalAffectedOrdersTest {
     }
     @Test
     void Tag0533Test() {
-        Log533IntTotalAffectedOrders tagData;
+        Tag533IntTotalAffectedOrders tagData;
 
     }
 }
