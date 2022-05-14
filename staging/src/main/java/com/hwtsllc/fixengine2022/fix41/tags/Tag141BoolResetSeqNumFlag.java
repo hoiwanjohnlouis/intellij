@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -31,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      N - No
  *      Y - Yes, reset sequence numbers
  */
-public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValuePairString, LogVerboseString {
+public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyBooleanType dataValue;
 
     public final static MyBooleanType TESTA_BOOL_RESET_SEQ_NUM_FLAG = MyBooleanType.NO ; // N - No
@@ -65,7 +66,14 @@ public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValue
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -83,10 +91,12 @@ public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValue
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag141BoolResetSeqNumFlag(TESTB_BOOL_RESET_SEQ_NUM_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

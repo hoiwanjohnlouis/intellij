@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum163SettlInstTransType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -35,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    R - Replace
  *  <p>    T - Restate
  */
-public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogValuePairString, LogVerboseString {
+public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum163SettlInstTransType dataValue;
 
     public final static Enum163SettlInstTransType TESTA_ENU_SETTL_INST_TRANS_TYPE = Enum163SettlInstTransType.NEW;
@@ -69,7 +70,14 @@ public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogVal
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -87,10 +95,12 @@ public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogVal
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag163EnuSettlInstTransType(TESTB_ENU_SETTL_INST_TRANS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

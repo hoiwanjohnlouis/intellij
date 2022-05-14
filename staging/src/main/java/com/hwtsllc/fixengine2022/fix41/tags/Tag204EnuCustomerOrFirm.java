@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum204CustomerOrFirm;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -37,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    1 - Firm
  */
 // @Deprecated
-public class Tag204EnuCustomerOrFirm extends FIX41Abstract implements LogValuePairString, LogVerboseString {
+public class Tag204EnuCustomerOrFirm extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum204CustomerOrFirm dataValue;
 
     public final static Enum204CustomerOrFirm TESTA_ENU_CUSTOMER_OR_FIRM = Enum204CustomerOrFirm.FIRM;
@@ -71,7 +72,14 @@ public class Tag204EnuCustomerOrFirm extends FIX41Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -89,10 +97,12 @@ public class Tag204EnuCustomerOrFirm extends FIX41Abstract implements LogValuePa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag204EnuCustomerOrFirm(TESTB_ENU_CUSTOMER_OR_FIRM);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

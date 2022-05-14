@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum165SettlInstSource;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -34,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    2 - Institution's Instructions
  *  <p>    3 - Investor (e.g. CIV use)
  */
-public class Tag165EnuSettlInstSource extends FIX41Abstract implements LogValuePairString, LogVerboseString {
+public class Tag165EnuSettlInstSource extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum165SettlInstSource dataValue;
 
     public final static Enum165SettlInstSource TESTA_ENU_SETTL_INST_SOURCE = Enum165SettlInstSource.BROKER_INSTRUCTIONS;
@@ -68,7 +69,14 @@ public class Tag165EnuSettlInstSource extends FIX41Abstract implements LogValueP
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -86,10 +94,12 @@ public class Tag165EnuSettlInstSource extends FIX41Abstract implements LogValueP
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag165EnuSettlInstSource(TESTB_ENU_SETTL_INST_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }
