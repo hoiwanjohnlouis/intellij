@@ -102,10 +102,12 @@ public class Tag1046EnuUnderlyingFXRateCalc extends FIX50Abstract implements Log
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1046EnuUnderlyingFXRateCalc(TESTB_ENU_UNDERLYING_FX_RATE_CALC);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

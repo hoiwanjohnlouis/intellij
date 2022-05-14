@@ -99,10 +99,12 @@ public class Tag1111EnuTriggerOrderType extends FIX50Abstract implements LogValu
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1111EnuTriggerOrderType(TESTB_ENU_TRIGGER_ORDER_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

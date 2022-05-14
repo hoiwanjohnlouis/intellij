@@ -107,10 +107,12 @@ public class Tag1123EnuTradeHandlingInstr extends FIX50Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1123EnuTradeHandlingInstr(TESTB_ENU_TRADE_HANDLING_INSTR);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

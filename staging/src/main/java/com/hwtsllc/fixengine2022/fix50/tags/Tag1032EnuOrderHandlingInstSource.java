@@ -102,10 +102,12 @@ public class Tag1032EnuOrderHandlingInstSource extends FIX50Abstract implements 
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1032EnuOrderHandlingInstSource(TESTB_ENU_ORDER_HANDLING_INST_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -95,10 +95,12 @@ public class Tag992EnuIndividualAllocType extends FIX50Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag992EnuIndividualAllocType(TESTB_ENU_INDIVIDUAL_ALLOC_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

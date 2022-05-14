@@ -115,10 +115,12 @@ public class Tag1000EnuUnderlyingTimeUnit extends FIX50Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1000EnuUnderlyingTimeUnit(TESTB_ENU_UNDERLYING_TIME_UNIT);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

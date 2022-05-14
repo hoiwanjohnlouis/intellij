@@ -98,10 +98,12 @@ public class Tag982EnuExpType extends FIX50Abstract implements LogValuePairStrin
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag982EnuExpType(TESTB_ENU_EXP_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

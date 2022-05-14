@@ -106,10 +106,12 @@ public class Tag1008EnuSideTrdSubTyp extends FIX50Abstract implements LogValuePa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1008EnuSideTrdSubTyp(TESTB_ENU_SIDE_TRD_SUB_TYP);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

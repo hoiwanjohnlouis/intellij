@@ -251,10 +251,12 @@ public class Tag1051EnuInstrumentPartyRole extends FIX50Abstract implements LogV
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1051EnuInstrumentPartyRole(TESTB_ENU_INSTRUMENT_PARTY_ROLE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -102,10 +102,12 @@ public class Tag1034EnuDeskTypeSource extends FIX50Abstract implements LogValueP
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1034EnuDeskTypeSource(TESTB_ENU_DESK_TYPE_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

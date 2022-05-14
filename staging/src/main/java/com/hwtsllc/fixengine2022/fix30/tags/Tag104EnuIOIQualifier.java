@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumQualifier;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -62,7 +63,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    Y - At the Midpoint
  *  <p>    Z - Pre-open
  */
-public class Tag104EnuIOIQualifier extends FIX30Abstract implements LogValuePairString, LogVerboseString {
+public class Tag104EnuIOIQualifier extends FIX30Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumQualifier dataValue;
 
     public final static MyEnumQualifier TESTA_ENU_IOI_QUALIFIER = MyEnumQualifier.ALL_OR_NONE; // fake data
@@ -96,7 +97,14 @@ public class Tag104EnuIOIQualifier extends FIX30Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -114,10 +122,12 @@ public class Tag104EnuIOIQualifier extends FIX30Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag104EnuIOIQualifier(TESTB_ENU_IOI_QUALIFIER);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

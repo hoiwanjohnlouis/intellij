@@ -251,10 +251,12 @@ public class Tag1119EnuRootPartyRole extends FIX50Abstract implements LogValuePa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1119EnuRootPartyRole(TESTB_ENU_ROOT_PARTY_ROLE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

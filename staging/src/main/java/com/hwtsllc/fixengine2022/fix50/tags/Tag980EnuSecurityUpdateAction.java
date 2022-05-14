@@ -95,10 +95,12 @@ public class Tag980EnuSecurityUpdateAction extends FIX50Abstract implements LogV
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag980EnuSecurityUpdateAction(TESTB_ENU_SECURITY_UPDATE_ACTION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

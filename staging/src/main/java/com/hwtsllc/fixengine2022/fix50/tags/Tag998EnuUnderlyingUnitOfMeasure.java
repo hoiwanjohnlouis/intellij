@@ -123,10 +123,12 @@ public class Tag998EnuUnderlyingUnitOfMeasure extends FIX50Abstract implements L
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure(TESTB_ENU_UNDERLYING_UNIT_OF_MEASURE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

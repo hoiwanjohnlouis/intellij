@@ -123,10 +123,12 @@ public class Tag996EnuUnitOfMeasure extends FIX50Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag996EnuUnitOfMeasure(TESTB_ENU_UNIT_OF_MEASURE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

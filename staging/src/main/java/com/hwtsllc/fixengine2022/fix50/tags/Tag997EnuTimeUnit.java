@@ -115,10 +115,12 @@ public class Tag997EnuTimeUnit extends FIX50Abstract implements LogValuePairStri
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag997EnuTimeUnit(TESTB_ENU_TIME_UNIT);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

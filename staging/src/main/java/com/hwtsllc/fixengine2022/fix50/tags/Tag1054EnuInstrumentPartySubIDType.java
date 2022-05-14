@@ -191,10 +191,12 @@ public class Tag1054EnuInstrumentPartySubIDType extends FIX50Abstract implements
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1054EnuInstrumentPartySubIDType(TESTB_ENU_INSTRUMENT_PARTY_SUB_ID_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

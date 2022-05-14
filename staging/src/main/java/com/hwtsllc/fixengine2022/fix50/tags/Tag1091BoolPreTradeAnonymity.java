@@ -98,10 +98,12 @@ public class Tag1091BoolPreTradeAnonymity extends FIX50Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1091BoolPreTradeAnonymity(TESTB_BOOL_PRE_TRADE_ANONYMITY);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

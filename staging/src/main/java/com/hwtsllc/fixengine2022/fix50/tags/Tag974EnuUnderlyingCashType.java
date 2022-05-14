@@ -95,10 +95,12 @@ public class Tag974EnuUnderlyingCashType extends FIX50Abstract implements LogVal
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag974EnuUnderlyingCashType(TESTB_ENU_UNDERLYING_CASH_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

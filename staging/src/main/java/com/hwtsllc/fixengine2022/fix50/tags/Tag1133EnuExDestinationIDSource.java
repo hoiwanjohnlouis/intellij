@@ -98,10 +98,12 @@ public class Tag1133EnuExDestinationIDSource extends FIX50Abstract implements Lo
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1133EnuExDestinationIDSource(TESTB_ENU_EX_DESTINATION_ID_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

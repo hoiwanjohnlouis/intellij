@@ -124,10 +124,12 @@ public class Tag1137EnuDefaultApplVerID extends FIX50Abstract implements LogValu
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1137EnuDefaultApplVerID(TESTB_ENU_DEFAULT_APPL_VER_ID);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

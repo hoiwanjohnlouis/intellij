@@ -191,10 +191,12 @@ public class Tag1122EnuRootPartySubIDType extends FIX50Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1122EnuRootPartySubIDType(TESTB_ENU_ROOT_PARTY_SUB_ID_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

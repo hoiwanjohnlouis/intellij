@@ -189,10 +189,12 @@ public class Tag1096EnuPegSecurityIDSource extends FIX50Abstract implements LogV
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1096EnuPegSecurityIDSource(TESTB_ENU_PEG_SECURITY_ID_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -102,10 +102,12 @@ public class Tag1049EnuInstrmtAssignmentMethod extends FIX50Abstract implements 
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1049EnuInstrmtAssignmentMethod(TESTB_ENU_INSTRMT_ASSIGNMENT_METHOD);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

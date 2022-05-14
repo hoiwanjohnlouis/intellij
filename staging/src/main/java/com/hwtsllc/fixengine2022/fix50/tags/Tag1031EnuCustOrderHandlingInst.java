@@ -135,10 +135,12 @@ public class Tag1031EnuCustOrderHandlingInst extends FIX50Abstract implements Lo
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1031EnuCustOrderHandlingInst(TESTB_ENU_CUST_ORDER_HANDLING_INST);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

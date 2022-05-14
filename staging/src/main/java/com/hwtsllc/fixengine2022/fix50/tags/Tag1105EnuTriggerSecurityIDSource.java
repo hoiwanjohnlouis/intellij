@@ -189,10 +189,12 @@ public class Tag1105EnuTriggerSecurityIDSource extends FIX50Abstract implements 
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1105EnuTriggerSecurityIDSource(TESTB_ENU_TRIGGER_SECURITY_ID_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

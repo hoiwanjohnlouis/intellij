@@ -95,10 +95,12 @@ public class Tag1109EnuTriggerPriceDirection extends FIX50Abstract implements Lo
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1109EnuTriggerPriceDirection(TESTB_ENU_TRIGGER_PRICE_DIRECTION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

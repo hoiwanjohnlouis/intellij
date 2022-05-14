@@ -135,10 +135,12 @@ public class Tag1035EnuDeskOrderHandlingInst extends FIX50Abstract implements Lo
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1035EnuDeskOrderHandlingInst(TESTB_ENU_DESK_ORDER_HANDLING_INST);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -94,10 +94,12 @@ public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValue
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1134BoolReportedPxDiff(TESTB_BOOL_REPORTED_PX_DIFF);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

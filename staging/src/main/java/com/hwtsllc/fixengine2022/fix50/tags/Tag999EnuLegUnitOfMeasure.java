@@ -123,10 +123,12 @@ public class Tag999EnuLegUnitOfMeasure extends FIX50Abstract implements LogValue
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag999EnuLegUnitOfMeasure(TESTB_ENU_LEG_UNIT_OF_MEASURE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

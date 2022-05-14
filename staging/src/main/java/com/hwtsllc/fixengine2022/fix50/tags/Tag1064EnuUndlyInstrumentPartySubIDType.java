@@ -191,10 +191,12 @@ public class Tag1064EnuUndlyInstrumentPartySubIDType extends FIX50Abstract imple
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(TESTB_ENU_UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

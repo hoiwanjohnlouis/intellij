@@ -103,10 +103,12 @@ public class Tag1092EnuPriceProtectionScope extends FIX50Abstract implements Log
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1092EnuPriceProtectionScope(TESTB_ENU_PRICE_PROTECTION_SCOPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

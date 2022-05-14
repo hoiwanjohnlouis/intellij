@@ -107,10 +107,12 @@ public class Tag1124EnuOrigTradeHandlingInstr extends FIX50Abstract implements L
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr(TESTB_ENU_ORIG_TRADE_HANDLING_INSTR);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

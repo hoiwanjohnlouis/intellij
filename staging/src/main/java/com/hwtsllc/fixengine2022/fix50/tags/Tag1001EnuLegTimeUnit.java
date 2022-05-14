@@ -115,10 +115,12 @@ public class Tag1001EnuLegTimeUnit extends FIX50Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1001EnuLegTimeUnit(TESTB_ENU_LEG_TIME_UNIT);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

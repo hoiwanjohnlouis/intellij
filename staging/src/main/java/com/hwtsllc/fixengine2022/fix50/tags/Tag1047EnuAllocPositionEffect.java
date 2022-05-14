@@ -117,10 +117,12 @@ public class Tag1047EnuAllocPositionEffect extends FIX50Abstract implements LogV
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1047EnuAllocPositionEffect(TESTB_ENU_ALLOC_POSITION_EFFECT);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

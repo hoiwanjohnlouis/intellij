@@ -94,10 +94,12 @@ public class Tag1028BoolManualOrderIndicator extends FIX50Abstract implements Lo
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1028BoolManualOrderIndicator(TESTB_BOOL_MANUAL_ORDER_INDICATOR);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

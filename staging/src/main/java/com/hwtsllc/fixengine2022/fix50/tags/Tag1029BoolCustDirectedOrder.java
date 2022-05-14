@@ -99,10 +99,12 @@ public class Tag1029BoolCustDirectedOrder extends FIX50Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1029BoolCustDirectedOrder(TESTB_BOOL_CUST_DIRECTED_ORDER);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

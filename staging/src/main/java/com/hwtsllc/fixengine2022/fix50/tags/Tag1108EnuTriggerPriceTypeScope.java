@@ -103,10 +103,12 @@ public class Tag1108EnuTriggerPriceTypeScope extends FIX50Abstract implements Lo
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1108EnuTriggerPriceTypeScope(TESTB_ENU_TRIGGER_PRICE_TYPE_SCOPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

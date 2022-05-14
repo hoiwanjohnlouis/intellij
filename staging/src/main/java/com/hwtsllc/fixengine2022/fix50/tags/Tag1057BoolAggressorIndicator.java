@@ -95,10 +95,12 @@ public class Tag1057BoolAggressorIndicator extends FIX50Abstract implements LogV
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1057BoolAggressorIndicator(TESTB_BOOL_AGGRESSOR_INDICATOR);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -121,10 +121,12 @@ public class Tag959EnuStrategyParameterType extends FIX50Abstract implements Log
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag959EnuStrategyParameterType(TESTB_ENU_STRATEGY_PARAMETER_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

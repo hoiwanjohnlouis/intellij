@@ -251,10 +251,12 @@ public class Tag1061EnuUndlyInstrumentPartyRole extends FIX50Abstract implements
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1061EnuUndlyInstrumentPartyRole(TESTB_ENU_UNDLY_INSTRUMENT_PARTY_ROLE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

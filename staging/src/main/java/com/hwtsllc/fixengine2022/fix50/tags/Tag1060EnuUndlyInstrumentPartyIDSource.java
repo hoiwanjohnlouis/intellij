@@ -188,10 +188,12 @@ public class Tag1060EnuUndlyInstrumentPartyIDSource extends FIX50Abstract implem
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1060EnuUndlyInstrumentPartyIDSource(TESTB_ENU_UNDLY_INSTRUMENT_PARTY_ID_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

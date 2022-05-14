@@ -188,10 +188,12 @@ public class Tag1050EnuInstrumentPartyIDSource extends FIX50Abstract implements 
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag1050EnuInstrumentPartyIDSource(TESTB_ENU_INSTRUMENT_PARTY_ID_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

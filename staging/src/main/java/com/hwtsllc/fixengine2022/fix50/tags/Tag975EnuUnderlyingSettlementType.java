@@ -96,10 +96,12 @@ public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements 
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag975EnuUnderlyingSettlementType(TESTB_ENU_UNDERLYING_SETTLEMENT_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }
