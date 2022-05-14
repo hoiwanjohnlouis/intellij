@@ -27,9 +27,9 @@ class Tag487EnuTradeReportTransTypeTest {
     @Test
     void FIX0487Test() {
         FIX43 fixData = FIX43.FIX487_ENU_TRADE_REPORT_TRANS_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "487", fixData.getID());
+        assertEquals( "TRADE_REPORT_TRANS_TYPE", fixData.getName());
+        assertEquals( "TradeReportTransType", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

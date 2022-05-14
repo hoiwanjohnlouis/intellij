@@ -29,7 +29,7 @@ class Tag647QtyMinBidSizeTest {
         FIX43 fixData = FIX43.FIX647_QTY_MIN_BID_SIZE;
         assertEquals( "647", fixData.getID());
         assertEquals( "MIN_BID_SIZE", fixData.getName());
-        assertEquals( "FIX647_QTY_MIN_BID_SIZE", fixData.getDescription());
+        assertEquals( "MinBidSize", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

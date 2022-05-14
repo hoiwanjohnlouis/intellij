@@ -27,9 +27,9 @@ class Tag545StrNestedPartySubIDTest {
     @Test
     void FIX0545Test() {
         FIX43 fixData = FIX43.FIX545_STR_NESTED_PARTY_SUB_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "545", fixData.getID());
+        assertEquals( "NESTED_PARTY_SUB_ID", fixData.getName());
+        assertEquals( "NestedPartySubID", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

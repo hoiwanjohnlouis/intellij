@@ -115,7 +115,7 @@ class Enum959StrategyParameterTypeTest {
 
         enumType = Enum959StrategyParameterType.QTY;
         assertEquals( "7", enumType.getID() );
-        assertEquals( "FLOAT", enumType.getName() );
+        assertEquals( "QTY", enumType.getName() );
         assertEquals( "7 - Qty", enumType.getDescription() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

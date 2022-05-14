@@ -27,9 +27,9 @@ class Tag490LmdCardExpDateTest {
     @Test
     void FIX0490Test() {
         FIX43 fixData = FIX43.FIX490_LMD_CARD_EXP_DATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "490", fixData.getID());
+        assertEquals( "CARD_EXP_DATE", fixData.getName());
+        assertEquals( "CardExpDate", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

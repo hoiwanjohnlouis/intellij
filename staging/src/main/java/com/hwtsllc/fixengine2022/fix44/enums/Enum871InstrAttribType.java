@@ -67,9 +67,9 @@ public enum Enum871InstrAttribType implements EnumAccessors, LogVerboseString {
     STEPPED_COUPON( "7", "STEPPED_COUPON", "7 - Stepped coupon" ),
     COUPON_PERIOD( "8", "COUPON_PERIOD", "8 - Coupon period (if not semi-annual). Supply redemption date in the InstrAttribValue (872) field" ),
     WHEN_ISSUED( "9", "WHEN_ISSUED", "9 - When [and if] issued" ),
-    ORIGINAL_ISSUE_DISCOUNT( "10", "", "10 - Original issue discount" ),
+    ORIGINAL_ISSUE_DISCOUNT( "10", "ORIGINAL_ISSUE_DISCOUNT", "10 - Original issue discount" ),
 
-    CALLABLE_PUTTABLE( "11", "ORIGINAL_ISSUE_DISCOUNT", "11 - Callable, puttable" ),
+    CALLABLE_PUTTABLE( "11", "CALLABLE_PUTTABLE", "11 - Callable, puttable" ),
     ESCROWED_TO_MATURITY( "12", "ESCROWED_TO_MATURITY", "12 - Escrowed to Maturity" ),
     ESCROWED_TO_REDEMPTION_DATE( "13", "ESCROWED_TO_REDEMPTION_DATE", "13 - Escrowed to redemption date - callable. Supply redemption date in the InstrAttribValue (872) field" ),
     PRE_REFUNDED( "14", "PRE_REFUNDED", "14 - Pre-refunded" ),

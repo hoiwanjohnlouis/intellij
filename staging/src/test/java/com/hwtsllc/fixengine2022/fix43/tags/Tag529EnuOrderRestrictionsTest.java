@@ -27,9 +27,9 @@ class Tag529EnuOrderRestrictionsTest {
     @Test
     void FIX0529Test() {
         FIX43 fixData = FIX43.FIX529_ENU_ORDER_RESTRICTIONS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "529", fixData.getID());
+        assertEquals( "ORDER_RESTRICTIONS", fixData.getName());
+        assertEquals( "OrderRestrictions", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

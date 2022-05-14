@@ -27,9 +27,9 @@ class Tag477EnuDistribPaymentMethodTest {
     @Test
     void FIX0477Test() {
         FIX43 fixData = FIX43.FIX477_ENU_DISTRIB_PAYMENT_METHOD;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "477", fixData.getID());
+        assertEquals( "DISTRIB_PAYMENT_METHOD", fixData.getName());
+        assertEquals( "DistribPaymentMethod", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

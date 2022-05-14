@@ -29,7 +29,7 @@ class Tag644StrRFQReqIDTest {
         FIX43 fixData = FIX43.FIX644_STR_RFQ_REQ_ID;
         assertEquals( "644", fixData.getID());
         assertEquals( "RFQ_REQ_ID", fixData.getName());
-        assertEquals( "RfqReqID", fixData.getDescription());
+        assertEquals( "RFQReqID", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

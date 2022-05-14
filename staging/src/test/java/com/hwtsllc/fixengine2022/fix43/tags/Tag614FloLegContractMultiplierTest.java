@@ -27,9 +27,9 @@ class Tag614FloLegContractMultiplierTest {
     @Test
     void FIX0614Test() {
         FIX43 fixData = FIX43.FIX614_FLO_LEG_CONTRACT_MULTIPLIER;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "614", fixData.getID());
+        assertEquals( "LEG_CONTRACT_MULTIPLIER", fixData.getName());
+        assertEquals( "LegContractMultiplier", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

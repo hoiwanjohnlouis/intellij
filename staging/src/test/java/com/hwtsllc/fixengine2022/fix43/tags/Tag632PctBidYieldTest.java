@@ -27,9 +27,9 @@ class Tag632PctBidYieldTest {
     @Test
     void FIX0632Test() {
         FIX43 fixData = FIX43.FIX632_PCT_BID_YIELD;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "632", fixData.getID());
+        assertEquals( "BID_YIELD", fixData.getName());
+        assertEquals( "BidYield", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

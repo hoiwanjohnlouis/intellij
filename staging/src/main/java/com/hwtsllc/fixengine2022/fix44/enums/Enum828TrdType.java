@@ -83,23 +83,27 @@ public enum Enum828TrdType implements EnumAccessors, LogVerboseString {
     EFP( "2", "EFP", "2 - EFP (Exchange for physical)" ),
     TRANSFER( "3", "TRANSFER", "3 - Transfer" ),
     LATE_TRADE( "4", "LATE_TRADE", "4 - Late Trade" ),
+
     T_TRADE( "5", "T_TRADE", "5 - T Trade" ),
-    WEIGHTED_AVERAGE_TRADE( "6", "", "6 - Weighted Average Price Trade" ),
+    WEIGHTED_AVERAGE_TRADE( "6", "WEIGHTED_AVERAGE_TRADE", "6 - Weighted Average Price Trade" ),
     BUNCHED_TRADE( "7", "BUNCHED_TRADE", "7 - Bunched Trade" ),
     LATE_BUNCHED_TRADE( "8", "LATE_BUNCHED_TRADE", "8 - Late Bunched Trade" ),
     PRIOR_REFERENCE_TRADE( "9", "PRIOR_REFERENCE_TRADE", "9 - Prior Reference Price Trade" ),
+
     AFTER_HOURS_TRADE( "10", "AFTER_HOURS_TRADE", "10 - After Hours Trade" ),
     EFR( "11", "EFR", "11 - Exchange for Risk (EFR)" ),
-    EFS( "12", "EFS", "12 - Exchange for Swap (EFS )" ),
+    EFS( "12", "EFS", "12 - Exchange for Swap (EFS)" ),
     EFM( "13", "EFM",
             "13 - Exchange of Futures for (in Market) Futures (EFM) (e,g, full sized for mini)" ),
     EOO( "14", "EOO", "14 - Exchange of Options for Options (EOO)" ),
+
     TRADING_AT_SETTLEMENT( "15", "TRADING_AT_SETTLEMENT", "15 - Trading at Settlement" ),
     AON( "16", "AON", "16 - All or None" ),
     FUTURES_LARGE_ORDER_EXECUTION( "17", "FUTURES_LARGE_ORDER_EXECUTION",
             "17 - Futures Large Order Execution" ),
     EFF( "18", "EFF", "18 - Exchange of Futures for Futures (external market) (EFF)" ),
     OPTION_INTERIM_TRADE( "19", "OPTION_INTERIM_TRADE", "19 - Option Interim Trade" ),
+
     OPTION_CABINET_TRADE( "20", "OPTION_CABINET_TRADE", "20 - Option Cabinet Trade" ),
     PRIVATELY_NEGOTIATED_TRADES( "22", "PRIVATELY_NEGOTIATED_TRADES",
             "22 - Privately Negotiated Trades" ),
@@ -114,16 +118,19 @@ public enum Enum828TrdType implements EnumAccessors, LogVerboseString {
     XD( "26", "XD", "26 - Special ex dividend (XD)" ),
     CC( "27", "CC", "27 - Special cum coupon (CC)" ),
     XC( "28", "XC", "28 - Special ex coupon (XC)" ),
+
     CS( "29", "CS", "29 - Cash settlement (CS)" ),
     SP( "30", "SP", "30 - Special price (usually net- or all-in price) (SP)" ),
     GD( "31", "GD", "31 - Guaranteed delivery (GD)" ),
     CR( "32", "CR", "32 - Special cum rights (CR)" ),
     XR( "33", "XR", "33 - Special ex rights (XR)" ),
+
     CP( "34", "CP", "34 - Special cum capital repayments (CP)" ),
     XP( "35", "XP", "35 - Special ex capital repayments (XP)" ),
     CB( "36", "CB", "36 - Special cum bonus (CB)" ),
     XB( "37", "XB", "37 - Special ex bonus (XB)" ),
     LARGE_TRADE( "38", "LARGE_TRADE", "38 - Block trade (same as large trade)" ),
+
     WORKED_PRINCIPAL_TRADE( "39", "WORKED_PRINCIPAL_TRADE",
             "39 - Worked principal trade (UK-specific)" ),
     BLOCK_TRADE_AFTER_MARKET( "40", "BLOCK_TRADE_AFTER_MARKET",
@@ -134,6 +141,7 @@ public enum Enum828TrdType implements EnumAccessors, LogVerboseString {
             "43 - Prorogation buy - Euronext Paris only. " +
                     "Is used to defer settlement under French SRD (deferred settlement system). " +
                     "Trades must be reported_as_crosses_zero_price" ),
+
     PROROGATION_SELL( "44", "PROROGATION_SELL", "44 - Prorogation sell - see prorogation buy" ),
     OPTION_EXERCISE( "45", "OPTION_EXERCISE", "45 - Option exercise" ),
     DELTA_NEUTRAL_TRANSACTION( "46", "DELTA_NEUTRAL_TRANSACTION", "46 - Delta neutral transaction" ),

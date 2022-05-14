@@ -41,7 +41,7 @@ class Tag900TotalNetValueTest {
         FIX44 fixData = FIX44.FIX900_TOTAL_NET_VALUE;
         assertEquals( "900", fixData.getID());
         assertEquals( "TOTAL_NET_VALUE", fixData.getName());
-        assertEquals( "FIX900_TOTAL_NET_VALUE", fixData.getDescription());
+        assertEquals( "TotalNetValue", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

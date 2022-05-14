@@ -27,9 +27,9 @@ class Tag536StrAffectedSecondaryOrderIDTest {
     @Test
     void FIX0536Test() {
         FIX43 fixData = FIX43.FIX536_STR_AFFECTED_SECONDARY_ORDER_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "536", fixData.getID());
+        assertEquals( "AFFECTED_SECONDARY_ORDER_ID", fixData.getName());
+        assertEquals( "AffectedSecondaryOrderID", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,9 +27,9 @@ class Tag469FloRoundingModulusTest {
     @Test
     void FIX0469Test() {
         FIX43 fixData = FIX43.FIX469_FLO_ROUNDING_MODULUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "469", fixData.getID());
+        assertEquals( "ROUNDING_MODULUS", fixData.getName());
+        assertEquals( "RoundingModulus", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

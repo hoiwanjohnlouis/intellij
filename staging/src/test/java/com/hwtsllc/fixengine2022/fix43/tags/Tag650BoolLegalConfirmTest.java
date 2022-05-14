@@ -30,7 +30,7 @@ class Tag650BoolLegalConfirmTest {
         FIX43 fixData = FIX43.FIX650_BOOL_LEGAL_CONFIRM;
         assertEquals( "650", fixData.getID());
         assertEquals( "LEGAL_CONFIRM", fixData.getName());
-        assertEquals( "FIX650_BOOL_LEGAL_CONFIRM", fixData.getDescription());
+        assertEquals( "LegalConfirm", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

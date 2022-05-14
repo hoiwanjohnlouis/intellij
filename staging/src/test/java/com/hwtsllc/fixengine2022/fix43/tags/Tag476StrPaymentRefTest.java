@@ -27,9 +27,9 @@ class Tag476StrPaymentRefTest {
     @Test
     void FIX0476Test() {
         FIX43 fixData = FIX43.FIX476_STR_PAYMENT_REF;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "476", fixData.getID());
+        assertEquals( "PAYMENT_REF", fixData.getName());
+        assertEquals( "PaymentRef", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

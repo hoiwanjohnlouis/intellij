@@ -27,9 +27,9 @@ class Tag588LmdLegSettlDateTest {
     @Test
     void FIX0588Test() {
         FIX43 fixData = FIX43.FIX588_LMD_LEG_SETTL_DATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "588", fixData.getID());
+        assertEquals( "LEG_SETTL_DATE", fixData.getName());
+        assertEquals( "LegSettlDate (formerly named LegFutSettlDate prior to FIX 4.4)", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

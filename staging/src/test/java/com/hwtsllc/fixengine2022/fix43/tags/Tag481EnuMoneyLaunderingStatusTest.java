@@ -27,9 +27,9 @@ class Tag481EnuMoneyLaunderingStatusTest {
     @Test
     void FIX0481Test() {
         FIX43 fixData = FIX43.FIX481_ENU_MONEY_LAUNDERING_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "481", fixData.getID());
+        assertEquals( "MONEY_LAUNDERING_STATUS", fixData.getName());
+        assertEquals( "MoneyLaunderingStatus", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -29,7 +29,7 @@ class Tag655StrContraLegRefIDTest {
         FIX43 fixData = FIX43.FIX655_STR_CONTRA_LEG_REF_ID;
         assertEquals( "655", fixData.getID());
         assertEquals( "CONTRA_LEG_REF_ID", fixData.getName());
-        assertEquals( "FIX655_STR_CONTRA_LEG_REF_ID", fixData.getDescription());
+        assertEquals( "ContraLegRefID", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

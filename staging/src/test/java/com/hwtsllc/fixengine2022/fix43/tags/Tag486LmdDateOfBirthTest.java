@@ -27,9 +27,9 @@ class Tag486LmdDateOfBirthTest {
     @Test
     void FIX0486Test() {
         FIX43 fixData = FIX43.FIX486_LMD_DATE_OF_BIRTH;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "486", fixData.getID());
+        assertEquals( "DATE_OF_BIRTH", fixData.getName());
+        assertEquals( "DateOfBirth", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

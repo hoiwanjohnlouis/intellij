@@ -27,9 +27,9 @@ class Tag474StrMailingDtlsTest {
     @Test
     void FIX0474Test() {
         FIX43 fixData = FIX43.FIX474_STR_MAILING_DTLS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "474", fixData.getID());
+        assertEquals( "MAILING_DTLS", fixData.getName());
+        assertEquals( "MailingDtls", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

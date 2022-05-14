@@ -27,9 +27,9 @@ class Tag506EnuRegistStatusTest {
     @Test
     void FIX0506Test() {
         FIX43 fixData = FIX43.FIX506_ENU_REGIST_STATUS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "506", fixData.getID());
+        assertEquals( "REGIST_STATUS", fixData.getName());
+        assertEquals( "RegistStatus", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

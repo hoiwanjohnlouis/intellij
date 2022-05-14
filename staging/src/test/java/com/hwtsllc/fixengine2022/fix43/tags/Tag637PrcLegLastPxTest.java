@@ -27,9 +27,9 @@ class Tag637PrcLegLastPxTest {
     @Test
     void FIX0637Test() {
         FIX43 fixData = FIX43.FIX637_PRC_LEG_LAST_PX;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "637", fixData.getID());
+        assertEquals( "LEG_LAST_PX", fixData.getName());
+        assertEquals( "LegLastPx", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

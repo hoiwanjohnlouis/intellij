@@ -34,18 +34,18 @@ class Enum591PreallocMethodTest {
          *  0-1 types
          */
         enumType = Enum591PreallocMethod.PRO_RATA;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,PRO_RATA,0 - Pro-rata", enumType.getDescription());
+        assertEquals("0", enumType.getID());
+        assertEquals("PRO_RATA", enumType.getName());
+        assertEquals("0 - Pro-rata", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum591PreallocMethod.DO_NOT_PRO_RATA;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,DO_NOT_PRO_RATA,1 - Do not pro-rata - discuss first", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("DO_NOT_PRO_RATA", enumType.getName());
+        assertEquals("1 - Do not pro-rata - discuss first", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

@@ -27,9 +27,9 @@ class Tag537EnuQuoteTypeTest {
     @Test
     void FIX0537Test() {
         FIX43 fixData = FIX43.FIX537_ENU_QUOTE_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "537", fixData.getID());
+        assertEquals( "QUOTE_TYPE", fixData.getName());
+        assertEquals( "QuoteType", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

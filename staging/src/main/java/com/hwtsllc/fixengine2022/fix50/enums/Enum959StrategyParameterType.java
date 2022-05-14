@@ -78,7 +78,7 @@ public enum Enum959StrategyParameterType implements EnumAccessors, LogVerboseStr
     CURRENCY( "16", "CURRENCY", "16 - Currency" ),
     EXCHANGE( "17", "EXCHANGE", "17 - Exchange" ),
     MONTH_YEAR( "18", "MONTH_YEAR", "18 - Month-Year" ),
-    UTC_TIMESTAMP( "19", "UTC_TIME_STAMP", "19 - UTCTimeStamp" ),
+    UTC_TIMESTAMP( "19", "UTC_TIMESTAMP", "19 - UTCTimeStamp" ),
     UTC_TIME_ONLY( "20", "UTC_TIME_ONLY", "20 - UTCTimeOnly" ),
 
     LOCAL_MKT_TIME( "21", "LOCAL_MKT_TIME", "21 - LocalMktTime" ),

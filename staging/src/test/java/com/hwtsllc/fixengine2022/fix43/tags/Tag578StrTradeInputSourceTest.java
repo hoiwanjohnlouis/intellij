@@ -27,9 +27,9 @@ class Tag578StrTradeInputSourceTest {
     @Test
     void FIX0578Test() {
         FIX43 fixData = FIX43.FIX578_STR_TRADE_INPUT_SOURCE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "578", fixData.getID());
+        assertEquals( "TRADE_INPUT_SOURCE", fixData.getName());
+        assertEquals( "TradeInputSource", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

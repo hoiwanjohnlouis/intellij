@@ -27,9 +27,9 @@ class Tag639PxoPriceImprovementTest {
     @Test
     void FIX0639Test() {
         FIX43 fixData = FIX43.FIX639_PXO_PRICE_IMPROVEMENT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "639", fixData.getID());
+        assertEquals( "PRICE_IMPROVEMENT", fixData.getName());
+        assertEquals( "PriceImprovement", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

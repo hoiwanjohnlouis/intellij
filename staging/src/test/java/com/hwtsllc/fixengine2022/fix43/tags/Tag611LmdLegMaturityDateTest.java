@@ -27,9 +27,9 @@ class Tag611LmdLegMaturityDateTest {
     @Test
     void FIX0611Test() {
         FIX43 fixData = FIX43.FIX611_LMD_LEG_MATURITY_DATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "611", fixData.getID());
+        assertEquals( "LEG_MATURITY_DATE", fixData.getName());
+        assertEquals( "LegMaturityDate", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

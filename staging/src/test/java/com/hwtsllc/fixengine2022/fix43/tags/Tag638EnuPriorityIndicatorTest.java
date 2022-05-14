@@ -27,9 +27,9 @@ class Tag638EnuPriorityIndicatorTest {
     @Test
     void FIX0638Test() {
         FIX43 fixData = FIX43.FIX638_ENU_PRIORITY_INDICATOR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "638", fixData.getID());
+        assertEquals( "PRIORITY_INDICATOR", fixData.getName());
+        assertEquals( "PriorityIndicator", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

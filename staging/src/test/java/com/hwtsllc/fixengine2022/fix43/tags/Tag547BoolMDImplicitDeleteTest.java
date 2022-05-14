@@ -28,9 +28,9 @@ class Tag547BoolMDImplicitDeleteTest {
     @Test
     void FIX0547Test() {
         FIX43 fixData = FIX43.FIX547_BOOL_MD_IMPLICIT_DELETE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "547", fixData.getID());
+        assertEquals( "MD_IMPLICIT_DELETE", fixData.getName());
+        assertEquals( "MDImplicitDelete", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

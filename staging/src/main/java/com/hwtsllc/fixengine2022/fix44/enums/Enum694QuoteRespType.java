@@ -32,12 +32,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      6 - Pass
  */
 public enum Enum694QuoteRespType implements EnumAccessors, LogVerboseString {
-    HIT_OR_LIFT( "1", "", "1 - Hit/Lift" ),
-    COUNTER( "2", "", "2 - Counter" ),
-    EXPIRED( "3", "", "3 - Expired" ),
-    COVER( "4", "", "4 - Cover" ),
-    DONE_AWAY( "5", "", "5 - Done Away" ),
-    PASS( "6", "", "6 - Pass" ),
+    HIT_OR_LIFT( "1", "HIT_OR_LIFT", "1 - Hit/Lift" ),
+    COUNTER( "2", "COUNTER", "2 - Counter" ),
+    EXPIRED( "3", "EXPIRED", "3 - Expired" ),
+    COVER( "4", "COVER", "4 - Cover" ),
+    DONE_AWAY( "5", "DONE_AWAY", "5 - Done Away" ),
+
+    PASS( "6", "PASS", "6 - Pass" ),
     ;
 
     private final String id;

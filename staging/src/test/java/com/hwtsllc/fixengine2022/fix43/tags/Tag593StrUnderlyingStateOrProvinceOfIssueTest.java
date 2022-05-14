@@ -27,9 +27,9 @@ class Tag593StrUnderlyingStateOrProvinceOfIssueTest {
     @Test
     void FIX0593Test() {
         FIX43 fixData = FIX43.FIX593_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "593", fixData.getID());
+        assertEquals( "UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE", fixData.getName());
+        assertEquals( "UnderlyingStateOrProvinceOfIssue", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,9 +27,9 @@ class Tag623FloLegRatioQtyTest {
     @Test
     void FIX0623Test() {
         FIX43 fixData = FIX43.FIX623_FLO_LEG_RATIO_QTY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "623", fixData.getID());
+        assertEquals( "LEG_RATIO_QTY", fixData.getName());
+        assertEquals( "LegRatioQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

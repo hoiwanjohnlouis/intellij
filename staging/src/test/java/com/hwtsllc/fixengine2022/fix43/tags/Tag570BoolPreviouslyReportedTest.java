@@ -27,10 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag570BoolPreviouslyReportedTest {
     @Test
     void FIX0570Test() {
-        FIX43 fixData = FIX43.FIX570_PREVIOUSLY_REPORTED;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        FIX43 fixData = FIX43.FIX570_BOOL_PREVIOUSLY_REPORTED;
+        assertEquals( "570", fixData.getID());
+        assertEquals( "PREVIOUSLY_REPORTED", fixData.getName());
+        assertEquals( "PreviouslyReported", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

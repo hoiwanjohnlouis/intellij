@@ -27,9 +27,9 @@ class Tag504LmdPaymentDateTest {
     @Test
     void FIX0504Test() {
         FIX43 fixData = FIX43.FIX504_LMD_PAYMENT_DATE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "504", fixData.getID());
+        assertEquals( "PAYMENT_DATE", fixData.getName());
+        assertEquals( "PaymentDate", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -27,9 +27,9 @@ class Tag616ExcLegSecurityExchangeTest {
     @Test
     void FIX0616Test() {
         FIX43 fixData = FIX43.FIX616_EXC_LEG_SECURITY_EXCHANGE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "616", fixData.getID());
+        assertEquals( "LEG_SECURITY_EXCHANGE", fixData.getName());
+        assertEquals( "LegSecurityExchange", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

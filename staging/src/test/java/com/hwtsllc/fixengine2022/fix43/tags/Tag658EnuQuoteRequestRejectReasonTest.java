@@ -29,7 +29,7 @@ class Tag658EnuQuoteRequestRejectReasonTest {
         FIX43 fixData = FIX43.FIX658_ENU_QUOTE_REQUEST_REJECT_REASON;
         assertEquals( "658", fixData.getID());
         assertEquals( "QUOTE_REQUEST_REJECT_REASON", fixData.getName());
-        assertEquals( "FIX658_ENU_QUOTE_REQUEST_REJECT_REASON", fixData.getDescription());
+        assertEquals( "QuoteRequestRejectReason", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

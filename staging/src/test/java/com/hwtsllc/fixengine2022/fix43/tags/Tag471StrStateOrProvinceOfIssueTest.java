@@ -27,9 +27,9 @@ class Tag471StrStateOrProvinceOfIssueTest {
     @Test
     void FIX0471Test() {
         FIX43 fixData = FIX43.FIX471_STR_STATE_OR_PROVINCE_OF_ISSUE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "471", fixData.getID());
+        assertEquals( "STATE_OR_PROVINCE_OF_ISSUE", fixData.getName());
+        assertEquals( "StateOrProvinceOfIssue", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

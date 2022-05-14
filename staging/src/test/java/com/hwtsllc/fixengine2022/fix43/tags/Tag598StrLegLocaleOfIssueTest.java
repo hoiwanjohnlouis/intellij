@@ -27,9 +27,9 @@ class Tag598StrLegLocaleOfIssueTest {
     @Test
     void FIX0598Test() {
         FIX43 fixData = FIX43.FIX598_STR_LEG_LOCALE_OF_ISSUE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "598", fixData.getID());
+        assertEquals( "LEG_LOCALE_OF_ISSUE", fixData.getName());
+        assertEquals( "LegLocaleOfIssue", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

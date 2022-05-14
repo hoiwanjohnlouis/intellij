@@ -27,9 +27,9 @@ class Tag468EnuRoundingDirectionTest {
     @Test
     void FIX0468Test() {
         FIX43 fixData = FIX43.FIX468_ENU_ROUNDING_DIRECTION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "468", fixData.getID());
+        assertEquals( "ROUNDING_DIRECTION", fixData.getName());
+        assertEquals( "RoundingDirection", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

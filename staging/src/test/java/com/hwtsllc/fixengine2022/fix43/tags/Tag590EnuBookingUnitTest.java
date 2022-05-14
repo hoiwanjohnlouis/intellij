@@ -27,9 +27,9 @@ class Tag590EnuBookingUnitTest {
     @Test
     void FIX0590Test() {
         FIX43 fixData = FIX43.FIX590_ENU_BOOKING_UNIT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "590", fixData.getID());
+        assertEquals( "BOOKING_UNIT", fixData.getName());
+        assertEquals( "BookingUnit", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

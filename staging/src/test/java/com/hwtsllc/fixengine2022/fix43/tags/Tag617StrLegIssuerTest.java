@@ -27,9 +27,9 @@ class Tag617StrLegIssuerTest {
     @Test
     void FIX0617Test() {
         FIX43 fixData = FIX43.FIX617_STR_LEG_ISSUER;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "617", fixData.getID());
+        assertEquals( "LEG_ISSUER", fixData.getName());
+        assertEquals( "LegIssuer", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

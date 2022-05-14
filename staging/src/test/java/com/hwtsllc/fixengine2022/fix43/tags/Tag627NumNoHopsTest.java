@@ -27,9 +27,9 @@ class Tag627NumNoHopsTest {
     @Test
     void FIX0627Test() {
         FIX43 fixData = FIX43.FIX627_NUM_NO_HOPS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "627", fixData.getID());
+        assertEquals( "NO_HOPS", fixData.getName());
+        assertEquals( "NoHops", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

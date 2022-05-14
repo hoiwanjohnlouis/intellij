@@ -35,7 +35,7 @@ class Tag909CollInquiryIDTest {
         FIX44 fixData = FIX44.FIX909_COLL_INQUIRY_ID;
         assertEquals( "909", fixData.getID());
         assertEquals( "COLL_INQUIRY_ID", fixData.getName());
-        assertEquals( "FIX909_COLL_INQUIRY_ID", fixData.getDescription());
+        assertEquals( "CollInquiryID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

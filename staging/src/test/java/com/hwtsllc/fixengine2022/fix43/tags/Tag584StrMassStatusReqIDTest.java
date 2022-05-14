@@ -27,9 +27,9 @@ class Tag584StrMassStatusReqIDTest {
     @Test
     void FIX0584Test() {
         FIX43 fixData = FIX43.FIX584_STR_MASS_STATUS_REQ_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "584", fixData.getID());
+        assertEquals( "MASS_STATUS_REQ_ID", fixData.getName());
+        assertEquals( "MassStatusReqID", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

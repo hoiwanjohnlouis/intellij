@@ -195,7 +195,7 @@ class Tag538EnuNestedPartyRoleTest {
     @Test
     void FIX0538Test() {
         FIX43 fixData = FIX43.FIX538_ENU_NESTED_PARTY_ROLE;
-        assertEquals( "FIX538", fixData.getID());
+        assertEquals( "538", fixData.getID());
         assertEquals( "NESTED_PARTY_ROLE", fixData.getName());
         assertEquals( "NestedPartyRole", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
@@ -207,12 +207,12 @@ class Tag538EnuNestedPartyRoleTest {
         Log538EnuNestedPartyRole tagData;
 
 
-        /**
+        /*
          * 1-22, 24-78 msg types
          */
 
 
-        /**
+        /*
          *  1-22, msg types
          */
         tagData = new Log538EnuNestedPartyRole(MyEnumPartyRole.EXECUTING_FIRM);
@@ -309,7 +309,7 @@ class Tag538EnuNestedPartyRoleTest {
 
 
 
-        /**
+        /*
          *  24-78 msg types
          */
         tagData = new Log538EnuNestedPartyRole(MyEnumPartyRole.CUSTOMER_ACCOUNT);

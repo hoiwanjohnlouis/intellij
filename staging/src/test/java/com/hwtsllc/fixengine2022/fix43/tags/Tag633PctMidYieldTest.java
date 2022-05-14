@@ -27,9 +27,9 @@ class Tag633PctMidYieldTest {
     @Test
     void FIX0633Test() {
         FIX43 fixData = FIX43.FIX633_PCT_MID_YIELD;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "633", fixData.getID());
+        assertEquals( "MID_YIELD", fixData.getName());
+        assertEquals( "MidYield", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

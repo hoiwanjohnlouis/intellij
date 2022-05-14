@@ -22,29 +22,41 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  773
+ *  ConfirmType
+ *  Identifies the type of Confirmation message being sent.
+ *  Valid values:
+ *      1 - Status
+ *      2 - Confirmation
+ *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+ */
 class Enum773ConfirmTypeTest {
-    /**
-     *  773
-     *  ConfirmType
-     *  Identifies the type of Confirmation message being sent.
-     *  Valid values:
-     *      1 - Status
-     *      2 - Confirmation
-     *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
-     */
     @Test
     void EnumTest() {
         Enum773ConfirmType enumType;
 
         enumType = Enum773ConfirmType.STATUS;
-        assertEquals("", enumType.getDescription());
-        enumType = Enum773ConfirmType.CONFIRMATION;
-        assertEquals("", enumType.getDescription());
-        enumType = Enum773ConfirmType.CONFIRMATION_REJECTED;
-        assertEquals("", enumType.getDescription());
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "STATUS", enumType.getName() );
+        assertEquals( "1 - Status", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
+        enumType = Enum773ConfirmType.CONFIRMATION;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "CONFIRMATION", enumType.getName() );
+        assertEquals( "2 - Confirmation", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum773ConfirmType.CONFIRMATION_REJECTED;
+        assertEquals( "3", enumType.getID() );
+        assertEquals( "CONFIRMATION_REJECTED", enumType.getName() );
+        assertEquals( "3 - Confirmation Request Rejected (reason can be stated in Text (58) field)",
+                enumType.getDescription() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());

@@ -27,9 +27,9 @@ class Tag492EnuPaymentMethodTest {
     @Test
     void FIX0492Test() {
         FIX43 fixData = FIX43.FIX492_ENU_PAYMENT_METHOD;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "492", fixData.getID());
+        assertEquals( "PAYMENT_METHOD", fixData.getName());
+        assertEquals( "PaymentMethod", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

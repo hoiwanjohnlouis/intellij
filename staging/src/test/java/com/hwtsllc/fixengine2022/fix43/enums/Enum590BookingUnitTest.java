@@ -34,27 +34,27 @@ class Enum590BookingUnitTest {
          *  0-2 types
          */
         enumType = Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,PARTIAL_EXECUTION_BOOKABLE,0 - Each partial execution is a bookable unit", enumType.getDescription());
+        assertEquals("0", enumType.getID());
+        assertEquals("PARTIAL_EXECUTION_BOOKABLE", enumType.getName());
+        assertEquals("0 - Each partial execution is a bookable unit", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,AGGREGATE_PARTIAL_EXECUTION,1 - Aggregate partial executions on this order, and book one trade per order", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("AGGREGATE_PARTIAL_EXECUTION", enumType.getName());
+        assertEquals("1 - Aggregate partial executions on this order, and book one trade per order", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum590BookingUnit.AGGREGATE_EXECUTIONS;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,AGGREGATE_EXECUTIONS,2 - Aggregate executions for this symbol, side, and settlement date", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("AGGREGATE_EXECUTIONS", enumType.getName());
+        assertEquals("2 - Aggregate executions for this symbol, side, and settlement date", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

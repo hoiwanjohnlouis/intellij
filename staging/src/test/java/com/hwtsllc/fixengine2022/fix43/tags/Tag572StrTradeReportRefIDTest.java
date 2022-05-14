@@ -27,9 +27,9 @@ class Tag572StrTradeReportRefIDTest {
     @Test
     void FIX0572Test() {
         FIX43 fixData = FIX43.FIX572_STR_TRADE_REPORT_REF_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "572", fixData.getID());
+        assertEquals( "TRADE_REPORT_REF_ID", fixData.getName());
+        assertEquals( "TradeReportRefID", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

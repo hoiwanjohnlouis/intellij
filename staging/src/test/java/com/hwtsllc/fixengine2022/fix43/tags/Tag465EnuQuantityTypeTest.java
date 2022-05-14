@@ -29,7 +29,7 @@ class Tag465EnuQuantityTypeTest {
         FIX43 fixData = FIX43.FIX465_ENU_QUANTITY_TYPE;
         assertEquals( "465", fixData.getID());
         assertEquals( "QUANTITY_TYPE", fixData.getName());
-        assertEquals( "QuantityType", fixData.getDescription());
+        assertEquals( "QuantityType (Deprecated)", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -43,9 +43,13 @@ public enum Enum749TradeRequestResult implements EnumAccessors, LogVerboseString
     INVALID_TRADE_TYPE( "2", "INVALID_TRADE_TYPE", "2 - Invalid type of trade requested" ),
     INVALID_PARTIES( "3", "INVALID_PARTIES", "3 - Invalid parties" ),
     INVALID_TRANSPORT_TYPE( "4", "INVALID_TRANSPORT_TYPE", "4 - Invalid transport type requested" ),
-    INVALID_DESTINATION_REQUESTED( "5", "INVALID_DESTINATION_REQUESTED", "5 - Invalid destination requested" ),
-    TRADE_REQUEST_TYPE_NOT_SUPPORTED( "6", "TRADE_REQUEST_TYPE_NOT_SUPPORTED", "8 - TradeRequestType not supported" ),
-    UNAUTHORIZED_REPORT_REQUEST( "7", "UNAUTHORIZED_REPORT_REQUEST", "9 - Unauthorized For Trade Capture Report Request" ),
+
+    INVALID_DESTINATION_REQUESTED( "5", "INVALID_DESTINATION_REQUESTED",
+            "5 - Invalid destination requested" ),
+    TRADE_REQUEST_TYPE_NOT_SUPPORTED( "8", "TRADE_REQUEST_TYPE_NOT_SUPPORTED",
+            "8 - TradeRequestType not supported" ),
+    UNAUTHORIZED_REPORT_REQUEST( "9", "UNAUTHORIZED_REPORT_REQUEST",
+            "9 - Unauthorized for Trade Capture Report Request" ),
     OTHER( "99", "OTHER", "99 - Other" ),
     ;
 

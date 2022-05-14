@@ -35,7 +35,7 @@ class Tag907CollAsgnRefIDTest {
         FIX44 fixData = FIX44.FIX907_COLL_ASGN_REF_ID;
         assertEquals( "907", fixData.getID());
         assertEquals( "COLL_ASGN_REF_ID", fixData.getName());
-        assertEquals( "FIX907_COLL_ASGN_REF_ID", fixData.getDescription());
+        assertEquals( "CollAsgnRefID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

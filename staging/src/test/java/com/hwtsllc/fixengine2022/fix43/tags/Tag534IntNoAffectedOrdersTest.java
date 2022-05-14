@@ -27,9 +27,9 @@ class Tag534IntNoAffectedOrdersTest {
     @Test
     void FIX0534Test() {
         FIX43 fixData = FIX43.FIX534_INT_NO_AFFECTED_ORDERS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "534", fixData.getID());
+        assertEquals( "NO_AFFECTED_ORDERS", fixData.getName());
+        assertEquals( "NoAffectedOrders", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

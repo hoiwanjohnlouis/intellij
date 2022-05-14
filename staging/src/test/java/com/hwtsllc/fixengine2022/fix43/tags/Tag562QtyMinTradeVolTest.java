@@ -27,9 +27,9 @@ class Tag562QtyMinTradeVolTest {
     @Test
     void FIX0562Test() {
         FIX43 fixData = FIX43.FIX562_QTY_MIN_TRADE_VOL;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "562", fixData.getID());
+        assertEquals( "MIN_TRADE_VOL", fixData.getName());
+        assertEquals( "MinTradeVol", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

@@ -34,36 +34,36 @@ class Enum582CustOrderCapacityTest {
          *  1-4 types
          */
         enumType = Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,MEMBER_TRADING_ACCOUNT,1 - Member trading for their own account", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("MEMBER_TRADING_ACCOUNT", enumType.getName());
+        assertEquals("1 - Member trading for their own account", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,CLEARING_FIRM_PROPRIETARY,2 - Clearing Firm trading for its proprietary account", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("CLEARING_FIRM_PROPRIETARY", enumType.getName());
+        assertEquals("2 - Clearing Firm trading for its proprietary account", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("3,MEMBER_TRADING_FOR_ANOTHER,3 - Member trading for another member", enumType.getDescription());
+        assertEquals("3", enumType.getID());
+        assertEquals("MEMBER_TRADING_FOR_ANOTHER", enumType.getName());
+        assertEquals("3 - Member trading for another member", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum582CustOrderCapacity.ALL_OTHER;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("4,ALL_OTHER,4 - All other", enumType.getDescription());
+        assertEquals("4", enumType.getID());
+        assertEquals("ALL_OTHER", enumType.getName());
+        assertEquals("4 - All other", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

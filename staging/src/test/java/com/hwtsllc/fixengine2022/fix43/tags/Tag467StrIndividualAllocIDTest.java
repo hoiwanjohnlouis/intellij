@@ -27,9 +27,9 @@ class Tag467StrIndividualAllocIDTest {
     @Test
     void FIX0467Test() {
         FIX43 fixData = FIX43.FIX467_STR_INDIVIDUAL_ALLOC_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "467", fixData.getID());
+        assertEquals( "INDIVIDUAL_ALLOC_ID", fixData.getName());
+        assertEquals( "IndividualAllocID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

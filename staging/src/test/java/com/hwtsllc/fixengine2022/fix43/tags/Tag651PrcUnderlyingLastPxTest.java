@@ -29,7 +29,7 @@ class Tag651PrcUnderlyingLastPxTest {
         FIX43 fixData = FIX43.FIX651_PRC_UNDERLYING_LAST_PX;
         assertEquals( "651", fixData.getID());
         assertEquals( "UNDERLYING_LAST_PX", fixData.getName());
-        assertEquals( "FIX651_PRC_UNDERLYING_LAST_PX", fixData.getDescription());
+        assertEquals( "UnderlyingLastPx", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

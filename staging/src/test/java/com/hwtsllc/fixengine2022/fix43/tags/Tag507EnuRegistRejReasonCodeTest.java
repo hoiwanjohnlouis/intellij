@@ -27,9 +27,9 @@ class Tag507EnuRegistRejReasonCodeTest {
     @Test
     void FIX0507Test() {
         FIX43 fixData = FIX43.FIX507_ENU_REGIST_REJ_REASON_CODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "507", fixData.getID());
+        assertEquals( "REGIST_REJ_REASON_CODE", fixData.getName());
+        assertEquals( "RegistRejReasonCode", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

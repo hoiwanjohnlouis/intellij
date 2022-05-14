@@ -27,9 +27,9 @@ class Tag518NumNoContAmtsTest {
     @Test
     void FIX0518Test() {
         FIX43 fixData = FIX43.FIX518_NUM_NO_CONT_AMTS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "518", fixData.getID());
+        assertEquals( "NO_CONT_AMTS", fixData.getName());
+        assertEquals( "NoContAmts", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

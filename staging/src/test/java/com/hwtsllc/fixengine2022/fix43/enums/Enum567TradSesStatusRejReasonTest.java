@@ -38,9 +38,9 @@ class Enum567TradSesStatusRejReasonTest {
          *  1, type(s)
          */
         enumType = Enum567TradSesStatusRejReason.UNKNOWN_TRADING_SESSION_ID;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,UNKNOWN_TRADING_SESSION_ID,1 - Unknown or invalid TradingSessionID", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("UNKNOWN_TRADING_SESSION_ID", enumType.getName());
+        assertEquals("1 - Unknown or invalid TradingSessionID", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -51,9 +51,9 @@ class Enum567TradSesStatusRejReasonTest {
          *  99, type(s)
          */
         enumType = Enum567TradSesStatusRejReason.OTHER;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("99,OTHER,99 - Other", enumType.getDescription());
+        assertEquals("99", enumType.getID());
+        assertEquals("OTHER", enumType.getName());
+        assertEquals("99 - Other", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

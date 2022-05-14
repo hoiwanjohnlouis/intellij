@@ -27,9 +27,9 @@ class Tag625StrTradingSessionSubIDTest {
     @Test
     void FIX0625Test() {
         FIX43 fixData = FIX43.FIX625_STR_TRADING_SESSION_SUB_ID;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "625", fixData.getID());
+        assertEquals( "TRADING_SESSION_SUB_ID", fixData.getName());
+        assertEquals( "TradingSessionSubID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

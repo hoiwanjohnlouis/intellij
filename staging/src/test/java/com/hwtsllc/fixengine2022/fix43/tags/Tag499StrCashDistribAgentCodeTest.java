@@ -27,9 +27,9 @@ class Tag499StrCashDistribAgentCodeTest {
     @Test
     void FIX0499Test() {
         FIX43 fixData = FIX43.FIX499_STR_CASH_DISTRIB_AGENT_CODE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "499", fixData.getID());
+        assertEquals( "CASH_DISTRIB_AGENT_CODE", fixData.getName());
+        assertEquals( "CashDistribAgentCode", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

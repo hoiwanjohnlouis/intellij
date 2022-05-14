@@ -27,9 +27,9 @@ class Tag599StrLegInstrRegistryTest {
     @Test
     void FIX0599Test() {
         FIX43 fixData = FIX43.FIX599_STR_LEG_INSTR_REGISTRY;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "599", fixData.getID());
+        assertEquals( "LEG_INSTR_REGISTRY", fixData.getName());
+        assertEquals( "LegInstrRegistry", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

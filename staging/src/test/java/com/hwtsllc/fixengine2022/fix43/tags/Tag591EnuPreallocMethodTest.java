@@ -27,9 +27,9 @@ class Tag591EnuPreallocMethodTest {
     @Test
     void FIX0591Test() {
         FIX43 fixData = FIX43.FIX591_ENU_PREALLOC_METHOD;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "591", fixData.getID());
+        assertEquals( "PREALLOC_METHOD", fixData.getName());
+        assertEquals( "PreallocMethod", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

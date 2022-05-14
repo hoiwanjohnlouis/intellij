@@ -27,9 +27,9 @@ class Tag561QtyRoundLotTest {
     @Test
     void FIX0561Test() {
         FIX43 fixData = FIX43.FIX561_QTY_ROUND_LOT;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "561", fixData.getID());
+        assertEquals( "ROUND_LOT", fixData.getName());
+        assertEquals( "RoundLot", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

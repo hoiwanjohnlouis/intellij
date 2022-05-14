@@ -27,9 +27,9 @@ class Tag510NumNoDistribInstsTest {
     @Test
     void FIX0510Test() {
         FIX43 fixData = FIX43.FIX510_NUM_NO_DISTRIB_INSTS;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "510", fixData.getID());
+        assertEquals( "NO_DISTRIB_INSTS", fixData.getName());
+        assertEquals( "NoDistribInsts", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

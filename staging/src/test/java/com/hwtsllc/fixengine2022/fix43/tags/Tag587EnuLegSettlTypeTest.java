@@ -27,9 +27,9 @@ class Tag587EnuLegSettlTypeTest {
     @Test
     void FIX0587Test() {
         FIX43 fixData = FIX43.FIX587_ENU_LEG_SETTL_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "587", fixData.getID());
+        assertEquals( "LEG_SETTL_TYPE", fixData.getName());
+        assertEquals( "LegSettlType (formerly named LegSettlmntTyp prior to FIX 4.4)", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

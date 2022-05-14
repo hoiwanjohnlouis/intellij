@@ -27,9 +27,9 @@ class Tag478CcyCashDistribCurrTest {
     @Test
     void FIX0478Test() {
         FIX43 fixData = FIX43.FIX478_CCY_CASH_DISTRIB_CURR;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "478", fixData.getID());
+        assertEquals( "CASH_DISTRIB_CURR", fixData.getName());
+        assertEquals( "CashDistribCurr", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

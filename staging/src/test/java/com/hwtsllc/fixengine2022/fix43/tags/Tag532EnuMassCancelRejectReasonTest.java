@@ -27,9 +27,9 @@ class Tag532EnuMassCancelRejectReasonTest {
     @Test
     void FIX0532Test() {
         FIX43 fixData = FIX43.FIX532_ENU_MASS_CANCEL_REJECT_REASON;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "532", fixData.getID());
+        assertEquals( "MASS_CANCEL_REJECT_REASON", fixData.getName());
+        assertEquals( "MassCancelRejectReason", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

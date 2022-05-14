@@ -34,27 +34,27 @@ class Enum573MatchStatusTest {
          *  0-2 types
          */
         enumType = Enum573MatchStatus.COMPARED_MATCHED_AFFIRMED;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,COMPARED_MATCHED_AFFIRMED,0 - Compared, matched, or affirmed", enumType.getDescription());
+        assertEquals("0", enumType.getID());
+        assertEquals("COMPARED_MATCHED_AFFIRMED", enumType.getName());
+        assertEquals("0 - Compared, matched, or affirmed", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum573MatchStatus.UNCOMPARED_UNMATCHED_UNAFFIRMED;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,UNCOMPARED_UNMATCHED_UNAFFIRMED,1 - Uncompared, unmatched, or unaffirmed", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("UNCOMPARED_UNMATCHED_UNAFFIRMED", enumType.getName());
+        assertEquals("1 - Uncompared, unmatched, or unaffirmed", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum573MatchStatus.ADVISORY;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,ADVISORY,2 - Advisory or alert", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("ADVISORY", enumType.getName());
+        assertEquals("2 - Advisory or alert", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

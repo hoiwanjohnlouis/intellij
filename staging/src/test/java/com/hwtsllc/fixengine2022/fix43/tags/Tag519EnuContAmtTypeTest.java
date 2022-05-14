@@ -26,9 +26,9 @@ class Tag519EnuContAmtTypeTest {
     @Test
     void FIX0519Test() {
         FIX43 fixData = FIX43.FIX519_ENU_CONT_AMT_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "519", fixData.getID());
+        assertEquals( "CONT_AMT_TYPE", fixData.getName());
+        assertEquals( "ContAmtType", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

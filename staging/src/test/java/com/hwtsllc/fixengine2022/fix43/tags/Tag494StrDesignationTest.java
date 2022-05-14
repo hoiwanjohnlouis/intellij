@@ -27,9 +27,9 @@ class Tag494StrDesignationTest {
     @Test
     void FIX0494Test() {
         FIX43 fixData = FIX43.FIX494_STR_DESIGNATION;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "494", fixData.getID());
+        assertEquals( "DESIGNATION", fixData.getName());
+        assertEquals( "Designation", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

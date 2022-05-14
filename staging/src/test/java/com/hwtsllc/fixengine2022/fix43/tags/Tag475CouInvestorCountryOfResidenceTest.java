@@ -27,9 +27,9 @@ class Tag475CouInvestorCountryOfResidenceTest {
     @Test
     void FIX0475Test() {
         FIX43 fixData = FIX43.FIX475_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "475", fixData.getID());
+        assertEquals( "INVESTOR_COUNTRY_OF_RESIDENCE", fixData.getName());
+        assertEquals( "InvestorCountryOfResidence", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

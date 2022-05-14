@@ -27,9 +27,9 @@ class Tag618LenEncodedLegIssuerLenTest {
     @Test
     void FIX0618Test() {
         FIX43 fixData = FIX43.FIX618_LEN_ENCODED_LEG_ISSUER_LEN;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "618", fixData.getID());
+        assertEquals( "ENCODED_LEG_ISSUER_LEN", fixData.getName());
+        assertEquals( "EncodedLegIssuerLen", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

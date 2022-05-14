@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  Information is the same for TAGS 635
+ */
 class Enum635ClearingFeeIndicatorTest {
-    /**
-     *  Information is the same for TAGS 635
-     */
     @Test
     void Enum0635Test() {
         Enum635ClearingFeeIndicator enumType;
@@ -39,8 +39,8 @@ class Enum635ClearingFeeIndicatorTest {
          */
         enumType = Enum635ClearingFeeIndicator.FIRST_YEAR_DELEGATE;
         assertEquals("1", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,FIRST_YEAR_DELEGATE,1 - 1st year delegate trading for own account", enumType.getDescription());
+        assertEquals("FIRST_YEAR_DELEGATE", enumType.getName());
+        assertEquals("1 - 1st year delegate trading for own account", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -48,8 +48,8 @@ class Enum635ClearingFeeIndicatorTest {
 
         enumType = Enum635ClearingFeeIndicator.SECOND_YEAR_DELEGATE;
         assertEquals("2", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,SECOND_YEAR_DELEGATE,2 - 2nd year delegate trading for own account", enumType.getDescription());
+        assertEquals("SECOND_YEAR_DELEGATE", enumType.getName());
+        assertEquals("2 - 2nd year delegate trading for own account", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -57,8 +57,8 @@ class Enum635ClearingFeeIndicatorTest {
 
         enumType = Enum635ClearingFeeIndicator.THIRD_YEAR_DELEGATE;
         assertEquals("3", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("3,THIRD_YEAR_DELEGATE,3 - 3rd year delegate trading for own account", enumType.getDescription());
+        assertEquals("THIRD_YEAR_DELEGATE", enumType.getName());
+        assertEquals("3 - 3rd year delegate trading for own account", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -66,8 +66,8 @@ class Enum635ClearingFeeIndicatorTest {
 
         enumType = Enum635ClearingFeeIndicator.FOURTH_YEAR_DELEGATE;
         assertEquals("4", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("4,FOURTH_YEAR_DELEGATE,4 - 4th year delegate trading for own account", enumType.getDescription());
+        assertEquals("FOURTH_YEAR_DELEGATE", enumType.getName());
+        assertEquals("4 - 4th year delegate trading for own account", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -75,8 +75,8 @@ class Enum635ClearingFeeIndicatorTest {
 
         enumType = Enum635ClearingFeeIndicator.FIFTH_YEAR_DELEGATE;
         assertEquals("5", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("5,FIFTH_YEAR_DELEGATE,5 - 5th year delegate trading for own account", enumType.getDescription());
+        assertEquals("FIFTH_YEAR_DELEGATE", enumType.getName());
+        assertEquals("5 - 5th year delegate trading for own account", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -89,8 +89,8 @@ class Enum635ClearingFeeIndicatorTest {
          */
         enumType = Enum635ClearingFeeIndicator.SIXTH_YEAR_DELEGATE;
         assertEquals("9", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("9,SIXTH_YEAR_DELEGATE,9 - 6th year delegate trading for own account", enumType.getDescription());
+        assertEquals("SIXTH_YEAR_DELEGATE", enumType.getName());
+        assertEquals("9 - 6th year delegate trading for own account", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -103,8 +103,8 @@ class Enum635ClearingFeeIndicatorTest {
          */
         enumType = Enum635ClearingFeeIndicator.CBOE_MEMBER;
         assertEquals("B", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("B,CBOE_MEMBER,B - CBOE Member", enumType.getDescription());
+        assertEquals("CBOE_MEMBER", enumType.getName());
+        assertEquals("B - CBOE Member", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -112,8 +112,8 @@ class Enum635ClearingFeeIndicatorTest {
 
         enumType = Enum635ClearingFeeIndicator.NON_MEMBER_AND_CUSTOMER;
         assertEquals("C", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("C,NON_MEMBER_AND_CUSTOMER,C - Non-member and Customer", enumType.getDescription());
+        assertEquals("NON_MEMBER_AND_CUSTOMER", enumType.getName());
+        assertEquals("C - Non-member and Customer", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -126,8 +126,8 @@ class Enum635ClearingFeeIndicatorTest {
          */
         enumType = Enum635ClearingFeeIndicator.EQUITY_AND_CLEARING_MEMBER;
         assertEquals("E", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("E,EQUITY_AND_CLEARING_MEMBER,E - Equity Member and Clearing Member", enumType.getDescription());
+        assertEquals("EQUITY_AND_CLEARING_MEMBER", enumType.getName());
+        assertEquals("E - Equity Member and Clearing Member", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -135,8 +135,8 @@ class Enum635ClearingFeeIndicatorTest {
 
         enumType = Enum635ClearingFeeIndicator.FULL_AND_ASSOCIATE_AS_FLOOR;
         assertEquals("F", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("F,FULL_AND_ASSOCIATE_AS_FLOOR,F - Full and Associate Member trading for own account and as floor brokers", enumType.getDescription());
+        assertEquals("FULL_AND_ASSOCIATE_AS_FLOOR", enumType.getName());
+        assertEquals("F - Full and Associate Member trading for own account and as floor brokers", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -149,8 +149,8 @@ class Enum635ClearingFeeIndicatorTest {
          */
         enumType = Enum635ClearingFeeIndicator.H_AND_J_FIRMS;
         assertEquals("H", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("H,H_AND_J_FIRMS,H - 106.H and 106.J firms", enumType.getDescription());
+        assertEquals("H_AND_J_FIRMS", enumType.getName());
+        assertEquals("H - 106.H and 106.J firms", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -158,8 +158,8 @@ class Enum635ClearingFeeIndicatorTest {
 
         enumType = Enum635ClearingFeeIndicator.GIM_IDEM_AND_COM;
         assertEquals("I", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("I,GIM_IDEM_AND_COM,I - GIM, IDEM and COM Membership Interest Holders", enumType.getDescription());
+        assertEquals("GIM_IDEM_AND_COM", enumType.getName());
+        assertEquals("I - GIM, IDEM and COM Membership Interest Holders", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -172,8 +172,8 @@ class Enum635ClearingFeeIndicatorTest {
          */
         enumType = Enum635ClearingFeeIndicator.F_EMPLOYEES;
         assertEquals("L", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("L,F_EMPLOYEES,L - Lessee 106.F Employees", enumType.getDescription());
+        assertEquals("F_EMPLOYEES", enumType.getName());
+        assertEquals("L - Lessee 106.F Employees", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
@@ -181,8 +181,8 @@ class Enum635ClearingFeeIndicatorTest {
 
         enumType = Enum635ClearingFeeIndicator.ALL_OTHER;
         assertEquals("M", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("M,ALL_OTHER,M - All other ownership types", enumType.getDescription());
+        assertEquals("ALL_OTHER", enumType.getName());
+        assertEquals("M - All other ownership types", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

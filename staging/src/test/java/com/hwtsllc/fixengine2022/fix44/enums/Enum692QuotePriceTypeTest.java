@@ -78,7 +78,7 @@ class Enum692QuotePriceTypeTest {
 
         enumType = Enum692QuotePriceType.PREMIUM;
         assertEquals("5", enumType.getID());
-        assertEquals("", enumType.getName());
+        assertEquals("PREMIUM", enumType.getName());
         assertEquals("5 - Premium - percentage points over par", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

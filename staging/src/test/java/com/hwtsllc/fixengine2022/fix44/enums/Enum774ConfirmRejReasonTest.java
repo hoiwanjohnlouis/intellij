@@ -22,29 +22,42 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  774
+ *  ConfirmRejReason
+ *  Identifies the reason for rejecting a Confirmation.
+ *  Valid values:
+ *      1 - Mismatched account
+ *      2 - Missing settlement instructions
+ *      99 - Other
+ *
+ *      or any value conforming to the data type Reserved100Plus
+ */
 class Enum774ConfirmRejReasonTest {
-    /**
-     *  774
-     *  ConfirmRejReason
-     *  Identifies the reason for rejecting a Confirmation.
-     *  Valid values:
-     *      1 - Mismatched account
-     *      2 - Missing settlement instructions
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     @Test
     void EnumTest() {
         Enum774ConfirmRejReason enumType;
 
         enumType = Enum774ConfirmRejReason.MISMATCHED_ACCOUNT;
-        enumType = Enum774ConfirmRejReason.MISSING_INSTRUCTIONS;
-        enumType = Enum774ConfirmRejReason.OTHER;
-        assertEquals("", enumType.getDescription());
+        assertEquals( "1", enumType.getID() );
+        assertEquals( "MISMATCHED_ACCOUNT", enumType.getName() );
+        assertEquals( "1 - Mismatched account", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
+        enumType = Enum774ConfirmRejReason.MISSING_INSTRUCTIONS;
+        assertEquals( "2", enumType.getID() );
+        assertEquals( "MISSING_INSTRUCTIONS", enumType.getName() );
+        assertEquals( "2 - Missing settlement instructions", enumType.getDescription() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+
+        enumType = Enum774ConfirmRejReason.OTHER;
+        assertEquals( "99", enumType.getID() );
+        assertEquals( "OTHER", enumType.getName() );
+        assertEquals( "99 - Other", enumType.getDescription() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());

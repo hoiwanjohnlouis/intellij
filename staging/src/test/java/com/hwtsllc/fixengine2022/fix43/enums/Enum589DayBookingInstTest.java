@@ -34,27 +34,27 @@ class Enum589DayBookingInstTest {
          *  0-2 types
          */
         enumType = Enum589DayBookingInst.AUTO_BOOKING;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("0,AUTO_BOOKING,0 - Can trigger booking without reference to the order initiator (auto)", enumType.getDescription());
+        assertEquals("0", enumType.getID());
+        assertEquals("AUTO_BOOKING", enumType.getName());
+        assertEquals("0 - Can trigger booking without reference to the order initiator (auto)", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum589DayBookingInst.VERBAL_BOOKING;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("1,VERBAL_BOOKING,1 - Speak with order initiator before booking (speak first)", enumType.getDescription());
+        assertEquals("1", enumType.getID());
+        assertEquals("VERBAL_BOOKING", enumType.getName());
+        assertEquals("1 - Speak with order initiator before booking (speak first)", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
 
         enumType = Enum589DayBookingInst.ACCUMULATE;
-        assertEquals("", enumType.getID());
-        assertEquals("", enumType.getName());
-        assertEquals("2,ACCUMULATE,2 - Accumulate", enumType.getDescription());
+        assertEquals("2", enumType.getID());
+        assertEquals("ACCUMULATE", enumType.getName());
+        assertEquals("2 - Accumulate", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());

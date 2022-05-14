@@ -27,9 +27,9 @@ class Tag574EnuMatchTypeTest {
     @Test
     void FIX0574Test() {
         FIX43 fixData = FIX43.FIX574_ENU_MATCH_TYPE;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "574", fixData.getID());
+        assertEquals( "MATCH_TYPE", fixData.getName());
+        assertEquals( "MatchType", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());

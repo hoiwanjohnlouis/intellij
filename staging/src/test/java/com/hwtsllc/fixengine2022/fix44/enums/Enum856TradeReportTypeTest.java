@@ -176,7 +176,7 @@ class Enum856TradeReportTypeTest {
         enumType = Enum856TradeReportType.ALLEGED_LOCKED_IN_TRADE_BREAK;
         assertEquals("15", enumType.getID());
         assertEquals("ALLEGED_LOCKED_IN_TRADE_BREAK", enumType.getName());
-        assertEquals("Alleged (Locked-In) Trade Break", enumType.getDescription());
+        assertEquals("15 - Alleged (Locked-In) Trade Break", enumType.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());

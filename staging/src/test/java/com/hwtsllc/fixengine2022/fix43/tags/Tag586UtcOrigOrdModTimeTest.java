@@ -27,9 +27,9 @@ class Tag586UtcOrigOrdModTimeTest {
     @Test
     void FIX0586Test() {
         FIX43 fixData = FIX43.FIX586_UTC_ORIG_ORD_MOD_TIME;
-        assertEquals( "", fixData.getID());
-        assertEquals( "", fixData.getName());
-        assertEquals( "", fixData.getDescription());
+        assertEquals( "586", fixData.getID());
+        assertEquals( "ORIG_ORD_MOD_TIME", fixData.getName());
+        assertEquals( "OrigOrdModTime", fixData.getDescription());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
