@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum975UnderlyingSettlementType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -34,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    4 - T+3
  *  <p>    5 - T+4
  */
-public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum975UnderlyingSettlementType dataValue;
 
     public final static Enum975UnderlyingSettlementType TESTA_ENU_UNDERLYING_SETTLEMENT_TYPE
@@ -70,7 +71,14 @@ public class Tag975EnuUnderlyingSettlementType extends FIX50Abstract implements 
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {

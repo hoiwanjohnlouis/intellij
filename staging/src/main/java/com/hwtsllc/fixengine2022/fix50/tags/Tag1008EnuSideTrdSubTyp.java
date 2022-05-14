@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1008SideTrdSubTyp;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -44,7 +45,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p></p>
  *  <p>    10 - Transaction from Assignment
  */
-public class Tag1008EnuSideTrdSubTyp extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+public class Tag1008EnuSideTrdSubTyp extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum1008SideTrdSubTyp dataValue;
 
     public final static Enum1008SideTrdSubTyp TESTA_ENU_SIDE_TRD_SUB_TYP
@@ -80,7 +81,14 @@ public class Tag1008EnuSideTrdSubTyp extends FIX50Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {

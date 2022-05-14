@@ -69,14 +69,14 @@ public class Tag978BoolLateIndicator extends FIX50Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * wrapper to format a simple Yes string describing the data
+     * wrapper to return the description of the underlying ENUM data
      */
     @Override
     public String toEnumString() {
-        return null;
+        return this.dataValue.getDescription();
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {

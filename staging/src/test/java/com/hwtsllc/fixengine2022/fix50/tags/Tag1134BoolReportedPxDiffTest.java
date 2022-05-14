@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.fix50.enums.Bool1134ReportedPxDiff;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,5 +49,12 @@ class Tag1134BoolReportedPxDiffTest {
     void Tag1134Test() {
         Tag1134BoolReportedPxDiff tagData;
 
+        tagData = new Tag1134BoolReportedPxDiff( Bool1134ReportedPxDiff.NO );
+        assertEquals( Bool1134ReportedPxDiff.NO.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag1134BoolReportedPxDiff( Bool1134ReportedPxDiff.YES );
+        assertEquals( Bool1134ReportedPxDiff.YES.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

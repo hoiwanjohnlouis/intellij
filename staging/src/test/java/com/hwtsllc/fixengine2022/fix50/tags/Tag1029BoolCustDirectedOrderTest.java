@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.fix50.enums.Bool1029CustDirectedOrder;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -53,5 +54,12 @@ class Tag1029BoolCustDirectedOrderTest {
     void Tag1029Test() {
         Tag1029BoolCustDirectedOrder tagData;
 
+        tagData = new Tag1029BoolCustDirectedOrder( Bool1029CustDirectedOrder.NO );
+        assertEquals( Bool1029CustDirectedOrder.NO.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag1029BoolCustDirectedOrder( Bool1029CustDirectedOrder.YES );
+        assertEquals( Bool1029CustDirectedOrder.YES.getID(), tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

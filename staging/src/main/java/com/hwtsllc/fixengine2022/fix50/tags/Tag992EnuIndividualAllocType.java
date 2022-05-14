@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum992IndividualAllocType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    1 - Sub Allocate
  *  <p>    2 - Third Party Allocation
  */
-public class Tag992EnuIndividualAllocType extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+public class Tag992EnuIndividualAllocType extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum992IndividualAllocType dataValue;
 
     public final static Enum992IndividualAllocType TESTA_ENU_INDIVIDUAL_ALLOC_TYPE
@@ -69,7 +70,14 @@ public class Tag992EnuIndividualAllocType extends FIX50Abstract implements LogVa
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {

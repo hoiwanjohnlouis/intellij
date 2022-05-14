@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.ENum980SecurityUpdateAction;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    D - Delete
  *  <p>    M - Modify
  */
-public class Tag980EnuSecurityUpdateAction extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+public class Tag980EnuSecurityUpdateAction extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final ENum980SecurityUpdateAction dataValue;
 
     public final static ENum980SecurityUpdateAction TESTA_ENU_SECURITY_UPDATE_ACTION
@@ -69,7 +70,14 @@ public class Tag980EnuSecurityUpdateAction extends FIX50Abstract implements LogV
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {

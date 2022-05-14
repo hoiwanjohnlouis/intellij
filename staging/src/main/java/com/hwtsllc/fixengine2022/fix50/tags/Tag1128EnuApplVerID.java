@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.*;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -60,7 +61,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    6 - FIX44
  *  <p>    7 - FIX50
  */
-public class Tag1128EnuApplVerID extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+public class Tag1128EnuApplVerID extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumApplVerID dataValue;
 
     public final static MyEnumApplVerID TESTA_ENU_APPL_VER_ID
@@ -96,7 +97,14 @@ public class Tag1128EnuApplVerID extends FIX50Abstract implements LogValuePairSt
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
