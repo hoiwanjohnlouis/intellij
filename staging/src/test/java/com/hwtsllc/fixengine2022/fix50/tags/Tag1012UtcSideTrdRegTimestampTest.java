@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -35,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Use to store time information required by government regulators
  *  or self regulatory organizations such as an exchange or clearing house
  */
-class Tag1012SideTrdRegTimestampTest {
+class Tag1012UtcSideTrdRegTimestampTest {
     @Test
     void FIX1012Test() {
-        FIX50 fixData = FIX50.FIX1012_SIDE_TRD_REG_TIMESTAMP;
+        FIX50 fixData = FIX50.FIX1012_UTC_SIDE_TRD_REG_TIMESTAMP;
         assertEquals( "1012", fixData.getID());
         assertEquals( "SIDE_TRD_REG_TIMESTAMP", fixData.getName());
         assertEquals( "SideTrdRegTimestamp", fixData.getDescription());
@@ -48,7 +49,16 @@ class Tag1012SideTrdRegTimestampTest {
     }
     @Test
     void Tag1012Test() {
-        Tag1012SideTrdRegTimestamp tagData;
+        Tag1012UtcSideTrdRegTimestamp tagData;
 
+        tagData = new Tag1012UtcSideTrdRegTimestamp(
+                new MyUTCTimestampType( Tag1012UtcSideTrdRegTimestamp.TESTA_UTC_SIDE_TRD_REG_TIMESTAMP ));
+        assertEquals( Tag1012UtcSideTrdRegTimestamp.TESTA_UTC_SIDE_TRD_REG_TIMESTAMP, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag1012UtcSideTrdRegTimestamp(
+                new MyUTCTimestampType( Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP ));
+        assertEquals( Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

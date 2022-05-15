@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -35,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  SideTimeInForce will override TimeInForce if both are provided.
  */
-class Tag962SideTimeInForceTest {
+class Tag962UtcSideTimeInForceTest {
     @Test
     void FIX0962Test() {
-        FIX50 fixData = FIX50.FIX962_SIDE_TIME_IN_FORCE;
+        FIX50 fixData = FIX50.FIX962_UTC_SIDE_TIME_IN_FORCE;
         assertEquals( "962", fixData.getID());
         assertEquals( "SIDE_TIME_IN_FORCE", fixData.getName());
         assertEquals( "SideTimeInForce", fixData.getDescription());
@@ -48,7 +49,16 @@ class Tag962SideTimeInForceTest {
     }
     @Test
     void Tag0962Test() {
-        Tag962SideTimeInForce tagData;
+        Tag962UtcSideTimeInForce tagData;
 
+        tagData = new Tag962UtcSideTimeInForce(
+                        new MyUTCTimestampType( Tag962UtcSideTimeInForce.TESTA_UTC_SIDE_TIME_IN_FORCE ));
+        assertEquals( Tag962UtcSideTimeInForce.TESTA_UTC_SIDE_TIME_IN_FORCE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag962UtcSideTimeInForce(
+                        new MyUTCTimestampType( Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE ));
+        assertEquals( Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }
