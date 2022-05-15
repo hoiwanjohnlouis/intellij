@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,26 +25,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1013
- *  SideTrdRegTimestampType
+ *  971
+ *  NTPositionLimit
  *  int
  *  <p>
- *  Same as TrdRegTimeStampType
+ *  Position Limit in the near-term contract for a given exchange-traded product.
  */
-class Tag1013SideTrdRegTimestampTypeTest {
+class Tag971IntNTPositionLimitTest {
     @Test
-    void FIX1013Test() {
-        FIX50 fixData = FIX50.FIX1013_SIDE_TRD_REG_TIMESTAMP_TYPE;
-        assertEquals( "1013", fixData.getID());
-        assertEquals( "SIDE_TRD_REG_TIMESTAMP_TYPE", fixData.getName());
-        assertEquals( "SideTrdRegTimestampType", fixData.getDescription());
+    void FIX0971Test() {
+        FIX50 fixData = FIX50.FIX971_INT_NT_POSITION_LIMIT;
+        assertEquals( "971", fixData.getID());
+        assertEquals( "NT_POSITION_LIMIT", fixData.getName());
+        assertEquals( "NTPositionLimit", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag1013Test() {
-        Tag1013SideTrdRegTimestampType tagData;
+    void Tag0971Test() {
+        Tag971IntNTPositionLimit tagData;
 
+        tagData = new Tag971IntNTPositionLimit(
+                new MyIntType( Tag971IntNTPositionLimit.TESTA_INT_NT_POSITION_LIMIT ));
+        assertEquals( Tag971IntNTPositionLimit.TESTA_INT_NT_POSITION_LIMIT,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag971IntNTPositionLimit(
+                new MyIntType( Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT ));
+        assertEquals( Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

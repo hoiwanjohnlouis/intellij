@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,26 +25,39 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1009
- *  SideQty
+ *  964
+ *  SecurityReportID
  *  int
  *  <p>
- *  Used to indicate the quantity on one of a multi-sided Trade Capture Report
+ *  Security Report ID.
+ *  <p>
+ *  Unique identifier for the Security Report.
  */
-class Tag1009SideQtyTest {
+class Tag964IntSecurityReportIDTest {
     @Test
-    void FIX1009Test() {
-        FIX50 fixData = FIX50.FIX1009_SIDE_QTY;
-        assertEquals( "1009", fixData.getID());
-        assertEquals( "SIDE_QTY", fixData.getName());
-        assertEquals( "SideQty", fixData.getDescription());
+    void FIX0964Test() {
+        FIX50 fixData = FIX50.FIX964_INT_SECURITY_REPORT_ID;
+        assertEquals( "964", fixData.getID());
+        assertEquals( "SECURITY_REPORT_ID", fixData.getName());
+        assertEquals( "SecurityReportID", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag1009Test() {
-        Tag1009SideQty tagData;
+    void Tag0964Test() {
+        Tag964IntSecurityReportID tagData;
 
+        tagData = new Tag964IntSecurityReportID(
+                new MyIntType( Tag964IntSecurityReportID.TESTA_INT_SECURITY_REPORT_ID ));
+        assertEquals( Tag964IntSecurityReportID.TESTA_INT_SECURITY_REPORT_ID,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag964IntSecurityReportID(
+                new MyIntType( Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID ));
+        assertEquals( Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

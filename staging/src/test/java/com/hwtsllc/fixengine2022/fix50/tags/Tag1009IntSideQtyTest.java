@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,26 +25,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  970
- *  PositionLimit
+ *  1009
+ *  SideQty
  *  int
  *  <p>
- *  Position Limit for a given exchange-traded product.
+ *  Used to indicate the quantity on one of a multi-sided Trade Capture Report
  */
-class Tag970PositionLimitTest {
+class Tag1009IntSideQtyTest {
     @Test
-    void FIX0970Test() {
-        FIX50 fixData = FIX50.FIX970_POSITION_LIMIT;
-        assertEquals( "970", fixData.getID());
-        assertEquals( "POSITION_LIMIT", fixData.getName());
-        assertEquals( "PositionLimit", fixData.getDescription());
+    void FIX1009Test() {
+        FIX50 fixData = FIX50.FIX1009_INT_SIDE_QTY;
+        assertEquals( "1009", fixData.getID());
+        assertEquals( "SIDE_QTY", fixData.getName());
+        assertEquals( "SideQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0970Test() {
-        Tag970PositionLimit tagData;
+    void Tag1009Test() {
+        Tag1009IntSideQty tagData;
 
+        tagData = new Tag1009IntSideQty(
+                new MyIntType( Tag1009IntSideQty.TESTA_INT_SIDE_QTY ));
+        assertEquals( Tag1009IntSideQty.TESTA_INT_SIDE_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1009IntSideQty(
+                new MyIntType( Tag1009IntSideQty.TESTB_INT_SIDE_QTY ));
+        assertEquals( Tag1009IntSideQty.TESTB_INT_SIDE_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }

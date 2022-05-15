@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,10 +34,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  This is in contrast to MDEntryPositionNo which is used to
  *  convey the position of an order within a Price level
  */
-class Tag1023MDPriceLevelTest {
+class Tag1023IntMDPriceLevelTest {
     @Test
     void FIX1023Test() {
-        FIX50 fixData = FIX50.FIX1023_MD_PRICE_LEVEL;
+        FIX50 fixData = FIX50.FIX1023_INT_MD_PRICE_LEVEL;
         assertEquals( "1023", fixData.getID());
         assertEquals( "MD_PRICE_LEVEL", fixData.getName());
         assertEquals( "MDPriceLevel", fixData.getDescription());
@@ -46,7 +47,18 @@ class Tag1023MDPriceLevelTest {
     }
     @Test
     void Tag1023Test() {
-        Tag1023MDPriceLevel tagData;
+        Tag1023IntMDPriceLevel tagData;
 
+        tagData = new Tag1023IntMDPriceLevel(
+                new MyIntType( Tag1023IntMDPriceLevel.TESTA_INT_MD_PRICE_LEVEL ));
+        assertEquals( Tag1023IntMDPriceLevel.TESTA_INT_MD_PRICE_LEVEL,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1023IntMDPriceLevel(
+                new MyIntType( Tag1023IntMDPriceLevel.TESTB_INT_MD_PRICE_LEVEL ));
+        assertEquals( Tag1023IntMDPriceLevel.TESTB_INT_MD_PRICE_LEVEL,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 }
