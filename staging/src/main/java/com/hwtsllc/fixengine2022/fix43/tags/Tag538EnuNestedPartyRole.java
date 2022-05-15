@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyRole;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -189,7 +190,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    77 - Market data market
  *  <p>    78 - Allocation Entity
  */
-public class Tag538EnuNestedPartyRole extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag538EnuNestedPartyRole extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumPartyRole dataValue;
 
     public final static MyEnumPartyRole TESTA_ENU_NESTED_PARTY_ROLE
@@ -225,7 +226,14 @@ public class Tag538EnuNestedPartyRole extends FIX43Abstract implements LogValueP
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -243,10 +251,12 @@ public class Tag538EnuNestedPartyRole extends FIX43Abstract implements LogValueP
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag538EnuNestedPartyRole(TESTB_ENU_NESTED_PARTY_ROLE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

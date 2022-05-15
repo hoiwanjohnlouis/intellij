@@ -19,15 +19,18 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag547BoolMDImplicitDelete extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag547BoolMDImplicitDelete extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyBooleanType dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_MD_IMPLICIT_DELETE = MyBooleanType.NO ;
+    public final static MyBooleanType TESTA_BOOL_MD_IMPLICIT_DELETE
+            = MyBooleanType.NO ;
     // N - Server must send an explicit delete for bids or offers falling outside the requested MarketDepth of the request
-    public final static MyBooleanType TESTB_BOOL_MD_IMPLICIT_DELETE = MyBooleanType.YES;
+    public final static MyBooleanType TESTB_BOOL_MD_IMPLICIT_DELETE
+            = MyBooleanType.YES;
     // Y - Client has responsibility for implicitly deleting bids or offers falling outside the MarketDepth of the request
 
     public Tag547BoolMDImplicitDelete(MyBooleanType dataValue) {
@@ -58,7 +61,14 @@ public class Tag547BoolMDImplicitDelete extends FIX43Abstract implements LogValu
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -76,10 +86,12 @@ public class Tag547BoolMDImplicitDelete extends FIX43Abstract implements LogValu
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag547BoolMDImplicitDelete(TESTB_BOOL_MD_IMPLICIT_DELETE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum514RegistTransType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag514EnuRegistTransType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag514EnuRegistTransType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum514RegistTransType dataValue;
 
-    public final static Enum514RegistTransType TESTA_ENU_REGIST_TRANS_TYPE = Enum514RegistTransType.CANCEL;
-    public final static Enum514RegistTransType TESTB_ENU_REGIST_TRANS_TYPE = Enum514RegistTransType.NEW;
+    public final static Enum514RegistTransType TESTA_ENU_REGIST_TRANS_TYPE
+            = Enum514RegistTransType.CANCEL;
+    public final static Enum514RegistTransType TESTB_ENU_REGIST_TRANS_TYPE
+            = Enum514RegistTransType.NEW;
 
     public Tag514EnuRegistTransType(Enum514RegistTransType dataValue) {
         setFixType(FIX43.FIX514_ENU_REGIST_TRANS_TYPE);
@@ -56,7 +59,14 @@ public class Tag514EnuRegistTransType extends FIX43Abstract implements LogValueP
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag514EnuRegistTransType extends FIX43Abstract implements LogValueP
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag514EnuRegistTransType(TESTB_ENU_REGIST_TRANS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

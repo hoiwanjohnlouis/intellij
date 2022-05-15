@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum506RegistStatus;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag506EnuRegistStatus extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag506EnuRegistStatus extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum506RegistStatus dataValue;
 
-    public final static Enum506RegistStatus TESTA_ENU_REGIST_STATUS = Enum506RegistStatus.ACCEPTED;
-    public final static Enum506RegistStatus TESTB_ENU_REGIST_STATUS = Enum506RegistStatus.REMINDER;
+    public final static Enum506RegistStatus TESTA_ENU_REGIST_STATUS
+            = Enum506RegistStatus.ACCEPTED;
+    public final static Enum506RegistStatus TESTB_ENU_REGIST_STATUS
+            = Enum506RegistStatus.REMINDER;
 
     public Tag506EnuRegistStatus(Enum506RegistStatus dataValue) {
         setFixType(FIX43.FIX506_ENU_REGIST_STATUS);
@@ -56,7 +59,14 @@ public class Tag506EnuRegistStatus extends FIX43Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag506EnuRegistStatus extends FIX43Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag506EnuRegistStatus(TESTB_ENU_REGIST_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

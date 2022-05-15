@@ -19,15 +19,18 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum465QuantityType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 // @Deprecated
-public class Tag465EnuQuantityType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag465EnuQuantityType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum465QuantityType dataValue;
 
-    public final static Enum465QuantityType TESTA_ENU_QUANTITY_TYPE = Enum465QuantityType.BONDS;
-    public final static Enum465QuantityType TESTB_ENU_QUANTITY_TYPE = Enum465QuantityType.PAR;
+    public final static Enum465QuantityType TESTA_ENU_QUANTITY_TYPE
+            = Enum465QuantityType.BONDS;
+    public final static Enum465QuantityType TESTB_ENU_QUANTITY_TYPE
+            = Enum465QuantityType.PAR;
 
     public Tag465EnuQuantityType(Enum465QuantityType dataValue) {
         setFixType(FIX43.FIX465_ENU_QUANTITY_TYPE);
@@ -57,7 +60,14 @@ public class Tag465EnuQuantityType extends FIX43Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -75,10 +85,12 @@ public class Tag465EnuQuantityType extends FIX43Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag465EnuQuantityType(TESTB_ENU_QUANTITY_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

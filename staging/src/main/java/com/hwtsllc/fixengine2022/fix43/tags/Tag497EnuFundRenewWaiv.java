@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum497FundRenewWaiv;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag497EnuFundRenewWaiv extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag497EnuFundRenewWaiv extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum497FundRenewWaiv dataValue;
 
-    public final static Enum497FundRenewWaiv TESTA_ENU_FUND_RENEW_WAIV = Enum497FundRenewWaiv.NO;
-    public final static Enum497FundRenewWaiv TESTB_ENU_FUND_RENEW_WAIV = Enum497FundRenewWaiv.YES;
+    public final static Enum497FundRenewWaiv TESTA_ENU_FUND_RENEW_WAIV
+            = Enum497FundRenewWaiv.NO;
+    public final static Enum497FundRenewWaiv TESTB_ENU_FUND_RENEW_WAIV
+            = Enum497FundRenewWaiv.YES;
 
     public Tag497EnuFundRenewWaiv(Enum497FundRenewWaiv dataValue) {
         setFixType(FIX43.FIX497_ENU_FUND_RENEW_WAIV);
@@ -56,7 +59,14 @@ public class Tag497EnuFundRenewWaiv extends FIX43Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag497EnuFundRenewWaiv extends FIX43Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag497EnuFundRenewWaiv(TESTB_ENU_FUND_RENEW_WAIV);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

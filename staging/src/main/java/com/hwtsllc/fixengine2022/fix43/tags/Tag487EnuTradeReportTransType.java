@@ -19,10 +19,11 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum487TradeReportTransType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag487EnuTradeReportTransType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag487EnuTradeReportTransType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum487TradeReportTransType dataValue;
 
     public final static Enum487TradeReportTransType TESTA_ENU_TRADE_REPORT_TRANS_TYPE
@@ -58,7 +59,14 @@ public class Tag487EnuTradeReportTransType extends FIX43Abstract implements LogV
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -76,10 +84,12 @@ public class Tag487EnuTradeReportTransType extends FIX43Abstract implements LogV
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag487EnuTradeReportTransType(TESTB_ENU_TRADE_REPORT_TRANS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

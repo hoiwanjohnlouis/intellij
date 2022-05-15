@@ -19,15 +19,18 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag650BoolLegalConfirm extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag650BoolLegalConfirm extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyBooleanType dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_LEGAL_CONFIRM = MyBooleanType.NO ;
+    public final static MyBooleanType TESTA_BOOL_LEGAL_CONFIRM
+            = MyBooleanType.NO ;
     // N - Does not constitute a Legal Confirm
-    public final static MyBooleanType TESTB_BOOL_LEGAL_CONFIRM = MyBooleanType.YES;
+    public final static MyBooleanType TESTB_BOOL_LEGAL_CONFIRM
+            = MyBooleanType.YES;
     // Y - Legal Confirm
 
     public Tag650BoolLegalConfirm(MyBooleanType dataValue) {
@@ -58,7 +61,14 @@ public class Tag650BoolLegalConfirm extends FIX43Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -76,10 +86,12 @@ public class Tag650BoolLegalConfirm extends FIX43Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag650BoolLegalConfirm(TESTB_BOOL_LEGAL_CONFIRM);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

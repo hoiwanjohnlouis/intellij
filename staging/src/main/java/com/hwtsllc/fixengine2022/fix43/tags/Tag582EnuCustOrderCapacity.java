@@ -19,10 +19,11 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum582CustOrderCapacity;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag582EnuCustOrderCapacity extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag582EnuCustOrderCapacity extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum582CustOrderCapacity dataValue;
 
     public final static Enum582CustOrderCapacity TESTA_ENU_CUST_ORDER_CAPACITY
@@ -58,7 +59,14 @@ public class Tag582EnuCustOrderCapacity extends FIX43Abstract implements LogValu
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -76,10 +84,12 @@ public class Tag582EnuCustOrderCapacity extends FIX43Abstract implements LogValu
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag582EnuCustOrderCapacity(TESTB_ENU_CUST_ORDER_CAPACITY);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

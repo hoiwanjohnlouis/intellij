@@ -19,10 +19,11 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum626AllocType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag626EnuAllocType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag626EnuAllocType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum626AllocType dataValue;
 
     public final static Enum626AllocType TESTA_ENU_ALLOC_TYPE
@@ -58,7 +59,14 @@ public class Tag626EnuAllocType extends FIX43Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -76,10 +84,12 @@ public class Tag626EnuAllocType extends FIX43Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag626EnuAllocType(TESTB_ENU_ALLOC_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

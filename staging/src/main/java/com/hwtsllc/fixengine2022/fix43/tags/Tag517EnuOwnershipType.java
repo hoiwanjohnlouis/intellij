@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum517OwnershipType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag517EnuOwnershipType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag517EnuOwnershipType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum517OwnershipType dataValue;
 
-    public final static Enum517OwnershipType TESTA_ENU_OWNERSHIP_TYPE = Enum517OwnershipType.JOINT_INVESTORS;
-    public final static Enum517OwnershipType TESTB_ENU_OWNERSHIP_TYPE = Enum517OwnershipType.TENANTS_IN_COMMON;
+    public final static Enum517OwnershipType TESTA_ENU_OWNERSHIP_TYPE
+            = Enum517OwnershipType.JOINT_INVESTORS;
+    public final static Enum517OwnershipType TESTB_ENU_OWNERSHIP_TYPE
+            = Enum517OwnershipType.TENANTS_IN_COMMON;
 
     public Tag517EnuOwnershipType(Enum517OwnershipType dataValue) {
         setFixType(FIX43.FIX517_ENU_OWNERSHIP_TYPE);
@@ -56,7 +59,14 @@ public class Tag517EnuOwnershipType extends FIX43Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag517EnuOwnershipType extends FIX43Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag517EnuOwnershipType(TESTB_ENU_OWNERSHIP_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

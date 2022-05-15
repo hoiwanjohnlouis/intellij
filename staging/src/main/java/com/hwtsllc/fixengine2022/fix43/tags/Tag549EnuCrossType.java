@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum549CrossType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum549CrossType dataValue;
 
-    public final static Enum549CrossType TESTA_ENU_CROSS_TYPE = Enum549CrossType.CROSS_IOC;
-    public final static Enum549CrossType TESTB_ENU_CROSS_TYPE = Enum549CrossType.CROSS_SAME_PRICE;
+    public final static Enum549CrossType TESTA_ENU_CROSS_TYPE
+            = Enum549CrossType.CROSS_IOC;
+    public final static Enum549CrossType TESTB_ENU_CROSS_TYPE
+            = Enum549CrossType.CROSS_SAME_PRICE;
 
     public Tag549EnuCrossType(Enum549CrossType dataValue) {
         setFixType(FIX43.FIX549_ENU_CROSS_TYPE);
@@ -56,7 +59,14 @@ public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag549EnuCrossType(TESTB_ENU_CROSS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

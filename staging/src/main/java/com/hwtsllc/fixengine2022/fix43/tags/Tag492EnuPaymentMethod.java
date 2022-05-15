@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum492PaymentMethod;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag492EnuPaymentMethod extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag492EnuPaymentMethod extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum492PaymentMethod dataValue;
 
-    public final static Enum492PaymentMethod TESTA_ENU_PAYMENT_METHOD = Enum492PaymentMethod.ACH_DEBIT;
-    public final static Enum492PaymentMethod TESTB_ENU_PAYMENT_METHOD = Enum492PaymentMethod.CREDIT_CARD;
+    public final static Enum492PaymentMethod TESTA_ENU_PAYMENT_METHOD
+            = Enum492PaymentMethod.ACH_DEBIT;
+    public final static Enum492PaymentMethod TESTB_ENU_PAYMENT_METHOD
+            = Enum492PaymentMethod.CREDIT_CARD;
 
     public Tag492EnuPaymentMethod(Enum492PaymentMethod dataValue) {
         setFixType(FIX43.FIX492_ENU_PAYMENT_METHOD);
@@ -56,7 +59,14 @@ public class Tag492EnuPaymentMethod extends FIX43Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag492EnuPaymentMethod extends FIX43Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag492EnuPaymentMethod(TESTB_ENU_PAYMENT_METHOD);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

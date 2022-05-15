@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumMarketScope;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -34,11 +35,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    2 - National
  *  <p>    3 - Global
  */
-public class Tag546EnuMarketScope extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag546EnuMarketScope extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyEnumMarketScope dataValue;
 
-    public final static MyEnumMarketScope TESTA_ENU_SCOPE = MyEnumMarketScope.LOCAL_MARKET;
-    public final static MyEnumMarketScope TESTB_ENU_SCOPE = MyEnumMarketScope.GLOBAL;
+    public final static MyEnumMarketScope TESTA_ENU_SCOPE
+            = MyEnumMarketScope.LOCAL_MARKET;
+    public final static MyEnumMarketScope TESTB_ENU_SCOPE
+            = MyEnumMarketScope.GLOBAL;
 
     public Tag546EnuMarketScope(MyEnumMarketScope dataValue) {
         setFixType(FIX43.FIX546_ENU_MARKET_SCOPE);
@@ -68,7 +71,14 @@ public class Tag546EnuMarketScope extends FIX43Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -86,10 +96,12 @@ public class Tag546EnuMarketScope extends FIX43Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag546EnuMarketScope(TESTB_ENU_SCOPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

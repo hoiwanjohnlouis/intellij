@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum528OrderCapacity;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag528EnuOrderCapacity extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag528EnuOrderCapacity extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum528OrderCapacity dataValue;
 
-    public final static Enum528OrderCapacity TESTA_ENU_ORDER_CAPACITY = Enum528OrderCapacity.AGENT_FOR_OTHER_MEMBER;
-    public final static Enum528OrderCapacity TESTB_ENU_ORDER_CAPACITY = Enum528OrderCapacity.PROPRIETARY;
+    public final static Enum528OrderCapacity TESTA_ENU_ORDER_CAPACITY
+            = Enum528OrderCapacity.AGENT_FOR_OTHER_MEMBER;
+    public final static Enum528OrderCapacity TESTB_ENU_ORDER_CAPACITY
+            = Enum528OrderCapacity.PROPRIETARY;
 
     public Tag528EnuOrderCapacity(Enum528OrderCapacity dataValue) {
         setFixType(FIX43.FIX528_ENU_ORDER_CAPACITY);
@@ -56,7 +59,14 @@ public class Tag528EnuOrderCapacity extends FIX43Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag528EnuOrderCapacity extends FIX43Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag528EnuOrderCapacity(TESTB_ENU_ORDER_CAPACITY);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

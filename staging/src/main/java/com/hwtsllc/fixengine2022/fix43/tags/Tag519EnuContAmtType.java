@@ -19,14 +19,17 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum519ContAmtType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag519EnuContAmtType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag519EnuContAmtType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final Enum519ContAmtType dataValue;
 
-    public final static Enum519ContAmtType TESTA_ENU_CONT_AMT_TYPE = Enum519ContAmtType.COMMISSION_PERCENT_ACTUAL;
-    public final static Enum519ContAmtType TESTB_ENU_CONT_AMT_TYPE = Enum519ContAmtType.DISCOUNT_AMOUNT;
+    public final static Enum519ContAmtType TESTA_ENU_CONT_AMT_TYPE
+            = Enum519ContAmtType.COMMISSION_PERCENT_ACTUAL;
+    public final static Enum519ContAmtType TESTB_ENU_CONT_AMT_TYPE
+            = Enum519ContAmtType.DISCOUNT_AMOUNT;
 
     public Tag519EnuContAmtType(Enum519ContAmtType dataValue) {
         setFixType(FIX43.FIX519_ENU_CONT_AMT_TYPE);
@@ -56,7 +59,14 @@ public class Tag519EnuContAmtType extends FIX43Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -74,10 +84,12 @@ public class Tag519EnuContAmtType extends FIX43Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag519EnuContAmtType(TESTB_ENU_CONT_AMT_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }

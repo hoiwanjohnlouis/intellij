@@ -19,15 +19,18 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag575BoolOddLot extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag575BoolOddLot extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
     private final MyBooleanType dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_ODD_LOT = MyBooleanType.NO ;
+    public final static MyBooleanType TESTA_BOOL_ODD_LOT
+            = MyBooleanType.NO ;
     // N - Treat as round lot (default)
-    public final static MyBooleanType TESTB_BOOL_ODD_LOT = MyBooleanType.YES;
+    public final static MyBooleanType TESTB_BOOL_ODD_LOT
+            = MyBooleanType.YES;
     // Y - Treat as odd lot
 
     public Tag575BoolOddLot(MyBooleanType dataValue) {
@@ -58,7 +61,14 @@ public class Tag575BoolOddLot extends FIX43Abstract implements LogValuePairStrin
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the description of the underlying ENUM data
+     */
+    @Override
+    public String toEnumString() {
+        return this.dataValue.getDescription();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -76,10 +86,12 @@ public class Tag575BoolOddLot extends FIX43Abstract implements LogValuePairStrin
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
 
         tagData = new Tag575BoolOddLot(TESTB_BOOL_ODD_LOT);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toEnumString());
     }
 }
