@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -30,10 +31,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  Identifies the number of parties identified with an instrument
  */
-class Tag1018NoInstrumentPartiesTest {
+class Tag1018NumNoInstrumentPartiesTest {
     @Test
     void FIX1018Test() {
-        FIX50 fixData = FIX50.FIX1018_NO_INSTRUMENT_PARTIES;
+        FIX50 fixData = FIX50.FIX1018_NUM_NO_INSTRUMENT_PARTIES;
         assertEquals( "1018", fixData.getID());
         assertEquals( "NO_INSTRUMENT_PARTIES", fixData.getName());
         assertEquals( "NoInstrumentParties", fixData.getDescription());
@@ -43,7 +44,16 @@ class Tag1018NoInstrumentPartiesTest {
     }
     @Test
     void Tag1018Test() {
-        Tag1018NoInstrumentParties tagData;
+        Tag1018NumNoInstrumentParties tagData;
 
+        tagData = new Tag1018NumNoInstrumentParties(
+                new MyNumInGroupType( Tag1018NumNoInstrumentParties.TESTA_NUM_NO_INSTRUMENT_PARTIES ));
+        assertEquals( Tag1018NumNoInstrumentParties.TESTA_NUM_NO_INSTRUMENT_PARTIES, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1018NumNoInstrumentParties(
+                new MyNumInGroupType( Tag1018NumNoInstrumentParties.TESTB_NUM_NO_INSTRUMENT_PARTIES ));
+        assertEquals( Tag1018NumNoInstrumentParties.TESTB_NUM_NO_INSTRUMENT_PARTIES, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

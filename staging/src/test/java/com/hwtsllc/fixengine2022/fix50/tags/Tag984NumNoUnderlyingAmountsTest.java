@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -30,10 +31,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  Total number of occurrences of Amount to pay in order to receive the underlying instrument
  */
-class Tag984NoUnderlyingAmountsTest {
+class Tag984NumNoUnderlyingAmountsTest {
     @Test
     void FIX0984Test() {
-        FIX50 fixData = FIX50.FIX984_NO_UNDERLYING_AMOUNTS;
+        FIX50 fixData = FIX50.FIX984_NUM_NO_UNDERLYING_AMOUNTS;
         assertEquals( "984", fixData.getID());
         assertEquals( "NO_UNDERLYING_AMOUNTS", fixData.getName());
         assertEquals( "NoUnderlyingAmounts", fixData.getDescription());
@@ -43,7 +44,16 @@ class Tag984NoUnderlyingAmountsTest {
     }
     @Test
     void Tag0984Test() {
-        Tag984NoUnderlyingAmounts tagData;
+        Tag984NumNoUnderlyingAmounts tagData;
 
+        tagData = new Tag984NumNoUnderlyingAmounts(
+                new MyNumInGroupType( Tag984NumNoUnderlyingAmounts.TESTA_NUM_NO_UNDERLYING_AMOUNTS ));
+        assertEquals( Tag984NumNoUnderlyingAmounts.TESTA_NUM_NO_UNDERLYING_AMOUNTS, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag984NumNoUnderlyingAmounts(
+                new MyNumInGroupType( Tag984NumNoUnderlyingAmounts.TESTB_NUM_NO_UNDERLYING_AMOUNTS ));
+        assertEquals( Tag984NumNoUnderlyingAmounts.TESTB_NUM_NO_UNDERLYING_AMOUNTS, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -30,10 +31,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  Number of RootPartySubID (1121) and RootPartySubIDType (1122) entries
  */
-class Tag1120NoRootPartySubIDsTest {
+class Tag1120NumNoRootPartySubIDsTest {
     @Test
     void FIX1120Test() {
-        FIX50 fixData = FIX50.FIX1120_NO_ROOT_PARTY_SUB_IDS;
+        FIX50 fixData = FIX50.FIX1120_NUM_NO_ROOT_PARTY_SUB_IDS;
         assertEquals( "1120", fixData.getID());
         assertEquals( "NO_ROOT_PARTY_SUB_IDS", fixData.getName());
         assertEquals( "NoRootPartySubIDs", fixData.getDescription());
@@ -43,7 +44,18 @@ class Tag1120NoRootPartySubIDsTest {
     }
     @Test
     void Tag1120Test() {
-        Tag1120NoRootPartySubIDs tagData;
+        Tag1120NumNoRootPartySubIDs tagData;
 
+        tagData = new Tag1120NumNoRootPartySubIDs(
+                new MyNumInGroupType( Tag1120NumNoRootPartySubIDs.TESTA_NUM_NO_ROOT_PARTY_SUB_IDS ));
+        assertEquals( Tag1120NumNoRootPartySubIDs.TESTA_NUM_NO_ROOT_PARTY_SUB_IDS,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1120NumNoRootPartySubIDs(
+                new MyNumInGroupType( Tag1120NumNoRootPartySubIDs.TESTB_NUM_NO_ROOT_PARTY_SUB_IDS ));
+        assertEquals( Tag1120NumNoRootPartySubIDs.TESTB_NUM_NO_ROOT_PARTY_SUB_IDS,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -30,10 +31,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  Indicates number of strategy parameters
  */
-class Tag957NoStrategyParametersTest {
+class Tag957NumNoStrategyParametersTest {
     @Test
     void FIX0957Test() {
-        FIX50 fixData = FIX50.FIX957_NO_STRATEGY_PARAMETERS;
+        FIX50 fixData = FIX50.FIX957_NUM_NO_STRATEGY_PARAMETERS;
         assertEquals( "957", fixData.getID());
         assertEquals( "NO_STRATEGY_PARAMETERS", fixData.getName());
         assertEquals( "NoStrategyParameters", fixData.getDescription());
@@ -43,7 +44,16 @@ class Tag957NoStrategyParametersTest {
     }
     @Test
     void Tag0957Test() {
-        Tag957NoStrategyParameters tagData;
+        Tag957NumNoStrategyParameters tagData;
 
+        tagData = new Tag957NumNoStrategyParameters(
+                 new MyNumInGroupType( Tag957NumNoStrategyParameters.TESTA_NUM_NO_STRATEGY_PARAMETERS ));
+        assertEquals( Tag957NumNoStrategyParameters.TESTA_NUM_NO_STRATEGY_PARAMETERS, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag957NumNoStrategyParameters(
+                new MyNumInGroupType( Tag957NumNoStrategyParameters.TESTB_NUM_NO_STRATEGY_PARAMETERS ));
+        assertEquals( Tag957NumNoStrategyParameters.TESTB_NUM_NO_STRATEGY_PARAMETERS, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }

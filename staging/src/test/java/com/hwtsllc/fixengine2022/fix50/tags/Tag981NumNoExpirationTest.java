@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,26 +25,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1062
- *  NoUndlyInstrumentPartySubIDs
+ *  981
+ *  NoExpiration
  *  NumInGroup
  *  <p>
- *  Number of Underlying InstrumentPartySubID (1053) and InstrumentPartySubIDType (1054) entries
+ *  Number of Expiration Qty entries
  */
-class Tag1062NoUndlyInstrumentPartySubIDsTest {
+class Tag981NumNoExpirationTest {
     @Test
-    void FIX1062Test() {
-        FIX50 fixData = FIX50.FIX1062_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS;
-        assertEquals( "1062", fixData.getID());
-        assertEquals( "NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS", fixData.getName());
-        assertEquals( "NoUndlyInstrumentPartySubIDs", fixData.getDescription());
+    void FIX0981Test() {
+        FIX50 fixData = FIX50.FIX981_NUM_NO_EXPIRATION;
+        assertEquals( "981", fixData.getID());
+        assertEquals( "NO_EXPIRATION", fixData.getName());
+        assertEquals( "NoExpiration", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag1062Test() {
-        Tag1062NoUndlyInstrumentPartySubIDs tagData;
+    void Tag0981Test() {
+        Tag981NumNoExpiration tagData;
 
+        tagData = new Tag981NumNoExpiration(
+                new MyNumInGroupType( Tag981NumNoExpiration.TESTA_NUM_NO_EXPIRATION ));
+        assertEquals( Tag981NumNoExpiration.TESTA_NUM_NO_EXPIRATION, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag981NumNoExpiration(
+                new MyNumInGroupType( Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION ));
+        assertEquals( Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 }
