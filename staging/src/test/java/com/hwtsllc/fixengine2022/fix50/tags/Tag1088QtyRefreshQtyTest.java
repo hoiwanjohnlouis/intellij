@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,28 +25,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1074
- *  LegCalculatedCcyLastQty
+ *  1088
+ *  RefreshQty
  *  Qty
  *  <p>
- *  Used for the calculated quantity of the other side of the currency for this leg.
- *  <p>
- *  Can be derived from LegQty and LegLastPx.
+ *  Defines the quantity used to refresh DisplayQty.
  */
-class Tag1074LegCalculatedCcyLastQtyTest {
+class Tag1088QtyRefreshQtyTest {
     @Test
-    void FIX1074Test() {
-        FIX50 fixData = FIX50.FIX1074_LEG_CALCULATED_CCY_LAST_QTY;
-        assertEquals( "1074", fixData.getID());
-        assertEquals( "LEG_CALCULATED_CCY_LAST_QTY", fixData.getName());
-        assertEquals( "LegCalculatedCcyLastQty", fixData.getDescription());
+    void FIX1088Test() {
+        FIX50 fixData = FIX50.FIX1088_QTY_REFRESH_QTY;
+        assertEquals( "1088", fixData.getID());
+        assertEquals( "REFRESH_QTY", fixData.getName());
+        assertEquals( "RefreshQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag1074Test() {
-        Tag1074LegCalculatedCcyLastQty tagData;
+    void Tag1088Test() {
+        Tag1088QtyRefreshQty tagData;
 
+        tagData = new Tag1088QtyRefreshQty(new MyQtyType(
+                Tag1088QtyRefreshQty.TESTA_QTY_REFRESH_QTY));
+        assertEquals( Tag1088QtyRefreshQty.TESTA_QTY_REFRESH_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1088QtyRefreshQty(new MyQtyType(
+                Tag1088QtyRefreshQty.TESTB_QTY_REFRESH_QTY));
+        assertEquals( Tag1088QtyRefreshQty.TESTB_QTY_REFRESH_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

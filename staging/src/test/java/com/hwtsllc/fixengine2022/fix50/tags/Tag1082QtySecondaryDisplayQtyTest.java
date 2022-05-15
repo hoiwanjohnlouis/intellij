@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,10 +34,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
  */
-class Tag1082SecondaryDisplayQtyTest {
+class Tag1082QtySecondaryDisplayQtyTest {
     @Test
     void FIX1082Test() {
-        FIX50 fixData = FIX50.FIX1082_SECONDARY_DISPLAY_QTY;
+        FIX50 fixData = FIX50.FIX1082_QTY_SECONDARY_DISPLAY_QTY;
         assertEquals( "1082", fixData.getID());
         assertEquals( "SECONDARY_DISPLAY_QTY", fixData.getName());
         assertEquals( "SecondaryDisplayQty", fixData.getDescription());
@@ -46,7 +47,18 @@ class Tag1082SecondaryDisplayQtyTest {
     }
     @Test
     void Tag1082Test() {
-        Tag1082SecondaryDisplayQty tagData;
+        Tag1082QtySecondaryDisplayQty tagData;
 
+        tagData = new Tag1082QtySecondaryDisplayQty(new MyQtyType(
+                Tag1082QtySecondaryDisplayQty.TESTA_QTY_SECONDARY_DISPLAY_QTY));
+        assertEquals( Tag1082QtySecondaryDisplayQty.TESTA_QTY_SECONDARY_DISPLAY_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1082QtySecondaryDisplayQty(new MyQtyType(
+                Tag1082QtySecondaryDisplayQty.TESTB_QTY_SECONDARY_DISPLAY_QTY));
+        assertEquals( Tag1082QtySecondaryDisplayQty.TESTB_QTY_SECONDARY_DISPLAY_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

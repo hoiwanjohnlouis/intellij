@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -30,10 +31,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  The Quantity the order should have after the trigger has hit.
  */
-class Tag1112TriggerNewQtyTest {
+class Tag1112QtyTriggerNewQtyTest {
     @Test
     void FIX1112Test() {
-        FIX50 fixData = FIX50.FIX1112_TRIGGER_NEW_QTY;
+        FIX50 fixData = FIX50.FIX1112_QTY_TRIGGER_NEW_QTY;
         assertEquals( "1112", fixData.getID());
         assertEquals( "TRIGGER_NEW_QTY", fixData.getName());
         assertEquals( "TriggerNewQty", fixData.getDescription());
@@ -43,7 +44,18 @@ class Tag1112TriggerNewQtyTest {
     }
     @Test
     void Tag1112Test() {
-        Tag1112TriggerNewQty tagData;
+        Tag1112QtyTriggerNewQty tagData;
 
+        tagData = new Tag1112QtyTriggerNewQty(new MyQtyType(
+                Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY));
+        assertEquals( Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1112QtyTriggerNewQty(new MyQtyType(
+                Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY));
+        assertEquals( Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

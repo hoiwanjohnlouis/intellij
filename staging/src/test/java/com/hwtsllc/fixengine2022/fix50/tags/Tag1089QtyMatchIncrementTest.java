@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -34,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  The order may still fill against smaller orders, but the cumulative quantity
  *  of the execution must be in multiples of the MatchIncrement.
  */
-class Tag1089MatchIncrementTest {
+class Tag1089QtyMatchIncrementTest {
     @Test
     void FIX1089Test() {
-        FIX50 fixData = FIX50.FIX1089_MATCH_INCREMENT;
+        FIX50 fixData = FIX50.FIX1089_QTY_MATCH_INCREMENT;
         assertEquals( "1089", fixData.getID());
         assertEquals( "MATCH_INCREMENT", fixData.getName());
         assertEquals( "MatchIncrement", fixData.getDescription());
@@ -47,7 +48,18 @@ class Tag1089MatchIncrementTest {
     }
     @Test
     void Tag1089Test() {
-        Tag1089MatchIncrement tagData;
+        Tag1089QtyMatchIncrement tagData;
 
+        tagData = new Tag1089QtyMatchIncrement(new MyQtyType(
+                Tag1089QtyMatchIncrement.TESTA_QTY_MATCH_INCREMENT));
+        assertEquals( Tag1089QtyMatchIncrement.TESTA_QTY_MATCH_INCREMENT,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1089QtyMatchIncrement(new MyQtyType(
+                Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT));
+        assertEquals( Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

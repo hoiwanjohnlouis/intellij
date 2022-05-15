@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,26 +25,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1086
- *  DisplayHighQty
+ *  1020
+ *  TradeVolume
  *  Qty
  *  <p>
- *  Defines the upper quantity limit to a randomized refresh of DisplayQty.
+ *  Used to report volume with a trade
  */
-class Tag1086DisplayHighQtyTest {
+class Tag1020QtyTradeVolumeTest {
     @Test
-    void FIX1086Test() {
-        FIX50 fixData = FIX50.FIX1086_DISPLAY_HIGH_QTY;
-        assertEquals( "1086", fixData.getID());
-        assertEquals( "DISPLAY_HIGH_QTY", fixData.getName());
-        assertEquals( "DisplayHighQty", fixData.getDescription());
+    void FIX1020Test() {
+        FIX50 fixData = FIX50.FIX1020_QTY_TRADE_VOLUME;
+        assertEquals( "1020", fixData.getID());
+        assertEquals( "TRADE_VOLUME", fixData.getName());
+        assertEquals( "TradeVolume", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag1086Test() {
-        Tag1086DisplayHighQty tagData;
+    void Tag1020Test() {
+        Tag1020QtyTradeVolume tagData;
 
+        tagData = new Tag1020QtyTradeVolume(new MyQtyType(
+                Tag1020QtyTradeVolume.TESTA_QTY_TRADE_VOLUME));
+        assertEquals( Tag1020QtyTradeVolume.TESTA_QTY_TRADE_VOLUME,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1020QtyTradeVolume(new MyQtyType(
+                Tag1020QtyTradeVolume.TESTB_QTY_TRADE_VOLUME));
+        assertEquals( Tag1020QtyTradeVolume.TESTB_QTY_TRADE_VOLUME,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -1,0 +1,63 @@
+/*
+ * Copyright (c) 2022.  HW Tech Services, LLC
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+
+package com.hwtsllc.fixengine2022.fix50.tags;
+
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+/**
+ *  1056
+ *  CalculatedCcyLastQty
+ *  Qty
+ *  <p>
+ *  Used for the calculated quantity of the other side of the currency trade.
+ *  <p>
+ *  Can be derived from LastQty and LastPx.
+ */
+class Tag1056QtyCalculatedCcyLastQtyTest {
+    @Test
+    void FIX1056Test() {
+        FIX50 fixData = FIX50.FIX1056_QTY_CALCULATED_CCY_LAST_QTY;
+        assertEquals( "1056", fixData.getID());
+        assertEquals( "CALCULATED_CCY_LAST_QTY", fixData.getName());
+        assertEquals( "CalculatedCcyLastQty", fixData.getDescription());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+    }
+    @Test
+    void Tag1056Test() {
+        Tag1056QtyCalculatedCcyLastQty tagData;
+
+        tagData = new Tag1056QtyCalculatedCcyLastQty(new MyQtyType(
+                Tag1056QtyCalculatedCcyLastQty.TESTA_QTY_CALCULATED_CCY_LAST_QTY));
+        assertEquals( Tag1056QtyCalculatedCcyLastQty.TESTA_QTY_CALCULATED_CCY_LAST_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1056QtyCalculatedCcyLastQty(new MyQtyType(
+                Tag1056QtyCalculatedCcyLastQty.TESTB_QTY_CALCULATED_CCY_LAST_QTY));
+        assertEquals( Tag1056QtyCalculatedCcyLastQty.TESTB_QTY_CALCULATED_CCY_LAST_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+}

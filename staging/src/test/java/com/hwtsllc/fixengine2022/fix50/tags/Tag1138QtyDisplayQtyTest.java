@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,28 +25,41 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1056
- *  CalculatedCcyLastQty
+ *  1138
+ *  DisplayQty
  *  Qty
  *  <p>
- *  Used for the calculated quantity of the other side of the currency trade.
+ *  The quantity to be displayed.
  *  <p>
- *  Can be derived from LastQty and LastPx.
+ *  Required for reserve orders.
+ *  <p>
+ *  On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
  */
-class Tag1056CalculatedCcyLastQtyTest {
+class Tag1138QtyDisplayQtyTest {
     @Test
-    void FIX1056Test() {
-        FIX50 fixData = FIX50.FIX1056_CALCULATED_CCY_LAST_QTY;
-        assertEquals( "1056", fixData.getID());
-        assertEquals( "CALCULATED_CCY_LAST_QTY", fixData.getName());
-        assertEquals( "CalculatedCcyLastQty", fixData.getDescription());
+    void FIX1138Test() {
+        FIX50 fixData = FIX50.FIX1138_QTY_DISPLAY_QTY;
+        assertEquals( "1138", fixData.getID());
+        assertEquals( "DISPLAY_QTY", fixData.getName());
+        assertEquals( "DisplayQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag1056Test() {
-        Tag1056CalculatedCcyLastQty tagData;
+    void Tag1138Test() {
+        Tag1138QtyDisplayQty tagData;
 
+        tagData = new Tag1138QtyDisplayQty(new MyQtyType(
+                Tag1138QtyDisplayQty.TESTA_QTY_DISPLAY_QTY));
+        assertEquals( Tag1138QtyDisplayQty.TESTA_QTY_DISPLAY_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1138QtyDisplayQty(new MyQtyType(
+                Tag1138QtyDisplayQty.TESTB_QTY_DISPLAY_QTY));
+        assertEquals( Tag1138QtyDisplayQty.TESTB_QTY_DISPLAY_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

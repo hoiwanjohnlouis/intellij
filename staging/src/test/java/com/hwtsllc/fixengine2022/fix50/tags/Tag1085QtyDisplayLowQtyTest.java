@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,26 +25,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1044
- *  UnderlyingAdjustedQuantity
+ *  1085
+ *  DisplayLowQty
  *  Qty
  *  <p>
- *  Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated.
+ *  Defines the lower quantity limit to a randomized refresh of DisplayQty.
  */
-class Tag1044UnderlyingAdjustedQuantityTest {
+class Tag1085QtyDisplayLowQtyTest {
     @Test
-    void FIX1044Test() {
-        FIX50 fixData = FIX50.FIX1044_UNDERLYING_ADJUSTED_QUANTITY;
-        assertEquals( "1044", fixData.getID());
-        assertEquals( "UNDERLYING_ADJUSTED_QUANTITY", fixData.getName());
-        assertEquals( "UnderlyingAdjustedQuantity", fixData.getDescription());
+    void FIX1085Test() {
+        FIX50 fixData = FIX50.FIX1085_QTY_DISPLAY_LOW_QTY;
+        assertEquals( "1085", fixData.getID());
+        assertEquals( "DISPLAY_LOW_QTY", fixData.getName());
+        assertEquals( "DisplayLowQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag1044Test() {
-        Tag1044UnderlyingAdjustedQuantity tagData;
+    void Tag1085Test() {
+        Tag1085QtyDisplayLowQty tagData;
 
+        tagData = new Tag1085QtyDisplayLowQty(new MyQtyType(
+                Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY));
+        assertEquals( Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1085QtyDisplayLowQty(new MyQtyType(
+                Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY));
+        assertEquals( Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }

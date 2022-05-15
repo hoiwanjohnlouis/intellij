@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,26 +25,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  983
- *  ExpQty
+ *  1086
+ *  DisplayHighQty
  *  Qty
  *  <p>
- *  Expiration Quantity associated with the Expiration Type
+ *  Defines the upper quantity limit to a randomized refresh of DisplayQty.
  */
-class Tag983ExpQtyTest {
+class Tag1086QtyDisplayHighQtyTest {
     @Test
-    void FIX0983Test() {
-        FIX50 fixData = FIX50.FIX983_EXP_QTY;
-        assertEquals( "983", fixData.getID());
-        assertEquals( "EXP_QTY", fixData.getName());
-        assertEquals( "ExpQty", fixData.getDescription());
+    void FIX1086Test() {
+        FIX50 fixData = FIX50.FIX1086_QTY_DISPLAY_HIGH_QTY;
+        assertEquals( "1086", fixData.getID());
+        assertEquals( "DISPLAY_HIGH_QTY", fixData.getName());
+        assertEquals( "DisplayHighQty", fixData.getDescription());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
     }
     @Test
-    void Tag0983Test() {
-        Tag983ExpQty tagData;
+    void Tag1086Test() {
+        Tag1086QtyDisplayHighQty tagData;
 
+        tagData = new Tag1086QtyDisplayHighQty(new MyQtyType(
+                Tag1086QtyDisplayHighQty.TESTA_QTY_DISPLAY_HIGH_QTY));
+        assertEquals( Tag1086QtyDisplayHighQty.TESTA_QTY_DISPLAY_HIGH_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1086QtyDisplayHighQty(new MyQtyType(
+                Tag1086QtyDisplayHighQty.TESTB_QTY_DISPLAY_HIGH_QTY));
+        assertEquals( Tag1086QtyDisplayHighQty.TESTB_QTY_DISPLAY_HIGH_QTY,
+                tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 }
