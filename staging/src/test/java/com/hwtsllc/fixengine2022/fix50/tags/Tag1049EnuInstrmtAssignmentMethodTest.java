@@ -46,23 +46,23 @@ class Tag1049EnuInstrmtAssignmentMethodTest {
     @Test
     void FIX1049Test() {
         FIX50 fixData = FIX50.FIX1049_ENU_INSTRMT_ASSIGNMENT_METHOD;
-        assertEquals( "1049", fixData.getID());
-        assertEquals( "INSTRMT_ASSIGNMENT_METHOD", fixData.getName());
-        assertEquals( "InstrmtAssignmentMethod", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1049", fixData.toFIXIDString());
+        assertEquals( "INSTRMT_ASSIGNMENT_METHOD", fixData.toFIXNameString());
+        assertEquals( "InstrmtAssignmentMethod", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1049Test() {
         Tag1049EnuInstrmtAssignmentMethod tagData;
 
         tagData = new Tag1049EnuInstrmtAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
-        assertEquals( MyEnumAssignmentMethod.PRO_RATA.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAssignmentMethod.PRO_RATA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1049EnuInstrmtAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
-        assertEquals( MyEnumAssignmentMethod.RANDOM.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAssignmentMethod.RANDOM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

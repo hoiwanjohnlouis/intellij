@@ -39,12 +39,12 @@ class Tag900TotalNetValueTest {
     @Test
     void FIX0900Test() {
         FIX44 fixData = FIX44.FIX900_TOTAL_NET_VALUE;
-        assertEquals( "900", fixData.getID());
-        assertEquals( "TOTAL_NET_VALUE", fixData.getName());
-        assertEquals( "TotalNetValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "900", fixData.toFIXIDString());
+        assertEquals( "TOTAL_NET_VALUE", fixData.toFIXNameString());
+        assertEquals( "TotalNetValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0900Test() {

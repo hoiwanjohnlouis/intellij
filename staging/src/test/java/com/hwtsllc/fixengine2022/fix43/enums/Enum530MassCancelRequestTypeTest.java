@@ -34,66 +34,66 @@ class Enum530MassCancelRequestTypeTest {
          *  1-7 types
          */
         enumType = Enum530MassCancelRequestType.CANCEL_ORDERS_FOR_SECURITY;
-        assertEquals("1", enumType.getID());
-        assertEquals("CANCEL_ORDERS_FOR_SECURITY", enumType.getName());
-        assertEquals("1 - Cancel orders for a security", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("CANCEL_ORDERS_FOR_SECURITY", enumType.toFIXNameString());
+        assertEquals("1 - Cancel orders for a security", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum530MassCancelRequestType.CANCEL_ORDERS_FOR_UNDERLYING;
-        assertEquals("2", enumType.getID());
-        assertEquals("CANCEL_ORDERS_FOR_UNDERLYING", enumType.getName());
-        assertEquals("2 - Cancel orders for an underlying security", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("CANCEL_ORDERS_FOR_UNDERLYING", enumType.toFIXNameString());
+        assertEquals("2 - Cancel orders for an underlying security", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum530MassCancelRequestType.CANCEL_ORDERS_FOR_PRODUCT;
-        assertEquals("3", enumType.getID());
-        assertEquals("CANCEL_ORDERS_FOR_PRODUCT", enumType.getName());
-        assertEquals("3 - Cancel orders for a Product", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("CANCEL_ORDERS_FOR_PRODUCT", enumType.toFIXNameString());
+        assertEquals("3 - Cancel orders for a Product", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum530MassCancelRequestType.CANCEL_ORDERS_FOR_CFICODE;
-        assertEquals("4", enumType.getID());
-        assertEquals("CANCEL_ORDERS_FOR_CFICODE", enumType.getName());
-        assertEquals("4 - Cancel orders for a CFICode", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("CANCEL_ORDERS_FOR_CFICODE", enumType.toFIXNameString());
+        assertEquals("4 - Cancel orders for a CFICode", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum530MassCancelRequestType.CANCEL_ORDERS_FOR_SECURITYTYPE;
-        assertEquals("5", enumType.getID());
-        assertEquals("CANCEL_ORDERS_FOR_SECURITYTYPE", enumType.getName());
-        assertEquals("5 - Cancel orders for a SecurityType", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("5", enumType.toFIXIDString());
+        assertEquals("CANCEL_ORDERS_FOR_SECURITYTYPE", enumType.toFIXNameString());
+        assertEquals("5 - Cancel orders for a SecurityType", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum530MassCancelRequestType.CANCEL_ORDERS_FOR_SESSION;
-        assertEquals("6", enumType.getID());
-        assertEquals("CANCEL_ORDERS_FOR_SESSION", enumType.getName());
-        assertEquals("6 - Cancel orders for a trading session", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("6", enumType.toFIXIDString());
+        assertEquals("CANCEL_ORDERS_FOR_SESSION", enumType.toFIXNameString());
+        assertEquals("6 - Cancel orders for a trading session", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum530MassCancelRequestType.CANCEL_ALL_ORDERS;
-        assertEquals("7", enumType.getID());
-        assertEquals("CANCEL_ALL_ORDERS", enumType.getName());
-        assertEquals("7 - Cancel all orders", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("7", enumType.toFIXIDString());
+        assertEquals("CANCEL_ALL_ORDERS", enumType.toFIXNameString());
+        assertEquals("7 - Cancel all orders", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

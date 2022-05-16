@@ -38,13 +38,13 @@ class Tag28EnuIOITransTypeTest {
     @Test
     void FIX0028Test() {
         FIX27 fixData = FIX27.FIX28_ENU_IOI_TRANS_TYPE;
-        assertEquals( "IOI_TRANS_TYPE", fixData.getName());
-        assertEquals( "28", fixData.getID());
-        assertEquals( "IOITransType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "IOI_TRANS_TYPE", fixData.toFIXNameString());
+        assertEquals( "28", fixData.toFIXIDString());
+        assertEquals( "IOITransType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0028Test() {

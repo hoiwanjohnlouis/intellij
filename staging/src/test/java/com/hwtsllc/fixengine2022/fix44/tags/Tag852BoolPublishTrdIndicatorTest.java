@@ -37,12 +37,12 @@ class Tag852BoolPublishTrdIndicatorTest {
     @Test
     void FIX0852Test() {
         FIX44 fixData = FIX44.FIX852_BOOL_PUBLISH_TRD_INDICATOR;
-        assertEquals( "852", fixData.getID());
-        assertEquals( "PUBLISH_TRD_INDICATOR", fixData.getName());
-        assertEquals( "PublishTrdIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "852", fixData.toFIXIDString());
+        assertEquals( "PUBLISH_TRD_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "PublishTrdIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0852Test() {

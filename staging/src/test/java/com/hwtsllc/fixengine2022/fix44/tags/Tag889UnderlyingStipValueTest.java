@@ -34,12 +34,12 @@ class Tag889UnderlyingStipValueTest {
     @Test
     void FIX0889Test() {
         FIX44 fixData = FIX44.FIX889_UNDERLYING_STIP_VALUE;
-        assertEquals( "889", fixData.getID());
-        assertEquals( "UNDERLYING_STIP_VALUE", fixData.getName());
-        assertEquals( "UnderlyingStipValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "889", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_STIP_VALUE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingStipValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0889Test() {

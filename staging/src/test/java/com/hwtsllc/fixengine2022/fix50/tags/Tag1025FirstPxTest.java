@@ -34,12 +34,12 @@ class Tag1025FirstPxTest {
     @Test
     void FIX1025Test() {
         FIX50 fixData = FIX50.FIX1025_FIRST_PX;
-        assertEquals( "1025", fixData.getID());
-        assertEquals( "FIRST_PX", fixData.getName());
-        assertEquals( "FirstPx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1025", fixData.toFIXIDString());
+        assertEquals( "FIRST_PX", fixData.toFIXNameString());
+        assertEquals( "FirstPx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1025Test() {

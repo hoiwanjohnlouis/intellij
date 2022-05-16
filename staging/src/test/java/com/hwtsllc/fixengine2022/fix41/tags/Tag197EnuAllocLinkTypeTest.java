@@ -39,23 +39,23 @@ class Tag197EnuAllocLinkTypeTest {
     @Test
     void FIX0197Test() {
         FIX41 fixData = FIX41.FIX197_ENU_ALLOC_LINK_TYPE;
-        assertEquals( "197", fixData.getID());
-        assertEquals( "ALLOC_LINK_TYPE", fixData.getName());
-        assertEquals( "AllocLinkType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "197", fixData.toFIXIDString());
+        assertEquals( "ALLOC_LINK_TYPE", fixData.toFIXNameString());
+        assertEquals( "AllocLinkType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0197Test() {
         Tag197EnuAllocLinkType tagData;
 
         tagData = new Tag197EnuAllocLinkType(Enum197AllocLinkType.FX_NETTING);
-        assertEquals( Enum197AllocLinkType.FX_NETTING.getID(), tagData.getDataValue());
+        assertEquals( Enum197AllocLinkType.FX_NETTING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag197EnuAllocLinkType(Enum197AllocLinkType.FX_SWAP);
-        assertEquals( Enum197AllocLinkType.FX_SWAP.getID(), tagData.getDataValue());
+        assertEquals( Enum197AllocLinkType.FX_SWAP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

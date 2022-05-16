@@ -35,13 +35,13 @@ class Tag32QtyLastQtyTest {
     @Test
     void FIX0032Test() {
         FIX27 fixData = FIX27.FIX32_QTY_LAST_QTY;
-        assertEquals( "LAST_QTY", fixData.getName());
-        assertEquals( "32", fixData.getID());
-        assertEquals( "LastQty", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "LAST_QTY", fixData.toFIXNameString());
+        assertEquals( "32", fixData.toFIXIDString());
+        assertEquals( "LastQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0032Test() {

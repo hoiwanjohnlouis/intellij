@@ -39,12 +39,12 @@ class Tag1069SwapPointsTest {
     @Test
     void FIX1069Test() {
         FIX50 fixData = FIX50.FIX1069_SWAP_POINTS;
-        assertEquals( "1069", fixData.getID());
-        assertEquals( "SWAP_POINTS", fixData.getName());
-        assertEquals( "SwapPoints", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1069", fixData.toFIXIDString());
+        assertEquals( "SWAP_POINTS", fixData.toFIXNameString());
+        assertEquals( "SwapPoints", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1069Test() {

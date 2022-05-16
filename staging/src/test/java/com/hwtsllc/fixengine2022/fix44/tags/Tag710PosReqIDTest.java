@@ -33,12 +33,12 @@ class Tag710PosReqIDTest {
     @Test
     void FIX0710Test() {
         FIX44 fixData = FIX44.FIX710_POS_REQ_ID;
-        assertEquals( "710", fixData.getID());
-        assertEquals( "POS_REQ_ID", fixData.getName());
-        assertEquals( "PosReqID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "710", fixData.toFIXIDString());
+        assertEquals( "POS_REQ_ID", fixData.toFIXNameString());
+        assertEquals( "PosReqID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0710Test() {

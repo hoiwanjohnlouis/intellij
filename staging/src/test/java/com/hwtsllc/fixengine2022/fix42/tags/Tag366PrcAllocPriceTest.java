@@ -28,12 +28,12 @@ class Tag366PrcAllocPriceTest {
     @Test
     void FIX0366Test() {
         FIX42 fixData = FIX42.FIX366_PRC_ALLOC_PRICE;
-        assertEquals( "366", fixData.getID());
-        assertEquals( "ALLOC_PRICE", fixData.getName());
-        assertEquals( "AllocPrice", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "366", fixData.toFIXIDString());
+        assertEquals( "ALLOC_PRICE", fixData.toFIXNameString());
+        assertEquals( "AllocPrice", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0366Test() {

@@ -33,12 +33,12 @@ class Tag743DeliveryDateTest {
     @Test
     void FIX0743Test() {
         FIX44 fixData = FIX44.FIX743_DELIVERY_DATE;
-        assertEquals( "743", fixData.getID());
-        assertEquals( "DELIVERY_DATE", fixData.getName());
-        assertEquals( "DeliveryDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "743", fixData.toFIXIDString());
+        assertEquals( "DELIVERY_DATE", fixData.toFIXNameString());
+        assertEquals( "DeliveryDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0743Test() {

@@ -27,12 +27,12 @@ class Tag631PrcMidPxTest {
     @Test
     void FIX0631Test() {
         FIX43 fixData = FIX43.FIX631_PRC_MID_PX;
-        assertEquals( "631", fixData.getID());
-        assertEquals( "MID_PX", fixData.getName());
-        assertEquals( "MidPx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "631", fixData.toFIXIDString());
+        assertEquals( "MID_PX", fixData.toFIXNameString());
+        assertEquals( "MidPx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0631Test() {

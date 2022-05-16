@@ -36,12 +36,12 @@ class Tag198StrSecondaryOrderIDTest {
     @Test
     void FIX0198Test() {
         FIX41 fixData = FIX41.FIX198_STR_SECONDARY_ORDER_ID;
-        assertEquals( "198", fixData.getID());
-        assertEquals( "SECONDARY_ORDER_ID", fixData.getName());
-        assertEquals( "SecondaryOrderID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "198", fixData.toFIXIDString());
+        assertEquals( "SECONDARY_ORDER_ID", fixData.toFIXNameString());
+        assertEquals( "SecondaryOrderID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0198Test() {

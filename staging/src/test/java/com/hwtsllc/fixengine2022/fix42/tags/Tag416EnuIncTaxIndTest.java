@@ -37,12 +37,12 @@ class Tag416EnuIncTaxIndTest {
     @Test
     void FIX0416Test() {
         FIX42 fixData = FIX42.FIX416_ENU_INC_TAX_IND;
-        assertEquals( "416", fixData.getID());
-        assertEquals( "INC_TAX_IND", fixData.getName());
-        assertEquals( "IncTaxInd", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "416", fixData.toFIXIDString());
+        assertEquals( "INC_TAX_IND", fixData.toFIXNameString());
+        assertEquals( "IncTaxInd", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0416Test() {
@@ -52,11 +52,11 @@ class Tag416EnuIncTaxIndTest {
          * 1-2 msg types
          */
         tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.NET);
-        assertEquals( Enum416IncTaxInd.NET.getID(), tagData.getDataValue());
+        assertEquals( Enum416IncTaxInd.NET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
-        assertEquals( Enum416IncTaxInd.GROSS.getID(), tagData.getDataValue());
+        assertEquals( Enum416IncTaxInd.GROSS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

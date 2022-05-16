@@ -36,12 +36,12 @@ class Tag303EnuQuoteRequestTypeTest {
     @Test
     void FIX0303Test() {
         FIX42 fixData = FIX42.FIX303_ENU_QUOTE_REQUEST_TYPE;
-        assertEquals( "303", fixData.getID());
-        assertEquals( "QUOTE_REQUEST_TYPE", fixData.getName());
-        assertEquals( "QuoteRequestType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "303", fixData.toFIXIDString());
+        assertEquals( "QUOTE_REQUEST_TYPE", fixData.toFIXNameString());
+        assertEquals( "QuoteRequestType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0303Test() {
@@ -51,11 +51,11 @@ class Tag303EnuQuoteRequestTypeTest {
          * 1-2 msg types
          */
         tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.MANUAL);
-        assertEquals( Enum303QuoteRequestType.MANUAL.getID(), tagData.getDataValue());
+        assertEquals( Enum303QuoteRequestType.MANUAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.AUTOMATIC);
-        assertEquals( Enum303QuoteRequestType.AUTOMATIC.getID(), tagData.getDataValue());
+        assertEquals( Enum303QuoteRequestType.AUTOMATIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

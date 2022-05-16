@@ -39,12 +39,12 @@ class Tag1027MDEntryForwardPointsTest {
     @Test
     void FIX1027Test() {
         FIX50 fixData = FIX50.FIX1027_MD_ENTRY_FORWARD_POINTS;
-        assertEquals( "1027", fixData.getID());
-        assertEquals( "MD_ENTRY_FORWARD_POINTS", fixData.getName());
-        assertEquals( "MDEntryForwardPoints", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1027", fixData.toFIXIDString());
+        assertEquals( "MD_ENTRY_FORWARD_POINTS", fixData.toFIXNameString());
+        assertEquals( "MDEntryForwardPoints", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1027Test() {

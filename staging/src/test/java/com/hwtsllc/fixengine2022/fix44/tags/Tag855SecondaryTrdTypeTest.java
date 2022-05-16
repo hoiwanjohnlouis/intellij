@@ -33,12 +33,12 @@ class Tag855SecondaryTrdTypeTest {
     @Test
     void FIX0855Test() {
         FIX44 fixData = FIX44.FIX855_SECONDARY_TRD_TYPE;
-        assertEquals( "855", fixData.getID());
-        assertEquals( "SECONDARY_TRD_TYPE", fixData.getName());
-        assertEquals( "SecondaryTrdType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "855", fixData.toFIXIDString());
+        assertEquals( "SECONDARY_TRD_TYPE", fixData.toFIXNameString());
+        assertEquals( "SecondaryTrdType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0855Test() {

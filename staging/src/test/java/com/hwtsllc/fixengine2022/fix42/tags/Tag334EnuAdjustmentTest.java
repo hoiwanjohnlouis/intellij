@@ -38,12 +38,12 @@ class Tag334EnuAdjustmentTest {
     @Test
     void FIX0334Test() {
         FIX42 fixData = FIX42.FIX334_ENU_ADJUSTMENT;
-        assertEquals( "334", fixData.getID());
-        assertEquals( "ADJUSTMENT", fixData.getName());
-        assertEquals( "Adjustment", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "334", fixData.toFIXIDString());
+        assertEquals( "ADJUSTMENT", fixData.toFIXNameString());
+        assertEquals( "Adjustment", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0334Test() {
@@ -53,15 +53,15 @@ class Tag334EnuAdjustmentTest {
          * 1-3 msg types
          */
         tagData = new Tag334EnuAdjustment(Enum334Adjustment.CANCEL);
-        assertEquals( Enum334Adjustment.CANCEL.getID(), tagData.getDataValue());
+        assertEquals( Enum334Adjustment.CANCEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag334EnuAdjustment(Enum334Adjustment.ERROR);
-        assertEquals( Enum334Adjustment.ERROR.getID(), tagData.getDataValue());
+        assertEquals( Enum334Adjustment.ERROR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag334EnuAdjustment(Enum334Adjustment.CORRECTION);
-        assertEquals( Enum334Adjustment.CORRECTION.getID(), tagData.getDataValue());
+        assertEquals( Enum334Adjustment.CORRECTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

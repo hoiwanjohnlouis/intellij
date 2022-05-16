@@ -195,12 +195,12 @@ class Tag759EnuNested2PartyRoleTest {
     @Test
     void FIX0759Test() {
         FIX44 fixData = FIX44.FIX759_ENU_NESTED_2_PARTY_ROLE;
-        assertEquals( "759", fixData.getID());
-        assertEquals( "NESTED_2_PARTY_ROLE", fixData.getName());
-        assertEquals( "Nested2PartyRole", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "759", fixData.toFIXIDString());
+        assertEquals( "NESTED_2_PARTY_ROLE", fixData.toFIXNameString());
+        assertEquals( "Nested2PartyRole", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0759Test() {
@@ -216,95 +216,95 @@ class Tag759EnuNested2PartyRoleTest {
          *  1-22, msg types
          */
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.EXECUTING_FIRM);
-        assertEquals( MyEnumPartyRole.EXECUTING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.EXECUTING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.BROKER_OF_CREDIT);
-        assertEquals( MyEnumPartyRole.BROKER_OF_CREDIT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.BROKER_OF_CREDIT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CLIENT_ID);
-        assertEquals( MyEnumPartyRole.CLIENT_ID.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CLIENT_ID.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CLEARING_FIRM);
-        assertEquals( MyEnumPartyRole.CLEARING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CLEARING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.INVESTOR_ID);
-        assertEquals( MyEnumPartyRole.INVESTOR_ID.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.INVESTOR_ID.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.INTRODUCING_FIRM);
-        assertEquals( MyEnumPartyRole.INTRODUCING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.INTRODUCING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ENTERING_FIRM);
-        assertEquals( MyEnumPartyRole.ENTERING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ENTERING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.LENDING_FIRM);
-        assertEquals( MyEnumPartyRole.LENDING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.LENDING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.FUND_MANAGER_CLIENT_ID);
-        assertEquals( MyEnumPartyRole.FUND_MANAGER_CLIENT_ID.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.FUND_MANAGER_CLIENT_ID.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.SETTLEMENT_LOCATION);
-        assertEquals( MyEnumPartyRole.SETTLEMENT_LOCATION.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.SETTLEMENT_LOCATION.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ORDER_ORIGINATION_TRADER);
-        assertEquals( MyEnumPartyRole.ORDER_ORIGINATION_TRADER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ORDER_ORIGINATION_TRADER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.EXECUTING_TRADER);
-        assertEquals( MyEnumPartyRole.EXECUTING_TRADER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.EXECUTING_TRADER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ORDER_ORIGINATION_FIRM);
-        assertEquals( MyEnumPartyRole.ORDER_ORIGINATION_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ORDER_ORIGINATION_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.GIVEUP_CLEARING_FIRM);
-        assertEquals( MyEnumPartyRole.GIVEUP_CLEARING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.GIVEUP_CLEARING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CORRESPONDENT_CLEARING_FIRM);
-        assertEquals( MyEnumPartyRole.CORRESPONDENT_CLEARING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CORRESPONDENT_CLEARING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.EXECUTING_SYSTEM);
-        assertEquals( MyEnumPartyRole.EXECUTING_SYSTEM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.EXECUTING_SYSTEM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CONTRA_FIRM);
-        assertEquals( MyEnumPartyRole.CONTRA_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CONTRA_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CONTRA_CLEARING_FIRM);
-        assertEquals( MyEnumPartyRole.CONTRA_CLEARING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CONTRA_CLEARING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.SPONSORING_FIRM);
-        assertEquals( MyEnumPartyRole.SPONSORING_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.SPONSORING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.UNDERLYING_CONTRA_FIRM);
-        assertEquals( MyEnumPartyRole.UNDERLYING_CONTRA_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.UNDERLYING_CONTRA_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CLEARING_ORGANIZATION);
-        assertEquals( MyEnumPartyRole.CLEARING_ORGANIZATION.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CLEARING_ORGANIZATION.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.EXCHANGE);
-        assertEquals( MyEnumPartyRole.EXCHANGE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.EXCHANGE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
@@ -313,234 +313,234 @@ class Tag759EnuNested2PartyRoleTest {
          *  24-78 msg types
          */
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CUSTOMER_ACCOUNT);
-        assertEquals( MyEnumPartyRole.CUSTOMER_ACCOUNT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CUSTOMER_ACCOUNT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CORRESPONDENT_CLEARING_ORGANIZATION);
-        assertEquals( MyEnumPartyRole.CORRESPONDENT_CLEARING_ORGANIZATION.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CORRESPONDENT_CLEARING_ORGANIZATION.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CORRESPONDENT_BROKER);
-        assertEquals( MyEnumPartyRole.CORRESPONDENT_BROKER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CORRESPONDENT_BROKER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.BUYER_SELLER);
-        assertEquals( MyEnumPartyRole.BUYER_SELLER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.BUYER_SELLER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CUSTODIAN);
-        assertEquals( MyEnumPartyRole.CUSTODIAN.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CUSTODIAN.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.INTERMEDIARY);
-        assertEquals( MyEnumPartyRole.INTERMEDIARY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.INTERMEDIARY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.AGENT);
-        assertEquals( MyEnumPartyRole.AGENT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.AGENT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.SUB_CUSTODIAN);
-        assertEquals( MyEnumPartyRole.SUB_CUSTODIAN.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.SUB_CUSTODIAN.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.BENEFICIARY);
-        assertEquals( MyEnumPartyRole.BENEFICIARY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.BENEFICIARY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.INTERESTED_PARTY);
-        assertEquals( MyEnumPartyRole.INTERESTED_PARTY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.INTERESTED_PARTY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.REGULATORY_BODY);
-        assertEquals( MyEnumPartyRole.REGULATORY_BODY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.REGULATORY_BODY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.LIQUIDITY_PROVIDER);
-        assertEquals( MyEnumPartyRole.LIQUIDITY_PROVIDER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.LIQUIDITY_PROVIDER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ENTERING_TRADER);
-        assertEquals( MyEnumPartyRole.ENTERING_TRADER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ENTERING_TRADER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CONTRA_TRADER);
-        assertEquals( MyEnumPartyRole.CONTRA_TRADER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CONTRA_TRADER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.POSITION_ACCOUNT);
-        assertEquals( MyEnumPartyRole.POSITION_ACCOUNT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.POSITION_ACCOUNT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CONTRA_INVESTOR_ID);
-        assertEquals( MyEnumPartyRole.CONTRA_INVESTOR_ID.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CONTRA_INVESTOR_ID.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.TRANSFER_TO_FIRM);
-        assertEquals( MyEnumPartyRole.TRANSFER_TO_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.TRANSFER_TO_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CONTRA_POSITION_ACCOUNT);
-        assertEquals( MyEnumPartyRole.CONTRA_POSITION_ACCOUNT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CONTRA_POSITION_ACCOUNT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CONTRA_EXCHANGE);
-        assertEquals( MyEnumPartyRole.CONTRA_EXCHANGE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CONTRA_EXCHANGE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.INTERNAL_CARRY_ACCOUNT);
-        assertEquals( MyEnumPartyRole.INTERNAL_CARRY_ACCOUNT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.INTERNAL_CARRY_ACCOUNT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ORDER_ENTRY_OPERATOR_ID);
-        assertEquals( MyEnumPartyRole.ORDER_ENTRY_OPERATOR_ID.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ORDER_ENTRY_OPERATOR_ID.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.SECONDARY_ACCOUNT_NUMBER);
-        assertEquals( MyEnumPartyRole.SECONDARY_ACCOUNT_NUMBER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.SECONDARY_ACCOUNT_NUMBER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.FOREIGN_FIRM);
-        assertEquals( MyEnumPartyRole.FOREIGN_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.FOREIGN_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.THIRD_PARTY_ALLOCATION_FIRM);
-        assertEquals( MyEnumPartyRole.THIRD_PARTY_ALLOCATION_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.THIRD_PARTY_ALLOCATION_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CLAIMING_ACCOUNT);
-        assertEquals( MyEnumPartyRole.CLAIMING_ACCOUNT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CLAIMING_ACCOUNT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ASSET_MANAGER);
-        assertEquals( MyEnumPartyRole.ASSET_MANAGER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ASSET_MANAGER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.PLEDGOR_ACCOUNT);
-        assertEquals( MyEnumPartyRole.PLEDGOR_ACCOUNT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.PLEDGOR_ACCOUNT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.PLEDGEE_ACCOUNT);
-        assertEquals( MyEnumPartyRole.PLEDGEE_ACCOUNT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.PLEDGEE_ACCOUNT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.LARGE_TRADER_REPORTABLE_ACCOUNT);
-        assertEquals( MyEnumPartyRole.LARGE_TRADER_REPORTABLE_ACCOUNT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.LARGE_TRADER_REPORTABLE_ACCOUNT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.TRADER_MNEMONIC);
-        assertEquals( MyEnumPartyRole.TRADER_MNEMONIC.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.TRADER_MNEMONIC.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.SENDER_LOCATION);
-        assertEquals( MyEnumPartyRole.SENDER_LOCATION.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.SENDER_LOCATION.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.SESSION_ID);
-        assertEquals( MyEnumPartyRole.SESSION_ID.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.SESSION_ID.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ACCEPTABLE_COUNTERPARTY);
-        assertEquals( MyEnumPartyRole.ACCEPTABLE_COUNTERPARTY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ACCEPTABLE_COUNTERPARTY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.UNACCEPTABLE_COUNTERPARTY);
-        assertEquals( MyEnumPartyRole.UNACCEPTABLE_COUNTERPARTY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.UNACCEPTABLE_COUNTERPARTY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ENTERING_UNIT);
-        assertEquals( MyEnumPartyRole.ENTERING_UNIT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ENTERING_UNIT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.EXECUTING_UNIT);
-        assertEquals( MyEnumPartyRole.EXECUTING_UNIT.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.EXECUTING_UNIT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.INTRODUCING_BROKER);
-        assertEquals( MyEnumPartyRole.INTRODUCING_BROKER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.INTRODUCING_BROKER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.QUOTE_ORIGINATOR);
-        assertEquals( MyEnumPartyRole.QUOTE_ORIGINATOR.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.QUOTE_ORIGINATOR.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.REPORT_ORIGINATOR);
-        assertEquals( MyEnumPartyRole.REPORT_ORIGINATOR.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.REPORT_ORIGINATOR.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.SYSTEMATIC_INTERNALISER);
-        assertEquals( MyEnumPartyRole.SYSTEMATIC_INTERNALISER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.SYSTEMATIC_INTERNALISER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.MULTILATERAL_TRADING_FACILITY);
-        assertEquals( MyEnumPartyRole.MULTILATERAL_TRADING_FACILITY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.MULTILATERAL_TRADING_FACILITY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.REGULATED_MARKET);
-        assertEquals( MyEnumPartyRole.REGULATED_MARKET.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.REGULATED_MARKET.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.MARKET_MAKER);
-        assertEquals( MyEnumPartyRole.MARKET_MAKER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.MARKET_MAKER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.INVESTMENT_FIRM);
-        assertEquals( MyEnumPartyRole.INVESTMENT_FIRM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.INVESTMENT_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.HOST_CA);
-        assertEquals( MyEnumPartyRole.HOST_CA.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.HOST_CA.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.HOME_CA);
-        assertEquals( MyEnumPartyRole.HOME_CA.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.HOME_CA.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CA_LIQUIDITY);
-        assertEquals( MyEnumPartyRole.CA_LIQUIDITY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CA_LIQUIDITY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.CA_TRANSACTION_VENUE);
-        assertEquals( MyEnumPartyRole.CA_TRANSACTION_VENUE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.CA_TRANSACTION_VENUE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.REPORTING_INTERMEDIARY);
-        assertEquals( MyEnumPartyRole.REPORTING_INTERMEDIARY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.REPORTING_INTERMEDIARY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.EXECUTION_VENUE);
-        assertEquals( MyEnumPartyRole.EXECUTION_VENUE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.EXECUTION_VENUE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.MARKET_DATA_ENTRY_ORIGINATOR);
-        assertEquals( MyEnumPartyRole.MARKET_DATA_ENTRY_ORIGINATOR.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.MARKET_DATA_ENTRY_ORIGINATOR.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.LOCATION_ID);
-        assertEquals( MyEnumPartyRole.LOCATION_ID.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.LOCATION_ID.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.DESK_ID);
-        assertEquals( MyEnumPartyRole.DESK_ID.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.DESK_ID.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.MARKET_DATA_MARKET);
-        assertEquals( MyEnumPartyRole.MARKET_DATA_MARKET.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.MARKET_DATA_MARKET.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag759EnuNested2PartyRole(MyEnumPartyRole.ALLOCATION_ENTITY);
-        assertEquals( MyEnumPartyRole.ALLOCATION_ENTITY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyRole.ALLOCATION_ENTITY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

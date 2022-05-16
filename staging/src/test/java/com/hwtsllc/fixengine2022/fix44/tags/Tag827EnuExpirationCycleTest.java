@@ -37,23 +37,23 @@ class Tag827EnuExpirationCycleTest {
     @Test
     void FIX0827Test() {
         FIX44 fixData = FIX44.FIX827_ENU_EXPIRATION_CYCLE;
-        assertEquals( "827", fixData.getID());
-        assertEquals( "EXPIRATION_CYCLE", fixData.getName());
-        assertEquals( "ExpirationCycle", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "827", fixData.toFIXIDString());
+        assertEquals( "EXPIRATION_CYCLE", fixData.toFIXNameString());
+        assertEquals( "ExpirationCycle", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0827Test() {
         Tag827EnuExpirationCycle tagData;
 
         tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_CLOSE );
-        assertEquals( Enum827ExpirationCycle.EXPIRE_ON_CLOSE.getID(), tagData.getDataValue());
+        assertEquals( Enum827ExpirationCycle.EXPIRE_ON_CLOSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_OPEN );
-        assertEquals( Enum827ExpirationCycle.EXPIRE_ON_OPEN.getID(), tagData.getDataValue());
+        assertEquals( Enum827ExpirationCycle.EXPIRE_ON_OPEN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

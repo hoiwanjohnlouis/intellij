@@ -45,7 +45,7 @@ public class Tag852BoolPublishTrdIndicator extends FIX44Abstract implements LogV
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag

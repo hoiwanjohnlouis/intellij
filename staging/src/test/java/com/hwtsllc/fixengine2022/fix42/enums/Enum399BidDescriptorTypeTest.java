@@ -37,35 +37,35 @@ class Enum399BidDescriptorTypeTest {
     void Enum0399Test() {
         Enum399BidDescriptorType enumType;
 
-        /**
+        /*
          * 1-3 msg types
          */
         enumType = Enum399BidDescriptorType.SECTOR;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "SECTOR", enumType.getName());
-        assertEquals( "1 - Sector", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "SECTOR", enumType.toFIXNameString());
+        assertEquals( "1 - Sector", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum399BidDescriptorType.COUNTRY;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "COUNTRY", enumType.getName());
-        assertEquals( "2 - Country", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "COUNTRY", enumType.toFIXNameString());
+        assertEquals( "2 - Country", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum399BidDescriptorType.INDEX;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "INDEX", enumType.getName());
-        assertEquals( "3 - Index", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "INDEX", enumType.toFIXNameString());
+        assertEquals( "3 - Index", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

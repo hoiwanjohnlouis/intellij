@@ -38,13 +38,13 @@ class Tag61EnuUrgencyTest {
     @Test
     void FIX0061Test() {
         FIX27 fixData = FIX27.FIX61_ENU_URGENCY;
-        assertEquals( "URGENCY", fixData.getName());
-        assertEquals( "61", fixData.getID());
-        assertEquals( "Urgency", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "URGENCY", fixData.toFIXNameString());
+        assertEquals( "61", fixData.toFIXIDString());
+        assertEquals( "Urgency", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0061Test() {

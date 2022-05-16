@@ -27,12 +27,12 @@ class Tag483UtcTransBkdTimeTest {
     @Test
     void FIX0483Test() {
         FIX43 fixData = FIX43.FIX483_UTC_TRANS_BKD_TIME;
-        assertEquals( "483", fixData.getID());
-        assertEquals( "TRANS_BKD_TIME", fixData.getName());
-        assertEquals( "TransBkdTime", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "483", fixData.toFIXIDString());
+        assertEquals( "TRANS_BKD_TIME", fixData.toFIXNameString());
+        assertEquals( "TransBkdTime", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0483Test() {

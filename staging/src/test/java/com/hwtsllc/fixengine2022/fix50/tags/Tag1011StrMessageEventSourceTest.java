@@ -42,12 +42,12 @@ class Tag1011StrMessageEventSourceTest {
     @Test
     void FIX1011Test() {
         FIX50 fixData = FIX50.FIX1011_STR_MESSAGE_EVENT_SOURCE;
-        assertEquals( "1011", fixData.getID());
-        assertEquals( "MESSAGE_EVENT_SOURCE", fixData.getName());
-        assertEquals( "MessageEventSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1011", fixData.toFIXIDString());
+        assertEquals( "MESSAGE_EVENT_SOURCE", fixData.toFIXNameString());
+        assertEquals( "MessageEventSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1011Test() {

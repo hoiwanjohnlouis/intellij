@@ -35,12 +35,12 @@ class Tag993StrAllocCustomerCapacityTest {
     @Test
     void FIX0993Test() {
         FIX50 fixData = FIX50.FIX993_STR_ALLOC_CUSTOMER_CAPACITY;
-        assertEquals( "993", fixData.getID());
-        assertEquals( "ALLOC_CUSTOMER_CAPACITY", fixData.getName());
-        assertEquals( "AllocCustomerCapacity", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "993", fixData.toFIXIDString());
+        assertEquals( "ALLOC_CUSTOMER_CAPACITY", fixData.toFIXNameString());
+        assertEquals( "AllocCustomerCapacity", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0993Test() {

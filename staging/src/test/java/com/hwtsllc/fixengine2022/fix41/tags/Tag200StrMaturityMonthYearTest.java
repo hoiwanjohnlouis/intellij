@@ -48,12 +48,12 @@ class Tag200StrMaturityMonthYearTest {
     @Test
     void FIX0200Test() {
         FIX41 fixData = FIX41.FIX200_STR_MATURITY_MONTH_YEAR;
-        assertEquals( "200", fixData.getID());
-        assertEquals( "MATURITY_MONTH_YEAR", fixData.getName());
-        assertEquals( "MaturityMonthYear", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "200", fixData.toFIXIDString());
+        assertEquals( "MATURITY_MONTH_YEAR", fixData.toFIXNameString());
+        assertEquals( "MaturityMonthYear", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0200Test() {

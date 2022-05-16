@@ -27,12 +27,12 @@ class Tag576NumNoClearingInstructionsTest {
     @Test
     void FIX0576Test() {
         FIX43 fixData = FIX43.FIX576_NUM_NO_CLEARING_INSTRUCTIONS;
-        assertEquals( "576", fixData.getID());
-        assertEquals( "NO_CLEARING_INSTRUCTIONS", fixData.getName());
-        assertEquals( "NoClearingInstructions", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "576", fixData.toFIXIDString());
+        assertEquals( "NO_CLEARING_INSTRUCTIONS", fixData.toFIXNameString());
+        assertEquals( "NoClearingInstructions", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0576Test() {

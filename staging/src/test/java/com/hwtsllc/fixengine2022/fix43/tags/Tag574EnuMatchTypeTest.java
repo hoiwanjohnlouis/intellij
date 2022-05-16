@@ -27,12 +27,12 @@ class Tag574EnuMatchTypeTest {
     @Test
     void FIX0574Test() {
         FIX43 fixData = FIX43.FIX574_ENU_MATCH_TYPE;
-        assertEquals( "574", fixData.getID());
-        assertEquals( "MATCH_TYPE", fixData.getName());
-        assertEquals( "MatchType", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "574", fixData.toFIXIDString());
+        assertEquals( "MATCH_TYPE", fixData.toFIXNameString());
+        assertEquals( "MatchType", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0574Test() {

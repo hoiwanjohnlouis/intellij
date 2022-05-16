@@ -103,13 +103,13 @@ class Tag18EnuExecInstTest {
     @Test
     void FIX0018Test() {
         FIX27 fixData = FIX27.FIX18_ENU_EXEC_INST;
-        assertEquals( "EXEC_INST", fixData.getName());
-        assertEquals( "18", fixData.getID());
-        assertEquals( "ExecInst", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "EXEC_INST", fixData.toFIXNameString());
+        assertEquals( "18", fixData.toFIXIDString());
+        assertEquals( "ExecInst", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0018Test() {

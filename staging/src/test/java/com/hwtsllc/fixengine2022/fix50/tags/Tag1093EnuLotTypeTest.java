@@ -40,27 +40,27 @@ class Tag1093EnuLotTypeTest {
     @Test
     void FIX1093Test() {
         FIX50 fixData = FIX50.FIX1093_ENU_LOT_TYPE;
-        assertEquals( "1093", fixData.getID());
-        assertEquals( "LOT_TYPE", fixData.getName());
-        assertEquals( "LotType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1093", fixData.toFIXIDString());
+        assertEquals( "LOT_TYPE", fixData.toFIXNameString());
+        assertEquals( "LotType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1093Test() {
         Tag1093EnuLotType tagData;
 
         tagData = new Tag1093EnuLotType( Enum1093LotType.ODD_LOT );
-        assertEquals( Enum1093LotType.ODD_LOT.getID(), tagData.getDataValue());
+        assertEquals( Enum1093LotType.ODD_LOT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1093EnuLotType( Enum1093LotType.ROUND_LOT );
-        assertEquals( Enum1093LotType.ROUND_LOT.getID(), tagData.getDataValue());
+        assertEquals( Enum1093LotType.ROUND_LOT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1093EnuLotType( Enum1093LotType.BLOCK_LOT );
-        assertEquals( Enum1093LotType.BLOCK_LOT.getID(), tagData.getDataValue());
+        assertEquals( Enum1093LotType.BLOCK_LOT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

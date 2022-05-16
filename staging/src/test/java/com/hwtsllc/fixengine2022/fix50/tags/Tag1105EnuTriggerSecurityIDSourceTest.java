@@ -133,18 +133,18 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
     @Test
     void FIX1105Test() {
         FIX50 fixData = FIX50.FIX1105_ENU_TRIGGER_SECURITY_ID_SOURCE;
-        assertEquals( "1105", fixData.getID());
-        assertEquals( "TRIGGER_SECURITY_ID_SOURCE", fixData.getName());
-        assertEquals( "TriggerSecurityIDSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1105", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_SECURITY_ID_SOURCE", fixData.toFIXNameString());
+        assertEquals( "TriggerSecurityIDSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1105Test() {
         Tag1105EnuTriggerSecurityIDSource tagData;
 
-        /**
+        /*
          * 1-9 Security ID Source
          */
         tagData = new Tag1105EnuTriggerSecurityIDSource(MyEnumSecurityIDSource.CUSIP);
@@ -185,7 +185,7 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          * A-L Security ID Source
          */
         tagData = new Tag1105EnuTriggerSecurityIDSource(MyEnumSecurityIDSource.BLOOMBERG);

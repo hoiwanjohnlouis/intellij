@@ -34,26 +34,26 @@ class Enum265MDUpdateTypeTest {
     void Enum0265Test() {
         Enum265MDUpdateType enumType;
 
-        /**
+        /*
          * 0-1 msg types
          */
         enumType = Enum265MDUpdateType.FULL_REFRESH;
-        assertEquals("0", enumType.getID());
-        assertEquals("FULL_REFRESH", enumType.getName());
-        assertEquals("0 - Full refresh", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("FULL_REFRESH", enumType.toFIXNameString());
+        assertEquals("0 - Full refresh", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum265MDUpdateType.INCREMENTAL_REFRESH;
-        assertEquals("1", enumType.getID());
-        assertEquals("INCREMENTAL_REFRESH", enumType.getName());
-        assertEquals("1 - Incremental refresh", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("INCREMENTAL_REFRESH", enumType.toFIXNameString());
+        assertEquals("1 - Incremental refresh", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

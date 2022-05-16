@@ -34,21 +34,21 @@ class Enum591PreallocMethodTest {
          *  0-1 types
          */
         enumType = Enum591PreallocMethod.PRO_RATA;
-        assertEquals("0", enumType.getID());
-        assertEquals("PRO_RATA", enumType.getName());
-        assertEquals("0 - Pro-rata", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("PRO_RATA", enumType.toFIXNameString());
+        assertEquals("0 - Pro-rata", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum591PreallocMethod.DO_NOT_PRO_RATA;
-        assertEquals("1", enumType.getID());
-        assertEquals("DO_NOT_PRO_RATA", enumType.getName());
-        assertEquals("1 - Do not pro-rata - discuss first", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("DO_NOT_PRO_RATA", enumType.toFIXNameString());
+        assertEquals("1 - Do not pro-rata - discuss first", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

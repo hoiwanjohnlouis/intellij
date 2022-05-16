@@ -38,12 +38,12 @@ class Tag149StrURLLinkTest {
     @Test
     void FIX0149Test() {
         FIX41 fixData = FIX41.FIX149_STR_URL_LINK;
-        assertEquals( "149", fixData.getID());
-        assertEquals( "URL_LINK", fixData.getName());
-        assertEquals( "URLLink", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "149", fixData.toFIXIDString());
+        assertEquals( "URL_LINK", fixData.toFIXNameString());
+        assertEquals( "URLLink", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0149Test() {

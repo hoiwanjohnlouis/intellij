@@ -35,13 +35,13 @@ class Tag96DatRawDataTest {
     @Test
     void FIX0096Test() {
         FIX27 fixData = FIX27.FIX96_DAT_RAW_DATA;
-        assertEquals( "RAW_DATA", fixData.getName());
-        assertEquals( "96", fixData.getID());
-        assertEquals( "RawData", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "RAW_DATA", fixData.toFIXNameString());
+        assertEquals( "96", fixData.toFIXIDString());
+        assertEquals( "RawData", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0096Test() {

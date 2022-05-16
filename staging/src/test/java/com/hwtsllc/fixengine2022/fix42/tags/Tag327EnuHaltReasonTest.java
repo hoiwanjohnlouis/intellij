@@ -41,12 +41,12 @@ class Tag327EnuHaltReasonTest {
     @Test
     void FIX0327Test() {
         FIX42 fixData = FIX42.FIX327_ENU_HALT_REASON;
-        assertEquals( "327", fixData.getID());
-        assertEquals( "HALT_REASON", fixData.getName());
-        assertEquals( "HaltReason", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "327", fixData.toFIXIDString());
+        assertEquals( "HALT_REASON", fixData.toFIXNameString());
+        assertEquals( "HaltReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0327Test() {
@@ -56,27 +56,27 @@ class Tag327EnuHaltReasonTest {
          * D, E, I, M, P, and X msg types
          */
         tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEWS_DISSEMINATION);
-        assertEquals( Enum327HaltReason.NEWS_DISSEMINATION.getID(), tagData.getDataValue());
+        assertEquals( Enum327HaltReason.NEWS_DISSEMINATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag327EnuHaltReason(Enum327HaltReason.ORDER_INFLUX);
-        assertEquals( Enum327HaltReason.ORDER_INFLUX.getID(), tagData.getDataValue());
+        assertEquals( Enum327HaltReason.ORDER_INFLUX.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag327EnuHaltReason(Enum327HaltReason.ORDER_IMBALANCE);
-        assertEquals( Enum327HaltReason.ORDER_IMBALANCE.getID(), tagData.getDataValue());
+        assertEquals( Enum327HaltReason.ORDER_IMBALANCE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag327EnuHaltReason(Enum327HaltReason.ADDITIONAL_INFORMATION);
-        assertEquals( Enum327HaltReason.ADDITIONAL_INFORMATION.getID(), tagData.getDataValue());
+        assertEquals( Enum327HaltReason.ADDITIONAL_INFORMATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEW_PENDING);
-        assertEquals( Enum327HaltReason.NEW_PENDING.getID(), tagData.getDataValue());
+        assertEquals( Enum327HaltReason.NEW_PENDING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag327EnuHaltReason(Enum327HaltReason.EQUIPMENT_CHANGE_OVER);
-        assertEquals( Enum327HaltReason.EQUIPMENT_CHANGE_OVER.getID(), tagData.getDataValue());
+        assertEquals( Enum327HaltReason.EQUIPMENT_CHANGE_OVER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

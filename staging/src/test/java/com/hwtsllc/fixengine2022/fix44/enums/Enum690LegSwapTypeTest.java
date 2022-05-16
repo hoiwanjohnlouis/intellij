@@ -40,35 +40,35 @@ class Enum690LegSwapTypeTest {
         Enum690LegSwapType enumType;
 
         enumType = Enum690LegSwapType.PAR_FOR_PAR;
-        assertEquals("1", enumType.getID());
-        assertEquals("PAR_FOR_PAR", enumType.getName());
-        assertEquals("1 - Par For Par", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("PAR_FOR_PAR", enumType.toFIXNameString());
+        assertEquals("1 - Par For Par", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum690LegSwapType.MODIFIED_DURATION;
-        assertEquals("2", enumType.getID());
-        assertEquals("MODIFIED_DURATION", enumType.getName());
-        assertEquals("2 - Modified Duration", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("MODIFIED_DURATION", enumType.toFIXNameString());
+        assertEquals("2 - Modified Duration", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum690LegSwapType.RISK;
-        assertEquals("4", enumType.getID());
-        assertEquals("RISK", enumType.getName());
-        assertEquals("4 - Risk", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("RISK", enumType.toFIXNameString());
+        assertEquals("4 - Risk", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum690LegSwapType.PROCEEDS;
-        assertEquals("5", enumType.getID());
-        assertEquals("PROCEEDS", enumType.getName());
-        assertEquals("5 - Proceeds", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("5", enumType.toFIXIDString());
+        assertEquals("PROCEEDS", enumType.toFIXNameString());
+        assertEquals("5 - Proceeds", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

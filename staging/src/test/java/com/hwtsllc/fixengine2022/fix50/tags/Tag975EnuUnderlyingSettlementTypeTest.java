@@ -40,27 +40,27 @@ class Tag975EnuUnderlyingSettlementTypeTest {
     @Test
     void FIX0975Test() {
         FIX50 fixData = FIX50.FIX975_ENU_UNDERLYING_SETTLEMENT_TYPE;
-        assertEquals( "975", fixData.getID());
-        assertEquals( "UNDERLYING_SETTLEMENT_TYPE", fixData.getName());
-        assertEquals( "UnderlyingSettlementType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "975", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_SETTLEMENT_TYPE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingSettlementType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0975Test() {
         Tag975EnuUnderlyingSettlementType tagData;
 
         tagData = new Tag975EnuUnderlyingSettlementType( Enum975UnderlyingSettlementType.T_PLUS_1 );
-        assertEquals( Enum975UnderlyingSettlementType.T_PLUS_1.getID(), tagData.getDataValue());
+        assertEquals( Enum975UnderlyingSettlementType.T_PLUS_1.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag975EnuUnderlyingSettlementType( Enum975UnderlyingSettlementType.T_PLUS_3 );
-        assertEquals( Enum975UnderlyingSettlementType.T_PLUS_3.getID(), tagData.getDataValue());
+        assertEquals( Enum975UnderlyingSettlementType.T_PLUS_3.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag975EnuUnderlyingSettlementType( Enum975UnderlyingSettlementType.T_PLUS_4 );
-        assertEquals( Enum975UnderlyingSettlementType.T_PLUS_4.getID(), tagData.getDataValue());
+        assertEquals( Enum975UnderlyingSettlementType.T_PLUS_4.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

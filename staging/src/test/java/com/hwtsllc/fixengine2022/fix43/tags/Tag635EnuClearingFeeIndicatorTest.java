@@ -27,12 +27,12 @@ class Tag635EnuClearingFeeIndicatorTest {
     @Test
     void FIX0635Test() {
         FIX43 fixData = FIX43.FIX635_ENU_CLEARING_FEE_INDICATOR;
-        assertEquals( "635", fixData.getID());
-        assertEquals( "CLEARING_FEE_INDICATOR", fixData.getName());
-        assertEquals( "ClearingFeeIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "635", fixData.toFIXIDString());
+        assertEquals( "CLEARING_FEE_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "ClearingFeeIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0635Test() {

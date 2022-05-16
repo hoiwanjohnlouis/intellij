@@ -27,12 +27,12 @@ class Tag630SeqHopRefIDTest {
     @Test
     void FIX0630Test() {
         FIX43 fixData = FIX43.FIX630_SEQ_HOP_REF_ID;
-        assertEquals( "630", fixData.getID());
-        assertEquals( "HOP_REF_ID", fixData.getName());
-        assertEquals( "HopRefID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "630", fixData.toFIXIDString());
+        assertEquals( "HOP_REF_ID", fixData.toFIXNameString());
+        assertEquals( "HopRefID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0630Test() {

@@ -35,12 +35,12 @@ class Tag58StrTextTest {
     @Test
     void FIX0058Test() {
         FIX27 fixData = FIX27.FIX58_STR_TEXT;
-        assertEquals( "58", fixData.getID());
-        assertEquals( "TEXT", fixData.getName());
-        assertEquals( "Text", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "58", fixData.toFIXIDString());
+        assertEquals( "TEXT", fixData.toFIXNameString());
+        assertEquals( "Text", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0058Test() {

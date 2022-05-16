@@ -35,12 +35,12 @@ class Tag754BoolAutoAcceptIndicatorTest {
     @Test
     void FIX0754Test() {
         FIX44 fixData = FIX44.FIX754_BOOL_AUTO_ACCEPT_INDICATOR;
-        assertEquals( "754", fixData.getID());
-        assertEquals( "AUTO_ACCEPT_INDICATOR", fixData.getName());
-        assertEquals( "AutoAcceptIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "754", fixData.toFIXIDString());
+        assertEquals( "AUTO_ACCEPT_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "AutoAcceptIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0754Test() {

@@ -28,12 +28,12 @@ class Tag407PctOutsideIndexPctTest {
     @Test
     void FIX0407Test() {
         FIX42 fixData = FIX42.FIX407_PCT_OUTSIDE_INDEX_PCT;
-        assertEquals( "407", fixData.getID());
-        assertEquals( "OUTSIDE_INDEX_PCT", fixData.getName());
-        assertEquals( "OutsideIndexPct", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "407", fixData.toFIXIDString());
+        assertEquals( "OUTSIDE_INDEX_PCT", fixData.toFIXNameString());
+        assertEquals( "OutsideIndexPct", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0407Test() {

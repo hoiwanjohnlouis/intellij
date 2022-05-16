@@ -37,12 +37,12 @@ class Tag434EnuCxlRejResponseToTest {
     @Test
     void FIX0434Test() {
         FIX42 fixData = FIX42.FIX434_ENU_CXL_REJ_RESPONSE_TO;
-        assertEquals( "434", fixData.getID());
-        assertEquals( "CXL_REJ_RESPONSE_TO", fixData.getName());
-        assertEquals( "CxlRejResponseTo", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "434", fixData.toFIXIDString());
+        assertEquals( "CXL_REJ_RESPONSE_TO", fixData.toFIXNameString());
+        assertEquals( "CxlRejResponseTo", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0434Test() {
@@ -52,11 +52,11 @@ class Tag434EnuCxlRejResponseToTest {
          * 1-2 msg types
          */
         tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST);
-        assertEquals( Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST);
-        assertEquals( Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

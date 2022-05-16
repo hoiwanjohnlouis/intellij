@@ -38,29 +38,29 @@ class Enum819AvgPxIndicatorTest {
         Enum819AvgPxIndicator enumType;
 
         enumType = Enum819AvgPxIndicator.NO_PRICING;
-        assertEquals("0", enumType.getID());
-        assertEquals("NO_PRICING", enumType.getName());
-        assertEquals("0 - No Average Pricing", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("NO_PRICING", enumType.toFIXNameString());
+        assertEquals("0 - No Average Pricing", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum819AvgPxIndicator.PART_OF_APG;
-        assertEquals("1", enumType.getID());
-        assertEquals("PART_OF_APG", enumType.getName());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("PART_OF_APG", enumType.toFIXNameString());
         assertEquals("1 - Trade is part of an average price group identified by the TradeLinkID (820)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum819AvgPxIndicator.LAST_TRADE;
-        assertEquals("2", enumType.getID());
-        assertEquals("LAST_TRADE", enumType.getName());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("LAST_TRADE", enumType.toFIXNameString());
         assertEquals("2 - Last trade is the average price group identified by the TradeLinkID (820)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -60,128 +60,128 @@ class Enum39OrdStatusTest {
          * 0-9 msg types
          */
         enumType = Enum39OrdStatus.NEW;
-        assertEquals("0", enumType.getID());
-        assertEquals("NEW", enumType.getName());
-        assertEquals("0 - New", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("NEW", enumType.toFIXNameString());
+        assertEquals("0 - New", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.PARTIALLY_FILLED;
-        assertEquals("1", enumType.getID());
-        assertEquals("PARTIALLY_FILLED", enumType.getName());
-        assertEquals("1 - Partially filled", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("PARTIALLY_FILLED", enumType.toFIXNameString());
+        assertEquals("1 - Partially filled", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.FILLED;
-        assertEquals("2", enumType.getID());
-        assertEquals("FILLED", enumType.getName());
-        assertEquals("2 - Filled", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("FILLED", enumType.toFIXNameString());
+        assertEquals("2 - Filled", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.DONE_FOR_DAY;
-        assertEquals("3", enumType.getID());
-        assertEquals("DONE_FOR_DAY", enumType.getName());
-        assertEquals("3 - Done for day", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("DONE_FOR_DAY", enumType.toFIXNameString());
+        assertEquals("3 - Done for day", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.CANCELED;
-        assertEquals("4", enumType.getID());
-        assertEquals("CANCELED", enumType.getName());
-        assertEquals("4 - Canceled", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("CANCELED", enumType.toFIXNameString());
+        assertEquals("4 - Canceled", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum39OrdStatus.REPLACED;
-        assertEquals("5", enumType.getID());
-        assertEquals("REPLACED", enumType.getName());
-        assertEquals("5 - Replaced (No longer used)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("5", enumType.toFIXIDString());
+        assertEquals("REPLACED", enumType.toFIXNameString());
+        assertEquals("5 - Replaced (No longer used)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.PENDING_CANCEL;
-        assertEquals("6", enumType.getID());
-        assertEquals("PENDING_CANCEL", enumType.getName());
-        assertEquals("6 - Pending Cancel (i.e. result of Order Cancel Request)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("6", enumType.toFIXIDString());
+        assertEquals("PENDING_CANCEL", enumType.toFIXNameString());
+        assertEquals("6 - Pending Cancel (i.e. result of Order Cancel Request)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.STOPPED;
-        assertEquals("7", enumType.getID());
-        assertEquals("STOPPED", enumType.getName());
-        assertEquals("7 - Stopped", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("7", enumType.toFIXIDString());
+        assertEquals("STOPPED", enumType.toFIXNameString());
+        assertEquals("7 - Stopped", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.REJECTED;
-        assertEquals("8", enumType.getID());
-        assertEquals("REJECTED", enumType.getName());
-        assertEquals("8 - Rejected", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("8", enumType.toFIXIDString());
+        assertEquals("REJECTED", enumType.toFIXNameString());
+        assertEquals("8 - Rejected", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.SUSPENDED;
-        assertEquals("9", enumType.getID());
-        assertEquals("SUSPENDED", enumType.getName());
-        assertEquals("9 - Suspended", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("9", enumType.toFIXIDString());
+        assertEquals("SUSPENDED", enumType.toFIXNameString());
+        assertEquals("9 - Suspended", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         /*
          * A-E msg types
          */
         enumType = Enum39OrdStatus.PENDING_NEW;
-        assertEquals("A", enumType.getID());
-        assertEquals("PENDING_NEW", enumType.getName());
-        assertEquals("A - Pending New", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("A", enumType.toFIXIDString());
+        assertEquals("PENDING_NEW", enumType.toFIXNameString());
+        assertEquals("A - Pending New", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.CALCULATED;
-        assertEquals("B", enumType.getID());
-        assertEquals("CALCULATED", enumType.getName());
-        assertEquals("B - Calculated", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("B", enumType.toFIXIDString());
+        assertEquals("CALCULATED", enumType.toFIXNameString());
+        assertEquals("B - Calculated", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.EXPIRED;
-        assertEquals("C", enumType.getID());
-        assertEquals("EXPIRED", enumType.getName());
-        assertEquals("C - Expired", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("C", enumType.toFIXIDString());
+        assertEquals("EXPIRED", enumType.toFIXNameString());
+        assertEquals("C - Expired", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.ACCEPTED_FOR_BIDDING;
-        assertEquals("D", enumType.getID());
-        assertEquals("ACCEPTED_FOR_BIDDING", enumType.getName());
-        assertEquals("D - Accepted for Bidding", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("D", enumType.toFIXIDString());
+        assertEquals("ACCEPTED_FOR_BIDDING", enumType.toFIXNameString());
+        assertEquals("D - Accepted for Bidding", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum39OrdStatus.PENDING_REPLACE;
-        assertEquals("E", enumType.getID());
-        assertEquals("PENDING_REPLACE", enumType.getName());
-        assertEquals("E - Pending Replace (i.e. result of Order Cancel/Replace Request)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("E", enumType.toFIXIDString());
+        assertEquals("PENDING_REPLACE", enumType.toFIXNameString());
+        assertEquals("E - Pending Replace (i.e. result of Order Cancel/Replace Request)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

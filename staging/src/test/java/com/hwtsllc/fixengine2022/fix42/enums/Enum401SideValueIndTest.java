@@ -36,26 +36,26 @@ class Enum401SideValueIndTest {
     void Enum0401Test() {
         Enum401SideValueInd enumType;
 
-        /**
+        /*
          * 1-2 msg types
          */
         enumType = Enum401SideValueInd.SIDE_VALUE_1;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "SIDE_VALUE_1", enumType.getName());
-        assertEquals( "1 - Side Value 1", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "SIDE_VALUE_1", enumType.toFIXNameString());
+        assertEquals( "1 - Side Value 1", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum401SideValueInd.SIDE_VALUE_2;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "SIDE_VALUE_2", enumType.getName());
-        assertEquals( "2 - Side Value 2", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "SIDE_VALUE_2", enumType.toFIXNameString());
+        assertEquals( "2 - Side Value 2", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

@@ -28,12 +28,12 @@ class Tag413PctCrossPercentTest {
     @Test
     void FIX0413Test() {
         FIX42 fixData = FIX42.FIX413_PCT_CROSS_PERCENT;
-        assertEquals( "413", fixData.getID());
-        assertEquals( "CROSS_PERCENT", fixData.getName());
-        assertEquals( "CrossPercent", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "413", fixData.toFIXIDString());
+        assertEquals( "CROSS_PERCENT", fixData.toFIXNameString());
+        assertEquals( "CrossPercent", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0413Test() {

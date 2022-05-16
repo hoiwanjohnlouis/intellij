@@ -38,13 +38,13 @@ class Tag5Enu5AdvTransTypeTest {
     @Test
     void FIX0005Test() {
         FIX27 fixData = FIX27.FIX5_ENU_ADV_TRANS_TYPE;
-        assertEquals( "ADV_TRANS_TYPE", fixData.getName());
-        assertEquals( "5", fixData.getID());
-        assertEquals( "Enum5AdvTransType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ADV_TRANS_TYPE", fixData.toFIXNameString());
+        assertEquals( "5", fixData.toFIXIDString());
+        assertEquals( "Enum5AdvTransType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0005Test() {

@@ -34,13 +34,13 @@ class Tag50StrSenderSubIDTest {
     @Test
     void FIX0050Test() {
         FIX27 fixData = FIX27.FIX50_STR_SENDER_SUB_ID;
-        assertEquals( "SENDER_SUB_ID", fixData.getName());
-        assertEquals( "50", fixData.getID());
-        assertEquals( "SenderSubID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "SENDER_SUB_ID", fixData.toFIXNameString());
+        assertEquals( "50", fixData.toFIXIDString());
+        assertEquals( "SenderSubID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0050Test() {

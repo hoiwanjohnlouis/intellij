@@ -29,12 +29,12 @@ class Tag318CcyUnderlyingCurrencyTest {
     @Test
     void FIX0318Test() {
         FIX42 fixData = FIX42.FIX318_CCY_UNDERLYING_CURRENCY;
-        assertEquals( "318", fixData.getID());
-        assertEquals( "UNDERLYING_CURRENCY", fixData.getName());
-        assertEquals( "UnderlyingCurrency", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "318", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CURRENCY", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCurrency", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0318Test() {

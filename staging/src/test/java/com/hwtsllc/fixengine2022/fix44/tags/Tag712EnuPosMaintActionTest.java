@@ -41,31 +41,31 @@ class Tag712EnuPosMaintActionTest {
     @Test
     void FIX0712Test() {
         FIX44 fixData = FIX44.FIX712_ENU_POS_MAINT_ACTION;
-        assertEquals( "712", fixData.getID());
-        assertEquals( "POS_MAINT_ACTION", fixData.getName());
-        assertEquals( "PosMaintAction", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "712", fixData.toFIXIDString());
+        assertEquals( "POS_MAINT_ACTION", fixData.toFIXNameString());
+        assertEquals( "PosMaintAction", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0712Test() {
         Tag712EnuPosMaintAction tagData;
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.NEW );
-        assertEquals( Enum712PosMaintAction.NEW.getID(), tagData.getDataValue());
+        assertEquals( Enum712PosMaintAction.NEW.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.REPLACE );
-        assertEquals( Enum712PosMaintAction.REPLACE.getID(), tagData.getDataValue());
+        assertEquals( Enum712PosMaintAction.REPLACE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.CANCEL );
-        assertEquals( Enum712PosMaintAction.CANCEL.getID(), tagData.getDataValue());
+        assertEquals( Enum712PosMaintAction.CANCEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.REVERSE );
-        assertEquals( Enum712PosMaintAction.REVERSE.getID(), tagData.getDataValue());
+        assertEquals( Enum712PosMaintAction.REVERSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

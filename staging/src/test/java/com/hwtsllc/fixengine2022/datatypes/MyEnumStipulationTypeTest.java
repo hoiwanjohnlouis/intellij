@@ -204,507 +204,507 @@ class MyEnumStipulationTypeTest {
          *  233 StipulationType
          */
         enumType = MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX;
-        assertEquals("AMT", enumType.getID());
-        assertEquals("ALTERNATIVE_MINIMUM_TAX", enumType.getName());
-        assertEquals("AMT - Alternative Minimum Tax (Y/N)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("AMT", enumType.toFIXIDString());
+        assertEquals("ALTERNATIVE_MINIMUM_TAX", enumType.toFIXNameString());
+        assertEquals("AMT - Alternative Minimum Tax (Y/N)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.AUTO_REINVESTMENT;
-        assertEquals("AUTOREINV", enumType.getID());
-        assertEquals("AUTO_REINVESTMENT", enumType.getName());
-        assertEquals("AUTOREINV - Auto Reinvestment at <rate> or better", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("AUTOREINV", enumType.toFIXIDString());
+        assertEquals("AUTO_REINVESTMENT", enumType.toFIXNameString());
+        assertEquals("AUTOREINV - Auto Reinvestment at <rate> or better", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.BANK_QUALIFIED;
-        assertEquals("BANKQUAL", enumType.getID());
-        assertEquals("BANK_QUALIFIED", enumType.getName());
-        assertEquals("BANKQUAL - Bank qualified (Y/N)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("BANKQUAL", enumType.toFIXIDString());
+        assertEquals("BANK_QUALIFIED", enumType.toFIXNameString());
+        assertEquals("BANKQUAL - Bank qualified (Y/N)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.BARGAIN_CONDITIONS;
-        assertEquals("BGNCON", enumType.getID());
-        assertEquals("BARGAIN_CONDITIONS", enumType.getName());
-        assertEquals("BGNCON - Bargain conditions (see StipulationValue (234) for values)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("BGNCON", enumType.toFIXIDString());
+        assertEquals("BARGAIN_CONDITIONS", enumType.toFIXNameString());
+        assertEquals("BGNCON - Bargain conditions (see StipulationValue (234) for values)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.COUPON_RANGE;
-        assertEquals("COUPON", enumType.getID());
-        assertEquals("COUPON_RANGE", enumType.getName());
-        assertEquals("COUPON - Coupon range", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("COUPON", enumType.toFIXIDString());
+        assertEquals("COUPON_RANGE", enumType.toFIXNameString());
+        assertEquals("COUPON - Coupon range", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.ISO_CURRENCY_CODE;
-        assertEquals("CURRENCY", enumType.getID());
-        assertEquals("ISO_CURRENCY_CODE", enumType.getName());
-        assertEquals("CURRENCY - ISO Currency Code", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("CURRENCY", enumType.toFIXIDString());
+        assertEquals("ISO_CURRENCY_CODE", enumType.toFIXNameString());
+        assertEquals("CURRENCY - ISO Currency Code", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.CUSTOM_START_END_DATE;
-        assertEquals("CUSTOMDATE", enumType.getID());
-        assertEquals("CUSTOM_START_END_DATE", enumType.getName());
-        assertEquals("CUSTOMDATE - Custom start/end date", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("CUSTOMDATE", enumType.toFIXIDString());
+        assertEquals("CUSTOM_START_END_DATE", enumType.toFIXNameString());
+        assertEquals("CUSTOMDATE - Custom start/end date", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.GEOGRAPHIC_AND_PERCENT_RANGE;
-        assertEquals("GEOG", enumType.getID());
-        assertEquals("GEOGRAPHIC_AND_PERCENT_RANGE", enumType.getName());
+        assertEquals("GEOG", enumType.toFIXIDString());
+        assertEquals("GEOGRAPHIC_AND_PERCENT_RANGE", enumType.toFIXNameString());
         assertEquals("GEOG - Geographics and % range (ex. 234=CA 0-80 [minimum of 80% California assets])",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.VALUATION_DISCOUNT;
-        assertEquals("HAIRCUT", enumType.getID());
-        assertEquals("VALUATION_DISCOUNT", enumType.getName());
-        assertEquals("HAIRCUT - Valuation Discount", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("HAIRCUT", enumType.toFIXIDString());
+        assertEquals("VALUATION_DISCOUNT", enumType.toFIXNameString());
+        assertEquals("HAIRCUT - Valuation Discount", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.INSURED;
-        assertEquals("INSURED", enumType.getID());
-        assertEquals("INSURED", enumType.getName());
-        assertEquals("INSURED - Insured (Y/N)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("INSURED", enumType.toFIXIDString());
+        assertEquals("INSURED", enumType.toFIXNameString());
+        assertEquals("INSURED - Insured (Y/N)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.YEAR_OR_YEAR_MONTH_OF_ISSUE;
-        assertEquals("ISSUE", enumType.getID());
-        assertEquals("YEAR_OR_YEAR_MONTH_OF_ISSUE", enumType.getName());
-        assertEquals("ISSUE - Year Or Year/Month of Issue (ex. 234=2002/09)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("ISSUE", enumType.toFIXIDString());
+        assertEquals("YEAR_OR_YEAR_MONTH_OF_ISSUE", enumType.toFIXNameString());
+        assertEquals("ISSUE - Year Or Year/Month of Issue (ex. 234=2002/09)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.ISSUERS_TICKER;
-        assertEquals("ISSUER", enumType.getID());
-        assertEquals("ISSUERS_TICKER", enumType.getName());
-        assertEquals("ISSUER - Issuer's ticker", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("ISSUER", enumType.toFIXIDString());
+        assertEquals("ISSUERS_TICKER", enumType.toFIXNameString());
+        assertEquals("ISSUER - Issuer's ticker", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.ISSUE_SIZE_RANGE;
-        assertEquals("ISSUESIZE", enumType.getID());
-        assertEquals("ISSUE_SIZE_RANGE", enumType.getName());
-        assertEquals("ISSUESIZE - issue size range", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("ISSUESIZE", enumType.toFIXIDString());
+        assertEquals("ISSUE_SIZE_RANGE", enumType.toFIXNameString());
+        assertEquals("ISSUESIZE - issue size range", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.LOOKBACK_DAYS;
-        assertEquals("LOOKBACK", enumType.getID());
-        assertEquals("LOOKBACK_DAYS", enumType.getName());
-        assertEquals("LOOKBACK - Lookback Days", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("LOOKBACK", enumType.toFIXIDString());
+        assertEquals("LOOKBACK_DAYS", enumType.toFIXNameString());
+        assertEquals("LOOKBACK - Lookback Days", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.EXPLICIT_LOT_IDENTIFIER;
-        assertEquals("LOT", enumType.getID());
-        assertEquals("EXPLICIT_LOT_IDENTIFIER", enumType.getName());
-        assertEquals("LOT - Explicit lot identifier", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("LOT", enumType.toFIXIDString());
+        assertEquals("EXPLICIT_LOT_IDENTIFIER", enumType.toFIXNameString());
+        assertEquals("LOT - Explicit lot identifier", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.LOT_VARIANCE;
-        assertEquals("LOTVAR", enumType.getID());
-        assertEquals("LOT_VARIANCE", enumType.getName());
+        assertEquals("LOTVAR", enumType.toFIXIDString());
+        assertEquals("LOT_VARIANCE", enumType.toFIXNameString());
         assertEquals("LOTVAR - Lot Variance (value in percent maximum over- or under-allocation allowed)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.MATURITY_YEAR_AND_MONTH;
-        assertEquals("MAT", enumType.getID());
-        assertEquals("MATURITY_YEAR_AND_MONTH", enumType.getName());
-        assertEquals("MAT - Maturity Year And Month", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("MAT", enumType.toFIXIDString());
+        assertEquals("MATURITY_YEAR_AND_MONTH", enumType.toFIXNameString());
+        assertEquals("MAT - Maturity Year And Month", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.MATURITY_RANGE;
-        assertEquals("MATURITY", enumType.getID());
-        assertEquals("MATURITY_RANGE", enumType.getName());
-        assertEquals("MATURITY - Maturity range", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("MATURITY", enumType.toFIXIDString());
+        assertEquals("MATURITY_RANGE", enumType.toFIXNameString());
+        assertEquals("MATURITY - Maturity range", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.MAXIMUM_SUBSTITUTIONS_REPO;
-        assertEquals("MAXSUBS", enumType.getID());
-        assertEquals("MAXIMUM_SUBSTITUTIONS_REPO", enumType.getName());
-        assertEquals("MAXSUBS - Maximum substitutions (Repo)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("MAXSUBS", enumType.toFIXIDString());
+        assertEquals("MAXIMUM_SUBSTITUTIONS_REPO", enumType.toFIXNameString());
+        assertEquals("MAXSUBS - Maximum substitutions (Repo)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.MINIMUM_DENOMINATION;
-        assertEquals("MINDNOM", enumType.getID());
-        assertEquals("MINIMUM_DENOMINATION", enumType.getName());
-        assertEquals("MINDNOM - Minimum denomination", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("MINDNOM", enumType.toFIXIDString());
+        assertEquals("MINIMUM_DENOMINATION", enumType.toFIXNameString());
+        assertEquals("MINDNOM - Minimum denomination", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.MINIMUM_INCREMENT;
-        assertEquals("MININCR", enumType.getID());
-        assertEquals("MINIMUM_INCREMENT", enumType.getName());
-        assertEquals("MININCR - Minimum increment", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("MININCR", enumType.toFIXIDString());
+        assertEquals("MINIMUM_INCREMENT", enumType.toFIXNameString());
+        assertEquals("MININCR - Minimum increment", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.MINIMUM_QUANTITY;
-        assertEquals("MINQTY", enumType.getID());
-        assertEquals("MINIMUM_QUANTITY", enumType.getName());
-        assertEquals("MINQTY - Minimum quantity", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("MINQTY", enumType.toFIXIDString());
+        assertEquals("MINIMUM_QUANTITY", enumType.toFIXNameString());
+        assertEquals("MINQTY - Minimum quantity", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.PAYMENT_FREQUENCY;
-        assertEquals("PAYFREQ", enumType.getID());
-        assertEquals("PAYMENT_FREQUENCY", enumType.getName());
-        assertEquals("PAYFREQ - Payment frequency, calendar", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PAYFREQ", enumType.toFIXIDString());
+        assertEquals("PAYMENT_FREQUENCY", enumType.toFIXNameString());
+        assertEquals("PAYFREQ - Payment frequency, calendar", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.NUMBER_OF_PIECES;
-        assertEquals("PIECES", enumType.getID());
-        assertEquals("NUMBER_OF_PIECES", enumType.getName());
-        assertEquals("PIECES - Number Of Pieces", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PIECES", enumType.toFIXIDString());
+        assertEquals("NUMBER_OF_PIECES", enumType.toFIXNameString());
+        assertEquals("PIECES - Number Of Pieces", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.POOLS_MAXIMUM;
-        assertEquals("PMAX", enumType.getID());
-        assertEquals("POOLS_MAXIMUM", enumType.getName());
-        assertEquals("PMAX - Pools Maximum", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PMAX", enumType.toFIXIDString());
+        assertEquals("POOLS_MAXIMUM", enumType.toFIXNameString());
+        assertEquals("PMAX - Pools Maximum", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.POOLS_PER_LOT;
-        assertEquals("PPL", enumType.getID());
-        assertEquals("POOLS_PER_LOT", enumType.getName());
-        assertEquals("PPL - Pools per Lot", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PPL", enumType.toFIXIDString());
+        assertEquals("POOLS_PER_LOT", enumType.toFIXNameString());
+        assertEquals("PPL - Pools per Lot", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.POOLS_PER_MILLION;
-        assertEquals("PPM", enumType.getID());
-        assertEquals("POOLS_PER_MILLION", enumType.getName());
-        assertEquals("PPM - Pools per Million", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PPM", enumType.toFIXIDString());
+        assertEquals("POOLS_PER_MILLION", enumType.toFIXNameString());
+        assertEquals("PPM - Pools per Million", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.POOLS_PER_TRADE;
-        assertEquals("PPT", enumType.getID());
-        assertEquals("POOLS_PER_TRADE", enumType.getName());
-        assertEquals("PPT - Pools per Trade", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PPT", enumType.toFIXIDString());
+        assertEquals("POOLS_PER_TRADE", enumType.toFIXNameString());
+        assertEquals("PPT - Pools per Trade", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.PRICE_RANGE;
-        assertEquals("PRICE", enumType.getID());
-        assertEquals("PRICE_RANGE", enumType.getName());
-        assertEquals("PRICE - Price Range", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PRICE", enumType.toFIXIDString());
+        assertEquals("PRICE_RANGE", enumType.toFIXNameString());
+        assertEquals("PRICE - Price Range", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.PRICING_FREQUENCY;
-        assertEquals("PRICEFREQ", enumType.getID());
-        assertEquals("PRICING_FREQUENCY", enumType.getName());
-        assertEquals("PRICEFREQ - Pricing frequency", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PRICEFREQ", enumType.toFIXIDString());
+        assertEquals("PRICING_FREQUENCY", enumType.toFIXNameString());
+        assertEquals("PRICEFREQ - Pricing frequency", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.PRODUCTION_YEAR;
-        assertEquals("PROD", enumType.getID());
-        assertEquals("PRODUCTION_YEAR", enumType.getName());
-        assertEquals("PROD - Production Year", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PROD", enumType.toFIXIDString());
+        assertEquals("PRODUCTION_YEAR", enumType.toFIXNameString());
+        assertEquals("PROD - Production Year", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.CALL_PROTECTION;
-        assertEquals("PROTECT", enumType.getID());
-        assertEquals("CALL_PROTECTION", enumType.getName());
-        assertEquals("PROTECT - Call protection", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PROTECT", enumType.toFIXIDString());
+        assertEquals("CALL_PROTECTION", enumType.toFIXNameString());
+        assertEquals("PROTECT - Call protection", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.PURPOSE;
-        assertEquals("PURPOSE", enumType.getID());
-        assertEquals("PURPOSE", enumType.getName());
-        assertEquals("PURPOSE - Purpose", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PURPOSE", enumType.toFIXIDString());
+        assertEquals("PURPOSE", enumType.toFIXNameString());
+        assertEquals("PURPOSE - Purpose", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.BENCHMARK_PRICE_SOURCE;
-        assertEquals("PXSOURCE", enumType.getID());
-        assertEquals("BENCHMARK_PRICE_SOURCE", enumType.getName());
-        assertEquals("PXSOURCE - Benchmark price source", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PXSOURCE", enumType.toFIXIDString());
+        assertEquals("BENCHMARK_PRICE_SOURCE", enumType.toFIXNameString());
+        assertEquals("PXSOURCE - Benchmark price source", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.RATING_SOURCE_AND_RANGE;
-        assertEquals("RATING", enumType.getID());
-        assertEquals("RATING_SOURCE_AND_RANGE", enumType.getName());
-        assertEquals("RATING - Rating source and range", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("RATING", enumType.toFIXIDString());
+        assertEquals("RATING_SOURCE_AND_RANGE", enumType.toFIXNameString());
+        assertEquals("RATING - Rating source and range", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.TYPE_OF_REDEMPTION;
-        assertEquals("REDEMPTION", enumType.getID());
-        assertEquals("TYPE_OF_REDEMPTION", enumType.getName());
+        assertEquals("REDEMPTION", enumType.toFIXIDString());
+        assertEquals("TYPE_OF_REDEMPTION", enumType.toFIXNameString());
         assertEquals("REDEMPTION - Type Of Redemption - values are: " +
                 "NonCallable, Prefunded, EscrowedToMaturity, Putable, Convertible",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.RESTRICTED;
-        assertEquals("RESTRICTED", enumType.getID());
-        assertEquals("RESTRICTED", enumType.getName());
-        assertEquals("RESTRICTED - Restricted (Y/N)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("RESTRICTED", enumType.toFIXIDString());
+        assertEquals("RESTRICTED", enumType.toFIXNameString());
+        assertEquals("RESTRICTED - Restricted (Y/N)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.MARKET_SECTOR;
-        assertEquals("SECTOR", enumType.getID());
-        assertEquals("MARKET_SECTOR", enumType.getName());
-        assertEquals("SECTOR - Market Sector", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("SECTOR", enumType.toFIXIDString());
+        assertEquals("MARKET_SECTOR", enumType.toFIXNameString());
+        assertEquals("SECTOR - Market Sector", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.SECURITY_TYPE;
-        assertEquals("SECTYPE", enumType.getID());
-        assertEquals("SECURITY_TYPE", enumType.getName());
-        assertEquals("SECTYPE - Security Type included or excluded", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("SECTYPE", enumType.toFIXIDString());
+        assertEquals("SECURITY_TYPE", enumType.toFIXNameString());
+        assertEquals("SECTYPE - Security Type included or excluded", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.STRUCTURE;
-        assertEquals("STRUCT", enumType.getID());
-        assertEquals("STRUCTURE", enumType.getName());
-        assertEquals("STRUCT - Structure", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("STRUCT", enumType.toFIXIDString());
+        assertEquals("STRUCTURE", enumType.toFIXNameString());
+        assertEquals("STRUCT - Structure", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.SUBSTITUTIONS_FREQUENCY_REPO;
-        assertEquals("SUBSFREQ", enumType.getID());
-        assertEquals("SUBSTITUTIONS_FREQUENCY_REPO", enumType.getName());
-        assertEquals("SUBSFREQ - Substitutions frequency (Repo)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("SUBSFREQ", enumType.toFIXIDString());
+        assertEquals("SUBSTITUTIONS_FREQUENCY_REPO", enumType.toFIXNameString());
+        assertEquals("SUBSFREQ - Substitutions frequency (Repo)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.SUBSTITUTIONS_LEFT_REPO;
-        assertEquals("SUBSLEFT", enumType.getID());
-        assertEquals("SUBSTITUTIONS_LEFT_REPO", enumType.getName());
-        assertEquals("SUBSLEFT - Substitutions left (Repo)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("SUBSLEFT", enumType.toFIXIDString());
+        assertEquals("SUBSTITUTIONS_LEFT_REPO", enumType.toFIXNameString());
+        assertEquals("SUBSLEFT - Substitutions left (Repo)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.FREEFORM_TEXT;
-        assertEquals("TEXT", enumType.getID());
-        assertEquals("FREEFORM_TEXT", enumType.getName());
-        assertEquals("TEXT - Freeform Text", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("TEXT", enumType.toFIXIDString());
+        assertEquals("FREEFORM_TEXT", enumType.toFIXNameString());
+        assertEquals("TEXT - Freeform Text", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.TRADE_VARIANCE;
-        assertEquals("TRDVAR", enumType.getID());
-        assertEquals("TRADE_VARIANCE", enumType.getName());
+        assertEquals("TRDVAR", enumType.toFIXIDString());
+        assertEquals("TRADE_VARIANCE", enumType.toFIXNameString());
         assertEquals("TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.WEIGHTED_AVERAGE_COUPON;
-        assertEquals("WAC", enumType.getID());
-        assertEquals("WEIGHTED_AVERAGE_COUPON", enumType.getName());
+        assertEquals("WAC", enumType.toFIXIDString());
+        assertEquals("WEIGHTED_AVERAGE_COUPON", enumType.toFIXNameString());
         assertEquals("WAC - Weighted Average Coupon - value in percent (exact or range) " +
                 "plus (Gross or Net) of servicing spread (the default) " +
-                "(ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                "(ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.WEIGHTED_AVERAGE_LIFE_COUPON;
-        assertEquals("WAL", enumType.getID());
-        assertEquals("WEIGHTED_AVERAGE_LIFE_COUPON", enumType.getName());
+        assertEquals("WAL", enumType.toFIXIDString());
+        assertEquals("WEIGHTED_AVERAGE_LIFE_COUPON", enumType.toFIXNameString());
         assertEquals("WAL - Weighted Average Life Coupon - value in percent (exact or range)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.WEIGHTED_AVERAGE_LOAN_AGE;
-        assertEquals("WALA", enumType.getID());
-        assertEquals("WEIGHTED_AVERAGE_LOAN_AGE", enumType.getName());
+        assertEquals("WALA", enumType.toFIXIDString());
+        assertEquals("WEIGHTED_AVERAGE_LOAN_AGE", enumType.toFIXNameString());
         assertEquals("WALA - Weighted Average Loan Age - value in months (exact or range)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.WEIGHTED_AVERAGE_MATURITY;
-        assertEquals("WAM", enumType.getID());
-        assertEquals("WEIGHTED_AVERAGE_MATURITY", enumType.getName());
-        assertEquals("WAM - Weighted Average Maturity - value in months (exact or range)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("WAM", enumType.toFIXIDString());
+        assertEquals("WEIGHTED_AVERAGE_MATURITY", enumType.toFIXNameString());
+        assertEquals("WAM - Weighted Average Maturity - value in months (exact or range)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.WHOLE_POOL;
-        assertEquals("WHOLE", enumType.getID());
-        assertEquals("WHOLE_POOL", enumType.getName());
-        assertEquals("WHOLE - Whole Pool (Y/N)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("WHOLE", enumType.toFIXIDString());
+        assertEquals("WHOLE_POOL", enumType.toFIXNameString());
+        assertEquals("WHOLE - Whole Pool (Y/N)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.YIELD_RANGE;
-        assertEquals("YIELD", enumType.getID());
-        assertEquals("YIELD_RANGE", enumType.getName());
-        assertEquals("YIELD - Yield Range", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("YIELD", enumType.toFIXIDString());
+        assertEquals("YIELD_RANGE", enumType.toFIXNameString());
+        assertEquals("YIELD - Yield Range", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         /*
          *  Prepayment Speeds
          */
         enumType = MyEnumStipulationType.ABSOLUTE_PREPAYMENT_SPEED;
-        assertEquals("ABS", enumType.getID());
-        assertEquals("ABSOLUTE_PREPAYMENT_SPEED", enumType.getName());
-        assertEquals("ABS - Absolute Prepayment Speed", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("ABS", enumType.toFIXIDString());
+        assertEquals("ABSOLUTE_PREPAYMENT_SPEED", enumType.toFIXNameString());
+        assertEquals("ABS - Absolute Prepayment Speed", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.CONSTANT_PREPAYMENT_PENALTY;
-        assertEquals("CPP", enumType.getID());
-        assertEquals("CONSTANT_PREPAYMENT_PENALTY", enumType.getName());
-        assertEquals("CPP - Constant Prepayment Penalty", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("CPP", enumType.toFIXIDString());
+        assertEquals("CONSTANT_PREPAYMENT_PENALTY", enumType.toFIXNameString());
+        assertEquals("CPP - Constant Prepayment Penalty", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.CONSTANT_PREPAYMENT_RATE;
-        assertEquals("CPR", enumType.getID());
-        assertEquals("CONSTANT_PREPAYMENT_RATE", enumType.getName());
-        assertEquals("CPR - Constant Prepayment Rate", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("CPR", enumType.toFIXIDString());
+        assertEquals("CONSTANT_PREPAYMENT_RATE", enumType.toFIXNameString());
+        assertEquals("CPR - Constant Prepayment Rate", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.CONSTANT_PREPAYMENT_YIELD;
-        assertEquals("CPY", enumType.getID());
-        assertEquals("CONSTANT_PREPAYMENT_YIELD", enumType.getName());
-        assertEquals("CPY - Constant Prepayment Yield", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("CPY", enumType.toFIXIDString());
+        assertEquals("CONSTANT_PREPAYMENT_YIELD", enumType.toFIXNameString());
+        assertEquals("CPY - Constant Prepayment Yield", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.FINAL_CPR_HOME_EQUITY;
-        assertEquals("HEP", enumType.getID());
-        assertEquals("FINAL_CPR_HOME_EQUITY", enumType.getName());
-        assertEquals("HEP - final CPR of Home Equity Prepayment Curve", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("HEP", enumType.toFIXIDString());
+        assertEquals("FINAL_CPR_HOME_EQUITY", enumType.toFIXNameString());
+        assertEquals("HEP - final CPR of Home Equity Prepayment Curve", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumStipulationType.MANUFACTURED_HOUSING_PREPAYMENT;
-        assertEquals("MHP", enumType.getID());
-        assertEquals("MANUFACTURED_HOUSING_PREPAYMENT", enumType.getName());
-        assertEquals("MHP - Percent of Manufactured Housing Prepayment Curve", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("MHP", enumType.toFIXIDString());
+        assertEquals("MANUFACTURED_HOUSING_PREPAYMENT", enumType.toFIXNameString());
+        assertEquals("MHP - Percent of Manufactured Housing Prepayment Curve", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.MONTHLY_PREPAYMENT_RATE;
-        assertEquals("MPR", enumType.getID());
-        assertEquals("MONTHLY_PREPAYMENT_RATE", enumType.getName());
-        assertEquals("MPR - Monthly Prepayment Rate", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("MPR", enumType.toFIXIDString());
+        assertEquals("MONTHLY_PREPAYMENT_RATE", enumType.toFIXNameString());
+        assertEquals("MPR - Monthly Prepayment Rate", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.PERCENT_PROSPECTUS_PREPAYMENT;
-        assertEquals("PPC", enumType.getID());
-        assertEquals("PERCENT_PROSPECTUS_PREPAYMENT", enumType.getName());
-        assertEquals("PPC - Percent of Prospectus Prepayment Curve", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PPC", enumType.toFIXIDString());
+        assertEquals("PERCENT_PROSPECTUS_PREPAYMENT", enumType.toFIXNameString());
+        assertEquals("PPC - Percent of Prospectus Prepayment Curve", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.PERCENT_BMA_PREPAYMENT;
-        assertEquals("PSA", enumType.getID());
-        assertEquals("PERCENT_BMA_PREPAYMENT", enumType.getName());
-        assertEquals("PSA - Percent of BMA Prepayment Curve", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PSA", enumType.toFIXIDString());
+        assertEquals("PERCENT_BMA_PREPAYMENT", enumType.toFIXNameString());
+        assertEquals("PSA - Percent of BMA Prepayment Curve", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumStipulationType.SINGLE_MONTHLY_MORTALITY;
-        assertEquals("SMM", enumType.getID());
-        assertEquals("SINGLE_MONTHLY_MORTALITY", enumType.getName());
-        assertEquals("SMM - Single Monthly Mortality", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("SMM", enumType.toFIXIDString());
+        assertEquals("SINGLE_MONTHLY_MORTALITY", enumType.toFIXNameString());
+        assertEquals("SMM - Single Monthly Mortality", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

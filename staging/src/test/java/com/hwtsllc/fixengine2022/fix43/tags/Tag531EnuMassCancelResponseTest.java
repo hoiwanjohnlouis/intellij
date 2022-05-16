@@ -27,12 +27,12 @@ class Tag531EnuMassCancelResponseTest {
     @Test
     void FIX0531Test() {
         FIX43 fixData = FIX43.FIX531_ENU_MASS_CANCEL_RESPONSE;
-        assertEquals( "531", fixData.getID());
-        assertEquals( "MASS_CANCEL_RESPONSE", fixData.getName());
-        assertEquals( "MassCancelResponse", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "531", fixData.toFIXIDString());
+        assertEquals( "MASS_CANCEL_RESPONSE", fixData.toFIXNameString());
+        assertEquals( "MassCancelResponse", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0531Test() {

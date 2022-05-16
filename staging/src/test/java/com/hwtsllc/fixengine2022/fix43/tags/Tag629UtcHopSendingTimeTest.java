@@ -27,12 +27,12 @@ class Tag629UtcHopSendingTimeTest {
     @Test
     void FIX0629Test() {
         FIX43 fixData = FIX43.FIX629_UTC_HOP_SENDING_TIME;
-        assertEquals( "629", fixData.getID());
-        assertEquals( "HOP_SENDING_TIME", fixData.getName());
-        assertEquals( "HopSendingTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "629", fixData.toFIXIDString());
+        assertEquals( "HOP_SENDING_TIME", fixData.toFIXNameString());
+        assertEquals( "HopSendingTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0629Test() {

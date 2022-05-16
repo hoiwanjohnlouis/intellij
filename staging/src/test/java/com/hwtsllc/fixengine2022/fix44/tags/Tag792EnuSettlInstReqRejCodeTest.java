@@ -40,31 +40,31 @@ class Tag792EnuSettlInstReqRejCodeTest {
     @Test
     void FIX0792Test() {
         FIX44 fixData = FIX44.FIX792_ENU_SETTL_INST_REQ_REJ_CODE;
-        assertEquals( "792", fixData.getID());
-        assertEquals( "SETTL_INST_REQ_REJ_CODE", fixData.getName());
-        assertEquals( "SettlInstReqRejCode", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "792", fixData.toFIXIDString());
+        assertEquals( "SETTL_INST_REQ_REJ_CODE", fixData.toFIXNameString());
+        assertEquals( "SettlInstReqRejCode", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0792Test() {
         Tag792EnuSettlInstReqRejCode tagData;
 
         tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.UNABLE_TO_PROCESS_REQUEST );
-        assertEquals( Enum792SettlInstReqRejCode.UNABLE_TO_PROCESS_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( Enum792SettlInstReqRejCode.UNABLE_TO_PROCESS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT );
-        assertEquals( Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.NO_MATCHING_INSTRUCTIONS );
-        assertEquals( Enum792SettlInstReqRejCode.NO_MATCHING_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertEquals( Enum792SettlInstReqRejCode.NO_MATCHING_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.OTHER );
-        assertEquals( Enum792SettlInstReqRejCode.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum792SettlInstReqRejCode.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

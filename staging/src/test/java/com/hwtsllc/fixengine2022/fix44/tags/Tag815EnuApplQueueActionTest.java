@@ -48,31 +48,31 @@ class Tag815EnuApplQueueActionTest {
     @Test
     void FIX0815Test() {
         FIX44 fixData = FIX44.FIX815_ENU_APPL_QUEUE_ACTION;
-        assertEquals( "815", fixData.getID());
-        assertEquals( "APPL_QUEUE_ACTION", fixData.getName());
-        assertEquals( "ApplQueueAction", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "815", fixData.toFIXIDString());
+        assertEquals( "APPL_QUEUE_ACTION", fixData.toFIXNameString());
+        assertEquals( "ApplQueueAction", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0815Test() {
         Tag815EnuApplQueueAction tagData;
 
         tagData = new Tag815EnuApplQueueAction(MyEnumApplQueue.NO_ACTION);
-        assertEquals( MyEnumApplQueue.NO_ACTION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumApplQueue.NO_ACTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag815EnuApplQueueAction(MyEnumApplQueue.QUEUE_FLUSHED);
-        assertEquals( MyEnumApplQueue.QUEUE_FLUSHED.getID(), tagData.getDataValue());
+        assertEquals( MyEnumApplQueue.QUEUE_FLUSHED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag815EnuApplQueueAction(MyEnumApplQueue.OVERLAY_LAST);
-        assertEquals( MyEnumApplQueue.OVERLAY_LAST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumApplQueue.OVERLAY_LAST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag815EnuApplQueueAction(MyEnumApplQueue.END_SESSION);
-        assertEquals( MyEnumApplQueue.END_SESSION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumApplQueue.END_SESSION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

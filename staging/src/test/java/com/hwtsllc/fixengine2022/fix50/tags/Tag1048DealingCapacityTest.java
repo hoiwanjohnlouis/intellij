@@ -34,12 +34,12 @@ class Tag1048DealingCapacityTest {
     @Test
     void FIX1048Test() {
         FIX50 fixData = FIX50.FIX1048_DEALING_CAPACITY;
-        assertEquals( "1048", fixData.getID());
-        assertEquals( "DEALING_CAPACITY", fixData.getName());
-        assertEquals( "DealingCapacity", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1048", fixData.toFIXIDString());
+        assertEquals( "DEALING_CAPACITY", fixData.toFIXNameString());
+        assertEquals( "DealingCapacity", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1048Test() {

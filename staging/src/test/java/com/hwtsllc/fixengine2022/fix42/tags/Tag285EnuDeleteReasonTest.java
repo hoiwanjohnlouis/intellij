@@ -36,12 +36,12 @@ class Tag285EnuDeleteReasonTest {
     @Test
     void FIX0285Test() {
         FIX42 fixData = FIX42.FIX285_ENU_DELETE_REASON;
-        assertEquals( "285", fixData.getID());
-        assertEquals( "DELETE_REASON", fixData.getName());
-        assertEquals( "DeleteReason", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "285", fixData.toFIXIDString());
+        assertEquals( "DELETE_REASON", fixData.toFIXNameString());
+        assertEquals( "DeleteReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0285Test() {
@@ -51,11 +51,11 @@ class Tag285EnuDeleteReasonTest {
          * 0-1 msg types
          */
         tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
-        assertEquals( Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST.getID(), tagData.getDataValue());
+        assertEquals( Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.ERROR);
-        assertEquals( Enum285DeleteReason.ERROR.getID(), tagData.getDataValue());
+        assertEquals( Enum285DeleteReason.ERROR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

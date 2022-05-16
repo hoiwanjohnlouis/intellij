@@ -27,12 +27,12 @@ class Tag642PxoBidForwardPoints2Test {
     @Test
     void FIX0642Test() {
         FIX43 fixData = FIX43.FIX642_PXO_BID_FORWARD_POINTS_2;
-        assertEquals( "642", fixData.getID());
-        assertEquals( "BID_FORWARD_POINTS_2", fixData.getName());
-        assertEquals( "BidForwardPoints2", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "642", fixData.toFIXIDString());
+        assertEquals( "BID_FORWARD_POINTS_2", fixData.toFIXNameString());
+        assertEquals( "BidForwardPoints2", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0642Test() {

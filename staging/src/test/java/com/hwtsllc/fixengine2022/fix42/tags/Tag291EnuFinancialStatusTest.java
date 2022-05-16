@@ -37,12 +37,12 @@ class Tag291EnuFinancialStatusTest {
     @Test
     void FIX0291Test() {
         FIX42 fixData = FIX42.FIX291_ENU_FINANCIAL_STATUS;
-        assertEquals( "291", fixData.getID());
-        assertEquals( "FINANCIAL_STATUS", fixData.getName());
-        assertEquals( "FinancialStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "291", fixData.toFIXIDString());
+        assertEquals( "FINANCIAL_STATUS", fixData.toFIXNameString());
+        assertEquals( "FinancialStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0291Test() {
@@ -52,15 +52,15 @@ class Tag291EnuFinancialStatusTest {
          * 1-3 msg types
          */
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.BANKRUPT);
-        assertEquals( Enum291FinancialStatus.BANKRUPT.getID(), tagData.getDataValue());
+        assertEquals( Enum291FinancialStatus.BANKRUPT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.PENDING_DELISTING);
-        assertEquals( Enum291FinancialStatus.PENDING_DELISTING.getID(), tagData.getDataValue());
+        assertEquals( Enum291FinancialStatus.PENDING_DELISTING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.RESTRICTED);
-        assertEquals( Enum291FinancialStatus.RESTRICTED.getID(), tagData.getDataValue());
+        assertEquals( Enum291FinancialStatus.RESTRICTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

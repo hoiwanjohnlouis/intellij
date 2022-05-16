@@ -39,27 +39,27 @@ class Tag796EnuAllocCancReplaceReasonTest {
     @Test
     void FIX0796Test() {
         FIX44 fixData = FIX44.FIX796_ENU_ALLOC_CANC_REPLACE_REASON;
-        assertEquals( "796", fixData.getID());
-        assertEquals( "ALLOC_CANC_REPLACE_REASON", fixData.getName());
-        assertEquals( "AllocCancReplaceReason", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "796", fixData.toFIXIDString());
+        assertEquals( "ALLOC_CANC_REPLACE_REASON", fixData.toFIXNameString());
+        assertEquals( "AllocCancReplaceReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0796Test() {
         Tag796EnuAllocCancReplaceReason tagData;
 
         tagData = new Tag796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE);
-        assertEquals( Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE.getID(), tagData.getDataValue());
+        assertEquals( Enum796AllocCancReplaceReason.ORIGINAL_DETAILS_INCOMPLETE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER);
-        assertEquals( Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER.getID(), tagData.getDataValue());
+        assertEquals( Enum796AllocCancReplaceReason.CHANGE_IN_UNDERLYING_ORDER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag796EnuAllocCancReplaceReason(Enum796AllocCancReplaceReason.OTHER);
-        assertEquals( Enum796AllocCancReplaceReason.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum796AllocCancReplaceReason.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

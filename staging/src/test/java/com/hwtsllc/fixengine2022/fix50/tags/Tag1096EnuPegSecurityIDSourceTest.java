@@ -133,18 +133,18 @@ class Tag1096EnuPegSecurityIDSourceTest {
     @Test
     void FIX1096Test() {
         FIX50 fixData = FIX50.FIX1096_ENU_PEG_SECURITY_ID_SOURCE;
-        assertEquals( "1096", fixData.getID());
-        assertEquals( "PEG_SECURITY_ID_SOURCE", fixData.getName());
-        assertEquals( "PegSecurityIDSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1096", fixData.toFIXIDString());
+        assertEquals( "PEG_SECURITY_ID_SOURCE", fixData.toFIXNameString());
+        assertEquals( "PegSecurityIDSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1096Test() {
         Tag1096EnuPegSecurityIDSource tagData;
 
-        /**
+        /*
          * 1-9 Security ID Source
          */
         tagData = new Tag1096EnuPegSecurityIDSource(MyEnumSecurityIDSource.CUSIP);
@@ -185,7 +185,7 @@ class Tag1096EnuPegSecurityIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          * A-L Security ID Source
          */
         tagData = new Tag1096EnuPegSecurityIDSource(MyEnumSecurityIDSource.BLOOMBERG);

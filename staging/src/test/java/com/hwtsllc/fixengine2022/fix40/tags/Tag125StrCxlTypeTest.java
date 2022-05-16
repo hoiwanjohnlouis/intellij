@@ -35,12 +35,12 @@ class Tag125StrCxlTypeTest {
     @Test
     void FIX0125Test() {
         FIX40 fixData = FIX40.FIX125_STR_CXL_TYPE;
-        assertEquals( "CXL_TYPE", fixData.getName());
-        assertEquals( "125", fixData.getID());
-        assertEquals( "CxlType (no longer used)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "CXL_TYPE", fixData.toFIXNameString());
+        assertEquals( "125", fixData.toFIXIDString());
+        assertEquals( "CxlType (no longer used)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0125Test() {

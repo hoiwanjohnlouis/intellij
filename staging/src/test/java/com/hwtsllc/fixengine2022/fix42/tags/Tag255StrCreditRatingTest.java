@@ -28,12 +28,12 @@ class Tag255StrCreditRatingTest {
     @Test
     void FIX0255Test() {
         FIX42 fixData = FIX42.FIX255_STR_CREDIT_RATING;
-        assertEquals( "255", fixData.getID());
-        assertEquals( "CREDIT_RATING", fixData.getName());
-        assertEquals( "CreditRating", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "255", fixData.toFIXIDString());
+        assertEquals( "CREDIT_RATING", fixData.toFIXNameString());
+        assertEquals( "CreditRating", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0255Test() {

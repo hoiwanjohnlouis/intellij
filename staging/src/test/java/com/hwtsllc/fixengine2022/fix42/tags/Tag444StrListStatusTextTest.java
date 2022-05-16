@@ -28,12 +28,12 @@ class Tag444StrListStatusTextTest {
     @Test
     void FIX0444Test() {
         FIX42 fixData = FIX42.FIX444_STR_LIST_STATUS_TEXT;
-        assertEquals( "444", fixData.getID());
-        assertEquals( "LIST_STATUS_TEXT", fixData.getName());
-        assertEquals( "ListStatusText", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "444", fixData.toFIXIDString());
+        assertEquals( "LIST_STATUS_TEXT", fixData.toFIXNameString());
+        assertEquals( "ListStatusText", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0444Test() {

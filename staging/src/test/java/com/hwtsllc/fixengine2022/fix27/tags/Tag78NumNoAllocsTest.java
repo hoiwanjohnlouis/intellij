@@ -35,13 +35,13 @@ class Tag78NumNoAllocsTest {
     @Test
     void FIX0078Test() {
         FIX27 fixData = FIX27.FIX78_NUM_NO_ALLOCS;
-        assertEquals( "NO_ALLOCS", fixData.getName());
-        assertEquals( "78", fixData.getID());
-        assertEquals( "NoAllocs", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "NO_ALLOCS", fixData.toFIXNameString());
+        assertEquals( "78", fixData.toFIXIDString());
+        assertEquals( "NoAllocs", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0078Test() {

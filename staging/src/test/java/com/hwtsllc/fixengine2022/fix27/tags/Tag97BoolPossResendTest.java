@@ -38,13 +38,13 @@ class Tag97BoolPossResendTest {
     @Test
     void FIX0097Test() {
         FIX27 fixData = FIX27.FIX97_BOOL_POSS_RESEND;
-        assertEquals( "POSS_RESEND", fixData.getName());
-        assertEquals( "97", fixData.getID());
-        assertEquals( "PossResend", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "POSS_RESEND", fixData.toFIXNameString());
+        assertEquals( "97", fixData.toFIXIDString());
+        assertEquals( "PossResend", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0097Test() {

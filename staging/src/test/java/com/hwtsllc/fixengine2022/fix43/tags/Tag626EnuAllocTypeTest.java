@@ -27,12 +27,12 @@ class Tag626EnuAllocTypeTest {
     @Test
     void FIX0626Test() {
         FIX43 fixData = FIX43.FIX626_ENU_ALLOC_TYPE;
-        assertEquals( "626", fixData.getID());
-        assertEquals( "ALLOC_TYPE", fixData.getName());
-        assertEquals( "AllocType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "626", fixData.toFIXIDString());
+        assertEquals( "ALLOC_TYPE", fixData.toFIXNameString());
+        assertEquals( "AllocType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0626Test() {

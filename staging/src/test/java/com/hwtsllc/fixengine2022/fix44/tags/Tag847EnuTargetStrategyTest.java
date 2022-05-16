@@ -41,27 +41,27 @@ class Tag847EnuTargetStrategyTest {
     @Test
     void FIX0847Test() {
         FIX44 fixData = FIX44.FIX847_ENU_TARGET_STRATEGY;
-        assertEquals( "847", fixData.getID());
-        assertEquals( "TARGET_STRATEGY", fixData.getName());
-        assertEquals( "TargetStrategy", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "847", fixData.toFIXIDString());
+        assertEquals( "TARGET_STRATEGY", fixData.toFIXNameString());
+        assertEquals( "TargetStrategy", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0847Test() {
         Tag847EnuTargetStrategy tagData;
 
         tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.VWAP );
-        assertEquals( Enum847TargetStrategy.VWAP.getID(), tagData.getDataValue());
+        assertEquals( Enum847TargetStrategy.VWAP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.PARTICIPATE );
-        assertEquals( Enum847TargetStrategy.PARTICIPATE.getID(), tagData.getDataValue());
+        assertEquals( Enum847TargetStrategy.PARTICIPATE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT );
-        assertEquals( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT.getID(), tagData.getDataValue());
+        assertEquals( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

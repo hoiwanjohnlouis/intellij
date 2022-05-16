@@ -34,12 +34,12 @@ class Tag120CcySettlCurrencyTest {
     @Test
     void FIX0120Test() {
         FIX40 fixData = FIX40.FIX120_CCY_SETTL_CURRENCY;
-        assertEquals( "SETTL_CURRENCY", fixData.getName());
-        assertEquals( "120", fixData.getID());
-        assertEquals( "SettlCurrency", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "SETTL_CURRENCY", fixData.toFIXNameString());
+        assertEquals( "120", fixData.toFIXIDString());
+        assertEquals( "SettlCurrency", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0120Test() {

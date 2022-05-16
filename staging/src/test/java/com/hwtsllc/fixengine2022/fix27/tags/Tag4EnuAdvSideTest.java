@@ -39,13 +39,13 @@ class Tag4EnuAdvSideTest {
     @Test
     void FIX0004Test() {
         FIX27 fixData = FIX27.FIX4_ENU_ADV_SIDE;
-        assertEquals( "ADV_SIDE", fixData.getName());
-        assertEquals( "4", fixData.getID());
-        assertEquals( "AdvSide", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ADV_SIDE", fixData.toFIXNameString());
+        assertEquals( "4", fixData.toFIXIDString());
+        assertEquals( "AdvSide", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0004Test() {

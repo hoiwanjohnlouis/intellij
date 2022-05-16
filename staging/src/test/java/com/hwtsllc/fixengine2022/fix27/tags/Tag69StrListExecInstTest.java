@@ -34,13 +34,13 @@ class Tag69StrListExecInstTest {
     @Test
     void FIX0069Test() {
         FIX27 fixData = FIX27.FIX69_STR_LIST_EXEC_INST;
-        assertEquals( "LIST_EXEC_INST", fixData.getName());
-        assertEquals( "69", fixData.getID());
-        assertEquals( "ListExecInst", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "LIST_EXEC_INST", fixData.toFIXNameString());
+        assertEquals( "69", fixData.toFIXIDString());
+        assertEquals( "ListExecInst", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0069Test() {

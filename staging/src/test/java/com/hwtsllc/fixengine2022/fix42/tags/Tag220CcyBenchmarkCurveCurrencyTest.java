@@ -28,12 +28,12 @@ class Tag220CcyBenchmarkCurveCurrencyTest {
     @Test
     void FIX0220Test() {
         FIX42 fixData = FIX42.FIX220_CCY_BENCHMARK_CURVE_CURRENCY;
-        assertEquals( "220", fixData.getID());
-        assertEquals( "BENCHMARK_CURVE_CURRENCY", fixData.getName());
-        assertEquals( "BenchmarkCurveCurrency", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "220", fixData.toFIXIDString());
+        assertEquals( "BENCHMARK_CURVE_CURRENCY", fixData.toFIXNameString());
+        assertEquals( "BenchmarkCurveCurrency", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0220Test() {

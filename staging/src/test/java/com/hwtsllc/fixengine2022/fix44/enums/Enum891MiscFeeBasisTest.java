@@ -38,27 +38,27 @@ class Enum891MiscFeeBasisTest {
         Enum891MiscFeeBasis enumType;
 
         enumType = Enum891MiscFeeBasis.ABSOLUTE;
-        assertEquals( "0", enumType.getID() );
-        assertEquals( "ABSOLUTE", enumType.getName() );
-        assertEquals( "0 - Absolute", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString() );
+        assertEquals( "ABSOLUTE", enumType.toFIXNameString() );
+        assertEquals( "0 - Absolute", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum891MiscFeeBasis.PER_UNIT;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "PER_UNIT", enumType.getName() );
-        assertEquals( "1 - Per Unit", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "PER_UNIT", enumType.toFIXNameString() );
+        assertEquals( "1 - Per Unit", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum891MiscFeeBasis.PERCENTAGE;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "PERCENTAGE", enumType.getName() );
-        assertEquals( "2 - Percentage", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "PERCENTAGE", enumType.toFIXNameString() );
+        assertEquals( "2 - Percentage", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

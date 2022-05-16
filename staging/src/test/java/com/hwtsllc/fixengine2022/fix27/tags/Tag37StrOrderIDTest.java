@@ -37,13 +37,13 @@ class Tag37StrOrderIDTest {
     @Test
     void FIX0037Test() {
         FIX27 fixData = FIX27.FIX37_STR_ORDER_ID;
-        assertEquals( "ORDER_ID", fixData.getName());
-        assertEquals( "37", fixData.getID());
-        assertEquals( "OrderID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ORDER_ID", fixData.toFIXNameString());
+        assertEquals( "37", fixData.toFIXIDString());
+        assertEquals( "OrderID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0037Test() {

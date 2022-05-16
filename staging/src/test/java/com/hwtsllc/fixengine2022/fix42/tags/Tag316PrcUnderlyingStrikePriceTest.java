@@ -28,12 +28,12 @@ class Tag316PrcUnderlyingStrikePriceTest {
     @Test
     void FIX0316Test() {
         FIX42 fixData = FIX42.FIX316_PRC_UNDERLYING_STRIKE_PRICE;
-        assertEquals( "316", fixData.getID());
-        assertEquals( "UNDERLYING_STRIKE_PRICE", fixData.getName());
-        assertEquals( "UnderlyingStrikePrice", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "316", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_STRIKE_PRICE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingStrikePrice", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0316Test() {

@@ -41,31 +41,31 @@ class Tag1081EnuRefOrderIDSourceTest {
     @Test
     void FIX1081Test() {
         FIX50 fixData = FIX50.FIX1081_ENU_REF_ORDER_ID_SOURCE;
-        assertEquals( "1081", fixData.getID());
-        assertEquals( "REF_ORDER_ID_SOURCE", fixData.getName());
-        assertEquals( "RefOrderIDSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1081", fixData.toFIXIDString());
+        assertEquals( "REF_ORDER_ID_SOURCE", fixData.toFIXNameString());
+        assertEquals( "RefOrderIDSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1081Test() {
         Tag1081EnuRefOrderIDSource tagData;
 
         tagData = new Tag1081EnuRefOrderIDSource( Enum1081RefOrderIDSource.SECONDARY_ORDE_ID );
-        assertEquals( Enum1081RefOrderIDSource.SECONDARY_ORDE_ID.getID(), tagData.getDataValue());
+        assertEquals( Enum1081RefOrderIDSource.SECONDARY_ORDE_ID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1081EnuRefOrderIDSource( Enum1081RefOrderIDSource.ORDE_ID );
-        assertEquals( Enum1081RefOrderIDSource.ORDE_ID.getID(), tagData.getDataValue());
+        assertEquals( Enum1081RefOrderIDSource.ORDE_ID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1081EnuRefOrderIDSource( Enum1081RefOrderIDSource.M_ENTRY_ID );
-        assertEquals( Enum1081RefOrderIDSource.M_ENTRY_ID.getID(), tagData.getDataValue());
+        assertEquals( Enum1081RefOrderIDSource.M_ENTRY_ID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1081EnuRefOrderIDSource( Enum1081RefOrderIDSource.QUOT_ENTRY_ID );
-        assertEquals( Enum1081RefOrderIDSource.QUOT_ENTRY_ID.getID(), tagData.getDataValue());
+        assertEquals( Enum1081RefOrderIDSource.QUOT_ENTRY_ID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -45,44 +45,44 @@ class Tag865EnuEventTypeTest {
     @Test
     void FIX0865Test() {
         FIX44 fixData = FIX44.FIX865_ENU_EVENT_TYPE;
-        assertEquals( "865", fixData.getID());
-        assertEquals( "EVENT_TYPE", fixData.getName());
-        assertEquals( "EventType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "865", fixData.toFIXIDString());
+        assertEquals( "EVENT_TYPE", fixData.toFIXNameString());
+        assertEquals( "EventType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0865Test() {
         Tag865EnuEventType tagData;
 
         tagData = new Tag865EnuEventType( Enum865EventType.PUT );
-        assertEquals( Enum865EventType.PUT.getID(), tagData.getDataValue());
+        assertEquals( Enum865EventType.PUT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag865EnuEventType( Enum865EventType.CALL );
-        assertEquals( Enum865EventType.CALL.getID(), tagData.getDataValue());
+        assertEquals( Enum865EventType.CALL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag865EnuEventType( Enum865EventType.TENDER );
-        assertEquals( Enum865EventType.TENDER.getID(), tagData.getDataValue());
+        assertEquals( Enum865EventType.TENDER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag865EnuEventType( Enum865EventType.SINKING_FUND_CALL );
-        assertEquals( Enum865EventType.SINKING_FUND_CALL.getID(), tagData.getDataValue());
+        assertEquals( Enum865EventType.SINKING_FUND_CALL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag865EnuEventType( Enum865EventType.ACTIVATION );
-        assertEquals( Enum865EventType.ACTIVATION.getID(), tagData.getDataValue());
+        assertEquals( Enum865EventType.ACTIVATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag865EnuEventType( Enum865EventType.INACTIVATION );
-        assertEquals( Enum865EventType.INACTIVATION.getID(), tagData.getDataValue());
+        assertEquals( Enum865EventType.INACTIVATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag865EnuEventType( Enum865EventType.OTHER );
-        assertEquals( Enum865EventType.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum865EventType.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -34,12 +34,12 @@ class Tag1079MaturityTimeTest {
     @Test
     void FIX1079Test() {
         FIX50 fixData = FIX50.FIX1079_MATURITY_TIME;
-        assertEquals( "1079", fixData.getID());
-        assertEquals( "MATURITY_TIME", fixData.getName());
-        assertEquals( "MaturityTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1079", fixData.toFIXIDString());
+        assertEquals( "MATURITY_TIME", fixData.toFIXNameString());
+        assertEquals( "MaturityTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1079Test() {

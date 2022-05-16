@@ -27,12 +27,12 @@ class Tag577EnuClearingInstructionTest {
     @Test
     void FIX0577Test() {
         FIX43 fixData = FIX43.FIX577_ENU_CLEARING_INSTRUCTION;
-        assertEquals( "577", fixData.getID());
-        assertEquals( "CLEARING_INSTRUCTION", fixData.getName());
-        assertEquals( "ClearingInstruction", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "577", fixData.toFIXIDString());
+        assertEquals( "CLEARING_INSTRUCTION", fixData.toFIXNameString());
+        assertEquals( "ClearingInstruction", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0577Test() {

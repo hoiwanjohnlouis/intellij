@@ -27,12 +27,12 @@ class Tag582EnuCustOrderCapacityTest {
     @Test
     void FIX0582Test() {
         FIX43 fixData = FIX43.FIX582_ENU_CUST_ORDER_CAPACITY;
-        assertEquals( "582", fixData.getID());
-        assertEquals( "CUST_ORDER_CAPACITY", fixData.getName());
-        assertEquals( "CustOrderCapacity", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "582", fixData.toFIXIDString());
+        assertEquals( "CUST_ORDER_CAPACITY", fixData.toFIXNameString());
+        assertEquals( "CustOrderCapacity", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0582Test() {

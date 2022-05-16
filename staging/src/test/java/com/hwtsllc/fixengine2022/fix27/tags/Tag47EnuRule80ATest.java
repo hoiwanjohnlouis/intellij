@@ -76,20 +76,20 @@ class Tag47EnuRule80ATest {
     @Test
     void FIX0047Test() {
         FIX27 fixData = FIX27.FIX47_ENU_RULE_80_A;
-        assertEquals( "RULE_80_A", fixData.getName());
-        assertEquals( "47", fixData.getID());
-        assertEquals( "Rule80A (no longer used)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "RULE_80_A", fixData.toFIXNameString());
+        assertEquals( "47", fixData.toFIXIDString());
+        assertEquals( "Rule80A (no longer used)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0047Test() {
         Tag47EnuRule80A tagData;
 
         tagData = new Tag47EnuRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
-        assertEquals( Enum47Rule80A.AGENCY_SINGLE_ORDER.getID(), tagData.getDataValue());
+        assertEquals( Enum47Rule80A.AGENCY_SINGLE_ORDER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -34,12 +34,12 @@ class Tag124NumNoExecsTest {
     @Test
     void FIX0124Test() {
         FIX40 fixData = FIX40.FIX124_NUM_NO_EXECS;
-        assertEquals( "NO_EXECS", fixData.getName());
-        assertEquals( "124", fixData.getID());
-        assertEquals( "NoExecs", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "NO_EXECS", fixData.toFIXNameString());
+        assertEquals( "124", fixData.toFIXIDString());
+        assertEquals( "NoExecs", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0124Test() {

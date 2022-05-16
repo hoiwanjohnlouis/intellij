@@ -33,12 +33,12 @@ class Tag736AllocSettlCurrencyTest {
     @Test
     void FIX0736Test() {
         FIX44 fixData = FIX44.FIX736_ALLOC_SETTL_CURRENCY;
-        assertEquals( "736", fixData.getID());
-        assertEquals( "ALLOC_SETTL_CURRENCY", fixData.getName());
-        assertEquals( "AllocSettlCurrency", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "736", fixData.toFIXIDString());
+        assertEquals( "ALLOC_SETTL_CURRENCY", fixData.toFIXNameString());
+        assertEquals( "AllocSettlCurrency", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0736Test() {

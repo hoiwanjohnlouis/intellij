@@ -43,12 +43,12 @@ class Tag961StrHostCrossIDTest {
     @Test
     void FIX0961Test() {
         FIX50 fixData = FIX50.FIX961_STR_HOST_CROSS_ID;
-        assertEquals( "961", fixData.getID());
-        assertEquals( "HOST_CROSS_ID", fixData.getName());
-        assertEquals( "HostCrossID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "961", fixData.toFIXIDString());
+        assertEquals( "HOST_CROSS_ID", fixData.toFIXNameString());
+        assertEquals( "HostCrossID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0961Test() {

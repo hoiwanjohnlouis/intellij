@@ -38,27 +38,27 @@ class Tag939EnuTrdRptStatusTest {
     @Test
     void FIX0939Test() {
         FIX44 fixData = FIX44.FIX939_ENU_TRD_RPT_STATUS;
-        assertEquals( "939", fixData.getID());
-        assertEquals( "TRD_RPT_STATUS", fixData.getName());
-        assertEquals( "TrdRptStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "939", fixData.toFIXIDString());
+        assertEquals( "TRD_RPT_STATUS", fixData.toFIXNameString());
+        assertEquals( "TrdRptStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0939Test() {
         Tag939EnuTrdRptStatus tagData;
 
         tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED );
-        assertEquals( Enum939TrdRptStatus.ACCEPTED.getID(), tagData.getDataValue());
+        assertEquals( Enum939TrdRptStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.REJECTED );
-        assertEquals( Enum939TrdRptStatus.REJECTED.getID(), tagData.getDataValue());
+        assertEquals( Enum939TrdRptStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS );
-        assertEquals( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS.getID(), tagData.getDataValue());
+        assertEquals( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

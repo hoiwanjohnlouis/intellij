@@ -40,35 +40,35 @@ class Tag903EnuCollAsgnTransTypeTest {
     @Test
     void FIX0903Test() {
         FIX44 fixData = FIX44.FIX903_ENU_COLL_ASGN_TRANS_TYPE;
-        assertEquals( "903", fixData.getID());
-        assertEquals( "COLL_ASGN_TRANS_TYPE", fixData.getName());
-        assertEquals( "CollAsgnTransType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "903", fixData.toFIXIDString());
+        assertEquals( "COLL_ASGN_TRANS_TYPE", fixData.toFIXNameString());
+        assertEquals( "CollAsgnTransType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0903Test() {
         Tag903EnuCollAsgnTransType tagData;
 
         tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.NEW );
-        assertEquals( Enum903CollAsgnTransType.NEW.getID(), tagData.getDataValue());
+        assertEquals( Enum903CollAsgnTransType.NEW.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REPLACE );
-        assertEquals( Enum903CollAsgnTransType.REPLACE.getID(), tagData.getDataValue());
+        assertEquals( Enum903CollAsgnTransType.REPLACE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.CANCEL );
-        assertEquals( Enum903CollAsgnTransType.CANCEL.getID(), tagData.getDataValue());
+        assertEquals( Enum903CollAsgnTransType.CANCEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.RELEASE );
-        assertEquals( Enum903CollAsgnTransType.RELEASE.getID(), tagData.getDataValue());
+        assertEquals( Enum903CollAsgnTransType.RELEASE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REVERSE );
-        assertEquals( Enum903CollAsgnTransType.REVERSE.getID(), tagData.getDataValue());
+        assertEquals( Enum903CollAsgnTransType.REVERSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -33,12 +33,12 @@ class Tag702NoPositionsTest {
     @Test
     void FIX0702Test() {
         FIX44 fixData = FIX44.FIX702_NO_POSITIONS;
-        assertEquals( "702", fixData.getID());
-        assertEquals( "NO_POSITIONS", fixData.getName());
-        assertEquals( "NoPositions", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "702", fixData.toFIXIDString());
+        assertEquals( "NO_POSITIONS", fixData.toFIXNameString());
+        assertEquals( "NoPositions", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0702Test() {

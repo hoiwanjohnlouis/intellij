@@ -49,63 +49,63 @@ class Enum71AllocTransTypeTest {
          * 0-6 msg types
          */
         enumType = Enum71AllocTransType.NEW;
-        assertEquals("0", enumType.getID());
-        assertEquals("NEW", enumType.getName());
-        assertEquals("0 - New", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("NEW", enumType.toFIXNameString());
+        assertEquals("0 - New", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum71AllocTransType.REPLACE;
-        assertEquals("1", enumType.getID());
-        assertEquals("REPLACE", enumType.getName());
-        assertEquals("1 - Replace", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("REPLACE", enumType.toFIXNameString());
+        assertEquals("1 - Replace", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum71AllocTransType.CANCEL;
-        assertEquals("2", enumType.getID());
-        assertEquals("CANCEL", enumType.getName());
-        assertEquals("2 - Cancel", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("CANCEL", enumType.toFIXNameString());
+        assertEquals("2 - Cancel", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum71AllocTransType.PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY;
-        assertEquals("3", enumType.getID());
-        assertEquals("PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY", enumType.getName());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY", enumType.toFIXNameString());
         assertEquals("3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum71AllocTransType.CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY;
-        assertEquals("4", enumType.getID());
-        assertEquals("CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY", enumType.getName());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY", enumType.toFIXNameString());
         assertEquals("4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum71AllocTransType.CALCULATED_WITHOUT_PRELIMINARY;
-        assertEquals("5", enumType.getID());
-        assertEquals("CALCULATED_WITHOUT_PRELIMINARY", enumType.getName());
+        assertEquals("5", enumType.toFIXIDString());
+        assertEquals("CALCULATED_WITHOUT_PRELIMINARY", enumType.toFIXNameString());
         assertEquals("5 - Calculated without Preliminary (sent unsolicited by broker, " +
-                "includes MiscFees and NetMoney) (Removed/Replaced)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                "includes MiscFees and NetMoney) (Removed/Replaced)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum71AllocTransType.REVERSAL;
-        assertEquals("6", enumType.getID());
-        assertEquals("REVERSAL", enumType.getName());
-        assertEquals("6 - Reversal", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("6", enumType.toFIXIDString());
+        assertEquals("REVERSAL", enumType.toFIXNameString());
+        assertEquals("6 - Reversal", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

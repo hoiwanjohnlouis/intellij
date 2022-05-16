@@ -27,12 +27,12 @@ class Tag646PrcMktOfferPxTest {
     @Test
     void FIX0646Test() {
         FIX43 fixData = FIX43.FIX646_PRC_MKT_OFFER_PX;
-        assertEquals( "646", fixData.getID());
-        assertEquals( "MKT_OFFER_PX", fixData.getName());
-        assertEquals( "MktOfferPx", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "646", fixData.toFIXIDString());
+        assertEquals( "MKT_OFFER_PX", fixData.toFIXNameString());
+        assertEquals( "MktOfferPx", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0646Test() {

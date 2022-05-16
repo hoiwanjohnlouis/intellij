@@ -39,31 +39,31 @@ class Tag919EnuDeliveryTypeTest {
     @Test
     void FIX0919Test() {
         FIX44 fixData = FIX44.FIX919_ENU_DELIVERY_TYPE;
-        assertEquals( "919", fixData.getID());
-        assertEquals( "DELIVERY_TYPE", fixData.getName());
-        assertEquals( "DeliveryType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "919", fixData.toFIXIDString());
+        assertEquals( "DELIVERY_TYPE", fixData.toFIXNameString());
+        assertEquals( "DeliveryType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0919Test() {
         Tag919EnuDeliveryType tagData;
 
         tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.VERSUS_PAYMENT );
-        assertEquals( Enum919DeliveryType.VERSUS_PAYMENT.getID(), tagData.getDataValue());
+        assertEquals( Enum919DeliveryType.VERSUS_PAYMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.FREE );
-        assertEquals( Enum919DeliveryType.FREE.getID(), tagData.getDataValue());
+        assertEquals( Enum919DeliveryType.FREE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.TRI_PARTY );
-        assertEquals( Enum919DeliveryType.TRI_PARTY.getID(), tagData.getDataValue());
+        assertEquals( Enum919DeliveryType.TRI_PARTY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag919EnuDeliveryType( Enum919DeliveryType.HOLD_IN_CUSTODY );
-        assertEquals( Enum919DeliveryType.HOLD_IN_CUSTODY.getID(), tagData.getDataValue());
+        assertEquals( Enum919DeliveryType.HOLD_IN_CUSTODY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

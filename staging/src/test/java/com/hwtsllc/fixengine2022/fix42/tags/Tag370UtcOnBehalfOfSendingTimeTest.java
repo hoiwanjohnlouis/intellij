@@ -28,12 +28,12 @@ class Tag370UtcOnBehalfOfSendingTimeTest {
     @Test
     void FIX0370Test() {
         FIX42 fixData = FIX42.FIX370_UTC_ON_BEHALF_OF_SENDING_TIME;
-        assertEquals( "370", fixData.getID());
-        assertEquals( "ON_BEHALF_OF_SENDING_TIME", fixData.getName());
-        assertEquals( "OnBehalfOfSendingTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "370", fixData.toFIXIDString());
+        assertEquals( "ON_BEHALF_OF_SENDING_TIME", fixData.toFIXNameString());
+        assertEquals( "OnBehalfOfSendingTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0370Test() {

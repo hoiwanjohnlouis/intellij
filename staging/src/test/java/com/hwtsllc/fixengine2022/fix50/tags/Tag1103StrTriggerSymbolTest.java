@@ -36,12 +36,12 @@ class Tag1103StrTriggerSymbolTest {
     @Test
     void FIX1103Test() {
         FIX50 fixData = FIX50.FIX1103_STR_TRIGGER_SYMBOL;
-        assertEquals( "1103", fixData.getID());
-        assertEquals( "TRIGGER_SYMBOL", fixData.getName());
-        assertEquals( "TriggerSymbol", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1103", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_SYMBOL", fixData.toFIXNameString());
+        assertEquals( "TriggerSymbol", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1103Test() {

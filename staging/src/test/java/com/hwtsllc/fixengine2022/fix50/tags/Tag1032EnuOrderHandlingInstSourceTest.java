@@ -46,19 +46,19 @@ class Tag1032EnuOrderHandlingInstSourceTest {
     @Test
     void FIX1032Test() {
         FIX50 fixData = FIX50.FIX1032_ENU_ORDER_HANDLING_INST_SOURCE;
-        assertEquals( "1032", fixData.getID());
-        assertEquals( "ORDER_HANDLING_INST_SOURCE", fixData.getName());
-        assertEquals( "OrderHandlingInstSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1032", fixData.toFIXIDString());
+        assertEquals( "ORDER_HANDLING_INST_SOURCE", fixData.toFIXNameString());
+        assertEquals( "OrderHandlingInstSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1032Test() {
         Tag1032EnuOrderHandlingInstSource tagData;
 
         tagData = new Tag1032EnuOrderHandlingInstSource( MyEnumOrderSource.NASD_OATS );
-        assertEquals( MyEnumOrderSource.NASD_OATS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderSource.NASD_OATS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

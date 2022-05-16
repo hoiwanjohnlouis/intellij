@@ -33,12 +33,12 @@ class Tag704LongQtyTest {
     @Test
     void FIX0704Test() {
         FIX44 fixData = FIX44.FIX704_LONG_QTY;
-        assertEquals( "704", fixData.getID());
-        assertEquals( "LONG_QTY", fixData.getName());
-        assertEquals( "LongQty", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "704", fixData.toFIXIDString());
+        assertEquals( "LONG_QTY", fixData.toFIXNameString());
+        assertEquals( "LongQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0704Test() {

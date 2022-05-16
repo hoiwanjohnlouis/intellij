@@ -38,25 +38,25 @@ class Enum567TradSesStatusRejReasonTest {
          *  1, type(s)
          */
         enumType = Enum567TradSesStatusRejReason.UNKNOWN_TRADING_SESSION_ID;
-        assertEquals("1", enumType.getID());
-        assertEquals("UNKNOWN_TRADING_SESSION_ID", enumType.getName());
-        assertEquals("1 - Unknown or invalid TradingSessionID", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("UNKNOWN_TRADING_SESSION_ID", enumType.toFIXNameString());
+        assertEquals("1 - Unknown or invalid TradingSessionID", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         /*
          *  99, type(s)
          */
         enumType = Enum567TradSesStatusRejReason.OTHER;
-        assertEquals("99", enumType.getID());
-        assertEquals("OTHER", enumType.getName());
-        assertEquals("99 - Other", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("99", enumType.toFIXIDString());
+        assertEquals("OTHER", enumType.toFIXNameString());
+        assertEquals("99 - Other", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

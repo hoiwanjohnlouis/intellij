@@ -34,12 +34,12 @@ class Tag986UnderlyingCollectAmountTest {
     @Test
     void FIX0986Test() {
         FIX50 fixData = FIX50.FIX986_UNDERLYING_COLLECT_AMOUNT;
-        assertEquals( "986", fixData.getID());
-        assertEquals( "UNDERLYING_COLLECT_AMOUNT", fixData.getName());
-        assertEquals( "UnderlyingCollectAmount", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "986", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_COLLECT_AMOUNT", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCollectAmount", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0986Test() {

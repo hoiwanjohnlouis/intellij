@@ -34,12 +34,12 @@ class Tag767AllowableOneSidednessCurrTest {
     @Test
     void FIX0767Test() {
         FIX44 fixData = FIX44.FIX767_ALLOWABLE_ONE_SIDEDNESS_CURR;
-        assertEquals( "767", fixData.getID());
-        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", fixData.getName());
-        assertEquals( "AllowableOneSidednessCurr", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "767", fixData.toFIXIDString());
+        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", fixData.toFIXNameString());
+        assertEquals( "AllowableOneSidednessCurr", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0767Test() {

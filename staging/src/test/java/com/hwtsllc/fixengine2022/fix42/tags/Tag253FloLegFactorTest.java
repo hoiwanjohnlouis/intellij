@@ -28,12 +28,12 @@ class Tag253FloLegFactorTest {
     @Test
     void FIX0253Test() {
         FIX42 fixData = FIX42.FIX253_FLO_LEG_FACTOR;
-        assertEquals( "253", fixData.getID());
-        assertEquals( "LEG_FACTOR", fixData.getName());
-        assertEquals( "LegFactor", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "253", fixData.toFIXIDString());
+        assertEquals( "LEG_FACTOR", fixData.toFIXNameString());
+        assertEquals( "LegFactor", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0253Test() {

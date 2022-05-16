@@ -36,12 +36,12 @@ class Tag118AmtNetMoneyTest {
     @Test
     void FIX0118Test() {
         FIX40 fixData = FIX40.FIX118_AMT_NET_MONEY;
-        assertEquals( "NET_MONEY", fixData.getName());
-        assertEquals( "118", fixData.getID());
-        assertEquals( "NetMoney", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "NET_MONEY", fixData.toFIXNameString());
+        assertEquals( "118", fixData.toFIXIDString());
+        assertEquals( "NetMoney", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0118Test() {

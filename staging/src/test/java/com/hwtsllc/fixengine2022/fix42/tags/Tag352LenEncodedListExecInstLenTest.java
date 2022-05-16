@@ -28,12 +28,12 @@ class Tag352LenEncodedListExecInstLenTest {
     @Test
     void FIX0352Test() {
         FIX42 fixData = FIX42.FIX352_LEN_ENCODED_LIST_EXEC_INST_LEN;
-        assertEquals( "352", fixData.getID());
-        assertEquals( "ENCODED_LIST_EXEC_INST_LEN", fixData.getName());
-        assertEquals( "EncodedListExecInstLen", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "352", fixData.toFIXIDString());
+        assertEquals( "ENCODED_LIST_EXEC_INST_LEN", fixData.toFIXNameString());
+        assertEquals( "EncodedListExecInstLen", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0352Test() {

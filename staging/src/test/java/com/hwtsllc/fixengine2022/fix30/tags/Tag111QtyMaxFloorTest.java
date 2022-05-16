@@ -38,12 +38,12 @@ class Tag111QtyMaxFloorTest {
     @Test
     void FIX0111Test() {
         FIX30 fixData = FIX30.FIX111_QTY_MAX_FLOOR;
-        assertEquals( "MAX_FLOOR", fixData.getName());
-        assertEquals( "111", fixData.getID());
-        assertEquals( "MaxFloor", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "MAX_FLOOR", fixData.toFIXNameString());
+        assertEquals( "111", fixData.toFIXIDString());
+        assertEquals( "MaxFloor", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0111Test() {

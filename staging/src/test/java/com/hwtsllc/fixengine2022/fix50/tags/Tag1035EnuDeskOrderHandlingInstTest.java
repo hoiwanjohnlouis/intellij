@@ -79,115 +79,115 @@ class Tag1035EnuDeskOrderHandlingInstTest {
     @Test
     void FIX1035Test() {
         FIX50 fixData = FIX50.FIX1035_ENU_DESK_ORDER_HANDLING_INST;
-        assertEquals( "1035", fixData.getID());
-        assertEquals( "DESK_ORDER_HANDLING_INST", fixData.getName());
-        assertEquals( "DeskOrderHandlingInst", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1035", fixData.toFIXIDString());
+        assertEquals( "DESK_ORDER_HANDLING_INST", fixData.toFIXNameString());
+        assertEquals( "DeskOrderHandlingInst", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1035Test() {
         Tag1035EnuDeskOrderHandlingInst tagData;
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.ADD_ON_ORDER );
-        assertEquals( MyEnumOrderHandlingInst.ADD_ON_ORDER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.ADD_ON_ORDER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.ALL_OR_NONE );
-        assertEquals( MyEnumOrderHandlingInst.ALL_OR_NONE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.ALL_OR_NONE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.CASH_NOT_HELD );
-        assertEquals( MyEnumOrderHandlingInst.CASH_NOT_HELD.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.CASH_NOT_HELD.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.DIRECTED_ORDER );
-        assertEquals( MyEnumOrderHandlingInst.DIRECTED_ORDER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.DIRECTED_ORDER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.EXCHANGE_FOR_PHYSICAL );
-        assertEquals( MyEnumOrderHandlingInst.EXCHANGE_FOR_PHYSICAL.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.EXCHANGE_FOR_PHYSICAL.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.FILL_OR_KILL );
-        assertEquals( MyEnumOrderHandlingInst.FILL_OR_KILL.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.FILL_OR_KILL.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.IMBALANCE_ONLY );
-        assertEquals( MyEnumOrderHandlingInst.IMBALANCE_ONLY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.IMBALANCE_ONLY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.IMMEDIATE_OR_CANCEL );
-        assertEquals( MyEnumOrderHandlingInst.IMMEDIATE_OR_CANCEL.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.IMMEDIATE_OR_CANCEL.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.LIMIT_ON_OPEN );
-        assertEquals( MyEnumOrderHandlingInst.LIMIT_ON_OPEN.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.LIMIT_ON_OPEN.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.LIMIT_ON_CLOSE );
-        assertEquals( MyEnumOrderHandlingInst.LIMIT_ON_CLOSE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.LIMIT_ON_CLOSE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.MARKET_AT_OPEN );
-        assertEquals( MyEnumOrderHandlingInst.MARKET_AT_OPEN.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.MARKET_AT_OPEN.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.MARKET_AT_CLOSE );
-        assertEquals( MyEnumOrderHandlingInst.MARKET_AT_CLOSE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.MARKET_AT_CLOSE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.MARKET_ON_OPEN );
-        assertEquals( MyEnumOrderHandlingInst.MARKET_ON_OPEN.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.MARKET_ON_OPEN.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.MARKET_ON_CLOSE );
-        assertEquals( MyEnumOrderHandlingInst.MARKET_ON_CLOSE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.MARKET_ON_CLOSE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.MINIMUM_QUANTITY );
-        assertEquals( MyEnumOrderHandlingInst.MINIMUM_QUANTITY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.MINIMUM_QUANTITY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.NOT_HELD );
-        assertEquals( MyEnumOrderHandlingInst.NOT_HELD.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.NOT_HELD.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.OVER_THE_DAY );
-        assertEquals( MyEnumOrderHandlingInst.OVER_THE_DAY.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.OVER_THE_DAY.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.PEGGED );
-        assertEquals( MyEnumOrderHandlingInst.PEGGED.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.PEGGED.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.RESERVE_SIZE_ORDER );
-        assertEquals( MyEnumOrderHandlingInst.RESERVE_SIZE_ORDER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.RESERVE_SIZE_ORDER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.STOP_STOCK_TRANSACTION );
-        assertEquals( MyEnumOrderHandlingInst.STOP_STOCK_TRANSACTION.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.STOP_STOCK_TRANSACTION.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.SCALE );
-        assertEquals( MyEnumOrderHandlingInst.SCALE.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.SCALE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.TIME_ORDER );
-        assertEquals( MyEnumOrderHandlingInst.TIME_ORDER.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.TIME_ORDER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.TRAILING_STOP );
-        assertEquals( MyEnumOrderHandlingInst.TRAILING_STOP.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.TRAILING_STOP.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1035EnuDeskOrderHandlingInst( MyEnumOrderHandlingInst.WORK );
-        assertEquals( MyEnumOrderHandlingInst.WORK.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderHandlingInst.WORK.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

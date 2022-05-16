@@ -41,35 +41,35 @@ class Enum1081RefOrderIDSourceTest {
         Enum1081RefOrderIDSource enumType;
 
         enumType = Enum1081RefOrderIDSource.SECONDARY_ORDE_ID;
-        assertEquals( "0", enumType.getID() );
-        assertEquals( "SECONDARY_ORDE_ID", enumType.getName() );
-        assertEquals( "0 - SecondaryOrdeID (198)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString() );
+        assertEquals( "SECONDARY_ORDE_ID", enumType.toFIXNameString() );
+        assertEquals( "0 - SecondaryOrdeID (198)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1081RefOrderIDSource.ORDE_ID;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "ORDE_ID", enumType.getName() );
-        assertEquals( "1 - OrdeID (37)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "ORDE_ID", enumType.toFIXNameString() );
+        assertEquals( "1 - OrdeID (37)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1081RefOrderIDSource.M_ENTRY_ID;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "M_ENTRY_ID", enumType.getName() );
-        assertEquals( "2 - MEntryID (278)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "M_ENTRY_ID", enumType.toFIXNameString() );
+        assertEquals( "2 - MEntryID (278)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1081RefOrderIDSource.QUOT_ENTRY_ID;
-        assertEquals( "3", enumType.getID() );
-        assertEquals( "QUOT_ENTRY_ID", enumType.getName() );
-        assertEquals( "3 - QuotEntryID (299)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString() );
+        assertEquals( "QUOT_ENTRY_ID", enumType.toFIXNameString() );
+        assertEquals( "3 - QuotEntryID (299)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -45,23 +45,23 @@ class Tag841EnuDiscretionMoveTypeTest {
     @Test
     void FIX0841Test() {
         FIX44 fixData = FIX44.FIX841_ENU_DISCRETION_MOVE_TYPE;
-        assertEquals( "841", fixData.getID());
-        assertEquals( "DISCRETION_MOVE_TYPE", fixData.getName());
-        assertEquals( "DiscretionMoveType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "841", fixData.toFIXIDString());
+        assertEquals( "DISCRETION_MOVE_TYPE", fixData.toFIXNameString());
+        assertEquals( "DiscretionMoveType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0841Test() {
         Tag841EnuDiscretionMoveType tagData;
 
         tagData = new Tag841EnuDiscretionMoveType(MyEnumMoveType.FLOATING);
-        assertEquals( MyEnumMoveType.FLOATING.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMoveType.FLOATING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag841EnuDiscretionMoveType(MyEnumMoveType.FIXED);
-        assertEquals( MyEnumMoveType.FIXED.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMoveType.FIXED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

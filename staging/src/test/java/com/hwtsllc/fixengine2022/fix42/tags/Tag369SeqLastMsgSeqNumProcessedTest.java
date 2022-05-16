@@ -28,12 +28,12 @@ class Tag369SeqLastMsgSeqNumProcessedTest {
     @Test
     void FIX0369Test() {
         FIX42 fixData = FIX42.FIX369_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
-        assertEquals( "369", fixData.getID());
-        assertEquals( "LAST_MSG_SEQ_NUM_PROCESSED", fixData.getName());
-        assertEquals( "LastMsgSeqNumProcessed", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "369", fixData.toFIXIDString());
+        assertEquals( "LAST_MSG_SEQ_NUM_PROCESSED", fixData.toFIXNameString());
+        assertEquals( "LastMsgSeqNumProcessed", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0369Test() {

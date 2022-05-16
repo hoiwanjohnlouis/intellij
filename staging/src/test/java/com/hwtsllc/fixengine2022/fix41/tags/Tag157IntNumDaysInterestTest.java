@@ -37,12 +37,12 @@ class Tag157IntNumDaysInterestTest {
     @Test
     void FIX0157Test() {
         FIX41 fixData = FIX41.FIX157_INT_NUM_DAYS_INTEREST;
-        assertEquals( "157", fixData.getID());
-        assertEquals( "NUM_DAYS_INTEREST", fixData.getName());
-        assertEquals( "NumDaysInterest", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "157", fixData.toFIXIDString());
+        assertEquals( "NUM_DAYS_INTEREST", fixData.toFIXNameString());
+        assertEquals( "NumDaysInterest", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0157Test() {

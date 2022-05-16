@@ -36,12 +36,12 @@ class Tag1003StrTradeIDTest {
     @Test
     void FIX1003Test() {
         FIX50 fixData = FIX50.FIX1003_STR_TRADE_ID;
-        assertEquals( "1003", fixData.getID());
-        assertEquals( "TRADE_ID", fixData.getName());
-        assertEquals( "TradeID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1003", fixData.toFIXIDString());
+        assertEquals( "TRADE_ID", fixData.toFIXNameString());
+        assertEquals( "TradeID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1003Test() {

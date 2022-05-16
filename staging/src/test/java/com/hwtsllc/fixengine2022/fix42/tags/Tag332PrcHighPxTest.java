@@ -28,12 +28,12 @@ class Tag332PrcHighPxTest {
     @Test
     void FIX0332Test() {
         FIX42 fixData = FIX42.FIX332_PRC_HIGH_PX;
-        assertEquals( "332", fixData.getID());
-        assertEquals( "HIGH_PX", fixData.getName());
-        assertEquals( "HighPx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "332", fixData.toFIXIDString());
+        assertEquals( "HIGH_PX", fixData.toFIXNameString());
+        assertEquals( "HighPx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0332Test() {

@@ -38,27 +38,27 @@ class Tag944EnuCollActionTest {
     @Test
     void FIX0944Test() {
         FIX44 fixData = FIX44.FIX944_ENU_COLL_ACTION;
-        assertEquals( "944", fixData.getID());
-        assertEquals( "COLL_ACTION", fixData.getName());
-        assertEquals( "CollAction", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "944", fixData.toFIXIDString());
+        assertEquals( "COLL_ACTION", fixData.toFIXNameString());
+        assertEquals( "CollAction", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0944Test() {
         Tag944EnuCollAction tagData;
 
         tagData = new Tag944EnuCollAction( Enum944CollAction.RETAIN );
-        assertEquals( Enum944CollAction.RETAIN.getID(), tagData.getDataValue());
+        assertEquals( Enum944CollAction.RETAIN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag944EnuCollAction( Enum944CollAction.ADD );
-        assertEquals( Enum944CollAction.ADD.getID(), tagData.getDataValue());
+        assertEquals( Enum944CollAction.ADD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag944EnuCollAction( Enum944CollAction.REMOVE );
-        assertEquals( Enum944CollAction.REMOVE.getID(), tagData.getDataValue());
+        assertEquals( Enum944CollAction.REMOVE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

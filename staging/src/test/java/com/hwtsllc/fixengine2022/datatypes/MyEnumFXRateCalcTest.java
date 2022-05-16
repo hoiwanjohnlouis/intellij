@@ -49,19 +49,19 @@ class MyEnumFXRateCalcTest {
          * M,D msg types
          */
         enumType = MyEnumFXRateCalc.MULTIPLY;
-        assertEquals("M", enumType.getID());
-        assertEquals("MULTIPLY", enumType.getName());
-        assertEquals("M - Multiply", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("M", enumType.toFIXIDString());
+        assertEquals("MULTIPLY", enumType.toFIXNameString());
+        assertEquals("M - Multiply", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumFXRateCalc.DIVIDE;
-        assertEquals("D", enumType.getID());
-        assertEquals("DIVIDE", enumType.getName());
-        assertEquals("D - Divide", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("D", enumType.toFIXIDString());
+        assertEquals("DIVIDE", enumType.toFIXNameString());
+        assertEquals("D - Divide", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

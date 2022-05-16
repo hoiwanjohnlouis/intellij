@@ -34,12 +34,12 @@ class Tag681LegBidPxTest {
     @Test
     void FIX0681Test() {
         FIX44 fixData = FIX44.FIX681_LEG_BID_PX;
-        assertEquals( "681", fixData.getID());
-        assertEquals( "LEG_BID_PX", fixData.getName());
-        assertEquals( "LegBidPx", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "681", fixData.toFIXIDString());
+        assertEquals( "LEG_BID_PX", fixData.toFIXNameString());
+        assertEquals( "LegBidPx", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0681Test() {

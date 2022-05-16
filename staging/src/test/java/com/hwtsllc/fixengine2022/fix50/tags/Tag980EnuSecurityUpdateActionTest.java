@@ -39,27 +39,27 @@ class Tag980EnuSecurityUpdateActionTest {
     @Test
     void FIX0980Test() {
         FIX50 fixData = FIX50.FIX980_ENU_SECURITY_UPDATE_ACTION;
-        assertEquals( "980", fixData.getID());
-        assertEquals( "SECURITY_UPDATE_ACTION", fixData.getName());
-        assertEquals( "SecurityUpdateAction", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "980", fixData.toFIXIDString());
+        assertEquals( "SECURITY_UPDATE_ACTION", fixData.toFIXNameString());
+        assertEquals( "SecurityUpdateAction", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0980Test() {
         Tag980EnuSecurityUpdateAction tagData;
 
         tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.ADD );
-        assertEquals( ENum980SecurityUpdateAction.ADD.getID(), tagData.getDataValue());
+        assertEquals( ENum980SecurityUpdateAction.ADD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.DELETE );
-        assertEquals( ENum980SecurityUpdateAction.DELETE.getID(), tagData.getDataValue());
+        assertEquals( ENum980SecurityUpdateAction.DELETE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.MODIFY );
-        assertEquals( ENum980SecurityUpdateAction.MODIFY.getID(), tagData.getDataValue());
+        assertEquals( ENum980SecurityUpdateAction.MODIFY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -38,12 +38,12 @@ class Tag725EnuResponseTransportTypeTest {
     @Test
     void FIX0725Test() {
         FIX44 fixData = FIX44.FIX725_ENU_RESPONSE_TRANSPORT_TYPE;
-        assertEquals( "725", fixData.getID());
-        assertEquals( "RESPONSE_TRANSPORT_TYPE", fixData.getName());
-        assertEquals( "ResponseTransportType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "725", fixData.toFIXIDString());
+        assertEquals( "RESPONSE_TRANSPORT_TYPE", fixData.toFIXNameString());
+        assertEquals( "ResponseTransportType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0725Test() {

@@ -35,12 +35,12 @@ class Tag116StrOnBehalfOfSubIDTest {
     @Test
     void FIX0116Test() {
         FIX40 fixData = FIX40.FIX116_STR_ON_BEHALF_OF_SUB_ID;
-        assertEquals("ON_BEHALF_OF_SUB_ID", fixData.getName());
-        assertEquals("116", fixData.getID());
-        assertEquals("OnBehalfOfSubID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals("ON_BEHALF_OF_SUB_ID", fixData.toFIXNameString());
+        assertEquals("116", fixData.toFIXIDString());
+        assertEquals("OnBehalfOfSubID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0116Test() {

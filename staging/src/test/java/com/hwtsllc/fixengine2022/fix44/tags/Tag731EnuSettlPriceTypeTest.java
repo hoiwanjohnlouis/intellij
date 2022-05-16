@@ -36,12 +36,12 @@ class Tag731EnuSettlPriceTypeTest {
     @Test
     void FIX0731Test() {
         FIX44 fixData = FIX44.FIX731_ENU_SETTL_PRICE_TYPE;
-        assertEquals( "731", fixData.getID());
-        assertEquals( "SETTL_PRICE_TYPE", fixData.getName());
-        assertEquals( "SettlPriceType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "731", fixData.toFIXIDString());
+        assertEquals( "SETTL_PRICE_TYPE", fixData.toFIXNameString());
+        assertEquals( "SettlPriceType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0731Test() {

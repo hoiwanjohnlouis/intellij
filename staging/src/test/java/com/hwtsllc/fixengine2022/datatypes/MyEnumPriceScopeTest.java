@@ -47,35 +47,35 @@ class MyEnumPriceScopeTest {
         MyEnumPriceScope enumType;
 
         enumType = MyEnumPriceScope.NONE;
-        assertEquals( "0", enumType.getID());
-        assertEquals( "NONE", enumType.getName());
-        assertEquals( "0 - None", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString());
+        assertEquals( "NONE", enumType.toFIXNameString());
+        assertEquals( "0 - None", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumPriceScope.LOCAL;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "LOCAL", enumType.getName());
-        assertEquals( "1 - Local (Exchange, ECN, ATS)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "LOCAL", enumType.toFIXNameString());
+        assertEquals( "1 - Local (Exchange, ECN, ATS)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumPriceScope.NATIONAL;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "NATIONAL", enumType.getName());
-        assertEquals( "2 - National (Across all national markets)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "NATIONAL", enumType.toFIXNameString());
+        assertEquals( "2 - National (Across all national markets)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumPriceScope.GLOBAL;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "GLOBAL", enumType.getName());
-        assertEquals( "3 - Global (Across all markets)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "GLOBAL", enumType.toFIXNameString());
+        assertEquals( "3 - Global (Across all markets)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

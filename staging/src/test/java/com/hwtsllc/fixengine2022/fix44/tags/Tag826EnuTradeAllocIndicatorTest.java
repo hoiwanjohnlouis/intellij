@@ -41,40 +41,40 @@ class Tag826EnuTradeAllocIndicatorTest {
     @Test
     void FIX0826Test() {
         FIX44 fixData = FIX44.FIX826_ENU_TRADE_ALLOC_INDICATOR;
-        assertEquals( "826", fixData.getID());
-        assertEquals( "TRADE_ALLOC_INDICATOR", fixData.getName());
-        assertEquals( "TradeAllocIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "826", fixData.toFIXIDString());
+        assertEquals( "TRADE_ALLOC_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "TradeAllocIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0826Test() {
         Tag826EnuTradeAllocIndicator tagData;
 
         tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.NOT_REQUIRED );
-        assertEquals( Enum826TradeAllocIndicator.NOT_REQUIRED.getID(), tagData.getDataValue());
+        assertEquals( Enum826TradeAllocIndicator.NOT_REQUIRED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.REQUIRED );
-        assertEquals( Enum826TradeAllocIndicator.REQUIRED.getID(), tagData.getDataValue());
+        assertEquals( Enum826TradeAllocIndicator.REQUIRED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.USE_PROVIDED_INFO );
-        assertEquals( Enum826TradeAllocIndicator.USE_PROVIDED_INFO.getID(), tagData.getDataValue());
+        assertEquals( Enum826TradeAllocIndicator.USE_PROVIDED_INFO.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR );
-        assertEquals( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR.getID(), tagData.getDataValue());
+        assertEquals( Enum826TradeAllocIndicator.GIVE_UP_EXECUTOR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.FROM_EXECUTOR );
-        assertEquals( Enum826TradeAllocIndicator.FROM_EXECUTOR.getID(), tagData.getDataValue());
+        assertEquals( Enum826TradeAllocIndicator.FROM_EXECUTOR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.CLAIM_ACCOUNT );
-        assertEquals( Enum826TradeAllocIndicator.CLAIM_ACCOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum826TradeAllocIndicator.CLAIM_ACCOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

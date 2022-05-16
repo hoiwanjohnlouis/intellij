@@ -35,13 +35,13 @@ class Tag86StrDlvyInstTest {
     @Test
     void FIX0086Test() {
         FIX27 fixData = FIX27.FIX86_STR_DLVY_INST;
-        assertEquals( "DLVY_INST", fixData.getName());
-        assertEquals( "86", fixData.getID());
-        assertEquals( "DlvyInst (no longer used)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "DLVY_INST", fixData.toFIXNameString());
+        assertEquals( "86", fixData.toFIXIDString());
+        assertEquals( "DlvyInst (no longer used)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0086Test() {

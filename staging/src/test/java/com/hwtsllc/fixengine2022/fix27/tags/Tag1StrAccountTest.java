@@ -49,13 +49,13 @@ class Tag1StrAccountTest {
     @Test
     void FIX0001Test() {
         FIX27 fixData = FIX27.FIX1_STR_ACCOUNT;
-        assertEquals( "FIX1_STR_ACCOUNT", fixData.getEnumName());
-        assertEquals( "1", fixData.getID());
-        assertEquals( "ACCOUNT", fixData.getName());
-        assertEquals( "Account", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "FIX1_STR_ACCOUNT", fixData.toEnumNameString());
+        assertEquals( "1", fixData.toFIXIDString());
+        assertEquals( "ACCOUNT", fixData.toFIXNameString());
+        assertEquals( "Account", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0001Test() {

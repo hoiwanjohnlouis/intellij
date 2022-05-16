@@ -27,12 +27,12 @@ class Tag594StrUnderlyingLocaleOfIssueTest {
     @Test
     void FIX0594Test() {
         FIX43 fixData = FIX43.FIX594_STR_UNDERLYING_LOCALE_OF_ISSUE;
-        assertEquals( "594", fixData.getID());
-        assertEquals( "UNDERLYING_LOCALE_OF_ISSUE", fixData.getName());
-        assertEquals( "UnderlyingLocaleOfIssue", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "594", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_LOCALE_OF_ISSUE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingLocaleOfIssue", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0594Test() {

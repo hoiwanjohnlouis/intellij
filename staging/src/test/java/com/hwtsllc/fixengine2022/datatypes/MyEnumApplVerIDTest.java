@@ -68,68 +68,68 @@ class MyEnumApplVerIDTest {
         MyEnumApplVerID enumType;
 
         enumType = MyEnumApplVerID.FIX27;
-        assertEquals( "0", enumType.getID() );
-        assertEquals( "FIX27", enumType.getName() );
-        assertEquals( "0 - FIX27", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString() );
+        assertEquals( "FIX27", enumType.toFIXNameString() );
+        assertEquals( "0 - FIX27", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplVerID.FIX30;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "FIX30", enumType.getName() );
-        assertEquals( "1 - FIX30", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "FIX30", enumType.toFIXNameString() );
+        assertEquals( "1 - FIX30", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplVerID.FIX40;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "FIX40", enumType.getName() );
-        assertEquals( "2 - FIX40", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "FIX40", enumType.toFIXNameString() );
+        assertEquals( "2 - FIX40", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplVerID.FIX41;
-        assertEquals( "3", enumType.getID() );
-        assertEquals( "FIX41", enumType.getName() );
-        assertEquals( "3 - FIX41", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString() );
+        assertEquals( "FIX41", enumType.toFIXNameString() );
+        assertEquals( "3 - FIX41", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplVerID.FIX42;
-        assertEquals( "4", enumType.getID() );
-        assertEquals( "FIX42", enumType.getName() );
-        assertEquals( "4 - FIX42", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString() );
+        assertEquals( "FIX42", enumType.toFIXNameString() );
+        assertEquals( "4 - FIX42", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumApplVerID.FIX43;
-        assertEquals( "5", enumType.getID() );
-        assertEquals( "FIX43", enumType.getName() );
-        assertEquals( "5 - FIX43", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "5", enumType.toFIXIDString() );
+        assertEquals( "FIX43", enumType.toFIXNameString() );
+        assertEquals( "5 - FIX43", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplVerID.FIX44;
-        assertEquals( "6", enumType.getID() );
-        assertEquals( "FIX44", enumType.getName() );
-        assertEquals( "6 - FIX44", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "6", enumType.toFIXIDString() );
+        assertEquals( "FIX44", enumType.toFIXNameString() );
+        assertEquals( "6 - FIX44", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplVerID.FIX50;
-        assertEquals( "7", enumType.getID() );
-        assertEquals( "FIX50", enumType.getName() );
-        assertEquals( "7 - FIX50", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "7", enumType.toFIXIDString() );
+        assertEquals( "FIX50", enumType.toFIXNameString() );
+        assertEquals( "7 - FIX50", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

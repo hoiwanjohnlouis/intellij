@@ -28,12 +28,12 @@ class Tag342UtcTradSesOpenTimeTest {
     @Test
     void FIX0342Test() {
         FIX42 fixData = FIX42.FIX342_UTC_TRAD_SES_OPEN_TIME;
-        assertEquals( "342", fixData.getID());
-        assertEquals( "TRAD_SES_OPEN_TIME", fixData.getName());
-        assertEquals( "TradSesOpenTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "342", fixData.toFIXIDString());
+        assertEquals( "TRAD_SES_OPEN_TIME", fixData.toFIXNameString());
+        assertEquals( "TradSesOpenTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0342Test() {

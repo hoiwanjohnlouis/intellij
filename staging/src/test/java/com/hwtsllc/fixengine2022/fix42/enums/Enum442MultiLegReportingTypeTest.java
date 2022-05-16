@@ -37,35 +37,35 @@ class Enum442MultiLegReportingTypeTest {
     void Enum0442Test() {
         Enum442MultiLegReportingType enumType;
 
-        /**
+        /*
          * 1-3 msg types
          */
         enumType = Enum442MultiLegReportingType.SINGLE_SECURITY;
-        assertEquals("1", enumType.getID());
-        assertEquals("SINGLE_SECURITY", enumType.getName());
-        assertEquals("1 - Single security (default if not specified)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("SINGLE_SECURITY", enumType.toFIXNameString());
+        assertEquals("1 - Single security (default if not specified)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY;
-        assertEquals("2", enumType.getID());
-        assertEquals("INDIVIDUAL_LEG_SECURITY", enumType.getName());
-        assertEquals("2 - Individual leg of a multi=leg security", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("INDIVIDUAL_LEG_SECURITY", enumType.toFIXNameString());
+        assertEquals("2 - Individual leg of a multi=leg security", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum442MultiLegReportingType.MULTI_LEG_SECURITY;
-        assertEquals("3", enumType.getID());
-        assertEquals("MULTI_LEG_SECURITY", enumType.getName());
-        assertEquals("3 - Multi-leg security", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("MULTI_LEG_SECURITY", enumType.toFIXNameString());
+        assertEquals("3 - Multi-leg security", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

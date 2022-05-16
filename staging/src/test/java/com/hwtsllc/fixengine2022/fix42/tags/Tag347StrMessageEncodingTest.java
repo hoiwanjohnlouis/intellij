@@ -28,12 +28,12 @@ class Tag347StrMessageEncodingTest {
     @Test
     void FIX0347Test() {
         FIX42 fixData = FIX42.FIX347_STR_MESSAGE_ENCODING;
-        assertEquals( "347", fixData.getID());
-        assertEquals( "MESSAGE_ENCODING", fixData.getName());
-        assertEquals( "MessageEncoding", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "347", fixData.toFIXIDString());
+        assertEquals( "MESSAGE_ENCODING", fixData.toFIXNameString());
+        assertEquals( "MessageEncoding", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0347Test() {

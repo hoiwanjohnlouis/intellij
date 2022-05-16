@@ -34,12 +34,12 @@ class Tag140PrcPrevClosePxTest {
     @Test
     void FIX0140Test() {
         FIX40 fixData = FIX40.FIX140_PRC_PREV_CLOSE_PX;
-        assertEquals( "PREV_CLOSE_PX", fixData.getName() );
-        assertEquals( "140", fixData.getID() );
-        assertEquals( "PrevClosePx", fixData.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "PREV_CLOSE_PX", fixData.toFIXNameString() );
+        assertEquals( "140", fixData.toFIXIDString() );
+        assertEquals( "PrevClosePx", fixData.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0140Test() {

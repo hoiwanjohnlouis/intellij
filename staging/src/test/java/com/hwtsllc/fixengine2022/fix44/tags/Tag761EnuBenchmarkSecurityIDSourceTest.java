@@ -133,12 +133,12 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
     @Test
     void FIX0761Test() {
         FIX44 fixData = FIX44.FIX761_ENU_BENCHMARK_SECURITY_ID_SOURCE;
-        assertEquals( "761", fixData.getID());
-        assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", fixData.getName());
-        assertEquals( "BenchmarkSecurityIDSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "761", fixData.toFIXIDString());
+        assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", fixData.toFIXNameString());
+        assertEquals( "BenchmarkSecurityIDSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0761Test() {

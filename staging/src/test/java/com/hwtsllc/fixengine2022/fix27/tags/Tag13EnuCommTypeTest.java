@@ -44,13 +44,13 @@ class Tag13EnuCommTypeTest {
     @Test
     void FIX0013Test() {
         FIX27 fixData = FIX27.FIX13_ENU_COMM_TYPE;
-        assertEquals( "COMM_TYPE", fixData.getName());
-        assertEquals( "13", fixData.getID());
-        assertEquals( "CommType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "COMM_TYPE", fixData.toFIXNameString());
+        assertEquals( "13", fixData.toFIXIDString());
+        assertEquals( "CommType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0013Test() {

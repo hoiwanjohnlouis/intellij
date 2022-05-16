@@ -43,51 +43,51 @@ class Enum751TradeReportRejectReasonTest {
         Enum751TradeReportRejectReason enumType;
 
         enumType = Enum751TradeReportRejectReason.SUCCESSFUL;
-        assertEquals( "0", enumType.getID());
-        assertEquals( "SUCCESSFUL", enumType.getName());
-        assertEquals( "0 - Successful (default)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString());
+        assertEquals( "SUCCESSFUL", enumType.toFIXNameString());
+        assertEquals( "0 - Successful (default)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "INVALID_PARTY_INFORMATION", enumType.getName());
-        assertEquals( "1 - Invalid party information", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "INVALID_PARTY_INFORMATION", enumType.toFIXNameString());
+        assertEquals( "1 - Invalid party information", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "UNKNOWN_INSTRUMENT", enumType.getName());
-        assertEquals( "2 - Unknown instrument", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "UNKNOWN_INSTRUMENT", enumType.toFIXNameString());
+        assertEquals( "2 - Unknown instrument", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "UNAUTHORIZED_TO_REPORT_TRADES", enumType.getName());
-        assertEquals( "3 - Unauthorized to report trades", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "UNAUTHORIZED_TO_REPORT_TRADES", enumType.toFIXNameString());
+        assertEquals( "3 - Unauthorized to report trades", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum751TradeReportRejectReason.INVALID_TRADE_TYPE;
-        assertEquals( "4", enumType.getID());
-        assertEquals( "INVALID_TRADE_TYPE", enumType.getName());
-        assertEquals( "4 - Invalid trade type", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString());
+        assertEquals( "INVALID_TRADE_TYPE", enumType.toFIXNameString());
+        assertEquals( "4 - Invalid trade type", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum751TradeReportRejectReason.OTHER;
-        assertEquals( "99", enumType.getID());
-        assertEquals( "OTHER", enumType.getName());
-        assertEquals( "99 - Other", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "99", enumType.toFIXIDString());
+        assertEquals( "OTHER", enumType.toFIXNameString());
+        assertEquals( "99 - Other", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

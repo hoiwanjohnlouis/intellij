@@ -35,12 +35,12 @@ class Tag949StrNested3PartyIDTest {
     @Test
     void FIX0949Test() {
         FIX44 fixData = FIX44.FIX949_STR_NESTED_3_PARTY_ID;
-        assertEquals( "949", fixData.getID());
-        assertEquals( "NESTED_3_PARTY_ID", fixData.getName());
-        assertEquals( "Nested3PartyID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "949", fixData.toFIXIDString());
+        assertEquals( "NESTED_3_PARTY_ID", fixData.toFIXNameString());
+        assertEquals( "Nested3PartyID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0949Test() {

@@ -38,12 +38,12 @@ class Tag718EnuAdjustmentTypeTest {
     @Test
     void FIX0718Test() {
         FIX44 fixData = FIX44.FIX718_ENU_ADJUSTMENT_TYPE;
-        assertEquals( "718", fixData.getID());
-        assertEquals( "ADJUSTMENT_TYPE", fixData.getName());
-        assertEquals( "AdjustmentType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "718", fixData.toFIXIDString());
+        assertEquals( "ADJUSTMENT_TYPE", fixData.toFIXNameString());
+        assertEquals( "AdjustmentType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0718Test() {

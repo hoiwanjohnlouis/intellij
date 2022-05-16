@@ -40,35 +40,35 @@ class Tag910EnuCollStatusTest {
     @Test
     void FIX0910Test() {
         FIX44 fixData = FIX44.FIX910_ENU_COLL_STATUS;
-        assertEquals( "910", fixData.getID());
-        assertEquals( "COLL_STATUS", fixData.getName());
-        assertEquals( "CollStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "910", fixData.toFIXIDString());
+        assertEquals( "COLL_STATUS", fixData.toFIXNameString());
+        assertEquals( "CollStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0910Test() {
         Tag910EnuCollStatus tagData;
 
         tagData = new Tag910EnuCollStatus( Enum910CollStatus.UNASSIGNED );
-        assertEquals( Enum910CollStatus.UNASSIGNED.getID(), tagData.getDataValue());
+        assertEquals( Enum910CollStatus.UNASSIGNED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag910EnuCollStatus( Enum910CollStatus.PARTIALLY_ASSIGNED );
-        assertEquals( Enum910CollStatus.PARTIALLY_ASSIGNED.getID(), tagData.getDataValue());
+        assertEquals( Enum910CollStatus.PARTIALLY_ASSIGNED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNMENT_PROPOSED );
-        assertEquals( Enum910CollStatus.ASSIGNMENT_PROPOSED.getID(), tagData.getDataValue());
+        assertEquals( Enum910CollStatus.ASSIGNMENT_PROPOSED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNED );
-        assertEquals( Enum910CollStatus.ASSIGNED.getID(), tagData.getDataValue());
+        assertEquals( Enum910CollStatus.ASSIGNED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag910EnuCollStatus( Enum910CollStatus.CHALLENGED );
-        assertEquals( Enum910CollStatus.CHALLENGED.getID(), tagData.getDataValue());
+        assertEquals( Enum910CollStatus.CHALLENGED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

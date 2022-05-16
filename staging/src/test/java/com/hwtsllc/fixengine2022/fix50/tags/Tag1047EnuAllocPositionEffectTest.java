@@ -61,12 +61,12 @@ class Tag1047EnuAllocPositionEffectTest {
     @Test
     void FIX1047Test() {
         FIX50 fixData = FIX50.FIX1047_ENU_ALLOC_POSITION_EFFECT;
-        assertEquals( "1047", fixData.getID());
-        assertEquals( "ALLOC_POSITION_EFFECT", fixData.getName());
-        assertEquals( "AllocPositionEffect", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1047", fixData.toFIXIDString());
+        assertEquals( "ALLOC_POSITION_EFFECT", fixData.toFIXNameString());
+        assertEquals( "AllocPositionEffect", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1047Test() {

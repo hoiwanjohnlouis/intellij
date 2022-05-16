@@ -28,12 +28,12 @@ class Tag443UtcStrikeTimeTest {
     @Test
     void FIX0443Test() {
         FIX42 fixData = FIX42.FIX443_UTC_STRIKE_TIME;
-        assertEquals( "443", fixData.getID());
-        assertEquals( "STRIKE_TIME", fixData.getName());
-        assertEquals( "StrikeTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "443", fixData.toFIXIDString());
+        assertEquals( "STRIKE_TIME", fixData.toFIXNameString());
+        assertEquals( "StrikeTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0443Test() {

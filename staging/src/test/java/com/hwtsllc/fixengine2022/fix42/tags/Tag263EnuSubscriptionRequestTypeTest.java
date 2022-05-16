@@ -35,12 +35,12 @@ class Tag263EnuSubscriptionRequestTypeTest {
     @Test
     void FIX0263Test() {
         FIX42 fixData = FIX42.FIX263_ENU_SUBSCRIPTION_REQUEST_TYPE;
-        assertEquals( "263", fixData.getID());
-        assertEquals( "SUBSCRIPTION_REQUEST_TYPE", fixData.getName());
-        assertEquals( "SubscriptionRequestType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "263", fixData.toFIXIDString());
+        assertEquals( "SUBSCRIPTION_REQUEST_TYPE", fixData.toFIXNameString());
+        assertEquals( "SubscriptionRequestType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0263Test() {
@@ -50,15 +50,15 @@ class Tag263EnuSubscriptionRequestTypeTest {
          * 0-2 msg types
          */
         tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SNAPSHOT);
-        assertEquals( Enum263SubscriptionRequestType.SNAPSHOT.getID(), tagData.getDataValue());
+        assertEquals( Enum263SubscriptionRequestType.SNAPSHOT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT);
-        assertEquals( Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT.getID(), tagData.getDataValue());
+        assertEquals( Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT);
-        assertEquals( Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT.getID(), tagData.getDataValue());
+        assertEquals( Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

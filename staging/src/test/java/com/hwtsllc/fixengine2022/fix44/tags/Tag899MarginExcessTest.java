@@ -33,12 +33,12 @@ class Tag899MarginExcessTest {
     @Test
     void FIX0899Test() {
         FIX44 fixData = FIX44.FIX899_MARGIN_EXCESS;
-        assertEquals( "899", fixData.getID());
-        assertEquals( "MARGIN_EXCESS", fixData.getName());
-        assertEquals( "MarginExcess", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "899", fixData.toFIXIDString());
+        assertEquals( "MARGIN_EXCESS", fixData.toFIXNameString());
+        assertEquals( "MarginExcess", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0899Test() {

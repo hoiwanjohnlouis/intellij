@@ -36,12 +36,12 @@ class Tag669LastParPxTest {
     @Test
     void FIX0669Test() {
         FIX44 fixData = FIX44.FIX669_LAST_PAR_PX;
-        assertEquals( "669", fixData.getID());
-        assertEquals( "LAST_PAR_PX", fixData.getName());
-        assertEquals( "LastParPx", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "669", fixData.toFIXIDString());
+        assertEquals( "LAST_PAR_PX", fixData.toFIXNameString());
+        assertEquals( "LastParPx", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0669Test() {

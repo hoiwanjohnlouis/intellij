@@ -42,12 +42,12 @@ class Tag431EnuListOrderStatusTest {
     @Test
     void FIX0431Test() {
         FIX42 fixData = FIX42.FIX431_ENU_LIST_ORDER_STATUS;
-        assertEquals( "431", fixData.getID());
-        assertEquals( "LIST_ORDER_STATUS", fixData.getName());
-        assertEquals( "ListOrderStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "431", fixData.toFIXIDString());
+        assertEquals( "LIST_ORDER_STATUS", fixData.toFIXNameString());
+        assertEquals( "ListOrderStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0431Test() {
@@ -57,31 +57,31 @@ class Tag431EnuListOrderStatusTest {
          * 1-7 msg types
          */
         tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.IN_BIDDING_PROCESS);
-        assertEquals( Enum431ListOrderStatus.IN_BIDDING_PROCESS.getID(), tagData.getDataValue());
+        assertEquals( Enum431ListOrderStatus.IN_BIDDING_PROCESS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION);
-        assertEquals( Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION.getID(), tagData.getDataValue());
+        assertEquals( Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.EXECUTING);
-        assertEquals( Enum431ListOrderStatus.EXECUTING.getID(), tagData.getDataValue());
+        assertEquals( Enum431ListOrderStatus.EXECUTING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.CANCELLING);
-        assertEquals( Enum431ListOrderStatus.CANCELLING.getID(), tagData.getDataValue());
+        assertEquals( Enum431ListOrderStatus.CANCELLING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALERT);
-        assertEquals( Enum431ListOrderStatus.ALERT.getID(), tagData.getDataValue());
+        assertEquals( Enum431ListOrderStatus.ALERT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALL_DONE);
-        assertEquals( Enum431ListOrderStatus.ALL_DONE.getID(), tagData.getDataValue());
+        assertEquals( Enum431ListOrderStatus.ALL_DONE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.REJECT);
-        assertEquals( Enum431ListOrderStatus.REJECT.getID(), tagData.getDataValue());
+        assertEquals( Enum431ListOrderStatus.REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

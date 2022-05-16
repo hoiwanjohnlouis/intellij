@@ -35,12 +35,12 @@ class Tag979StrInputSourceTest {
     @Test
     void FIX0979Test() {
         FIX50 fixData = FIX50.FIX979_STR_INPUT_SOURCE;
-        assertEquals( "979", fixData.getID());
-        assertEquals( "INPUT_SOURCE", fixData.getName());
-        assertEquals( "InputSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "979", fixData.toFIXIDString());
+        assertEquals( "INPUT_SOURCE", fixData.toFIXNameString());
+        assertEquals( "InputSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0979Test() {

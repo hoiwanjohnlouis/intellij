@@ -46,12 +46,12 @@ class Tag206StrOptAttributeTest {
     @Test
     void FIX0206Test() {
         FIX41 fixData = FIX41.FIX206_STR_OPT_ATTRIBUTE;
-        assertEquals( "206", fixData.getID());
-        assertEquals( "OPT_ATTRIBUTE", fixData.getName());
-        assertEquals( "OptAttribute", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "206", fixData.toFIXIDString());
+        assertEquals( "OPT_ATTRIBUTE", fixData.toFIXNameString());
+        assertEquals( "OptAttribute", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0206Test() {

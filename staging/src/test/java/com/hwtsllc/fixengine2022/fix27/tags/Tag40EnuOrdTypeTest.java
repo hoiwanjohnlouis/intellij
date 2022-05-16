@@ -71,19 +71,19 @@ class Tag40EnuOrdTypeTest {
     @Test
     void FIX0040Test() {
         FIX27 fixData = FIX27.FIX40_ENU_ORD_TYPE;
-        assertEquals( "ORD_TYPE", fixData.getName());
-        assertEquals( "40", fixData.getID());
-        assertEquals( "OrdType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ORD_TYPE", fixData.toFIXNameString());
+        assertEquals( "40", fixData.toFIXIDString());
+        assertEquals( "OrdType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0040Test() {
         Tag40EnuOrdType tagData;
 
-        /**
+        /*
          * 1-9 Order Type msg
          */
         tagData = new Tag40EnuOrdType(Enum40OrdType.MARKET);
@@ -124,7 +124,7 @@ class Tag40EnuOrdTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          * A-Q Order Type msg
          */
         tagData = new Tag40EnuOrdType(Enum40OrdType.ON_CLOSE);

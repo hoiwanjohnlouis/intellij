@@ -34,12 +34,12 @@ class Tag1129StrCstmApplVerIDTest {
     @Test
     void FIX1129Test() {
         FIX50 fixData = FIX50.FIX1129_CSTM_APPL_VER_ID;
-        assertEquals( "1129", fixData.getID());
-        assertEquals( "CSTM_APPL_VER_ID", fixData.getName());
-        assertEquals( "CstmApplVerID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1129", fixData.toFIXIDString());
+        assertEquals( "CSTM_APPL_VER_ID", fixData.toFIXNameString());
+        assertEquals( "CstmApplVerID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1129Test() {

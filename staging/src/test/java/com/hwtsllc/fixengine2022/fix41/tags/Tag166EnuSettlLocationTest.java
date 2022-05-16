@@ -46,43 +46,43 @@ class Tag166EnuSettlLocationTest {
     @Test
     void FIX0166Test() {
         FIX41 fixData = FIX41.FIX166_ENU_SETTL_LOCATION;
-        assertEquals( "166", fixData.getID());
-        assertEquals( "SETTL_LOCATION", fixData.getName());
-        assertEquals( "SettlLocation (replaced)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "166", fixData.toFIXIDString());
+        assertEquals( "SETTL_LOCATION", fixData.toFIXNameString());
+        assertEquals( "SettlLocation (replaced)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0166Test() {
         Tag166EnuSettlLocation tagData;
 
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.CEDEL);
-        assertEquals( Enum166SettlLocation.CEDEL.getID(), tagData.getDataValue());
+        assertEquals( Enum166SettlLocation.CEDEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY);
-        assertEquals( Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY.getID(), tagData.getDataValue());
+        assertEquals( Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.EURO_CLEAR);
-        assertEquals( Enum166SettlLocation.EURO_CLEAR.getID(), tagData.getDataValue());
+        assertEquals( Enum166SettlLocation.EURO_CLEAR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.FEDERAL_BOOK_ENTRY);
-        assertEquals( Enum166SettlLocation.FEDERAL_BOOK_ENTRY.getID(), tagData.getDataValue());
+        assertEquals( Enum166SettlLocation.FEDERAL_BOOK_ENTRY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION);
-        assertEquals( Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION.getID(), tagData.getDataValue());
+        assertEquals( Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PHYSICAL);
-        assertEquals( Enum166SettlLocation.PHYSICAL.getID(), tagData.getDataValue());
+        assertEquals( Enum166SettlLocation.PHYSICAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY);
-        assertEquals( Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY.getID(), tagData.getDataValue());
+        assertEquals( Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

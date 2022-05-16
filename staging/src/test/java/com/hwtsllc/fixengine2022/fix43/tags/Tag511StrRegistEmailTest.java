@@ -27,12 +27,12 @@ class Tag511StrRegistEmailTest {
     @Test
     void FIX0511Test() {
         FIX43 fixData = FIX43.FIX511_STR_REGIST_EMAIL;
-        assertEquals( "511", fixData.getID());
-        assertEquals( "REGIST_EMAIL", fixData.getName());
-        assertEquals( "RegistEmail", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "511", fixData.toFIXIDString());
+        assertEquals( "REGIST_EMAIL", fixData.toFIXNameString());
+        assertEquals( "RegistEmail", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0511Test() {

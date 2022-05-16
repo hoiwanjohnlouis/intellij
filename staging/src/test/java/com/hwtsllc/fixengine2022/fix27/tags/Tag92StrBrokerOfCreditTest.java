@@ -37,13 +37,13 @@ class Tag92StrBrokerOfCreditTest {
     @Test
     void FIX0092Test() {
         FIX27 fixData = FIX27.FIX92_STR_BROKER_OF_CREDIT;
-        assertEquals( "BROKER_OF_CREDIT", fixData.getName());
-        assertEquals( "92", fixData.getID());
-        assertEquals( "BrokerOfCredit (replaced)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "BROKER_OF_CREDIT", fixData.toFIXNameString());
+        assertEquals( "92", fixData.toFIXIDString());
+        assertEquals( "BrokerOfCredit (replaced)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0092Test() {

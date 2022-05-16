@@ -36,12 +36,12 @@ class Tag1072SideGrossTradeAmtTest {
     @Test
     void FIX1072Test() {
         FIX50 fixData = FIX50.FIX1072_SIDE_GROSS_TRADE_AMT;
-        assertEquals( "1072", fixData.getID());
-        assertEquals( "SIDE_GROSS_TRADE_AMT", fixData.getName());
-        assertEquals( "SideGrossTradeAmt", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1072", fixData.toFIXIDString());
+        assertEquals( "SIDE_GROSS_TRADE_AMT", fixData.toFIXNameString());
+        assertEquals( "SideGrossTradeAmt", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1072Test() {

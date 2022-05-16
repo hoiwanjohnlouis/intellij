@@ -39,19 +39,19 @@ class Enum1043CollApplTypeTest {
         Enum1043CollApplType enumType;
 
         enumType = Enum1043CollApplType.SPECIFIC_DEPOSIT;
-        assertEquals( "0", enumType.getID() );
-        assertEquals( "SPECIFIC_DEPOSIT", enumType.getName() );
-        assertEquals( "0 - Specific Deposit", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString() );
+        assertEquals( "SPECIFIC_DEPOSIT", enumType.toFIXNameString() );
+        assertEquals( "0 - Specific Deposit", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1043CollApplType.GENERAL;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "GENERAL", enumType.getName() );
-        assertEquals( "1 - General", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "GENERAL", enumType.toFIXNameString() );
+        assertEquals( "1 - General", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

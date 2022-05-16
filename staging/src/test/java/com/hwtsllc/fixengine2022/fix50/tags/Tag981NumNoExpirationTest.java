@@ -35,12 +35,12 @@ class Tag981NumNoExpirationTest {
     @Test
     void FIX0981Test() {
         FIX50 fixData = FIX50.FIX981_NUM_NO_EXPIRATION;
-        assertEquals( "981", fixData.getID());
-        assertEquals( "NO_EXPIRATION", fixData.getName());
-        assertEquals( "NoExpiration", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "981", fixData.toFIXIDString());
+        assertEquals( "NO_EXPIRATION", fixData.toFIXNameString());
+        assertEquals( "NoExpiration", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0981Test() {

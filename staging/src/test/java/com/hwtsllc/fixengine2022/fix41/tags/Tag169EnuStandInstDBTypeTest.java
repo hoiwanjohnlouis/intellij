@@ -42,35 +42,35 @@ class Tag169EnuStandInstDBTypeTest {
     @Test
     void FIX0169Test() {
         FIX41 fixData = FIX41.FIX169_ENU_STAND_INST_DB_TYPE;
-        assertEquals( "169", fixData.getID());
-        assertEquals( "STAND_INST_DB_TYPE", fixData.getName());
-        assertEquals( "StandInstDbType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "169", fixData.toFIXIDString());
+        assertEquals( "STAND_INST_DB_TYPE", fixData.toFIXNameString());
+        assertEquals( "StandInstDbType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0169Test() {
         Tag169EnuStandInstDBType tagData;
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
-        assertEquals( Enum169StandInstDbType.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
-        assertEquals( Enum169StandInstDbType.DTC_SID.getID(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.DTC_SID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
-        assertEquals( Enum169StandInstDbType.THOMPSON_ALERT.getID(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.THOMPSON_ALERT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
-        assertEquals( Enum169StandInstDbType.GLOBAL_CUSTODIAN.getID(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.GLOBAL_CUSTODIAN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
-        assertEquals( Enum169StandInstDbType.ACCOUNT_NET.getID(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.ACCOUNT_NET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -39,12 +39,12 @@ class Tag1089QtyMatchIncrementTest {
     @Test
     void FIX1089Test() {
         FIX50 fixData = FIX50.FIX1089_QTY_MATCH_INCREMENT;
-        assertEquals( "1089", fixData.getID());
-        assertEquals( "MATCH_INCREMENT", fixData.getName());
-        assertEquals( "MatchIncrement", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1089", fixData.toFIXIDString());
+        assertEquals( "MATCH_INCREMENT", fixData.toFIXNameString());
+        assertEquals( "MatchIncrement", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1089Test() {

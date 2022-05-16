@@ -39,27 +39,27 @@ class Tag774EnuConfirmRejReasonTest {
     @Test
     void FIX0774Test() {
         FIX44 fixData = FIX44.FIX774_ENU_CONFIRM_REJ_REASON;
-        assertEquals( "774", fixData.getID());
-        assertEquals( "CONFIRM_REJ_REASON", fixData.getName());
-        assertEquals( "ConfirmRejReason", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "774", fixData.toFIXIDString());
+        assertEquals( "CONFIRM_REJ_REASON", fixData.toFIXNameString());
+        assertEquals( "ConfirmRejReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0774Test() {
         Tag774EnuConfirmRejReason tagData;
 
         tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.MISMATCHED_ACCOUNT);
-        assertEquals( Enum774ConfirmRejReason.MISMATCHED_ACCOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum774ConfirmRejReason.MISMATCHED_ACCOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.MISSING_INSTRUCTIONS);
-        assertEquals( Enum774ConfirmRejReason.MISSING_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertEquals( Enum774ConfirmRejReason.MISSING_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.OTHER);
-        assertEquals( Enum774ConfirmRejReason.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum774ConfirmRejReason.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -42,35 +42,35 @@ class Enum1100TriggerTypeTest {
         Enum1100TriggerType enumType;
 
         enumType = Enum1100TriggerType.PARTIAL_EXECUTION;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "PARTIAL_EXECUTION", enumType.getName() );
-        assertEquals( "1 - Partial Execution", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "PARTIAL_EXECUTION", enumType.toFIXNameString() );
+        assertEquals( "1 - Partial Execution", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1100TriggerType.SPECIFIED_SESSION;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "SPECIFIED_SESSION", enumType.getName() );
-        assertEquals( "2 - Specified Trading Session", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "SPECIFIED_SESSION", enumType.toFIXNameString() );
+        assertEquals( "2 - Specified Trading Session", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1100TriggerType.NEXT_AUCTION;
-        assertEquals( "3", enumType.getID() );
-        assertEquals( "NEXT_AUCTION", enumType.getName() );
-        assertEquals( "3 - Next Auction", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString() );
+        assertEquals( "NEXT_AUCTION", enumType.toFIXNameString() );
+        assertEquals( "3 - Next Auction", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1100TriggerType.PRICE_MOVEMENT;
-        assertEquals( "4", enumType.getID() );
-        assertEquals( "PRICE_MOVEMENT", enumType.getName() );
-        assertEquals( "4 - Price Movement", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString() );
+        assertEquals( "PRICE_MOVEMENT", enumType.toFIXNameString() );
+        assertEquals( "4 - Price Movement", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

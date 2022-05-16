@@ -28,12 +28,12 @@ class Tag354LenEncodedTextLenTest {
     @Test
     void FIX0354Test() {
         FIX42 fixData = FIX42.FIX354_LEN_ENCODED_TEXT_LEN;
-        assertEquals( "354", fixData.getID());
-        assertEquals( "ENCODED_TEXT_LEN", fixData.getName());
-        assertEquals( "EncodedTextLen", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "354", fixData.toFIXIDString());
+        assertEquals( "ENCODED_TEXT_LEN", fixData.toFIXNameString());
+        assertEquals( "EncodedTextLen", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0354Test() {

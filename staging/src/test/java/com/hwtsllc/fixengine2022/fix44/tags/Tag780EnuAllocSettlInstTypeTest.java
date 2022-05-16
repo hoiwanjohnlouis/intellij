@@ -40,35 +40,35 @@ class Tag780EnuAllocSettlInstTypeTest {
     @Test
     void FIX0780Test() {
         FIX44 fixData = FIX44.FIX780_ENU_ALLOC_SETTL_INST_TYPE;
-        assertEquals( "780", fixData.getID());
-        assertEquals( "ALLOC_SETTL_INST_TYPE", fixData.getName());
-        assertEquals( "AllocSettlInstType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "780", fixData.toFIXIDString());
+        assertEquals( "ALLOC_SETTL_INST_TYPE", fixData.toFIXNameString());
+        assertEquals( "AllocSettlInstType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0780Test() {
         Tag780EnuAllocSettlInstType tagData;
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.USE_DEFAULTS );
-        assertEquals( Enum780AllocSettlInstType.USE_DEFAULTS.getID(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.USE_DEFAULTS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS );
-        assertEquals( Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS.getID(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.FULL_DETAILS );
-        assertEquals( Enum780AllocSettlInstType.FULL_DETAILS.getID(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.FULL_DETAILS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.SSI_DB_ID_PROVIDED );
-        assertEquals( Enum780AllocSettlInstType.SSI_DB_ID_PROVIDED.getID(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.SSI_DB_ID_PROVIDED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS );
-        assertEquals( Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

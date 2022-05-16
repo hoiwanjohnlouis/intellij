@@ -34,12 +34,12 @@ class Tag1102TriggerPriceTest {
     @Test
     void FIX1102Test() {
         FIX50 fixData = FIX50.FIX1102_TRIGGER_PRICE;
-        assertEquals( "1102", fixData.getID());
-        assertEquals( "TRIGGER_PRICE", fixData.getName());
-        assertEquals( "TriggerPrice", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1102", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_PRICE", fixData.toFIXNameString());
+        assertEquals( "TriggerPrice", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1102Test() {

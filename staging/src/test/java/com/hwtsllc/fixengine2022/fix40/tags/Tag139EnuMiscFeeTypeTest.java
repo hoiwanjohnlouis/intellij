@@ -49,18 +49,18 @@ class Tag139EnuMiscFeeTypeTest {
     @Test
     void FIX0139Test() {
         FIX40 fixData = FIX40.FIX139_ENU_MISC_FEE_TYPE;
-        assertEquals( "MISC_FEE_TYPE", fixData.getName());
-        assertEquals( "139", fixData.getID());
-        assertEquals( "MiscFeeType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "MISC_FEE_TYPE", fixData.toFIXNameString());
+        assertEquals( "139", fixData.toFIXIDString());
+        assertEquals( "MiscFeeType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0139Test() {
         Tag139EnuMiscFeeType tagData;
 
-        /**
+        /*
          * 1-14 MiscFeeType types
          */
         tagData = new Tag139EnuMiscFeeType(Enum139MiscFeeType.REGULATORY);

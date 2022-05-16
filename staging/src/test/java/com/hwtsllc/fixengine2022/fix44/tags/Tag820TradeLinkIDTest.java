@@ -34,12 +34,12 @@ class Tag820TradeLinkIDTest {
     @Test
     void FIX0820Test() {
         FIX44 fixData = FIX44.FIX820_TRADE_LINK_ID;
-        assertEquals( "820", fixData.getID());
-        assertEquals( "TRADE_LINK_ID", fixData.getName());
-        assertEquals( "TradeLinkID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "820", fixData.toFIXIDString());
+        assertEquals( "TRADE_LINK_ID", fixData.toFIXNameString());
+        assertEquals( "TradeLinkID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0820Test() {

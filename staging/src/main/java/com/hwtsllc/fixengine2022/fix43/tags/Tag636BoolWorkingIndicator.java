@@ -36,7 +36,7 @@ public class Tag636BoolWorkingIndicator extends FIX43Abstract implements LogValu
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag

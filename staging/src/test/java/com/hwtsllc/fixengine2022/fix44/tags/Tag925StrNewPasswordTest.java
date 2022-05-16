@@ -33,12 +33,12 @@ class Tag925StrNewPasswordTest {
     @Test
     void FIX0925Test() {
         FIX44 fixData = FIX44.FIX925_STR_NEW_PASSWORD;
-        assertEquals( "925", fixData.getID());
-        assertEquals( "NEW_PASSWORD", fixData.getName());
-        assertEquals( "NewPassword", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "925", fixData.toFIXIDString());
+        assertEquals( "NEW_PASSWORD", fixData.toFIXNameString());
+        assertEquals( "NewPassword", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     /**
      *  925

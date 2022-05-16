@@ -36,13 +36,13 @@ class Tag9LenBodyLengthTest {
     @Test
     void FIX0009Test() {
         FIX27 fixData = FIX27.FIX9_LEN_BODY_LENGTH;
-        assertEquals( "BODY_LENGTH", fixData.getName());
-        assertEquals( "9", fixData.getID());
-        assertEquals( "BodyLength", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "BODY_LENGTH", fixData.toFIXNameString());
+        assertEquals( "9", fixData.toFIXIDString());
+        assertEquals( "BodyLength", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0009Test() {

@@ -33,12 +33,12 @@ class Tag711NoUnderlyingsTest {
     @Test
     void FIX0711Test() {
         FIX44 fixData = FIX44.FIX711_NO_UNDERLYINGS;
-        assertEquals( "711", fixData.getID());
-        assertEquals( "NO_UNDERLYINGS", fixData.getName());
-        assertEquals( "NoUnderlyings", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "711", fixData.toFIXIDString());
+        assertEquals( "NO_UNDERLYINGS", fixData.toFIXNameString());
+        assertEquals( "NoUnderlyings", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0711Test() {

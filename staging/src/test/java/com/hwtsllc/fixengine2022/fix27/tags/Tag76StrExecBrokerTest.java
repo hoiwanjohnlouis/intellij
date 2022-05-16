@@ -40,13 +40,13 @@ class Tag76StrExecBrokerTest {
     @Test
     void FIX0076Test() {
         FIX27 fixData = FIX27.FIX76_STR_EXEC_BROKER;
-        assertEquals( "EXEC_BROKER", fixData.getName());
-        assertEquals( "76", fixData.getID());
-        assertEquals( "ExecBroker (replaced)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "EXEC_BROKER", fixData.toFIXNameString());
+        assertEquals( "76", fixData.toFIXIDString());
+        assertEquals( "ExecBroker (replaced)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0076Test() {

@@ -27,12 +27,12 @@ class Tag476StrPaymentRefTest {
     @Test
     void FIX0476Test() {
         FIX43 fixData = FIX43.FIX476_STR_PAYMENT_REF;
-        assertEquals( "476", fixData.getID());
-        assertEquals( "PAYMENT_REF", fixData.getName());
-        assertEquals( "PaymentRef", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "476", fixData.toFIXIDString());
+        assertEquals( "PAYMENT_REF", fixData.toFIXNameString());
+        assertEquals( "PaymentRef", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0476Test() {

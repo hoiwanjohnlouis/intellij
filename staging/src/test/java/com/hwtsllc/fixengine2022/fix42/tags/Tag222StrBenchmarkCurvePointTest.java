@@ -28,12 +28,12 @@ class Tag222StrBenchmarkCurvePointTest {
     @Test
     void FIX0222Test() {
         FIX42 fixData = FIX42.FIX222_STR_BENCHMARK_CURVE_POINT;
-        assertEquals( "222", fixData.getID());
-        assertEquals( "BENCHMARK_CURVE_POINT", fixData.getName());
-        assertEquals( "BenchmarkCurvePoint", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "222", fixData.toFIXIDString());
+        assertEquals( "BENCHMARK_CURVE_POINT", fixData.toFIXNameString());
+        assertEquals( "BenchmarkCurvePoint", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0222Test() {

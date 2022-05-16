@@ -27,12 +27,12 @@ class Tag472StrLocaleOfIssueTest {
     @Test
     void FIX0472Test() {
         FIX43 fixData = FIX43.FIX472_STR_LOCALE_OF_ISSUE;
-        assertEquals( "472", fixData.getID());
-        assertEquals( "LOCALE_OF_ISSUE", fixData.getName());
-        assertEquals( "LocaleOfIssue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "472", fixData.toFIXIDString());
+        assertEquals( "LOCALE_OF_ISSUE", fixData.toFIXNameString());
+        assertEquals( "LocaleOfIssue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0472Test() {

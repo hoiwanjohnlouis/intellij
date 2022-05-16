@@ -39,35 +39,35 @@ class Tag665EnuConfirmStatusTest {
     @Test
     void FIX0665Test() {
         FIX44 fixData = FIX44.FIX665_ENU_CONFIRM_STATUS;
-        assertEquals( "665", fixData.getID());
-        assertEquals( "CONFIRM_STATUS", fixData.getName());
-        assertEquals( "ConfirmStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "665", fixData.toFIXIDString());
+        assertEquals( "CONFIRM_STATUS", fixData.toFIXNameString());
+        assertEquals( "ConfirmStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0665Test() {
         Tag665EnuConfirmStatus tagData;
 
         tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.RECEIVED);
-        assertEquals( Enum665ConfirmStatus.RECEIVED.getID(), tagData.getDataValue());
+        assertEquals( Enum665ConfirmStatus.RECEIVED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.MISMATCHED_ACCOUNT);
-        assertEquals( Enum665ConfirmStatus.MISMATCHED_ACCOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum665ConfirmStatus.MISMATCHED_ACCOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.MISSING_INSTRUCTIONS);
-        assertEquals( Enum665ConfirmStatus.MISSING_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertEquals( Enum665ConfirmStatus.MISSING_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.CONFIRMED);
-        assertEquals( Enum665ConfirmStatus.CONFIRMED.getID(), tagData.getDataValue());
+        assertEquals( Enum665ConfirmStatus.CONFIRMED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.REJECTED);
-        assertEquals( Enum665ConfirmStatus.REJECTED.getID(), tagData.getDataValue());
+        assertEquals( Enum665ConfirmStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

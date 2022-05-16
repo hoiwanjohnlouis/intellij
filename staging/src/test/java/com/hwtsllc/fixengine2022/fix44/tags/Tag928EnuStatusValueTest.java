@@ -39,31 +39,31 @@ class Tag928EnuStatusValueTest {
     @Test
     void FIX0928Test() {
         FIX44 fixData = FIX44.FIX928_ENU_STATUS_VALUE;
-        assertEquals( "928", fixData.getID());
-        assertEquals( "STATUS_VALUE", fixData.getName());
-        assertEquals( "StatusValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "928", fixData.toFIXIDString());
+        assertEquals( "STATUS_VALUE", fixData.toFIXNameString());
+        assertEquals( "StatusValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0928Test() {
         Tag928EnuStatusValue tagData;
 
         tagData = new Tag928EnuStatusValue( Enum928StatusValue.CONNECTED );
-        assertEquals( Enum928StatusValue.CONNECTED.getID(), tagData.getDataValue());
+        assertEquals( Enum928StatusValue.CONNECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag928EnuStatusValue( Enum928StatusValue.DOWN_EXPECTED_UP );
-        assertEquals( Enum928StatusValue.DOWN_EXPECTED_UP.getID(), tagData.getDataValue());
+        assertEquals( Enum928StatusValue.DOWN_EXPECTED_UP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag928EnuStatusValue( Enum928StatusValue.DOWN_EXPECTED_DOWN );
-        assertEquals( Enum928StatusValue.DOWN_EXPECTED_DOWN.getID(), tagData.getDataValue());
+        assertEquals( Enum928StatusValue.DOWN_EXPECTED_DOWN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag928EnuStatusValue( Enum928StatusValue.IN_PROCESS );
-        assertEquals( Enum928StatusValue.IN_PROCESS.getID(), tagData.getDataValue());
+        assertEquals( Enum928StatusValue.IN_PROCESS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

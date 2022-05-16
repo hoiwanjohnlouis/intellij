@@ -28,12 +28,12 @@ class Tag282StrMDEntryOriginatorTest {
     @Test
     void FIX0282Test() {
         FIX42 fixData = FIX42.FIX282_STR_MD_ENTRY_ORIGINATOR;
-        assertEquals( "282", fixData.getID());
-        assertEquals( "MD_ENTRY_ORIGINATOR", fixData.getName());
-        assertEquals( "MDEntryOriginator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "282", fixData.toFIXIDString());
+        assertEquals( "MD_ENTRY_ORIGINATOR", fixData.toFIXNameString());
+        assertEquals( "MDEntryOriginator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0282Test() {

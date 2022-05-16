@@ -28,12 +28,12 @@ class Tag361DatEncodedAllocTextTest {
     @Test
     void FIX0361Test() {
         FIX42 fixData = FIX42.FIX361_DAT_ENCODED_ALLOC_TEXT;
-        assertEquals( "361", fixData.getID());
-        assertEquals( "ENCODED_ALLOC_TEXT", fixData.getName());
-        assertEquals( "EncodedAllocText", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "361", fixData.toFIXIDString());
+        assertEquals( "ENCODED_ALLOC_TEXT", fixData.toFIXNameString());
+        assertEquals( "EncodedAllocText", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0361Test() {

@@ -35,12 +35,12 @@ class Tag1104StrTriggerSecurityIDTest {
     @Test
     void FIX1104Test() {
         FIX50 fixData = FIX50.FIX1104_STR_TRIGGER_SECURITY_ID;
-        assertEquals( "1104", fixData.getID());
-        assertEquals( "TRIGGER_SECURITY_ID", fixData.getName());
-        assertEquals( "TriggerSecurityID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1104", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_SECURITY_ID", fixData.toFIXNameString());
+        assertEquals( "TriggerSecurityID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1104Test() {

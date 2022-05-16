@@ -41,31 +41,31 @@ class Tag163EnuSettlInstTransTypeTest {
     @Test
     void FIX0163Test() {
         FIX41 fixData = FIX41.FIX163_ENU_SETTL_INST_TRANS_TYPE;
-        assertEquals( "163", fixData.getID());
-        assertEquals( "SETTL_INST_TRANS_TYPE", fixData.getName());
-        assertEquals( "SettlInstTransType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "163", fixData.toFIXIDString());
+        assertEquals( "SETTL_INST_TRANS_TYPE", fixData.toFIXNameString());
+        assertEquals( "SettlInstTransType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0163Test() {
         Tag163EnuSettlInstTransType tagData;
 
         tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
-        assertEquals( Enum163SettlInstTransType.NEW.getID(), tagData.getDataValue());
+        assertEquals( Enum163SettlInstTransType.NEW.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.CANCEL);
-        assertEquals( Enum163SettlInstTransType.CANCEL.getID(), tagData.getDataValue());
+        assertEquals( Enum163SettlInstTransType.CANCEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.REPLACE);
-        assertEquals( Enum163SettlInstTransType.REPLACE.getID(), tagData.getDataValue());
+        assertEquals( Enum163SettlInstTransType.REPLACE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.RESTATE);
-        assertEquals( Enum163SettlInstTransType.RESTATE.getID(), tagData.getDataValue());
+        assertEquals( Enum163SettlInstTransType.RESTATE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

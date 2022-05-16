@@ -39,23 +39,23 @@ class Tag974EnuUnderlyingCashTypeTest {
     @Test
     void FIX0974Test() {
         FIX50 fixData = FIX50.FIX974_ENU_UNDERLYING_CASH_TYPE;
-        assertEquals( "974", fixData.getID());
-        assertEquals( "UNDERLYING_CASH_TYPE", fixData.getName());
-        assertEquals( "UnderlyingCashType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "974", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CASH_TYPE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCashType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0974Test() {
         Tag974EnuUnderlyingCashType tagData;
 
         tagData = new Tag974EnuUnderlyingCashType( Enum974UnderlyingCashType.FIXED );
-        assertEquals( Enum974UnderlyingCashType.FIXED.getID(), tagData.getDataValue());
+        assertEquals( Enum974UnderlyingCashType.FIXED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag974EnuUnderlyingCashType( Enum974UnderlyingCashType.DIFF );
-        assertEquals( Enum974UnderlyingCashType.DIFF.getID(), tagData.getDataValue());
+        assertEquals( Enum974UnderlyingCashType.DIFF.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

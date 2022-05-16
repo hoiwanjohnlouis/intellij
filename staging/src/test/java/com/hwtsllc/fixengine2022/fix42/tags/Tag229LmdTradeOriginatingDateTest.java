@@ -28,12 +28,12 @@ class Tag229LmdTradeOriginatingDateTest {
     @Test
     void FIX0229Test() {
         FIX42 fixData = FIX42.FIX229_LMD_TRADE_ORIGINATION_DATE;
-        assertEquals( "229", fixData.getID());
-        assertEquals( "TRADE_ORIGINATION_DATE", fixData.getName());
-        assertEquals( "TradeOriginationDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "229", fixData.toFIXIDString());
+        assertEquals( "TRADE_ORIGINATION_DATE", fixData.toFIXNameString());
+        assertEquals( "TradeOriginationDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0229Test() {

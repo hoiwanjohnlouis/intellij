@@ -37,12 +37,12 @@ class Tag115StrOnBehalfOfCompIDTest {
     @Test
     void FIX0115Test() {
         FIX40 fixData = FIX40.FIX115_STR_ON_BEHALF_OF_COMP_ID;
-        assertEquals( "ON_BEHALF_OF_COMP_ID", fixData.getName());
-        assertEquals( "115", fixData.getID());
-        assertEquals( "OnBehalfOfCompID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ON_BEHALF_OF_COMP_ID", fixData.toFIXNameString());
+        assertEquals( "115", fixData.toFIXIDString());
+        assertEquals( "OnBehalfOfCompID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0115Test() {

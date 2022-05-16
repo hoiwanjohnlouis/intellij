@@ -35,12 +35,12 @@ class Tag171StrStandInstDBIDTest {
     @Test
     void FIX0171Test() {
         FIX41 fixData = FIX41.FIX171_STR_STAND_INST_DB_ID;
-        assertEquals( "171", fixData.getID());
-        assertEquals( "STAND_INST_DB_ID", fixData.getName());
-        assertEquals( "StandInstDbID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "171", fixData.toFIXIDString());
+        assertEquals( "STAND_INST_DB_ID", fixData.toFIXNameString());
+        assertEquals( "StandInstDbID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0171Test() {

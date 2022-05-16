@@ -27,12 +27,12 @@ class Tag463StrUnderlyingCFICodeTest {
     @Test
     void FIX0463Test() {
         FIX43 fixData = FIX43.FIX463_STR_UNDERLYING_CFI_CODE;
-        assertEquals( "463", fixData.getID());
-        assertEquals( "UNDERLYING_CFI_CODE", fixData.getName());
-        assertEquals( "UnderlyingCFICode", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "463", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CFI_CODE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCFICode", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0463Test() {

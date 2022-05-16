@@ -47,31 +47,31 @@ class Tag842EnuDiscretionOffsetTypeTest {
     @Test
     void FIX0842Test() {
         FIX44 fixData = FIX44.FIX842_ENU_DISCRETION_OFFSET_TYPE;
-        assertEquals( "842", fixData.getID());
-        assertEquals( "DISCRETION_OFFSET_TYPE", fixData.getName());
-        assertEquals( "DiscretionOffsetType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "842", fixData.toFIXIDString());
+        assertEquals( "DISCRETION_OFFSET_TYPE", fixData.toFIXNameString());
+        assertEquals( "DiscretionOffsetType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0842Test() {
         Tag842EnuDiscretionOffsetType tagData;
 
         tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.PRICE);
-        assertEquals( MyEnumOffsetType.PRICE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumOffsetType.PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.BASIS);
-        assertEquals( MyEnumOffsetType.BASIS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumOffsetType.BASIS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.TICKS);
-        assertEquals( MyEnumOffsetType.TICKS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumOffsetType.TICKS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.TIER_OR_LEVEL);
-        assertEquals( MyEnumOffsetType.TIER_OR_LEVEL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumOffsetType.TIER_OR_LEVEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

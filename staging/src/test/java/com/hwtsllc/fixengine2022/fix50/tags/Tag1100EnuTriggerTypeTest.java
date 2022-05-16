@@ -42,31 +42,31 @@ class Tag1100EnuTriggerTypeTest {
     @Test
     void FIX1100Test() {
         FIX50 fixData = FIX50.FIX1100_ENU_TRIGGER_TYPE;
-        assertEquals( "1100", fixData.getID());
-        assertEquals( "TRIGGER_TYPE", fixData.getName());
-        assertEquals( "TriggerType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1100", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_TYPE", fixData.toFIXNameString());
+        assertEquals( "TriggerType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1100Test() {
         Tag1100EnuTriggerType tagData;
 
         tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.PARTIAL_EXECUTION );
-        assertEquals( Enum1100TriggerType.PARTIAL_EXECUTION.getID(), tagData.getDataValue());
+        assertEquals( Enum1100TriggerType.PARTIAL_EXECUTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.SPECIFIED_SESSION );
-        assertEquals( Enum1100TriggerType.SPECIFIED_SESSION.getID(), tagData.getDataValue());
+        assertEquals( Enum1100TriggerType.SPECIFIED_SESSION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.NEXT_AUCTION );
-        assertEquals( Enum1100TriggerType.NEXT_AUCTION.getID(), tagData.getDataValue());
+        assertEquals( Enum1100TriggerType.NEXT_AUCTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.PRICE_MOVEMENT );
-        assertEquals( Enum1100TriggerType.PRICE_MOVEMENT.getID(), tagData.getDataValue());
+        assertEquals( Enum1100TriggerType.PRICE_MOVEMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix50.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    3 - Next Auction
  *  <p>    4 - Price Movement
  */
-public enum Enum1100TriggerType implements EnumAccessors, LogVerboseString {
+public enum Enum1100TriggerType implements LogFIXString, LogVerboseString {
     PARTIAL_EXECUTION( "1", "PARTIAL_EXECUTION", "1 - Partial Execution" ),
     SPECIFIED_SESSION( "2", "SPECIFIED_SESSION", "2 - Specified Trading Session" ),
     NEXT_AUCTION( "3", "NEXT_AUCTION", "3 - Next Auction" ),
@@ -54,28 +54,28 @@ public enum Enum1100TriggerType implements EnumAccessors, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String getEnumName() {
+    public String toEnumNameString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getID() {
+    public String toFIXIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String getName() {
+    public String toFIXNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String getDescription() {
+    public String toFIXDescriptionString() {
         return description;
     }
     /**
@@ -85,16 +85,16 @@ public enum Enum1100TriggerType implements EnumAccessors, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(getEnumName())
+                .concat(toEnumNameString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
     /**
@@ -102,13 +102,13 @@ public enum Enum1100TriggerType implements EnumAccessors, LogVerboseString {
      */
     @Override
     public String toString() {
-        return getEnumName()
+        return toEnumNameString()
                 .concat("=[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat(",")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat(",")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
 

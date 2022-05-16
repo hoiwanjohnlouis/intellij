@@ -29,12 +29,12 @@ class Tag243IntUnderlyingRepoCollateralSecurityTypeTest {
     @Test
     void FIX0243Test() {
         FIX42 fixData = FIX42.FIX243_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE;
-        assertEquals( "243", fixData.getID());
-        assertEquals( "UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", fixData.getName());
-        assertEquals( "UnderlyingRepoCollateralSecurityType (Deprecated)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "243", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingRepoCollateralSecurityType (Deprecated)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0243Test() {

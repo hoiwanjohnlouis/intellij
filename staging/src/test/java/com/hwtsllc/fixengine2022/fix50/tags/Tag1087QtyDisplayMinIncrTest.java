@@ -38,12 +38,12 @@ class Tag1087QtyDisplayMinIncrTest {
     @Test
     void FIX1087Test() {
         FIX50 fixData = FIX50.FIX1087_QTY_DISPLAY_MIN_INCR;
-        assertEquals( "1087", fixData.getID());
-        assertEquals( "DISPLAY_MIN_INCR", fixData.getName());
-        assertEquals( "DisplayMinIncr", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1087", fixData.toFIXIDString());
+        assertEquals( "DISPLAY_MIN_INCR", fixData.toFIXNameString());
+        assertEquals( "DisplayMinIncr", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1087Test() {

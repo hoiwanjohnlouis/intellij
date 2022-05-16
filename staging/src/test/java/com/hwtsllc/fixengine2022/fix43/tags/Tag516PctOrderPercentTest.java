@@ -27,12 +27,12 @@ class Tag516PctOrderPercentTest {
     @Test
     void FIX0516Test() {
         FIX43 fixData = FIX43.FIX516_PCT_ORDER_PERCENT;
-        assertEquals( "516", fixData.getID());
-        assertEquals( "ORDER_PERCENT", fixData.getName());
-        assertEquals( "OrderPercent", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "516", fixData.toFIXIDString());
+        assertEquals( "ORDER_PERCENT", fixData.toFIXNameString());
+        assertEquals( "OrderPercent", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0516Test() {

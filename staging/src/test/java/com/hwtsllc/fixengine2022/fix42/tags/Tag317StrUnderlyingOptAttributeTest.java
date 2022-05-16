@@ -28,12 +28,12 @@ class Tag317StrUnderlyingOptAttributeTest {
     @Test
     void FIX0317Test() {
         FIX42 fixData = FIX42.FIX317_STR_UNDERLYING_OPT_ATTRIBUTE;
-        assertEquals( "317", fixData.getID());
-        assertEquals( "UNDERLYING_OPT_ATTRIBUTE", fixData.getName());
-        assertEquals( "UnderlyingOptAttribute", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "317", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_OPT_ATTRIBUTE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingOptAttribute", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0317Test() {

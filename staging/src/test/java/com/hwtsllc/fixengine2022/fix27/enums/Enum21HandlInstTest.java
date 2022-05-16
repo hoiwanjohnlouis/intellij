@@ -41,27 +41,27 @@ class Enum21HandlInstTest {
          *  1-3
          */
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER;
-        assertEquals("1", enumType.getID());
-        assertEquals("AUTOMATIC_EXECUTION_NO_BROKER", enumType.getName());
-        assertEquals("1 - Automated execution order, private, no Broker intervention", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("AUTOMATIC_EXECUTION_NO_BROKER", enumType.toFIXNameString());
+        assertEquals("1 - Automated execution order, private, no Broker intervention", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY;
-        assertEquals("2", enumType.getID());
-        assertEquals("AUTOMATIC_EXECUTION_BROKER_OKAY", enumType.getName());
-        assertEquals("2 - Automated execution order, public, Broker intervention OK", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("AUTOMATIC_EXECUTION_BROKER_OKAY", enumType.toFIXNameString());
+        assertEquals("2 - Automated execution order, public, Broker intervention OK", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum21HandlInst.MANUAL_ORDER_BEST_EXECUTION;
-        assertEquals("3", enumType.getID());
-        assertEquals("MANUAL_ORDER_BEST_EXECUTION", enumType.getName());
-        assertEquals("3 - Manual order, best execution", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("MANUAL_ORDER_BEST_EXECUTION", enumType.toFIXNameString());
+        assertEquals("3 - Manual order, best execution", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

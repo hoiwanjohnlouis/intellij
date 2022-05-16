@@ -35,12 +35,12 @@ class Tag966StrSettleOnOpenFlagTest {
     @Test
     void FIX0966Test() {
         FIX50 fixData = FIX50.FIX966_STR_SETTLE_ON_OPEN_FLAG;
-        assertEquals( "966", fixData.getID());
-        assertEquals( "SETTLE_ON_OPEN_FLAG", fixData.getName());
-        assertEquals( "SettleOnOpenFlag", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "966", fixData.toFIXIDString());
+        assertEquals( "SETTLE_ON_OPEN_FLAG", fixData.toFIXNameString());
+        assertEquals( "SettleOnOpenFlag", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0966Test() {

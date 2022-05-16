@@ -38,35 +38,35 @@ class Enum716SettlSessIDTest {
         Enum716SettlSessID enumType;
 
         enumType = Enum716SettlSessID.INTRADAY;
-        assertEquals( "ITD", enumType.getID());
-        assertEquals( "INTRADAY", enumType.getName());
-        assertEquals( "ITD - Intraday", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "ITD", enumType.toFIXIDString());
+        assertEquals( "INTRADAY", enumType.toFIXNameString());
+        assertEquals( "ITD - Intraday", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum716SettlSessID.REGULAR_TRADING_HOURS;
-        assertEquals( "RTH", enumType.getID());
-        assertEquals( "REGULAR_TRADING_HOURS", enumType.getName());
-        assertEquals( "RTH - Regular Trading Hours", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "RTH", enumType.toFIXIDString());
+        assertEquals( "REGULAR_TRADING_HOURS", enumType.toFIXNameString());
+        assertEquals( "RTH - Regular Trading Hours", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum716SettlSessID.ELECTRONIC_TRADING_HOURS;
-        assertEquals( "ETH", enumType.getID());
-        assertEquals( "ELECTRONIC_TRADING_HOURS", enumType.getName());
-        assertEquals( "ETH - Electronic Trading Hours", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "ETH", enumType.toFIXIDString());
+        assertEquals( "ELECTRONIC_TRADING_HOURS", enumType.toFIXNameString());
+        assertEquals( "ETH - Electronic Trading Hours", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum716SettlSessID.END_OF_DAY;
-        assertEquals( "EOD", enumType.getID());
-        assertEquals( "END_OF_DAY", enumType.getName());
-        assertEquals( "EOD - End Of Day", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "EOD", enumType.toFIXIDString());
+        assertEquals( "END_OF_DAY", enumType.toFIXNameString());
+        assertEquals( "EOD - End Of Day", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

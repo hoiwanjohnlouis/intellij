@@ -27,12 +27,12 @@ class Tag466StrBookingRefIDTest {
     @Test
     void FIX0466Test() {
         FIX43 fixData = FIX43.FIX466_STR_BOOKING_REF_ID;
-        assertEquals( "466", fixData.getID());
-        assertEquals( "BOOKING_REF_ID", fixData.getName());
-        assertEquals( "BookingRefID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "466", fixData.toFIXIDString());
+        assertEquals( "BOOKING_REF_ID", fixData.toFIXNameString());
+        assertEquals( "BookingRefID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0466Test() {

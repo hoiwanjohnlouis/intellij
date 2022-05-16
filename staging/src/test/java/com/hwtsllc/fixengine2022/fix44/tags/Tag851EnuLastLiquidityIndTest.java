@@ -40,27 +40,27 @@ class Tag851EnuLastLiquidityIndTest {
     @Test
     void FIX0851Test() {
         FIX44 fixData = FIX44.FIX851_ENU_LAST_LIQUIDITY_IND;
-        assertEquals( "851", fixData.getID());
-        assertEquals( "LAST_LIQUIDITY_IND", fixData.getName());
-        assertEquals( "LastLiquidityInd", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "851", fixData.toFIXIDString());
+        assertEquals( "LAST_LIQUIDITY_IND", fixData.toFIXNameString());
+        assertEquals( "LastLiquidityInd", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0851Test() {
         Tag851EnuLastLiquidityInd tagData;
 
         tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ADDED );
-        assertEquals( Enum851LastLiquidityInd.ADDED.getID(), tagData.getDataValue());
+        assertEquals( Enum851LastLiquidityInd.ADDED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.REMOVED );
-        assertEquals( Enum851LastLiquidityInd.REMOVED.getID(), tagData.getDataValue());
+        assertEquals( Enum851LastLiquidityInd.REMOVED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ROUTED_OUT );
-        assertEquals( Enum851LastLiquidityInd.ROUTED_OUT.getID(), tagData.getDataValue());
+        assertEquals( Enum851LastLiquidityInd.ROUTED_OUT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

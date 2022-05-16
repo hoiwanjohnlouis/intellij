@@ -28,12 +28,12 @@ class Tag264IntMarketDepthTest {
     @Test
     void FIX0264Test() {
         FIX42 fixData = FIX42.FIX264_INT_MARKET_DEPTH;
-        assertEquals( "264", fixData.getID());
-        assertEquals( "MARKET_DEPTH", fixData.getName());
-        assertEquals( "MarketDepth", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "264", fixData.toFIXIDString());
+        assertEquals( "MARKET_DEPTH", fixData.toFIXNameString());
+        assertEquals( "MarketDepth", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0264Test() {

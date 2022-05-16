@@ -42,27 +42,27 @@ class Tag1021EnuMDBookTypeTest {
     @Test
     void FIX1021Test() {
         FIX50 fixData = FIX50.FIX1021_ENU_MD_BOOK_TYPE;
-        assertEquals( "1021", fixData.getID());
-        assertEquals( "MD_BOOK_TYPE", fixData.getName());
-        assertEquals( "MDBookType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1021", fixData.toFIXIDString());
+        assertEquals( "MD_BOOK_TYPE", fixData.toFIXNameString());
+        assertEquals( "MDBookType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1021Test() {
         Tag1021EnuMDBookType tagData;
 
         tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.TOP_OF_BOOK );
-        assertEquals( Enum1021MDBookType.TOP_OF_BOOK.getID(), tagData.getDataValue());
+        assertEquals( Enum1021MDBookType.TOP_OF_BOOK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.PRICE_DEPTH );
-        assertEquals( Enum1021MDBookType.PRICE_DEPTH.getID(), tagData.getDataValue());
+        assertEquals( Enum1021MDBookType.PRICE_DEPTH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.ORDER_DEPTH );
-        assertEquals( Enum1021MDBookType.ORDER_DEPTH.getID(), tagData.getDataValue());
+        assertEquals( Enum1021MDBookType.ORDER_DEPTH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

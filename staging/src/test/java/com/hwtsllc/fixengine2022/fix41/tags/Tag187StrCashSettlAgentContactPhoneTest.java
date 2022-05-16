@@ -38,12 +38,12 @@ class Tag187StrCashSettlAgentContactPhoneTest {
     @Test
     void FIX0187Test() {
         FIX41 fixData = FIX41.FIX187_STR_CASH_SETTL_AGENT_CONTACT_PHONE;
-        assertEquals( "187", fixData.getID());
-        assertEquals( "CASH_SETTL_AGENT_CONTACT_PHONE", fixData.getName());
-        assertEquals( "CashSettlAgentContactPhone (replaced)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "187", fixData.toFIXIDString());
+        assertEquals( "CASH_SETTL_AGENT_CONTACT_PHONE", fixData.toFIXNameString());
+        assertEquals( "CashSettlAgentContactPhone (replaced)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0187Test() {

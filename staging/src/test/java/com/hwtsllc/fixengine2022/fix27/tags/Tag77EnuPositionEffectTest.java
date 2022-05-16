@@ -61,13 +61,13 @@ class Tag77EnuPositionEffectTest {
     @Test
     void FIX0077Test() {
         FIX27 fixData = FIX27.FIX77_ENU_POSITION_EFFECT;
-        assertEquals( "POSITION_EFFECT", fixData.getName());
-        assertEquals( "77", fixData.getID());
-        assertEquals( "PositionEffect", fixData.getDescription());
-        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( FIX27.JUNK_NAME, fixData.getName());
-        assertNotEquals( FIX27.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "POSITION_EFFECT", fixData.toFIXNameString());
+        assertEquals( "77", fixData.toFIXIDString());
+        assertEquals( "PositionEffect", fixData.toFIXDescriptionString());
+        assertNotEquals( FIX27.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( FIX27.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( FIX27.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0077Test() {

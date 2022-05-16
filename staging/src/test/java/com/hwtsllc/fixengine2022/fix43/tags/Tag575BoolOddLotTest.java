@@ -28,12 +28,12 @@ class Tag575BoolOddLotTest {
     @Test
     void FIX0575Test() {
         FIX43 fixData = FIX43.FIX575_BOOL_ODD_LOT;
-        assertEquals( "575", fixData.getID());
-        assertEquals( "ODD_LOT", fixData.getName());
-        assertEquals( "OddLot", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "575", fixData.toFIXIDString());
+        assertEquals( "ODD_LOT", fixData.toFIXNameString());
+        assertEquals( "OddLot", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0575Test() {

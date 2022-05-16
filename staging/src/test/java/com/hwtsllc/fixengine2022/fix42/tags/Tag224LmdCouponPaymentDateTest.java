@@ -28,12 +28,12 @@ class Tag224LmdCouponPaymentDateTest {
     @Test
     void FIX0224Test() {
         FIX42 fixData = FIX42.FIX224_LMD_COUPON_PAYMENT_DATE;
-        assertEquals( "224", fixData.getID());
-        assertEquals( "COUPON_PAYMENT_DATE", fixData.getName());
-        assertEquals( "CouponPaymentDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "224", fixData.toFIXIDString());
+        assertEquals( "COUPON_PAYMENT_DATE", fixData.toFIXNameString());
+        assertEquals( "CouponPaymentDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0224Test() {

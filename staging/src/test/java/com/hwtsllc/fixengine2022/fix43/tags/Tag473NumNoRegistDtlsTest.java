@@ -27,12 +27,12 @@ class Tag473NumNoRegistDtlsTest {
     @Test
     void FIX0473Test() {
         FIX43 fixData = FIX43.FIX473_NUM_NO_REGIST_DTLS;
-        assertEquals( "473", fixData.getID());
-        assertEquals( "NO_REGIST_DTLS", fixData.getName());
-        assertEquals( "NoRegistDtls", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "473", fixData.toFIXIDString());
+        assertEquals( "NO_REGIST_DTLS", fixData.toFIXNameString());
+        assertEquals( "NoRegistDtls", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0473Test() {

@@ -28,12 +28,12 @@ class Tag406AmtFairValueTest {
     @Test
     void FIX0406Test() {
         FIX42 fixData = FIX42.FIX406_AMT_FAIR_VALUE;
-        assertEquals( "406", fixData.getID());
-        assertEquals( "FAIR_VALUE", fixData.getName());
-        assertEquals( "FairValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "406", fixData.toFIXIDString());
+        assertEquals( "FAIR_VALUE", fixData.toFIXNameString());
+        assertEquals( "FairValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0406Test() {

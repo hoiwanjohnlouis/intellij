@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
@@ -34,7 +34,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      5 - PGP / DES-MD5 (See app note on FIX web site)
  *      6 - PEM / DES-MD5 (see app note on FIX web site)
  */
-public enum Enum98EncryptMethod implements EnumAccessors, LogVerboseString {
+public enum Enum98EncryptMethod implements LogFIXString, LogVerboseString {
     NONE_OR_OTHER("0", "NONE_OR_OTHER", "0 - None / Other"),
     PKCS("1", "PKCS", "1 - PKCS (Proprietary)"),
     DES_ECB("2", "DES_ECB", "2 - DES (ECB Mode)"),
@@ -59,28 +59,28 @@ public enum Enum98EncryptMethod implements EnumAccessors, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String getEnumName() {
+    public String toEnumNameString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getID() {
+    public String toFIXIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String getName() {
+    public String toFIXNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String getDescription() {
+    public String toFIXDescriptionString() {
         return description;
     }
     /**
@@ -90,16 +90,16 @@ public enum Enum98EncryptMethod implements EnumAccessors, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(getEnumName())
+                .concat(toEnumNameString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
     /**
@@ -107,13 +107,13 @@ public enum Enum98EncryptMethod implements EnumAccessors, LogVerboseString {
      */
     @Override
     public String toString() {
-        return getEnumName()
+        return toEnumNameString()
                 .concat("=[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat(",")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat(",")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
 

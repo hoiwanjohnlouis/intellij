@@ -27,12 +27,12 @@ class Tag550EnuCrossPrioritizationTest {
     @Test
     void FIX0550Test() {
         FIX43 fixData = FIX43.FIX550_ENU_CROSS_PRIORITIZATION;
-        assertEquals( "550", fixData.getID());
-        assertEquals( "CROSS_PRIORITIZATION", fixData.getName());
-        assertEquals( "CrossPrioritization", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "550", fixData.toFIXIDString());
+        assertEquals( "CROSS_PRIORITIZATION", fixData.toFIXNameString());
+        assertEquals( "CrossPrioritization", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0550Test() {

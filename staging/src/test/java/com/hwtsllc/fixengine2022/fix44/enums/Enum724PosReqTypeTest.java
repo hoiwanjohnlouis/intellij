@@ -40,51 +40,51 @@ class Enum724PosReqTypeTest {
         Enum724PosReqType enumType;
 
         enumType = Enum724PosReqType.POSITIONS;
-        assertEquals( "0", enumType.getID());
-        assertEquals( "POSITIONS", enumType.getName());
-        assertEquals( "0 - Positions", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString());
+        assertEquals( "POSITIONS", enumType.toFIXNameString());
+        assertEquals( "0 - Positions", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum724PosReqType.TRADES;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "TRADES", enumType.getName());
-        assertEquals( "1 - Trades", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "TRADES", enumType.toFIXNameString());
+        assertEquals( "1 - Trades", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum724PosReqType.EXERCISES;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "EXERCISES", enumType.getName());
-        assertEquals( "2 - Exercises", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "EXERCISES", enumType.toFIXNameString());
+        assertEquals( "2 - Exercises", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum724PosReqType.ASSIGNMENTS;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "ASSIGNMENTS", enumType.getName());
-        assertEquals( "3 - Assignments", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "ASSIGNMENTS", enumType.toFIXNameString());
+        assertEquals( "3 - Assignments", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum724PosReqType.SETTLEMENT_ACTIVITY;
-        assertEquals( "4", enumType.getID());
-        assertEquals( "SETTLEMENT_ACTIVITY", enumType.getName());
-        assertEquals( "4 - Settlement Activity", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString());
+        assertEquals( "SETTLEMENT_ACTIVITY", enumType.toFIXNameString());
+        assertEquals( "4 - Settlement Activity", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum724PosReqType.BACKOUT_MESSAGE;
-        assertEquals( "5", enumType.getID());
-        assertEquals( "BACKOUT_MESSAGE", enumType.getName());
-        assertEquals( "5 - Backout Message", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "5", enumType.toFIXIDString());
+        assertEquals( "BACKOUT_MESSAGE", enumType.toFIXNameString());
+        assertEquals( "5 - Backout Message", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

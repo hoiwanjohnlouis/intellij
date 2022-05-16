@@ -40,12 +40,12 @@ class Tag1090MaxPriceLevelsTest {
     @Test
     void FIX1090Test() {
         FIX50 fixData = FIX50.FIX1090_MAX_PRICE_LEVELS;
-        assertEquals( "1090", fixData.getID());
-        assertEquals( "MAX_PRICE_LEVELS", fixData.getName());
-        assertEquals( "MaxPriceLevels", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1090", fixData.toFIXIDString());
+        assertEquals( "MAX_PRICE_LEVELS", fixData.toFIXNameString());
+        assertEquals( "MaxPriceLevels", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1090Test() {

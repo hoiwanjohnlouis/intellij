@@ -35,12 +35,12 @@ class Tag1088QtyRefreshQtyTest {
     @Test
     void FIX1088Test() {
         FIX50 fixData = FIX50.FIX1088_QTY_REFRESH_QTY;
-        assertEquals( "1088", fixData.getID());
-        assertEquals( "REFRESH_QTY", fixData.getName());
-        assertEquals( "RefreshQty", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1088", fixData.toFIXIDString());
+        assertEquals( "REFRESH_QTY", fixData.toFIXNameString());
+        assertEquals( "RefreshQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1088Test() {

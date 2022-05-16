@@ -28,12 +28,12 @@ class Tag271QtyMDEntrySizeTest {
     @Test
     void FIX0271Test() {
         FIX42 fixData = FIX42.FIX271_QTY_MD_ENTRY_SIZE;
-        assertEquals( "271", fixData.getID());
-        assertEquals( "MD_ENTRY_SIZE", fixData.getName());
-        assertEquals( "MDEntrySize", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "271", fixData.toFIXIDString());
+        assertEquals( "MD_ENTRY_SIZE", fixData.toFIXNameString());
+        assertEquals( "MDEntrySize", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0271Test() {

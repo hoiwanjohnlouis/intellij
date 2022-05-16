@@ -43,23 +43,23 @@ class Tag204EnuCustomerOrFirmTest {
     @Test
     void FIX0204Test() {
         FIX41 fixData = FIX41.FIX204_ENU_CUSTOMER_OR_FIRM;
-        assertEquals( "204", fixData.getID());
-        assertEquals( "CUSTOMER_OR_FIRM", fixData.getName());
-        assertEquals( "CustomerOrFirm (replaced)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "204", fixData.toFIXIDString());
+        assertEquals( "CUSTOMER_OR_FIRM", fixData.toFIXNameString());
+        assertEquals( "CustomerOrFirm (replaced)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0204Test() {
         Tag204EnuCustomerOrFirm tagData;
 
         tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.CUSTOMER);
-        assertEquals( Enum204CustomerOrFirm.CUSTOMER.getID(), tagData.getDataValue());
+        assertEquals( Enum204CustomerOrFirm.CUSTOMER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.FIRM);
-        assertEquals( Enum204CustomerOrFirm.FIRM.getID(), tagData.getDataValue());
+        assertEquals( Enum204CustomerOrFirm.FIRM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

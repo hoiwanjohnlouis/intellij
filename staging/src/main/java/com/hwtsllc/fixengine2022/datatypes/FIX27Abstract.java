@@ -25,16 +25,16 @@ public abstract class FIX27Abstract implements LogVerboseString {
         this.fixValue = fixType;
     }
     public String getEnumName() {
-        return fixValue.getEnumName();
+        return fixValue.toEnumNameString();
     }
     public String getID() {
-        return String.valueOf(fixValue.getID());
+        return String.valueOf(fixValue.toFIXIDString());
     }
     public String getName() {
-        return fixValue.getName();
+        return fixValue.toFIXNameString();
     }
     public String getDescription() {
-        return fixValue.getDescription();
+        return fixValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a detailed string describing this enum

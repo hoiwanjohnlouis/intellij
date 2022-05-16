@@ -48,27 +48,27 @@ class Tag837EnuPegLimitTypeTest {
     @Test
     void FIX0837Test() {
         FIX44 fixData = FIX44.FIX837_ENU_PEG_LIMIT_TYPE;
-        assertEquals( "837", fixData.getID());
-        assertEquals( "PEG_LIMIT_TYPE", fixData.getName());
-        assertEquals( "PegLimitType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "837", fixData.toFIXIDString());
+        assertEquals( "PEG_LIMIT_TYPE", fixData.toFIXNameString());
+        assertEquals( "PegLimitType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0837Test() {
         Tag837EnuPegLimitType tagData;
 
         tagData = new Tag837EnuPegLimitType(MyEnumLimitType.OR_BETTER);
-        assertEquals( MyEnumLimitType.OR_BETTER.getID(), tagData.getDataValue());
+        assertEquals( MyEnumLimitType.OR_BETTER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag837EnuPegLimitType(MyEnumLimitType.STRICT);
-        assertEquals( MyEnumLimitType.STRICT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumLimitType.STRICT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag837EnuPegLimitType(MyEnumLimitType.OR_WORSE);
-        assertEquals( MyEnumLimitType.OR_WORSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumLimitType.OR_WORSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

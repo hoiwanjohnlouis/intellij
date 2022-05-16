@@ -36,12 +36,12 @@ class Tag1022StrMDFeedTypeTest {
     @Test
     void FIX1022Test() {
         FIX50 fixData = FIX50.FIX1022_STR_MD_FEED_TYPE;
-        assertEquals( "1022", fixData.getID());
-        assertEquals( "MD_FEED_TYPE", fixData.getName());
-        assertEquals( "MDFeedType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1022", fixData.toFIXIDString());
+        assertEquals( "MD_FEED_TYPE", fixData.toFIXNameString());
+        assertEquals( "MDFeedType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1022Test() {

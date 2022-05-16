@@ -28,12 +28,12 @@ class Tag330QtyBuyVolumeTest {
     @Test
     void FIX0330Test() {
         FIX42 fixData = FIX42.FIX330_QTY_BUY_VOLUME;
-        assertEquals( "330", fixData.getID());
-        assertEquals( "BUY_VOLUME", fixData.getName());
-        assertEquals( "BuyVolume", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "330", fixData.toFIXIDString());
+        assertEquals( "BUY_VOLUME", fixData.toFIXNameString());
+        assertEquals( "BuyVolume", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0330Test() {

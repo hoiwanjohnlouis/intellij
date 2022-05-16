@@ -37,27 +37,27 @@ class Tag773EnuConfirmTypeTest {
     @Test
     void FIX0773Test() {
         FIX44 fixData = FIX44.FIX773_ENU_CONFIRM_TYPE;
-        assertEquals( "773", fixData.getID());
-        assertEquals( "CONFIRM_TYPE", fixData.getName());
-        assertEquals( "ConfirmType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "773", fixData.toFIXIDString());
+        assertEquals( "CONFIRM_TYPE", fixData.toFIXNameString());
+        assertEquals( "ConfirmType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0773Test() {
         Tag773EnuConfirmType tagData;
 
         tagData = new Tag773EnuConfirmType(Enum773ConfirmType.STATUS);
-        assertEquals( Enum773ConfirmType.STATUS.getID(), tagData.getDataValue());
+        assertEquals( Enum773ConfirmType.STATUS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
-        assertEquals( Enum773ConfirmType.CONFIRMATION.getID(), tagData.getDataValue());
+        assertEquals( Enum773ConfirmType.CONFIRMATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
-        assertEquals( Enum773ConfirmType.CONFIRMATION_REJECTED.getID(), tagData.getDataValue());
+        assertEquals( Enum773ConfirmType.CONFIRMATION_REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

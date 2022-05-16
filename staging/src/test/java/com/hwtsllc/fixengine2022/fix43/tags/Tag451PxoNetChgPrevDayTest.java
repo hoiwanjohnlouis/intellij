@@ -27,12 +27,12 @@ class Tag451PxoNetChgPrevDayTest {
     @Test
     void FIX0451Test() {
         FIX43 fixData = FIX43.FIX451_PXO_NET_CHG_PREV_DAY;
-        assertEquals( "451", fixData.getID());
-        assertEquals( "NET_CHG_PREV_DAY", fixData.getName());
-        assertEquals( "NetChgPrevDay", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "451", fixData.toFIXIDString());
+        assertEquals( "NET_CHG_PREV_DAY", fixData.toFIXNameString());
+        assertEquals( "NetChgPrevDay", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0451Test() {

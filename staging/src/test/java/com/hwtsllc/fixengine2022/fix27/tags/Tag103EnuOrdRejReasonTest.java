@@ -57,13 +57,13 @@ class Tag103EnuOrdRejReasonTest {
     @Test
     void FIX0103Test() {
         FIX27 fixData = FIX27.FIX103_ENU_ORD_REJ_REASON;
-        assertEquals( "ORD_REJ_REASON", fixData.getName());
-        assertEquals( "103", fixData.getID());
-        assertEquals( "OrdRejReason",  fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ORD_REJ_REASON", fixData.toFIXNameString());
+        assertEquals( "103", fixData.toFIXIDString());
+        assertEquals( "OrdRejReason",  fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0103Test() {

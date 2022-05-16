@@ -43,48 +43,48 @@ class Tag895EnuCollAsgnReasonTest {
     @Test
     void FIX0895Test() {
         FIX44 fixData = FIX44.FIX895_ENU_COLL_ASGN_REASON;
-        assertEquals( "895", fixData.getID());
-        assertEquals( "COLL_ASGN_REASON", fixData.getName());
-        assertEquals( "CollAsgnReason", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "895", fixData.toFIXIDString());
+        assertEquals( "COLL_ASGN_REASON", fixData.toFIXNameString());
+        assertEquals( "CollAsgnReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0895Test() {
         Tag895EnuCollAsgnReason tagData;
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.INITIAL );
-        assertEquals( Enum895CollAsgnReason.INITIAL.getID(), tagData.getDataValue());
+        assertEquals( Enum895CollAsgnReason.INITIAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.SCHEDULED );
-        assertEquals( Enum895CollAsgnReason.SCHEDULED.getID(), tagData.getDataValue());
+        assertEquals( Enum895CollAsgnReason.SCHEDULED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.TIME_WARNING );
-        assertEquals( Enum895CollAsgnReason.TIME_WARNING.getID(), tagData.getDataValue());
+        assertEquals( Enum895CollAsgnReason.TIME_WARNING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.MARGIN_DEFICIENCY );
-        assertEquals( Enum895CollAsgnReason.MARGIN_DEFICIENCY.getID(), tagData.getDataValue());
+        assertEquals( Enum895CollAsgnReason.MARGIN_DEFICIENCY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.MARGIN_EXCESS );
-        assertEquals( Enum895CollAsgnReason.MARGIN_EXCESS.getID(), tagData.getDataValue());
+        assertEquals( Enum895CollAsgnReason.MARGIN_EXCESS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.FORWARD_COLLATERAL_DEMAND );
-        assertEquals( Enum895CollAsgnReason.FORWARD_COLLATERAL_DEMAND.getID(), tagData.getDataValue());
+        assertEquals( Enum895CollAsgnReason.FORWARD_COLLATERAL_DEMAND.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.EVENT_OF_DEFAULT );
-        assertEquals( Enum895CollAsgnReason.EVENT_OF_DEFAULT.getID(), tagData.getDataValue());
+        assertEquals( Enum895CollAsgnReason.EVENT_OF_DEFAULT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.ADVERSE_TAX_EVENT );
-        assertEquals( Enum895CollAsgnReason.ADVERSE_TAX_EVENT.getID(), tagData.getDataValue());
+        assertEquals( Enum895CollAsgnReason.ADVERSE_TAX_EVENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

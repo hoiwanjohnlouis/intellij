@@ -40,27 +40,27 @@ class Enum1036ExecAckStatusTest {
         Enum1036ExecAckStatus enumType;
 
         enumType = Enum1036ExecAckStatus.RECEIVED;
-        assertEquals( "0", enumType.getID() );
-        assertEquals( "RECEIVED", enumType.getName() );
-        assertEquals( "0 - Received, not yet processed", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString() );
+        assertEquals( "RECEIVED", enumType.toFIXNameString() );
+        assertEquals( "0 - Received, not yet processed", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1036ExecAckStatus.ACCEPTED;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "ACCEPTED", enumType.getName() );
-        assertEquals( "1 - Accepted", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "ACCEPTED", enumType.toFIXNameString() );
+        assertEquals( "1 - Accepted", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1036ExecAckStatus.DONT_KNOW_REJECTED;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "DONT_KNOW_REJECTED", enumType.getName() );
-        assertEquals( "2 - Don't know / Rejected", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "DONT_KNOW_REJECTED", enumType.toFIXNameString() );
+        assertEquals( "2 - Don't know / Rejected", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

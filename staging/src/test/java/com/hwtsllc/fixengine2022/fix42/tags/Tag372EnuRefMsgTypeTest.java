@@ -193,12 +193,12 @@ class Tag372EnuRefMsgTypeTest {
     @Test
     void FIX0372Test() {
         FIX42 fixData = FIX42.FIX372_ENU_REF_MSG_TYPE;
-        assertEquals( "372", fixData.getID());
-        assertEquals( "REF_MSG_TYPE", fixData.getName());
-        assertEquals( "RefMsgType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "372", fixData.toFIXIDString());
+        assertEquals( "REF_MSG_TYPE", fixData.toFIXNameString());
+        assertEquals( "RefMsgType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0372Test() {
@@ -222,44 +222,44 @@ class Tag372EnuRefMsgTypeTest {
          * 0-9 msg types
          */
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.HEARTBEAT);
-        assertEquals( MyEnumMsgType.HEARTBEAT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.HEARTBEAT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TEST_REQUEST);
-        assertEquals( MyEnumMsgType.TEST_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TEST_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.RESEND_REQUEST);
-        assertEquals( MyEnumMsgType.RESEND_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.RESEND_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.REJECT);
-        assertEquals( MyEnumMsgType.REJECT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SEQUENCE_RESET);
-        assertEquals( MyEnumMsgType.SEQUENCE_RESET.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SEQUENCE_RESET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.LOGOUT);
-        assertEquals( MyEnumMsgType.LOGOUT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.LOGOUT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.INDICATION_OF_INTEREST);
-        assertEquals( MyEnumMsgType.INDICATION_OF_INTEREST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.INDICATION_OF_INTEREST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ADVERTISEMENT);
-        assertEquals( MyEnumMsgType.ADVERTISEMENT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ADVERTISEMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.EXECUTION_REPORT);
-        assertEquals( MyEnumMsgType.EXECUTION_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.EXECUTION_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ORDER_CANCEL_REJECT);
-        assertEquals( MyEnumMsgType.ORDER_CANCEL_REJECT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ORDER_CANCEL_REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -268,99 +268,99 @@ class Tag372EnuRefMsgTypeTest {
          * A-Z msg types, skipping "I", and "O"
          */
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.LOGON);
-        assertEquals( MyEnumMsgType.LOGON.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.LOGON.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.NEWS);
-        assertEquals( MyEnumMsgType.NEWS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.NEWS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.EMAIL);
-        assertEquals( MyEnumMsgType.EMAIL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.EMAIL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.NEW_ORDER_SINGLE);
-        assertEquals( MyEnumMsgType.NEW_ORDER_SINGLE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.NEW_ORDER_SINGLE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.NEW_ORDER_LIST);
-        assertEquals( MyEnumMsgType.NEW_ORDER_LIST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.NEW_ORDER_LIST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ORDER_CANCEL_REQUEST);
-        assertEquals( MyEnumMsgType.ORDER_CANCEL_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ORDER_CANCEL_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ORDER_MODIFICATION);
-        assertEquals( MyEnumMsgType.ORDER_MODIFICATION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ORDER_MODIFICATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ORDER_STATUS_REQUEST);
-        assertEquals( MyEnumMsgType.ORDER_STATUS_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ORDER_STATUS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ALLOCATION_INSTRUCTION);
-        assertEquals( MyEnumMsgType.ALLOCATION_INSTRUCTION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ALLOCATION_INSTRUCTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.LIST_CANCEL_REQUEST);
-        assertEquals( MyEnumMsgType.LIST_CANCEL_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.LIST_CANCEL_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.LIST_EXECUTE);
-        assertEquals( MyEnumMsgType.LIST_EXECUTE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.LIST_EXECUTE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.LIST_STATUS_REQUEST);
-        assertEquals( MyEnumMsgType.LIST_STATUS_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.LIST_STATUS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.LIST_STATUS);
-        assertEquals( MyEnumMsgType.LIST_STATUS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.LIST_STATUS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ALLOCATION_INSTRUCTION_ACK);
-        assertEquals( MyEnumMsgType.ALLOCATION_INSTRUCTION_ACK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ALLOCATION_INSTRUCTION_ACK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.DONT_KNOW_TRADE);
-        assertEquals( MyEnumMsgType.DONT_KNOW_TRADE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.DONT_KNOW_TRADE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.QUOTE_REQUEST);
-        assertEquals( MyEnumMsgType.QUOTE_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.QUOTE_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.QUOTE);
-        assertEquals( MyEnumMsgType.QUOTE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.QUOTE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SETTLEMENT_INSTRUCTIONS);
-        assertEquals( MyEnumMsgType.SETTLEMENT_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SETTLEMENT_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.MARKET_DATA_REQUEST);
-        assertEquals( MyEnumMsgType.MARKET_DATA_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.MARKET_DATA_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.MARKET_DATA_REFRESH);
-        assertEquals( MyEnumMsgType.MARKET_DATA_REFRESH.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.MARKET_DATA_REFRESH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.MARKET_DATA_INCREMENTAL_REFRESH);
-        assertEquals( MyEnumMsgType.MARKET_DATA_INCREMENTAL_REFRESH.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.MARKET_DATA_INCREMENTAL_REFRESH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.MARKET_DATA_REQUEST_REJECT);
-        assertEquals( MyEnumMsgType.MARKET_DATA_REQUEST_REJECT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.MARKET_DATA_REQUEST_REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.QUOTE_CANCEL);
-        assertEquals( MyEnumMsgType.QUOTE_CANCEL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.QUOTE_CANCEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -369,111 +369,111 @@ class Tag372EnuRefMsgTypeTest {
          * a-z msg types
          */
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.QUOTE_STATUS_REQUEST);
-        assertEquals( MyEnumMsgType.QUOTE_STATUS_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.QUOTE_STATUS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.MASS_QUOTE_ACKNOWLEDGEMENT);
-        assertEquals( MyEnumMsgType.MASS_QUOTE_ACKNOWLEDGEMENT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.MASS_QUOTE_ACKNOWLEDGEMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_DEFINITION_REQUEST);
-        assertEquals( MyEnumMsgType.SECURITY_DEFINITION_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_DEFINITION_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_DEFINITION);
-        assertEquals( MyEnumMsgType.SECURITY_DEFINITION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_DEFINITION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_STATUS_REQUEST);
-        assertEquals( MyEnumMsgType.SECURITY_STATUS_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_STATUS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_STATUS);
-        assertEquals( MyEnumMsgType.SECURITY_STATUS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_STATUS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TRADING_SESSION_STATUS_REQUEST);
-        assertEquals( MyEnumMsgType.TRADING_SESSION_STATUS_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TRADING_SESSION_STATUS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TRADING_SESSION_STATUS);
-        assertEquals( MyEnumMsgType.TRADING_SESSION_STATUS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TRADING_SESSION_STATUS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.MASS_QUOTE);
-        assertEquals( MyEnumMsgType.MASS_QUOTE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.MASS_QUOTE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.BUSINESS_MESSAGE_REJECT);
-        assertEquals( MyEnumMsgType.BUSINESS_MESSAGE_REJECT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.BUSINESS_MESSAGE_REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.BID_REQUEST);
-        assertEquals( MyEnumMsgType.BID_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.BID_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.BID_RESPONSE);
-        assertEquals( MyEnumMsgType.BID_RESPONSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.BID_RESPONSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.LIST_STRIKE_PRICE);
-        assertEquals( MyEnumMsgType.LIST_STRIKE_PRICE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.LIST_STRIKE_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.XML_MESSAGE);
-        assertEquals( MyEnumMsgType.XML_MESSAGE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.XML_MESSAGE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.REGISTRATION_INSTRUCTIONS);
-        assertEquals( MyEnumMsgType.REGISTRATION_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.REGISTRATION_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.REGISTRATION_INSTRUCTIONS_RESPONSE);
-        assertEquals( MyEnumMsgType.REGISTRATION_INSTRUCTIONS_RESPONSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.REGISTRATION_INSTRUCTIONS_RESPONSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ORDER_MASS_CANCEL_REQUEST);
-        assertEquals( MyEnumMsgType.ORDER_MASS_CANCEL_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ORDER_MASS_CANCEL_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ORDER_MASS_CANCEL_REPORT);
-        assertEquals( MyEnumMsgType.ORDER_MASS_CANCEL_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ORDER_MASS_CANCEL_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.NEW_ORDER_CROSS);
-        assertEquals( MyEnumMsgType.NEW_ORDER_CROSS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.NEW_ORDER_CROSS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.CROSS_ORDER_MODIFICATION_REQUEST);
-        assertEquals( MyEnumMsgType.CROSS_ORDER_MODIFICATION_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.CROSS_ORDER_MODIFICATION_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.CROSS_ORDER_CANCEL_REQUEST);
-        assertEquals( MyEnumMsgType.CROSS_ORDER_CANCEL_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.CROSS_ORDER_CANCEL_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_TYPE_REQUEST);
-        assertEquals( MyEnumMsgType.SECURITY_TYPE_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_TYPE_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_TYPES);
-        assertEquals( MyEnumMsgType.SECURITY_TYPES.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_TYPES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_LIST_REQUEST);
-        assertEquals( MyEnumMsgType.SECURITY_LIST_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_LIST_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_LIST);
-        assertEquals( MyEnumMsgType.SECURITY_LIST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_LIST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST);
-        assertEquals( MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -482,112 +482,112 @@ class Tag372EnuRefMsgTypeTest {
          * AA-AZ msg types
          */
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.DERIVATIVE_SECURITY_LIST);
-        assertEquals( MyEnumMsgType.DERIVATIVE_SECURITY_LIST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.DERIVATIVE_SECURITY_LIST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.NEW_ORDER_MULTILEG);
-        assertEquals( MyEnumMsgType.NEW_ORDER_MULTILEG.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.NEW_ORDER_MULTILEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.MULTILEG_ORDER_MODIFICATION_REQUEST);
-        assertEquals( MyEnumMsgType.MULTILEG_ORDER_MODIFICATION_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.MULTILEG_ORDER_MODIFICATION_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TRADE_CAPTURE_REPORT_REQUEST);
-        assertEquals( MyEnumMsgType.TRADE_CAPTURE_REPORT_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TRADE_CAPTURE_REPORT_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TRADE_CAPTURE_REPORT);
-        assertEquals( MyEnumMsgType.TRADE_CAPTURE_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TRADE_CAPTURE_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ORDER_MASS_STATUS_REQUEST);
-        assertEquals( MyEnumMsgType.ORDER_MASS_STATUS_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ORDER_MASS_STATUS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.QUOTE_REQUEST_REJECT);
-        assertEquals( MyEnumMsgType.QUOTE_REQUEST_REJECT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.QUOTE_REQUEST_REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.RFQ_REQUEST);
-        assertEquals( MyEnumMsgType.RFQ_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.RFQ_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.QUOTE_STATUS_REPORT);
-        assertEquals( MyEnumMsgType.QUOTE_STATUS_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.QUOTE_STATUS_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.QUOTE_RESPONSE);
-        assertEquals( MyEnumMsgType.QUOTE_RESPONSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.QUOTE_RESPONSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.CONFIRMATION);
-        assertEquals( MyEnumMsgType.CONFIRMATION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.CONFIRMATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.POSITION_MAINTENANCE_REQUEST);
-        assertEquals( MyEnumMsgType.POSITION_MAINTENANCE_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.POSITION_MAINTENANCE_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.POSITION_MAINTENANCE_REPORT);
-        assertEquals( MyEnumMsgType.POSITION_MAINTENANCE_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.POSITION_MAINTENANCE_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.REQUEST_FOR_POSITIONS);
-        assertEquals( MyEnumMsgType.REQUEST_FOR_POSITIONS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.REQUEST_FOR_POSITIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.REQUEST_FOR_POSITIONS_ACK);
-        assertEquals( MyEnumMsgType.REQUEST_FOR_POSITIONS_ACK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.REQUEST_FOR_POSITIONS_ACK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.POSITION_REPORT);
-        assertEquals( MyEnumMsgType.POSITION_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.POSITION_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TRADE_CAPTURE_REPORT_REQUEST_ACK);
-        assertEquals( MyEnumMsgType.TRADE_CAPTURE_REPORT_REQUEST_ACK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TRADE_CAPTURE_REPORT_REQUEST_ACK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TRADE_CAPTURE_REPORT_ACK);
-        assertEquals( MyEnumMsgType.TRADE_CAPTURE_REPORT_ACK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TRADE_CAPTURE_REPORT_ACK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ALLOCATION_CLAIM);
-        assertEquals( MyEnumMsgType.ALLOCATION_CLAIM.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ALLOCATION_CLAIM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ALLOCATION_CLAIM_ACK);
-        assertEquals( MyEnumMsgType.ALLOCATION_CLAIM_ACK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ALLOCATION_CLAIM_ACK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.AFFIRMATION);
-        assertEquals( MyEnumMsgType.AFFIRMATION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.AFFIRMATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SETTLEMENT_INSTRUCTION_REQUEST);
-        assertEquals( MyEnumMsgType.SETTLEMENT_INSTRUCTION_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SETTLEMENT_INSTRUCTION_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ASSIGNMENT_REPORT);
-        assertEquals( MyEnumMsgType.ASSIGNMENT_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ASSIGNMENT_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.COLLATERAL_REQUEST);
-        assertEquals( MyEnumMsgType.COLLATERAL_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.COLLATERAL_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.COLLATERAL_ASSIGNMENT);
-        assertEquals( MyEnumMsgType.COLLATERAL_ASSIGNMENT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.COLLATERAL_ASSIGNMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.COLLATERAL_RESPONSE);
-        assertEquals( MyEnumMsgType.COLLATERAL_RESPONSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.COLLATERAL_RESPONSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -596,70 +596,70 @@ class Tag372EnuRefMsgTypeTest {
          * BA-BP msg types
          */
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.COLLATERAL_REPORT);
-        assertEquals( MyEnumMsgType.COLLATERAL_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.COLLATERAL_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.COLLATERAL_INQUIRY);
-        assertEquals( MyEnumMsgType.COLLATERAL_INQUIRY.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.COLLATERAL_INQUIRY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_REQUEST);
-        assertEquals( MyEnumMsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_RESPONSE);
-        assertEquals( MyEnumMsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_RESPONSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_RESPONSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.USER_REQUEST);
-        assertEquals( MyEnumMsgType.USER_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.USER_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.USER_RESPONSE);
-        assertEquals( MyEnumMsgType.USER_RESPONSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.USER_RESPONSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.COLLATERAL_INQUIRY_ACK);
-        assertEquals( MyEnumMsgType.COLLATERAL_INQUIRY_ACK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.COLLATERAL_INQUIRY_ACK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.CONFIRMATION_REQUEST);
-        assertEquals( MyEnumMsgType.CONFIRMATION_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.CONFIRMATION_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TRADING_SESSION_LIST_REQUEST);
-        assertEquals( MyEnumMsgType.TRADING_SESSION_LIST_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TRADING_SESSION_LIST_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.TRADING_SESSION_LIST);
-        assertEquals( MyEnumMsgType.TRADING_SESSION_LIST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.TRADING_SESSION_LIST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_LIST_UPDATE_REPORT);
-        assertEquals( MyEnumMsgType.SECURITY_LIST_UPDATE_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_LIST_UPDATE_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ADJUSTED_POSITION_REPORT);
-        assertEquals( MyEnumMsgType.ADJUSTED_POSITION_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ADJUSTED_POSITION_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ALLOCATION_INSTRUCTION_ALERT);
-        assertEquals( MyEnumMsgType.ALLOCATION_INSTRUCTION_ALERT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.ALLOCATION_INSTRUCTION_ALERT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.EXECUTION_ACKNOWLEDGEMENT);
-        assertEquals( MyEnumMsgType.EXECUTION_ACKNOWLEDGEMENT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.EXECUTION_ACKNOWLEDGEMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.CONTRARY_INTENTION_REPORT);
-        assertEquals( MyEnumMsgType.CONTRARY_INTENTION_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.CONTRARY_INTENTION_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_DEFINITION_UPDATE_REPORT);
-        assertEquals( MyEnumMsgType.SECURITY_DEFINITION_UPDATE_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMsgType.SECURITY_DEFINITION_UPDATE_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

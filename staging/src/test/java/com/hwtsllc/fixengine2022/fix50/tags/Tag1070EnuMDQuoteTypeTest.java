@@ -42,35 +42,35 @@ class Tag1070EnuMDQuoteTypeTest {
     @Test
     void FIX1070Test() {
         FIX50 fixData = FIX50.FIX1070_ENU_MD_QUOTE_TYPE;
-        assertEquals( "1070", fixData.getID());
-        assertEquals( "MD_QUOTE_TYPE", fixData.getName());
-        assertEquals( "MDQuoteType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1070", fixData.toFIXIDString());
+        assertEquals( "MD_QUOTE_TYPE", fixData.toFIXNameString());
+        assertEquals( "MDQuoteType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1070Test() {
         Tag1070EnuMDQuoteType tagData;
 
         tagData = new Tag1070EnuMDQuoteType( Enum1070MDQuoteType.INDICATIVE );
-        assertEquals( Enum1070MDQuoteType.INDICATIVE.getID(), tagData.getDataValue());
+        assertEquals( Enum1070MDQuoteType.INDICATIVE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1070EnuMDQuoteType( Enum1070MDQuoteType.TRADEABLE );
-        assertEquals( Enum1070MDQuoteType.TRADEABLE.getID(), tagData.getDataValue());
+        assertEquals( Enum1070MDQuoteType.TRADEABLE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1070EnuMDQuoteType( Enum1070MDQuoteType.RESTRICTED );
-        assertEquals( Enum1070MDQuoteType.RESTRICTED.getID(), tagData.getDataValue());
+        assertEquals( Enum1070MDQuoteType.RESTRICTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1070EnuMDQuoteType( Enum1070MDQuoteType.COUNTER );
-        assertEquals( Enum1070MDQuoteType.COUNTER.getID(), tagData.getDataValue());
+        assertEquals( Enum1070MDQuoteType.COUNTER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1070EnuMDQuoteType( Enum1070MDQuoteType.INDICATIVE_TRADEABLE );
-        assertEquals( Enum1070MDQuoteType.INDICATIVE_TRADEABLE.getID(), tagData.getDataValue());
+        assertEquals( Enum1070MDQuoteType.INDICATIVE_TRADEABLE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

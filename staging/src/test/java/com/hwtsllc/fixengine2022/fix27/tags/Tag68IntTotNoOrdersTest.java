@@ -40,13 +40,13 @@ class Tag68IntTotNoOrdersTest {
     @Test
     void FIX0068Test() {
         FIX27 fixData = FIX27.FIX68_INT_TOT_NO_ORDERS;
-        assertEquals( "TOT_NO_ORDERS", fixData.getName());
-        assertEquals( "68", fixData.getID());
-        assertEquals( "TotNoOrders (formerly named: ListNoOrds)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "TOT_NO_ORDERS", fixData.toFIXNameString());
+        assertEquals( "68", fixData.toFIXIDString());
+        assertEquals( "TotNoOrders (formerly named: ListNoOrds)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0068Test() {

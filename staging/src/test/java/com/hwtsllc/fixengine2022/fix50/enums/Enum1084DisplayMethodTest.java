@@ -42,27 +42,27 @@ class Enum1084DisplayMethodTest {
         Enum1084DisplayMethod enumType;
 
         enumType = Enum1084DisplayMethod.INITIAL;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "INITIAL", enumType.getName() );
-        assertEquals( "1 - Initial (use original DisplayQty)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "INITIAL", enumType.toFIXNameString() );
+        assertEquals( "1 - Initial (use original DisplayQty)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1084DisplayMethod.NEW;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "NEW", enumType.getName() );
-        assertEquals( "2 - New (use RefreshQty)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "NEW", enumType.toFIXNameString() );
+        assertEquals( "2 - New (use RefreshQty)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1084DisplayMethod.RANDOM;
-        assertEquals( "3", enumType.getID() );
-        assertEquals( "RANDOM", enumType.getName() );
-        assertEquals( "3 - Random (randomize value)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString() );
+        assertEquals( "RANDOM", enumType.toFIXNameString() );
+        assertEquals( "3 - Random (randomize value)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

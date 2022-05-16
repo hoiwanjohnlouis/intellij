@@ -35,12 +35,12 @@ class Tag148StrHeadlineTest {
     @Test
     void FIX0148Test() {
         FIX41 fixData = FIX41.FIX148_STR_HEADLINE;
-        assertEquals( "148", fixData.getID());
-        assertEquals( "HEADLINE", fixData.getName());
-        assertEquals( "Headline", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "148", fixData.toFIXIDString());
+        assertEquals( "HEADLINE", fixData.toFIXNameString());
+        assertEquals( "Headline", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0148Test() {

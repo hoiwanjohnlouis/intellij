@@ -35,13 +35,13 @@ class Tag67StrListSeqNoTest {
     @Test
     void FIX0067Test() {
         FIX27 fixData = FIX27.FIX67_STR_LIST_SEQ_NO;
-        assertEquals( "LIST_SEQ_NO", fixData.getName());
-        assertEquals( "67", fixData.getID());
-        assertEquals( "ListSeqNo", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "LIST_SEQ_NO", fixData.toFIXNameString());
+        assertEquals( "67", fixData.toFIXIDString());
+        assertEquals( "ListSeqNo", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0067Test() {

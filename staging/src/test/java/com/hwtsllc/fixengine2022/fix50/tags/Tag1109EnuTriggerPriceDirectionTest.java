@@ -39,23 +39,23 @@ class Tag1109EnuTriggerPriceDirectionTest {
     @Test
     void FIX1109Test() {
         FIX50 fixData = FIX50.FIX1109_ENU_TRIGGER_PRICE_DIRECTION;
-        assertEquals( "1109", fixData.getID());
-        assertEquals( "TRIGGER_PRICE_DIRECTION", fixData.getName());
-        assertEquals( "TriggerPriceDirection", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1109", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_PRICE_DIRECTION", fixData.toFIXNameString());
+        assertEquals( "TriggerPriceDirection", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1109Test() {
         Tag1109EnuTriggerPriceDirection tagData;
 
         tagData = new Tag1109EnuTriggerPriceDirection( Enum1109TriggerPriceDirection.TRIGGER_UP );
-        assertEquals( Enum1109TriggerPriceDirection.TRIGGER_UP.getID(), tagData.getDataValue());
+        assertEquals( Enum1109TriggerPriceDirection.TRIGGER_UP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1109EnuTriggerPriceDirection( Enum1109TriggerPriceDirection.TRIGGER_DOWN );
-        assertEquals( Enum1109TriggerPriceDirection.TRIGGER_DOWN.getID(), tagData.getDataValue());
+        assertEquals( Enum1109TriggerPriceDirection.TRIGGER_DOWN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

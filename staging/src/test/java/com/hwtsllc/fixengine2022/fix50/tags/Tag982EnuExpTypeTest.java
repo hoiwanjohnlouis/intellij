@@ -42,35 +42,35 @@ class Tag982EnuExpTypeTest {
     @Test
     void FIX0982Test() {
         FIX50 fixData = FIX50.FIX982_ENU_EXP_TYPE;
-        assertEquals( "982", fixData.getID());
-        assertEquals( "EXP_TYPE", fixData.getName());
-        assertEquals( "ExpType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "982", fixData.toFIXIDString());
+        assertEquals( "EXP_TYPE", fixData.toFIXNameString());
+        assertEquals( "ExpType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0982Test() {
         Tag982EnuExpType tagData;
 
         tagData = new Tag982EnuExpType( Enum982ExpType.AUTO_EXERCISE );
-        assertEquals( Enum982ExpType.AUTO_EXERCISE.getID(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.AUTO_EXERCISE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag982EnuExpType( Enum982ExpType.NON_AUTO_EXERCISE );
-        assertEquals( Enum982ExpType.NON_AUTO_EXERCISE.getID(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.NON_AUTO_EXERCISE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag982EnuExpType( Enum982ExpType.FINAL_EXERCISED );
-        assertEquals( Enum982ExpType.FINAL_EXERCISED.getID(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.FINAL_EXERCISED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag982EnuExpType( Enum982ExpType.CONTRARY_INTENTION );
-        assertEquals( Enum982ExpType.CONTRARY_INTENTION.getID(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.CONTRARY_INTENTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag982EnuExpType( Enum982ExpType.DIFFERENCE );
-        assertEquals( Enum982ExpType.DIFFERENCE.getID(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.DIFFERENCE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

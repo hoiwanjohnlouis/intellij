@@ -33,12 +33,12 @@ class Tag821OrderInputDeviceTest {
     @Test
     void FIX0821Test() {
         FIX44 fixData = FIX44.FIX821_ORDER_INPUT_DEVICE;
-        assertEquals( "821", fixData.getID());
-        assertEquals( "ORDER_INPUT_DEVICE", fixData.getName());
-        assertEquals( "OrderInputDevice", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "821", fixData.toFIXIDString());
+        assertEquals( "ORDER_INPUT_DEVICE", fixData.toFIXNameString());
+        assertEquals( "OrderInputDevice", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0821Test() {

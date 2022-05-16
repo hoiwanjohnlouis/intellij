@@ -37,27 +37,27 @@ class Tag750EnuTradeRequestStatusTest {
     @Test
     void FIX0750Test() {
         FIX44 fixData = FIX44.FIX750_ENU_TRADE_REQUEST_STATUS;
-        assertEquals( "750", fixData.getID());
-        assertEquals( "TRADE_REQUEST_STATUS", fixData.getName());
-        assertEquals( "TradeRequestStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "750", fixData.toFIXIDString());
+        assertEquals( "TRADE_REQUEST_STATUS", fixData.toFIXNameString());
+        assertEquals( "TradeRequestStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0750Test() {
         Tag750EnuTradeRequestStatus tagData;
 
         tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.ACCEPTED);
-        assertEquals( Enum750TradeRequestStatus.ACCEPTED.getID(), tagData.getDataValue() );
+        assertEquals( Enum750TradeRequestStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.COMPLETED);
-        assertEquals( Enum750TradeRequestStatus.COMPLETED.getID(), tagData.getDataValue() );
+        assertEquals( Enum750TradeRequestStatus.COMPLETED.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.REJECTED);
-        assertEquals( Enum750TradeRequestStatus.REJECTED.getID(), tagData.getDataValue() );
+        assertEquals( Enum750TradeRequestStatus.REJECTED.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

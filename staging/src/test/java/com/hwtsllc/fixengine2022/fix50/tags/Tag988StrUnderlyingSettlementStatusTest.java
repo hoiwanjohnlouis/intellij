@@ -39,12 +39,12 @@ class Tag988StrUnderlyingSettlementStatusTest {
     @Test
     void FIX0988Test() {
         FIX50 fixData = FIX50.FIX988_STR_UNDERLYING_SETTLEMENT_STATUS;
-        assertEquals( "988", fixData.getID());
-        assertEquals( "UNDERLYING_SETTLEMENT_STATUS", fixData.getName());
-        assertEquals( "UnderlyingSettlementStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "988", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_SETTLEMENT_STATUS", fixData.toFIXNameString());
+        assertEquals( "UnderlyingSettlementStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0988Test() {

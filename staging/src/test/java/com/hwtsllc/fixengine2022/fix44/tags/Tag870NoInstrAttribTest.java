@@ -33,12 +33,12 @@ class Tag870NoInstrAttribTest {
     @Test
     void FIX0870Test() {
         FIX44 fixData = FIX44.FIX870_NO_INSTR_ATTRIB;
-        assertEquals( "870", fixData.getID());
-        assertEquals( "NO_INSTR_ATTRIB", fixData.getName());
-        assertEquals( "NoInstrAttrib", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "870", fixData.toFIXIDString());
+        assertEquals( "NO_INSTR_ATTRIB", fixData.toFIXNameString());
+        assertEquals( "NoInstrAttrib", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0870Test() {

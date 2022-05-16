@@ -35,12 +35,12 @@ class Tag1009IntSideQtyTest {
     @Test
     void FIX1009Test() {
         FIX50 fixData = FIX50.FIX1009_INT_SIDE_QTY;
-        assertEquals( "1009", fixData.getID());
-        assertEquals( "SIDE_QTY", fixData.getName());
-        assertEquals( "SideQty", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1009", fixData.toFIXIDString());
+        assertEquals( "SIDE_QTY", fixData.toFIXNameString());
+        assertEquals( "SideQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1009Test() {

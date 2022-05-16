@@ -29,12 +29,12 @@ class Tag227PctRepurchaseRateTest {
     @Test
     void FIX0227Test() {
         FIX42 fixData = FIX42.FIX227_PCT_REPURCHASE_RATE;
-        assertEquals( "227", fixData.getID());
-        assertEquals( "REPURCHASE_RATE", fixData.getName());
-        assertEquals( "RepurchaseRate (Deprecated)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "227", fixData.toFIXIDString());
+        assertEquals( "REPURCHASE_RATE", fixData.toFIXNameString());
+        assertEquals( "RepurchaseRate (Deprecated)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0227Test() {

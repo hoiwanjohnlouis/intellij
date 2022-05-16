@@ -34,12 +34,12 @@ class Tag972UnderlyingAllocationPercentTest {
     @Test
     void FIX0972Test() {
         FIX50 fixData = FIX50.FIX972_UNDERLYING_ALLOCATION_PERCENT;
-        assertEquals( "972", fixData.getID());
-        assertEquals( "UNDERLYING_ALLOCATION_PERCENT", fixData.getName());
-        assertEquals( "UnderlyingAllocationPercent", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "972", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_ALLOCATION_PERCENT", fixData.toFIXNameString());
+        assertEquals( "UnderlyingAllocationPercent", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0972Test() {

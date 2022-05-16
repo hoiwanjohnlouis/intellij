@@ -44,12 +44,12 @@ class Tag414EnuProgRptReqsTest {
     @Test
     void FIX0414Test() {
         FIX42 fixData = FIX42.FIX414_ENU_PROG_RPT_REQS;
-        assertEquals( "414", fixData.getID());
-        assertEquals( "PROG_RPT_REQS", fixData.getName());
-        assertEquals( "ProgRptReqs", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "414", fixData.toFIXIDString());
+        assertEquals( "PROG_RPT_REQS", fixData.toFIXNameString());
+        assertEquals( "ProgRptReqs", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0414Test() {
@@ -59,15 +59,15 @@ class Tag414EnuProgRptReqsTest {
          * 1-3 msg types
          */
         tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.BUY_SIDE_STATUS);
-        assertEquals( Enum414ProgRptReqs.BUY_SIDE_STATUS.getID(), tagData.getDataValue());
+        assertEquals( Enum414ProgRptReqs.BUY_SIDE_STATUS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.SELL_SIDE_STATUS);
-        assertEquals( Enum414ProgRptReqs.SELL_SIDE_STATUS.getID(), tagData.getDataValue());
+        assertEquals( Enum414ProgRptReqs.SELL_SIDE_STATUS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS);
-        assertEquals( Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS.getID(), tagData.getDataValue());
+        assertEquals( Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

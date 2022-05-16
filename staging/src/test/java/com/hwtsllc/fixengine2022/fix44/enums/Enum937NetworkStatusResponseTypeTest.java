@@ -37,19 +37,19 @@ class Enum937NetworkStatusResponseTypeTest {
         Enum937NetworkStatusResponseType enumType;
 
         enumType = Enum937NetworkStatusResponseType.FULL;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "FULL", enumType.getName() );
-        assertEquals( "1 - Full", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "FULL", enumType.toFIXNameString() );
+        assertEquals( "1 - Full", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum937NetworkStatusResponseType.INCREMENTAL;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "INCREMENTAL", enumType.getName() );
-        assertEquals( "2 - Incremental Update", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "INCREMENTAL", enumType.toFIXNameString() );
+        assertEquals( "2 - Incremental Update", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

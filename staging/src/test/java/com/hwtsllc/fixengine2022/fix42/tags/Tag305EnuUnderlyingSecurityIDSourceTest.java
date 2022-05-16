@@ -134,12 +134,12 @@ class Tag305EnuUnderlyingSecurityIDSourceTest {
     @Test
     void FIX0305Test() {
         FIX42 fixData = FIX42.FIX305_ENU_UNDERLYING_SECURITY_ID_SOURCE;
-        assertEquals( "305", fixData.getID());
-        assertEquals( "UNDERLYING_SECURITY_ID_SOURCE", fixData.getName());
-        assertEquals( "UnderlyingSecurityIDSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "305", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_SECURITY_ID_SOURCE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingSecurityIDSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0305Test() {

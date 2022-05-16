@@ -27,12 +27,12 @@ class Tag495EnuTaxAdvantageTypeTest {
     @Test
     void FIX0495Test() {
         FIX43 fixData = FIX43.FIX495_ENU_TAX_ADVANTAGE_TYPE;
-        assertEquals( "495", fixData.getID());
-        assertEquals( "TAX_ADVANTAGE_TYPE", fixData.getName());
-        assertEquals( "TaxAdvantageType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "495", fixData.toFIXIDString());
+        assertEquals( "TAX_ADVANTAGE_TYPE", fixData.toFIXNameString());
+        assertEquals( "TaxAdvantageType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0495Test() {

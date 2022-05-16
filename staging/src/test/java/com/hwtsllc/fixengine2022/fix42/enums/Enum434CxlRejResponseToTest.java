@@ -36,26 +36,26 @@ class Enum434CxlRejResponseToTest {
     void Enum0434Test() {
         Enum434CxlRejResponseTo enumType;
 
-        /**
+        /*
          * 1-2 msg types
          */
         enumType = Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST;
-        assertEquals("1", enumType.getID());
-        assertEquals("ORDER_CANCEL_REQUEST", enumType.getName());
-        assertEquals("1 - Order cancel request", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("ORDER_CANCEL_REQUEST", enumType.toFIXNameString());
+        assertEquals("1 - Order cancel request", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST;
-        assertEquals("2", enumType.getID());
-        assertEquals("ORDER_MODIFICATION_REQUEST", enumType.getName());
-        assertEquals("2 - Order cancel/replace request", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("ORDER_MODIFICATION_REQUEST", enumType.toFIXNameString());
+        assertEquals("2 - Order cancel/replace request", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

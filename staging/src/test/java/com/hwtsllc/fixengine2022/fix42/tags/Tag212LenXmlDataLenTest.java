@@ -28,12 +28,12 @@ class Tag212LenXmlDataLenTest {
     @Test
     void FIX0212Test() {
         FIX42 fixData = FIX42.FIX212_LEN_XML_DATA_LEN;
-        assertEquals( "212", fixData.getID());
-        assertEquals( "XML_DATA_LEN", fixData.getName());
-        assertEquals( "XmlDataLen", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "212", fixData.toFIXIDString());
+        assertEquals( "XML_DATA_LEN", fixData.toFIXNameString());
+        assertEquals( "XmlDataLen", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0212Test() {

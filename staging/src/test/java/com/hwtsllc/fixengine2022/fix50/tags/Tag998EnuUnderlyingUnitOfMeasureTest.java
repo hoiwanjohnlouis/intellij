@@ -67,65 +67,65 @@ class Tag998EnuUnderlyingUnitOfMeasureTest {
     @Test
     void FIX0998Test() {
         FIX50 fixData = FIX50.FIX998_ENU_UNDERLYING_UNIT_OF_MEASURE;
-        assertEquals( "998", fixData.getID());
-        assertEquals( "UNDERLYING_UNIT_OF_MEASURE", fixData.getName());
-        assertEquals( "UnderlyingUnitOfMeasure", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "998", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_UNIT_OF_MEASURE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingUnitOfMeasure", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0998Test() {
         Tag998EnuUnderlyingUnitOfMeasure tagData;
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.BARRELS );
-        assertEquals( MyEnumUnitOfMeasure.BARRELS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.BARRELS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.BILLION_CUBIC_FEET );
-        assertEquals( MyEnumUnitOfMeasure.BILLION_CUBIC_FEET.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.BILLION_CUBIC_FEET.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.BUSHELS );
-        assertEquals( MyEnumUnitOfMeasure.BUSHELS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.BUSHELS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.POUNDS );
-        assertEquals( MyEnumUnitOfMeasure.POUNDS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.POUNDS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.GALLONS );
-        assertEquals( MyEnumUnitOfMeasure.GALLONS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.GALLONS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.MILLION_BARRELS );
-        assertEquals( MyEnumUnitOfMeasure.MILLION_BARRELS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.MILLION_BARRELS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.MILLION_BTU );
-        assertEquals( MyEnumUnitOfMeasure.MILLION_BTU.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.MILLION_BTU.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.MEGAWATT_HOURS );
-        assertEquals( MyEnumUnitOfMeasure.MEGAWATT_HOURS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.MEGAWATT_HOURS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.TROY_OUNCES );
-        assertEquals( MyEnumUnitOfMeasure.TROY_OUNCES.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.TROY_OUNCES.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.METRIC_TONS );
-        assertEquals( MyEnumUnitOfMeasure.METRIC_TONS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.METRIC_TONS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.US_TONS );
-        assertEquals( MyEnumUnitOfMeasure.US_TONS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.US_TONS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.US_DOLLARS );
-        assertEquals( MyEnumUnitOfMeasure.US_DOLLARS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumUnitOfMeasure.US_DOLLARS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

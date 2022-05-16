@@ -28,12 +28,12 @@ class Tag256StrUnderlyingCreditRatingTest {
     @Test
     void FIX0256Test() {
         FIX42 fixData = FIX42.FIX256_STR_UNDERLYING_CREDIT_RATING;
-        assertEquals( "256", fixData.getID());
-        assertEquals( "UNDERLYING_CREDIT_RATING", fixData.getName());
-        assertEquals( "UnderlyingCreditRating", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "256", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CREDIT_RATING", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCreditRating", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0256Test() {

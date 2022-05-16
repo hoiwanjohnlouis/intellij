@@ -33,12 +33,12 @@ class Tag746OpenInterestTest {
     @Test
     void FIX0746Test() {
         FIX44 fixData = FIX44.FIX746_OPEN_INTEREST;
-        assertEquals( "746", fixData.getID());
-        assertEquals( "OPEN_INTEREST", fixData.getName());
-        assertEquals( "OpenInterest", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "746", fixData.toFIXIDString());
+        assertEquals( "OPEN_INTEREST", fixData.toFIXNameString());
+        assertEquals( "OpenInterest", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0746Test() {

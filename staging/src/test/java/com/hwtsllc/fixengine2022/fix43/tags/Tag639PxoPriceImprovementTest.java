@@ -27,12 +27,12 @@ class Tag639PxoPriceImprovementTest {
     @Test
     void FIX0639Test() {
         FIX43 fixData = FIX43.FIX639_PXO_PRICE_IMPROVEMENT;
-        assertEquals( "639", fixData.getID());
-        assertEquals( "PRICE_IMPROVEMENT", fixData.getName());
-        assertEquals( "PriceImprovement", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "639", fixData.toFIXIDString());
+        assertEquals( "PRICE_IMPROVEMENT", fixData.toFIXNameString());
+        assertEquals( "PriceImprovement", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0639Test() {

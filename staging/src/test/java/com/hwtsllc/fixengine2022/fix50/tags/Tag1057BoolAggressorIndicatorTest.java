@@ -39,23 +39,23 @@ class Tag1057BoolAggressorIndicatorTest {
     @Test
     void FIX1057Test() {
         FIX50 fixData = FIX50.FIX1057_BOOL_AGGRESSOR_INDICATOR;
-        assertEquals( "1057", fixData.getID());
-        assertEquals( "AGGRESSOR_INDICATOR", fixData.getName());
-        assertEquals( "AggressorIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1057", fixData.toFIXIDString());
+        assertEquals( "AGGRESSOR_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "AggressorIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1057Test() {
         Tag1057BoolAggressorIndicator tagData;
 
         tagData = new Tag1057BoolAggressorIndicator( Bool1057AggressorIndicator.AGGRESSOR );
-        assertEquals( Bool1057AggressorIndicator.AGGRESSOR.getID(), tagData.getDataValue() );
+        assertEquals( Bool1057AggressorIndicator.AGGRESSOR.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1057BoolAggressorIndicator( Bool1057AggressorIndicator.PASSIVE );
-        assertEquals( Bool1057AggressorIndicator.PASSIVE.getID(), tagData.getDataValue() );
+        assertEquals( Bool1057AggressorIndicator.PASSIVE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

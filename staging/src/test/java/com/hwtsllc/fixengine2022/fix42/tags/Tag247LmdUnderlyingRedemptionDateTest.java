@@ -29,12 +29,12 @@ class Tag247LmdUnderlyingRedemptionDateTest {
     @Test
     void FIX0247Test() {
         FIX42 fixData = FIX42.FIX247_LMD_UNDERLYING_REDEMPTION_DATE;
-        assertEquals( "247", fixData.getID());
-        assertEquals( "UNDERLYING_REDEMPTION_DATE", fixData.getName());
-        assertEquals( "UnderlyingRedemptionDate (Deprecated)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "247", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_REDEMPTION_DATE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingRedemptionDate (Deprecated)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0247Test() {

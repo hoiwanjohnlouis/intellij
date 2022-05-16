@@ -33,12 +33,12 @@ class Tag850TargetStrategyPerformanceTest {
     @Test
     void FIX0850Test() {
         FIX44 fixData = FIX44.FIX850_TARGET_STRATEGY_PERFORMANCE;
-        assertEquals( "850", fixData.getID());
-        assertEquals( "TARGET_STRATEGY_PERFORMANCE", fixData.getName());
-        assertEquals( "TargetStrategyPerformance", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "850", fixData.toFIXIDString());
+        assertEquals( "TARGET_STRATEGY_PERFORMANCE", fixData.toFIXNameString());
+        assertEquals( "TargetStrategyPerformance", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0850Test() {

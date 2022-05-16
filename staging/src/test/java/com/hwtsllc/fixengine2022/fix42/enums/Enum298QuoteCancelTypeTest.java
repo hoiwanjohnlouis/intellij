@@ -38,53 +38,53 @@ class Enum298QuoteCancelTypeTest {
     void Enum0298Test() {
         Enum298QuoteCancelType enumType;
 
-        /**
+        /*
          * 1-5 msg types
          */
         enumType = Enum298QuoteCancelType.CANCEL_FOR_SYMBOL;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "CANCEL_FOR_SYMBOL", enumType.getName());
-        assertEquals( "1 - Cancel for Symbol(s)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "CANCEL_FOR_SYMBOL", enumType.toFIXNameString());
+        assertEquals( "1 - Cancel for Symbol(s)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "CANCEL_FOR_SECURITY_TYPE", enumType.getName());
-        assertEquals( "2 - Cancel for Security Type(s)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "CANCEL_FOR_SECURITY_TYPE", enumType.toFIXNameString());
+        assertEquals( "2 - Cancel for Security Type(s)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "CANCEL_FOR_UNDERLYING_SYMBOL", enumType.getName());
-        assertEquals( "3 - Cancel for Underlying Symbol", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "CANCEL_FOR_UNDERLYING_SYMBOL", enumType.toFIXNameString());
+        assertEquals( "3 - Cancel for Underlying Symbol", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum298QuoteCancelType.CANCEL_ALL_QUOTES;
-        assertEquals( "4", enumType.getID());
-        assertEquals( "CANCEL_ALL_QUOTES", enumType.getName());
-        assertEquals( "4 - Cancel All Quotes", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString());
+        assertEquals( "CANCEL_ALL_QUOTES", enumType.toFIXNameString());
+        assertEquals( "4 - Cancel All Quotes", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE;
-        assertEquals( "5", enumType.getID());
-        assertEquals( "CANCEL_QUOTEID_QUOTE", enumType.getName());
-        assertEquals( "5 - Cancel quote specified in QuoteID", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "5", enumType.toFIXIDString());
+        assertEquals( "CANCEL_QUOTEID_QUOTE", enumType.toFIXNameString());
+        assertEquals( "5 - Cancel quote specified in QuoteID", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

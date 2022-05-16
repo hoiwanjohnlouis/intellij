@@ -28,12 +28,12 @@ class Tag364LenEncodedUnderlyingSecurityDescLenTest {
     @Test
     void FIX0364Test() {
         FIX42 fixData = FIX42.FIX364_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
-        assertEquals( "364", fixData.getID());
-        assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC_LEN", fixData.getName());
-        assertEquals( "EncodedUnderlyingSecurityDescLen", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "364", fixData.toFIXIDString());
+        assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC_LEN", fixData.toFIXNameString());
+        assertEquals( "EncodedUnderlyingSecurityDescLen", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0364Test() {

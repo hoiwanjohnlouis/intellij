@@ -28,12 +28,12 @@ class Tag381AmtGrossTradeAmtTest {
     @Test
     void FIX0381Test() {
         FIX42 fixData = FIX42.FIX381_AMT_GROSS_TRADE_AMT;
-        assertEquals( "381", fixData.getID());
-        assertEquals( "GROSS_TRADE_AMT", fixData.getName());
-        assertEquals( "GrossTradeAmt", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "381", fixData.toFIXIDString());
+        assertEquals( "GROSS_TRADE_AMT", fixData.toFIXNameString());
+        assertEquals( "GrossTradeAmt", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0381Test() {

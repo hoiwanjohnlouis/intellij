@@ -40,12 +40,12 @@ class Tag1017LegOptionRatioTest {
     @Test
     void FIX1017Test() {
         FIX50 fixData = FIX50.FIX1017_LEG_OPTION_RATIO;
-        assertEquals( "1017", fixData.getID());
-        assertEquals( "LEG_OPTION_RATIO", fixData.getName());
-        assertEquals( "LegOptionRatio", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1017", fixData.toFIXIDString());
+        assertEquals( "LEG_OPTION_RATIO", fixData.toFIXNameString());
+        assertEquals( "LegOptionRatio", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1017Test() {

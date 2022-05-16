@@ -35,12 +35,12 @@ class Tag1006StrSideFillStationCDTest {
     @Test
     void FIX1006Test() {
         FIX50 fixData = FIX50.FIX1006_STR_SIDE_FILL_STATION_CD;
-        assertEquals( "1006", fixData.getID());
-        assertEquals( "SIDE_FILL_STATION_CD", fixData.getName());
-        assertEquals( "SideFillStationCD", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1006", fixData.toFIXIDString());
+        assertEquals( "SIDE_FILL_STATION_CD", fixData.toFIXNameString());
+        assertEquals( "SideFillStationCD", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1006Test() {

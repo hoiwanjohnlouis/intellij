@@ -40,12 +40,12 @@ class Tag1065BidSwapPointsTest {
     @Test
     void FIX1065Test() {
         FIX50 fixData = FIX50.FIX1065_BID_SWAP_POINTS;
-        assertEquals( "1065", fixData.getID());
-        assertEquals( "BID_SWAP_POINTS", fixData.getName());
-        assertEquals( "BidSwapPoints", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1065", fixData.toFIXIDString());
+        assertEquals( "BID_SWAP_POINTS", fixData.toFIXNameString());
+        assertEquals( "BidSwapPoints", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1065Test() {

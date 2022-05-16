@@ -45,12 +45,12 @@ class Tag300EnuQuoteRejectReasonTest {
     @Test
     void FIX0300Test() {
         FIX42 fixData = FIX42.FIX300_ENU_QUOTE_REJECT_REASON;
-        assertEquals( "300", fixData.getID());
-        assertEquals( "QUOTE_REJECT_REASON", fixData.getName());
-        assertEquals( "QuoteRejectReason", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "300", fixData.toFIXIDString());
+        assertEquals( "QUOTE_REJECT_REASON", fixData.toFIXNameString());
+        assertEquals( "QuoteRejectReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0300Test() {
@@ -60,43 +60,43 @@ class Tag300EnuQuoteRejectReasonTest {
          * 1-9, 99 msg types
          */
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.UNKNOWN_SYMBOL);
-        assertEquals( Enum300QuoteRejectReason.UNKNOWN_SYMBOL.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.UNKNOWN_SYMBOL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.EXCHANGE_SECURITY_CLOSED);
-        assertEquals( Enum300QuoteRejectReason.EXCHANGE_SECURITY_CLOSED.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.EXCHANGE_SECURITY_CLOSED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT);
-        assertEquals( Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.TOO_LATE_TO_ENTER);
-        assertEquals( Enum300QuoteRejectReason.TOO_LATE_TO_ENTER.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.TOO_LATE_TO_ENTER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.UNKNOWN_QUOTE);
-        assertEquals( Enum300QuoteRejectReason.UNKNOWN_QUOTE.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.UNKNOWN_QUOTE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.DUPLICATE_QUOTE);
-        assertEquals( Enum300QuoteRejectReason.DUPLICATE_QUOTE.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.DUPLICATE_QUOTE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD);
-        assertEquals( Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.INVALID_PRICE);
-        assertEquals( Enum300QuoteRejectReason.INVALID_PRICE.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.INVALID_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY);
-        assertEquals( Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.OTHER);
-        assertEquals( Enum300QuoteRejectReason.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

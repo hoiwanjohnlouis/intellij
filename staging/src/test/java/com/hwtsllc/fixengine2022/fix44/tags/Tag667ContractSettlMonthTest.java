@@ -33,12 +33,12 @@ class Tag667ContractSettlMonthTest {
     @Test
     void FIX0667Test() {
         FIX44 fixData = FIX44.FIX667_CONTRACT_SETTL_MONTH;
-        assertEquals( "667", fixData.getID());
-        assertEquals( "CONTRACT_SETTL_MONTH", fixData.getName());
-        assertEquals( "ContractSettlMonth", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "667", fixData.toFIXIDString());
+        assertEquals( "CONTRACT_SETTL_MONTH", fixData.toFIXNameString());
+        assertEquals( "ContractSettlMonth", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0667Test() {

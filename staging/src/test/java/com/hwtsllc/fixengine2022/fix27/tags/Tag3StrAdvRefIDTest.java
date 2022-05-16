@@ -35,13 +35,13 @@ class Tag3StrAdvRefIDTest {
     @Test
     void FIX0003Test() {
         FIX27 fixData = FIX27.FIX3_STR_ADV_REF_ID;
-        assertEquals( "ADV_REF_ID", fixData.getName());
-        assertEquals( "3", fixData.getID());
-        assertEquals( "AdvRefId", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ADV_REF_ID", fixData.toFIXNameString());
+        assertEquals( "3", fixData.toFIXIDString());
+        assertEquals( "AdvRefId", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0003Test() {

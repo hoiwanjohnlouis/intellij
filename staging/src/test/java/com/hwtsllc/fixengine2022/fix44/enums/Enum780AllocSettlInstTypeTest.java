@@ -40,43 +40,43 @@ class Enum780AllocSettlInstTypeTest {
         Enum780AllocSettlInstType enumType;
 
         enumType = Enum780AllocSettlInstType.USE_DEFAULTS;
-        assertEquals("0", enumType.getID());
-        assertEquals("USE_DEFAULTS", enumType.getName());
-        assertEquals("0 - Use default instructions", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("USE_DEFAULTS", enumType.toFIXNameString());
+        assertEquals("0 - Use default instructions", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS;
-        assertEquals("1", enumType.getID());
-        assertEquals("DERIVE_FROM_PARAMETERS", enumType.getName());
-        assertEquals("1 - Derive from parameters provided", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("DERIVE_FROM_PARAMETERS", enumType.toFIXNameString());
+        assertEquals("1 - Derive from parameters provided", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum780AllocSettlInstType.FULL_DETAILS;
-        assertEquals("2", enumType.getID());
-        assertEquals("FULL_DETAILS", enumType.getName());
-        assertEquals("2 - Full details provided", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("FULL_DETAILS", enumType.toFIXNameString());
+        assertEquals("2 - Full details provided", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum780AllocSettlInstType.SSI_DB_ID_PROVIDED;
-        assertEquals("3", enumType.getID());
-        assertEquals("SSI_DB_ID_PROVIDED", enumType.getName());
-        assertEquals("3 - SSI DB IDs provided", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("SSI_DB_ID_PROVIDED", enumType.toFIXNameString());
+        assertEquals("3 - SSI DB IDs provided", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS;
-        assertEquals("4", enumType.getID());
-        assertEquals("PHONE_FOR_INSTRUCTIONS", enumType.getName());
-        assertEquals("4 - Phone for instructions", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("PHONE_FOR_INSTRUCTIONS", enumType.toFIXNameString());
+        assertEquals("4 - Phone for instructions", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

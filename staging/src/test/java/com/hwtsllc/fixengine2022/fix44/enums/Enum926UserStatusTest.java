@@ -41,52 +41,52 @@ class Enum926UserStatusTest {
         Enum926UserStatus enumType;
 
         enumType = Enum926UserStatus.LOGGED_IN;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "LOGGED_IN", enumType.getName() );
-        assertEquals( "1 - Logged In", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "LOGGED_IN", enumType.toFIXNameString() );
+        assertEquals( "1 - Logged In", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum926UserStatus.NOT_LOGGED_IN;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "NOT_LOGGED_IN", enumType.getName() );
-        assertEquals( "2 - Not Logged In", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "NOT_LOGGED_IN", enumType.toFIXNameString() );
+        assertEquals( "2 - Not Logged In", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum926UserStatus.USER_NOT_RECOGNISED;
-        assertEquals( "3", enumType.getID() );
-        assertEquals( "USER_NOT_RECOGNISED", enumType.getName() );
-        assertEquals( "3 - User Not Recognised", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString() );
+        assertEquals( "USER_NOT_RECOGNISED", enumType.toFIXNameString() );
+        assertEquals( "3 - User Not Recognised", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum926UserStatus.PASSWORD_INCORRECT;
-        assertEquals( "4", enumType.getID() );
-        assertEquals( "PASSWORD_INCORRECT", enumType.getName() );
-        assertEquals( "4 - Password Incorrect", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString() );
+        assertEquals( "PASSWORD_INCORRECT", enumType.toFIXNameString() );
+        assertEquals( "4 - Password Incorrect", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum926UserStatus.PASSWORD_CHANGED;
-        assertEquals( "5", enumType.getID() );
-        assertEquals( "PASSWORD_CHANGED", enumType.getName() );
-        assertEquals( "5 - Password Changed", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "5", enumType.toFIXIDString() );
+        assertEquals( "PASSWORD_CHANGED", enumType.toFIXNameString() );
+        assertEquals( "5 - Password Changed", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum926UserStatus.OTHER;
-        assertEquals( "6", enumType.getID() );
-        assertEquals( "OTHER", enumType.getName() );
-        assertEquals( "6 - Other", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "6", enumType.toFIXIDString() );
+        assertEquals( "OTHER", enumType.toFIXNameString() );
+        assertEquals( "6 - Other", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

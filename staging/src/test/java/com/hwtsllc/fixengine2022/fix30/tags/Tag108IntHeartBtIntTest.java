@@ -35,12 +35,12 @@ class Tag108IntHeartBtIntTest {
     @Test
     void FIX0108Test() {
         FIX30 fixData = FIX30.FIX108_INT_HEART_BT_INT;
-        assertEquals( "HEART_BT_INT", fixData.getName());
-        assertEquals( "108", fixData.getID());
-        assertEquals( "HeartBtInt", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "HEART_BT_INT", fixData.toFIXNameString());
+        assertEquals( "108", fixData.toFIXIDString());
+        assertEquals( "HeartBtInt", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0108Test() {

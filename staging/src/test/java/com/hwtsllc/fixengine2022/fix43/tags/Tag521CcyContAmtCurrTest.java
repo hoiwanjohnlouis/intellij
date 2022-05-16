@@ -27,12 +27,12 @@ class Tag521CcyContAmtCurrTest {
     @Test
     void FIX0521Test() {
         FIX43 fixData = FIX43.FIX521_CCY_CONT_AMT_CURR;
-        assertEquals( "521", fixData.getID());
-        assertEquals( "CONT_AMT_CURR", fixData.getName());
-        assertEquals( "ContAmtCurr", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "521", fixData.toFIXIDString());
+        assertEquals( "CONT_AMT_CURR", fixData.toFIXNameString());
+        assertEquals( "ContAmtCurr", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0521Test() {

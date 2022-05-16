@@ -46,48 +46,48 @@ class Tag1115EnuOrderCategoryTest {
     @Test
     void FIX1115Test() {
         FIX50 fixData = FIX50.FIX1115_ENU_ORDER_CATEGORY;
-        assertEquals( "1115", fixData.getID());
-        assertEquals( "ORDER_CATEGORY", fixData.getName());
-        assertEquals( "OrderCategory", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1115", fixData.toFIXIDString());
+        assertEquals( "ORDER_CATEGORY", fixData.toFIXNameString());
+        assertEquals( "OrderCategory", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1115Test() {
         Tag1115EnuOrderCategory tagData;
 
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.ORDER );
-        assertEquals( Enum1115OrderCategory.ORDER.getID(), tagData.getDataValue());
+        assertEquals( Enum1115OrderCategory.ORDER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.QUOTE );
-        assertEquals( Enum1115OrderCategory.QUOTE.getID(), tagData.getDataValue());
+        assertEquals( Enum1115OrderCategory.QUOTE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.PRIVATELY );
-        assertEquals( Enum1115OrderCategory.PRIVATELY.getID(), tagData.getDataValue());
+        assertEquals( Enum1115OrderCategory.PRIVATELY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.MULTILEG );
-        assertEquals( Enum1115OrderCategory.MULTILEG.getID(), tagData.getDataValue());
+        assertEquals( Enum1115OrderCategory.MULTILEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.LINKED );
-        assertEquals( Enum1115OrderCategory.LINKED.getID(), tagData.getDataValue());
+        assertEquals( Enum1115OrderCategory.LINKED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.QUOTE_REQUEST );
-        assertEquals( Enum1115OrderCategory.QUOTE_REQUEST.getID(), tagData.getDataValue());
+        assertEquals( Enum1115OrderCategory.QUOTE_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.IMPLIED_ORDER );
-        assertEquals( Enum1115OrderCategory.IMPLIED_ORDER.getID(), tagData.getDataValue());
+        assertEquals( Enum1115OrderCategory.IMPLIED_ORDER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.CROSS_ORDER );
-        assertEquals( Enum1115OrderCategory.CROSS_ORDER.getID(), tagData.getDataValue());
+        assertEquals( Enum1115OrderCategory.CROSS_ORDER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

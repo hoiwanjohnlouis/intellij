@@ -34,12 +34,12 @@ class Tag132PrcBidPxTest {
     @Test
     void FIX0132Test() {
         FIX40 fixData = FIX40.FIX132_PRC_BID_PX;
-        assertEquals( "BID_PX", fixData.getName());
-        assertEquals( "132", fixData.getID());
-        assertEquals( "BidPx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "BID_PX", fixData.toFIXNameString());
+        assertEquals( "132", fixData.toFIXIDString());
+        assertEquals( "BidPx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0132Test() {

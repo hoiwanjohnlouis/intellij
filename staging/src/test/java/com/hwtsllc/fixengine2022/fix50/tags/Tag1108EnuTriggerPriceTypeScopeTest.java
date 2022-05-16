@@ -47,31 +47,31 @@ class Tag1108EnuTriggerPriceTypeScopeTest {
     @Test
     void FIX1108Test() {
         FIX50 fixData = FIX50.FIX1108_ENU_TRIGGER_PRICE_TYPE_SCOPE;
-        assertEquals( "1108", fixData.getID());
-        assertEquals( "TRIGGER_PRICE_TYPE_SCOPE", fixData.getName());
-        assertEquals( "TriggerPriceTypeScope", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1108", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_PRICE_TYPE_SCOPE", fixData.toFIXNameString());
+        assertEquals( "TriggerPriceTypeScope", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1108Test() {
         Tag1108EnuTriggerPriceTypeScope tagData;
 
         tagData = new Tag1108EnuTriggerPriceTypeScope( MyEnumPriceScope.NONE );
-        assertEquals( MyEnumPriceScope.NONE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceScope.NONE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1108EnuTriggerPriceTypeScope( MyEnumPriceScope.LOCAL );
-        assertEquals( MyEnumPriceScope.LOCAL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceScope.LOCAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1108EnuTriggerPriceTypeScope( MyEnumPriceScope.NATIONAL );
-        assertEquals( MyEnumPriceScope.NATIONAL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceScope.NATIONAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1108EnuTriggerPriceTypeScope( MyEnumPriceScope.GLOBAL );
-        assertEquals( MyEnumPriceScope.GLOBAL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceScope.GLOBAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

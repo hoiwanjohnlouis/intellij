@@ -38,12 +38,12 @@ class Tag1082QtySecondaryDisplayQtyTest {
     @Test
     void FIX1082Test() {
         FIX50 fixData = FIX50.FIX1082_QTY_SECONDARY_DISPLAY_QTY;
-        assertEquals( "1082", fixData.getID());
-        assertEquals( "SECONDARY_DISPLAY_QTY", fixData.getName());
-        assertEquals( "SecondaryDisplayQty", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1082", fixData.toFIXIDString());
+        assertEquals( "SECONDARY_DISPLAY_QTY", fixData.toFIXNameString());
+        assertEquals( "SecondaryDisplayQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1082Test() {

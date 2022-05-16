@@ -29,12 +29,12 @@ class Tag440StrClearingAccountTest {
     @Test
     void FIX0440Test() {
         FIX42 fixData = FIX42.FIX440_STR_CLEARING_ACCOUNT;
-        assertEquals( "440", fixData.getID());
-        assertEquals( "CLEARING_ACCOUNT", fixData.getName());
-        assertEquals( "ClearingAccount", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "440", fixData.toFIXIDString());
+        assertEquals( "CLEARING_ACCOUNT", fixData.toFIXNameString());
+        assertEquals( "ClearingAccount", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0440Test() {

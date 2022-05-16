@@ -28,12 +28,12 @@ class Tag389FloDiscretionOffsetValueTest {
     @Test
     void FIX0389Test() {
         FIX42 fixData = FIX42.FIX389_FLO_DISCRETION_OFFSET_VALUE;
-        assertEquals( "389", fixData.getID());
-        assertEquals( "DISCRETION_OFFSET_VALUE", fixData.getName());
-        assertEquals( "DiscretionOffsetValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "389", fixData.toFIXIDString());
+        assertEquals( "DISCRETION_OFFSET_VALUE", fixData.toFIXNameString());
+        assertEquals( "DiscretionOffsetValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0389Test() {

@@ -27,12 +27,12 @@ class Tag544EnuCashMarginTest {
     @Test
     void FIX0544Test() {
         FIX43 fixData = FIX43.FIX544_ENU_CASH_MARGIN;
-        assertEquals( "544", fixData.getID());
-        assertEquals( "CASH_MARGIN", fixData.getName());
-        assertEquals( "CashMargin", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "544", fixData.toFIXIDString());
+        assertEquals( "CASH_MARGIN", fixData.toFIXNameString());
+        assertEquals( "CashMargin", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0544Test() {

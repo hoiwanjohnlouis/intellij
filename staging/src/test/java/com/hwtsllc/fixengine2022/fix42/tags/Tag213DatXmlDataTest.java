@@ -28,12 +28,12 @@ class Tag213DatXmlDataTest {
     @Test
     void FIX0213Test() {
         FIX42 fixData = FIX42.FIX213_DAT_XML_DATA;
-        assertEquals( "213", fixData.getID());
-        assertEquals( "XML_DATA", fixData.getName());
-        assertEquals( "XmlData", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "213", fixData.toFIXIDString());
+        assertEquals( "XML_DATA", fixData.toFIXNameString());
+        assertEquals( "XmlData", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0213Test() {

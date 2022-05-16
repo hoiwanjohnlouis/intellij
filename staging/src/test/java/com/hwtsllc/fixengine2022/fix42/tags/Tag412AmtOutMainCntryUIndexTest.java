@@ -28,12 +28,12 @@ class Tag412AmtOutMainCntryUIndexTest {
     @Test
     void FIX0412Test() {
         FIX42 fixData = FIX42.FIX412_AMT_OUT_MAIN_CNTRY_U_INDEX;
-        assertEquals( "412", fixData.getID());
-        assertEquals( "OUT_MAIN_CNTRY_U_INDEX", fixData.getName());
-        assertEquals( "OutMainCntryUIndex", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "412", fixData.toFIXIDString());
+        assertEquals( "OUT_MAIN_CNTRY_U_INDEX", fixData.toFIXNameString());
+        assertEquals( "OutMainCntryUIndex", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0412Test() {

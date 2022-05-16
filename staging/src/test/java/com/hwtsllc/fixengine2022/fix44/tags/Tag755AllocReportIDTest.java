@@ -33,12 +33,12 @@ class Tag755AllocReportIDTest {
     @Test
     void FIX0755Test() {
         FIX44 fixData = FIX44.FIX755_ALLOC_REPORT_ID;
-        assertEquals( "755", fixData.getID());
-        assertEquals( "ALLOC_REPORT_ID", fixData.getName());
-        assertEquals( "AllocReportID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "755", fixData.toFIXIDString());
+        assertEquals( "ALLOC_REPORT_ID", fixData.toFIXNameString());
+        assertEquals( "AllocReportID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0755Test() {

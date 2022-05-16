@@ -38,12 +38,12 @@ class Tag394EnuBidTypeTest {
     @Test
     void FIX0394Test() {
         FIX42 fixData = FIX42.FIX394_ENU_BID_TYPE;
-        assertEquals( "394", fixData.getID());
-        assertEquals( "BID_TYPE", fixData.getName());
-        assertEquals( "BidType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "394", fixData.toFIXIDString());
+        assertEquals( "BID_TYPE", fixData.toFIXNameString());
+        assertEquals( "BidType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0394Test() {
@@ -53,15 +53,15 @@ class Tag394EnuBidTypeTest {
          * 1-3 msg types
          */
         tagData = new Tag394EnuBidType(Enum394BidType.NON_DISCLOSED);
-        assertEquals( Enum394BidType.NON_DISCLOSED.getID(), tagData.getDataValue());
+        assertEquals( Enum394BidType.NON_DISCLOSED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag394EnuBidType(Enum394BidType.DISCLOSED);
-        assertEquals( Enum394BidType.DISCLOSED.getID(), tagData.getDataValue());
+        assertEquals( Enum394BidType.DISCLOSED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag394EnuBidType(Enum394BidType.NO_BIDDING);
-        assertEquals( Enum394BidType.NO_BIDDING.getID(), tagData.getDataValue());
+        assertEquals( Enum394BidType.NO_BIDDING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

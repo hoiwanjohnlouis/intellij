@@ -38,12 +38,12 @@ class Tag912BoolLastRptRequestedTest {
     @Test
     void FIX0912Test() {
         FIX44 fixData = FIX44.FIX912_BOOL_LAST_RPT_REQUESTED;
-        assertEquals( "912", fixData.getID());
-        assertEquals( "LAST_RPT_REQUESTED", fixData.getName());
-        assertEquals( "LastRptRequested", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "912", fixData.toFIXIDString());
+        assertEquals( "LAST_RPT_REQUESTED", fixData.toFIXNameString());
+        assertEquals( "LastRptRequested", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0912Test() {

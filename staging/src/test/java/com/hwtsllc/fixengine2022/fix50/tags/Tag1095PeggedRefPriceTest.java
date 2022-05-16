@@ -39,12 +39,12 @@ class Tag1095PeggedRefPriceTest {
     @Test
     void FIX1095Test() {
         FIX50 fixData = FIX50.FIX1095_PEGGED_REF_PRICE;
-        assertEquals( "1095", fixData.getID());
-        assertEquals( "PEGGED_REF_PRICE", fixData.getName());
-        assertEquals( "PeggedRefPrice", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1095", fixData.toFIXIDString());
+        assertEquals( "PEGGED_REF_PRICE", fixData.toFIXNameString());
+        assertEquals( "PeggedRefPrice", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1095Test() {

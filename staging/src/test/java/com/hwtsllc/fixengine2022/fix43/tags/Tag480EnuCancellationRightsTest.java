@@ -27,12 +27,12 @@ class Tag480EnuCancellationRightsTest {
     @Test
     void FIX0480Test() {
         FIX43 fixData = FIX43.FIX480_ENU_CANCELLATION_RIGHTS;
-        assertEquals( "480", fixData.getID());
-        assertEquals( "CANCELLATION_RIGHTS", fixData.getName());
-        assertEquals( "CancellationRights", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "480", fixData.toFIXIDString());
+        assertEquals( "CANCELLATION_RIGHTS", fixData.toFIXNameString());
+        assertEquals( "CancellationRights", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0480Test() {

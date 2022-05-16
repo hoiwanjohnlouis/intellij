@@ -28,12 +28,12 @@ class Tag417IntNumBiddersTest {
     @Test
     void FIX0417Test() {
         FIX42 fixData = FIX42.FIX417_INT_NUM_BIDDERS;
-        assertEquals( "417", fixData.getID());
-        assertEquals( "NUM_BIDDERS", fixData.getName());
-        assertEquals( "NumBidders", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "417", fixData.toFIXIDString());
+        assertEquals( "NUM_BIDDERS", fixData.toFIXNameString());
+        assertEquals( "NumBidders", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0417Test() {

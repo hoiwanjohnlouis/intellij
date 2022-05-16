@@ -42,35 +42,35 @@ class Enum29LastCapacityTest {
          * 1-4
          */
         enumType = Enum29LastCapacity.AGENT;
-        assertEquals("1", enumType.getID());
-        assertEquals("AGENT", enumType.getName());
-        assertEquals("1 - Agent", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("AGENT", enumType.toFIXNameString());
+        assertEquals("1 - Agent", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum29LastCapacity.CROSS_AS_AGENT;
-        assertEquals("2", enumType.getID());
-        assertEquals("CROSS_AS_AGENT", enumType.getName());
-        assertEquals("2 - Cross as agent", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("CROSS_AS_AGENT", enumType.toFIXNameString());
+        assertEquals("2 - Cross as agent", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum29LastCapacity.CROSS_AS_PRINCIPAL;
-        assertEquals("3", enumType.getID());
-        assertEquals("CROSS_AS_PRINCIPAL", enumType.getName());
-        assertEquals("3 - Cross as principal", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("CROSS_AS_PRINCIPAL", enumType.toFIXNameString());
+        assertEquals("3 - Cross as principal", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum29LastCapacity.PRINCIPAL;
-        assertEquals("4", enumType.getID());
-        assertEquals("PRINCIPAL", enumType.getName());
-        assertEquals("4 - Principal", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("PRINCIPAL", enumType.toFIXNameString());
+        assertEquals("4 - Principal", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

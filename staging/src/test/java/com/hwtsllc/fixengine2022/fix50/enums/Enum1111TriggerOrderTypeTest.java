@@ -43,19 +43,19 @@ class Enum1111TriggerOrderTypeTest {
         Enum1111TriggerOrderType enumType;
 
         enumType = Enum1111TriggerOrderType.MARKET;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "MARKET", enumType.getName() );
-        assertEquals( "1 - Market", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "MARKET", enumType.toFIXNameString() );
+        assertEquals( "1 - Market", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1111TriggerOrderType.LIMIT;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "LIMIT", enumType.getName() );
-        assertEquals( "2 - Limit", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "LIMIT", enumType.toFIXNameString() );
+        assertEquals( "2 - Limit", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

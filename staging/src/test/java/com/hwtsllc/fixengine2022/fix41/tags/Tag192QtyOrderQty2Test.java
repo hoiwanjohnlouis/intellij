@@ -36,12 +36,12 @@ class Tag192QtyOrderQty2Test {
     @Test
     void FIX0192Test() {
         FIX41 fixData = FIX41.FIX192_QTY_ORDER_QTY_2;
-        assertEquals( "192", fixData.getID());
-        assertEquals( "ORDER_QTY_2", fixData.getName());
-        assertEquals( "OrderQty2", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "192", fixData.toFIXIDString());
+        assertEquals( "ORDER_QTY_2", fixData.toFIXNameString());
+        assertEquals( "OrderQty2", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0192Test() {

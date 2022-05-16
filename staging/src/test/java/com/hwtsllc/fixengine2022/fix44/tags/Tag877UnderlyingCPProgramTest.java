@@ -33,12 +33,12 @@ class Tag877UnderlyingCPProgramTest {
     @Test
     void FIX0877Test() {
         FIX44 fixData = FIX44.FIX877_UNDERLYING_CP_PROGRAM;
-        assertEquals( "877", fixData.getID());
-        assertEquals( "UNDERLYING_CP_PROGRAM", fixData.getName());
-        assertEquals( "UnderlyingCPProgram", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "877", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CP_PROGRAM", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCPProgram", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0877Test() {

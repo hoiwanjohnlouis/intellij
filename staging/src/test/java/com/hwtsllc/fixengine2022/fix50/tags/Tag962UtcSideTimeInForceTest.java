@@ -40,12 +40,12 @@ class Tag962UtcSideTimeInForceTest {
     @Test
     void FIX0962Test() {
         FIX50 fixData = FIX50.FIX962_UTC_SIDE_TIME_IN_FORCE;
-        assertEquals( "962", fixData.getID());
-        assertEquals( "SIDE_TIME_IN_FORCE", fixData.getName());
-        assertEquals( "SideTimeInForce", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "962", fixData.toFIXIDString());
+        assertEquals( "SIDE_TIME_IN_FORCE", fixData.toFIXNameString());
+        assertEquals( "SideTimeInForce", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0962Test() {

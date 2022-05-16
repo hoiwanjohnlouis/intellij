@@ -38,67 +38,67 @@ class Enum532MassCancelRejectReasonTest {
          *  0-6, types
          */
         enumType = Enum532MassCancelRejectReason.MASS_CANCEL_NOT_SUPPORTED;
-        assertEquals("0", enumType.getID());
-        assertEquals("MASS_CANCEL_NOT_SUPPORTED", enumType.getName());
-        assertEquals("0 - Mass Cancel Not Supported", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("MASS_CANCEL_NOT_SUPPORTED", enumType.toFIXNameString());
+        assertEquals("0 - Mass Cancel Not Supported", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SECURITY;
-        assertEquals("1", enumType.getID());
-        assertEquals("UNKNOWN_SECURITY", enumType.getName());
-        assertEquals("1 - Invalid or Unknown Security", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("UNKNOWN_SECURITY", enumType.toFIXNameString());
+        assertEquals("1 - Invalid or Unknown Security", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_UNDERLYING;
-        assertEquals("2", enumType.getID());
-        assertEquals("UNKNOWN_UNDERLYING", enumType.getName());
-        assertEquals("2 - Invalid or Unknown Underlying security", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("UNKNOWN_UNDERLYING", enumType.toFIXNameString());
+        assertEquals("2 - Invalid or Unknown Underlying security", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_PRODUCT;
-        assertEquals("3", enumType.getID());
-        assertEquals("UNKNOWN_PRODUCT", enumType.getName());
-        assertEquals("3 - Invalid or Unknown Product", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("UNKNOWN_PRODUCT", enumType.toFIXNameString());
+        assertEquals("3 - Invalid or Unknown Product", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_CFICODE;
-        assertEquals("4", enumType.getID());
-        assertEquals("UNKNOWN_CFICODE", enumType.getName());
-        assertEquals("4 - Invalid or Unknown CFICode", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("UNKNOWN_CFICODE", enumType.toFIXNameString());
+        assertEquals("4 - Invalid or Unknown CFICode", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE;
-        assertEquals("5", enumType.getID());
-        assertEquals("UNKNOWN_SECURITYTYPE", enumType.getName());
-        assertEquals("5 - Invalid or Unknown SecurityType", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("5", enumType.toFIXIDString());
+        assertEquals("UNKNOWN_SECURITYTYPE", enumType.toFIXNameString());
+        assertEquals("5 - Invalid or Unknown SecurityType", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SESSION;
-        assertEquals("6", enumType.getID());
-        assertEquals("UNKNOWN_SESSION", enumType.getName());
-        assertEquals("6 - Invalid or Unknown Trading Session", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("6", enumType.toFIXIDString());
+        assertEquals("UNKNOWN_SESSION", enumType.toFIXNameString());
+        assertEquals("6 - Invalid or Unknown Trading Session", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
 
@@ -106,12 +106,12 @@ class Enum532MassCancelRejectReasonTest {
          *  99, type
          */
         enumType = Enum532MassCancelRejectReason.OTHER;
-        assertEquals("99", enumType.getID());
-        assertEquals("OTHER", enumType.getName());
-        assertEquals("99 - Other", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("99", enumType.toFIXIDString());
+        assertEquals("OTHER", enumType.toFIXNameString());
+        assertEquals("99 - Other", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

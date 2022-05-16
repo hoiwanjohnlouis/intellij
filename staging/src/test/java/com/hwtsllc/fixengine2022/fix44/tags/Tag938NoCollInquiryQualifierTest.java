@@ -33,12 +33,12 @@ class Tag938NoCollInquiryQualifierTest {
     @Test
     void FIX0938Test() {
         FIX44 fixData = FIX44.FIX938_NO_COLL_INQUIRY_QUALIFIER;
-        assertEquals( "938", fixData.getID());
-        assertEquals( "NO_COLL_INQUIRY_QUALIFIER", fixData.getName());
-        assertEquals( "NoCollInquiryQualifier", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "938", fixData.toFIXIDString());
+        assertEquals( "NO_COLL_INQUIRY_QUALIFIER", fixData.toFIXNameString());
+        assertEquals( "NoCollInquiryQualifier", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0938Test() {

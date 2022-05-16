@@ -27,12 +27,12 @@ class Tag596CouLegCountryOfIssueTest {
     @Test
     void FIX0596Test() {
         FIX43 fixData = FIX43.FIX596_COU_LEG_COUNTRY_OF_ISSUE;
-        assertEquals( "596", fixData.getID());
-        assertEquals( "LEG_COUNTRY_OF_ISSUE", fixData.getName());
-        assertEquals( "LegCountryOfIssue", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "596", fixData.toFIXIDString());
+        assertEquals( "LEG_COUNTRY_OF_ISSUE", fixData.toFIXNameString());
+        assertEquals( "LegCountryOfIssue", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0596Test() {

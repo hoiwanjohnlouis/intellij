@@ -34,13 +34,13 @@ class Tag7SeqBeginSeqNoTest {
     @Test
     void FIX0007Test() {
         FIX27 fixData = FIX27.FIX7_SEQ_BEGIN_SEQ_NO;
-        assertEquals( "BEGIN_SEQ_NO", fixData.getName());
-        assertEquals( "7", fixData.getID());
-        assertEquals( "BeginSeqNo", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "BEGIN_SEQ_NO", fixData.toFIXNameString());
+        assertEquals( "7", fixData.toFIXIDString());
+        assertEquals( "BeginSeqNo", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0007Test() {

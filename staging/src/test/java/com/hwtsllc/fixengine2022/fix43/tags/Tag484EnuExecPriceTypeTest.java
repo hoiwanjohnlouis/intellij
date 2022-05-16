@@ -26,12 +26,12 @@ class Tag484EnuExecPriceTypeTest {
     @Test
     void FIX0484Test() {
         FIX43 fixData = FIX43.FIX484_ENU_EXEC_PRICE_TYPE;
-        assertEquals( "484", fixData.getID());
-        assertEquals( "EXEC_PRICE_TYPE", fixData.getName());
-        assertEquals( "ExecPriceType", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "484", fixData.toFIXIDString());
+        assertEquals( "EXEC_PRICE_TYPE", fixData.toFIXNameString());
+        assertEquals( "ExecPriceType", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0484Test() {

@@ -42,18 +42,18 @@ class Tag127EnuDKReasonTest {
     @Test
     void FIX0127Test() {
         FIX40 fixData = FIX40.FIX127_ENU_DK_REASON;
-        assertEquals( fixData.getName(), "DK_REASON");
-        assertEquals( fixData.getID(), "127");
-        assertEquals( fixData.getDescription(), "DKReason");
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( fixData.toFIXNameString(), "DK_REASON");
+        assertEquals( fixData.toFIXIDString(), "127");
+        assertEquals( fixData.toFIXDescriptionString(), "DKReason");
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0127Test() {
         Tag127EnuDKReason tagData;
 
-        /**
+        /*
          * A-F, Z DKReason type
          */
         tagData = new Tag127EnuDKReason(Enum127DKReason.UNKNOWN_SYMBOL);

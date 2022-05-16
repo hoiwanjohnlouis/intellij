@@ -27,12 +27,12 @@ class Tag580IntNoDatesTest {
     @Test
     void FIX0580Test() {
         FIX43 fixData = FIX43.FIX580_INT_NO_DATES;
-        assertEquals( "580", fixData.getID());
-        assertEquals( "NO_DATES", fixData.getName());
-        assertEquals( "NoDates", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "580", fixData.toFIXIDString());
+        assertEquals( "NO_DATES", fixData.toFIXNameString());
+        assertEquals( "NoDates", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0580Test() {

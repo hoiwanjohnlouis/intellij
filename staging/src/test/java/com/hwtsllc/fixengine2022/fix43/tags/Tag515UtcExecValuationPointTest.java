@@ -27,12 +27,12 @@ class Tag515UtcExecValuationPointTest {
     @Test
     void FIX0515Test() {
         FIX43 fixData = FIX43.FIX515_UTC_EXEC_VALUATION_POINT;
-        assertEquals( "515", fixData.getID());
-        assertEquals( "EXEC_VALUATION_POINT", fixData.getName());
-        assertEquals( "ExecValuationPoint", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "515", fixData.toFIXIDString());
+        assertEquals( "EXEC_VALUATION_POINT", fixData.toFIXNameString());
+        assertEquals( "ExecValuationPoint", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0515Test() {

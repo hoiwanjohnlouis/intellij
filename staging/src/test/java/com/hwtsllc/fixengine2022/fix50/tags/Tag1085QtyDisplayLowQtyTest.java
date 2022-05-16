@@ -35,12 +35,12 @@ class Tag1085QtyDisplayLowQtyTest {
     @Test
     void FIX1085Test() {
         FIX50 fixData = FIX50.FIX1085_QTY_DISPLAY_LOW_QTY;
-        assertEquals( "1085", fixData.getID());
-        assertEquals( "DISPLAY_LOW_QTY", fixData.getName());
-        assertEquals( "DisplayLowQty", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1085", fixData.toFIXIDString());
+        assertEquals( "DISPLAY_LOW_QTY", fixData.toFIXNameString());
+        assertEquals( "DisplayLowQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1085Test() {

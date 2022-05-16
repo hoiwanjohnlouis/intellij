@@ -38,12 +38,12 @@ class Tag121BoolForexReqTest {
     @Test
     void FIX0121Test() {
         FIX40 fixData = FIX40.FIX121_BOOL_FOREX_REQ;
-        assertEquals( "FOREX_REQ", fixData.getName());
-        assertEquals( "121", fixData.getID());
-        assertEquals( "ForexReq", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "FOREX_REQ", fixData.toFIXNameString());
+        assertEquals( "121", fixData.toFIXIDString());
+        assertEquals( "ForexReq", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0121Test() {

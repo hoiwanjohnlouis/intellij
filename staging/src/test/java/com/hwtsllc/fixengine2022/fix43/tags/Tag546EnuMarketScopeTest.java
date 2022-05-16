@@ -40,27 +40,27 @@ class Tag546EnuMarketScopeTest {
     @Test
     void FIX0546Test() {
         FIX43 fixData = FIX43.FIX546_ENU_MARKET_SCOPE;
-        assertEquals( "546", fixData.getID());
-        assertEquals( "MARKET_SCOPE", fixData.getName());
-        assertEquals( "MarketScope", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "546", fixData.toFIXIDString());
+        assertEquals( "MARKET_SCOPE", fixData.toFIXNameString());
+        assertEquals( "MarketScope", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0546Test() {
         Tag546EnuMarketScope tagData;
 
         tagData = new Tag546EnuMarketScope(MyEnumMarketScope.LOCAL_MARKET);
-        assertEquals( MyEnumMarketScope.LOCAL_MARKET.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMarketScope.LOCAL_MARKET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag546EnuMarketScope(MyEnumMarketScope.NATIONAL);
-        assertEquals( MyEnumMarketScope.NATIONAL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMarketScope.NATIONAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag546EnuMarketScope(MyEnumMarketScope.GLOBAL);
-        assertEquals( MyEnumMarketScope.GLOBAL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMarketScope.GLOBAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

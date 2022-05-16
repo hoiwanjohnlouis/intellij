@@ -44,35 +44,35 @@ class Enum163SettlInstTransTypeTest {
          * N,C,R,T msg types
          */
         enumType = Enum163SettlInstTransType.NEW;
-        assertEquals("N", enumType.getID());
-        assertEquals("NEW", enumType.getName());
-        assertEquals("N - New", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("N", enumType.toFIXIDString());
+        assertEquals("NEW", enumType.toFIXNameString());
+        assertEquals("N - New", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum163SettlInstTransType.CANCEL;
-        assertEquals("C", enumType.getID());
-        assertEquals("CANCEL", enumType.getName());
-        assertEquals("C - Cancel", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("C", enumType.toFIXIDString());
+        assertEquals("CANCEL", enumType.toFIXNameString());
+        assertEquals("C - Cancel", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum163SettlInstTransType.REPLACE;
-        assertEquals("R", enumType.getID());
-        assertEquals("REPLACE", enumType.getName());
-        assertEquals("R - Replace", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("R", enumType.toFIXIDString());
+        assertEquals("REPLACE", enumType.toFIXNameString());
+        assertEquals("R - Replace", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum163SettlInstTransType.RESTATE;
-        assertEquals("T", enumType.getID());
-        assertEquals("RESTATE", enumType.getName());
-        assertEquals("T - Restate", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("T", enumType.toFIXIDString());
+        assertEquals("RESTATE", enumType.toFIXNameString());
+        assertEquals("T - Restate", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

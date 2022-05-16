@@ -27,12 +27,12 @@ class Tag461StrCFICodeTest {
     @Test
     void FIX0461Test() {
         FIX43 fixData = FIX43.FIX461_STR_CFI_CODE;
-        assertEquals( "461", fixData.getID());
-        assertEquals( "CFI_CODE", fixData.getName());
-        assertEquals( "CFICode", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "461", fixData.toFIXIDString());
+        assertEquals( "CFI_CODE", fixData.toFIXNameString());
+        assertEquals( "CFICode", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0461Test() {

@@ -28,12 +28,12 @@ class Tag329BoolDueToRelatedTest {
     @Test
     void FIX0329Test() {
         FIX42 fixData = FIX42.FIX329_BOOL_DUE_TO_RELATED;
-        assertEquals( "329", fixData.getID());
-        assertEquals( "DUE_TO_RELATED", fixData.getName());
-        assertEquals( "DueToRelated", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "329", fixData.toFIXIDString());
+        assertEquals( "DUE_TO_RELATED", fixData.toFIXNameString());
+        assertEquals( "DueToRelated", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0329Test() {

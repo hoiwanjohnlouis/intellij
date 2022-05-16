@@ -27,12 +27,12 @@ class Tag485FloExecPriceAdjustmentTest {
     @Test
     void FIX0485Test() {
         FIX43 fixData = FIX43.FIX485_FLO_EXEC_PRICE_ADJUSTMENT;
-        assertEquals( "485", fixData.getID());
-        assertEquals( "EXEC_PRICE_ADJUSTMENT", fixData.getName());
-        assertEquals( "ExecPriceAdjustment", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "485", fixData.toFIXIDString());
+        assertEquals( "EXEC_PRICE_ADJUSTMENT", fixData.toFIXNameString());
+        assertEquals( "ExecPriceAdjustment", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0485Test() {

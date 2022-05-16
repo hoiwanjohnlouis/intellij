@@ -28,12 +28,12 @@ class Tag215NumNoRoutingIDsTest {
     @Test
     void FIX0215Test() {
         FIX42 fixData = FIX42.FIX215_NUM_NO_ROUTING_IDS;
-        assertEquals( "215", fixData.getID());
-        assertEquals( "NO_ROUTING_IDS", fixData.getName());
-        assertEquals( "NoRoutingIDs", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "215", fixData.toFIXIDString());
+        assertEquals( "NO_ROUTING_IDS", fixData.toFIXNameString());
+        assertEquals( "NoRoutingIDs", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0215Test() {

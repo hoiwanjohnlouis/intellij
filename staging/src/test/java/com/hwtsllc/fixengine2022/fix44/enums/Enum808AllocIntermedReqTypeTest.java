@@ -44,52 +44,52 @@ class Enum808AllocIntermedReqTypeTest {
         Enum808AllocIntermedReqType enumType;
 
         enumType = Enum808AllocIntermedReqType.PENDING_ACCEPT;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "PENDING_ACCEPT", enumType.getName() );
-        assertEquals( "1 - Pending Accept", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "PENDING_ACCEPT", enumType.toFIXNameString() );
+        assertEquals( "1 - Pending Accept", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum808AllocIntermedReqType.PENDING_RELEASE;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "PENDING_RELEASE", enumType.getName() );
-        assertEquals( "2 - Pending Release", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "PENDING_RELEASE", enumType.toFIXNameString() );
+        assertEquals( "2 - Pending Release", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum808AllocIntermedReqType.PENDING_REVERSAL;
-        assertEquals( "3", enumType.getID() );
-        assertEquals( "PENDING_REVERSAL", enumType.getName() );
-        assertEquals( "3 - Pending Reversal", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString() );
+        assertEquals( "PENDING_REVERSAL", enumType.toFIXNameString() );
+        assertEquals( "3 - Pending Reversal", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum808AllocIntermedReqType.ACCEPT;
-        assertEquals( "4", enumType.getID() );
-        assertEquals( "ACCEPT", enumType.getName() );
-        assertEquals( "4 - Accept", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString() );
+        assertEquals( "ACCEPT", enumType.toFIXNameString() );
+        assertEquals( "4 - Accept", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum808AllocIntermedReqType.BLOCK_LEVEL_REJECT;
-        assertEquals( "5", enumType.getID() );
-        assertEquals( "BLOCK_LEVEL_REJECT", enumType.getName() );
-        assertEquals( "5 - Block Level Reject", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "5", enumType.toFIXIDString() );
+        assertEquals( "BLOCK_LEVEL_REJECT", enumType.toFIXNameString() );
+        assertEquals( "5 - Block Level Reject", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum808AllocIntermedReqType.ACCOUNT_LEVEL_REJECT;
-        assertEquals( "6", enumType.getID() );
-        assertEquals( "ACCOUNT_LEVEL_REJECT", enumType.getName() );
-        assertEquals( "6 - Account Level Reject", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "6", enumType.toFIXIDString() );
+        assertEquals( "ACCOUNT_LEVEL_REJECT", enumType.toFIXNameString() );
+        assertEquals( "6 - Account Level Reject", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

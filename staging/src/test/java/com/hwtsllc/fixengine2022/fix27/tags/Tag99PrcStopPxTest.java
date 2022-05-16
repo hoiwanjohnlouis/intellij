@@ -35,13 +35,13 @@ class Tag99PrcStopPxTest {
     @Test
     void FIX0099Test() {
         FIX27 fixData = FIX27.FIX99_PRC_STOP_PX;
-        assertEquals( "STOP_PX", fixData.getName());
-        assertEquals( "99", fixData.getID());
-        assertEquals( "StopPx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "STOP_PX", fixData.toFIXNameString());
+        assertEquals( "99", fixData.toFIXIDString());
+        assertEquals( "StopPx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0099Test() {

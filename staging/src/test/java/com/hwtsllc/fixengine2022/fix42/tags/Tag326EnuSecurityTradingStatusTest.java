@@ -61,12 +61,12 @@ class Tag326EnuSecurityTradingStatusTest {
     @Test
     void FIX0326Test() {
         FIX42 fixData = FIX42.FIX326_ENU_SECURITY_TRADING_STATUS;
-        assertEquals( "326", fixData.getID());
-        assertEquals( "SECURITY_TRADING_STATUS", fixData.getName());
-        assertEquals( "SecurityTradingStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "326", fixData.toFIXIDString());
+        assertEquals( "SECURITY_TRADING_STATUS", fixData.toFIXNameString());
+        assertEquals( "SecurityTradingStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0326Test() {
@@ -76,91 +76,91 @@ class Tag326EnuSecurityTradingStatusTest {
          * 1-10, 12-23 msg types. skipped 11.
          */
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.OPENING_DELAY);
-        assertEquals( Enum326SecurityTradingStatus.OPENING_DELAY.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.OPENING_DELAY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.TRADING_HALT);
-        assertEquals( Enum326SecurityTradingStatus.TRADING_HALT.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.TRADING_HALT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.RESUME);
-        assertEquals( Enum326SecurityTradingStatus.RESUME.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.RESUME.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.NO_OPEN_NO_RESUME);
-        assertEquals( Enum326SecurityTradingStatus.NO_OPEN_NO_RESUME.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.NO_OPEN_NO_RESUME.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.PRICE_INDICATION);
-        assertEquals( Enum326SecurityTradingStatus.PRICE_INDICATION.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.PRICE_INDICATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.TRADING_RANGE_INDICATION);
-        assertEquals( Enum326SecurityTradingStatus.TRADING_RANGE_INDICATION.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.TRADING_RANGE_INDICATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.MARKET_IMBALANCE_BUY);
-        assertEquals( Enum326SecurityTradingStatus.MARKET_IMBALANCE_BUY.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.MARKET_IMBALANCE_BUY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.MARKET_IMBALANCE_SELL);
-        assertEquals( Enum326SecurityTradingStatus.MARKET_IMBALANCE_SELL.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.MARKET_IMBALANCE_SELL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.MARKET_ON_CLOSE_IMBALANCE_BUY);
-        assertEquals( Enum326SecurityTradingStatus.MARKET_ON_CLOSE_IMBALANCE_BUY.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.MARKET_ON_CLOSE_IMBALANCE_BUY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.MARKET_ON_CLOSE_IMBALANCE_SELL);
-        assertEquals( Enum326SecurityTradingStatus.MARKET_ON_CLOSE_IMBALANCE_SELL.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.MARKET_ON_CLOSE_IMBALANCE_SELL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.NO_MARKET_IMBALANCE);
-        assertEquals( Enum326SecurityTradingStatus.NO_MARKET_IMBALANCE.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.NO_MARKET_IMBALANCE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.NO_MARKET_ON_CLOSE_IMBALANCE);
-        assertEquals( Enum326SecurityTradingStatus.NO_MARKET_ON_CLOSE_IMBALANCE.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.NO_MARKET_ON_CLOSE_IMBALANCE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.ITS_PRE_OPENING);
-        assertEquals( Enum326SecurityTradingStatus.ITS_PRE_OPENING.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.ITS_PRE_OPENING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.NEW_PRICE_INDICATION);
-        assertEquals( Enum326SecurityTradingStatus.NEW_PRICE_INDICATION.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.NEW_PRICE_INDICATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.TRADE_DISSEMINATION_TIME);
-        assertEquals( Enum326SecurityTradingStatus.TRADE_DISSEMINATION_TIME.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.TRADE_DISSEMINATION_TIME.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.READY_TO_TRADE);
-        assertEquals( Enum326SecurityTradingStatus.READY_TO_TRADE.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.READY_TO_TRADE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.NOT_AVAILABLE_FOR_TRADING);
-        assertEquals( Enum326SecurityTradingStatus.NOT_AVAILABLE_FOR_TRADING.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.NOT_AVAILABLE_FOR_TRADING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.NOT_TRADED_ON_THIS_MARKET);
-        assertEquals( Enum326SecurityTradingStatus.NOT_TRADED_ON_THIS_MARKET.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.NOT_TRADED_ON_THIS_MARKET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.UNKNOWN_OR_INVALID);
-        assertEquals( Enum326SecurityTradingStatus.UNKNOWN_OR_INVALID.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.UNKNOWN_OR_INVALID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.PRE_OPEN);
-        assertEquals( Enum326SecurityTradingStatus.PRE_OPEN.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.PRE_OPEN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.OPENING_ROTATION);
-        assertEquals( Enum326SecurityTradingStatus.OPENING_ROTATION.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.OPENING_ROTATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag326EnuSecurityTradingStatus(Enum326SecurityTradingStatus.FAST_MARKET);
-        assertEquals( Enum326SecurityTradingStatus.FAST_MARKET.getID(), tagData.getDataValue());
+        assertEquals( Enum326SecurityTradingStatus.FAST_MARKET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

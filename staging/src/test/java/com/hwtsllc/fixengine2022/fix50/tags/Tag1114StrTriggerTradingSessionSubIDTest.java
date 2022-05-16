@@ -35,12 +35,12 @@ class Tag1114StrTriggerTradingSessionSubIDTest {
     @Test
     void FIX1114Test() {
         FIX50 fixData = FIX50.FIX1114_STR_TRIGGER_TRADING_SESSION_SUB_ID;
-        assertEquals( "1114", fixData.getID());
-        assertEquals( "TRIGGER_TRADING_SESSION_SUB_ID", fixData.getName());
-        assertEquals( "TriggerTradingSessionSubID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1114", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_TRADING_SESSION_SUB_ID", fixData.toFIXNameString());
+        assertEquals( "TriggerTradingSessionSubID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1114Test() {

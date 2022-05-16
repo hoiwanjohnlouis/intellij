@@ -28,12 +28,12 @@ class Tag650BoolLegalConfirmTest {
     @Test
     void FIX0650Test() {
         FIX43 fixData = FIX43.FIX650_BOOL_LEGAL_CONFIRM;
-        assertEquals( "650", fixData.getID());
-        assertEquals( "LEGAL_CONFIRM", fixData.getName());
-        assertEquals( "LegalConfirm", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "650", fixData.toFIXIDString());
+        assertEquals( "LEGAL_CONFIRM", fixData.toFIXNameString());
+        assertEquals( "LegalConfirm", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0650Test() {

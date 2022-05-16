@@ -28,12 +28,12 @@ class Tag402PctLiquidityPctLowTest {
     @Test
     void FIX0402Test() {
         FIX42 fixData = FIX42.FIX402_PCT_LIQUIDITY_PCT_LOW;
-        assertEquals( "402", fixData.getID());
-        assertEquals( "LIQUIDITY_PCT_LOW", fixData.getName());
-        assertEquals( "LiquidityPctLow", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "402", fixData.toFIXIDString());
+        assertEquals( "LIQUIDITY_PCT_LOW", fixData.toFIXNameString());
+        assertEquals( "LiquidityPctLow", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0402Test() {

@@ -38,27 +38,27 @@ class Tag854EnuQtyTypeTest {
     @Test
     void FIX0854Test() {
         FIX44 fixData = FIX44.FIX854_ENU_QTY_TYPE;
-        assertEquals( "854", fixData.getID());
-        assertEquals( "QTY_TYPE", fixData.getName());
-        assertEquals( "QtyType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "854", fixData.toFIXIDString());
+        assertEquals( "QTY_TYPE", fixData.toFIXNameString());
+        assertEquals( "QtyType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0854Test() {
         Tag854EnuQtyType tagData;
 
         tagData = new Tag854EnuQtyType( Enum854QtyType.UNITS );
-        assertEquals( Enum854QtyType.UNITS.getID(), tagData.getDataValue());
+        assertEquals( Enum854QtyType.UNITS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag854EnuQtyType( Enum854QtyType.CONTRACTS );
-        assertEquals( Enum854QtyType.CONTRACTS.getID(), tagData.getDataValue());
+        assertEquals( Enum854QtyType.CONTRACTS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag854EnuQtyType( Enum854QtyType.MEASURE_PER_TIME );
-        assertEquals( Enum854QtyType.MEASURE_PER_TIME.getID(), tagData.getDataValue());
+        assertEquals( Enum854QtyType.MEASURE_PER_TIME.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

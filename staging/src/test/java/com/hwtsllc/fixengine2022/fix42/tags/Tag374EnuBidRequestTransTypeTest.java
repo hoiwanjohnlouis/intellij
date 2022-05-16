@@ -37,12 +37,12 @@ class Tag374EnuBidRequestTransTypeTest {
     @Test
     void FIX0374Test() {
         FIX42 fixData = FIX42.FIX374_ENU_BID_REQUEST_TRANS_TYPE;
-        assertEquals( "374", fixData.getID());
-        assertEquals( "BID_REQUEST_TRANS_TYPE", fixData.getName());
-        assertEquals( "BidRequestTransType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "374", fixData.toFIXIDString());
+        assertEquals( "BID_REQUEST_TRANS_TYPE", fixData.toFIXNameString());
+        assertEquals( "BidRequestTransType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0374Test() {
@@ -53,11 +53,11 @@ class Tag374EnuBidRequestTransTypeTest {
          * C, and N msg types
          */
         tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.CANCEL);
-        assertEquals( Enum374BidRequestTransType.CANCEL.getID(), tagData.getDataValue());
+        assertEquals( Enum374BidRequestTransType.CANCEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.NEW);
-        assertEquals( Enum374BidRequestTransType.NEW.getID(), tagData.getDataValue());
+        assertEquals( Enum374BidRequestTransType.NEW.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

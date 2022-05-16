@@ -27,12 +27,12 @@ class Tag801NoSettlPartySubIDsTest {
     @Test
     void FIX0801Test() {
         FIX44 fixData = FIX44.FIX801_NO_SETTL_PARTY_SUB_IDS;
-        assertEquals( "801", fixData.getID());
-        assertEquals( "NO_SETTL_PARTY_SUB_IDS", fixData.getName());
-        assertEquals( "NoSettlPartySubIDs", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "801", fixData.toFIXIDString());
+        assertEquals( "NO_SETTL_PARTY_SUB_IDS", fixData.toFIXNameString());
+        assertEquals( "NoSettlPartySubIDs", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0801Test() {

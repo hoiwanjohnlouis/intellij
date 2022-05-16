@@ -44,40 +44,40 @@ class Tag808EnuAllocIntermedReqTypeTest {
     @Test
     void FIX0808Test() {
         FIX44 fixData = FIX44.FIX808_ENU_ALLOC_INTERMED_REQ_TYPE;
-        assertEquals( "808", fixData.getID());
-        assertEquals( "ALLOC_INTERMED_REQ_TYPE", fixData.getName());
-        assertEquals( "AllocIntermedReqType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "808", fixData.toFIXIDString());
+        assertEquals( "ALLOC_INTERMED_REQ_TYPE", fixData.toFIXNameString());
+        assertEquals( "AllocIntermedReqType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0808Test() {
         Tag808EnuAllocIntermedReqType tagData;
 
         tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_ACCEPT );
-        assertEquals( Enum808AllocIntermedReqType.PENDING_ACCEPT.getID(), tagData.getDataValue());
+        assertEquals( Enum808AllocIntermedReqType.PENDING_ACCEPT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_RELEASE );
-        assertEquals( Enum808AllocIntermedReqType.PENDING_RELEASE.getID(), tagData.getDataValue());
+        assertEquals( Enum808AllocIntermedReqType.PENDING_RELEASE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_REVERSAL );
-        assertEquals( Enum808AllocIntermedReqType.PENDING_REVERSAL.getID(), tagData.getDataValue());
+        assertEquals( Enum808AllocIntermedReqType.PENDING_REVERSAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.ACCEPT );
-        assertEquals( Enum808AllocIntermedReqType.ACCEPT.getID(), tagData.getDataValue());
+        assertEquals( Enum808AllocIntermedReqType.ACCEPT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.BLOCK_LEVEL_REJECT );
-        assertEquals( Enum808AllocIntermedReqType.BLOCK_LEVEL_REJECT.getID(), tagData.getDataValue());
+        assertEquals( Enum808AllocIntermedReqType.BLOCK_LEVEL_REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.ACCOUNT_LEVEL_REJECT );
-        assertEquals( Enum808AllocIntermedReqType.ACCOUNT_LEVEL_REJECT.getID(), tagData.getDataValue());
+        assertEquals( Enum808AllocIntermedReqType.ACCOUNT_LEVEL_REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

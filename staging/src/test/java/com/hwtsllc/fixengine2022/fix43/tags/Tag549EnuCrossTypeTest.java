@@ -27,12 +27,12 @@ class Tag549EnuCrossTypeTest {
     @Test
     void FIX0549Test() {
         FIX43 fixData = FIX43.FIX549_ENU_CROSS_TYPE;
-        assertEquals( "549", fixData.getID());
-        assertEquals( "CROSS_TYPE", fixData.getName());
-        assertEquals( "CrossType", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "549", fixData.toFIXIDString());
+        assertEquals( "CROSS_TYPE", fixData.toFIXNameString());
+        assertEquals( "CrossType", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0549Test() {

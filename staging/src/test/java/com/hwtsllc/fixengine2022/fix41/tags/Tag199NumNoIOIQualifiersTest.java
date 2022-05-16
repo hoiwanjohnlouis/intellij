@@ -35,12 +35,12 @@ class Tag199NumNoIOIQualifiersTest {
     @Test
     void FIX0199Test() {
         FIX41 fixData = FIX41.FIX199_NUM_NO_IOI_QUALIFIERS;
-        assertEquals( "199", fixData.getID());
-        assertEquals( "NO_IOI_QUALIFIERS", fixData.getName());
-        assertEquals( "NoIOIQualifiers", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "199", fixData.toFIXIDString());
+        assertEquals( "NO_IOI_QUALIFIERS", fixData.toFIXNameString());
+        assertEquals( "NoIOIQualifiers", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0199Test() {

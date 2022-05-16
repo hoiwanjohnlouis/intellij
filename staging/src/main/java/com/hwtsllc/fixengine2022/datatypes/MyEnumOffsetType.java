@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    2 - Ticks
  *  <p>    3 - Price Tier or Level
  */
-public enum MyEnumOffsetType implements EnumAccessors, LogVerboseString {
+public enum MyEnumOffsetType implements LogFIXString, LogVerboseString {
     PRICE( "0", "PRICE", "0 - Price (default)" ),
     BASIS( "1", "BASIS", "1 - Basis Points" ),
     TICKS( "2", "TICKS", "2 - Ticks" ),
@@ -59,28 +59,28 @@ public enum MyEnumOffsetType implements EnumAccessors, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String getEnumName() {
+    public String toEnumNameString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getID() {
+    public String toFIXIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String getName() {
+    public String toFIXNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String getDescription() {
+    public String toFIXDescriptionString() {
         return description;
     }
     /**
@@ -90,16 +90,16 @@ public enum MyEnumOffsetType implements EnumAccessors, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(getEnumName())
+                .concat(toEnumNameString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
     /**
@@ -107,13 +107,13 @@ public enum MyEnumOffsetType implements EnumAccessors, LogVerboseString {
      */
     @Override
     public String toString() {
-        return getEnumName()
+        return toEnumNameString()
                 .concat("=[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat(",")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat(",")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
 

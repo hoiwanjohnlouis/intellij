@@ -34,12 +34,12 @@ class Tag765AllowableOneSidednessPctTest {
     @Test
     void FIX0765Test() {
         FIX44 fixData = FIX44.FIX765_ALLOWABLE_ONE_SIDEDNESS_PCT;
-        assertEquals( "765", fixData.getID());
-        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_PCT", fixData.getName());
-        assertEquals( "AllowableOneSidednessPct", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "765", fixData.toFIXIDString());
+        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_PCT", fixData.toFIXNameString());
+        assertEquals( "AllowableOneSidednessPct", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0765Test() {

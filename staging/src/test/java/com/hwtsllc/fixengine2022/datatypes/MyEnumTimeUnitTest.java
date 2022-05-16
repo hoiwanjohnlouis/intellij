@@ -59,60 +59,60 @@ class MyEnumTimeUnitTest {
         MyEnumTimeUnit enumType;
 
         enumType = MyEnumTimeUnit.HH;
-        assertEquals( "H", enumType.getID() );
-        assertEquals( "HH", enumType.getName() );
-        assertEquals( "H - Hour", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "H", enumType.toFIXIDString() );
+        assertEquals( "HH", enumType.toFIXNameString() );
+        assertEquals( "H - Hour", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumTimeUnit.MM;
-        assertEquals( "Min", enumType.getID() );
-        assertEquals( "MM", enumType.getName() );
-        assertEquals( "Min - Minute", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "Min", enumType.toFIXIDString() );
+        assertEquals( "MM", enumType.toFIXNameString() );
+        assertEquals( "Min - Minute", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumTimeUnit.SS;
-        assertEquals( "S", enumType.getID() );
-        assertEquals( "SS", enumType.getName() );
-        assertEquals( "S - Second", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "S", enumType.toFIXIDString() );
+        assertEquals( "SS", enumType.toFIXNameString() );
+        assertEquals( "S - Second", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumTimeUnit.DD;
-        assertEquals( "D", enumType.getID() );
-        assertEquals( "DD", enumType.getName() );
-        assertEquals( "D - Day", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "D", enumType.toFIXIDString() );
+        assertEquals( "DD", enumType.toFIXNameString() );
+        assertEquals( "D - Day", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumTimeUnit.WK;
-        assertEquals( "Wk", enumType.getID() );
-        assertEquals( "WK", enumType.getName() );
-        assertEquals( "Wk - Week", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "Wk", enumType.toFIXIDString() );
+        assertEquals( "WK", enumType.toFIXNameString() );
+        assertEquals( "Wk - Week", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumTimeUnit.MO;
-        assertEquals( "Mo", enumType.getID() );
-        assertEquals( "MO", enumType.getName() );
-        assertEquals( "Mo - Month", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "Mo", enumType.toFIXIDString() );
+        assertEquals( "MO", enumType.toFIXNameString() );
+        assertEquals( "Mo - Month", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumTimeUnit.YR;
-        assertEquals( "Yr", enumType.getID() );
-        assertEquals( "YR", enumType.getName() );
-        assertEquals( "Yr - Year", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "Yr", enumType.toFIXIDString() );
+        assertEquals( "YR", enumType.toFIXNameString() );
+        assertEquals( "Yr - Year", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

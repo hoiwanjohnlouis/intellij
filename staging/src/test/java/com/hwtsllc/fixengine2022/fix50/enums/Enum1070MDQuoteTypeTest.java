@@ -42,43 +42,43 @@ class Enum1070MDQuoteTypeTest {
         Enum1070MDQuoteType enumType;
 
         enumType = Enum1070MDQuoteType.INDICATIVE;
-        assertEquals( "0", enumType.getID() );
-        assertEquals( "INDICATIVE", enumType.getName() );
-        assertEquals( "0 - Indicative", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString() );
+        assertEquals( "INDICATIVE", enumType.toFIXNameString() );
+        assertEquals( "0 - Indicative", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1070MDQuoteType.TRADEABLE;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "TRADEABLE", enumType.getName() );
-        assertEquals( "1 - Tradeable", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "TRADEABLE", enumType.toFIXNameString() );
+        assertEquals( "1 - Tradeable", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1070MDQuoteType.RESTRICTED;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "RESTRICTED", enumType.getName() );
-        assertEquals( "2 - Restricted Tradeable", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "RESTRICTED", enumType.toFIXNameString() );
+        assertEquals( "2 - Restricted Tradeable", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1070MDQuoteType.COUNTER;
-        assertEquals( "3", enumType.getID() );
-        assertEquals( "COUNTER", enumType.getName() );
-        assertEquals( "3 - Counter", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString() );
+        assertEquals( "COUNTER", enumType.toFIXNameString() );
+        assertEquals( "3 - Counter", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1070MDQuoteType.INDICATIVE_TRADEABLE;
-        assertEquals( "4", enumType.getID() );
-        assertEquals( "INDICATIVE_TRADEABLE", enumType.getName() );
-        assertEquals( "4 - Indicative and Tradeable", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString() );
+        assertEquals( "INDICATIVE_TRADEABLE", enumType.toFIXNameString() );
+        assertEquals( "4 - Indicative and Tradeable", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

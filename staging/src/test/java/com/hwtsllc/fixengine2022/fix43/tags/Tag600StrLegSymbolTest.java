@@ -27,12 +27,12 @@ class Tag600StrLegSymbolTest {
     @Test
     void FIX0600Test() {
         FIX43 fixData = FIX43.FIX600_STR_LEG_SYMBOL;
-        assertEquals( "600", fixData.getID());
-        assertEquals( "LEG_SYMBOL", fixData.getName());
-        assertEquals( "LegSymbol", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "600", fixData.toFIXIDString());
+        assertEquals( "LEG_SYMBOL", fixData.toFIXNameString());
+        assertEquals( "LegSymbol", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0600Test() {

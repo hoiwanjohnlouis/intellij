@@ -35,12 +35,12 @@ class Tag1080StrRefOrderIDTest {
     @Test
     void FIX1080Test() {
         FIX50 fixData = FIX50.FIX1080_STR_REF_ORDER_ID;
-        assertEquals( "1080", fixData.getID());
-        assertEquals( "REF_ORDER_ID", fixData.getName());
-        assertEquals( "RefOrderID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1080", fixData.toFIXIDString());
+        assertEquals( "REF_ORDER_ID", fixData.toFIXNameString());
+        assertEquals( "RefOrderID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1080Test() {

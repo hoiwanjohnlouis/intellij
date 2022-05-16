@@ -38,12 +38,12 @@ class Tag301EnuQuoteResponseLevelTest {
     @Test
     void FIX0301Test() {
         FIX42 fixData = FIX42.FIX301_ENU_QUOTE_RESPONSE_LEVEL;
-        assertEquals( "301", fixData.getID());
-        assertEquals( "QUOTE_RESPONSE_LEVEL", fixData.getName());
-        assertEquals( "QuoteResponseLevel", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "301", fixData.toFIXIDString());
+        assertEquals( "QUOTE_RESPONSE_LEVEL", fixData.toFIXNameString());
+        assertEquals( "QuoteResponseLevel", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0301Test() {
@@ -53,15 +53,15 @@ class Tag301EnuQuoteResponseLevelTest {
          * 0-2 msg types
          */
         tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT);
-        assertEquals( Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT.getID(), tagData.getDataValue());
+        assertEquals( Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS);
-        assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS.getID(), tagData.getDataValue());
+        assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE);
-        assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE.getID(), tagData.getDataValue());
+        assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

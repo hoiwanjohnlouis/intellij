@@ -41,12 +41,12 @@ class Tag427EnuGTBookingInstTest {
     @Test
     void FIX0427Test() {
         FIX42 fixData = FIX42.FIX427_ENU_GT_BOOKING_INST;
-        assertEquals( "427", fixData.getID());
-        assertEquals( "GT_BOOKING_INST", fixData.getName());
-        assertEquals( "GTBookingInst", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "427", fixData.toFIXIDString());
+        assertEquals( "GT_BOOKING_INST", fixData.toFIXNameString());
+        assertEquals( "GTBookingInst", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0427Test() {
@@ -56,15 +56,15 @@ class Tag427EnuGTBookingInstTest {
          * 0-2 msg types
          */
         tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.BOOK_OUT_ALL_TRADES);
-        assertEquals( Enum427GTBookingInst.BOOK_OUT_ALL_TRADES.getID(), tagData.getDataValue());
+        assertEquals( Enum427GTBookingInst.BOOK_OUT_ALL_TRADES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES);
-        assertEquals( Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES.getID(), tagData.getDataValue());
+        assertEquals( Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE);
-        assertEquals( Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE.getID(), tagData.getDataValue());
+        assertEquals( Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

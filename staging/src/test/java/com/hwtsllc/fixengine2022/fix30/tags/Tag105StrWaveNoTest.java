@@ -36,12 +36,12 @@ class Tag105StrWaveNoTest {
     @Test
     void FIX0105Test() {
         FIX30 fixData = FIX30.FIX105_STR_WAVE_NO;
-        assertEquals( "WAVE_NO", fixData.getName());
-        assertEquals( "105", fixData.getID());
-        assertEquals( "WaveNo", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "WAVE_NO", fixData.toFIXNameString());
+        assertEquals( "105", fixData.toFIXIDString());
+        assertEquals( "WaveNo", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0105Test() {

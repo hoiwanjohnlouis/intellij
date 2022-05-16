@@ -50,61 +50,61 @@ class Tag1008EnuSideTrdSubTypTest {
     @Test
     void FIX1008Test() {
         FIX50 fixData = FIX50.FIX1008_ENU_SIDE_TRD_SUB_TYP;
-        assertEquals( "1008", fixData.getID());
-        assertEquals( "SIDE_TRD_SUB_TYP", fixData.getName());
-        assertEquals( "SideTrdSubTyp", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1008", fixData.toFIXIDString());
+        assertEquals( "SIDE_TRD_SUB_TYP", fixData.toFIXNameString());
+        assertEquals( "SideTrdSubTyp", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1008Test() {
         Tag1008EnuSideTrdSubTyp tagData;
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.CMTA );
-        assertEquals( Enum1008SideTrdSubTyp.CMTA.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.CMTA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.INTERNAL_TRANSFER );
-        assertEquals( Enum1008SideTrdSubTyp.INTERNAL_TRANSFER.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.INTERNAL_TRANSFER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.EXTERNAL_TRANSFER );
-        assertEquals( Enum1008SideTrdSubTyp.EXTERNAL_TRANSFER.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.EXTERNAL_TRANSFER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.REJECT_SUBMISSION );
-        assertEquals( Enum1008SideTrdSubTyp.REJECT_SUBMISSION.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.REJECT_SUBMISSION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.ADVISORY_FOR_CONTRA );
-        assertEquals( Enum1008SideTrdSubTyp.ADVISORY_FOR_CONTRA.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.ADVISORY_FOR_CONTRA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.OFFSET_DUE_TO_ALLOCATION );
-        assertEquals( Enum1008SideTrdSubTyp.OFFSET_DUE_TO_ALLOCATION.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.OFFSET_DUE_TO_ALLOCATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.ONSET_DUE_TO_ALLOCATION );
-        assertEquals( Enum1008SideTrdSubTyp.ONSET_DUE_TO_ALLOCATION.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.ONSET_DUE_TO_ALLOCATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.DIFFERENTIAL_SPREAD );
-        assertEquals( Enum1008SideTrdSubTyp.DIFFERENTIAL_SPREAD.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.DIFFERENTIAL_SPREAD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.IMPLIED_SPREAD_LEG );
-        assertEquals( Enum1008SideTrdSubTyp.IMPLIED_SPREAD_LEG.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.IMPLIED_SPREAD_LEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.TRANSACTION_FROM_EXERCISE );
-        assertEquals( Enum1008SideTrdSubTyp.TRANSACTION_FROM_EXERCISE.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.TRANSACTION_FROM_EXERCISE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.TRANSACTION_FROM_ASSIGNMENT );
-        assertEquals( Enum1008SideTrdSubTyp.TRANSACTION_FROM_ASSIGNMENT.getID(), tagData.getDataValue());
+        assertEquals( Enum1008SideTrdSubTyp.TRANSACTION_FROM_ASSIGNMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

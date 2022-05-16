@@ -38,12 +38,12 @@ class Tag123BoolGapFillFlagTest {
     @Test
     void FIX0123Test() {
         FIX40 fixData = FIX40.FIX123_BOOL_GAP_FILL_FLAG;
-        assertEquals( "GAP_FILL_FLAG", fixData.getName());
-        assertEquals( "123", fixData.getID());
-        assertEquals( "GapFillFlag", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "GAP_FILL_FLAG", fixData.toFIXNameString());
+        assertEquals( "123", fixData.toFIXIDString());
+        assertEquals( "GapFillFlag", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0123Test() {

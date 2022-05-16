@@ -35,12 +35,12 @@ class Tag1020QtyTradeVolumeTest {
     @Test
     void FIX1020Test() {
         FIX50 fixData = FIX50.FIX1020_QTY_TRADE_VOLUME;
-        assertEquals( "1020", fixData.getID());
-        assertEquals( "TRADE_VOLUME", fixData.getName());
-        assertEquals( "TradeVolume", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1020", fixData.toFIXIDString());
+        assertEquals( "TRADE_VOLUME", fixData.toFIXNameString());
+        assertEquals( "TradeVolume", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1020Test() {

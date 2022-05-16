@@ -40,27 +40,27 @@ class Tag165EnuSettlInstSourceTest {
     @Test
     void FIX0165Test() {
         FIX41 fixData = FIX41.FIX165_ENU_SETTL_INST_SOURCE;
-        assertEquals( "165", fixData.getID());
-        assertEquals( "SETTL_INST_SOURCE", fixData.getName());
-        assertEquals( "SettlInstSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "165", fixData.toFIXIDString());
+        assertEquals( "SETTL_INST_SOURCE", fixData.toFIXNameString());
+        assertEquals( "SettlInstSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0165Test() {
         Tag165EnuSettlInstSource tagData;
 
         tagData = new Tag165EnuSettlInstSource(Enum165SettlInstSource.BROKER_INSTRUCTIONS);
-        assertEquals( Enum165SettlInstSource.BROKER_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertEquals( Enum165SettlInstSource.BROKER_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag165EnuSettlInstSource(Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS);
-        assertEquals( Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS.getID(), tagData.getDataValue());
+        assertEquals( Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag165EnuSettlInstSource(Enum165SettlInstSource.INVESTOR);
-        assertEquals( Enum165SettlInstSource.INVESTOR.getID(), tagData.getDataValue());
+        assertEquals( Enum165SettlInstSource.INVESTOR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

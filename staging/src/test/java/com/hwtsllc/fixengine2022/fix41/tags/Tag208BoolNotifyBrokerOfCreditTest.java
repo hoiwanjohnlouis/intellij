@@ -37,23 +37,23 @@ class Tag208BoolNotifyBrokerOfCreditTest {
     @Test
     void FIX0208Test() {
         FIX41 fixData = FIX41.FIX208_BOOL_NOTIFY_BROKER_OF_CREDIT;
-        assertEquals( "208", fixData.getID());
-        assertEquals( "NOTIFY_BROKER_OF_CREDIT", fixData.getName());
-        assertEquals( "NotifyBrokerOfCredit", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "208", fixData.toFIXIDString());
+        assertEquals( "NOTIFY_BROKER_OF_CREDIT", fixData.toFIXNameString());
+        assertEquals( "NotifyBrokerOfCredit", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0208Test() {
         Tag208BoolNotifyBrokerOfCredit tagData;
 
         tagData = new Tag208BoolNotifyBrokerOfCredit(MyBooleanType.NO);
-        assertEquals( MyBooleanType.NO.getID(), tagData.getDataValue());
+        assertEquals( MyBooleanType.NO.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag208BoolNotifyBrokerOfCredit(MyBooleanType.YES);
-        assertEquals( MyBooleanType.YES.getID(), tagData.getDataValue());
+        assertEquals( MyBooleanType.YES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

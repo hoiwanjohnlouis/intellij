@@ -40,27 +40,27 @@ class Enum1024MDOriginTypeTest {
         Enum1024MDOriginType enumType;
 
         enumType = Enum1024MDOriginType.BOOK;
-        assertEquals( "0", enumType.getID() );
-        assertEquals( "BOOK", enumType.getName() );
-        assertEquals( "0 - Book", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString() );
+        assertEquals( "BOOK", enumType.toFIXNameString() );
+        assertEquals( "0 - Book", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1024MDOriginType.OFF_BOOK;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "OFF_BOOK", enumType.getName() );
-        assertEquals( "1 - Off-Book", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "OFF_BOOK", enumType.toFIXNameString() );
+        assertEquals( "1 - Off-Book", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1024MDOriginType.CROSS;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "CROSS", enumType.getName() );
-        assertEquals( "2 - Cross", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "CROSS", enumType.toFIXNameString() );
+        assertEquals( "2 - Cross", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

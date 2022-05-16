@@ -33,12 +33,12 @@ class Tag822UnderlyingTradingSessionIDTest {
     @Test
     void FIX0822Test() {
         FIX44 fixData = FIX44.FIX822_UNDERLYING_TRADING_SESSION_ID;
-        assertEquals( "822", fixData.getID());
-        assertEquals( "UNDERLYING_TRADING_SESSION_ID", fixData.getName());
-        assertEquals( "UnderlyingTradingSessionID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "822", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_TRADING_SESSION_ID", fixData.toFIXNameString());
+        assertEquals( "UnderlyingTradingSessionID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0822Test() {

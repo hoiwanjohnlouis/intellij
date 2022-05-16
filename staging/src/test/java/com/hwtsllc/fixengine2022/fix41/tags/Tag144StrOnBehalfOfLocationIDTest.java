@@ -35,12 +35,12 @@ class Tag144StrOnBehalfOfLocationIDTest {
     @Test
     void FIX0144Test() {
         FIX41 fixData = FIX41.FIX144_STR_ON_BEHALF_OF_LOCATION_ID;
-        assertEquals( "144", fixData.getID());
-        assertEquals( "ON_BEHALF_OF_LOCATION_ID", fixData.getName());
-        assertEquals( "OnBehalfOfLocationID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "144", fixData.toFIXIDString());
+        assertEquals( "ON_BEHALF_OF_LOCATION_ID", fixData.toFIXNameString());
+        assertEquals( "OnBehalfOfLocationID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0144Test() {

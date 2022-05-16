@@ -35,12 +35,12 @@ class Tag1016NumNoSideTrdRegTSTest {
     @Test
     void FIX1016Test() {
         FIX50 fixData = FIX50.FIX1016_NUM_NO_SIDE_TRD_REG_TS;
-        assertEquals( "1016", fixData.getID());
-        assertEquals( "NO_SIDE_TRD_REG_TS", fixData.getName());
-        assertEquals( "NoSideTrdRegTS", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1016", fixData.toFIXIDString());
+        assertEquals( "NO_SIDE_TRD_REG_TS", fixData.toFIXNameString());
+        assertEquals( "NoSideTrdRegTS", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1016Test() {

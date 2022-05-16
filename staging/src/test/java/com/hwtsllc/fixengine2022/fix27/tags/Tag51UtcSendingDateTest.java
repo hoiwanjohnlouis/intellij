@@ -35,13 +35,13 @@ class Tag51UtcSendingDateTest {
     @Test
     void FIX0051Test() {
         FIX27 fixData = FIX27.FIX51_UTC_SENDING_DATE;
-        assertEquals( "SENDING_DATE", fixData.getName());
-        assertEquals( "51", fixData.getID());
-        assertEquals( "SendingDate (no longer used)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "SENDING_DATE", fixData.toFIXNameString());
+        assertEquals( "51", fixData.toFIXIDString());
+        assertEquals( "SendingDate (no longer used)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0051Test() {

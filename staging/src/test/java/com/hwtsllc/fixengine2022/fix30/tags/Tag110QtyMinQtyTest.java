@@ -36,12 +36,12 @@ class Tag110QtyMinQtyTest {
     @Test
     void FIX0110Test() {
         FIX30 fixData = FIX30.FIX110_QTY_MIN_QTY;
-        assertEquals( "MIN_QTY", fixData.getName());
-        assertEquals( "110", fixData.getID());
-        assertEquals( "MinQty", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "MIN_QTY", fixData.toFIXNameString());
+        assertEquals( "110", fixData.toFIXIDString());
+        assertEquals( "MinQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0110Test() {

@@ -35,12 +35,12 @@ class Tag971IntNTPositionLimitTest {
     @Test
     void FIX0971Test() {
         FIX50 fixData = FIX50.FIX971_INT_NT_POSITION_LIMIT;
-        assertEquals( "971", fixData.getID());
-        assertEquals( "NT_POSITION_LIMIT", fixData.getName());
-        assertEquals( "NTPositionLimit", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "971", fixData.toFIXIDString());
+        assertEquals( "NT_POSITION_LIMIT", fixData.toFIXNameString());
+        assertEquals( "NTPositionLimit", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0971Test() {

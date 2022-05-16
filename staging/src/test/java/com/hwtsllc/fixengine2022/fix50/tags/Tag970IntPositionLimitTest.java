@@ -35,12 +35,12 @@ class Tag970IntPositionLimitTest {
     @Test
     void FIX0970Test() {
         FIX50 fixData = FIX50.FIX970_INT_POSITION_LIMIT;
-        assertEquals( "970", fixData.getID());
-        assertEquals( "POSITION_LIMIT", fixData.getName());
-        assertEquals( "PositionLimit", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "970", fixData.toFIXIDString());
+        assertEquals( "POSITION_LIMIT", fixData.toFIXNameString());
+        assertEquals( "PositionLimit", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0970Test() {

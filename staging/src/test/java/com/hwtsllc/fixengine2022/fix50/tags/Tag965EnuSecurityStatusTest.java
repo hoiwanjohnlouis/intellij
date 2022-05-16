@@ -41,23 +41,23 @@ class Tag965EnuSecurityStatusTest {
     @Test
     void FIX0965Test() {
         FIX50 fixData = FIX50.FIX965_ENU_SECURITY_STATUS;
-        assertEquals( "965", fixData.getID());
-        assertEquals( "SECURITY_STATUS", fixData.getName());
-        assertEquals( "SecurityStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "965", fixData.toFIXIDString());
+        assertEquals( "SECURITY_STATUS", fixData.toFIXNameString());
+        assertEquals( "SecurityStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0965Test() {
         Tag965EnuSecurityStatus tagData;
 
         tagData = new Tag965EnuSecurityStatus( Enum965SecurityStatus.ACTIVE );
-        assertEquals( Enum965SecurityStatus.ACTIVE.getID(), tagData.getDataValue());
+        assertEquals( Enum965SecurityStatus.ACTIVE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag965EnuSecurityStatus( Enum965SecurityStatus.INACTIVE );
-        assertEquals( Enum965SecurityStatus.INACTIVE.getID(), tagData.getDataValue());
+        assertEquals( Enum965SecurityStatus.INACTIVE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -44,51 +44,51 @@ class Enum770TrdRegTimestampTypeTest {
         Enum770TrdRegTimestampType enumType;
 
         enumType = Enum770TrdRegTimestampType.EXECUTION_TIME;
-        assertEquals("1", enumType.getID());
-        assertEquals("EXECUTION_TIME", enumType.getName());
-        assertEquals("1 - Execution Time", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("EXECUTION_TIME", enumType.toFIXNameString());
+        assertEquals("1 - Execution Time", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.TIME_IN;
-        assertEquals("2", enumType.getID());
-        assertEquals("TIME_IN", enumType.getName());
-        assertEquals("2 - Time In", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("TIME_IN", enumType.toFIXNameString());
+        assertEquals("2 - Time In", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.TIME_OUT;
-        assertEquals("3", enumType.getID());
-        assertEquals("TIME_OUT", enumType.getName());
-        assertEquals("3 - Time Out", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("TIME_OUT", enumType.toFIXNameString());
+        assertEquals("3 - Time Out", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.BROKER_RECEIPT;
-        assertEquals("4", enumType.getID());
-        assertEquals("BROKER_RECEIPT", enumType.getName());
-        assertEquals("4 - Broker Receipt", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("BROKER_RECEIPT", enumType.toFIXNameString());
+        assertEquals("4 - Broker Receipt", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.BROKER_EXECUTION;
-        assertEquals("5", enumType.getID());
-        assertEquals("BROKER_EXECUTION", enumType.getName());
-        assertEquals("5 - Broker Execution", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("5", enumType.toFIXIDString());
+        assertEquals("BROKER_EXECUTION", enumType.toFIXNameString());
+        assertEquals("5 - Broker Execution", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.DESK_RECEIPT;
-        assertEquals("6", enumType.getID());
-        assertEquals("DESK_RECEIPT", enumType.getName());
-        assertEquals("6 - Desk Receipt", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("6", enumType.toFIXIDString());
+        assertEquals("DESK_RECEIPT", enumType.toFIXNameString());
+        assertEquals("6 - Desk Receipt", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

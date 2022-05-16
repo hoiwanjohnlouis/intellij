@@ -45,23 +45,23 @@ class Tag835EnuPegMoveTypeTest {
     @Test
     void FIX0835Test() {
         FIX44 fixData = FIX44.FIX835_ENU_PEG_MOVE_TYPE;
-        assertEquals( "835", fixData.getID());
-        assertEquals( "PEG_MOVE_TYPE", fixData.getName());
-        assertEquals( "PegMoveType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "835", fixData.toFIXIDString());
+        assertEquals( "PEG_MOVE_TYPE", fixData.toFIXNameString());
+        assertEquals( "PegMoveType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0835Test() {
         Tag835EnuPegMoveType tagData;
 
         tagData = new Tag835EnuPegMoveType(MyEnumMoveType.FLOATING);
-        assertEquals( MyEnumMoveType.FLOATING.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMoveType.FLOATING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag835EnuPegMoveType(MyEnumMoveType.FIXED);
-        assertEquals( MyEnumMoveType.FIXED.getID(), tagData.getDataValue());
+        assertEquals( MyEnumMoveType.FIXED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -27,12 +27,12 @@ class Tag522EnuOwnerTypeTest {
     @Test
     void FIX0522Test() {
         FIX43 fixData = FIX43.FIX522_ENU_OWNER_TYPE;
-        assertEquals( "522", fixData.getID());
-        assertEquals( "OWNER_TYPE", fixData.getName());
-        assertEquals( "OwnerType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "522", fixData.toFIXIDString());
+        assertEquals( "OWNER_TYPE", fixData.toFIXNameString());
+        assertEquals( "OwnerType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0522Test() {

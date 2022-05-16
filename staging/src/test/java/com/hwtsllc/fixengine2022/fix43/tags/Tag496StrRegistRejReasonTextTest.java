@@ -27,12 +27,12 @@ class Tag496StrRegistRejReasonTextTest {
     @Test
     void FIX0496Test() {
         FIX43 fixData = FIX43.FIX496_STR_REGIST_REJ_REASON_TEXT;
-        assertEquals( "496", fixData.getID());
-        assertEquals( "REGIST_REJ_REASON_TEXT", fixData.getName());
-        assertEquals( "RegistRejReasonText", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "496", fixData.toFIXIDString());
+        assertEquals( "REGIST_REJ_REASON_TEXT", fixData.toFIXNameString());
+        assertEquals( "RegistRejReasonText", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0496Test() {

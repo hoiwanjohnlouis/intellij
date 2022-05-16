@@ -28,12 +28,12 @@ class Tag246FloUnderlyingFactorTest {
     @Test
     void FIX0246Test() {
         FIX42 fixData = FIX42.FIX246_FLO_UNDERLYING_FACTOR;
-        assertEquals( "246", fixData.getID());
-        assertEquals( "UNDERLYING_FACTOR", fixData.getName());
-        assertEquals( "UnderlyingFactor", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "246", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_FACTOR", fixData.toFIXNameString());
+        assertEquals( "UnderlyingFactor", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0246Test() {

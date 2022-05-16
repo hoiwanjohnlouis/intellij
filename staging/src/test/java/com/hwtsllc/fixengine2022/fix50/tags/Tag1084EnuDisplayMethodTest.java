@@ -42,27 +42,27 @@ class Tag1084EnuDisplayMethodTest {
     @Test
     void FIX1084Test() {
         FIX50 fixData = FIX50.FIX1084_ENU_DISPLAY_METHOD;
-        assertEquals( "1084", fixData.getID());
-        assertEquals( "DISPLAY_METHOD", fixData.getName());
-        assertEquals( "DisplayMethod", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1084", fixData.toFIXIDString());
+        assertEquals( "DISPLAY_METHOD", fixData.toFIXNameString());
+        assertEquals( "DisplayMethod", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1084Test() {
         Tag1084EnuDisplayMethod tagData;
 
         tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.INITIAL );
-        assertEquals( Enum1084DisplayMethod.INITIAL.getID(), tagData.getDataValue());
+        assertEquals( Enum1084DisplayMethod.INITIAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.NEW );
-        assertEquals( Enum1084DisplayMethod.NEW.getID(), tagData.getDataValue());
+        assertEquals( Enum1084DisplayMethod.NEW.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.RANDOM );
-        assertEquals( Enum1084DisplayMethod.RANDOM.getID(), tagData.getDataValue());
+        assertEquals( Enum1084DisplayMethod.RANDOM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

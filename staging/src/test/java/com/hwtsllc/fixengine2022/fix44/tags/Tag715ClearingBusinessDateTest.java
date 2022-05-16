@@ -33,12 +33,12 @@ class Tag715ClearingBusinessDateTest {
     @Test
     void FIX0715Test() {
         FIX44 fixData = FIX44.FIX715_CLEARING_BUSINESS_DATE;
-        assertEquals( "715", fixData.getID());
-        assertEquals( "CLEARING_BUSINESS_DATE", fixData.getName());
-        assertEquals( "ClearingBusinessDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "715", fixData.toFIXIDString());
+        assertEquals( "CLEARING_BUSINESS_DATE", fixData.toFIXNameString());
+        assertEquals( "ClearingBusinessDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0715Test() {

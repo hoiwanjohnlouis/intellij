@@ -27,12 +27,12 @@ class Tag513StrRegistIDTest {
     @Test
     void FIX0513Test() {
         FIX43 fixData = FIX43.FIX513_STR_REGIST_ID;
-        assertEquals( "513", fixData.getID());
-        assertEquals( "REGIST_ID", fixData.getName());
-        assertEquals( "RegistID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "513", fixData.toFIXIDString());
+        assertEquals( "REGIST_ID", fixData.toFIXNameString());
+        assertEquals( "RegistID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0513Test() {

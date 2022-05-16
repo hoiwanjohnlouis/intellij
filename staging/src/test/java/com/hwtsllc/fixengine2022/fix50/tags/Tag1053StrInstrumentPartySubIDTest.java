@@ -37,12 +37,12 @@ class Tag1053StrInstrumentPartySubIDTest {
     @Test
     void FIX1053Test() {
         FIX50 fixData = FIX50.FIX1053_STR_INSTRUMENT_PARTY_SUB_ID;
-        assertEquals( "1053", fixData.getID());
-        assertEquals( "INSTRUMENT_PARTY_SUB_ID", fixData.getName());
-        assertEquals( "InstrumentPartySubID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1053", fixData.toFIXIDString());
+        assertEquals( "INSTRUMENT_PARTY_SUB_ID", fixData.toFIXNameString());
+        assertEquals( "InstrumentPartySubID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1053Test() {

@@ -43,52 +43,52 @@ class Enum728PosReqResultTest {
         Enum728PosReqResult enumType;
 
         enumType = Enum728PosReqResult.VALID_REQUEST;
-        assertEquals( "0", enumType.getID());
-        assertEquals( "VALID_REQUEST", enumType.getName());
-        assertEquals( "0 - Valid request", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString());
+        assertEquals( "VALID_REQUEST", enumType.toFIXNameString());
+        assertEquals( "0 - Valid request", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum728PosReqResult.UNSUPPORTED_REQUEST;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "UNSUPPORTED_REQUEST", enumType.getName());
-        assertEquals( "1 - Invalid or unsupported request", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_REQUEST", enumType.toFIXNameString());
+        assertEquals( "1 - Invalid or unsupported request", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum728PosReqResult.NO_POSITIONS_FOUND;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "NO_POSITIONS_FOUND", enumType.getName());
-        assertEquals( "2 - No positions found that match criteria", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "NO_POSITIONS_FOUND", enumType.toFIXNameString());
+        assertEquals( "2 - No positions found that match criteria", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum728PosReqResult.NOT_AUTHORIZED;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "NOT_AUTHORIZED", enumType.getName());
-        assertEquals( "3 - Not authorized to request positions", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "NOT_AUTHORIZED", enumType.toFIXNameString());
+        assertEquals( "3 - Not authorized to request positions", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum728PosReqResult.REQUEST_NOT_SUPPORTED;
-        assertEquals( "4", enumType.getID());
-        assertEquals( "REQUEST_NOT_SUPPORTED", enumType.getName());
-        assertEquals( "4 - Request for position not supported", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString());
+        assertEquals( "REQUEST_NOT_SUPPORTED", enumType.toFIXNameString());
+        assertEquals( "4 - Request for position not supported", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum728PosReqResult.OTHER;
-        assertEquals( "99", enumType.getID());
-        assertEquals( "OTHER", enumType.getName());
+        assertEquals( "99", enumType.toFIXIDString());
+        assertEquals( "OTHER", enumType.toFIXNameString());
         assertEquals( "99 - Other (use Text (58) in conjunction with this code for an explanation)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

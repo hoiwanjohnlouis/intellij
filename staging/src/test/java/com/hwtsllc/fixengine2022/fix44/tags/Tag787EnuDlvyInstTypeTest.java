@@ -36,23 +36,23 @@ class Tag787EnuDlvyInstTypeTest {
     @Test
     void FIX0787Test() {
         FIX44 fixData = FIX44.FIX787_ENU_DLVY_INST_TYPE;
-        assertEquals( "787", fixData.getID());
-        assertEquals( "DLVY_INST_TYPE", fixData.getName());
-        assertEquals( "DlvyInstType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "787", fixData.toFIXIDString());
+        assertEquals( "DLVY_INST_TYPE", fixData.toFIXNameString());
+        assertEquals( "DlvyInstType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0787Test() {
         Tag787EnuDlvyInstType tagData;
 
         tagData = new Tag787EnuDlvyInstType( Enum787DlvyInstType.CASH );
-        assertEquals( Enum787DlvyInstType.CASH.getID(), tagData.getDataValue());
+        assertEquals( Enum787DlvyInstType.CASH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag787EnuDlvyInstType( Enum787DlvyInstType.SECURITIES);
-        assertEquals( Enum787DlvyInstType.SECURITIES.getID(), tagData.getDataValue());
+        assertEquals( Enum787DlvyInstType.SECURITIES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

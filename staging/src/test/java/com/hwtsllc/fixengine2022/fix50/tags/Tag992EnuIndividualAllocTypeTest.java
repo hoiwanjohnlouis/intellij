@@ -39,23 +39,23 @@ class Tag992EnuIndividualAllocTypeTest {
     @Test
     void FIX0992Test() {
         FIX50 fixData = FIX50.FIX992_ENU_INDIVIDUAL_ALLOC_TYPE;
-        assertEquals( "992", fixData.getID());
-        assertEquals( "INDIVIDUAL_ALLOC_TYPE", fixData.getName());
-        assertEquals( "IndividualAllocType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "992", fixData.toFIXIDString());
+        assertEquals( "INDIVIDUAL_ALLOC_TYPE", fixData.toFIXNameString());
+        assertEquals( "IndividualAllocType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0992Test() {
         Tag992EnuIndividualAllocType tagData;
 
         tagData = new Tag992EnuIndividualAllocType( Enum992IndividualAllocType.SUB_ALLOCATE );
-        assertEquals( Enum992IndividualAllocType.SUB_ALLOCATE.getID(), tagData.getDataValue());
+        assertEquals( Enum992IndividualAllocType.SUB_ALLOCATE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag992EnuIndividualAllocType( Enum992IndividualAllocType.THIRD_PARTY_ALLOCATION );
-        assertEquals( Enum992IndividualAllocType.THIRD_PARTY_ALLOCATION.getID(), tagData.getDataValue());
+        assertEquals( Enum992IndividualAllocType.THIRD_PARTY_ALLOCATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

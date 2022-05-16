@@ -28,12 +28,12 @@ class Tag553StrUsernameTest {
     @Test
     void FIX0553Test() {
         FIX43 fixData = FIX43.FIX553_STR_PASSWORD;
-        assertEquals( "553", fixData.getID());
-        assertEquals( "USERNAME", fixData.getName());
-        assertEquals( "Username", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "553", fixData.toFIXIDString());
+        assertEquals( "USERNAME", fixData.toFIXNameString());
+        assertEquals( "Username", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0553Test() {

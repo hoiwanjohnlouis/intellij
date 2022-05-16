@@ -34,12 +34,12 @@ class Tag943TimeBracketTest {
     @Test
     void FIX0943Test() {
         FIX44 fixData = FIX44.FIX943_TIME_BRACKET;
-        assertEquals( "943", fixData.getID());
-        assertEquals( "TIME_BRACKET", fixData.getName());
-        assertEquals( "TimeBracket", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "943", fixData.toFIXIDString());
+        assertEquals( "TIME_BRACKET", fixData.toFIXNameString());
+        assertEquals( "TimeBracket", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0943Test() {

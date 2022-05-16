@@ -34,13 +34,13 @@ class Tag44PrcPriceTest {
     @Test
     void FIX0044Test() {
         FIX27 fixData = FIX27.FIX44_PRC_PRICE;
-        assertEquals( "PRICE", fixData.getName());
-        assertEquals( "44", fixData.getID());
-        assertEquals( "Price", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "PRICE", fixData.toFIXNameString());
+        assertEquals( "44", fixData.toFIXIDString());
+        assertEquals( "Price", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0044Test() {

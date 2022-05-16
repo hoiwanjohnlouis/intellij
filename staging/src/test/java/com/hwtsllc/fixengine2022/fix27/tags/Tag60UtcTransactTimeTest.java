@@ -35,13 +35,13 @@ class Tag60UtcTransactTimeTest {
     @Test
     void FIX0060Test() {
         FIX27 fixData = FIX27.FIX60_UTC_TRANSACT_TIME;
-        assertEquals( "TRANSACT_TIME", fixData.getName());
-        assertEquals( "60", fixData.getID());
-        assertEquals( "TransactTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "TRANSACT_TIME", fixData.toFIXNameString());
+        assertEquals( "60", fixData.toFIXIDString());
+        assertEquals( "TransactTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0060Test() {

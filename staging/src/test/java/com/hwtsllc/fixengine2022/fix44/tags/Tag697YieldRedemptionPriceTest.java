@@ -33,12 +33,12 @@ class Tag697YieldRedemptionPriceTest {
     @Test
     void FIX0697Test() {
         FIX44 fixData = FIX44.FIX697_YIELD_REDEMPTION_PRICE;
-        assertEquals( "697", fixData.getID());
-        assertEquals( "YIELD_REDEMPTION_PRICE", fixData.getName());
-        assertEquals( "YieldRedemptionPrice", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "697", fixData.toFIXIDString());
+        assertEquals( "YIELD_REDEMPTION_PRICE", fixData.toFIXNameString());
+        assertEquals( "YieldRedemptionPrice", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0697Test() {

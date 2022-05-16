@@ -28,12 +28,12 @@ class Tag363DatEncodedUnderlyingIssuerTest {
     @Test
     void FIX0363Test() {
         FIX42 fixData = FIX42.FIX363_DAT_ENCODED_UNDERLYING_ISSUER;
-        assertEquals( "363", fixData.getID());
-        assertEquals( "ENCODED_UNDERLYING_ISSUER", fixData.getName());
-        assertEquals( "EncodedUnderlyingIssuer", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "363", fixData.toFIXIDString());
+        assertEquals( "ENCODED_UNDERLYING_ISSUER", fixData.toFIXNameString());
+        assertEquals( "EncodedUnderlyingIssuer", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0363Test() {

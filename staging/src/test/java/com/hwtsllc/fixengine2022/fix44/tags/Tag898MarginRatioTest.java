@@ -35,12 +35,12 @@ class Tag898MarginRatioTest {
     @Test
     void FIX0898Test() {
         FIX44 fixData = FIX44.FIX898_MARGIN_RATIO;
-        assertEquals( "898", fixData.getID());
-        assertEquals( "MARGIN_RATIO", fixData.getName());
-        assertEquals( "MarginRatio", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "898", fixData.toFIXIDString());
+        assertEquals( "MARGIN_RATIO", fixData.toFIXNameString());
+        assertEquals( "MarginRatio", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0898Test() {

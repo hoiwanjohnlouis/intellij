@@ -28,12 +28,12 @@ class Tag408AmtValueOfFuturesTest {
     @Test
     void FIX0408Test() {
         FIX42 fixData = FIX42.FIX408_AMT_VALUE_OF_FUTURES;
-        assertEquals( "408", fixData.getID());
-        assertEquals( "VALUE_OF_FUTURES", fixData.getName());
-        assertEquals( "ValueOfFutures", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "408", fixData.toFIXIDString());
+        assertEquals( "VALUE_OF_FUTURES", fixData.toFIXNameString());
+        assertEquals( "ValueOfFutures", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0408Test() {

@@ -40,27 +40,27 @@ class Tag1036EnuExecAckStatusTest {
     @Test
     void FIX1036Test() {
         FIX50 fixData = FIX50.FIX1036_ENU_EXEC_ACK_STATUS;
-        assertEquals( "1036", fixData.getID());
-        assertEquals( "EXEC_ACK_STATUS", fixData.getName());
-        assertEquals( "ExecAckStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1036", fixData.toFIXIDString());
+        assertEquals( "EXEC_ACK_STATUS", fixData.toFIXNameString());
+        assertEquals( "ExecAckStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1036Test() {
         Tag1036EnuExecAckStatus tagData;
 
         tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.RECEIVED );
-        assertEquals( Enum1036ExecAckStatus.RECEIVED.getID(), tagData.getDataValue());
+        assertEquals( Enum1036ExecAckStatus.RECEIVED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.ACCEPTED );
-        assertEquals( Enum1036ExecAckStatus.ACCEPTED.getID(), tagData.getDataValue());
+        assertEquals( Enum1036ExecAckStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.DONT_KNOW_REJECTED );
-        assertEquals( Enum1036ExecAckStatus.DONT_KNOW_REJECTED.getID(), tagData.getDataValue());
+        assertEquals( Enum1036ExecAckStatus.DONT_KNOW_REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

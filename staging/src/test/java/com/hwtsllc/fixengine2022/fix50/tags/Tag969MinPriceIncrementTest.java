@@ -34,12 +34,12 @@ class Tag969MinPriceIncrementTest {
     @Test
     void FIX0969Test() {
         FIX50 fixData = FIX50.FIX969_MIN_PRICE_INCREMENT;
-        assertEquals( "969", fixData.getID());
-        assertEquals( "MIN_PRICE_INCREMENT", fixData.getName());
-        assertEquals( "MinPriceIncrement", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "969", fixData.toFIXIDString());
+        assertEquals( "MIN_PRICE_INCREMENT", fixData.toFIXNameString());
+        assertEquals( "MinPriceIncrement", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0969Test() {

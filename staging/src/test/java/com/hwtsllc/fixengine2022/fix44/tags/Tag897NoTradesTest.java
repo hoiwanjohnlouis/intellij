@@ -33,12 +33,12 @@ class Tag897NoTradesTest {
     @Test
     void FIX0897Test() {
         FIX44 fixData = FIX44.FIX897_NO_TRADES;
-        assertEquals( "897", fixData.getID());
-        assertEquals( "NO_TRADES", fixData.getName());
-        assertEquals( "NoTrades", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "897", fixData.toFIXIDString());
+        assertEquals( "NO_TRADES", fixData.toFIXNameString());
+        assertEquals( "NoTrades", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0897Test() {

@@ -35,12 +35,12 @@ class Tag147StrSubjectTest {
     @Test
     void FIX0147Test() {
         FIX41 fixData = FIX41.FIX147_STR_SUBJECT;
-        assertEquals( "147", fixData.getID());
-        assertEquals( "SUBJECT", fixData.getName());
-        assertEquals( "Subject", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "147", fixData.toFIXIDString());
+        assertEquals( "SUBJECT", fixData.toFIXNameString());
+        assertEquals( "Subject", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0147Test() {

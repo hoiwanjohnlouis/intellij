@@ -40,12 +40,12 @@ class Tag1012UtcSideTrdRegTimestampTest {
     @Test
     void FIX1012Test() {
         FIX50 fixData = FIX50.FIX1012_UTC_SIDE_TRD_REG_TIMESTAMP;
-        assertEquals( "1012", fixData.getID());
-        assertEquals( "SIDE_TRD_REG_TIMESTAMP", fixData.getName());
-        assertEquals( "SideTrdRegTimestamp", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1012", fixData.toFIXIDString());
+        assertEquals( "SIDE_TRD_REG_TIMESTAMP", fixData.toFIXNameString());
+        assertEquals( "SideTrdRegTimestamp", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1012Test() {

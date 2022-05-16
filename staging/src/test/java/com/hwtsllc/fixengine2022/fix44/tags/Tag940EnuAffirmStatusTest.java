@@ -38,27 +38,27 @@ class Tag940EnuAffirmStatusTest {
     @Test
     void FIX0940Test() {
         FIX44 fixData = FIX44.FIX940_ENU_AFFIRM_STATUS;
-        assertEquals( "940", fixData.getID());
-        assertEquals( "AFFIRM_STATUS", fixData.getName());
-        assertEquals( "AffirmStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "940", fixData.toFIXIDString());
+        assertEquals( "AFFIRM_STATUS", fixData.toFIXNameString());
+        assertEquals( "AffirmStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0940Test() {
         Tag940EnuAffirmStatus tagData;
 
         tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.RECEIVED );
-        assertEquals( Enum940AffirmStatus.RECEIVED.getID(), tagData.getDataValue());
+        assertEquals( Enum940AffirmStatus.RECEIVED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.REJECTED );
-        assertEquals( Enum940AffirmStatus.REJECTED.getID(), tagData.getDataValue());
+        assertEquals( Enum940AffirmStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag940EnuAffirmStatus( Enum940AffirmStatus.AFFIRMED );
-        assertEquals( Enum940AffirmStatus.AFFIRMED.getID(), tagData.getDataValue());
+        assertEquals( Enum940AffirmStatus.AFFIRMED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

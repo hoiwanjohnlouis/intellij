@@ -52,35 +52,35 @@ class MyEnumApplQueueTest {
         MyEnumApplQueue enumType;
 
         enumType = MyEnumApplQueue.NO_ACTION;
-        assertEquals("0", enumType.getID());
-        assertEquals("NO_ACTION", enumType.getName());
-        assertEquals("0 - No Action Taken", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("NO_ACTION", enumType.toFIXNameString());
+        assertEquals("0 - No Action Taken", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplQueue.QUEUE_FLUSHED;
-        assertEquals("1", enumType.getID());
-        assertEquals("QUEUE_FLUSHED", enumType.getName());
-        assertEquals("1 - Queue Flushed", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("QUEUE_FLUSHED", enumType.toFIXNameString());
+        assertEquals("1 - Queue Flushed", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplQueue.OVERLAY_LAST;
-        assertEquals("2", enumType.getID());
-        assertEquals("OVERLAY_LAST", enumType.getName());
-        assertEquals("2 - Overlay Last", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("OVERLAY_LAST", enumType.toFIXNameString());
+        assertEquals("2 - Overlay Last", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumApplQueue.END_SESSION;
-        assertEquals("3", enumType.getID());
-        assertEquals("END_SESSION", enumType.getName());
-        assertEquals("3 - End Session", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("END_SESSION", enumType.toFIXNameString());
+        assertEquals("3 - End Session", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

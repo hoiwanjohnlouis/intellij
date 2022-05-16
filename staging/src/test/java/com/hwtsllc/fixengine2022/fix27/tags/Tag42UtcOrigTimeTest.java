@@ -35,13 +35,13 @@ class Tag42UtcOrigTimeTest {
     @Test
     void FIX0042Test() {
         FIX27 fixData = FIX27.FIX42_UTC_ORIG_TIME;
-        assertEquals( "ORIG_TIME", fixData.getName());
-        assertEquals( "42", fixData.getID());
-        assertEquals( "OrigTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ORIG_TIME", fixData.toFIXNameString());
+        assertEquals( "42", fixData.toFIXIDString());
+        assertEquals( "OrigTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0042Test() {

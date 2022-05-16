@@ -34,12 +34,12 @@ class Tag934LastNetworkResponseIDTest {
     @Test
     void FIX0934Test() {
         FIX44 fixData = FIX44.FIX934_LAST_NETWORK_RESPONSE_ID;
-        assertEquals( "934", fixData.getID());
-        assertEquals( "LAST_NETWORK_RESPONSE_ID", fixData.getName());
-        assertEquals( "LastNetworkResponseID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "934", fixData.toFIXIDString());
+        assertEquals( "LAST_NETWORK_RESPONSE_ID", fixData.toFIXNameString());
+        assertEquals( "LastNetworkResponseID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0934Test() {

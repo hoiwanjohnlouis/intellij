@@ -27,12 +27,12 @@ class Tag652QtyUnderlyingLastQtyTest {
     @Test
     void FIX0652Test() {
         FIX43 fixData = FIX43.FIX652_QTY_UNDERLYING_LAST_QTY;
-        assertEquals( "652", fixData.getID());
-        assertEquals( "UNDERLYING_LAST_QTY", fixData.getName());
-        assertEquals( "UnderlyingLastQty", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "652", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_LAST_QTY", fixData.toFIXNameString());
+        assertEquals( "UnderlyingLastQty", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0652Test() {

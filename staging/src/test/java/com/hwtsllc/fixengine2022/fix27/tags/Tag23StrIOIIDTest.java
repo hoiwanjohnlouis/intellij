@@ -35,13 +35,13 @@ class Tag23StrIOIIDTest {
     @Test
     void FIX0023Test() {
         FIX27 fixData = FIX27.FIX23_STR_IOI_ID;
-        assertEquals( "IOI_ID", fixData.getName());
-        assertEquals( "23", fixData.getID());
-        assertEquals( "IOIid", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "IOI_ID", fixData.toFIXNameString());
+        assertEquals( "23", fixData.toFIXIDString());
+        assertEquals( "IOIid", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0023Test() {

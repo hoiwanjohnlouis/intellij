@@ -27,12 +27,12 @@ class Tag913AgreementDescTest {
     @Test
     void FIX0913Test() {
         FIX44 fixData = FIX44.FIX913_AGREEMENT_DESC;
-        assertEquals( "913", fixData.getID());
-        assertEquals( "AGREEMENT_DESC", fixData.getName());
-        assertEquals( "AgreementDesc", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "913", fixData.toFIXIDString());
+        assertEquals( "AGREEMENT_DESC", fixData.toFIXNameString());
+        assertEquals( "AgreementDesc", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0913Test() {

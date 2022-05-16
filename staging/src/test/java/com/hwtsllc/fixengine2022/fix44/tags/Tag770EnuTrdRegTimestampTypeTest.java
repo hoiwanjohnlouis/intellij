@@ -44,39 +44,39 @@ class Tag770EnuTrdRegTimestampTypeTest {
     @Test
     void FIX0770Test() {
         FIX44 fixData = FIX44.FIX770_ENU_TRD_REG_TIMESTAMP_TYPE;
-        assertEquals( "770", fixData.getID());
-        assertEquals( "TRD_REG_TIMESTAMP_TYPE", fixData.getName());
-        assertEquals( "TrdRegTimestampType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "770", fixData.toFIXIDString());
+        assertEquals( "TRD_REG_TIMESTAMP_TYPE", fixData.toFIXNameString());
+        assertEquals( "TrdRegTimestampType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0770Test() {
         Tag770EnuTrdRegTimestampType tagData;
 
         tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.EXECUTION_TIME);
-        assertEquals( Enum770TrdRegTimestampType.EXECUTION_TIME.getID(), tagData.getDataValue());
+        assertEquals( Enum770TrdRegTimestampType.EXECUTION_TIME.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_IN);
-        assertEquals( Enum770TrdRegTimestampType.TIME_IN.getID(), tagData.getDataValue());
+        assertEquals( Enum770TrdRegTimestampType.TIME_IN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_OUT);
-        assertEquals( Enum770TrdRegTimestampType.TIME_OUT.getID(), tagData.getDataValue());
+        assertEquals( Enum770TrdRegTimestampType.TIME_OUT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_RECEIPT);
-        assertEquals( Enum770TrdRegTimestampType.BROKER_RECEIPT.getID(), tagData.getDataValue());
+        assertEquals( Enum770TrdRegTimestampType.BROKER_RECEIPT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.BROKER_EXECUTION);
-        assertEquals( Enum770TrdRegTimestampType.BROKER_EXECUTION.getID(), tagData.getDataValue());
+        assertEquals( Enum770TrdRegTimestampType.BROKER_EXECUTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.DESK_RECEIPT);
-        assertEquals( Enum770TrdRegTimestampType.DESK_RECEIPT.getID(), tagData.getDataValue());
+        assertEquals( Enum770TrdRegTimestampType.DESK_RECEIPT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

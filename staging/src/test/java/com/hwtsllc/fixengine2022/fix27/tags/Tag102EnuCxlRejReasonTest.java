@@ -46,13 +46,13 @@ class Tag102EnuCxlRejReasonTest {
     @Test
     void FIX0102Test() {
         FIX27 fixData = FIX27.FIX102_ENU_CXL_REJ_REASON;
-        assertEquals( fixData.getName(), "CXL_REJ_REASON");
-        assertEquals( fixData.getID(), "102");
-        assertEquals( fixData.getDescription(), "CxlRejReason");
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( fixData.toFIXNameString(), "CXL_REJ_REASON");
+        assertEquals( fixData.toFIXIDString(), "102");
+        assertEquals( fixData.toFIXDescriptionString(), "CxlRejReason");
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0102Test() {

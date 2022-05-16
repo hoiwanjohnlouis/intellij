@@ -27,12 +27,12 @@ class Tag489StrCardNumberTest {
     @Test
     void FIX0489Test() {
         FIX43 fixData = FIX43.FIX489_STR_CARD_NUMBER;
-        assertEquals( "489", fixData.getID());
-        assertEquals( "CARD_NUMBER", fixData.getName());
-        assertEquals( "CardNumber", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "489", fixData.toFIXIDString());
+        assertEquals( "CARD_NUMBER", fixData.toFIXNameString());
+        assertEquals( "CardNumber", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0489Test() {

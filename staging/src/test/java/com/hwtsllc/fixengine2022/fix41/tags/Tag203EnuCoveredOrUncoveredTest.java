@@ -47,23 +47,23 @@ class Tag203EnuCoveredOrUncoveredTest {
     @Test
     void FIX0203Test() {
         FIX41 fixData = FIX41.FIX203_ENU_COVERED_OR_UNCOVERED;
-        assertEquals( "203", fixData.getID());
-        assertEquals( "COVERED_OR_UNCOVERED", fixData.getName());
-        assertEquals( "CoveredOrUncovered", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "203", fixData.toFIXIDString());
+        assertEquals( "COVERED_OR_UNCOVERED", fixData.toFIXNameString());
+        assertEquals( "CoveredOrUncovered", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0203Test() {
         Tag203EnuCoveredOrUncovered tagData;
 
         tagData = new Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
-        assertEquals( MyEnumCoveredOrUncovered.COVERED.getID(), tagData.getDataValue());
+        assertEquals( MyEnumCoveredOrUncovered.COVERED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.UNCOVERED);
-        assertEquals( MyEnumCoveredOrUncovered.UNCOVERED.getID(), tagData.getDataValue());
+        assertEquals( MyEnumCoveredOrUncovered.UNCOVERED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

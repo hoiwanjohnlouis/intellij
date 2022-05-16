@@ -50,12 +50,12 @@ class Tag297EnuQuoteAckStatusTest {
     @Test
     void FIX0297Test() {
         FIX42 fixData = FIX42.FIX297_ENU_QUOTE_ACK_STATUS;
-        assertEquals( "297", fixData.getID());
-        assertEquals( "QUOTE_ACK_STATUS", fixData.getName());
-        assertEquals( "QuoteAckStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "297", fixData.toFIXIDString());
+        assertEquals( "QUOTE_ACK_STATUS", fixData.toFIXNameString());
+        assertEquals( "QuoteAckStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0297Test() {
@@ -65,67 +65,67 @@ class Tag297EnuQuoteAckStatusTest {
          * 0-15 msg types
          */
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.ACCEPTED);
-        assertEquals( Enum297QuoteStatus.ACCEPTED.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCEL_FOR_SYMBOL);
-        assertEquals( Enum297QuoteStatus.CANCEL_FOR_SYMBOL.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCEL_FOR_SYMBOL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE);
-        assertEquals( Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_FOR_UNDERLYING);
-        assertEquals( Enum297QuoteStatus.CANCELED_FOR_UNDERLYING.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_FOR_UNDERLYING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_ALL);
-        assertEquals( Enum297QuoteStatus.CANCELED_ALL.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_ALL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.REJECTED);
-        assertEquals( Enum297QuoteStatus.REJECTED.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.REMOVED_FROM_MARKET);
-        assertEquals( Enum297QuoteStatus.REMOVED_FROM_MARKET.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.REMOVED_FROM_MARKET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.EXPIRED);
-        assertEquals( Enum297QuoteStatus.EXPIRED.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.EXPIRED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.QUERY);
-        assertEquals( Enum297QuoteStatus.QUERY.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.QUERY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.QUOTE_NOT_FOUND);
-        assertEquals( Enum297QuoteStatus.QUOTE_NOT_FOUND.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.QUOTE_NOT_FOUND.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.PENDING);
-        assertEquals( Enum297QuoteStatus.PENDING.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.PENDING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.PASS);
-        assertEquals( Enum297QuoteStatus.PASS.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.PASS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.LOCKED_MARKET_WARNING);
-        assertEquals( Enum297QuoteStatus.LOCKED_MARKET_WARNING.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.LOCKED_MARKET_WARNING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CROSS_MARKET_WARNING);
-        assertEquals( Enum297QuoteStatus.CROSS_MARKET_WARNING.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CROSS_MARKET_WARNING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET);
-        assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET);
-        assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET.getID(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

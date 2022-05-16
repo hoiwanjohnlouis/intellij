@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
-import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
@@ -59,7 +59,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    Y - At the Midpoint
  *  <p>    Z - Pre-open
  */
-public enum MyEnumQualifier implements EnumAccessors, LogVerboseString {
+public enum MyEnumQualifier implements LogFIXString, LogVerboseString {
     ALL_OR_NONE("A", "ALL_OR_NONE", "A - All or None (AON)"),
     MARKET_ON_CLOSE("B", "MARKET_ON_CLOSE", "B - Market On Close (MOC) (held to close)"),
     AT_THE_CLOSE("C", "AT_THE_CLOSE", "C - At the close (around/not held to close)"),
@@ -97,28 +97,28 @@ public enum MyEnumQualifier implements EnumAccessors, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String getEnumName() {
+    public String toEnumNameString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getID() {
+    public String toFIXIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String getName() {
+    public String toFIXNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String getDescription() {
+    public String toFIXDescriptionString() {
         return description;
     }
     /**
@@ -128,16 +128,16 @@ public enum MyEnumQualifier implements EnumAccessors, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(getEnumName())
+                .concat(toEnumNameString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
     /**
@@ -145,13 +145,13 @@ public enum MyEnumQualifier implements EnumAccessors, LogVerboseString {
      */
     @Override
     public String toString() {
-        return getEnumName()
+        return toEnumNameString()
                 .concat("=[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat(",")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat(",")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
 

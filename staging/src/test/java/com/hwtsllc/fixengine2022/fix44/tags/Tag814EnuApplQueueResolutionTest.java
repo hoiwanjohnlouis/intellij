@@ -48,31 +48,31 @@ class Tag814EnuApplQueueResolutionTest {
     @Test
     void FIX0814Test() {
         FIX44 fixData = FIX44.FIX814_ENU_APPL_QUEUE_RESOLUTION;
-        assertEquals( "814", fixData.getID());
-        assertEquals( "APPL_QUEUE_RESOLUTION", fixData.getName());
-        assertEquals( "ApplQueueResolution", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "814", fixData.toFIXIDString());
+        assertEquals( "APPL_QUEUE_RESOLUTION", fixData.toFIXNameString());
+        assertEquals( "ApplQueueResolution", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0814Test() {
         Tag814EnuApplQueueResolution tagData;
 
         tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.NO_ACTION);
-        assertEquals( MyEnumApplQueue.NO_ACTION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumApplQueue.NO_ACTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.QUEUE_FLUSHED);
-        assertEquals( MyEnumApplQueue.QUEUE_FLUSHED.getID(), tagData.getDataValue());
+        assertEquals( MyEnumApplQueue.QUEUE_FLUSHED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.OVERLAY_LAST);
-        assertEquals( MyEnumApplQueue.OVERLAY_LAST.getID(), tagData.getDataValue());
+        assertEquals( MyEnumApplQueue.OVERLAY_LAST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag814EnuApplQueueResolution(MyEnumApplQueue.END_SESSION);
-        assertEquals( MyEnumApplQueue.END_SESSION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumApplQueue.END_SESSION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -50,61 +50,61 @@ class Tag1033EnuDeskTypeTest {
     @Test
     void FIX1033Test() {
         FIX50 fixData = FIX50.FIX1033_ENU_DESK_TYPE;
-        assertEquals( "1033", fixData.getID());
-        assertEquals( "DESK_TYPE", fixData.getName());
-        assertEquals( "DeskType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1033", fixData.toFIXIDString());
+        assertEquals( "DESK_TYPE", fixData.toFIXNameString());
+        assertEquals( "DeskType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1033Test() {
         Tag1033EnuDeskType tagData;
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.AGENCY );
-        assertEquals( Enum1033DeskType.AGENCY.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.AGENCY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.ARBITRAGE );
-        assertEquals( Enum1033DeskType.ARBITRAGE.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.ARBITRAGE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.DERIVATIVES );
-        assertEquals( Enum1033DeskType.DERIVATIVES.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.DERIVATIVES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.INTERNATIONAL );
-        assertEquals( Enum1033DeskType.INTERNATIONAL.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.INTERNATIONAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.INSTITUTIONAL );
-        assertEquals( Enum1033DeskType.INSTITUTIONAL.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.INSTITUTIONAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.OTHER );
-        assertEquals( Enum1033DeskType.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PREFERRED );
-        assertEquals( Enum1033DeskType.PREFERRED.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.PREFERRED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PROPRIETARY );
-        assertEquals( Enum1033DeskType.PROPRIETARY.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.PROPRIETARY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PROGRAM_TRADING );
-        assertEquals( Enum1033DeskType.PROGRAM_TRADING.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.PROGRAM_TRADING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.SALES );
-        assertEquals( Enum1033DeskType.SALES.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.SALES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.TRADING );
-        assertEquals( Enum1033DeskType.TRADING.getID(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.TRADING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

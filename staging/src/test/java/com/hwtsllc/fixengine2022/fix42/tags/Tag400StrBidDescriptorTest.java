@@ -28,12 +28,12 @@ class Tag400StrBidDescriptorTest {
     @Test
     void FIX0400Test() {
         FIX42 fixData = FIX42.FIX400_STR_BID_DESCRIPTOR;
-        assertEquals( "400", fixData.getID());
-        assertEquals( "BID_DESCRIPTOR", fixData.getName());
-        assertEquals( "BidDescriptor", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "400", fixData.toFIXIDString());
+        assertEquals( "BID_DESCRIPTOR", fixData.toFIXNameString());
+        assertEquals( "BidDescriptor", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0400Test() {

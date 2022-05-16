@@ -33,12 +33,12 @@ class Tag879UnderlyingQtyTest {
     @Test
     void FIX0879Test() {
         FIX44 fixData = FIX44.FIX879_UNDERLYING_QTY;
-        assertEquals( "879", fixData.getID());
-        assertEquals( "UNDERLYING_QTY", fixData.getName());
-        assertEquals( "UnderlyingQty", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "879", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_QTY", fixData.toFIXNameString());
+        assertEquals( "UnderlyingQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0879Test() {

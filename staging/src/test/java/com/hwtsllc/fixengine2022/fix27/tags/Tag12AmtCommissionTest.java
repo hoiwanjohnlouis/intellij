@@ -35,13 +35,13 @@ class Tag12AmtCommissionTest {
     @Test
     void FIX0012Test() {
         FIX27 fixData = FIX27.FIX12_AMT_COMMISSION;
-        assertEquals( "COMMISSION", fixData.getName());
-        assertEquals( "12", fixData.getID());
-        assertEquals( "Commission", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "COMMISSION", fixData.toFIXNameString());
+        assertEquals( "12", fixData.toFIXIDString());
+        assertEquals( "Commission", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0012Test() {

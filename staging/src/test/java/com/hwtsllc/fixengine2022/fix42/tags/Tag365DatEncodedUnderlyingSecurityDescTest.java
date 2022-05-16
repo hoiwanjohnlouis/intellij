@@ -28,12 +28,12 @@ class Tag365DatEncodedUnderlyingSecurityDescTest {
     @Test
     void FIX0365Test() {
         FIX42 fixData = FIX42.FIX365_DAT_ENCODED_UNDERLYING_SECURITY_DESC;
-        assertEquals( "365", fixData.getID());
-        assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC", fixData.getName());
-        assertEquals( "EncodedUnderlyingSecurityDesc", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "365", fixData.toFIXIDString());
+        assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC", fixData.toFIXNameString());
+        assertEquals( "EncodedUnderlyingSecurityDesc", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0365Test() {

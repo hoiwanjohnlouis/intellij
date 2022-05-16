@@ -38,23 +38,23 @@ class Tag1134BoolReportedPxDiffTest {
     @Test
     void FIX1134Test() {
         FIX50 fixData = FIX50.FIX1134_BOOL_REPORTED_PX_DIFF;
-        assertEquals( "1134", fixData.getID());
-        assertEquals( "REPORTED_PX_DIFF", fixData.getName());
-        assertEquals( "ReportedPxDiff", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1134", fixData.toFIXIDString());
+        assertEquals( "REPORTED_PX_DIFF", fixData.toFIXNameString());
+        assertEquals( "ReportedPxDiff", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1134Test() {
         Tag1134BoolReportedPxDiff tagData;
 
         tagData = new Tag1134BoolReportedPxDiff( Bool1134ReportedPxDiff.NO );
-        assertEquals( Bool1134ReportedPxDiff.NO.getID(), tagData.getDataValue() );
+        assertEquals( Bool1134ReportedPxDiff.NO.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1134BoolReportedPxDiff( Bool1134ReportedPxDiff.YES );
-        assertEquals( Bool1134ReportedPxDiff.YES.getID(), tagData.getDataValue() );
+        assertEquals( Bool1134ReportedPxDiff.YES.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

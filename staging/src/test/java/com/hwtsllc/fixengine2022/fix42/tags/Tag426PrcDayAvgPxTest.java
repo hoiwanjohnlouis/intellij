@@ -28,12 +28,12 @@ class Tag426PrcDayAvgPxTest {
     @Test
     void FIX0426Test() {
         FIX42 fixData = FIX42.FIX426_PRC_DAY_AVG_PX;
-        assertEquals( "426", fixData.getID());
-        assertEquals( "DAY_AVG_PX", fixData.getName());
-        assertEquals( "DayAvgPx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "426", fixData.toFIXIDString());
+        assertEquals( "DAY_AVG_PX", fixData.toFIXNameString());
+        assertEquals( "DayAvgPx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0426Test() {

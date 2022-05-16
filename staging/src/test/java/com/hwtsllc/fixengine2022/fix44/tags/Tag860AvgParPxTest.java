@@ -33,12 +33,12 @@ class Tag860AvgParPxTest {
     @Test
     void FIX0860Test() {
         FIX44 fixData = FIX44.FIX860_AVG_PAR_PX;
-        assertEquals( "860", fixData.getID());
-        assertEquals( "AVG_PAR_PX", fixData.getName());
-        assertEquals( "AvgParPx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "860", fixData.toFIXIDString());
+        assertEquals( "AVG_PAR_PX", fixData.toFIXNameString());
+        assertEquals( "AvgParPx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0860Test() {

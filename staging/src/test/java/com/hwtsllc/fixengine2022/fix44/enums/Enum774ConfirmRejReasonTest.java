@@ -39,27 +39,27 @@ class Enum774ConfirmRejReasonTest {
         Enum774ConfirmRejReason enumType;
 
         enumType = Enum774ConfirmRejReason.MISMATCHED_ACCOUNT;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "MISMATCHED_ACCOUNT", enumType.getName() );
-        assertEquals( "1 - Mismatched account", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "MISMATCHED_ACCOUNT", enumType.toFIXNameString() );
+        assertEquals( "1 - Mismatched account", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum774ConfirmRejReason.MISSING_INSTRUCTIONS;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "MISSING_INSTRUCTIONS", enumType.getName() );
-        assertEquals( "2 - Missing settlement instructions", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "MISSING_INSTRUCTIONS", enumType.toFIXNameString() );
+        assertEquals( "2 - Missing settlement instructions", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum774ConfirmRejReason.OTHER;
-        assertEquals( "99", enumType.getID() );
-        assertEquals( "OTHER", enumType.getName() );
-        assertEquals( "99 - Other", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "99", enumType.toFIXIDString() );
+        assertEquals( "OTHER", enumType.toFIXNameString() );
+        assertEquals( "99 - Other", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

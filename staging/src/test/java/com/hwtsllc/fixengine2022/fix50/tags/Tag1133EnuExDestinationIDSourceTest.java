@@ -42,35 +42,35 @@ class Tag1133EnuExDestinationIDSourceTest {
     @Test
     void FIX1133Test() {
         FIX50 fixData = FIX50.FIX1133_ENU_EX_DESTINATION_ID_SOURCE;
-        assertEquals( "1133", fixData.getID());
-        assertEquals( "EX_DESTINATION_ID_SOURCE", fixData.getName());
-        assertEquals( "ExDestinationIDSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1133", fixData.toFIXIDString());
+        assertEquals( "EX_DESTINATION_ID_SOURCE", fixData.toFIXNameString());
+        assertEquals( "ExDestinationIDSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1133Test() {
         Tag1133EnuExDestinationIDSource tagData;
 
         tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.BIC );
-        assertEquals( Enum1133DestinationSource.BIC.getID(), tagData.getDataValue());
+        assertEquals( Enum1133DestinationSource.BIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.MARKET_PARTICIPANT_IDENTIFIER );
-        assertEquals( Enum1133DestinationSource.MARKET_PARTICIPANT_IDENTIFIER.getID(), tagData.getDataValue());
+        assertEquals( Enum1133DestinationSource.MARKET_PARTICIPANT_IDENTIFIER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.PROPRIETARY );
-        assertEquals( Enum1133DestinationSource.PROPRIETARY.getID(), tagData.getDataValue());
+        assertEquals( Enum1133DestinationSource.PROPRIETARY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.ISO_COUNTRY_CODE );
-        assertEquals( Enum1133DestinationSource.ISO_COUNTRY_CODE.getID(), tagData.getDataValue());
+        assertEquals( Enum1133DestinationSource.ISO_COUNTRY_CODE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.MIC );
-        assertEquals( Enum1133DestinationSource.MIC.getID(), tagData.getDataValue());
+        assertEquals( Enum1133DestinationSource.MIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

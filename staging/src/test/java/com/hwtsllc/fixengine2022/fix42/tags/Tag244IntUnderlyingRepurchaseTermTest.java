@@ -29,12 +29,12 @@ class Tag244IntUnderlyingRepurchaseTermTest {
     @Test
     void FIX0244Test() {
         FIX42 fixData = FIX42.FIX244_INT_UNDERLYING_REPURCHASE_TERM;
-        assertEquals( "244", fixData.getID());
-        assertEquals( "UNDERLYING_REPURCHASE_TERM", fixData.getName());
-        assertEquals( "UnderlyingRepurchaseTerm (Deprecated)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "244", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_REPURCHASE_TERM", fixData.toFIXNameString());
+        assertEquals( "UnderlyingRepurchaseTerm (Deprecated)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0244Test() {

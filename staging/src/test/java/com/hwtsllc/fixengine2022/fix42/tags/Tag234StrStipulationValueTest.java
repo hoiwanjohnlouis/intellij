@@ -28,12 +28,12 @@ class Tag234StrStipulationValueTest {
     @Test
     void FIX0234Test() {
         FIX42 fixData = FIX42.FIX234_STR_STIPULATION_VALUE;
-        assertEquals( "234", fixData.getID());
-        assertEquals( "STIPULATION_VALUE", fixData.getName());
-        assertEquals( "StipulationValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "234", fixData.toFIXIDString());
+        assertEquals( "STIPULATION_VALUE", fixData.toFIXNameString());
+        assertEquals( "StipulationValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0234Test() {

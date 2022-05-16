@@ -33,12 +33,12 @@ class Tag878UnderlyingCPRegTypeTest {
     @Test
     void FIX0878Test() {
         FIX44 fixData = FIX44.FIX878_UNDERLYING_CP_REGTYPE;
-        assertEquals( "878", fixData.getID());
-        assertEquals( "UNDERLYING_CP_REGTYPE", fixData.getName());
-        assertEquals( "UnderlyingCPRegType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "878", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CP_REGTYPE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCPRegType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0878Test() {

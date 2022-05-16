@@ -40,35 +40,35 @@ class Tag945EnuCollInquiryStatusTest {
     @Test
     void FIX0945Test() {
         FIX44 fixData = FIX44.FIX945_ENU_COLL_INQUIRY_STATUS;
-        assertEquals( "945", fixData.getID());
-        assertEquals( "COLL_INQUIRY_STATUS", fixData.getName());
-        assertEquals( "CollInquiryStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "945", fixData.toFIXIDString());
+        assertEquals( "COLL_INQUIRY_STATUS", fixData.toFIXNameString());
+        assertEquals( "CollInquiryStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0945Test() {
         Tag945EnuCollInquiryStatus tagData;
 
         tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED );
-        assertEquals( Enum945CollInquiryStatus.ACCEPTED.getID(), tagData.getDataValue());
+        assertEquals( Enum945CollInquiryStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS );
-        assertEquals( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS.getID(), tagData.getDataValue());
+        assertEquals( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED );
-        assertEquals( Enum945CollInquiryStatus.COMPLETED.getID(), tagData.getDataValue());
+        assertEquals( Enum945CollInquiryStatus.COMPLETED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS );
-        assertEquals( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS.getID(), tagData.getDataValue());
+        assertEquals( Enum945CollInquiryStatus.COMPLETED_WITH_WARNINGS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.REJECTED );
-        assertEquals( Enum945CollInquiryStatus.REJECTED.getID(), tagData.getDataValue());
+        assertEquals( Enum945CollInquiryStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

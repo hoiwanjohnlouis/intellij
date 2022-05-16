@@ -35,13 +35,13 @@ class Tag89DatSignatureTest {
     @Test
     void FIX0089Test() {
         FIX27 fixData = FIX27.FIX89_DAT_SIGNATURE;
-        assertEquals( "SIGNATURE", fixData.getName());
-        assertEquals( "89", fixData.getID());
-        assertEquals( "Signature", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "SIGNATURE", fixData.toFIXNameString());
+        assertEquals( "89", fixData.toFIXIDString());
+        assertEquals( "Signature", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0089Test() {

@@ -43,23 +43,23 @@ class Tag1111EnuTriggerOrderTypeTest {
     @Test
     void FIX1111Test() {
         FIX50 fixData = FIX50.FIX1111_ENU_TRIGGER_ORDER_TYPE;
-        assertEquals( "1111", fixData.getID());
-        assertEquals( "TRIGGER_ORDER_TYPE", fixData.getName());
-        assertEquals( "TriggerOrderType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1111", fixData.toFIXIDString());
+        assertEquals( "TRIGGER_ORDER_TYPE", fixData.toFIXNameString());
+        assertEquals( "TriggerOrderType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1111Test() {
         Tag1111EnuTriggerOrderType tagData;
 
         tagData = new Tag1111EnuTriggerOrderType( Enum1111TriggerOrderType.MARKET );
-        assertEquals( Enum1111TriggerOrderType.MARKET.getID(), tagData.getDataValue() );
+        assertEquals( Enum1111TriggerOrderType.MARKET.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1111EnuTriggerOrderType( Enum1111TriggerOrderType.LIMIT );
-        assertEquals( Enum1111TriggerOrderType.LIMIT.getID(), tagData.getDataValue() );
+        assertEquals( Enum1111TriggerOrderType.LIMIT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -28,12 +28,12 @@ class Tag441IntLiquidityNumSecuritiesTest {
     @Test
     void FIX0441Test() {
         FIX42 fixData = FIX42.FIX441_INT_LIQUIDITY_NUM_SECURITIES;
-        assertEquals( "441", fixData.getID());
-        assertEquals( "LIQUIDITY_NUM_SECURITIES", fixData.getName());
-        assertEquals( "LiquidityNumSecurities", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "441", fixData.toFIXIDString());
+        assertEquals( "LIQUIDITY_NUM_SECURITIES", fixData.toFIXNameString());
+        assertEquals( "LiquidityNumSecurities", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0441Test() {

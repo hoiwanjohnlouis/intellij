@@ -34,12 +34,12 @@ class Tag1039StrUnderlyingSettlMethodTest {
     @Test
     void FIX1039Test() {
         FIX50 fixData = FIX50.FIX1039_STR_UNDERLYING_SETTL_METHOD;
-        assertEquals( "1039", fixData.getID());
-        assertEquals( "UNDERLYING_SETTL_METHOD", fixData.getName());
-        assertEquals( "UnderlyingSettlMethod", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1039", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_SETTL_METHOD", fixData.toFIXNameString());
+        assertEquals( "UnderlyingSettlMethod", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1039Test() {

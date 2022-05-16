@@ -46,12 +46,12 @@ class Tag321EnuSecurityRequestTypeTest {
     @Test
     void FIX0321Test() {
         FIX42 fixData = FIX42.FIX321_ENU_SECURITY_REQUEST_TYPE;
-        assertEquals( "321", fixData.getID());
-        assertEquals( "SECURITY_REQUEST_TYPE", fixData.getName());
-        assertEquals( "SecurityRequestType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "321", fixData.toFIXIDString());
+        assertEquals( "SECURITY_REQUEST_TYPE", fixData.toFIXNameString());
+        assertEquals( "SecurityRequestType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0321Test() {
@@ -61,19 +61,19 @@ class Tag321EnuSecurityRequestTypeTest {
          * 0-3 msg types
          */
         tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY);
-        assertEquals( Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY.getID(), tagData.getDataValue());
+        assertEquals( Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY);
-        assertEquals( Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY.getID(), tagData.getDataValue());
+        assertEquals( Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES);
-        assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES.getID(), tagData.getDataValue());
+        assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITIES);
-        assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITIES.getID(), tagData.getDataValue());
+        assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITIES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

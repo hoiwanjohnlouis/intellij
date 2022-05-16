@@ -28,12 +28,12 @@ class Tag359DatEncodedHeadlineTest {
     @Test
     void FIX0359Test() {
         FIX42 fixData = FIX42.FIX359_DAT_ENCODED_HEADLINE;
-        assertEquals( "359", fixData.getID());
-        assertEquals( "ENCODED_HEADLINE", fixData.getName());
-        assertEquals( "EncodedHeadline", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "359", fixData.toFIXIDString());
+        assertEquals( "ENCODED_HEADLINE", fixData.toFIXNameString());
+        assertEquals( "EncodedHeadline", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0359Test() {

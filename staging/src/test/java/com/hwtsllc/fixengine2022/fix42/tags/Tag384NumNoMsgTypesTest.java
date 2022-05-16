@@ -28,12 +28,12 @@ class Tag384NumNoMsgTypesTest {
     @Test
     void FIX0384Test() {
         FIX42 fixData = FIX42.FIX384_NUM_NO_MSG_TYPES;
-        assertEquals( "384", fixData.getID());
-        assertEquals( "NO_MSG_TYPES", fixData.getName());
-        assertEquals( "NoMsgTypes", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "384", fixData.toFIXIDString());
+        assertEquals( "NO_MSG_TYPES", fixData.toFIXNameString());
+        assertEquals( "NoMsgTypes", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0384Test() {

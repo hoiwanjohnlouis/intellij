@@ -40,39 +40,39 @@ class Tag709EnuPosTransTypeTest {
     @Test
     void FIX0709Test() {
         FIX44 fixData = FIX44.FIX709_ENU_POS_TRANS_TYPE;
-        assertEquals( "709", fixData.getID());
-        assertEquals( "POS_TRANS_TYPE", fixData.getName());
-        assertEquals( "PosTransType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "709", fixData.toFIXIDString());
+        assertEquals( "POS_TRANS_TYPE", fixData.toFIXNameString());
+        assertEquals( "PosTransType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0709Test() {
         Tag709EnuPosTransType tagData;
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.EXERCISE);
-        assertEquals( Enum709PosTransType.EXERCISE.getID(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.EXERCISE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.DO_NOT_EXERCISE);
-        assertEquals( Enum709PosTransType.DO_NOT_EXERCISE.getID(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.DO_NOT_EXERCISE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.POSITION_ADJUSTMENT);
-        assertEquals( Enum709PosTransType.POSITION_ADJUSTMENT.getID(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.POSITION_ADJUSTMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.MARGIN_DISPOSITION);
-        assertEquals( Enum709PosTransType.MARGIN_DISPOSITION.getID(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.MARGIN_DISPOSITION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.PLEDGE);
-        assertEquals( Enum709PosTransType.PLEDGE.getID(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.PLEDGE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.LARGE_TRADER_SUBMISSION);
-        assertEquals( Enum709PosTransType.LARGE_TRADER_SUBMISSION.getID(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.LARGE_TRADER_SUBMISSION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

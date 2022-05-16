@@ -46,19 +46,19 @@ class Tag1034EnuDeskTypeSourceTest {
     @Test
     void FIX1034Test() {
         FIX50 fixData = FIX50.FIX1034_ENU_DESK_TYPE_SOURCE;
-        assertEquals( "1034", fixData.getID());
-        assertEquals( "DESK_TYPE_SOURCE", fixData.getName());
-        assertEquals( "DeskTypeSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1034", fixData.toFIXIDString());
+        assertEquals( "DESK_TYPE_SOURCE", fixData.toFIXNameString());
+        assertEquals( "DeskTypeSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1034Test() {
         Tag1034EnuDeskTypeSource tagData;
 
         tagData = new Tag1034EnuDeskTypeSource( MyEnumOrderSource.NASD_OATS );
-        assertEquals( MyEnumOrderSource.NASD_OATS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderSource.NASD_OATS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

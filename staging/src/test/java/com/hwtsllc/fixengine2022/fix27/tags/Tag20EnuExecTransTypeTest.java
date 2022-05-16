@@ -41,13 +41,13 @@ class Tag20EnuExecTransTypeTest {
     @Test
     void FIX0020Test() {
         FIX27 fixData = FIX27.FIX20_ENU_EXEC_TRANS_TYPE;
-        assertEquals( "EXEC_TRANS_TYPE", fixData.getName());
-        assertEquals( "20", fixData.getID());
-        assertEquals( "ExecTransType (replaced)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "EXEC_TRANS_TYPE", fixData.toFIXNameString());
+        assertEquals( "20", fixData.toFIXIDString());
+        assertEquals( "ExecTransType (replaced)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0020Test() {

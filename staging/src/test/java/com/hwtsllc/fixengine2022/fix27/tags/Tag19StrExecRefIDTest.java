@@ -35,13 +35,13 @@ class Tag19StrExecRefIDTest {
     @Test
     void FIX0019Test() {
         FIX27 fixData = FIX27.FIX19_STR_EXEC_REF_ID;
-        assertEquals( "EXEC_REF_ID", fixData.getName());
-        assertEquals( "19", fixData.getID());
-        assertEquals( "ExecRefID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "EXEC_REF_ID", fixData.toFIXNameString());
+        assertEquals( "19", fixData.toFIXIDString());
+        assertEquals( "ExecRefID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0019Test() {

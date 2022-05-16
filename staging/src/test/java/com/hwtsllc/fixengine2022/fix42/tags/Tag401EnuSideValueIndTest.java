@@ -37,12 +37,12 @@ class Tag401EnuSideValueIndTest {
     @Test
     void FIX0401Test() {
         FIX42 fixData = FIX42.FIX401_ENU_SIDE_VALUE_IND;
-        assertEquals( "401", fixData.getID());
-        assertEquals( "SIDE_VALUE_IND", fixData.getName());
-        assertEquals( "SideValueInd", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "401", fixData.toFIXIDString());
+        assertEquals( "SIDE_VALUE_IND", fixData.toFIXNameString());
+        assertEquals( "SideValueInd", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0401Test() {
@@ -52,11 +52,11 @@ class Tag401EnuSideValueIndTest {
          * 1-2 msg types
          */
         tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
-        assertEquals( Enum401SideValueInd.SIDE_VALUE_1.getID(), tagData.getDataValue());
+        assertEquals( Enum401SideValueInd.SIDE_VALUE_1.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
-        assertEquals( Enum401SideValueInd.SIDE_VALUE_2.getID(), tagData.getDataValue());
+        assertEquals( Enum401SideValueInd.SIDE_VALUE_2.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

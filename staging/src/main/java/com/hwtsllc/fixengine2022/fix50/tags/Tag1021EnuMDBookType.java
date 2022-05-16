@@ -51,7 +51,7 @@ public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairS
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -77,21 +77,21 @@ public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairS
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.getID();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.getName();
+        return this.dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.getDescription();
+        return this.dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

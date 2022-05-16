@@ -35,12 +35,12 @@ class Tag1044QtyUnderlyingAdjustedQuantityTest {
     @Test
     void FIX1044Test() {
         FIX50 fixData = FIX50.FIX1044_QTY_UNDERLYING_ADJUSTED_QUANTITY;
-        assertEquals( "1044", fixData.getID());
-        assertEquals( "UNDERLYING_ADJUSTED_QUANTITY", fixData.getName());
-        assertEquals( "UnderlyingAdjustedQuantity", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1044", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_ADJUSTED_QUANTITY", fixData.toFIXNameString());
+        assertEquals( "UnderlyingAdjustedQuantity", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1044Test() {

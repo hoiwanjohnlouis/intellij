@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag226IntRepurchaseTerm;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -36,12 +35,12 @@ class Tag963IntMDReportIDTest {
     @Test
     void FIX0963Test() {
         FIX50 fixData = FIX50.FIX963_INT_MD_REPORT_ID;
-        assertEquals( "963", fixData.getID());
-        assertEquals( "MD_REPORT_ID", fixData.getName());
-        assertEquals( "MDReportID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "963", fixData.toFIXIDString());
+        assertEquals( "MD_REPORT_ID", fixData.toFIXNameString());
+        assertEquals( "MDReportID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0963Test() {

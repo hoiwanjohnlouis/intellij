@@ -43,40 +43,40 @@ class Enum414ProgRptReqsTest {
     void Enum0414Test() {
         Enum414ProgRptReqs enumType;
 
-        /**
+        /*
          * 1-3 msg types
          */
         enumType = Enum414ProgRptReqs.BUY_SIDE_STATUS;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "BUY_SIDE_STATUS", enumType.getName());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "BUY_SIDE_STATUS", enumType.toFIXNameString());
         assertEquals( "1 - Buy-side explicitly requests status using Statue Request (default), " +
                         "the sell-side firm can, however, send a DONE status List STatus Response " +
                         "in an unsolicited fashion",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum414ProgRptReqs.SELL_SIDE_STATUS;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "SELL_SIDE_STATUS", enumType.getName());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "SELL_SIDE_STATUS", enumType.toFIXNameString());
         assertEquals( "2 - Sell-side periodically sends status using List Status. " +
                         "Period optionally specified in ProgressPeriod",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "REAL_TIME_EXECUTION_REPORTS", enumType.getName());
-        assertEquals( "3 - Real-time execution reports (to be discourage)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "REAL_TIME_EXECUTION_REPORTS", enumType.toFIXNameString());
+        assertEquals( "3 - Real-time execution reports (to be discourage)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

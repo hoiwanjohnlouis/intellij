@@ -50,12 +50,12 @@ class Tag798EnuAllocAccountTypeTest {
     @Test
     void FIX0798Test() {
         FIX44 fixData = FIX44.FIX798_ENU_ALLOC_ACCOUNT_TYPE;
-        assertEquals( "798", fixData.getID());
-        assertEquals( "ALLOC_ACCOUNT_TYPE", fixData.getName());
-        assertEquals( "AllocAccountType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "798", fixData.toFIXIDString());
+        assertEquals( "ALLOC_ACCOUNT_TYPE", fixData.toFIXNameString());
+        assertEquals( "AllocAccountType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0798Test() {
@@ -65,19 +65,19 @@ class Tag798EnuAllocAccountTypeTest {
          *  1-4, types
          */
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.CUSTOMER_BOOK);
-        assertEquals( MyEnumAccountType.CUSTOMER_BOOK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAccountType.CUSTOMER_BOOK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_BOOK);
-        assertEquals( MyEnumAccountType.NON_CUSTOMER_BOOK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAccountType.NON_CUSTOMER_BOOK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.HOUSE_TRADER);
-        assertEquals( MyEnumAccountType.HOUSE_TRADER.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAccountType.HOUSE_TRADER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.FLOOR_TRADER);
-        assertEquals( MyEnumAccountType.FLOOR_TRADER.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAccountType.FLOOR_TRADER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -85,15 +85,15 @@ class Tag798EnuAllocAccountTypeTest {
          *  6-8, types
          */
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK);
-        assertEquals( MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK);
-        assertEquals( MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.JOINT_BACK_OFFICE);
-        assertEquals( MyEnumAccountType.JOINT_BACK_OFFICE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAccountType.JOINT_BACK_OFFICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

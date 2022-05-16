@@ -35,12 +35,12 @@ class Tag188PrcBidSpotRateTest {
     @Test
     void FIX0188Test() {
         FIX41 fixData = FIX41.FIX188_PRC_BID_SPOT_RATE;
-        assertEquals( "188", fixData.getID());
-        assertEquals( "BID_SPOT_RATE", fixData.getName());
-        assertEquals( "BidSpotRate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "188", fixData.toFIXIDString());
+        assertEquals( "BID_SPOT_RATE", fixData.toFIXNameString());
+        assertEquals( "BidSpotRate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0188Test() {

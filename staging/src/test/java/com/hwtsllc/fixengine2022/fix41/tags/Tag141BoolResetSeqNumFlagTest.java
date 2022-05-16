@@ -37,12 +37,12 @@ class Tag141BoolResetSeqNumFlagTest {
     @Test
     void FIX0141Test() {
         FIX41 fixData = FIX41.FIX141_BOOL_RESET_SEQ_NUM_FLAG;
-        assertEquals( "RESET_SEQ_NUM_FLAG", fixData.getName());
-        assertEquals( "141", fixData.getID());
-        assertEquals( "ResetSeqNumFlag", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "RESET_SEQ_NUM_FLAG", fixData.toFIXNameString());
+        assertEquals( "141", fixData.toFIXIDString());
+        assertEquals( "ResetSeqNumFlag", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0141Test() {

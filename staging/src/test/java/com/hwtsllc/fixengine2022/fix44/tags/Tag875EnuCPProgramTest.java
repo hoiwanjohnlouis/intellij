@@ -40,27 +40,27 @@ class Tag875EnuCPProgramTest {
     @Test
     void FIX0875Test() {
         FIX44 fixData = FIX44.FIX875_ENU_CP_PROGRAM;
-        assertEquals( "875", fixData.getID());
-        assertEquals( "CP_PROGRAM", fixData.getName());
-        assertEquals( "CPProgram", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "875", fixData.toFIXIDString());
+        assertEquals( "CP_PROGRAM", fixData.toFIXNameString());
+        assertEquals( "CPProgram", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0875Test() {
         Tag875EnuCPProgram tagData;
 
         tagData = new Tag875EnuCPProgram( Enum875CPProgram.THREE );
-        assertEquals( Enum875CPProgram.THREE.getID(), tagData.getDataValue());
+        assertEquals( Enum875CPProgram.THREE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag875EnuCPProgram( Enum875CPProgram.FOUR );
-        assertEquals( Enum875CPProgram.FOUR.getID(), tagData.getDataValue());
+        assertEquals( Enum875CPProgram.FOUR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag875EnuCPProgram( Enum875CPProgram.OTHER );
-        assertEquals( Enum875CPProgram.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum875CPProgram.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

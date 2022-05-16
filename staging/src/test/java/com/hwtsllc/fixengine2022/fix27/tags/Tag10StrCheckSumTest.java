@@ -42,13 +42,13 @@ class Tag10StrCheckSumTest {
     @Test
     void FIX0010Test() {
         FIX27 fixData = FIX27.FIX10_STR_CHECK_SUM;
-        assertEquals( "CHECK_SUM", fixData.getName());
-        assertEquals( "10", fixData.getID());
-        assertEquals( "CheckSum", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "CHECK_SUM", fixData.toFIXNameString());
+        assertEquals( "10", fixData.toFIXIDString());
+        assertEquals( "CheckSum", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0010Test() {

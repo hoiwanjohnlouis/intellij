@@ -27,12 +27,12 @@ class Tag610LegMaturityMonthYearTest {
     @Test
     void FIX0610Test() {
         FIX43 fixData = FIX43.FIX610_LEG_MATURITY_MONTH_YEAR;
-        assertEquals( "610", fixData.getID());
-        assertEquals( "LEG_MATURITY_MONTH_YEAR", fixData.getName());
-        assertEquals( "LegMaturityMonthYear", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "610", fixData.toFIXIDString());
+        assertEquals( "LEG_MATURITY_MONTH_YEAR", fixData.toFIXNameString());
+        assertEquals( "LegMaturityMonthYear", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0610Test() {

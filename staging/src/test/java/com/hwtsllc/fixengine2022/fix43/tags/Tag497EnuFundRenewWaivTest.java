@@ -27,12 +27,12 @@ class Tag497EnuFundRenewWaivTest {
     @Test
     void FIX0497Test() {
         FIX43 fixData = FIX43.FIX497_ENU_FUND_RENEW_WAIV;
-        assertEquals( "497", fixData.getID());
-        assertEquals( "FUND_RENEW_WAIV", fixData.getName());
-        assertEquals( "FundRenewWaiv", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "497", fixData.toFIXIDString());
+        assertEquals( "FUND_RENEW_WAIV", fixData.toFIXNameString());
+        assertEquals( "FundRenewWaiv", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0497Test() {

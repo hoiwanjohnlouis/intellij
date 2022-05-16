@@ -36,13 +36,13 @@ class Tag53QtyQuantityTest {
     @Test
     void FIX0053Test() {
         FIX27 fixData = FIX27.FIX53_QTY_QUANTITY;
-        assertEquals( "QUANTITY", fixData.getName());
-        assertEquals( "53", fixData.getID());
-        assertEquals( "Quantity (formerly Shares)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "QUANTITY", fixData.toFIXNameString());
+        assertEquals( "53", fixData.toFIXIDString());
+        assertEquals( "Quantity (formerly Shares)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0053Test() {

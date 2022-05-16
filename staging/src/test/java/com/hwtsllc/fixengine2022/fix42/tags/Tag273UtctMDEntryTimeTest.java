@@ -28,12 +28,12 @@ class Tag273UtctMDEntryTimeTest {
     @Test
     void FIX0273Test() {
         FIX42 fixData = FIX42.FIX273_UTCT_MD_ENTRY_TIME;
-        assertEquals( "273", fixData.getID());
-        assertEquals( "MD_ENTRY_TIME", fixData.getName());
-        assertEquals( "MDEntryTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "273", fixData.toFIXIDString());
+        assertEquals( "MD_ENTRY_TIME", fixData.toFIXNameString());
+        assertEquals( "MDEntryTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0273Test() {

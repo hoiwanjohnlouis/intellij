@@ -36,19 +36,19 @@ class Enum747ExerciseMethodTest {
         Enum747ExerciseMethod enumType;
 
         enumType = Enum747ExerciseMethod.AUTOMATIC;
-        assertEquals( "A", enumType.getID());
-        assertEquals( "AUTOMATIC", enumType.getName());
-        assertEquals( "A - Automatic", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "A", enumType.toFIXIDString());
+        assertEquals( "AUTOMATIC", enumType.toFIXNameString());
+        assertEquals( "A - Automatic", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum747ExerciseMethod.MANUAL;
-        assertEquals( "M", enumType.getID());
-        assertEquals( "MANUAL", enumType.getName());
-        assertEquals( "M - Manual", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "M", enumType.toFIXIDString());
+        assertEquals( "MANUAL", enumType.toFIXNameString());
+        assertEquals( "M - Manual", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

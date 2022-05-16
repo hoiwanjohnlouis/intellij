@@ -38,13 +38,13 @@ class Tag100StrExDestinationTest {
     @Test
     void FIX0100Test() {
         FIX27 fixData = FIX27.FIX100_STR_EX_DESTINATION;
-        assertEquals( "EX_DESTINATION", fixData.getName());
-        assertEquals( "100", fixData.getID());
-        assertEquals( "ExDestination", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "EX_DESTINATION", fixData.toFIXNameString());
+        assertEquals( "100", fixData.toFIXIDString());
+        assertEquals( "ExDestination", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0100Test() {

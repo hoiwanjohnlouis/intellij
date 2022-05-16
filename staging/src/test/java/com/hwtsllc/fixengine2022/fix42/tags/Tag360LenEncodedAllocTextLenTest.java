@@ -28,12 +28,12 @@ class Tag360LenEncodedAllocTextLenTest {
     @Test
     void FIX0360Test() {
         FIX42 fixData = FIX42.FIX360_LEN_ENCODED_ALLOC_TEXT_LEN;
-        assertEquals( "360", fixData.getID());
-        assertEquals( "ENCODED_ALLOC_TEXT_LEN", fixData.getName());
-        assertEquals( "EncodedAllocTextLen", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "360", fixData.toFIXIDString());
+        assertEquals( "ENCODED_ALLOC_TEXT_LEN", fixData.toFIXNameString());
+        assertEquals( "EncodedAllocTextLen", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0360Test() {

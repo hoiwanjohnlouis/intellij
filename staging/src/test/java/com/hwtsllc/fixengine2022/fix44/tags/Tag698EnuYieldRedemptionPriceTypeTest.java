@@ -89,12 +89,12 @@ class Tag698EnuYieldRedemptionPriceTypeTest {
     @Test
     void FIX0698Test() {
         FIX44 fixData = FIX44.FIX698_ENU_YIELD_REDEMPTION_PRICE_TYPE;
-        assertEquals( "698", fixData.getID());
-        assertEquals( "YIELD_REDEMPTION_PRICE_TYPE", fixData.getName());
-        assertEquals( "YieldRedemptionPriceType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "698", fixData.toFIXIDString());
+        assertEquals( "YIELD_REDEMPTION_PRICE_TYPE", fixData.toFIXNameString());
+        assertEquals( "YieldRedemptionPriceType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0698Test() {
@@ -108,49 +108,49 @@ class Tag698EnuYieldRedemptionPriceTypeTest {
          * 1-11 msg types
          */
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.PERCENTAGE);
-        assertEquals( MyEnumPriceType.PERCENTAGE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.PERCENTAGE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.PER_UNIT);
-        assertEquals( MyEnumPriceType.PER_UNIT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.PER_UNIT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.FIXED_AMOUNT);
-        assertEquals( MyEnumPriceType.FIXED_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.FIXED_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.DISCOUNT);
-        assertEquals( MyEnumPriceType.DISCOUNT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.DISCOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.PREMIUM);
-        assertEquals( MyEnumPriceType.PREMIUM.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.PREMIUM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.SPREAD);
-        assertEquals( MyEnumPriceType.SPREAD.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.SPREAD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TED_PRICE);
-        assertEquals( MyEnumPriceType.TED_PRICE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TED_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TED_YIELD);
-        assertEquals( MyEnumPriceType.TED_YIELD.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TED_YIELD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.YIELD);
-        assertEquals( MyEnumPriceType.YIELD.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.YIELD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.FIXED_TRADE_PRICE);
-        assertEquals( MyEnumPriceType.FIXED_TRADE_PRICE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.FIXED_TRADE_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.VARIABLE_TRADE_PRICE);
-        assertEquals( MyEnumPriceType.VARIABLE_TRADE_PRICE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.VARIABLE_TRADE_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -159,32 +159,32 @@ class Tag698EnuYieldRedemptionPriceTypeTest {
          * 13-19 msg types
          */
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TICKS_IN_HALFS);
-        assertEquals( MyEnumPriceType.TICKS_IN_HALFS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_HALFS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TICKS_IN_FOURTHS);
-        assertEquals( MyEnumPriceType.TICKS_IN_FOURTHS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_FOURTHS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TICKS_IN_EIGHTHS);
-        assertEquals( MyEnumPriceType.TICKS_IN_EIGHTHS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_EIGHTHS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TICKS_IN_SIXTEENTHS);
-        assertEquals( MyEnumPriceType.TICKS_IN_SIXTEENTHS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_SIXTEENTHS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TICKS_IN_THIRTY_SECONDS);
-        assertEquals( MyEnumPriceType.TICKS_IN_THIRTY_SECONDS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_THIRTY_SECONDS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS);
-        assertEquals( MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
-        assertEquals( MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

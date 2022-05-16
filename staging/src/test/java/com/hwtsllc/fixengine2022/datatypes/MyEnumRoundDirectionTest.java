@@ -49,23 +49,23 @@ class MyEnumRoundDirectionTest {
         MyEnumRoundDirection enumType;
 
         enumType = MyEnumRoundDirection.AGGRESSIVE;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "AGGRESSIVE", enumType.getName());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "AGGRESSIVE", enumType.toFIXNameString());
         assertEquals( "1 - More aggressive - on a buy order round the price up to the " +
                             "nearest tick; on a sell order round down to the nearest tick",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumRoundDirection.PASSIVE;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "PASSIVE", enumType.getName());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "PASSIVE", enumType.toFIXNameString());
         assertEquals( "2 - More passive - on a buy order round down to the nearest tick; " +
                             "on a sell order round up to the nearest tick",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

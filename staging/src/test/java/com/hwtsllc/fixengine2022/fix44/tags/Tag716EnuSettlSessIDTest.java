@@ -38,12 +38,12 @@ class Tag716EnuSettlSessIDTest {
     @Test
     void FIX0716Test() {
         FIX44 fixData = FIX44.FIX716_ENU_SETTL_SESS_ID;
-        assertEquals( "716", fixData.getID());
-        assertEquals( "SETTL_SESS_ID", fixData.getName());
-        assertEquals( "SettlSessID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "716", fixData.toFIXIDString());
+        assertEquals( "SETTL_SESS_ID", fixData.toFIXNameString());
+        assertEquals( "SettlSessID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0716Test() {

@@ -36,23 +36,23 @@ class Tag747EnuExerciseMethodTest {
     @Test
     void FIX0747Test() {
         FIX44 fixData = FIX44.FIX747_ENU_EXERCISE_METHOD;
-        assertEquals( "747", fixData.getID());
-        assertEquals( "EXERCISE_METHOD", fixData.getName());
-        assertEquals( "ExerciseMethod", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "747", fixData.toFIXIDString());
+        assertEquals( "EXERCISE_METHOD", fixData.toFIXNameString());
+        assertEquals( "ExerciseMethod", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0747Test() {
         Tag747EnuExerciseMethod tagData;
 
         tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.AUTOMATIC);
-        assertEquals( Enum747ExerciseMethod.AUTOMATIC.getID(), tagData.getDataValue());
+        assertEquals( Enum747ExerciseMethod.AUTOMATIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
-        assertEquals( Enum747ExerciseMethod.MANUAL.getID(), tagData.getDataValue());
+        assertEquals( Enum747ExerciseMethod.MANUAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

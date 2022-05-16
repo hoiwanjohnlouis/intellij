@@ -53,7 +53,7 @@ public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairStrin
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -79,21 +79,21 @@ public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairStrin
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.getID();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.getName();
+        return this.dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.getDescription();
+        return this.dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data
@@ -135,5 +135,20 @@ public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairStrin
         System.out.println("DataIDString:" + tagData.toDataIDString());
         System.out.println("DataNameString:" + tagData.toDataNameString());
         System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+    }
+    static void dumpDataValues(Tag13EnuCommType tagData) {
+        System.out.println("-------------------- Start --------------------");
+        System.out.println(tagData);
+        System.out.println(tagData.toVerboseString());
+        System.out.println(tagData.toValuePairString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        System.out.println("-------------------- End --------------------");
     }
 }

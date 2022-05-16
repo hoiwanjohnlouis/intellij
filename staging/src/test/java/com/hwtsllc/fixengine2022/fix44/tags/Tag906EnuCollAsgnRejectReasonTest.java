@@ -44,44 +44,44 @@ class Tag906EnuCollAsgnRejectReasonTest {
     @Test
     void FIX0906Test() {
         FIX44 fixData = FIX44.FIX906_ENU_COLL_ASGN_REJECT_REASON;
-        assertEquals( "906", fixData.getID());
-        assertEquals( "COLL_ASGN_REJECT_REASON", fixData.getName());
-        assertEquals( "CollAsgnRejectReason", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "906", fixData.toFIXIDString());
+        assertEquals( "COLL_ASGN_REJECT_REASON", fixData.toFIXNameString());
+        assertEquals( "CollAsgnRejectReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0906Test() {
         Tag906EnuCollAsgnRejectReason tagData;
 
         tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.UNKNOWN_DEAL );
-        assertEquals( Enum906CollAsgnRejectReason.UNKNOWN_DEAL.getID(), tagData.getDataValue());
+        assertEquals( Enum906CollAsgnRejectReason.UNKNOWN_DEAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INVALID_INSTRUMENT );
-        assertEquals( Enum906CollAsgnRejectReason.INVALID_INSTRUMENT.getID(), tagData.getDataValue());
+        assertEquals( Enum906CollAsgnRejectReason.INVALID_INSTRUMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.UNAUTHORIZED_TRANSACTION );
-        assertEquals( Enum906CollAsgnRejectReason.UNAUTHORIZED_TRANSACTION.getID(), tagData.getDataValue());
+        assertEquals( Enum906CollAsgnRejectReason.UNAUTHORIZED_TRANSACTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INSUFFICIENT_COLLATERAL );
-        assertEquals( Enum906CollAsgnRejectReason.INSUFFICIENT_COLLATERAL.getID(), tagData.getDataValue());
+        assertEquals( Enum906CollAsgnRejectReason.INSUFFICIENT_COLLATERAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.INVALID_COLLATERAL );
-        assertEquals( Enum906CollAsgnRejectReason.INVALID_COLLATERAL.getID(), tagData.getDataValue());
+        assertEquals( Enum906CollAsgnRejectReason.INVALID_COLLATERAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.EXCESSIVE_SUBSTITUTION );
-        assertEquals( Enum906CollAsgnRejectReason.EXCESSIVE_SUBSTITUTION.getID(), tagData.getDataValue());
+        assertEquals( Enum906CollAsgnRejectReason.EXCESSIVE_SUBSTITUTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag906EnuCollAsgnRejectReason( Enum906CollAsgnRejectReason.OTHER );
-        assertEquals( Enum906CollAsgnRejectReason.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum906CollAsgnRejectReason.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

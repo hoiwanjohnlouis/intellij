@@ -33,12 +33,12 @@ class Tag811PriceDeltaTest {
     @Test
     void FIX0811Test() {
         FIX44 fixData = FIX44.FIX811_PRICE_DELTA;
-        assertEquals( "811", fixData.getID());
-        assertEquals( "PRICE_DELTA", fixData.getName());
-        assertEquals( "PriceDelta", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "811", fixData.toFIXIDString());
+        assertEquals( "PRICE_DELTA", fixData.toFIXNameString());
+        assertEquals( "PriceDelta", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0811Test() {

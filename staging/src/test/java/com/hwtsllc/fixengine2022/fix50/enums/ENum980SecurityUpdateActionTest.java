@@ -39,27 +39,27 @@ class ENum980SecurityUpdateActionTest {
         ENum980SecurityUpdateAction enumType;
 
         enumType = ENum980SecurityUpdateAction.ADD;
-        assertEquals( "A", enumType.getID() );
-        assertEquals( "ADD", enumType.getName() );
-        assertEquals( "A - Add", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "A", enumType.toFIXIDString() );
+        assertEquals( "ADD", enumType.toFIXNameString() );
+        assertEquals( "A - Add", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = ENum980SecurityUpdateAction.DELETE;
-        assertEquals( "D", enumType.getID() );
-        assertEquals( "DELETE", enumType.getName() );
-        assertEquals( "D - Delete", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "D", enumType.toFIXIDString() );
+        assertEquals( "DELETE", enumType.toFIXNameString() );
+        assertEquals( "D - Delete", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = ENum980SecurityUpdateAction.MODIFY;
-        assertEquals( "M", enumType.getID() );
-        assertEquals( "MODIFY", enumType.getName() );
-        assertEquals( "M - Modify", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "M", enumType.toFIXIDString() );
+        assertEquals( "MODIFY", enumType.toFIXNameString() );
+        assertEquals( "M - Modify", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

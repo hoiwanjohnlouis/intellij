@@ -27,12 +27,12 @@ class Tag608StrLegCFICodeTest {
     @Test
     void FIX0608Test() {
         FIX43 fixData = FIX43.FIX608_STR_LEG_CFI_CODE;
-        assertEquals( "608", fixData.getID());
-        assertEquals( "LEG_CFI_CODE", fixData.getName());
-        assertEquals( "LegCFICode", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "608", fixData.toFIXIDString());
+        assertEquals( "LEG_CFI_CODE", fixData.toFIXNameString());
+        assertEquals( "LegCFICode", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0608Test() {

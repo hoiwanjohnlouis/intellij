@@ -38,13 +38,13 @@ class Tag85NumNoDlvyInstTest {
     @Test
     void FIX0085Test() {
         FIX27 fixData = FIX27.FIX85_NUM_NO_DLVY_INST;
-        assertEquals( "NO_DLVY_INST", fixData.getName());
-        assertEquals( "85", fixData.getID());
-        assertEquals( "NoDlvyInst (no longer used)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "NO_DLVY_INST", fixData.toFIXNameString());
+        assertEquals( "85", fixData.toFIXIDString());
+        assertEquals( "NoDlvyInst (no longer used)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0085Test() {

@@ -28,12 +28,12 @@ class Tag346IntNumberOfOrdersTest {
     @Test
     void FIX0346Test() {
         FIX42 fixData = FIX42.FIX346_INT_NUMBER_OF_ORDERS;
-        assertEquals( "346", fixData.getID());
-        assertEquals( "NUMBER_OF_ORDERS", fixData.getName());
-        assertEquals( "NumberOfOrders", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "346", fixData.toFIXIDString());
+        assertEquals( "NUMBER_OF_ORDERS", fixData.toFIXNameString());
+        assertEquals( "NumberOfOrders", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0346Test() {

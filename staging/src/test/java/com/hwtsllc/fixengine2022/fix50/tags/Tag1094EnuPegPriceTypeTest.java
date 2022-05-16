@@ -47,52 +47,52 @@ class Tag1094EnuPegPriceTypeTest {
     @Test
     void FIX1094Test() {
         FIX50 fixData = FIX50.FIX1094_ENU_PEG_PRICE_TYPE;
-        assertEquals( "1094", fixData.getID());
-        assertEquals( "PEG_PRICE_TYPE", fixData.getName());
-        assertEquals( "PegPriceType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1094", fixData.toFIXIDString());
+        assertEquals( "PEG_PRICE_TYPE", fixData.toFIXNameString());
+        assertEquals( "PegPriceType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1094Test() {
         Tag1094EnuPegPriceType tagData;
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.LAST_PEG );
-        assertEquals( Enum1094PegPriceType.LAST_PEG.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.LAST_PEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.MID_PEG );
-        assertEquals( Enum1094PegPriceType.MID_PEG.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.MID_PEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.OPENING_PEG );
-        assertEquals( Enum1094PegPriceType.OPENING_PEG.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.OPENING_PEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.MARKET_PEG );
-        assertEquals( Enum1094PegPriceType.MARKET_PEG.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.MARKET_PEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.PRIMARY_PEG );
-        assertEquals( Enum1094PegPriceType.PRIMARY_PEG.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.PRIMARY_PEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.FIXED_PEG );
-        assertEquals( Enum1094PegPriceType.FIXED_PEG.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.FIXED_PEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.PEG_TO_VWAP );
-        assertEquals( Enum1094PegPriceType.PEG_TO_VWAP.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.PEG_TO_VWAP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.TRAILING_STOP );
-        assertEquals( Enum1094PegPriceType.TRAILING_STOP.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.TRAILING_STOP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.PEG_TO_LIMIT );
-        assertEquals( Enum1094PegPriceType.PEG_TO_LIMIT.getID(), tagData.getDataValue());
+        assertEquals( Enum1094PegPriceType.PEG_TO_LIMIT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

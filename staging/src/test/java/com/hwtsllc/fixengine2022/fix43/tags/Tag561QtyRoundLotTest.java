@@ -27,12 +27,12 @@ class Tag561QtyRoundLotTest {
     @Test
     void FIX0561Test() {
         FIX43 fixData = FIX43.FIX561_QTY_ROUND_LOT;
-        assertEquals( "561", fixData.getID());
-        assertEquals( "ROUND_LOT", fixData.getName());
-        assertEquals( "RoundLot", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "561", fixData.toFIXIDString());
+        assertEquals( "ROUND_LOT", fixData.toFIXNameString());
+        assertEquals( "RoundLot", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0561Test() {

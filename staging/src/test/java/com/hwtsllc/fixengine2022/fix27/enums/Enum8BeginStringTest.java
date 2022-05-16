@@ -47,51 +47,51 @@ class Enum8BeginStringTest {
         Enum8BeginString enumType;
 
         enumType = Enum8BeginString.BEGIN_STRING_4_0;
-        assertEquals("FIX.4.0", enumType.getID());
-        assertEquals("BEGIN_STRING_4_0", enumType.getName());
-        assertEquals("Begin String 4.0", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("FIX.4.0", enumType.toFIXIDString());
+        assertEquals("BEGIN_STRING_4_0", enumType.toFIXNameString());
+        assertEquals("Begin String 4.0", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum8BeginString.BEGIN_STRING_4_1;
-        assertEquals("FIX.4.1", enumType.getID());
-        assertEquals("BEGIN_STRING_4_1", enumType.getName());
-        assertEquals("Begin String 4.1", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("FIX.4.1", enumType.toFIXIDString());
+        assertEquals("BEGIN_STRING_4_1", enumType.toFIXNameString());
+        assertEquals("Begin String 4.1", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum8BeginString.BEGIN_STRING_4_2;
-        assertEquals("FIX.4.2", enumType.getID());
-        assertEquals("BEGIN_STRING_4_2", enumType.getName());
-        assertEquals("Begin String 4.2", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("FIX.4.2", enumType.toFIXIDString());
+        assertEquals("BEGIN_STRING_4_2", enumType.toFIXNameString());
+        assertEquals("Begin String 4.2", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum8BeginString.BEGIN_STRING_4_3;
-        assertEquals("FIX.4.3", enumType.getID());
-        assertEquals("BEGIN_STRING_4_3", enumType.getName());
-        assertEquals("Begin String 4.3", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("FIX.4.3", enumType.toFIXIDString());
+        assertEquals("BEGIN_STRING_4_3", enumType.toFIXNameString());
+        assertEquals("Begin String 4.3", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum8BeginString.BEGIN_STRING_4_4;
-        assertEquals("FIX.4.4", enumType.getID());
-        assertEquals("BEGIN_STRING_4_4", enumType.getName());
-        assertEquals("Begin String 4.4", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("FIX.4.4", enumType.toFIXIDString());
+        assertEquals("BEGIN_STRING_4_4", enumType.toFIXNameString());
+        assertEquals("Begin String 4.4", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum8BeginString.BEGIN_STRING_5_0;
-        assertEquals("FIXT.1.1", enumType.getID());
-        assertEquals("BEGIN_STRING_5_0", enumType.getName());
-        assertEquals("Begin String 5.0", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("FIXT.1.1", enumType.toFIXIDString());
+        assertEquals("BEGIN_STRING_5_0", enumType.toFIXNameString());
+        assertEquals("Begin String 5.0", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

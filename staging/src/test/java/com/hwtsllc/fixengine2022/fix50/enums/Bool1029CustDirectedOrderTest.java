@@ -42,19 +42,19 @@ class Bool1029CustDirectedOrderTest {
         Bool1029CustDirectedOrder enumType;
 
         enumType = Bool1029CustDirectedOrder.NO;
-        assertEquals("N",enumType.getID());
-        assertEquals("NO", enumType.getName());
-        assertEquals("N - Execution venue not specified", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("N",enumType.toFIXIDString());
+        assertEquals("NO", enumType.toFIXNameString());
+        assertEquals("N - Execution venue not specified", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Bool1029CustDirectedOrder.YES;
-        assertEquals("Y", enumType.getID());
-        assertEquals("YES", enumType.getName());
-        assertEquals("Y - Customer directed this order to a specific execution venue", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("Y", enumType.toFIXIDString());
+        assertEquals("YES", enumType.toFIXNameString());
+        assertEquals("Y - Customer directed this order to a specific execution venue", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

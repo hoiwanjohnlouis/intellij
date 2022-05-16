@@ -28,12 +28,12 @@ class Tag295NumNoQuoteEntriesTest {
     @Test
     void FIX0295Test() {
         FIX42 fixData = FIX42.FIX295_NUM_NO_QUOTE_ENTRIES;
-        assertEquals( "295", fixData.getID());
-        assertEquals( "NO_QUOTE_ENTRIES", fixData.getName());
-        assertEquals( "NoQuoteEntries", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "295", fixData.toFIXIDString());
+        assertEquals( "NO_QUOTE_ENTRIES", fixData.toFIXNameString());
+        assertEquals( "NoQuoteEntries", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0295Test() {

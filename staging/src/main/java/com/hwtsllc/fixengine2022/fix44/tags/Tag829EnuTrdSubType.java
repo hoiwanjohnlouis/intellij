@@ -60,8 +60,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *                  Non-order book securities only.)
  *      19 - N (Non-protected portfolio transaction or a fully disclosed portfolio transaction)
  *      20 - NM (
- *                    i) transaction where Exchange has granted permission for non-publication
- *                   ii) IDB is reporting as seller
+ *                    i) transaction where Exchange has granted permission for non-publication.
+ *                   ii) IDB is reporting as seller.
  *                  iii) submitting a transaction report to the Exchange,
  *                       where the transaction report is not also a trade report.
  *              )
@@ -78,16 +78,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *                          where the buying and selling transactions are
  *                          executed at different prices or on different terms
  *                          (requires a trade report with trade type indicator
- *                           R for each transaction)
+ *                           R for each transaction).
  *                   ii) market maker is reporting all the legs of a riskless principal
  *                          transaction where the buying and selling transactions
  *                          are executed at different prices
- *                          (requires a trade report with trade type indicator R for each transaction) or
+ *                          (requires a trade report with trade type indicator R for each transaction).
  *                  iii) market maker is reporting the onward leg of a riskless principal
  *                          transaction where the legs are executed at different prices,
  *                          and another market maker has submitted a trade report using
  *                          trade type indicator M for the first leg
- *                          (this requires a single trade report with trade type indicator R)
+ *                          (this requires a single trade report with trade type indicator R).
  *              )
  *      27 - RO (Transaction which resulted from the exercise of a traditional option
  *                  or a stock-settled covered warrant)
@@ -113,7 +113,7 @@ public class Tag829EnuTrdSubType extends FIX44Abstract implements LogValuePairSt
     }
 
     public String getDataValue() {
-        return this.dataValue.getID();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -139,21 +139,21 @@ public class Tag829EnuTrdSubType extends FIX44Abstract implements LogValuePairSt
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.getID();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.getName();
+        return this.dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.getDescription();
+        return this.dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

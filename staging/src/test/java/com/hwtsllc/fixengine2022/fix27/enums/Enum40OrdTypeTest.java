@@ -74,77 +74,77 @@ class Enum40OrdTypeTest {
          * 1-9 msg types
          */
         enumType = Enum40OrdType.MARKET;
-        assertEquals("1", enumType.getID());
-        assertEquals("MARKET", enumType.getName());
-        assertEquals("1 - Market", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("MARKET", enumType.toFIXNameString());
+        assertEquals("1 - Market", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.LIMIT;
-        assertEquals("2", enumType.getID());
-        assertEquals("LIMIT", enumType.getName());
-        assertEquals("2 - Limit", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("2", enumType.toFIXIDString());
+        assertEquals("LIMIT", enumType.toFIXNameString());
+        assertEquals("2 - Limit", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.STOP_OR_STOP_LOSS;
-        assertEquals("3", enumType.getID());
-        assertEquals("STOP_OR_STOP_LOSS", enumType.getName());
-        assertEquals("3 - Stop or Stop Loss", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("3", enumType.toFIXIDString());
+        assertEquals("STOP_OR_STOP_LOSS", enumType.toFIXNameString());
+        assertEquals("3 - Stop or Stop Loss", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.STOP_LIMIT;
-        assertEquals("4", enumType.getID());
-        assertEquals("STOP_LIMIT", enumType.getName());
-        assertEquals("4 - Stop Limit", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("4", enumType.toFIXIDString());
+        assertEquals("STOP_LIMIT", enumType.toFIXNameString());
+        assertEquals("4 - Stop Limit", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.MARKET_ON_CLOSE;
-        assertEquals("5", enumType.getID());
-        assertEquals("MARKET_ON_CLOSE", enumType.getName());
-        assertEquals("5 - Market On Close (No longer used)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("5", enumType.toFIXIDString());
+        assertEquals("MARKET_ON_CLOSE", enumType.toFIXNameString());
+        assertEquals("5 - Market On Close (No longer used)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum40OrdType.WITH_OR_WITHOUT;
-        assertEquals("6", enumType.getID());
-        assertEquals("WITH_OR_WITHOUT", enumType.getName());
-        assertEquals("6 - With Or Without", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("6", enumType.toFIXIDString());
+        assertEquals("WITH_OR_WITHOUT", enumType.toFIXNameString());
+        assertEquals("6 - With Or Without", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.LIMIT_OR_BETTER;
-        assertEquals("7", enumType.getID());
-        assertEquals("LIMIT_OR_BETTER", enumType.getName());
-        assertEquals("7 - Limit Or Better", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("7", enumType.toFIXIDString());
+        assertEquals("LIMIT_OR_BETTER", enumType.toFIXNameString());
+        assertEquals("7 - Limit Or Better", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.LIMIT_WITH_OR_WITHOUT;
-        assertEquals("8", enumType.getID());
-        assertEquals("LIMIT_WITH_OR_WITHOUT", enumType.getName());
-        assertEquals("8 - Limit With Or Without", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("8", enumType.toFIXIDString());
+        assertEquals("LIMIT_WITH_OR_WITHOUT", enumType.toFIXNameString());
+        assertEquals("8 - Limit With Or Without", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.ON_BASIS;
-        assertEquals("9", enumType.getID());
-        assertEquals("ON_BASIS", enumType.getName());
-        assertEquals("9 - On Basis", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("9", enumType.toFIXIDString());
+        assertEquals("ON_BASIS", enumType.toFIXNameString());
+        assertEquals("9 - On Basis", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         /*
@@ -152,125 +152,125 @@ class Enum40OrdTypeTest {
          * A-Q msg types
          */
         enumType = Enum40OrdType.ON_CLOSE;
-        assertEquals("A", enumType.getID());
-        assertEquals("ON_CLOSE", enumType.getName());
-        assertEquals("A - On Close (No longer used)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("A", enumType.toFIXIDString());
+        assertEquals("ON_CLOSE", enumType.toFIXNameString());
+        assertEquals("A - On Close (No longer used)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.LIMIT_ON_CLOSE;
-        assertEquals("B", enumType.getID());
-        assertEquals("LIMIT_ON_CLOSE", enumType.getName());
-        assertEquals("B - Limit On Close (No longer used)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("B", enumType.toFIXIDString());
+        assertEquals("LIMIT_ON_CLOSE", enumType.toFIXNameString());
+        assertEquals("B - Limit On Close (No longer used)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.FOREX_MARKET;
-        assertEquals("C", enumType.getID());
-        assertEquals("FOREX_MARKET", enumType.getName());
-        assertEquals("C - Forex Market (No longer used)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("C", enumType.toFIXIDString());
+        assertEquals("FOREX_MARKET", enumType.toFIXNameString());
+        assertEquals("C - Forex Market (No longer used)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.PREVIOUSLY_QUOTED;
-        assertEquals("D", enumType.getID());
-        assertEquals("PREVIOUSLY_QUOTED", enumType.getName());
-        assertEquals("D - Previously Quoted", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("D", enumType.toFIXIDString());
+        assertEquals("PREVIOUSLY_QUOTED", enumType.toFIXNameString());
+        assertEquals("D - Previously Quoted", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.PREVIOUSLY_INDICATED;
-        assertEquals("E", enumType.getID());
-        assertEquals("PREVIOUSLY_INDICATED", enumType.getName());
-        assertEquals("E - Previously Indicated", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("E", enumType.toFIXIDString());
+        assertEquals("PREVIOUSLY_INDICATED", enumType.toFIXNameString());
+        assertEquals("E - Previously Indicated", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum40OrdType.FOREX_LIMIT;
-        assertEquals("F", enumType.getID());
-        assertEquals("FOREX_LIMIT", enumType.getName());
-        assertEquals("F - Forex Limit (No longer used)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("F", enumType.toFIXIDString());
+        assertEquals("FOREX_LIMIT", enumType.toFIXNameString());
+        assertEquals("F - Forex Limit (No longer used)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.FOREX_SWAP;
-        assertEquals("G", enumType.getID());
-        assertEquals("FOREX_SWAP", enumType.getName());
-        assertEquals("G - Forex Swap", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("G", enumType.toFIXIDString());
+        assertEquals("FOREX_SWAP", enumType.toFIXNameString());
+        assertEquals("G - Forex Swap", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.FOREX_PREVIOUSLY_QUOTED;
-        assertEquals("H", enumType.getID());
-        assertEquals("FOREX_PREVIOUSLY_QUOTED", enumType.getName());
-        assertEquals("H - Forex Previously Quoted (No longer used)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("H", enumType.toFIXIDString());
+        assertEquals("FOREX_PREVIOUSLY_QUOTED", enumType.toFIXNameString());
+        assertEquals("H - Forex Previously Quoted (No longer used)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.FUNARI;
-        assertEquals("I", enumType.getID());
-        assertEquals("FUNARI", enumType.getName());
-        assertEquals("I - Funari (Limit day order with unexecuted portion handles as Market On Close. E.g. Japan)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("I", enumType.toFIXIDString());
+        assertEquals("FUNARI", enumType.toFIXNameString());
+        assertEquals("I - Funari (Limit day order with unexecuted portion handles as Market On Close. E.g. Japan)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.MARKET_IF_TOUCHED;
-        assertEquals("J", enumType.getID());
-        assertEquals("MARKET_IF_TOUCHED", enumType.getName());
-        assertEquals("J - Market If Touched (MIT)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("J", enumType.toFIXIDString());
+        assertEquals("MARKET_IF_TOUCHED", enumType.toFIXNameString());
+        assertEquals("J - Market If Touched (MIT)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum40OrdType.MARKET_WITH_LEFT_OVER_AS_LIMIT;
-        assertEquals("K", enumType.getID());
-        assertEquals("MARKET_WITH_LEFT_OVER_AS_LIMIT", enumType.getName());
-        assertEquals("K - Market With Left Over as Limit (market order with unexecuted quantity becoming limit order at last price)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("K", enumType.toFIXIDString());
+        assertEquals("MARKET_WITH_LEFT_OVER_AS_LIMIT", enumType.toFIXNameString());
+        assertEquals("K - Market With Left Over as Limit (market order with unexecuted quantity becoming limit order at last price)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.PREVIOUS_FUND_VALUATION_POINT;
-        assertEquals("L", enumType.getID());
-        assertEquals("PREVIOUS_FUND_VALUATION_POINT", enumType.getName());
-        assertEquals("L - Previous Fund Valuation Point (Historic pricing;  for CIV)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("L", enumType.toFIXIDString());
+        assertEquals("PREVIOUS_FUND_VALUATION_POINT", enumType.toFIXNameString());
+        assertEquals("L - Previous Fund Valuation Point (Historic pricing;  for CIV)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.NEXT_FUND_VALUATION_POINT;
-        assertEquals("M", enumType.getID());
-        assertEquals("NEXT_FUND_VALUATION_POINT", enumType.getName());
-        assertEquals("M - Next Fund Valuation Point (Forward pricing;  for CIV)", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("M", enumType.toFIXIDString());
+        assertEquals("NEXT_FUND_VALUATION_POINT", enumType.toFIXNameString());
+        assertEquals("M - Next Fund Valuation Point (Forward pricing;  for CIV)", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.PEGGED;
-        assertEquals("P", enumType.getID());
-        assertEquals("PEGGED", enumType.getName());
-        assertEquals("P - Pegged", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("P", enumType.toFIXIDString());
+        assertEquals("PEGGED", enumType.toFIXNameString());
+        assertEquals("P - Pegged", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum40OrdType.COUNTER_ORDER_SELECTION;
-        assertEquals("Q", enumType.getID());
-        assertEquals("COUNTER_ORDER_SELECTION", enumType.getName());
-        assertEquals("Q - Counter-order selection", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("Q", enumType.toFIXIDString());
+        assertEquals("COUNTER_ORDER_SELECTION", enumType.toFIXNameString());
+        assertEquals("Q - Counter-order selection", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

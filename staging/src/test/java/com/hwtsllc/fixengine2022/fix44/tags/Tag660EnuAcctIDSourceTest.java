@@ -52,39 +52,39 @@ class Tag660EnuAcctIDSourceTest {
     @Test
     void FIX0660Test() {
         FIX44 fixData = FIX44.FIX660_ENU_ACCT_ID_SOURCE;
-        assertEquals( "660", fixData.getID());
-        assertEquals( "ACCT_ID_SOURCE", fixData.getName());
-        assertEquals( "AcctIDSource", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "660", fixData.toFIXIDString());
+        assertEquals( "ACCT_ID_SOURCE", fixData.toFIXNameString());
+        assertEquals( "AcctIDSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0660Test() {
         Tag660EnuAcctIDSource tagData;
 
         tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.BIC);
-        assertEquals( MyEnumAcctIDSource.BIC.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAcctIDSource.BIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.SID);
-        assertEquals( MyEnumAcctIDSource.SID.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAcctIDSource.SID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.TFM);
-        assertEquals( MyEnumAcctIDSource.TFM.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAcctIDSource.TFM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OMGEO);
-        assertEquals( MyEnumAcctIDSource.OMGEO.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAcctIDSource.OMGEO.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.DTCC);
-        assertEquals( MyEnumAcctIDSource.DTCC.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAcctIDSource.DTCC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OTHER);
-        assertEquals( MyEnumAcctIDSource.OTHER.getID(), tagData.getDataValue());
+        assertEquals( MyEnumAcctIDSource.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -45,59 +45,59 @@ class Enum433ListExecInstTypeTest {
     void Enum0433Test() {
         Enum433ListExecInstType enumType;
 
-        /**
+        /*
          * 1-5 msg types
          */
         enumType = Enum433ListExecInstType.IMMEDIATE;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "IMMEDIATE", enumType.getName());
-        assertEquals( "1 - Immediate", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "IMMEDIATE", enumType.toFIXNameString());
+        assertEquals( "1 - Immediate", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "WAIT_FOR_EXECUTION_INSTRUCTION", enumType.getName());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "WAIT_FOR_EXECUTION_INSTRUCTION", enumType.toFIXNameString());
         assertEquals( "2 - Wait for Execution Instruction " +
                         "(i.e. a List Execution message or phone call before proceeding with execution of the list)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum433ListExecInstType.SELL_DRIVEN;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "SELL_DRIVEN", enumType.getName());
-        assertEquals( "3 - Exchange/switch CIV order - Sell driven", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "SELL_DRIVEN", enumType.toFIXNameString());
+        assertEquals( "3 - Exchange/switch CIV order - Sell driven", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP;
-        assertEquals( "4", enumType.getID());
-        assertEquals( "BUY_DRIVEN_CASH_TOP_UP", enumType.getName());
+        assertEquals( "4", enumType.toFIXIDString());
+        assertEquals( "BUY_DRIVEN_CASH_TOP_UP", enumType.toFIXNameString());
         assertEquals( "4 - Exchange/switch CIV order - Buy driven, cash top-up " +
                         "(i.e. additional cash will be provided to fulfill the order)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW;
-        assertEquals( "5", enumType.getID());
-        assertEquals( "BUY_DRIVEN_CASH_WITHDRAW", enumType.getName());
+        assertEquals( "5", enumType.toFIXIDString());
+        assertEquals( "BUY_DRIVEN_CASH_WITHDRAW", enumType.toFIXNameString());
         assertEquals( "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
                         "(i.e. additional cash will not be provided to fulfill the order)",
-                enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+                enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

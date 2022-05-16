@@ -38,12 +38,12 @@ class Tag893BoolLastFragmentTest {
     @Test
     void FIX0893Test() {
         FIX44 fixData = FIX44.FIX893_BOOL_LAST_FRAGMENT;
-        assertEquals( "893", fixData.getID());
-        assertEquals( "LAST_FRAGMENT", fixData.getName());
-        assertEquals( "LastFragment", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "893", fixData.toFIXIDString());
+        assertEquals( "LAST_FRAGMENT", fixData.toFIXNameString());
+        assertEquals( "LastFragment", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0893Test() {

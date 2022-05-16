@@ -35,12 +35,12 @@ class Tag194PrcLastSpotRateTest {
     @Test
     void FIX0194Test() {
         FIX41 fixData = FIX41.FIX194_PRC_LAST_SPOT_RATE;
-        assertEquals( "194", fixData.getID());
-        assertEquals( "LAST_SPOT_RATE", fixData.getName());
-        assertEquals( "LastSpotRate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "194", fixData.toFIXIDString());
+        assertEquals( "LAST_SPOT_RATE", fixData.toFIXNameString());
+        assertEquals( "LastSpotRate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0194Test() {

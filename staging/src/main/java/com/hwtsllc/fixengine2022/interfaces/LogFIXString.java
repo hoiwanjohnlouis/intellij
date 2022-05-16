@@ -16,10 +16,10 @@
 
 package com.hwtsllc.fixengine2022.interfaces;
 
-public interface EnumAccessors {
+public interface LogFIXString {
     // concrete definitions are by whom inherits this class
-    String getEnumName();
-    String getID();
-    String getName();
-    String getDescription();
+    String toEnumNameString();
+    String toFIXIDString();
+    String toFIXNameString();
+    String toFIXDescriptionString();
 }

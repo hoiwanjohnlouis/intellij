@@ -46,51 +46,51 @@ class Tag749EnuTradeRequestResultTest {
     @Test
     void FIX0749Test() {
         FIX44 fixData = FIX44.FIX749_ENU_TRADE_REQUEST_RESULT;
-        assertEquals( "749", fixData.getID());
-        assertEquals( "TRADE_REQUEST_RESULT", fixData.getName());
-        assertEquals( "TradeRequestResult", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "749", fixData.toFIXIDString());
+        assertEquals( "TRADE_REQUEST_RESULT", fixData.toFIXNameString());
+        assertEquals( "TradeRequestResult", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0749Test() {
         Tag749EnuTradeRequestResult tagData;
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.SUCCESSFUL);
-        assertEquals( Enum749TradeRequestResult.SUCCESSFUL.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.SUCCESSFUL.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNKNOWN_INSTRUMENT);
-        assertEquals( Enum749TradeRequestResult.UNKNOWN_INSTRUMENT.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.UNKNOWN_INSTRUMENT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRADE_TYPE);
-        assertEquals( Enum749TradeRequestResult.INVALID_TRADE_TYPE.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.INVALID_TRADE_TYPE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_PARTIES);
-        assertEquals( Enum749TradeRequestResult.INVALID_PARTIES.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.INVALID_PARTIES.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRANSPORT_TYPE);
-        assertEquals( Enum749TradeRequestResult.INVALID_TRANSPORT_TYPE.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.INVALID_TRANSPORT_TYPE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_DESTINATION_REQUESTED);
-        assertEquals( Enum749TradeRequestResult.INVALID_DESTINATION_REQUESTED.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.INVALID_DESTINATION_REQUESTED.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.TRADE_REQUEST_TYPE_NOT_SUPPORTED);
-        assertEquals( Enum749TradeRequestResult.TRADE_REQUEST_TYPE_NOT_SUPPORTED.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.TRADE_REQUEST_TYPE_NOT_SUPPORTED.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNAUTHORIZED_REPORT_REQUEST);
-        assertEquals( Enum749TradeRequestResult.UNAUTHORIZED_REPORT_REQUEST.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.UNAUTHORIZED_REPORT_REQUEST.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.OTHER);
-        assertEquals( Enum749TradeRequestResult.OTHER.getID(), tagData.getDataValue() );
+        assertEquals( Enum749TradeRequestResult.OTHER.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

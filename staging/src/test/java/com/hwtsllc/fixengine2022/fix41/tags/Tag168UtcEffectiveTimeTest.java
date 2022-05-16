@@ -36,12 +36,12 @@ class Tag168UtcEffectiveTimeTest {
     @Test
     void FIX0168Test() {
         FIX41 fixData = FIX41.FIX168_UTC_EFFECTIVE_TIME;
-        assertEquals( "168", fixData.getID());
-        assertEquals( "EFFECTIVE_TIME", fixData.getName());
-        assertEquals( "EffectiveTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "168", fixData.toFIXIDString());
+        assertEquals( "EFFECTIVE_TIME", fixData.toFIXNameString());
+        assertEquals( "EffectiveTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0168Test() {

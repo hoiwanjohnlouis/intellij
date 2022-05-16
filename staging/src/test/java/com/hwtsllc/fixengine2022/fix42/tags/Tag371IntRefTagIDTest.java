@@ -28,12 +28,12 @@ class Tag371IntRefTagIDTest {
     @Test
     void FIX0371Test() {
         FIX42 fixData = FIX42.FIX371_INT_REF_TAG_ID;
-        assertEquals( "371", fixData.getID());
-        assertEquals( "REF_TAG_ID", fixData.getName());
-        assertEquals( "RefTagID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "371", fixData.toFIXIDString());
+        assertEquals( "REF_TAG_ID", fixData.toFIXNameString());
+        assertEquals( "RefTagID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0371Test() {

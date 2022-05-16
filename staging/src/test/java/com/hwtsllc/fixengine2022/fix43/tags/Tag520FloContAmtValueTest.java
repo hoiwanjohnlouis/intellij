@@ -27,12 +27,12 @@ class Tag520FloContAmtValueTest {
     @Test
     void FIX0520Test() {
         FIX43 fixData = FIX43.FIX520_FLO_CONT_AMT_VALUE;
-        assertEquals( "520", fixData.getID());
-        assertEquals( "CONT_AMT_VALUE", fixData.getName());
-        assertEquals( "ContAmtValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "520", fixData.toFIXIDString());
+        assertEquals( "CONT_AMT_VALUE", fixData.toFIXNameString());
+        assertEquals( "ContAmtValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0520Test() {

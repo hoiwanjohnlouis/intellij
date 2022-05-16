@@ -27,12 +27,12 @@ class Tag527StrSecondaryExecIDTest {
     @Test
     void FIX0527Test() {
         FIX43 fixData = FIX43.FIX527_STR_SECONDARY_EXEC_ID;
-        assertEquals( "527", fixData.getID());
-        assertEquals( "SECONDARY_EXEC_ID", fixData.getName());
-        assertEquals( "SecondaryExecID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "527", fixData.toFIXIDString());
+        assertEquals( "SECONDARY_EXEC_ID", fixData.toFIXNameString());
+        assertEquals( "SecondaryExecID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0527Test() {

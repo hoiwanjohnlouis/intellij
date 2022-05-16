@@ -38,23 +38,23 @@ class Tag978BoolLateIndicatorTest {
     @Test
     void FIX0978Test() {
         FIX50 fixData = FIX50.FIX978_BOOL_LATE_INDICATOR;
-        assertEquals( "978", fixData.getID());
-        assertEquals( "LATE_INDICATOR", fixData.getName());
-        assertEquals( "LateIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "978", fixData.toFIXIDString());
+        assertEquals( "LATE_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "LateIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0978Test() {
         Tag978BoolLateIndicator tagData;
 
         tagData = new Tag978BoolLateIndicator( Bool978LateIndicator.NO );
-        assertEquals( Bool978LateIndicator.NO.getID(), tagData.getDataValue() );
+        assertEquals( Bool978LateIndicator.NO.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag978BoolLateIndicator( Bool978LateIndicator.YES );
-        assertEquals( Bool978LateIndicator.YES.getID(), tagData.getDataValue() );
+        assertEquals( Bool978LateIndicator.YES.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -28,12 +28,12 @@ class Tag375StrContraBrokerTest {
     @Test
     void FIX0375Test() {
         FIX42 fixData = FIX42.FIX375_STR_CONTRA_BROKER;
-        assertEquals( "375", fixData.getID());
-        assertEquals( "CONTRA_BROKER", fixData.getName());
-        assertEquals( "ContraBroker", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "375", fixData.toFIXIDString());
+        assertEquals( "CONTRA_BROKER", fixData.toFIXNameString());
+        assertEquals( "ContraBroker", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0375Test() {

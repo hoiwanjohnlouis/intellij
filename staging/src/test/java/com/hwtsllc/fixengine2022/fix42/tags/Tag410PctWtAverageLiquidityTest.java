@@ -28,12 +28,12 @@ class Tag410PctWtAverageLiquidityTest {
     @Test
     void FIX0410Test() {
         FIX42 fixData = FIX42.FIX410_PCT_WT_AVERAGE_LIQUIDITY;
-        assertEquals( "410", fixData.getID());
-        assertEquals( "WT_AVERAGE_LIQUIDITY", fixData.getName());
-        assertEquals( "WtAverageLiquidity", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "410", fixData.toFIXIDString());
+        assertEquals( "WT_AVERAGE_LIQUIDITY", fixData.toFIXNameString());
+        assertEquals( "WtAverageLiquidity", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0410Test() {

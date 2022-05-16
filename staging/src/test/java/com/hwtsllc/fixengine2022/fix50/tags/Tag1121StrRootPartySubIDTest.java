@@ -35,12 +35,12 @@ class Tag1121StrRootPartySubIDTest {
     @Test
     void FIX1121Test() {
         FIX50 fixData = FIX50.FIX1121_STR_ROOT_PARTY_SUB_ID;
-        assertEquals( "1121", fixData.getID());
-        assertEquals( "ROOT_PARTY_SUB_ID", fixData.getName());
-        assertEquals( "RootPartySubID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1121", fixData.toFIXIDString());
+        assertEquals( "ROOT_PARTY_SUB_ID", fixData.toFIXNameString());
+        assertEquals( "RootPartySubID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1121Test() {

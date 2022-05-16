@@ -36,12 +36,12 @@ class Tag106StrIssuerTest {
     @Test
     void FIX0106Test() {
         FIX30 fixData = FIX30.FIX106_STR_ISSUER;
-        assertEquals( "ISSUER", fixData.getName());
-        assertEquals( "106", fixData.getID());
-        assertEquals( "Issuer", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ISSUER", fixData.toFIXNameString());
+        assertEquals( "106", fixData.toFIXIDString());
+        assertEquals( "Issuer", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0106Test() {

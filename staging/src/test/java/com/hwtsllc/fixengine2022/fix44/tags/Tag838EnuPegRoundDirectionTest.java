@@ -49,23 +49,23 @@ class Tag838EnuPegRoundDirectionTest {
     @Test
     void FIX0838Test() {
         FIX44 fixData = FIX44.FIX838_ENU_PEG_ROUND_DIRECTION;
-        assertEquals( "838", fixData.getID());
-        assertEquals( "PEG_ROUND_DIRECTION", fixData.getName());
-        assertEquals( "PegRoundDirection", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "838", fixData.toFIXIDString());
+        assertEquals( "PEG_ROUND_DIRECTION", fixData.toFIXNameString());
+        assertEquals( "PegRoundDirection", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0838Test() {
         Tag838EnuPegRoundDirection tagData;
 
         tagData = new Tag838EnuPegRoundDirection(MyEnumRoundDirection.AGGRESSIVE);
-        assertEquals( MyEnumRoundDirection.AGGRESSIVE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumRoundDirection.AGGRESSIVE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag838EnuPegRoundDirection(MyEnumRoundDirection.PASSIVE);
-        assertEquals( MyEnumRoundDirection.PASSIVE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumRoundDirection.PASSIVE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

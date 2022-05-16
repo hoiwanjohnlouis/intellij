@@ -33,12 +33,12 @@ class Tag876CPRegTypeTest {
     @Test
     void FIX0876Test() {
         FIX44 fixData = FIX44.FIX876_CP_REG_TYPE;
-        assertEquals( "876", fixData.getID());
-        assertEquals( "CP_REG_TYPE", fixData.getName());
-        assertEquals( "CPRegType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "876", fixData.toFIXIDString());
+        assertEquals( "CP_REG_TYPE", fixData.toFIXNameString());
+        assertEquals( "CPRegType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0876Test() {

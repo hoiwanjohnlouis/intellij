@@ -36,12 +36,12 @@ class Tag122UtcOrigSendingTimeTest {
     @Test
     void FIX0122Test() {
         FIX40 fixData = FIX40.FIX122_UTC_ORIG_SENDING_TIME;
-        assertEquals( "ORIG_SENDING_TIME", fixData.getName());
-        assertEquals( "122", fixData.getID());
-        assertEquals( "OrigSendingTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ORIG_SENDING_TIME", fixData.toFIXNameString());
+        assertEquals( "122", fixData.toFIXIDString());
+        assertEquals( "OrigSendingTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0122Test() {

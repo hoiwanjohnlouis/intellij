@@ -35,12 +35,12 @@ class Tag1135StrRptSysTest {
     @Test
     void FIX1135Test() {
         FIX50 fixData = FIX50.FIX1135_STR_RPT_SYS;
-        assertEquals( "1135", fixData.getID());
-        assertEquals( "RPT_SYS", fixData.getName());
-        assertEquals( "RptSys", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1135", fixData.toFIXIDString());
+        assertEquals( "RPT_SYS", fixData.toFIXNameString());
+        assertEquals( "RptSys", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1135Test() {

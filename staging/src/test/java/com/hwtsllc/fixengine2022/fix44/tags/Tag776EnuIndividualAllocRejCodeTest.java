@@ -59,12 +59,12 @@ class Tag776EnuIndividualAllocRejCodeTest {
     @Test
     void FIX0776Test() {
         FIX44 fixData = FIX44.FIX776_ENU_INDIVIDUAL_ALLOC_REJ_CODE;
-        assertEquals( "776", fixData.getID());
-        assertEquals( "INDIVIDUAL_ALLOC_REJ_CODE", fixData.getName());
-        assertEquals( "IndividualAllocRejCode", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "776", fixData.toFIXIDString());
+        assertEquals( "INDIVIDUAL_ALLOC_REJ_CODE", fixData.toFIXNameString());
+        assertEquals( "IndividualAllocRejCode", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0776Test() {

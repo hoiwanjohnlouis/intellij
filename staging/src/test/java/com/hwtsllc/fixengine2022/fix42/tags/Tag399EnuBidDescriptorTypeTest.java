@@ -38,12 +38,12 @@ class Tag399EnuBidDescriptorTypeTest {
     @Test
     void FIX0399Test() {
         FIX42 fixData = FIX42.FIX399_ENU_BID_DESCRIPTOR_TYPE;
-        assertEquals( "399", fixData.getID());
-        assertEquals( "BID_DESCRIPTOR_TYPE", fixData.getName());
-        assertEquals( "BidDescriptorType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "399", fixData.toFIXIDString());
+        assertEquals( "BID_DESCRIPTOR_TYPE", fixData.toFIXNameString());
+        assertEquals( "BidDescriptorType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0399Test() {
@@ -53,15 +53,15 @@ class Tag399EnuBidDescriptorTypeTest {
          * 1-3 msg types
          */
         tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
-        assertEquals( Enum399BidDescriptorType.SECTOR.getID(), tagData.getDataValue());
+        assertEquals( Enum399BidDescriptorType.SECTOR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
-        assertEquals( Enum399BidDescriptorType.COUNTRY.getID(), tagData.getDataValue());
+        assertEquals( Enum399BidDescriptorType.COUNTRY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
-        assertEquals( Enum399BidDescriptorType.INDEX.getID(), tagData.getDataValue());
+        assertEquals( Enum399BidDescriptorType.INDEX.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

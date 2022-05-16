@@ -49,143 +49,143 @@ class Enum281MDReqRejReasonTest {
     void Enum0281Test() {
         Enum281MDReqRejReason enumType;
 
-        /**
+        /*
          *  0-9, A-D msg types
          */
 
 
-        /**
+        /*
          *  0-9 msg types
          */
         enumType = Enum281MDReqRejReason.UNKNOWN_SYMBOL;
-        assertEquals( "0", enumType.getID());
-        assertEquals( "UNKNOWN_SYMBOL", enumType.getName());
-        assertEquals( "0 - Unknown Symbol", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString());
+        assertEquals( "UNKNOWN_SYMBOL", enumType.toFIXNameString());
+        assertEquals( "0 - Unknown Symbol", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.DUPLICATE_MDREQID;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "DUPLICATE_MDREQID", enumType.getName());
-        assertEquals( "1 - Duplicate MDReqID", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "DUPLICATE_MDREQID", enumType.toFIXNameString());
+        assertEquals( "1 - Duplicate MDReqID", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH;
-        assertEquals( "2", enumType.getID());
-        assertEquals( "INSUFFICIENT_BANDWIDTH", enumType.getName());
-        assertEquals( "2 - Insufficient Bandwidth", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString());
+        assertEquals( "INSUFFICIENT_BANDWIDTH", enumType.toFIXNameString());
+        assertEquals( "2 - Insufficient Bandwidth", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS;
-        assertEquals( "3", enumType.getID());
-        assertEquals( "INSUFFICIENT_PERMISSIONS", enumType.getName());
-        assertEquals( "3 - Insufficient Permissions", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "3", enumType.toFIXIDString());
+        assertEquals( "INSUFFICIENT_PERMISSIONS", enumType.toFIXNameString());
+        assertEquals( "3 - Insufficient Permissions", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE;
-        assertEquals( "4", enumType.getID());
-        assertEquals( "UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE", enumType.getName());
-        assertEquals( "4 - Unsupported SubscriptionRequestType", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE", enumType.toFIXNameString());
+        assertEquals( "4 - Unsupported SubscriptionRequestType", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH;
-        assertEquals( "5", enumType.getID());
-        assertEquals( "UNSUPPORTED_MARKETDEPTH", enumType.getName());
-        assertEquals( "5 - Unsupported MarketDepth", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "5", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_MARKETDEPTH", enumType.toFIXNameString());
+        assertEquals( "5 - Unsupported MarketDepth", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE;
-        assertEquals( "6", enumType.getID());
-        assertEquals( "UNSUPPORTED_MDUPDATETYPE", enumType.getName());
-        assertEquals( "6 - Unsupported MDUpdateType", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "6", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_MDUPDATETYPE", enumType.toFIXNameString());
+        assertEquals( "6 - Unsupported MDUpdateType", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK;
-        assertEquals( "7", enumType.getID());
-        assertEquals( "UNSUPPORTED_AGGREGATEDBOOK", enumType.getName());
-        assertEquals( "7 - Unsupported AggregatedBook", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "7", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_AGGREGATEDBOOK", enumType.toFIXNameString());
+        assertEquals( "7 - Unsupported AggregatedBook", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE;
-        assertEquals( "8", enumType.getID());
-        assertEquals( "UNSUPPORTED_MDENTRYTYPE", enumType.getName());
-        assertEquals( "8 - Unsupported MDEntryType", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "8", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_MDENTRYTYPE", enumType.toFIXNameString());
+        assertEquals( "8 - Unsupported MDEntryType", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID;
-        assertEquals( "9", enumType.getID());
-        assertEquals( "UNSUPPORTED_TRADINGSESSIONID", enumType.getName());
-        assertEquals( "9 - Unsupported TradingSessionID", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "9", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_TRADINGSESSIONID", enumType.toFIXNameString());
+        assertEquals( "9 - Unsupported TradingSessionID", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
-        /**
+        /*
          *  A-D, msg types
          */
         enumType = Enum281MDReqRejReason.UNSUPPORTED_SCOPE;
-        assertEquals( "A", enumType.getID());
-        assertEquals( "UNSUPPORTED_SCOPE", enumType.getName());
-        assertEquals( "A - Unsupported Scope", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "A", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_SCOPE", enumType.toFIXNameString());
+        assertEquals( "A - Unsupported Scope", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG;
-        assertEquals( "B", enumType.getID());
-        assertEquals( "UNSUPPORTED_OPENCLOSESETTLEFLAG", enumType.getName());
-        assertEquals( "B - Unsupported OpenCloseSettleFlag", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "B", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_OPENCLOSESETTLEFLAG", enumType.toFIXNameString());
+        assertEquals( "B - Unsupported OpenCloseSettleFlag", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE;
-        assertEquals( "C", enumType.getID());
-        assertEquals( "UNSUPPORTED_MDIMPLICITDELETE", enumType.getName());
-        assertEquals( "C - Unsupported MDImplicitDelete", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "C", enumType.toFIXIDString());
+        assertEquals( "UNSUPPORTED_MDIMPLICITDELETE", enumType.toFIXNameString());
+        assertEquals( "C - Unsupported MDImplicitDelete", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum281MDReqRejReason.INSUFFICIENT_CREDIT;
-        assertEquals( "D", enumType.getID());
-        assertEquals( "INSUFFICIENT_CREDIT", enumType.getName());
-        assertEquals( "D - Insufficient credit", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "D", enumType.toFIXIDString());
+        assertEquals( "INSUFFICIENT_CREDIT", enumType.toFIXNameString());
+        assertEquals( "D - Insufficient credit", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

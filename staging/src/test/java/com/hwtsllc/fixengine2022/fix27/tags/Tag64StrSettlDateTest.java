@@ -39,13 +39,13 @@ class Tag64StrSettlDateTest {
     @Test
     void FIX0064Test() {
         FIX27 fixData = FIX27.FIX64_STR_SETTL_DATE;
-        assertEquals( "SETTL_DATE", fixData.getName());
-        assertEquals( "64", fixData.getID());
-        assertEquals( "SettlDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "SETTL_DATE", fixData.toFIXNameString());
+        assertEquals( "64", fixData.toFIXIDString());
+        assertEquals( "SettlDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0064Test() {

@@ -50,12 +50,12 @@ class Tag281EnuMDReqRejReasonTest {
     @Test
     void FIX0281Test() {
         FIX42 fixData = FIX42.FIX281_ENU_MD_REQ_REJ_REASON;
-        assertEquals( "281", fixData.getID());
-        assertEquals( "MD_REQ_REJ_REASON", fixData.getName());
-        assertEquals( "MDReqRejReason", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "281", fixData.toFIXIDString());
+        assertEquals( "MD_REQ_REJ_REASON", fixData.toFIXNameString());
+        assertEquals( "MDReqRejReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0281Test() {
@@ -65,63 +65,63 @@ class Tag281EnuMDReqRejReasonTest {
          * 0-9 msg types
          */
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNKNOWN_SYMBOL);
-        assertEquals( Enum281MDReqRejReason.UNKNOWN_SYMBOL.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNKNOWN_SYMBOL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.DUPLICATE_MDREQID);
-        assertEquals( Enum281MDReqRejReason.DUPLICATE_MDREQID.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.DUPLICATE_MDREQID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH);
-        assertEquals( Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.INSUFFICIENT_BANDWIDTH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS);
-        assertEquals( Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.INSUFFICIENT_PERMISSIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_MARKETDEPTH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_MDUPDATETYPE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_AGGREGATEDBOOK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_MDENTRYTYPE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_TRADINGSESSIONID.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-        /**
+        /*
          * A-D msg types
          */
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_SCOPE);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_SCOPE.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_SCOPE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_OPENCLOSESETTLEFLAG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE);
-        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.UNSUPPORTED_MDIMPLICITDELETE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_CREDIT);
-        assertEquals( Enum281MDReqRejReason.INSUFFICIENT_CREDIT.getID(), tagData.getDataValue());
+        assertEquals( Enum281MDReqRejReason.INSUFFICIENT_CREDIT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

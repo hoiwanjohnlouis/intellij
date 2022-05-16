@@ -34,12 +34,12 @@ class Tag701YieldCalcDateTest {
     @Test
     void FIX0701Test() {
         FIX44 fixData = FIX44.FIX701_YIELD_CALC_DATE;
-        assertEquals( "701", fixData.getID());
-        assertEquals( "YIELD_CALC_DATE", fixData.getName());
-        assertEquals( "YieldCalcDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "701", fixData.toFIXIDString());
+        assertEquals( "YIELD_CALC_DATE", fixData.toFIXNameString());
+        assertEquals( "YieldCalcDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0701Test() {

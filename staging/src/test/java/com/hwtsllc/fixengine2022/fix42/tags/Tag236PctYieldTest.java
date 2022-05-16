@@ -28,12 +28,12 @@ class Tag236PctYieldTest {
     @Test
     void FIX0236Test() {
         FIX42 fixData = FIX42.FIX236_PCT_YIELD;
-        assertEquals( "236", fixData.getID());
-        assertEquals( "YIELD", fixData.getName());
-        assertEquals( "Yield", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "236", fixData.toFIXIDString());
+        assertEquals( "YIELD", fixData.toFIXNameString());
+        assertEquals( "Yield", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0236Test() {

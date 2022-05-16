@@ -27,12 +27,12 @@ class Tag557IntTotNoSecurityTypesTest {
     @Test
     void FIX0557Test() {
         FIX43 fixData = FIX43.FIX557_INT_TOT_NO_SECURITY_TYPES;
-        assertEquals( "557", fixData.getID());
-        assertEquals( "TOT_NO_SECURITY_TYPES", fixData.getName());
-        assertEquals( "TotNoSecurityTypes", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "557", fixData.toFIXIDString());
+        assertEquals( "TOT_NO_SECURITY_TYPES", fixData.toFIXNameString());
+        assertEquals( "TotNoSecurityTypes", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0557Test() {

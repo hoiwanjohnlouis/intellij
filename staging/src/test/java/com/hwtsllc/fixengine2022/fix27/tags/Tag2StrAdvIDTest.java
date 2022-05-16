@@ -35,12 +35,12 @@ class Tag2StrAdvIDTest {
     @Test
     void FIX0002Test() {
         FIX27 fixData = FIX27.FIX2_STR_ADV_ID;
-        assertEquals( "ADV_ID", fixData.getName());
-        assertEquals( "2", fixData.getID());
-        assertEquals( "AdvId", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ADV_ID", fixData.toFIXNameString());
+        assertEquals( "2", fixData.toFIXIDString());
+        assertEquals( "AdvId", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0002Test() {

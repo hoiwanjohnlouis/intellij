@@ -43,51 +43,51 @@ class Tag707EnuPosAmtTypeTest {
     @Test
     void FIX0707Test() {
         FIX44 fixData = FIX44.FIX707_ENU_POS_AMT_TYPE;
-        assertEquals( "707", fixData.getID());
-        assertEquals( "POS_AMT_TYPE", fixData.getName());
-        assertEquals( "PosAmtType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "707", fixData.toFIXIDString());
+        assertEquals( "POS_AMT_TYPE", fixData.toFIXNameString());
+        assertEquals( "PosAmtType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0707Test() {
         Tag707EnuPosAmtType tagData;
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.CASH_AMOUNT);
-        assertEquals( Enum707PosAmtType.CASH_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.CASH_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.CASH_RESIDUAL_AMOUNT);
-        assertEquals( Enum707PosAmtType.CASH_RESIDUAL_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.CASH_RESIDUAL_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.FINAL_MARK_TO_MARKET_AMOUNT);
-        assertEquals( Enum707PosAmtType.FINAL_MARK_TO_MARKET_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.FINAL_MARK_TO_MARKET_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.INCREMENTAL_MARK_TO_MARKET_AMOUNT);
-        assertEquals( Enum707PosAmtType.INCREMENTAL_MARK_TO_MARKET_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.INCREMENTAL_MARK_TO_MARKET_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.PREMIUM_AMOUNT);
-        assertEquals( Enum707PosAmtType.PREMIUM_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.PREMIUM_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.SETTLEMENT_VALUE);
-        assertEquals( Enum707PosAmtType.SETTLEMENT_VALUE.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.SETTLEMENT_VALUE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.START_OF_DAY_MARK_TO_MARKET_AMOUNT);
-        assertEquals( Enum707PosAmtType.START_OF_DAY_MARK_TO_MARKET_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.START_OF_DAY_MARK_TO_MARKET_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.TRADE_VARIATION_AMOUNT);
-        assertEquals( Enum707PosAmtType.TRADE_VARIATION_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.TRADE_VARIATION_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.VALUE_ADJUSTED_AMOUNT);
-        assertEquals( Enum707PosAmtType.VALUE_ADJUSTED_AMOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum707PosAmtType.VALUE_ADJUSTED_AMOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

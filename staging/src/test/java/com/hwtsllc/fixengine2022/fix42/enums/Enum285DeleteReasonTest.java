@@ -35,26 +35,26 @@ class Enum285DeleteReasonTest {
     void Enum0285Test() {
         Enum285DeleteReason enumType;
 
-        /**
+        /*
          * 0-1 msg types
          */
         enumType = Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST;
-        assertEquals( "0", enumType.getID());
-        assertEquals( "CANCELLATION_OR_TRADE_BUST", enumType.getName());
-        assertEquals( "0 - Cancellation / Trade Bust", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "0", enumType.toFIXIDString());
+        assertEquals( "CANCELLATION_OR_TRADE_BUST", enumType.toFIXNameString());
+        assertEquals( "0 - Cancellation / Trade Bust", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum285DeleteReason.ERROR;
-        assertEquals( "1", enumType.getID());
-        assertEquals( "ERROR", enumType.getName());
-        assertEquals( "1 - Error", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString());
+        assertEquals( "ERROR", enumType.toFIXNameString());
+        assertEquals( "1 - Error", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

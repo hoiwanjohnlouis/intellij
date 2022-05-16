@@ -43,23 +43,23 @@ class Tag1029BoolCustDirectedOrderTest {
     @Test
     void FIX1029Test() {
         FIX50 fixData = FIX50.FIX1029_BOOL_CUST_DIRECTED_ORDER;
-        assertEquals( "1029", fixData.getID());
-        assertEquals( "CUST_DIRECTED_ORDER", fixData.getName());
-        assertEquals( "CustDirectedOrder", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1029", fixData.toFIXIDString());
+        assertEquals( "CUST_DIRECTED_ORDER", fixData.toFIXNameString());
+        assertEquals( "CustDirectedOrder", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1029Test() {
         Tag1029BoolCustDirectedOrder tagData;
 
         tagData = new Tag1029BoolCustDirectedOrder( Bool1029CustDirectedOrder.NO );
-        assertEquals( Bool1029CustDirectedOrder.NO.getID(), tagData.getDataValue() );
+        assertEquals( Bool1029CustDirectedOrder.NO.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1029BoolCustDirectedOrder( Bool1029CustDirectedOrder.YES );
-        assertEquals( Bool1029CustDirectedOrder.YES.getID(), tagData.getDataValue() );
+        assertEquals( Bool1029CustDirectedOrder.YES.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix42.enums;
 
-import com.hwtsllc.fixengine2022.interfaces.EnumAccessors;
+import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
  *      INDEX( "3", "INDEX", "3 - Index" ),
  */
-public enum Enum399BidDescriptorType implements EnumAccessors, LogVerboseString {
+public enum Enum399BidDescriptorType implements LogFIXString, LogVerboseString {
     /**
      * 1-3 msg types
      */
@@ -52,28 +52,28 @@ public enum Enum399BidDescriptorType implements EnumAccessors, LogVerboseString 
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String getEnumName() {
+    public String toEnumNameString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String getID() {
+    public String toFIXIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String getName() {
+    public String toFIXNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String getDescription() {
+    public String toFIXDescriptionString() {
         return description;
     }
     /**
@@ -83,16 +83,16 @@ public enum Enum399BidDescriptorType implements EnumAccessors, LogVerboseString 
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(getEnumName())
+                .concat(toEnumNameString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
     /**
@@ -100,13 +100,13 @@ public enum Enum399BidDescriptorType implements EnumAccessors, LogVerboseString 
      */
     @Override
     public String toString() {
-        return getEnumName()
+        return toEnumNameString()
                 .concat("=[")
-                .concat(getID())
+                .concat(toFIXIDString())
                 .concat(",")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat(",")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
 

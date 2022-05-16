@@ -36,23 +36,23 @@ class Tag668EnuDeliveryFormTest {
     @Test
     void FIX0668Test() {
         FIX44 fixData = FIX44.FIX668_ENU_DELIVERY_FORM;
-        assertEquals( "668", fixData.getID());
-        assertEquals( "DELIVERY_FORM", fixData.getName());
-        assertEquals( "DeliveryForm", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "668", fixData.toFIXIDString());
+        assertEquals( "DELIVERY_FORM", fixData.toFIXNameString());
+        assertEquals( "DeliveryForm", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0668Test() {
         Tag668EnuDeliveryForm tagData;
 
         tagData = new Tag668EnuDeliveryForm(Enum668DeliveryForm.BOOK_ENTRY);
-        assertEquals( Enum668DeliveryForm.BOOK_ENTRY.getID(), tagData.getDataValue());
+        assertEquals( Enum668DeliveryForm.BOOK_ENTRY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag668EnuDeliveryForm(Enum668DeliveryForm.BEARER);
-        assertEquals( Enum668DeliveryForm.BEARER.getID(), tagData.getDataValue());
+        assertEquals( Enum668DeliveryForm.BEARER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

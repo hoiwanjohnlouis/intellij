@@ -33,12 +33,12 @@ class Tag936NoCompIDsTest {
     @Test
     void FIX0936Test() {
         FIX44 fixData = FIX44.FIX936_NO_COMP_IDS;
-        assertEquals( "936", fixData.getID());
-        assertEquals( "NO_COMP_IDS", fixData.getName());
-        assertEquals( "NoCompIDs", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "936", fixData.toFIXIDString());
+        assertEquals( "NO_COMP_IDS", fixData.toFIXNameString());
+        assertEquals( "NoCompIDs", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0936Test() {

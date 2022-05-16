@@ -43,12 +43,12 @@ class Tag219EnuBenchmarkTest {
     @Test
     void FIX0219Test() {
         FIX42 fixData = FIX42.FIX219_ENU_BENCHMARK;
-        assertEquals( "219", fixData.getID());
-        assertEquals( "BENCHMARK", fixData.getName());
-        assertEquals( "Benchmark (no longer used)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "219", fixData.toFIXIDString());
+        assertEquals( "BENCHMARK", fixData.toFIXNameString());
+        assertEquals( "Benchmark (no longer used)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0219Test() {
@@ -58,47 +58,47 @@ class Tag219EnuBenchmarkTest {
          * 1-9 msg types
          */
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.CURVE);
-        assertEquals( Enum219Benchmark.CURVE.getID(),
+        assertEquals( Enum219Benchmark.CURVE.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.FIVE_YEAR);
-        assertEquals( Enum219Benchmark.FIVE_YEAR.getID(),
+        assertEquals( Enum219Benchmark.FIVE_YEAR.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_FIVE_YEAR);
-        assertEquals( Enum219Benchmark.OLD_FIVE_YEAR.getID(),
+        assertEquals( Enum219Benchmark.OLD_FIVE_YEAR.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.TEN_YEAR);
-        assertEquals( Enum219Benchmark.TEN_YEAR.getID(),
+        assertEquals( Enum219Benchmark.TEN_YEAR.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_TEN_YEAR);
-        assertEquals( Enum219Benchmark.OLD_TEN_YEAR.getID(),
+        assertEquals( Enum219Benchmark.OLD_TEN_YEAR.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.THIRTY_YEAR);
-        assertEquals( Enum219Benchmark.THIRTY_YEAR.getID(),
+        assertEquals( Enum219Benchmark.THIRTY_YEAR.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_THIRTY_YEAR);
-        assertEquals( Enum219Benchmark.OLD_THIRTY_YEAR.getID(),
+        assertEquals( Enum219Benchmark.OLD_THIRTY_YEAR.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.THREE_MONTH);
-        assertEquals( Enum219Benchmark.THREE_MONTH.getID(),
+        assertEquals( Enum219Benchmark.THREE_MONTH.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.SIX_MONTH);
-        assertEquals( Enum219Benchmark.SIX_MONTH.getID(),
+        assertEquals( Enum219Benchmark.SIX_MONTH.toFIXIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

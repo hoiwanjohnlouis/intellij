@@ -33,12 +33,12 @@ class Tag869PctAtRiskTest {
     @Test
     void FIX0869Test() {
         FIX44 fixData = FIX44.FIX869_PCT_AT_RISK;
-        assertEquals( "869", fixData.getID());
-        assertEquals( "PCT_AT_RISK", fixData.getName());
-        assertEquals( "PctAtRisk", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "869", fixData.toFIXIDString());
+        assertEquals( "PCT_AT_RISK", fixData.toFIXNameString());
+        assertEquals( "PctAtRisk", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0869Test() {

@@ -38,12 +38,12 @@ class Tag987UnderlyingSettlementDateTest {
     @Test
     void FIX0987Test() {
         FIX50 fixData = FIX50.FIX987_UNDERLYING_SETTLEMENT_DATE;
-        assertEquals( "987", fixData.getID());
-        assertEquals( "UNDERLYING_SETTLEMENT_DATE", fixData.getName());
-        assertEquals( "UnderlyingSettlementDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "987", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_SETTLEMENT_DATE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingSettlementDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0987Test() {

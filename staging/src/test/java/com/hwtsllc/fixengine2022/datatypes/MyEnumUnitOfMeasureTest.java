@@ -67,101 +67,101 @@ class MyEnumUnitOfMeasureTest {
         MyEnumUnitOfMeasure enumType;
 
         enumType = MyEnumUnitOfMeasure.BARRELS;
-        assertEquals( "Bbl", enumType.getID() );
-        assertEquals( "BARRELS", enumType.getName() );
-        assertEquals( "Bbl - Barrels", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "Bbl", enumType.toFIXIDString() );
+        assertEquals( "BARRELS", enumType.toFIXNameString() );
+        assertEquals( "Bbl - Barrels", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.BILLION_CUBIC_FEET;
-        assertEquals( "Bcf", enumType.getID() );
-        assertEquals( "BILLION_CUBIC_FEET", enumType.getName() );
-        assertEquals( "Bcf - Billion cubic feet", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "Bcf", enumType.toFIXIDString() );
+        assertEquals( "BILLION_CUBIC_FEET", enumType.toFIXNameString() );
+        assertEquals( "Bcf - Billion cubic feet", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.BUSHELS;
-        assertEquals( "Bu", enumType.getID() );
-        assertEquals( "BUSHELS", enumType.getName() );
-        assertEquals( "Bu - Bushels", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "Bu", enumType.toFIXIDString() );
+        assertEquals( "BUSHELS", enumType.toFIXNameString() );
+        assertEquals( "Bu - Bushels", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.POUNDS;
-        assertEquals( "lbs", enumType.getID() );
-        assertEquals( "POUNDS", enumType.getName() );
-        assertEquals( "lbs - pounds", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "lbs", enumType.toFIXIDString() );
+        assertEquals( "POUNDS", enumType.toFIXNameString() );
+        assertEquals( "lbs - pounds", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.GALLONS;
-        assertEquals( "Gal", enumType.getID() );
-        assertEquals( "GALLONS", enumType.getName() );
-        assertEquals( "Gal - Gallons", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "Gal", enumType.toFIXIDString() );
+        assertEquals( "GALLONS", enumType.toFIXNameString() );
+        assertEquals( "Gal - Gallons", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumUnitOfMeasure.MILLION_BARRELS;
-        assertEquals( "MMbbl", enumType.getID() );
-        assertEquals( "MILLION_BARRELS", enumType.getName() );
-        assertEquals( "MMbbl - Million Barrels", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "MMbbl", enumType.toFIXIDString() );
+        assertEquals( "MILLION_BARRELS", enumType.toFIXNameString() );
+        assertEquals( "MMbbl - Million Barrels", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.MILLION_BTU;
-        assertEquals( "MMBtu", enumType.getID() );
-        assertEquals( "MILLION_BTU", enumType.getName() );
-        assertEquals( "MMBtu - One Million BTU", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "MMBtu", enumType.toFIXIDString() );
+        assertEquals( "MILLION_BTU", enumType.toFIXNameString() );
+        assertEquals( "MMBtu - One Million BTU", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.MEGAWATT_HOURS;
-        assertEquals( "MWh", enumType.getID() );
-        assertEquals( "MEGAWATT_HOURS", enumType.getName() );
-        assertEquals( "MWh - Megawatt hours", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "MWh", enumType.toFIXIDString() );
+        assertEquals( "MEGAWATT_HOURS", enumType.toFIXNameString() );
+        assertEquals( "MWh - Megawatt hours", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.TROY_OUNCES;
-        assertEquals( "oz_tr", enumType.getID() );
-        assertEquals( "TROY_OUNCES", enumType.getName() );
-        assertEquals( "oz_tr - Troy Ounces", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "oz_tr", enumType.toFIXIDString() );
+        assertEquals( "TROY_OUNCES", enumType.toFIXNameString() );
+        assertEquals( "oz_tr - Troy Ounces", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.METRIC_TONS;
-        assertEquals( "t", enumType.getID() );
-        assertEquals( "METRIC_TONS", enumType.getName() );
-        assertEquals( "t - Metric Tons (aka Tonne)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "t", enumType.toFIXIDString() );
+        assertEquals( "METRIC_TONS", enumType.toFIXNameString() );
+        assertEquals( "t - Metric Tons (aka Tonne)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = MyEnumUnitOfMeasure.US_TONS;
-        assertEquals( "tn", enumType.getID() );
-        assertEquals( "US_TONS", enumType.getName() );
-        assertEquals( "tn - Tons (US)", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "tn", enumType.toFIXIDString() );
+        assertEquals( "US_TONS", enumType.toFIXNameString() );
+        assertEquals( "tn - Tons (US)", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumUnitOfMeasure.US_DOLLARS;
-        assertEquals( "USD", enumType.getID() );
-        assertEquals( "US_DOLLARS", enumType.getName() );
-        assertEquals( "USD - US Dollars", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "USD", enumType.toFIXIDString() );
+        assertEquals( "US_DOLLARS", enumType.toFIXNameString() );
+        assertEquals( "USD - US Dollars", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

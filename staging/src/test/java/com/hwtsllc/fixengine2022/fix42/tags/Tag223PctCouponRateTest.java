@@ -28,12 +28,12 @@ class Tag223PctCouponRateTest {
     @Test
     void FIX0223Test() {
         FIX42 fixData = FIX42.FIX223_PCT_COUPON_RATE;
-        assertEquals( "223", fixData.getID());
-        assertEquals( "COUPON_RATE", fixData.getName());
-        assertEquals( "CouponRate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "223", fixData.toFIXIDString());
+        assertEquals( "COUPON_RATE", fixData.toFIXNameString());
+        assertEquals( "CouponRate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0223Test() {

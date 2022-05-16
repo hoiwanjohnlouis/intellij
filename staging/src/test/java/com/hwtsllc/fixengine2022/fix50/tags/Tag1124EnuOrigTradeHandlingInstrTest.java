@@ -51,35 +51,35 @@ class Tag1124EnuOrigTradeHandlingInstrTest {
     @Test
     void FIX1124Test() {
         FIX50 fixData = FIX50.FIX1124_ENU_ORIG_TRADE_HANDLING_INSTR;
-        assertEquals( "1124", fixData.getID());
-        assertEquals( "ORIG_TRADE_HANDLING_INSTR", fixData.getName());
-        assertEquals( "OrigTradeHandlingInstr", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1124", fixData.toFIXIDString());
+        assertEquals( "ORIG_TRADE_HANDLING_INSTR", fixData.toFIXNameString());
+        assertEquals( "OrigTradeHandlingInstr", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1124Test() {
         Tag1124EnuOrigTradeHandlingInstr tagData;
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.TRADE_CONFIRMATION );
-        assertEquals( MyEnumTradeHandlingInstr.TRADE_CONFIRMATION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.TRADE_CONFIRMATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.TWO_PARTY_REPORT );
-        assertEquals( MyEnumTradeHandlingInstr.TWO_PARTY_REPORT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.TWO_PARTY_REPORT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING );
-        assertEquals( MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING.getID(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH );
-        assertEquals( MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH.getID(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.AUTOMATED_ROUTING );
-        assertEquals( MyEnumTradeHandlingInstr.AUTOMATED_ROUTING.getID(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.AUTOMATED_ROUTING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

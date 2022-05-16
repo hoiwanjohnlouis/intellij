@@ -48,12 +48,12 @@ class Tag126UtcExpireTimeTest {
     @Test
     void FIX0126Test() {
         FIX40 fixData = FIX40.FIX126_UTC_EXPIRE_TIME;
-        assertEquals( "EXPIRE_TIME", fixData.getName());
-        assertEquals( "126", fixData.getID());
-        assertEquals( "ExpireTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "EXPIRE_TIME", fixData.toFIXNameString());
+        assertEquals( "126", fixData.toFIXIDString());
+        assertEquals( "ExpireTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0126Test() {

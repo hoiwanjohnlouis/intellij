@@ -39,12 +39,12 @@ class Tag210QtyMaxShowTest {
     @Test
     void FIX0210Test() {
         FIX41 fixData = FIX41.FIX210_QTY_MAX_SHOW;
-        assertEquals( "210", fixData.getID());
-        assertEquals( "MAX_SHOW", fixData.getName());
-        assertEquals( "MaxShow", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "210", fixData.toFIXIDString());
+        assertEquals( "MAX_SHOW", fixData.toFIXNameString());
+        assertEquals( "MaxShow", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0210Test() {

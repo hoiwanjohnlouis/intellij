@@ -46,19 +46,19 @@ class MyEnumAssignmentMethodTest {
         MyEnumAssignmentMethod enumType;
 
         enumType = MyEnumAssignmentMethod.PRO_RATA;
-        assertEquals( "P", enumType.getID());
-        assertEquals( "PRO_RATA", enumType.getName());
-        assertEquals( "P - Pro-rata", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "P", enumType.toFIXIDString());
+        assertEquals( "PRO_RATA", enumType.toFIXNameString());
+        assertEquals( "P - Pro-rata", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAssignmentMethod.RANDOM;
-        assertEquals( "R", enumType.getID());
-        assertEquals( "RANDOM", enumType.getName());
-        assertEquals( "R - Random", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "R", enumType.toFIXIDString());
+        assertEquals( "RANDOM", enumType.toFIXNameString());
+        assertEquals( "R - Random", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -35,12 +35,12 @@ class Tag1055StrPositionCurrencyTest {
     @Test
     void FIX1055Test() {
         FIX50 fixData = FIX50.FIX1055_STR_POSITION_CURRENCY;
-        assertEquals( "1055", fixData.getID());
-        assertEquals( "POSITION_CURRENCY", fixData.getName());
-        assertEquals( "PositionCurrency", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1055", fixData.toFIXIDString());
+        assertEquals( "POSITION_CURRENCY", fixData.toFIXNameString());
+        assertEquals( "PositionCurrency", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1055Test() {

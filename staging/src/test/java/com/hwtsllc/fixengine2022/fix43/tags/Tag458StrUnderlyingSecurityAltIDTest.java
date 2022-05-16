@@ -27,12 +27,12 @@ class Tag458StrUnderlyingSecurityAltIDTest {
     @Test
     void FIX0458Test() {
         FIX43 fixData = FIX43.FIX458_STR_UNDERLYING_SECURITY_ALT_ID;
-        assertEquals( "458", fixData.getID());
-        assertEquals( "UNDERLYING_SECURITY_ALT_ID", fixData.getName());
-        assertEquals( "UnderlyingSecurityAltID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "458", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_SECURITY_ALT_ID", fixData.toFIXNameString());
+        assertEquals( "UnderlyingSecurityAltID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0458Test() {

@@ -35,12 +35,12 @@ class Tag994StrTierCodeTest {
     @Test
     void FIX0994Test() {
         FIX50 fixData = FIX50.FIX994_STR_TIER_CODE;
-        assertEquals( "994", fixData.getID());
-        assertEquals( "TIER_CODE", fixData.getName());
-        assertEquals( "TierCode", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "994", fixData.toFIXIDString());
+        assertEquals( "TIER_CODE", fixData.toFIXNameString());
+        assertEquals( "TierCode", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0994Test() {

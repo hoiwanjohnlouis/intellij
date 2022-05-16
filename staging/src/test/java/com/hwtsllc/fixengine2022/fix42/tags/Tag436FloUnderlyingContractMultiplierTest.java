@@ -28,12 +28,12 @@ class Tag436FloUnderlyingContractMultiplierTest {
     @Test
     void FIX0436Test() {
         FIX42 fixData = FIX42.FIX436_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
-        assertEquals( "436", fixData.getID());
-        assertEquals( "UNDERLYING_CONTRACT_MULTIPLIER", fixData.getName());
-        assertEquals( "UnderlyingContractMultiplier", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "436", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CONTRACT_MULTIPLIER", fixData.toFIXNameString());
+        assertEquals( "UnderlyingContractMultiplier", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0436Test() {

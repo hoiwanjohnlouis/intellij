@@ -28,12 +28,12 @@ class Tag420NumNoBidComponentsTest {
     @Test
     void FIX0420Test() {
         FIX42 fixData = FIX42.FIX420_NUM_NO_BID_COMPONENTS;
-        assertEquals( "420", fixData.getID());
-        assertEquals( "NO_BID_COMPONENTS", fixData.getName());
-        assertEquals( "NoBidComponents", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "420", fixData.toFIXIDString());
+        assertEquals( "NO_BID_COMPONENTS", fixData.toFIXNameString());
+        assertEquals( "NoBidComponents", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0420Test() {

@@ -68,90 +68,90 @@ class Tag695EnuQuoteQualifierTest {
     @Test
     void FIX0695Test() {
         FIX44 fixData = FIX44.FIX695_ENU_QUOTE_QUALIFIER;
-        assertEquals( "695", fixData.getID());
-        assertEquals( "QUOTE_QUALIFIER", fixData.getName());
-        assertEquals( "QuoteQualifier", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "695", fixData.toFIXIDString());
+        assertEquals( "QUOTE_QUALIFIER", fixData.toFIXNameString());
+        assertEquals( "QuoteQualifier", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0695Test() {
         Tag695EnuQuoteQualifier tagData;
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.ALL_OR_NONE);
-        assertEquals( MyEnumQualifier.ALL_OR_NONE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.ALL_OR_NONE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.MARKET_ON_CLOSE);
-        assertEquals( MyEnumQualifier.MARKET_ON_CLOSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.MARKET_ON_CLOSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.AT_THE_CLOSE);
-        assertEquals( MyEnumQualifier.AT_THE_CLOSE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.AT_THE_CLOSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.VWAP);
-        assertEquals( MyEnumQualifier.VWAP.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.VWAP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.IN_TOUCH_WITH);
-        assertEquals( MyEnumQualifier.IN_TOUCH_WITH.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.IN_TOUCH_WITH.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.LIMIT);
-        assertEquals( MyEnumQualifier.LIMIT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.LIMIT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.MORE_BEHIND);
-        assertEquals( MyEnumQualifier.MORE_BEHIND.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.MORE_BEHIND.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.AT_THE_OPEN);
-        assertEquals( MyEnumQualifier.AT_THE_OPEN.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.AT_THE_OPEN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.TAKING_A_POSITION);
-        assertEquals( MyEnumQualifier.TAKING_A_POSITION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.TAKING_A_POSITION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.AT_THE_MARKET);
-        assertEquals( MyEnumQualifier.AT_THE_MARKET.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.AT_THE_MARKET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.READY_TO_TRADE);
-        assertEquals( MyEnumQualifier.READY_TO_TRADE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.READY_TO_TRADE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.PORTFOLIO_SHOWN);
-        assertEquals( MyEnumQualifier.PORTFOLIO_SHOWN.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.PORTFOLIO_SHOWN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.THROUGH_THE_DAY);
-        assertEquals( MyEnumQualifier.THROUGH_THE_DAY.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.THROUGH_THE_DAY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.VERSUS);
-        assertEquals( MyEnumQualifier.VERSUS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.VERSUS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.INDICATION_WORKING_AWAY);
-        assertEquals( MyEnumQualifier.INDICATION_WORKING_AWAY.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.INDICATION_WORKING_AWAY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.CROSSING_OPPORTUNITY);
-        assertEquals( MyEnumQualifier.CROSSING_OPPORTUNITY.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.CROSSING_OPPORTUNITY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.AT_THE_MIDPOINT);
-        assertEquals( MyEnumQualifier.AT_THE_MIDPOINT.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.AT_THE_MIDPOINT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag695EnuQuoteQualifier(MyEnumQualifier.PRE_OPEN);
-        assertEquals( MyEnumQualifier.PRE_OPEN.getID(), tagData.getDataValue());
+        assertEquals( MyEnumQualifier.PRE_OPEN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

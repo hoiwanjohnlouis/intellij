@@ -60,112 +60,112 @@ class Tag871EnuInstrAttribTypeTest {
     @Test
     void FIX0871Test() {
         FIX44 fixData = FIX44.FIX871_ENU_INSTR_ATTRIB_TYPE;
-        assertEquals( "871", fixData.getID());
-        assertEquals( "INSTR_ATTRIB_TYPE", fixData.getName());
-        assertEquals( "InstrAttribType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "871", fixData.toFIXIDString());
+        assertEquals( "INSTR_ATTRIB_TYPE", fixData.toFIXNameString());
+        assertEquals( "InstrAttribType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0871Test() {
         Tag871EnuInstrAttribType tagData;
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.FLAT);
-        assertEquals( Enum871InstrAttribType.FLAT.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.FLAT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ZERO_COUPON);
-        assertEquals( Enum871InstrAttribType.ZERO_COUPON.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.ZERO_COUPON.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.INTEREST_BEARING);
-        assertEquals( Enum871InstrAttribType.INTEREST_BEARING.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.INTEREST_BEARING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.NO_PERIODIC_PAYMENTS);
-        assertEquals( Enum871InstrAttribType.NO_PERIODIC_PAYMENTS.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.NO_PERIODIC_PAYMENTS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.VARIABLE_RATE);
-        assertEquals( Enum871InstrAttribType.VARIABLE_RATE.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.VARIABLE_RATE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.LESS_FEE_FOR_PUT);
-        assertEquals( Enum871InstrAttribType.LESS_FEE_FOR_PUT.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.LESS_FEE_FOR_PUT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.STEPPED_COUPON);
-        assertEquals( Enum871InstrAttribType.STEPPED_COUPON.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.STEPPED_COUPON.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.COUPON_PERIOD);
-        assertEquals( Enum871InstrAttribType.COUPON_PERIOD.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.COUPON_PERIOD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.WHEN_ISSUED);
-        assertEquals( Enum871InstrAttribType.WHEN_ISSUED.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.WHEN_ISSUED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ORIGINAL_ISSUE_DISCOUNT);
-        assertEquals( Enum871InstrAttribType.ORIGINAL_ISSUE_DISCOUNT.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.ORIGINAL_ISSUE_DISCOUNT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.CALLABLE_PUTTABLE);
-        assertEquals( Enum871InstrAttribType.CALLABLE_PUTTABLE.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.CALLABLE_PUTTABLE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ESCROWED_TO_MATURITY);
-        assertEquals( Enum871InstrAttribType.ESCROWED_TO_MATURITY.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.ESCROWED_TO_MATURITY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ESCROWED_TO_REDEMPTION_DATE);
-        assertEquals( Enum871InstrAttribType.ESCROWED_TO_REDEMPTION_DATE.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.ESCROWED_TO_REDEMPTION_DATE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.PRE_REFUNDED);
-        assertEquals( Enum871InstrAttribType.PRE_REFUNDED.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.PRE_REFUNDED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.IN_DEFAULT);
-        assertEquals( Enum871InstrAttribType.IN_DEFAULT.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.IN_DEFAULT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.UNRATED);
-        assertEquals( Enum871InstrAttribType.UNRATED.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.UNRATED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.TAXABLE);
-        assertEquals( Enum871InstrAttribType.TAXABLE.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.TAXABLE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.INDEXED);
-        assertEquals( Enum871InstrAttribType.INDEXED.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.INDEXED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.SUBJECT_TO_AMT);
-        assertEquals( Enum871InstrAttribType.SUBJECT_TO_AMT.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.SUBJECT_TO_AMT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ORIGINAL_DISCOUNT_PRICE);
-        assertEquals( Enum871InstrAttribType.ORIGINAL_DISCOUNT_PRICE.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.ORIGINAL_DISCOUNT_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.CALLABLE_BELOW_MATURITY_VALUE);
-        assertEquals( Enum871InstrAttribType.CALLABLE_BELOW_MATURITY_VALUE.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.CALLABLE_BELOW_MATURITY_VALUE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.CALLABLE_WITHOUT_NOTICE);
-        assertEquals( Enum871InstrAttribType.CALLABLE_WITHOUT_NOTICE.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.CALLABLE_WITHOUT_NOTICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.TEXT);
-        assertEquals( Enum871InstrAttribType.TEXT.getID(), tagData.getDataValue());
+        assertEquals( Enum871InstrAttribType.TEXT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

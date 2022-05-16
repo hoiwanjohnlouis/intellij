@@ -28,12 +28,12 @@ class Tag415IntProgPeriodIntervalTest {
     @Test
     void FIX0415Test() {
         FIX42 fixData = FIX42.FIX415_INT_PROG_PERIOD_INTERVAL;
-        assertEquals( "415", fixData.getID());
-        assertEquals( "PROG_PERIOD_INTERVAL", fixData.getName());
-        assertEquals( "ProgPeriodInterval", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "415", fixData.toFIXIDString());
+        assertEquals( "PROG_PERIOD_INTERVAL", fixData.toFIXNameString());
+        assertEquals( "ProgPeriodInterval", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0415Test() {

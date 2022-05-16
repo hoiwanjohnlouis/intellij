@@ -48,52 +48,52 @@ class Enum166SettlLocationTest {
          * CED, DTC, EUR, FED, PNY, & PTC msg types
          */
         enumType = Enum166SettlLocation.CEDEL;
-        assertEquals("CED", enumType.getID());
-        assertEquals("CEDEL", enumType.getName());
-        assertEquals("CED - CEDEL", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("CED", enumType.toFIXIDString());
+        assertEquals("CEDEL", enumType.toFIXNameString());
+        assertEquals("CED - CEDEL", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY;
-        assertEquals("DTC", enumType.getID());
-        assertEquals("DEPOSITORY_TRUST_COMPANY", enumType.getName());
-        assertEquals("DTC - Depository Trust Company", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("DTC", enumType.toFIXIDString());
+        assertEquals("DEPOSITORY_TRUST_COMPANY", enumType.toFIXNameString());
+        assertEquals("DTC - Depository Trust Company", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum166SettlLocation.EURO_CLEAR;
-        assertEquals("EUR", enumType.getID());
-        assertEquals("EURO_CLEAR", enumType.getName());
-        assertEquals("EUR - Euro clear", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("EUR", enumType.toFIXIDString());
+        assertEquals("EURO_CLEAR", enumType.toFIXNameString());
+        assertEquals("EUR - Euro clear", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum166SettlLocation.FEDERAL_BOOK_ENTRY;
-        assertEquals("FED", enumType.getID());
-        assertEquals("FEDERAL_BOOK_ENTRY", enumType.getName());
-        assertEquals("FED - Federal Book Entry", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("FED", enumType.toFIXIDString());
+        assertEquals("FEDERAL_BOOK_ENTRY", enumType.toFIXNameString());
+        assertEquals("FED - Federal Book Entry", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum166SettlLocation.PHYSICAL;
-        assertEquals("PNY", enumType.getID());
-        assertEquals("PHYSICAL", enumType.getName());
-        assertEquals("PNY - Physical", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PNY", enumType.toFIXIDString());
+        assertEquals("PHYSICAL", enumType.toFIXNameString());
+        assertEquals("PNY - Physical", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY;
-        assertEquals("PTC", enumType.getID());
-        assertEquals("PARTICIPANT_TRUST_COMPANY", enumType.getName());
-        assertEquals("PTC - Participant Trust Company", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("PTC", enumType.toFIXIDString());
+        assertEquals("PARTICIPANT_TRUST_COMPANY", enumType.toFIXNameString());
+        assertEquals("PTC - Participant Trust Company", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

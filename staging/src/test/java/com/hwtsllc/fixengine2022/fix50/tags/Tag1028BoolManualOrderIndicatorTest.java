@@ -38,23 +38,23 @@ class Tag1028BoolManualOrderIndicatorTest {
     @Test
     void FIX1028Test() {
         FIX50 fixData = FIX50.FIX1028_BOOL_MANUAL_ORDER_INDICATOR;
-        assertEquals( "1028", fixData.getID());
-        assertEquals( "MANUAL_ORDER_INDICATOR", fixData.getName());
-        assertEquals( "ManualOrderIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1028", fixData.toFIXIDString());
+        assertEquals( "MANUAL_ORDER_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "ManualOrderIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1028Test() {
         Tag1028BoolManualOrderIndicator tagData;
 
         tagData = new Tag1028BoolManualOrderIndicator( Bool1028ManualOrderIndicator.NO );
-        assertEquals( Bool1028ManualOrderIndicator.NO.getID(), tagData.getDataValue() );
+        assertEquals( Bool1028ManualOrderIndicator.NO.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag1028BoolManualOrderIndicator( Bool1028ManualOrderIndicator.YES );
-        assertEquals( Bool1028ManualOrderIndicator.YES.getID(), tagData.getDataValue() );
+        assertEquals( Bool1028ManualOrderIndicator.YES.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

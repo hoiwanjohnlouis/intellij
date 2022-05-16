@@ -34,13 +34,13 @@ class Tag36SeqNewSeqNoTest {
     @Test
     void FIX0036Test() {
         FIX27 fixData = FIX27.FIX36_SEQ_NEW_SEQ_NO;
-        assertEquals( "NEW_SEQ_NO", fixData.getName());
-        assertEquals( "36", fixData.getID());
-        assertEquals( "NewSeqNo", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "NEW_SEQ_NO", fixData.toFIXNameString());
+        assertEquals( "36", fixData.toFIXIDString());
+        assertEquals( "NewSeqNo", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0036Test() {

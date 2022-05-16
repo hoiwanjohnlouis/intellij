@@ -28,12 +28,12 @@ class Tag464TestMessageIndicatorEnuTest {
     @Test
     void FIX0464Test() {
         FIX43 fixData = FIX43.FIX464_BOOL_TEST_MESSAGE_INDICATOR;
-        assertEquals( "464", fixData.getID());
-        assertEquals( "TEST_MESSAGE_INDICATOR", fixData.getName());
-        assertEquals( "TestMessageIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "464", fixData.toFIXIDString());
+        assertEquals( "TEST_MESSAGE_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "TestMessageIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0464Test() {

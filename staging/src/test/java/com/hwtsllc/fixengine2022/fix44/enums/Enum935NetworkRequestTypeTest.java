@@ -40,35 +40,35 @@ class Enum935NetworkRequestTypeTest {
         Enum935NetworkRequestType enumType;
 
         enumType = Enum935NetworkRequestType.SNAPSHOT;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "SNAPSHOT", enumType.getName() );
-        assertEquals( "1 - Snapshot", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "SNAPSHOT", enumType.toFIXNameString() );
+        assertEquals( "1 - Snapshot", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum935NetworkRequestType.SUBSCRIBE;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "SUBSCRIBE", enumType.getName() );
-        assertEquals( "2 - Subscribe", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "SUBSCRIBE", enumType.toFIXNameString() );
+        assertEquals( "2 - Subscribe", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum935NetworkRequestType.STOP_SUBSCRIBING;
-        assertEquals( "4", enumType.getID() );
-        assertEquals( "STOP_SUBSCRIBING", enumType.getName() );
-        assertEquals( "4 - Stop Subscribing", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "4", enumType.toFIXIDString() );
+        assertEquals( "STOP_SUBSCRIBING", enumType.toFIXNameString() );
+        assertEquals( "4 - Stop Subscribing", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum935NetworkRequestType.LEVEL_OF_DETAIL;
-        assertEquals( "8", enumType.getID() );
-        assertEquals( "LEVEL_OF_DETAIL", enumType.getName() );
-        assertEquals( "8 - Level of Detail, then NoCompID's becomes required", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "8", enumType.toFIXIDString() );
+        assertEquals( "LEVEL_OF_DETAIL", enumType.toFIXNameString() );
+        assertEquals( "8 - Level of Detail, then NoCompID's becomes required", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

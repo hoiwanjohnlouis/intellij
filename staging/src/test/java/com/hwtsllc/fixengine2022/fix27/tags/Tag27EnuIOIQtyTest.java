@@ -51,35 +51,35 @@ class Tag27EnuIOIQtyTest {
     @Test
     void FIX0027Test() {
         FIX27 fixData = FIX27.FIX27_ENU_IOI_SHARES;
-        assertEquals( "IOI_SHARES", fixData.getName());
-        assertEquals( "27", fixData.getID());
-        assertEquals( "IOIShares", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "IOI_SHARES", fixData.toFIXNameString());
+        assertEquals( "27", fixData.toFIXIDString());
+        assertEquals( "IOIShares", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0027Test() {
         Tag27EnuIOIQty tagData;
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.ONE_BILLION);
-        assertEquals( MyEnumIOIQty.ONE_BILLION.getID(), tagData.getDataValue());
+        assertEquals( MyEnumIOIQty.ONE_BILLION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.SMALL);
-        assertEquals( MyEnumIOIQty.SMALL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumIOIQty.SMALL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.MEDIUM);
-        assertEquals( MyEnumIOIQty.MEDIUM.getID(), tagData.getDataValue());
+        assertEquals( MyEnumIOIQty.MEDIUM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.LARGE);
-        assertEquals( MyEnumIOIQty.LARGE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumIOIQty.LARGE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
-        assertEquals( MyEnumIOIQty.UNDISCLOSED_QUANTITY.getID(), tagData.getDataValue());
+        assertEquals( MyEnumIOIQty.UNDISCLOSED_QUANTITY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

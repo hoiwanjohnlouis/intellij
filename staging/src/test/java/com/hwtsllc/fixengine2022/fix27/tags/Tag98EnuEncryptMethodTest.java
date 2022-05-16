@@ -43,13 +43,13 @@ class Tag98EnuEncryptMethodTest {
     @Test
     void FIX0098Test() {
         FIX27 fixData = FIX27.FIX98_ENU_ENCRYPT_METHOD;
-        assertEquals( "ENCRYPT_METHOD", fixData.getName());
-        assertEquals( "98", fixData.getID());
-        assertEquals( "EncryptMethod", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ENCRYPT_METHOD", fixData.toFIXNameString());
+        assertEquals( "98", fixData.toFIXIDString());
+        assertEquals( "EncryptMethod", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0098Test() {

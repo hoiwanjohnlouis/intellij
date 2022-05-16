@@ -35,13 +35,13 @@ class Tag95LenRawDataLengthTest {
     @Test
     void FIX0095Test() {
         FIX27 fixData = FIX27.FIX95_LEN_RAW_DATA_LENGTH;
-        assertEquals( "RAW_DATA_LENGTH", fixData.getName());
-        assertEquals( "95", fixData.getID());
-        assertEquals( "RawDataLength", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "RAW_DATA_LENGTH", fixData.toFIXNameString());
+        assertEquals( "95", fixData.toFIXIDString());
+        assertEquals( "RawDataLength", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0095Test() {

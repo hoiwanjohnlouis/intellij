@@ -37,12 +37,12 @@ class Tag430EnuNetGrossIndTest {
     @Test
     void FIX0430Test() {
         FIX42 fixData = FIX42.FIX430_ENU_NET_GROSS_IND;
-        assertEquals( "430", fixData.getID());
-        assertEquals( "NET_GROSS_IND", fixData.getName());
-        assertEquals( "NetGrossInd", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "430", fixData.toFIXIDString());
+        assertEquals( "NET_GROSS_IND", fixData.toFIXNameString());
+        assertEquals( "NetGrossInd", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0430Test() {
@@ -52,11 +52,11 @@ class Tag430EnuNetGrossIndTest {
          * 1-2 msg types
          */
         tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.NET);
-        assertEquals( Enum430NetGrossInd.NET.getID(), tagData.getDataValue());
+        assertEquals( Enum430NetGrossInd.NET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
-        assertEquals( Enum430NetGrossInd.GROSS.getID(), tagData.getDataValue());
+        assertEquals( Enum430NetGrossInd.GROSS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

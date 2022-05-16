@@ -38,12 +38,12 @@ class Tag338EnuTradSesMethodTest {
     @Test
     void FIX0338Test() {
         FIX42 fixData = FIX42.FIX338_ENU_TRAD_SES_METHOD;
-        assertEquals( "338", fixData.getID());
-        assertEquals( "TRAD_SES_METHOD", fixData.getName());
-        assertEquals( "TradSesMethod", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "338", fixData.toFIXIDString());
+        assertEquals( "TRAD_SES_METHOD", fixData.toFIXNameString());
+        assertEquals( "TradSesMethod", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0338Test() {
@@ -53,15 +53,15 @@ class Tag338EnuTradSesMethodTest {
          * 1-3 msg types
          */
         tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.ELECTRONIC);
-        assertEquals( Enum338TradSesMethod.ELECTRONIC.getID(), tagData.getDataValue());
+        assertEquals( Enum338TradSesMethod.ELECTRONIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.OPEN_OUTCRY);
-        assertEquals( Enum338TradSesMethod.OPEN_OUTCRY.getID(), tagData.getDataValue());
+        assertEquals( Enum338TradSesMethod.OPEN_OUTCRY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.TWO_PARTY);
-        assertEquals( Enum338TradSesMethod.TWO_PARTY.getID(), tagData.getDataValue());
+        assertEquals( Enum338TradSesMethod.TWO_PARTY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

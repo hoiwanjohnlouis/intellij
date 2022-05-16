@@ -43,12 +43,12 @@ class Tag728EnuPosReqResultTest {
     @Test
     void FIX0728Test() {
         FIX44 fixData = FIX44.FIX728_ENU_POS_REQ_RESULT;
-        assertEquals( "728", fixData.getID());
-        assertEquals( "POS_REQ_RESULT", fixData.getName());
-        assertEquals( "PosReqResult", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "728", fixData.toFIXIDString());
+        assertEquals( "POS_REQ_RESULT", fixData.toFIXNameString());
+        assertEquals( "PosReqResult", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0728Test() {

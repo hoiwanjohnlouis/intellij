@@ -34,12 +34,12 @@ class Tag138CcyMiscFeeCurrTest {
     @Test
     void FIX0138Test() {
         FIX40 fixData = FIX40.FIX138_CCY_MISC_FEE_CURR;
-        assertEquals( "MISC_FEE_CURR", fixData.getName());
-        assertEquals( "138", fixData.getID());
-        assertEquals( "MiscFeeCurr", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "MISC_FEE_CURR", fixData.toFIXNameString());
+        assertEquals( "138", fixData.toFIXIDString());
+        assertEquals( "MiscFeeCurr", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0138Test() {

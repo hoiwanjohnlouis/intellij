@@ -27,12 +27,12 @@ class Tag533IntTotalAffectedOrdersTest {
     @Test
     void FIX0533Test() {
         FIX43 fixData = FIX43.FIX533_INT_TOTAL_AFFECTED_ORDERS;
-        assertEquals( "533", fixData.getID());
-        assertEquals( "TOTAL_AFFECTED_ORDERS", fixData.getName());
-        assertEquals( "TotalAffectedOrders", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "533", fixData.toFIXIDString());
+        assertEquals( "TOTAL_AFFECTED_ORDERS", fixData.toFIXNameString());
+        assertEquals( "TotalAffectedOrders", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0533Test() {

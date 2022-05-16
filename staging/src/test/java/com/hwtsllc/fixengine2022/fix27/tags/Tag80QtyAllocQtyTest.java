@@ -37,13 +37,13 @@ class Tag80QtyAllocQtyTest {
     @Test
     void FIX0080Test() {
         FIX27 fixData = FIX27.FIX80_QTY_ALLOC_SHARES;
-        assertEquals( "ALLOC_SHARES", fixData.getName());
-        assertEquals( "80", fixData.getID());
-        assertEquals( "AllocShares", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ALLOC_SHARES", fixData.toFIXNameString());
+        assertEquals( "80", fixData.toFIXIDString());
+        assertEquals( "AllocShares", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0080Test() {

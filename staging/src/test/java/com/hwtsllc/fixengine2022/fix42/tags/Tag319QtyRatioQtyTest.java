@@ -29,12 +29,12 @@ class Tag319QtyRatioQtyTest {
     @Test
     void FIX0319Test() {
         FIX42 fixData = FIX42.FIX319_QTY_RATIO_QTY;
-        assertEquals( "319", fixData.getID());
-        assertEquals( "RATIO_QTY", fixData.getName());
-        assertEquals( "RatioQty (unused)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "319", fixData.toFIXIDString());
+        assertEquals( "RATIO_QTY", fixData.toFIXNameString());
+        assertEquals( "RatioQty (unused)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0319Test() {

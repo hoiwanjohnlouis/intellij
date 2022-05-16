@@ -37,13 +37,13 @@ class Tag43BoolPossDupFlagTest {
     @Test
     void FIX0043Test() {
         FIX27 fixData = FIX27.FIX43_BOOL_POSS_DUP_FLAG;
-        assertEquals( "POSS_DUP_FLAG", fixData.getName());
-        assertEquals( "43", fixData.getID());
-        assertEquals( "PossDupFlag", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "POSS_DUP_FLAG", fixData.toFIXNameString());
+        assertEquals( "43", fixData.toFIXIDString());
+        assertEquals( "PossDupFlag", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0043Test() {

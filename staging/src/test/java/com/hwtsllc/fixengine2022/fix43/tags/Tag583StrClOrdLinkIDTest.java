@@ -27,12 +27,12 @@ class Tag583StrClOrdLinkIDTest {
     @Test
     void FIX0583Test() {
         FIX43 fixData = FIX43.FIX583_STR_CL_ORD_LINK_ID;
-        assertEquals( "583", fixData.getID());
-        assertEquals( "CL_ORD_LINK_ID", fixData.getName());
-        assertEquals( "ClOrdLinkID", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "583", fixData.toFIXIDString());
+        assertEquals( "CL_ORD_LINK_ID", fixData.toFIXNameString());
+        assertEquals( "ClOrdLinkID", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0583Test() {

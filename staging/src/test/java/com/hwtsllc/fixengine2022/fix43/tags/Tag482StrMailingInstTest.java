@@ -27,12 +27,12 @@ class Tag482StrMailingInstTest {
     @Test
     void FIX0482Test() {
         FIX43 fixData = FIX43.FIX482_STR_MAILING_INST;
-        assertEquals( "482", fixData.getID());
-        assertEquals( "MAILING_INST", fixData.getName());
-        assertEquals( "MailingInst", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "482", fixData.toFIXIDString());
+        assertEquals( "MAILING_INST", fixData.toFIXNameString());
+        assertEquals( "MailingInst", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0482Test() {

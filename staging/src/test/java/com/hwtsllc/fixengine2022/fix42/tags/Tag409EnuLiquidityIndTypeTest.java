@@ -39,12 +39,12 @@ class Tag409EnuLiquidityIndTypeTest {
     @Test
     void FIX0409Test() {
         FIX42 fixData = FIX42.FIX409_ENU_LIQUIDITY_IND_TYPE;
-        assertEquals( "409", fixData.getID());
-        assertEquals( "LIQUIDITY_IND_TYPE", fixData.getName());
-        assertEquals( "LiquidityIndType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "409", fixData.toFIXIDString());
+        assertEquals( "LIQUIDITY_IND_TYPE", fixData.toFIXNameString());
+        assertEquals( "LiquidityIndType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0409Test() {
@@ -54,19 +54,19 @@ class Tag409EnuLiquidityIndTypeTest {
          * 1-4 msg types
          */
         tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE);
-        assertEquals( Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE.getID(), tagData.getDataValue());
+        assertEquals( Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE);
-        assertEquals( Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE.getID(), tagData.getDataValue());
+        assertEquals( Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.NORMAL_MARKET_SIZE);
-        assertEquals( Enum409LiquidityIndType.NORMAL_MARKET_SIZE.getID(), tagData.getDataValue());
+        assertEquals( Enum409LiquidityIndType.NORMAL_MARKET_SIZE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.OTHER);
-        assertEquals( Enum409LiquidityIndType.OTHER.getID(), tagData.getDataValue());
+        assertEquals( Enum409LiquidityIndType.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

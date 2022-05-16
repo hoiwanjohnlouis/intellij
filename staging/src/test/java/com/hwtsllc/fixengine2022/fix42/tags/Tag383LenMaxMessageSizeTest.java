@@ -28,12 +28,12 @@ class Tag383LenMaxMessageSizeTest {
     @Test
     void FIX0383Test() {
         FIX42 fixData = FIX42.FIX383_LEN_MAX_MESSAGE_SIZE;
-        assertEquals( "383", fixData.getID());
-        assertEquals( "MAX_MESSAGE_SIZE", fixData.getName());
-        assertEquals( "MaxMessageSize", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "383", fixData.toFIXIDString());
+        assertEquals( "MAX_MESSAGE_SIZE", fixData.toFIXNameString());
+        assertEquals( "MaxMessageSize", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0383Test() {

@@ -46,12 +46,12 @@ class Tag433EnuListExecInstTypeTest {
     @Test
     void FIX0433Test() {
         FIX42 fixData = FIX42.FIX433_ENU_LIST_EXEC_INST_TYPE;
-        assertEquals( "433", fixData.getID());
-        assertEquals( "LIST_EXEC_INST_TYPE", fixData.getName());
-        assertEquals( "ListExecInstType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "433", fixData.toFIXIDString());
+        assertEquals( "LIST_EXEC_INST_TYPE", fixData.toFIXNameString());
+        assertEquals( "ListExecInstType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0433Test() {
@@ -61,23 +61,23 @@ class Tag433EnuListExecInstTypeTest {
          * 1-5 msg types
          */
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.IMMEDIATE);
-        assertEquals( Enum433ListExecInstType.IMMEDIATE.getID(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.IMMEDIATE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION);
-        assertEquals( Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION.getID(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.SELL_DRIVEN);
-        assertEquals( Enum433ListExecInstType.SELL_DRIVEN.getID(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.SELL_DRIVEN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP);
-        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP.getID(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW);
-        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW.getID(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

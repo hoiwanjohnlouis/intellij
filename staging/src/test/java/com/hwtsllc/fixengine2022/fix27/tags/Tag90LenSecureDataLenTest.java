@@ -35,13 +35,13 @@ class Tag90LenSecureDataLenTest {
     @Test
     void FIX0090Test() {
         FIX27 fixData = FIX27.FIX90_LEN_SECURE_DATA_LEN;
-        assertEquals( "SECURE_DATA_LEN", fixData.getName());
-        assertEquals( "90", fixData.getID());
-        assertEquals( "SecureDataLen", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "SECURE_DATA_LEN", fixData.toFIXNameString());
+        assertEquals( "90", fixData.toFIXIDString());
+        assertEquals( "SecureDataLen", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0090Test() {

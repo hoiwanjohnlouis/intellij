@@ -28,12 +28,12 @@ class Tag367UtcQuoteSetValidUntilTimeTest {
     @Test
     void FIX0367Test() {
         FIX42 fixData = FIX42.FIX367_UTC_QUOTE_SET_VALID_UNTIL_TIME;
-        assertEquals( "367", fixData.getID());
-        assertEquals( "QUOTE_SET_VALID_UNTIL_TIME", fixData.getName());
-        assertEquals( "QuoteSetValidUntilTime", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "367", fixData.toFIXIDString());
+        assertEquals( "QUOTE_SET_VALID_UNTIL_TIME", fixData.toFIXNameString());
+        assertEquals( "QuoteSetValidUntilTime", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0367Test() {

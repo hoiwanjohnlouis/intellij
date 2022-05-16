@@ -28,12 +28,12 @@ class Tag404AmtLiquidityValueTest {
     @Test
     void FIX0404Test() {
         FIX42 fixData = FIX42.FIX404_AMT_LIQUIDITY_VALUE;
-        assertEquals( "404", fixData.getID());
-        assertEquals( "LIQUIDITY_VALUE", fixData.getName());
-        assertEquals( "LiquidityValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "404", fixData.toFIXIDString());
+        assertEquals( "LIQUIDITY_VALUE", fixData.toFIXNameString());
+        assertEquals( "LiquidityValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0404Test() {

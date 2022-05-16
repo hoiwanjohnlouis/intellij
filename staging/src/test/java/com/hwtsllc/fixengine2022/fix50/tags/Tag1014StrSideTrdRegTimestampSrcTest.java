@@ -39,12 +39,12 @@ class Tag1014StrSideTrdRegTimestampSrcTest {
     @Test
     void FIX1014Test() {
         FIX50 fixData = FIX50.FIX1014_STR_SIDE_TRD_REG_TIMESTAMP_SRC;
-        assertEquals( "1014", fixData.getID());
-        assertEquals( "SIDE_TRD_REG_TIMESTAMP_SRC", fixData.getName());
-        assertEquals( "SideTrdRegTimestampSrc", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1014", fixData.toFIXIDString());
+        assertEquals( "SIDE_TRD_REG_TIMESTAMP_SRC", fixData.toFIXNameString());
+        assertEquals( "SideTrdRegTimestampSrc", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1014Test() {

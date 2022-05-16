@@ -36,12 +36,12 @@ class Tag968StrikeValueTest {
     @Test
     void FIX0968Test() {
         FIX50 fixData = FIX50.FIX968_STRIKE_VALUE;
-        assertEquals( "968", fixData.getID());
-        assertEquals( "STRIKE_VALUE", fixData.getName());
-        assertEquals( "StrikeValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "968", fixData.toFIXIDString());
+        assertEquals( "STRIKE_VALUE", fixData.toFIXNameString());
+        assertEquals( "StrikeValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0968Test() {

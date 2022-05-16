@@ -36,12 +36,12 @@ class Tag967StrikeMultiplierTest {
     @Test
     void FIX0967Test() {
         FIX50 fixData = FIX50.FIX967_STRIKE_MULTIPLIER;
-        assertEquals( "967", fixData.getID());
-        assertEquals( "STRIKE_MULTIPLIER", fixData.getName());
-        assertEquals( "StrikeMultiplier", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "967", fixData.toFIXIDString());
+        assertEquals( "STRIKE_MULTIPLIER", fixData.toFIXNameString());
+        assertEquals( "StrikeMultiplier", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0967Test() {

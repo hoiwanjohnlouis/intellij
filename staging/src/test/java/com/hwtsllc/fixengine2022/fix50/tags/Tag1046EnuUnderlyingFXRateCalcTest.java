@@ -46,23 +46,23 @@ class Tag1046EnuUnderlyingFXRateCalcTest {
     @Test
     void FIX1046Test() {
         FIX50 fixData = FIX50.FIX1046_ENU_UNDERLYING_FX_RATE_CALC;
-        assertEquals( "1046", fixData.getID());
-        assertEquals( "UNDERLYING_FX_RATE_CALC", fixData.getName());
-        assertEquals( "UnderlyingFXRateCalc", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1046", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_FX_RATE_CALC", fixData.toFIXNameString());
+        assertEquals( "UnderlyingFXRateCalc", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1046Test() {
         Tag1046EnuUnderlyingFXRateCalc tagData;
 
         tagData = new Tag1046EnuUnderlyingFXRateCalc(MyEnumFXRateCalc.MULTIPLY);
-        assertEquals( MyEnumFXRateCalc.MULTIPLY.getID(), tagData.getDataValue());
+        assertEquals( MyEnumFXRateCalc.MULTIPLY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1046EnuUnderlyingFXRateCalc(MyEnumFXRateCalc.DIVIDE);
-        assertEquals( MyEnumFXRateCalc.DIVIDE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumFXRateCalc.DIVIDE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

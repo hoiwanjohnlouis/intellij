@@ -34,12 +34,12 @@ class Tag764LegSecuritySubTypeTest {
     @Test
     void FIX0764Test() {
         FIX44 fixData = FIX44.FIX764_LEG_SECURITY_SUB_TYPE;
-        assertEquals( "764", fixData.getID());
-        assertEquals( "LEG_SECURITY_SUB_TYPE", fixData.getName());
-        assertEquals( "LegSecuritySubType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "764", fixData.toFIXIDString());
+        assertEquals( "LEG_SECURITY_SUB_TYPE", fixData.toFIXNameString());
+        assertEquals( "LegSecuritySubType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0764Test() {

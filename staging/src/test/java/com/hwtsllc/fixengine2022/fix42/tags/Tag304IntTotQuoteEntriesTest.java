@@ -28,12 +28,12 @@ class Tag304IntTotQuoteEntriesTest {
     @Test
     void FIX0304Test() {
         FIX42 fixData = FIX42.FIX304_INT_TOT_QUOTE_ENTRIES;
-        assertEquals( "304", fixData.getID());
-        assertEquals( "TOT_QUOTE_ENTRIES", fixData.getName());
-        assertEquals( "TotQuoteEntries", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "304", fixData.toFIXIDString());
+        assertEquals( "TOT_QUOTE_ENTRIES", fixData.toFIXNameString());
+        assertEquals( "TotQuoteEntries", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0304Test() {

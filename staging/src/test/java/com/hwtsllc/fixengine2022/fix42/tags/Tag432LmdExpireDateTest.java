@@ -28,12 +28,12 @@ class Tag432LmdExpireDateTest {
     @Test
     void FIX0432Test() {
         FIX42 fixData = FIX42.FIX432_LMD_EXPIRE_DATE;
-        assertEquals( "432", fixData.getID());
-        assertEquals( "EXPIRE_DATE", fixData.getName());
-        assertEquals( "ExpireDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "432", fixData.toFIXIDString());
+        assertEquals( "EXPIRE_DATE", fixData.toFIXNameString());
+        assertEquals( "ExpireDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0432Test() {

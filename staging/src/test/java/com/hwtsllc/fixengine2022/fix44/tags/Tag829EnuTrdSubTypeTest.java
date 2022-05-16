@@ -61,8 +61,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *                  Non-order book securities only.)
  *      19 - N (Non-protected portfolio transaction or a fully disclosed portfolio transaction)
  *      20 - NM (
- *                    i) transaction where Exchange has granted permission for non-publication
- *                   ii) IDB is reporting as seller
+ *                    i) transaction where Exchange has granted permission for non-publication.
+ *                   ii) IDB is reporting as seller.
  *                  iii) submitting a transaction report to the Exchange,
  *                       where the transaction report is not also a trade report.
  *              )
@@ -79,16 +79,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *                          where the buying and selling transactions are
  *                          executed at different prices or on different terms
  *                          (requires a trade report with trade type indicator
- *                           R for each transaction)
+ *                           R for each transaction).
  *                   ii) market maker is reporting all the legs of a riskless principal
  *                          transaction where the buying and selling transactions
  *                          are executed at different prices
- *                          (requires a trade report with trade type indicator R for each transaction) or
+ *                          (requires a trade report with trade type indicator R for each transaction).
  *                  iii) market maker is reporting the onward leg of a riskless principal
  *                          transaction where the legs are executed at different prices,
  *                          and another market maker has submitted a trade report using
  *                          trade type indicator M for the first leg
- *                          (this requires a single trade report with trade type indicator R)
+ *                          (this requires a single trade report with trade type indicator R).
  *              )
  *      27 - RO (Transaction which resulted from the exercise of a traditional option
  *                  or a stock-settled covered warrant)
@@ -104,65 +104,65 @@ class Tag829EnuTrdSubTypeTest {
     @Test
     void FIX0829Test() {
         FIX44 fixData = FIX44.FIX829_ENU_TRD_SUB_TYPE;
-        assertEquals( "829", fixData.getID());
-        assertEquals( "TRD_SUB_TYPE", fixData.getName());
-        assertEquals( "TrdSubType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "829", fixData.toFIXIDString());
+        assertEquals( "TRD_SUB_TYPE", fixData.toFIXNameString());
+        assertEquals( "TrdSubType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0829Test() {
         Tag829EnuTrdSubType tagData;
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.CMTA);
-        assertEquals( Enum829TrdSubType.CMTA.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.CMTA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.INTERNAL_TRANSFER);
-        assertEquals( Enum829TrdSubType.INTERNAL_TRANSFER.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.INTERNAL_TRANSFER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.EXTERNAL_TRANSFER);
-        assertEquals( Enum829TrdSubType.EXTERNAL_TRANSFER.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.EXTERNAL_TRANSFER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.REJECT);
-        assertEquals( Enum829TrdSubType.REJECT.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.REJECT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.ADVISORY_FOR_CONTRA);
-        assertEquals( Enum829TrdSubType.ADVISORY_FOR_CONTRA.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.ADVISORY_FOR_CONTRA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.OFFSET_DUE_TO_ALLOCATION);
-        assertEquals( Enum829TrdSubType.OFFSET_DUE_TO_ALLOCATION.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.OFFSET_DUE_TO_ALLOCATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.ONSET_DUE_TO_ALLOCATION);
-        assertEquals( Enum829TrdSubType.ONSET_DUE_TO_ALLOCATION.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.ONSET_DUE_TO_ALLOCATION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.DIFFERENTIAL_SPREAD);
-        assertEquals( Enum829TrdSubType.DIFFERENTIAL_SPREAD.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.DIFFERENTIAL_SPREAD.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.IMPLIED_SPREAD_LEG);
-        assertEquals( Enum829TrdSubType.IMPLIED_SPREAD_LEG.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.IMPLIED_SPREAD_LEG.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.TRANSACTION_FROM_EXERCISE);
-        assertEquals( Enum829TrdSubType.TRANSACTION_FROM_EXERCISE.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.TRANSACTION_FROM_EXERCISE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.TRANSACTION_FROM_ASSIGNMENT);
-        assertEquals( Enum829TrdSubType.TRANSACTION_FROM_ASSIGNMENT.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.TRANSACTION_FROM_ASSIGNMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.ACATS);
-        assertEquals( Enum829TrdSubType.ACATS.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.ACATS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -171,82 +171,82 @@ class Tag829EnuTrdSubTypeTest {
          *  MiFID Values
          */
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.AI);
-        assertEquals( Enum829TrdSubType.AI.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.AI.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.B);
-        assertEquals( Enum829TrdSubType.B.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.B.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.K);
-        assertEquals( Enum829TrdSubType.K.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.K.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.LC);
-        assertEquals( Enum829TrdSubType.LC.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.LC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.M);
-        assertEquals( Enum829TrdSubType.M.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.M.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.N);
-        assertEquals( Enum829TrdSubType.N.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.N.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.NM);
-        assertEquals( Enum829TrdSubType.NM.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.NM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.NR);
-        assertEquals( Enum829TrdSubType.NR.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.NR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.P);
-        assertEquals( Enum829TrdSubType.P.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.P.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.PA);
-        assertEquals( Enum829TrdSubType.PA.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.PA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.PC);
-        assertEquals( Enum829TrdSubType.PC.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.PC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.PN);
-        assertEquals( Enum829TrdSubType.PN.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.PN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.R);
-        assertEquals( Enum829TrdSubType.R.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.R.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.RO);
-        assertEquals( Enum829TrdSubType.RO.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.RO.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.RT);
-        assertEquals( Enum829TrdSubType.RT.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.RT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.SW);
-        assertEquals( Enum829TrdSubType.SW.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.SW.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.T);
-        assertEquals( Enum829TrdSubType.T.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.T.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.WN);
-        assertEquals( Enum829TrdSubType.WN.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.WN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.WT);
-        assertEquals( Enum829TrdSubType.WT.getID(), tagData.getDataValue());
+        assertEquals( Enum829TrdSubType.WT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

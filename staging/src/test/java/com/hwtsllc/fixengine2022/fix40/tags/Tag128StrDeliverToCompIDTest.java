@@ -37,12 +37,12 @@ class Tag128StrDeliverToCompIDTest {
     @Test
     void FIX0128Test() {
         FIX40 fixData = FIX40.FIX128_STR_DELIVER_TO_COMP_ID;
-        assertEquals( "DELIVER_TO_COMP_ID", fixData.getName());
-        assertEquals( "128", fixData.getID());
-        assertEquals( "DeliverToCompID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "DELIVER_TO_COMP_ID", fixData.toFIXNameString());
+        assertEquals( "128", fixData.toFIXIDString());
+        assertEquals( "DeliverToCompID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0128Test() {

@@ -34,12 +34,12 @@ class Tag991RndPxTest {
     @Test
     void FIX0991Test() {
         FIX50 fixData = FIX50.FIX991_RND_PX;
-        assertEquals( "991", fixData.getID());
-        assertEquals( "RND_PX", fixData.getName());
-        assertEquals( "RndPx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "991", fixData.toFIXIDString());
+        assertEquals( "RND_PX", fixData.toFIXNameString());
+        assertEquals( "RndPx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0991Test() {

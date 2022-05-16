@@ -40,39 +40,39 @@ class Tag694EnuQuoteRespTypeTest {
     @Test
     void FIX0694Test() {
         FIX44 fixData = FIX44.FIX694_ENU_QUOTE_RESP_TYPE;
-        assertEquals( "694", fixData.getID());
-        assertEquals( "QUOTE_RESP_TYPE", fixData.getName());
-        assertEquals( "QuoteRespType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "694", fixData.toFIXIDString());
+        assertEquals( "QUOTE_RESP_TYPE", fixData.toFIXNameString());
+        assertEquals( "QuoteRespType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0694Test() {
         Tag694EnuQuoteRespType tagData;
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.HIT_OR_LIFT);
-        assertEquals( Enum694QuoteRespType.HIT_OR_LIFT.getID(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.HIT_OR_LIFT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COUNTER);
-        assertEquals( Enum694QuoteRespType.COUNTER.getID(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.COUNTER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.EXPIRED);
-        assertEquals( Enum694QuoteRespType.EXPIRED.getID(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.EXPIRED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COVER);
-        assertEquals( Enum694QuoteRespType.COVER.getID(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.COVER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.DONE_AWAY);
-        assertEquals( Enum694QuoteRespType.DONE_AWAY.getID(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.DONE_AWAY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.PASS);
-        assertEquals( Enum694QuoteRespType.PASS.getID(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.PASS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

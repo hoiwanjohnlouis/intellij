@@ -42,19 +42,19 @@ class Enum197AllocLinkTypeTest {
          * 0-1 msg types
          */
         enumType = Enum197AllocLinkType.FX_NETTING;
-        assertEquals("0", enumType.getID());
-        assertEquals("FX_NETTING", enumType.getName());
-        assertEquals("0 - FX Netting", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("0", enumType.toFIXIDString());
+        assertEquals("FX_NETTING", enumType.toFIXNameString());
+        assertEquals("0 - FX Netting", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum197AllocLinkType.FX_SWAP;
-        assertEquals("1", enumType.getID());
-        assertEquals("FX_SWAP", enumType.getName());
-        assertEquals("1 - FX Swap", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("1", enumType.toFIXIDString());
+        assertEquals("FX_SWAP", enumType.toFIXNameString());
+        assertEquals("1 - FX Swap", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

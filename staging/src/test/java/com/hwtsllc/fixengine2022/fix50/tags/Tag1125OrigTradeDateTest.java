@@ -35,12 +35,12 @@ class Tag1125OrigTradeDateTest {
     @Test
     void FIX1125Test() {
         FIX50 fixData = FIX50.FIX1125_ORIG_TRADE_DATE;
-        assertEquals( "1125", fixData.getID());
-        assertEquals( "ORIG_TRADE_DATE", fixData.getName());
-        assertEquals( "OrigTradeDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1125", fixData.toFIXIDString());
+        assertEquals( "ORIG_TRADE_DATE", fixData.toFIXNameString());
+        assertEquals( "OrigTradeDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1125Test() {

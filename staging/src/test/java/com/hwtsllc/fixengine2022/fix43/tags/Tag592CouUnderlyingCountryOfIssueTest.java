@@ -27,12 +27,12 @@ class Tag592CouUnderlyingCountryOfIssueTest {
     @Test
     void FIX0592Test() {
         FIX43 fixData = FIX43.FIX592_COU_UNDERLYING_COUNTRY_OF_ISSUE;
-        assertEquals( "592", fixData.getID());
-        assertEquals( "UNDERLYING_COUNTRY_OF_ISSUE", fixData.getName());
-        assertEquals( "UnderlyingCountryOfIssue", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "592", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_COUNTRY_OF_ISSUE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCountryOfIssue", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0592Test() {

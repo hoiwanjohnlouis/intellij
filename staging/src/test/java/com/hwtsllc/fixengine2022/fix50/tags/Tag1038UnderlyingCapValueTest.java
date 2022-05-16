@@ -34,12 +34,12 @@ class Tag1038UnderlyingCapValueTest {
     @Test
     void FIX1038Test() {
         FIX50 fixData = FIX50.FIX1038_UNDERLYING_CAP_VALUE;
-        assertEquals( "1038", fixData.getID());
-        assertEquals( "UNDERLYING_CAP_VALUE", fixData.getName());
-        assertEquals( "UnderlyingCapValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1038", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CAP_VALUE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCapValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1038Test() {

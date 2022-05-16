@@ -61,12 +61,12 @@ class Tag564EnuLegPositionEffectTest {
     @Test
     void FIX0564Test() {
         FIX43 fixData = FIX43.FIX564_ENU_LEG_POSITION_EFFECT;
-        assertEquals( "564", fixData.getID());
-        assertEquals( "LEG_POSITION_EFFECT", fixData.getName());
-        assertEquals( "LegPositionEffect", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "564", fixData.toFIXIDString());
+        assertEquals( "LEG_POSITION_EFFECT", fixData.toFIXNameString());
+        assertEquals( "LegPositionEffect", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     /**
      *  Information is the same for TAGS 77, 564

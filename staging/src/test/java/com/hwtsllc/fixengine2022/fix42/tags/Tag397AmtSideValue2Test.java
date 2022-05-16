@@ -28,12 +28,12 @@ class Tag397AmtSideValue2Test {
     @Test
     void FIX0397Test() {
         FIX42 fixData = FIX42.FIX397_AMT_SIDE_VALUE2;
-        assertEquals( "397", fixData.getID());
-        assertEquals( "SIDE_VALUE2", fixData.getName());
-        assertEquals( "SideValue2", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "397", fixData.toFIXIDString());
+        assertEquals( "SIDE_VALUE2", fixData.toFIXNameString());
+        assertEquals( "SideValue2", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0397Test() {

@@ -28,12 +28,12 @@ class Tag325BoolUnsolicitedIndicatorTest {
     @Test
     void FIX0325Test() {
         FIX42 fixData = FIX42.FIX325_BOOL_UNSOLICITED_INDICATOR;
-        assertEquals( "325", fixData.getID());
-        assertEquals( "UNSOLICITED_INDICATOR", fixData.getName());
-        assertEquals( "UnsolicitedIndicator", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "325", fixData.toFIXIDString());
+        assertEquals( "UNSOLICITED_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "UnsolicitedIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0325Test() {

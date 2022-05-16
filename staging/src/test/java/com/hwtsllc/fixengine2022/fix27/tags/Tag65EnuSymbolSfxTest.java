@@ -62,24 +62,24 @@ class Tag65EnuSymbolSfxTest {
     @Test
     void FIX0065Test() {
         FIX27 fixData = FIX27.FIX65_ENU_SYMBOL_SFX;
-        assertEquals( "SYMBOL_SFX", fixData.getName());
-        assertEquals( "65", fixData.getID());
-        assertEquals( "SymbolSfx", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "SYMBOL_SFX", fixData.toFIXNameString());
+        assertEquals( "65", fixData.toFIXIDString());
+        assertEquals( "SymbolSfx", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0065Test() {
         Tag65EnuSymbolSfx tagData;
 
         tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.EUCP);
-        assertEquals( MyEnumSymbolSfx.EUCP.getID(), tagData.getDataValue());
+        assertEquals( MyEnumSymbolSfx.EUCP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
-        assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.getID(), tagData.getDataValue());
+        assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

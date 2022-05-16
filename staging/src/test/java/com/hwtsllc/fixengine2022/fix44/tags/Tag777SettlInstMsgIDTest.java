@@ -33,12 +33,12 @@ class Tag777SettlInstMsgIDTest {
     @Test
     void FIX0777Test() {
         FIX44 fixData = FIX44.FIX777_SETTL_INST_MSG_ID;
-        assertEquals( "777", fixData.getID());
-        assertEquals( "SETTL_INST_MSG_ID", fixData.getName());
-        assertEquals( "SettlInstMsgID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "777", fixData.toFIXIDString());
+        assertEquals( "SETTL_INST_MSG_ID", fixData.toFIXNameString());
+        assertEquals( "SettlInstMsgID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0777Test() {

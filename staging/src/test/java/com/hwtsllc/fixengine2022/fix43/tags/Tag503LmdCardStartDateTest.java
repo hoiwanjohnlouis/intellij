@@ -27,12 +27,12 @@ class Tag503LmdCardStartDateTest {
     @Test
     void FIX0503Test() {
         FIX43 fixData = FIX43.FIX503_LMD_CARD_START_DATE;
-        assertEquals( "503", fixData.getID());
-        assertEquals( "CARD_START_DATE", fixData.getName());
-        assertEquals( "CardStartDate", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "503", fixData.toFIXIDString());
+        assertEquals( "CARD_START_DATE", fixData.toFIXNameString());
+        assertEquals( "CardStartDate", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0503Test() {

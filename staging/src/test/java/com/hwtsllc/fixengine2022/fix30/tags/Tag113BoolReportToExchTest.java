@@ -37,12 +37,12 @@ class Tag113BoolReportToExchTest {
     @Test
     void FIX0113Test() {
         FIX30 fixData = FIX30.FIX113_BOOL_REPORT_TO_EXCH;
-        assertEquals( "REPORT_TO_EXCH", fixData.getName());
-        assertEquals( "113", fixData.getID());
-        assertEquals( "ReportToExch", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "REPORT_TO_EXCH", fixData.toFIXNameString());
+        assertEquals( "113", fixData.toFIXIDString());
+        assertEquals( "ReportToExch", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0113Test() {

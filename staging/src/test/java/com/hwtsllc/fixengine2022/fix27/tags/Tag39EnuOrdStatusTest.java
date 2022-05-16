@@ -57,19 +57,19 @@ class Tag39EnuOrdStatusTest {
     @Test
     void FIX0039Test() {
         FIX27 fixData = FIX27.FIX39_ENU_ORD_STATUS;
-        assertEquals( "ORD_STATUS", fixData.getName());
-        assertEquals( "39", fixData.getID());
-        assertEquals( "OrdStatus", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "ORD_STATUS", fixData.toFIXNameString());
+        assertEquals( "39", fixData.toFIXIDString());
+        assertEquals( "OrdStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0039Test() {
         Tag39EnuOrdStatus tagData;
 
-        /**
+        /*
          * 0-9 Order Status msg
          */
         tagData = new Tag39EnuOrdStatus(Enum39OrdStatus.NEW);

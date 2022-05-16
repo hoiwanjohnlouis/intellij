@@ -28,12 +28,12 @@ class Tag288StrMDEntryBuyerTest {
     @Test
     void FIX0288Test() {
         FIX42 fixData = FIX42.FIX288_STR_MD_ENTRY_BUYER;
-        assertEquals( "288", fixData.getID());
-        assertEquals( "MD_ENTRY_BUYER", fixData.getName());
-        assertEquals( "MDEntryBuyer", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "288", fixData.toFIXIDString());
+        assertEquals( "MD_ENTRY_BUYER", fixData.toFIXNameString());
+        assertEquals( "MDEntryBuyer", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0288Test() {

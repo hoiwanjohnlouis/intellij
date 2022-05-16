@@ -35,13 +35,13 @@ class Tag46StrRelatdSymTest {
     @Test
     void FIX0046Test() {
         FIX27 fixData = FIX27.FIX46_STR_RELATD_SYM;
-        assertEquals( "RELATD_SYM", fixData.getName());
-        assertEquals( "46", fixData.getID());
-        assertEquals( "RelatdSym (No longer used)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "RELATD_SYM", fixData.toFIXNameString());
+        assertEquals( "46", fixData.toFIXIDString());
+        assertEquals( "RelatdSym (No longer used)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0046Test() {

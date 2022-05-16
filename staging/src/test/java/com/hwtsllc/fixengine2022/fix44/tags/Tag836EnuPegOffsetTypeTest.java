@@ -47,31 +47,31 @@ class Tag836EnuPegOffsetTypeTest {
     @Test
     void FIX0836Test() {
         FIX44 fixData = FIX44.FIX836_ENU_PEG_OFFSET_TYPE;
-        assertEquals( "836", fixData.getID());
-        assertEquals( "PEG_OFFSET_TYPE", fixData.getName());
-        assertEquals( "PegOffsetType", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "836", fixData.toFIXIDString());
+        assertEquals( "PEG_OFFSET_TYPE", fixData.toFIXNameString());
+        assertEquals( "PegOffsetType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0836Test() {
         Tag836EnuPegOffsetType tagData;
 
         tagData = new Tag836EnuPegOffsetType(MyEnumOffsetType.PRICE);
-        assertEquals( MyEnumOffsetType.PRICE.getID(), tagData.getDataValue());
+        assertEquals( MyEnumOffsetType.PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag836EnuPegOffsetType(MyEnumOffsetType.BASIS);
-        assertEquals( MyEnumOffsetType.BASIS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumOffsetType.BASIS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag836EnuPegOffsetType(MyEnumOffsetType.TICKS);
-        assertEquals( MyEnumOffsetType.TICKS.getID(), tagData.getDataValue());
+        assertEquals( MyEnumOffsetType.TICKS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag836EnuPegOffsetType(MyEnumOffsetType.TIER_OR_LEVEL);
-        assertEquals( MyEnumOffsetType.TIER_OR_LEVEL.getID(), tagData.getDataValue());
+        assertEquals( MyEnumOffsetType.TIER_OR_LEVEL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

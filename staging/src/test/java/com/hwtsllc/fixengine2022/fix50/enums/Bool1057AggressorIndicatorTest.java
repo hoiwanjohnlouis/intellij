@@ -38,19 +38,19 @@ class Bool1057AggressorIndicatorTest {
         Bool1057AggressorIndicator enumType;
 
         enumType = Bool1057AggressorIndicator.PASSIVE;
-        assertEquals("N",enumType.getID());
-        assertEquals("PASSIVE", enumType.getName());
-        assertEquals("N - Order initiator is passive", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("N",enumType.toFIXIDString());
+        assertEquals("PASSIVE", enumType.toFIXNameString());
+        assertEquals("N - Order initiator is passive", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Bool1057AggressorIndicator.AGGRESSOR;
-        assertEquals("Y", enumType.getID());
-        assertEquals("AGGRESSOR", enumType.getName());
-        assertEquals("Y - Order initiator is aggressor", enumType.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals("Y", enumType.toFIXIDString());
+        assertEquals("AGGRESSOR", enumType.toFIXNameString());
+        assertEquals("Y - Order initiator is aggressor", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

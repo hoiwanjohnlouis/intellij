@@ -28,12 +28,12 @@ class Tag353DatEncodedListExecInstTest {
     @Test
     void FIX0353Test() {
         FIX42 fixData = FIX42.FIX353_DAT_ENCODED_LIST_EXEC_INST;
-        assertEquals( "353", fixData.getID());
-        assertEquals( "ENCODED_LIST_EXEC_INST", fixData.getName());
-        assertEquals( "EncodedListExecInst", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "353", fixData.toFIXIDString());
+        assertEquals( "ENCODED_LIST_EXEC_INST", fixData.toFIXNameString());
+        assertEquals( "EncodedListExecInst", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0353Test() {

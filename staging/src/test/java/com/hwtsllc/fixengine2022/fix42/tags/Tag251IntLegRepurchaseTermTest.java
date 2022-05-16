@@ -29,12 +29,12 @@ class Tag251IntLegRepurchaseTermTest {
     @Test
     void FIX0251Test() {
         FIX42 fixData = FIX42.FIX251_INT_LEG_REPURCHASE_TERM;
-        assertEquals( "251", fixData.getID());
-        assertEquals( "LEG_REPURCHASE_TERM", fixData.getName());
-        assertEquals( "LegRepurchaseTerm (Deprecated)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "251", fixData.toFIXIDString());
+        assertEquals( "LEG_REPURCHASE_TERM", fixData.toFIXNameString());
+        assertEquals( "LegRepurchaseTerm (Deprecated)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0251Test() {

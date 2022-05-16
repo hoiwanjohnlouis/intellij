@@ -28,12 +28,12 @@ class Tag379StrBusinessRejectRefIDTest {
     @Test
     void FIX0379Test() {
         FIX42 fixData = FIX42.FIX379_STR_BUSINESS_REJECT_REF_ID;
-        assertEquals( "379", fixData.getID());
-        assertEquals( "BUSINESS_REJECT_REF_ID", fixData.getName());
-        assertEquals( "BusinessRejectRefID", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "379", fixData.toFIXIDString());
+        assertEquals( "BUSINESS_REJECT_REF_ID", fixData.toFIXNameString());
+        assertEquals( "BusinessRejectRefID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0379Test() {

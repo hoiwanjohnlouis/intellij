@@ -40,27 +40,27 @@ class Tag1002EnuAllocMethodTest {
     @Test
     void FIX1002Test() {
         FIX50 fixData = FIX50.FIX1002_ENU_ALLOC_METHOD;
-        assertEquals( "1002", fixData.getID());
-        assertEquals( "ALLOC_METHOD", fixData.getName());
-        assertEquals( "AllocMethod", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "1002", fixData.toFIXIDString());
+        assertEquals( "ALLOC_METHOD", fixData.toFIXNameString());
+        assertEquals( "AllocMethod", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag1002Test() {
         Tag1002EnuAllocMethod tagData;
 
         tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.AUTOMATIC );
-        assertEquals( Enum1002AllocMethod.AUTOMATIC.getID(), tagData.getDataValue());
+        assertEquals( Enum1002AllocMethod.AUTOMATIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.GUARANTOR );
-        assertEquals( Enum1002AllocMethod.GUARANTOR.getID(), tagData.getDataValue());
+        assertEquals( Enum1002AllocMethod.GUARANTOR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.MANUAL );
-        assertEquals( Enum1002AllocMethod.MANUAL.getID(), tagData.getDataValue());
+        assertEquals( Enum1002AllocMethod.MANUAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

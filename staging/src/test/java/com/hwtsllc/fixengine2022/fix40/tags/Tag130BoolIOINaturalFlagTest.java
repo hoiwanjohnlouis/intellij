@@ -39,12 +39,12 @@ class Tag130BoolIOINaturalFlagTest {
     @Test
     void FIX0130Test() {
         FIX40 fixData = FIX40.FIX130_BOOL_IOI_NATURAL_FLAG;
-        assertEquals( "IOI_NATURAL_FLAG", fixData.getName());
-        assertEquals( "130", fixData.getID());
-        assertEquals( "IOINaturalFlag", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "IOI_NATURAL_FLAG", fixData.toFIXNameString());
+        assertEquals( "130", fixData.toFIXIDString());
+        assertEquals( "IOINaturalFlag", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0130Test() {

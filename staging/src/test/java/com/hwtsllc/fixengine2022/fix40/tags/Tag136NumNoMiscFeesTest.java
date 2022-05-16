@@ -34,12 +34,12 @@ class Tag136NumNoMiscFeesTest {
     @Test
     void FIX0136Test() {
         FIX40 fixData = FIX40.FIX136_NUM_NO_MISC_FEES;
-        assertEquals( "NO_MISC_FEES", fixData.getName());
-        assertEquals( "136", fixData.getID());
-        assertEquals( "NoMiscFees", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "NO_MISC_FEES", fixData.toFIXNameString());
+        assertEquals( "136", fixData.toFIXIDString());
+        assertEquals( "NoMiscFees", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0136Test() {

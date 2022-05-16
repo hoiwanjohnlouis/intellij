@@ -39,19 +39,19 @@ class Enum992IndividualAllocTypeTest {
         Enum992IndividualAllocType enumType;
 
         enumType = Enum992IndividualAllocType.SUB_ALLOCATE;
-        assertEquals( "1", enumType.getID() );
-        assertEquals( "SUB_ALLOCATE", enumType.getName() );
-        assertEquals( "1 - Sub Allocate", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "1", enumType.toFIXIDString() );
+        assertEquals( "SUB_ALLOCATE", enumType.toFIXNameString() );
+        assertEquals( "1 - Sub Allocate", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum992IndividualAllocType.THIRD_PARTY_ALLOCATION;
-        assertEquals( "2", enumType.getID() );
-        assertEquals( "THIRD_PARTY_ALLOCATION", enumType.getName() );
-        assertEquals( "2 - Third Party Allocation", enumType.getDescription() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.getDescription());
+        assertEquals( "2", enumType.toFIXIDString() );
+        assertEquals( "THIRD_PARTY_ALLOCATION", enumType.toFIXNameString() );
+        assertEquals( "2 - Third Party Allocation", enumType.toFIXDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

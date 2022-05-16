@@ -44,12 +44,12 @@ class Tag388EnuDiscretionInstTest {
     @Test
     void FIX0388Test() {
         FIX42 fixData = FIX42.FIX388_ENU_DISCRETION_INST;
-        assertEquals( "388", fixData.getID());
-        assertEquals( "DISCRETION_INST", fixData.getName());
-        assertEquals( "DiscretionInst", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "388", fixData.toFIXIDString());
+        assertEquals( "DISCRETION_INST", fixData.toFIXNameString());
+        assertEquals( "DiscretionInst", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0388Test() {
@@ -59,29 +59,29 @@ class Tag388EnuDiscretionInstTest {
          *  0-7 msg types
          */
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_DISPLAYED_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_DISPLAYED_PRICE.getID(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_DISPLAYED_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_MARKET_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_MARKET_PRICE.getID(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_MARKET_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_PRIMARY_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_PRIMARY_PRICE.getID(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_PRIMARY_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_LOCAL_PRIMARY_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_LOCAL_PRIMARY_PRICE.getID(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_LOCAL_PRIMARY_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_MIDPOINT_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_MIDPOINT_PRICE.getID(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_MIDPOINT_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_LAST_TRADE_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_LAST_TRADE_PRICE.getID(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_LAST_TRADE_PRICE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_VWAP);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_VWAP.getID(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_VWAP.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.AVERAGE_PRICE_GUARANTEE);
-        assertEquals( Enum388DiscretionInst.AVERAGE_PRICE_GUARANTEE.getID(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.AVERAGE_PRICE_GUARANTEE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

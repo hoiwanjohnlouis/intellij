@@ -35,12 +35,12 @@ class Tag960StrStrategyParameterValueTest {
     @Test
     void FIX0960Test() {
         FIX50 fixData = FIX50.FIX960_STR_STRATEGY_PARAMETER_VALUE;
-        assertEquals( "960", fixData.getID());
-        assertEquals( "STRATEGY_PARAMETER_VALUE", fixData.getName());
-        assertEquals( "StrategyParameterValue", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "960", fixData.toFIXIDString());
+        assertEquals( "STRATEGY_PARAMETER_VALUE", fixData.toFIXNameString());
+        assertEquals( "StrategyParameterValue", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0960Test() {

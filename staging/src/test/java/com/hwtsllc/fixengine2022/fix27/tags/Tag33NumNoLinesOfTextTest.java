@@ -34,13 +34,13 @@ class Tag33NumNoLinesOfTextTest {
     @Test
     void FIX0033Test() {
         FIX27 fixData = FIX27.FIX33_NUM_NO_LINES_OF_TEXT;
-        assertEquals( "NO_LINES_OF_TEXT", fixData.getName());
-        assertEquals( "33", fixData.getID());
-        assertEquals( "NoLinesOfText", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "NO_LINES_OF_TEXT", fixData.toFIXNameString());
+        assertEquals( "33", fixData.toFIXIDString());
+        assertEquals( "NoLinesOfText", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0033Test() {

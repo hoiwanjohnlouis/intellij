@@ -27,12 +27,12 @@ class Tag567EnuTradSesStatusRejReasonTest {
     @Test
     void FIX0567Test() {
         FIX43 fixData = FIX43.FIX567_ENU_TRAD_SES_STATUS_REJ_REASON;
-        assertEquals( "567", fixData.getID());
-        assertEquals( "TRAD_SES_STATUS_REJ_REASON", fixData.getName());
-        assertEquals( "TradSesStatusRejReason", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "567", fixData.toFIXIDString());
+        assertEquals( "TRAD_SES_STATUS_REJ_REASON", fixData.toFIXNameString());
+        assertEquals( "TradSesStatusRejReason", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0567Test() {

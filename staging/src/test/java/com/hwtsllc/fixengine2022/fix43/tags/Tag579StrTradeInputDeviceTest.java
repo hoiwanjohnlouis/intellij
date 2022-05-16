@@ -27,12 +27,12 @@ class Tag579StrTradeInputDeviceTest {
     @Test
     void FIX0579Test() {
         FIX43 fixData = FIX43.FIX579_STR_TRADE_INPUT_DEVICE;
-        assertEquals( "579", fixData.getID());
-        assertEquals( "TRADE_INPUT_DEVICE", fixData.getName());
-        assertEquals( "TradeInputDevice", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "579", fixData.toFIXIDString());
+        assertEquals( "TRADE_INPUT_DEVICE", fixData.toFIXNameString());
+        assertEquals( "TradeInputDevice", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0579Test() {

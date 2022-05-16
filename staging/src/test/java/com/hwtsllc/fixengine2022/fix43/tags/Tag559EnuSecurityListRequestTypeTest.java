@@ -27,12 +27,12 @@ class Tag559EnuSecurityListRequestTypeTest {
     @Test
     void FIX0559Test() {
         FIX43 fixData = FIX43.FIX559_ENU_SECURITY_LIST_REQUEST_TYPE;
-        assertEquals( "559", fixData.getID());
-        assertEquals( "SECURITY_LIST_REQUEST_TYPE", fixData.getName());
-        assertEquals( "SecurityListRequestType", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "559", fixData.toFIXIDString());
+        assertEquals( "SECURITY_LIST_REQUEST_TYPE", fixData.toFIXNameString());
+        assertEquals( "SecurityListRequestType", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0559Test() {

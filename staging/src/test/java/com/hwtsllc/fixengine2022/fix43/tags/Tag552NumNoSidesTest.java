@@ -27,12 +27,12 @@ class Tag552NumNoSidesTest {
     @Test
     void FIX0552Test() {
         FIX43 fixData = FIX43.FIX552_NUM_NO_SIDES;
-        assertEquals( "552", fixData.getID());
-        assertEquals( "NO_SIDES", fixData.getName());
-        assertEquals( "NoSides", fixData.getDescription());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "552", fixData.toFIXIDString());
+        assertEquals( "NO_SIDES", fixData.toFIXNameString());
+        assertEquals( "NoSides", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0552Test() {

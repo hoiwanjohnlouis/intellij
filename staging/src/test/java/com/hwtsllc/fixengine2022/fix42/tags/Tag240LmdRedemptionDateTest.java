@@ -29,12 +29,12 @@ class Tag240LmdRedemptionDateTest {
     @Test
     void FIX0240Test() {
         FIX42 fixData = FIX42.FIX240_LMD_REDEMPTION_DATE;
-        assertEquals( "240", fixData.getID());
-        assertEquals( "REDEMPTION_DATE", fixData.getName());
-        assertEquals( "RedemptionDate (Deprecated)", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "240", fixData.toFIXIDString());
+        assertEquals( "REDEMPTION_DATE", fixData.toFIXNameString());
+        assertEquals( "RedemptionDate (Deprecated)", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0240Test() {

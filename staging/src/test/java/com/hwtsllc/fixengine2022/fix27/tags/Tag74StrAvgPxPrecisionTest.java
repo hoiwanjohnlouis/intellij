@@ -38,13 +38,13 @@ class Tag74StrAvgPxPrecisionTest {
     @Test
     void FIX0074Test() {
         FIX27 fixData = FIX27.FIX74_STR_AVG_PX_PRECISION;
-        assertEquals( "AVG_PX_PRECISION", fixData.getName());
-        assertEquals( "74", fixData.getID());
-        assertEquals( "AvgPxPrecision", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "AVG_PX_PRECISION", fixData.toFIXNameString());
+        assertEquals( "74", fixData.toFIXIDString());
+        assertEquals( "AvgPxPrecision", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0074Test() {

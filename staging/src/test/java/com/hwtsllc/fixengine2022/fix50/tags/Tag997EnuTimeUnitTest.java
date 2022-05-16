@@ -59,44 +59,44 @@ class Tag997EnuTimeUnitTest {
     @Test
     void FIX0997Test() {
         FIX50 fixData = FIX50.FIX997_ENU_TIME_UNIT;
-        assertEquals( "997", fixData.getID());
-        assertEquals( "TIME_UNIT", fixData.getName());
-        assertEquals( "TimeUnit", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "997", fixData.toFIXIDString());
+        assertEquals( "TIME_UNIT", fixData.toFIXNameString());
+        assertEquals( "TimeUnit", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0997Test() {
         Tag997EnuTimeUnit tagData;
 
         tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.HH );
-        assertEquals( MyEnumTimeUnit.HH.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumTimeUnit.HH.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.MM );
-        assertEquals( MyEnumTimeUnit.MM.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumTimeUnit.MM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.SS );
-        assertEquals( MyEnumTimeUnit.SS.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumTimeUnit.SS.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
         tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.DD );
-        assertEquals( MyEnumTimeUnit.DD.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumTimeUnit.DD.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.WK );
-        assertEquals( MyEnumTimeUnit.WK.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumTimeUnit.WK.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.MO );
-        assertEquals( MyEnumTimeUnit.MO.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumTimeUnit.MO.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.YR );
-        assertEquals( MyEnumTimeUnit.YR.getID(), tagData.getDataValue() );
+        assertEquals( MyEnumTimeUnit.YR.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

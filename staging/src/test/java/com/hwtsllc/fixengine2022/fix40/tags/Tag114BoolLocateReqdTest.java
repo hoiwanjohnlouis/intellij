@@ -37,12 +37,12 @@ class Tag114BoolLocateReqdTest {
     @Test
     void FIX0114Test() {
         FIX40 fixData = FIX40.FIX114_BOOL_LOCATE_REQD;
-        assertEquals( "LOCATE_REQD", fixData.getName());
-        assertEquals( "114", fixData.getID());
-        assertEquals( "LocateReqd", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "LOCATE_REQD", fixData.toFIXNameString());
+        assertEquals( "114", fixData.toFIXIDString());
+        assertEquals( "LocateReqd", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0114Test() {

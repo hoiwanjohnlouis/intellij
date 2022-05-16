@@ -39,13 +39,13 @@ class Tag29EnuLastCapacityTest {
     @Test
     void FIX0029Test() {
         FIX27 fixData = FIX27.FIX29_ENU_LAST_CAPACITY;
-        assertEquals( "LAST_CAPACITY", fixData.getName());
-        assertEquals( "29", fixData.getID());
-        assertEquals( "LastCapacity", fixData.getDescription());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.getEnumName());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.getName());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.getID());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.getDescription());
+        assertEquals( "LAST_CAPACITY", fixData.toFIXNameString());
+        assertEquals( "29", fixData.toFIXIDString());
+        assertEquals( "LastCapacity", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
     void Tag0029Test() {
