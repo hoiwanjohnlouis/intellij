@@ -78,16 +78,23 @@ public class Tag100StrExDestination extends FIX27Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag100StrExDestination tagData;
-
-        tagData = new Tag100StrExDestination(new MyStringType(TESTA_STR_EX_DESTINATION) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag100StrExDestination(new MyStringType(TESTB_STR_EX_DESTINATION) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag100StrExDestination(new MyStringType(TESTA_STR_EX_DESTINATION)) );
+        dumpDataValues( new Tag100StrExDestination(new MyStringType(TESTB_STR_EX_DESTINATION)) );
+    }
+    /**
+     *
+     * @param tagData   Tag100StrExDestination
+     */
+    static void dumpDataValues(Tag100StrExDestination tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

@@ -82,21 +82,23 @@ public class Tag10StrCheckSum extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag10StrCheckSum tagData;
-
-        tagData = new Tag10StrCheckSum(new MyStringType(TESTA_STR_CHECK_SUM) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag10StrCheckSum(new MyStringType(TESTB_STR_CHECK_SUM) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag10StrCheckSum(new MyStringType(TESTA_STR_CHECK_SUM)) );
+        dumpDataValues( new Tag10StrCheckSum(new MyStringType(TESTB_STR_CHECK_SUM)) );
+    }
+    /**
+     *
+     * @param tagData   Tag10StrCheckSum
+     */
+    static void dumpDataValues(Tag10StrCheckSum tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

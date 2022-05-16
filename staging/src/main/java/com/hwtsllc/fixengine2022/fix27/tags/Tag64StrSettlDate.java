@@ -79,16 +79,23 @@ public class Tag64StrSettlDate extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag64StrSettlDate tagData;
-
-        tagData = new Tag64StrSettlDate(new MyStringType(TESTA_STR_SETTL_DATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag64StrSettlDate(new MyStringType(TESTB_STR_SETTL_DATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag64StrSettlDate(new MyStringType(TESTA_STR_SETTL_DATE)) );
+        dumpDataValues( new Tag64StrSettlDate(new MyStringType(TESTB_STR_SETTL_DATE)) );
+    }
+    /**
+     *
+     * @param tagData   Tag64StrSettlDate
+     */
+    static void dumpDataValues(Tag64StrSettlDate tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

@@ -74,21 +74,23 @@ public class Tag49StrSenderCompID extends FIX27Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag49StrSenderCompID tagData;
-
-        tagData= new Tag49StrSenderCompID(new MyStringType(TESTA_STR_SENDER_COMP_ID) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag49StrSenderCompID(new MyStringType(TESTB_STR_SENDER_COMP_ID) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag49StrSenderCompID(new MyStringType(TESTA_STR_SENDER_COMP_ID)) );
+        dumpDataValues( new Tag49StrSenderCompID(new MyStringType(TESTB_STR_SENDER_COMP_ID)) );
+    }
+    /**
+     *
+     * @param tagData   Tag49StrSenderCompID
+     */
+    static void dumpDataValues(Tag49StrSenderCompID tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

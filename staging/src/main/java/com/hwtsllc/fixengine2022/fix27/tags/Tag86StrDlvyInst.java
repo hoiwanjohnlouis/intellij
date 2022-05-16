@@ -75,26 +75,23 @@ public class Tag86StrDlvyInst extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag86StrDlvyInst tagData;
-
-        tagData= new Tag86StrDlvyInst(new MyStringType(TESTA_STR_DLVY_INST) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-
-        tagData = new Tag86StrDlvyInst(new MyStringType(TESTB_STR_DLVY_INST) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag86StrDlvyInst(new MyStringType(TESTA_STR_DLVY_INST)) );
+        dumpDataValues( new Tag86StrDlvyInst(new MyStringType(TESTB_STR_DLVY_INST)) );
+    }
+    /**
+     *
+     * @param tagData   Tag86StrDlvyInst
+     */
+    static void dumpDataValues(Tag86StrDlvyInst tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

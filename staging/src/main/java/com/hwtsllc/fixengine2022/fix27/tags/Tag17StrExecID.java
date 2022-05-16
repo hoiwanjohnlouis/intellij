@@ -80,21 +80,23 @@ public class Tag17StrExecID extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag17StrExecID tagData;
-
-        tagData= new Tag17StrExecID(new MyStringType(TESTA_STR_EXEC_ID) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag17StrExecID(new MyStringType(TESTB_STR_EXEC_ID) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag17StrExecID(new MyStringType(TESTA_STR_EXEC_ID)) );
+        dumpDataValues( new Tag17StrExecID(new MyStringType(TESTB_STR_EXEC_ID)) );
+    }
+    /**
+     *
+     * @param tagData   Tag17StrExecID
+     */
+    static void dumpDataValues(Tag17StrExecID tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

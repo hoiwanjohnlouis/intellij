@@ -75,16 +75,23 @@ public class Tag24StrIOIOthSvc extends FIX27Abstract implements LogValuePairStri
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        Tag24StrIOIOthSvc tagData;
-
-        tagData = new Tag24StrIOIOthSvc(new MyStringType(TESTA_STR_IOI_OTH_SVC) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag24StrIOIOthSvc(new MyStringType(TESTB_STR_IOI_OTH_SVC) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag24StrIOIOthSvc(new MyStringType(TESTA_STR_IOI_OTH_SVC)) );
+        dumpDataValues( new Tag24StrIOIOthSvc(new MyStringType(TESTB_STR_IOI_OTH_SVC)) );
+    }
+    /**
+     *
+     * @param tagData   Tag24StrIOIOthSvc
+     */
+    static void dumpDataValues(Tag24StrIOIOthSvc tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

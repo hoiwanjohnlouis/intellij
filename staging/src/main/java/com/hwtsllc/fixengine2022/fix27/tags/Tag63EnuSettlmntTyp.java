@@ -152,7 +152,7 @@ public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairSt
         System.out.println("-------------------- Start --------------------");
         System.out.println("VerboseString:" + tagData.toVerboseString());
         System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData.toString());
+        System.out.println("TagDataString:" + tagData);
         System.out.println("EnumNameString:" + tagData.toEnumNameString());
         System.out.println("FIXIDString:" + tagData.toFIXIDString());
         System.out.println("FIXNameString:" + tagData.toFIXNameString());

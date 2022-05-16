@@ -133,7 +133,7 @@ public class Tag54EnuSide extends FIX27Abstract implements LogValuePairString, L
         System.out.println("-------------------- Start Enum --------------------");
         System.out.println("VerboseString:" + tagData.toVerboseString());
         System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData.toString());
+        System.out.println("TagDataString:" + tagData);
         System.out.println("EnumNameString:" + tagData.toEnumNameString());
         System.out.println("FIXIDString:" + tagData.toFIXIDString());
         System.out.println("FIXNameString:" + tagData.toFIXNameString());

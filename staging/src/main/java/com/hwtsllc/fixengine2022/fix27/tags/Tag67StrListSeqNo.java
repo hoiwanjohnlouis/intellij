@@ -75,16 +75,23 @@ public class Tag67StrListSeqNo extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag67StrListSeqNo tagData;
-
-        tagData = new Tag67StrListSeqNo(new MyStringType(TESTA_STR_LIST_SEQ_NO) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag67StrListSeqNo(new MyStringType(TESTB_STR_LIST_SEQ_NO) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag67StrListSeqNo(new MyStringType(TESTA_STR_LIST_SEQ_NO)) );
+        dumpDataValues( new Tag67StrListSeqNo(new MyStringType(TESTB_STR_LIST_SEQ_NO)) );
+    }
+    /**
+     *
+     * @param tagData   Tag67StrListSeqNo
+     */
+    static void dumpDataValues(Tag67StrListSeqNo tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag57StrTargetSubID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_TARGET_SUB_ID = "BilboBaggins-57StTargetSubID"; // fake data
-    public final static String TESTB_STR_TARGET_SUB_ID = "Gandalf-57StTargetSubID";
+    public final static String TESTA_STR_TARGET_SUB_ID
+            = "BilboBaggins-57StTargetSubID";
+    public final static String TESTB_STR_TARGET_SUB_ID
+            = "Gandalf-57StTargetSubID";
 
     public Tag57StrTargetSubID(MyStringType dataValue) {
         setFixType(FIX27.FIX57_STR_TARGET_SUB_ID);
@@ -75,21 +77,23 @@ public class Tag57StrTargetSubID extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag57StrTargetSubID tagData;
-
-        tagData= new Tag57StrTargetSubID(new MyStringType(TESTA_STR_TARGET_SUB_ID) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag57StrTargetSubID(new MyStringType(TESTB_STR_TARGET_SUB_ID) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag57StrTargetSubID(new MyStringType(TESTA_STR_TARGET_SUB_ID)) );
+        dumpDataValues( new Tag57StrTargetSubID(new MyStringType(TESTB_STR_TARGET_SUB_ID)) );
+    }
+    /**
+     *
+     * @param tagData   Tag57StrTargetSubID
+     */
+    static void dumpDataValues(Tag57StrTargetSubID tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

@@ -75,17 +75,18 @@ public class Tag1StrAccount extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag1StrAccount tagData;
-
-        // display the data of this tag
-        dumpDataValues(new Tag1StrAccount(new MyStringType(TESTA_STR_ACCOUNT)));
-        dumpDataValues(new Tag1StrAccount(new MyStringType(TESTB_STR_ACCOUNT)));
+        dumpDataValues( new Tag1StrAccount(new MyStringType(TESTA_STR_ACCOUNT)) );
+        dumpDataValues( new Tag1StrAccount(new MyStringType(TESTB_STR_ACCOUNT)) );
     }
+    /**
+     *
+     * @param tagData   Tag1StrAccount
+     */
     static void dumpDataValues(Tag1StrAccount tagData) {
         System.out.println("-------------------- Start String --------------------");
         System.out.println("VerboseString:" + tagData.toVerboseString());
         System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData.toString());
+        System.out.println("TagDataString:" + tagData);
         System.out.println("EnumNameString:" + tagData.toEnumNameString());
         System.out.println("FIXIDString:" + tagData.toFIXIDString());
         System.out.println("FIXNameString:" + tagData.toFIXNameString());
