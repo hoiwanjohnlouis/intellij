@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum433ListExecInstType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -41,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *                          "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
  *                          "(i.e. additional cash will not be provided to fulfill the order)" ),
  */
-public class Tag433EnuListExecInstType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag433EnuListExecInstType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum433ListExecInstType dataValue;
 
     public final static Enum433ListExecInstType TESTA_ENU_LIST_EXEC_INST_TYPE
@@ -77,10 +77,24 @@ public class Tag433EnuListExecInstType extends FIX42Abstract implements LogValue
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -102,12 +116,12 @@ public class Tag433EnuListExecInstType extends FIX42Abstract implements LogValue
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag433EnuListExecInstType(TESTB_ENU_LIST_EXEC_INST_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

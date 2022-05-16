@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -57,7 +57,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    CD - EUCP with lump-sum interest rather than discount price
  *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
  */
-public class Tag601EnuLegSymbolSfx extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag601EnuLegSymbolSfx extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumSymbolSfx dataValue;
 
     public final static MyEnumSymbolSfx TESTA_ENU_LEG_SYMBOL_SFX
@@ -93,10 +93,24 @@ public class Tag601EnuLegSymbolSfx extends FIX43Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -118,12 +132,12 @@ public class Tag601EnuLegSymbolSfx extends FIX43Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag601EnuLegSymbolSfx(TESTB_ENU_LEG_SYMBOL_SFX);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

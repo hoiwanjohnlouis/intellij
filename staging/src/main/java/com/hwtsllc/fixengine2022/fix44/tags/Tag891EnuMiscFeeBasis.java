@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum891MiscFeeBasis;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      1 - Per Unit
  *      2 - Percentage
  */
-public class Tag891EnuMiscFeeBasis extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag891EnuMiscFeeBasis extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum891MiscFeeBasis dataValue;
 
     public final static Enum891MiscFeeBasis TESTA_ENU_MISC_FEE_BASIS
@@ -66,6 +67,27 @@ public class Tag891EnuMiscFeeBasis extends FIX44Abstract implements LogValuePair
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

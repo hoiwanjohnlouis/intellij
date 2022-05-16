@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum871InstrAttribType;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -54,7 +55,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *
  *      or any value conforming to the data type Reserved100Plus
  */
-public class Tag871EnuInstrAttribType extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag871EnuInstrAttribType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum871InstrAttribType dataValue;
 
     public final static Enum871InstrAttribType TESTA_ENU_INSTR_ATTRIB_TYPE
@@ -88,6 +89,27 @@ public class Tag871EnuInstrAttribType extends FIX44Abstract implements LogValueP
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

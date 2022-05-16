@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum265MDUpdateType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -30,11 +30,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      "0 - Full refresh"
  *      "1 - Incremental refresh"
  */
-public class Tag265EnuMDUpdateType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag265EnuMDUpdateType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum265MDUpdateType dataValue;
 
-    public final static Enum265MDUpdateType TESTA_ENU_MD_UPDATE_TYPE = Enum265MDUpdateType.FULL_REFRESH;
-    public final static Enum265MDUpdateType TESTB_ENU_MD_UPDATE_TYPE = Enum265MDUpdateType.INCREMENTAL_REFRESH;
+    public final static Enum265MDUpdateType TESTA_ENU_MD_UPDATE_TYPE
+            = Enum265MDUpdateType.FULL_REFRESH;
+    public final static Enum265MDUpdateType TESTB_ENU_MD_UPDATE_TYPE
+            = Enum265MDUpdateType.INCREMENTAL_REFRESH;
 
     public Tag265EnuMDUpdateType(Enum265MDUpdateType dataValue) {
         setFixType(FIX42.FIX265_ENU_MD_UPDATE_TYPE);
@@ -64,10 +66,24 @@ public class Tag265EnuMDUpdateType extends FIX42Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -89,12 +105,12 @@ public class Tag265EnuMDUpdateType extends FIX42Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag265EnuMDUpdateType(TESTB_ENU_MD_UPDATE_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum427GTBookingInst;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE( "2", "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE",
  *                          "2 - Accumulate until verbally notified otherwise" ),
  */
-public class Tag427EnuGTBookingInst extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag427EnuGTBookingInst extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum427GTBookingInst dataValue;
 
     public final static Enum427GTBookingInst TESTA_ENU_GT_BOOKING_INST
@@ -72,10 +72,24 @@ public class Tag427EnuGTBookingInst extends FIX42Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -97,12 +111,12 @@ public class Tag427EnuGTBookingInst extends FIX42Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag427EnuGTBookingInst(TESTB_ENU_GT_BOOKING_INST);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

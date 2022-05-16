@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum431ListOrderStatus;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      ALL_DONE( "6", "ALL_DONE", "6 - All Done" ),
  *      REJECT( "7", "REJECT", "7 - Reject" ),
  */
-public class Tag431EnuListOrderStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag431EnuListOrderStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum431ListOrderStatus dataValue;
 
     public final static Enum431ListOrderStatus TESTA_ENU_LIST_ORDER_STATUS
@@ -73,10 +73,24 @@ public class Tag431EnuListOrderStatus extends FIX42Abstract implements LogValueP
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -98,12 +112,12 @@ public class Tag431EnuListOrderStatus extends FIX42Abstract implements LogValueP
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag431EnuListOrderStatus(TESTB_ENU_LIST_ORDER_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

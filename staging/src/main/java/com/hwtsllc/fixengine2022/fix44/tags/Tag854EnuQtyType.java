@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum854QtyType;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      1 - Contracts (if used - must specify ContractMultiplier (tag 231))
  *      2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
  */
-public class Tag854EnuQtyType extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag854EnuQtyType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum854QtyType dataValue;
 
     public final static Enum854QtyType TESTA_ENU_QTY_TYPE
@@ -66,6 +67,27 @@ public class Tag854EnuQtyType extends FIX44Abstract implements LogValuePairStrin
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

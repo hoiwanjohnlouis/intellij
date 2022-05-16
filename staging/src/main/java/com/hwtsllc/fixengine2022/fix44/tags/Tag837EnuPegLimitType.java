@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumLimitType;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -42,7 +43,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *                  and for a sell the peg limit is a maximum
  *                  (for use for orders which have a price range)
  */
-public class Tag837EnuPegLimitType extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag837EnuPegLimitType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumLimitType dataValue;
 
     public final static MyEnumLimitType TESTA_ENU_PEG_LIMIT_TYPE
@@ -76,6 +77,27 @@ public class Tag837EnuPegLimitType extends FIX44Abstract implements LogValuePair
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

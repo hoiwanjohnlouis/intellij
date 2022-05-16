@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum327HaltReason;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      NEW_PENDING( "P", "NEW_PENDING", "P - New Pending" ),
  *      EQUIPMENT_CHANGE_OVER( "X", "EQUIPMENT_CHANGE_OVER", "X - Equipment Changeover" ),
  */
-public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum327HaltReason dataValue;
 
     public final static Enum327HaltReason TESTA_ENU_HALT_REASON
@@ -72,10 +72,24 @@ public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairSt
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -97,12 +111,12 @@ public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairSt
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag327EnuHaltReason(TESTB_ENU_HALT_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSide;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -57,7 +57,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    F - Lend (FINANCING - identifies direction of collateral)
  *  <p>    G - Borrow (FINANCING - identifies direction of collateral)
  */
-public class Tag624EnuLegSide extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag624EnuLegSide extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumSide dataValue;
 
     public final static MyEnumSide TESTA_ENU_LEG_SIDE
@@ -93,10 +93,24 @@ public class Tag624EnuLegSide extends FIX43Abstract implements LogValuePairStrin
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -118,12 +132,12 @@ public class Tag624EnuLegSide extends FIX43Abstract implements LogValuePairStrin
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag624EnuLegSide(TESTB_ENU_LEG_SIDE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

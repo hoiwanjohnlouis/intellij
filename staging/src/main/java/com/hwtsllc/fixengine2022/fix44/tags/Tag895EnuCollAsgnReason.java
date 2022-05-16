@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum895CollAsgnReason;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -37,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      6 - Event of default
  *      7 - Adverse tax event
  */
-public class Tag895EnuCollAsgnReason extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag895EnuCollAsgnReason extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum895CollAsgnReason dataValue;
 
     public final static Enum895CollAsgnReason TESTA_ENU_COLL_ASGN_REASON
@@ -71,6 +72,27 @@ public class Tag895EnuCollAsgnReason extends FIX44Abstract implements LogValuePa
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

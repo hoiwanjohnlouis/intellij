@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum857AllocNoOrdersType;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      0 - Not Specified
  *      1 - Explicit List Provided
  */
-public class Tag857EnuAllocNoOrdersType extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag857EnuAllocNoOrdersType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum857AllocNoOrdersType dataValue;
 
     public final static Enum857AllocNoOrdersType TESTA_ENU_ALLOC_NO_ORDERS_TYPE
@@ -66,6 +67,27 @@ public class Tag857EnuAllocNoOrdersType extends FIX44Abstract implements LogValu
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

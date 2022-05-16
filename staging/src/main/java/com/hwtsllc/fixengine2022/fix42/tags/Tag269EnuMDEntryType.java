@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum269MDEntryType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -57,11 +57,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      "P - Early Prices"
  *      "Q - Auction Clearing Price"
  */
-public class Tag269EnuMDEntryType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag269EnuMDEntryType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum269MDEntryType dataValue;
 
-    public final static Enum269MDEntryType TESTA_ENU_MD_ENTRY_TYPE = Enum269MDEntryType.BID;
-    public final static Enum269MDEntryType TESTB_ENU_MD_ENTRY_TYPE = Enum269MDEntryType.AUCTION_CLEARING_PRICE;
+    public final static Enum269MDEntryType TESTA_ENU_MD_ENTRY_TYPE
+            = Enum269MDEntryType.BID;
+    public final static Enum269MDEntryType TESTB_ENU_MD_ENTRY_TYPE
+            = Enum269MDEntryType.AUCTION_CLEARING_PRICE;
 
     public Tag269EnuMDEntryType(Enum269MDEntryType dataValue) {
         setFixType(FIX42.FIX269_ENU_MD_ENTRY_TYPE);
@@ -91,10 +93,24 @@ public class Tag269EnuMDEntryType extends FIX42Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -116,12 +132,12 @@ public class Tag269EnuMDEntryType extends FIX42Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag269EnuMDEntryType(TESTB_ENU_MD_ENTRY_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

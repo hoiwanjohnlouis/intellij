@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumStipulationType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -127,11 +127,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    PSA - Percent of BMA Prepayment Curve
  *  <p>    SMM - Single Monthly Mortality
  */
-public class Tag233EnuStipulationType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag233EnuStipulationType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumStipulationType dataValue;
 
-    public final static MyEnumStipulationType TESTA_ENU_STIPULATION_TYPE = MyEnumStipulationType.SECURITY_TYPE;
-    public final static MyEnumStipulationType TESTB_ENU_STIPULATION_TYPE = MyEnumStipulationType.BANK_QUALIFIED;
+    public final static MyEnumStipulationType TESTA_ENU_STIPULATION_TYPE
+            = MyEnumStipulationType.SECURITY_TYPE;
+    public final static MyEnumStipulationType TESTB_ENU_STIPULATION_TYPE
+            = MyEnumStipulationType.BANK_QUALIFIED;
 
     public Tag233EnuStipulationType(MyEnumStipulationType dataValue) {
         setFixType(FIX42.FIX233_ENU_STIPULATION_TYPE);
@@ -161,10 +163,24 @@ public class Tag233EnuStipulationType extends FIX42Abstract implements LogValueP
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -186,12 +202,12 @@ public class Tag233EnuStipulationType extends FIX42Abstract implements LogValueP
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag233EnuStipulationType(TESTB_ENU_STIPULATION_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

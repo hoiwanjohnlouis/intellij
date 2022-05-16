@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -128,7 +128,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    K - ISDA/FpML Product URL (URL in SecurityID)
  *  <p>    L - Letter of Credit
  */
-public class Tag603EnuLegSecurityIDSource extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag603EnuLegSecurityIDSource extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumSecurityIDSource dataValue;
 
     public final static MyEnumSecurityIDSource TESTA_ENU_LEG_SECURITY_ID_SOURCE
@@ -164,10 +164,24 @@ public class Tag603EnuLegSecurityIDSource extends FIX43Abstract implements LogVa
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -189,12 +203,12 @@ public class Tag603EnuLegSecurityIDSource extends FIX43Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag603EnuLegSecurityIDSource(TESTB_ENU_LEG_SECURITY_ID_SOURCE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

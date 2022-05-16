@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum301QuoteResponseLevel;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *                      "1 - Acknowledge only negative or erroneous quotes" ),
  *      ACKNOWLEDGE_EACH_QUOTE( "2", "ACKNOWLEDGE_EACH_QUOTE", "2 - Acknowledge each quote messages" ),
  */
-public class Tag301EnuQuoteResponseLevel extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag301EnuQuoteResponseLevel extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum301QuoteResponseLevel dataValue;
 
     public final static Enum301QuoteResponseLevel TESTA_ENU_QUOTE_RESPONSE_LEVEL
@@ -69,10 +69,24 @@ public class Tag301EnuQuoteResponseLevel extends FIX42Abstract implements LogVal
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -94,12 +108,12 @@ public class Tag301EnuQuoteResponseLevel extends FIX42Abstract implements LogVal
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag301EnuQuoteResponseLevel(TESTB_ENU_QUOTE_RESPONSE_LEVEL);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

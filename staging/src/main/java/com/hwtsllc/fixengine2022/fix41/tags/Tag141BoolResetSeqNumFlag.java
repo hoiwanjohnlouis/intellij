@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,7 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      N - No
  *      Y - Yes, reset sequence numbers
  */
-public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyBooleanType dataValue;
 
     public final static MyBooleanType TESTA_BOOL_RESET_SEQ_NUM_FLAG = MyBooleanType.NO ; // N - No
@@ -66,10 +66,24 @@ public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValue
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -91,12 +105,26 @@ public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValue
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
 
         tagData = new Tag141BoolResetSeqNumFlag(TESTB_BOOL_RESET_SEQ_NUM_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
     }
 }

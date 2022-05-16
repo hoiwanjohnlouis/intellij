@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum163SettlInstTransType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -36,7 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    R - Replace
  *  <p>    T - Restate
  */
-public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum163SettlInstTransType dataValue;
 
     public final static Enum163SettlInstTransType TESTA_ENU_SETTL_INST_TRANS_TYPE = Enum163SettlInstTransType.NEW;
@@ -70,10 +70,24 @@ public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogVal
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -95,12 +109,26 @@ public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogVal
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
 
         tagData = new Tag163EnuSettlInstTransType(TESTB_ENU_SETTL_INST_TRANS_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
     }
 }

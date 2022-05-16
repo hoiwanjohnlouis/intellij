@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1021MDBookType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    2 - Price Depth
  *  <p>    3 - Order Depth
  */
-public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum1021MDBookType dataValue;
 
     public final static Enum1021MDBookType TESTA_ENU_MD_BOOK_TYPE
@@ -73,10 +73,24 @@ public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairS
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -98,12 +112,16 @@ public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairS
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataIDString());
+        System.out.println(tagData.toDataNameString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag1021EnuMDBookType(TESTB_ENU_MD_BOOK_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataIDString());
+        System.out.println(tagData.toDataNameString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

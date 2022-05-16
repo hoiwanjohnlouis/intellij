@@ -16,7 +16,9 @@
 
 package com.hwtsllc.fixengine2022.interfaces;
 
-public interface LogEnumString {
+public interface LogDataString {
     // concrete definitions are by whom inherits this class
-    String toEnumString();
+    String toDataIDString();
+    String toDataNameString();
+    String toDataDescriptionString();
 }

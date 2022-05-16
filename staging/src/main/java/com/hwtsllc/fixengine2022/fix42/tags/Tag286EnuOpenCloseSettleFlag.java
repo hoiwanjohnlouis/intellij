@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum286OpenCLoseSettlFlag;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      PREVIOUS_BUSINESS_DAY( "4", "PREVIOUS_BUSINESS_DAY", "4 - Entry from previous business day" ),
  *      THEORETICAL_PRICE_VALUE( "5", "THEORETICAL_PRICE_VALUE", "5 - Theoretical Price value" ),
  */
-public class Tag286EnuOpenCloseSettleFlag extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag286EnuOpenCloseSettleFlag extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum286OpenCLoseSettlFlag dataValue;
 
     public final static Enum286OpenCLoseSettlFlag TESTA_ENU_OPEN_CLOSE_SETTLE_FLAG
@@ -73,10 +73,24 @@ public class Tag286EnuOpenCloseSettleFlag extends FIX42Abstract implements LogVa
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -98,12 +112,12 @@ public class Tag286EnuOpenCloseSettleFlag extends FIX42Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag286EnuOpenCloseSettleFlag(TESTB_ENU_OPEN_CLOSE_SETTLE_FLAG);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

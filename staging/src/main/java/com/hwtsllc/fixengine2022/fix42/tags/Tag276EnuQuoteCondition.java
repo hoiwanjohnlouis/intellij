@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum276QuoteCondition;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -88,11 +88,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      "1 - No Active SAM"
  *      "2 - Restricted"
  */
-public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum276QuoteCondition dataValue;
 
-    public final static Enum276QuoteCondition TESTA_ENU_QUOTE_CONDITION = Enum276QuoteCondition.ADDITIONAL_INFO;
-    public final static Enum276QuoteCondition TESTB_ENU_QUOTE_CONDITION = Enum276QuoteCondition.CLOSED_INACTIVE;
+    public final static Enum276QuoteCondition TESTA_ENU_QUOTE_CONDITION
+            = Enum276QuoteCondition.ADDITIONAL_INFO;
+    public final static Enum276QuoteCondition TESTB_ENU_QUOTE_CONDITION
+            = Enum276QuoteCondition.CLOSED_INACTIVE;
 
     public Tag276EnuQuoteCondition(Enum276QuoteCondition dataValue) {
         setFixType(FIX42.FIX276_ENU_QUOTE_CONDITION);
@@ -122,10 +124,24 @@ public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -147,12 +163,12 @@ public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag276EnuQuoteCondition(TESTB_ENU_QUOTE_CONDITION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

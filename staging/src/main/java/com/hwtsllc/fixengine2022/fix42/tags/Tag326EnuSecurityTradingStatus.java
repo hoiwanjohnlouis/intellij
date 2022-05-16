@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum326SecurityTradingStatus;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -56,7 +56,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      OPENING_ROTATION( "22", "OPENING_ROTATION", "22 - Opening Rotation" ),
  *      FAST_MARKET( "23", "FAST_MARKET", "23 - Fast Market" ),
  */
-public class Tag326EnuSecurityTradingStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag326EnuSecurityTradingStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum326SecurityTradingStatus dataValue;
 
     public final static Enum326SecurityTradingStatus TESTA_ENU_SECURITY_TRADING_STATUS
@@ -92,10 +92,24 @@ public class Tag326EnuSecurityTradingStatus extends FIX42Abstract implements Log
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -117,12 +131,12 @@ public class Tag326EnuSecurityTradingStatus extends FIX42Abstract implements Log
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag326EnuSecurityTradingStatus(TESTB_ENU_SECURITY_TRADING_STATUS);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

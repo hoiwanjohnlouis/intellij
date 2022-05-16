@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum285DeleteReason;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -31,11 +31,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
  *      ERROR( "1", "ERROR", "1 - Error" ),
  */
-public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum285DeleteReason dataValue;
 
-    public final static Enum285DeleteReason TESTA_ENU_DELETE_REASON = Enum285DeleteReason.ERROR;
-    public final static Enum285DeleteReason TESTB_ENU_DELETE_REASON = Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST;
+    public final static Enum285DeleteReason TESTA_ENU_DELETE_REASON
+            = Enum285DeleteReason.ERROR;
+    public final static Enum285DeleteReason TESTB_ENU_DELETE_REASON
+            = Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST;
 
     public Tag285EnuDeleteReason(Enum285DeleteReason dataValue) {
         setFixType(FIX42.FIX285_ENU_DELETE_REASON);
@@ -65,10 +67,24 @@ public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePair
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -90,12 +106,12 @@ public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePair
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag285EnuDeleteReason(TESTB_ENU_DELETE_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

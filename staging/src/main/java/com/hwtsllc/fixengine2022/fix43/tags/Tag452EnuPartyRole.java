@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyRole;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -190,7 +190,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    77 - Market data market
  *  <p>    78 - Allocation Entity
  */
-public class Tag452EnuPartyRole extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag452EnuPartyRole extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumPartyRole dataValue;
 
     public final static MyEnumPartyRole TESTA_ENU_PARTY_ROLE
@@ -226,10 +226,24 @@ public class Tag452EnuPartyRole extends FIX43Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -251,12 +265,12 @@ public class Tag452EnuPartyRole extends FIX43Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag452EnuPartyRole(TESTB_ENU_PARTY_ROLE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -25,8 +25,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag386NumNoTradingSessions extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_TRADING_SESSIONS = 386; // fake data
-    public final static int TESTB_NUM_NO_TRADING_SESSIONS = 683;
+    public final static int TESTA_NUM_NO_TRADING_SESSIONS
+            = 386; // fake data
+    public final static int TESTB_NUM_NO_TRADING_SESSIONS
+            = 683;
 
     public Tag386NumNoTradingSessions(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX386_NUM_NO_TRADING_SESSIONS);

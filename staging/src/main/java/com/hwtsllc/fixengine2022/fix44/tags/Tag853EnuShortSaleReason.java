@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum853ShortSaleReason;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -36,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *
  *      5 - QSR or AGU Contra Side Sold Short Exempt
  */
-public class Tag853EnuShortSaleReason extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag853EnuShortSaleReason extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum853ShortSaleReason dataValue;
 
     public final static Enum853ShortSaleReason TESTA_ENU_SHORT_SALE_REASON
@@ -70,6 +71,27 @@ public class Tag853EnuShortSaleReason extends FIX44Abstract implements LogValueP
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

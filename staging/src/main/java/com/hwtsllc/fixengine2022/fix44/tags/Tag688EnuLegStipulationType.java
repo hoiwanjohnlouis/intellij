@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumStipulationType;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -126,7 +127,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    PSA - Percent of BMA Prepayment Curve
  *  <p>    SMM - Single Monthly Mortality
  */
-public class Tag688EnuLegStipulationType extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag688EnuLegStipulationType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumStipulationType dataValue;
 
     public final static MyEnumStipulationType TESTA_ENU_LEG_STIPULATION_TYPE
@@ -160,6 +161,27 @@ public class Tag688EnuLegStipulationType extends FIX44Abstract implements LogVal
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

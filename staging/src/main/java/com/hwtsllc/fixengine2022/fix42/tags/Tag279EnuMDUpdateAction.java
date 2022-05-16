@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum279MDUpdateAction;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -34,11 +34,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
  *      DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
  */
-public class Tag279EnuMDUpdateAction extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag279EnuMDUpdateAction extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum279MDUpdateAction dataValue;
 
-    public final static Enum279MDUpdateAction TESTA_ENU_MD_UPDATE_ACTION = Enum279MDUpdateAction.CHANGE;
-    public final static Enum279MDUpdateAction TESTB_ENU_MD_UPDATE_ACTION = Enum279MDUpdateAction.DELETE_THRU;
+    public final static Enum279MDUpdateAction TESTA_ENU_MD_UPDATE_ACTION
+            = Enum279MDUpdateAction.CHANGE;
+    public final static Enum279MDUpdateAction TESTB_ENU_MD_UPDATE_ACTION
+            = Enum279MDUpdateAction.DELETE_THRU;
 
     public Tag279EnuMDUpdateAction(Enum279MDUpdateAction dataValue) {
         setFixType(FIX42.FIX279_ENU_MD_UPDATE_ACTION);
@@ -68,10 +70,24 @@ public class Tag279EnuMDUpdateAction extends FIX42Abstract implements LogValuePa
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -93,12 +109,12 @@ public class Tag279EnuMDUpdateAction extends FIX42Abstract implements LogValuePa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag279EnuMDUpdateAction(TESTB_ENU_MD_UPDATE_ACTION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

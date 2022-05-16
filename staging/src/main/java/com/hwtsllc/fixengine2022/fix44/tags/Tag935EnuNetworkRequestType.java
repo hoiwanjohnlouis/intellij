@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum935NetworkRequestType;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -34,7 +35,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      4 - Stop Subscribing
  *      8 - Level of Detail, then NoCompID's becomes required
  */
-public class Tag935EnuNetworkRequestType extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag935EnuNetworkRequestType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum935NetworkRequestType dataValue;
 
     public final static Enum935NetworkRequestType TESTA_ENU_NETWORK_REQUEST_TYPE
@@ -68,6 +69,27 @@ public class Tag935EnuNetworkRequestType extends FIX44Abstract implements LogVal
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

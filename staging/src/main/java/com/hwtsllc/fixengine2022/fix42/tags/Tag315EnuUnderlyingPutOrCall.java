@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPutOrCall;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -41,11 +41,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    1 - Call
  */
 // @Deprecated
-public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumPutOrCall dataValue;
 
-    public final static MyEnumPutOrCall TESTA_ENU_UNDERLYING_PUT_OR_CALL = MyEnumPutOrCall.CALL;
-    public final static MyEnumPutOrCall TESTB_ENU_UNDERLYING_PUT_OR_CALL = MyEnumPutOrCall.PUT;
+    public final static MyEnumPutOrCall TESTA_ENU_UNDERLYING_PUT_OR_CALL
+            = MyEnumPutOrCall.CALL;
+    public final static MyEnumPutOrCall TESTB_ENU_UNDERLYING_PUT_OR_CALL
+            = MyEnumPutOrCall.PUT;
 
     public Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall dataValue) {
         setFixType(FIX42.FIX315_ENU_UNDERLYING_PUT_OR_CALL);
@@ -75,10 +77,24 @@ public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogVa
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -100,12 +116,12 @@ public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogVa
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag315EnuUnderlyingPutOrCall(TESTB_ENU_UNDERLYING_PUT_OR_CALL);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

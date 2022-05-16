@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum819AvgPxIndicator;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      1 - Trade is part of an average price group identified by the TradeLinkID (820)
  *      2 - Last trade is the average price group identified by the TradeLinkID (820)
  */
-public class Tag819EnuAvgPxIndicator extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag819EnuAvgPxIndicator extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum819AvgPxIndicator dataValue;
 
     public final static Enum819AvgPxIndicator TESTA_ENU_AVG_PX_INDICATOR
@@ -66,6 +67,27 @@ public class Tag819EnuAvgPxIndicator extends FIX44Abstract implements LogValuePa
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

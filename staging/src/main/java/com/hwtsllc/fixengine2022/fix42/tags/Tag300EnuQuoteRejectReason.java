@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum300QuoteRejectReason;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -40,7 +40,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *                      "9 - Not authorized to quote security" ),
  *      OTHER( "99", "OTHER", "99 - Other" ),
  */
-public class Tag300EnuQuoteRejectReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag300EnuQuoteRejectReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum300QuoteRejectReason dataValue;
 
     public final static Enum300QuoteRejectReason TESTA_ENU_QUOTE_REJECT_REASON
@@ -76,10 +76,24 @@ public class Tag300EnuQuoteRejectReason extends FIX42Abstract implements LogValu
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -101,12 +115,12 @@ public class Tag300EnuQuoteRejectReason extends FIX42Abstract implements LogValu
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag300EnuQuoteRejectReason(TESTB_ENU_QUOTE_REJECT_REASON);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

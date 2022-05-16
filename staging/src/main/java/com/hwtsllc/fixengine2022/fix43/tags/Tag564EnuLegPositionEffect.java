@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPositionEffect;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -56,7 +56,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    O - Open
  *  <p>    R - Rolled
  */
-public class Tag564EnuLegPositionEffect extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag564EnuLegPositionEffect extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumPositionEffect dataValue;
 
     public final static MyEnumPositionEffect TESTA_ENU_LEG_POSITION_EFFECT
@@ -92,10 +92,24 @@ public class Tag564EnuLegPositionEffect extends FIX43Abstract implements LogValu
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -117,12 +131,12 @@ public class Tag564EnuLegPositionEffect extends FIX43Abstract implements LogValu
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag564EnuLegPositionEffect(TESTB_ENU_LEG_POSITION_EFFECT);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

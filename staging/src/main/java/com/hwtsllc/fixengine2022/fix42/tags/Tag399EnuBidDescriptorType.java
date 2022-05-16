@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum399BidDescriptorType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
  *      INDEX( "3", "INDEX", "3 - Index" ),
  */
-public class Tag399EnuBidDescriptorType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag399EnuBidDescriptorType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum399BidDescriptorType dataValue;
 
     public final static Enum399BidDescriptorType TESTA_ENU_BID_DESCRIPTOR_TYPE
@@ -69,10 +69,24 @@ public class Tag399EnuBidDescriptorType extends FIX42Abstract implements LogValu
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -94,12 +108,12 @@ public class Tag399EnuBidDescriptorType extends FIX42Abstract implements LogValu
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag399EnuBidDescriptorType(TESTB_ENU_BID_DESCRIPTOR_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

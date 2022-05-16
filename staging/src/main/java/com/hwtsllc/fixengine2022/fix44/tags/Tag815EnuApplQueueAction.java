@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumApplQueue;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -42,7 +43,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    2 - Overlay Last
  *  <p>    3 - End Session
  */
-public class Tag815EnuApplQueueAction extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag815EnuApplQueueAction extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumApplQueue dataValue;
 
     public final static MyEnumApplQueue TESTA_ENU_APPL_QUEUE_ACTION
@@ -76,6 +77,27 @@ public class Tag815EnuApplQueueAction extends FIX44Abstract implements LogValueP
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

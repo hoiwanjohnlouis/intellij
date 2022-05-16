@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum292CorporateAction;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -51,11 +51,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      CUSIP_OR_NAME_CHANGE( "U", "CUSIP_OR_NAME_CHANGE", "U - CUSIP / Name Change" ),
  *      LEAP_ROLLOVER( "V", "LEAP_ROLLOVER", "V - Leap Rollover" ),
  */
-public class Tag292EnuCorporateAction extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag292EnuCorporateAction extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum292CorporateAction dataValue;
 
-    public final static Enum292CorporateAction TESTA_ENU_CORPORATE_ACTION = Enum292CorporateAction.SPECIAL_ACTION;
-    public final static Enum292CorporateAction TESTB_ENU_CORPORATE_ACTION = Enum292CorporateAction.CUSIP_OR_NAME_CHANGE;
+    public final static Enum292CorporateAction TESTA_ENU_CORPORATE_ACTION
+            = Enum292CorporateAction.SPECIAL_ACTION;
+    public final static Enum292CorporateAction TESTB_ENU_CORPORATE_ACTION
+            = Enum292CorporateAction.CUSIP_OR_NAME_CHANGE;
 
     public Tag292EnuCorporateAction(Enum292CorporateAction dataValue) {
         setFixType(FIX42.FIX292_ENU_CORPORATE_ACTION);
@@ -85,10 +87,24 @@ public class Tag292EnuCorporateAction extends FIX42Abstract implements LogValueP
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -110,12 +126,12 @@ public class Tag292EnuCorporateAction extends FIX42Abstract implements LogValueP
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag292EnuCorporateAction(TESTB_ENU_CORPORATE_ACTION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

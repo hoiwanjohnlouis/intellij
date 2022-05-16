@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Bool1134ReportedPxDiff;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -33,7 +33,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p> YES( "Y", "YES", "Y - Reported price is different from the market price" ),
  *  <p> NO( "N", "NO", "N - Reported price is equal to market price" ),
  */
-public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Bool1134ReportedPxDiff dataValue;
 
     public final static Bool1134ReportedPxDiff TESTA_BOOL_REPORTED_PX_DIFF
@@ -69,10 +69,24 @@ public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValue
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -94,12 +108,26 @@ public class Tag1134BoolReportedPxDiff extends FIX50Abstract implements LogValue
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
 
         tagData = new Tag1134BoolReportedPxDiff(TESTB_BOOL_REPORTED_PX_DIFF);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
     }
 }

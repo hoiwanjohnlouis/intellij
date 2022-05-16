@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum303QuoteRequestType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -31,11 +31,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      MANUAL( "1", "MANUAL", "1 - Manual" ),
  *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
  */
-public class Tag303EnuQuoteRequestType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag303EnuQuoteRequestType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum303QuoteRequestType dataValue;
 
-    public final static Enum303QuoteRequestType TESTA_ENU_QUOTE_REQUEST_TYPE = Enum303QuoteRequestType.AUTOMATIC;
-    public final static Enum303QuoteRequestType TESTB_ENU_QUOTE_REQUEST_TYPE = Enum303QuoteRequestType.MANUAL;
+    public final static Enum303QuoteRequestType TESTA_ENU_QUOTE_REQUEST_TYPE
+            = Enum303QuoteRequestType.AUTOMATIC;
+    public final static Enum303QuoteRequestType TESTB_ENU_QUOTE_REQUEST_TYPE
+            = Enum303QuoteRequestType.MANUAL;
 
     public Tag303EnuQuoteRequestType(Enum303QuoteRequestType dataValue) {
         setFixType(FIX42.FIX303_ENU_QUOTE_REQUEST_TYPE);
@@ -65,10 +67,24 @@ public class Tag303EnuQuoteRequestType extends FIX42Abstract implements LogValue
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -90,12 +106,12 @@ public class Tag303EnuQuoteRequestType extends FIX42Abstract implements LogValue
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag303EnuQuoteRequestType(TESTB_ENU_QUOTE_REQUEST_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

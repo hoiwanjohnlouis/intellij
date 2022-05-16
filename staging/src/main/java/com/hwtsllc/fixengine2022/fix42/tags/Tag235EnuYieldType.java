@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum235YieldType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -62,11 +62,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      "VALUE1_32 - Yield Value Of 1/32"
  *      "WORST - Yield To Worst"
  */
-public class Tag235EnuYieldType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag235EnuYieldType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum235YieldType dataValue;
 
-    public final static Enum235YieldType TESTA_ENU_YIELD_TYPE = Enum235YieldType.COMPOUND;
-    public final static Enum235YieldType TESTB_ENU_YIELD_TYPE = Enum235YieldType.AFTERTAX;
+    public final static Enum235YieldType TESTA_ENU_YIELD_TYPE
+            = Enum235YieldType.COMPOUND;
+    public final static Enum235YieldType TESTB_ENU_YIELD_TYPE
+            = Enum235YieldType.AFTERTAX;
 
     public Tag235EnuYieldType(Enum235YieldType dataValue) {
         setFixType(FIX42.FIX235_ENU_YIELD_TYPE);
@@ -96,10 +98,24 @@ public class Tag235EnuYieldType extends FIX42Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -121,12 +137,12 @@ public class Tag235EnuYieldType extends FIX42Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag235EnuYieldType(TESTB_ENU_YIELD_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

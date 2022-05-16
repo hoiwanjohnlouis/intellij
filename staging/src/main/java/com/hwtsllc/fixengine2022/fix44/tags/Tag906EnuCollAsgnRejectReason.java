@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum906CollAsgnRejectReason;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -38,7 +39,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *
  *  or any value conforming to the data type Reserved100Plus
  */
-public class Tag906EnuCollAsgnRejectReason extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag906EnuCollAsgnRejectReason extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum906CollAsgnRejectReason dataValue;
 
     public final static Enum906CollAsgnRejectReason TESTA_ENU_COLL_ASGN_REJECT_REASON
@@ -72,6 +73,27 @@ public class Tag906EnuCollAsgnRejectReason extends FIX44Abstract implements LogV
                 .concat("\n\tDataValue[")
                 .concat(toString())
                 .concat("]");
+    }
+    /**
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.getDescription();
     }
     /**
      * standard wrapper to format a simple string describing the data

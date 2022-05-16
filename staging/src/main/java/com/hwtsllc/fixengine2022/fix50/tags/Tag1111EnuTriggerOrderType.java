@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix50.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1111TriggerOrderType;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -38,7 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    1 - Market
  *  <p>    2 - Limit
  */
-public class Tag1111EnuTriggerOrderType extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag1111EnuTriggerOrderType extends FIX50Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum1111TriggerOrderType dataValue;
 
     public final static Enum1111TriggerOrderType TESTA_ENU_TRIGGER_ORDER_TYPE
@@ -74,10 +74,24 @@ public class Tag1111EnuTriggerOrderType extends FIX50Abstract implements LogValu
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -99,12 +113,26 @@ public class Tag1111EnuTriggerOrderType extends FIX50Abstract implements LogValu
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
 
         tagData = new Tag1111EnuTriggerOrderType(TESTB_ENU_TRIGGER_ORDER_TYPE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println("Accessing FIXType Directly");
+        System.out.println("EnumName:" + tagData.getEnumName());
+        System.out.println("ID:" + tagData.getID());
+        System.out.println("Name:" + tagData.getName());
+        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("DataIDString:" + tagData.toDataIDString());
+        System.out.println("DataNameString:" + tagData.toDataNameString());
+        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
     }
 }

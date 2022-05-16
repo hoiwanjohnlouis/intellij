@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum274TickDirection;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -32,11 +32,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      "2 - Minus Tick"
  *      "3 - Zero-Minus Tick"
  */
-public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum274TickDirection dataValue;
 
-    public final static Enum274TickDirection TESTA_ENU_TICK_DIRECTION = Enum274TickDirection.PLUS_TICK;
-    public final static Enum274TickDirection TESTB_ENU_TICK_DIRECTION = Enum274TickDirection.MINUS_TICK;
+    public final static Enum274TickDirection TESTA_ENU_TICK_DIRECTION
+            = Enum274TickDirection.PLUS_TICK;
+    public final static Enum274TickDirection TESTB_ENU_TICK_DIRECTION
+            = Enum274TickDirection.MINUS_TICK;
 
     public Tag274EnuTickDirection(Enum274TickDirection dataValue) {
         setFixType(FIX42.FIX274_ENU_TICK_DIRECTION);
@@ -66,10 +68,24 @@ public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePai
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -91,12 +107,12 @@ public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePai
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag274EnuTickDirection(TESTB_ENU_TICK_DIRECTION);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

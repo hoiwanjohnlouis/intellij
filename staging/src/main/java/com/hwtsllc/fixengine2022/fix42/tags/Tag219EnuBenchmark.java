@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum219Benchmark;
-import com.hwtsllc.fixengine2022.interfaces.LogEnumString;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -38,11 +38,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *      "8 - 3MOLIBOR"
  *      "9 - 6MOLIBOR"
  */
-public class Tag219EnuBenchmark extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogEnumString {
+public class Tag219EnuBenchmark extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum219Benchmark dataValue;
 
-    public final static Enum219Benchmark TESTA_ENU_BENCHMARK = Enum219Benchmark.CURVE;
-    public final static Enum219Benchmark TESTB_ENU_BENCHMARK = Enum219Benchmark.SIX_MONTH;
+    public final static Enum219Benchmark TESTA_ENU_BENCHMARK
+            = Enum219Benchmark.CURVE;
+    public final static Enum219Benchmark TESTB_ENU_BENCHMARK
+            = Enum219Benchmark.SIX_MONTH;
 
     public Tag219EnuBenchmark(Enum219Benchmark dataValue) {
         setFixType(FIX42.FIX219_ENU_BENCHMARK);
@@ -72,10 +74,24 @@ public class Tag219EnuBenchmark extends FIX42Abstract implements LogValuePairStr
                 .concat("]");
     }
     /**
-     * wrapper to return the description of the underlying ENUM data
+     * wrapper to return the ID of the underlying Data
      */
     @Override
-    public String toEnumString() {
+    public String toDataIDString() {
+        return this.dataValue.getID();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.getName();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
         return this.dataValue.getDescription();
     }
     /**
@@ -97,12 +113,12 @@ public class Tag219EnuBenchmark extends FIX42Abstract implements LogValuePairStr
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag219EnuBenchmark(TESTB_ENU_BENCHMARK);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toEnumString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }
