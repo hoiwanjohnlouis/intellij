@@ -104,32 +104,22 @@ public class Tag20EnuExecTransType extends FIX27Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag20EnuExecTransType tagData;
-
-        tagData = new Tag20EnuExecTransType(TESTA_ENU_EXEC_TRANS_TYPE);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues(new Tag20EnuExecTransType(TESTA_ENU_EXEC_TRANS_TYPE));
+        dumpDataValues(new Tag20EnuExecTransType(TESTB_ENU_EXEC_TRANS_TYPE));
+    }
+    static void dumpDataValues(Tag20EnuExecTransType tagData) {
+        System.out.println("-------------------- Start Enum --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData.toString());
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
         System.out.println("DataIDString:" + tagData.toDataIDString());
         System.out.println("DataNameString:" + tagData.toDataNameString());
         System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag20EnuExecTransType(TESTB_ENU_EXEC_TRANS_TYPE);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End Enum --------------------");
     }
 }

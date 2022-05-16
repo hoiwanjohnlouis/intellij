@@ -16,23 +16,28 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public abstract class FIX30Abstract implements LogVerboseString {
+public abstract class FIX30Abstract implements LogFIXString, LogVerboseString {
     private FIX30 fixValue;
 
     public void setFixType(FIX30 fixType) {
         this.fixValue = fixType;
     }
+    @Override
     public String toEnumNameString() {
         return fixValue.toEnumNameString();
     }
+    @Override
     public String toFIXIDString() {
         return String.valueOf(fixValue.toFIXIDString());
     }
+    @Override
     public String toFIXNameString() {
         return fixValue.toFIXNameString();
     }
+    @Override
     public String toFIXDescriptionString() {
         return fixValue.toFIXDescriptionString();
     }

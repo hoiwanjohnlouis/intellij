@@ -77,19 +77,20 @@ public class Tag1StrAccount extends FIX27Abstract implements LogValuePairString,
     public static void main(String[] args) {
         Tag1StrAccount tagData;
 
-        tagData= new Tag1StrAccount(new MyStringType(TESTA_STR_ACCOUNT) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag1StrAccount(new MyStringType(TESTB_STR_ACCOUNT) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        // display the data of this tag
+        dumpDataValues(new Tag1StrAccount(new MyStringType(TESTA_STR_ACCOUNT)));
+        dumpDataValues(new Tag1StrAccount(new MyStringType(TESTB_STR_ACCOUNT)));
+    }
+    static void dumpDataValues(Tag1StrAccount tagData) {
+        System.out.println("-------------------- Start String --------------------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData.toString());
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("-------------------- End String --------------------");
     }
 }

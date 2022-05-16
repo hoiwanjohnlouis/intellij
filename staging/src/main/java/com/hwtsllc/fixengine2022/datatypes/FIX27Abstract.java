@@ -16,23 +16,28 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public abstract class FIX27Abstract implements LogVerboseString {
+public abstract class FIX27Abstract implements LogFIXString, LogVerboseString {
     private FIX27 fixValue;
 
     public void setFixType(FIX27 fixType) {
         this.fixValue = fixType;
     }
+    @Override
     public String toEnumNameString() {
         return fixValue.toEnumNameString();
     }
+    @Override
     public String toFIXIDString() {
         return String.valueOf(fixValue.toFIXIDString());
     }
+    @Override
     public String toFIXNameString() {
         return fixValue.toFIXNameString();
     }
+    @Override
     public String toFIXDescriptionString() {
         return fixValue.toFIXDescriptionString();
     }
@@ -42,10 +47,10 @@ public abstract class FIX27Abstract implements LogVerboseString {
     @Override
     public String toVerboseString() {
         return this.getClass().getSimpleName()
-                .concat("\n\tFIXTypeName[")
+                .concat("\n\tEnumName[")
                 .concat(toEnumNameString())
                 .concat("]")
-                .concat("\n\tFIXNumber[")
+                .concat("\n\tFIXID[")
                 .concat(String.valueOf(toFIXIDString()))
                 .concat("]")
                 .concat("\n\tFIXName[")
