@@ -52,7 +52,7 @@ public class Tag964IntSecurityReportID extends FIX50Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

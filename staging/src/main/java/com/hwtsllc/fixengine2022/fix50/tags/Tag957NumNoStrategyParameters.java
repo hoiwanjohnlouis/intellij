@@ -50,7 +50,7 @@ class Tag957NumNoStrategyParameters extends FIX50Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

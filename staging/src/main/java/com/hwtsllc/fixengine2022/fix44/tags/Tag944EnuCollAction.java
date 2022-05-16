@@ -54,7 +54,7 @@ public class Tag944EnuCollAction extends FIX44Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

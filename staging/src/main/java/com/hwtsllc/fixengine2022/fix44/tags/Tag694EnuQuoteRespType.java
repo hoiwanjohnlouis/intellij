@@ -56,7 +56,7 @@ public class Tag694EnuQuoteRespType extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

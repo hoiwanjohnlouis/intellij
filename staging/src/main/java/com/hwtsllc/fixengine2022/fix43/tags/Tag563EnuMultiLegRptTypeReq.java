@@ -44,7 +44,7 @@ public class Tag563EnuMultiLegRptTypeReq extends FIX43Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

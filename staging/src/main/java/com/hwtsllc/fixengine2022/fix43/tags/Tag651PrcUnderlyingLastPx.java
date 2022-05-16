@@ -41,7 +41,7 @@ public class Tag651PrcUnderlyingLastPx extends FIX43Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

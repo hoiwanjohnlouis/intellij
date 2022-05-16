@@ -75,7 +75,7 @@ public class Tag677EnuLegBenchmarkCurveName extends FIX44Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

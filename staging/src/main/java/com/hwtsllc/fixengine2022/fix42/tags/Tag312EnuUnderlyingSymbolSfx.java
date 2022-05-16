@@ -78,7 +78,7 @@ public class Tag312EnuUnderlyingSymbolSfx extends FIX42Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

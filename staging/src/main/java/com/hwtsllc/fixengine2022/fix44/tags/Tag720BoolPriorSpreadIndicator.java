@@ -50,7 +50,7 @@ public class Tag720BoolPriorSpreadIndicator extends FIX44Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

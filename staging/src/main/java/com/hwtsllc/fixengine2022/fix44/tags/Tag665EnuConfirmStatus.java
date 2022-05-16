@@ -55,7 +55,7 @@ public class Tag665EnuConfirmStatus extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

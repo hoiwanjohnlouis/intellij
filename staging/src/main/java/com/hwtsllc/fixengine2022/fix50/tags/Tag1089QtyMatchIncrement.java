@@ -54,7 +54,7 @@ public class Tag1089QtyMatchIncrement extends FIX50Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

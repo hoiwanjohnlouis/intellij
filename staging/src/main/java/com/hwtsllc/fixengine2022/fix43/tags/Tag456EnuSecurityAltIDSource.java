@@ -149,7 +149,7 @@ public class Tag456EnuSecurityAltIDSource extends FIX43Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

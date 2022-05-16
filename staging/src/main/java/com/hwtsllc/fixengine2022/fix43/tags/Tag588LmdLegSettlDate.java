@@ -41,7 +41,7 @@ public class Tag588LmdLegSettlDate extends FIX43Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

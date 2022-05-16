@@ -57,7 +57,7 @@ public class Tag712EnuPosMaintAction extends FIX44Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

@@ -41,7 +41,7 @@ public class Tag241LmdUnderlyingCouponPaymentDate extends FIX42Abstract implemen
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -41,7 +41,7 @@ public class Tag232NumNoStipulations extends FIX42Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

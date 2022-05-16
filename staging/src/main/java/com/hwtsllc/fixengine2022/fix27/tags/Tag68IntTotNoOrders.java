@@ -53,7 +53,7 @@ public class Tag68IntTotNoOrders extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

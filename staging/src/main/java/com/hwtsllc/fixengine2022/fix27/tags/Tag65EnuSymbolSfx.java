@@ -78,7 +78,7 @@ public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -133,10 +133,10 @@ public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairStri
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
         System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.getEnumName());
-        System.out.println("ID:" + tagData.getID());
-        System.out.println("Name:" + tagData.getName());
-        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("EnumName:" + tagData.toEnumNameString());
+        System.out.println("ID:" + tagData.toFIXIDString());
+        System.out.println("Name:" + tagData.toFIXNameString());
+        System.out.println("Description:" + tagData.toFIXDescriptionString());
         System.out.println("DataIDString:" + tagData.toDataIDString());
         System.out.println("DataNameString:" + tagData.toDataNameString());
         System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
@@ -146,10 +146,10 @@ public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairStri
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
         System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.getEnumName());
-        System.out.println("ID:" + tagData.getID());
-        System.out.println("Name:" + tagData.getName());
-        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("EnumName:" + tagData.toEnumNameString());
+        System.out.println("ID:" + tagData.toFIXIDString());
+        System.out.println("Name:" + tagData.toFIXNameString());
+        System.out.println("Description:" + tagData.toFIXDescriptionString());
         System.out.println("DataIDString:" + tagData.toDataIDString());
         System.out.println("DataNameString:" + tagData.toDataNameString());
         System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());

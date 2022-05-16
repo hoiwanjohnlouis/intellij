@@ -61,7 +61,7 @@ public class Tag300EnuQuoteRejectReason extends FIX42Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

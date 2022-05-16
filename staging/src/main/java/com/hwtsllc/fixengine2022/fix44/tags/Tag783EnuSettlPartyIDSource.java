@@ -148,7 +148,7 @@ public class Tag783EnuSettlPartyIDSource extends FIX44Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

@@ -56,7 +56,7 @@ public class Tag724EnuPosReqType extends FIX44Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

@@ -149,7 +149,7 @@ public class Tag606EnuLegSecurityAltIDSource extends FIX43Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

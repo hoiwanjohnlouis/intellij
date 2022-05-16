@@ -54,7 +54,7 @@ public class Tag939EnuTrdRptStatus extends FIX44Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

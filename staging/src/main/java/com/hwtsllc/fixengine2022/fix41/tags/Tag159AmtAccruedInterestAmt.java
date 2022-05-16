@@ -48,7 +48,7 @@ public class Tag159AmtAccruedInterestAmt extends FIX41Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

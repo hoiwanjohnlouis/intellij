@@ -53,7 +53,7 @@ public class Tag401EnuSideValueInd extends FIX42Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

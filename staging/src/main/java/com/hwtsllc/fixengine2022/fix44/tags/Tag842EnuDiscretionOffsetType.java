@@ -63,7 +63,7 @@ public class Tag842EnuDiscretionOffsetType extends FIX44Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

@@ -41,7 +41,7 @@ public class Tag289StrMDEntrySeller extends FIX42Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

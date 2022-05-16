@@ -41,7 +41,7 @@ public class Tag513StrRegistID extends FIX43Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

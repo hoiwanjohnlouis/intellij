@@ -41,7 +41,7 @@ public class Tag215NumNoRoutingIDs extends FIX42Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

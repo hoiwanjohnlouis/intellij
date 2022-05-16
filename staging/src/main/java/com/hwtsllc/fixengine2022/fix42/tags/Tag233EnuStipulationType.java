@@ -148,7 +148,7 @@ public class Tag233EnuStipulationType extends FIX42Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

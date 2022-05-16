@@ -44,7 +44,7 @@ public class Tag559EnuSecurityListRequestType extends FIX43Abstract implements L
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

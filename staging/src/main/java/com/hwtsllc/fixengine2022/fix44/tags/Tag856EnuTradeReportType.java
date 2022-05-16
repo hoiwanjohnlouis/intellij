@@ -67,7 +67,7 @@ public class Tag856EnuTradeReportType extends FIX44Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

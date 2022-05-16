@@ -44,7 +44,7 @@ public class Tag591EnuPreallocMethod extends FIX43Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

@@ -41,7 +41,7 @@ public class Tag320StrSecurityReqID extends FIX42Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

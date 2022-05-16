@@ -41,7 +41,7 @@ public class Tag306StrUnderlyingIssuer extends FIX42Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

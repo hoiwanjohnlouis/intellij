@@ -49,7 +49,7 @@ public class Tag182StrCashSettlAgentName extends FIX41Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

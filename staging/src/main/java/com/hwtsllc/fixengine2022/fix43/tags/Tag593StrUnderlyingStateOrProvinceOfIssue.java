@@ -43,7 +43,7 @@ public class Tag593StrUnderlyingStateOrProvinceOfIssue extends FIX43Abstract imp
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

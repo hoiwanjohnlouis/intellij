@@ -75,7 +75,7 @@ public class Tag776EnuIndividualAllocRejCode extends FIX44Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

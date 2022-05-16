@@ -22,7 +22,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 public class LogDataType extends FIX27Abstract implements LogValuePairString, LogVerboseString {
-    private DataSType dataValue;
+    private final DataSType dataValue;
 
     public LogDataType(DataSType dataValue) {
         setFixType(FIX27.FIX58_STR_TEXT);
@@ -40,7 +40,7 @@ public class LogDataType extends FIX27Abstract implements LogValuePairString, Lo
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -81,9 +81,9 @@ public class LogDataType extends FIX27Abstract implements LogValuePairString, Lo
         System.out.println(tagData.getDataValue());
         System.out.println(tagData.toValuePairString());
         System.out.println("Accessing FIXType");
-        System.out.println("EnumName:" + tagData.getEnumName());
-        System.out.println("ID:" + tagData.getID());
-        System.out.println("Name:" + tagData.getName());
-        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("EnumName:" + tagData.toEnumNameString());
+        System.out.println("ID:" + tagData.toFIXIDString());
+        System.out.println("Name:" + tagData.toFIXNameString());
+        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

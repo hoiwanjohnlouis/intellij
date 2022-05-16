@@ -50,7 +50,7 @@ public class Tag75StrTradeDate extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

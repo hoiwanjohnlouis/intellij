@@ -61,7 +61,7 @@ public class Tag841EnuDiscretionMoveType extends FIX44Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

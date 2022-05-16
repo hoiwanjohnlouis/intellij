@@ -104,7 +104,7 @@ public class Tag423EnuPriceType extends FIX42Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

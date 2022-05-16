@@ -53,7 +53,7 @@ public class Tag430EnuNetGrossInd extends FIX42Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

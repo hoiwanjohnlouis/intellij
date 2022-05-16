@@ -52,7 +52,7 @@ public class Tag205IntMaturityDay extends FIX41Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

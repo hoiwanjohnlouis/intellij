@@ -109,7 +109,7 @@ public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

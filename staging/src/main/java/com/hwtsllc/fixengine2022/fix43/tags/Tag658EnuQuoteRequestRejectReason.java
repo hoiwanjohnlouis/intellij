@@ -44,7 +44,7 @@ public class Tag658EnuQuoteRequestRejectReason extends FIX43Abstract implements 
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

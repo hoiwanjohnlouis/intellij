@@ -51,7 +51,7 @@ public class Tag754BoolAutoAcceptIndicator extends FIX44Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

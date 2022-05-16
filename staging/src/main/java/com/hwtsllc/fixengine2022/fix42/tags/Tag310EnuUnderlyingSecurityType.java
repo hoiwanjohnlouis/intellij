@@ -246,7 +246,7 @@ public class Tag310EnuUnderlyingSecurityType extends FIX42Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

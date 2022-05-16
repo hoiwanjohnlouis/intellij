@@ -43,7 +43,7 @@ public class Tag317StrUnderlyingOptAttribute extends FIX42Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

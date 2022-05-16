@@ -56,7 +56,7 @@ public class Tag903EnuCollAsgnTransType extends FIX44Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

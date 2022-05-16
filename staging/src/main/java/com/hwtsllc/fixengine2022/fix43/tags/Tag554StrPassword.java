@@ -41,7 +41,7 @@ public class Tag554StrPassword extends FIX43Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -73,20 +73,20 @@ public class Tag554StrPassword extends FIX43Abstract implements LogValuePairStri
         tagData = new Tag554StrPassword( new MyStringType(TESTA_STR_PASSWORD) );
         System.out.println("t1.1:" + tagData);
         System.out.println("t1.2:" + tagData.toVerboseString());
-        System.out.println("t1.3.FIXTypeName:" + tagData.getEnumName());
-        System.out.println("t1.4.FIXNumber:" + tagData.getID());
-        System.out.println("t1.5.FIXName:" + tagData.getName());
-        System.out.println("t1.6.FIXDescription:" + tagData.getDescription());
+        System.out.println("t1.3.FIXTypeName:" + tagData.toEnumNameString());
+        System.out.println("t1.4.FIXNumber:" + tagData.toFIXIDString());
+        System.out.println("t1.5.FIXName:" + tagData.toFIXNameString());
+        System.out.println("t1.6.FIXDescription:" + tagData.toFIXDescriptionString());
         System.out.println("t1.7.DataValue:" + tagData.getDataValue());
         System.out.println("t1.8.FixString:" + tagData.toValuePairString());
 
         tagData = new Tag554StrPassword( new MyStringType(TESTB_STR_PASSWORD) );
         System.out.println("t1.1:" + tagData);
         System.out.println("t1.2:" + tagData.toVerboseString());
-        System.out.println("t1.3.FIXTypeName:" + tagData.getEnumName());
-        System.out.println("t1.4.FIXNumber:" + tagData.getID());
-        System.out.println("t1.5.FIXName:" + tagData.getName());
-        System.out.println("t1.6.FIXDescription:" + tagData.getDescription());
+        System.out.println("t1.3.FIXTypeName:" + tagData.toEnumNameString());
+        System.out.println("t1.4.FIXNumber:" + tagData.toFIXIDString());
+        System.out.println("t1.5.FIXName:" + tagData.toFIXNameString());
+        System.out.println("t1.6.FIXDescription:" + tagData.toFIXDescriptionString());
         System.out.println("t1.7.DataValue:" + tagData.getDataValue());
         System.out.println("t1.8.FixString:" + tagData.toValuePairString());
     }

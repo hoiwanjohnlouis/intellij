@@ -41,7 +41,7 @@ public class Tag488StrCardHolderName extends FIX43Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

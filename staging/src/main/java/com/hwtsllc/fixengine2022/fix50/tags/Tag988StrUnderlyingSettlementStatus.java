@@ -54,7 +54,7 @@ public class Tag988StrUnderlyingSettlementStatus extends FIX50Abstract implement
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

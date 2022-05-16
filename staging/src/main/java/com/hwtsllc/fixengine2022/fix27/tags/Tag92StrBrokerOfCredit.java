@@ -49,7 +49,7 @@ public class Tag92StrBrokerOfCredit extends FIX27Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -88,9 +88,9 @@ public class Tag92StrBrokerOfCredit extends FIX27Abstract implements LogValuePai
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
         System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.getEnumName());
-        System.out.println("ID:" + tagData.getID());
-        System.out.println("Name:" + tagData.getName());
-        System.out.println("Description:" + tagData.getDescription());
+        System.out.println("EnumName:" + tagData.toEnumNameString());
+        System.out.println("ID:" + tagData.toFIXIDString());
+        System.out.println("Name:" + tagData.toFIXNameString());
+        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

@@ -41,7 +41,7 @@ public class Tag595StrUnderlyingInstrRegistry extends FIX43Abstract implements L
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

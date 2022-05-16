@@ -51,7 +51,7 @@ public class Tag186StrCashSettlAgentContactName extends FIX41Abstract implements
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

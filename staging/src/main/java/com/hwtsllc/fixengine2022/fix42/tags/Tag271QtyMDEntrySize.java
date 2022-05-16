@@ -41,7 +41,7 @@ public class Tag271QtyMDEntrySize extends FIX42Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

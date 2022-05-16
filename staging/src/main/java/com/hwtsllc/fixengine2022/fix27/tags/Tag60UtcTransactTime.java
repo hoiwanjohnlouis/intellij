@@ -38,8 +38,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  * <p>
  *      During a leap second insertion, a UTCTimestamp field may read "19981231-23:59:59", "19981231-23:59:60", "19990101-00:00:00".
  *      (see http://tycho.usno.navy.mil/leapsec.html)
- */
-/**
+ *
  *  60
  *  TransactTime
  *  UTCTimestamp
@@ -65,7 +64,7 @@ public class Tag60UtcTransactTime extends FIX27Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

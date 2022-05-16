@@ -41,7 +41,7 @@ public class Tag472StrLocaleOfIssue extends FIX43Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

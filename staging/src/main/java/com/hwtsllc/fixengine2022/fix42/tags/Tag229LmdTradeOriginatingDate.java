@@ -41,7 +41,7 @@ public class Tag229LmdTradeOriginatingDate extends FIX42Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

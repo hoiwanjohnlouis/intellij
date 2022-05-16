@@ -149,7 +149,7 @@ public class Tag761EnuBenchmarkSecurityIDSource extends FIX44Abstract implements
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

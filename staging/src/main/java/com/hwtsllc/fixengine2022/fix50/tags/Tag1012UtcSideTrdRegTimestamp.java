@@ -55,7 +55,7 @@ public class Tag1012UtcSideTrdRegTimestamp extends FIX50Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

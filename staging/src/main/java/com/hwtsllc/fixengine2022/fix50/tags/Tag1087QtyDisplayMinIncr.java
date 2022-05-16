@@ -53,7 +53,7 @@ public class Tag1087QtyDisplayMinIncr extends FIX50Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

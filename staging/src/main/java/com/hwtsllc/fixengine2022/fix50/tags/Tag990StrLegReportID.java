@@ -50,7 +50,7 @@ public class Tag990StrLegReportID extends FIX50Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

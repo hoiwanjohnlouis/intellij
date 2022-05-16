@@ -41,7 +41,7 @@ public class Tag407PctOutsideIndexPct extends FIX42Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

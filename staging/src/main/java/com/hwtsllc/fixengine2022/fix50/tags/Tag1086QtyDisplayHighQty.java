@@ -50,7 +50,7 @@ public class Tag1086QtyDisplayHighQty extends FIX50Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

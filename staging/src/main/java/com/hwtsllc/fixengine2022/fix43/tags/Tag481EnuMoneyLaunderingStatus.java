@@ -44,7 +44,7 @@ public class Tag481EnuMoneyLaunderingStatus extends FIX43Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

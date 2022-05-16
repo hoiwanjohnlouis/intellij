@@ -24,16 +24,16 @@ public abstract class FIX42Abstract implements LogVerboseString {
     public void setFixType(FIX42 fixType) {
         this.fixValue = fixType;
     }
-    public String getEnumName() {
+    public String toEnumNameString() {
         return fixValue.toEnumNameString();
     }
-    public String getID() {
+    public String toFIXIDString() {
         return String.valueOf(fixValue.toFIXIDString());
     }
-    public String getName() {
+    public String toFIXNameString() {
         return fixValue.toFIXNameString();
     }
-    public String getDescription() {
+    public String toFIXDescriptionString() {
         return fixValue.toFIXDescriptionString();
     }
     /**
@@ -43,29 +43,29 @@ public abstract class FIX42Abstract implements LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tFIXTypeName[")
-                .concat(getEnumName())
+                .concat(toEnumNameString())
                 .concat("]")
                 .concat("\n\tFIXNumber[")
-                .concat(String.valueOf(getID()))
+                .concat(String.valueOf(toFIXIDString()))
                 .concat("]")
                 .concat("\n\tFIXName[")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
     @Override
     public String toString() {
         return this.getClass().getSimpleName()
                 .concat("=[")
-                .concat(getEnumName())
+                .concat(toEnumNameString())
                 .concat(",")
-                .concat(String.valueOf(getID()))
+                .concat(String.valueOf(toFIXIDString()))
                 .concat(",")
-                .concat(getName())
+                .concat(toFIXNameString())
                 .concat(",")
-                .concat(getDescription())
+                .concat(toFIXDescriptionString())
                 .concat("]");
     }
 }

@@ -50,7 +50,7 @@ public class Tag1020QtyTradeVolume extends FIX50Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

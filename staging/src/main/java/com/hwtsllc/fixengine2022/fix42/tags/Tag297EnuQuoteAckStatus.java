@@ -66,7 +66,7 @@ public class Tag297EnuQuoteAckStatus extends FIX42Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

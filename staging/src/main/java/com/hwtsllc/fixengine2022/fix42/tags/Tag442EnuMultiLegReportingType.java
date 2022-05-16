@@ -54,7 +54,7 @@ public class Tag442EnuMultiLegReportingType extends FIX42Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

@@ -126,8 +126,8 @@ public enum Enum829TrdSubType implements LogFIXString, LogVerboseString {
                     "stock swap or stock switch, between two market makers registered in that security " +
                     "including IDB or a public display system trades. Non-order book securities only.)" ),
 
-    N( "19", "N", "19 - N (Non-protected portfolio transaction or a fully disclosed " +
-            "       portfolio transaction)" ),
+    N( "19", "N", "19 - N " +
+                    "(Non-protected portfolio transaction or a fully disclosed portfolio transaction)" ),
     NM( "20", "NM", "20 - NM (  i) transaction where Exchange has granted permission for " +
                     "non-publication.  ii) IDB is reporting as seller.  iii) submitting a transaction report " +
                     "to the Exchange, where the transaction report is not also a trade report.)" ),
@@ -142,11 +142,11 @@ public enum Enum829TrdSubType implements LogFIXString, LogVerboseString {
     PN( "25", "PN", "25 - PN (Worked principal notification for a portfolio transaction " +
                     "which includes order book securities)" ),
     R( "26", "R", "26 - R (  i) riskless principal transaction between non-members where " +
-                    "the buying and selling transactions are executed at different prices or on different " +
-                    "terms (requires a trade report with trade type indicator R for each transaction).  " +
+                    "the buying and selling transactions are executed at different prices or on different terms " +
+                    "(requires a trade report with trade type indicator R for each transaction).  " +
                     "ii) market maker is reporting all the legs of a riskless principal transaction where " +
                     "the buying and selling transactions are executed at different prices " +
-                    "(requires a trade report with trade type indicator R for each transaction). " +
+                    "(requires a trade report with trade type indicator R for each transaction).  " +
                     "or  iii) market maker is reporting the onward leg of a riskless principal transaction " +
                     "where the legs are executed at different prices, and another market maker has submitted " +
                     "a trade report using trade type indicator M for the first leg (this requires a single " +
@@ -156,8 +156,8 @@ public enum Enum829TrdSubType implements LogFIXString, LogVerboseString {
     RT( "28", "RT", "28 - RT (Risk transaction in a SEATS security, " +
                     "(excluding AIM security) reported by a market maker registered in that security)" ),
 
-    SW( "29", "SW", "29 - SW (Transactions resulting from stock swap " +
-                    "or a stock switch (one report is required for each line of stock))" ),
+    SW( "29", "SW", "29 - SW (Transactions resulting from stock swap or a stock switch " +
+                    "(one report is required for each line of stock)" ),
     T( "30", "T", "30 - T (If reporting a single protected transaction)" ),
     WN( "31", "WN", "31 - WN (Worked principal notification for a single order book security)" ),
     WT( "32", "WT", "32 - WT (Worked principal transaction (other than a portfolio transaction))" ),

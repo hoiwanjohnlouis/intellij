@@ -44,7 +44,7 @@ public class Tag577EnuClearingInstruction extends FIX43Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

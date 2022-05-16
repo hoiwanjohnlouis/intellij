@@ -87,7 +87,7 @@ public class Tag460EnuProduct extends FIX43Abstract implements LogValuePairStrin
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

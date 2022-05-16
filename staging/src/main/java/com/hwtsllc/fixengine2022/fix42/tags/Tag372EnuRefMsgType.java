@@ -209,7 +209,7 @@ public class Tag372EnuRefMsgType extends FIX42Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

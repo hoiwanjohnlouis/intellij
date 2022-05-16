@@ -50,7 +50,7 @@ public class Tag960StrStrategyParameterValue extends FIX50Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

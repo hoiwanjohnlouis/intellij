@@ -47,7 +47,7 @@ public class Tag107StrSecurityDesc extends FIX30Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

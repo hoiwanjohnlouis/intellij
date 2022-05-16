@@ -57,7 +57,7 @@ public class Tag429EnuListStatusType extends FIX42Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

@@ -48,7 +48,7 @@ public class Tag52UtcSendingTime extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

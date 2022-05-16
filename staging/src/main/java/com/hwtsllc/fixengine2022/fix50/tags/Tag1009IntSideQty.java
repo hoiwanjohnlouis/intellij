@@ -50,7 +50,7 @@ public class Tag1009IntSideQty extends FIX50Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

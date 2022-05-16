@@ -58,7 +58,7 @@ public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

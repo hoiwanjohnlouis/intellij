@@ -44,7 +44,7 @@ public class Tag263EnuSubscriptionRequestType extends FIX42Abstract implements L
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

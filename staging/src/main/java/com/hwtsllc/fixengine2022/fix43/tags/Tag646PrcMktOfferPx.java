@@ -41,7 +41,7 @@ public class Tag646PrcMktOfferPx extends FIX43Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

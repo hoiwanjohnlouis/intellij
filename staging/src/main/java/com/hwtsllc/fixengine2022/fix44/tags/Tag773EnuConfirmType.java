@@ -53,7 +53,7 @@ public class Tag773EnuConfirmType extends FIX44Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

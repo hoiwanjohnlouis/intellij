@@ -42,7 +42,7 @@ public class Tag250IntLegRepoCollateralSecurityType extends FIX42Abstract implem
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

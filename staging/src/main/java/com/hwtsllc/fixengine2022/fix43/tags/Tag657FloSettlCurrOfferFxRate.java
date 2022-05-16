@@ -41,7 +41,7 @@ public class Tag657FloSettlCurrOfferFxRate extends FIX43Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

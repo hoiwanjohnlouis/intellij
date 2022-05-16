@@ -46,7 +46,7 @@ public class Tag325BoolUnsolicitedIndicator extends FIX42Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

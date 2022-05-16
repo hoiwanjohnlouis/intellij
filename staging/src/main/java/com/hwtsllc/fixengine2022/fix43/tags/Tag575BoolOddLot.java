@@ -46,7 +46,7 @@ public class Tag575BoolOddLot extends FIX43Abstract implements LogValuePairStrin
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

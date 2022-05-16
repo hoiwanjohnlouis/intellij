@@ -334,9 +334,9 @@ class Enum829TrdSubTypeTest {
         assertEquals("26", enumType.toFIXIDString());
         assertEquals("R", enumType.toFIXNameString());
         assertEquals("26 - R (  " +
-                "i) riskless principal transaction between non-members where " +
-                        "the buying and selling transactions are executed at different prices or on different " +
-                        "terms (requires a trade report with trade type indicator R for each transaction).  " +
+                "i) riskless principal transaction between non-members where the buying and selling " +
+                        "transactions are executed at different prices or on different terms " +
+                        "(requires a trade report with trade type indicator R for each transaction).  " +
                 "ii) market maker is reporting all the legs of a riskless principal transaction where " +
                         "the buying and selling transactions are executed at different prices " +
                         "(requires a trade report with trade type indicator R for each transaction).  " +
@@ -375,7 +375,7 @@ class Enum829TrdSubTypeTest {
         assertEquals("29", enumType.toFIXIDString());
         assertEquals("SW", enumType.toFIXNameString());
         assertEquals("29 - SW (Transactions resulting from stock swap or a stock switch " +
-                "(one report is required for each line of stock) )",
+                "(one report is required for each line of stock)",
                 enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());

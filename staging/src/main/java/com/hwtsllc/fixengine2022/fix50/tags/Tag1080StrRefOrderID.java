@@ -50,7 +50,7 @@ public class Tag1080StrRefOrderID extends FIX50Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -148,7 +148,7 @@ public class Tag950EnuNested3PartyIDSource extends FIX44Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

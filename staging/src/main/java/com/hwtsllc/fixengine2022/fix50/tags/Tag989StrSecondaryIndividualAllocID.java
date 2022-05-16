@@ -50,7 +50,7 @@ public class Tag989StrSecondaryIndividualAllocID extends FIX50Abstract implement
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

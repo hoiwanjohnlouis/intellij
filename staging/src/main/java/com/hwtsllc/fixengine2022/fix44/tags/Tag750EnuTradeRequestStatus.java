@@ -53,7 +53,7 @@ public class Tag750EnuTradeRequestStatus extends FIX44Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

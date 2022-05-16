@@ -51,7 +51,7 @@ public class Tag1042StrSecondaryFirmTradeID extends FIX50Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

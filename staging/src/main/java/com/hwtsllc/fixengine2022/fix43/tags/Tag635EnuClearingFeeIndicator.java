@@ -44,7 +44,7 @@ public class Tag635EnuClearingFeeIndicator extends FIX43Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(getDataValue());
     }

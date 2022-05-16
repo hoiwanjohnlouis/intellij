@@ -51,7 +51,7 @@ public class Tag174StrSettlBrkrCode extends FIX41Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return getID()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
