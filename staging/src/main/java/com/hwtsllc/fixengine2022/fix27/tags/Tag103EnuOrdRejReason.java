@@ -123,6 +123,11 @@ public class Tag103EnuOrdRejReason extends FIX27Abstract implements LogValuePair
     public static void main(String[] args) {
         dumpDataValues(new Tag103EnuOrdRejReason(TESTA_ENU_ORD_REJ_REASON));
         dumpDataValues(new Tag103EnuOrdRejReason(TESTB_ENU_ORD_REJ_REASON));
+
+        // loop around the ENUM and display
+        for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
+            dumpDataValues(new Tag103EnuOrdRejReason(oneEnum));
+        }
     }
     static void dumpDataValues(Tag103EnuOrdRejReason tagData) {
         System.out.println("-------------------- Start Enum --------------------");

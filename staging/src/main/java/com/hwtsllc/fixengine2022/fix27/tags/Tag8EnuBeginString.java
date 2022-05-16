@@ -111,9 +111,13 @@ public class Tag8EnuBeginString extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        // display the data of this tag
         dumpDataValues(new Tag8EnuBeginString(TESTA_ENU_BEGIN_STRING));
         dumpDataValues(new Tag8EnuBeginString(TESTB_ENU_BEGIN_STRING));
+
+        // loop around the ENUM and display
+        for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
+            dumpDataValues(new Tag8EnuBeginString(oneEnum));
+        }
     }
     static void dumpDataValues(Tag8EnuBeginString tagData) {
         System.out.println("-------------------- Start Enum --------------------");

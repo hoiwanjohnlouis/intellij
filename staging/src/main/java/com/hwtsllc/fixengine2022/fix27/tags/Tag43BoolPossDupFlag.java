@@ -103,6 +103,11 @@ public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairS
     public static void main(String[] args) {
         dumpDataValues(new Tag43BoolPossDupFlag(TESTA_BOOL_POSS_DUP_FLAG));
         dumpDataValues(new Tag43BoolPossDupFlag(TESTB_BOOL_POSS_DUP_FLAG));
+
+        // loop around the ENUM and display
+        for (MyBooleanType oneEnum : MyBooleanType.values()) {
+            dumpDataValues(new Tag43BoolPossDupFlag(oneEnum));
+        }
     }
     static void dumpDataValues(Tag43BoolPossDupFlag tagData) {
         System.out.println("-------------------- Start Boolean --------------------");

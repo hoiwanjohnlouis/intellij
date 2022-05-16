@@ -169,6 +169,11 @@ public class Tag18EnuExecInst extends FIX27Abstract implements LogValuePairStrin
     public static void main(String[] args) {
         dumpDataValues(new Tag18EnuExecInst(TESTA_ENU_EXEC_INST));
         dumpDataValues(new Tag18EnuExecInst(TESTB_ENU_EXEC_INST));
+
+        // loop around the ENUM and display
+        for (Enum18ExecInst oneEnum : Enum18ExecInst.values()) {
+            dumpDataValues(new Tag18EnuExecInst(oneEnum));
+        }
     }
     static void dumpDataValues(Tag18EnuExecInst tagData) {
         System.out.println("-------------------- Start Enum --------------------");

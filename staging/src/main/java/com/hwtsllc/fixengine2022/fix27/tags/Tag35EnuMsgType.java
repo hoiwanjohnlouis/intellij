@@ -259,6 +259,11 @@ public class Tag35EnuMsgType extends FIX27Abstract implements LogValuePairString
     public static void main(String[] args) {
         dumpDataValues(new Tag35EnuMsgType(TESTA_ENU_MSG_TYPE));
         dumpDataValues(new Tag35EnuMsgType(TESTB_ENU_MSG_TYPE));
+
+        // loop around the ENUM and display
+        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+            dumpDataValues(new Tag35EnuMsgType(oneEnum));
+        }
     }
     static void dumpDataValues(Tag35EnuMsgType tagData) {
         System.out.println("-------------------- Start Enum --------------------");

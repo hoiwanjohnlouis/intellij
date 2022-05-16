@@ -127,6 +127,11 @@ public class Tag77EnuPositionEffect extends FIX27Abstract implements LogValuePai
     public static void main(String[] args) {
         dumpDataValues(new Tag77EnuPositionEffect(TESTA_ENU_POSITION_EFFECT));
         dumpDataValues(new Tag77EnuPositionEffect(TESTB_ENU_POSITION_EFFECT));
+
+        // loop around the ENUM and display
+        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
+            dumpDataValues(new Tag77EnuPositionEffect(oneEnum));
+        }
     }
     static void dumpDataValues(Tag77EnuPositionEffect tagData) {
         System.out.println("-------------------- Start Enum --------------------");

@@ -110,6 +110,11 @@ public class Tag81EnuProcessCode extends FIX27Abstract implements LogValuePairSt
     public static void main(String[] args) {
         dumpDataValues(new Tag81EnuProcessCode(TESTA_ENU_PROCESS_CODE));
         dumpDataValues(new Tag81EnuProcessCode(TESTB_ENU_PROCESS_CODE));
+
+        // loop around the ENUM and display
+        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
+            dumpDataValues(new Tag81EnuProcessCode(oneEnum));
+        }
     }
     static void dumpDataValues(Tag81EnuProcessCode tagData) {
         System.out.println("-------------------- Start Enum --------------------");

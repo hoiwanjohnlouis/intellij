@@ -125,6 +125,11 @@ public class Tag88EnuAllocRejCode extends FIX27Abstract implements LogValuePairS
     public static void main(String[] args) {
         dumpDataValues(new Tag88EnuAllocRejCode(TESTA_ENU_ALLOC_STATUS));
         dumpDataValues(new Tag88EnuAllocRejCode(TESTB_ENU_ALLOC_STATUS));
+
+        // loop around the ENUM and display
+        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
+            dumpDataValues(new Tag88EnuAllocRejCode(oneEnum));
+        }
     }
     static void dumpDataValues(Tag88EnuAllocRejCode tagData) {
         System.out.println("-------------------- Start Enum --------------------");

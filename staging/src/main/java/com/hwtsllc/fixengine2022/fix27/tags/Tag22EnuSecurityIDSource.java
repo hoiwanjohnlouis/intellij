@@ -199,6 +199,11 @@ public class Tag22EnuSecurityIDSource extends FIX27Abstract implements LogValueP
     public static void main(String[] args) {
         dumpDataValues(new Tag22EnuSecurityIDSource(TESTA_ENU_SECURITY_ID_SOURCE));
         dumpDataValues(new Tag22EnuSecurityIDSource(TESTB_ENU_SECURITY_ID_SOURCE));
+
+        // loop around the ENUM and display
+        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            dumpDataValues(new Tag22EnuSecurityIDSource(oneEnum));
+        }
     }
     static void dumpDataValues(Tag22EnuSecurityIDSource tagData) {
         System.out.println("-------------------- Start Enum --------------------");

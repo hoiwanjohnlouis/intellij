@@ -112,6 +112,11 @@ public class Tag71EnuAllocTransType extends FIX27Abstract implements LogValuePai
     public static void main(String[] args) {
         dumpDataValues(new Tag71EnuAllocTransType(TESTA_ENU_ALLOC_TRANS_TYPE));
         dumpDataValues(new Tag71EnuAllocTransType(TESTB_ENU_ALLOC_TRANS_TYPE));
+
+        // loop around the ENUM and display
+        for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
+            dumpDataValues(new Tag71EnuAllocTransType(oneEnum));
+        }
     }
     static void dumpDataValues(Tag71EnuAllocTransType tagData) {
         System.out.println("-------------------- Start Enum --------------------");

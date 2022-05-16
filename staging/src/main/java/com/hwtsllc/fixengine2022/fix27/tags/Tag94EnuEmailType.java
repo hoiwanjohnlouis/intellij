@@ -104,6 +104,11 @@ public class Tag94EnuEmailType extends FIX27Abstract implements LogValuePairStri
     public static void main(String[] args) {
         dumpDataValues(new Tag94EnuEmailType(TESTA_ENU_EMAIL_TYPE));
         dumpDataValues(new Tag94EnuEmailType(TESTB_ENU_EMAIL_TYPE));
+
+        // loop around the ENUM and display
+        for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
+            dumpDataValues(new Tag94EnuEmailType(oneEnum));
+        }
     }
     static void dumpDataValues(Tag94EnuEmailType tagData) {
         System.out.println("-------------------- Start Enum --------------------");

@@ -104,6 +104,11 @@ public class Tag21EnuHandlInst extends FIX27Abstract implements LogValuePairStri
     public static void main(String[] args) {
         dumpDataValues(new Tag21EnuHandlInst(TESTA_ENU_HANDL_INST));
         dumpDataValues(new Tag21EnuHandlInst(TESTB_ENU_HANDL_INST));
+
+        // loop around the ENUM and display
+        for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
+            dumpDataValues(new Tag21EnuHandlInst(oneEnum));
+        }
     }
     static void dumpDataValues(Tag21EnuHandlInst tagData) {
         System.out.println("-------------------- Start Enum --------------------");

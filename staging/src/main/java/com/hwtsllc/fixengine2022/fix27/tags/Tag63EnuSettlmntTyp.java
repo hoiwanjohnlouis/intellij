@@ -147,6 +147,11 @@ public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairSt
     public static void main(String[] args) {
         dumpDataValues(new Tag63EnuSettlmntTyp(TESTA_ENU_SETTLMNT_TYP));
         dumpDataValues(new Tag63EnuSettlmntTyp(TESTB_ENU_SETTLMNT_TYP));
+
+        // loop around the ENUM and display
+        for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
+            dumpDataValues(new Tag63EnuSettlmntTyp(oneEnum));
+        }
     }
     static void dumpDataValues(Tag63EnuSettlmntTyp tagData) {
         System.out.println("-------------------- Start --------------------");

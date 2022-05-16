@@ -102,9 +102,13 @@ public class Tag5EnuAdvTransType extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        // display the data of this tag
         dumpDataValues(new Tag5EnuAdvTransType(TESTA_ENU_ADV_TRANS_TYPE));
         dumpDataValues(new Tag5EnuAdvTransType(TESTB_ENU_ADV_TRANS_TYPE));
+
+        // loop around the ENUM and display
+        for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
+            dumpDataValues(new Tag5EnuAdvTransType(oneEnum));
+        }
     }
     static void dumpDataValues(Tag5EnuAdvTransType tagData) {
         System.out.println("-------------------- Start Enum --------------------");

@@ -128,6 +128,11 @@ public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairStri
     public static void main(String[] args) {
         dumpDataValues(new Tag65EnuSymbolSfx( TESTA_STR_SYMBOL_SFX ));
         dumpDataValues(new Tag65EnuSymbolSfx( TESTB_STR_SYMBOL_SFX ));
+
+        // loop around the ENUM and display
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            dumpDataValues(new Tag65EnuSymbolSfx(oneEnum));
+        }
     }
     static void dumpDataValues(Tag65EnuSymbolSfx tagData) {
         System.out.println("-------------------- Start Enum --------------------");

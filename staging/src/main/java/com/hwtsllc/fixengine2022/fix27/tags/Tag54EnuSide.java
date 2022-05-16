@@ -128,6 +128,11 @@ public class Tag54EnuSide extends FIX27Abstract implements LogValuePairString, L
     public static void main(String[] args) {
         dumpDataValues(new Tag54EnuSide(TESTA_ENU_SIDE));
         dumpDataValues(new Tag54EnuSide(TESTB_ENU_SIDE));
+
+        // loop around the ENUM and display
+        for (MyEnumSide oneEnum : MyEnumSide.values()) {
+            dumpDataValues(new Tag54EnuSide(oneEnum));
+        }
     }
     static void dumpDataValues(Tag54EnuSide tagData) {
         System.out.println("-------------------- Start Enum --------------------");

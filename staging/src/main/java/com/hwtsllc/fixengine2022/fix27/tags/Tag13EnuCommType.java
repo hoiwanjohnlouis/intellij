@@ -110,6 +110,11 @@ public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairStrin
     public static void main(String[] args) {
         dumpDataValues(new Tag13EnuCommType(TESTA_ENU_COMMISSION));
         dumpDataValues(new Tag13EnuCommType(TESTB_ENU_COMMISSION));
+
+        // loop around the ENUM and display
+        for (Enum13CommType oneEnum : Enum13CommType.values()) {
+            dumpDataValues(new Tag13EnuCommType(oneEnum));
+        }
     }
     static void dumpDataValues(Tag13EnuCommType tagData) {
         System.out.println("-------------------- Start Enum --------------------");

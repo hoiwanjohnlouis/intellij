@@ -115,6 +115,11 @@ public class Tag59EnuTimeInForce extends FIX27Abstract implements LogValuePairSt
     public static void main(String[] args) {
         dumpDataValues(new Tag59EnuTimeInForce(TESTA_ENU_TIME_IN_FORCE));
         dumpDataValues(new Tag59EnuTimeInForce(TESTB_ENU_TIME_IN_FORCE));
+
+        // loop around the ENUM and display
+        for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
+            dumpDataValues(new Tag59EnuTimeInForce(oneEnum));
+        }
     }
     static void dumpDataValues(Tag59EnuTimeInForce tagData) {
         System.out.println("-------------------- Start Enum --------------------");

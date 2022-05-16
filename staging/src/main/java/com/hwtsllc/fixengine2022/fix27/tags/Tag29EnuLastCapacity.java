@@ -105,6 +105,11 @@ public class Tag29EnuLastCapacity extends FIX27Abstract implements LogValuePairS
     public static void main(String[] args) {
         dumpDataValues(new Tag29EnuLastCapacity(TESTA_ENU_LAST_CAPACITY));
         dumpDataValues(new Tag29EnuLastCapacity(TESTB_ENU_LAST_CAPACITY));
+
+        // loop around the ENUM and display
+        for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
+            dumpDataValues(new Tag29EnuLastCapacity(oneEnum));
+        }
     }
     static void dumpDataValues(Tag29EnuLastCapacity tagData) {
         System.out.println("-------------------- Start Enum --------------------");

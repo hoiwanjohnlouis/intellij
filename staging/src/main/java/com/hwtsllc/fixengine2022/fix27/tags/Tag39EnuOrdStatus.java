@@ -123,6 +123,11 @@ public class Tag39EnuOrdStatus extends FIX27Abstract implements LogValuePairStri
     public static void main(String[] args) {
         dumpDataValues(new Tag39EnuOrdStatus(TESTA_ENU_ORDER_STATUS));
         dumpDataValues(new Tag39EnuOrdStatus(TESTB_ENU_ORDER_STATUS));
+
+        // loop around the ENUM and display
+        for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
+            dumpDataValues(new Tag39EnuOrdStatus(oneEnum));
+        }
     }
     static void dumpDataValues(Tag39EnuOrdStatus tagData) {
         System.out.println("-------------------- Start Enum --------------------");

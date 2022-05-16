@@ -109,6 +109,11 @@ public class Tag98EnuEncryptMethod extends FIX27Abstract implements LogValuePair
     public static void main(String[] args) {
         dumpDataValues(new Tag98EnuEncryptMethod(TESTA_ENU_ENCRYPT_METHOD));
         dumpDataValues(new Tag98EnuEncryptMethod(TESTB_ENU_ENCRYPT_METHOD));
+
+        // loop around the ENUM and display
+        for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
+            dumpDataValues(new Tag98EnuEncryptMethod(oneEnum));
+        }
     }
     static void dumpDataValues(Tag98EnuEncryptMethod tagData) {
         System.out.println("-------------------- Start Enum --------------------");

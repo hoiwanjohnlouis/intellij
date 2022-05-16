@@ -104,6 +104,11 @@ public class Tag61EnuUrgency extends FIX27Abstract implements LogValuePairString
     public static void main(String[] args) {
         dumpDataValues(new Tag61EnuUrgency(TESTA_ENU_URGENCY));
         dumpDataValues(new Tag61EnuUrgency(TESTB_ENU_URGENCY));
+
+        // loop around the ENUM and display
+        for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
+            dumpDataValues(new Tag61EnuUrgency(oneEnum));
+        }
     }
     static void dumpDataValues(Tag61EnuUrgency tagData) {
         System.out.println("-------------------- Start Enum --------------------");

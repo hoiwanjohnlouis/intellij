@@ -104,6 +104,11 @@ public class Tag28EnuIOITransType extends FIX27Abstract implements LogValuePairS
     public static void main(String[] args) {
         dumpDataValues(new Tag28EnuIOITransType(TESTA_ENU_IOI_TRANS_TYPE));
         dumpDataValues(new Tag28EnuIOITransType(TESTB_ENU_IOI_TRANS_TYPE));
+
+        // loop around the ENUM and display
+        for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
+            dumpDataValues(new Tag28EnuIOITransType(oneEnum));
+        }
     }
     static void dumpDataValues(Tag28EnuIOITransType tagData) {
         System.out.println("-------------------- Start Enum --------------------");

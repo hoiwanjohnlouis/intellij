@@ -112,6 +112,11 @@ public class Tag102EnuCxlRejReason extends FIX27Abstract implements LogValuePair
     public static void main(String[] args) {
         dumpDataValues(new Tag102EnuCxlRejReason(TESTA_ENU_CXL_REJ_REASON));
         dumpDataValues(new Tag102EnuCxlRejReason(TESTB_ENU_CXL_REJ_REASON));
+
+        // loop around the ENUM and display
+        for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
+            dumpDataValues(new Tag102EnuCxlRejReason(oneEnum));
+        }
     }
     static void dumpDataValues(Tag102EnuCxlRejReason tagData) {
         System.out.println("-------------------- Start Enum --------------------");

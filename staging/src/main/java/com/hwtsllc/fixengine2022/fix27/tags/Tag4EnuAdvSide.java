@@ -105,6 +105,11 @@ public class Tag4EnuAdvSide extends FIX27Abstract implements LogValuePairString,
     public static void main(String[] args) {
         dumpDataValues(new Tag4EnuAdvSide(TESTA_ENU_ADV_SIDE));
         dumpDataValues(new Tag4EnuAdvSide(TESTB_ENU_ADV_SIDE));
+
+        // loop around the ENUM and display
+        for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
+            dumpDataValues(new Tag4EnuAdvSide(oneEnum));
+        }
     }
     static void dumpDataValues(Tag4EnuAdvSide tagData) {
         System.out.println("-------------------- Start Enum --------------------");

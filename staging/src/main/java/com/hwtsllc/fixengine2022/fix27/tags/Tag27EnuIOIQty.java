@@ -116,6 +116,11 @@ public class Tag27EnuIOIQty extends FIX27Abstract implements LogValuePairString,
     public static void main(String[] args) {
         dumpDataValues(new Tag27EnuIOIQty(TESTA_ENU_IOI_QTY));
         dumpDataValues(new Tag27EnuIOIQty(TESTB_ENU_IOI_QTY));
+
+        // loop around the ENUM and display
+        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+            dumpDataValues(new Tag27EnuIOIQty(oneEnum));
+        }
     }
     static void dumpDataValues(Tag27EnuIOIQty tagData) {
         System.out.println("-------------------- Start Enum --------------------");

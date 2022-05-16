@@ -137,6 +137,11 @@ public class Tag40EnuOrdType extends FIX27Abstract implements LogValuePairString
     public static void main(String[] args) {
         dumpDataValues(new Tag40EnuOrdType(TESTA_ENU_ORDER_TYPE));
         dumpDataValues(new Tag40EnuOrdType(TESTB_ENU_ORDER_TYPE));
+
+        // loop around the ENUM and display
+        for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
+            dumpDataValues(new Tag40EnuOrdType(oneEnum));
+        }
     }
     static void dumpDataValues(Tag40EnuOrdType tagData) {
         System.out.println("-------------------- Start Enum --------------------");

@@ -142,6 +142,11 @@ public class Tag47EnuRule80A extends FIX27Abstract implements LogValuePairString
     public static void main(String[] args) {
         dumpDataValues(new Tag47EnuRule80A(TESTA_ENU_RULE_80_A));
         dumpDataValues(new Tag47EnuRule80A(TESTB_ENU_RULE_80_A));
+
+        // loop around the ENUM and display
+        for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
+            dumpDataValues(new Tag47EnuRule80A(oneEnum));
+        }
     }
     static void dumpDataValues(Tag47EnuRule80A tagData) {
         System.out.println("-------------------- Start Enum --------------------");

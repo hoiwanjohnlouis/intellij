@@ -106,6 +106,11 @@ public class Tag20EnuExecTransType extends FIX27Abstract implements LogValuePair
     public static void main(String[] args) {
         dumpDataValues(new Tag20EnuExecTransType(TESTA_ENU_EXEC_TRANS_TYPE));
         dumpDataValues(new Tag20EnuExecTransType(TESTB_ENU_EXEC_TRANS_TYPE));
+
+        // loop around the ENUM and display
+        for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
+            dumpDataValues(new Tag20EnuExecTransType(oneEnum));
+        }
     }
     static void dumpDataValues(Tag20EnuExecTransType tagData) {
         System.out.println("-------------------- Start Enum --------------------");

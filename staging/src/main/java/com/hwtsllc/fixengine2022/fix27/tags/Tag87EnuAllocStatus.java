@@ -109,6 +109,11 @@ public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairSt
     public static void main(String[] args) {
         dumpDataValues(new Tag87EnuAllocStatus(TESTA_ENU_ALLOC_STATUS));
         dumpDataValues(new Tag87EnuAllocStatus(TESTB_ENU_ALLOC_STATUS));
+
+        // loop around the ENUM and display
+        for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
+            dumpDataValues(new Tag87EnuAllocStatus(oneEnum));
+        }
     }
     static void dumpDataValues(Tag87EnuAllocStatus tagData) {
         System.out.println("-------------------- Start Enum --------------------");
