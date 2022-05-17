@@ -75,16 +75,23 @@ public class Tag99PrcStopPx extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag99PrcStopPx tagData;
-
-        tagData = new Tag99PrcStopPx(new MyPriceType(TESTA_PRC_STOP_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag99PrcStopPx(new MyPriceType(TESTB_PRC_STOP_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag99PrcStopPx(new MyPriceType(TESTA_PRC_STOP_PX)) );
+        dumpDataValues( new Tag99PrcStopPx(new MyPriceType(TESTB_PRC_STOP_PX)) );
+    }
+    /**
+     *
+     * @param tagData   Tag99PrcStopPx
+     */
+    static void dumpDataValues(Tag99PrcStopPx tagData) {
+        System.out.println("---------- Start Tag99PrcStopPx MyPriceType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("---------- End Tag99PrcStopPx MyPriceType ----------");
     }
 }

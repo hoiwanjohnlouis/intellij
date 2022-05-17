@@ -74,16 +74,23 @@ public class Tag44PrcPrice extends FIX27Abstract implements LogValuePairString, 
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag44PrcPrice tagData;
-
-        tagData = new Tag44PrcPrice(new MyPriceType(TESTA_PRC_PRICE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag44PrcPrice(new MyPriceType(TESTB_PRC_PRICE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag44PrcPrice(new MyPriceType(TESTA_PRC_PRICE)) );
+        dumpDataValues( new Tag44PrcPrice(new MyPriceType(TESTB_PRC_PRICE)) );
+    }
+    /**
+     *
+     * @param tagData   Tag44PrcPrice
+     */
+    static void dumpDataValues(Tag44PrcPrice tagData) {
+        System.out.println("---------- Start Tag44PrcPrice MyPriceType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("Accessing FIXTag Directly:");
+        System.out.println("TagDataString:" + tagData);
+        System.out.println("EnumNameString:" + tagData.toEnumNameString());
+        System.out.println("FIXIDString:" + tagData.toFIXIDString());
+        System.out.println("FIXNameString:" + tagData.toFIXNameString());
+        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
+        System.out.println("ValuePairString:" + tagData.toValuePairString());
+        System.out.println("---------- End Tag44PrcPrice MyPriceType ----------");
     }
 }
