@@ -60,7 +60,11 @@ public class Tag53QtyQuantity extends FIX27Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,21 +79,16 @@ public class Tag53QtyQuantity extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag53QtyQuantity tagData;
-
-        tagData = new Tag53QtyQuantity(new MyQtyType(TESTA_QTY_QUANTITY) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag53QtyQuantity(new MyQtyType(TESTB_QTY_QUANTITY) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag53QtyQuantity(new MyQtyType(TESTA_QTY_QUANTITY)) );
+        dumpDataValues( new Tag53QtyQuantity(new MyQtyType(TESTB_QTY_QUANTITY)) );
+    }
+    /**
+     *
+     * @param tagData   Tag53QtyQuantity
+     */
+    static void dumpDataValues(Tag53QtyQuantity tagData) {
+        System.out.println("---------- Start Tag53QtyQuantity MyQtyType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag53QtyQuantity MyQtyType ----------");
     }
 }

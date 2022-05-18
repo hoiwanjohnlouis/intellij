@@ -60,7 +60,11 @@ public class Tag73NumNoOrders extends FIX27Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,16 @@ public class Tag73NumNoOrders extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag73NumNoOrders tagData;
-
-        tagData = new Tag73NumNoOrders(new MyNumInGroupType(TESTA_NUM_NO_ORDERS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag73NumNoOrders(new MyNumInGroupType(TESTB_NUM_NO_ORDERS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag73NumNoOrders(new MyNumInGroupType(TESTA_NUM_NO_ORDERS)) );
+        dumpDataValues( new Tag73NumNoOrders(new MyNumInGroupType(TESTB_NUM_NO_ORDERS)) );
+    }
+    /**
+     *
+     * @param tagData   Tag73NumNoOrders
+     */
+    static void dumpDataValues(Tag73NumNoOrders tagData) {
+        System.out.println("---------- Start Tag73NumNoOrders MyNumInGroupType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag73NumNoOrders MyNumInGroupType ----------");
     }
 }

@@ -59,7 +59,11 @@ public class Tag56StrTargetCompID extends FIX27Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -82,15 +86,8 @@ public class Tag56StrTargetCompID extends FIX27Abstract implements LogValuePairS
      * @param tagData   Tag56StrTargetCompID
      */
     static void dumpDataValues(Tag56StrTargetCompID tagData) {
-        System.out.println("-------------------- Start String --------------------");
+        System.out.println("-------------------- Start Tag56StrTargetCompID MyStringType --------------------");
         System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData);
-        System.out.println("EnumNameString:" + tagData.toEnumNameString());
-        System.out.println("FIXIDString:" + tagData.toFIXIDString());
-        System.out.println("FIXNameString:" + tagData.toFIXNameString());
-        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
-        System.out.println("ValuePairString:" + tagData.toValuePairString());
-        System.out.println("-------------------- End String --------------------");
+        System.out.println("-------------------- End Tag56StrTargetCompID MyStringType --------------------");
     }
 }

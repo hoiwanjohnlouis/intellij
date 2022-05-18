@@ -60,7 +60,11 @@ public class Tag2StrAdvID extends FIX27Abstract implements LogValuePairString, L
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -83,15 +87,8 @@ public class Tag2StrAdvID extends FIX27Abstract implements LogValuePairString, L
      * @param tagData   Tag2StrAdvID
      */
     static void dumpDataValues(Tag2StrAdvID tagData) {
-        System.out.println("-------------------- Start String --------------------");
+        System.out.println("-------------------- Start Tag2StrAdvID MyStringType --------------------");
         System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData);
-        System.out.println("EnumNameString:" + tagData.toEnumNameString());
-        System.out.println("FIXIDString:" + tagData.toFIXIDString());
-        System.out.println("FIXNameString:" + tagData.toFIXNameString());
-        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
-        System.out.println("ValuePairString:" + tagData.toValuePairString());
-        System.out.println("-------------------- End String --------------------");
+        System.out.println("-------------------- End Tag2StrAdvID MyStringType --------------------");
     }
 }

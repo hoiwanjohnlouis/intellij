@@ -63,7 +63,11 @@ public class Tag85NumNoDlvyInst extends FIX27Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -78,26 +82,16 @@ public class Tag85NumNoDlvyInst extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag85NumNoDlvyInst tagData;
-
-        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTA_NUM_NO_DLVY_INST) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-
-        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTB_NUM_NO_DLVY_INST) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTA_NUM_NO_DLVY_INST)) );
+        dumpDataValues( new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTB_NUM_NO_DLVY_INST)) );
+    }
+    /**
+     *
+     * @param tagData   Tag85NumNoDlvyInst
+     */
+    static void dumpDataValues(Tag85NumNoDlvyInst tagData) {
+        System.out.println("---------- Start Tag85NumNoDlvyInst MyNumInGroupType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag85NumNoDlvyInst MyNumInGroupType ----------");
     }
 }

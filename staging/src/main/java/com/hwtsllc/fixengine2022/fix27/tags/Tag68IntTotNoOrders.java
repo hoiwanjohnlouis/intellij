@@ -65,7 +65,11 @@ public class Tag68IntTotNoOrders extends FIX27Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,16 +84,16 @@ public class Tag68IntTotNoOrders extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag68IntTotNoOrders tagData;
-
-        tagData = new Tag68IntTotNoOrders(new MyIntType(TESTA_INT_TOT_NO_ORDERS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag68IntTotNoOrders(new MyIntType(TESTB_INT_TOT_NO_ORDERS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag68IntTotNoOrders(new MyIntType(TESTA_INT_TOT_NO_ORDERS)) );
+        dumpDataValues( new Tag68IntTotNoOrders(new MyIntType(TESTB_INT_TOT_NO_ORDERS)) );
+    }
+    /**
+     *
+     * @param tagData   Tag68IntTotNoOrders
+     */
+    static void dumpDataValues(Tag68IntTotNoOrders tagData) {
+        System.out.println("---------- Start Tag68IntTotNoOrders MyIntType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag68IntTotNoOrders MyIntType ----------");
     }
 }

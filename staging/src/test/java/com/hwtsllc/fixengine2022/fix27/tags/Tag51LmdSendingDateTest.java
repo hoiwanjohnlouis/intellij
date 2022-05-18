@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
+import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
-import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,10 +31,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Deprecated in FIX.4.3
  */
 // @Deprecated
-class Tag51UtcSendingDateTest {
+class Tag51LmdSendingDateTest {
     @Test
     void FIX0051Test() {
-        FIX27 fixData = FIX27.FIX51_UTC_SENDING_DATE;
+        FIX27 fixData = FIX27.FIX51_LMD_SENDING_DATE;
         assertEquals( "SENDING_DATE", fixData.toFIXNameString());
         assertEquals( "51", fixData.toFIXIDString());
         assertEquals( "SendingDate (no longer used)", fixData.toFIXDescriptionString());
@@ -45,9 +45,9 @@ class Tag51UtcSendingDateTest {
     }
     @Test
     void Tag0051Test() {
-        Tag51UtcSendingDate tagData;
+        Tag51LmdSendingDate tagData;
 
-        tagData = new Tag51UtcSendingDate(new MyUTCTimestampType("20220319 141400") );
+        tagData = new Tag51LmdSendingDate(new MyLocalMktDateType("20220319 141400") );
         assertEquals( "20220319 141400", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }

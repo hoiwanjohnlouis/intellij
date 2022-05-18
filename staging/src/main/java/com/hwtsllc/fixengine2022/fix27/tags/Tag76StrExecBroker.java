@@ -64,7 +64,11 @@ public class Tag76StrExecBroker extends FIX27Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -87,15 +91,8 @@ public class Tag76StrExecBroker extends FIX27Abstract implements LogValuePairStr
      * @param tagData   Tag76StrExecBroker
      */
     static void dumpDataValues(Tag76StrExecBroker tagData) {
-        System.out.println("-------------------- Start String --------------------");
+        System.out.println("-------------------- Start Tag76StrExecBroker MyStringType --------------------");
         System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData);
-        System.out.println("EnumNameString:" + tagData.toEnumNameString());
-        System.out.println("FIXIDString:" + tagData.toFIXIDString());
-        System.out.println("FIXNameString:" + tagData.toFIXNameString());
-        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
-        System.out.println("ValuePairString:" + tagData.toValuePairString());
-        System.out.println("-------------------- End String --------------------");
+        System.out.println("-------------------- End Tag76StrExecBroker MyStringType --------------------");
     }
 }

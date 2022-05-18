@@ -59,7 +59,11 @@ public class Tag33NumNoLinesOfText extends FIX27Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,16 @@ public class Tag33NumNoLinesOfText extends FIX27Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag33NumNoLinesOfText tagData;
-
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTA_NUM_NO_LINES_OF_TEXT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTB_NUM_NO_LINES_OF_TEXT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTA_NUM_NO_LINES_OF_TEXT)) );
+        dumpDataValues( new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTB_NUM_NO_LINES_OF_TEXT)) );
+    }
+    /**
+     *
+     * @param tagData   Tag33NumNoLinesOfText
+     */
+    static void dumpDataValues(Tag33NumNoLinesOfText tagData) {
+        System.out.println("---------- Start Tag33NumNoLinesOfText MyNumInGroupType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag33NumNoLinesOfText MyNumInGroupType ----------");
     }
 }

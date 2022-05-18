@@ -120,7 +120,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
     FIX49_STR_SENDER_COMP_ID(49, "SENDER_COMP_ID", "SenderCompID"),
     FIX50_STR_SENDER_SUB_ID(50, "SENDER_SUB_ID", "SenderSubID"),
 
-    FIX51_UTC_SENDING_DATE(51, "SENDING_DATE", "SendingDate (no longer used)"),
+    FIX51_LMD_SENDING_DATE(51, "SENDING_DATE", "SendingDate (no longer used)"),
     FIX52_UTC_SENDING_TIME(52, "SENDING_TIME", "SendingTime"),
     FIX53_QTY_QUANTITY(53, "QUANTITY", "Quantity (formerly Shares)"),
     FIX54_ENU_SIDE(54, "SIDE", "Side"),

@@ -61,7 +61,11 @@ public class Tag9LenBodyLength extends FIX27Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -76,18 +80,16 @@ public class Tag9LenBodyLength extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag9LenBodyLength tagData = new Tag9LenBodyLength(new MyLengthType(TESTA_LEN_BODY_LENGTH) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        tagData = new Tag9LenBodyLength(new MyLengthType(TESTB_LEN_BODY_LENGTH) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag9LenBodyLength(new MyLengthType(TESTA_LEN_BODY_LENGTH)) );
+        dumpDataValues( new Tag9LenBodyLength(new MyLengthType(TESTB_LEN_BODY_LENGTH)) );
+    }
+    /**
+     *
+     * @param tagData   Tag9LenBodyLength
+     */
+    static void dumpDataValues(Tag9LenBodyLength tagData) {
+        System.out.println("---------- Start Tag9LenBodyLength MyLengthType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag9LenBodyLength MyLengthType ----------");
     }
 }

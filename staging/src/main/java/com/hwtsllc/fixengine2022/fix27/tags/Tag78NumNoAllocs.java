@@ -60,7 +60,11 @@ public class Tag78NumNoAllocs extends FIX27Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,16 @@ public class Tag78NumNoAllocs extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag78NumNoAllocs tagData;
-
-        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(TESTA_NUM_NO_ALLOCS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(TESTB_NUM_NO_ALLOCS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag78NumNoAllocs(new MyNumInGroupType(TESTA_NUM_NO_ALLOCS)) );
+        dumpDataValues( new Tag78NumNoAllocs(new MyNumInGroupType(TESTB_NUM_NO_ALLOCS)) );
+    }
+    /**
+     *
+     * @param tagData   Tag78NumNoAllocs
+     */
+    static void dumpDataValues(Tag78NumNoAllocs tagData) {
+        System.out.println("---------- Start Tag78NumNoAllocs MyNumInGroupType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag78NumNoAllocs MyNumInGroupType ----------");
     }
 }

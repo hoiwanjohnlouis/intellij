@@ -59,7 +59,11 @@ public class Tag44PrcPrice extends FIX27Abstract implements LogValuePairString, 
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -84,13 +88,6 @@ public class Tag44PrcPrice extends FIX27Abstract implements LogValuePairString, 
     static void dumpDataValues(Tag44PrcPrice tagData) {
         System.out.println("---------- Start Tag44PrcPrice MyPriceType ----------");
         System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData);
-        System.out.println("EnumNameString:" + tagData.toEnumNameString());
-        System.out.println("FIXIDString:" + tagData.toFIXIDString());
-        System.out.println("FIXNameString:" + tagData.toFIXNameString());
-        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
-        System.out.println("ValuePairString:" + tagData.toValuePairString());
         System.out.println("---------- End Tag44PrcPrice MyPriceType ----------");
     }
 }

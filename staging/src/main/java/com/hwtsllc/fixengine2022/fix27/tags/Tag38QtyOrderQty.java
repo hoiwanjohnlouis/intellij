@@ -61,7 +61,11 @@ public class Tag38QtyOrderQty extends FIX27Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -76,21 +80,16 @@ public class Tag38QtyOrderQty extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag38QtyOrderQty tagData;
-
-        tagData = new Tag38QtyOrderQty(new MyQtyType(TESTA_QTY_ORDER_QTY) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag38QtyOrderQty(new MyQtyType(TESTB_QTY_ORDER_QTY) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag38QtyOrderQty(new MyQtyType(TESTA_QTY_ORDER_QTY)) );
+        dumpDataValues( new Tag38QtyOrderQty(new MyQtyType(TESTB_QTY_ORDER_QTY)) );
+    }
+    /**
+     *
+     * @param tagData   Tag38QtyOrderQty
+     */
+    static void dumpDataValues(Tag38QtyOrderQty tagData) {
+        System.out.println("---------- Start Tag38QtyOrderQty MyQtyType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag38QtyOrderQty MyQtyType ----------");
     }
 }

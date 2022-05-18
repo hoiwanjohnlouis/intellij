@@ -63,7 +63,11 @@ public class Tag16SeqEndSeqNo extends FIX27Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -78,19 +82,16 @@ public class Tag16SeqEndSeqNo extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag16SeqEndSeqNo tagData;
-        tagData = new Tag16SeqEndSeqNo(new MySeqNumType(TESTA_SEQ_END_SEQ_NO) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        tagData = new Tag16SeqEndSeqNo(new MySeqNumType(TESTB_SEQ_END_SEQ_NO) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag16SeqEndSeqNo(new MySeqNumType(TESTA_SEQ_END_SEQ_NO)) );
+        dumpDataValues( new Tag16SeqEndSeqNo(new MySeqNumType(TESTB_SEQ_END_SEQ_NO)) );
+    }
+    /**
+     *
+     * @param tagData   Tag16SeqEndSeqNo
+     */
+    static void dumpDataValues(Tag16SeqEndSeqNo tagData) {
+        System.out.println("---------- Start Tag16SeqEndSeqNo MySeqNumType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag16SeqEndSeqNo MySeqNumType ----------");
     }
 }

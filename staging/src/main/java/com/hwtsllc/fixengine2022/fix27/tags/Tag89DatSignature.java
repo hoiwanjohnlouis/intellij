@@ -60,7 +60,11 @@ public class Tag89DatSignature extends FIX27Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,21 +79,16 @@ public class Tag89DatSignature extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag89DatSignature tagData;
-
-        tagData= new Tag89DatSignature(new MyDataType(TESTA_DAT_SIGNATURE) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag89DatSignature(new MyDataType(TESTB_DAT_SIGNATURE) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag89DatSignature(new MyDataType(TESTA_DAT_SIGNATURE)) );
+        dumpDataValues( new Tag89DatSignature(new MyDataType(TESTB_DAT_SIGNATURE)) );
+    }
+    /**
+     *
+     * @param tagData   Tag89DatSignature
+     */
+    static void dumpDataValues(Tag89DatSignature tagData) {
+        System.out.println("---------- Start Tag89DatSignature MyDataType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag89DatSignature MyDataType ----------");
     }
 }

@@ -60,7 +60,11 @@ public class Tag91DatSecureData extends FIX27Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,21 +79,16 @@ public class Tag91DatSecureData extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag91DatSecureData tagData;
-
-        tagData= new Tag91DatSecureData(new MyDataType(TESTA_DAT_SECURE_DATA) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag91DatSecureData(new MyDataType(TESTB_DAT_SECURE_DATA) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag91DatSecureData(new MyDataType(TESTA_DAT_SECURE_DATA)) );
+        dumpDataValues( new Tag91DatSecureData(new MyDataType(TESTB_DAT_SECURE_DATA)) );
+    }
+    /**
+     *
+     * @param tagData   Tag91DatSecureData
+     */
+    static void dumpDataValues(Tag91DatSecureData tagData) {
+        System.out.println("---------- Start Tag91DatSecureData MyDataType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag91DatSecureData MyDataType ----------");
     }
 }

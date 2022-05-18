@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -29,14 +29,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Deprecated in FIX.4.3
  */
 // @Deprecated
-public class Tag51UtcSendingDate extends FIX27Abstract implements LogValuePairString, LogVerboseString {
-    private final MyUTCTimestampType dataValue;
+public class Tag51LmdSendingDate extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+    private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_UTC_SENDING_DATE = "18991231-23:59:59.051";
-    public final static String TESTB_UTC_SENDING_DATE = "19001231-23:59:59.051";
+    public final static String TESTA_LMD_SENDING_DATE = "18991231-23:59:59.051";
+    public final static String TESTB_LMD_SENDING_DATE = "19001231-23:59:59.051";
 
-    public Tag51UtcSendingDate(MyUTCTimestampType dataValue) {
-        setFixType(FIX27.FIX51_UTC_SENDING_DATE);
+    public Tag51LmdSendingDate(MyLocalMktDateType dataValue) {
+        setFixType(FIX27.FIX51_LMD_SENDING_DATE);
         this.dataValue = dataValue;
     }
 
@@ -60,7 +60,11 @@ public class Tag51UtcSendingDate extends FIX27Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,16 @@ public class Tag51UtcSendingDate extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag51UtcSendingDate tagData;
-
-        tagData = new Tag51UtcSendingDate(new MyUTCTimestampType(TESTA_UTC_SENDING_DATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag51UtcSendingDate(new MyUTCTimestampType(TESTB_UTC_SENDING_DATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag51LmdSendingDate(new MyLocalMktDateType(TESTA_LMD_SENDING_DATE)) );
+        dumpDataValues( new Tag51LmdSendingDate(new MyLocalMktDateType(TESTB_LMD_SENDING_DATE)) );
+    }
+    /**
+     *
+     * @param tagData   Tag51LmdSendingDate
+     */
+    static void dumpDataValues(Tag51LmdSendingDate tagData) {
+        System.out.println("---------- Start Tag51LmdSendingDate MyLocalMktDateType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag51LmdSendingDate MyLocalMktDateType ----------");
     }
 }

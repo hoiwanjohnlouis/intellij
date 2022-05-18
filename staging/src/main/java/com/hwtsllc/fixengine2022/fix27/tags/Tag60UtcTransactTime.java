@@ -76,7 +76,11 @@ public class Tag60UtcTransactTime extends FIX27Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -91,16 +95,16 @@ public class Tag60UtcTransactTime extends FIX27Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag60UtcTransactTime tagData;
-
-        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(TESTA_UTC_TRANSACT_TIME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(TESTB_UTC_TRANSACT_TIME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag60UtcTransactTime(new MyUTCTimestampType(TESTA_UTC_TRANSACT_TIME)) );
+        dumpDataValues( new Tag60UtcTransactTime(new MyUTCTimestampType(TESTB_UTC_TRANSACT_TIME)) );
+    }
+    /**
+     *
+     * @param tagData   Tag60UtcTransactTime
+     */
+    static void dumpDataValues(Tag60UtcTransactTime tagData) {
+        System.out.println("---------- Start Tag60UtcTransactTime MyUTCTimestampType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag60UtcTransactTime MyUTCTimestampType ----------");
     }
 }

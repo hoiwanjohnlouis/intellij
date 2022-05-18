@@ -62,7 +62,11 @@ public class Tag80QtyAllocQty extends FIX27Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -77,25 +81,16 @@ public class Tag80QtyAllocQty extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag80QtyAllocQty tagData;
-        tagData = new Tag80QtyAllocQty(new MyQtyType(TESTA_QTY_ALLOC_QTY) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-
-        tagData = new Tag80QtyAllocQty(new MyQtyType(TESTB_QTY_ALLOC_QTY) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag80QtyAllocQty(new MyQtyType(TESTA_QTY_ALLOC_QTY)) );
+        dumpDataValues( new Tag80QtyAllocQty(new MyQtyType(TESTB_QTY_ALLOC_QTY)) );
+    }
+    /**
+     *
+     * @param tagData   Tag80QtyAllocQty
+     */
+    static void dumpDataValues(Tag80QtyAllocQty tagData) {
+        System.out.println("---------- Start Tag80QtyAllocQty MyQtyType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag80QtyAllocQty MyQtyType ----------");
     }
 }

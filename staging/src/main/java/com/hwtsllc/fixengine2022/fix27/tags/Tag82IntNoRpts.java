@@ -60,7 +60,11 @@ public class Tag82IntNoRpts extends FIX27Abstract implements LogValuePairString,
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,16 @@ public class Tag82IntNoRpts extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag82IntNoRpts tagData;
-
-        tagData = new Tag82IntNoRpts(new MyIntType(TESTA_INT_NO_RPTS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag82IntNoRpts(new MyIntType(TESTB_INT_NO_RPTS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag82IntNoRpts(new MyIntType(TESTA_INT_NO_RPTS)) );
+        dumpDataValues( new Tag82IntNoRpts(new MyIntType(TESTB_INT_NO_RPTS)) );
+    }
+    /**
+     *
+     * @param tagData   Tag82IntNoRpts
+     */
+    static void dumpDataValues(Tag82IntNoRpts tagData) {
+        System.out.println("---------- Start Tag82IntNoRpts MyIntType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag82IntNoRpts MyIntType ----------");
     }
 }

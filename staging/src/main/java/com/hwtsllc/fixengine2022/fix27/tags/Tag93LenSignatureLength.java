@@ -60,7 +60,11 @@ public class Tag93LenSignatureLength extends FIX27Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,19 +79,16 @@ public class Tag93LenSignatureLength extends FIX27Abstract implements LogValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag93LenSignatureLength tagData;
-        tagData = new Tag93LenSignatureLength(new MyLengthType(TESTA_LEN_SIGNATURE_LENGTH) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        tagData = new Tag93LenSignatureLength(new MyLengthType(TESTB_LEN_SIGNATURE_LENGTH) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag93LenSignatureLength(new MyLengthType(TESTA_LEN_SIGNATURE_LENGTH)) );
+        dumpDataValues( new Tag93LenSignatureLength(new MyLengthType(TESTB_LEN_SIGNATURE_LENGTH)) );
+    }
+    /**
+     *
+     * @param tagData   Tag93LenSignatureLength
+     */
+    static void dumpDataValues(Tag93LenSignatureLength tagData) {
+        System.out.println("---------- Start Tag93LenSignatureLength MyLengthType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag93LenSignatureLength MyLengthType ----------");
     }
 }

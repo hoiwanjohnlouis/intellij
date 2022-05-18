@@ -60,7 +60,11 @@ public class Tag12AmtCommission extends FIX27Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,16 @@ public class Tag12AmtCommission extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag12AmtCommission tagData;
-
-        tagData = new Tag12AmtCommission(new MyAmtType(TESTA_AMT_COMMISSION) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag12AmtCommission(new MyAmtType(TESTB_AMT_COMMISSION) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag12AmtCommission(new MyAmtType(TESTA_AMT_COMMISSION)) );
+        dumpDataValues( new Tag12AmtCommission(new MyAmtType(TESTB_AMT_COMMISSION)) );
+    }
+    /**
+     *
+     * @param tagData   Tag12AmtCommission
+     */
+    static void dumpDataValues(Tag12AmtCommission tagData) {
+        System.out.println("---------- Start Tag12AmtCommission MyAmtType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag12AmtCommission MyAmtType ----------");
     }
 }

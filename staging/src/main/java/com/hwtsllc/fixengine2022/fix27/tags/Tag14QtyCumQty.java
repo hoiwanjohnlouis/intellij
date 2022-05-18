@@ -60,7 +60,11 @@ public class Tag14QtyCumQty extends FIX27Abstract implements LogValuePairString,
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,19 +79,16 @@ public class Tag14QtyCumQty extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag14QtyCumQty tagData;
-        tagData = new Tag14QtyCumQty(new MyQtyType(TESTA_QTY_CUM_QTY) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        tagData = new Tag14QtyCumQty(new MyQtyType(TESTB_QTY_CUM_QTY) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag14QtyCumQty(new MyQtyType(TESTA_QTY_CUM_QTY)) );
+        dumpDataValues( new Tag14QtyCumQty(new MyQtyType(TESTB_QTY_CUM_QTY)) );
+    }
+    /**
+     *
+     * @param tagData   Tag14QtyCumQty
+     */
+    static void dumpDataValues(Tag14QtyCumQty tagData) {
+        System.out.println("---------- Start Tag14QtyCumQty MyQtyType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag14QtyCumQty MyQtyType ----------");
     }
 }

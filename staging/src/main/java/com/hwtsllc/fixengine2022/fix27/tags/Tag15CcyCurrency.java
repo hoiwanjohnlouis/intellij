@@ -63,7 +63,11 @@ public class Tag15CcyCurrency extends FIX27Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -78,16 +82,16 @@ public class Tag15CcyCurrency extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag15CcyCurrency tagData;
-
-        tagData = new Tag15CcyCurrency(new MyCurrencyType(TESTA_CCY_CURRENCY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag15CcyCurrency(new MyCurrencyType(TESTB_CCY_CURRENCY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        dumpDataValues( new Tag15CcyCurrency(new MyCurrencyType(TESTA_CCY_CURRENCY)) );
+        dumpDataValues( new Tag15CcyCurrency(new MyCurrencyType(TESTB_CCY_CURRENCY)) );
+    }
+    /**
+     *
+     * @param tagData   Tag15CcyCurrency
+     */
+    static void dumpDataValues(Tag15CcyCurrency tagData) {
+        System.out.println("---------- Start Tag15CcyCurrency MyCurrencyType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag15CcyCurrency MyCurrencyType ----------");
     }
 }

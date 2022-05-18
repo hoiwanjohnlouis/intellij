@@ -59,7 +59,11 @@ public class Tag34SeqMsgSeqNum extends FIX27Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,21 +78,16 @@ public class Tag34SeqMsgSeqNum extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag34SeqMsgSeqNum tagData;
-
-        tagData = new Tag34SeqMsgSeqNum(new MySeqNumType(TESTA_SEQ_MSG_SEQ_NO) );
-        System.out.println("initial values A");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag34SeqMsgSeqNum(new MySeqNumType(TESTB_SEQ_MSG_SEQ_NO) );
-        System.out.println("initial values B");
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
+        dumpDataValues( new Tag34SeqMsgSeqNum(new MySeqNumType(TESTA_SEQ_MSG_SEQ_NO)) );
+        dumpDataValues( new Tag34SeqMsgSeqNum(new MySeqNumType(TESTB_SEQ_MSG_SEQ_NO)) );
+    }
+    /**
+     *
+     * @param tagData   Tag34SeqMsgSeqNum
+     */
+    static void dumpDataValues(Tag34SeqMsgSeqNum tagData) {
+        System.out.println("---------- Start Tag34SeqMsgSeqNum MySeqNumType ----------");
+        System.out.println("VerboseString:" + tagData.toVerboseString());
+        System.out.println("---------- End Tag34SeqMsgSeqNum MySeqNumType ----------");
     }
 }
