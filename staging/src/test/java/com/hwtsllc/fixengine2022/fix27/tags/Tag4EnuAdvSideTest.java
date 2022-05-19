@@ -48,26 +48,6 @@ class Tag4EnuAdvSideTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0004Test() {
-        Tag4EnuAdvSide tagData;
-
-        tagData = new Tag4EnuAdvSide(Enum4AdvSide.BUY);
-        assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag4EnuAdvSide(Enum4AdvSide.SELL);
-        assertEquals( "S", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag4EnuAdvSide(Enum4AdvSide.CROSS);
-        assertEquals( "X", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag4EnuAdvSide(Enum4AdvSide.TRADE);
-        assertEquals( "T", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag4EnuAdvSide tagData;
 
@@ -130,6 +110,5 @@ class Tag4EnuAdvSideTest {
             assertEquals( oneEnum.toFIXIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
         }
-
     }
 }

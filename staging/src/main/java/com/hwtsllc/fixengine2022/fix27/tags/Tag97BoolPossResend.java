@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum97PossResend;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -27,21 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  97
  *  PossResend
  *  Boolean
- *  Indicates that message may contain information
- *  that has been sent under another sequence number.
+ *  <p>
+ *  Indicates that message may contain information that has been sent under another sequence number.
+ *  <p></p>
  *  Valid values:
- *      N - Original Transmission
- *      Y - Possible Resend
+ *  <p>    N - Original Transmission
+ *  <p>    Y - Possible Resend
  */
 public class Tag97BoolPossResend extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Enum97PossResend dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_POSS_RESEND
-            = MyBooleanType.NO;
-    public final static MyBooleanType TESTB_BOOL_POSS_RESEND
-            = MyBooleanType.YES;
+    public final static Enum97PossResend TESTA_BOOL_POSS_RESEND
+            = Enum97PossResend.NO;
+    public final static Enum97PossResend TESTB_BOOL_POSS_RESEND
+            = Enum97PossResend.YES;
 
-    public Tag97BoolPossResend(MyBooleanType dataValue) {
+    public Tag97BoolPossResend(Enum97PossResend dataValue) {
         setFixType(FIX27.FIX97_BOOL_POSS_RESEND);
         this.dataValue = dataValue;
     }
@@ -119,7 +120,7 @@ public class Tag97BoolPossResend extends FIX27Abstract implements LogValuePairSt
         System.out.println( new Tag97BoolPossResend(TESTB_BOOL_POSS_RESEND).toVerboseString() );
 
         // loop around the ENUM and display
-        for (MyBooleanType oneEnum : MyBooleanType.values()) {
+        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             System.out.println( new Tag97BoolPossResend(oneEnum).toVerboseString() );
         }
     }

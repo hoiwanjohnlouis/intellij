@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum97PossResend;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -28,11 +28,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  97
  *  PossResend
  *  Boolean
- *  Indicates that message may contain information
- *  that has been sent under another sequence number.
+ *  <p>
+ *  Indicates that message may contain information that has been sent under another sequence number.
+ *  <p></p>
  *  Valid values:
- *      N - Original Transmission
- *      Y - Possible Resend
+ *  <p>    N - Original Transmission
+ *  <p>    Y - Possible Resend
  */
 class Tag97BoolPossResendTest {
     @Test
@@ -47,15 +48,67 @@ class Tag97BoolPossResendTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0097Test() {
+    void PrintFIXTagTest() {
         Tag97BoolPossResend tagData;
 
-        tagData = new Tag97BoolPossResend(MyBooleanType.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        // loop around the ENUM and process
+        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+            tagData = new Tag97BoolPossResend(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag97BoolPossResend tagData;
 
-        tagData = new Tag97BoolPossResend(MyBooleanType.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        // loop around the ENUM and process
+        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+            tagData = new Tag97BoolPossResend(oneEnum);
+            assertEquals( oneEnum.toFIXIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag97BoolPossResend tagData;
+
+        // loop around the ENUM and process
+        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+            tagData = new Tag97BoolPossResend(oneEnum);
+            assertEquals( "97=" + oneEnum.toFIXIDString(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag97BoolPossResend tagData;
+
+        // loop around the ENUM and process
+        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+            tagData = new Tag97BoolPossResend(oneEnum);
+            assertEquals( "Tag97BoolPossResend\n" +
+                            "\tEnumName[FIX97_BOOL_POSS_RESEND]\n" +
+                            "\tFIXID[97]\n" +
+                            "\tFIXName[POSS_RESEND]\n" +
+                            "\tFIXDescription[PossResend]\n" +
+                            "\tDataValue[" + oneEnum.toFIXIDString() + "]\n" +
+                            "\tValuePair[97=" + oneEnum.toFIXIDString() + "]\n" +
+                            "\tDataID[" + oneEnum.toFIXIDString() + "]\n" +
+                            "\tDataName[" + oneEnum.toFIXNameString() + "]\n" +
+                            "\tDataDescription[" + oneEnum.toFIXDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag97BoolPossResend tagData;
+
+        // loop around the ENUM and process
+        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+            tagData = new Tag97BoolPossResend(oneEnum);
+            assertEquals( oneEnum.toFIXIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
 }

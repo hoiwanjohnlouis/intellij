@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix27.enums.Enum43PossDupFlag;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -27,20 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  43
  *  PossDupFlag
  *  Boolean
+ *  <p>
  *  Indicates possible retransmission of message with this sequence number
+ *  <p></p>
  *  Valid values:
- *      N - Original transmission
- *      Y - Possible duplicate
+ *  <p>    N - Original transmission
+ *  <p>    Y - Possible duplicate
  */
 public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Enum43PossDupFlag dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_POSS_DUP_FLAG
-            = MyBooleanType.NO;
-    public final static MyBooleanType TESTB_BOOL_POSS_DUP_FLAG
-            = MyBooleanType.YES;
+    public final static Enum43PossDupFlag TESTA_BOOL_POSS_DUP_FLAG
+            = Enum43PossDupFlag.NO;
+    public final static Enum43PossDupFlag TESTB_BOOL_POSS_DUP_FLAG
+            = Enum43PossDupFlag.YES;
 
-    public Tag43BoolPossDupFlag(MyBooleanType dataValue) {
+    public Tag43BoolPossDupFlag(Enum43PossDupFlag dataValue) {
         setFixType(FIX27.FIX43_BOOL_POSS_DUP_FLAG);
         this.dataValue = dataValue;
     }
@@ -118,7 +120,7 @@ public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairS
         System.out.println( new Tag43BoolPossDupFlag(TESTB_BOOL_POSS_DUP_FLAG).toVerboseString() );
 
         // loop around the ENUM and display
-        for (MyBooleanType oneEnum : MyBooleanType.values()) {
+        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             System.out.println( new Tag43BoolPossDupFlag(oneEnum).toVerboseString() );
         }
     }
