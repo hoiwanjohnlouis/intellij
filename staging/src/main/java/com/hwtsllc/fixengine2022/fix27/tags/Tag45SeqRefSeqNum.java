@@ -78,16 +78,7 @@ public class Tag45SeqRefSeqNum extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag45SeqRefSeqNum(new MySeqNumType(TESTA_SEQ_REF_SEQ_NO)) );
-        dumpDataValues( new Tag45SeqRefSeqNum(new MySeqNumType(TESTB_SEQ_REF_SEQ_NO)) );
-    }
-    /**
-     *
-     * @param tagData   Tag45SeqRefSeqNum
-     */
-    static void dumpDataValues(Tag45SeqRefSeqNum tagData) {
-        System.out.println("---------- Start Tag45SeqRefSeqNum MySeqNumType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag45SeqRefSeqNum MySeqNumType ----------");
+        System.out.println( new Tag45SeqRefSeqNum(new MySeqNumType(TESTA_SEQ_REF_SEQ_NO)).toVerboseString() );
+        System.out.println( new Tag45SeqRefSeqNum(new MySeqNumType(TESTB_SEQ_REF_SEQ_NO)).toVerboseString() );
     }
 }

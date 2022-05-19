@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag37StrOrderID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ORDER_ID = "BilboBaggins-37StOrderID"; // fake data
-    public final static String TESTB_STR_ORDER_ID = "Gandalf-37StOrderID";
+    public final static String TESTA_STR_ORDER_ID
+            = "BilboBaggins-Tag37StrOrderID";
+    public final static String TESTB_STR_ORDER_ID
+            = "Gandalf-Tag37StrOrderID";
 
     public Tag37StrOrderID(MyStringType dataValue) {
         setFixType(FIX27.FIX37_STR_ORDER_ID);
@@ -81,16 +83,7 @@ public class Tag37StrOrderID extends FIX27Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag37StrOrderID(new MyStringType(TESTA_STR_ORDER_ID)) );
-        dumpDataValues( new Tag37StrOrderID(new MyStringType(TESTB_STR_ORDER_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag37StrOrderID
-     */
-    static void dumpDataValues(Tag37StrOrderID tagData) {
-        System.out.println("-------------------- Start Tag37StrOrderID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag37StrOrderID MyStringType --------------------");
+        System.out.println( new Tag37StrOrderID(new MyStringType(TESTA_STR_ORDER_ID)).toVerboseString() );
+        System.out.println( new Tag37StrOrderID(new MyStringType(TESTB_STR_ORDER_ID)).toVerboseString() );
     }
 }

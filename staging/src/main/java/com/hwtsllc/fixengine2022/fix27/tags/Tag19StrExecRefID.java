@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag19StrExecRefID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_EXEC_REF_ID = "BilboBaggins-19StExecRefID"; // fake data
-    public final static String TESTB_STR_EXEC_REF_ID = "Gandalf-19StExecRefID";
+    public final static String TESTA_STR_EXEC_REF_ID
+            = "BilboBaggins-Tag19StrExecRefID";
+    public final static String TESTB_STR_EXEC_REF_ID
+            = "Gandalf-Tag19StrExecRefID";
 
     public Tag19StrExecRefID(MyStringType dataValue) {
         setFixType(FIX27.FIX19_STR_EXEC_REF_ID);
@@ -79,16 +81,7 @@ public class Tag19StrExecRefID extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag19StrExecRefID(new MyStringType(TESTA_STR_EXEC_REF_ID)) );
-        dumpDataValues( new Tag19StrExecRefID(new MyStringType(TESTB_STR_EXEC_REF_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag19StrExecRefID
-     */
-    static void dumpDataValues(Tag19StrExecRefID tagData) {
-        System.out.println("-------------------- Start Tag19StrExecRefID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag19StrExecRefID MyStringType --------------------");
+        System.out.println( new Tag19StrExecRefID(new MyStringType(TESTA_STR_EXEC_REF_ID)).toVerboseString() );
+        System.out.println( new Tag19StrExecRefID(new MyStringType(TESTB_STR_EXEC_REF_ID)).toVerboseString() );
     }
 }

@@ -79,16 +79,7 @@ public class Tag82IntNoRpts extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag82IntNoRpts(new MyIntType(TESTA_INT_NO_RPTS)) );
-        dumpDataValues( new Tag82IntNoRpts(new MyIntType(TESTB_INT_NO_RPTS)) );
-    }
-    /**
-     *
-     * @param tagData   Tag82IntNoRpts
-     */
-    static void dumpDataValues(Tag82IntNoRpts tagData) {
-        System.out.println("---------- Start Tag82IntNoRpts MyIntType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag82IntNoRpts MyIntType ----------");
+        System.out.println( new Tag82IntNoRpts(new MyIntType(TESTA_INT_NO_RPTS)).toVerboseString() );
+        System.out.println( new Tag82IntNoRpts(new MyIntType(TESTB_INT_NO_RPTS)).toVerboseString() );
     }
 }

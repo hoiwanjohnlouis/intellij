@@ -39,8 +39,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag10StrCheckSum extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CHECK_SUM = "789"; // fake data
-    public final static String TESTB_STR_CHECK_SUM = "123";
+    public final static String TESTA_STR_CHECK_SUM
+            = "789";
+    public final static String TESTB_STR_CHECK_SUM
+            = "123";
 
     public Tag10StrCheckSum(MyStringType dataValue) {
         setFixType(FIX27.FIX10_STR_CHECK_SUM);
@@ -86,16 +88,7 @@ public class Tag10StrCheckSum extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag10StrCheckSum(new MyStringType(TESTA_STR_CHECK_SUM)) );
-        dumpDataValues( new Tag10StrCheckSum(new MyStringType(TESTB_STR_CHECK_SUM)) );
-    }
-    /**
-     *
-     * @param tagData   Tag10StrCheckSum
-     */
-    static void dumpDataValues(Tag10StrCheckSum tagData) {
-        System.out.println("-------------------- Start Tag10StrCheckSum MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag10StrCheckSum MyStringType --------------------");
+        System.out.println( new Tag10StrCheckSum(new MyStringType(TESTA_STR_CHECK_SUM)).toVerboseString() );
+        System.out.println( new Tag10StrCheckSum(new MyStringType(TESTB_STR_CHECK_SUM)).toVerboseString() );
     }
 }

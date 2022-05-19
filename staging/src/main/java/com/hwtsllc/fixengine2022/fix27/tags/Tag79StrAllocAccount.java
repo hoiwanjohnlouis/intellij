@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag79StrAllocAccount extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ALLOC_ACCOUNT = "BilboBaggins-79StAllocAccount";
-    public final static String TESTB_STR_ALLOC_ACCOUNT = "Gandalf-79StAllocAccount";
+    public final static String TESTA_STR_ALLOC_ACCOUNT
+            = "BilboBaggins-Tag79StrAllocAccount";
+    public final static String TESTB_STR_ALLOC_ACCOUNT
+            = "Gandalf-Tag79StrAllocAccount";
 
     public Tag79StrAllocAccount(MyStringType dataValue) {
         setFixType(FIX27.FIX79_STR_ALLOC_ACCOUNT);
@@ -79,16 +81,7 @@ public class Tag79StrAllocAccount extends FIX27Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag79StrAllocAccount(new MyStringType(TESTA_STR_ALLOC_ACCOUNT)) );
-        dumpDataValues( new Tag79StrAllocAccount(new MyStringType(TESTB_STR_ALLOC_ACCOUNT)) );
-    }
-    /**
-     *
-     * @param tagData   Tag79StrAllocAccount
-     */
-    static void dumpDataValues(Tag79StrAllocAccount tagData) {
-        System.out.println("-------------------- Start Tag79StrAllocAccount MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag79StrAllocAccount MyStringType --------------------");
+        System.out.println( new Tag79StrAllocAccount(new MyStringType(TESTA_STR_ALLOC_ACCOUNT)).toVerboseString() );
+        System.out.println( new Tag79StrAllocAccount(new MyStringType(TESTB_STR_ALLOC_ACCOUNT)).toVerboseString() );
     }
 }

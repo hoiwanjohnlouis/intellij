@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag75StrTradeDate extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_TRADE_DATE = "BilboBaggins-75TradeDate"; // fake data
-    public final static String TESTB_STR_TRADE_DATE = "Gandalf-75TradeDate";
+    public final static String TESTA_STR_TRADE_DATE
+            = "BilboBaggins-Tag75StrTradeDate";
+    public final static String TESTB_STR_TRADE_DATE
+            = "Gandalf-Tag75StrTradeDate";
 
     public Tag75StrTradeDate(MyStringType dataValue) {
         setFixType(FIX27.FIX75_STR_TRADE_DATE);
@@ -81,16 +83,7 @@ public class Tag75StrTradeDate extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag75StrTradeDate(new MyStringType(TESTA_STR_TRADE_DATE)) );
-        dumpDataValues( new Tag75StrTradeDate(new MyStringType(TESTB_STR_TRADE_DATE)) );
-    }
-    /**
-     *
-     * @param tagData   Tag75StrTradeDate
-     */
-    static void dumpDataValues(Tag75StrTradeDate tagData) {
-        System.out.println("-------------------- Start Tag75StrTradeDate MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag75StrTradeDate MyStringType --------------------");
+        System.out.println( new Tag75StrTradeDate(new MyStringType(TESTA_STR_TRADE_DATE)).toVerboseString() );
+        System.out.println( new Tag75StrTradeDate(new MyStringType(TESTB_STR_TRADE_DATE)).toVerboseString() );
     }
 }

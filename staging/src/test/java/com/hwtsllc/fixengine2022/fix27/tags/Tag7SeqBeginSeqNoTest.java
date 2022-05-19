@@ -43,15 +43,48 @@ class Tag7SeqBeginSeqNoTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0007Test() {
+    void PrintFIXTagTest() {
         Tag7SeqBeginSeqNo tagData;
 
-        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO) );
+        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag7SeqBeginSeqNo tagData;
+
+        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO));
         assertEquals( Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag7SeqBeginSeqNo tagData;
 
-        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTB_SEQ_BEGIN_SEQ_NO) );
-        assertEquals( Tag7SeqBeginSeqNo.TESTB_SEQ_BEGIN_SEQ_NO, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
+        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO));
+        assertEquals( "7=" + Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag7SeqBeginSeqNo tagData;
+
+        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO));
+        assertEquals( "Tag7SeqBeginSeqNo\n" +
+                "\tEnumName[FIX7_SEQ_BEGIN_SEQ_NO]\n" +
+                "\tFIXID[7]\n" +
+                "\tFIXName[BEGIN_SEQ_NO]\n" +
+                "\tFIXDescription[BeginSeqNo]\n" +
+                "\tDataValue[" + Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO + "]\n" +
+                "\tValuePair[7=" + Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO + "]", tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag7SeqBeginSeqNo tagData;
+
+        tagData = new Tag7SeqBeginSeqNo(new MySeqNumType(Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO));
+        assertEquals( String.valueOf(Tag7SeqBeginSeqNo.TESTA_SEQ_BEGIN_SEQ_NO), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 }

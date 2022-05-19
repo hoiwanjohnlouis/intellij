@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag1StrAccount extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ACCOUNT = "BilboBaggins-1StAccount";
-    public final static String TESTB_STR_ACCOUNT = "Gandalf-1StAccount";
+    public final static String TESTA_STR_ACCOUNT
+            = "BilboBaggins-Tag1StrAccount";
+    public final static String TESTB_STR_ACCOUNT
+            = "Gandalf-Tag1StrAccount";
 
     public Tag1StrAccount(MyStringType dataValue) {
         setFixType(FIX27.FIX1_STR_ACCOUNT);
@@ -79,16 +81,7 @@ public class Tag1StrAccount extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag1StrAccount(new MyStringType(TESTA_STR_ACCOUNT)) );
-        dumpDataValues( new Tag1StrAccount(new MyStringType(TESTB_STR_ACCOUNT)) );
-    }
-    /**
-     *
-     * @param tagData   Tag1StrAccount
-     */
-    static void dumpDataValues(Tag1StrAccount tagData) {
-        System.out.println("-------------------- Start Tag1StrAccount MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag1StrAccount MyStringType --------------------");
+        System.out.println(new Tag1StrAccount(new MyStringType(TESTA_STR_ACCOUNT)).toVerboseString());
+        System.out.println(new Tag1StrAccount(new MyStringType(TESTB_STR_ACCOUNT)).toVerboseString());
     }
 }

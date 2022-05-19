@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag23StrIOIID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_IOI_ID = "BilboBaggins-23StIOIID"; // fake data
-    public final static String TESTB_STR_IOI_ID = "Gandalf-23StIOIID";
+    public final static String TESTA_STR_IOI_ID
+            = "BilboBaggins-Tag23StrIOIID";
+    public final static String TESTB_STR_IOI_ID
+            = "Gandalf-Tag23StrIOIID";
 
     public Tag23StrIOIID(MyStringType dataValue) {
         setFixType(FIX27.FIX23_STR_IOI_ID);
@@ -79,16 +81,7 @@ public class Tag23StrIOIID extends FIX27Abstract implements LogValuePairString, 
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag23StrIOIID(new MyStringType(TESTA_STR_IOI_ID)) );
-        dumpDataValues( new Tag23StrIOIID(new MyStringType(TESTB_STR_IOI_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag23StrIOIID
-     */
-    static void dumpDataValues(Tag23StrIOIID tagData) {
-        System.out.println("-------------------- Start Tag23StrIOIID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag23StrIOIID MyStringType --------------------");
+        System.out.println( new Tag23StrIOIID(new MyStringType(TESTA_STR_IOI_ID)).toVerboseString() );
+        System.out.println( new Tag23StrIOIID(new MyStringType(TESTB_STR_IOI_ID)).toVerboseString() );
     }
 }

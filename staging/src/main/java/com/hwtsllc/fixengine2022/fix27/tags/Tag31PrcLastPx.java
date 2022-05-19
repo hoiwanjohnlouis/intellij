@@ -78,17 +78,8 @@ public class Tag31PrcLastPx extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag31PrcLastPx(new MyPriceType(TESTA_PRC_LAST_PX)) );
-        dumpDataValues( new Tag31PrcLastPx(new MyPriceType(TESTB_PRC_LAST_PX)) );
-    }
-    /**
-     *
-     * @param tagData   Tag31PrcLastPx
-     */
-    static void dumpDataValues(Tag31PrcLastPx tagData) {
-        System.out.println("---------- Start Tag31PrcLastPx MyPriceType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag31PrcLastPx MyPriceType ----------");
+        System.out.println( new Tag31PrcLastPx(new MyPriceType(TESTA_PRC_LAST_PX)).toVerboseString() );
+        System.out.println( new Tag31PrcLastPx(new MyPriceType(TESTB_PRC_LAST_PX)).toVerboseString() );
     }
 }
 

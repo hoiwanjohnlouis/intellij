@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag100StrExDestination extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_EX_DESTINATION = "BilboBaggins-100ExDestination";
-    public final static String TESTB_STR_EX_DESTINATION = "Gandalf-100ExDestination";
+    public final static String TESTA_STR_EX_DESTINATION
+            = "BilboBaggins-Tag100StrExDestination";
+    public final static String TESTB_STR_EX_DESTINATION
+            = "Gandalf-Tag100StrExDestination";
 
     public Tag100StrExDestination(MyStringType dataValue) {
         setFixType(FIX27.FIX100_STR_EX_DESTINATION);
@@ -82,16 +84,7 @@ public class Tag100StrExDestination extends FIX27Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag100StrExDestination(new MyStringType(TESTA_STR_EX_DESTINATION)) );
-        dumpDataValues( new Tag100StrExDestination(new MyStringType(TESTB_STR_EX_DESTINATION)) );
-    }
-    /**
-     *
-     * @param tagData   Tag100StrExDestination
-     */
-    static void dumpDataValues(Tag100StrExDestination tagData) {
-        System.out.println("-------------------- Start Tag100StrExDestination MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag100StrExDestination MyStringType --------------------");
+        System.out.println( new Tag100StrExDestination(new MyStringType(TESTA_STR_EX_DESTINATION)).toVerboseString() );
+        System.out.println( new Tag100StrExDestination(new MyStringType(TESTB_STR_EX_DESTINATION)).toVerboseString() );
     }
 }

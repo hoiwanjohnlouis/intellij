@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag3StrAdvRefID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ADV_REF_ID = "BilboBaggins-3StAdvRefID";
-    public final static String TESTB_STR_ADV_REF_ID = "Gandalf-3StAdvRefID";
+    public final static String TESTA_STR_ADV_REF_ID
+            = "BilboBaggins-Tag3StrAdvRefID";
+    public final static String TESTB_STR_ADV_REF_ID
+            = "Gandalf-Tag3StrAdvRefID";
 
     public Tag3StrAdvRefID(MyStringType dataValue) {
         setFixType(FIX27.FIX3_STR_ADV_REF_ID);
@@ -79,16 +81,7 @@ public class Tag3StrAdvRefID extends FIX27Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag3StrAdvRefID(new MyStringType(TESTA_STR_ADV_REF_ID)) );
-        dumpDataValues( new Tag3StrAdvRefID(new MyStringType(TESTB_STR_ADV_REF_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag3StrAdvRefID
-     */
-    static void dumpDataValues(Tag3StrAdvRefID tagData) {
-        System.out.println("-------------------- Start Tag3StrAdvRefID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag3StrAdvRefID MyStringType --------------------");
+        System.out.println( new Tag3StrAdvRefID(new MyStringType(TESTA_STR_ADV_REF_ID)).toVerboseString() );
+        System.out.println( new Tag3StrAdvRefID(new MyStringType(TESTA_STR_ADV_REF_ID)).toVerboseString() );
     }
 }

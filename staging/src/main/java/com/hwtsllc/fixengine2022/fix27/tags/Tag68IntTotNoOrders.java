@@ -84,16 +84,7 @@ public class Tag68IntTotNoOrders extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag68IntTotNoOrders(new MyIntType(TESTA_INT_TOT_NO_ORDERS)) );
-        dumpDataValues( new Tag68IntTotNoOrders(new MyIntType(TESTB_INT_TOT_NO_ORDERS)) );
-    }
-    /**
-     *
-     * @param tagData   Tag68IntTotNoOrders
-     */
-    static void dumpDataValues(Tag68IntTotNoOrders tagData) {
-        System.out.println("---------- Start Tag68IntTotNoOrders MyIntType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag68IntTotNoOrders MyIntType ----------");
+        System.out.println( new Tag68IntTotNoOrders(new MyIntType(TESTA_INT_TOT_NO_ORDERS)).toVerboseString() );
+        System.out.println( new Tag68IntTotNoOrders(new MyIntType(TESTB_INT_TOT_NO_ORDERS)).toVerboseString() );
     }
 }

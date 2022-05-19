@@ -79,16 +79,7 @@ public class Tag93LenSignatureLength extends FIX27Abstract implements LogValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag93LenSignatureLength(new MyLengthType(TESTA_LEN_SIGNATURE_LENGTH)) );
-        dumpDataValues( new Tag93LenSignatureLength(new MyLengthType(TESTB_LEN_SIGNATURE_LENGTH)) );
-    }
-    /**
-     *
-     * @param tagData   Tag93LenSignatureLength
-     */
-    static void dumpDataValues(Tag93LenSignatureLength tagData) {
-        System.out.println("---------- Start Tag93LenSignatureLength MyLengthType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag93LenSignatureLength MyLengthType ----------");
+        System.out.println( new Tag93LenSignatureLength(new MyLengthType(TESTA_LEN_SIGNATURE_LENGTH)).toVerboseString() );
+        System.out.println( new Tag93LenSignatureLength(new MyLengthType(TESTB_LEN_SIGNATURE_LENGTH)).toVerboseString() );
     }
 }

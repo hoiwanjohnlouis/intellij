@@ -79,16 +79,7 @@ public class Tag32QtyLastQty extends FIX27Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag32QtyLastQty(new MyQtyType(TESTA_QTY_LAST_QTY)) );
-        dumpDataValues( new Tag32QtyLastQty(new MyQtyType(TESTB_QTY_LAST_QTY)) );
-    }
-    /**
-     *
-     * @param tagData   Tag32QtyLastQty
-     */
-    static void dumpDataValues(Tag32QtyLastQty tagData) {
-        System.out.println("---------- Start Tag32QtyLastQty MyQtyType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag32QtyLastQty MyQtyType ----------");
+        System.out.println( new Tag32QtyLastQty(new MyQtyType(TESTA_QTY_LAST_QTY)).toVerboseString() );
+        System.out.println( new Tag32QtyLastQty(new MyQtyType(TESTB_QTY_LAST_QTY)).toVerboseString() );
     }
 }

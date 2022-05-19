@@ -66,7 +66,20 @@ public class Tag97BoolPossResend extends FIX27Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -102,22 +115,12 @@ public class Tag97BoolPossResend extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues(new Tag97BoolPossResend(TESTA_BOOL_POSS_RESEND));
-        dumpDataValues(new Tag97BoolPossResend(TESTB_BOOL_POSS_RESEND));
-    }
-    static void dumpDataValues(Tag97BoolPossResend tagData) {
-        System.out.println("-------------------- Start Boolean --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData);
-        System.out.println("EnumNameString:" + tagData.toEnumNameString());
-        System.out.println("FIXIDString:" + tagData.toFIXIDString());
-        System.out.println("FIXNameString:" + tagData.toFIXNameString());
-        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-        System.out.println("ValuePairString:" + tagData.toValuePairString());
-        System.out.println("-------------------- End Boolean --------------------");
+        System.out.println( new Tag97BoolPossResend(TESTA_BOOL_POSS_RESEND).toVerboseString() );
+        System.out.println( new Tag97BoolPossResend(TESTB_BOOL_POSS_RESEND).toVerboseString() );
+
+        // loop around the ENUM and display
+        for (MyBooleanType oneEnum : MyBooleanType.values()) {
+            System.out.println( new Tag97BoolPossResend(oneEnum).toVerboseString() );
+        }
     }
 }

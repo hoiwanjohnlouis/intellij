@@ -79,16 +79,7 @@ public class Tag78NumNoAllocs extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag78NumNoAllocs(new MyNumInGroupType(TESTA_NUM_NO_ALLOCS)) );
-        dumpDataValues( new Tag78NumNoAllocs(new MyNumInGroupType(TESTB_NUM_NO_ALLOCS)) );
-    }
-    /**
-     *
-     * @param tagData   Tag78NumNoAllocs
-     */
-    static void dumpDataValues(Tag78NumNoAllocs tagData) {
-        System.out.println("---------- Start Tag78NumNoAllocs MyNumInGroupType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag78NumNoAllocs MyNumInGroupType ----------");
+        System.out.println( new Tag78NumNoAllocs(new MyNumInGroupType(TESTA_NUM_NO_ALLOCS)).toVerboseString() );
+        System.out.println( new Tag78NumNoAllocs(new MyNumInGroupType(TESTB_NUM_NO_ALLOCS)).toVerboseString() );
     }
 }

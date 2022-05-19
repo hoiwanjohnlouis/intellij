@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag55StrSymbol extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SYMBOL = "TESTA";
-    public final static String TESTB_STR_SYMBOL = "TESTB";
+    public final static String TESTA_STR_SYMBOL
+            = "TESTA";
+    public final static String TESTB_STR_SYMBOL
+            = "TESTB";
 
     public Tag55StrSymbol(MyStringType dataValue) {
         setFixType(FIX27.FIX55_STR_SYMBOL);
@@ -82,16 +84,7 @@ public class Tag55StrSymbol extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag55StrSymbol(new MyStringType(TESTA_STR_SYMBOL)) );
-        dumpDataValues( new Tag55StrSymbol(new MyStringType(TESTB_STR_SYMBOL)) );
-    }
-    /**
-     *
-     * @param tagData   Tag55StrSymbol
-     */
-    static void dumpDataValues(Tag55StrSymbol tagData) {
-        System.out.println("-------------------- Start Tag55StrSymbol MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag55StrSymbol MyStringType --------------------");
+        System.out.println( new Tag55StrSymbol(new MyStringType(TESTA_STR_SYMBOL)).toVerboseString() );
+        System.out.println( new Tag55StrSymbol(new MyStringType(TESTB_STR_SYMBOL)).toVerboseString() );
     }
 }

@@ -80,16 +80,7 @@ public class Tag9LenBodyLength extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag9LenBodyLength(new MyLengthType(TESTA_LEN_BODY_LENGTH)) );
-        dumpDataValues( new Tag9LenBodyLength(new MyLengthType(TESTB_LEN_BODY_LENGTH)) );
-    }
-    /**
-     *
-     * @param tagData   Tag9LenBodyLength
-     */
-    static void dumpDataValues(Tag9LenBodyLength tagData) {
-        System.out.println("---------- Start Tag9LenBodyLength MyLengthType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag9LenBodyLength MyLengthType ----------");
+        System.out.println( new Tag9LenBodyLength(new MyLengthType(TESTA_LEN_BODY_LENGTH)).toVerboseString() );
+        System.out.println( new Tag9LenBodyLength(new MyLengthType(TESTB_LEN_BODY_LENGTH)).toVerboseString() );
     }
 }

@@ -79,16 +79,7 @@ public class Tag51LmdSendingDate extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag51LmdSendingDate(new MyLocalMktDateType(TESTA_LMD_SENDING_DATE)) );
-        dumpDataValues( new Tag51LmdSendingDate(new MyLocalMktDateType(TESTB_LMD_SENDING_DATE)) );
-    }
-    /**
-     *
-     * @param tagData   Tag51LmdSendingDate
-     */
-    static void dumpDataValues(Tag51LmdSendingDate tagData) {
-        System.out.println("---------- Start Tag51LmdSendingDate MyLocalMktDateType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag51LmdSendingDate MyLocalMktDateType ----------");
+        System.out.println( new Tag51LmdSendingDate(new MyLocalMktDateType(TESTA_LMD_SENDING_DATE)).toVerboseString() );
+        System.out.println( new Tag51LmdSendingDate(new MyLocalMktDateType(TESTB_LMD_SENDING_DATE)).toVerboseString() );
     }
 }

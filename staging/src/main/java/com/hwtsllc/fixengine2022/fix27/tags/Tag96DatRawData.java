@@ -79,16 +79,7 @@ public class Tag96DatRawData extends FIX27Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag96DatRawData(new MyDataType(TESTA_DAT_RAW_DATA)) );
-        dumpDataValues( new Tag96DatRawData(new MyDataType(TESTB_DAT_RAW_DATA)) );
-    }
-    /**
-     *
-     * @param tagData   Tag96DatRawData
-     */
-    static void dumpDataValues(Tag96DatRawData tagData) {
-        System.out.println("---------- Start Tag96DatRawData MyDataType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag96DatRawData MyDataType ----------");
+        System.out.println( new Tag96DatRawData(new MyDataType(TESTA_DAT_RAW_DATA)).toVerboseString() );
+        System.out.println( new Tag96DatRawData(new MyDataType(TESTB_DAT_RAW_DATA)).toVerboseString() );
     }
 }

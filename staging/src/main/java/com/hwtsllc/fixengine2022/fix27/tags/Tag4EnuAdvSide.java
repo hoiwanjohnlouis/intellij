@@ -67,7 +67,20 @@ public class Tag4EnuAdvSide extends FIX27Abstract implements LogValuePairString,
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -103,27 +116,12 @@ public class Tag4EnuAdvSide extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues(new Tag4EnuAdvSide(TESTA_ENU_ADV_SIDE));
-        dumpDataValues(new Tag4EnuAdvSide(TESTB_ENU_ADV_SIDE));
+        System.out.println( new Tag4EnuAdvSide(TESTA_ENU_ADV_SIDE).toVerboseString() );
+        System.out.println( new Tag4EnuAdvSide(TESTB_ENU_ADV_SIDE).toVerboseString() );
 
         // loop around the ENUM and display
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
-            dumpDataValues(new Tag4EnuAdvSide(oneEnum));
+            System.out.println( new Tag4EnuAdvSide(oneEnum).toVerboseString() );
         }
-    }
-    static void dumpDataValues(Tag4EnuAdvSide tagData) {
-        System.out.println("-------------------- Start Enum --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData);
-        System.out.println("EnumNameString:" + tagData.toEnumNameString());
-        System.out.println("FIXIDString:" + tagData.toFIXIDString());
-        System.out.println("FIXNameString:" + tagData.toFIXNameString());
-        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-        System.out.println("ValuePairString:" + tagData.toValuePairString());
-        System.out.println("-------------------- End Enum --------------------");
     }
 }

@@ -31,8 +31,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag49StrSenderCompID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SENDER_COMP_ID = "BilboBaggins-49StSenderCompID"; // fake data
-    public final static String TESTB_STR_SENDER_COMP_ID = "Gandalf-49StSenderCompID";
+    public final static String TESTA_STR_SENDER_COMP_ID
+            = "BilboBaggins-Tag49StrSenderCompID";
+    public final static String TESTB_STR_SENDER_COMP_ID
+            = "Gandalf-Tag49StrSenderCompID";
 
     public Tag49StrSenderCompID(MyStringType dataValue) {
         setFixType(FIX27.FIX49_STR_SENDER_COMP_ID);
@@ -78,16 +80,7 @@ public class Tag49StrSenderCompID extends FIX27Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag49StrSenderCompID(new MyStringType(TESTA_STR_SENDER_COMP_ID)) );
-        dumpDataValues( new Tag49StrSenderCompID(new MyStringType(TESTB_STR_SENDER_COMP_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag49StrSenderCompID
-     */
-    static void dumpDataValues(Tag49StrSenderCompID tagData) {
-        System.out.println("-------------------- Start Tag49StrSenderCompID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag49StrSenderCompID MyStringType --------------------");
+        System.out.println( new Tag49StrSenderCompID(new MyStringType(TESTA_STR_SENDER_COMP_ID)).toVerboseString() );
+        System.out.println( new Tag49StrSenderCompID(new MyStringType(TESTB_STR_SENDER_COMP_ID)).toVerboseString() );
     }
 }

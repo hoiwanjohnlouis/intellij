@@ -79,16 +79,7 @@ public class Tag12AmtCommission extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag12AmtCommission(new MyAmtType(TESTA_AMT_COMMISSION)) );
-        dumpDataValues( new Tag12AmtCommission(new MyAmtType(TESTB_AMT_COMMISSION)) );
-    }
-    /**
-     *
-     * @param tagData   Tag12AmtCommission
-     */
-    static void dumpDataValues(Tag12AmtCommission tagData) {
-        System.out.println("---------- Start Tag12AmtCommission MyAmtType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag12AmtCommission MyAmtType ----------");
+        System.out.println( new Tag12AmtCommission(new MyAmtType(TESTA_AMT_COMMISSION)).toVerboseString() );
+        System.out.println( new Tag12AmtCommission(new MyAmtType(TESTB_AMT_COMMISSION)).toVerboseString() );
     }
 }

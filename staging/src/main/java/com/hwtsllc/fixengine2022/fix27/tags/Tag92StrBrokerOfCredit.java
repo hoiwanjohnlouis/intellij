@@ -33,8 +33,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag92StrBrokerOfCredit extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_BROKER_OF_CREDIT = "BilboBaggins-92StBrokerOfCredit";
-    public final static String TESTB_STR_BROKER_OF_CREDIT = "Gandalf-92StBrokerOfCredit";
+    public final static String TESTA_STR_BROKER_OF_CREDIT
+            = "BilboBaggins-Tag92StrBrokerOfCredit";
+    public final static String TESTB_STR_BROKER_OF_CREDIT
+            = "Gandalf-Tag92StrBrokerOfCredit";
 
     public Tag92StrBrokerOfCredit(MyStringType dataValue) {
         setFixType(FIX27.FIX92_STR_BROKER_OF_CREDIT);
@@ -80,16 +82,7 @@ public class Tag92StrBrokerOfCredit extends FIX27Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag92StrBrokerOfCredit(new MyStringType(TESTA_STR_BROKER_OF_CREDIT)) );
-        dumpDataValues( new Tag92StrBrokerOfCredit(new MyStringType(TESTB_STR_BROKER_OF_CREDIT)) );
-    }
-    /**
-     *
-     * @param tagData   Tag92StrBrokerOfCredit
-     */
-    static void dumpDataValues(Tag92StrBrokerOfCredit tagData) {
-        System.out.println("-------------------- Start Tag92StrBrokerOfCredit MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag92StrBrokerOfCredit MyStringType --------------------");
+        System.out.println( new Tag92StrBrokerOfCredit(new MyStringType(TESTA_STR_BROKER_OF_CREDIT)).toVerboseString() );
+        System.out.println( new Tag92StrBrokerOfCredit(new MyStringType(TESTB_STR_BROKER_OF_CREDIT)).toVerboseString() );
     }
 }

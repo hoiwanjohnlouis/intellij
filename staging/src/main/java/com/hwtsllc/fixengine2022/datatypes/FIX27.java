@@ -66,8 +66,8 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
      *  Tags: 1-103
      */
     FIX1_STR_ACCOUNT(1, "ACCOUNT", "Account"),
-    FIX2_STR_ADV_ID(2, "ADV_ID", "AdvId"),
-    FIX3_STR_ADV_REF_ID(3, "ADV_REF_ID", "AdvRefId"),
+    FIX2_STR_ADV_ID(2, "ADV_ID", "AdvID"),
+    FIX3_STR_ADV_REF_ID(3, "ADV_REF_ID", "AdvRefID"),
     FIX4_ENU_ADV_SIDE(4, "ADV_SIDE", "AdvSide"),
     FIX5_ENU_ADV_TRANS_TYPE(5, "ADV_TRANS_TYPE", "Enum5AdvTransType"),
     FIX6_PRC_AVG_PX(6, "AVG_PX", "AvgPx"),
@@ -89,7 +89,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
 
     FIX21_ENU_HANDL_INST(21, "HANDL_INST", "HandlInst"),
     FIX22_ENU_SECURITY_ID_SOURCE(22, "SECURITY_ID_SOURCE", "SecurityIDSource"),
-    FIX23_STR_IOI_ID(23, "IOI_ID", "IOIid"),
+    FIX23_STR_IOI_ID(23, "IOI_ID", "IOIID"),
     FIX24_STR_IOI_OTH_SVC(24, "IOI_OTH_SVC", "IOIOthSvc (no longer used)"),
     FIX25_ENU_IOI_QLTY_IND(25, "IOI_QLTY_IND", "IOIQltyInd"),
     FIX26_STR_IOI_REF_ID(26, "IOI_REF_ID", "IOIRefID"),

@@ -81,16 +81,7 @@ public class Tag80QtyAllocQty extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag80QtyAllocQty(new MyQtyType(TESTA_QTY_ALLOC_QTY)) );
-        dumpDataValues( new Tag80QtyAllocQty(new MyQtyType(TESTB_QTY_ALLOC_QTY)) );
-    }
-    /**
-     *
-     * @param tagData   Tag80QtyAllocQty
-     */
-    static void dumpDataValues(Tag80QtyAllocQty tagData) {
-        System.out.println("---------- Start Tag80QtyAllocQty MyQtyType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag80QtyAllocQty MyQtyType ----------");
+        System.out.println( new Tag80QtyAllocQty(new MyQtyType(TESTA_QTY_ALLOC_QTY)).toVerboseString() );
+        System.out.println( new Tag80QtyAllocQty(new MyQtyType(TESTB_QTY_ALLOC_QTY)).toVerboseString() );
     }
 }

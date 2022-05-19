@@ -31,8 +31,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag69StrListExecInst extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LIST_EXEC_INST = "BilboBaggins-69ListExecInst"; // fake data
-    public final static String TESTB_STR_LIST_EXEC_INST = "Gandalf-69ListExecInst";
+    public final static String TESTA_STR_LIST_EXEC_INST
+            = "BilboBaggins-Tag69StrListExecInst";
+    public final static String TESTB_STR_LIST_EXEC_INST
+            = "Gandalf-Tag69StrListExecInst";
 
     public Tag69StrListExecInst(MyStringType dataValue) {
         setFixType(FIX27.FIX69_STR_LIST_EXEC_INST);
@@ -78,16 +80,7 @@ public class Tag69StrListExecInst extends FIX27Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag69StrListExecInst(new MyStringType(TESTA_STR_LIST_EXEC_INST)) );
-        dumpDataValues( new Tag69StrListExecInst(new MyStringType(TESTB_STR_LIST_EXEC_INST)) );
-    }
-    /**
-     *
-     * @param tagData   Tag69StrListExecInst
-     */
-    static void dumpDataValues(Tag69StrListExecInst tagData) {
-        System.out.println("-------------------- Start Tag69StrListExecInst MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag69StrListExecInst MyStringType --------------------");
+        System.out.println( new Tag69StrListExecInst(new MyStringType(TESTA_STR_LIST_EXEC_INST)).toVerboseString() );
+        System.out.println( new Tag69StrListExecInst(new MyStringType(TESTB_STR_LIST_EXEC_INST)).toVerboseString() );
     }
 }

@@ -16,9 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.*;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -79,16 +77,7 @@ public class Tag73NumNoOrders extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag73NumNoOrders(new MyNumInGroupType(TESTA_NUM_NO_ORDERS)) );
-        dumpDataValues( new Tag73NumNoOrders(new MyNumInGroupType(TESTB_NUM_NO_ORDERS)) );
-    }
-    /**
-     *
-     * @param tagData   Tag73NumNoOrders
-     */
-    static void dumpDataValues(Tag73NumNoOrders tagData) {
-        System.out.println("---------- Start Tag73NumNoOrders MyNumInGroupType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag73NumNoOrders MyNumInGroupType ----------");
+        System.out.println( new Tag73NumNoOrders(new MyNumInGroupType(TESTA_NUM_NO_ORDERS)).toVerboseString() );
+        System.out.println( new Tag73NumNoOrders(new MyNumInGroupType(TESTB_NUM_NO_ORDERS)).toVerboseString() );
     }
 }

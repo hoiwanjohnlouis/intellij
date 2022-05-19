@@ -16,9 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -82,16 +82,7 @@ public class Tag15CcyCurrency extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag15CcyCurrency(new MyCurrencyType(TESTA_CCY_CURRENCY)) );
-        dumpDataValues( new Tag15CcyCurrency(new MyCurrencyType(TESTB_CCY_CURRENCY)) );
-    }
-    /**
-     *
-     * @param tagData   Tag15CcyCurrency
-     */
-    static void dumpDataValues(Tag15CcyCurrency tagData) {
-        System.out.println("---------- Start Tag15CcyCurrency MyCurrencyType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag15CcyCurrency MyCurrencyType ----------");
+        System.out.println( new Tag15CcyCurrency(new MyCurrencyType(TESTA_CCY_CURRENCY)).toVerboseString() );
+        System.out.println( new Tag15CcyCurrency(new MyCurrencyType(TESTB_CCY_CURRENCY)).toVerboseString() );
     }
 }

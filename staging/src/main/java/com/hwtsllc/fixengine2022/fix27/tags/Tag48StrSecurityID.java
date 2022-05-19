@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag48StrSecurityID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECURITY_ID = "TESTA"; // fake data
-    public final static String TESTB_STR_SECURITY_ID = "TESTB";
+    public final static String TESTA_STR_SECURITY_ID
+            = "TESTA";
+    public final static String TESTB_STR_SECURITY_ID
+            = "TESTB";
 
     public Tag48StrSecurityID(MyStringType dataValue) {
         setFixType(FIX27.FIX48_STR_SECURITY_ID);
@@ -79,16 +81,7 @@ public class Tag48StrSecurityID extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag48StrSecurityID(new MyStringType(TESTA_STR_SECURITY_ID)) );
-        dumpDataValues( new Tag48StrSecurityID(new MyStringType(TESTB_STR_SECURITY_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag48StrSecurityID
-     */
-    static void dumpDataValues(Tag48StrSecurityID tagData) {
-        System.out.println("-------------------- Start Tag48StrSecurityID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag48StrSecurityID MyStringType --------------------");
+        System.out.println( new Tag48StrSecurityID(new MyStringType(TESTA_STR_SECURITY_ID)).toVerboseString() );
+        System.out.println( new Tag48StrSecurityID(new MyStringType(TESTB_STR_SECURITY_ID)).toVerboseString() );
     }
 }

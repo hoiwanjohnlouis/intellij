@@ -79,16 +79,7 @@ public class Tag91DatSecureData extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag91DatSecureData(new MyDataType(TESTA_DAT_SECURE_DATA)) );
-        dumpDataValues( new Tag91DatSecureData(new MyDataType(TESTB_DAT_SECURE_DATA)) );
-    }
-    /**
-     *
-     * @param tagData   Tag91DatSecureData
-     */
-    static void dumpDataValues(Tag91DatSecureData tagData) {
-        System.out.println("---------- Start Tag91DatSecureData MyDataType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag91DatSecureData MyDataType ----------");
+        System.out.println( new Tag91DatSecureData(new MyDataType(TESTA_DAT_SECURE_DATA)).toVerboseString() );
+        System.out.println( new Tag91DatSecureData(new MyDataType(TESTB_DAT_SECURE_DATA)).toVerboseString() );
     }
 }

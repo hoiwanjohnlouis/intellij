@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag24StrIOIOthSvc extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_IOI_OTH_SVC = "BilboBaggins-24IOIOthSvc"; // fake data
-    public final static String TESTB_STR_IOI_OTH_SVC = "Gandalf-24IOIOthSvc";
+    public final static String TESTA_STR_IOI_OTH_SVC
+            = "BilboBaggins-Tag24StrIOIOthSvc";
+    public final static String TESTB_STR_IOI_OTH_SVC
+            = "Gandalf-Tag24StrIOIOthSvc";
 
     public Tag24StrIOIOthSvc(MyStringType dataValue) {
         setFixType(FIX27.FIX24_STR_IOI_OTH_SVC);
@@ -79,16 +81,7 @@ public class Tag24StrIOIOthSvc extends FIX27Abstract implements LogValuePairStri
      * @param args      Not used.
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag24StrIOIOthSvc(new MyStringType(TESTA_STR_IOI_OTH_SVC)) );
-        dumpDataValues( new Tag24StrIOIOthSvc(new MyStringType(TESTB_STR_IOI_OTH_SVC)) );
-    }
-    /**
-     *
-     * @param tagData   Tag24StrIOIOthSvc
-     */
-    static void dumpDataValues(Tag24StrIOIOthSvc tagData) {
-        System.out.println("-------------------- Start Tag24StrIOIOthSvc MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag24StrIOIOthSvc MyStringType --------------------");
+        System.out.println( new Tag24StrIOIOthSvc(new MyStringType(TESTA_STR_IOI_OTH_SVC)).toVerboseString() );
+        System.out.println( new Tag24StrIOIOthSvc(new MyStringType(TESTB_STR_IOI_OTH_SVC)).toVerboseString() );
     }
 }

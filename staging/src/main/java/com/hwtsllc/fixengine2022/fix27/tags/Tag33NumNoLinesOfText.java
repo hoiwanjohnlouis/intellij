@@ -78,16 +78,7 @@ public class Tag33NumNoLinesOfText extends FIX27Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTA_NUM_NO_LINES_OF_TEXT)) );
-        dumpDataValues( new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTB_NUM_NO_LINES_OF_TEXT)) );
-    }
-    /**
-     *
-     * @param tagData   Tag33NumNoLinesOfText
-     */
-    static void dumpDataValues(Tag33NumNoLinesOfText tagData) {
-        System.out.println("---------- Start Tag33NumNoLinesOfText MyNumInGroupType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag33NumNoLinesOfText MyNumInGroupType ----------");
+        System.out.println( new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTA_NUM_NO_LINES_OF_TEXT)).toVerboseString() );
+        System.out.println( new Tag33NumNoLinesOfText(new MyNumInGroupType(TESTB_NUM_NO_LINES_OF_TEXT)).toVerboseString() );
     }
 }

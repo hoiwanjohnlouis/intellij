@@ -48,8 +48,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag60UtcTransactTime extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_TRANSACT_TIME = "18991231-23:59:59.060";
-    public final static String TESTB_UTC_TRANSACT_TIME = "19001231-23:59:59.060";
+    public final static String TESTA_UTC_TRANSACT_TIME
+            = "18991231-23:59:59.060";
+    public final static String TESTB_UTC_TRANSACT_TIME
+            = "19001231-23:59:59.060";
 
     public Tag60UtcTransactTime(MyUTCTimestampType dataValue) {
         setFixType(FIX27.FIX60_UTC_TRANSACT_TIME);
@@ -95,16 +97,7 @@ public class Tag60UtcTransactTime extends FIX27Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag60UtcTransactTime(new MyUTCTimestampType(TESTA_UTC_TRANSACT_TIME)) );
-        dumpDataValues( new Tag60UtcTransactTime(new MyUTCTimestampType(TESTB_UTC_TRANSACT_TIME)) );
-    }
-    /**
-     *
-     * @param tagData   Tag60UtcTransactTime
-     */
-    static void dumpDataValues(Tag60UtcTransactTime tagData) {
-        System.out.println("---------- Start Tag60UtcTransactTime MyUTCTimestampType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag60UtcTransactTime MyUTCTimestampType ----------");
+        System.out.println( new Tag60UtcTransactTime(new MyUTCTimestampType(TESTA_UTC_TRANSACT_TIME)).toVerboseString() );
+        System.out.println( new Tag60UtcTransactTime(new MyUTCTimestampType(TESTB_UTC_TRANSACT_TIME)).toVerboseString() );
     }
 }

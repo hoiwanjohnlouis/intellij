@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag58StrText extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_TEXT = "BilboBaggins-58StText"; // fake data
-    public final static String TESTB_STR_TEXT = "Gandalf-58StText";
+    public final static String TESTA_STR_TEXT
+            = "BilboBaggins-Tag58StrText";
+    public final static String TESTB_STR_TEXT
+            = "Gandalf-Tag58StrText";
 
     public Tag58StrText(MyStringType dataValue) {
         setFixType(FIX27.FIX58_STR_TEXT);
@@ -79,16 +81,7 @@ public class Tag58StrText extends FIX27Abstract implements LogValuePairString, L
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag58StrText(new MyStringType(TESTA_STR_TEXT)) );
-        dumpDataValues( new Tag58StrText(new MyStringType(TESTB_STR_TEXT)) );
-    }
-    /**
-     *
-     * @param tagData   Tag58StrText
-     */
-    static void dumpDataValues(Tag58StrText tagData) {
-        System.out.println("-------------------- Start Tag58StrText MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag58StrText MyStringType --------------------");
+        System.out.println( new Tag58StrText(new MyStringType(TESTA_STR_TEXT)).toVerboseString() );
+        System.out.println( new Tag58StrText(new MyStringType(TESTB_STR_TEXT)).toVerboseString() );
     }
 }

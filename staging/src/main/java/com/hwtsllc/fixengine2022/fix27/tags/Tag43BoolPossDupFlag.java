@@ -65,7 +65,20 @@ public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -101,27 +114,12 @@ public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues(new Tag43BoolPossDupFlag(TESTA_BOOL_POSS_DUP_FLAG));
-        dumpDataValues(new Tag43BoolPossDupFlag(TESTB_BOOL_POSS_DUP_FLAG));
+        System.out.println( new Tag43BoolPossDupFlag(TESTA_BOOL_POSS_DUP_FLAG).toVerboseString() );
+        System.out.println( new Tag43BoolPossDupFlag(TESTB_BOOL_POSS_DUP_FLAG).toVerboseString() );
 
         // loop around the ENUM and display
         for (MyBooleanType oneEnum : MyBooleanType.values()) {
-            dumpDataValues(new Tag43BoolPossDupFlag(oneEnum));
+            System.out.println( new Tag43BoolPossDupFlag(oneEnum).toVerboseString() );
         }
-    }
-    static void dumpDataValues(Tag43BoolPossDupFlag tagData) {
-        System.out.println("-------------------- Start Boolean --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData);
-        System.out.println("EnumNameString:" + tagData.toEnumNameString());
-        System.out.println("FIXIDString:" + tagData.toFIXIDString());
-        System.out.println("FIXNameString:" + tagData.toFIXNameString());
-        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-        System.out.println("ValuePairString:" + tagData.toValuePairString());
-        System.out.println("-------------------- End Boolean --------------------");
     }
 }

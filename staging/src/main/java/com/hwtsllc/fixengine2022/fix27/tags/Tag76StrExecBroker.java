@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag76StrExecBroker extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_EXEC_BROKER = "BilboBaggins-76ExecBroker"; // fake data
-    public final static String TESTB_STR_EXEC_BROKER = "Gandalf-76ExecBroker";
+    public final static String TESTA_STR_EXEC_BROKER
+            = "BilboBaggins-Tag76StrExecBroker";
+    public final static String TESTB_STR_EXEC_BROKER
+            = "Gandalf-Tag76StrExecBroker";
 
     public Tag76StrExecBroker(MyStringType dataValue) {
         setFixType(FIX27.FIX76_STR_EXEC_BROKER);
@@ -83,16 +85,7 @@ public class Tag76StrExecBroker extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag76StrExecBroker(new MyStringType(TESTA_STR_EXEC_BROKER)) );
-        dumpDataValues( new Tag76StrExecBroker(new MyStringType(TESTB_STR_EXEC_BROKER)) );
-    }
-    /**
-     *
-     * @param tagData   Tag76StrExecBroker
-     */
-    static void dumpDataValues(Tag76StrExecBroker tagData) {
-        System.out.println("-------------------- Start Tag76StrExecBroker MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag76StrExecBroker MyStringType --------------------");
+        System.out.println( new Tag76StrExecBroker(new MyStringType(TESTA_STR_EXEC_BROKER)).toVerboseString() );
+        System.out.println( new Tag76StrExecBroker(new MyStringType(TESTB_STR_EXEC_BROKER)).toVerboseString() );
     }
 }

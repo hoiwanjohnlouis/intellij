@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag30StrLastMkt extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LAST_MKT = "BilboBaggins-30LastMkt"; // fake data
-    public final static String TESTB_STR_LAST_MKT = "Gandalf-30LastMkt";
+    public final static String TESTA_STR_LAST_MKT
+            = "BilboBaggins-Tag30StrLastMkt";
+    public final static String TESTB_STR_LAST_MKT
+            = "Gandalf-Tag30StrLastMkt";
 
     public Tag30StrLastMkt(MyStringType dataValue) {
         setFixType(FIX27.FIX30_STR_LAST_MKT);
@@ -79,16 +81,7 @@ public class Tag30StrLastMkt extends FIX27Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag30StrLastMkt(new MyStringType(TESTA_STR_LAST_MKT)) );
-        dumpDataValues( new Tag30StrLastMkt(new MyStringType(TESTB_STR_LAST_MKT)) );
-    }
-    /**
-     *
-     * @param tagData   Tag30StrLastMkt
-     */
-    static void dumpDataValues(Tag30StrLastMkt tagData) {
-        System.out.println("-------------------- Start Tag30StrLastMkt MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag30StrLastMkt MyStringType --------------------");
+        System.out.println( new Tag30StrLastMkt(new MyStringType(TESTA_STR_LAST_MKT)).toVerboseString() );
+        System.out.println( new Tag30StrLastMkt(new MyStringType(TESTB_STR_LAST_MKT)).toVerboseString() );
     }
 }

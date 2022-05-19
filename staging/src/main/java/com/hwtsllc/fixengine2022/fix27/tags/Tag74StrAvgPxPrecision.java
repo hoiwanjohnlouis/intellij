@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag74StrAvgPxPrecision extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_AVG_PX_PRECISION = "BilboBaggins-74AvgPxPrecision"; // fake data
-    public final static String TESTB_STR_AVG_PX_PRECISION = "Gandalf-74AvgPxPrecision";
+    public final static String TESTA_STR_AVG_PX_PRECISION
+            = "BilboBaggins-Tag74StrAvgPxPrecision";
+    public final static String TESTB_STR_AVG_PX_PRECISION
+            = "Gandalf-Tag74StrAvgPxPrecision";
 
     public Tag74StrAvgPxPrecision(MyStringType dataValue) {
         setFixType(FIX27.FIX74_STR_AVG_PX_PRECISION);
@@ -82,16 +84,7 @@ public class Tag74StrAvgPxPrecision extends FIX27Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag74StrAvgPxPrecision(new MyStringType(TESTA_STR_AVG_PX_PRECISION)) );
-        dumpDataValues( new Tag74StrAvgPxPrecision(new MyStringType(TESTB_STR_AVG_PX_PRECISION)) );
-    }
-    /**
-     *
-     * @param tagData   Tag74StrAvgPxPrecision
-     */
-    static void dumpDataValues(Tag74StrAvgPxPrecision tagData) {
-        System.out.println("-------------------- Start Tag74StrAvgPxPrecision MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag74StrAvgPxPrecision MyStringType --------------------");
+        System.out.println( new Tag74StrAvgPxPrecision(new MyStringType(TESTA_STR_AVG_PX_PRECISION)).toVerboseString() );
+        System.out.println( new Tag74StrAvgPxPrecision(new MyStringType(TESTB_STR_AVG_PX_PRECISION)).toVerboseString() );
     }
 }

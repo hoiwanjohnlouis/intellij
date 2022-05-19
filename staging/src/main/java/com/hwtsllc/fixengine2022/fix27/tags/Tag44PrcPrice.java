@@ -78,16 +78,7 @@ public class Tag44PrcPrice extends FIX27Abstract implements LogValuePairString, 
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag44PrcPrice(new MyPriceType(TESTA_PRC_PRICE)) );
-        dumpDataValues( new Tag44PrcPrice(new MyPriceType(TESTB_PRC_PRICE)) );
-    }
-    /**
-     *
-     * @param tagData   Tag44PrcPrice
-     */
-    static void dumpDataValues(Tag44PrcPrice tagData) {
-        System.out.println("---------- Start Tag44PrcPrice MyPriceType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag44PrcPrice MyPriceType ----------");
+        System.out.println( new Tag44PrcPrice(new MyPriceType(TESTA_PRC_PRICE)).toVerboseString() );
+        System.out.println( new Tag44PrcPrice(new MyPriceType(TESTB_PRC_PRICE)).toVerboseString() );
     }
 }

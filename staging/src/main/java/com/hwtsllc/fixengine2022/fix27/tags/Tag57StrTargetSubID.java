@@ -33,9 +33,9 @@ public class Tag57StrTargetSubID extends FIX27Abstract implements LogValuePairSt
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TARGET_SUB_ID
-            = "BilboBaggins-57StTargetSubID";
+            = "BilboBaggins-Tag57StrTargetSubID";
     public final static String TESTB_STR_TARGET_SUB_ID
-            = "Gandalf-57StTargetSubID";
+            = "Gandalf-Tag57StrTargetSubID";
 
     public Tag57StrTargetSubID(MyStringType dataValue) {
         setFixType(FIX27.FIX57_STR_TARGET_SUB_ID);
@@ -81,16 +81,7 @@ public class Tag57StrTargetSubID extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag57StrTargetSubID(new MyStringType(TESTA_STR_TARGET_SUB_ID)) );
-        dumpDataValues( new Tag57StrTargetSubID(new MyStringType(TESTB_STR_TARGET_SUB_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag57StrTargetSubID
-     */
-    static void dumpDataValues(Tag57StrTargetSubID tagData) {
-        System.out.println("-------------------- Start Tag57StrTargetSubID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag57StrTargetSubID MyStringType --------------------");
+        System.out.println( new Tag57StrTargetSubID(new MyStringType(TESTA_STR_TARGET_SUB_ID)).toVerboseString() );
+        System.out.println( new Tag57StrTargetSubID(new MyStringType(TESTB_STR_TARGET_SUB_ID)).toVerboseString() );
     }
 }

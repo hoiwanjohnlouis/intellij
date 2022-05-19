@@ -79,16 +79,7 @@ public class Tag99PrcStopPx extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag99PrcStopPx(new MyPriceType(TESTA_PRC_STOP_PX)) );
-        dumpDataValues( new Tag99PrcStopPx(new MyPriceType(TESTB_PRC_STOP_PX)) );
-    }
-    /**
-     *
-     * @param tagData   Tag99PrcStopPx
-     */
-    static void dumpDataValues(Tag99PrcStopPx tagData) {
-        System.out.println("---------- Start Tag99PrcStopPx MyPriceType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag99PrcStopPx MyPriceType ----------");
+        System.out.println( new Tag99PrcStopPx(new MyPriceType(TESTA_PRC_STOP_PX)).toVerboseString() );
+        System.out.println( new Tag99PrcStopPx(new MyPriceType(TESTB_PRC_STOP_PX)).toVerboseString() );
     }
 }

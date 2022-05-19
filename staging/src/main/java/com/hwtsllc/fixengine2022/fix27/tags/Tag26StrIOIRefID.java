@@ -33,9 +33,9 @@ public class Tag26StrIOIRefID extends FIX27Abstract implements LogValuePairStrin
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_IOI_REF_ID
-            = "BilboBaggins-26StIOIRefID";
+            = "BilboBaggins-Tag26StrIOIRefID";
     public final static String TESTB_STR_IOI_REF_ID
-            = "Gandalf-26StIOIRefID";
+            = "Gandalf-Tag26StrIOIRefID";
 
     public Tag26StrIOIRefID(MyStringType dataValue) {
         setFixType(FIX27.FIX26_STR_IOI_REF_ID);
@@ -81,16 +81,7 @@ public class Tag26StrIOIRefID extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag26StrIOIRefID(new MyStringType(TESTA_STR_IOI_REF_ID)) );
-        dumpDataValues( new Tag26StrIOIRefID(new MyStringType(TESTB_STR_IOI_REF_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag26StrIOIRefID
-     */
-    static void dumpDataValues(Tag26StrIOIRefID tagData) {
-        System.out.println("-------------------- Start Tag26StrIOIRefID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag26StrIOIRefID MyStringType --------------------");
+        System.out.println( new Tag26StrIOIRefID(new MyStringType(TESTA_STR_IOI_REF_ID)).toVerboseString() );
+        System.out.println( new Tag26StrIOIRefID(new MyStringType(TESTB_STR_IOI_REF_ID)).toVerboseString() );
     }
 }

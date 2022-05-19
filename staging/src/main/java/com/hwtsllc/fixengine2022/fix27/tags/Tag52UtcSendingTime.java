@@ -79,16 +79,7 @@ public class Tag52UtcSendingTime extends FIX27Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag52UtcSendingTime(new MyUTCTimestampType(TESTA_UTC_SENDING_TIME)) );
-        dumpDataValues( new Tag52UtcSendingTime(new MyUTCTimestampType(TESTB_UTC_SENDING_TIME)) );
-    }
-    /**
-     *
-     * @param tagData   Tag52UtcSendingTime
-     */
-    static void dumpDataValues(Tag52UtcSendingTime tagData) {
-        System.out.println("---------- Start Tag52UtcSendingTime MyUTCTimestampType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag52UtcSendingTime MyUTCTimestampType ----------");
+        System.out.println( new Tag52UtcSendingTime(new MyUTCTimestampType(TESTA_UTC_SENDING_TIME)).toVerboseString() );
+        System.out.println( new Tag52UtcSendingTime(new MyUTCTimestampType(TESTB_UTC_SENDING_TIME)).toVerboseString() );
     }
 }

@@ -83,16 +83,7 @@ public class Tag6PrcAvgPx extends FIX27Abstract implements LogValuePairString, L
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag6PrcAvgPx(new MyPriceType(TESTA_PRC_AVG_PX)) );
-        dumpDataValues( new Tag6PrcAvgPx(new MyPriceType(TESTB_PRC_AVG_PX)) );
-    }
-    /**
-     *
-     * @param tagData   Tag6PrcAvgPx
-     */
-    static void dumpDataValues(Tag6PrcAvgPx tagData) {
-        System.out.println("---------- Start Tag6PrcAvgPx MyPriceType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag6PrcAvgPx MyPriceType ----------");
+        System.out.println( new Tag6PrcAvgPx(new MyPriceType(TESTA_PRC_AVG_PX)).toVerboseString() );
+        System.out.println( new Tag6PrcAvgPx(new MyPriceType(TESTB_PRC_AVG_PX)).toVerboseString() );
     }
 }

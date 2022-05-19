@@ -48,11 +48,48 @@ class Tag6PrcAvgPxTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0006Test() {
+    void PrintFIXTagTest() {
         Tag6PrcAvgPx tagData;
 
-        tagData = new Tag6PrcAvgPx(new MyPriceType(123.45D) );
-        assertEquals( 123.45D, tagData.getDataValue());
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag6PrcAvgPx tagData;
+
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
+        assertEquals( Tag6PrcAvgPx.TESTA_PRC_AVG_PX, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag6PrcAvgPx tagData;
+
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
+        assertEquals( "6=" + Tag6PrcAvgPx.TESTA_PRC_AVG_PX, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag6PrcAvgPx tagData;
+
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
+        assertEquals( "Tag6PrcAvgPx\n" +
+                "\tEnumName[FIX6_PRC_AVG_PX]\n" +
+                "\tFIXID[6]\n" +
+                "\tFIXName[AVG_PX]\n" +
+                "\tFIXDescription[AvgPx]\n" +
+                "\tDataValue[" + Tag6PrcAvgPx.TESTA_PRC_AVG_PX + "]\n" +
+                "\tValuePair[6=" + Tag6PrcAvgPx.TESTA_PRC_AVG_PX + "]", tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag6PrcAvgPx tagData;
+
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
+        assertEquals( String.valueOf(Tag6PrcAvgPx.TESTA_PRC_AVG_PX), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 }

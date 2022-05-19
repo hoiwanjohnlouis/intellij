@@ -79,16 +79,7 @@ public class Tag95LenRawDataLength extends FIX27Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag95LenRawDataLength(new MyLengthType(TESTA_LEN_RAW_DATA_LENGTH)) );
-        dumpDataValues( new Tag95LenRawDataLength(new MyLengthType(TESTB_LEN_RAW_DATA_LENGTH)) );
-    }
-    /**
-     *
-     * @param tagData   Tag95LenRawDataLength
-     */
-    static void dumpDataValues(Tag95LenRawDataLength tagData) {
-        System.out.println("---------- Start Tag95LenRawDataLength MyLengthType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag95LenRawDataLength MyLengthType ----------");
+        System.out.println( new Tag95LenRawDataLength(new MyLengthType(TESTA_LEN_RAW_DATA_LENGTH)).toVerboseString() );
+        System.out.println( new Tag95LenRawDataLength(new MyLengthType(TESTB_LEN_RAW_DATA_LENGTH)).toVerboseString() );
     }
 }

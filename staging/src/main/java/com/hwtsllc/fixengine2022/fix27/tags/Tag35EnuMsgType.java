@@ -221,7 +221,20 @@ public class Tag35EnuMsgType extends FIX27Abstract implements LogValuePairString
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -257,27 +270,12 @@ public class Tag35EnuMsgType extends FIX27Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues(new Tag35EnuMsgType(TESTA_ENU_MSG_TYPE));
-        dumpDataValues(new Tag35EnuMsgType(TESTB_ENU_MSG_TYPE));
+        System.out.println( new Tag35EnuMsgType(TESTA_ENU_MSG_TYPE).toVerboseString() );
+        System.out.println( new Tag35EnuMsgType(TESTB_ENU_MSG_TYPE).toVerboseString() );
 
         // loop around the ENUM and display
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
-            dumpDataValues(new Tag35EnuMsgType(oneEnum));
+            System.out.println( new Tag35EnuMsgType(oneEnum).toVerboseString() );
         }
-    }
-    static void dumpDataValues(Tag35EnuMsgType tagData) {
-        System.out.println("-------------------- Start Enum --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("Accessing FIXTag Directly:");
-        System.out.println("TagDataString:" + tagData);
-        System.out.println("EnumNameString:" + tagData.toEnumNameString());
-        System.out.println("FIXIDString:" + tagData.toFIXIDString());
-        System.out.println("FIXNameString:" + tagData.toFIXNameString());
-        System.out.println("FIXDescriptionString:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-        System.out.println("ValuePairString:" + tagData.toValuePairString());
-        System.out.println("-------------------- End Enum --------------------");
     }
 }

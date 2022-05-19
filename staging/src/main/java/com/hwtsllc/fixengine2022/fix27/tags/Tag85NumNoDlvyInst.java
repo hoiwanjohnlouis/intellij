@@ -82,16 +82,7 @@ public class Tag85NumNoDlvyInst extends FIX27Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTA_NUM_NO_DLVY_INST)) );
-        dumpDataValues( new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTB_NUM_NO_DLVY_INST)) );
-    }
-    /**
-     *
-     * @param tagData   Tag85NumNoDlvyInst
-     */
-    static void dumpDataValues(Tag85NumNoDlvyInst tagData) {
-        System.out.println("---------- Start Tag85NumNoDlvyInst MyNumInGroupType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag85NumNoDlvyInst MyNumInGroupType ----------");
+        System.out.println( new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTA_NUM_NO_DLVY_INST)).toVerboseString() );
+        System.out.println( new Tag85NumNoDlvyInst(new MyNumInGroupType(TESTB_NUM_NO_DLVY_INST)).toVerboseString() );
     }
 }

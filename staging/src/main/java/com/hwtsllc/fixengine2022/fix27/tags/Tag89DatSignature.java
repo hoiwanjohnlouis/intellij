@@ -79,16 +79,7 @@ public class Tag89DatSignature extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag89DatSignature(new MyDataType(TESTA_DAT_SIGNATURE)) );
-        dumpDataValues( new Tag89DatSignature(new MyDataType(TESTB_DAT_SIGNATURE)) );
-    }
-    /**
-     *
-     * @param tagData   Tag89DatSignature
-     */
-    static void dumpDataValues(Tag89DatSignature tagData) {
-        System.out.println("---------- Start Tag89DatSignature MyDataType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag89DatSignature MyDataType ----------");
+        System.out.println( new Tag89DatSignature(new MyDataType(TESTA_DAT_SIGNATURE)).toVerboseString() );
+        System.out.println( new Tag89DatSignature(new MyDataType(TESTB_DAT_SIGNATURE)).toVerboseString() );
     }
 }

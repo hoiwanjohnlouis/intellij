@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag83StrRptSeq extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_RPT_SEQ = "BilboBaggins-83RptSeq"; // fake data
-    public final static String TESTB_STR_RPT_SEQ = "Gandalf-83RptSeq";
+    public final static String TESTA_STR_RPT_SEQ
+            = "BilboBaggins-Tag83StrRptSeq";
+    public final static String TESTB_STR_RPT_SEQ
+            = "Gandalf-Tag83StrRptSeq";
 
     public Tag83StrRptSeq(MyStringType dataValue) {
         setFixType(FIX27.FIX83_STR_RPT_SEQ);
@@ -81,16 +83,7 @@ public class Tag83StrRptSeq extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag83StrRptSeq(new MyStringType(TESTA_STR_RPT_SEQ)) );
-        dumpDataValues( new Tag83StrRptSeq(new MyStringType(TESTB_STR_RPT_SEQ)) );
-    }
-    /**
-     *
-     * @param tagData   Tag83StrRptSeq
-     */
-    static void dumpDataValues(Tag83StrRptSeq tagData) {
-        System.out.println("-------------------- Start Tag83StrRptSeq MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag83StrRptSeq MyStringType --------------------");
+        System.out.println( new Tag83StrRptSeq(new MyStringType(TESTA_STR_RPT_SEQ)).toVerboseString() );
+        System.out.println( new Tag83StrRptSeq(new MyStringType(TESTB_STR_RPT_SEQ)).toVerboseString() );
     }
 }

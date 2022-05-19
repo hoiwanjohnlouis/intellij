@@ -45,11 +45,48 @@ class Tag9LenBodyLengthTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0009Test() {
+    void PrintFIXTagTest() {
         Tag9LenBodyLength tagData;
 
-        tagData = new Tag9LenBodyLength(new MyLengthType(120) );
-        assertEquals( 120, tagData.getDataValue());
+        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag9LenBodyLength tagData;
+
+        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH));
+        assertEquals( Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag9LenBodyLength tagData;
+
+        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH));
+        assertEquals( "9=" + Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag9LenBodyLength tagData;
+
+        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH));
+        assertEquals( "Tag9LenBodyLength\n" +
+                "\tEnumName[FIX9_LEN_BODY_LENGTH]\n" +
+                "\tFIXID[9]\n" +
+                "\tFIXName[BODY_LENGTH]\n" +
+                "\tFIXDescription[BodyLength]\n" +
+                "\tDataValue[" + Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH + "]\n" +
+                "\tValuePair[9=" + Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH + "]", tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag9LenBodyLength tagData;
+
+        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH));
+        assertEquals( String.valueOf(Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 }

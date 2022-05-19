@@ -79,16 +79,7 @@ public class Tag90LenSecureDataLen extends FIX27Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag90LenSecureDataLen(new MyLengthType(TESTA_LEN_SECURE_DATA_LEN)) );
-        dumpDataValues( new Tag90LenSecureDataLen(new MyLengthType(TESTB_LEN_SECURE_DATA_LEN)) );
-    }
-    /**
-     *
-     * @param tagData   Tag90LenSecureDataLen
-     */
-    static void dumpDataValues(Tag90LenSecureDataLen tagData) {
-        System.out.println("---------- Start Tag90LenSecureDataLen MyLengthType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag90LenSecureDataLen MyLengthType ----------");
+        System.out.println( new Tag90LenSecureDataLen(new MyLengthType(TESTA_LEN_SECURE_DATA_LEN)).toVerboseString() );
+        System.out.println( new Tag90LenSecureDataLen(new MyLengthType(TESTB_LEN_SECURE_DATA_LEN)).toVerboseString() );
     }
 }

@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag62StrValidUntilTime extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_VALID_UNTIL_TIME = "BilboBaggins-62ValidUntilTime"; // fake data
-    public final static String TESTB_STR_VALID_UNTIL_TIME = "Gandalf-62ValidUntilTime";
+    public final static String TESTA_STR_VALID_UNTIL_TIME
+            = "BilboBaggins-Tag62StrValidUntilTime";
+    public final static String TESTB_STR_VALID_UNTIL_TIME
+            = "Gandalf-Tag62StrValidUntilTime";
 
     public Tag62StrValidUntilTime(MyStringType dataValue) {
         setFixType(FIX27.FIX62_STR_VALID_UNTIL_TIME);
@@ -79,16 +81,7 @@ public class Tag62StrValidUntilTime extends FIX27Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag62StrValidUntilTime(new MyStringType(TESTA_STR_VALID_UNTIL_TIME)) );
-        dumpDataValues( new Tag62StrValidUntilTime(new MyStringType(TESTB_STR_VALID_UNTIL_TIME)) );
-    }
-    /**
-     *
-     * @param tagData   Tag62StrValidUntilTime
-     */
-    static void dumpDataValues(Tag62StrValidUntilTime tagData) {
-        System.out.println("-------------------- Start Tag62StrValidUntilTime MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag62StrValidUntilTime MyStringType --------------------");
+        System.out.println( new Tag62StrValidUntilTime(new MyStringType(TESTA_STR_VALID_UNTIL_TIME)).toVerboseString() );
+        System.out.println( new Tag62StrValidUntilTime(new MyStringType(TESTB_STR_VALID_UNTIL_TIME)).toVerboseString() );
     }
 }

@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag64StrSettlDate extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SETTL_DATE = "BilboBaggins-64SettlDate"; // fake data
-    public final static String TESTB_STR_SETTL_DATE = "Gandalf-64SettlDate";
+    public final static String TESTA_STR_SETTL_DATE
+            = "BilboBaggins-Tag64StrSettlDate";
+    public final static String TESTB_STR_SETTL_DATE
+            = "Gandalf-Tag64StrSettlDate";
 
     public Tag64StrSettlDate(MyStringType dataValue) {
         setFixType(FIX27.FIX64_STR_SETTL_DATE);
@@ -83,16 +85,7 @@ public class Tag64StrSettlDate extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag64StrSettlDate(new MyStringType(TESTA_STR_SETTL_DATE)) );
-        dumpDataValues( new Tag64StrSettlDate(new MyStringType(TESTB_STR_SETTL_DATE)) );
-    }
-    /**
-     *
-     * @param tagData   Tag64StrSettlDate
-     */
-    static void dumpDataValues(Tag64StrSettlDate tagData) {
-        System.out.println("-------------------- Start Tag64StrSettlDate MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag64StrSettlDate MyStringType --------------------");
+        System.out.println( new Tag64StrSettlDate(new MyStringType(TESTA_STR_SETTL_DATE)).toVerboseString() );
+        System.out.println( new Tag64StrSettlDate(new MyStringType(TESTB_STR_SETTL_DATE)).toVerboseString() );
     }
 }

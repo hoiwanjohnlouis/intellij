@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag70StrAllocID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ALLOC_ID = "BilboBaggins-70StAllocID"; // fake data
-    public final static String TESTB_STR_ALLOC_ID = "Gandalf-70StAllocID";
+    public final static String TESTA_STR_ALLOC_ID
+            = "BilboBaggins-Tag70StrAllocID";
+    public final static String TESTB_STR_ALLOC_ID
+            = "Gandalf-Tag70StrAllocID";
 
     public Tag70StrAllocID(MyStringType dataValue) {
         setFixType(FIX27.FIX70_STR_ALLOC_ID);
@@ -81,16 +83,7 @@ public class Tag70StrAllocID extends FIX27Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag70StrAllocID(new MyStringType(TESTA_STR_ALLOC_ID)) );
-        dumpDataValues( new Tag70StrAllocID(new MyStringType(TESTB_STR_ALLOC_ID)) );
-    }
-    /**
-     *
-     * @param tagData   Tag70StrAllocID
-     */
-    static void dumpDataValues(Tag70StrAllocID tagData) {
-        System.out.println("-------------------- Start Tag70StrAllocID MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag70StrAllocID MyStringType --------------------");
+        System.out.println( new Tag70StrAllocID(new MyStringType(TESTA_STR_ALLOC_ID)).toVerboseString() );
+        System.out.println( new Tag70StrAllocID(new MyStringType(TESTB_STR_ALLOC_ID)).toVerboseString() );
     }
 }

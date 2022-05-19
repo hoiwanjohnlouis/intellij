@@ -51,11 +51,48 @@ class Tag10StrCheckSumTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0010Test() {
+    void PrintFIXTagTest() {
         Tag10StrCheckSum tagData;
 
-        tagData = new Tag10StrCheckSum(new MyStringType("ABC") );
-        assertEquals( "ABC", tagData.getDataValue());
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void getDataValueTest() {
+        Tag10StrCheckSum tagData;
+
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
+        assertEquals( Tag10StrCheckSum.TESTA_STR_CHECK_SUM, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void toValuePairStringTest() {
+        Tag10StrCheckSum tagData;
+
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
+        assertEquals( "10=" + Tag10StrCheckSum.TESTA_STR_CHECK_SUM, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void toVerboseStringTest() {
+        Tag10StrCheckSum tagData;
+
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
+        assertEquals( "Tag10StrCheckSum\n" +
+                "\tEnumName[FIX10_STR_CHECK_SUM]\n" +
+                "\tFIXID[10]\n" +
+                "\tFIXName[CHECK_SUM]\n" +
+                "\tFIXDescription[CheckSum]\n" +
+                "\tDataValue[" + Tag10StrCheckSum.TESTA_STR_CHECK_SUM + "]\n" +
+                "\tValuePair[10=" + Tag10StrCheckSum.TESTA_STR_CHECK_SUM + "]", tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag10StrCheckSum tagData;
+
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
+        assertEquals( Tag10StrCheckSum.TESTA_STR_CHECK_SUM, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 }

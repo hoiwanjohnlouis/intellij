@@ -37,17 +37,54 @@ class Tag2StrAdvIDTest {
         FIX27 fixData = FIX27.FIX2_STR_ADV_ID;
         assertEquals( "ADV_ID", fixData.toFIXNameString());
         assertEquals( "2", fixData.toFIXIDString());
-        assertEquals( "AdvId", fixData.toFIXDescriptionString());
+        assertEquals( "AdvID", fixData.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0002Test() {
+    void PrintFIXTagTest() {
         Tag2StrAdvID tagData;
 
-        tagData = new Tag2StrAdvID(new MyStringType("ABC987654321XYZ") );
-        assertEquals( "ABC987654321XYZ", tagData.getDataValue());
+        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTA_STR_ADV_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag2StrAdvID tagData;
+
+        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTA_STR_ADV_ID));
+        assertEquals( Tag2StrAdvID.TESTA_STR_ADV_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag2StrAdvID tagData;
+
+        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTA_STR_ADV_ID));
+        assertEquals( "2=" + Tag2StrAdvID.TESTA_STR_ADV_ID, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag2StrAdvID tagData;
+
+        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTA_STR_ADV_ID));
+        assertEquals( "Tag2StrAdvID\n" +
+                "\tEnumName[FIX2_STR_ADV_ID]\n" +
+                "\tFIXID[2]\n" +
+                "\tFIXName[ADV_ID]\n" +
+                "\tFIXDescription[AdvID]\n" +
+                "\tDataValue[" + Tag2StrAdvID.TESTA_STR_ADV_ID + "]\n" +
+                "\tValuePair[2=" + Tag2StrAdvID.TESTA_STR_ADV_ID + "]", tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag2StrAdvID tagData;
+
+        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTA_STR_ADV_ID));
+        assertEquals( Tag2StrAdvID.TESTA_STR_ADV_ID, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 }

@@ -37,18 +37,55 @@ class Tag3StrAdvRefIDTest {
         FIX27 fixData = FIX27.FIX3_STR_ADV_REF_ID;
         assertEquals( "ADV_REF_ID", fixData.toFIXNameString());
         assertEquals( "3", fixData.toFIXIDString());
-        assertEquals( "AdvRefId", fixData.toFIXDescriptionString());
+        assertEquals( "AdvRefID", fixData.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0003Test() {
+    void PrintFIXTagTest() {
         Tag3StrAdvRefID tagData;
 
-        tagData = new Tag3StrAdvRefID(new MyStringType("hello from main routine") );
-        assertEquals( "hello from main routine", tagData.getDataValue());
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag3StrAdvRefID tagData;
+
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
+        assertEquals( Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag3StrAdvRefID tagData;
+
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
+        assertEquals( "3=" + Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag3StrAdvRefID tagData;
+
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
+        assertEquals( "Tag3StrAdvRefID\n" +
+                "\tEnumName[FIX3_STR_ADV_REF_ID]\n" +
+                "\tFIXID[3]\n" +
+                "\tFIXName[ADV_REF_ID]\n" +
+                "\tFIXDescription[AdvRefID]\n" +
+                "\tDataValue[" + Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID + "]\n" +
+                "\tValuePair[3=" + Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID + "]", tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag3StrAdvRefID tagData;
+
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
+        assertEquals( Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 }

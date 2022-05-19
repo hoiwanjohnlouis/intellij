@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag46StrRelatdSym extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_RELATED_SYM = "TESTA";
-    public final static String TESTB_STR_RELATED_SYM = "TESTB";
+    public final static String TESTA_STR_RELATED_SYM
+            = "TESTA";
+    public final static String TESTB_STR_RELATED_SYM
+            = "TESTB";
 
     public Tag46StrRelatdSym(MyStringType dataValue) {
         setFixType(FIX27.FIX46_STR_RELATD_SYM);
@@ -79,16 +81,7 @@ public class Tag46StrRelatdSym extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag46StrRelatdSym(new MyStringType(TESTA_STR_RELATED_SYM)) );
-        dumpDataValues( new Tag46StrRelatdSym(new MyStringType(TESTB_STR_RELATED_SYM)) );
-    }
-    /**
-     *
-     * @param tagData   Tag46StrRelatdSym
-     */
-    static void dumpDataValues(Tag46StrRelatdSym tagData) {
-        System.out.println("-------------------- Start Tag46StrRelatdSym MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag46StrRelatdSym MyStringType --------------------");
+        System.out.println( new Tag46StrRelatdSym(new MyStringType(TESTA_STR_RELATED_SYM)).toVerboseString() );
+        System.out.println( new Tag46StrRelatdSym(new MyStringType(TESTB_STR_RELATED_SYM)).toVerboseString() );
     }
 }

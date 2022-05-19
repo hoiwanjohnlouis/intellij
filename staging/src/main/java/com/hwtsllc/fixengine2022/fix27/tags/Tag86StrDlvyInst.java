@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag86StrDlvyInst extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_DLVY_INST = "BilboBaggins-86StDlvyInst"; // fake data
-    public final static String TESTB_STR_DLVY_INST = "Gandalf-86StDlvyInst";
+    public final static String TESTA_STR_DLVY_INST
+            = "BilboBaggins-Tag86StrDlvyInst";
+    public final static String TESTB_STR_DLVY_INST
+            = "Gandalf-Tag86StrDlvyInst";
 
     public Tag86StrDlvyInst(MyStringType dataValue) {
         setFixType(FIX27.FIX86_STR_DLVY_INST);
@@ -79,16 +81,7 @@ public class Tag86StrDlvyInst extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag86StrDlvyInst(new MyStringType(TESTA_STR_DLVY_INST)) );
-        dumpDataValues( new Tag86StrDlvyInst(new MyStringType(TESTB_STR_DLVY_INST)) );
-    }
-    /**
-     *
-     * @param tagData   Tag86StrDlvyInst
-     */
-    static void dumpDataValues(Tag86StrDlvyInst tagData) {
-        System.out.println("-------------------- Start Tag86StrDlvyInst MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag86StrDlvyInst MyStringType --------------------");
+        System.out.println( new Tag86StrDlvyInst(new MyStringType(TESTA_STR_DLVY_INST)).toVerboseString() );
+        System.out.println( new Tag86StrDlvyInst(new MyStringType(TESTB_STR_DLVY_INST)).toVerboseString() );
     }
 }

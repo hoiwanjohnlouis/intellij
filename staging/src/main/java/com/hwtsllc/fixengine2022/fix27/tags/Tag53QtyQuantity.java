@@ -79,16 +79,7 @@ public class Tag53QtyQuantity extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag53QtyQuantity(new MyQtyType(TESTA_QTY_QUANTITY)) );
-        dumpDataValues( new Tag53QtyQuantity(new MyQtyType(TESTB_QTY_QUANTITY)) );
-    }
-    /**
-     *
-     * @param tagData   Tag53QtyQuantity
-     */
-    static void dumpDataValues(Tag53QtyQuantity tagData) {
-        System.out.println("---------- Start Tag53QtyQuantity MyQtyType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag53QtyQuantity MyQtyType ----------");
+        System.out.println( new Tag53QtyQuantity(new MyQtyType(TESTA_QTY_QUANTITY)).toVerboseString() );
+        System.out.println( new Tag53QtyQuantity(new MyQtyType(TESTB_QTY_QUANTITY)).toVerboseString() );
     }
 }

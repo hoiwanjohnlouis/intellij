@@ -78,16 +78,7 @@ public class Tag36SeqNewSeqNo extends FIX27Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag36SeqNewSeqNo(new MySeqNumType(TESTA_SEQ_NEW_SEQ_NO)) );
-        dumpDataValues( new Tag36SeqNewSeqNo(new MySeqNumType(TESTB_SEQ_NEW_SEQ_NO)) );
-    }
-    /**
-     *
-     * @param tagData   Tag36SeqNewSeqNo
-     */
-    static void dumpDataValues(Tag36SeqNewSeqNo tagData) {
-        System.out.println("---------- Start Tag36SeqNewSeqNo MySeqNumType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag36SeqNewSeqNo MySeqNumType ----------");
+        System.out.println( new Tag36SeqNewSeqNo(new MySeqNumType(TESTA_SEQ_NEW_SEQ_NO)).toVerboseString() );
+        System.out.println( new Tag36SeqNewSeqNo(new MySeqNumType(TESTB_SEQ_NEW_SEQ_NO)).toVerboseString() );
     }
 }

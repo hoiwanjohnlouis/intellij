@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag67StrListSeqNo extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LIST_SEQ_NO = "567";  // same as tag34 TESTA_MSG_SEQ_NO
-    public final static String TESTB_STR_LIST_SEQ_NO = "1482";  // same as tag34 TESTB_MSG_SEQ_NO
+    public final static String TESTA_STR_LIST_SEQ_NO
+            = "567";  // same as tag34 TESTA_MSG_SEQ_NO
+    public final static String TESTB_STR_LIST_SEQ_NO
+            = "1482";  // same as tag34 TESTB_MSG_SEQ_NO
 
     public Tag67StrListSeqNo(MyStringType dataValue) {
         setFixType(FIX27.FIX67_STR_LIST_SEQ_NO);
@@ -79,16 +81,7 @@ public class Tag67StrListSeqNo extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag67StrListSeqNo(new MyStringType(TESTA_STR_LIST_SEQ_NO)) );
-        dumpDataValues( new Tag67StrListSeqNo(new MyStringType(TESTB_STR_LIST_SEQ_NO)) );
-    }
-    /**
-     *
-     * @param tagData   Tag67StrListSeqNo
-     */
-    static void dumpDataValues(Tag67StrListSeqNo tagData) {
-        System.out.println("-------------------- Start Tag67StrListSeqNo MyStringType --------------------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("-------------------- End Tag67StrListSeqNo MyStringType --------------------");
+        System.out.println( new Tag67StrListSeqNo(new MyStringType(TESTA_STR_LIST_SEQ_NO)).toVerboseString() );
+        System.out.println( new Tag67StrListSeqNo(new MyStringType(TESTB_STR_LIST_SEQ_NO)).toVerboseString() );
     }
 }

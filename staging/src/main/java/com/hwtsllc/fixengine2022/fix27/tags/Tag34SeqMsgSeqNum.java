@@ -78,16 +78,7 @@ public class Tag34SeqMsgSeqNum extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        dumpDataValues( new Tag34SeqMsgSeqNum(new MySeqNumType(TESTA_SEQ_MSG_SEQ_NO)) );
-        dumpDataValues( new Tag34SeqMsgSeqNum(new MySeqNumType(TESTB_SEQ_MSG_SEQ_NO)) );
-    }
-    /**
-     *
-     * @param tagData   Tag34SeqMsgSeqNum
-     */
-    static void dumpDataValues(Tag34SeqMsgSeqNum tagData) {
-        System.out.println("---------- Start Tag34SeqMsgSeqNum MySeqNumType ----------");
-        System.out.println("VerboseString:" + tagData.toVerboseString());
-        System.out.println("---------- End Tag34SeqMsgSeqNum MySeqNumType ----------");
+        System.out.println( new Tag34SeqMsgSeqNum(new MySeqNumType(TESTA_SEQ_MSG_SEQ_NO)).toVerboseString() );
+        System.out.println( new Tag34SeqMsgSeqNum(new MySeqNumType(TESTB_SEQ_MSG_SEQ_NO)).toVerboseString() );
     }
 }
