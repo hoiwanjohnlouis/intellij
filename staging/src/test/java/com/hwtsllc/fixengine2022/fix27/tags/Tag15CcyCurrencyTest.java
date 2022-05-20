@@ -54,4 +54,54 @@ class Tag15CcyCurrencyTest {
         assertEquals( "USD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag15CcyCurrency tagData;
+
+        tagData = new Tag15CcyCurrency(new MyCurrencyType(Tag15CcyCurrency.TESTB_CCY_CURRENCY));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag15CcyCurrency tagData;
+
+        tagData = new Tag15CcyCurrency(new MyCurrencyType(Tag15CcyCurrency.TESTB_CCY_CURRENCY));
+        assertEquals( Tag15CcyCurrency.TESTB_CCY_CURRENCY, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag15CcyCurrency tagData;
+
+        tagData = new Tag15CcyCurrency(new MyCurrencyType(Tag15CcyCurrency.TESTB_CCY_CURRENCY));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag15CcyCurrency.TESTB_CCY_CURRENCY,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag15CcyCurrency tagData;
+
+        tagData = new Tag15CcyCurrency(new MyCurrencyType(Tag15CcyCurrency.TESTB_CCY_CURRENCY));
+        assertEquals( Tag15CcyCurrency.TESTB_CCY_CURRENCY,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag15CcyCurrency tagData;
+
+        tagData = new Tag15CcyCurrency(new MyCurrencyType(Tag15CcyCurrency.TESTA_CCY_CURRENCY));
+        assertEquals( "Tag15CcyCurrency\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag15CcyCurrency.TESTA_CCY_CURRENCY + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag15CcyCurrency.TESTA_CCY_CURRENCY + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

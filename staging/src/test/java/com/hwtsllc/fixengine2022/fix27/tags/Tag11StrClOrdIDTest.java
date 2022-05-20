@@ -57,4 +57,54 @@ class Tag11StrClOrdIDTest {
         assertEquals( "MLCO-ABCD1234", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag11StrClOrdID tagData;
+
+        tagData = new Tag11StrClOrdID(new MyStringType(Tag11StrClOrdID.TESTB_STR_CL_ORD_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag11StrClOrdID tagData;
+
+        tagData = new Tag11StrClOrdID(new MyStringType(Tag11StrClOrdID.TESTB_STR_CL_ORD_ID));
+        assertEquals( Tag11StrClOrdID.TESTB_STR_CL_ORD_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag11StrClOrdID tagData;
+
+        tagData = new Tag11StrClOrdID(new MyStringType(Tag11StrClOrdID.TESTB_STR_CL_ORD_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag11StrClOrdID.TESTB_STR_CL_ORD_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag11StrClOrdID tagData;
+
+        tagData = new Tag11StrClOrdID(new MyStringType(Tag11StrClOrdID.TESTB_STR_CL_ORD_ID));
+        assertEquals( Tag11StrClOrdID.TESTB_STR_CL_ORD_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag11StrClOrdID tagData;
+
+        tagData = new Tag11StrClOrdID(new MyStringType(Tag11StrClOrdID.TESTA_STR_CL_ORD_ID));
+        assertEquals( "Tag11StrClOrdID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag11StrClOrdID.TESTA_STR_CL_ORD_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag11StrClOrdID.TESTA_STR_CL_ORD_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

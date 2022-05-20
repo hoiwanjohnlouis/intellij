@@ -53,4 +53,54 @@ class Tag95LenRawDataLengthTest {
         assertEquals( dataLength, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag95LenRawDataLength tagData;
+
+        tagData = new Tag95LenRawDataLength(new MyLengthType(Tag95LenRawDataLength.TESTB_LEN_RAW_DATA_LENGTH));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag95LenRawDataLength tagData;
+
+        tagData = new Tag95LenRawDataLength(new MyLengthType(Tag95LenRawDataLength.TESTB_LEN_RAW_DATA_LENGTH));
+        assertEquals( Tag95LenRawDataLength.TESTB_LEN_RAW_DATA_LENGTH, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag95LenRawDataLength tagData;
+
+        tagData = new Tag95LenRawDataLength(new MyLengthType(Tag95LenRawDataLength.TESTB_LEN_RAW_DATA_LENGTH));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag95LenRawDataLength.TESTB_LEN_RAW_DATA_LENGTH,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag95LenRawDataLength tagData;
+
+        tagData = new Tag95LenRawDataLength(new MyLengthType(Tag95LenRawDataLength.TESTB_LEN_RAW_DATA_LENGTH));
+        assertEquals( String.valueOf(Tag95LenRawDataLength.TESTB_LEN_RAW_DATA_LENGTH),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag95LenRawDataLength tagData;
+
+        tagData = new Tag95LenRawDataLength(new MyLengthType(Tag95LenRawDataLength.TESTA_LEN_RAW_DATA_LENGTH));
+        assertEquals( "Tag95LenRawDataLength\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag95LenRawDataLength.TESTA_LEN_RAW_DATA_LENGTH + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag95LenRawDataLength.TESTA_LEN_RAW_DATA_LENGTH + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

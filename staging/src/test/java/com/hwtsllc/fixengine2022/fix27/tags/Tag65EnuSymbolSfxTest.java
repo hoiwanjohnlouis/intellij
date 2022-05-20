@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -81,5 +81,70 @@ class Tag65EnuSymbolSfxTest {
         tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
         assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag65EnuSymbolSfx tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            tagData = new Tag65EnuSymbolSfx(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag65EnuSymbolSfx tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            tagData = new Tag65EnuSymbolSfx(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag65EnuSymbolSfx tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            tagData = new Tag65EnuSymbolSfx(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag65EnuSymbolSfx tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            tagData = new Tag65EnuSymbolSfx(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag65EnuSymbolSfx tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            tagData = new Tag65EnuSymbolSfx(oneEnum);
+            assertEquals( "Tag65EnuSymbolSfx\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

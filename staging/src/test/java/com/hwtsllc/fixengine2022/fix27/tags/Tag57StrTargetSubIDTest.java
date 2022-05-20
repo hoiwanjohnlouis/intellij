@@ -51,4 +51,54 @@ class Tag57StrTargetSubIDTest {
         assertEquals( "MLCO", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag57StrTargetSubID tagData;
+
+        tagData = new Tag57StrTargetSubID(new MyStringType(Tag57StrTargetSubID.TESTB_STR_TARGET_SUB_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag57StrTargetSubID tagData;
+
+        tagData = new Tag57StrTargetSubID(new MyStringType(Tag57StrTargetSubID.TESTB_STR_TARGET_SUB_ID));
+        assertEquals( Tag57StrTargetSubID.TESTB_STR_TARGET_SUB_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag57StrTargetSubID tagData;
+
+        tagData = new Tag57StrTargetSubID(new MyStringType(Tag57StrTargetSubID.TESTB_STR_TARGET_SUB_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag57StrTargetSubID.TESTB_STR_TARGET_SUB_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag57StrTargetSubID tagData;
+
+        tagData = new Tag57StrTargetSubID(new MyStringType(Tag57StrTargetSubID.TESTB_STR_TARGET_SUB_ID));
+        assertEquals( Tag57StrTargetSubID.TESTB_STR_TARGET_SUB_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag57StrTargetSubID tagData;
+
+        tagData = new Tag57StrTargetSubID(new MyStringType(Tag57StrTargetSubID.TESTA_STR_TARGET_SUB_ID));
+        assertEquals( "Tag57StrTargetSubID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag57StrTargetSubID.TESTA_STR_TARGET_SUB_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag57StrTargetSubID.TESTA_STR_TARGET_SUB_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

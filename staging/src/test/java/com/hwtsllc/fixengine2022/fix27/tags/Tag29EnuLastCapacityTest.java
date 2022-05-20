@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum29LastCapacity;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -66,5 +66,70 @@ class Tag29EnuLastCapacityTest {
         tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.PRINCIPAL);
         assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag29EnuLastCapacity tagData;
+
+        // loop around the ENUM and process
+        for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
+            tagData = new Tag29EnuLastCapacity(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag29EnuLastCapacity tagData;
+
+        // loop around the ENUM and process
+        for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
+            tagData = new Tag29EnuLastCapacity(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag29EnuLastCapacity tagData;
+
+        // loop around the ENUM and process
+        for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
+            tagData = new Tag29EnuLastCapacity(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag29EnuLastCapacity tagData;
+
+        // loop around the ENUM and process
+        for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
+            tagData = new Tag29EnuLastCapacity(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag29EnuLastCapacity tagData;
+
+        // loop around the ENUM and process
+        for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
+            tagData = new Tag29EnuLastCapacity(oneEnum);
+            assertEquals( "Tag29EnuLastCapacity\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

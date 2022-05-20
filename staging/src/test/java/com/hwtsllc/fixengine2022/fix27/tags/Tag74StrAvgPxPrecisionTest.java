@@ -54,4 +54,54 @@ class Tag74StrAvgPxPrecisionTest {
         assertEquals( "Saruman-74AvgPxPrecision", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag74StrAvgPxPrecision tagData;
+
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType(Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag74StrAvgPxPrecision tagData;
+
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType(Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION));
+        assertEquals( Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag74StrAvgPxPrecision tagData;
+
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType(Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag74StrAvgPxPrecision tagData;
+
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType(Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION));
+        assertEquals( Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag74StrAvgPxPrecision tagData;
+
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType(Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION));
+        assertEquals( "Tag74StrAvgPxPrecision\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

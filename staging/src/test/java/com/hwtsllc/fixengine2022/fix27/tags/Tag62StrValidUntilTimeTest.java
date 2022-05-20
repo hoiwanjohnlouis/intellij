@@ -51,4 +51,54 @@ class Tag62StrValidUntilTimeTest {
         assertEquals( "20220401 000001", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag62StrValidUntilTime tagData;
+
+        tagData = new Tag62StrValidUntilTime(new MyStringType(Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag62StrValidUntilTime tagData;
+
+        tagData = new Tag62StrValidUntilTime(new MyStringType(Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME));
+        assertEquals( Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag62StrValidUntilTime tagData;
+
+        tagData = new Tag62StrValidUntilTime(new MyStringType(Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag62StrValidUntilTime tagData;
+
+        tagData = new Tag62StrValidUntilTime(new MyStringType(Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME));
+        assertEquals( Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag62StrValidUntilTime tagData;
+
+        tagData = new Tag62StrValidUntilTime(new MyStringType(Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME));
+        assertEquals( "Tag62StrValidUntilTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

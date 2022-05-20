@@ -56,4 +56,54 @@ class Tag76StrExecBrokerTest {
         assertEquals( "Denethor-76ExecBroker", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag76StrExecBroker tagData;
+
+        tagData = new Tag76StrExecBroker(new MyStringType(Tag76StrExecBroker.TESTB_STR_EXEC_BROKER));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag76StrExecBroker tagData;
+
+        tagData = new Tag76StrExecBroker(new MyStringType(Tag76StrExecBroker.TESTB_STR_EXEC_BROKER));
+        assertEquals( Tag76StrExecBroker.TESTB_STR_EXEC_BROKER, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag76StrExecBroker tagData;
+
+        tagData = new Tag76StrExecBroker(new MyStringType(Tag76StrExecBroker.TESTB_STR_EXEC_BROKER));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag76StrExecBroker.TESTB_STR_EXEC_BROKER,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag76StrExecBroker tagData;
+
+        tagData = new Tag76StrExecBroker(new MyStringType(Tag76StrExecBroker.TESTB_STR_EXEC_BROKER));
+        assertEquals( Tag76StrExecBroker.TESTB_STR_EXEC_BROKER,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag76StrExecBroker tagData;
+
+        tagData = new Tag76StrExecBroker(new MyStringType(Tag76StrExecBroker.TESTA_STR_EXEC_BROKER));
+        assertEquals( "Tag76StrExecBroker\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag76StrExecBroker.TESTA_STR_EXEC_BROKER + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag76StrExecBroker.TESTA_STR_EXEC_BROKER + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

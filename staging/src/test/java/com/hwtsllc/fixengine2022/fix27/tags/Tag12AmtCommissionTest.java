@@ -51,4 +51,54 @@ class Tag12AmtCommissionTest {
         assertEquals( 10D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag12AmtCommission tagData;
+
+        tagData = new Tag12AmtCommission(new MyAmtType(Tag12AmtCommission.TESTB_AMT_COMMISSION));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag12AmtCommission tagData;
+
+        tagData = new Tag12AmtCommission(new MyAmtType(Tag12AmtCommission.TESTB_AMT_COMMISSION));
+        assertEquals( Tag12AmtCommission.TESTB_AMT_COMMISSION, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag12AmtCommission tagData;
+
+        tagData = new Tag12AmtCommission(new MyAmtType(Tag12AmtCommission.TESTB_AMT_COMMISSION));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag12AmtCommission.TESTB_AMT_COMMISSION,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag12AmtCommission tagData;
+
+        tagData = new Tag12AmtCommission(new MyAmtType(Tag12AmtCommission.TESTB_AMT_COMMISSION));
+        assertEquals( String.valueOf(Tag12AmtCommission.TESTB_AMT_COMMISSION),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag12AmtCommission tagData;
+
+        tagData = new Tag12AmtCommission(new MyAmtType(Tag12AmtCommission.TESTA_AMT_COMMISSION));
+        assertEquals( "Tag12AmtCommission\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag12AmtCommission.TESTA_AMT_COMMISSION + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag12AmtCommission.TESTA_AMT_COMMISSION + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

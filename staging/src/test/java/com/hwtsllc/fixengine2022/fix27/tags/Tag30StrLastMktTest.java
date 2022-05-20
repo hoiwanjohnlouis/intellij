@@ -51,4 +51,54 @@ class Tag30StrLastMktTest {
         assertEquals( "NYSE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag30StrLastMkt tagData;
+
+        tagData = new Tag30StrLastMkt(new MyStringType(Tag30StrLastMkt.TESTB_STR_LAST_MKT));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag30StrLastMkt tagData;
+
+        tagData = new Tag30StrLastMkt(new MyStringType(Tag30StrLastMkt.TESTB_STR_LAST_MKT));
+        assertEquals( Tag30StrLastMkt.TESTB_STR_LAST_MKT, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag30StrLastMkt tagData;
+
+        tagData = new Tag30StrLastMkt(new MyStringType(Tag30StrLastMkt.TESTB_STR_LAST_MKT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag30StrLastMkt.TESTB_STR_LAST_MKT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag30StrLastMkt tagData;
+
+        tagData = new Tag30StrLastMkt(new MyStringType(Tag30StrLastMkt.TESTB_STR_LAST_MKT));
+        assertEquals( Tag30StrLastMkt.TESTB_STR_LAST_MKT,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag30StrLastMkt tagData;
+
+        tagData = new Tag30StrLastMkt(new MyStringType(Tag30StrLastMkt.TESTA_STR_LAST_MKT));
+        assertEquals( "Tag30StrLastMkt\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag30StrLastMkt.TESTA_STR_LAST_MKT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag30StrLastMkt.TESTA_STR_LAST_MKT + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

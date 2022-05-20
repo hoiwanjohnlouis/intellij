@@ -62,24 +62,36 @@ class Tag1StrAccountTest {
     void PrintFIXTagTest() {
         Tag1StrAccount tagData;
 
-        tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTA_STR_ACCOUNT));
+        tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTB_STR_ACCOUNT));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag1StrAccount tagData;
 
-        tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTA_STR_ACCOUNT));
-        assertEquals( Tag1StrAccount.TESTA_STR_ACCOUNT, tagData.getDataValue());
+        tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTB_STR_ACCOUNT));
+        assertEquals( Tag1StrAccount.TESTB_STR_ACCOUNT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag1StrAccount tagData;
 
-        tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTA_STR_ACCOUNT));
-        assertEquals( "1=" + Tag1StrAccount.TESTA_STR_ACCOUNT, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTB_STR_ACCOUNT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag1StrAccount.TESTB_STR_ACCOUNT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1StrAccount tagData;
+
+        tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTB_STR_ACCOUNT));
+        assertEquals( Tag1StrAccount.TESTB_STR_ACCOUNT,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
@@ -87,20 +99,13 @@ class Tag1StrAccountTest {
 
         tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTA_STR_ACCOUNT));
         assertEquals( "Tag1StrAccount\n" +
-                "\tEnumName[FIX1_STR_ACCOUNT]\n" +
-                "\tFIXID[1]\n" +
-                "\tFIXName[ACCOUNT]\n" +
-                "\tFIXDescription[Account]\n" +
-                "\tDataValue[" + Tag1StrAccount.TESTA_STR_ACCOUNT + "]\n" +
-                "\tValuePair[1=" + Tag1StrAccount.TESTA_STR_ACCOUNT + "]", tagData.toVerboseString());
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag1StrAccount.TESTA_STR_ACCOUNT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag1StrAccount.TESTA_STR_ACCOUNT + "]",
+                tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
-    }
-    @Test
-    void TagToStringTest() {
-        Tag1StrAccount tagData;
-
-        tagData = new Tag1StrAccount(new MyStringType(Tag1StrAccount.TESTA_STR_ACCOUNT));
-        assertEquals( Tag1StrAccount.TESTA_STR_ACCOUNT, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 }

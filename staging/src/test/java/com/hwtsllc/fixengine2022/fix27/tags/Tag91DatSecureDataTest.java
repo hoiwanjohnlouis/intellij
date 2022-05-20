@@ -51,4 +51,54 @@ class Tag91DatSecureDataTest {
         assertEquals( "Gollum-91StSecureData", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag91DatSecureData tagData;
+
+        tagData = new Tag91DatSecureData(new MyDataType(Tag91DatSecureData.TESTB_DAT_SECURE_DATA));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag91DatSecureData tagData;
+
+        tagData = new Tag91DatSecureData(new MyDataType(Tag91DatSecureData.TESTB_DAT_SECURE_DATA));
+        assertEquals( Tag91DatSecureData.TESTB_DAT_SECURE_DATA, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag91DatSecureData tagData;
+
+        tagData = new Tag91DatSecureData(new MyDataType(Tag91DatSecureData.TESTB_DAT_SECURE_DATA));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag91DatSecureData.TESTB_DAT_SECURE_DATA,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag91DatSecureData tagData;
+
+        tagData = new Tag91DatSecureData(new MyDataType(Tag91DatSecureData.TESTB_DAT_SECURE_DATA));
+        assertEquals( Tag91DatSecureData.TESTB_DAT_SECURE_DATA,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag91DatSecureData tagData;
+
+        tagData = new Tag91DatSecureData(new MyDataType(Tag91DatSecureData.TESTA_DAT_SECURE_DATA));
+        assertEquals( "Tag91DatSecureData\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag91DatSecureData.TESTA_DAT_SECURE_DATA + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag91DatSecureData.TESTA_DAT_SECURE_DATA + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

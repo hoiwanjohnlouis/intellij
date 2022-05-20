@@ -55,4 +55,54 @@ class Tag17StrExecIDTest {
         tagData = new Tag17StrExecID(new MyStringType("BEST-1234") );
         assertEquals( "BEST-1234", tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag17StrExecID tagData;
+
+        tagData = new Tag17StrExecID(new MyStringType(Tag17StrExecID.TESTB_STR_EXEC_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag17StrExecID tagData;
+
+        tagData = new Tag17StrExecID(new MyStringType(Tag17StrExecID.TESTB_STR_EXEC_ID));
+        assertEquals( Tag17StrExecID.TESTB_STR_EXEC_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag17StrExecID tagData;
+
+        tagData = new Tag17StrExecID(new MyStringType(Tag17StrExecID.TESTB_STR_EXEC_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag17StrExecID.TESTB_STR_EXEC_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag17StrExecID tagData;
+
+        tagData = new Tag17StrExecID(new MyStringType(Tag17StrExecID.TESTB_STR_EXEC_ID));
+        assertEquals( Tag17StrExecID.TESTB_STR_EXEC_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag17StrExecID tagData;
+
+        tagData = new Tag17StrExecID(new MyStringType(Tag17StrExecID.TESTA_STR_EXEC_ID));
+        assertEquals( "Tag17StrExecID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag17StrExecID.TESTA_STR_EXEC_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag17StrExecID.TESTA_STR_EXEC_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

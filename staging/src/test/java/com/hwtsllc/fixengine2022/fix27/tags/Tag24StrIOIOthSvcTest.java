@@ -51,4 +51,54 @@ class Tag24StrIOIOthSvcTest {
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag24StrIOIOthSvc tagData;
+
+        tagData = new Tag24StrIOIOthSvc(new MyStringType(Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag24StrIOIOthSvc tagData;
+
+        tagData = new Tag24StrIOIOthSvc(new MyStringType(Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC));
+        assertEquals( Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag24StrIOIOthSvc tagData;
+
+        tagData = new Tag24StrIOIOthSvc(new MyStringType(Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag24StrIOIOthSvc tagData;
+
+        tagData = new Tag24StrIOIOthSvc(new MyStringType(Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC));
+        assertEquals( Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag24StrIOIOthSvc tagData;
+
+        tagData = new Tag24StrIOIOthSvc(new MyStringType(Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC));
+        assertEquals( "Tag24StrIOIOthSvc\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

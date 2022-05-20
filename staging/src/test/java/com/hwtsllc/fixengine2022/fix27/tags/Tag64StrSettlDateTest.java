@@ -55,4 +55,54 @@ class Tag64StrSettlDateTest {
         assertEquals( "MeriadocBrandybuck-64SettlDate", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag64StrSettlDate tagData;
+
+        tagData = new Tag64StrSettlDate(new MyStringType(Tag64StrSettlDate.TESTB_STR_SETTL_DATE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag64StrSettlDate tagData;
+
+        tagData = new Tag64StrSettlDate(new MyStringType(Tag64StrSettlDate.TESTB_STR_SETTL_DATE));
+        assertEquals( Tag64StrSettlDate.TESTB_STR_SETTL_DATE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag64StrSettlDate tagData;
+
+        tagData = new Tag64StrSettlDate(new MyStringType(Tag64StrSettlDate.TESTB_STR_SETTL_DATE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag64StrSettlDate.TESTB_STR_SETTL_DATE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag64StrSettlDate tagData;
+
+        tagData = new Tag64StrSettlDate(new MyStringType(Tag64StrSettlDate.TESTB_STR_SETTL_DATE));
+        assertEquals( Tag64StrSettlDate.TESTB_STR_SETTL_DATE,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag64StrSettlDate tagData;
+
+        tagData = new Tag64StrSettlDate(new MyStringType(Tag64StrSettlDate.TESTA_STR_SETTL_DATE));
+        assertEquals( "Tag64StrSettlDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag64StrSettlDate.TESTA_STR_SETTL_DATE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag64StrSettlDate.TESTA_STR_SETTL_DATE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

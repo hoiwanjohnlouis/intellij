@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -50,5 +50,55 @@ class Tag42UtcOrigTimeTest {
         tagData = new Tag42UtcOrigTime(new MyUTCTimestampType("20220131") );
         assertEquals( "20220131", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag42UtcOrigTime tagData;
+
+        tagData = new Tag42UtcOrigTime(new MyUTCTimestampType(Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag42UtcOrigTime tagData;
+
+        tagData = new Tag42UtcOrigTime(new MyUTCTimestampType(Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME));
+        assertEquals( Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag42UtcOrigTime tagData;
+
+        tagData = new Tag42UtcOrigTime(new MyUTCTimestampType(Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag42UtcOrigTime tagData;
+
+        tagData = new Tag42UtcOrigTime(new MyUTCTimestampType(Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME));
+        assertEquals( Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag42UtcOrigTime tagData;
+
+        tagData = new Tag42UtcOrigTime(new MyUTCTimestampType(Tag42UtcOrigTime.TESTA_UTC_ORIG_TIME));
+        assertEquals( "Tag42UtcOrigTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag42UtcOrigTime.TESTA_UTC_ORIG_TIME + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag42UtcOrigTime.TESTA_UTC_ORIG_TIME + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -51,4 +51,54 @@ class Tag89DatSignatureTest {
         assertEquals( "BarleymanButterBurr-89StSignature", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag89DatSignature tagData;
+
+        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag89DatSignature tagData;
+
+        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
+        assertEquals( Tag89DatSignature.TESTB_DAT_SIGNATURE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag89DatSignature tagData;
+
+        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag89DatSignature.TESTB_DAT_SIGNATURE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag89DatSignature tagData;
+
+        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
+        assertEquals( Tag89DatSignature.TESTB_DAT_SIGNATURE,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag89DatSignature tagData;
+
+        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTA_DAT_SIGNATURE));
+        assertEquals( "Tag89DatSignature\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag89DatSignature.TESTA_DAT_SIGNATURE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag89DatSignature.TESTA_DAT_SIGNATURE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

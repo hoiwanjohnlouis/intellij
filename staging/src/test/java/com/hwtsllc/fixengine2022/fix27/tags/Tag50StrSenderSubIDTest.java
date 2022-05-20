@@ -50,4 +50,54 @@ class Tag50StrSenderSubIDTest {
         assertEquals( "BEST", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag50StrSenderSubID tagData;
+
+        tagData = new Tag50StrSenderSubID(new MyStringType(Tag50StrSenderSubID.TESTB_STR_SENDER_SUB_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag50StrSenderSubID tagData;
+
+        tagData = new Tag50StrSenderSubID(new MyStringType(Tag50StrSenderSubID.TESTB_STR_SENDER_SUB_ID));
+        assertEquals( Tag50StrSenderSubID.TESTB_STR_SENDER_SUB_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag50StrSenderSubID tagData;
+
+        tagData = new Tag50StrSenderSubID(new MyStringType(Tag50StrSenderSubID.TESTB_STR_SENDER_SUB_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag50StrSenderSubID.TESTB_STR_SENDER_SUB_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag50StrSenderSubID tagData;
+
+        tagData = new Tag50StrSenderSubID(new MyStringType(Tag50StrSenderSubID.TESTB_STR_SENDER_SUB_ID));
+        assertEquals( Tag50StrSenderSubID.TESTB_STR_SENDER_SUB_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag50StrSenderSubID tagData;
+
+        tagData = new Tag50StrSenderSubID(new MyStringType(Tag50StrSenderSubID.TESTA_STR_SENDER_SUB_ID));
+        assertEquals( "Tag50StrSenderSubID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag50StrSenderSubID.TESTA_STR_SENDER_SUB_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag50StrSenderSubID.TESTA_STR_SENDER_SUB_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

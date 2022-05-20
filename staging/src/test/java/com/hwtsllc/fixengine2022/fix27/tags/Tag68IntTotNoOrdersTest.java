@@ -56,4 +56,54 @@ class Tag68IntTotNoOrdersTest {
         assertEquals( 123, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag68IntTotNoOrders tagData;
+
+        tagData = new Tag68IntTotNoOrders(new MyIntType(Tag68IntTotNoOrders.TESTB_INT_TOT_NO_ORDERS));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag68IntTotNoOrders tagData;
+
+        tagData = new Tag68IntTotNoOrders(new MyIntType(Tag68IntTotNoOrders.TESTB_INT_TOT_NO_ORDERS));
+        assertEquals( Tag68IntTotNoOrders.TESTB_INT_TOT_NO_ORDERS, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag68IntTotNoOrders tagData;
+
+        tagData = new Tag68IntTotNoOrders(new MyIntType(Tag68IntTotNoOrders.TESTB_INT_TOT_NO_ORDERS));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag68IntTotNoOrders.TESTB_INT_TOT_NO_ORDERS,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag68IntTotNoOrders tagData;
+
+        tagData = new Tag68IntTotNoOrders(new MyIntType(Tag68IntTotNoOrders.TESTB_INT_TOT_NO_ORDERS));
+        assertEquals( String.valueOf(Tag68IntTotNoOrders.TESTB_INT_TOT_NO_ORDERS),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag68IntTotNoOrders tagData;
+
+        tagData = new Tag68IntTotNoOrders(new MyIntType(Tag68IntTotNoOrders.TESTA_INT_TOT_NO_ORDERS));
+        assertEquals( "Tag68IntTotNoOrders\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag68IntTotNoOrders.TESTA_INT_TOT_NO_ORDERS + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag68IntTotNoOrders.TESTA_INT_TOT_NO_ORDERS + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

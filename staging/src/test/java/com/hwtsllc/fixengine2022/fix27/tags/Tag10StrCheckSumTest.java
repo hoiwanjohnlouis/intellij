@@ -54,45 +54,50 @@ class Tag10StrCheckSumTest {
     void PrintFIXTagTest() {
         Tag10StrCheckSum tagData;
 
-        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTB_STR_CHECK_SUM));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
-    void getDataValueTest() {
+    void TagGetDataValueTest() {
         Tag10StrCheckSum tagData;
 
-        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
-        assertEquals( Tag10StrCheckSum.TESTA_STR_CHECK_SUM, tagData.getDataValue());
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTB_STR_CHECK_SUM));
+        assertEquals( Tag10StrCheckSum.TESTB_STR_CHECK_SUM, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void toValuePairStringTest() {
+    void TagToValuePairStringTest() {
         Tag10StrCheckSum tagData;
 
-        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
-        assertEquals( "10=" + Tag10StrCheckSum.TESTA_STR_CHECK_SUM, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-    @Test
-    void toVerboseStringTest() {
-        Tag10StrCheckSum tagData;
-
-        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
-        assertEquals( "Tag10StrCheckSum\n" +
-                "\tEnumName[FIX10_STR_CHECK_SUM]\n" +
-                "\tFIXID[10]\n" +
-                "\tFIXName[CHECK_SUM]\n" +
-                "\tFIXDescription[CheckSum]\n" +
-                "\tDataValue[" + Tag10StrCheckSum.TESTA_STR_CHECK_SUM + "]\n" +
-                "\tValuePair[10=" + Tag10StrCheckSum.TESTA_STR_CHECK_SUM + "]", tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTB_STR_CHECK_SUM));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag10StrCheckSum.TESTB_STR_CHECK_SUM,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag10StrCheckSum tagData;
 
+        tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTB_STR_CHECK_SUM));
+        assertEquals( Tag10StrCheckSum.TESTB_STR_CHECK_SUM,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag10StrCheckSum tagData;
+
         tagData = new Tag10StrCheckSum(new MyStringType(Tag10StrCheckSum.TESTA_STR_CHECK_SUM));
-        assertEquals( Tag10StrCheckSum.TESTA_STR_CHECK_SUM, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        assertEquals( "Tag10StrCheckSum\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag10StrCheckSum.TESTA_STR_CHECK_SUM + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag10StrCheckSum.TESTA_STR_CHECK_SUM + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

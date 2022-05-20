@@ -43,11 +43,53 @@ class Tag31PrcLastPxTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0031Test() {
+    void PrintFIXTagTest() {
         Tag31PrcLastPx tagData;
 
-        tagData = new Tag31PrcLastPx(new MyPriceType(98.23D) );
-        assertEquals( 98.23D, tagData.getDataValue());
+        tagData = new Tag31PrcLastPx(new MyPriceType(Tag31PrcLastPx.TESTB_PRC_LAST_PX));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag31PrcLastPx tagData;
+
+        tagData = new Tag31PrcLastPx(new MyPriceType(Tag31PrcLastPx.TESTB_PRC_LAST_PX));
+        assertEquals( Tag31PrcLastPx.TESTB_PRC_LAST_PX, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag31PrcLastPx tagData;
+
+        tagData = new Tag31PrcLastPx(new MyPriceType(Tag31PrcLastPx.TESTB_PRC_LAST_PX));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag31PrcLastPx.TESTB_PRC_LAST_PX,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag31PrcLastPx tagData;
+
+        tagData = new Tag31PrcLastPx(new MyPriceType(Tag31PrcLastPx.TESTB_PRC_LAST_PX));
+        assertEquals( String.valueOf(Tag31PrcLastPx.TESTB_PRC_LAST_PX),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag31PrcLastPx tagData;
+
+        tagData = new Tag31PrcLastPx(new MyPriceType(Tag31PrcLastPx.TESTA_PRC_LAST_PX));
+        assertEquals( "Tag31PrcLastPx\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag31PrcLastPx.TESTA_PRC_LAST_PX + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag31PrcLastPx.TESTA_PRC_LAST_PX + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

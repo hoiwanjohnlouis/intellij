@@ -51,4 +51,54 @@ class Tag79StrAllocAccountTest {
         assertEquals( Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag58StrText tagData;
+
+        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTB_STR_TEXT));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag58StrText tagData;
+
+        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTB_STR_TEXT));
+        assertEquals( Tag58StrText.TESTB_STR_TEXT, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag58StrText tagData;
+
+        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTB_STR_TEXT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag58StrText.TESTB_STR_TEXT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag58StrText tagData;
+
+        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTB_STR_TEXT));
+        assertEquals( Tag58StrText.TESTB_STR_TEXT,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag58StrText tagData;
+
+        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTA_STR_TEXT));
+        assertEquals( "Tag58StrText\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag58StrText.TESTA_STR_TEXT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag58StrText.TESTA_STR_TEXT + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

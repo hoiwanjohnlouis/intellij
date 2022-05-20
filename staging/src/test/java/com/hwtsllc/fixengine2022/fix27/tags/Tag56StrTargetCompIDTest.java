@@ -50,4 +50,54 @@ class Tag56StrTargetCompIDTest {
         assertEquals( "JPMC", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag56StrTargetCompID tagData;
+
+        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag56StrTargetCompID tagData;
+
+        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID));
+        assertEquals( Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag56StrTargetCompID tagData;
+
+        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag56StrTargetCompID tagData;
+
+        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID));
+        assertEquals( Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag56StrTargetCompID tagData;
+
+        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID));
+        assertEquals( "Tag56StrTargetCompID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

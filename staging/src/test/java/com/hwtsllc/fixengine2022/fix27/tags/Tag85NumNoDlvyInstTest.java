@@ -54,4 +54,54 @@ class Tag85NumNoDlvyInstTest {
         assertEquals( 42, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag85NumNoDlvyInst tagData;
+
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(Tag85NumNoDlvyInst.TESTB_NUM_NO_DLVY_INST));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag85NumNoDlvyInst tagData;
+
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(Tag85NumNoDlvyInst.TESTB_NUM_NO_DLVY_INST));
+        assertEquals( Tag85NumNoDlvyInst.TESTB_NUM_NO_DLVY_INST, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag85NumNoDlvyInst tagData;
+
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(Tag85NumNoDlvyInst.TESTB_NUM_NO_DLVY_INST));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag85NumNoDlvyInst.TESTB_NUM_NO_DLVY_INST,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag85NumNoDlvyInst tagData;
+
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(Tag85NumNoDlvyInst.TESTB_NUM_NO_DLVY_INST));
+        assertEquals( String.valueOf(Tag85NumNoDlvyInst.TESTB_NUM_NO_DLVY_INST),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag85NumNoDlvyInst tagData;
+
+        tagData = new Tag85NumNoDlvyInst(new MyNumInGroupType(Tag85NumNoDlvyInst.TESTA_NUM_NO_DLVY_INST));
+        assertEquals( "Tag85NumNoDlvyInst\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag85NumNoDlvyInst.TESTA_NUM_NO_DLVY_INST + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag85NumNoDlvyInst.TESTA_NUM_NO_DLVY_INST + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

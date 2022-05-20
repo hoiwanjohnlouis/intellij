@@ -53,4 +53,54 @@ class Tag92StrBrokerOfCreditTest {
         assertEquals( "Saruman-92StBrokerOfCredit", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag92StrBrokerOfCredit tagData;
+
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag92StrBrokerOfCredit tagData;
+
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT));
+        assertEquals( Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag92StrBrokerOfCredit tagData;
+
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag92StrBrokerOfCredit tagData;
+
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT));
+        assertEquals( Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag92StrBrokerOfCredit tagData;
+
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT));
+        assertEquals( "Tag92StrBrokerOfCredit\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

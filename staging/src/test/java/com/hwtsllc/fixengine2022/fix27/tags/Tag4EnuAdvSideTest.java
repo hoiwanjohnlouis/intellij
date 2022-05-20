@@ -64,7 +64,7 @@ class Tag4EnuAdvSideTest {
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
-            assertEquals( oneEnum.toFIXIDString(), tagData.getDataValue());
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -75,28 +75,8 @@ class Tag4EnuAdvSideTest {
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
-            assertEquals( "4=" + oneEnum.toFIXIDString(), tagData.toValuePairString());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag4EnuAdvSide tagData;
-
-        // loop around the ENUM and process
-        for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
-            tagData = new Tag4EnuAdvSide(oneEnum);
-            assertEquals( "Tag4EnuAdvSide\n" +
-                    "\tEnumName[FIX4_ENU_ADV_SIDE]\n" +
-                    "\tFIXID[4]\n" +
-                    "\tFIXName[ADV_SIDE]\n" +
-                    "\tFIXDescription[AdvSide]\n" +
-                    "\tDataValue[" + oneEnum.toFIXIDString() + "]\n" +
-                    "\tValuePair[4=" + oneEnum.toFIXIDString() + "]\n" +
-                    "\tDataID[" + oneEnum.toFIXIDString() + "]\n" +
-                    "\tDataName[" + oneEnum.toFIXNameString() + "]\n" +
-                    "\tDataDescription[" + oneEnum.toFIXDescriptionString() + "]",
-                    tagData.toVerboseString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -107,8 +87,29 @@ class Tag4EnuAdvSideTest {
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
-            assertEquals( oneEnum.toFIXIDString(), tagData.toString());
+            assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag4EnuAdvSide tagData;
+
+        // loop around the ENUM and process
+        for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
+            tagData = new Tag4EnuAdvSide(oneEnum);
+            assertEquals( "Tag4EnuAdvSide\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
 }

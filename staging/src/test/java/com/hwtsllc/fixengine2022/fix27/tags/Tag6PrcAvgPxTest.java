@@ -51,45 +51,50 @@ class Tag6PrcAvgPxTest {
     void PrintFIXTagTest() {
         Tag6PrcAvgPx tagData;
 
-        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTB_PRC_AVG_PX));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag6PrcAvgPx tagData;
 
-        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
-        assertEquals( Tag6PrcAvgPx.TESTA_PRC_AVG_PX, tagData.getDataValue());
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTB_PRC_AVG_PX));
+        assertEquals( Tag6PrcAvgPx.TESTB_PRC_AVG_PX, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag6PrcAvgPx tagData;
 
-        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
-        assertEquals( "6=" + Tag6PrcAvgPx.TESTA_PRC_AVG_PX, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag6PrcAvgPx tagData;
-
-        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
-        assertEquals( "Tag6PrcAvgPx\n" +
-                "\tEnumName[FIX6_PRC_AVG_PX]\n" +
-                "\tFIXID[6]\n" +
-                "\tFIXName[AVG_PX]\n" +
-                "\tFIXDescription[AvgPx]\n" +
-                "\tDataValue[" + Tag6PrcAvgPx.TESTA_PRC_AVG_PX + "]\n" +
-                "\tValuePair[6=" + Tag6PrcAvgPx.TESTA_PRC_AVG_PX + "]", tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTB_PRC_AVG_PX));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag6PrcAvgPx.TESTB_PRC_AVG_PX,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag6PrcAvgPx tagData;
 
-        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTA_PRC_AVG_PX));
-        assertEquals( String.valueOf(Tag6PrcAvgPx.TESTA_PRC_AVG_PX), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTB_PRC_AVG_PX));
+        assertEquals( String.valueOf(Tag6PrcAvgPx.TESTB_PRC_AVG_PX),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag6PrcAvgPx tagData;
+
+        tagData = new Tag6PrcAvgPx(new MyPriceType(Tag6PrcAvgPx.TESTB_PRC_AVG_PX));
+        assertEquals( "Tag6PrcAvgPx\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag6PrcAvgPx.TESTB_PRC_AVG_PX + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag6PrcAvgPx.TESTB_PRC_AVG_PX + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -53,4 +53,54 @@ class Tag75StrTradeDateTest {
         assertEquals( "20220401 130000", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag75StrTradeDate tagData;
+
+        tagData = new Tag75StrTradeDate(new MyStringType(Tag75StrTradeDate.TESTB_STR_TRADE_DATE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag75StrTradeDate tagData;
+
+        tagData = new Tag75StrTradeDate(new MyStringType(Tag75StrTradeDate.TESTB_STR_TRADE_DATE));
+        assertEquals( Tag75StrTradeDate.TESTB_STR_TRADE_DATE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag75StrTradeDate tagData;
+
+        tagData = new Tag75StrTradeDate(new MyStringType(Tag75StrTradeDate.TESTB_STR_TRADE_DATE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag75StrTradeDate.TESTB_STR_TRADE_DATE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag75StrTradeDate tagData;
+
+        tagData = new Tag75StrTradeDate(new MyStringType(Tag75StrTradeDate.TESTB_STR_TRADE_DATE));
+        assertEquals( Tag75StrTradeDate.TESTB_STR_TRADE_DATE,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag75StrTradeDate tagData;
+
+        tagData = new Tag75StrTradeDate(new MyStringType(Tag75StrTradeDate.TESTA_STR_TRADE_DATE));
+        assertEquals( "Tag75StrTradeDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag75StrTradeDate.TESTA_STR_TRADE_DATE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag75StrTradeDate.TESTA_STR_TRADE_DATE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

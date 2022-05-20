@@ -51,4 +51,54 @@ class Tag51LmdSendingDateTest {
         assertEquals( "20220319 141400", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag51LmdSendingDate tagData;
+
+        tagData = new Tag51LmdSendingDate(new MyLocalMktDateType(Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag51LmdSendingDate tagData;
+
+        tagData = new Tag51LmdSendingDate(new MyLocalMktDateType(Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE));
+        assertEquals( Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag51LmdSendingDate tagData;
+
+        tagData = new Tag51LmdSendingDate(new MyLocalMktDateType(Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag51LmdSendingDate tagData;
+
+        tagData = new Tag51LmdSendingDate(new MyLocalMktDateType(Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE));
+        assertEquals( Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag51LmdSendingDate tagData;
+
+        tagData = new Tag51LmdSendingDate(new MyLocalMktDateType(Tag51LmdSendingDate.TESTA_LMD_SENDING_DATE));
+        assertEquals( "Tag51LmdSendingDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag51LmdSendingDate.TESTA_LMD_SENDING_DATE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag51LmdSendingDate.TESTA_LMD_SENDING_DATE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

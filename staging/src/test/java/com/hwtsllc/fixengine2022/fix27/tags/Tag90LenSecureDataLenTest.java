@@ -53,4 +53,54 @@ class Tag90LenSecureDataLenTest {
         assertEquals( dataLength, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag90LenSecureDataLen tagData;
+
+        tagData = new Tag90LenSecureDataLen(new MyLengthType(Tag90LenSecureDataLen.TESTB_LEN_SECURE_DATA_LEN));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag90LenSecureDataLen tagData;
+
+        tagData = new Tag90LenSecureDataLen(new MyLengthType(Tag90LenSecureDataLen.TESTB_LEN_SECURE_DATA_LEN));
+        assertEquals( Tag90LenSecureDataLen.TESTB_LEN_SECURE_DATA_LEN, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag90LenSecureDataLen tagData;
+
+        tagData = new Tag90LenSecureDataLen(new MyLengthType(Tag90LenSecureDataLen.TESTB_LEN_SECURE_DATA_LEN));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag90LenSecureDataLen.TESTB_LEN_SECURE_DATA_LEN,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag90LenSecureDataLen tagData;
+
+        tagData = new Tag90LenSecureDataLen(new MyLengthType(Tag90LenSecureDataLen.TESTB_LEN_SECURE_DATA_LEN));
+        assertEquals( String.valueOf(Tag90LenSecureDataLen.TESTB_LEN_SECURE_DATA_LEN),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag90LenSecureDataLen tagData;
+
+        tagData = new Tag90LenSecureDataLen(new MyLengthType(Tag90LenSecureDataLen.TESTA_LEN_SECURE_DATA_LEN));
+        assertEquals( "Tag90LenSecureDataLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag90LenSecureDataLen.TESTA_LEN_SECURE_DATA_LEN + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag90LenSecureDataLen.TESTA_LEN_SECURE_DATA_LEN + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

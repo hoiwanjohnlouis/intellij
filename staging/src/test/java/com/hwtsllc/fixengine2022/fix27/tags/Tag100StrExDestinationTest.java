@@ -54,4 +54,54 @@ class Tag100StrExDestinationTest {
         assertEquals( "JPMC", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag100StrExDestination tagData;
+
+        tagData = new Tag100StrExDestination(new MyStringType(Tag100StrExDestination.TESTB_STR_EX_DESTINATION));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag100StrExDestination tagData;
+
+        tagData = new Tag100StrExDestination(new MyStringType(Tag100StrExDestination.TESTB_STR_EX_DESTINATION));
+        assertEquals( Tag100StrExDestination.TESTB_STR_EX_DESTINATION, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag100StrExDestination tagData;
+
+        tagData = new Tag100StrExDestination(new MyStringType(Tag100StrExDestination.TESTB_STR_EX_DESTINATION));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag100StrExDestination.TESTB_STR_EX_DESTINATION,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag100StrExDestination tagData;
+
+        tagData = new Tag100StrExDestination(new MyStringType(Tag100StrExDestination.TESTB_STR_EX_DESTINATION));
+        assertEquals( Tag100StrExDestination.TESTB_STR_EX_DESTINATION,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag100StrExDestination tagData;
+
+        tagData = new Tag100StrExDestination(new MyStringType(Tag100StrExDestination.TESTA_STR_EX_DESTINATION));
+        assertEquals( "Tag100StrExDestination\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag100StrExDestination.TESTA_STR_EX_DESTINATION + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag100StrExDestination.TESTA_STR_EX_DESTINATION + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

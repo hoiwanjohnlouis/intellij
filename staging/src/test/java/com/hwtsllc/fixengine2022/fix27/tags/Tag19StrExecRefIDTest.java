@@ -51,4 +51,54 @@ class Tag19StrExecRefIDTest {
         assertEquals( "6789-XYZ", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag19StrExecRefID tagData;
+
+        tagData = new Tag19StrExecRefID(new MyStringType(Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag19StrExecRefID tagData;
+
+        tagData = new Tag19StrExecRefID(new MyStringType(Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID));
+        assertEquals( Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag19StrExecRefID tagData;
+
+        tagData = new Tag19StrExecRefID(new MyStringType(Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag19StrExecRefID tagData;
+
+        tagData = new Tag19StrExecRefID(new MyStringType(Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID));
+        assertEquals( Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag19StrExecRefID tagData;
+
+        tagData = new Tag19StrExecRefID(new MyStringType(Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID));
+        assertEquals( "Tag19StrExecRefID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

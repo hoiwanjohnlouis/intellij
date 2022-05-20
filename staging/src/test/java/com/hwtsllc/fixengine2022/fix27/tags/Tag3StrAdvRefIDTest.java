@@ -47,24 +47,36 @@ class Tag3StrAdvRefIDTest {
     void PrintFIXTagTest() {
         Tag3StrAdvRefID tagData;
 
-        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTB_STR_ADV_REF_ID));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag3StrAdvRefID tagData;
 
-        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
-        assertEquals( Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID, tagData.getDataValue());
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTB_STR_ADV_REF_ID));
+        assertEquals( Tag3StrAdvRefID.TESTB_STR_ADV_REF_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag3StrAdvRefID tagData;
 
-        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
-        assertEquals( "3=" + Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTB_STR_ADV_REF_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag3StrAdvRefID.TESTB_STR_ADV_REF_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag3StrAdvRefID tagData;
+
+        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTB_STR_ADV_REF_ID));
+        assertEquals( Tag3StrAdvRefID.TESTB_STR_ADV_REF_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
@@ -72,20 +84,13 @@ class Tag3StrAdvRefIDTest {
 
         tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
         assertEquals( "Tag3StrAdvRefID\n" +
-                "\tEnumName[FIX3_STR_ADV_REF_ID]\n" +
-                "\tFIXID[3]\n" +
-                "\tFIXName[ADV_REF_ID]\n" +
-                "\tFIXDescription[AdvRefID]\n" +
-                "\tDataValue[" + Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID + "]\n" +
-                "\tValuePair[3=" + Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID + "]", tagData.toVerboseString());
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID + "]",
+                tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
-    }
-    @Test
-    void TagToStringTest() {
-        Tag3StrAdvRefID tagData;
-
-        tagData = new Tag3StrAdvRefID(new MyStringType(Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID));
-        assertEquals( Tag3StrAdvRefID.TESTA_STR_ADV_REF_ID, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 }

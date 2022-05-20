@@ -50,4 +50,54 @@ class Tag45SeqRefSeqNumTest {
         assertEquals( 32523, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag45SeqRefSeqNum tagData;
+
+        tagData = new Tag45SeqRefSeqNum(new MySeqNumType(Tag45SeqRefSeqNum.TESTB_SEQ_REF_SEQ_NO));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag45SeqRefSeqNum tagData;
+
+        tagData = new Tag45SeqRefSeqNum(new MySeqNumType(Tag45SeqRefSeqNum.TESTB_SEQ_REF_SEQ_NO));
+        assertEquals( Tag45SeqRefSeqNum.TESTB_SEQ_REF_SEQ_NO, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag45SeqRefSeqNum tagData;
+
+        tagData = new Tag45SeqRefSeqNum(new MySeqNumType(Tag45SeqRefSeqNum.TESTB_SEQ_REF_SEQ_NO));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag45SeqRefSeqNum.TESTB_SEQ_REF_SEQ_NO,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag45SeqRefSeqNum tagData;
+
+        tagData = new Tag45SeqRefSeqNum(new MySeqNumType(Tag45SeqRefSeqNum.TESTB_SEQ_REF_SEQ_NO));
+        assertEquals( String.valueOf(Tag45SeqRefSeqNum.TESTB_SEQ_REF_SEQ_NO),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag45SeqRefSeqNum tagData;
+
+        tagData = new Tag45SeqRefSeqNum(new MySeqNumType(Tag45SeqRefSeqNum.TESTA_SEQ_REF_SEQ_NO));
+        assertEquals( "Tag45SeqRefSeqNum\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag45SeqRefSeqNum.TESTA_SEQ_REF_SEQ_NO + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag45SeqRefSeqNum.TESTA_SEQ_REF_SEQ_NO + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

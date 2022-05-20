@@ -51,4 +51,54 @@ class Tag26StrIOIRefIDTest {
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag26StrIOIRefID tagData;
+
+        tagData = new Tag26StrIOIRefID(new MyStringType(Tag26StrIOIRefID.TESTB_STR_IOI_REF_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag26StrIOIRefID tagData;
+
+        tagData = new Tag26StrIOIRefID(new MyStringType(Tag26StrIOIRefID.TESTB_STR_IOI_REF_ID));
+        assertEquals( Tag26StrIOIRefID.TESTB_STR_IOI_REF_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag26StrIOIRefID tagData;
+
+        tagData = new Tag26StrIOIRefID(new MyStringType(Tag26StrIOIRefID.TESTB_STR_IOI_REF_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag26StrIOIRefID.TESTB_STR_IOI_REF_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag26StrIOIRefID tagData;
+
+        tagData = new Tag26StrIOIRefID(new MyStringType(Tag26StrIOIRefID.TESTB_STR_IOI_REF_ID));
+        assertEquals( Tag26StrIOIRefID.TESTB_STR_IOI_REF_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag26StrIOIRefID tagData;
+
+        tagData = new Tag26StrIOIRefID(new MyStringType(Tag26StrIOIRefID.TESTA_STR_IOI_REF_ID));
+        assertEquals( "Tag26StrIOIRefID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag26StrIOIRefID.TESTA_STR_IOI_REF_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag26StrIOIRefID.TESTA_STR_IOI_REF_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

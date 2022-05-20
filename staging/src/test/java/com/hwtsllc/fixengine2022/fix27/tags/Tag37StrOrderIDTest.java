@@ -53,4 +53,54 @@ class Tag37StrOrderIDTest {
         assertEquals( "ORD-24601", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag37StrOrderID tagData;
+
+        tagData = new Tag37StrOrderID(new MyStringType(Tag37StrOrderID.TESTB_STR_ORDER_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag37StrOrderID tagData;
+
+        tagData = new Tag37StrOrderID(new MyStringType(Tag37StrOrderID.TESTB_STR_ORDER_ID));
+        assertEquals( Tag37StrOrderID.TESTB_STR_ORDER_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag37StrOrderID tagData;
+
+        tagData = new Tag37StrOrderID(new MyStringType(Tag37StrOrderID.TESTB_STR_ORDER_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag37StrOrderID.TESTB_STR_ORDER_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag37StrOrderID tagData;
+
+        tagData = new Tag37StrOrderID(new MyStringType(Tag37StrOrderID.TESTB_STR_ORDER_ID));
+        assertEquals( Tag37StrOrderID.TESTB_STR_ORDER_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag37StrOrderID tagData;
+
+        tagData = new Tag37StrOrderID(new MyStringType(Tag37StrOrderID.TESTA_STR_ORDER_ID));
+        assertEquals( "Tag37StrOrderID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag37StrOrderID.TESTA_STR_ORDER_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag37StrOrderID.TESTA_STR_ORDER_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

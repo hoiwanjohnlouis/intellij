@@ -64,7 +64,7 @@ class Tag97BoolPossResendTest {
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97BoolPossResend(oneEnum);
-            assertEquals( oneEnum.toFIXIDString(), tagData.getDataValue());
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -75,28 +75,8 @@ class Tag97BoolPossResendTest {
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97BoolPossResend(oneEnum);
-            assertEquals( "97=" + oneEnum.toFIXIDString(), tagData.toValuePairString());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag97BoolPossResend tagData;
-
-        // loop around the ENUM and process
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
-            tagData = new Tag97BoolPossResend(oneEnum);
-            assertEquals( "Tag97BoolPossResend\n" +
-                            "\tEnumName[FIX97_BOOL_POSS_RESEND]\n" +
-                            "\tFIXID[97]\n" +
-                            "\tFIXName[POSS_RESEND]\n" +
-                            "\tFIXDescription[PossResend]\n" +
-                            "\tDataValue[" + oneEnum.toFIXIDString() + "]\n" +
-                            "\tValuePair[97=" + oneEnum.toFIXIDString() + "]\n" +
-                            "\tDataID[" + oneEnum.toFIXIDString() + "]\n" +
-                            "\tDataName[" + oneEnum.toFIXNameString() + "]\n" +
-                            "\tDataDescription[" + oneEnum.toFIXDescriptionString() + "]",
-                    tagData.toVerboseString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -107,8 +87,29 @@ class Tag97BoolPossResendTest {
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97BoolPossResend(oneEnum);
-            assertEquals( oneEnum.toFIXIDString(), tagData.toString());
+            assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag97BoolPossResend tagData;
+
+        // loop around the ENUM and process
+        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+            tagData = new Tag97BoolPossResend(oneEnum);
+            assertEquals( "Tag97BoolPossResend\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
 }

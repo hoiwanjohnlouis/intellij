@@ -53,4 +53,54 @@ class Tag83StrRptSeqTest {
         assertEquals( "Legolas-83RptSeq", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag83StrRptSeq tagData;
+
+        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTB_STR_RPT_SEQ));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag83StrRptSeq tagData;
+
+        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTB_STR_RPT_SEQ));
+        assertEquals( Tag83StrRptSeq.TESTB_STR_RPT_SEQ, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag83StrRptSeq tagData;
+
+        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTB_STR_RPT_SEQ));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag83StrRptSeq.TESTB_STR_RPT_SEQ,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag83StrRptSeq tagData;
+
+        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTB_STR_RPT_SEQ));
+        assertEquals( Tag83StrRptSeq.TESTB_STR_RPT_SEQ,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag83StrRptSeq tagData;
+
+        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTA_STR_RPT_SEQ));
+        assertEquals( "Tag83StrRptSeq\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag83StrRptSeq.TESTA_STR_RPT_SEQ + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag83StrRptSeq.TESTA_STR_RPT_SEQ + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

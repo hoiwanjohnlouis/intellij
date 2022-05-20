@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum81ProcessCode;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -87,5 +87,70 @@ class Tag81EnuProcessCodeTest {
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.PLAN_SPONSOR);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag81EnuProcessCode tagData;
+
+        // loop around the ENUM and process
+        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
+            tagData = new Tag81EnuProcessCode(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag81EnuProcessCode tagData;
+
+        // loop around the ENUM and process
+        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
+            tagData = new Tag81EnuProcessCode(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag81EnuProcessCode tagData;
+
+        // loop around the ENUM and process
+        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
+            tagData = new Tag81EnuProcessCode(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag81EnuProcessCode tagData;
+
+        // loop around the ENUM and process
+        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
+            tagData = new Tag81EnuProcessCode(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag81EnuProcessCode tagData;
+
+        // loop around the ENUM and process
+        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
+            tagData = new Tag81EnuProcessCode(oneEnum);
+            assertEquals( "Tag81EnuProcessCode\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

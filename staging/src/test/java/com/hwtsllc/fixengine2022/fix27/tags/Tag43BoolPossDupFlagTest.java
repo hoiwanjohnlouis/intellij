@@ -64,7 +64,7 @@ class Tag43BoolPossDupFlagTest {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43BoolPossDupFlag(oneEnum);
-            assertEquals( oneEnum.toFIXIDString(), tagData.getDataValue());
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -75,28 +75,8 @@ class Tag43BoolPossDupFlagTest {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43BoolPossDupFlag(oneEnum);
-            assertEquals( "43=" + oneEnum.toFIXIDString(), tagData.toValuePairString());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag43BoolPossDupFlag tagData;
-
-        // loop around the ENUM and process
-        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
-            tagData = new Tag43BoolPossDupFlag(oneEnum);
-            assertEquals( "Tag43BoolPossDupFlag\n" +
-                            "\tEnumName[FIX43_BOOL_POSS_DUP_FLAG]\n" +
-                            "\tFIXID[43]\n" +
-                            "\tFIXName[POSS_DUP_FLAG]\n" +
-                            "\tFIXDescription[PossDupFlag]\n" +
-                            "\tDataValue[" + oneEnum.toFIXIDString() + "]\n" +
-                            "\tValuePair[43=" + oneEnum.toFIXIDString() + "]\n" +
-                            "\tDataID[" + oneEnum.toFIXIDString() + "]\n" +
-                            "\tDataName[" + oneEnum.toFIXNameString() + "]\n" +
-                            "\tDataDescription[" + oneEnum.toFIXDescriptionString() + "]",
-                    tagData.toVerboseString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -107,8 +87,29 @@ class Tag43BoolPossDupFlagTest {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43BoolPossDupFlag(oneEnum);
-            assertEquals( oneEnum.toFIXIDString(), tagData.toString());
+            assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag43BoolPossDupFlag tagData;
+
+        // loop around the ENUM and process
+        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
+            tagData = new Tag43BoolPossDupFlag(oneEnum);
+            assertEquals( "Tag43BoolPossDupFlag\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
 }

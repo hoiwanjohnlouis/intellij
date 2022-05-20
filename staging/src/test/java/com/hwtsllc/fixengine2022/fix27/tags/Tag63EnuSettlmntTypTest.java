@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum63SettlType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -142,5 +142,70 @@ class Tag63EnuSettlmntTypTest {
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.FX_SPOT );
         assertEquals( Enum63SettlType.FX_SPOT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag63EnuSettlmntTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
+            tagData = new Tag63EnuSettlmntTyp(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag63EnuSettlmntTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
+            tagData = new Tag63EnuSettlmntTyp(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag63EnuSettlmntTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
+            tagData = new Tag63EnuSettlmntTyp(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag63EnuSettlmntTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
+            tagData = new Tag63EnuSettlmntTyp(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag63EnuSettlmntTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
+            tagData = new Tag63EnuSettlmntTyp(oneEnum);
+            assertEquals( "Tag63EnuSettlmntTyp\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

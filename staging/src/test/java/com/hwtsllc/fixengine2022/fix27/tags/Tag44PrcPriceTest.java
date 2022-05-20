@@ -43,11 +43,53 @@ class Tag44PrcPriceTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0044Test() {
+    void PrintFIXTagTest() {
         Tag44PrcPrice tagData;
 
-        tagData = new Tag44PrcPrice(new MyPriceType(10.43D) );
-        assertEquals( 10.43D, tagData.getDataValue());
+        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTB_PRC_PRICE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag44PrcPrice tagData;
+
+        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTB_PRC_PRICE));
+        assertEquals( Tag44PrcPrice.TESTB_PRC_PRICE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag44PrcPrice tagData;
+
+        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTB_PRC_PRICE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag44PrcPrice.TESTB_PRC_PRICE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag44PrcPrice tagData;
+
+        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTB_PRC_PRICE));
+        assertEquals( String.valueOf(Tag44PrcPrice.TESTB_PRC_PRICE),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag44PrcPrice tagData;
+
+        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTA_PRC_PRICE));
+        assertEquals( "Tag44PrcPrice\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag44PrcPrice.TESTA_PRC_PRICE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag44PrcPrice.TESTA_PRC_PRICE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

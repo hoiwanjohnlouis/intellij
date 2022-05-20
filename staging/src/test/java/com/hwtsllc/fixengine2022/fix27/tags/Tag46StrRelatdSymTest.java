@@ -51,4 +51,54 @@ class Tag46StrRelatdSymTest {
         assertEquals( "IBM", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag46StrRelatdSym tagData;
+
+        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTB_STR_RELATED_SYM));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag46StrRelatdSym tagData;
+
+        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTB_STR_RELATED_SYM));
+        assertEquals( Tag46StrRelatdSym.TESTB_STR_RELATED_SYM, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag46StrRelatdSym tagData;
+
+        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTB_STR_RELATED_SYM));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag46StrRelatdSym.TESTB_STR_RELATED_SYM,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag46StrRelatdSym tagData;
+
+        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTB_STR_RELATED_SYM));
+        assertEquals( Tag46StrRelatdSym.TESTB_STR_RELATED_SYM,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag46StrRelatdSym tagData;
+
+        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTA_STR_RELATED_SYM));
+        assertEquals( "Tag46StrRelatdSym\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag46StrRelatdSym.TESTA_STR_RELATED_SYM + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag46StrRelatdSym.TESTA_STR_RELATED_SYM + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

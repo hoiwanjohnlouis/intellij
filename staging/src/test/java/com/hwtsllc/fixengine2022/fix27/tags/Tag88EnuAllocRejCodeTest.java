@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAllocRejCode;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -122,5 +123,70 @@ class Tag88EnuAllocRejCodeTest {
         tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.WAREHOUSE_REQUEST_REJECTED);
         assertEquals( "13", tagData.getDataValue());
         assertNotEquals( FIX27.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag88EnuAllocRejCode tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
+            tagData = new Tag88EnuAllocRejCode(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag88EnuAllocRejCode tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
+            tagData = new Tag88EnuAllocRejCode(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag88EnuAllocRejCode tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
+            tagData = new Tag88EnuAllocRejCode(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag88EnuAllocRejCode tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
+            tagData = new Tag88EnuAllocRejCode(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag88EnuAllocRejCode tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
+            tagData = new Tag88EnuAllocRejCode(oneEnum);
+            assertEquals( "Tag88EnuAllocRejCode\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

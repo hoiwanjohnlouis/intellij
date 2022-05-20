@@ -51,4 +51,54 @@ class Tag60UtcTransactTimeTest {
         assertEquals( "20220401 000000", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag60UtcTransactTime tagData;
+
+        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag60UtcTransactTime tagData;
+
+        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME));
+        assertEquals( Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag60UtcTransactTime tagData;
+
+        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag60UtcTransactTime tagData;
+
+        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME));
+        assertEquals( Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag60UtcTransactTime tagData;
+
+        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME));
+        assertEquals( "Tag60UtcTransactTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

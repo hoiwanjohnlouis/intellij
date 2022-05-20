@@ -51,4 +51,54 @@ class Tag48StrSecurityIDTest {
         assertEquals( "TESTA", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag48StrSecurityID tagData;
+
+        tagData = new Tag48StrSecurityID(new MyStringType(Tag48StrSecurityID.TESTB_STR_SECURITY_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag48StrSecurityID tagData;
+
+        tagData = new Tag48StrSecurityID(new MyStringType(Tag48StrSecurityID.TESTB_STR_SECURITY_ID));
+        assertEquals( Tag48StrSecurityID.TESTB_STR_SECURITY_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag48StrSecurityID tagData;
+
+        tagData = new Tag48StrSecurityID(new MyStringType(Tag48StrSecurityID.TESTB_STR_SECURITY_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag48StrSecurityID.TESTB_STR_SECURITY_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag48StrSecurityID tagData;
+
+        tagData = new Tag48StrSecurityID(new MyStringType(Tag48StrSecurityID.TESTB_STR_SECURITY_ID));
+        assertEquals( Tag48StrSecurityID.TESTB_STR_SECURITY_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag48StrSecurityID tagData;
+
+        tagData = new Tag48StrSecurityID(new MyStringType(Tag48StrSecurityID.TESTA_STR_SECURITY_ID));
+        assertEquals( "Tag48StrSecurityID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag48StrSecurityID.TESTA_STR_SECURITY_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag48StrSecurityID.TESTA_STR_SECURITY_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

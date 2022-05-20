@@ -53,4 +53,54 @@ class Tag80QtyAllocQtyTest {
         assertEquals( 80, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag80QtyAllocQty tagData;
+
+        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag80QtyAllocQty tagData;
+
+        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY));
+        assertEquals( Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag80QtyAllocQty tagData;
+
+        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag80QtyAllocQty tagData;
+
+        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY));
+        assertEquals( String.valueOf(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag80QtyAllocQty tagData;
+
+        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY));
+        assertEquals( "Tag80QtyAllocQty\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

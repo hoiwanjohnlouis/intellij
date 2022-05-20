@@ -53,4 +53,54 @@ class Tag72StrRefAllocIDTest {
         assertEquals( Tag72StrRefAllocID.TESTA_STR_REF_ALLOC_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag72StrRefAllocID tagData;
+
+        tagData = new Tag72StrRefAllocID(new MyStringType(Tag72StrRefAllocID.TESTB_STR_REF_ALLOC_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag72StrRefAllocID tagData;
+
+        tagData = new Tag72StrRefAllocID(new MyStringType(Tag72StrRefAllocID.TESTB_STR_REF_ALLOC_ID));
+        assertEquals( Tag72StrRefAllocID.TESTB_STR_REF_ALLOC_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag72StrRefAllocID tagData;
+
+        tagData = new Tag72StrRefAllocID(new MyStringType(Tag72StrRefAllocID.TESTB_STR_REF_ALLOC_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag72StrRefAllocID.TESTB_STR_REF_ALLOC_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag72StrRefAllocID tagData;
+
+        tagData = new Tag72StrRefAllocID(new MyStringType(Tag72StrRefAllocID.TESTB_STR_REF_ALLOC_ID));
+        assertEquals( Tag72StrRefAllocID.TESTB_STR_REF_ALLOC_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag72StrRefAllocID tagData;
+
+        tagData = new Tag72StrRefAllocID(new MyStringType(Tag72StrRefAllocID.TESTA_STR_REF_ALLOC_ID));
+        assertEquals( "Tag72StrRefAllocID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag72StrRefAllocID.TESTA_STR_REF_ALLOC_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag72StrRefAllocID.TESTA_STR_REF_ALLOC_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }
