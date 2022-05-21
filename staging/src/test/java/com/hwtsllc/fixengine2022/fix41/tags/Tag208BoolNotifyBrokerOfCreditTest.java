@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix41.enums.Bool208NotifyBrokerOfCredit;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -28,10 +29,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  208
  *  NotifyBrokerOfCredit
  *  Boolean
+ *  <p>
  *  Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker).
+ *  <p></p>
  *  Valid values:
- *      N - Details should not be communicated
- *      Y - Details should be communicated
+ *  <p>    N - Details should not be communicated
+ *  <p>    Y - Details should be communicated
  */
 class Tag208BoolNotifyBrokerOfCreditTest {
     @Test
@@ -48,11 +51,11 @@ class Tag208BoolNotifyBrokerOfCreditTest {
     void Tag0208Test() {
         Tag208BoolNotifyBrokerOfCredit tagData;
 
-        tagData = new Tag208BoolNotifyBrokerOfCredit(MyBooleanType.NO);
+        tagData = new Tag208BoolNotifyBrokerOfCredit(Bool208NotifyBrokerOfCredit.NO);
         assertEquals( MyBooleanType.NO.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag208BoolNotifyBrokerOfCredit(MyBooleanType.YES);
+        tagData = new Tag208BoolNotifyBrokerOfCredit(Bool208NotifyBrokerOfCredit.YES);
         assertEquals( MyBooleanType.YES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

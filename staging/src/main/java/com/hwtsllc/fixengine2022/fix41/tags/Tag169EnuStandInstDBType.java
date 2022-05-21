@@ -104,32 +104,12 @@ public class Tag169EnuStandInstDBType extends FIX41Abstract implements LogValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag169EnuStandInstDBType tagData;
+        System.out.println( new Tag169EnuStandInstDBType(TESTA_ENU_STAND_INST_DB_TYPE).toVerboseString() );
+        System.out.println( new Tag169EnuStandInstDBType(TESTB_ENU_STAND_INST_DB_TYPE).toVerboseString() );
 
-        tagData = new Tag169EnuStandInstDBType(TESTA_ENU_STAND_INST_DB_TYPE);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag169EnuStandInstDBType(TESTB_ENU_STAND_INST_DB_TYPE);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
+            System.out.println( new Tag169EnuStandInstDBType(oneEnum).toVerboseString() );
+        }
     }
 }

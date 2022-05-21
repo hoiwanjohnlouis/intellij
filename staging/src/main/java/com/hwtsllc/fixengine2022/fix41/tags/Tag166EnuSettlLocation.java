@@ -108,32 +108,12 @@ public class Tag166EnuSettlLocation extends FIX41Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag166EnuSettlLocation tagData;
+        System.out.println( new Tag166EnuSettlLocation(TESTA_ENU_SETTL_LOCATION).toVerboseString() );
+        System.out.println( new Tag166EnuSettlLocation(TESTB_ENU_SETTL_LOCATION).toVerboseString() );
 
-        tagData = new Tag166EnuSettlLocation(TESTA_ENU_SETTL_LOCATION);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag166EnuSettlLocation(TESTB_ENU_SETTL_LOCATION);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
+            System.out.println( new Tag166EnuSettlLocation(oneEnum).toVerboseString() );
+        }
     }
 }

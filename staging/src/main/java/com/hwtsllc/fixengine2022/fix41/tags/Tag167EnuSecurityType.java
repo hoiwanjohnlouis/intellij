@@ -292,32 +292,12 @@ public class Tag167EnuSecurityType extends FIX41Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag167EnuSecurityType tagData;
+        System.out.println( new Tag167EnuSecurityType(TESTA_ENU_SECURITY_TYPE).toVerboseString() );
+        System.out.println( new Tag167EnuSecurityType(TESTB_ENU_SECURITY_TYPE).toVerboseString() );
 
-        tagData = new Tag167EnuSecurityType(TESTA_ENU_SECURITY_TYPE);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag167EnuSecurityType(TESTB_ENU_SECURITY_TYPE);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+            System.out.println( new Tag167EnuSecurityType(oneEnum).toVerboseString() );
+        }
     }
 }

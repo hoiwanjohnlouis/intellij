@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix41.enums.Bool208NotifyBrokerOfCredit;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -27,20 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  208
  *  NotifyBrokerOfCredit
  *  Boolean
+ *  <p>
  *  Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker).
+ *  <p></p>
  *  Valid values:
- *      N - Details should not be communicated
- *      Y - Details should be communicated
+ *  <p>    N - Details should not be communicated
+ *  <p>    Y - Details should be communicated
  */
 public class Tag208BoolNotifyBrokerOfCredit extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool208NotifyBrokerOfCredit dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_NOTIFY_BROKER_OF_CREDIT = MyBooleanType.NO;
-                                    // N - Details should not be communicated
-    public final static MyBooleanType TESTB_BOOL_NOTIFY_BROKER_OF_CREDIT = MyBooleanType.YES;
-                                    // Y - Details should be communicated
+    public final static Bool208NotifyBrokerOfCredit TESTA_BOOL_NOTIFY_BROKER_OF_CREDIT
+            = Bool208NotifyBrokerOfCredit.NO;
+    public final static Bool208NotifyBrokerOfCredit TESTB_BOOL_NOTIFY_BROKER_OF_CREDIT
+            = Bool208NotifyBrokerOfCredit.YES;
 
-    public Tag208BoolNotifyBrokerOfCredit(MyBooleanType dataValue) {
+    public Tag208BoolNotifyBrokerOfCredit(Bool208NotifyBrokerOfCredit dataValue) {
         setFixType(FIX41.FIX208_BOOL_NOTIFY_BROKER_OF_CREDIT);
         this.dataValue = dataValue;
     }
@@ -101,32 +103,12 @@ public class Tag208BoolNotifyBrokerOfCredit extends FIX41Abstract implements Log
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag208BoolNotifyBrokerOfCredit tagData;
+        System.out.println( new Tag208BoolNotifyBrokerOfCredit(TESTA_BOOL_NOTIFY_BROKER_OF_CREDIT).toVerboseString() );
+        System.out.println( new Tag208BoolNotifyBrokerOfCredit(TESTB_BOOL_NOTIFY_BROKER_OF_CREDIT).toVerboseString() );
 
-        tagData = new Tag208BoolNotifyBrokerOfCredit(TESTA_BOOL_NOTIFY_BROKER_OF_CREDIT);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag208BoolNotifyBrokerOfCredit(TESTB_BOOL_NOTIFY_BROKER_OF_CREDIT);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Bool208NotifyBrokerOfCredit oneEnum : Bool208NotifyBrokerOfCredit.values()) {
+            System.out.println( new Tag208BoolNotifyBrokerOfCredit(oneEnum).toVerboseString() );
+        }
     }
 }
