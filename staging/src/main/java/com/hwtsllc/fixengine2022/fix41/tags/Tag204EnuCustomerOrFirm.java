@@ -105,33 +105,12 @@ public class Tag204EnuCustomerOrFirm extends FIX41Abstract implements LogValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag204EnuCustomerOrFirm tagData;
+        System.out.println( new Tag204EnuCustomerOrFirm(TESTA_ENU_CUSTOMER_OR_FIRM).toVerboseString() );
+        System.out.println( new Tag204EnuCustomerOrFirm(TESTB_ENU_CUSTOMER_OR_FIRM).toVerboseString() );
 
-        tagData = new Tag204EnuCustomerOrFirm(TESTA_ENU_CUSTOMER_OR_FIRM);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag204EnuCustomerOrFirm(TESTB_ENU_CUSTOMER_OR_FIRM);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-        System.out.println(tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
+            System.out.println( new Tag204EnuCustomerOrFirm(oneEnum).toVerboseString() );
+        }
     }
 }

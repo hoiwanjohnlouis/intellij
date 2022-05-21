@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix41.enums.Bool141ResetSeqNumFlag;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -27,18 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  141
  *  ResetSeqNumFlag
  *  Boolean
+ *  <p>
  *  Indicates that the both sides of the FIX session should reset sequence numbers.
+ *  <p></p>
  *  Valid values:
- *      N - No
- *      Y - Yes, reset sequence numbers
+ *  <p>    N - No
+ *  <p>    Y - Yes, reset sequence numbers
  */
 public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool141ResetSeqNumFlag dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_RESET_SEQ_NUM_FLAG = MyBooleanType.NO ; // N - No
-    public final static MyBooleanType TESTB_BOOL_RESET_SEQ_NUM_FLAG = MyBooleanType.YES; // Y - Yes, reset sequence numbers
+    public final static Bool141ResetSeqNumFlag TESTA_BOOL_RESET_SEQ_NUM_FLAG
+            = Bool141ResetSeqNumFlag.NO ; // N - No
+    public final static Bool141ResetSeqNumFlag TESTB_BOOL_RESET_SEQ_NUM_FLAG
+            = Bool141ResetSeqNumFlag.YES; // Y - Yes, reset sequence numbers
 
-    public Tag141BoolResetSeqNumFlag(MyBooleanType dataValue) {
+    public Tag141BoolResetSeqNumFlag(Bool141ResetSeqNumFlag dataValue) {
         setFixType(FIX41.FIX141_BOOL_RESET_SEQ_NUM_FLAG);
         this.dataValue = dataValue;
     }
@@ -99,32 +103,12 @@ public class Tag141BoolResetSeqNumFlag extends FIX41Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag141BoolResetSeqNumFlag tagData;
+        System.out.println( new Tag141BoolResetSeqNumFlag(TESTA_BOOL_RESET_SEQ_NUM_FLAG).toVerboseString() );
+        System.out.println( new Tag141BoolResetSeqNumFlag(TESTB_BOOL_RESET_SEQ_NUM_FLAG).toVerboseString() );
 
-        tagData = new Tag141BoolResetSeqNumFlag(TESTA_BOOL_RESET_SEQ_NUM_FLAG);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag141BoolResetSeqNumFlag(TESTB_BOOL_RESET_SEQ_NUM_FLAG);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Bool141ResetSeqNumFlag oneEnum : Bool141ResetSeqNumFlag.values()) {
+            System.out.println( new Tag141BoolResetSeqNumFlag(oneEnum).toVerboseString() );
+        }
     }
 }

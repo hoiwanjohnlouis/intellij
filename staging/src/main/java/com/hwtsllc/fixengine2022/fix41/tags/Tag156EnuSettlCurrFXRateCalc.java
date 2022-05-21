@@ -110,32 +110,12 @@ public class Tag156EnuSettlCurrFXRateCalc extends FIX41Abstract implements LogVa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag156EnuSettlCurrFXRateCalc tagData;
+        System.out.println( new Tag156EnuSettlCurrFXRateCalc(TESTA_ENU_SETTL_CURR_FX_RATE_CALC).toVerboseString() );
+        System.out.println( new Tag156EnuSettlCurrFXRateCalc(TESTB_ENU_SETTL_CURR_FX_RATE_CALC).toVerboseString() );
 
-        tagData = new Tag156EnuSettlCurrFXRateCalc(TESTA_ENU_SETTL_CURR_FX_RATE_CALC);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag156EnuSettlCurrFXRateCalc(TESTB_ENU_SETTL_CURR_FX_RATE_CALC);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
+            System.out.println( new Tag156EnuSettlCurrFXRateCalc(oneEnum).toVerboseString() );
+        }
     }
 }

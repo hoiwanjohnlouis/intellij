@@ -108,32 +108,12 @@ public class Tag201EnuPutOrCall extends FIX41Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag201EnuPutOrCall tagData;
+        System.out.println( new Tag201EnuPutOrCall(TESTA_ENU_PUT_OR_CALL).toVerboseString() );
+        System.out.println( new Tag201EnuPutOrCall(TESTB_ENU_PUT_OR_CALL).toVerboseString() );
 
-        tagData = new Tag201EnuPutOrCall(TESTA_ENU_PUT_OR_CALL);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag201EnuPutOrCall(TESTB_ENU_PUT_OR_CALL);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
+            System.out.println( new Tag201EnuPutOrCall(oneEnum).toVerboseString() );
+        }
     }
 }
