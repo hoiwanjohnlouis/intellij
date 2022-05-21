@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix30.enums.Enum113ReportToExch;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -27,18 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  113
  *  ReportToExch
  *  Boolean
+ *  <p>
  *  Identifies party of trade responsible for exchange reporting.
+ *  <p></p>
  *  Valid values:
- *      N - Indicates the party sending message will report trade
- *      Y - Indicates the party receiving message must report trade
+ *  <p>    N - Indicates the party sending message will report trade
+ *  <p>    Y - Indicates the party receiving message must report trade
  */
 public class Tag113BoolReportToExch extends FIX30Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Enum113ReportToExch dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_REPORT_TO_EXCH = MyBooleanType.NO; // fake data
-    public final static MyBooleanType TESTB_BOOL_REPORT_TO_EXCH = MyBooleanType.YES;
+    public final static Enum113ReportToExch TESTA_BOOL_POSS_RESEND
+            = Enum113ReportToExch.NO;
+    public final static Enum113ReportToExch TESTB_BOOL_POSS_RESEND
+            = Enum113ReportToExch.YES;
 
-    public Tag113BoolReportToExch(MyBooleanType dataValue) {
+    public Tag113BoolReportToExch(Enum113ReportToExch dataValue) {
         setFixType(FIX30.FIX113_BOOL_REPORT_TO_EXCH);
         this.dataValue = dataValue;
     }
@@ -63,7 +67,20 @@ public class Tag113BoolReportToExch extends FIX30Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -99,32 +116,12 @@ public class Tag113BoolReportToExch extends FIX30Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag113BoolReportToExch tagData;
+        System.out.println( new Tag113BoolReportToExch(TESTA_BOOL_POSS_RESEND).toVerboseString() );
+        System.out.println( new Tag113BoolReportToExch(TESTB_BOOL_POSS_RESEND).toVerboseString() );
 
-        tagData = new Tag113BoolReportToExch(TESTA_BOOL_REPORT_TO_EXCH);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag113BoolReportToExch(TESTB_BOOL_REPORT_TO_EXCH);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+            System.out.println( new Tag113BoolReportToExch(oneEnum).toVerboseString() );
+        }
     }
 }

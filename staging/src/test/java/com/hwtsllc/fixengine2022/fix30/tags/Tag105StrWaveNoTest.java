@@ -28,6 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  105
  *  WaveNo
  *  String
+ *  <p>
  *  Deprecated in FIX.4.2
  */
 // @Deprecated
@@ -50,5 +51,55 @@ class Tag105StrWaveNoTest {
         tagData = new Tag105StrWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
         assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag105StrWaveNo tagData;
+
+        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTB_STR_WAVE_NO));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag105StrWaveNo tagData;
+
+        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTB_STR_WAVE_NO));
+        assertEquals( Tag105StrWaveNo.TESTB_STR_WAVE_NO, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag105StrWaveNo tagData;
+
+        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTB_STR_WAVE_NO));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag105StrWaveNo.TESTB_STR_WAVE_NO,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag105StrWaveNo tagData;
+
+        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTB_STR_WAVE_NO));
+        assertEquals( Tag105StrWaveNo.TESTB_STR_WAVE_NO,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag105StrWaveNo tagData;
+
+        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTA_STR_WAVE_NO));
+        assertEquals( "Tag105StrWaveNo\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag105StrWaveNo.TESTA_STR_WAVE_NO + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag105StrWaveNo.TESTA_STR_WAVE_NO + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

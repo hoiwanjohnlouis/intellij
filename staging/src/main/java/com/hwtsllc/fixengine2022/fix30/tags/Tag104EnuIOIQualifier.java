@@ -66,8 +66,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag104EnuIOIQualifier extends FIX30Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumQualifier dataValue;
 
-    public final static MyEnumQualifier TESTA_ENU_IOI_QUALIFIER = MyEnumQualifier.ALL_OR_NONE; // fake data
-    public final static MyEnumQualifier TESTB_ENU_IOI_QUALIFIER = MyEnumQualifier.PRE_OPEN;
+    public final static MyEnumQualifier TESTA_ENU_IOI_QUALIFIER
+            = MyEnumQualifier.ALL_OR_NONE;
+    public final static MyEnumQualifier TESTB_ENU_IOI_QUALIFIER
+            = MyEnumQualifier.PRE_OPEN;
 
     public Tag104EnuIOIQualifier(MyEnumQualifier dataValue) {
         setFixType(FIX30.FIX104_ENU_IOI_QUALIFIER);
@@ -94,7 +96,20 @@ public class Tag104EnuIOIQualifier extends FIX30Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -130,32 +145,12 @@ public class Tag104EnuIOIQualifier extends FIX30Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag104EnuIOIQualifier tagData;
+        System.out.println( new Tag104EnuIOIQualifier(TESTA_ENU_IOI_QUALIFIER).toVerboseString() );
+        System.out.println( new Tag104EnuIOIQualifier(TESTB_ENU_IOI_QUALIFIER).toVerboseString() );
 
-        tagData = new Tag104EnuIOIQualifier(TESTA_ENU_IOI_QUALIFIER);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag104EnuIOIQualifier(TESTB_ENU_IOI_QUALIFIER);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
+            System.out.println( new Tag104EnuIOIQualifier(oneEnum).toVerboseString() );
+        }
     }
 }

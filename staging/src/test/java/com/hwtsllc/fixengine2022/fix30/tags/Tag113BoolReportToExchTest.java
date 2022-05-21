@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix30.enums.Enum113ReportToExch;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -28,10 +28,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  113
  *  ReportToExch
  *  Boolean
+ *  <p>
  *  Identifies party of trade responsible for exchange reporting.
+ *  <p></p>
  *  Valid values:
- *      N - Indicates the party sending message will report trade
- *      Y - Indicates the party receiving message must report trade
+ *  <p>    N - Indicates the party sending message will report trade
+ *  <p>    Y - Indicates the party receiving message must report trade
  */
 class Tag113BoolReportToExchTest {
     @Test
@@ -48,12 +50,77 @@ class Tag113BoolReportToExchTest {
     void Tag0113Test() {
         Tag113BoolReportToExch tagData;
 
-        tagData = new Tag113BoolReportToExch(MyBooleanType.NO);
+        tagData = new Tag113BoolReportToExch(Enum113ReportToExch.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag113BoolReportToExch(MyBooleanType.YES);
+        tagData = new Tag113BoolReportToExch(Enum113ReportToExch.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag113BoolReportToExch tagData;
+
+        // loop around the ENUM and process
+        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+            tagData = new Tag113BoolReportToExch(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag113BoolReportToExch tagData;
+
+        // loop around the ENUM and process
+        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+            tagData = new Tag113BoolReportToExch(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag113BoolReportToExch tagData;
+
+        // loop around the ENUM and process
+        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+            tagData = new Tag113BoolReportToExch(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag113BoolReportToExch tagData;
+
+        // loop around the ENUM and process
+        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+            tagData = new Tag113BoolReportToExch(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag113BoolReportToExch tagData;
+
+        // loop around the ENUM and process
+        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+            tagData = new Tag113BoolReportToExch(oneEnum);
+            assertEquals( "Tag113BoolReportToExch\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

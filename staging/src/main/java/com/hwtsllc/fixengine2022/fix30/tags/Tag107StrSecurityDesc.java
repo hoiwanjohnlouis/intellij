@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  107
  *  SecurityDesc
  *  String
+ *  <p>
  *  Security description.
  */
 public class Tag107StrSecurityDesc extends FIX30Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECURITY_DESC = "BilboBaggins-107SecurityDesc"; // fake data
-    public final static String TESTB_STR_SECURITY_DESC = "Gandalf-107SecurityDesc";
+    public final static String TESTA_STR_SECURITY_DESC
+            = "BilboBaggins-Tag107StrSecurityDesc";
+    public final static String TESTB_STR_SECURITY_DESC
+            = "Gandalf-Tag107StrSecurityDesc";
 
     public Tag107StrSecurityDesc(MyStringType dataValue) {
         setFixType(FIX30.FIX107_STR_SECURITY_DESC);
@@ -59,7 +62,11 @@ public class Tag107StrSecurityDesc extends FIX30Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +81,7 @@ public class Tag107StrSecurityDesc extends FIX30Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag107StrSecurityDesc tagData;
-
-        tagData = new Tag107StrSecurityDesc(new MyStringType(TESTA_STR_SECURITY_DESC) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag107StrSecurityDesc(new MyStringType(TESTB_STR_SECURITY_DESC) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag107StrSecurityDesc(new MyStringType(TESTA_STR_SECURITY_DESC)).toVerboseString() );
+        System.out.println( new Tag107StrSecurityDesc(new MyStringType(TESTB_STR_SECURITY_DESC)).toVerboseString() );
     }
 }

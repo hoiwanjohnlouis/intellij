@@ -26,16 +26,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  109
  *  ClientID
  *  String
+ *  <p>
  *  Deprecated in FIX.4.2
+ *  <p>
  *  Firm identifier used in third party-transactions
+ *  <p>
  *  (should not be a substitute for OnBehalfOfCompID/DeliverToCompID).
  */
 // @Deprecated
 public class Tag109StrClientID extends FIX30Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CLIENT_ID = "BilboBaggins-109ClientID"; // fake data
-    public final static String TESTB_STR_CLIENT_ID = "Gandalf-109ClientID";
+    public final static String TESTA_STR_CLIENT_ID
+            = "BilboBaggins-Tag109StrClientID";
+    public final static String TESTB_STR_CLIENT_ID
+            = "Gandalf-Tag109StrClientID";
 
     public Tag109StrClientID(MyStringType dataValue) {
         setFixType(FIX30.FIX109_STR_CLIENT_ID);
@@ -62,7 +67,11 @@ public class Tag109StrClientID extends FIX30Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -77,16 +86,7 @@ public class Tag109StrClientID extends FIX30Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag109StrClientID tagData;
-
-        tagData = new Tag109StrClientID(new MyStringType(TESTA_STR_CLIENT_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag109StrClientID(new MyStringType(TESTB_STR_CLIENT_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag109StrClientID(new MyStringType(TESTA_STR_CLIENT_ID)).toVerboseString() );
+        System.out.println( new Tag109StrClientID(new MyStringType(TESTB_STR_CLIENT_ID)).toVerboseString() );
     }
 }

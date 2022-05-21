@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  108
  *  HeartBtInt
  *  int
+ *  <p>
  *  Heartbeat interval (seconds)
  */
 public class Tag108IntHeartBtInt extends FIX30Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_HEART_BT_INT = 60;
-    public final static int TESTB_INT_HEART_BT_INT = 30;
+    public final static int TESTA_INT_HEART_BT_INT
+            = 60;
+    public final static int TESTB_INT_HEART_BT_INT
+            = 30;
 
     public Tag108IntHeartBtInt(MyIntType dataValue) {
         setFixType(FIX30.FIX108_INT_HEART_BT_INT);
@@ -59,7 +62,11 @@ public class Tag108IntHeartBtInt extends FIX30Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +81,7 @@ public class Tag108IntHeartBtInt extends FIX30Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag108IntHeartBtInt tagData;
-
-        tagData = new Tag108IntHeartBtInt(new MyIntType(TESTA_INT_HEART_BT_INT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag108IntHeartBtInt(new MyIntType(TESTB_INT_HEART_BT_INT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag108IntHeartBtInt(new MyIntType(TESTA_INT_HEART_BT_INT)).toVerboseString() );
+        System.out.println( new Tag108IntHeartBtInt(new MyIntType(TESTB_INT_HEART_BT_INT)).toVerboseString() );
     }
 }

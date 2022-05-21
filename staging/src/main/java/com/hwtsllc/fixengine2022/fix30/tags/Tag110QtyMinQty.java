@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  110
  *  MinQty
  *  Qty
+ *  <p>
  *  Minimum quantity of an order to be executed.
- *              (Prior to FIX 4.2 this field was of type int)
+ *  <p>
+ *  (Prior to FIX 4.2 this field was of type int)
  */
 public class Tag110QtyMinQty extends FIX30Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_MIN_QTY = 11; // fake data
-    public final static int TESTB_QTY_MIN_QTY = 22;
+    public final static int TESTA_QTY_MIN_QTY
+            = 110;
+    public final static int TESTB_QTY_MIN_QTY
+            = 11;
 
     public Tag110QtyMinQty(MyQtyType dataValue) {
         setFixType(FIX30.FIX110_QTY_MIN_QTY);
@@ -60,7 +64,11 @@ public class Tag110QtyMinQty extends FIX30Abstract implements LogValuePairString
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +83,7 @@ public class Tag110QtyMinQty extends FIX30Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag110QtyMinQty tagData;
-
-        tagData = new Tag110QtyMinQty(new MyQtyType(TESTA_QTY_MIN_QTY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag110QtyMinQty(new MyQtyType(TESTB_QTY_MIN_QTY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag110QtyMinQty(new MyQtyType(TESTA_QTY_MIN_QTY)).toVerboseString() );
+        System.out.println( new Tag110QtyMinQty(new MyQtyType(TESTB_QTY_MIN_QTY)).toVerboseString() );
     }
 }

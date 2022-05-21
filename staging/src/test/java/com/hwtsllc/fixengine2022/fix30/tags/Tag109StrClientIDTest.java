@@ -28,8 +28,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  109
  *  ClientID
  *  String
+ *  <p>
  *  Deprecated in FIX.4.2
+ *  <p>
  *  Firm identifier used in third party-transactions
+ *  <p>
  *  (should not be a substitute for OnBehalfOfCompID/DeliverToCompID).
  */
 // @Deprecated
@@ -52,5 +55,55 @@ class Tag109StrClientIDTest {
         tagData = new Tag109StrClientID(new MyStringType("SOME-ACCT-NUMBER") );
         assertEquals("SOME-ACCT-NUMBER", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag109StrClientID tagData;
+
+        tagData = new Tag109StrClientID(new MyStringType(Tag109StrClientID.TESTB_STR_CLIENT_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag109StrClientID tagData;
+
+        tagData = new Tag109StrClientID(new MyStringType(Tag109StrClientID.TESTB_STR_CLIENT_ID));
+        assertEquals( Tag109StrClientID.TESTB_STR_CLIENT_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag109StrClientID tagData;
+
+        tagData = new Tag109StrClientID(new MyStringType(Tag109StrClientID.TESTB_STR_CLIENT_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag109StrClientID.TESTB_STR_CLIENT_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag109StrClientID tagData;
+
+        tagData = new Tag109StrClientID(new MyStringType(Tag109StrClientID.TESTB_STR_CLIENT_ID));
+        assertEquals( Tag109StrClientID.TESTB_STR_CLIENT_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag109StrClientID tagData;
+
+        tagData = new Tag109StrClientID(new MyStringType(Tag109StrClientID.TESTA_STR_CLIENT_ID));
+        assertEquals( "Tag109StrClientID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag109StrClientID.TESTA_STR_CLIENT_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag109StrClientID.TESTA_STR_CLIENT_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

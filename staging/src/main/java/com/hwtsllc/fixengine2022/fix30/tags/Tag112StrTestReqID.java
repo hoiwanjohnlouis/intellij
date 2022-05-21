@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  112
  *  TestReqID
  *  String
+ *  <p>
  *  Identifier included in Test Request message to be returned in resulting Heartbeat
  */
 public class Tag112StrTestReqID extends FIX30Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_TEST_REQ_ID = "BilboBaggins-112TestReqID"; // fake data
-    public final static String TESTB_STR_TEST_REQ_ID = "Gandalf-112TestReqID";
+    public final static String TESTA_STR_TEST_REQ_ID
+            = "BilboBaggins-Tag112StrTestReqID";
+    public final static String TESTB_STR_TEST_REQ_ID
+            = "Gandalf-Tag112StrTestReqID";
 
     public Tag112StrTestReqID(MyStringType dataValue) {
         setFixType(FIX30.FIX112_STR_TEST_REQ_ID);
@@ -59,7 +62,11 @@ public class Tag112StrTestReqID extends FIX30Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +81,7 @@ public class Tag112StrTestReqID extends FIX30Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag112StrTestReqID tagData;
-
-        tagData = new Tag112StrTestReqID(new MyStringType(TESTA_STR_TEST_REQ_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag112StrTestReqID(new MyStringType(TESTB_STR_TEST_REQ_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag112StrTestReqID(new MyStringType(TESTA_STR_TEST_REQ_ID)).toVerboseString() );
+        System.out.println( new Tag112StrTestReqID(new MyStringType(TESTB_STR_TEST_REQ_ID)).toVerboseString() );
     }
 }

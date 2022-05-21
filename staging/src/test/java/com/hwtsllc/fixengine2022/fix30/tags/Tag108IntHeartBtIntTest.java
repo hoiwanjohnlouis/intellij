@@ -28,6 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  108
  *  HeartBtInt
  *  int
+ *  <p>
  *  Heartbeat interval (seconds)
  */
 class Tag108IntHeartBtIntTest {
@@ -49,5 +50,55 @@ class Tag108IntHeartBtIntTest {
         tagData = new Tag108IntHeartBtInt(new MyIntType(60) );
         assertEquals(60, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag108IntHeartBtInt tagData;
+
+        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag108IntHeartBtInt tagData;
+
+        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT));
+        assertEquals( Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag108IntHeartBtInt tagData;
+
+        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag108IntHeartBtInt tagData;
+
+        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT));
+        assertEquals( String.valueOf(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag108IntHeartBtInt tagData;
+
+        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT));
+        assertEquals( "Tag108IntHeartBtInt\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

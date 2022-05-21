@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  106
  *  Issuer
  *  String
+ *  <p>
  *  Name of security issuer (e.g. International Business Machines, GNMA).
- *              see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values"
+ *  <p>
+ *  see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values"
  */
 public class Tag106StrIssuer extends FIX30Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ISSUER = "BilboBaggins-106Issuer"; // fake data
-    public final static String TESTB_STR_ISSUER = "Gandalf-106Issuer";
+    public final static String TESTA_STR_ISSUER
+            = "BilboBaggins-Tag106StrIssuer";
+    public final static String TESTB_STR_ISSUER
+            = "Gandalf-Tag106StrIssuer";
 
     public Tag106StrIssuer(MyStringType dataValue) {
         setFixType(FIX30.FIX106_STR_ISSUER);
@@ -60,7 +64,11 @@ public class Tag106StrIssuer extends FIX30Abstract implements LogValuePairString
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +83,7 @@ public class Tag106StrIssuer extends FIX30Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag106StrIssuer tagData;
-
-        tagData = new Tag106StrIssuer(new MyStringType(TESTA_STR_ISSUER) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag106StrIssuer(new MyStringType(TESTB_STR_ISSUER) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag106StrIssuer(new MyStringType(TESTA_STR_ISSUER)).toVerboseString() );
+        System.out.println( new Tag106StrIssuer(new MyStringType(TESTB_STR_ISSUER)).toVerboseString() );
     }
 }

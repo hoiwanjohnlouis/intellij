@@ -28,8 +28,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  111
  *  MaxFloor
  *  Qty
+ *  <p>
  *  Deprecated in FIX.5.0
+ *  <p>
  *  The quantity to be displayed. Required for reserve orders.
+ *  <p>
  *  On orders specifies the qty to be displayed, on execution
  *  reports the currently displayed quantity.
  */
@@ -52,5 +55,55 @@ class Tag111QtyMaxFloorTest {
         tagData = new Tag111QtyMaxFloor(new MyQtyType(200) );
         assertEquals( 200, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag111QtyMaxFloor tagData;
+
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag111QtyMaxFloor tagData;
+
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR));
+        assertEquals( Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag111QtyMaxFloor tagData;
+
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag111QtyMaxFloor tagData;
+
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR));
+        assertEquals( String.valueOf(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag111QtyMaxFloor tagData;
+
+        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR));
+        assertEquals( "Tag111QtyMaxFloor\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

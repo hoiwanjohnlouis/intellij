@@ -26,14 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  105
  *  WaveNo
  *  String
+ *  <p>
  *  Deprecated in FIX.4.2
  */
 // @Deprecated
 public class Tag105StrWaveNo extends FIX30Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_WAVE_NO = "BilboBaggins-105WaveNo"; // fake data
-    public final static String TESTB_STR_WAVE_NO = "Gandalf-105WaveNo";
+    public final static String TESTA_STR_WAVE_NO
+            = "BilboBaggins-Tag105StrWaveNo";
+    public final static String TESTB_STR_WAVE_NO
+            = "Gandalf-Tag105StrWaveNo";
 
     public Tag105StrWaveNo(MyStringType dataValue) {
         setFixType(FIX30.FIX105_STR_WAVE_NO);
@@ -60,7 +63,11 @@ public class Tag105StrWaveNo extends FIX30Abstract implements LogValuePairString
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +82,7 @@ public class Tag105StrWaveNo extends FIX30Abstract implements LogValuePairString
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag105StrWaveNo tagData;
-
-        tagData = new Tag105StrWaveNo(new MyStringType(TESTA_STR_WAVE_NO) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag105StrWaveNo(new MyStringType(TESTB_STR_WAVE_NO) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag105StrWaveNo(new MyStringType(TESTA_STR_WAVE_NO)).toVerboseString() );
+        System.out.println( new Tag105StrWaveNo(new MyStringType(TESTB_STR_WAVE_NO)).toVerboseString() );
     }
 }

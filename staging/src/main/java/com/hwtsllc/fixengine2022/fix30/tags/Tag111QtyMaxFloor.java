@@ -26,16 +26,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  111
  *  MaxFloor
  *  Qty
+ *  <p>
  *  Deprecated in FIX.5.0
+ *  <p>
  *  The quantity to be displayed. Required for reserve orders.
+ *  <p>
  *  On orders specifies the qty to be displayed, on execution
  *  reports the currently displayed quantity.
  */
 public class Tag111QtyMaxFloor extends FIX30Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_MAX_FLOOR = 111; // fake data
-    public final static int TESTB_QTY_MAX_FLOOR = 222;
+    public final static int TESTA_QTY_MAX_FLOOR
+            = 111;
+    public final static int TESTB_QTY_MAX_FLOOR
+            = 1111;
 
     public Tag111QtyMaxFloor(MyQtyType dataValue) {
         setFixType(FIX30.FIX111_QTY_MAX_FLOOR);
@@ -62,7 +67,11 @@ public class Tag111QtyMaxFloor extends FIX30Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -77,16 +86,7 @@ public class Tag111QtyMaxFloor extends FIX30Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag111QtyMaxFloor tagData;
-
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(TESTA_QTY_MAX_FLOOR) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(TESTB_QTY_MAX_FLOOR) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag111QtyMaxFloor(new MyQtyType(TESTA_QTY_MAX_FLOOR)).toVerboseString() );
+        System.out.println( new Tag111QtyMaxFloor(new MyQtyType(TESTB_QTY_MAX_FLOOR)).toVerboseString() );
     }
 }

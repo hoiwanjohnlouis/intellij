@@ -47,10 +47,10 @@ public abstract class FIX44Abstract implements LogFIXString, LogVerboseString {
     @Override
     public String toVerboseString() {
         return this.getClass().getSimpleName()
-                .concat("\n\tFIXTypeName[")
+                .concat("\n\tEnumName[")
                 .concat(toEnumNameString())
                 .concat("]")
-                .concat("\n\tFIXNumber[")
+                .concat("\n\tFIXID[")
                 .concat(String.valueOf(toFIXIDString()))
                 .concat("]")
                 .concat("\n\tFIXName[")

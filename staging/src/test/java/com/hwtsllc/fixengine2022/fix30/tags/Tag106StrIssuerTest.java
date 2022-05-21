@@ -28,8 +28,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  106
  *  Issuer
  *  String
+ *  <p>
  *  Name of security issuer (e.g. International Business Machines, GNMA).
- *              see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values"
+ *  <p>
+ *  see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values"
  */
 class Tag106StrIssuerTest {
 
@@ -50,5 +52,55 @@ class Tag106StrIssuerTest {
         tagData = new Tag106StrIssuer(new MyStringType("show me the money") );
         assertEquals("show me the money", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag106StrIssuer tagData;
+
+        tagData = new Tag106StrIssuer(new MyStringType(Tag106StrIssuer.TESTB_STR_ISSUER));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag106StrIssuer tagData;
+
+        tagData = new Tag106StrIssuer(new MyStringType(Tag106StrIssuer.TESTB_STR_ISSUER));
+        assertEquals( Tag106StrIssuer.TESTB_STR_ISSUER, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag106StrIssuer tagData;
+
+        tagData = new Tag106StrIssuer(new MyStringType(Tag106StrIssuer.TESTB_STR_ISSUER));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag106StrIssuer.TESTB_STR_ISSUER,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag106StrIssuer tagData;
+
+        tagData = new Tag106StrIssuer(new MyStringType(Tag106StrIssuer.TESTB_STR_ISSUER));
+        assertEquals( Tag106StrIssuer.TESTB_STR_ISSUER,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag106StrIssuer tagData;
+
+        tagData = new Tag106StrIssuer(new MyStringType(Tag106StrIssuer.TESTA_STR_ISSUER));
+        assertEquals( "Tag106StrIssuer\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag106StrIssuer.TESTA_STR_ISSUER + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag106StrIssuer.TESTA_STR_ISSUER + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }
