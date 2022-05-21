@@ -49,4 +49,54 @@ class Tag138CcyMiscFeeCurrTest {
         assertEquals( "SungHyunAh-138MiscFeeCurr", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag138CcyMiscFeeCurr tagData;
+
+        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(Tag138CcyMiscFeeCurr.TESTB_CCY_MISC_FEE_CURR));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag138CcyMiscFeeCurr tagData;
+
+        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(Tag138CcyMiscFeeCurr.TESTB_CCY_MISC_FEE_CURR));
+        assertEquals( Tag138CcyMiscFeeCurr.TESTB_CCY_MISC_FEE_CURR, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag138CcyMiscFeeCurr tagData;
+
+        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(Tag138CcyMiscFeeCurr.TESTB_CCY_MISC_FEE_CURR));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag138CcyMiscFeeCurr.TESTB_CCY_MISC_FEE_CURR,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag138CcyMiscFeeCurr tagData;
+
+        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(Tag138CcyMiscFeeCurr.TESTB_CCY_MISC_FEE_CURR));
+        assertEquals( Tag138CcyMiscFeeCurr.TESTB_CCY_MISC_FEE_CURR,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag138CcyMiscFeeCurr tagData;
+
+        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(Tag138CcyMiscFeeCurr.TESTA_CCY_MISC_FEE_CURR));
+        assertEquals( "Tag138CcyMiscFeeCurr\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag138CcyMiscFeeCurr.TESTA_CCY_MISC_FEE_CURR + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag138CcyMiscFeeCurr.TESTA_CCY_MISC_FEE_CURR + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

@@ -49,4 +49,54 @@ class Tag117StrQuoteIDTest {
         assertEquals( "Galadriel-117QuoteID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag117StrQuoteID tagData;
+
+        tagData = new Tag117StrQuoteID(new MyStringType(Tag117StrQuoteID.TESTB_STR_QUOTE_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag117StrQuoteID tagData;
+
+        tagData = new Tag117StrQuoteID(new MyStringType(Tag117StrQuoteID.TESTB_STR_QUOTE_ID));
+        assertEquals( Tag117StrQuoteID.TESTB_STR_QUOTE_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag117StrQuoteID tagData;
+
+        tagData = new Tag117StrQuoteID(new MyStringType(Tag117StrQuoteID.TESTB_STR_QUOTE_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag117StrQuoteID.TESTB_STR_QUOTE_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag117StrQuoteID tagData;
+
+        tagData = new Tag117StrQuoteID(new MyStringType(Tag117StrQuoteID.TESTB_STR_QUOTE_ID));
+        assertEquals( Tag117StrQuoteID.TESTB_STR_QUOTE_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag117StrQuoteID tagData;
+
+        tagData = new Tag117StrQuoteID(new MyStringType(Tag117StrQuoteID.TESTA_STR_QUOTE_ID));
+        assertEquals( "Tag117StrQuoteID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag117StrQuoteID.TESTA_STR_QUOTE_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag117StrQuoteID.TESTA_STR_QUOTE_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

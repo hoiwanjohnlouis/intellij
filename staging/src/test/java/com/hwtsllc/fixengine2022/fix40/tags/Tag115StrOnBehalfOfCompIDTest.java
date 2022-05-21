@@ -52,4 +52,54 @@ class Tag115StrOnBehalfOfCompIDTest {
         assertEquals( "Legolas-115OnBehalfOfCompID", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag115StrOnBehalfOfCompID tagData;
+
+        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType(Tag115StrOnBehalfOfCompID.TESTB_STR_ON_BEHALF_OF_COMP_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag115StrOnBehalfOfCompID tagData;
+
+        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType(Tag115StrOnBehalfOfCompID.TESTB_STR_ON_BEHALF_OF_COMP_ID));
+        assertEquals( Tag115StrOnBehalfOfCompID.TESTB_STR_ON_BEHALF_OF_COMP_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag115StrOnBehalfOfCompID tagData;
+
+        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType(Tag115StrOnBehalfOfCompID.TESTB_STR_ON_BEHALF_OF_COMP_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag115StrOnBehalfOfCompID.TESTB_STR_ON_BEHALF_OF_COMP_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag115StrOnBehalfOfCompID tagData;
+
+        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType(Tag115StrOnBehalfOfCompID.TESTB_STR_ON_BEHALF_OF_COMP_ID));
+        assertEquals( Tag115StrOnBehalfOfCompID.TESTB_STR_ON_BEHALF_OF_COMP_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag115StrOnBehalfOfCompID tagData;
+
+        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType(Tag115StrOnBehalfOfCompID.TESTA_STR_ON_BEHALF_OF_COMP_ID));
+        assertEquals( "Tag115StrOnBehalfOfCompID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag115StrOnBehalfOfCompID.TESTA_STR_ON_BEHALF_OF_COMP_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag115StrOnBehalfOfCompID.TESTA_STR_ON_BEHALF_OF_COMP_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

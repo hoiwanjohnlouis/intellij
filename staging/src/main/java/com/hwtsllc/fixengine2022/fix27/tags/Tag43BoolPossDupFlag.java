@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum43PossDupFlag;
+import com.hwtsllc.fixengine2022.fix27.enums.Bool43PossDupFlag;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -35,14 +35,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    Y - Possible duplicate
  */
 public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final Enum43PossDupFlag dataValue;
+    private final Bool43PossDupFlag dataValue;
 
-    public final static Enum43PossDupFlag TESTA_BOOL_POSS_DUP_FLAG
-            = Enum43PossDupFlag.NO;
-    public final static Enum43PossDupFlag TESTB_BOOL_POSS_DUP_FLAG
-            = Enum43PossDupFlag.YES;
+    public final static Bool43PossDupFlag TESTA_BOOL_POSS_DUP_FLAG
+            = Bool43PossDupFlag.NO;
+    public final static Bool43PossDupFlag TESTB_BOOL_POSS_DUP_FLAG
+            = Bool43PossDupFlag.YES;
 
-    public Tag43BoolPossDupFlag(Enum43PossDupFlag dataValue) {
+    public Tag43BoolPossDupFlag(Bool43PossDupFlag dataValue) {
         setFixType(FIX27.FIX43_BOOL_POSS_DUP_FLAG);
         this.dataValue = dataValue;
     }
@@ -120,7 +120,7 @@ public class Tag43BoolPossDupFlag extends FIX27Abstract implements LogValuePairS
         System.out.println( new Tag43BoolPossDupFlag(TESTB_BOOL_POSS_DUP_FLAG).toVerboseString() );
 
         // loop around the ENUM and display
-        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
+        for (Bool43PossDupFlag oneEnum : Bool43PossDupFlag.values()) {
             System.out.println( new Tag43BoolPossDupFlag(oneEnum).toVerboseString() );
         }
     }

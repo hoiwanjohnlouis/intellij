@@ -49,4 +49,54 @@ class Tag137AmtMiscFeeAmtTest {
         assertEquals( 137D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag137AmtMiscFeeAmt tagData;
+
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag137AmtMiscFeeAmt tagData;
+
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT));
+        assertEquals( Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag137AmtMiscFeeAmt tagData;
+
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag137AmtMiscFeeAmt tagData;
+
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT));
+        assertEquals( String.valueOf(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag137AmtMiscFeeAmt tagData;
+
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT));
+        assertEquals( "Tag137AmtMiscFeeAmt\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

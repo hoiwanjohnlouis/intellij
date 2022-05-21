@@ -62,7 +62,11 @@ public class Tag115StrOnBehalfOfCompID extends FIX40Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -77,16 +81,7 @@ public class Tag115StrOnBehalfOfCompID extends FIX40Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag115StrOnBehalfOfCompID tagData;
-
-        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType(TESTA_STR_ON_BEHALF_OF_COMP_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag115StrOnBehalfOfCompID(new MyStringType(TESTB_STR_ON_BEHALF_OF_COMP_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag115StrOnBehalfOfCompID(new MyStringType(TESTA_STR_ON_BEHALF_OF_COMP_ID)).toVerboseString() );
+        System.out.println( new Tag115StrOnBehalfOfCompID(new MyStringType(TESTB_STR_ON_BEHALF_OF_COMP_ID)).toVerboseString() );
     }
 }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix40.enums.Bool130IOINaturalFlag;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -27,20 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  130
  *  IOINaturalFlag
  *  Boolean
+ *  <p>
  *  Indicates that IOI is the result of an existing agency order
  *  or a facilitation position resulting from an agency order,
  *  not from principal trading or order solicitation activity.
+ *  <p></p>
  *  Valid values:
- *      N - Not Natural
- *      Y - Natural
+ *  <p>    N - Not Natural
+ *  <p>    Y - Natural
  */
 public class Tag130BoolIOINaturalFlag extends FIX40Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool130IOINaturalFlag dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_IOI_NATURAL_FLAG = MyBooleanType.NO ; // fake data
-    public final static MyBooleanType TESTB_BOOL_IOI_NATURAL_FLAG = MyBooleanType.YES;
+    public final static Bool130IOINaturalFlag TESTA_BOOL_IOI_NATURAL_FLAG = Bool130IOINaturalFlag.NO ; // fake data
+    public final static Bool130IOINaturalFlag TESTB_BOOL_IOI_NATURAL_FLAG = Bool130IOINaturalFlag.YES;
 
-    public Tag130BoolIOINaturalFlag(MyBooleanType dataValue) {
+    public Tag130BoolIOINaturalFlag(Bool130IOINaturalFlag dataValue) {
         setFixType(FIX40.FIX130_BOOL_IOI_NATURAL_FLAG);
         this.dataValue = dataValue;
     }
@@ -65,7 +67,20 @@ public class Tag130BoolIOINaturalFlag extends FIX40Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -101,32 +116,12 @@ public class Tag130BoolIOINaturalFlag extends FIX40Abstract implements LogValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag130BoolIOINaturalFlag tagData;
+        System.out.println( new Tag130BoolIOINaturalFlag(TESTA_BOOL_IOI_NATURAL_FLAG).toVerboseString() );
+        System.out.println( new Tag130BoolIOINaturalFlag(TESTB_BOOL_IOI_NATURAL_FLAG).toVerboseString() );
 
-        tagData = new Tag130BoolIOINaturalFlag(TESTA_BOOL_IOI_NATURAL_FLAG);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag130BoolIOINaturalFlag(TESTB_BOOL_IOI_NATURAL_FLAG);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Bool130IOINaturalFlag oneEnum : Bool130IOINaturalFlag.values()) {
+            System.out.println( new Tag130BoolIOINaturalFlag(oneEnum).toVerboseString() );
+        }
     }
 }

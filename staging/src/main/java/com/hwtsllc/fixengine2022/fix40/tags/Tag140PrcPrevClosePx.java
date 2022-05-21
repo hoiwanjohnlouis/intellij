@@ -59,7 +59,11 @@ public class Tag140PrcPrevClosePx extends FIX40Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,17 +78,8 @@ public class Tag140PrcPrevClosePx extends FIX40Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag140PrcPrevClosePx tagData;
-
-        tagData = new Tag140PrcPrevClosePx(new MyPriceType(TESTA_PRC_PREV_CLOSE_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag140PrcPrevClosePx(new MyPriceType(TESTB_PRC_PREV_CLOSE_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag140PrcPrevClosePx(new MyPriceType(TESTA_PRC_PREV_CLOSE_PX)).toVerboseString() );
+        System.out.println( new Tag140PrcPrevClosePx(new MyPriceType(TESTB_PRC_PREV_CLOSE_PX)).toVerboseString() );
     }
 }
 

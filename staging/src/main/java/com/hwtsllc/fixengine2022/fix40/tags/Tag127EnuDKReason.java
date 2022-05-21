@@ -68,7 +68,20 @@ public class Tag127EnuDKReason extends FIX40Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -104,32 +117,12 @@ public class Tag127EnuDKReason extends FIX40Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag127EnuDKReason tagData;
+        System.out.println( new Tag127EnuDKReason(TESTA_ENU_DK_REASON).toVerboseString() );
+        System.out.println( new Tag127EnuDKReason(TESTB_ENU_DK_REASON).toVerboseString() );
 
-        tagData = new Tag127EnuDKReason(TESTA_ENU_DK_REASON);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag127EnuDKReason(TESTB_ENU_DK_REASON);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
+            System.out.println( new Tag127EnuDKReason(oneEnum).toVerboseString() );
+        }
     }
 }

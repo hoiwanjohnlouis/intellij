@@ -60,7 +60,11 @@ public class Tag125StrCxlType extends FIX40Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,7 @@ public class Tag125StrCxlType extends FIX40Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag125StrCxlType tagData;
-
-        tagData = new Tag125StrCxlType(new MyStringType(TESTA_STR_CXL_TYPE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag125StrCxlType(new MyStringType(TESTB_STR_CXL_TYPE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag125StrCxlType(new MyStringType(TESTA_STR_CXL_TYPE)).toVerboseString() );
+        System.out.println( new Tag125StrCxlType(new MyStringType(TESTB_STR_CXL_TYPE)).toVerboseString() );
     }
 }

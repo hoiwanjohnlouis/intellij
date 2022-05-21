@@ -60,7 +60,11 @@ public class Tag135QtyOfferSize extends FIX40Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,7 @@ public class Tag135QtyOfferSize extends FIX40Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag135QtyOfferSize tagData;
-
-        tagData = new Tag135QtyOfferSize(new MyQtyType(TESTA_QTY_OFFER_SIZE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag135QtyOfferSize(new MyQtyType(TESTB_QTY_OFFER_SIZE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag135QtyOfferSize(new MyQtyType(TESTA_QTY_OFFER_SIZE)).toVerboseString() );
+        System.out.println( new Tag135QtyOfferSize(new MyQtyType(TESTB_QTY_OFFER_SIZE)).toVerboseString() );
     }
 }

@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.FIX40Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix40.enums.Bool123GapFillFlag;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -27,19 +27,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  123
  *  GapFillFlag
  *  Boolean
+ *  <p>
  *  Indicates that the Sequence Reset message is replacing administrative
  *  or application messages which will not be resent.
+ *  <p></p>
  *  Valid values:
- *      N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
- *      Y - Gap Fill Message, Msg Seq Num Field Valid
+ *  <p>    N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
+ *  <p>    Y - Gap Fill Message, Msg Seq Num Field Valid
  */
 public class Tag123BoolGapFillFlag extends FIX40Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool123GapFillFlag dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_GAP_FILL_FLAG = MyBooleanType.NO; // fake data
-    public final static MyBooleanType TESTB_BOOL_GAP_FILL_FLAG = MyBooleanType.YES;
+    public final static Bool123GapFillFlag TESTA_BOOL_GAP_FILL_FLAG
+            = Bool123GapFillFlag.NO; // fake data
+    public final static Bool123GapFillFlag TESTB_BOOL_GAP_FILL_FLAG
+            = Bool123GapFillFlag.YES;
 
-    public Tag123BoolGapFillFlag(MyBooleanType dataValue) {
+    public Tag123BoolGapFillFlag(Bool123GapFillFlag dataValue) {
         setFixType(FIX40.FIX123_BOOL_GAP_FILL_FLAG);
         this.dataValue = dataValue;
     }
@@ -64,7 +68,20 @@ public class Tag123BoolGapFillFlag extends FIX40Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -100,32 +117,12 @@ public class Tag123BoolGapFillFlag extends FIX40Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag123BoolGapFillFlag tagData;
+        System.out.println( new Tag123BoolGapFillFlag(TESTA_BOOL_GAP_FILL_FLAG).toVerboseString() );
+        System.out.println( new Tag123BoolGapFillFlag(TESTB_BOOL_GAP_FILL_FLAG).toVerboseString() );
 
-        tagData = new Tag123BoolGapFillFlag(TESTA_BOOL_GAP_FILL_FLAG);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
-
-        tagData = new Tag123BoolGapFillFlag(TESTB_BOOL_GAP_FILL_FLAG);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
-        System.out.println("DataIDString:" + tagData.toDataIDString());
-        System.out.println("DataNameString:" + tagData.toDataNameString());
-        System.out.println("DataDescriptionString:" + tagData.toDataDescriptionString());
+        // loop around the ENUM and display
+        for (Bool123GapFillFlag oneEnum : Bool123GapFillFlag.values()) {
+            System.out.println( new Tag123BoolGapFillFlag(oneEnum).toVerboseString() );
+        }
     }
 }

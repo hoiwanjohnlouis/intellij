@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix40.enums.Bool130IOINaturalFlag;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -28,12 +28,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  130
  *  IOINaturalFlag
  *  Boolean
+ *  <p>
  *  Indicates that IOI is the result of an existing agency order
  *  or a facilitation position resulting from an agency order,
  *  not from principal trading or order solicitation activity.
+ *  <p></p>
  *  Valid values:
- *      N - Not Natural
- *      Y - Natural
+ *  <p>    N - Not Natural
+ *  <p>    Y - Natural
  */
 class Tag130BoolIOINaturalFlagTest {
     @Test
@@ -50,12 +52,77 @@ class Tag130BoolIOINaturalFlagTest {
     void Tag0130Test() {
         Tag130BoolIOINaturalFlag tagData;
 
-        tagData = new Tag130BoolIOINaturalFlag(MyBooleanType.NO);
+        tagData = new Tag130BoolIOINaturalFlag(Bool130IOINaturalFlag.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag130BoolIOINaturalFlag(MyBooleanType.YES);
+        tagData = new Tag130BoolIOINaturalFlag(Bool130IOINaturalFlag.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag130BoolIOINaturalFlag tagData;
+
+        // loop around the ENUM and process
+        for (Bool130IOINaturalFlag oneEnum : Bool130IOINaturalFlag.values()) {
+            tagData = new Tag130BoolIOINaturalFlag(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag130BoolIOINaturalFlag tagData;
+
+        // loop around the ENUM and process
+        for (Bool130IOINaturalFlag oneEnum : Bool130IOINaturalFlag.values()) {
+            tagData = new Tag130BoolIOINaturalFlag(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag130BoolIOINaturalFlag tagData;
+
+        // loop around the ENUM and process
+        for (Bool130IOINaturalFlag oneEnum : Bool130IOINaturalFlag.values()) {
+            tagData = new Tag130BoolIOINaturalFlag(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag130BoolIOINaturalFlag tagData;
+
+        // loop around the ENUM and process
+        for (Bool130IOINaturalFlag oneEnum : Bool130IOINaturalFlag.values()) {
+            tagData = new Tag130BoolIOINaturalFlag(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag130BoolIOINaturalFlag tagData;
+
+        // loop around the ENUM and process
+        for (Bool130IOINaturalFlag oneEnum : Bool130IOINaturalFlag.values()) {
+            tagData = new Tag130BoolIOINaturalFlag(oneEnum);
+            assertEquals( "Tag130BoolIOINaturalFlag\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

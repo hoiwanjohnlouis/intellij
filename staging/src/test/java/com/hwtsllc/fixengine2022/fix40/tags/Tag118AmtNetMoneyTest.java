@@ -51,4 +51,54 @@ class Tag118AmtNetMoneyTest {
         assertEquals( 118D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag118AmtNetMoney tagData;
+
+        tagData = new Tag118AmtNetMoney(new MyAmtType(Tag118AmtNetMoney.TESTB_AMT_NET_MONEY));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag118AmtNetMoney tagData;
+
+        tagData = new Tag118AmtNetMoney(new MyAmtType(Tag118AmtNetMoney.TESTB_AMT_NET_MONEY));
+        assertEquals( Tag118AmtNetMoney.TESTB_AMT_NET_MONEY, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag118AmtNetMoney tagData;
+
+        tagData = new Tag118AmtNetMoney(new MyAmtType(Tag118AmtNetMoney.TESTB_AMT_NET_MONEY));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag118AmtNetMoney.TESTB_AMT_NET_MONEY,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag118AmtNetMoney tagData;
+
+        tagData = new Tag118AmtNetMoney(new MyAmtType(Tag118AmtNetMoney.TESTB_AMT_NET_MONEY));
+        assertEquals( String.valueOf(Tag118AmtNetMoney.TESTB_AMT_NET_MONEY),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag118AmtNetMoney tagData;
+
+        tagData = new Tag118AmtNetMoney(new MyAmtType(Tag118AmtNetMoney.TESTA_AMT_NET_MONEY));
+        assertEquals( "Tag118AmtNetMoney\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag118AmtNetMoney.TESTA_AMT_NET_MONEY + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag118AmtNetMoney.TESTA_AMT_NET_MONEY + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

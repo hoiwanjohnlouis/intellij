@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
-import com.hwtsllc.fixengine2022.fix30.enums.Enum113ReportToExch;
+import com.hwtsllc.fixengine2022.fix30.enums.Bool113ReportToExch;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -50,11 +50,11 @@ class Tag113BoolReportToExchTest {
     void Tag0113Test() {
         Tag113BoolReportToExch tagData;
 
-        tagData = new Tag113BoolReportToExch(Enum113ReportToExch.NO);
+        tagData = new Tag113BoolReportToExch(Bool113ReportToExch.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag113BoolReportToExch(Enum113ReportToExch.YES);
+        tagData = new Tag113BoolReportToExch(Bool113ReportToExch.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
@@ -63,7 +63,7 @@ class Tag113BoolReportToExchTest {
         Tag113BoolReportToExch tagData;
 
         // loop around the ENUM and process
-        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+        for (Bool113ReportToExch oneEnum : Bool113ReportToExch.values()) {
             tagData = new Tag113BoolReportToExch(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -73,7 +73,7 @@ class Tag113BoolReportToExchTest {
         Tag113BoolReportToExch tagData;
 
         // loop around the ENUM and process
-        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+        for (Bool113ReportToExch oneEnum : Bool113ReportToExch.values()) {
             tagData = new Tag113BoolReportToExch(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -84,7 +84,7 @@ class Tag113BoolReportToExchTest {
         Tag113BoolReportToExch tagData;
 
         // loop around the ENUM and process
-        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+        for (Bool113ReportToExch oneEnum : Bool113ReportToExch.values()) {
             tagData = new Tag113BoolReportToExch(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -96,7 +96,7 @@ class Tag113BoolReportToExchTest {
         Tag113BoolReportToExch tagData;
 
         // loop around the ENUM and process
-        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+        for (Bool113ReportToExch oneEnum : Bool113ReportToExch.values()) {
             tagData = new Tag113BoolReportToExch(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -107,7 +107,7 @@ class Tag113BoolReportToExchTest {
         Tag113BoolReportToExch tagData;
 
         // loop around the ENUM and process
-        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+        for (Bool113ReportToExch oneEnum : Bool113ReportToExch.values()) {
             tagData = new Tag113BoolReportToExch(oneEnum);
             assertEquals( "Tag113BoolReportToExch\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

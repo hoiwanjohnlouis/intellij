@@ -28,13 +28,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Price
  *  Offer price/rate
  */
-public class Log133PrcOfferPx extends FIX40Abstract implements LogValuePairString, LogVerboseString {
+public class Tag133PrcOfferPx extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_OFFER_PX = 1.33D;
     public final static double TESTB_PRC_OFFER_PX = 3.31D;
 
-    public Log133PrcOfferPx(MyPriceType dataValue) {
+    public Tag133PrcOfferPx(MyPriceType dataValue) {
         setFixType(FIX40.FIX133_PRC_OFFER_PX);
         this.dataValue = dataValue;
     }
@@ -59,7 +59,11 @@ public class Log133PrcOfferPx extends FIX40Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Log133PrcOfferPx extends FIX40Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Log133PrcOfferPx tagData;
-
-        tagData = new Log133PrcOfferPx(new MyPriceType(TESTA_PRC_OFFER_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Log133PrcOfferPx(new MyPriceType(TESTB_PRC_OFFER_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag133PrcOfferPx(new MyPriceType(TESTA_PRC_OFFER_PX)).toVerboseString() );
+        System.out.println( new Tag133PrcOfferPx(new MyPriceType(TESTB_PRC_OFFER_PX)).toVerboseString() );
     }
 }

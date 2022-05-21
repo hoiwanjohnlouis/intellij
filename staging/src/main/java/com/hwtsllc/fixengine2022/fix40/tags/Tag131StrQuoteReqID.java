@@ -59,7 +59,11 @@ public class Tag131StrQuoteReqID extends FIX40Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Tag131StrQuoteReqID extends FIX40Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag131StrQuoteReqID tagData;
-
-        tagData = new Tag131StrQuoteReqID(new MyStringType(TESTA_STR_QUOTE_REQ_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag131StrQuoteReqID(new MyStringType(TESTB_STR_QUOTE_REQ_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag131StrQuoteReqID(new MyStringType(TESTA_STR_QUOTE_REQ_ID)).toVerboseString() );
+        System.out.println( new Tag131StrQuoteReqID(new MyStringType(TESTB_STR_QUOTE_REQ_ID)).toVerboseString() );
     }
 }

@@ -59,7 +59,11 @@ public class Tag136NumNoMiscFees extends FIX40Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Tag136NumNoMiscFees extends FIX40Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag136NumNoMiscFees tagData;
-
-        tagData = new Tag136NumNoMiscFees(new MyNumInGroupType(TESTA_NUM_NO_MISC_FEES) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag136NumNoMiscFees(new MyNumInGroupType(TESTB_NUM_NO_MISC_FEES) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag136NumNoMiscFees(new MyNumInGroupType(TESTA_NUM_NO_MISC_FEES)).toVerboseString() );
+        System.out.println( new Tag136NumNoMiscFees(new MyNumInGroupType(TESTB_NUM_NO_MISC_FEES)).toVerboseString() );
     }
 }

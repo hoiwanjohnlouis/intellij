@@ -59,7 +59,11 @@ public class Tag117StrQuoteID extends FIX40Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Tag117StrQuoteID extends FIX40Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag117StrQuoteID tagData;
-
-        tagData = new Tag117StrQuoteID(new MyStringType(TESTA_STR_QUOTE_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag117StrQuoteID(new MyStringType(TESTB_STR_QUOTE_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag117StrQuoteID(new MyStringType(TESTA_STR_QUOTE_ID)).toVerboseString() );
+        System.out.println( new Tag117StrQuoteID(new MyStringType(TESTB_STR_QUOTE_ID)).toVerboseString() );
     }
 }

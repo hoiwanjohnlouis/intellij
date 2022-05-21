@@ -59,7 +59,11 @@ public class Tag124NumNoExecs extends FIX40Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Tag124NumNoExecs extends FIX40Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag124NumNoExecs tagData;
-
-        tagData = new Tag124NumNoExecs(new MyNumInGroupType(TESTA_NUM_NO_EXECS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag124NumNoExecs(new MyNumInGroupType(TESTB_NUM_NO_EXECS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag124NumNoExecs(new MyNumInGroupType(TESTA_NUM_NO_EXECS)).toVerboseString() );
+        System.out.println( new Tag124NumNoExecs(new MyNumInGroupType(TESTB_NUM_NO_EXECS)).toVerboseString() );
     }
 }

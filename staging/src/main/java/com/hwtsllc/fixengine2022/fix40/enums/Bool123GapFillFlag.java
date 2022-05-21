@@ -14,32 +14,33 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix30.enums;
+package com.hwtsllc.fixengine2022.fix40.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  113
- *  ReportToExch
+ *  123
+ *  GapFillFlag
  *  Boolean
  *  <p>
- *  Identifies party of trade responsible for exchange reporting.
+ *  Indicates that the Sequence Reset message is replacing administrative
+ *  or application messages which will not be resent.
  *  <p></p>
  *  Valid values:
- *  <p>    N - Indicates the party sending message will report trade
- *  <p>    Y - Indicates the party receiving message must report trade
+ *  <p>    N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
+ *  <p>    Y - Gap Fill Message, Msg Seq Num Field Valid
  */
-public enum Enum113ReportToExch implements LogFIXString, LogVerboseString {
-    NO ("N", "NO", "N - Indicates the party sending message will report trade"),
-    YES ("Y", "YES", "Y - Indicates the party receiving message must report trade"),
+public enum Bool123GapFillFlag implements LogFIXString, LogVerboseString {
+    NO ("N", "NO", "N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)"),
+    YES ("Y", "YES", "Y - Gap Fill Message, Msg Seq Num Field Valid"),
     ;
 
     private final String id;
     private final String name;
     private final String description;
 
-    Enum113ReportToExch(final String id, final String name, final String description) {
+    Bool123GapFillFlag(final String id, final String name, final String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -115,7 +116,7 @@ public enum Enum113ReportToExch implements LogFIXString, LogVerboseString {
         /*
          * dump all the enum values
          */
-        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+        for (Bool123GapFillFlag oneEnum : Bool123GapFillFlag.values()) {
             System.out.println(oneEnum);
         }
     }

@@ -50,4 +50,54 @@ class Tag119AmtSettlCurrAmtTest {
         assertEquals( 119D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag119AmtSettlCurrAmt tagData;
+
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag119AmtSettlCurrAmt tagData;
+
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT));
+        assertEquals( Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag119AmtSettlCurrAmt tagData;
+
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag119AmtSettlCurrAmt tagData;
+
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT));
+        assertEquals( String.valueOf(Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag119AmtSettlCurrAmt tagData;
+
+        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT));
+        assertEquals( "Tag119AmtSettlCurrAmt\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

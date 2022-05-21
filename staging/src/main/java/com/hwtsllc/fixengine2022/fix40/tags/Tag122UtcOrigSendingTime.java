@@ -61,7 +61,11 @@ public class Tag122UtcOrigSendingTime extends FIX40Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -76,16 +80,7 @@ public class Tag122UtcOrigSendingTime extends FIX40Abstract implements LogValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag122UtcOrigSendingTime tagData;
-
-        tagData = new Tag122UtcOrigSendingTime(new MyUTCTimestampType(TESTA_UTC_ORIG_SENDING_TIME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag122UtcOrigSendingTime(new MyUTCTimestampType(TESTB_UTC_ORIG_SENDING_TIME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag122UtcOrigSendingTime(new MyUTCTimestampType(TESTA_UTC_ORIG_SENDING_TIME)).toVerboseString() );
+        System.out.println( new Tag122UtcOrigSendingTime(new MyUTCTimestampType(TESTB_UTC_ORIG_SENDING_TIME)).toVerboseString() );
     }
 }

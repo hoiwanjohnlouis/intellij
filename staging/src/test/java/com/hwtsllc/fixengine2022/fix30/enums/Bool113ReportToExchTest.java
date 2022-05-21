@@ -33,12 +33,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    N - Indicates the party sending message will report trade
  *  <p>    Y - Indicates the party receiving message must report trade
  */
-class Enum113ReportToExchTest {
+class Bool113ReportToExchTest {
     @Test
     void Enum0097Test() {
-        Enum113ReportToExch enumType;
+        Bool113ReportToExch enumType;
 
-        enumType = Enum113ReportToExch.NO;
+        enumType = Bool113ReportToExch.NO;
         assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toFIXNameString());
         assertEquals("N - Indicates the party sending message will report trade", enumType.toFIXDescriptionString());
@@ -46,7 +46,7 @@ class Enum113ReportToExchTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
-        enumType = Enum113ReportToExch.YES;
+        enumType = Bool113ReportToExch.YES;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toFIXNameString());
         assertEquals("Y - Indicates the party receiving message must report trade", enumType.toFIXDescriptionString());

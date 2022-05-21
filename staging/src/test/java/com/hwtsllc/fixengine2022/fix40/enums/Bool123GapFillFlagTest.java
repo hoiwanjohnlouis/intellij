@@ -14,41 +14,44 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix27.enums;
+package com.hwtsllc.fixengine2022.fix40.enums;
 
+import com.hwtsllc.fixengine2022.fix27.enums.Bool97PossResend;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *  97
- *  PossResend
+ *  123
+ *  GapFillFlag
  *  Boolean
  *  <p>
- *  Indicates that message may contain information that has been sent under another sequence number.
+ *  Indicates that the Sequence Reset message is replacing administrative
+ *  or application messages which will not be resent.
  *  <p></p>
  *  Valid values:
- *  <p>    N - Original Transmission
- *  <p>    Y - Possible Resend
+ *  <p>    N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
+ *  <p>    Y - Gap Fill Message, Msg Seq Num Field Valid
  */
-class Enum97PossResendTest {
+class Bool123GapFillFlagTest {
     @Test
-    void Enum0097Test() {
-        Enum97PossResend enumType;
+    void Enum0123Test() {
+        Bool123GapFillFlag enumType;
 
-        enumType = Enum97PossResend.NO;
+        enumType = Bool123GapFillFlag.NO;
         assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toFIXNameString());
-        assertEquals("N - Original Transmission", enumType.toFIXDescriptionString());
+        assertEquals("N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)",
+                enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
-        enumType = Enum97PossResend.YES;
+        enumType = Bool123GapFillFlag.YES;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Possible Resend", enumType.toFIXDescriptionString());
+        assertEquals("Y - Gap Fill Message, Msg Seq Num Field Valid", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());

@@ -20,26 +20,26 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  97
- *  PossResend
+ *  43
+ *  PossDupFlag
  *  Boolean
  *  <p>
- *  Indicates that message may contain information that has been sent under another sequence number.
+ *  Indicates possible retransmission of message with this sequence number
  *  <p></p>
  *  Valid values:
- *  <p>    N - Original Transmission
- *  <p>    Y - Possible Resend
+ *  <p>    N - Original transmission
+ *  <p>    Y - Possible duplicate
  */
-public enum Enum97PossResend implements LogFIXString, LogVerboseString {
-    NO ("N", "NO", "N - Original Transmission"),
-    YES ("Y", "YES", "Y - Possible Resend"),
+public enum Bool43PossDupFlag implements LogFIXString, LogVerboseString {
+    NO ("N", "NO", "N - Original transmission"),
+    YES ("Y", "YES", "Y - Possible duplicate"),
     ;
 
     private final String id;
     private final String name;
     private final String description;
 
-    Enum97PossResend(final String id, final String name, final String description) {
+    Bool43PossDupFlag(final String id, final String name, final String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -115,7 +115,7 @@ public enum Enum97PossResend implements LogFIXString, LogVerboseString {
         /*
          * dump all the enum values
          */
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+        for (Bool43PossDupFlag oneEnum : Bool43PossDupFlag.values()) {
             System.out.println(oneEnum);
         }
     }

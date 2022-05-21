@@ -59,7 +59,11 @@ public class Tag138CcyMiscFeeCurr extends FIX40Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Tag138CcyMiscFeeCurr extends FIX40Abstract implements LogValuePairS
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag138CcyMiscFeeCurr tagData;
-
-        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(TESTA_CCY_MISC_FEE_CURR) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag138CcyMiscFeeCurr(new MyCurrencyType(TESTB_CCY_MISC_FEE_CURR) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag138CcyMiscFeeCurr(new MyCurrencyType(TESTA_CCY_MISC_FEE_CURR)).toVerboseString() );
+        System.out.println( new Tag138CcyMiscFeeCurr(new MyCurrencyType(TESTB_CCY_MISC_FEE_CURR)).toVerboseString() );
     }
 }

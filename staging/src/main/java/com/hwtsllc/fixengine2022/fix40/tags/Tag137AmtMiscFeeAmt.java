@@ -59,7 +59,11 @@ public class Tag137AmtMiscFeeAmt extends FIX40Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Tag137AmtMiscFeeAmt extends FIX40Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag137AmtMiscFeeAmt tagData;
-
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(TESTA_AMT_MISC_FEE_AMT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(TESTB_AMT_MISC_FEE_AMT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag137AmtMiscFeeAmt(new MyAmtType(TESTA_AMT_MISC_FEE_AMT)).toVerboseString() );
+        System.out.println( new Tag137AmtMiscFeeAmt(new MyAmtType(TESTB_AMT_MISC_FEE_AMT)).toVerboseString() );
     }
 }

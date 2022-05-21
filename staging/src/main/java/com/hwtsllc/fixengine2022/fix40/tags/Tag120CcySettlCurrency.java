@@ -59,7 +59,11 @@ public class Tag120CcySettlCurrency extends FIX40Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Tag120CcySettlCurrency extends FIX40Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag120CcySettlCurrency tagData;
-
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType(TESTA_CCY_SETTL_CURRENCY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType(TESTB_CCY_SETTL_CURRENCY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag120CcySettlCurrency(new MyCurrencyType(TESTA_CCY_SETTL_CURRENCY)).toVerboseString() );
+        System.out.println( new Tag120CcySettlCurrency(new MyCurrencyType(TESTB_CCY_SETTL_CURRENCY)).toVerboseString() );
     }
 }

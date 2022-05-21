@@ -73,7 +73,11 @@ public class Tag126UtcExpireTime extends FIX40Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -88,16 +92,7 @@ public class Tag126UtcExpireTime extends FIX40Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag126UtcExpireTime tagData;
-
-        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(TESTA_UTC_EXPIRE_TIME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(TESTB_UTC_EXPIRE_TIME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag126UtcExpireTime(new MyUTCTimestampType(TESTA_UTC_EXPIRE_TIME)).toVerboseString() );
+        System.out.println( new Tag126UtcExpireTime(new MyUTCTimestampType(TESTB_UTC_EXPIRE_TIME)).toVerboseString() );
     }
 }

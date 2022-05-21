@@ -50,4 +50,54 @@ class Tag125StrCxlTypeTest {
         assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag125StrCxlType tagData;
+
+        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTB_STR_CXL_TYPE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag125StrCxlType tagData;
+
+        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTB_STR_CXL_TYPE));
+        assertEquals( Tag125StrCxlType.TESTB_STR_CXL_TYPE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag125StrCxlType tagData;
+
+        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTB_STR_CXL_TYPE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag125StrCxlType.TESTB_STR_CXL_TYPE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag125StrCxlType tagData;
+
+        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTB_STR_CXL_TYPE));
+        assertEquals( Tag125StrCxlType.TESTB_STR_CXL_TYPE,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag125StrCxlType tagData;
+
+        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTA_STR_CXL_TYPE));
+        assertEquals( "Tag125StrCxlType\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag125StrCxlType.TESTA_STR_CXL_TYPE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag125StrCxlType.TESTA_STR_CXL_TYPE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

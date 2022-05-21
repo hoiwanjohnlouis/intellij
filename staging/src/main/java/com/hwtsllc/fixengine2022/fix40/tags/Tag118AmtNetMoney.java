@@ -61,7 +61,11 @@ public class Tag118AmtNetMoney extends FIX40Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -76,16 +80,7 @@ public class Tag118AmtNetMoney extends FIX40Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag118AmtNetMoney tagData;
-
-        tagData = new Tag118AmtNetMoney(new MyAmtType(TESTA_AMT_NET_MONEY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag118AmtNetMoney(new MyAmtType(TESTB_AMT_NET_MONEY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag118AmtNetMoney(new MyAmtType(TESTA_AMT_NET_MONEY)).toVerboseString() );
+        System.out.println( new Tag118AmtNetMoney(new MyAmtType(TESTB_AMT_NET_MONEY)).toVerboseString() );
     }
 }

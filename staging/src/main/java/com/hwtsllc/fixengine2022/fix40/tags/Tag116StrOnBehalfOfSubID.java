@@ -60,7 +60,11 @@ public class Tag116StrOnBehalfOfSubID extends FIX40Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,7 @@ public class Tag116StrOnBehalfOfSubID extends FIX40Abstract implements LogValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag116StrOnBehalfOfSubID tagData;
-
-        tagData = new Tag116StrOnBehalfOfSubID(new MyStringType(TESTA_STR_ON_BEHALF_OF_SUB_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag116StrOnBehalfOfSubID(new MyStringType(TESTB_STR_ON_BEHALF_OF_SUB_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag116StrOnBehalfOfSubID(new MyStringType(TESTA_STR_ON_BEHALF_OF_SUB_ID)).toVerboseString() );
+        System.out.println( new Tag116StrOnBehalfOfSubID(new MyStringType(TESTB_STR_ON_BEHALF_OF_SUB_ID)).toVerboseString() );
     }
 }

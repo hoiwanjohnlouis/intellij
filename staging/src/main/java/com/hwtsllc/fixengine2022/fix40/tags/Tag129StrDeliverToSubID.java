@@ -60,7 +60,11 @@ public class Tag129StrDeliverToSubID extends FIX40Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,7 @@ public class Tag129StrDeliverToSubID extends FIX40Abstract implements LogValuePa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag129StrDeliverToSubID tagData;
-
-        tagData = new Tag129StrDeliverToSubID(new MyStringType(TESTA_STR_DELIVER_TO_SUB_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag129StrDeliverToSubID(new MyStringType(TESTB_STR_DELIVER_TO_SUB_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag129StrDeliverToSubID(new MyStringType(TESTA_STR_DELIVER_TO_SUB_ID)).toVerboseString() );
+        System.out.println( new Tag129StrDeliverToSubID(new MyStringType(TESTB_STR_DELIVER_TO_SUB_ID)).toVerboseString() );
     }
 }

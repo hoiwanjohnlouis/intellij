@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -62,5 +62,55 @@ class Tag126UtcExpireTimeTest {
         tagData = new Tag126UtcExpireTime(new MyUTCTimestampType("HaJiWon-126ExpireTime") );
         assertEquals( "HaJiWon-126ExpireTime", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag126UtcExpireTime tagData;
+
+        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag126UtcExpireTime tagData;
+
+        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME));
+        assertEquals( Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag126UtcExpireTime tagData;
+
+        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag126UtcExpireTime tagData;
+
+        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME));
+        assertEquals( Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag126UtcExpireTime tagData;
+
+        tagData = new Tag126UtcExpireTime(new MyUTCTimestampType(Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME));
+        assertEquals( "Tag126UtcExpireTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

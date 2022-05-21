@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum97PossResend;
+import com.hwtsllc.fixengine2022.fix27.enums.Bool97PossResend;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -52,7 +52,7 @@ class Tag97BoolPossResendTest {
         Tag97BoolPossResend tagData;
 
         // loop around the ENUM and process
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+        for (Bool97PossResend oneEnum : Bool97PossResend.values()) {
             tagData = new Tag97BoolPossResend(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -62,7 +62,7 @@ class Tag97BoolPossResendTest {
         Tag97BoolPossResend tagData;
 
         // loop around the ENUM and process
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+        for (Bool97PossResend oneEnum : Bool97PossResend.values()) {
             tagData = new Tag97BoolPossResend(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -73,7 +73,7 @@ class Tag97BoolPossResendTest {
         Tag97BoolPossResend tagData;
 
         // loop around the ENUM and process
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+        for (Bool97PossResend oneEnum : Bool97PossResend.values()) {
             tagData = new Tag97BoolPossResend(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -85,7 +85,7 @@ class Tag97BoolPossResendTest {
         Tag97BoolPossResend tagData;
 
         // loop around the ENUM and process
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+        for (Bool97PossResend oneEnum : Bool97PossResend.values()) {
             tagData = new Tag97BoolPossResend(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -96,7 +96,7 @@ class Tag97BoolPossResendTest {
         Tag97BoolPossResend tagData;
 
         // loop around the ENUM and process
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+        for (Bool97PossResend oneEnum : Bool97PossResend.values()) {
             tagData = new Tag97BoolPossResend(oneEnum);
             assertEquals( "Tag97BoolPossResend\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

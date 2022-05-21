@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix40.enums.Bool121ForexReq;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -49,12 +49,77 @@ class Tag121BoolForexReqTest {
     void Tag0121Test() {
         Tag121BoolForexReq tagData;
 
-        tagData = new Tag121BoolForexReq(MyBooleanType.NO);
+        tagData = new Tag121BoolForexReq(Bool121ForexReq.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag121BoolForexReq(MyBooleanType.YES);
+        tagData = new Tag121BoolForexReq(Bool121ForexReq.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag121BoolForexReq tagData;
+
+        // loop around the ENUM and process
+        for (Bool121ForexReq oneEnum : Bool121ForexReq.values()) {
+            tagData = new Tag121BoolForexReq(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag121BoolForexReq tagData;
+
+        // loop around the ENUM and process
+        for (Bool121ForexReq oneEnum : Bool121ForexReq.values()) {
+            tagData = new Tag121BoolForexReq(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag121BoolForexReq tagData;
+
+        // loop around the ENUM and process
+        for (Bool121ForexReq oneEnum : Bool121ForexReq.values()) {
+            tagData = new Tag121BoolForexReq(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag121BoolForexReq tagData;
+
+        // loop around the ENUM and process
+        for (Bool121ForexReq oneEnum : Bool121ForexReq.values()) {
+            tagData = new Tag121BoolForexReq(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag121BoolForexReq tagData;
+
+        // loop around the ENUM and process
+        for (Bool121ForexReq oneEnum : Bool121ForexReq.values()) {
+            tagData = new Tag121BoolForexReq(oneEnum);
+            assertEquals( "Tag121BoolForexReq\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

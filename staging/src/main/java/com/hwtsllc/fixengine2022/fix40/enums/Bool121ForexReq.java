@@ -14,32 +14,32 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix27.enums;
+package com.hwtsllc.fixengine2022.fix40.enums;
 
 import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  43
- *  PossDupFlag
+ *  121
+ *  ForexReq
  *  Boolean
  *  <p>
- *  Indicates possible retransmission of message with this sequence number
+ *  Indicates request for forex accommodation trade to be executed along with security transaction.
  *  <p></p>
  *  Valid values:
- *  <p>    N - Original transmission
- *  <p>    Y - Possible duplicate
+ *  <p>    N - Do Not Execute Forex After Security Trade
+ *  <p>    Y - Execute Forex After Security Trade
  */
-public enum Enum43PossDupFlag implements LogFIXString, LogVerboseString {
-    NO ("N", "NO", "N - Original transmission"),
-    YES ("Y", "YES", "Y - Possible duplicate"),
+public enum Bool121ForexReq implements LogFIXString, LogVerboseString {
+    NO ("N", "NO", "N - Do Not Execute Forex After Security Trade"),
+    YES ("Y", "YES", "Y - Execute Forex After Security Trade"),
     ;
 
     private final String id;
     private final String name;
     private final String description;
 
-    Enum43PossDupFlag(final String id, final String name, final String description) {
+    Bool121ForexReq(final String id, final String name, final String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -115,7 +115,7 @@ public enum Enum43PossDupFlag implements LogFIXString, LogVerboseString {
         /*
          * dump all the enum values
          */
-        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
+        for (Bool121ForexReq oneEnum : Bool121ForexReq.values()) {
             System.out.println(oneEnum);
         }
     }

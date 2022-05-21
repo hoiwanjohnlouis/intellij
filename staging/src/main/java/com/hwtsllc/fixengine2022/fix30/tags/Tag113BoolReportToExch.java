@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix30.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX30;
 import com.hwtsllc.fixengine2022.datatypes.FIX30Abstract;
-import com.hwtsllc.fixengine2022.fix30.enums.Enum113ReportToExch;
+import com.hwtsllc.fixengine2022.fix30.enums.Bool113ReportToExch;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -35,14 +35,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    Y - Indicates the party receiving message must report trade
  */
 public class Tag113BoolReportToExch extends FIX30Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final Enum113ReportToExch dataValue;
+    private final Bool113ReportToExch dataValue;
 
-    public final static Enum113ReportToExch TESTA_BOOL_POSS_RESEND
-            = Enum113ReportToExch.NO;
-    public final static Enum113ReportToExch TESTB_BOOL_POSS_RESEND
-            = Enum113ReportToExch.YES;
+    public final static Bool113ReportToExch TESTA_BOOL_POSS_RESEND
+            = Bool113ReportToExch.NO;
+    public final static Bool113ReportToExch TESTB_BOOL_POSS_RESEND
+            = Bool113ReportToExch.YES;
 
-    public Tag113BoolReportToExch(Enum113ReportToExch dataValue) {
+    public Tag113BoolReportToExch(Bool113ReportToExch dataValue) {
         setFixType(FIX30.FIX113_BOOL_REPORT_TO_EXCH);
         this.dataValue = dataValue;
     }
@@ -120,7 +120,7 @@ public class Tag113BoolReportToExch extends FIX30Abstract implements LogValuePai
         System.out.println( new Tag113BoolReportToExch(TESTB_BOOL_POSS_RESEND).toVerboseString() );
 
         // loop around the ENUM and display
-        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+        for (Bool113ReportToExch oneEnum : Bool113ReportToExch.values()) {
             System.out.println( new Tag113BoolReportToExch(oneEnum).toVerboseString() );
         }
     }

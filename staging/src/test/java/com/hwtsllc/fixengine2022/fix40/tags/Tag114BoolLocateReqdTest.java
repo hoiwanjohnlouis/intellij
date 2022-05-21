@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix40.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX40;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix40.enums.Bool114LocateReqd;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -28,10 +28,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  114
  *  LocateReqd
  *  Boolean
+ *  <p>
  *  Indicates whether the broker is to locate the stock in conjunction with a short sell order.
+ *  <p></p>
  *  Valid values:
- *      N - Indicates the broker is not required to locate
- *      Y - Indicates the broker is responsible for locating the stock
+ *  <p>    N - Indicates the broker is not required to locate
+ *  <p>    Y - Indicates the broker is responsible for locating the stock
  */
 class Tag114BoolLocateReqdTest {
     @Test
@@ -48,12 +50,77 @@ class Tag114BoolLocateReqdTest {
     void Tag0114Test() {
         Tag114BoolLocateReqd tagData;
 
-        tagData = new Tag114BoolLocateReqd(MyBooleanType.NO);
+        tagData = new Tag114BoolLocateReqd(Bool114LocateReqd.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag114BoolLocateReqd(MyBooleanType.YES);
+        tagData = new Tag114BoolLocateReqd(Bool114LocateReqd.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag114BoolLocateReqd tagData;
+
+        // loop around the ENUM and process
+        for (Bool114LocateReqd oneEnum : Bool114LocateReqd.values()) {
+            tagData = new Tag114BoolLocateReqd(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag114BoolLocateReqd tagData;
+
+        // loop around the ENUM and process
+        for (Bool114LocateReqd oneEnum : Bool114LocateReqd.values()) {
+            tagData = new Tag114BoolLocateReqd(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag114BoolLocateReqd tagData;
+
+        // loop around the ENUM and process
+        for (Bool114LocateReqd oneEnum : Bool114LocateReqd.values()) {
+            tagData = new Tag114BoolLocateReqd(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag114BoolLocateReqd tagData;
+
+        // loop around the ENUM and process
+        for (Bool114LocateReqd oneEnum : Bool114LocateReqd.values()) {
+            tagData = new Tag114BoolLocateReqd(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag114BoolLocateReqd tagData;
+
+        // loop around the ENUM and process
+        for (Bool114LocateReqd oneEnum : Bool114LocateReqd.values()) {
+            tagData = new Tag114BoolLocateReqd(oneEnum);
+            assertEquals( "Tag114BoolLocateReqd\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

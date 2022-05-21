@@ -62,7 +62,11 @@ public class Tag128StrDeliverToCompID extends FIX40Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -77,16 +81,7 @@ public class Tag128StrDeliverToCompID extends FIX40Abstract implements LogValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag128StrDeliverToCompID tagData;
-
-        tagData = new Tag128StrDeliverToCompID(new MyStringType(TESTA_STR_DELIVER_TO_COMP_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag128StrDeliverToCompID(new MyStringType(TESTB_STR_DELIVER_TO_COMP_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag128StrDeliverToCompID(new MyStringType(TESTA_STR_DELIVER_TO_COMP_ID)).toVerboseString() );
+        System.out.println( new Tag128StrDeliverToCompID(new MyStringType(TESTB_STR_DELIVER_TO_COMP_ID)).toVerboseString() );
     }
 }

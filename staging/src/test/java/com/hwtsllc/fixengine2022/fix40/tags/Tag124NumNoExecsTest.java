@@ -49,4 +49,54 @@ class Tag124NumNoExecsTest {
         assertEquals( 100, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag124NumNoExecs tagData;
+
+        tagData = new Tag124NumNoExecs(new MyNumInGroupType(Tag124NumNoExecs.TESTB_NUM_NO_EXECS));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag124NumNoExecs tagData;
+
+        tagData = new Tag124NumNoExecs(new MyNumInGroupType(Tag124NumNoExecs.TESTB_NUM_NO_EXECS));
+        assertEquals( Tag124NumNoExecs.TESTB_NUM_NO_EXECS, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag124NumNoExecs tagData;
+
+        tagData = new Tag124NumNoExecs(new MyNumInGroupType(Tag124NumNoExecs.TESTB_NUM_NO_EXECS));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag124NumNoExecs.TESTB_NUM_NO_EXECS,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag124NumNoExecs tagData;
+
+        tagData = new Tag124NumNoExecs(new MyNumInGroupType(Tag124NumNoExecs.TESTB_NUM_NO_EXECS));
+        assertEquals( String.valueOf(Tag124NumNoExecs.TESTB_NUM_NO_EXECS),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag124NumNoExecs tagData;
+
+        tagData = new Tag124NumNoExecs(new MyNumInGroupType(Tag124NumNoExecs.TESTA_NUM_NO_EXECS));
+        assertEquals( "Tag124NumNoExecs\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag124NumNoExecs.TESTA_NUM_NO_EXECS + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag124NumNoExecs.TESTA_NUM_NO_EXECS + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

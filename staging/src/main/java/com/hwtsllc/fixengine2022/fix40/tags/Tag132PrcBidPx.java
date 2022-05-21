@@ -59,7 +59,11 @@ public class Tag132PrcBidPx extends FIX40Abstract implements LogValuePairString,
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -74,16 +78,7 @@ public class Tag132PrcBidPx extends FIX40Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag132PrcBidPx tagData;
-
-        tagData = new Tag132PrcBidPx(new MyPriceType(TESTA_PRC_BID_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag132PrcBidPx(new MyPriceType(TESTB_PRC_BID_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag132PrcBidPx(new MyPriceType(TESTA_PRC_BID_PX)).toVerboseString() );
+        System.out.println( new Tag132PrcBidPx(new MyPriceType(TESTB_PRC_BID_PX)).toVerboseString() );
     }
 }

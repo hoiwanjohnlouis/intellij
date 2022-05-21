@@ -49,4 +49,54 @@ class Tag132PrcBidPxTest {
         assertEquals( 1.32D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag132PrcBidPx tagData;
+
+        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag132PrcBidPx tagData;
+
+        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
+        assertEquals( Tag132PrcBidPx.TESTB_PRC_BID_PX, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag132PrcBidPx tagData;
+
+        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag132PrcBidPx.TESTB_PRC_BID_PX,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag132PrcBidPx tagData;
+
+        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
+        assertEquals( String.valueOf(Tag132PrcBidPx.TESTB_PRC_BID_PX),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag132PrcBidPx tagData;
+
+        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTA_PRC_BID_PX));
+        assertEquals( "Tag132PrcBidPx\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag132PrcBidPx.TESTA_PRC_BID_PX + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag132PrcBidPx.TESTA_PRC_BID_PX + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

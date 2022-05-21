@@ -60,7 +60,11 @@ public class Tag119AmtSettlCurrAmt extends FIX40Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -75,16 +79,7 @@ public class Tag119AmtSettlCurrAmt extends FIX40Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag119AmtSettlCurrAmt tagData;
-
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(TESTA_AMT_SETTL_CURR_AMT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType(TESTB_AMT_SETTL_CURR_AMT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag119AmtSettlCurrAmt(new MyAmtType(TESTA_AMT_SETTL_CURR_AMT)).toVerboseString() );
+        System.out.println( new Tag119AmtSettlCurrAmt(new MyAmtType(TESTB_AMT_SETTL_CURR_AMT)).toVerboseString() );
     }
 }

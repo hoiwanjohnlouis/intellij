@@ -50,4 +50,54 @@ class Tag134QtyBidSizeTest {
         assertEquals( 100, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag134QtyBidSize tagData;
+
+        tagData = new Tag134QtyBidSize(new MyQtyType(Tag134QtyBidSize.TESTB_QTY_BID_SIZE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag134QtyBidSize tagData;
+
+        tagData = new Tag134QtyBidSize(new MyQtyType(Tag134QtyBidSize.TESTB_QTY_BID_SIZE));
+        assertEquals( Tag134QtyBidSize.TESTB_QTY_BID_SIZE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag134QtyBidSize tagData;
+
+        tagData = new Tag134QtyBidSize(new MyQtyType(Tag134QtyBidSize.TESTB_QTY_BID_SIZE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag134QtyBidSize.TESTB_QTY_BID_SIZE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag134QtyBidSize tagData;
+
+        tagData = new Tag134QtyBidSize(new MyQtyType(Tag134QtyBidSize.TESTB_QTY_BID_SIZE));
+        assertEquals( String.valueOf(Tag134QtyBidSize.TESTB_QTY_BID_SIZE),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag134QtyBidSize tagData;
+
+        tagData = new Tag134QtyBidSize(new MyQtyType(Tag134QtyBidSize.TESTA_QTY_BID_SIZE));
+        assertEquals( "Tag134QtyBidSize\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag134QtyBidSize.TESTA_QTY_BID_SIZE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag134QtyBidSize.TESTA_QTY_BID_SIZE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

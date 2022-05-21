@@ -43,10 +43,60 @@ class Tag133PrcOfferPxTest {
     }
     @Test
     void Tag0133Test() {
-        Log133PrcOfferPx tagData;
+        Tag133PrcOfferPx tagData;
 
-        tagData = new Log133PrcOfferPx(new MyPriceType(133D) );
+        tagData = new Tag133PrcOfferPx(new MyPriceType(133D) );
         assertEquals( 133D, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag133PrcOfferPx tagData;
+
+        tagData = new Tag133PrcOfferPx(new MyPriceType(Tag133PrcOfferPx.TESTB_PRC_OFFER_PX));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag133PrcOfferPx tagData;
+
+        tagData = new Tag133PrcOfferPx(new MyPriceType(Tag133PrcOfferPx.TESTB_PRC_OFFER_PX));
+        assertEquals( Tag133PrcOfferPx.TESTB_PRC_OFFER_PX, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag133PrcOfferPx tagData;
+
+        tagData = new Tag133PrcOfferPx(new MyPriceType(Tag133PrcOfferPx.TESTB_PRC_OFFER_PX));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag133PrcOfferPx.TESTB_PRC_OFFER_PX,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag133PrcOfferPx tagData;
+
+        tagData = new Tag133PrcOfferPx(new MyPriceType(Tag133PrcOfferPx.TESTB_PRC_OFFER_PX));
+        assertEquals( String.valueOf(Tag133PrcOfferPx.TESTB_PRC_OFFER_PX),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag133PrcOfferPx tagData;
+
+        tagData = new Tag133PrcOfferPx(new MyPriceType(Tag133PrcOfferPx.TESTA_PRC_OFFER_PX));
+        assertEquals( "Tag133PrcOfferPx\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag133PrcOfferPx.TESTA_PRC_OFFER_PX + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag133PrcOfferPx.TESTA_PRC_OFFER_PX + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

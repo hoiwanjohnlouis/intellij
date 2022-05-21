@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.fix27.enums.Enum97PossResend;
+import com.hwtsllc.fixengine2022.fix27.enums.Bool97PossResend;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -35,14 +35,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    Y - Possible Resend
  */
 public class Tag97BoolPossResend extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final Enum97PossResend dataValue;
+    private final Bool97PossResend dataValue;
 
-    public final static Enum97PossResend TESTA_BOOL_POSS_RESEND
-            = Enum97PossResend.NO;
-    public final static Enum97PossResend TESTB_BOOL_POSS_RESEND
-            = Enum97PossResend.YES;
+    public final static Bool97PossResend TESTA_BOOL_POSS_RESEND
+            = Bool97PossResend.NO;
+    public final static Bool97PossResend TESTB_BOOL_POSS_RESEND
+            = Bool97PossResend.YES;
 
-    public Tag97BoolPossResend(Enum97PossResend dataValue) {
+    public Tag97BoolPossResend(Bool97PossResend dataValue) {
         setFixType(FIX27.FIX97_BOOL_POSS_RESEND);
         this.dataValue = dataValue;
     }
@@ -120,7 +120,7 @@ public class Tag97BoolPossResend extends FIX27Abstract implements LogValuePairSt
         System.out.println( new Tag97BoolPossResend(TESTB_BOOL_POSS_RESEND).toVerboseString() );
 
         // loop around the ENUM and display
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
+        for (Bool97PossResend oneEnum : Bool97PossResend.values()) {
             System.out.println( new Tag97BoolPossResend(oneEnum).toVerboseString() );
         }
     }
